@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.go
 //
@@ -58,12 +58,12 @@ func (this *QLineEdit) cursorBackward(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14cursorBackwardEbi
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorBackward", args)
- }
+  }
 
 }
 
@@ -77,12 +77,12 @@ func (this *QLineEdit) home(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4homeEb
   default:
     qtrt.ErrorResolve("QLineEdit", "home", args)
- }
+  }
 
 }
 
@@ -95,12 +95,12 @@ func (this *QLineEdit) selectionStart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14selectionStartEv
   default:
     qtrt.ErrorResolve("QLineEdit", "selectionStart", args)
- }
+  }
 
 }
 
@@ -114,12 +114,12 @@ func (this *QLineEdit) setCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit17setCursorPositionEi
   default:
     qtrt.ErrorResolve("QLineEdit", "setCursorPosition", args)
- }
+  }
 
 }
 
@@ -132,12 +132,12 @@ func (this *QLineEdit) isRedoAvailable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15isRedoAvailableEv
   default:
     qtrt.ErrorResolve("QLineEdit", "isRedoAvailable", args)
- }
+  }
 
 }
 
@@ -151,17 +151,18 @@ func (this *QLineEdit) setModified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit11setModifiedEb
   default:
     qtrt.ErrorResolve("QLineEdit", "setModified", args)
- }
+  }
 
 }
 
 
-func NewQLineEdit(args ...interface{})() {
+func NewQLineEdit(args ...interface{}) QLineEdit {
+  return QLineEdit{}
 }
 
 
@@ -174,12 +175,12 @@ func (this *QLineEdit) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QLineEdit", "event", args)
- }
+  }
 
 }
 
@@ -192,12 +193,12 @@ func (this *QLineEdit) maxLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9maxLengthEv
   default:
     qtrt.ErrorResolve("QLineEdit", "maxLength", args)
- }
+  }
 
 }
 
@@ -210,12 +211,12 @@ func (this *QLineEdit) createStandardContextMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit25createStandardContextMenuEv
   default:
     qtrt.ErrorResolve("QLineEdit", "createStandardContextMenu", args)
- }
+  }
 
 }
 
@@ -235,14 +236,14 @@ func (this *QLineEdit) setTextMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14setTextMarginsERK8QMargins
   case 1:
     // invoke: _ZN9QLineEdit14setTextMarginsEiiii
   default:
     qtrt.ErrorResolve("QLineEdit", "setTextMargins", args)
- }
+  }
 
 }
 
@@ -256,12 +257,12 @@ func (this *QLineEdit) cursorPositionAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit16cursorPositionAtERK6QPoint
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorPositionAt", args)
- }
+  }
 
 }
 
@@ -274,12 +275,12 @@ func (this *QLineEdit) hasSelectedText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15hasSelectedTextEv
   default:
     qtrt.ErrorResolve("QLineEdit", "hasSelectedText", args)
- }
+  }
 
 }
 
@@ -293,12 +294,12 @@ func (this *QLineEdit) setPlaceholderText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit18setPlaceholderTextERK7QString
   default:
     qtrt.ErrorResolve("QLineEdit", "setPlaceholderText", args)
- }
+  }
 
 }
 
@@ -311,12 +312,12 @@ func (this *QLineEdit) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QLineEdit", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -331,12 +332,12 @@ func (this *QLineEdit) cursorForward(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit13cursorForwardEbi
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorForward", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QLineEdit) insert(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit6insertERK7QString
   default:
     qtrt.ErrorResolve("QLineEdit", "insert", args)
- }
+  }
 
 }
 
@@ -369,12 +370,12 @@ func (this *QLineEdit) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit7setTextERK7QString
   default:
     qtrt.ErrorResolve("QLineEdit", "setText", args)
- }
+  }
 
 }
 
@@ -387,12 +388,12 @@ func (this *QLineEdit) validator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9validatorEv
   default:
     qtrt.ErrorResolve("QLineEdit", "validator", args)
- }
+  }
 
 }
 
@@ -405,12 +406,12 @@ func (this *QLineEdit) deselect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit8deselectEv
   default:
     qtrt.ErrorResolve("QLineEdit", "deselect", args)
- }
+  }
 
 }
 
@@ -423,12 +424,12 @@ func (this *QLineEdit) inputMask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9inputMaskEv
   default:
     qtrt.ErrorResolve("QLineEdit", "inputMask", args)
- }
+  }
 
 }
 
@@ -441,12 +442,12 @@ func (this *QLineEdit) placeholderText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15placeholderTextEv
   default:
     qtrt.ErrorResolve("QLineEdit", "placeholderText", args)
- }
+  }
 
 }
 
@@ -459,12 +460,12 @@ func (this *QLineEdit) cut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3cutEv
   default:
     qtrt.ErrorResolve("QLineEdit", "cut", args)
- }
+  }
 
 }
 
@@ -477,12 +478,12 @@ func (this *QLineEdit) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit4textEv
   default:
     qtrt.ErrorResolve("QLineEdit", "text", args)
- }
+  }
 
 }
 
@@ -495,12 +496,12 @@ func (this *QLineEdit) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10metaObjectEv
   default:
     qtrt.ErrorResolve("QLineEdit", "metaObject", args)
- }
+  }
 
 }
 
@@ -513,12 +514,12 @@ func (this *QLineEdit) del(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3delEv
   default:
     qtrt.ErrorResolve("QLineEdit", "del", args)
- }
+  }
 
 }
 
@@ -531,12 +532,12 @@ func (this *QLineEdit) isModified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10isModifiedEv
   default:
     qtrt.ErrorResolve("QLineEdit", "isModified", args)
- }
+  }
 
 }
 
@@ -550,12 +551,12 @@ func (this *QLineEdit) cursorWordForward(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit17cursorWordForwardEb
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorWordForward", args)
- }
+  }
 
 }
 
@@ -568,12 +569,12 @@ func (this *QLineEdit) selectAll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit9selectAllEv
   default:
     qtrt.ErrorResolve("QLineEdit", "selectAll", args)
- }
+  }
 
 }
 
@@ -588,12 +589,12 @@ func (this *QLineEdit) setSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setSelectionEii
   default:
     qtrt.ErrorResolve("QLineEdit", "setSelection", args)
- }
+  }
 
 }
 
@@ -607,12 +608,12 @@ func (this *QLineEdit) setCompleter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setCompleterEP10QCompleter
   default:
     qtrt.ErrorResolve("QLineEdit", "setCompleter", args)
- }
+  }
 
 }
 
@@ -626,12 +627,12 @@ func (this *QLineEdit) setMaxLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setMaxLengthEi
   default:
     qtrt.ErrorResolve("QLineEdit", "setMaxLength", args)
- }
+  }
 
 }
 
@@ -642,10 +643,10 @@ func (this *QLineEdit) FreeQLineEdit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLineEdit", "~QLineEdit", args)
- }
+  }
 
 }
 
@@ -659,12 +660,12 @@ func (this *QLineEdit) setReadOnly(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit11setReadOnlyEb
   default:
     qtrt.ErrorResolve("QLineEdit", "setReadOnly", args)
- }
+  }
 
 }
 
@@ -677,12 +678,12 @@ func (this *QLineEdit) displayText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11displayTextEv
   default:
     qtrt.ErrorResolve("QLineEdit", "displayText", args)
- }
+  }
 
 }
 
@@ -696,12 +697,12 @@ func (this *QLineEdit) setFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit8setFrameEb
   default:
     qtrt.ErrorResolve("QLineEdit", "setFrame", args)
- }
+  }
 
 }
 
@@ -714,12 +715,12 @@ func (this *QLineEdit) hasAcceptableInput(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit18hasAcceptableInputEv
   default:
     qtrt.ErrorResolve("QLineEdit", "hasAcceptableInput", args)
- }
+  }
 
 }
 
@@ -732,12 +733,12 @@ func (this *QLineEdit) hasFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit8hasFrameEv
   default:
     qtrt.ErrorResolve("QLineEdit", "hasFrame", args)
- }
+  }
 
 }
 
@@ -750,12 +751,12 @@ func (this *QLineEdit) cursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14cursorPositionEv
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorPosition", args)
- }
+  }
 
 }
 
@@ -769,12 +770,12 @@ func (this *QLineEdit) cursorWordBackward(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit18cursorWordBackwardEb
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorWordBackward", args)
- }
+  }
 
 }
 
@@ -787,12 +788,12 @@ func (this *QLineEdit) dragEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11dragEnabledEv
   default:
     qtrt.ErrorResolve("QLineEdit", "dragEnabled", args)
- }
+  }
 
 }
 
@@ -805,12 +806,12 @@ func (this *QLineEdit) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit8sizeHintEv
   default:
     qtrt.ErrorResolve("QLineEdit", "sizeHint", args)
- }
+  }
 
 }
 
@@ -823,12 +824,12 @@ func (this *QLineEdit) paste(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5pasteEv
   default:
     qtrt.ErrorResolve("QLineEdit", "paste", args)
- }
+  }
 
 }
 
@@ -842,12 +843,12 @@ func (this *QLineEdit) setValidator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setValidatorEPK10QValidator
   default:
     qtrt.ErrorResolve("QLineEdit", "setValidator", args)
- }
+  }
 
 }
 
@@ -860,12 +861,12 @@ func (this *QLineEdit) completer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9completerEv
   default:
     qtrt.ErrorResolve("QLineEdit", "completer", args)
- }
+  }
 
 }
 
@@ -878,12 +879,12 @@ func (this *QLineEdit) textMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11textMarginsEv
   default:
     qtrt.ErrorResolve("QLineEdit", "textMargins", args)
- }
+  }
 
 }
 
@@ -897,12 +898,12 @@ func (this *QLineEdit) setClearButtonEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit21setClearButtonEnabledEb
   default:
     qtrt.ErrorResolve("QLineEdit", "setClearButtonEnabled", args)
- }
+  }
 
 }
 
@@ -915,12 +916,12 @@ func (this *QLineEdit) selectedText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit12selectedTextEv
   default:
     qtrt.ErrorResolve("QLineEdit", "selectedText", args)
- }
+  }
 
 }
 
@@ -933,12 +934,12 @@ func (this *QLineEdit) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5clearEv
   default:
     qtrt.ErrorResolve("QLineEdit", "clear", args)
- }
+  }
 
 }
 
@@ -951,12 +952,12 @@ func (this *QLineEdit) copy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit4copyEv
   default:
     qtrt.ErrorResolve("QLineEdit", "copy", args)
- }
+  }
 
 }
 
@@ -969,12 +970,12 @@ func (this *QLineEdit) isUndoAvailable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15isUndoAvailableEv
   default:
     qtrt.ErrorResolve("QLineEdit", "isUndoAvailable", args)
- }
+  }
 
 }
 
@@ -987,12 +988,12 @@ func (this *QLineEdit) undo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4undoEv
   default:
     qtrt.ErrorResolve("QLineEdit", "undo", args)
- }
+  }
 
 }
 
@@ -1005,12 +1006,12 @@ func (this *QLineEdit) isClearButtonEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit20isClearButtonEnabledEv
   default:
     qtrt.ErrorResolve("QLineEdit", "isClearButtonEnabled", args)
- }
+  }
 
 }
 
@@ -1024,12 +1025,12 @@ func (this *QLineEdit) end(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3endEb
   default:
     qtrt.ErrorResolve("QLineEdit", "end", args)
- }
+  }
 
 }
 
@@ -1043,12 +1044,12 @@ func (this *QLineEdit) setDragEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14setDragEnabledEb
   default:
     qtrt.ErrorResolve("QLineEdit", "setDragEnabled", args)
- }
+  }
 
 }
 
@@ -1061,12 +1062,12 @@ func (this *QLineEdit) backspace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit9backspaceEv
   default:
     qtrt.ErrorResolve("QLineEdit", "backspace", args)
- }
+  }
 
 }
 
@@ -1079,12 +1080,12 @@ func (this *QLineEdit) redo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4redoEv
   default:
     qtrt.ErrorResolve("QLineEdit", "redo", args)
- }
+  }
 
 }
 
@@ -1098,12 +1099,12 @@ func (this *QLineEdit) setInputMask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setInputMaskERK7QString
   default:
     qtrt.ErrorResolve("QLineEdit", "setInputMask", args)
- }
+  }
 
 }
 
@@ -1120,12 +1121,12 @@ func (this *QLineEdit) getTextMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_
   default:
     qtrt.ErrorResolve("QLineEdit", "getTextMargins", args)
- }
+  }
 
 }
 
@@ -1138,12 +1139,12 @@ func (this *QLineEdit) isReadOnly(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10isReadOnlyEv
   default:
     qtrt.ErrorResolve("QLineEdit", "isReadOnly", args)
- }
+  }
 
 }
 

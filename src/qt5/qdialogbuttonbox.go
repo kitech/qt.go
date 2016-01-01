@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -54,12 +54,12 @@ func (this *QDialogButtonBox) buttons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox7buttonsEv
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "buttons", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QDialogButtonBox) setCenterButtons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox16setCenterButtonsEb
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "setCenterButtons", args)
- }
+  }
 
 }
 
@@ -91,12 +91,12 @@ func (this *QDialogButtonBox) centerButtons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox13centerButtonsEv
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "centerButtons", args)
- }
+  }
 
 }
 
@@ -109,12 +109,12 @@ func (this *QDialogButtonBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -128,12 +128,12 @@ func (this *QDialogButtonBox) removeButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox12removeButtonEP15QAbstractButton
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "removeButton", args)
- }
+  }
 
 }
 
@@ -144,15 +144,16 @@ func (this *QDialogButtonBox) FreeQDialogButtonBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "~QDialogButtonBox", args)
- }
+  }
 
 }
 
 
-func NewQDialogButtonBox(args ...interface{})() {
+func NewQDialogButtonBox(args ...interface{}) QDialogButtonBox {
+  return QDialogButtonBox{}
 }
 
 
@@ -164,12 +165,12 @@ func (this *QDialogButtonBox) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox5clearEv
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "clear", args)
- }
+  }
 
 }
 

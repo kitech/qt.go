@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -48,10 +48,10 @@ func (this *QBasicTimer) FreeQBasicTimer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QBasicTimer", "~QBasicTimer", args)
- }
+  }
 
 }
 
@@ -64,12 +64,12 @@ func (this *QBasicTimer) stop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QBasicTimer4stopEv
   default:
     qtrt.ErrorResolve("QBasicTimer", "stop", args)
- }
+  }
 
 }
 
@@ -82,12 +82,12 @@ func (this *QBasicTimer) timerId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QBasicTimer7timerIdEv
   default:
     qtrt.ErrorResolve("QBasicTimer", "timerId", args)
- }
+  }
 
 }
 
@@ -100,17 +100,18 @@ func (this *QBasicTimer) isActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QBasicTimer8isActiveEv
   default:
     qtrt.ErrorResolve("QBasicTimer", "isActive", args)
- }
+  }
 
 }
 
 
-func NewQBasicTimer(args ...interface{})() {
+func NewQBasicTimer(args ...interface{}) QBasicTimer {
+  return QBasicTimer{}
 }
 
 
@@ -129,14 +130,14 @@ func (this *QBasicTimer) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject
   case 1:
     // invoke: _ZN11QBasicTimer5startEiP7QObject
   default:
     qtrt.ErrorResolve("QBasicTimer", "start", args)
- }
+  }
 
 }
 

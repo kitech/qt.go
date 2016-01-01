@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -50,17 +50,18 @@ func (this *QTranslator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator10metaObjectEv
   default:
     qtrt.ErrorResolve("QTranslator", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQTranslator(args ...interface{})() {
+func NewQTranslator(args ...interface{}) QTranslator {
+  return QTranslator{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator7isEmptyEv
   default:
     qtrt.ErrorResolve("QTranslator", "isEmpty", args)
- }
+  }
 
 }
 
@@ -88,10 +89,10 @@ func (this *QTranslator) FreeQTranslator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTranslator", "~QTranslator", args)
- }
+  }
 
 }
 
@@ -120,7 +121,7 @@ func (this *QTranslator) load(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTranslator4loadERK7QStringS2_S2_S2_
   case 1:
@@ -129,7 +130,7 @@ func (this *QTranslator) load(args ...interface{}) () {
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
- }
+  }
 
 }
 
@@ -146,12 +147,12 @@ func (this *QTranslator) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator9translateEPKcS1_S1_i
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
- }
+  }
 
 }
 

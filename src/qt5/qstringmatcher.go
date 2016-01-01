@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.go
 //
@@ -42,7 +42,8 @@ type QStringMatcher struct {
 }
 
 
-func NewQStringMatcher(args ...interface{})() {
+func NewQStringMatcher(args ...interface{}) QStringMatcher {
+  return QStringMatcher{}
 }
 
 
@@ -61,14 +62,14 @@ func (this *QStringMatcher) indexIn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStringMatcher7indexInEPK5QCharii
   case 1:
     // invoke: _ZNK14QStringMatcher7indexInERK7QStringi
   default:
     qtrt.ErrorResolve("QStringMatcher", "indexIn", args)
- }
+  }
 
 }
 
@@ -82,12 +83,12 @@ func (this *QStringMatcher) setPattern(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStringMatcher10setPatternERK7QString
   default:
     qtrt.ErrorResolve("QStringMatcher", "setPattern", args)
- }
+  }
 
 }
 
@@ -100,12 +101,12 @@ func (this *QStringMatcher) pattern(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStringMatcher7patternEv
   default:
     qtrt.ErrorResolve("QStringMatcher", "pattern", args)
- }
+  }
 
 }
 
@@ -116,10 +117,10 @@ func (this *QStringMatcher) FreeQStringMatcher(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStringMatcher", "~QStringMatcher", args)
- }
+  }
 
 }
 

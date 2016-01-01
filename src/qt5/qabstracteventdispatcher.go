@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -52,17 +52,18 @@ func (this *QAbstractEventDispatcher) hasPendingEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher16hasPendingEventsEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "hasPendingEvents", args)
- }
+  }
 
 }
 
 
-func NewQAbstractEventDispatcher(args ...interface{})() {
+func NewQAbstractEventDispatcher(args ...interface{}) QAbstractEventDispatcher {
+  return QAbstractEventDispatcher{}
 }
 
 
@@ -72,10 +73,10 @@ func (this *QAbstractEventDispatcher) instance_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "instance", args)
- }
+  }
 
 }
 
@@ -91,12 +92,12 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "filterNativeEvent", args)
- }
+  }
 
 }
 
@@ -107,10 +108,10 @@ func (this *QAbstractEventDispatcher) FreeQAbstractEventDispatcher(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "~QAbstractEventDispatcher", args)
- }
+  }
 
 }
 
@@ -123,12 +124,12 @@ func (this *QAbstractEventDispatcher) interrupt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher9interruptEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "interrupt", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QAbstractEventDispatcher) registerSocketNotifier(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "registerSocketNotifier", args)
- }
+  }
 
 }
 
@@ -161,12 +162,12 @@ func (this *QAbstractEventDispatcher) installNativeEventFilter(args ...interface
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "installNativeEventFilter", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QAbstractEventDispatcher) removeNativeEventFilter(args ...interface{
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "removeNativeEventFilter", args)
- }
+  }
 
 }
 
@@ -198,12 +199,12 @@ func (this *QAbstractEventDispatcher) flush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher5flushEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "flush", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QAbstractEventDispatcher) unregisterSocketNotifier(args ...interface
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterSocketNotifier", args)
- }
+  }
 
 }
 
@@ -235,12 +236,12 @@ func (this *QAbstractEventDispatcher) wakeUp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher6wakeUpEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "wakeUp", args)
- }
+  }
 
 }
 
@@ -253,12 +254,12 @@ func (this *QAbstractEventDispatcher) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAbstractEventDispatcher10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "metaObject", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QAbstractEventDispatcher) unregisterTimers(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterTimers", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QAbstractEventDispatcher) remainingTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher13remainingTimeEi
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "remainingTime", args)
- }
+  }
 
 }
 
@@ -309,12 +310,12 @@ func (this *QAbstractEventDispatcher) startingUp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher10startingUpEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "startingUp", args)
- }
+  }
 
 }
 
@@ -327,12 +328,12 @@ func (this *QAbstractEventDispatcher) closingDown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher11closingDownEv
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "closingDown", args)
- }
+  }
 
 }
 
@@ -346,12 +347,12 @@ func (this *QAbstractEventDispatcher) unregisterTimer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher15unregisterTimerEi
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterTimer", args)
- }
+  }
 
 }
 

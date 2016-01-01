@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -42,7 +42,8 @@ type QEventTransition struct {
 }
 
 
-func NewQEventTransition(args ...interface{})() {
+func NewQEventTransition(args ...interface{}) QEventTransition {
+  return QEventTransition{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QEventTransition) FreeQEventTransition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QEventTransition", "~QEventTransition", args)
- }
+  }
 
 }
 
@@ -69,12 +70,12 @@ func (this *QEventTransition) setEventSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QEventTransition14setEventSourceEP7QObject
   default:
     qtrt.ErrorResolve("QEventTransition", "setEventSource", args)
- }
+  }
 
 }
 
@@ -87,12 +88,12 @@ func (this *QEventTransition) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QEventTransition10metaObjectEv
   default:
     qtrt.ErrorResolve("QEventTransition", "metaObject", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QEventTransition) eventSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QEventTransition11eventSourceEv
   default:
     qtrt.ErrorResolve("QEventTransition", "eventSource", args)
- }
+  }
 
 }
 

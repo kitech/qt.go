@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.go
 //
@@ -50,12 +50,12 @@ func (this *QLocale) pmText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6pmTextEv
   default:
     qtrt.ErrorResolve("QLocale", "pmText", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QLocale) nativeLanguageName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale18nativeLanguageNameEv
   default:
     qtrt.ErrorResolve("QLocale", "nativeLanguageName", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QLocale) toLower(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toLowerERK7QString
   default:
     qtrt.ErrorResolve("QLocale", "toLower", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QLocale) zeroDigit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale9zeroDigitEv
   default:
     qtrt.ErrorResolve("QLocale", "zeroDigit", args)
- }
+  }
 
 }
 
@@ -123,12 +123,12 @@ func (this *QLocale) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale4nameEv
   default:
     qtrt.ErrorResolve("QLocale", "name", args)
- }
+  }
 
 }
 
@@ -171,7 +171,7 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale16toCurrencyStringExRK7QString
   case 1:
@@ -190,7 +190,7 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     // invoke: _ZNK7QLocale16toCurrencyStringEiRK7QString
   default:
     qtrt.ErrorResolve("QLocale", "toCurrencyString", args)
- }
+  }
 
 }
 
@@ -209,14 +209,14 @@ func (this *QLocale) toFloat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toFloatERK7QStringPb
   case 1:
     // invoke: _ZNK7QLocale7toFloatERK10QStringRefPb
   default:
     qtrt.ErrorResolve("QLocale", "toFloat", args)
- }
+  }
 
 }
 
@@ -227,10 +227,10 @@ func (this *QLocale) c_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLocale", "c", args)
- }
+  }
 
 }
 
@@ -244,12 +244,12 @@ func (this *QLocale) createSeparatedList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale19createSeparatedListERK11QStringList
   default:
     qtrt.ErrorResolve("QLocale", "createSeparatedList", args)
- }
+  }
 
 }
 
@@ -268,14 +268,14 @@ func (this *QLocale) toUInt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toUIntERK7QStringPb
   case 1:
     // invoke: _ZNK7QLocale6toUIntERK10QStringRefPb
   default:
     qtrt.ErrorResolve("QLocale", "toUInt", args)
- }
+  }
 
 }
 
@@ -288,12 +288,12 @@ func (this *QLocale) decimalPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale12decimalPointEv
   default:
     qtrt.ErrorResolve("QLocale", "decimalPoint", args)
- }
+  }
 
 }
 
@@ -306,12 +306,12 @@ func (this *QLocale) positiveSign(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale12positiveSignEv
   default:
     qtrt.ErrorResolve("QLocale", "positiveSign", args)
- }
+  }
 
 }
 
@@ -330,14 +330,14 @@ func (this *QLocale) toLongLong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale10toLongLongERK7QStringPb
   case 1:
     // invoke: _ZNK7QLocale10toLongLongERK10QStringRefPb
   default:
     qtrt.ErrorResolve("QLocale", "toLongLong", args)
- }
+  }
 
 }
 
@@ -356,14 +356,14 @@ func (this *QLocale) toShort(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toShortERK10QStringRefPb
   case 1:
     // invoke: _ZNK7QLocale7toShortERK7QStringPb
   default:
     qtrt.ErrorResolve("QLocale", "toShort", args)
- }
+  }
 
 }
 
@@ -426,7 +426,7 @@ func (this *QLocale) toString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE
   case 1:
@@ -457,7 +457,7 @@ func (this *QLocale) toString(args ...interface{}) () {
     // invoke: _ZNK7QLocale8toStringEs
   default:
     qtrt.ErrorResolve("QLocale", "toString", args)
- }
+  }
 
 }
 
@@ -476,14 +476,14 @@ func (this *QLocale) toDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale10toDateTimeERK7QStringS2_
   case 1:
     // invoke: _ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE
   default:
     qtrt.ErrorResolve("QLocale", "toDateTime", args)
- }
+  }
 
 }
 
@@ -496,17 +496,18 @@ func (this *QLocale) groupSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale14groupSeparatorEv
   default:
     qtrt.ErrorResolve("QLocale", "groupSeparator", args)
- }
+  }
 
 }
 
 
-func NewQLocale(args ...interface{})() {
+func NewQLocale(args ...interface{}) QLocale {
+  return QLocale{}
 }
 
 
@@ -524,14 +525,14 @@ func (this *QLocale) toDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE
   case 1:
     // invoke: _ZNK7QLocale6toDateERK7QStringS2_
   default:
     qtrt.ErrorResolve("QLocale", "toDate", args)
- }
+  }
 
 }
 
@@ -544,12 +545,12 @@ func (this *QLocale) nativeCountryName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale17nativeCountryNameEv
   default:
     qtrt.ErrorResolve("QLocale", "nativeCountryName", args)
- }
+  }
 
 }
 
@@ -562,12 +563,12 @@ func (this *QLocale) negativeSign(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale12negativeSignEv
   default:
     qtrt.ErrorResolve("QLocale", "negativeSign", args)
- }
+  }
 
 }
 
@@ -578,10 +579,10 @@ func (this *QLocale) FreeQLocale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLocale", "~QLocale", args)
- }
+  }
 
 }
 
@@ -595,12 +596,12 @@ func (this *QLocale) toUpper(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toUpperERK7QString
   default:
     qtrt.ErrorResolve("QLocale", "toUpper", args)
- }
+  }
 
 }
 
@@ -613,12 +614,12 @@ func (this *QLocale) percent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7percentEv
   default:
     qtrt.ErrorResolve("QLocale", "percent", args)
- }
+  }
 
 }
 
@@ -637,14 +638,14 @@ func (this *QLocale) toULongLong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale11toULongLongERK10QStringRefPb
   case 1:
     // invoke: _ZNK7QLocale11toULongLongERK7QStringPb
   default:
     qtrt.ErrorResolve("QLocale", "toULongLong", args)
- }
+  }
 
 }
 
@@ -657,12 +658,12 @@ func (this *QLocale) uiLanguages(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale11uiLanguagesEv
   default:
     qtrt.ErrorResolve("QLocale", "uiLanguages", args)
- }
+  }
 
 }
 
@@ -675,12 +676,12 @@ func (this *QLocale) bcp47Name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale9bcp47NameEv
   default:
     qtrt.ErrorResolve("QLocale", "bcp47Name", args)
- }
+  }
 
 }
 
@@ -699,14 +700,14 @@ func (this *QLocale) toTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE
   case 1:
     // invoke: _ZNK7QLocale6toTimeERK7QStringS2_
   default:
     qtrt.ErrorResolve("QLocale", "toTime", args)
- }
+  }
 
 }
 
@@ -725,14 +726,14 @@ func (this *QLocale) toUShort(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toUShortERK10QStringRefPb
   case 1:
     // invoke: _ZNK7QLocale8toUShortERK7QStringPb
   default:
     qtrt.ErrorResolve("QLocale", "toUShort", args)
- }
+  }
 
 }
 
@@ -751,14 +752,14 @@ func (this *QLocale) toDouble(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toDoubleERK10QStringRefPb
   case 1:
     // invoke: _ZNK7QLocale8toDoubleERK7QStringPb
   default:
     qtrt.ErrorResolve("QLocale", "toDouble", args)
- }
+  }
 
 }
 
@@ -769,10 +770,10 @@ func (this *QLocale) system_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLocale", "system", args)
- }
+  }
 
 }
 
@@ -783,10 +784,10 @@ func (this *QLocale) setDefault_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLocale", "setDefault", args)
- }
+  }
 
 }
 
@@ -799,12 +800,12 @@ func (this *QLocale) exponential(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale11exponentialEv
   default:
     qtrt.ErrorResolve("QLocale", "exponential", args)
- }
+  }
 
 }
 
@@ -817,12 +818,12 @@ func (this *QLocale) amText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6amTextEv
   default:
     qtrt.ErrorResolve("QLocale", "amText", args)
- }
+  }
 
 }
 
@@ -841,14 +842,14 @@ func (this *QLocale) toInt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale5toIntERK10QStringRefPb
   case 1:
     // invoke: _ZNK7QLocale5toIntERK7QStringPb
   default:
     qtrt.ErrorResolve("QLocale", "toInt", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -51,12 +51,12 @@ func (this *QAnimationGroup) animationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup11animationAtEi
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
- }
+  }
 
 }
 
@@ -67,15 +67,16 @@ func (this *QAnimationGroup) FreeQAnimationGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
- }
+  }
 
 }
 
 
-func NewQAnimationGroup(args ...interface{})() {
+func NewQAnimationGroup(args ...interface{}) QAnimationGroup {
+  return QAnimationGroup{}
 }
 
 
@@ -88,12 +89,12 @@ func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
- }
+  }
 
 }
 
@@ -106,12 +107,12 @@ func (this *QAnimationGroup) animationCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup14animationCountEv
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationCount", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAnimationGroup", "addAnimation", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QAnimationGroup) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup5clearEv
   default:
     qtrt.ErrorResolve("QAnimationGroup", "clear", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup13takeAnimationEi
   default:
     qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
- }
+  }
 
 }
 
@@ -182,12 +183,12 @@ func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAnimationGroup", "insertAnimation", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QAnimationGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QAnimationGroup", "metaObject", args)
- }
+  }
 
 }
 
@@ -219,12 +220,12 @@ func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
- }
+  }
 
 }
 

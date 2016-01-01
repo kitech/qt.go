@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -50,17 +50,18 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QIconEnginePlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQIconEnginePlugin(args ...interface{})() {
+func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
+  return QIconEnginePlugin{}
 }
 
 
@@ -73,12 +74,12 @@ func (this *QIconEnginePlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QIconEnginePlugin6createERK7QString
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "create", args)
- }
+  }
 
 }
 
@@ -89,10 +90,10 @@ func (this *QIconEnginePlugin) FreeQIconEnginePlugin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "~QIconEnginePlugin", args)
- }
+  }
 
 }
 

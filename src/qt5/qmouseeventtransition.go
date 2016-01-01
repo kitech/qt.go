@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -50,17 +50,18 @@ func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QMouseEventTransition10metaObjectEv
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQMouseEventTransition(args ...interface{})() {
+func NewQMouseEventTransition(args ...interface{}) QMouseEventTransition {
+  return QMouseEventTransition{}
 }
 
 
@@ -73,12 +74,12 @@ func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "setHitTestPath", args)
- }
+  }
 
 }
 
@@ -89,10 +90,10 @@ func (this *QMouseEventTransition) FreeQMouseEventTransition(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QMouseEventTransition11hitTestPathEv
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
- }
+  }
 
 }
 

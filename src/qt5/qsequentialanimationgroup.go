@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -53,17 +53,18 @@ func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QSequentialAnimationGroup11insertPauseEii
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "insertPause", args)
- }
+  }
 
 }
 
 
-func NewQSequentialAnimationGroup(args ...interface{})() {
+func NewQSequentialAnimationGroup(args ...interface{}) QSequentialAnimationGroup {
+  return QSequentialAnimationGroup{}
 }
 
 
@@ -76,12 +77,12 @@ func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QSequentialAnimationGroup8addPauseEi
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "addPause", args)
- }
+  }
 
 }
 
@@ -92,10 +93,10 @@ func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...int
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "~QSequentialAnimationGroup", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "metaObject", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup16currentAnimationEv
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "currentAnimation", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup8durationEv
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "duration", args)
- }
+  }
 
 }
 

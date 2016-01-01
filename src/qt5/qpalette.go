@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -42,7 +42,8 @@ type QPalette struct {
 }
 
 
-func NewQPalette(args ...interface{})() {
+func NewQPalette(args ...interface{}) QPalette {
+  return QPalette{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QPalette) FreeQPalette(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPalette", "~QPalette", args)
- }
+  }
 
 }
 
@@ -68,12 +69,12 @@ func (this *QPalette) button(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6buttonEv
   default:
     qtrt.ErrorResolve("QPalette", "button", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QPalette) foreground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10foregroundEv
   default:
     qtrt.ErrorResolve("QPalette", "foreground", args)
- }
+  }
 
 }
 
@@ -104,12 +105,12 @@ func (this *QPalette) background(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10backgroundEv
   default:
     qtrt.ErrorResolve("QPalette", "background", args)
- }
+  }
 
 }
 
@@ -128,7 +129,7 @@ func (this *QPalette) resolve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPalette7resolveEj
   case 1:
@@ -137,7 +138,7 @@ func (this *QPalette) resolve(args ...interface{}) () {
     // invoke: _ZNK8QPalette7resolveERKS_
   default:
     qtrt.ErrorResolve("QPalette", "resolve", args)
- }
+  }
 
 }
 
@@ -151,12 +152,12 @@ func (this *QPalette) isCopyOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8isCopyOfERKS_
   default:
     qtrt.ErrorResolve("QPalette", "isCopyOf", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QPalette) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPalette4swapERS_
   default:
     qtrt.ErrorResolve("QPalette", "swap", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QPalette) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6windowEv
   default:
     qtrt.ErrorResolve("QPalette", "window", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QPalette) highlightedText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette15highlightedTextEv
   default:
     qtrt.ErrorResolve("QPalette", "highlightedText", args)
- }
+  }
 
 }
 
@@ -224,12 +225,12 @@ func (this *QPalette) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4textEv
   default:
     qtrt.ErrorResolve("QPalette", "text", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QPalette) light(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette5lightEv
   default:
     qtrt.ErrorResolve("QPalette", "light", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QPalette) link(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4linkEv
   default:
     qtrt.ErrorResolve("QPalette", "link", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QPalette) cacheKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8cacheKeyEv
   default:
     qtrt.ErrorResolve("QPalette", "cacheKey", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QPalette) base(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4baseEv
   default:
     qtrt.ErrorResolve("QPalette", "base", args)
- }
+  }
 
 }
 
@@ -314,12 +315,12 @@ func (this *QPalette) dark(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4darkEv
   default:
     qtrt.ErrorResolve("QPalette", "dark", args)
- }
+  }
 
 }
 
@@ -332,12 +333,12 @@ func (this *QPalette) highlight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette9highlightEv
   default:
     qtrt.ErrorResolve("QPalette", "highlight", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QPalette) mid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette3midEv
   default:
     qtrt.ErrorResolve("QPalette", "mid", args)
- }
+  }
 
 }
 
@@ -368,12 +369,12 @@ func (this *QPalette) shadow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6shadowEv
   default:
     qtrt.ErrorResolve("QPalette", "shadow", args)
- }
+  }
 
 }
 
@@ -386,12 +387,12 @@ func (this *QPalette) buttonText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10buttonTextEv
   default:
     qtrt.ErrorResolve("QPalette", "buttonText", args)
- }
+  }
 
 }
 
@@ -404,12 +405,12 @@ func (this *QPalette) toolTipBase(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11toolTipBaseEv
   default:
     qtrt.ErrorResolve("QPalette", "toolTipBase", args)
- }
+  }
 
 }
 
@@ -422,12 +423,12 @@ func (this *QPalette) midlight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8midlightEv
   default:
     qtrt.ErrorResolve("QPalette", "midlight", args)
- }
+  }
 
 }
 
@@ -440,12 +441,12 @@ func (this *QPalette) brightText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10brightTextEv
   default:
     qtrt.ErrorResolve("QPalette", "brightText", args)
- }
+  }
 
 }
 
@@ -458,12 +459,12 @@ func (this *QPalette) linkVisited(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11linkVisitedEv
   default:
     qtrt.ErrorResolve("QPalette", "linkVisited", args)
- }
+  }
 
 }
 
@@ -476,12 +477,12 @@ func (this *QPalette) alternateBase(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette13alternateBaseEv
   default:
     qtrt.ErrorResolve("QPalette", "alternateBase", args)
- }
+  }
 
 }
 
@@ -494,12 +495,12 @@ func (this *QPalette) windowText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10windowTextEv
   default:
     qtrt.ErrorResolve("QPalette", "windowText", args)
- }
+  }
 
 }
 
@@ -512,12 +513,12 @@ func (this *QPalette) toolTipText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11toolTipTextEv
   default:
     qtrt.ErrorResolve("QPalette", "toolTipText", args)
- }
+  }
 
 }
 

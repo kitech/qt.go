@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -48,15 +48,16 @@ func (this *QTextDocumentFragment) fromHtml_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromHtml", args)
- }
+  }
 
 }
 
 
-func NewQTextDocumentFragment(args ...interface{})() {
+func NewQTextDocumentFragment(args ...interface{}) QTextDocumentFragment {
+  return QTextDocumentFragment{}
 }
 
 
@@ -66,10 +67,10 @@ func (this *QTextDocumentFragment) fromPlainText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "fromPlainText", args)
- }
+  }
 
 }
 
@@ -83,12 +84,12 @@ func (this *QTextDocumentFragment) toHtml(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
- }
+  }
 
 }
 
@@ -99,10 +100,10 @@ func (this *QTextDocumentFragment) FreeQTextDocumentFragment(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "~QTextDocumentFragment", args)
- }
+  }
 
 }
 
@@ -115,12 +116,12 @@ func (this *QTextDocumentFragment) toPlainText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment11toPlainTextEv
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toPlainText", args)
- }
+  }
 
 }
 
@@ -133,12 +134,12 @@ func (this *QTextDocumentFragment) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment7isEmptyEv
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "isEmpty", args)
- }
+  }
 
 }
 

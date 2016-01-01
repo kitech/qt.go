@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -48,7 +48,8 @@ type QAccessibleBridge struct {
 }
 
 
-func NewQAccessibleBridgePlugin(args ...interface{})() {
+func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
+  return QAccessibleBridgePlugin{}
 }
 
 
@@ -61,12 +62,12 @@ func (this *QAccessibleBridgePlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QAccessibleBridgePlugin6createERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "create", args)
- }
+  }
 
 }
 
@@ -77,10 +78,10 @@ func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "~QAccessibleBridgePlugin", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QAccessibleBridgePlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "metaObject", args)
- }
+  }
 
 }
 
@@ -109,10 +110,10 @@ func (this *QAccessibleBridge) FreeQAccessibleBridge(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleBridge", "~QAccessibleBridge", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QAccessibleBridge) notifyAccessibilityUpdate(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent
   default:
     qtrt.ErrorResolve("QAccessibleBridge", "notifyAccessibilityUpdate", args)
- }
+  }
 
 }
 
@@ -145,12 +146,12 @@ func (this *QAccessibleBridge) setRootObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface
   default:
     qtrt.ErrorResolve("QAccessibleBridge", "setRootObject", args)
- }
+  }
 
 }
 

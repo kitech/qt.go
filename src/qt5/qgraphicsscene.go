@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.go
 //
@@ -55,12 +55,12 @@ func (this *QGraphicsScene) setForegroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene18setForegroundBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setForegroundBrush", args)
- }
+  }
 
 }
 
@@ -80,14 +80,14 @@ func (this *QGraphicsScene) setSceneRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene12setSceneRectERK6QRectF
   case 1:
     // invoke: _ZN14QGraphicsScene12setSceneRectEdddd
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSceneRect", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QGraphicsScene) isActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene8isActiveEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "isActive", args)
- }
+  }
 
 }
 
@@ -118,12 +118,12 @@ func (this *QGraphicsScene) hasFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene8hasFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "hasFocus", args)
- }
+  }
 
 }
 
@@ -136,12 +136,12 @@ func (this *QGraphicsScene) itemsBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene17itemsBoundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "itemsBoundingRect", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QGraphicsScene) sendEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent
   default:
     qtrt.ErrorResolve("QGraphicsScene", "sendEvent", args)
- }
+  }
 
 }
 
@@ -174,12 +174,12 @@ func (this *QGraphicsScene) minimumRenderSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene17minimumRenderSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "minimumRenderSize", args)
- }
+  }
 
 }
 
@@ -192,12 +192,12 @@ func (this *QGraphicsScene) selectionArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene13selectionAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "selectionArea", args)
- }
+  }
 
 }
 
@@ -217,14 +217,14 @@ func (this *QGraphicsScene) update(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene6updateERK6QRectF
   case 1:
     // invoke: _ZN14QGraphicsScene6updateEdddd
   default:
     qtrt.ErrorResolve("QGraphicsScene", "update", args)
- }
+  }
 
 }
 
@@ -240,12 +240,12 @@ func (this *QGraphicsScene) addPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPolygon", args)
- }
+  }
 
 }
 
@@ -267,14 +267,14 @@ func (this *QGraphicsScene) addLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addLineERK6QLineFRK4QPen
   case 1:
     // invoke: _ZN14QGraphicsScene7addLineEddddRK4QPen
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addLine", args)
- }
+  }
 
 }
 
@@ -287,12 +287,12 @@ func (this *QGraphicsScene) palette(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene7paletteEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "palette", args)
- }
+  }
 
 }
 
@@ -305,17 +305,18 @@ func (this *QGraphicsScene) isSortCacheEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene18isSortCacheEnabledEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "isSortCacheEnabled", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsScene(args ...interface{})() {
+func NewQGraphicsScene(args ...interface{}) QGraphicsScene {
+  return QGraphicsScene{}
 }
 
 
@@ -327,12 +328,12 @@ func (this *QGraphicsScene) clearFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10clearFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "clearFocus", args)
- }
+  }
 
 }
 
@@ -345,12 +346,12 @@ func (this *QGraphicsScene) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "metaObject", args)
- }
+  }
 
 }
 
@@ -365,12 +366,12 @@ func (this *QGraphicsScene) addSimpleText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addSimpleText", args)
- }
+  }
 
 }
 
@@ -384,12 +385,12 @@ func (this *QGraphicsScene) setBspTreeDepth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene15setBspTreeDepthEi
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setBspTreeDepth", args)
- }
+  }
 
 }
 
@@ -402,12 +403,12 @@ func (this *QGraphicsScene) sceneRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene9sceneRectEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "sceneRect", args)
- }
+  }
 
 }
 
@@ -420,12 +421,12 @@ func (this *QGraphicsScene) activeWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene12activeWindowEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "activeWindow", args)
- }
+  }
 
 }
 
@@ -438,12 +439,12 @@ func (this *QGraphicsScene) backgroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene15backgroundBrushEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "backgroundBrush", args)
- }
+  }
 
 }
 
@@ -463,14 +464,14 @@ func (this *QGraphicsScene) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene6itemAtEddRK10QTransform
   case 1:
     // invoke: _ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform
   default:
     qtrt.ErrorResolve("QGraphicsScene", "itemAt", args)
- }
+  }
 
 }
 
@@ -483,12 +484,12 @@ func (this *QGraphicsScene) advance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7advanceEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "advance", args)
- }
+  }
 
 }
 
@@ -502,12 +503,12 @@ func (this *QGraphicsScene) setStickyFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene14setStickyFocusEb
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setStickyFocus", args)
- }
+  }
 
 }
 
@@ -520,12 +521,12 @@ func (this *QGraphicsScene) selectedItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene13selectedItemsEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "selectedItems", args)
- }
+  }
 
 }
 
@@ -538,12 +539,12 @@ func (this *QGraphicsScene) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene5clearEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "clear", args)
- }
+  }
 
 }
 
@@ -557,12 +558,12 @@ func (this *QGraphicsScene) setActivePanel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setActivePanel", args)
- }
+  }
 
 }
 
@@ -576,12 +577,12 @@ func (this *QGraphicsScene) addPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene9addPixmapERK7QPixmap
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPixmap", args)
- }
+  }
 
 }
 
@@ -594,12 +595,12 @@ func (this *QGraphicsScene) foregroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene15foregroundBrushEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "foregroundBrush", args)
- }
+  }
 
 }
 
@@ -612,12 +613,12 @@ func (this *QGraphicsScene) views(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene5viewsEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "views", args)
- }
+  }
 
 }
 
@@ -628,10 +629,10 @@ func (this *QGraphicsScene) FreeQGraphicsScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsScene", "~QGraphicsScene", args)
- }
+  }
 
 }
 
@@ -655,14 +656,14 @@ func (this *QGraphicsScene) addRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush
   case 1:
     // invoke: _ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addRect", args)
- }
+  }
 
 }
 
@@ -675,12 +676,12 @@ func (this *QGraphicsScene) bspTreeDepth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene12bspTreeDepthEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "bspTreeDepth", args)
- }
+  }
 
 }
 
@@ -694,12 +695,12 @@ func (this *QGraphicsScene) setStyle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene8setStyleEP6QStyle
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setStyle", args)
- }
+  }
 
 }
 
@@ -713,12 +714,12 @@ func (this *QGraphicsScene) setPalette(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10setPaletteERK8QPalette
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setPalette", args)
- }
+  }
 
 }
 
@@ -732,12 +733,12 @@ func (this *QGraphicsScene) setMinimumRenderSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene20setMinimumRenderSizeEd
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setMinimumRenderSize", args)
- }
+  }
 
 }
 
@@ -750,12 +751,12 @@ func (this *QGraphicsScene) mouseGrabberItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene16mouseGrabberItemEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "mouseGrabberItem", args)
- }
+  }
 
 }
 
@@ -779,14 +780,14 @@ func (this *QGraphicsScene) addEllipse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush
   case 1:
     // invoke: _ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addEllipse", args)
- }
+  }
 
 }
 
@@ -799,12 +800,12 @@ func (this *QGraphicsScene) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene6heightEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "height", args)
- }
+  }
 
 }
 
@@ -830,7 +831,7 @@ func (this *QGraphicsScene) setSelectionArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt17ItemSelectionModeERK10QTransform
   case 1:
@@ -839,7 +840,7 @@ func (this *QGraphicsScene) setSelectionArea(args ...interface{}) () {
     // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt22ItemSelectionOperationENS3_17ItemSelectionModeERK10QTransform
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSelectionArea", args)
- }
+  }
 
 }
 
@@ -852,12 +853,12 @@ func (this *QGraphicsScene) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene4fontEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "font", args)
- }
+  }
 
 }
 
@@ -870,12 +871,12 @@ func (this *QGraphicsScene) clearSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene14clearSelectionEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "clearSelection", args)
- }
+  }
 
 }
 
@@ -889,12 +890,12 @@ func (this *QGraphicsScene) removeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10removeItemEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsScene", "removeItem", args)
- }
+  }
 
 }
 
@@ -908,12 +909,12 @@ func (this *QGraphicsScene) setActiveWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setActiveWindow", args)
- }
+  }
 
 }
 
@@ -926,12 +927,12 @@ func (this *QGraphicsScene) focusItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene9focusItemEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "focusItem", args)
- }
+  }
 
 }
 
@@ -946,12 +947,12 @@ func (this *QGraphicsScene) addText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addTextERK7QStringRK5QFont
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addText", args)
- }
+  }
 
 }
 
@@ -965,12 +966,12 @@ func (this *QGraphicsScene) setSortCacheEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene19setSortCacheEnabledEb
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSortCacheEnabled", args)
- }
+  }
 
 }
 
@@ -984,12 +985,12 @@ func (this *QGraphicsScene) destroyItemGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup
   default:
     qtrt.ErrorResolve("QGraphicsScene", "destroyItemGroup", args)
- }
+  }
 
 }
 
@@ -1002,12 +1003,12 @@ func (this *QGraphicsScene) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene5widthEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "width", args)
- }
+  }
 
 }
 
@@ -1021,12 +1022,12 @@ func (this *QGraphicsScene) addItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addItemEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addItem", args)
- }
+  }
 
 }
 
@@ -1040,12 +1041,12 @@ func (this *QGraphicsScene) setBackgroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene18setBackgroundBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setBackgroundBrush", args)
- }
+  }
 
 }
 
@@ -1058,12 +1059,12 @@ func (this *QGraphicsScene) activePanel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene11activePanelEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "activePanel", args)
- }
+  }
 
 }
 
@@ -1076,12 +1077,12 @@ func (this *QGraphicsScene) style(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene5styleEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "style", args)
- }
+  }
 
 }
 
@@ -1095,12 +1096,12 @@ func (this *QGraphicsScene) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setFont", args)
- }
+  }
 
 }
 
@@ -1116,12 +1117,12 @@ func (this *QGraphicsScene) addPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPath", args)
- }
+  }
 
 }
 
@@ -1134,12 +1135,12 @@ func (this *QGraphicsScene) stickyFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene11stickyFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsScene", "stickyFocus", args)
- }
+  }
 
 }
 

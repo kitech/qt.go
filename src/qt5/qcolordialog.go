@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.go
 //
@@ -44,7 +44,8 @@ type QColorDialog struct {
 }
 
 
-func NewQColorDialog(args ...interface{})() {
+func NewQColorDialog(args ...interface{}) QColorDialog {
+  return QColorDialog{}
 }
 
 
@@ -56,12 +57,12 @@ func (this *QColorDialog) currentColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog12currentColorEv
   default:
     qtrt.ErrorResolve("QColorDialog", "currentColor", args)
- }
+  }
 
 }
 
@@ -72,10 +73,10 @@ func (this *QColorDialog) customColor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "customColor", args)
- }
+  }
 
 }
 
@@ -88,12 +89,12 @@ func (this *QColorDialog) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog10metaObjectEv
   default:
     qtrt.ErrorResolve("QColorDialog", "metaObject", args)
- }
+  }
 
 }
 
@@ -104,10 +105,10 @@ func (this *QColorDialog) setStandardColor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "setStandardColor", args)
- }
+  }
 
 }
 
@@ -122,12 +123,12 @@ func (this *QColorDialog) open(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog4openEP7QObjectPKc
   default:
     qtrt.ErrorResolve("QColorDialog", "open", args)
- }
+  }
 
 }
 
@@ -140,12 +141,12 @@ func (this *QColorDialog) selectedColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog13selectedColorEv
   default:
     qtrt.ErrorResolve("QColorDialog", "selectedColor", args)
- }
+  }
 
 }
 
@@ -156,10 +157,10 @@ func (this *QColorDialog) FreeQColorDialog(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "~QColorDialog", args)
- }
+  }
 
 }
 
@@ -173,12 +174,12 @@ func (this *QColorDialog) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog10setVisibleEb
   default:
     qtrt.ErrorResolve("QColorDialog", "setVisible", args)
- }
+  }
 
 }
 
@@ -192,12 +193,12 @@ func (this *QColorDialog) setCurrentColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog15setCurrentColorERK6QColor
   default:
     qtrt.ErrorResolve("QColorDialog", "setCurrentColor", args)
- }
+  }
 
 }
 
@@ -208,10 +209,10 @@ func (this *QColorDialog) standardColor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "standardColor", args)
- }
+  }
 
 }
 
@@ -222,10 +223,10 @@ func (this *QColorDialog) getRgba_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "getRgba", args)
- }
+  }
 
 }
 
@@ -236,10 +237,10 @@ func (this *QColorDialog) setCustomColor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "setCustomColor", args)
- }
+  }
 
 }
 
@@ -250,10 +251,10 @@ func (this *QColorDialog) customCount_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColorDialog", "customCount", args)
- }
+  }
 
 }
 

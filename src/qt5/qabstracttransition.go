@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -53,12 +53,12 @@ func (this *QAbstractTransition) targetState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition11targetStateEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetState", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QAbstractTransition) targetStates(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition12targetStatesEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetStates", args)
- }
+  }
 
 }
 
@@ -89,12 +89,12 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition11sourceStateEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "sourceState", args)
- }
+  }
 
 }
 
@@ -105,15 +105,16 @@ func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractTransition", "~QAbstractTransition", args)
- }
+  }
 
 }
 
 
-func NewQAbstractTransition(args ...interface{})() {
+func NewQAbstractTransition(args ...interface{}) QAbstractTransition {
+  return QAbstractTransition{}
 }
 
 
@@ -126,12 +127,12 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition14setTargetStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QAbstractTransition", "setTargetState", args)
- }
+  }
 
 }
 
@@ -145,12 +146,12 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAbstractTransition", "addAnimation", args)
- }
+  }
 
 }
 
@@ -163,12 +164,12 @@ func (this *QAbstractTransition) animations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition10animationsEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "animations", args)
- }
+  }
 
 }
 
@@ -182,12 +183,12 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QAbstractTransition", "removeAnimation", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QAbstractTransition) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "metaObject", args)
- }
+  }
 
 }
 
@@ -218,12 +219,12 @@ func (this *QAbstractTransition) machine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition7machineEv
   default:
     qtrt.ErrorResolve("QAbstractTransition", "machine", args)
- }
+  }
 
 }
 

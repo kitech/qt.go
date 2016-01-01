@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -50,12 +50,12 @@ func (this *QJsonObject) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject7isEmptyEv
   default:
     qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QJsonObject) length(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject6lengthEv
   default:
     qtrt.ErrorResolve("QJsonObject", "length", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QJsonObject) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject6removeERK7QString
   default:
     qtrt.ErrorResolve("QJsonObject", "remove", args)
- }
+  }
 
 }
 
@@ -103,10 +103,10 @@ func (this *QJsonObject) FreeQJsonObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QJsonObject", "~QJsonObject", args)
- }
+  }
 
 }
 
@@ -120,12 +120,12 @@ func (this *QJsonObject) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5valueERK7QString
   default:
     qtrt.ErrorResolve("QJsonObject", "value", args)
- }
+  }
 
 }
 
@@ -138,12 +138,12 @@ func (this *QJsonObject) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject4sizeEv
   default:
     qtrt.ErrorResolve("QJsonObject", "size", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QJsonObject) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5countEv
   default:
     qtrt.ErrorResolve("QJsonObject", "count", args)
- }
+  }
 
 }
 
@@ -174,12 +174,12 @@ func (this *QJsonObject) empty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5emptyEv
   default:
     qtrt.ErrorResolve("QJsonObject", "empty", args)
- }
+  }
 
 }
 
@@ -193,12 +193,12 @@ func (this *QJsonObject) take(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject4takeERK7QString
   default:
     qtrt.ErrorResolve("QJsonObject", "take", args)
- }
+  }
 
 }
 
@@ -211,12 +211,12 @@ func (this *QJsonObject) toVariantHash(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject13toVariantHashEv
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantHash", args)
- }
+  }
 
 }
 
@@ -229,12 +229,12 @@ func (this *QJsonObject) keys(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject4keysEv
   default:
     qtrt.ErrorResolve("QJsonObject", "keys", args)
- }
+  }
 
 }
 
@@ -248,17 +248,18 @@ func (this *QJsonObject) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject8containsERK7QString
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
- }
+  }
 
 }
 
 
-func NewQJsonObject(args ...interface{})() {
+func NewQJsonObject(args ...interface{}) QJsonObject {
+  return QJsonObject{}
 }
 
 
@@ -270,12 +271,12 @@ func (this *QJsonObject) toVariantMap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject12toVariantMapEv
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantMap", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -53,19 +53,20 @@ func (this *QFile) symLinkTarget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFile13symLinkTargetEv
   case 1:
     // invoke: _ZN5QFile13symLinkTargetERK7QString
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
- }
+  }
 
 }
 
 
-func NewQFile(args ...interface{})() {
+func NewQFile(args ...interface{}) QFile {
+  return QFile{}
 }
 
 
@@ -75,10 +76,10 @@ func (this *QFile) link_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "link", args)
- }
+  }
 
 }
 
@@ -89,10 +90,10 @@ func (this *QFile) rename_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
- }
+  }
 
 }
 
@@ -110,14 +111,14 @@ func (this *QFile) link(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile4linkERK7QStringS2_
   case 1:
     // invoke: _ZN5QFile4linkERK7QString
   default:
     qtrt.ErrorResolve("QFile", "link", args)
- }
+  }
 
 }
 
@@ -128,10 +129,10 @@ func (this *QFile) resize_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
- }
+  }
 
 }
 
@@ -142,10 +143,10 @@ func (this *QFile) exists_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "exists", args)
- }
+  }
 
 }
 
@@ -156,10 +157,10 @@ func (this *QFile) FreeQFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "~QFile", args)
- }
+  }
 
 }
 
@@ -170,10 +171,10 @@ func (this *QFile) copy_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
- }
+  }
 
 }
 
@@ -184,10 +185,10 @@ func (this *QFile) readLink_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "readLink", args)
- }
+  }
 
 }
 
@@ -203,14 +204,14 @@ func (this *QFile) exists(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile6existsERK7QString
   case 1:
     // invoke: _ZNK5QFile6existsEv
   default:
     qtrt.ErrorResolve("QFile", "exists", args)
- }
+  }
 
 }
 
@@ -223,12 +224,12 @@ func (this *QFile) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFile4sizeEv
   default:
     qtrt.ErrorResolve("QFile", "size", args)
- }
+  }
 
 }
 
@@ -246,14 +247,14 @@ func (this *QFile) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile6resizeERK7QStringx
   case 1:
     // invoke: _ZN5QFile6resizeEx
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
- }
+  }
 
 }
 
@@ -267,12 +268,12 @@ func (this *QFile) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QFile", "setFileName", args)
- }
+  }
 
 }
 
@@ -288,14 +289,14 @@ func (this *QFile) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile6removeEv
   case 1:
     // invoke: _ZN5QFile6removeERK7QString
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
- }
+  }
 
 }
 
@@ -313,14 +314,14 @@ func (this *QFile) copy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile4copyERK7QStringS2_
   case 1:
     // invoke: _ZN5QFile4copyERK7QString
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
- }
+  }
 
 }
 
@@ -331,10 +332,10 @@ func (this *QFile) encodeName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "encodeName", args)
- }
+  }
 
 }
 
@@ -345,10 +346,10 @@ func (this *QFile) decodeName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "decodeName", args)
- }
+  }
 
 }
 
@@ -366,14 +367,14 @@ func (this *QFile) rename(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile6renameERK7QStringS2_
   case 1:
     // invoke: _ZN5QFile6renameERK7QString
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
- }
+  }
 
 }
 
@@ -386,12 +387,12 @@ func (this *QFile) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFile8fileNameEv
   default:
     qtrt.ErrorResolve("QFile", "fileName", args)
- }
+  }
 
 }
 
@@ -404,12 +405,12 @@ func (this *QFile) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFile10metaObjectEv
   default:
     qtrt.ErrorResolve("QFile", "metaObject", args)
- }
+  }
 
 }
 
@@ -420,10 +421,10 @@ func (this *QFile) symLinkTarget_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
- }
+  }
 
 }
 
@@ -434,10 +435,10 @@ func (this *QFile) remove_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
- }
+  }
 
 }
 
@@ -453,14 +454,14 @@ func (this *QFile) readLink(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFile8readLinkERK7QString
   case 1:
     // invoke: _ZNK5QFile8readLinkEv
   default:
     qtrt.ErrorResolve("QFile", "readLink", args)
- }
+  }
 
 }
 

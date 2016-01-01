@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -48,10 +48,10 @@ func (this *QPdfWriter) FreeQPdfWriter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPdfWriter", "~QPdfWriter", args)
- }
+  }
 
 }
 
@@ -65,12 +65,12 @@ func (this *QPdfWriter) setCreator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter10setCreatorERK7QString
   default:
     qtrt.ErrorResolve("QPdfWriter", "setCreator", args)
- }
+  }
 
 }
 
@@ -84,12 +84,12 @@ func (this *QPdfWriter) setPageSizeMM(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter13setPageSizeMMERK6QSizeF
   default:
     qtrt.ErrorResolve("QPdfWriter", "setPageSizeMM", args)
- }
+  }
 
 }
 
@@ -103,17 +103,18 @@ func (this *QPdfWriter) setResolution(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter13setResolutionEi
   default:
     qtrt.ErrorResolve("QPdfWriter", "setResolution", args)
- }
+  }
 
 }
 
 
-func NewQPdfWriter(args ...interface{})() {
+func NewQPdfWriter(args ...interface{}) QPdfWriter {
+  return QPdfWriter{}
 }
 
 
@@ -125,12 +126,12 @@ func (this *QPdfWriter) newPage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter7newPageEv
   default:
     qtrt.ErrorResolve("QPdfWriter", "newPage", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QPdfWriter) title(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QPdfWriter5titleEv
   default:
     qtrt.ErrorResolve("QPdfWriter", "title", args)
- }
+  }
 
 }
 
@@ -161,12 +162,12 @@ func (this *QPdfWriter) creator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QPdfWriter7creatorEv
   default:
     qtrt.ErrorResolve("QPdfWriter", "creator", args)
- }
+  }
 
 }
 
@@ -179,12 +180,12 @@ func (this *QPdfWriter) resolution(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QPdfWriter10resolutionEv
   default:
     qtrt.ErrorResolve("QPdfWriter", "resolution", args)
- }
+  }
 
 }
 
@@ -197,12 +198,12 @@ func (this *QPdfWriter) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QPdfWriter10metaObjectEv
   default:
     qtrt.ErrorResolve("QPdfWriter", "metaObject", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QPdfWriter) setTitle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter8setTitleERK7QString
   default:
     qtrt.ErrorResolve("QPdfWriter", "setTitle", args)
- }
+  }
 
 }
 

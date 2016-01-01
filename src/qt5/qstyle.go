@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -42,7 +42,8 @@ type QStyle struct {
 }
 
 
-func NewQStyle(args ...interface{})() {
+func NewQStyle(args ...interface{}) QStyle {
+  return QStyle{}
 }
 
 
@@ -58,14 +59,14 @@ func (this *QStyle) unpolish(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QStyle8unpolishEP7QWidget
   case 1:
     // invoke: _ZN6QStyle8unpolishEP12QApplication
   default:
     qtrt.ErrorResolve("QStyle", "unpolish", args)
- }
+  }
 
 }
 
@@ -76,10 +77,10 @@ func (this *QStyle) FreeQStyle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyle", "~QStyle", args)
- }
+  }
 
 }
 
@@ -99,7 +100,7 @@ func (this *QStyle) polish(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QStyle6polishER8QPalette
   case 1:
@@ -108,7 +109,7 @@ func (this *QStyle) polish(args ...interface{}) () {
     // invoke: _ZN6QStyle6polishEP7QWidget
   default:
     qtrt.ErrorResolve("QStyle", "polish", args)
- }
+  }
 
 }
 
@@ -124,12 +125,12 @@ func (this *QStyle) itemPixmapRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap
   default:
     qtrt.ErrorResolve("QStyle", "itemPixmapRect", args)
- }
+  }
 
 }
 
@@ -147,12 +148,12 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString
   default:
     qtrt.ErrorResolve("QStyle", "itemTextRect", args)
- }
+  }
 
 }
 
@@ -165,12 +166,12 @@ func (this *QStyle) proxy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle5proxyEv
   default:
     qtrt.ErrorResolve("QStyle", "proxy", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QStyle) standardPalette(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle15standardPaletteEv
   default:
     qtrt.ErrorResolve("QStyle", "standardPalette", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QStyle) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle10metaObjectEv
   default:
     qtrt.ErrorResolve("QStyle", "metaObject", args)
- }
+  }
 
 }
 
@@ -223,12 +224,12 @@ func (this *QStyle) drawItemPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap
   default:
     qtrt.ErrorResolve("QStyle", "drawItemPixmap", args)
- }
+  }
 
 }
 
@@ -239,10 +240,10 @@ func (this *QStyle) sliderPositionFromValue_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyle", "sliderPositionFromValue", args)
- }
+  }
 
 }
 
@@ -253,10 +254,10 @@ func (this *QStyle) sliderValueFromPosition_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyle", "sliderValueFromPosition", args)
- }
+  }
 
 }
 

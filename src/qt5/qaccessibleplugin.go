@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -42,7 +42,8 @@ type QAccessiblePlugin struct {
 }
 
 
-func NewQAccessiblePlugin(args ...interface{})() {
+func NewQAccessiblePlugin(args ...interface{}) QAccessiblePlugin {
+  return QAccessiblePlugin{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QAccessiblePlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessiblePlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "metaObject", args)
- }
+  }
 
 }
 
@@ -70,10 +71,10 @@ func (this *QAccessiblePlugin) FreeQAccessiblePlugin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "~QAccessiblePlugin", args)
- }
+  }
 
 }
 
@@ -88,12 +89,12 @@ func (this *QAccessiblePlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QAccessiblePlugin6createERK7QStringP7QObject
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "create", args)
- }
+  }
 
 }
 

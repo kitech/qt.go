@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -48,10 +48,10 @@ func (this *QToolTip) setFont_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "setFont", args)
- }
+  }
 
 }
 
@@ -62,10 +62,10 @@ func (this *QToolTip) palette_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "palette", args)
- }
+  }
 
 }
 
@@ -76,10 +76,10 @@ func (this *QToolTip) hideText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "hideText", args)
- }
+  }
 
 }
 
@@ -90,15 +90,16 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "showText", args)
- }
+  }
 
 }
 
 
-func NewQToolTip(args ...interface{})() {
+func NewQToolTip(args ...interface{}) QToolTip {
+  return QToolTip{}
 }
 
 
@@ -108,10 +109,10 @@ func (this *QToolTip) text_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "text", args)
- }
+  }
 
 }
 
@@ -122,10 +123,10 @@ func (this *QToolTip) font_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "font", args)
- }
+  }
 
 }
 
@@ -136,10 +137,10 @@ func (this *QToolTip) setPalette_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "setPalette", args)
- }
+  }
 
 }
 
@@ -150,10 +151,10 @@ func (this *QToolTip) isVisible_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolTip", "isVisible", args)
- }
+  }
 
 }
 

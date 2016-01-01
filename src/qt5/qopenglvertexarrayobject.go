@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.go
 //
@@ -42,7 +42,8 @@ type QOpenGLVertexArrayObject struct {
 }
 
 
-func NewQOpenGLVertexArrayObject(args ...interface{})() {
+func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
+  return QOpenGLVertexArrayObject{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject8objectIdEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "objectId", args)
- }
+  }
 
 }
 
@@ -72,12 +73,12 @@ func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject7releaseEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "release", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject10metaObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "metaObject", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject4bindEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "bind", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject9isCreatedEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "isCreated", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject7destroyEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "destroy", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject6createEv
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "create", args)
- }
+  }
 
 }
 
@@ -178,10 +179,10 @@ func (this *QOpenGLVertexArrayObject) FreeQOpenGLVertexArrayObject(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "~QOpenGLVertexArrayObject", args)
- }
+  }
 
 }
 

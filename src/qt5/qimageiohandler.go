@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -48,7 +48,8 @@ type QImageIOPlugin struct {
 }
 
 
-func NewQImageIOHandler(args ...interface{})() {
+func NewQImageIOHandler(args ...interface{}) QImageIOHandler {
+  return QImageIOHandler{}
 }
 
 
@@ -60,12 +61,12 @@ func (this *QImageIOHandler) imageCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler10imageCountEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "imageCount", args)
- }
+  }
 
 }
 
@@ -78,12 +79,12 @@ func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler16currentImageRectEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageRect", args)
- }
+  }
 
 }
 
@@ -97,12 +98,12 @@ func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler11jumpToImageEi
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
- }
+  }
 
 }
 
@@ -115,12 +116,12 @@ func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler18currentImageNumberEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "currentImageNumber", args)
- }
+  }
 
 }
 
@@ -137,14 +138,14 @@ func (this *QImageIOHandler) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler9setFormatERK10QByteArray
   case 1:
     // invoke: _ZNK15QImageIOHandler9setFormatERK10QByteArray
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
- }
+  }
 
 }
 
@@ -157,12 +158,12 @@ func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler15jumpToNextImageEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToNextImage", args)
- }
+  }
 
 }
 
@@ -173,10 +174,10 @@ func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QImageIOHandler", "~QImageIOHandler", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QImageIOHandler) loopCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler9loopCountEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "loopCount", args)
- }
+  }
 
 }
 
@@ -208,12 +209,12 @@ func (this *QImageIOHandler) read(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler4readEP6QImage
   default:
     qtrt.ErrorResolve("QImageIOHandler", "read", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QImageIOHandler) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler4nameEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "name", args)
- }
+  }
 
 }
 
@@ -244,12 +245,12 @@ func (this *QImageIOHandler) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler6formatEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "format", args)
- }
+  }
 
 }
 
@@ -262,12 +263,12 @@ func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler14nextImageDelayEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "nextImageDelay", args)
- }
+  }
 
 }
 
@@ -281,12 +282,12 @@ func (this *QImageIOHandler) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
- }
+  }
 
 }
 
@@ -299,12 +300,12 @@ func (this *QImageIOHandler) canRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler7canReadEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "canRead", args)
- }
+  }
 
 }
 
@@ -317,12 +318,12 @@ func (this *QImageIOHandler) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QImageIOHandler6deviceEv
   default:
     qtrt.ErrorResolve("QImageIOHandler", "device", args)
- }
+  }
 
 }
 
@@ -336,12 +337,12 @@ func (this *QImageIOHandler) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler5writeERK6QImage
   default:
     qtrt.ErrorResolve("QImageIOHandler", "write", args)
- }
+  }
 
 }
 
@@ -354,12 +355,12 @@ func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QImageIOPlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "metaObject", args)
- }
+  }
 
 }
 
@@ -370,10 +371,10 @@ func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
- }
+  }
 
 }
 
@@ -388,17 +389,18 @@ func (this *QImageIOPlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "create", args)
- }
+  }
 
 }
 
 
-func NewQImageIOPlugin(args ...interface{})() {
+func NewQImageIOPlugin(args ...interface{}) QImageIOPlugin {
+  return QImageIOPlugin{}
 }
 
 // <= body block end

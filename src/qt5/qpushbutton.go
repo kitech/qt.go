@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -51,12 +51,12 @@ func (this *QPushButton) setMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton7setMenuEP5QMenu
   default:
     qtrt.ErrorResolve("QPushButton", "setMenu", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QPushButton) setFlat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton7setFlatEb
   default:
     qtrt.ErrorResolve("QPushButton", "setFlat", args)
- }
+  }
 
 }
 
@@ -89,12 +89,12 @@ func (this *QPushButton) setAutoDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton14setAutoDefaultEb
   default:
     qtrt.ErrorResolve("QPushButton", "setAutoDefault", args)
- }
+  }
 
 }
 
@@ -107,12 +107,12 @@ func (this *QPushButton) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QPushButton", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -126,12 +126,12 @@ func (this *QPushButton) setDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton10setDefaultEb
   default:
     qtrt.ErrorResolve("QPushButton", "setDefault", args)
- }
+  }
 
 }
 
@@ -142,15 +142,16 @@ func (this *QPushButton) FreeQPushButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPushButton", "~QPushButton", args)
- }
+  }
 
 }
 
 
-func NewQPushButton(args ...interface{})() {
+func NewQPushButton(args ...interface{}) QPushButton {
+  return QPushButton{}
 }
 
 
@@ -162,12 +163,12 @@ func (this *QPushButton) isDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton9isDefaultEv
   default:
     qtrt.ErrorResolve("QPushButton", "isDefault", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QPushButton) autoDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton11autoDefaultEv
   default:
     qtrt.ErrorResolve("QPushButton", "autoDefault", args)
- }
+  }
 
 }
 
@@ -198,12 +199,12 @@ func (this *QPushButton) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton8sizeHintEv
   default:
     qtrt.ErrorResolve("QPushButton", "sizeHint", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QPushButton) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton10metaObjectEv
   default:
     qtrt.ErrorResolve("QPushButton", "metaObject", args)
- }
+  }
 
 }
 
@@ -234,12 +235,12 @@ func (this *QPushButton) menu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton4menuEv
   default:
     qtrt.ErrorResolve("QPushButton", "menu", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QPushButton) showMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton8showMenuEv
   default:
     qtrt.ErrorResolve("QPushButton", "showMenu", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QPushButton) isFlat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton6isFlatEv
   default:
     qtrt.ErrorResolve("QPushButton", "isFlat", args)
- }
+  }
 
 }
 

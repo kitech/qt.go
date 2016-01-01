@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -53,12 +53,12 @@ func (this *QAbstractItemDelegate) paintingRoles(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13paintingRolesEv
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "paintingRoles", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QAbstractItemDelegate) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "metaObject", args)
- }
+  }
 
 }
 
@@ -92,12 +92,12 @@ func (this *QAbstractItemDelegate) updateEditorGeometry(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "updateEditorGeometry", args)
- }
+  }
 
 }
 
@@ -112,17 +112,18 @@ func (this *QAbstractItemDelegate) setEditorData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setEditorData", args)
- }
+  }
 
 }
 
 
-func NewQAbstractItemDelegate(args ...interface{})() {
+func NewQAbstractItemDelegate(args ...interface{}) QAbstractItemDelegate {
+  return QAbstractItemDelegate{}
 }
 
 
@@ -137,12 +138,12 @@ func (this *QAbstractItemDelegate) createEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "createEditor", args)
- }
+  }
 
 }
 
@@ -158,12 +159,12 @@ func (this *QAbstractItemDelegate) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "paint", args)
- }
+  }
 
 }
 
@@ -178,12 +179,12 @@ func (this *QAbstractItemDelegate) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "sizeHint", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QAbstractItemDelegate) editorEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "editorEvent", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QAbstractItemDelegate) helpEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "helpEvent", args)
- }
+  }
 
 }
 
@@ -238,10 +239,10 @@ func (this *QAbstractItemDelegate) FreeQAbstractItemDelegate(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "~QAbstractItemDelegate", args)
- }
+  }
 
 }
 
@@ -257,12 +258,12 @@ func (this *QAbstractItemDelegate) setModelData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setModelData", args)
- }
+  }
 
 }
 
@@ -277,12 +278,12 @@ func (this *QAbstractItemDelegate) destroyEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "destroyEditor", args)
- }
+  }
 
 }
 

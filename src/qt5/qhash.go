@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -56,12 +56,12 @@ func (this *QHashData) hasShrunk(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QHashData9hasShrunkEv
   default:
     qtrt.ErrorResolve("QHashData", "hasShrunk", args)
- }
+  }
 
 }
 
@@ -75,12 +75,12 @@ func (this *QHashData) allocateNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QHashData12allocateNodeEi
   default:
     qtrt.ErrorResolve("QHashData", "allocateNode", args)
- }
+  }
 
 }
 
@@ -93,12 +93,12 @@ func (this *QHashData) willGrow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QHashData8willGrowEv
   default:
     qtrt.ErrorResolve("QHashData", "willGrow", args)
- }
+  }
 
 }
 
@@ -112,12 +112,12 @@ func (this *QHashData) rehash(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QHashData6rehashEi
   default:
     qtrt.ErrorResolve("QHashData", "rehash", args)
- }
+  }
 
 }
 
@@ -131,12 +131,12 @@ func (this *QHashData) freeNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QHashData8freeNodeEPv
   default:
     qtrt.ErrorResolve("QHashData", "freeNode", args)
- }
+  }
 
 }
 

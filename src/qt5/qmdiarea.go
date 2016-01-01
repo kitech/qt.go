@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -51,12 +51,12 @@ func (this *QMdiArea) activateNextSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea21activateNextSubWindowEv
   default:
     qtrt.ErrorResolve("QMdiArea", "activateNextSubWindow", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QMdiArea) setBackground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea13setBackgroundERK6QBrush
   default:
     qtrt.ErrorResolve("QMdiArea", "setBackground", args)
- }
+  }
 
 }
 
@@ -86,10 +86,10 @@ func (this *QMdiArea) FreeQMdiArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMdiArea", "~QMdiArea", args)
- }
+  }
 
 }
 
@@ -103,12 +103,12 @@ func (this *QMdiArea) removeSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15removeSubWindowEP7QWidget
   default:
     qtrt.ErrorResolve("QMdiArea", "removeSubWindow", args)
- }
+  }
 
 }
 
@@ -122,12 +122,12 @@ func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setTabsClosableEb
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsClosable", args)
- }
+  }
 
 }
 
@@ -140,12 +140,12 @@ func (this *QMdiArea) currentSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea16currentSubWindowEv
   default:
     qtrt.ErrorResolve("QMdiArea", "currentSubWindow", args)
- }
+  }
 
 }
 
@@ -158,12 +158,12 @@ func (this *QMdiArea) tabsMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea11tabsMovableEv
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsMovable", args)
- }
+  }
 
 }
 
@@ -176,12 +176,12 @@ func (this *QMdiArea) activatePreviousSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea25activatePreviousSubWindowEv
   default:
     qtrt.ErrorResolve("QMdiArea", "activatePreviousSubWindow", args)
- }
+  }
 
 }
 
@@ -195,12 +195,12 @@ func (this *QMdiArea) setDocumentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setDocumentModeEb
   default:
     qtrt.ErrorResolve("QMdiArea", "setDocumentMode", args)
- }
+  }
 
 }
 
@@ -213,12 +213,12 @@ func (this *QMdiArea) documentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea12documentModeEv
   default:
     qtrt.ErrorResolve("QMdiArea", "documentMode", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QMdiArea) setActiveSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow
   default:
     qtrt.ErrorResolve("QMdiArea", "setActiveSubWindow", args)
- }
+  }
 
 }
 
@@ -250,12 +250,12 @@ func (this *QMdiArea) activeSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea15activeSubWindowEv
   default:
     qtrt.ErrorResolve("QMdiArea", "activeSubWindow", args)
- }
+  }
 
 }
 
@@ -269,12 +269,12 @@ func (this *QMdiArea) setTabsMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea14setTabsMovableEb
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsMovable", args)
- }
+  }
 
 }
 
@@ -287,17 +287,18 @@ func (this *QMdiArea) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea10metaObjectEv
   default:
     qtrt.ErrorResolve("QMdiArea", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQMdiArea(args ...interface{})() {
+func NewQMdiArea(args ...interface{}) QMdiArea {
+  return QMdiArea{}
 }
 
 
@@ -309,12 +310,12 @@ func (this *QMdiArea) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea8sizeHintEv
   default:
     qtrt.ErrorResolve("QMdiArea", "sizeHint", args)
- }
+  }
 
 }
 
@@ -327,12 +328,12 @@ func (this *QMdiArea) closeAllSubWindows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea18closeAllSubWindowsEv
   default:
     qtrt.ErrorResolve("QMdiArea", "closeAllSubWindows", args)
- }
+  }
 
 }
 
@@ -345,12 +346,12 @@ func (this *QMdiArea) cascadeSubWindows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea17cascadeSubWindowsEv
   default:
     qtrt.ErrorResolve("QMdiArea", "cascadeSubWindows", args)
- }
+  }
 
 }
 
@@ -363,12 +364,12 @@ func (this *QMdiArea) closeActiveSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea20closeActiveSubWindowEv
   default:
     qtrt.ErrorResolve("QMdiArea", "closeActiveSubWindow", args)
- }
+  }
 
 }
 
@@ -381,12 +382,12 @@ func (this *QMdiArea) background(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea10backgroundEv
   default:
     qtrt.ErrorResolve("QMdiArea", "background", args)
- }
+  }
 
 }
 
@@ -399,12 +400,12 @@ func (this *QMdiArea) tileSubWindows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea14tileSubWindowsEv
   default:
     qtrt.ErrorResolve("QMdiArea", "tileSubWindows", args)
- }
+  }
 
 }
 
@@ -417,12 +418,12 @@ func (this *QMdiArea) tabsClosable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea12tabsClosableEv
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsClosable", args)
- }
+  }
 
 }
 
@@ -435,12 +436,12 @@ func (this *QMdiArea) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QMdiArea", "minimumSizeHint", args)
- }
+  }
 
 }
 

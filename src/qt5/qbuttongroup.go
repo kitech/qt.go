@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -56,12 +56,12 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup9addButtonEP15QAbstractButtoni
   default:
     qtrt.ErrorResolve("QButtonGroup", "addButton", args)
- }
+  }
 
 }
 
@@ -74,12 +74,12 @@ func (this *QButtonGroup) buttons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup7buttonsEv
   default:
     qtrt.ErrorResolve("QButtonGroup", "buttons", args)
- }
+  }
 
 }
 
@@ -90,10 +90,10 @@ func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QButtonGroup", "~QButtonGroup", args)
- }
+  }
 
 }
 
@@ -107,12 +107,12 @@ func (this *QButtonGroup) id(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup2idEP15QAbstractButton
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
- }
+  }
 
 }
 
@@ -126,17 +126,18 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12removeButtonEP15QAbstractButton
   default:
     qtrt.ErrorResolve("QButtonGroup", "removeButton", args)
- }
+  }
 
 }
 
 
-func NewQButtonGroup(args ...interface{})() {
+func NewQButtonGroup(args ...interface{}) QButtonGroup {
+  return QButtonGroup{}
 }
 
 
@@ -148,12 +149,12 @@ func (this *QButtonGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QButtonGroup", "metaObject", args)
- }
+  }
 
 }
 
@@ -167,12 +168,12 @@ func (this *QButtonGroup) button(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup6buttonEi
   default:
     qtrt.ErrorResolve("QButtonGroup", "button", args)
- }
+  }
 
 }
 
@@ -185,12 +186,12 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup9checkedIdEv
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedId", args)
- }
+  }
 
 }
 
@@ -203,12 +204,12 @@ func (this *QButtonGroup) checkedButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup13checkedButtonEv
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedButton", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12setExclusiveEb
   default:
     qtrt.ErrorResolve("QButtonGroup", "setExclusive", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup5setIdEP15QAbstractButtoni
   default:
     qtrt.ErrorResolve("QButtonGroup", "setId", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup9exclusiveEv
   default:
     qtrt.ErrorResolve("QButtonGroup", "exclusive", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -50,12 +50,12 @@ func (this *QPropertyAnimation) propertyName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12propertyNameEv
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "propertyName", args)
- }
+  }
 
 }
 
@@ -69,17 +69,18 @@ func (this *QPropertyAnimation) setTargetObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setTargetObjectEP7QObject
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setTargetObject", args)
- }
+  }
 
 }
 
 
-func NewQPropertyAnimation(args ...interface{})() {
+func NewQPropertyAnimation(args ...interface{}) QPropertyAnimation {
+  return QPropertyAnimation{}
 }
 
 
@@ -89,10 +90,10 @@ func (this *QPropertyAnimation) FreeQPropertyAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "~QPropertyAnimation", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QPropertyAnimation) targetObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12targetObjectEv
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "targetObject", args)
- }
+  }
 
 }
 
@@ -123,12 +124,12 @@ func (this *QPropertyAnimation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation10metaObjectEv
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "metaObject", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QPropertyAnimation) setPropertyName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setPropertyNameERK10QByteArray
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setPropertyName", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -60,7 +60,7 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget14screenGeometryERK6QPoint
   case 1:
@@ -69,7 +69,7 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
     // invoke: _ZNK14QDesktopWidget14screenGeometryEi
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenGeometry", args)
- }
+  }
 
 }
 
@@ -83,12 +83,12 @@ func (this *QDesktopWidget) screen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDesktopWidget6screenEi
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screen", args)
- }
+  }
 
 }
 
@@ -101,12 +101,12 @@ func (this *QDesktopWidget) numScreens(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget10numScreensEv
   default:
     qtrt.ErrorResolve("QDesktopWidget", "numScreens", args)
- }
+  }
 
 }
 
@@ -117,10 +117,10 @@ func (this *QDesktopWidget) FreeQDesktopWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDesktopWidget", "~QDesktopWidget", args)
- }
+  }
 
 }
 
@@ -140,7 +140,7 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEPK7QWidget
   case 1:
@@ -149,12 +149,13 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
     // invoke: _ZNK14QDesktopWidget17availableGeometryEi
   default:
     qtrt.ErrorResolve("QDesktopWidget", "availableGeometry", args)
- }
+  }
 
 }
 
 
-func NewQDesktopWidget(args ...interface{})() {
+func NewQDesktopWidget(args ...interface{}) QDesktopWidget {
+  return QDesktopWidget{}
 }
 
 
@@ -170,14 +171,14 @@ func (this *QDesktopWidget) screenNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget12screenNumberERK6QPoint
   case 1:
     // invoke: _ZNK14QDesktopWidget12screenNumberEPK7QWidget
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenNumber", args)
- }
+  }
 
 }
 
@@ -190,12 +191,12 @@ func (this *QDesktopWidget) screenCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget11screenCountEv
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenCount", args)
- }
+  }
 
 }
 
@@ -208,12 +209,12 @@ func (this *QDesktopWidget) isVirtualDesktop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget16isVirtualDesktopEv
   default:
     qtrt.ErrorResolve("QDesktopWidget", "isVirtualDesktop", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QDesktopWidget) primaryScreen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget13primaryScreenEv
   default:
     qtrt.ErrorResolve("QDesktopWidget", "primaryScreen", args)
- }
+  }
 
 }
 
@@ -244,12 +245,12 @@ func (this *QDesktopWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QDesktopWidget", "metaObject", args)
- }
+  }
 
 }
 

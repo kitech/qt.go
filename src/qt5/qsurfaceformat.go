@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.go
 //
@@ -48,10 +48,10 @@ func (this *QSurfaceFormat) defaultFormat_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "defaultFormat", args)
- }
+  }
 
 }
 
@@ -65,12 +65,12 @@ func (this *QSurfaceFormat) setAlphaBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat18setAlphaBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setAlphaBufferSize", args)
- }
+  }
 
 }
 
@@ -84,12 +84,12 @@ func (this *QSurfaceFormat) setMinorVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat15setMinorVersionEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setMinorVersion", args)
- }
+  }
 
 }
 
@@ -102,12 +102,12 @@ func (this *QSurfaceFormat) stencilBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat17stencilBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "stencilBufferSize", args)
- }
+  }
 
 }
 
@@ -121,12 +121,12 @@ func (this *QSurfaceFormat) setRedBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat16setRedBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setRedBufferSize", args)
- }
+  }
 
 }
 
@@ -140,12 +140,12 @@ func (this *QSurfaceFormat) setDepthBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat18setDepthBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setDepthBufferSize", args)
- }
+  }
 
 }
 
@@ -158,12 +158,12 @@ func (this *QSurfaceFormat) majorVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12majorVersionEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "majorVersion", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QSurfaceFormat) setSamples(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat10setSamplesEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setSamples", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QSurfaceFormat) setMajorVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat15setMajorVersionEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setMajorVersion", args)
- }
+  }
 
 }
 
@@ -212,10 +212,10 @@ func (this *QSurfaceFormat) setDefaultFormat_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setDefaultFormat", args)
- }
+  }
 
 }
 
@@ -228,12 +228,12 @@ func (this *QSurfaceFormat) greenBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15greenBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "greenBufferSize", args)
- }
+  }
 
 }
 
@@ -246,12 +246,12 @@ func (this *QSurfaceFormat) minorVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12minorVersionEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "minorVersion", args)
- }
+  }
 
 }
 
@@ -265,12 +265,12 @@ func (this *QSurfaceFormat) setStencilBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat20setStencilBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setStencilBufferSize", args)
- }
+  }
 
 }
 
@@ -283,12 +283,12 @@ func (this *QSurfaceFormat) swapInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat12swapIntervalEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "swapInterval", args)
- }
+  }
 
 }
 
@@ -303,12 +303,12 @@ func (this *QSurfaceFormat) setVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat10setVersionEii
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setVersion", args)
- }
+  }
 
 }
 
@@ -321,17 +321,18 @@ func (this *QSurfaceFormat) hasAlpha(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat8hasAlphaEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "hasAlpha", args)
- }
+  }
 
 }
 
 
-func NewQSurfaceFormat(args ...interface{})() {
+func NewQSurfaceFormat(args ...interface{}) QSurfaceFormat {
+  return QSurfaceFormat{}
 }
 
 
@@ -343,12 +344,12 @@ func (this *QSurfaceFormat) version(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat7versionEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "version", args)
- }
+  }
 
 }
 
@@ -361,12 +362,12 @@ func (this *QSurfaceFormat) blueBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat14blueBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "blueBufferSize", args)
- }
+  }
 
 }
 
@@ -379,12 +380,12 @@ func (this *QSurfaceFormat) redBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat13redBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "redBufferSize", args)
- }
+  }
 
 }
 
@@ -395,10 +396,10 @@ func (this *QSurfaceFormat) FreeQSurfaceFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "~QSurfaceFormat", args)
- }
+  }
 
 }
 
@@ -412,12 +413,12 @@ func (this *QSurfaceFormat) setGreenBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat18setGreenBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setGreenBufferSize", args)
- }
+  }
 
 }
 
@@ -430,12 +431,12 @@ func (this *QSurfaceFormat) samples(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat7samplesEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "samples", args)
- }
+  }
 
 }
 
@@ -448,12 +449,12 @@ func (this *QSurfaceFormat) depthBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15depthBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "depthBufferSize", args)
- }
+  }
 
 }
 
@@ -467,12 +468,12 @@ func (this *QSurfaceFormat) setBlueBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat17setBlueBufferSizeEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setBlueBufferSize", args)
- }
+  }
 
 }
 
@@ -485,12 +486,12 @@ func (this *QSurfaceFormat) alphaBufferSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat15alphaBufferSizeEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "alphaBufferSize", args)
- }
+  }
 
 }
 
@@ -503,12 +504,12 @@ func (this *QSurfaceFormat) stereo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QSurfaceFormat6stereoEv
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "stereo", args)
- }
+  }
 
 }
 
@@ -522,12 +523,12 @@ func (this *QSurfaceFormat) setSwapInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat15setSwapIntervalEi
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setSwapInterval", args)
- }
+  }
 
 }
 
@@ -541,12 +542,12 @@ func (this *QSurfaceFormat) setStereo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSurfaceFormat9setStereoEb
   default:
     qtrt.ErrorResolve("QSurfaceFormat", "setStereo", args)
- }
+  }
 
 }
 

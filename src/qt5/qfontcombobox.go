@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -43,7 +43,8 @@ type QFontComboBox struct {
 }
 
 
-func NewQFontComboBox(args ...interface{})() {
+func NewQFontComboBox(args ...interface{}) QFontComboBox {
+  return QFontComboBox{}
 }
 
 
@@ -53,10 +54,10 @@ func (this *QFontComboBox) FreeQFontComboBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFontComboBox", "~QFontComboBox", args)
- }
+  }
 
 }
 
@@ -69,12 +70,12 @@ func (this *QFontComboBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QFontComboBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -87,12 +88,12 @@ func (this *QFontComboBox) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox8sizeHintEv
   default:
     qtrt.ErrorResolve("QFontComboBox", "sizeHint", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QFontComboBox) currentFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox11currentFontEv
   default:
     qtrt.ErrorResolve("QFontComboBox", "currentFont", args)
- }
+  }
 
 }
 
@@ -124,12 +125,12 @@ func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QFontComboBox14setCurrentFontERK5QFont
   default:
     qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
- }
+  }
 
 }
 

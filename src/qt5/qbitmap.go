@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -42,7 +42,8 @@ type QBitmap struct {
 }
 
 
-func NewQBitmap(args ...interface{})() {
+func NewQBitmap(args ...interface{}) QBitmap {
+  return QBitmap{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QBitmap) FreeQBitmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QBitmap", "~QBitmap", args)
- }
+  }
 
 }
 
@@ -69,12 +70,12 @@ func (this *QBitmap) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBitmap4swapERS_
   default:
     qtrt.ErrorResolve("QBitmap", "swap", args)
- }
+  }
 
 }
 
@@ -91,14 +92,14 @@ func (this *QBitmap) transformed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBitmap11transformedERK7QMatrix
   case 1:
     // invoke: _ZNK7QBitmap11transformedERK10QTransform
   default:
     qtrt.ErrorResolve("QBitmap", "transformed", args)
- }
+  }
 
 }
 
@@ -111,12 +112,12 @@ func (this *QBitmap) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBitmap5clearEv
   default:
     qtrt.ErrorResolve("QBitmap", "clear", args)
- }
+  }
 
 }
 

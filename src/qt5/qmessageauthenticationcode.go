@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -50,12 +50,12 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QMessageAuthenticationCode6resultEv
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
- }
+  }
 
 }
 
@@ -76,7 +76,7 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode7addDataERK10QByteArray
   case 1:
@@ -85,12 +85,13 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
     // invoke: _ZN26QMessageAuthenticationCode7addDataEP9QIODevice
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "addData", args)
- }
+  }
 
 }
 
 
-func NewQMessageAuthenticationCode(args ...interface{})() {
+func NewQMessageAuthenticationCode(args ...interface{}) QMessageAuthenticationCode {
+  return QMessageAuthenticationCode{}
 }
 
 
@@ -100,10 +101,10 @@ func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...i
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
- }
+  }
 
 }
 
@@ -116,12 +117,12 @@ func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode5resetEv
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
- }
+  }
 
 }
 
@@ -135,12 +136,12 @@ func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "setKey", args)
- }
+  }
 
 }
 

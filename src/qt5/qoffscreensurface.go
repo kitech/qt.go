@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -49,15 +49,16 @@ func (this *QOffscreenSurface) FreeQOffscreenSurface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "~QOffscreenSurface", args)
- }
+  }
 
 }
 
 
-func NewQOffscreenSurface(args ...interface{})() {
+func NewQOffscreenSurface(args ...interface{}) QOffscreenSurface {
+  return QOffscreenSurface{}
 }
 
 
@@ -69,12 +70,12 @@ func (this *QOffscreenSurface) screen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6screenEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "screen", args)
- }
+  }
 
 }
 
@@ -88,12 +89,12 @@ func (this *QOffscreenSurface) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setFormat", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QOffscreenSurface) setScreen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setScreenEP7QScreen
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setScreen", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QOffscreenSurface) requestedFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface15requestedFormatEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "requestedFormat", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QOffscreenSurface) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6formatEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "format", args)
- }
+  }
 
 }
 
@@ -161,12 +162,12 @@ func (this *QOffscreenSurface) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6handleEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "handle", args)
- }
+  }
 
 }
 
@@ -179,12 +180,12 @@ func (this *QOffscreenSurface) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface10metaObjectEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "metaObject", args)
- }
+  }
 
 }
 
@@ -197,12 +198,12 @@ func (this *QOffscreenSurface) destroy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface7destroyEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "destroy", args)
- }
+  }
 
 }
 
@@ -215,12 +216,12 @@ func (this *QOffscreenSurface) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface7isValidEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "isValid", args)
- }
+  }
 
 }
 
@@ -233,12 +234,12 @@ func (this *QOffscreenSurface) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface4sizeEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "size", args)
- }
+  }
 
 }
 
@@ -251,12 +252,12 @@ func (this *QOffscreenSurface) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface6createEv
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "create", args)
- }
+  }
 
 }
 

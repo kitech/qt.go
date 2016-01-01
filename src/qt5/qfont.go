@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.go
 //
@@ -51,12 +51,12 @@ func (this *QFont) setWordSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont14setWordSpacingEd
   default:
     qtrt.ErrorResolve("QFont", "setWordSpacing", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QFont) rawName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont7rawNameEv
   default:
     qtrt.ErrorResolve("QFont", "rawName", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QFont) setRawMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont10setRawModeEb
   default:
     qtrt.ErrorResolve("QFont", "setRawMode", args)
- }
+  }
 
 }
 
@@ -107,12 +107,12 @@ func (this *QFont) setStyleName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont12setStyleNameERK7QString
   default:
     qtrt.ErrorResolve("QFont", "setStyleName", args)
- }
+  }
 
 }
 
@@ -131,7 +131,7 @@ func (this *QFont) resolve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont7resolveERKS_
   case 1:
@@ -140,7 +140,7 @@ func (this *QFont) resolve(args ...interface{}) () {
     // invoke: _ZNK5QFont7resolveEv
   default:
     qtrt.ErrorResolve("QFont", "resolve", args)
- }
+  }
 
 }
 
@@ -153,12 +153,12 @@ func (this *QFont) strikeOut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont9strikeOutEv
   default:
     qtrt.ErrorResolve("QFont", "strikeOut", args)
- }
+  }
 
 }
 
@@ -171,12 +171,12 @@ func (this *QFont) pixelSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont9pixelSizeEv
   default:
     qtrt.ErrorResolve("QFont", "pixelSize", args)
- }
+  }
 
 }
 
@@ -190,12 +190,12 @@ func (this *QFont) setWeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont9setWeightEi
   default:
     qtrt.ErrorResolve("QFont", "setWeight", args)
- }
+  }
 
 }
 
@@ -208,12 +208,12 @@ func (this *QFont) weight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont6weightEv
   default:
     qtrt.ErrorResolve("QFont", "weight", args)
- }
+  }
 
 }
 
@@ -224,10 +224,10 @@ func (this *QFont) insertSubstitutions_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "insertSubstitutions", args)
- }
+  }
 
 }
 
@@ -240,12 +240,12 @@ func (this *QFont) kerning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont7kerningEv
   default:
     qtrt.ErrorResolve("QFont", "kerning", args)
- }
+  }
 
 }
 
@@ -256,10 +256,10 @@ func (this *QFont) substitutions_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "substitutions", args)
- }
+  }
 
 }
 
@@ -272,12 +272,12 @@ func (this *QFont) italic(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont6italicEv
   default:
     qtrt.ErrorResolve("QFont", "italic", args)
- }
+  }
 
 }
 
@@ -291,12 +291,12 @@ func (this *QFont) setUnderline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont12setUnderlineEb
   default:
     qtrt.ErrorResolve("QFont", "setUnderline", args)
- }
+  }
 
 }
 
@@ -309,12 +309,12 @@ func (this *QFont) letterSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont13letterSpacingEv
   default:
     qtrt.ErrorResolve("QFont", "letterSpacing", args)
- }
+  }
 
 }
 
@@ -328,17 +328,18 @@ func (this *QFont) setPointSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont12setPointSizeEi
   default:
     qtrt.ErrorResolve("QFont", "setPointSize", args)
- }
+  }
 
 }
 
 
-func NewQFont(args ...interface{})() {
+func NewQFont(args ...interface{}) QFont {
+  return QFont{}
 }
 
 
@@ -351,12 +352,12 @@ func (this *QFont) setOverline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont11setOverlineEb
   default:
     qtrt.ErrorResolve("QFont", "setOverline", args)
- }
+  }
 
 }
 
@@ -369,12 +370,12 @@ func (this *QFont) family(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont6familyEv
   default:
     qtrt.ErrorResolve("QFont", "family", args)
- }
+  }
 
 }
 
@@ -387,12 +388,12 @@ func (this *QFont) lastResortFamily(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont16lastResortFamilyEv
   default:
     qtrt.ErrorResolve("QFont", "lastResortFamily", args)
- }
+  }
 
 }
 
@@ -406,12 +407,12 @@ func (this *QFont) setItalic(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont9setItalicEb
   default:
     qtrt.ErrorResolve("QFont", "setItalic", args)
- }
+  }
 
 }
 
@@ -425,12 +426,12 @@ func (this *QFont) setFamily(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont9setFamilyERK7QString
   default:
     qtrt.ErrorResolve("QFont", "setFamily", args)
- }
+  }
 
 }
 
@@ -443,12 +444,12 @@ func (this *QFont) overline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont8overlineEv
   default:
     qtrt.ErrorResolve("QFont", "overline", args)
- }
+  }
 
 }
 
@@ -459,10 +460,10 @@ func (this *QFont) FreeQFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "~QFont", args)
- }
+  }
 
 }
 
@@ -476,12 +477,12 @@ func (this *QFont) setBold(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont7setBoldEb
   default:
     qtrt.ErrorResolve("QFont", "setBold", args)
- }
+  }
 
 }
 
@@ -492,10 +493,10 @@ func (this *QFont) cacheStatistics_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "cacheStatistics", args)
- }
+  }
 
 }
 
@@ -509,12 +510,12 @@ func (this *QFont) setPointSizeF(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont13setPointSizeFEd
   default:
     qtrt.ErrorResolve("QFont", "setPointSizeF", args)
- }
+  }
 
 }
 
@@ -525,10 +526,10 @@ func (this *QFont) substitutes_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "substitutes", args)
- }
+  }
 
 }
 
@@ -541,12 +542,12 @@ func (this *QFont) wordSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont11wordSpacingEv
   default:
     qtrt.ErrorResolve("QFont", "wordSpacing", args)
- }
+  }
 
 }
 
@@ -559,12 +560,12 @@ func (this *QFont) toString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont8toStringEv
   default:
     qtrt.ErrorResolve("QFont", "toString", args)
- }
+  }
 
 }
 
@@ -577,12 +578,12 @@ func (this *QFont) pointSizeF(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont10pointSizeFEv
   default:
     qtrt.ErrorResolve("QFont", "pointSizeF", args)
- }
+  }
 
 }
 
@@ -593,10 +594,10 @@ func (this *QFont) insertSubstitution_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "insertSubstitution", args)
- }
+  }
 
 }
 
@@ -610,12 +611,12 @@ func (this *QFont) setStretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont10setStretchEi
   default:
     qtrt.ErrorResolve("QFont", "setStretch", args)
- }
+  }
 
 }
 
@@ -628,12 +629,12 @@ func (this *QFont) styleName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont9styleNameEv
   default:
     qtrt.ErrorResolve("QFont", "styleName", args)
- }
+  }
 
 }
 
@@ -646,12 +647,12 @@ func (this *QFont) rawMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont7rawModeEv
   default:
     qtrt.ErrorResolve("QFont", "rawMode", args)
- }
+  }
 
 }
 
@@ -665,12 +666,12 @@ func (this *QFont) fromString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont10fromStringERK7QString
   default:
     qtrt.ErrorResolve("QFont", "fromString", args)
- }
+  }
 
 }
 
@@ -683,12 +684,12 @@ func (this *QFont) underline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont9underlineEv
   default:
     qtrt.ErrorResolve("QFont", "underline", args)
- }
+  }
 
 }
 
@@ -702,12 +703,12 @@ func (this *QFont) isCopyOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont8isCopyOfERKS_
   default:
     qtrt.ErrorResolve("QFont", "isCopyOf", args)
- }
+  }
 
 }
 
@@ -720,12 +721,12 @@ func (this *QFont) pointSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont9pointSizeEv
   default:
     qtrt.ErrorResolve("QFont", "pointSize", args)
- }
+  }
 
 }
 
@@ -739,12 +740,12 @@ func (this *QFont) setKerning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont10setKerningEb
   default:
     qtrt.ErrorResolve("QFont", "setKerning", args)
- }
+  }
 
 }
 
@@ -757,12 +758,12 @@ func (this *QFont) bold(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont4boldEv
   default:
     qtrt.ErrorResolve("QFont", "bold", args)
- }
+  }
 
 }
 
@@ -775,12 +776,12 @@ func (this *QFont) fixedPitch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont10fixedPitchEv
   default:
     qtrt.ErrorResolve("QFont", "fixedPitch", args)
- }
+  }
 
 }
 
@@ -791,10 +792,10 @@ func (this *QFont) substitute_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "substitute", args)
- }
+  }
 
 }
 
@@ -808,12 +809,12 @@ func (this *QFont) setFixedPitch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont13setFixedPitchEb
   default:
     qtrt.ErrorResolve("QFont", "setFixedPitch", args)
- }
+  }
 
 }
 
@@ -824,10 +825,10 @@ func (this *QFont) removeSubstitutions_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "removeSubstitutions", args)
- }
+  }
 
 }
 
@@ -841,12 +842,12 @@ func (this *QFont) setPixelSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont12setPixelSizeEi
   default:
     qtrt.ErrorResolve("QFont", "setPixelSize", args)
- }
+  }
 
 }
 
@@ -857,10 +858,10 @@ func (this *QFont) initialize_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "initialize", args)
- }
+  }
 
 }
 
@@ -873,12 +874,12 @@ func (this *QFont) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont3keyEv
   default:
     qtrt.ErrorResolve("QFont", "key", args)
- }
+  }
 
 }
 
@@ -891,12 +892,12 @@ func (this *QFont) lastResortFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont14lastResortFontEv
   default:
     qtrt.ErrorResolve("QFont", "lastResortFont", args)
- }
+  }
 
 }
 
@@ -910,12 +911,12 @@ func (this *QFont) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont4swapERS_
   default:
     qtrt.ErrorResolve("QFont", "swap", args)
- }
+  }
 
 }
 
@@ -928,12 +929,12 @@ func (this *QFont) defaultFamily(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont13defaultFamilyEv
   default:
     qtrt.ErrorResolve("QFont", "defaultFamily", args)
- }
+  }
 
 }
 
@@ -947,12 +948,12 @@ func (this *QFont) setStrikeOut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont12setStrikeOutEb
   default:
     qtrt.ErrorResolve("QFont", "setStrikeOut", args)
- }
+  }
 
 }
 
@@ -963,10 +964,10 @@ func (this *QFont) cleanup_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFont", "cleanup", args)
- }
+  }
 
 }
 
@@ -979,12 +980,12 @@ func (this *QFont) exactMatch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont10exactMatchEv
   default:
     qtrt.ErrorResolve("QFont", "exactMatch", args)
- }
+  }
 
 }
 
@@ -997,12 +998,12 @@ func (this *QFont) stretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QFont7stretchEv
   default:
     qtrt.ErrorResolve("QFont", "stretch", args)
- }
+  }
 
 }
 
@@ -1016,12 +1017,12 @@ func (this *QFont) setRawName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QFont10setRawNameERK7QString
   default:
     qtrt.ErrorResolve("QFont", "setRawName", args)
- }
+  }
 
 }
 

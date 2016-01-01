@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.go
 //
@@ -56,12 +56,12 @@ func (this *QPolygon) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon12boundingRectEv
   default:
     qtrt.ErrorResolve("QPolygon", "boundingRect", args)
- }
+  }
 
 }
 
@@ -81,14 +81,14 @@ func (this *QPolygon) setPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon8setPointEiii
   case 1:
     // invoke: _ZN8QPolygon8setPointEiRK6QPoint
   default:
     qtrt.ErrorResolve("QPolygon", "setPoint", args)
- }
+  }
 
 }
 
@@ -99,10 +99,10 @@ func (this *QPolygon) FreeQPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPolygon", "~QPolygon", args)
- }
+  }
 
 }
 
@@ -130,7 +130,7 @@ func (this *QPolygon) putPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9putPointsEiiRKS_i
   case 1:
@@ -139,7 +139,7 @@ func (this *QPolygon) putPoints(args ...interface{}) () {
     // invoke: _ZN8QPolygon9putPointsEiiPKi
   default:
     qtrt.ErrorResolve("QPolygon", "putPoints", args)
- }
+  }
 
 }
 
@@ -157,14 +157,14 @@ func (this *QPolygon) translated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon10translatedERK6QPoint
   case 1:
     // invoke: _ZNK8QPolygon10translatedEii
   default:
     qtrt.ErrorResolve("QPolygon", "translated", args)
- }
+  }
 
 }
 
@@ -178,12 +178,12 @@ func (this *QPolygon) subtracted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon10subtractedERKS_
   default:
     qtrt.ErrorResolve("QPolygon", "subtracted", args)
- }
+  }
 
 }
 
@@ -197,12 +197,12 @@ func (this *QPolygon) intersected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon11intersectedERKS_
   default:
     qtrt.ErrorResolve("QPolygon", "intersected", args)
- }
+  }
 
 }
 
@@ -221,14 +221,14 @@ func (this *QPolygon) point(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon5pointEiPiS0_
   case 1:
     // invoke: _ZNK8QPolygon5pointEi
   default:
     qtrt.ErrorResolve("QPolygon", "point", args)
- }
+  }
 
 }
 
@@ -246,14 +246,14 @@ func (this *QPolygon) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9translateEii
   case 1:
     // invoke: _ZN8QPolygon9translateERK6QPoint
   default:
     qtrt.ErrorResolve("QPolygon", "translate", args)
- }
+  }
 
 }
 
@@ -273,14 +273,14 @@ func (this *QPolygon) setPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9setPointsEiiiz
   case 1:
     // invoke: _ZN8QPolygon9setPointsEiPKi
   default:
     qtrt.ErrorResolve("QPolygon", "setPoints", args)
- }
+  }
 
 }
 
@@ -294,17 +294,18 @@ func (this *QPolygon) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon4swapERS_
   default:
     qtrt.ErrorResolve("QPolygon", "swap", args)
- }
+  }
 
 }
 
 
-func NewQPolygon(args ...interface{})() {
+func NewQPolygon(args ...interface{}) QPolygon {
+  return QPolygon{}
 }
 
 
@@ -317,12 +318,12 @@ func (this *QPolygon) united(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon6unitedERKS_
   default:
     qtrt.ErrorResolve("QPolygon", "united", args)
- }
+  }
 
 }
 
@@ -335,12 +336,12 @@ func (this *QPolygonF) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF12boundingRectEv
   default:
     qtrt.ErrorResolve("QPolygonF", "boundingRect", args)
- }
+  }
 
 }
 
@@ -354,17 +355,18 @@ func (this *QPolygonF) intersected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF11intersectedERKS_
   default:
     qtrt.ErrorResolve("QPolygonF", "intersected", args)
- }
+  }
 
 }
 
 
-func NewQPolygonF(args ...interface{})() {
+func NewQPolygonF(args ...interface{}) QPolygonF {
+  return QPolygonF{}
 }
 
 
@@ -376,12 +378,12 @@ func (this *QPolygonF) toPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF9toPolygonEv
   default:
     qtrt.ErrorResolve("QPolygonF", "toPolygon", args)
- }
+  }
 
 }
 
@@ -392,10 +394,10 @@ func (this *QPolygonF) FreeQPolygonF(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPolygonF", "~QPolygonF", args)
- }
+  }
 
 }
 
@@ -409,12 +411,12 @@ func (this *QPolygonF) subtracted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF10subtractedERKS_
   default:
     qtrt.ErrorResolve("QPolygonF", "subtracted", args)
- }
+  }
 
 }
 
@@ -432,14 +434,14 @@ func (this *QPolygonF) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QPolygonF9translateERK7QPointF
   case 1:
     // invoke: _ZN9QPolygonF9translateEdd
   default:
     qtrt.ErrorResolve("QPolygonF", "translate", args)
- }
+  }
 
 }
 
@@ -453,12 +455,12 @@ func (this *QPolygonF) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QPolygonF4swapERS_
   default:
     qtrt.ErrorResolve("QPolygonF", "swap", args)
- }
+  }
 
 }
 
@@ -476,14 +478,14 @@ func (this *QPolygonF) translated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF10translatedERK7QPointF
   case 1:
     // invoke: _ZNK9QPolygonF10translatedEdd
   default:
     qtrt.ErrorResolve("QPolygonF", "translated", args)
- }
+  }
 
 }
 
@@ -496,12 +498,12 @@ func (this *QPolygonF) isClosed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF8isClosedEv
   default:
     qtrt.ErrorResolve("QPolygonF", "isClosed", args)
- }
+  }
 
 }
 
@@ -515,12 +517,12 @@ func (this *QPolygonF) united(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF6unitedERKS_
   default:
     qtrt.ErrorResolve("QPolygonF", "united", args)
- }
+  }
 
 }
 

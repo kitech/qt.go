@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -52,12 +52,12 @@ func (this *QSignalMapper) removeMappings(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper14removeMappingsEP7QObject
   default:
     qtrt.ErrorResolve("QSignalMapper", "removeMappings", args)
- }
+  }
 
 }
 
@@ -68,15 +68,16 @@ func (this *QSignalMapper) map_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSignalMapper", "map", args)
- }
+  }
 
 }
 
 
-func NewQSignalMapper(args ...interface{})() {
+func NewQSignalMapper(args ...interface{}) QSignalMapper {
+  return QSignalMapper{}
 }
 
 
@@ -88,12 +89,12 @@ func (this *QSignalMapper) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSignalMapper10metaObjectEv
   default:
     qtrt.ErrorResolve("QSignalMapper", "metaObject", args)
- }
+  }
 
 }
 
@@ -120,7 +121,7 @@ func (this *QSignalMapper) setMapping(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectS1_
   case 1:
@@ -131,7 +132,7 @@ func (this *QSignalMapper) setMapping(args ...interface{}) () {
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget
   default:
     qtrt.ErrorResolve("QSignalMapper", "setMapping", args)
- }
+  }
 
 }
 
@@ -154,7 +155,7 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSignalMapper7mappingEi
   case 1:
@@ -165,7 +166,7 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
     // invoke: _ZNK13QSignalMapper7mappingEP7QWidget
   default:
     qtrt.ErrorResolve("QSignalMapper", "mapping", args)
- }
+  }
 
 }
 
@@ -176,10 +177,10 @@ func (this *QSignalMapper) FreeQSignalMapper(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSignalMapper", "~QSignalMapper", args)
- }
+  }
 
 }
 

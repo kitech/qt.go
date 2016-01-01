@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.go
 //
@@ -53,17 +53,18 @@ func (this *QStackedWidget) setCurrentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget15setCurrentIndexEi
   default:
     qtrt.ErrorResolve("QStackedWidget", "setCurrentIndex", args)
- }
+  }
 
 }
 
 
-func NewQStackedWidget(args ...interface{})() {
+func NewQStackedWidget(args ...interface{}) QStackedWidget {
+  return QStackedWidget{}
 }
 
 
@@ -75,12 +76,12 @@ func (this *QStackedWidget) currentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget13currentWidgetEv
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentWidget", args)
- }
+  }
 
 }
 
@@ -95,12 +96,12 @@ func (this *QStackedWidget) insertWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget12insertWidgetEiP7QWidget
   default:
     qtrt.ErrorResolve("QStackedWidget", "insertWidget", args)
- }
+  }
 
 }
 
@@ -114,12 +115,12 @@ func (this *QStackedWidget) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget7indexOfEP7QWidget
   default:
     qtrt.ErrorResolve("QStackedWidget", "indexOf", args)
- }
+  }
 
 }
 
@@ -133,12 +134,12 @@ func (this *QStackedWidget) removeWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget12removeWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QStackedWidget", "removeWidget", args)
- }
+  }
 
 }
 
@@ -152,12 +153,12 @@ func (this *QStackedWidget) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget6widgetEi
   default:
     qtrt.ErrorResolve("QStackedWidget", "widget", args)
- }
+  }
 
 }
 
@@ -171,12 +172,12 @@ func (this *QStackedWidget) addWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget9addWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QStackedWidget", "addWidget", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QStackedWidget) currentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget12currentIndexEv
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentIndex", args)
- }
+  }
 
 }
 
@@ -207,12 +208,12 @@ func (this *QStackedWidget) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget5countEv
   default:
     qtrt.ErrorResolve("QStackedWidget", "count", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QStackedWidget) setCurrentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget16setCurrentWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QStackedWidget", "setCurrentWidget", args)
- }
+  }
 
 }
 
@@ -242,10 +243,10 @@ func (this *QStackedWidget) FreeQStackedWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStackedWidget", "~QStackedWidget", args)
- }
+  }
 
 }
 
@@ -258,12 +259,12 @@ func (this *QStackedWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QStackedWidget", "metaObject", args)
- }
+  }
 
 }
 

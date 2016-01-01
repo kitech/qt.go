@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -42,7 +42,8 @@ type QTextOption struct {
 }
 
 
-func NewQTextOption(args ...interface{})() {
+func NewQTextOption(args ...interface{}) QTextOption {
+  return QTextOption{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QTextOption) tabStop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption7tabStopEv
   default:
     qtrt.ErrorResolve("QTextOption", "tabStop", args)
- }
+  }
 
 }
 
@@ -73,12 +74,12 @@ func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextOption19setUseDesignMetricsEb
   default:
     qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
- }
+  }
 
 }
 
@@ -92,12 +93,12 @@ func (this *QTextOption) setTabStop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextOption10setTabStopEd
   default:
     qtrt.ErrorResolve("QTextOption", "setTabStop", args)
- }
+  }
 
 }
 
@@ -110,12 +111,12 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
- }
+  }
 
 }
 
@@ -128,12 +129,12 @@ func (this *QTextOption) tabArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption8tabArrayEv
   default:
     qtrt.ErrorResolve("QTextOption", "tabArray", args)
- }
+  }
 
 }
 
@@ -144,10 +145,10 @@ func (this *QTextOption) FreeQTextOption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextOption", "~QTextOption", args)
- }
+  }
 
 }
 

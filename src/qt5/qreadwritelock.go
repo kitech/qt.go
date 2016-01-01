@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.go
 //
@@ -62,17 +62,18 @@ func (this *QWriteLocker) readWriteLock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QWriteLocker13readWriteLockEv
   default:
     qtrt.ErrorResolve("QWriteLocker", "readWriteLock", args)
- }
+  }
 
 }
 
 
-func NewQWriteLocker(args ...interface{})() {
+func NewQWriteLocker(args ...interface{}) QWriteLocker {
+  return QWriteLocker{}
 }
 
 
@@ -84,12 +85,12 @@ func (this *QWriteLocker) unlock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QWriteLocker6unlockEv
   default:
     qtrt.ErrorResolve("QWriteLocker", "unlock", args)
- }
+  }
 
 }
 
@@ -100,10 +101,10 @@ func (this *QWriteLocker) FreeQWriteLocker(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWriteLocker", "~QWriteLocker", args)
- }
+  }
 
 }
 
@@ -116,12 +117,12 @@ func (this *QWriteLocker) relock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QWriteLocker6relockEv
   default:
     qtrt.ErrorResolve("QWriteLocker", "relock", args)
- }
+  }
 
 }
 
@@ -132,15 +133,16 @@ func (this *QReadWriteLock) FreeQReadWriteLock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QReadWriteLock", "~QReadWriteLock", args)
- }
+  }
 
 }
 
 
-func NewQReadWriteLock(args ...interface{})() {
+func NewQReadWriteLock(args ...interface{}) QReadWriteLock {
+  return QReadWriteLock{}
 }
 
 
@@ -155,14 +157,14 @@ func (this *QReadWriteLock) tryLockForRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QReadWriteLock14tryLockForReadEv
   case 1:
     // invoke: _ZN14QReadWriteLock14tryLockForReadEi
   default:
     qtrt.ErrorResolve("QReadWriteLock", "tryLockForRead", args)
- }
+  }
 
 }
 
@@ -175,12 +177,12 @@ func (this *QReadWriteLock) lockForWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QReadWriteLock12lockForWriteEv
   default:
     qtrt.ErrorResolve("QReadWriteLock", "lockForWrite", args)
- }
+  }
 
 }
 
@@ -196,14 +198,14 @@ func (this *QReadWriteLock) tryLockForWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QReadWriteLock15tryLockForWriteEv
   case 1:
     // invoke: _ZN14QReadWriteLock15tryLockForWriteEi
   default:
     qtrt.ErrorResolve("QReadWriteLock", "tryLockForWrite", args)
- }
+  }
 
 }
 
@@ -216,12 +218,12 @@ func (this *QReadWriteLock) unlock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QReadWriteLock6unlockEv
   default:
     qtrt.ErrorResolve("QReadWriteLock", "unlock", args)
- }
+  }
 
 }
 
@@ -234,12 +236,12 @@ func (this *QReadWriteLock) lockForRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QReadWriteLock11lockForReadEv
   default:
     qtrt.ErrorResolve("QReadWriteLock", "lockForRead", args)
- }
+  }
 
 }
 
@@ -252,12 +254,12 @@ func (this *QReadLocker) readWriteLock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QReadLocker13readWriteLockEv
   default:
     qtrt.ErrorResolve("QReadLocker", "readWriteLock", args)
- }
+  }
 
 }
 
@@ -268,15 +270,16 @@ func (this *QReadLocker) FreeQReadLocker(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QReadLocker", "~QReadLocker", args)
- }
+  }
 
 }
 
 
-func NewQReadLocker(args ...interface{})() {
+func NewQReadLocker(args ...interface{}) QReadLocker {
+  return QReadLocker{}
 }
 
 
@@ -288,12 +291,12 @@ func (this *QReadLocker) relock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QReadLocker6relockEv
   default:
     qtrt.ErrorResolve("QReadLocker", "relock", args)
- }
+  }
 
 }
 
@@ -306,12 +309,12 @@ func (this *QReadLocker) unlock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QReadLocker6unlockEv
   default:
     qtrt.ErrorResolve("QReadLocker", "unlock", args)
- }
+  }
 
 }
 

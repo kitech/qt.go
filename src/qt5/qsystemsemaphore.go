@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -50,12 +50,12 @@ func (this *QSystemSemaphore) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QSystemSemaphore3keyEv
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "key", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QSystemSemaphore) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QSystemSemaphore7releaseEi
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "release", args)
- }
+  }
 
 }
 
@@ -87,17 +87,18 @@ func (this *QSystemSemaphore) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QSystemSemaphore11errorStringEv
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "errorString", args)
- }
+  }
 
 }
 
 
-func NewQSystemSemaphore(args ...interface{})() {
+func NewQSystemSemaphore(args ...interface{}) QSystemSemaphore {
+  return QSystemSemaphore{}
 }
 
 
@@ -109,12 +110,12 @@ func (this *QSystemSemaphore) acquire(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QSystemSemaphore7acquireEv
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "acquire", args)
- }
+  }
 
 }
 
@@ -125,10 +126,10 @@ func (this *QSystemSemaphore) FreeQSystemSemaphore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "~QSystemSemaphore", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -48,10 +48,10 @@ func (this *QArrayData) sharedNull_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QArrayData", "sharedNull", args)
- }
+  }
 
 }
 
@@ -66,14 +66,14 @@ func (this *QArrayData) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QArrayData4dataEv
   case 1:
     // invoke: _ZN10QArrayData4dataEv
   default:
     qtrt.ErrorResolve("QArrayData", "data", args)
- }
+  }
 
 }
 
@@ -84,10 +84,10 @@ func (this *QArrayData) deallocate_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QArrayData", "deallocate", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
- }
+  }
 
 }
 
@@ -119,12 +119,12 @@ func (this *QArrayData) detachCapacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QArrayData14detachCapacityEi
   default:
     qtrt.ErrorResolve("QArrayData", "detachCapacity", args)
- }
+  }
 
 }
 

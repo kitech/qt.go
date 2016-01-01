@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -62,12 +62,12 @@ func (this *QProcess) close(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess5closeEv
   default:
     qtrt.ErrorResolve("QProcess", "close", args)
- }
+  }
 
 }
 
@@ -81,12 +81,12 @@ func (this *QProcess) setEnvironment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess14setEnvironmentERK11QStringList
   default:
     qtrt.ErrorResolve("QProcess", "setEnvironment", args)
- }
+  }
 
 }
 
@@ -97,10 +97,10 @@ func (this *QProcess) startDetached_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcess", "startDetached", args)
- }
+  }
 
 }
 
@@ -113,12 +113,12 @@ func (this *QProcess) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess5atEndEv
   default:
     qtrt.ErrorResolve("QProcess", "atEnd", args)
- }
+  }
 
 }
 
@@ -129,10 +129,10 @@ func (this *QProcess) systemEnvironment_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcess", "systemEnvironment", args)
- }
+  }
 
 }
 
@@ -146,17 +146,18 @@ func (this *QProcess) setProcessEnvironment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment
   default:
     qtrt.ErrorResolve("QProcess", "setProcessEnvironment", args)
- }
+  }
 
 }
 
 
-func NewQProcess(args ...interface{})() {
+func NewQProcess(args ...interface{}) QProcess {
+  return QProcess{}
 }
 
 
@@ -168,12 +169,12 @@ func (this *QProcess) pid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess3pidEv
   default:
     qtrt.ErrorResolve("QProcess", "pid", args)
- }
+  }
 
 }
 
@@ -187,12 +188,12 @@ func (this *QProcess) setArguments(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess12setArgumentsERK11QStringList
   default:
     qtrt.ErrorResolve("QProcess", "setArguments", args)
- }
+  }
 
 }
 
@@ -203,10 +204,10 @@ func (this *QProcess) FreeQProcess(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcess", "~QProcess", args)
- }
+  }
 
 }
 
@@ -217,10 +218,10 @@ func (this *QProcess) execute_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcess", "execute", args)
- }
+  }
 
 }
 
@@ -233,12 +234,12 @@ func (this *QProcess) closeWriteChannel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess17closeWriteChannelEv
   default:
     qtrt.ErrorResolve("QProcess", "closeWriteChannel", args)
- }
+  }
 
 }
 
@@ -251,12 +252,12 @@ func (this *QProcess) processEnvironment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess18processEnvironmentEv
   default:
     qtrt.ErrorResolve("QProcess", "processEnvironment", args)
- }
+  }
 
 }
 
@@ -269,12 +270,12 @@ func (this *QProcess) readAllStandardOutput(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess21readAllStandardOutputEv
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardOutput", args)
- }
+  }
 
 }
 
@@ -285,10 +286,10 @@ func (this *QProcess) nullDevice_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcess", "nullDevice", args)
- }
+  }
 
 }
 
@@ -302,12 +303,12 @@ func (this *QProcess) waitForBytesWritten(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess19waitForBytesWrittenEi
   default:
     qtrt.ErrorResolve("QProcess", "waitForBytesWritten", args)
- }
+  }
 
 }
 
@@ -320,12 +321,12 @@ func (this *QProcess) program(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess7programEv
   default:
     qtrt.ErrorResolve("QProcess", "program", args)
- }
+  }
 
 }
 
@@ -338,12 +339,12 @@ func (this *QProcess) processId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess9processIdEv
   default:
     qtrt.ErrorResolve("QProcess", "processId", args)
- }
+  }
 
 }
 
@@ -356,12 +357,12 @@ func (this *QProcess) arguments(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess9argumentsEv
   default:
     qtrt.ErrorResolve("QProcess", "arguments", args)
- }
+  }
 
 }
 
@@ -374,12 +375,12 @@ func (this *QProcess) isSequential(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess12isSequentialEv
   default:
     qtrt.ErrorResolve("QProcess", "isSequential", args)
- }
+  }
 
 }
 
@@ -393,12 +394,12 @@ func (this *QProcess) waitForReadyRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess16waitForReadyReadEi
   default:
     qtrt.ErrorResolve("QProcess", "waitForReadyRead", args)
- }
+  }
 
 }
 
@@ -412,12 +413,12 @@ func (this *QProcess) setWorkingDirectory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess19setWorkingDirectoryERK7QString
   default:
     qtrt.ErrorResolve("QProcess", "setWorkingDirectory", args)
- }
+  }
 
 }
 
@@ -430,12 +431,12 @@ func (this *QProcess) terminate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess9terminateEv
   default:
     qtrt.ErrorResolve("QProcess", "terminate", args)
- }
+  }
 
 }
 
@@ -448,12 +449,12 @@ func (this *QProcess) kill(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess4killEv
   default:
     qtrt.ErrorResolve("QProcess", "kill", args)
- }
+  }
 
 }
 
@@ -466,12 +467,12 @@ func (this *QProcess) bytesAvailable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess14bytesAvailableEv
   default:
     qtrt.ErrorResolve("QProcess", "bytesAvailable", args)
- }
+  }
 
 }
 
@@ -484,12 +485,12 @@ func (this *QProcess) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess10metaObjectEv
   default:
     qtrt.ErrorResolve("QProcess", "metaObject", args)
- }
+  }
 
 }
 
@@ -503,12 +504,12 @@ func (this *QProcess) waitForStarted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess14waitForStartedEi
   default:
     qtrt.ErrorResolve("QProcess", "waitForStarted", args)
- }
+  }
 
 }
 
@@ -521,12 +522,12 @@ func (this *QProcess) readAllStandardError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess20readAllStandardErrorEv
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardError", args)
- }
+  }
 
 }
 
@@ -539,12 +540,12 @@ func (this *QProcess) exitCode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess8exitCodeEv
   default:
     qtrt.ErrorResolve("QProcess", "exitCode", args)
- }
+  }
 
 }
 
@@ -557,12 +558,12 @@ func (this *QProcess) environment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess11environmentEv
   default:
     qtrt.ErrorResolve("QProcess", "environment", args)
- }
+  }
 
 }
 
@@ -575,12 +576,12 @@ func (this *QProcess) canReadLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess11canReadLineEv
   default:
     qtrt.ErrorResolve("QProcess", "canReadLine", args)
- }
+  }
 
 }
 
@@ -594,12 +595,12 @@ func (this *QProcess) setStandardOutputProcess(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess24setStandardOutputProcessEPS_
   default:
     qtrt.ErrorResolve("QProcess", "setStandardOutputProcess", args)
- }
+  }
 
 }
 
@@ -613,12 +614,12 @@ func (this *QProcess) waitForFinished(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess15waitForFinishedEi
   default:
     qtrt.ErrorResolve("QProcess", "waitForFinished", args)
- }
+  }
 
 }
 
@@ -631,12 +632,12 @@ func (this *QProcess) bytesToWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess12bytesToWriteEv
   default:
     qtrt.ErrorResolve("QProcess", "bytesToWrite", args)
- }
+  }
 
 }
 
@@ -649,12 +650,12 @@ func (this *QProcess) workingDirectory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess16workingDirectoryEv
   default:
     qtrt.ErrorResolve("QProcess", "workingDirectory", args)
- }
+  }
 
 }
 
@@ -668,12 +669,12 @@ func (this *QProcess) setProgram(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess10setProgramERK7QString
   default:
     qtrt.ErrorResolve("QProcess", "setProgram", args)
- }
+  }
 
 }
 
@@ -687,12 +688,12 @@ func (this *QProcess) setStandardInputFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QProcess20setStandardInputFileERK7QString
   default:
     qtrt.ErrorResolve("QProcess", "setStandardInputFile", args)
- }
+  }
 
 }
 
@@ -706,12 +707,12 @@ func (this *QProcessEnvironment) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment8containsERK7QString
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "contains", args)
- }
+  }
 
 }
 
@@ -724,12 +725,12 @@ func (this *QProcessEnvironment) keys(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment4keysEv
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "keys", args)
- }
+  }
 
 }
 
@@ -743,12 +744,12 @@ func (this *QProcessEnvironment) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment6removeERK7QString
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "remove", args)
- }
+  }
 
 }
 
@@ -761,12 +762,12 @@ func (this *QProcessEnvironment) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment5clearEv
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "clear", args)
- }
+  }
 
 }
 
@@ -781,12 +782,12 @@ func (this *QProcessEnvironment) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment5valueERK7QStringS2_
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "value", args)
- }
+  }
 
 }
 
@@ -799,12 +800,12 @@ func (this *QProcessEnvironment) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment7isEmptyEv
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "isEmpty", args)
- }
+  }
 
 }
 
@@ -815,10 +816,10 @@ func (this *QProcessEnvironment) FreeQProcessEnvironment(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "~QProcessEnvironment", args)
- }
+  }
 
 }
 
@@ -832,17 +833,18 @@ func (this *QProcessEnvironment) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment4swapERS_
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "swap", args)
- }
+  }
 
 }
 
 
-func NewQProcessEnvironment(args ...interface{})() {
+func NewQProcessEnvironment(args ...interface{}) QProcessEnvironment {
+  return QProcessEnvironment{}
 }
 
 
@@ -852,10 +854,10 @@ func (this *QProcessEnvironment) systemEnvironment_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "systemEnvironment", args)
- }
+  }
 
 }
 
@@ -873,14 +875,14 @@ func (this *QProcessEnvironment) insert(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment6insertERK7QStringS2_
   case 1:
     // invoke: _ZN19QProcessEnvironment6insertERKS_
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "insert", args)
- }
+  }
 
 }
 
@@ -893,12 +895,12 @@ func (this *QProcessEnvironment) toStringList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment12toStringListEv
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "toStringList", args)
- }
+  }
 
 }
 

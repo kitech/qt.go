@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -51,17 +51,18 @@ func (this *QScrollBar) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QScrollBar5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QScrollBar", "event", args)
- }
+  }
 
 }
 
 
-func NewQScrollBar(args ...interface{})() {
+func NewQScrollBar(args ...interface{}) QScrollBar {
+  return QScrollBar{}
 }
 
 
@@ -73,12 +74,12 @@ func (this *QScrollBar) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QScrollBar10metaObjectEv
   default:
     qtrt.ErrorResolve("QScrollBar", "metaObject", args)
- }
+  }
 
 }
 
@@ -91,12 +92,12 @@ func (this *QScrollBar) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QScrollBar8sizeHintEv
   default:
     qtrt.ErrorResolve("QScrollBar", "sizeHint", args)
- }
+  }
 
 }
 
@@ -107,10 +108,10 @@ func (this *QScrollBar) FreeQScrollBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QScrollBar", "~QScrollBar", args)
- }
+  }
 
 }
 

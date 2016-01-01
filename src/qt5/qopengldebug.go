@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.go
 //
@@ -49,7 +49,8 @@ type QOpenGLDebugLogger struct {
 }
 
 
-func NewQOpenGLDebugMessage(args ...interface{})() {
+func NewQOpenGLDebugMessage(args ...interface{}) QOpenGLDebugMessage {
+  return QOpenGLDebugMessage{}
 }
 
 
@@ -59,10 +60,10 @@ func (this *QOpenGLDebugMessage) FreeQOpenGLDebugMessage(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "~QOpenGLDebugMessage", args)
- }
+  }
 
 }
 
@@ -75,12 +76,12 @@ func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage2idEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "id", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage7messageEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "message", args)
- }
+  }
 
 }
 
@@ -112,12 +113,12 @@ func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QOpenGLDebugMessage4swapERS_
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "swap", args)
- }
+  }
 
 }
 
@@ -128,10 +129,10 @@ func (this *QOpenGLDebugLogger) FreeQOpenGLDebugLogger(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "~QOpenGLDebugLogger", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "maximumMessageLength", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger9isLoggingEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "isLogging", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger11stopLoggingEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "stopLogging", args)
- }
+  }
 
 }
 
@@ -199,17 +200,18 @@ func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "logMessage", args)
- }
+  }
 
 }
 
 
-func NewQOpenGLDebugLogger(args ...interface{})() {
+func NewQOpenGLDebugLogger(args ...interface{}) QOpenGLDebugLogger {
+  return QOpenGLDebugLogger{}
 }
 
 
@@ -221,12 +223,12 @@ func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger10metaObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "metaObject", args)
- }
+  }
 
 }
 
@@ -239,12 +241,12 @@ func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger14loggedMessagesEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "loggedMessages", args)
- }
+  }
 
 }
 
@@ -257,12 +259,12 @@ func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger8popGroupEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "popGroup", args)
- }
+  }
 
 }
 
@@ -275,12 +277,12 @@ func (this *QOpenGLDebugLogger) initialize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger10initializeEv
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "initialize", args)
- }
+  }
 
 }
 

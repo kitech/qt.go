@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -54,12 +54,12 @@ func (this *QCalendarWidget) showPreviousYear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget16showPreviousYearEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousYear", args)
- }
+  }
 
 }
 
@@ -72,12 +72,12 @@ func (this *QCalendarWidget) maximumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget11maximumDateEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "maximumDate", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QCalendarWidget) showPreviousMonth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget17showPreviousMonthEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showPreviousMonth", args)
- }
+  }
 
 }
 
@@ -108,12 +108,12 @@ func (this *QCalendarWidget) showSelectedDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget16showSelectedDateEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showSelectedDate", args)
- }
+  }
 
 }
 
@@ -126,12 +126,12 @@ func (this *QCalendarWidget) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -145,12 +145,12 @@ func (this *QCalendarWidget) setDateEditAcceptDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget22setDateEditAcceptDelayEi
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditAcceptDelay", args)
- }
+  }
 
 }
 
@@ -164,12 +164,12 @@ func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget14setGridVisibleEb
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setGridVisible", args)
- }
+  }
 
 }
 
@@ -180,10 +180,10 @@ func (this *QCalendarWidget) FreeQCalendarWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCalendarWidget", "~QCalendarWidget", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QCalendarWidget) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget8sizeHintEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "sizeHint", args)
- }
+  }
 
 }
 
@@ -214,12 +214,12 @@ func (this *QCalendarWidget) monthShown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget10monthShownEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "monthShown", args)
- }
+  }
 
 }
 
@@ -233,17 +233,18 @@ func (this *QCalendarWidget) setSelectedDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget15setSelectedDateERK5QDate
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setSelectedDate", args)
- }
+  }
 
 }
 
 
-func NewQCalendarWidget(args ...interface{})() {
+func NewQCalendarWidget(args ...interface{}) QCalendarWidget {
+  return QCalendarWidget{}
 }
 
 
@@ -255,12 +256,12 @@ func (this *QCalendarWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "metaObject", args)
- }
+  }
 
 }
 
@@ -274,12 +275,12 @@ func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget23setNavigationBarVisibleEb
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setNavigationBarVisible", args)
- }
+  }
 
 }
 
@@ -292,12 +293,12 @@ func (this *QCalendarWidget) isNavigationBarVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget22isNavigationBarVisibleEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isNavigationBarVisible", args)
- }
+  }
 
 }
 
@@ -313,14 +314,14 @@ func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget14dateTextFormatERK5QDate
   case 1:
     // invoke: _ZNK15QCalendarWidget14dateTextFormatEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "dateTextFormat", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QCalendarWidget) setMinimumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget14setMinimumDateERK5QDate
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setMinimumDate", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QCalendarWidget) dateEditAcceptDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget19dateEditAcceptDelayEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "dateEditAcceptDelay", args)
- }
+  }
 
 }
 
@@ -370,12 +371,12 @@ func (this *QCalendarWidget) minimumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget11minimumDateEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "minimumDate", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QCalendarWidget) isDateEditEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget17isDateEditEnabledEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isDateEditEnabled", args)
- }
+  }
 
 }
 
@@ -407,12 +408,12 @@ func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget18setDateEditEnabledEb
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateEditEnabled", args)
- }
+  }
 
 }
 
@@ -427,12 +428,12 @@ func (this *QCalendarWidget) setDateTextFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateTextFormat", args)
- }
+  }
 
 }
 
@@ -445,12 +446,12 @@ func (this *QCalendarWidget) showNextMonth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget13showNextMonthEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showNextMonth", args)
- }
+  }
 
 }
 
@@ -465,12 +466,12 @@ func (this *QCalendarWidget) setDateRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget12setDateRangeERK5QDateS2_
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setDateRange", args)
- }
+  }
 
 }
 
@@ -483,12 +484,12 @@ func (this *QCalendarWidget) selectedDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget12selectedDateEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "selectedDate", args)
- }
+  }
 
 }
 
@@ -502,12 +503,12 @@ func (this *QCalendarWidget) setHeaderTextFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setHeaderTextFormat", args)
- }
+  }
 
 }
 
@@ -520,12 +521,12 @@ func (this *QCalendarWidget) isGridVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget13isGridVisibleEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "isGridVisible", args)
- }
+  }
 
 }
 
@@ -538,12 +539,12 @@ func (this *QCalendarWidget) yearShown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget9yearShownEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "yearShown", args)
- }
+  }
 
 }
 
@@ -557,12 +558,12 @@ func (this *QCalendarWidget) setMaximumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget14setMaximumDateERK5QDate
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setMaximumDate", args)
- }
+  }
 
 }
 
@@ -575,12 +576,12 @@ func (this *QCalendarWidget) headerTextFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QCalendarWidget16headerTextFormatEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "headerTextFormat", args)
- }
+  }
 
 }
 
@@ -595,12 +596,12 @@ func (this *QCalendarWidget) setCurrentPage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget14setCurrentPageEii
   default:
     qtrt.ErrorResolve("QCalendarWidget", "setCurrentPage", args)
- }
+  }
 
 }
 
@@ -613,12 +614,12 @@ func (this *QCalendarWidget) showToday(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget9showTodayEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showToday", args)
- }
+  }
 
 }
 
@@ -631,12 +632,12 @@ func (this *QCalendarWidget) showNextYear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QCalendarWidget12showNextYearEv
   default:
     qtrt.ErrorResolve("QCalendarWidget", "showNextYear", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -53,12 +53,12 @@ func (this *QStateMachine) defaultAnimations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine17defaultAnimationsEv
   default:
     qtrt.ErrorResolve("QStateMachine", "defaultAnimations", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QStateMachine) postDelayedEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine16postDelayedEventEP6QEventi
   default:
     qtrt.ErrorResolve("QStateMachine", "postDelayedEvent", args)
- }
+  }
 
 }
 
@@ -91,12 +91,12 @@ func (this *QStateMachine) configuration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine13configurationEv
   default:
     qtrt.ErrorResolve("QStateMachine", "configuration", args)
- }
+  }
 
 }
 
@@ -110,12 +110,12 @@ func (this *QStateMachine) setRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine10setRunningEb
   default:
     qtrt.ErrorResolve("QStateMachine", "setRunning", args)
- }
+  }
 
 }
 
@@ -129,12 +129,12 @@ func (this *QStateMachine) addDefaultAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine19addDefaultAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QStateMachine", "addDefaultAnimation", args)
- }
+  }
 
 }
 
@@ -148,12 +148,12 @@ func (this *QStateMachine) removeDefaultAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine22removeDefaultAnimationEP18QAbstractAnimation
   default:
     qtrt.ErrorResolve("QStateMachine", "removeDefaultAnimation", args)
- }
+  }
 
 }
 
@@ -167,17 +167,18 @@ func (this *QStateMachine) setAnimated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine11setAnimatedEb
   default:
     qtrt.ErrorResolve("QStateMachine", "setAnimated", args)
- }
+  }
 
 }
 
 
-func NewQStateMachine(args ...interface{})() {
+func NewQStateMachine(args ...interface{}) QStateMachine {
+  return QStateMachine{}
 }
 
 
@@ -189,12 +190,12 @@ func (this *QStateMachine) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine11errorStringEv
   default:
     qtrt.ErrorResolve("QStateMachine", "errorString", args)
- }
+  }
 
 }
 
@@ -207,12 +208,12 @@ func (this *QStateMachine) isRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine9isRunningEv
   default:
     qtrt.ErrorResolve("QStateMachine", "isRunning", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QStateMachine) cancelDelayedEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine18cancelDelayedEventEi
   default:
     qtrt.ErrorResolve("QStateMachine", "cancelDelayedEvent", args)
- }
+  }
 
 }
 
@@ -242,10 +243,10 @@ func (this *QStateMachine) FreeQStateMachine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStateMachine", "~QStateMachine", args)
- }
+  }
 
 }
 
@@ -258,12 +259,12 @@ func (this *QStateMachine) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine10metaObjectEv
   default:
     qtrt.ErrorResolve("QStateMachine", "metaObject", args)
- }
+  }
 
 }
 
@@ -277,12 +278,12 @@ func (this *QStateMachine) addState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine8addStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QStateMachine", "addState", args)
- }
+  }
 
 }
 
@@ -295,12 +296,12 @@ func (this *QStateMachine) clearError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine10clearErrorEv
   default:
     qtrt.ErrorResolve("QStateMachine", "clearError", args)
- }
+  }
 
 }
 
@@ -314,12 +315,12 @@ func (this *QStateMachine) removeState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine11removeStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QStateMachine", "removeState", args)
- }
+  }
 
 }
 
@@ -332,12 +333,12 @@ func (this *QStateMachine) stop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine4stopEv
   default:
     qtrt.ErrorResolve("QStateMachine", "stop", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QStateMachine) isAnimated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStateMachine10isAnimatedEv
   default:
     qtrt.ErrorResolve("QStateMachine", "isAnimated", args)
- }
+  }
 
 }
 
@@ -368,12 +369,12 @@ func (this *QStateMachine) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine5startEv
   default:
     qtrt.ErrorResolve("QStateMachine", "start", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QStateMachine) eventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStateMachine11eventFilterEP7QObjectP6QEvent
   default:
     qtrt.ErrorResolve("QStateMachine", "eventFilter", args)
- }
+  }
 
 }
 

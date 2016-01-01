@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -50,12 +50,12 @@ func (this *QElapsedTimer) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer5startEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "start", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QElapsedTimer) nsecsElapsed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer12nsecsElapsedEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "nsecsElapsed", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QElapsedTimer) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer10invalidateEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "invalidate", args)
- }
+  }
 
 }
 
@@ -102,15 +102,16 @@ func (this *QElapsedTimer) isMonotonic_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QElapsedTimer", "isMonotonic", args)
- }
+  }
 
 }
 
 
-func NewQElapsedTimer(args ...interface{})() {
+func NewQElapsedTimer(args ...interface{}) QElapsedTimer {
+  return QElapsedTimer{}
 }
 
 
@@ -123,12 +124,12 @@ func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7msecsToERKS_
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
- }
+  }
 
 }
 
@@ -141,12 +142,12 @@ func (this *QElapsedTimer) msecsSinceReference(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer19msecsSinceReferenceEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsSinceReference", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer10hasExpiredEx
   default:
     qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
- }
+  }
 
 }
 
@@ -178,12 +179,12 @@ func (this *QElapsedTimer) restart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer7restartEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "restart", args)
- }
+  }
 
 }
 
@@ -196,12 +197,12 @@ func (this *QElapsedTimer) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7isValidEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "isValid", args)
- }
+  }
 
 }
 
@@ -215,12 +216,12 @@ func (this *QElapsedTimer) secsTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer6secsToERKS_
   default:
     qtrt.ErrorResolve("QElapsedTimer", "secsTo", args)
- }
+  }
 
 }
 
@@ -233,12 +234,12 @@ func (this *QElapsedTimer) elapsed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7elapsedEv
   default:
     qtrt.ErrorResolve("QElapsedTimer", "elapsed", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.go
 //
@@ -50,17 +50,18 @@ func (this *QFileInfo) isHidden(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8isHiddenEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isHidden", args)
- }
+  }
 
 }
 
 
-func NewQFileInfo(args ...interface{})() {
+func NewQFileInfo(args ...interface{}) QFileInfo {
+  return QFileInfo{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QFileInfo) completeSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo14completeSuffixEv
   default:
     qtrt.ErrorResolve("QFileInfo", "completeSuffix", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QFileInfo) canonicalPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo13canonicalPathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "canonicalPath", args)
- }
+  }
 
 }
 
@@ -106,10 +107,10 @@ func (this *QFileInfo) exists_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileInfo", "exists", args)
- }
+  }
 
 }
 
@@ -122,12 +123,12 @@ func (this *QFileInfo) makeAbsolute(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo12makeAbsoluteEv
   default:
     qtrt.ErrorResolve("QFileInfo", "makeAbsolute", args)
- }
+  }
 
 }
 
@@ -140,12 +141,12 @@ func (this *QFileInfo) isRoot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo6isRootEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isRoot", args)
- }
+  }
 
 }
 
@@ -158,12 +159,12 @@ func (this *QFileInfo) canonicalFilePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo17canonicalFilePathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "canonicalFilePath", args)
- }
+  }
 
 }
 
@@ -176,12 +177,12 @@ func (this *QFileInfo) isDir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo5isDirEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isDir", args)
- }
+  }
 
 }
 
@@ -194,12 +195,12 @@ func (this *QFileInfo) symLinkTarget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo13symLinkTargetEv
   default:
     qtrt.ErrorResolve("QFileInfo", "symLinkTarget", args)
- }
+  }
 
 }
 
@@ -220,7 +221,7 @@ func (this *QFileInfo) setFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo7setFileERK7QString
   case 1:
@@ -229,7 +230,7 @@ func (this *QFileInfo) setFile(args ...interface{}) () {
     // invoke: _ZN9QFileInfo7setFileERK4QDirRK7QString
   default:
     qtrt.ErrorResolve("QFileInfo", "setFile", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QFileInfo) isFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo6isFileEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isFile", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QFileInfo) ownerId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo7ownerIdEv
   default:
     qtrt.ErrorResolve("QFileInfo", "ownerId", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QFileInfo) readLink(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8readLinkEv
   default:
     qtrt.ErrorResolve("QFileInfo", "readLink", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QFileInfo) filePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8filePathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "filePath", args)
- }
+  }
 
 }
 
@@ -314,12 +315,12 @@ func (this *QFileInfo) isSymLink(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo9isSymLinkEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isSymLink", args)
- }
+  }
 
 }
 
@@ -332,12 +333,12 @@ func (this *QFileInfo) lastRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8lastReadEv
   default:
     qtrt.ErrorResolve("QFileInfo", "lastRead", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QFileInfo) refresh(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo7refreshEv
   default:
     qtrt.ErrorResolve("QFileInfo", "refresh", args)
- }
+  }
 
 }
 
@@ -368,12 +369,12 @@ func (this *QFileInfo) path(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo4pathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "path", args)
- }
+  }
 
 }
 
@@ -386,12 +387,12 @@ func (this *QFileInfo) absoluteDir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo11absoluteDirEv
   default:
     qtrt.ErrorResolve("QFileInfo", "absoluteDir", args)
- }
+  }
 
 }
 
@@ -404,12 +405,12 @@ func (this *QFileInfo) isBundle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8isBundleEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isBundle", args)
- }
+  }
 
 }
 
@@ -422,12 +423,12 @@ func (this *QFileInfo) isRelative(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo10isRelativeEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isRelative", args)
- }
+  }
 
 }
 
@@ -441,12 +442,12 @@ func (this *QFileInfo) setCaching(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo10setCachingEb
   default:
     qtrt.ErrorResolve("QFileInfo", "setCaching", args)
- }
+  }
 
 }
 
@@ -459,12 +460,12 @@ func (this *QFileInfo) created(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo7createdEv
   default:
     qtrt.ErrorResolve("QFileInfo", "created", args)
- }
+  }
 
 }
 
@@ -477,12 +478,12 @@ func (this *QFileInfo) caching(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo7cachingEv
   default:
     qtrt.ErrorResolve("QFileInfo", "caching", args)
- }
+  }
 
 }
 
@@ -493,10 +494,10 @@ func (this *QFileInfo) FreeQFileInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileInfo", "~QFileInfo", args)
- }
+  }
 
 }
 
@@ -509,12 +510,12 @@ func (this *QFileInfo) completeBaseName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo16completeBaseNameEv
   default:
     qtrt.ErrorResolve("QFileInfo", "completeBaseName", args)
- }
+  }
 
 }
 
@@ -527,12 +528,12 @@ func (this *QFileInfo) baseName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8baseNameEv
   default:
     qtrt.ErrorResolve("QFileInfo", "baseName", args)
- }
+  }
 
 }
 
@@ -545,12 +546,12 @@ func (this *QFileInfo) isExecutable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo12isExecutableEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isExecutable", args)
- }
+  }
 
 }
 
@@ -563,12 +564,12 @@ func (this *QFileInfo) bundleName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo10bundleNameEv
   default:
     qtrt.ErrorResolve("QFileInfo", "bundleName", args)
- }
+  }
 
 }
 
@@ -581,12 +582,12 @@ func (this *QFileInfo) groupId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo7groupIdEv
   default:
     qtrt.ErrorResolve("QFileInfo", "groupId", args)
- }
+  }
 
 }
 
@@ -599,12 +600,12 @@ func (this *QFileInfo) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo8fileNameEv
   default:
     qtrt.ErrorResolve("QFileInfo", "fileName", args)
- }
+  }
 
 }
 
@@ -617,12 +618,12 @@ func (this *QFileInfo) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo4sizeEv
   default:
     qtrt.ErrorResolve("QFileInfo", "size", args)
- }
+  }
 
 }
 
@@ -635,12 +636,12 @@ func (this *QFileInfo) absoluteFilePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo16absoluteFilePathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "absoluteFilePath", args)
- }
+  }
 
 }
 
@@ -653,12 +654,12 @@ func (this *QFileInfo) suffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo6suffixEv
   default:
     qtrt.ErrorResolve("QFileInfo", "suffix", args)
- }
+  }
 
 }
 
@@ -671,12 +672,12 @@ func (this *QFileInfo) group(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo5groupEv
   default:
     qtrt.ErrorResolve("QFileInfo", "group", args)
- }
+  }
 
 }
 
@@ -689,12 +690,12 @@ func (this *QFileInfo) isAbsolute(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo10isAbsoluteEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isAbsolute", args)
- }
+  }
 
 }
 
@@ -707,12 +708,12 @@ func (this *QFileInfo) isNativePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo12isNativePathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isNativePath", args)
- }
+  }
 
 }
 
@@ -725,12 +726,12 @@ func (this *QFileInfo) isWritable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo10isWritableEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isWritable", args)
- }
+  }
 
 }
 
@@ -743,12 +744,12 @@ func (this *QFileInfo) owner(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo5ownerEv
   default:
     qtrt.ErrorResolve("QFileInfo", "owner", args)
- }
+  }
 
 }
 
@@ -761,12 +762,12 @@ func (this *QFileInfo) isReadable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo10isReadableEv
   default:
     qtrt.ErrorResolve("QFileInfo", "isReadable", args)
- }
+  }
 
 }
 
@@ -779,12 +780,12 @@ func (this *QFileInfo) dir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo3dirEv
   default:
     qtrt.ErrorResolve("QFileInfo", "dir", args)
- }
+  }
 
 }
 
@@ -798,12 +799,12 @@ func (this *QFileInfo) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo4swapERS_
   default:
     qtrt.ErrorResolve("QFileInfo", "swap", args)
- }
+  }
 
 }
 
@@ -819,14 +820,14 @@ func (this *QFileInfo) exists(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo6existsERK7QString
   case 1:
     // invoke: _ZNK9QFileInfo6existsEv
   default:
     qtrt.ErrorResolve("QFileInfo", "exists", args)
- }
+  }
 
 }
 
@@ -839,12 +840,12 @@ func (this *QFileInfo) lastModified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo12lastModifiedEv
   default:
     qtrt.ErrorResolve("QFileInfo", "lastModified", args)
- }
+  }
 
 }
 
@@ -857,12 +858,12 @@ func (this *QFileInfo) absolutePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QFileInfo12absolutePathEv
   default:
     qtrt.ErrorResolve("QFileInfo", "absolutePath", args)
- }
+  }
 
 }
 

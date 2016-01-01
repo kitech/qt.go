@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.go
 //
@@ -54,12 +54,12 @@ func (this *QAction) associatedWidgets(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction17associatedWidgetsEv
   default:
     qtrt.ErrorResolve("QAction", "associatedWidgets", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QAction) setAutoRepeat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction13setAutoRepeatEb
   default:
     qtrt.ErrorResolve("QAction", "setAutoRepeat", args)
- }
+  }
 
 }
 
@@ -91,17 +91,18 @@ func (this *QAction) whatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9whatsThisEv
   default:
     qtrt.ErrorResolve("QAction", "whatsThis", args)
- }
+  }
 
 }
 
 
-func NewQAction(args ...interface{})() {
+func NewQAction(args ...interface{}) QAction {
+  return QAction{}
 }
 
 
@@ -111,10 +112,10 @@ func (this *QAction) FreeQAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAction", "~QAction", args)
- }
+  }
 
 }
 
@@ -127,12 +128,12 @@ func (this *QAction) isVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isVisibleEv
   default:
     qtrt.ErrorResolve("QAction", "isVisible", args)
- }
+  }
 
 }
 
@@ -146,12 +147,12 @@ func (this *QAction) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QAction", "setFont", args)
- }
+  }
 
 }
 
@@ -165,12 +166,12 @@ func (this *QAction) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setDataERK8QVariant
   default:
     qtrt.ErrorResolve("QAction", "setData", args)
- }
+  }
 
 }
 
@@ -184,12 +185,12 @@ func (this *QAction) setIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setIconERK5QIcon
   default:
     qtrt.ErrorResolve("QAction", "setIcon", args)
- }
+  }
 
 }
 
@@ -202,12 +203,12 @@ func (this *QAction) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction10metaObjectEv
   default:
     qtrt.ErrorResolve("QAction", "metaObject", args)
- }
+  }
 
 }
 
@@ -221,12 +222,12 @@ func (this *QAction) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setTextERK7QString
   default:
     qtrt.ErrorResolve("QAction", "setText", args)
- }
+  }
 
 }
 
@@ -240,12 +241,12 @@ func (this *QAction) showStatusText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction14showStatusTextEP7QWidget
   default:
     qtrt.ErrorResolve("QAction", "showStatusText", args)
- }
+  }
 
 }
 
@@ -258,12 +259,12 @@ func (this *QAction) iconText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction8iconTextEv
   default:
     qtrt.ErrorResolve("QAction", "iconText", args)
- }
+  }
 
 }
 
@@ -277,12 +278,12 @@ func (this *QAction) setIconVisibleInMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction20setIconVisibleInMenuEb
   default:
     qtrt.ErrorResolve("QAction", "setIconVisibleInMenu", args)
- }
+  }
 
 }
 
@@ -295,12 +296,12 @@ func (this *QAction) statusTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9statusTipEv
   default:
     qtrt.ErrorResolve("QAction", "statusTip", args)
- }
+  }
 
 }
 
@@ -313,12 +314,12 @@ func (this *QAction) isCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11isCheckableEv
   default:
     qtrt.ErrorResolve("QAction", "isCheckable", args)
- }
+  }
 
 }
 
@@ -332,12 +333,12 @@ func (this *QAction) setWhatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setWhatsThisERK7QString
   default:
     qtrt.ErrorResolve("QAction", "setWhatsThis", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QAction) menu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4menuEv
   default:
     qtrt.ErrorResolve("QAction", "menu", args)
- }
+  }
 
 }
 
@@ -368,12 +369,12 @@ func (this *QAction) trigger(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7triggerEv
   default:
     qtrt.ErrorResolve("QAction", "trigger", args)
- }
+  }
 
 }
 
@@ -386,12 +387,12 @@ func (this *QAction) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4fontEv
   default:
     qtrt.ErrorResolve("QAction", "font", args)
- }
+  }
 
 }
 
@@ -405,12 +406,12 @@ func (this *QAction) setChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setCheckedEb
   default:
     qtrt.ErrorResolve("QAction", "setChecked", args)
- }
+  }
 
 }
 
@@ -424,12 +425,12 @@ func (this *QAction) setDisabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setDisabledEb
   default:
     qtrt.ErrorResolve("QAction", "setDisabled", args)
- }
+  }
 
 }
 
@@ -443,12 +444,12 @@ func (this *QAction) setShortcut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setShortcutERK12QKeySequence
   default:
     qtrt.ErrorResolve("QAction", "setShortcut", args)
- }
+  }
 
 }
 
@@ -461,12 +462,12 @@ func (this *QAction) toggle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction6toggleEv
   default:
     qtrt.ErrorResolve("QAction", "toggle", args)
- }
+  }
 
 }
 
@@ -479,12 +480,12 @@ func (this *QAction) shortcut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction8shortcutEv
   default:
     qtrt.ErrorResolve("QAction", "shortcut", args)
- }
+  }
 
 }
 
@@ -497,12 +498,12 @@ func (this *QAction) icon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4iconEv
   default:
     qtrt.ErrorResolve("QAction", "icon", args)
- }
+  }
 
 }
 
@@ -516,12 +517,12 @@ func (this *QAction) setActionGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction14setActionGroupEP12QActionGroup
   default:
     qtrt.ErrorResolve("QAction", "setActionGroup", args)
- }
+  }
 
 }
 
@@ -535,12 +536,12 @@ func (this *QAction) setMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setMenuEP5QMenu
   default:
     qtrt.ErrorResolve("QAction", "setMenu", args)
- }
+  }
 
 }
 
@@ -553,12 +554,12 @@ func (this *QAction) shortcuts(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9shortcutsEv
   default:
     qtrt.ErrorResolve("QAction", "shortcuts", args)
- }
+  }
 
 }
 
@@ -572,12 +573,12 @@ func (this *QAction) setCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setCheckableEb
   default:
     qtrt.ErrorResolve("QAction", "setCheckable", args)
- }
+  }
 
 }
 
@@ -590,12 +591,12 @@ func (this *QAction) toolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction7toolTipEv
   default:
     qtrt.ErrorResolve("QAction", "toolTip", args)
- }
+  }
 
 }
 
@@ -608,12 +609,12 @@ func (this *QAction) parentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction12parentWidgetEv
   default:
     qtrt.ErrorResolve("QAction", "parentWidget", args)
- }
+  }
 
 }
 
@@ -627,12 +628,12 @@ func (this *QAction) setSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setSeparatorEb
   default:
     qtrt.ErrorResolve("QAction", "setSeparator", args)
- }
+  }
 
 }
 
@@ -645,12 +646,12 @@ func (this *QAction) associatedGraphicsWidgets(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction25associatedGraphicsWidgetsEv
   default:
     qtrt.ErrorResolve("QAction", "associatedGraphicsWidgets", args)
- }
+  }
 
 }
 
@@ -664,12 +665,12 @@ func (this *QAction) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setVisibleEb
   default:
     qtrt.ErrorResolve("QAction", "setVisible", args)
- }
+  }
 
 }
 
@@ -682,12 +683,12 @@ func (this *QAction) isSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11isSeparatorEv
   default:
     qtrt.ErrorResolve("QAction", "isSeparator", args)
- }
+  }
 
 }
 
@@ -701,12 +702,12 @@ func (this *QAction) setIconText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setIconTextERK7QString
   default:
     qtrt.ErrorResolve("QAction", "setIconText", args)
- }
+  }
 
 }
 
@@ -719,12 +720,12 @@ func (this *QAction) actionGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11actionGroupEv
   default:
     qtrt.ErrorResolve("QAction", "actionGroup", args)
- }
+  }
 
 }
 
@@ -738,12 +739,12 @@ func (this *QAction) setStatusTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setStatusTipERK7QString
   default:
     qtrt.ErrorResolve("QAction", "setStatusTip", args)
- }
+  }
 
 }
 
@@ -756,12 +757,12 @@ func (this *QAction) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4dataEv
   default:
     qtrt.ErrorResolve("QAction", "data", args)
- }
+  }
 
 }
 
@@ -774,12 +775,12 @@ func (this *QAction) isChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isCheckedEv
   default:
     qtrt.ErrorResolve("QAction", "isChecked", args)
- }
+  }
 
 }
 
@@ -792,12 +793,12 @@ func (this *QAction) autoRepeat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction10autoRepeatEv
   default:
     qtrt.ErrorResolve("QAction", "autoRepeat", args)
- }
+  }
 
 }
 
@@ -810,12 +811,12 @@ func (this *QAction) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isEnabledEv
   default:
     qtrt.ErrorResolve("QAction", "isEnabled", args)
- }
+  }
 
 }
 
@@ -828,12 +829,12 @@ func (this *QAction) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4textEv
   default:
     qtrt.ErrorResolve("QAction", "text", args)
- }
+  }
 
 }
 
@@ -846,12 +847,12 @@ func (this *QAction) hover(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction5hoverEv
   default:
     qtrt.ErrorResolve("QAction", "hover", args)
- }
+  }
 
 }
 
@@ -864,12 +865,12 @@ func (this *QAction) isIconVisibleInMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QAction19isIconVisibleInMenuEv
   default:
     qtrt.ErrorResolve("QAction", "isIconVisibleInMenu", args)
- }
+  }
 
 }
 
@@ -883,12 +884,12 @@ func (this *QAction) setToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setToolTipERK7QString
   default:
     qtrt.ErrorResolve("QAction", "setToolTip", args)
- }
+  }
 
 }
 
@@ -902,12 +903,12 @@ func (this *QAction) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setEnabledEb
   default:
     qtrt.ErrorResolve("QAction", "setEnabled", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -50,12 +50,12 @@ func (this *QSlider) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider10metaObjectEv
   default:
     qtrt.ErrorResolve("QSlider", "metaObject", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QSlider) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QSlider5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QSlider", "event", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QSlider) tickInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider12tickIntervalEv
   default:
     qtrt.ErrorResolve("QSlider", "tickInterval", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QSlider) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider8sizeHintEv
   default:
     qtrt.ErrorResolve("QSlider", "sizeHint", args)
- }
+  }
 
 }
 
@@ -124,17 +124,18 @@ func (this *QSlider) setTickInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QSlider15setTickIntervalEi
   default:
     qtrt.ErrorResolve("QSlider", "setTickInterval", args)
- }
+  }
 
 }
 
 
-func NewQSlider(args ...interface{})() {
+func NewQSlider(args ...interface{}) QSlider {
+  return QSlider{}
 }
 
 
@@ -144,10 +145,10 @@ func (this *QSlider) FreeQSlider(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSlider", "~QSlider", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QSlider) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QSlider", "minimumSizeHint", args)
- }
+  }
 
 }
 

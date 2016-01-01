@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -56,12 +56,12 @@ func (this *QStyleHints) setMouseDoubleClickInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints27setMouseDoubleClickIntervalEi
   default:
     qtrt.ErrorResolve("QStyleHints", "setMouseDoubleClickInterval", args)
- }
+  }
 
 }
 
@@ -74,12 +74,12 @@ func (this *QStyleHints) mousePressAndHoldInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints25mousePressAndHoldIntervalEv
   default:
     qtrt.ErrorResolve("QStyleHints", "mousePressAndHoldInterval", args)
- }
+  }
 
 }
 
@@ -92,12 +92,12 @@ func (this *QStyleHints) passwordMaskDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints17passwordMaskDelayEv
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskDelay", args)
- }
+  }
 
 }
 
@@ -110,12 +110,12 @@ func (this *QStyleHints) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints10metaObjectEv
   default:
     qtrt.ErrorResolve("QStyleHints", "metaObject", args)
- }
+  }
 
 }
 
@@ -129,17 +129,18 @@ func (this *QStyleHints) setKeyboardInputInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints24setKeyboardInputIntervalEi
   default:
     qtrt.ErrorResolve("QStyleHints", "setKeyboardInputInterval", args)
- }
+  }
 
 }
 
 
-func NewQStyleHints(args ...interface{})() {
+func NewQStyleHints(args ...interface{}) QStyleHints {
+  return QStyleHints{}
 }
 
 
@@ -151,12 +152,12 @@ func (this *QStyleHints) showIsFullScreen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints16showIsFullScreenEv
   default:
     qtrt.ErrorResolve("QStyleHints", "showIsFullScreen", args)
- }
+  }
 
 }
 
@@ -169,12 +170,12 @@ func (this *QStyleHints) useRtlExtensions(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints16useRtlExtensionsEv
   default:
     qtrt.ErrorResolve("QStyleHints", "useRtlExtensions", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QStyleHints) setStartDragDistance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints20setStartDragDistanceEi
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragDistance", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QStyleHints) setFocusOnTouchRelease(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints22setFocusOnTouchReleaseEv
   default:
     qtrt.ErrorResolve("QStyleHints", "setFocusOnTouchRelease", args)
- }
+  }
 
 }
 
@@ -224,12 +225,12 @@ func (this *QStyleHints) startDragVelocity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragVelocityEv
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragVelocity", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QStyleHints) startDragTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints13startDragTimeEv
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragTime", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QStyleHints) keyboardInputInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints21keyboardInputIntervalEv
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardInputInterval", args)
- }
+  }
 
 }
 
@@ -279,12 +280,12 @@ func (this *QStyleHints) setStartDragTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints16setStartDragTimeEi
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragTime", args)
- }
+  }
 
 }
 
@@ -298,12 +299,12 @@ func (this *QStyleHints) setCursorFlashTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints18setCursorFlashTimeEi
   default:
     qtrt.ErrorResolve("QStyleHints", "setCursorFlashTime", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QStyleHints) cursorFlashTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints15cursorFlashTimeEv
   default:
     qtrt.ErrorResolve("QStyleHints", "cursorFlashTime", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QStyleHints) passwordMaskCharacter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints21passwordMaskCharacterEv
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskCharacter", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QStyleHints) keyboardAutoRepeatRate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints22keyboardAutoRepeatRateEv
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardAutoRepeatRate", args)
- }
+  }
 
 }
 
@@ -370,12 +371,12 @@ func (this *QStyleHints) startDragDistance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragDistanceEv
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragDistance", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QStyleHints) fontSmoothingGamma(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints18fontSmoothingGammaEv
   default:
     qtrt.ErrorResolve("QStyleHints", "fontSmoothingGamma", args)
- }
+  }
 
 }
 
@@ -406,12 +407,12 @@ func (this *QStyleHints) singleClickActivation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints21singleClickActivationEv
   default:
     qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
- }
+  }
 
 }
 
@@ -424,12 +425,12 @@ func (this *QStyleHints) mouseDoubleClickInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStyleHints24mouseDoubleClickIntervalEv
   default:
     qtrt.ErrorResolve("QStyleHints", "mouseDoubleClickInterval", args)
- }
+  }
 
 }
 

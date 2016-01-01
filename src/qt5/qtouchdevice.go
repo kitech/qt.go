@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -51,12 +51,12 @@ func (this *QTouchDevice) setName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice7setNameERK7QString
   default:
     qtrt.ErrorResolve("QTouchDevice", "setName", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QTouchDevice) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QTouchDevice4nameEv
   default:
     qtrt.ErrorResolve("QTouchDevice", "name", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice21setMaximumTouchPointsEi
   default:
     qtrt.ErrorResolve("QTouchDevice", "setMaximumTouchPoints", args)
- }
+  }
 
 }
 
@@ -104,15 +104,16 @@ func (this *QTouchDevice) devices_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTouchDevice", "devices", args)
- }
+  }
 
 }
 
 
-func NewQTouchDevice(args ...interface{})() {
+func NewQTouchDevice(args ...interface{}) QTouchDevice {
+  return QTouchDevice{}
 }
 
 
@@ -122,10 +123,10 @@ func (this *QTouchDevice) FreeQTouchDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTouchDevice", "~QTouchDevice", args)
- }
+  }
 
 }
 
@@ -138,12 +139,12 @@ func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QTouchDevice18maximumTouchPointsEv
   default:
     qtrt.ErrorResolve("QTouchDevice", "maximumTouchPoints", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsharedpointer_impl.h
 // dst-file: /src/core/qsharedpointer_impl.go
 //

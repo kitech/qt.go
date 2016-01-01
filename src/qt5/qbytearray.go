@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.go
 //
@@ -54,7 +54,8 @@ type QByteArrayDataPtr struct {
 }
 
 
-func NewQByteRef(args ...interface{})() {
+func NewQByteRef(args ...interface{}) QByteRef {
+  return QByteRef{}
 }
 
 
@@ -85,7 +86,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6insertEic
   case 1:
@@ -98,7 +99,7 @@ func (this *QByteArray) insert(args ...interface{}) () {
     // invoke: _ZN10QByteArray6insertEiPKc
   default:
     qtrt.ErrorResolve("QByteArray", "insert", args)
- }
+  }
 
 }
 
@@ -111,12 +112,12 @@ func (this *QByteArray) cend(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray4cendEv
   default:
     qtrt.ErrorResolve("QByteArray", "cend", args)
- }
+  }
 
 }
 
@@ -143,7 +144,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray11lastIndexOfERKS_i
   case 1:
@@ -154,7 +155,7 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     // invoke: _ZNK10QByteArray11lastIndexOfEPKci
   default:
     qtrt.ErrorResolve("QByteArray", "lastIndexOf", args)
- }
+  }
 
 }
 
@@ -174,7 +175,7 @@ func (this *QByteArray) push_front(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray10push_frontERKS_
   case 1:
@@ -183,7 +184,7 @@ func (this *QByteArray) push_front(args ...interface{}) () {
     // invoke: _ZN10QByteArray10push_frontEPKc
   default:
     qtrt.ErrorResolve("QByteArray", "push_front", args)
- }
+  }
 
 }
 
@@ -198,12 +199,12 @@ func (this *QByteArray) toULong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray7toULongEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toULong", args)
- }
+  }
 
 }
 
@@ -276,7 +277,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray7replaceEPKcS1_
   case 1:
@@ -307,7 +308,7 @@ func (this *QByteArray) replace(args ...interface{}) () {
     // invoke: _ZN10QByteArray7replaceERK7QStringRKS_
   default:
     qtrt.ErrorResolve("QByteArray", "replace", args)
- }
+  }
 
 }
 
@@ -318,10 +319,10 @@ func (this *QByteArray) fromHex_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "fromHex", args)
- }
+  }
 
 }
 
@@ -345,7 +346,7 @@ func (this *QByteArray) prepend(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray7prependEPKc
   case 1:
@@ -356,7 +357,7 @@ func (this *QByteArray) prepend(args ...interface{}) () {
     // invoke: _ZN10QByteArray7prependEPKci
   default:
     qtrt.ErrorResolve("QByteArray", "prepend", args)
- }
+  }
 
 }
 
@@ -378,7 +379,7 @@ func (this *QByteArray) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5countERKS_
   case 1:
@@ -389,7 +390,7 @@ func (this *QByteArray) count(args ...interface{}) () {
     // invoke: _ZNK10QByteArray5countEPKc
   default:
     qtrt.ErrorResolve("QByteArray", "count", args)
- }
+  }
 
 }
 
@@ -400,10 +401,10 @@ func (this *QByteArray) FreeQByteArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "~QByteArray", args)
- }
+  }
 
 }
 
@@ -418,19 +419,20 @@ func (this *QByteArray) end(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray3endEv
   case 1:
     // invoke: _ZNK10QByteArray3endEv
   default:
     qtrt.ErrorResolve("QByteArray", "end", args)
- }
+  }
 
 }
 
 
-func NewQByteArray(args ...interface{})() {
+func NewQByteArray(args ...interface{}) QByteArray {
+  return QByteArray{}
 }
 
 
@@ -443,12 +445,12 @@ func (this *QByteArray) toFloat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray7toFloatEPb
   default:
     qtrt.ErrorResolve("QByteArray", "toFloat", args)
- }
+  }
 
 }
 
@@ -462,12 +464,12 @@ func (this *QByteArray) truncate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray8truncateEi
   default:
     qtrt.ErrorResolve("QByteArray", "truncate", args)
- }
+  }
 
 }
 
@@ -483,14 +485,14 @@ func (this *QByteArray) toBase64(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8toBase64E6QFlagsINS_12Base64OptionEE
   case 1:
     // invoke: _ZNK10QByteArray8toBase64Ev
   default:
     qtrt.ErrorResolve("QByteArray", "toBase64", args)
- }
+  }
 
 }
 
@@ -503,12 +505,12 @@ func (this *QByteArray) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray7isEmptyEv
   default:
     qtrt.ErrorResolve("QByteArray", "isEmpty", args)
- }
+  }
 
 }
 
@@ -522,12 +524,12 @@ func (this *QByteArray) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6resizeEi
   default:
     qtrt.ErrorResolve("QByteArray", "resize", args)
- }
+  }
 
 }
 
@@ -540,12 +542,12 @@ func (this *QByteArray) toHex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5toHexEv
   default:
     qtrt.ErrorResolve("QByteArray", "toHex", args)
- }
+  }
 
 }
 
@@ -572,7 +574,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray7indexOfEPKci
   case 1:
@@ -583,7 +585,7 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     // invoke: _ZNK10QByteArray7indexOfERK7QStringi
   default:
     qtrt.ErrorResolve("QByteArray", "indexOf", args)
- }
+  }
 
 }
 
@@ -598,12 +600,12 @@ func (this *QByteArray) toUInt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray6toUIntEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toUInt", args)
- }
+  }
 
 }
 
@@ -614,10 +616,10 @@ func (this *QByteArray) fromStdString_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "fromStdString", args)
- }
+  }
 
 }
 
@@ -630,12 +632,12 @@ func (this *QByteArray) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray6isNullEv
   default:
     qtrt.ErrorResolve("QByteArray", "isNull", args)
- }
+  }
 
 }
 
@@ -649,12 +651,12 @@ func (this *QByteArray) reserve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray7reserveEi
   default:
     qtrt.ErrorResolve("QByteArray", "reserve", args)
- }
+  }
 
 }
 
@@ -667,12 +669,12 @@ func (this *QByteArray) cbegin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray6cbeginEv
   default:
     qtrt.ErrorResolve("QByteArray", "cbegin", args)
- }
+  }
 
 }
 
@@ -683,10 +685,10 @@ func (this *QByteArray) fromRawData_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "fromRawData", args)
- }
+  }
 
 }
 
@@ -706,7 +708,7 @@ func (this *QByteArray) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8containsEc
   case 1:
@@ -715,7 +717,7 @@ func (this *QByteArray) contains(args ...interface{}) () {
     // invoke: _ZNK10QByteArray8containsERKS_
   default:
     qtrt.ErrorResolve("QByteArray", "contains", args)
- }
+  }
 
 }
 
@@ -730,12 +732,12 @@ func (this *QByteArray) toLong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray6toLongEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toLong", args)
- }
+  }
 
 }
 
@@ -750,14 +752,14 @@ func (this *QByteArray) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray4dataEv
   case 1:
     // invoke: _ZNK10QByteArray4dataEv
   default:
     qtrt.ErrorResolve("QByteArray", "data", args)
- }
+  }
 
 }
 
@@ -768,10 +770,10 @@ func (this *QByteArray) number_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "number", args)
- }
+  }
 
 }
 
@@ -784,12 +786,12 @@ func (this *QByteArray) capacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8capacityEv
   default:
     qtrt.ErrorResolve("QByteArray", "capacity", args)
- }
+  }
 
 }
 
@@ -800,10 +802,10 @@ func (this *QByteArray) fromBase64_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "fromBase64", args)
- }
+  }
 
 }
 
@@ -817,12 +819,12 @@ func (this *QByteArray) left(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray4leftEi
   default:
     qtrt.ErrorResolve("QByteArray", "left", args)
- }
+  }
 
 }
 
@@ -849,7 +851,7 @@ func (this *QByteArray) append(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6appendEc
   case 1:
@@ -862,7 +864,7 @@ func (this *QByteArray) append(args ...interface{}) () {
     // invoke: _ZN10QByteArray6appendEPKci
   default:
     qtrt.ErrorResolve("QByteArray", "append", args)
- }
+  }
 
 }
 
@@ -882,7 +884,7 @@ func (this *QByteArray) startsWith(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray10startsWithEPKc
   case 1:
@@ -891,7 +893,7 @@ func (this *QByteArray) startsWith(args ...interface{}) () {
     // invoke: _ZNK10QByteArray10startsWithEc
   default:
     qtrt.ErrorResolve("QByteArray", "startsWith", args)
- }
+  }
 
 }
 
@@ -906,12 +908,12 @@ func (this *QByteArray) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6removeEii
   default:
     qtrt.ErrorResolve("QByteArray", "remove", args)
- }
+  }
 
 }
 
@@ -931,7 +933,7 @@ func (this *QByteArray) endsWith(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8endsWithEPKc
   case 1:
@@ -940,7 +942,7 @@ func (this *QByteArray) endsWith(args ...interface{}) () {
     // invoke: _ZNK10QByteArray8endsWithERKS_
   default:
     qtrt.ErrorResolve("QByteArray", "endsWith", args)
- }
+  }
 
 }
 
@@ -953,12 +955,12 @@ func (this *QByteArray) squeeze(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray7squeezeEv
   default:
     qtrt.ErrorResolve("QByteArray", "squeeze", args)
- }
+  }
 
 }
 
@@ -971,12 +973,12 @@ func (this *QByteArray) detach(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6detachEv
   default:
     qtrt.ErrorResolve("QByteArray", "detach", args)
- }
+  }
 
 }
 
@@ -990,12 +992,12 @@ func (this *QByteArray) repeated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8repeatedEi
   default:
     qtrt.ErrorResolve("QByteArray", "repeated", args)
- }
+  }
 
 }
 
@@ -1040,7 +1042,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray6setNumEfci
   case 1:
@@ -1059,7 +1061,7 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     // invoke: _ZN10QByteArray6setNumEii
   default:
     qtrt.ErrorResolve("QByteArray", "setNum", args)
- }
+  }
 
 }
 
@@ -1074,12 +1076,12 @@ func (this *QByteArray) toShort(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray7toShortEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toShort", args)
- }
+  }
 
 }
 
@@ -1094,12 +1096,12 @@ func (this *QByteArray) toInt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5toIntEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toInt", args)
- }
+  }
 
 }
 
@@ -1112,12 +1114,12 @@ func (this *QByteArray) constBegin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray10constBeginEv
   default:
     qtrt.ErrorResolve("QByteArray", "constBegin", args)
- }
+  }
 
 }
 
@@ -1137,7 +1139,7 @@ func (this *QByteArray) push_back(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray9push_backEc
   case 1:
@@ -1146,7 +1148,7 @@ func (this *QByteArray) push_back(args ...interface{}) () {
     // invoke: _ZN10QByteArray9push_backEPKc
   default:
     qtrt.ErrorResolve("QByteArray", "push_back", args)
- }
+  }
 
 }
 
@@ -1160,12 +1162,12 @@ func (this *QByteArray) isSharedWith(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray12isSharedWithERKS_
   default:
     qtrt.ErrorResolve("QByteArray", "isSharedWith", args)
- }
+  }
 
 }
 
@@ -1178,12 +1180,12 @@ func (this *QByteArray) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray4sizeEv
   default:
     qtrt.ErrorResolve("QByteArray", "size", args)
- }
+  }
 
 }
 
@@ -1199,12 +1201,12 @@ func (this *QByteArray) leftJustified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray13leftJustifiedEicb
   default:
     qtrt.ErrorResolve("QByteArray", "leftJustified", args)
- }
+  }
 
 }
 
@@ -1219,14 +1221,14 @@ func (this *QByteArray) begin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5beginEv
   case 1:
     // invoke: _ZN10QByteArray5beginEv
   default:
     qtrt.ErrorResolve("QByteArray", "begin", args)
- }
+  }
 
 }
 
@@ -1240,12 +1242,12 @@ func (this *QByteArray) toDouble(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8toDoubleEPb
   default:
     qtrt.ErrorResolve("QByteArray", "toDouble", args)
- }
+  }
 
 }
 
@@ -1260,12 +1262,12 @@ func (this *QByteArray) toULongLong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray11toULongLongEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toULongLong", args)
- }
+  }
 
 }
 
@@ -1276,10 +1278,10 @@ func (this *QByteArray) fromPercentEncoding_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QByteArray", "fromPercentEncoding", args)
- }
+  }
 
 }
 
@@ -1292,12 +1294,12 @@ func (this *QByteArray) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray5clearEv
   default:
     qtrt.ErrorResolve("QByteArray", "clear", args)
- }
+  }
 
 }
 
@@ -1312,12 +1314,12 @@ func (this *QByteArray) toLongLong(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray10toLongLongEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toLongLong", args)
- }
+  }
 
 }
 
@@ -1330,12 +1332,12 @@ func (this *QByteArray) constData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray9constDataEv
   default:
     qtrt.ErrorResolve("QByteArray", "constData", args)
- }
+  }
 
 }
 
@@ -1348,12 +1350,12 @@ func (this *QByteArray) length(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray6lengthEv
   default:
     qtrt.ErrorResolve("QByteArray", "length", args)
- }
+  }
 
 }
 
@@ -1367,12 +1369,12 @@ func (this *QByteArray) at(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray2atEi
   default:
     qtrt.ErrorResolve("QByteArray", "at", args)
- }
+  }
 
 }
 
@@ -1386,12 +1388,12 @@ func (this *QByteArray) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray4swapERS_
   default:
     qtrt.ErrorResolve("QByteArray", "swap", args)
- }
+  }
 
 }
 
@@ -1405,12 +1407,12 @@ func (this *QByteArray) split(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5splitEc
   default:
     qtrt.ErrorResolve("QByteArray", "split", args)
- }
+  }
 
 }
 
@@ -1424,12 +1426,12 @@ func (this *QByteArray) right(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray5rightEi
   default:
     qtrt.ErrorResolve("QByteArray", "right", args)
- }
+  }
 
 }
 
@@ -1443,12 +1445,12 @@ func (this *QByteArray) chop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray4chopEi
   default:
     qtrt.ErrorResolve("QByteArray", "chop", args)
- }
+  }
 
 }
 
@@ -1464,12 +1466,12 @@ func (this *QByteArray) toPercentEncoding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray17toPercentEncodingERKS_S1_c
   default:
     qtrt.ErrorResolve("QByteArray", "toPercentEncoding", args)
- }
+  }
 
 }
 
@@ -1482,12 +1484,12 @@ func (this *QByteArray) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray10isDetachedEv
   default:
     qtrt.ErrorResolve("QByteArray", "isDetached", args)
- }
+  }
 
 }
 
@@ -1500,12 +1502,12 @@ func (this *QByteArray) constEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8constEndEv
   default:
     qtrt.ErrorResolve("QByteArray", "constEnd", args)
- }
+  }
 
 }
 
@@ -1520,12 +1522,12 @@ func (this *QByteArray) setRawData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray10setRawDataEPKcj
   default:
     qtrt.ErrorResolve("QByteArray", "setRawData", args)
- }
+  }
 
 }
 
@@ -1540,12 +1542,12 @@ func (this *QByteArray) mid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray3midEii
   default:
     qtrt.ErrorResolve("QByteArray", "mid", args)
- }
+  }
 
 }
 
@@ -1560,12 +1562,12 @@ func (this *QByteArray) fill(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QByteArray4fillEci
   default:
     qtrt.ErrorResolve("QByteArray", "fill", args)
- }
+  }
 
 }
 
@@ -1580,12 +1582,12 @@ func (this *QByteArray) toUShort(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray8toUShortEPbi
   default:
     qtrt.ErrorResolve("QByteArray", "toUShort", args)
- }
+  }
 
 }
 
@@ -1601,12 +1603,12 @@ func (this *QByteArray) rightJustified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QByteArray14rightJustifiedEicb
   default:
     qtrt.ErrorResolve("QByteArray", "rightJustified", args)
- }
+  }
 
 }
 

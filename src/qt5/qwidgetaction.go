@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -50,12 +50,12 @@ func (this *QWidgetAction) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetAction10metaObjectEv
   default:
     qtrt.ErrorResolve("QWidgetAction", "metaObject", args)
- }
+  }
 
 }
 
@@ -66,10 +66,10 @@ func (this *QWidgetAction) FreeQWidgetAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWidgetAction", "~QWidgetAction", args)
- }
+  }
 
 }
 
@@ -83,12 +83,12 @@ func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction16setDefaultWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QWidgetAction", "setDefaultWidget", args)
- }
+  }
 
 }
 
@@ -102,17 +102,18 @@ func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13releaseWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QWidgetAction", "releaseWidget", args)
- }
+  }
 
 }
 
 
-func NewQWidgetAction(args ...interface{})() {
+func NewQWidgetAction(args ...interface{}) QWidgetAction {
+  return QWidgetAction{}
 }
 
 
@@ -125,12 +126,12 @@ func (this *QWidgetAction) requestWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13requestWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QWidgetAction", "requestWidget", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QWidgetAction) defaultWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetAction13defaultWidgetEv
   default:
     qtrt.ErrorResolve("QWidgetAction", "defaultWidget", args)
- }
+  }
 
 }
 

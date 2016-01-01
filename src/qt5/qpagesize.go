@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -42,7 +42,8 @@ type QPageSize struct {
 }
 
 
-func NewQPageSize(args ...interface{})() {
+func NewQPageSize(args ...interface{}) QPageSize {
+  return QPageSize{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QPageSize) FreeQPageSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPageSize", "~QPageSize", args)
- }
+  }
 
 }
 
@@ -71,14 +72,14 @@ func (this *QPageSize) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize3keyEv
   case 1:
     // invoke: _ZN9QPageSize3keyENS_10PageSizeIdE
   default:
     qtrt.ErrorResolve("QPageSize", "key", args)
- }
+  }
 
 }
 
@@ -94,14 +95,14 @@ func (this *QPageSize) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize4nameEv
   case 1:
     // invoke: _ZN9QPageSize4nameENS_10PageSizeIdE
   default:
     qtrt.ErrorResolve("QPageSize", "name", args)
- }
+  }
 
 }
 
@@ -117,14 +118,14 @@ func (this *QPageSize) definitionSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize14definitionSizeEv
   case 1:
     // invoke: _ZN9QPageSize14definitionSizeENS_10PageSizeIdE
   default:
     qtrt.ErrorResolve("QPageSize", "definitionSize", args)
- }
+  }
 
 }
 
@@ -138,12 +139,12 @@ func (this *QPageSize) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QPageSize4swapERS_
   default:
     qtrt.ErrorResolve("QPageSize", "swap", args)
- }
+  }
 
 }
 
@@ -159,14 +160,14 @@ func (this *QPageSize) windowsId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QPageSize9windowsIdENS_10PageSizeIdE
   case 1:
     // invoke: _ZNK9QPageSize9windowsIdEv
   default:
     qtrt.ErrorResolve("QPageSize", "windowsId", args)
- }
+  }
 
 }
 
@@ -184,14 +185,14 @@ func (this *QPageSize) sizePixels(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10sizePixelsEi
   case 1:
     // invoke: _ZN9QPageSize10sizePixelsENS_10PageSizeIdEi
   default:
     qtrt.ErrorResolve("QPageSize", "sizePixels", args)
- }
+  }
 
 }
 
@@ -204,12 +205,12 @@ func (this *QPageSize) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize7isValidEv
   default:
     qtrt.ErrorResolve("QPageSize", "isValid", args)
- }
+  }
 
 }
 
@@ -223,12 +224,12 @@ func (this *QPageSize) rectPixels(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10rectPixelsEi
   default:
     qtrt.ErrorResolve("QPageSize", "rectPixels", args)
- }
+  }
 
 }
 
@@ -241,12 +242,12 @@ func (this *QPageSize) rectPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10rectPointsEv
   default:
     qtrt.ErrorResolve("QPageSize", "rectPoints", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QPageSize) isEquivalentTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize14isEquivalentToERKS_
   default:
     qtrt.ErrorResolve("QPageSize", "isEquivalentTo", args)
- }
+  }
 
 }
 
@@ -281,14 +282,14 @@ func (this *QPageSize) sizePoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QPageSize10sizePointsENS_10PageSizeIdE
   case 1:
     // invoke: _ZNK9QPageSize10sizePointsEv
   default:
     qtrt.ErrorResolve("QPageSize", "sizePoints", args)
- }
+  }
 
 }
 

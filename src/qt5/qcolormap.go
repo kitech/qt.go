@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.go
 //
@@ -51,12 +51,12 @@ func (this *QColormap) pixel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap5pixelERK6QColor
   default:
     qtrt.ErrorResolve("QColormap", "pixel", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QColormap) colormap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap8colormapEv
   default:
     qtrt.ErrorResolve("QColormap", "colormap", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QColormap) colorAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap7colorAtEj
   default:
     qtrt.ErrorResolve("QColormap", "colorAt", args)
- }
+  }
 
 }
 
@@ -104,15 +104,16 @@ func (this *QColormap) FreeQColormap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColormap", "~QColormap", args)
- }
+  }
 
 }
 
 
-func NewQColormap(args ...interface{})() {
+func NewQColormap(args ...interface{}) QColormap {
+  return QColormap{}
 }
 
 
@@ -122,10 +123,10 @@ func (this *QColormap) instance_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColormap", "instance", args)
- }
+  }
 
 }
 
@@ -138,12 +139,12 @@ func (this *QColormap) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap4sizeEv
   default:
     qtrt.ErrorResolve("QColormap", "size", args)
- }
+  }
 
 }
 
@@ -154,10 +155,10 @@ func (this *QColormap) initialize_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColormap", "initialize", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QColormap) depth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap5depthEv
   default:
     qtrt.ErrorResolve("QColormap", "depth", args)
- }
+  }
 
 }
 
@@ -186,10 +187,10 @@ func (this *QColormap) cleanup_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColormap", "cleanup", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -50,12 +50,12 @@ func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19horizontalScrollBarEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "horizontalScrollBar", args)
- }
+  }
 
 }
 
@@ -68,17 +68,18 @@ func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea19maximumViewportSizeEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "maximumViewportSize", args)
- }
+  }
 
 }
 
 
-func NewQAbstractScrollArea(args ...interface{})() {
+func NewQAbstractScrollArea(args ...interface{}) QAbstractScrollArea {
+  return QAbstractScrollArea{}
 }
 
 
@@ -91,12 +92,12 @@ func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea11setViewportEP7QWidget
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setViewport", args)
- }
+  }
 
 }
 
@@ -109,12 +110,12 @@ func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -128,12 +129,12 @@ func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setCornerWidget", args)
- }
+  }
 
 }
 
@@ -146,12 +147,12 @@ func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "metaObject", args)
- }
+  }
 
 }
 
@@ -165,12 +166,12 @@ func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea13setupViewportEP7QWidget
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setupViewport", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea12cornerWidgetEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "cornerWidget", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea17verticalScrollBarEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "verticalScrollBar", args)
- }
+  }
 
 }
 
@@ -219,12 +220,12 @@ func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8viewportEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "viewport", args)
- }
+  }
 
 }
 
@@ -235,10 +236,10 @@ func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "~QAbstractScrollArea", args)
- }
+  }
 
 }
 
@@ -251,12 +252,12 @@ func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractScrollArea8sizeHintEv
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "sizeHint", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setHorizontalScrollBar", args)
- }
+  }
 
 }
 
@@ -289,12 +290,12 @@ func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setVerticalScrollBar", args)
- }
+  }
 
 }
 

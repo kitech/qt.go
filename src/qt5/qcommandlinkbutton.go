@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -42,7 +42,8 @@ type QCommandLinkButton struct {
 }
 
 
-func NewQCommandLinkButton(args ...interface{})() {
+func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
+  return QCommandLinkButton{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLinkButton10metaObjectEv
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "metaObject", args)
- }
+  }
 
 }
 
@@ -70,10 +71,10 @@ func (this *QCommandLinkButton) FreeQCommandLinkButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "~QCommandLinkButton", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLinkButton11descriptionEv
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "description", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLinkButton14setDescriptionERK7QString
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "setDescription", args)
- }
+  }
 
 }
 

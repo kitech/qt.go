@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -57,12 +57,12 @@ func (this *QAbstractSlider) setSliderPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider17setSliderPositionEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderPosition", args)
- }
+  }
 
 }
 
@@ -75,12 +75,12 @@ func (this *QAbstractSlider) isSliderDown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider12isSliderDownEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "isSliderDown", args)
- }
+  }
 
 }
 
@@ -93,12 +93,12 @@ func (this *QAbstractSlider) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider5valueEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "value", args)
- }
+  }
 
 }
 
@@ -112,17 +112,18 @@ func (this *QAbstractSlider) setInvertedControls(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider19setInvertedControlsEb
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedControls", args)
- }
+  }
 
 }
 
 
-func NewQAbstractSlider(args ...interface{})() {
+func NewQAbstractSlider(args ...interface{}) QAbstractSlider {
+  return QAbstractSlider{}
 }
 
 
@@ -134,12 +135,12 @@ func (this *QAbstractSlider) minimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider7minimumEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "minimum", args)
- }
+  }
 
 }
 
@@ -152,12 +153,12 @@ func (this *QAbstractSlider) singleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider10singleStepEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "singleStep", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QAbstractSlider) pageStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider8pageStepEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "pageStep", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QAbstractSlider) setMaximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMaximumEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMaximum", args)
- }
+  }
 
 }
 
@@ -207,12 +208,12 @@ func (this *QAbstractSlider) invertedControls(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider16invertedControlsEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedControls", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QAbstractSlider) setValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider8setValueEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setValue", args)
- }
+  }
 
 }
 
@@ -242,10 +243,10 @@ func (this *QAbstractSlider) FreeQAbstractSlider(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractSlider", "~QAbstractSlider", args)
- }
+  }
 
 }
 
@@ -259,12 +260,12 @@ func (this *QAbstractSlider) setPageStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider11setPageStepEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setPageStep", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QAbstractSlider) setSliderDown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSliderDownEb
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderDown", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QAbstractSlider) maximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider7maximumEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "maximum", args)
- }
+  }
 
 }
 
@@ -314,12 +315,12 @@ func (this *QAbstractSlider) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "metaObject", args)
- }
+  }
 
 }
 
@@ -333,12 +334,12 @@ func (this *QAbstractSlider) setSingleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSingleStepEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSingleStep", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QAbstractSlider) setInvertedAppearance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider21setInvertedAppearanceEb
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedAppearance", args)
- }
+  }
 
 }
 
@@ -370,12 +371,12 @@ func (this *QAbstractSlider) hasTracking(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider11hasTrackingEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "hasTracking", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QAbstractSlider) invertedAppearance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider18invertedAppearanceEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedAppearance", args)
- }
+  }
 
 }
 
@@ -406,12 +407,12 @@ func (this *QAbstractSlider) sliderPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider14sliderPositionEv
   default:
     qtrt.ErrorResolve("QAbstractSlider", "sliderPosition", args)
- }
+  }
 
 }
 
@@ -425,12 +426,12 @@ func (this *QAbstractSlider) setTracking(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider11setTrackingEb
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setTracking", args)
- }
+  }
 
 }
 
@@ -445,12 +446,12 @@ func (this *QAbstractSlider) setRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider8setRangeEii
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setRange", args)
- }
+  }
 
 }
 
@@ -464,12 +465,12 @@ func (this *QAbstractSlider) setMinimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMinimumEi
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMinimum", args)
- }
+  }
 
 }
 

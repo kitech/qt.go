@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -52,12 +52,12 @@ func (this *QMimeData) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setDataERK7QStringRK10QByteArray
   default:
     qtrt.ErrorResolve("QMimeData", "setData", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QMimeData) colorData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9colorDataEv
   default:
     qtrt.ErrorResolve("QMimeData", "colorData", args)
- }
+  }
 
 }
 
@@ -86,10 +86,10 @@ func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMimeData", "~QMimeData", args)
- }
+  }
 
 }
 
@@ -102,17 +102,18 @@ func (this *QMimeData) hasHtml(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasHtmlEv
   default:
     qtrt.ErrorResolve("QMimeData", "hasHtml", args)
- }
+  }
 
 }
 
 
-func NewQMimeData(args ...interface{})() {
+func NewQMimeData(args ...interface{}) QMimeData {
+  return QMimeData{}
 }
 
 
@@ -124,12 +125,12 @@ func (this *QMimeData) imageData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9imageDataEv
   default:
     qtrt.ErrorResolve("QMimeData", "imageData", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9hasFormatERK7QString
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QMimeData) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setTextERK7QString
   default:
     qtrt.ErrorResolve("QMimeData", "setText", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QMimeData) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData5clearEv
   default:
     qtrt.ErrorResolve("QMimeData", "clear", args)
- }
+  }
 
 }
 
@@ -198,12 +199,12 @@ func (this *QMimeData) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4textEv
   default:
     qtrt.ErrorResolve("QMimeData", "text", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setHtmlERK7QString
   default:
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
- }
+  }
 
 }
 
@@ -236,12 +237,12 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setImageDataERK8QVariant
   default:
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
- }
+  }
 
 }
 
@@ -254,12 +255,12 @@ func (this *QMimeData) hasUrls(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasUrlsEv
   default:
     qtrt.ErrorResolve("QMimeData", "hasUrls", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QMimeData) hasColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData8hasColorEv
   default:
     qtrt.ErrorResolve("QMimeData", "hasColor", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12removeFormatERK7QString
   default:
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
- }
+  }
 
 }
 
@@ -309,12 +310,12 @@ func (this *QMimeData) html(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4htmlEv
   default:
     qtrt.ErrorResolve("QMimeData", "html", args)
- }
+  }
 
 }
 
@@ -327,12 +328,12 @@ func (this *QMimeData) urls(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4urlsEv
   default:
     qtrt.ErrorResolve("QMimeData", "urls", args)
- }
+  }
 
 }
 
@@ -346,12 +347,12 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setColorDataERK8QVariant
   default:
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
- }
+  }
 
 }
 
@@ -364,12 +365,12 @@ func (this *QMimeData) hasText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasTextEv
   default:
     qtrt.ErrorResolve("QMimeData", "hasText", args)
- }
+  }
 
 }
 
@@ -382,12 +383,12 @@ func (this *QMimeData) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData10metaObjectEv
   default:
     qtrt.ErrorResolve("QMimeData", "metaObject", args)
- }
+  }
 
 }
 
@@ -401,12 +402,12 @@ func (this *QMimeData) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4dataERK7QString
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
- }
+  }
 
 }
 
@@ -419,12 +420,12 @@ func (this *QMimeData) formats(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7formatsEv
   default:
     qtrt.ErrorResolve("QMimeData", "formats", args)
- }
+  }
 
 }
 
@@ -437,12 +438,12 @@ func (this *QMimeData) hasImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData8hasImageEv
   default:
     qtrt.ErrorResolve("QMimeData", "hasImage", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -59,12 +59,12 @@ func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchYEv
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchY", args)
- }
+  }
 
 }
 
@@ -77,12 +77,12 @@ func (this *QScreen) geometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen8geometryEv
   default:
     qtrt.ErrorResolve("QScreen", "geometry", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QScreen) grabWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QScreen10grabWindowEiiiii
   default:
     qtrt.ErrorResolve("QScreen", "grabWindow", args)
- }
+  }
 
 }
 
@@ -118,12 +118,12 @@ func (this *QScreen) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen4sizeEv
   default:
     qtrt.ErrorResolve("QScreen", "size", args)
- }
+  }
 
 }
 
@@ -136,12 +136,12 @@ func (this *QScreen) physicalSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen12physicalSizeEv
   default:
     qtrt.ErrorResolve("QScreen", "physicalSize", args)
- }
+  }
 
 }
 
@@ -154,12 +154,12 @@ func (this *QScreen) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen6handleEv
   default:
     qtrt.ErrorResolve("QScreen", "handle", args)
- }
+  }
 
 }
 
@@ -172,12 +172,12 @@ func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen24availableVirtualGeometryEv
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualGeometry", args)
- }
+  }
 
 }
 
@@ -188,10 +188,10 @@ func (this *QScreen) FreeQScreen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QScreen", "~QScreen", args)
- }
+  }
 
 }
 
@@ -204,12 +204,12 @@ func (this *QScreen) virtualSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen11virtualSizeEv
   default:
     qtrt.ErrorResolve("QScreen", "virtualSize", args)
- }
+  }
 
 }
 
@@ -222,12 +222,12 @@ func (this *QScreen) devicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen16devicePixelRatioEv
   default:
     qtrt.ErrorResolve("QScreen", "devicePixelRatio", args)
- }
+  }
 
 }
 
@@ -240,17 +240,18 @@ func (this *QScreen) virtualSiblings(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen15virtualSiblingsEv
   default:
     qtrt.ErrorResolve("QScreen", "virtualSiblings", args)
- }
+  }
 
 }
 
 
-func NewQScreen(args ...interface{})() {
+func NewQScreen(args ...interface{}) QScreen {
+  return QScreen{}
 }
 
 
@@ -262,12 +263,12 @@ func (this *QScreen) virtualGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen15virtualGeometryEv
   default:
     qtrt.ErrorResolve("QScreen", "virtualGeometry", args)
- }
+  }
 
 }
 
@@ -280,12 +281,12 @@ func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen18logicalDotsPerInchEv
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInch", args)
- }
+  }
 
 }
 
@@ -298,12 +299,12 @@ func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen19physicalDotsPerInchEv
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInch", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QScreen) refreshRate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen11refreshRateEv
   default:
     qtrt.ErrorResolve("QScreen", "refreshRate", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QScreen) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen10metaObjectEv
   default:
     qtrt.ErrorResolve("QScreen", "metaObject", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QScreen) availableSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen13availableSizeEv
   default:
     qtrt.ErrorResolve("QScreen", "availableSize", args)
- }
+  }
 
 }
 
@@ -370,12 +371,12 @@ func (this *QScreen) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen4nameEv
   default:
     qtrt.ErrorResolve("QScreen", "name", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QScreen) availableVirtualSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen20availableVirtualSizeEv
   default:
     qtrt.ErrorResolve("QScreen", "availableVirtualSize", args)
- }
+  }
 
 }
 
@@ -406,12 +407,12 @@ func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen19logicalDotsPerInchXEv
   default:
     qtrt.ErrorResolve("QScreen", "logicalDotsPerInchX", args)
- }
+  }
 
 }
 
@@ -424,12 +425,12 @@ func (this *QScreen) availableGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen17availableGeometryEv
   default:
     qtrt.ErrorResolve("QScreen", "availableGeometry", args)
- }
+  }
 
 }
 
@@ -442,12 +443,12 @@ func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchXEv
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchX", args)
- }
+  }
 
 }
 
@@ -460,12 +461,12 @@ func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen20physicalDotsPerInchYEv
   default:
     qtrt.ErrorResolve("QScreen", "physicalDotsPerInchY", args)
- }
+  }
 
 }
 
@@ -478,12 +479,12 @@ func (this *QScreen) depth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QScreen5depthEv
   default:
     qtrt.ErrorResolve("QScreen", "depth", args)
- }
+  }
 
 }
 

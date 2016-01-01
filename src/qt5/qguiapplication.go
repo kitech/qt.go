@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -59,10 +59,10 @@ func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "~QGuiApplication", args)
- }
+  }
 
 }
 
@@ -73,10 +73,10 @@ func (this *QGuiApplication) setFont_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setFont", args)
- }
+  }
 
 }
 
@@ -87,10 +87,10 @@ func (this *QGuiApplication) platformName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformName", args)
- }
+  }
 
 }
 
@@ -101,10 +101,10 @@ func (this *QGuiApplication) screens_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "screens", args)
- }
+  }
 
 }
 
@@ -115,10 +115,10 @@ func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setPalette", args)
- }
+  }
 
 }
 
@@ -129,15 +129,16 @@ func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "inputMethod", args)
- }
+  }
 
 }
 
 
-func NewQGuiApplication(args ...interface{})() {
+func NewQGuiApplication(args ...interface{}) QGuiApplication {
+  return QGuiApplication{}
 }
 
 
@@ -149,12 +150,12 @@ func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication15isSavingSessionEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSavingSession", args)
- }
+  }
 
 }
 
@@ -165,10 +166,10 @@ func (this *QGuiApplication) font_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "font", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication17isSessionRestoredEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSessionRestored", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QGuiApplication) sessionKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication10sessionKeyEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionKey", args)
- }
+  }
 
 }
 
@@ -215,10 +216,10 @@ func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "desktopSettingsAware", args)
- }
+  }
 
 }
 
@@ -229,10 +230,10 @@ func (this *QGuiApplication) sync_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "sync", args)
- }
+  }
 
 }
 
@@ -243,10 +244,10 @@ func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setQuitOnLastWindowClosed", args)
- }
+  }
 
 }
 
@@ -257,10 +258,10 @@ func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "primaryScreen", args)
- }
+  }
 
 }
 
@@ -271,10 +272,10 @@ func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "overrideCursor", args)
- }
+  }
 
 }
 
@@ -285,10 +286,10 @@ func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "windowIcon", args)
- }
+  }
 
 }
 
@@ -299,10 +300,10 @@ func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "styleHints", args)
- }
+  }
 
 }
 
@@ -313,10 +314,10 @@ func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "clipboard", args)
- }
+  }
 
 }
 
@@ -327,10 +328,10 @@ func (this *QGuiApplication) palette_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "palette", args)
- }
+  }
 
 }
 
@@ -345,12 +346,12 @@ func (this *QGuiApplication) notify(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QGuiApplication6notifyEP7QObjectP6QEvent
   default:
     qtrt.ErrorResolve("QGuiApplication", "notify", args)
- }
+  }
 
 }
 
@@ -361,10 +362,10 @@ func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelWindows", args)
- }
+  }
 
 }
 
@@ -375,10 +376,10 @@ func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "isRightToLeft", args)
- }
+  }
 
 }
 
@@ -389,10 +390,10 @@ func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "changeOverrideCursor", args)
- }
+  }
 
 }
 
@@ -403,10 +404,10 @@ func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "allWindows", args)
- }
+  }
 
 }
 
@@ -417,10 +418,10 @@ func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setOverrideCursor", args)
- }
+  }
 
 }
 
@@ -431,10 +432,10 @@ func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setWindowIcon", args)
- }
+  }
 
 }
 
@@ -447,12 +448,12 @@ func (this *QGuiApplication) sessionId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication9sessionIdEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionId", args)
- }
+  }
 
 }
 
@@ -463,10 +464,10 @@ func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setApplicationDisplayName", args)
- }
+  }
 
 }
 
@@ -477,10 +478,10 @@ func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "isLeftToRight", args)
- }
+  }
 
 }
 
@@ -491,10 +492,10 @@ func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "topLevelAt", args)
- }
+  }
 
 }
 
@@ -505,10 +506,10 @@ func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "setDesktopSettingsAware", args)
- }
+  }
 
 }
 
@@ -519,10 +520,10 @@ func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "modalWindow", args)
- }
+  }
 
 }
 
@@ -533,10 +534,10 @@ func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "applicationDisplayName", args)
- }
+  }
 
 }
 
@@ -547,10 +548,10 @@ func (this *QGuiApplication) exec_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "exec", args)
- }
+  }
 
 }
 
@@ -561,10 +562,10 @@ func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "quitOnLastWindowClosed", args)
- }
+  }
 
 }
 
@@ -575,10 +576,10 @@ func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "restoreOverrideCursor", args)
- }
+  }
 
 }
 
@@ -589,10 +590,10 @@ func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformNativeInterface", args)
- }
+  }
 
 }
 
@@ -605,12 +606,12 @@ func (this *QGuiApplication) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication10metaObjectEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "metaObject", args)
- }
+  }
 
 }
 
@@ -621,10 +622,10 @@ func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusObject", args)
- }
+  }
 
 }
 
@@ -635,10 +636,10 @@ func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "focusWindow", args)
- }
+  }
 
 }
 
@@ -651,12 +652,12 @@ func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication16devicePixelRatioEv
   default:
     qtrt.ErrorResolve("QGuiApplication", "devicePixelRatio", args)
- }
+  }
 
 }
 
@@ -667,10 +668,10 @@ func (this *QGuiApplication) platformFunction_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGuiApplication", "platformFunction", args)
- }
+  }
 
 }
 

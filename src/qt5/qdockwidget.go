@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -55,12 +55,12 @@ func (this *QDockWidget) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDockWidget6widgetEv
   default:
     qtrt.ErrorResolve("QDockWidget", "widget", args)
- }
+  }
 
 }
 
@@ -74,12 +74,12 @@ func (this *QDockWidget) setFloating(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDockWidget11setFloatingEb
   default:
     qtrt.ErrorResolve("QDockWidget", "setFloating", args)
- }
+  }
 
 }
 
@@ -92,12 +92,12 @@ func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDockWidget14titleBarWidgetEv
   default:
     qtrt.ErrorResolve("QDockWidget", "titleBarWidget", args)
- }
+  }
 
 }
 
@@ -108,10 +108,10 @@ func (this *QDockWidget) FreeQDockWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDockWidget", "~QDockWidget", args)
- }
+  }
 
 }
 
@@ -125,12 +125,12 @@ func (this *QDockWidget) setWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDockWidget9setWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QDockWidget", "setWidget", args)
- }
+  }
 
 }
 
@@ -143,12 +143,12 @@ func (this *QDockWidget) isFloating(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDockWidget10isFloatingEv
   default:
     qtrt.ErrorResolve("QDockWidget", "isFloating", args)
- }
+  }
 
 }
 
@@ -161,17 +161,18 @@ func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDockWidget16toggleViewActionEv
   default:
     qtrt.ErrorResolve("QDockWidget", "toggleViewAction", args)
- }
+  }
 
 }
 
 
-func NewQDockWidget(args ...interface{})() {
+func NewQDockWidget(args ...interface{}) QDockWidget {
+  return QDockWidget{}
 }
 
 
@@ -184,12 +185,12 @@ func (this *QDockWidget) setTitleBarWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDockWidget17setTitleBarWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QDockWidget", "setTitleBarWidget", args)
- }
+  }
 
 }
 
@@ -202,12 +203,12 @@ func (this *QDockWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDockWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QDockWidget", "metaObject", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -42,7 +42,8 @@ type QScrollerProperties struct {
 }
 
 
-func NewQScrollerProperties(args ...interface{})() {
+func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
+  return QScrollerProperties{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QScrollerProperties) setDefaultScrollerProperties_s(args ...interfac
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QScrollerProperties", "setDefaultScrollerProperties", args)
- }
+  }
 
 }
 
@@ -66,10 +67,10 @@ func (this *QScrollerProperties) FreeQScrollerProperties(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QScrollerProperties", "~QScrollerProperties", args)
- }
+  }
 
 }
 
@@ -80,10 +81,10 @@ func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interf
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QScrollerProperties", "unsetDefaultScrollerProperties", args)
- }
+  }
 
 }
 

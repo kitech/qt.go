@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -50,12 +50,12 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface14supportsOpenGLEv
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QSurface) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface6formatEv
   default:
     qtrt.ErrorResolve("QSurface", "format", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QSurface) surfaceHandle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface13surfaceHandleEv
   default:
     qtrt.ErrorResolve("QSurface", "surfaceHandle", args)
- }
+  }
 
 }
 
@@ -104,12 +104,12 @@ func (this *QSurface) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface4sizeEv
   default:
     qtrt.ErrorResolve("QSurface", "size", args)
- }
+  }
 
 }
 
@@ -120,10 +120,10 @@ func (this *QSurface) FreeQSurface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSurface", "~QSurface", args)
- }
+  }
 
 }
 

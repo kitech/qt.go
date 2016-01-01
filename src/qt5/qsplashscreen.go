@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -51,12 +51,12 @@ func (this *QSplashScreen) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSplashScreen10metaObjectEv
   default:
     qtrt.ErrorResolve("QSplashScreen", "metaObject", args)
- }
+  }
 
 }
 
@@ -67,10 +67,10 @@ func (this *QSplashScreen) FreeQSplashScreen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSplashScreen", "~QSplashScreen", args)
- }
+  }
 
 }
 
@@ -83,17 +83,18 @@ func (this *QSplashScreen) clearMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen12clearMessageEv
   default:
     qtrt.ErrorResolve("QSplashScreen", "clearMessage", args)
- }
+  }
 
 }
 
 
-func NewQSplashScreen(args ...interface{})() {
+func NewQSplashScreen(args ...interface{}) QSplashScreen {
+  return QSplashScreen{}
 }
 
 
@@ -105,12 +106,12 @@ func (this *QSplashScreen) pixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSplashScreen6pixmapEv
   default:
     qtrt.ErrorResolve("QSplashScreen", "pixmap", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QSplashScreen) showMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor
   default:
     qtrt.ErrorResolve("QSplashScreen", "showMessage", args)
- }
+  }
 
 }
 
@@ -145,12 +146,12 @@ func (this *QSplashScreen) setPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen9setPixmapERK7QPixmap
   default:
     qtrt.ErrorResolve("QSplashScreen", "setPixmap", args)
- }
+  }
 
 }
 
@@ -163,12 +164,12 @@ func (this *QSplashScreen) message(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSplashScreen7messageEv
   default:
     qtrt.ErrorResolve("QSplashScreen", "message", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QSplashScreen) repaint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen7repaintEv
   default:
     qtrt.ErrorResolve("QSplashScreen", "repaint", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QSplashScreen) finish(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen6finishEP7QWidget
   default:
     qtrt.ErrorResolve("QSplashScreen", "finish", args)
- }
+  }
 
 }
 

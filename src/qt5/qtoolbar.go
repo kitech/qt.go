@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -74,7 +74,7 @@ func (this *QToolBar) addAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc
   case 1:
@@ -85,7 +85,7 @@ func (this *QToolBar) addAction(args ...interface{}) () {
     // invoke: _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc
   default:
     qtrt.ErrorResolve("QToolBar", "addAction", args)
- }
+  }
 
 }
 
@@ -98,12 +98,12 @@ func (this *QToolBar) isFloatable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar11isFloatableEv
   default:
     qtrt.ErrorResolve("QToolBar", "isFloatable", args)
- }
+  }
 
 }
 
@@ -116,12 +116,12 @@ func (this *QToolBar) iconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar8iconSizeEv
   default:
     qtrt.ErrorResolve("QToolBar", "iconSize", args)
- }
+  }
 
 }
 
@@ -135,12 +135,12 @@ func (this *QToolBar) actionGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar14actionGeometryEP7QAction
   default:
     qtrt.ErrorResolve("QToolBar", "actionGeometry", args)
- }
+  }
 
 }
 
@@ -154,12 +154,12 @@ func (this *QToolBar) widgetForAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar15widgetForActionEP7QAction
   default:
     qtrt.ErrorResolve("QToolBar", "widgetForAction", args)
- }
+  }
 
 }
 
@@ -172,17 +172,18 @@ func (this *QToolBar) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar5clearEv
   default:
     qtrt.ErrorResolve("QToolBar", "clear", args)
- }
+  }
 
 }
 
 
-func NewQToolBar(args ...interface{})() {
+func NewQToolBar(args ...interface{}) QToolBar {
+  return QToolBar{}
 }
 
 
@@ -195,12 +196,12 @@ func (this *QToolBar) setMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar10setMovableEb
   default:
     qtrt.ErrorResolve("QToolBar", "setMovable", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QToolBar) isMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar9isMovableEv
   default:
     qtrt.ErrorResolve("QToolBar", "isMovable", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QToolBar) setIconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar11setIconSizeERK5QSize
   default:
     qtrt.ErrorResolve("QToolBar", "setIconSize", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QToolBar) addSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar12addSeparatorEv
   default:
     qtrt.ErrorResolve("QToolBar", "addSeparator", args)
- }
+  }
 
 }
 
@@ -269,12 +270,12 @@ func (this *QToolBar) setFloatable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar12setFloatableEb
   default:
     qtrt.ErrorResolve("QToolBar", "setFloatable", args)
- }
+  }
 
 }
 
@@ -292,14 +293,14 @@ func (this *QToolBar) actionAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar8actionAtERK6QPoint
   case 1:
     // invoke: _ZNK8QToolBar8actionAtEii
   default:
     qtrt.ErrorResolve("QToolBar", "actionAt", args)
- }
+  }
 
 }
 
@@ -312,12 +313,12 @@ func (this *QToolBar) isFloating(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar10isFloatingEv
   default:
     qtrt.ErrorResolve("QToolBar", "isFloating", args)
- }
+  }
 
 }
 
@@ -330,12 +331,12 @@ func (this *QToolBar) toggleViewAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar16toggleViewActionEv
   default:
     qtrt.ErrorResolve("QToolBar", "toggleViewAction", args)
- }
+  }
 
 }
 
@@ -346,10 +347,10 @@ func (this *QToolBar) FreeQToolBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
- }
+  }
 
 }
 
@@ -364,12 +365,12 @@ func (this *QToolBar) insertWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar12insertWidgetEP7QActionP7QWidget
   default:
     qtrt.ErrorResolve("QToolBar", "insertWidget", args)
- }
+  }
 
 }
 
@@ -383,12 +384,12 @@ func (this *QToolBar) addWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar9addWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QToolBar", "addWidget", args)
- }
+  }
 
 }
 
@@ -401,12 +402,12 @@ func (this *QToolBar) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar10metaObjectEv
   default:
     qtrt.ErrorResolve("QToolBar", "metaObject", args)
- }
+  }
 
 }
 
@@ -420,12 +421,12 @@ func (this *QToolBar) insertSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar15insertSeparatorEP7QAction
   default:
     qtrt.ErrorResolve("QToolBar", "insertSeparator", args)
- }
+  }
 
 }
 

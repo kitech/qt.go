@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -53,12 +53,12 @@ func (this *QSignalTransition) setSenderObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QSignalTransition15setSenderObjectEPK7QObject
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSenderObject", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QSignalTransition) signal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition6signalEv
   default:
     qtrt.ErrorResolve("QSignalTransition", "signal", args)
- }
+  }
 
 }
 
@@ -87,15 +87,16 @@ func (this *QSignalTransition) FreeQSignalTransition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSignalTransition", "~QSignalTransition", args)
- }
+  }
 
 }
 
 
-func NewQSignalTransition(args ...interface{})() {
+func NewQSignalTransition(args ...interface{}) QSignalTransition {
+  return QSignalTransition{}
 }
 
 
@@ -107,12 +108,12 @@ func (this *QSignalTransition) senderObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition12senderObjectEv
   default:
     qtrt.ErrorResolve("QSignalTransition", "senderObject", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QSignalTransition) setSignal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QSignalTransition9setSignalERK10QByteArray
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSignal", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QSignalTransition) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition10metaObjectEv
   default:
     qtrt.ErrorResolve("QSignalTransition", "metaObject", args)
- }
+  }
 
 }
 

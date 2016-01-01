@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qaccessible.h
 // dst-file: /src/gui/qaccessible.go
 //
@@ -150,10 +150,10 @@ func (this *QAccessible) isActive_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "isActive", args)
- }
+  }
 
 }
 
@@ -164,10 +164,10 @@ func (this *QAccessible) uniqueId_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "uniqueId", args)
- }
+  }
 
 }
 
@@ -178,10 +178,10 @@ func (this *QAccessible) registerAccessibleInterface_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "registerAccessibleInterface", args)
- }
+  }
 
 }
 
@@ -192,10 +192,10 @@ func (this *QAccessible) setActive_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "setActive", args)
- }
+  }
 
 }
 
@@ -206,10 +206,10 @@ func (this *QAccessible) queryAccessibleInterface_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "queryAccessibleInterface", args)
- }
+  }
 
 }
 
@@ -220,10 +220,10 @@ func (this *QAccessible) updateAccessibility_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "updateAccessibility", args)
- }
+  }
 
 }
 
@@ -234,10 +234,10 @@ func (this *QAccessible) cleanup_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "cleanup", args)
- }
+  }
 
 }
 
@@ -248,10 +248,10 @@ func (this *QAccessible) setRootObject_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "setRootObject", args)
- }
+  }
 
 }
 
@@ -262,10 +262,10 @@ func (this *QAccessible) deleteAccessibleInterface_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "deleteAccessibleInterface", args)
- }
+  }
 
 }
 
@@ -276,15 +276,16 @@ func (this *QAccessible) accessibleInterface_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessible", "accessibleInterface", args)
- }
+  }
 
 }
 
 
-func NewQAccessible(args ...interface{})() {
+func NewQAccessible(args ...interface{}) QAccessible {
+  return QAccessible{}
 }
 
 
@@ -297,12 +298,12 @@ func (this *QAccessibleTableModelChangeEvent) setFirstColumn(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent14setFirstColumnEi
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setFirstColumn", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QAccessibleTableModelChangeEvent) setFirstRow(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent11setFirstRowEi
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setFirstRow", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QAccessibleTableModelChangeEvent) firstRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent8firstRowEv
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstRow", args)
- }
+  }
 
 }
 
@@ -353,12 +354,12 @@ func (this *QAccessibleTableModelChangeEvent) setLastColumn(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent13setLastColumnEi
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setLastColumn", args)
- }
+  }
 
 }
 
@@ -371,12 +372,12 @@ func (this *QAccessibleTableModelChangeEvent) firstColumn(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent11firstColumnEv
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstColumn", args)
- }
+  }
 
 }
 
@@ -389,12 +390,12 @@ func (this *QAccessibleTableModelChangeEvent) lastColumn(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent10lastColumnEv
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastColumn", args)
- }
+  }
 
 }
 
@@ -408,12 +409,12 @@ func (this *QAccessibleTableModelChangeEvent) setLastRow(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent10setLastRowEi
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setLastRow", args)
- }
+  }
 
 }
 
@@ -426,12 +427,12 @@ func (this *QAccessibleTableModelChangeEvent) lastRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent7lastRowEv
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastRow", args)
- }
+  }
 
 }
 
@@ -447,12 +448,12 @@ func (this *QAccessibleTextInterface) selection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface9selectionEiPiS0_
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "selection", args)
- }
+  }
 
 }
 
@@ -466,12 +467,12 @@ func (this *QAccessibleTextInterface) setCursorPosition(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface17setCursorPositionEi
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "setCursorPosition", args)
- }
+  }
 
 }
 
@@ -485,12 +486,12 @@ func (this *QAccessibleTextInterface) offsetAtPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "offsetAtPoint", args)
- }
+  }
 
 }
 
@@ -506,12 +507,12 @@ func (this *QAccessibleTextInterface) attributes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface10attributesEiPiS0_
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "attributes", args)
- }
+  }
 
 }
 
@@ -524,12 +525,12 @@ func (this *QAccessibleTextInterface) selectionCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14selectionCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "selectionCount", args)
- }
+  }
 
 }
 
@@ -542,12 +543,12 @@ func (this *QAccessibleTextInterface) characterCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14characterCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "characterCount", args)
- }
+  }
 
 }
 
@@ -558,10 +559,10 @@ func (this *QAccessibleTextInterface) FreeQAccessibleTextInterface(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "~QAccessibleTextInterface", args)
- }
+  }
 
 }
 
@@ -576,12 +577,12 @@ func (this *QAccessibleTextInterface) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface4textEii
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "text", args)
- }
+  }
 
 }
 
@@ -595,12 +596,12 @@ func (this *QAccessibleTextInterface) characterRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface13characterRectEi
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "characterRect", args)
- }
+  }
 
 }
 
@@ -614,12 +615,12 @@ func (this *QAccessibleTextInterface) removeSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface15removeSelectionEi
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "removeSelection", args)
- }
+  }
 
 }
 
@@ -634,12 +635,12 @@ func (this *QAccessibleTextInterface) addSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface12addSelectionEii
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "addSelection", args)
- }
+  }
 
 }
 
@@ -654,12 +655,12 @@ func (this *QAccessibleTextInterface) scrollToSubstring(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface17scrollToSubstringEii
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "scrollToSubstring", args)
- }
+  }
 
 }
 
@@ -672,12 +673,12 @@ func (this *QAccessibleTextInterface) cursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14cursorPositionEv
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "cursorPosition", args)
- }
+  }
 
 }
 
@@ -693,12 +694,12 @@ func (this *QAccessibleTextInterface) setSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface12setSelectionEiii
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "setSelection", args)
- }
+  }
 
 }
 
@@ -711,12 +712,12 @@ func (this *QAccessibleEvent) object(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent6objectEv
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "object", args)
- }
+  }
 
 }
 
@@ -730,12 +731,12 @@ func (this *QAccessibleEvent) setChild(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QAccessibleEvent8setChildEi
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "setChild", args)
- }
+  }
 
 }
 
@@ -748,17 +749,18 @@ func (this *QAccessibleEvent) accessibleInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent19accessibleInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "accessibleInterface", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleEvent(args ...interface{})() {
+func NewQAccessibleEvent(args ...interface{}) QAccessibleEvent {
+  return QAccessibleEvent{}
 }
 
 
@@ -770,12 +772,12 @@ func (this *QAccessibleEvent) child(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent5childEv
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "child", args)
- }
+  }
 
 }
 
@@ -786,10 +788,10 @@ func (this *QAccessibleEvent) FreeQAccessibleEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "~QAccessibleEvent", args)
- }
+  }
 
 }
 
@@ -800,10 +802,10 @@ func (this *QAccessibleActionInterface) scrollUpAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollUpAction", args)
- }
+  }
 
 }
 
@@ -816,12 +818,12 @@ func (this *QAccessibleActionInterface) actionNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface11actionNamesEv
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "actionNames", args)
- }
+  }
 
 }
 
@@ -832,10 +834,10 @@ func (this *QAccessibleActionInterface) decreaseAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "decreaseAction", args)
- }
+  }
 
 }
 
@@ -846,10 +848,10 @@ func (this *QAccessibleActionInterface) toggleAction_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "toggleAction", args)
- }
+  }
 
 }
 
@@ -863,12 +865,12 @@ func (this *QAccessibleActionInterface) localizedActionName(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface19localizedActionNameERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionName", args)
- }
+  }
 
 }
 
@@ -882,12 +884,12 @@ func (this *QAccessibleActionInterface) localizedActionDescription(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionDescription", args)
- }
+  }
 
 }
 
@@ -898,10 +900,10 @@ func (this *QAccessibleActionInterface) scrollLeftAction_s(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollLeftAction", args)
- }
+  }
 
 }
 
@@ -912,10 +914,10 @@ func (this *QAccessibleActionInterface) previousPageAction_s(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "previousPageAction", args)
- }
+  }
 
 }
 
@@ -926,10 +928,10 @@ func (this *QAccessibleActionInterface) showMenuAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "showMenuAction", args)
- }
+  }
 
 }
 
@@ -940,10 +942,10 @@ func (this *QAccessibleActionInterface) scrollRightAction_s(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollRightAction", args)
- }
+  }
 
 }
 
@@ -954,10 +956,10 @@ func (this *QAccessibleActionInterface) setFocusAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "setFocusAction", args)
- }
+  }
 
 }
 
@@ -968,10 +970,10 @@ func (this *QAccessibleActionInterface) nextPageAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "nextPageAction", args)
- }
+  }
 
 }
 
@@ -982,10 +984,10 @@ func (this *QAccessibleActionInterface) FreeQAccessibleActionInterface(args ...i
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "~QAccessibleActionInterface", args)
- }
+  }
 
 }
 
@@ -996,10 +998,10 @@ func (this *QAccessibleActionInterface) pressAction_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "pressAction", args)
- }
+  }
 
 }
 
@@ -1013,12 +1015,12 @@ func (this *QAccessibleActionInterface) doAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QAccessibleActionInterface8doActionERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "doAction", args)
- }
+  }
 
 }
 
@@ -1029,10 +1031,10 @@ func (this *QAccessibleActionInterface) increaseAction_s(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "increaseAction", args)
- }
+  }
 
 }
 
@@ -1046,12 +1048,12 @@ func (this *QAccessibleActionInterface) keyBindingsForAction(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface20keyBindingsForActionERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "keyBindingsForAction", args)
- }
+  }
 
 }
 
@@ -1062,10 +1064,10 @@ func (this *QAccessibleActionInterface) scrollDownAction_s(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollDownAction", args)
- }
+  }
 
 }
 
@@ -1078,12 +1080,12 @@ func (this *QAccessibleInterface) imageInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14imageInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "imageInterface", args)
- }
+  }
 
 }
 
@@ -1096,12 +1098,12 @@ func (this *QAccessibleInterface) tableInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14tableInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableInterface", args)
- }
+  }
 
 }
 
@@ -1114,12 +1116,12 @@ func (this *QAccessibleInterface) editableTextInterface(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface21editableTextInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "editableTextInterface", args)
- }
+  }
 
 }
 
@@ -1132,12 +1134,12 @@ func (this *QAccessibleInterface) valueInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14valueInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "valueInterface", args)
- }
+  }
 
 }
 
@@ -1150,12 +1152,12 @@ func (this *QAccessibleInterface) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface4rectEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "rect", args)
- }
+  }
 
 }
 
@@ -1168,12 +1170,12 @@ func (this *QAccessibleInterface) object(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6objectEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "object", args)
- }
+  }
 
 }
 
@@ -1186,12 +1188,12 @@ func (this *QAccessibleInterface) actionInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface15actionInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "actionInterface", args)
- }
+  }
 
 }
 
@@ -1204,12 +1206,12 @@ func (this *QAccessibleInterface) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6parentEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "parent", args)
- }
+  }
 
 }
 
@@ -1224,12 +1226,12 @@ func (this *QAccessibleInterface) childAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface7childAtEii
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "childAt", args)
- }
+  }
 
 }
 
@@ -1242,12 +1244,12 @@ func (this *QAccessibleInterface) childCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface10childCountEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "childCount", args)
- }
+  }
 
 }
 
@@ -1260,12 +1262,12 @@ func (this *QAccessibleInterface) tableCellInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface18tableCellInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableCellInterface", args)
- }
+  }
 
 }
 
@@ -1279,12 +1281,12 @@ func (this *QAccessibleInterface) indexOfChild(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface12indexOfChildEPKS_
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "indexOfChild", args)
- }
+  }
 
 }
 
@@ -1297,12 +1299,12 @@ func (this *QAccessibleInterface) foregroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15foregroundColorEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "foregroundColor", args)
- }
+  }
 
 }
 
@@ -1315,12 +1317,12 @@ func (this *QAccessibleInterface) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface7isValidEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "isValid", args)
- }
+  }
 
 }
 
@@ -1333,12 +1335,12 @@ func (this *QAccessibleInterface) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6windowEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "window", args)
- }
+  }
 
 }
 
@@ -1353,12 +1355,12 @@ func (this *QAccessibleInterface) virtual_hook(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface12virtual_hookEiPv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "virtual_hook", args)
- }
+  }
 
 }
 
@@ -1371,12 +1373,12 @@ func (this *QAccessibleInterface) focusChild(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface10focusChildEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "focusChild", args)
- }
+  }
 
 }
 
@@ -1390,12 +1392,12 @@ func (this *QAccessibleInterface) child(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface5childEi
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "child", args)
- }
+  }
 
 }
 
@@ -1408,12 +1410,12 @@ func (this *QAccessibleInterface) textInterface(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface13textInterfaceEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "textInterface", args)
- }
+  }
 
 }
 
@@ -1426,12 +1428,12 @@ func (this *QAccessibleInterface) backgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15backgroundColorEv
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "backgroundColor", args)
- }
+  }
 
 }
 
@@ -1442,10 +1444,10 @@ func (this *QAccessibleInterface) FreeQAccessibleInterface(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "~QAccessibleInterface", args)
- }
+  }
 
 }
 
@@ -1460,12 +1462,12 @@ func (this *QAccessibleEditableTextInterface) insertText(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "insertText", args)
- }
+  }
 
 }
 
@@ -1481,12 +1483,12 @@ func (this *QAccessibleEditableTextInterface) replaceText(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "replaceText", args)
- }
+  }
 
 }
 
@@ -1501,12 +1503,12 @@ func (this *QAccessibleEditableTextInterface) deleteText(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface10deleteTextEii
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "deleteText", args)
- }
+  }
 
 }
 
@@ -1517,10 +1519,10 @@ func (this *QAccessibleEditableTextInterface) FreeQAccessibleEditableTextInterfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "~QAccessibleEditableTextInterface", args)
- }
+  }
 
 }
 
@@ -1533,12 +1535,12 @@ func (this *QAccessibleTableCellInterface) columnIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface11columnIndexEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnIndex", args)
- }
+  }
 
 }
 
@@ -1549,10 +1551,10 @@ func (this *QAccessibleTableCellInterface) FreeQAccessibleTableCellInterface(arg
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "~QAccessibleTableCellInterface", args)
- }
+  }
 
 }
 
@@ -1565,12 +1567,12 @@ func (this *QAccessibleTableCellInterface) columnExtent(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface12columnExtentEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnExtent", args)
- }
+  }
 
 }
 
@@ -1583,12 +1585,12 @@ func (this *QAccessibleTableCellInterface) rowIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface8rowIndexEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowIndex", args)
- }
+  }
 
 }
 
@@ -1601,12 +1603,12 @@ func (this *QAccessibleTableCellInterface) table(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface5tableEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "table", args)
- }
+  }
 
 }
 
@@ -1619,12 +1621,12 @@ func (this *QAccessibleTableCellInterface) rowExtent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface9rowExtentEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowExtent", args)
- }
+  }
 
 }
 
@@ -1637,12 +1639,12 @@ func (this *QAccessibleTableCellInterface) rowHeaderCells(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowHeaderCells", args)
- }
+  }
 
 }
 
@@ -1655,12 +1657,12 @@ func (this *QAccessibleTableCellInterface) columnHeaderCells(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnHeaderCells", args)
- }
+  }
 
 }
 
@@ -1673,12 +1675,12 @@ func (this *QAccessibleTableCellInterface) isSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface10isSelectedEv
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "isSelected", args)
- }
+  }
 
 }
 
@@ -1692,12 +1694,12 @@ func (this *QAccessibleTableInterface) unselectColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface14unselectColumnEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "unselectColumn", args)
- }
+  }
 
 }
 
@@ -1711,12 +1713,12 @@ func (this *QAccessibleTableInterface) columnDescription(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface17columnDescriptionEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "columnDescription", args)
- }
+  }
 
 }
 
@@ -1729,12 +1731,12 @@ func (this *QAccessibleTableInterface) selectedCellCount(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface17selectedCellCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedCellCount", args)
- }
+  }
 
 }
 
@@ -1747,12 +1749,12 @@ func (this *QAccessibleTableInterface) selectedCells(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface13selectedCellsEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedCells", args)
- }
+  }
 
 }
 
@@ -1766,12 +1768,12 @@ func (this *QAccessibleTableInterface) selectRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface9selectRowEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectRow", args)
- }
+  }
 
 }
 
@@ -1784,12 +1786,12 @@ func (this *QAccessibleTableInterface) selectedRowCount(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface16selectedRowCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedRowCount", args)
- }
+  }
 
 }
 
@@ -1800,10 +1802,10 @@ func (this *QAccessibleTableInterface) FreeQAccessibleTableInterface(args ...int
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "~QAccessibleTableInterface", args)
- }
+  }
 
 }
 
@@ -1816,12 +1818,12 @@ func (this *QAccessibleTableInterface) selectedColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface15selectedColumnsEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedColumns", args)
- }
+  }
 
 }
 
@@ -1836,12 +1838,12 @@ func (this *QAccessibleTableInterface) cellAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface6cellAtEii
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "cellAt", args)
- }
+  }
 
 }
 
@@ -1854,12 +1856,12 @@ func (this *QAccessibleTableInterface) selectedRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface12selectedRowsEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedRows", args)
- }
+  }
 
 }
 
@@ -1873,12 +1875,12 @@ func (this *QAccessibleTableInterface) modelChange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "modelChange", args)
- }
+  }
 
 }
 
@@ -1891,12 +1893,12 @@ func (this *QAccessibleTableInterface) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface11columnCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "columnCount", args)
- }
+  }
 
 }
 
@@ -1910,12 +1912,12 @@ func (this *QAccessibleTableInterface) selectColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface12selectColumnEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectColumn", args)
- }
+  }
 
 }
 
@@ -1929,12 +1931,12 @@ func (this *QAccessibleTableInterface) unselectRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface11unselectRowEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "unselectRow", args)
- }
+  }
 
 }
 
@@ -1947,12 +1949,12 @@ func (this *QAccessibleTableInterface) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface8rowCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "rowCount", args)
- }
+  }
 
 }
 
@@ -1966,12 +1968,12 @@ func (this *QAccessibleTableInterface) rowDescription(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface14rowDescriptionEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "rowDescription", args)
- }
+  }
 
 }
 
@@ -1984,12 +1986,12 @@ func (this *QAccessibleTableInterface) summary(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface7summaryEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "summary", args)
- }
+  }
 
 }
 
@@ -2003,12 +2005,12 @@ func (this *QAccessibleTableInterface) isColumnSelected(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface16isColumnSelectedEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "isColumnSelected", args)
- }
+  }
 
 }
 
@@ -2021,12 +2023,12 @@ func (this *QAccessibleTableInterface) caption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface7captionEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "caption", args)
- }
+  }
 
 }
 
@@ -2040,12 +2042,12 @@ func (this *QAccessibleTableInterface) isRowSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface13isRowSelectedEi
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "isRowSelected", args)
- }
+  }
 
 }
 
@@ -2058,12 +2060,12 @@ func (this *QAccessibleTableInterface) selectedColumnCount(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface19selectedColumnCountEv
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedColumnCount", args)
- }
+  }
 
 }
 
@@ -2076,17 +2078,18 @@ func (this *QAccessibleTextUpdateEvent) textInserted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent12textInsertedEv
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textInserted", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleTextUpdateEvent(args ...interface{})() {
+func NewQAccessibleTextUpdateEvent(args ...interface{}) QAccessibleTextUpdateEvent {
+  return QAccessibleTextUpdateEvent{}
 }
 
 
@@ -2098,12 +2101,12 @@ func (this *QAccessibleTextUpdateEvent) textRemoved(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent11textRemovedEv
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textRemoved", args)
- }
+  }
 
 }
 
@@ -2116,12 +2119,12 @@ func (this *QAccessibleTextUpdateEvent) changePosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent14changePositionEv
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "changePosition", args)
- }
+  }
 
 }
 
@@ -2134,12 +2137,12 @@ func (this *QAccessibleImageInterface) imageDescription(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface16imageDescriptionEv
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imageDescription", args)
- }
+  }
 
 }
 
@@ -2152,12 +2155,12 @@ func (this *QAccessibleImageInterface) imagePosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface13imagePositionEv
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imagePosition", args)
- }
+  }
 
 }
 
@@ -2168,10 +2171,10 @@ func (this *QAccessibleImageInterface) FreeQAccessibleImageInterface(args ...int
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "~QAccessibleImageInterface", args)
- }
+  }
 
 }
 
@@ -2184,12 +2187,12 @@ func (this *QAccessibleImageInterface) imageSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface9imageSizeEv
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imageSize", args)
- }
+  }
 
 }
 
@@ -2202,12 +2205,12 @@ func (this *QAccessibleTextInsertEvent) textInserted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent12textInsertedEv
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "textInserted", args)
- }
+  }
 
 }
 
@@ -2220,17 +2223,18 @@ func (this *QAccessibleTextInsertEvent) changePosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent14changePositionEv
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "changePosition", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleTextInsertEvent(args ...interface{})() {
+func NewQAccessibleTextInsertEvent(args ...interface{}) QAccessibleTextInsertEvent {
+  return QAccessibleTextInsertEvent{}
 }
 
 
@@ -2242,12 +2246,12 @@ func (this *QAccessibleValueInterface) maximumValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12maximumValueEv
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "maximumValue", args)
- }
+  }
 
 }
 
@@ -2260,12 +2264,12 @@ func (this *QAccessibleValueInterface) minimumStepSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface15minimumStepSizeEv
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "minimumStepSize", args)
- }
+  }
 
 }
 
@@ -2278,12 +2282,12 @@ func (this *QAccessibleValueInterface) currentValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12currentValueEv
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "currentValue", args)
- }
+  }
 
 }
 
@@ -2296,12 +2300,12 @@ func (this *QAccessibleValueInterface) minimumValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12minimumValueEv
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "minimumValue", args)
- }
+  }
 
 }
 
@@ -2312,10 +2316,10 @@ func (this *QAccessibleValueInterface) FreeQAccessibleValueInterface(args ...int
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "~QAccessibleValueInterface", args)
- }
+  }
 
 }
 
@@ -2329,17 +2333,18 @@ func (this *QAccessibleValueInterface) setCurrentValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "setCurrentValue", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleTextRemoveEvent(args ...interface{})() {
+func NewQAccessibleTextRemoveEvent(args ...interface{}) QAccessibleTextRemoveEvent {
+  return QAccessibleTextRemoveEvent{}
 }
 
 
@@ -2351,12 +2356,12 @@ func (this *QAccessibleTextRemoveEvent) textRemoved(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent11textRemovedEv
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "textRemoved", args)
- }
+  }
 
 }
 
@@ -2369,12 +2374,12 @@ func (this *QAccessibleTextRemoveEvent) changePosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent14changePositionEv
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "changePosition", args)
- }
+  }
 
 }
 
@@ -2387,17 +2392,18 @@ func (this *QAccessibleTextSelectionEvent) selectionEnd(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent12selectionEndEv
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionEnd", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleTextSelectionEvent(args ...interface{})() {
+func NewQAccessibleTextSelectionEvent(args ...interface{}) QAccessibleTextSelectionEvent {
+  return QAccessibleTextSelectionEvent{}
 }
 
 
@@ -2409,12 +2415,12 @@ func (this *QAccessibleTextSelectionEvent) selectionStart(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent14selectionStartEv
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionStart", args)
- }
+  }
 
 }
 
@@ -2429,17 +2435,18 @@ func (this *QAccessibleTextSelectionEvent) setSelection(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN29QAccessibleTextSelectionEvent12setSelectionEii
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "setSelection", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleTextCursorEvent(args ...interface{})() {
+func NewQAccessibleTextCursorEvent(args ...interface{}) QAccessibleTextCursorEvent {
+  return QAccessibleTextCursorEvent{}
 }
 
 
@@ -2452,12 +2459,12 @@ func (this *QAccessibleTextCursorEvent) setCursorPosition(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QAccessibleTextCursorEvent17setCursorPositionEi
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "setCursorPosition", args)
- }
+  }
 
 }
 
@@ -2470,17 +2477,18 @@ func (this *QAccessibleTextCursorEvent) cursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextCursorEvent14cursorPositionEv
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "cursorPosition", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleValueChangeEvent(args ...interface{})() {
+func NewQAccessibleValueChangeEvent(args ...interface{}) QAccessibleValueChangeEvent {
+  return QAccessibleValueChangeEvent{}
 }
 
 
@@ -2493,12 +2501,12 @@ func (this *QAccessibleValueChangeEvent) setValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QAccessibleValueChangeEvent8setValueERK8QVariant
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "setValue", args)
- }
+  }
 
 }
 
@@ -2511,12 +2519,12 @@ func (this *QAccessibleValueChangeEvent) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAccessibleValueChangeEvent5valueEv
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "value", args)
- }
+  }
 
 }
 

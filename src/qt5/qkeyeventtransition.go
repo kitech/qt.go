@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -51,12 +51,12 @@ func (this *QKeyEventTransition) setKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QKeyEventTransition6setKeyEi
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "setKey", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QKeyEventTransition) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QKeyEventTransition10metaObjectEv
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "metaObject", args)
- }
+  }
 
 }
 
@@ -85,10 +85,10 @@ func (this *QKeyEventTransition) FreeQKeyEventTransition(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "~QKeyEventTransition", args)
- }
+  }
 
 }
 
@@ -101,17 +101,18 @@ func (this *QKeyEventTransition) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QKeyEventTransition3keyEv
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "key", args)
- }
+  }
 
 }
 
 
-func NewQKeyEventTransition(args ...interface{})() {
+func NewQKeyEventTransition(args ...interface{}) QKeyEventTransition {
+  return QKeyEventTransition{}
 }
 
 // <= body block end

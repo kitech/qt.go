@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.go
 //
@@ -53,12 +53,12 @@ func (this *QIdentityProxyModel) removeRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeRows", args)
- }
+  }
 
 }
 
@@ -74,12 +74,12 @@ func (this *QIdentityProxyModel) removeColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "removeColumns", args)
- }
+  }
 
 }
 
@@ -93,12 +93,12 @@ func (this *QIdentityProxyModel) mapSelectionFromSource(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionFromSource", args)
- }
+  }
 
 }
 
@@ -114,12 +114,12 @@ func (this *QIdentityProxyModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "index", args)
- }
+  }
 
 }
 
@@ -135,12 +135,12 @@ func (this *QIdentityProxyModel) insertRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertRows", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QIdentityProxyModel) insertColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "insertColumns", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QIdentityProxyModel) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "sibling", args)
- }
+  }
 
 }
 
@@ -195,12 +195,12 @@ func (this *QIdentityProxyModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -211,10 +211,10 @@ func (this *QIdentityProxyModel) FreeQIdentityProxyModel(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "~QIdentityProxyModel", args)
- }
+  }
 
 }
 
@@ -228,12 +228,12 @@ func (this *QIdentityProxyModel) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel6parentERK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "parent", args)
- }
+  }
 
 }
 
@@ -247,12 +247,12 @@ func (this *QIdentityProxyModel) setSourceModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QIdentityProxyModel14setSourceModelEP18QAbstractItemModel
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "setSourceModel", args)
- }
+  }
 
 }
 
@@ -266,12 +266,12 @@ func (this *QIdentityProxyModel) mapToSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel11mapToSourceERK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapToSource", args)
- }
+  }
 
 }
 
@@ -285,17 +285,18 @@ func (this *QIdentityProxyModel) mapFromSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel13mapFromSourceERK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapFromSource", args)
- }
+  }
 
 }
 
 
-func NewQIdentityProxyModel(args ...interface{})() {
+func NewQIdentityProxyModel(args ...interface{}) QIdentityProxyModel {
+  return QIdentityProxyModel{}
 }
 
 
@@ -308,12 +309,12 @@ func (this *QIdentityProxyModel) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel11columnCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "columnCount", args)
- }
+  }
 
 }
 
@@ -327,12 +328,12 @@ func (this *QIdentityProxyModel) mapSelectionToSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel20mapSelectionToSourceERK14QItemSelection
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "mapSelectionToSource", args)
- }
+  }
 
 }
 
@@ -346,12 +347,12 @@ func (this *QIdentityProxyModel) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QIdentityProxyModel8rowCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QIdentityProxyModel", "rowCount", args)
- }
+  }
 
 }
 

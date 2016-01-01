@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.go
 //
@@ -56,14 +56,14 @@ func (this *QGraphicsLayoutItem) setSizePolicy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setSizePolicy", args)
- }
+  }
 
 }
 
@@ -76,12 +76,12 @@ func (this *QGraphicsLayoutItem) parentLayoutItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem16parentLayoutItemEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "parentLayoutItem", args)
- }
+  }
 
 }
 
@@ -94,12 +94,12 @@ func (this *QGraphicsLayoutItem) minimumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12minimumWidthEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumWidth", args)
- }
+  }
 
 }
 
@@ -112,12 +112,12 @@ func (this *QGraphicsLayoutItem) graphicsItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12graphicsItemEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "graphicsItem", args)
- }
+  }
 
 }
 
@@ -130,12 +130,12 @@ func (this *QGraphicsLayoutItem) preferredWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem14preferredWidthEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredWidth", args)
- }
+  }
 
 }
 
@@ -148,12 +148,12 @@ func (this *QGraphicsLayoutItem) ownedByLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13ownedByLayoutEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "ownedByLayout", args)
- }
+  }
 
 }
 
@@ -166,12 +166,12 @@ func (this *QGraphicsLayoutItem) preferredSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13preferredSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredSize", args)
- }
+  }
 
 }
 
@@ -184,17 +184,18 @@ func (this *QGraphicsLayoutItem) geometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8geometryEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "geometry", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsLayoutItem(args ...interface{})() {
+func NewQGraphicsLayoutItem(args ...interface{}) QGraphicsLayoutItem {
+  return QGraphicsLayoutItem{}
 }
 
 
@@ -206,12 +207,12 @@ func (this *QGraphicsLayoutItem) minimumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13minimumHeightEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumHeight", args)
- }
+  }
 
 }
 
@@ -224,12 +225,12 @@ func (this *QGraphicsLayoutItem) preferredHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem15preferredHeightEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredHeight", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QGraphicsLayoutItem) maximumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11maximumSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumSize", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QGraphicsLayoutItem) sizePolicy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem10sizePolicyEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "sizePolicy", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QGraphicsLayoutItem) maximumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13maximumHeightEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumHeight", args)
- }
+  }
 
 }
 
@@ -297,12 +298,12 @@ func (this *QGraphicsLayoutItem) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem11setGeometryERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setGeometry", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QGraphicsLayoutItem) setPreferredWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem17setPreferredWidthEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredWidth", args)
- }
+  }
 
 }
 
@@ -339,14 +340,14 @@ func (this *QGraphicsLayoutItem) setMaximumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMaximumSizeEdd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumSize", args)
- }
+  }
 
 }
 
@@ -359,12 +360,12 @@ func (this *QGraphicsLayoutItem) maximumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12maximumWidthEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumWidth", args)
- }
+  }
 
 }
 
@@ -382,14 +383,14 @@ func (this *QGraphicsLayoutItem) setMinimumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14setMinimumSizeEdd
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumSize", args)
- }
+  }
 
 }
 
@@ -403,12 +404,12 @@ func (this *QGraphicsLayoutItem) setMaximumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setMaximumHeightEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumHeight", args)
- }
+  }
 
 }
 
@@ -426,14 +427,14 @@ func (this *QGraphicsLayoutItem) setPreferredSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem16setPreferredSizeEdd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredSize", args)
- }
+  }
 
 }
 
@@ -450,12 +451,12 @@ func (this *QGraphicsLayoutItem) getContentsMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "getContentsMargins", args)
- }
+  }
 
 }
 
@@ -469,12 +470,12 @@ func (this *QGraphicsLayoutItem) setParentLayoutItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setParentLayoutItem", args)
- }
+  }
 
 }
 
@@ -488,12 +489,12 @@ func (this *QGraphicsLayoutItem) setMinimumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem15setMinimumWidthEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumWidth", args)
- }
+  }
 
 }
 
@@ -507,12 +508,12 @@ func (this *QGraphicsLayoutItem) setMaximumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem15setMaximumWidthEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumWidth", args)
- }
+  }
 
 }
 
@@ -525,12 +526,12 @@ func (this *QGraphicsLayoutItem) updateGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14updateGeometryEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "updateGeometry", args)
- }
+  }
 
 }
 
@@ -544,12 +545,12 @@ func (this *QGraphicsLayoutItem) setPreferredHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem18setPreferredHeightEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredHeight", args)
- }
+  }
 
 }
 
@@ -562,12 +563,12 @@ func (this *QGraphicsLayoutItem) minimumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11minimumSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumSize", args)
- }
+  }
 
 }
 
@@ -580,12 +581,12 @@ func (this *QGraphicsLayoutItem) contentsRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12contentsRectEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "contentsRect", args)
- }
+  }
 
 }
 
@@ -598,12 +599,12 @@ func (this *QGraphicsLayoutItem) isLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8isLayoutEv
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "isLayout", args)
- }
+  }
 
 }
 
@@ -614,10 +615,10 @@ func (this *QGraphicsLayoutItem) FreeQGraphicsLayoutItem(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "~QGraphicsLayoutItem", args)
- }
+  }
 
 }
 
@@ -631,12 +632,12 @@ func (this *QGraphicsLayoutItem) setMinimumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setMinimumHeightEd
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumHeight", args)
- }
+  }
 
 }
 

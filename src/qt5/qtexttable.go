@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -48,7 +48,8 @@ type QTextTable struct {
 }
 
 
-func NewQTextTableCell(args ...interface{})() {
+func NewQTextTableCell(args ...interface{}) QTextTableCell {
+  return QTextTableCell{}
 }
 
 
@@ -61,12 +62,12 @@ func (this *QTextTableCell) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QTextTableCell9setFormatERK15QTextCharFormat
   default:
     qtrt.ErrorResolve("QTextTableCell", "setFormat", args)
- }
+  }
 
 }
 
@@ -79,12 +80,12 @@ func (this *QTextTableCell) lastPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell12lastPositionEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "lastPosition", args)
- }
+  }
 
 }
 
@@ -95,10 +96,10 @@ func (this *QTextTableCell) FreeQTextTableCell(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextTableCell", "~QTextTableCell", args)
- }
+  }
 
 }
 
@@ -111,12 +112,12 @@ func (this *QTextTableCell) rowSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell7rowSpanEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "rowSpan", args)
- }
+  }
 
 }
 
@@ -129,12 +130,12 @@ func (this *QTextTableCell) firstPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell13firstPositionEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "firstPosition", args)
- }
+  }
 
 }
 
@@ -147,12 +148,12 @@ func (this *QTextTableCell) tableCellFormatIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell20tableCellFormatIndexEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "tableCellFormatIndex", args)
- }
+  }
 
 }
 
@@ -165,12 +166,12 @@ func (this *QTextTableCell) columnSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell10columnSpanEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "columnSpan", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QTextTableCell) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell6formatEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "format", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QTextTableCell) row(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell3rowEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "row", args)
- }
+  }
 
 }
 
@@ -219,12 +220,12 @@ func (this *QTextTableCell) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell7isValidEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "isValid", args)
- }
+  }
 
 }
 
@@ -237,12 +238,12 @@ func (this *QTextTableCell) lastCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell18lastCursorPositionEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "lastCursorPosition", args)
- }
+  }
 
 }
 
@@ -255,12 +256,12 @@ func (this *QTextTableCell) column(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell6columnEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "column", args)
- }
+  }
 
 }
 
@@ -273,12 +274,12 @@ func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTextTableCell19firstCursorPositionEv
   default:
     qtrt.ErrorResolve("QTextTableCell", "firstCursorPosition", args)
- }
+  }
 
 }
 
@@ -299,7 +300,7 @@ func (this *QTextTable) cellAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable6cellAtEii
   case 1:
@@ -308,7 +309,7 @@ func (this *QTextTable) cellAt(args ...interface{}) () {
     // invoke: _ZNK10QTextTable6cellAtEi
   default:
     qtrt.ErrorResolve("QTextTable", "cellAt", args)
- }
+  }
 
 }
 
@@ -321,12 +322,12 @@ func (this *QTextTable) rows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable4rowsEv
   default:
     qtrt.ErrorResolve("QTextTable", "rows", args)
- }
+  }
 
 }
 
@@ -341,12 +342,12 @@ func (this *QTextTable) removeRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10removeRowsEii
   default:
     qtrt.ErrorResolve("QTextTable", "removeRows", args)
- }
+  }
 
 }
 
@@ -359,12 +360,12 @@ func (this *QTextTable) columns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable7columnsEv
   default:
     qtrt.ErrorResolve("QTextTable", "columns", args)
- }
+  }
 
 }
 
@@ -378,12 +379,12 @@ func (this *QTextTable) appendRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10appendRowsEi
   default:
     qtrt.ErrorResolve("QTextTable", "appendRows", args)
- }
+  }
 
 }
 
@@ -398,17 +399,18 @@ func (this *QTextTable) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable6resizeEii
   default:
     qtrt.ErrorResolve("QTextTable", "resize", args)
- }
+  }
 
 }
 
 
-func NewQTextTable(args ...interface{})() {
+func NewQTextTable(args ...interface{}) QTextTable {
+  return QTextTable{}
 }
 
 
@@ -421,12 +423,12 @@ func (this *QTextTable) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable9setFormatERK16QTextTableFormat
   default:
     qtrt.ErrorResolve("QTextTable", "setFormat", args)
- }
+  }
 
 }
 
@@ -441,12 +443,12 @@ func (this *QTextTable) insertColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13insertColumnsEii
   default:
     qtrt.ErrorResolve("QTextTable", "insertColumns", args)
- }
+  }
 
 }
 
@@ -463,12 +465,12 @@ func (this *QTextTable) splitCell(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable9splitCellEiiii
   default:
     qtrt.ErrorResolve("QTextTable", "splitCell", args)
- }
+  }
 
 }
 
@@ -488,14 +490,14 @@ func (this *QTextTable) mergeCells(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10mergeCellsEiiii
   case 1:
     // invoke: _ZN10QTextTable10mergeCellsERK11QTextCursor
   default:
     qtrt.ErrorResolve("QTextTable", "mergeCells", args)
- }
+  }
 
 }
 
@@ -510,12 +512,12 @@ func (this *QTextTable) insertRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10insertRowsEii
   default:
     qtrt.ErrorResolve("QTextTable", "insertRows", args)
- }
+  }
 
 }
 
@@ -526,10 +528,10 @@ func (this *QTextTable) FreeQTextTable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextTable", "~QTextTable", args)
- }
+  }
 
 }
 
@@ -543,12 +545,12 @@ func (this *QTextTable) rowStart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable8rowStartERK11QTextCursor
   default:
     qtrt.ErrorResolve("QTextTable", "rowStart", args)
- }
+  }
 
 }
 
@@ -561,12 +563,12 @@ func (this *QTextTable) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable6formatEv
   default:
     qtrt.ErrorResolve("QTextTable", "format", args)
- }
+  }
 
 }
 
@@ -580,12 +582,12 @@ func (this *QTextTable) rowEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable6rowEndERK11QTextCursor
   default:
     qtrt.ErrorResolve("QTextTable", "rowEnd", args)
- }
+  }
 
 }
 
@@ -598,12 +600,12 @@ func (this *QTextTable) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable10metaObjectEv
   default:
     qtrt.ErrorResolve("QTextTable", "metaObject", args)
- }
+  }
 
 }
 
@@ -618,12 +620,12 @@ func (this *QTextTable) removeColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13removeColumnsEii
   default:
     qtrt.ErrorResolve("QTextTable", "removeColumns", args)
- }
+  }
 
 }
 
@@ -637,12 +639,12 @@ func (this *QTextTable) appendColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13appendColumnsEi
   default:
     qtrt.ErrorResolve("QTextTable", "appendColumns", args)
- }
+  }
 
 }
 

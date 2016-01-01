@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -70,17 +70,18 @@ func (this *QSignalBlocker) unblock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSignalBlocker7unblockEv
   default:
     qtrt.ErrorResolve("QSignalBlocker", "unblock", args)
- }
+  }
 
 }
 
 
-func NewQSignalBlocker(args ...interface{})() {
+func NewQSignalBlocker(args ...interface{}) QSignalBlocker {
+  return QSignalBlocker{}
 }
 
 
@@ -92,12 +93,12 @@ func (this *QSignalBlocker) reblock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QSignalBlocker7reblockEv
   default:
     qtrt.ErrorResolve("QSignalBlocker", "reblock", args)
- }
+  }
 
 }
 
@@ -108,10 +109,10 @@ func (this *QSignalBlocker) FreeQSignalBlocker(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSignalBlocker", "~QSignalBlocker", args)
- }
+  }
 
 }
 
@@ -124,12 +125,12 @@ func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QObjectData17dynamicMetaObjectEv
   default:
     qtrt.ErrorResolve("QObjectData", "dynamicMetaObject", args)
- }
+  }
 
 }
 
@@ -140,10 +141,10 @@ func (this *QObjectData) FreeQObjectData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObjectData", "~QObjectData", args)
- }
+  }
 
 }
 
@@ -154,10 +155,10 @@ func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObjectUserData", "~QObjectUserData", args)
- }
+  }
 
 }
 
@@ -171,12 +172,12 @@ func (this *QObject) inherits(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8inheritsEPKc
   default:
     qtrt.ErrorResolve("QObject", "inherits", args)
- }
+  }
 
 }
 
@@ -190,12 +191,12 @@ func (this *QObject) moveToThread(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject12moveToThreadEP7QThread
   default:
     qtrt.ErrorResolve("QObject", "moveToThread", args)
- }
+  }
 
 }
 
@@ -209,12 +210,12 @@ func (this *QObject) removeEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject17removeEventFilterEPS_
   default:
     qtrt.ErrorResolve("QObject", "removeEventFilter", args)
- }
+  }
 
 }
 
@@ -227,12 +228,12 @@ func (this *QObject) dumpObjectTree(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject14dumpObjectTreeEv
   default:
     qtrt.ErrorResolve("QObject", "dumpObjectTree", args)
- }
+  }
 
 }
 
@@ -247,12 +248,12 @@ func (this *QObject) eventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject11eventFilterEPS_P6QEvent
   default:
     qtrt.ErrorResolve("QObject", "eventFilter", args)
- }
+  }
 
 }
 
@@ -267,17 +268,18 @@ func (this *QObject) setUserData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject11setUserDataEjP15QObjectUserData
   default:
     qtrt.ErrorResolve("QObject", "setUserData", args)
- }
+  }
 
 }
 
 
-func NewQObject(args ...interface{})() {
+func NewQObject(args ...interface{}) QObject {
+  return QObject{}
 }
 
 
@@ -287,10 +289,10 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObject", "disconnect", args)
- }
+  }
 
 }
 
@@ -304,12 +306,12 @@ func (this *QObject) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QObject", "event", args)
- }
+  }
 
 }
 
@@ -322,12 +324,12 @@ func (this *QObject) dynamicPropertyNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject20dynamicPropertyNamesEv
   default:
     qtrt.ErrorResolve("QObject", "dynamicPropertyNames", args)
- }
+  }
 
 }
 
@@ -340,12 +342,12 @@ func (this *QObject) isWidgetType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject12isWidgetTypeEv
   default:
     qtrt.ErrorResolve("QObject", "isWidgetType", args)
- }
+  }
 
 }
 
@@ -359,12 +361,12 @@ func (this *QObject) property(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8propertyEPKc
   default:
     qtrt.ErrorResolve("QObject", "property", args)
- }
+  }
 
 }
 
@@ -377,12 +379,12 @@ func (this *QObject) thread(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject6threadEv
   default:
     qtrt.ErrorResolve("QObject", "thread", args)
- }
+  }
 
 }
 
@@ -395,12 +397,12 @@ func (this *QObject) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject10metaObjectEv
   default:
     qtrt.ErrorResolve("QObject", "metaObject", args)
- }
+  }
 
 }
 
@@ -414,12 +416,12 @@ func (this *QObject) setParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject9setParentEPS_
   default:
     qtrt.ErrorResolve("QObject", "setParent", args)
- }
+  }
 
 }
 
@@ -454,7 +456,7 @@ func (this *QObject) disconnect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_
   case 1:
@@ -467,7 +469,7 @@ func (this *QObject) disconnect(args ...interface{}) () {
     // invoke: _ZN7QObject10disconnectEPKS_PKcS1_S3_
   default:
     qtrt.ErrorResolve("QObject", "disconnect", args)
- }
+  }
 
 }
 
@@ -480,12 +482,12 @@ func (this *QObject) children(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8childrenEv
   default:
     qtrt.ErrorResolve("QObject", "children", args)
- }
+  }
 
 }
 
@@ -498,12 +500,12 @@ func (this *QObject) isWindowType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject12isWindowTypeEv
   default:
     qtrt.ErrorResolve("QObject", "isWindowType", args)
- }
+  }
 
 }
 
@@ -516,12 +518,12 @@ func (this *QObject) deleteLater(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject11deleteLaterEv
   default:
     qtrt.ErrorResolve("QObject", "deleteLater", args)
- }
+  }
 
 }
 
@@ -532,10 +534,10 @@ func (this *QObject) FreeQObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObject", "~QObject", args)
- }
+  }
 
 }
 
@@ -548,12 +550,12 @@ func (this *QObject) objectName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject10objectNameEv
   default:
     qtrt.ErrorResolve("QObject", "objectName", args)
- }
+  }
 
 }
 
@@ -568,12 +570,12 @@ func (this *QObject) setProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject11setPropertyEPKcRK8QVariant
   default:
     qtrt.ErrorResolve("QObject", "setProperty", args)
- }
+  }
 
 }
 
@@ -586,12 +588,12 @@ func (this *QObject) signalsBlocked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject14signalsBlockedEv
   default:
     qtrt.ErrorResolve("QObject", "signalsBlocked", args)
- }
+  }
 
 }
 
@@ -602,10 +604,10 @@ func (this *QObject) registerUserData_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObject", "registerUserData", args)
- }
+  }
 
 }
 
@@ -619,12 +621,12 @@ func (this *QObject) userData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8userDataEj
   default:
     qtrt.ErrorResolve("QObject", "userData", args)
- }
+  }
 
 }
 
@@ -637,12 +639,12 @@ func (this *QObject) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QObject6parentEv
   default:
     qtrt.ErrorResolve("QObject", "parent", args)
- }
+  }
 
 }
 
@@ -656,12 +658,12 @@ func (this *QObject) installEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject18installEventFilterEPS_
   default:
     qtrt.ErrorResolve("QObject", "installEventFilter", args)
- }
+  }
 
 }
 
@@ -675,12 +677,12 @@ func (this *QObject) blockSignals(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject12blockSignalsEb
   default:
     qtrt.ErrorResolve("QObject", "blockSignals", args)
- }
+  }
 
 }
 
@@ -694,12 +696,12 @@ func (this *QObject) setObjectName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject13setObjectNameERK7QString
   default:
     qtrt.ErrorResolve("QObject", "setObjectName", args)
- }
+  }
 
 }
 
@@ -712,12 +714,12 @@ func (this *QObject) dumpObjectInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject14dumpObjectInfoEv
   default:
     qtrt.ErrorResolve("QObject", "dumpObjectInfo", args)
- }
+  }
 
 }
 
@@ -731,12 +733,12 @@ func (this *QObject) killTimer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QObject9killTimerEi
   default:
     qtrt.ErrorResolve("QObject", "killTimer", args)
- }
+  }
 
 }
 

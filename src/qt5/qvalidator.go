@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.go
 //
@@ -83,12 +83,12 @@ func (this *QRegularExpressionValidator) regularExpression(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QRegularExpressionValidator17regularExpressionEv
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "regularExpression", args)
- }
+  }
 
 }
 
@@ -99,15 +99,16 @@ func (this *QRegularExpressionValidator) FreeQRegularExpressionValidator(args ..
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "~QRegularExpressionValidator", args)
- }
+  }
 
 }
 
 
-func NewQRegularExpressionValidator(args ...interface{})() {
+func NewQRegularExpressionValidator(args ...interface{}) QRegularExpressionValidator {
+  return QRegularExpressionValidator{}
 }
 
 
@@ -119,12 +120,12 @@ func (this *QRegularExpressionValidator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QRegularExpressionValidator10metaObjectEv
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "metaObject", args)
- }
+  }
 
 }
 
@@ -138,12 +139,12 @@ func (this *QRegularExpressionValidator) setRegularExpression(args ...interface{
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "setRegularExpression", args)
- }
+  }
 
 }
 
@@ -156,12 +157,12 @@ func (this *QDoubleValidator) decimals(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDoubleValidator8decimalsEv
   default:
     qtrt.ErrorResolve("QDoubleValidator", "decimals", args)
- }
+  }
 
 }
 
@@ -172,10 +173,10 @@ func (this *QDoubleValidator) FreeQDoubleValidator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDoubleValidator", "~QDoubleValidator", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QDoubleValidator) top(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDoubleValidator3topEv
   default:
     qtrt.ErrorResolve("QDoubleValidator", "top", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QDoubleValidator) bottom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDoubleValidator6bottomEv
   default:
     qtrt.ErrorResolve("QDoubleValidator", "bottom", args)
- }
+  }
 
 }
 
@@ -225,17 +226,18 @@ func (this *QDoubleValidator) setDecimals(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator11setDecimalsEi
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setDecimals", args)
- }
+  }
 
 }
 
 
-func NewQDoubleValidator(args ...interface{})() {
+func NewQDoubleValidator(args ...interface{}) QDoubleValidator {
+  return QDoubleValidator{}
 }
 
 
@@ -248,12 +250,12 @@ func (this *QDoubleValidator) setBottom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator9setBottomEd
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setBottom", args)
- }
+  }
 
 }
 
@@ -269,12 +271,12 @@ func (this *QDoubleValidator) setRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator8setRangeEddi
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setRange", args)
- }
+  }
 
 }
 
@@ -287,12 +289,12 @@ func (this *QDoubleValidator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QDoubleValidator10metaObjectEv
   default:
     qtrt.ErrorResolve("QDoubleValidator", "metaObject", args)
- }
+  }
 
 }
 
@@ -306,17 +308,18 @@ func (this *QDoubleValidator) setTop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator6setTopEd
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setTop", args)
- }
+  }
 
 }
 
 
-func NewQIntValidator(args ...interface{})() {
+func NewQIntValidator(args ...interface{}) QIntValidator {
+  return QIntValidator{}
 }
 
 
@@ -329,12 +332,12 @@ func (this *QIntValidator) setBottom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator9setBottomEi
   default:
     qtrt.ErrorResolve("QIntValidator", "setBottom", args)
- }
+  }
 
 }
 
@@ -349,12 +352,12 @@ func (this *QIntValidator) setRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator8setRangeEii
   default:
     qtrt.ErrorResolve("QIntValidator", "setRange", args)
- }
+  }
 
 }
 
@@ -367,12 +370,12 @@ func (this *QIntValidator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QIntValidator10metaObjectEv
   default:
     qtrt.ErrorResolve("QIntValidator", "metaObject", args)
- }
+  }
 
 }
 
@@ -385,12 +388,12 @@ func (this *QIntValidator) top(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QIntValidator3topEv
   default:
     qtrt.ErrorResolve("QIntValidator", "top", args)
- }
+  }
 
 }
 
@@ -404,12 +407,12 @@ func (this *QIntValidator) fixup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QIntValidator5fixupER7QString
   default:
     qtrt.ErrorResolve("QIntValidator", "fixup", args)
- }
+  }
 
 }
 
@@ -420,10 +423,10 @@ func (this *QIntValidator) FreeQIntValidator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIntValidator", "~QIntValidator", args)
- }
+  }
 
 }
 
@@ -437,12 +440,12 @@ func (this *QIntValidator) setTop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator6setTopEi
   default:
     qtrt.ErrorResolve("QIntValidator", "setTop", args)
- }
+  }
 
 }
 
@@ -455,12 +458,12 @@ func (this *QIntValidator) bottom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QIntValidator6bottomEv
   default:
     qtrt.ErrorResolve("QIntValidator", "bottom", args)
- }
+  }
 
 }
 
@@ -473,17 +476,18 @@ func (this *QValidator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QValidator10metaObjectEv
   default:
     qtrt.ErrorResolve("QValidator", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQValidator(args ...interface{})() {
+func NewQValidator(args ...interface{}) QValidator {
+  return QValidator{}
 }
 
 
@@ -496,12 +500,12 @@ func (this *QValidator) setLocale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QValidator9setLocaleERK7QLocale
   default:
     qtrt.ErrorResolve("QValidator", "setLocale", args)
- }
+  }
 
 }
 
@@ -515,12 +519,12 @@ func (this *QValidator) fixup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QValidator5fixupER7QString
   default:
     qtrt.ErrorResolve("QValidator", "fixup", args)
- }
+  }
 
 }
 
@@ -531,10 +535,10 @@ func (this *QValidator) FreeQValidator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QValidator", "~QValidator", args)
- }
+  }
 
 }
 
@@ -547,12 +551,12 @@ func (this *QValidator) locale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QValidator6localeEv
   default:
     qtrt.ErrorResolve("QValidator", "locale", args)
- }
+  }
 
 }
 
@@ -563,10 +567,10 @@ func (this *QRegExpValidator) FreeQRegExpValidator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRegExpValidator", "~QRegExpValidator", args)
- }
+  }
 
 }
 
@@ -579,12 +583,12 @@ func (this *QRegExpValidator) regExp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QRegExpValidator6regExpEv
   default:
     qtrt.ErrorResolve("QRegExpValidator", "regExp", args)
- }
+  }
 
 }
 
@@ -597,17 +601,18 @@ func (this *QRegExpValidator) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QRegExpValidator10metaObjectEv
   default:
     qtrt.ErrorResolve("QRegExpValidator", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQRegExpValidator(args ...interface{})() {
+func NewQRegExpValidator(args ...interface{}) QRegExpValidator {
+  return QRegExpValidator{}
 }
 
 
@@ -620,12 +625,12 @@ func (this *QRegExpValidator) setRegExp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QRegExpValidator9setRegExpERK7QRegExp
   default:
     qtrt.ErrorResolve("QRegExpValidator", "setRegExp", args)
- }
+  }
 
 }
 

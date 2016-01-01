@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -54,12 +54,12 @@ func (this *QAbstractButton) iconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton8iconSizeEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "iconSize", args)
- }
+  }
 
 }
 
@@ -72,12 +72,12 @@ func (this *QAbstractButton) click(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton5clickEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "click", args)
- }
+  }
 
 }
 
@@ -88,10 +88,10 @@ func (this *QAbstractButton) FreeQAbstractButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractButton", "~QAbstractButton", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QAbstractButton) setChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton10setCheckedEb
   default:
     qtrt.ErrorResolve("QAbstractButton", "setChecked", args)
- }
+  }
 
 }
 
@@ -123,12 +123,12 @@ func (this *QAbstractButton) shortcut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton8shortcutEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "shortcut", args)
- }
+  }
 
 }
 
@@ -141,12 +141,12 @@ func (this *QAbstractButton) group(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton5groupEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "group", args)
- }
+  }
 
 }
 
@@ -159,17 +159,18 @@ func (this *QAbstractButton) isCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton11isCheckableEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "isCheckable", args)
- }
+  }
 
 }
 
 
-func NewQAbstractButton(args ...interface{})() {
+func NewQAbstractButton(args ...interface{}) QAbstractButton {
+  return QAbstractButton{}
 }
 
 
@@ -181,12 +182,12 @@ func (this *QAbstractButton) isDown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton6isDownEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "isDown", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton16setAutoExclusiveEb
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoExclusive", args)
- }
+  }
 
 }
 
@@ -218,12 +219,12 @@ func (this *QAbstractButton) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "metaObject", args)
- }
+  }
 
 }
 
@@ -236,12 +237,12 @@ func (this *QAbstractButton) isChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton9isCheckedEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "isChecked", args)
- }
+  }
 
 }
 
@@ -255,12 +256,12 @@ func (this *QAbstractButton) setAutoRepeatDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton18setAutoRepeatDelayEi
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatDelay", args)
- }
+  }
 
 }
 
@@ -273,12 +274,12 @@ func (this *QAbstractButton) autoRepeatDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton15autoRepeatDelayEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatDelay", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QAbstractButton) autoExclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton13autoExclusiveEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoExclusive", args)
- }
+  }
 
 }
 
@@ -309,12 +310,12 @@ func (this *QAbstractButton) toggle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton6toggleEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "toggle", args)
- }
+  }
 
 }
 
@@ -328,12 +329,12 @@ func (this *QAbstractButton) setIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setIconERK5QIcon
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIcon", args)
- }
+  }
 
 }
 
@@ -347,12 +348,12 @@ func (this *QAbstractButton) setAutoRepeatInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton21setAutoRepeatIntervalEi
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatInterval", args)
- }
+  }
 
 }
 
@@ -366,12 +367,12 @@ func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton13setAutoRepeatEb
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeat", args)
- }
+  }
 
 }
 
@@ -385,12 +386,12 @@ func (this *QAbstractButton) animateClick(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton12animateClickEi
   default:
     qtrt.ErrorResolve("QAbstractButton", "animateClick", args)
- }
+  }
 
 }
 
@@ -404,12 +405,12 @@ func (this *QAbstractButton) setDown(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setDownEb
   default:
     qtrt.ErrorResolve("QAbstractButton", "setDown", args)
- }
+  }
 
 }
 
@@ -422,12 +423,12 @@ func (this *QAbstractButton) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton4textEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "text", args)
- }
+  }
 
 }
 
@@ -441,12 +442,12 @@ func (this *QAbstractButton) setShortcut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton11setShortcutERK12QKeySequence
   default:
     qtrt.ErrorResolve("QAbstractButton", "setShortcut", args)
- }
+  }
 
 }
 
@@ -460,12 +461,12 @@ func (this *QAbstractButton) setCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton12setCheckableEb
   default:
     qtrt.ErrorResolve("QAbstractButton", "setCheckable", args)
- }
+  }
 
 }
 
@@ -478,12 +479,12 @@ func (this *QAbstractButton) icon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton4iconEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "icon", args)
- }
+  }
 
 }
 
@@ -497,12 +498,12 @@ func (this *QAbstractButton) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setTextERK7QString
   default:
     qtrt.ErrorResolve("QAbstractButton", "setText", args)
- }
+  }
 
 }
 
@@ -515,12 +516,12 @@ func (this *QAbstractButton) autoRepeatInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton18autoRepeatIntervalEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatInterval", args)
- }
+  }
 
 }
 
@@ -533,12 +534,12 @@ func (this *QAbstractButton) autoRepeat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton10autoRepeatEv
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeat", args)
- }
+  }
 
 }
 
@@ -552,12 +553,12 @@ func (this *QAbstractButton) setIconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton11setIconSizeERK5QSize
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIconSize", args)
- }
+  }
 
 }
 

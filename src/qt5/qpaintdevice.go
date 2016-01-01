@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.go
 //
@@ -50,12 +50,12 @@ func (this *QPaintDevice) physicalDpiY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiYEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiY", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QPaintDevice) heightMM(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice8heightMMEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "heightMM", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QPaintDevice) colorCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice10colorCountEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "colorCount", args)
- }
+  }
 
 }
 
@@ -104,12 +104,12 @@ func (this *QPaintDevice) physicalDpiX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiXEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiX", args)
- }
+  }
 
 }
 
@@ -122,12 +122,12 @@ func (this *QPaintDevice) widthMM(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice7widthMMEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "widthMM", args)
- }
+  }
 
 }
 
@@ -140,12 +140,12 @@ func (this *QPaintDevice) devType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice7devTypeEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "devType", args)
- }
+  }
 
 }
 
@@ -158,12 +158,12 @@ func (this *QPaintDevice) paintingActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice14paintingActiveEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintingActive", args)
- }
+  }
 
 }
 
@@ -176,17 +176,18 @@ func (this *QPaintDevice) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice5widthEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "width", args)
- }
+  }
 
 }
 
 
-func NewQPaintDevice(args ...interface{})() {
+func NewQPaintDevice(args ...interface{}) QPaintDevice {
+  return QPaintDevice{}
 }
 
 
@@ -198,12 +199,12 @@ func (this *QPaintDevice) devicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice16devicePixelRatioEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "devicePixelRatio", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QPaintDevice) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice6heightEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "height", args)
- }
+  }
 
 }
 
@@ -234,12 +235,12 @@ func (this *QPaintDevice) depth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice5depthEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "depth", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QPaintDevice) paintEngine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11paintEngineEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintEngine", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QPaintDevice) logicalDpiY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiYEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiY", args)
- }
+  }
 
 }
 
@@ -286,10 +287,10 @@ func (this *QPaintDevice) FreeQPaintDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPaintDevice", "~QPaintDevice", args)
- }
+  }
 
 }
 
@@ -302,12 +303,12 @@ func (this *QPaintDevice) logicalDpiX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiXEv
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiX", args)
- }
+  }
 
 }
 

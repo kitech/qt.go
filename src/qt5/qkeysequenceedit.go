@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -44,7 +44,8 @@ type QKeySequenceEdit struct {
 }
 
 
-func NewQKeySequenceEdit(args ...interface{})() {
+func NewQKeySequenceEdit(args ...interface{}) QKeySequenceEdit {
+  return QKeySequenceEdit{}
 }
 
 
@@ -56,12 +57,12 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QKeySequenceEdit5clearEv
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "clear", args)
- }
+  }
 
 }
 
@@ -75,12 +76,12 @@ func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit11keySequenceEv
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "keySequence", args)
- }
+  }
 
 }
 
@@ -109,10 +110,10 @@ func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
- }
+  }
 
 }
 

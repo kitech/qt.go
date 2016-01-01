@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -55,12 +55,12 @@ func (this *QState) errorState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QState10errorStateEv
   default:
     qtrt.ErrorResolve("QState", "errorState", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QState) initialState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QState12initialStateEv
   default:
     qtrt.ErrorResolve("QState", "initialState", args)
- }
+  }
 
 }
 
@@ -89,10 +89,10 @@ func (this *QState) FreeQState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QState", "~QState", args)
- }
+  }
 
 }
 
@@ -108,17 +108,18 @@ func (this *QState) assignProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant
   default:
     qtrt.ErrorResolve("QState", "assignProperty", args)
- }
+  }
 
 }
 
 
-func NewQState(args ...interface{})() {
+func NewQState(args ...interface{}) QState {
+  return QState{}
 }
 
 
@@ -130,12 +131,12 @@ func (this *QState) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QState10metaObjectEv
   default:
     qtrt.ErrorResolve("QState", "metaObject", args)
- }
+  }
 
 }
 
@@ -149,12 +150,12 @@ func (this *QState) setErrorState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QState13setErrorStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QState", "setErrorState", args)
- }
+  }
 
 }
 
@@ -176,7 +177,7 @@ func (this *QState) addTransition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QState13addTransitionEP19QAbstractTransition
   case 1:
@@ -185,7 +186,7 @@ func (this *QState) addTransition(args ...interface{}) () {
     // invoke: _ZN6QState13addTransitionEP14QAbstractState
   default:
     qtrt.ErrorResolve("QState", "addTransition", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QState) removeTransition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QState16removeTransitionEP19QAbstractTransition
   default:
     qtrt.ErrorResolve("QState", "removeTransition", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QState) transitions(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QState11transitionsEv
   default:
     qtrt.ErrorResolve("QState", "transitions", args)
- }
+  }
 
 }
 
@@ -236,12 +237,12 @@ func (this *QState) setInitialState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QState15setInitialStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QState", "setInitialState", args)
- }
+  }
 
 }
 

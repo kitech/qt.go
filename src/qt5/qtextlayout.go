@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -62,12 +62,12 @@ func (this *QTextLine) ascent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine6ascentEv
   default:
     qtrt.ErrorResolve("QTextLine", "ascent", args)
- }
+  }
 
 }
 
@@ -80,12 +80,12 @@ func (this *QTextLine) leading(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine7leadingEv
   default:
     qtrt.ErrorResolve("QTextLine", "leading", args)
- }
+  }
 
 }
 
@@ -98,12 +98,12 @@ func (this *QTextLine) textStart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine9textStartEv
   default:
     qtrt.ErrorResolve("QTextLine", "textStart", args)
- }
+  }
 
 }
 
@@ -116,12 +116,12 @@ func (this *QTextLine) leadingIncluded(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine15leadingIncludedEv
   default:
     qtrt.ErrorResolve("QTextLine", "leadingIncluded", args)
- }
+  }
 
 }
 
@@ -134,12 +134,12 @@ func (this *QTextLine) x(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine1xEv
   default:
     qtrt.ErrorResolve("QTextLine", "x", args)
- }
+  }
 
 }
 
@@ -152,12 +152,12 @@ func (this *QTextLine) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine6heightEv
   default:
     qtrt.ErrorResolve("QTextLine", "height", args)
- }
+  }
 
 }
 
@@ -170,12 +170,12 @@ func (this *QTextLine) y(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine1yEv
   default:
     qtrt.ErrorResolve("QTextLine", "y", args)
- }
+  }
 
 }
 
@@ -188,12 +188,12 @@ func (this *QTextLine) horizontalAdvance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine17horizontalAdvanceEv
   default:
     qtrt.ErrorResolve("QTextLine", "horizontalAdvance", args)
- }
+  }
 
 }
 
@@ -206,12 +206,12 @@ func (this *QTextLine) naturalTextRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine15naturalTextRectEv
   default:
     qtrt.ErrorResolve("QTextLine", "naturalTextRect", args)
- }
+  }
 
 }
 
@@ -229,14 +229,14 @@ func (this *QTextLine) setNumColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine13setNumColumnsEid
   case 1:
     // invoke: _ZN9QTextLine13setNumColumnsEi
   default:
     qtrt.ErrorResolve("QTextLine", "setNumColumns", args)
- }
+  }
 
 }
 
@@ -249,12 +249,12 @@ func (this *QTextLine) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine5widthEv
   default:
     qtrt.ErrorResolve("QTextLine", "width", args)
- }
+  }
 
 }
 
@@ -268,12 +268,12 @@ func (this *QTextLine) setLeadingIncluded(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine18setLeadingIncludedEb
   default:
     qtrt.ErrorResolve("QTextLine", "setLeadingIncluded", args)
- }
+  }
 
 }
 
@@ -287,12 +287,12 @@ func (this *QTextLine) setPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine11setPositionERK7QPointF
   default:
     qtrt.ErrorResolve("QTextLine", "setPosition", args)
- }
+  }
 
 }
 
@@ -305,12 +305,12 @@ func (this *QTextLine) lineNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine10lineNumberEv
   default:
     qtrt.ErrorResolve("QTextLine", "lineNumber", args)
- }
+  }
 
 }
 
@@ -323,17 +323,18 @@ func (this *QTextLine) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine4rectEv
   default:
     qtrt.ErrorResolve("QTextLine", "rect", args)
- }
+  }
 
 }
 
 
-func NewQTextLine(args ...interface{})() {
+func NewQTextLine(args ...interface{}) QTextLine {
+  return QTextLine{}
 }
 
 
@@ -345,12 +346,12 @@ func (this *QTextLine) textLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine10textLengthEv
   default:
     qtrt.ErrorResolve("QTextLine", "textLength", args)
- }
+  }
 
 }
 
@@ -363,12 +364,12 @@ func (this *QTextLine) position(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine8positionEv
   default:
     qtrt.ErrorResolve("QTextLine", "position", args)
- }
+  }
 
 }
 
@@ -383,12 +384,12 @@ func (this *QTextLine) glyphRuns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine9glyphRunsEii
   default:
     qtrt.ErrorResolve("QTextLine", "glyphRuns", args)
- }
+  }
 
 }
 
@@ -401,12 +402,12 @@ func (this *QTextLine) descent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine7descentEv
   default:
     qtrt.ErrorResolve("QTextLine", "descent", args)
- }
+  }
 
 }
 
@@ -419,12 +420,12 @@ func (this *QTextLine) naturalTextWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine16naturalTextWidthEv
   default:
     qtrt.ErrorResolve("QTextLine", "naturalTextWidth", args)
- }
+  }
 
 }
 
@@ -438,12 +439,12 @@ func (this *QTextLine) setLineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine12setLineWidthEd
   default:
     qtrt.ErrorResolve("QTextLine", "setLineWidth", args)
- }
+  }
 
 }
 
@@ -456,12 +457,12 @@ func (this *QTextLine) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine7isValidEv
   default:
     qtrt.ErrorResolve("QTextLine", "isValid", args)
- }
+  }
 
 }
 
@@ -475,12 +476,12 @@ func (this *QTextLayout) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QTextLayout", "setFont", args)
- }
+  }
 
 }
 
@@ -494,12 +495,12 @@ func (this *QTextLayout) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout7setTextERK7QString
   default:
     qtrt.ErrorResolve("QTextLayout", "setText", args)
- }
+  }
 
 }
 
@@ -513,12 +514,12 @@ func (this *QTextLayout) isValidCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout21isValidCursorPositionEi
   default:
     qtrt.ErrorResolve("QTextLayout", "isValidCursorPosition", args)
- }
+  }
 
 }
 
@@ -531,12 +532,12 @@ func (this *QTextLayout) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout12boundingRectEv
   default:
     qtrt.ErrorResolve("QTextLayout", "boundingRect", args)
- }
+  }
 
 }
 
@@ -550,12 +551,12 @@ func (this *QTextLayout) setRawFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout10setRawFontERK8QRawFont
   default:
     qtrt.ErrorResolve("QTextLayout", "setRawFont", args)
- }
+  }
 
 }
 
@@ -569,17 +570,18 @@ func (this *QTextLayout) setTextOption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout13setTextOptionERK11QTextOption
   default:
     qtrt.ErrorResolve("QTextLayout", "setTextOption", args)
- }
+  }
 
 }
 
 
-func NewQTextLayout(args ...interface{})() {
+func NewQTextLayout(args ...interface{}) QTextLayout {
+  return QTextLayout{}
 }
 
 
@@ -592,12 +594,12 @@ func (this *QTextLayout) setPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout11setPositionERK7QPointF
   default:
     qtrt.ErrorResolve("QTextLayout", "setPosition", args)
- }
+  }
 
 }
 
@@ -611,12 +613,12 @@ func (this *QTextLayout) lineForTextPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout19lineForTextPositionEi
   default:
     qtrt.ErrorResolve("QTextLayout", "lineForTextPosition", args)
- }
+  }
 
 }
 
@@ -629,12 +631,12 @@ func (this *QTextLayout) textOption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout10textOptionEv
   default:
     qtrt.ErrorResolve("QTextLayout", "textOption", args)
- }
+  }
 
 }
 
@@ -647,12 +649,12 @@ func (this *QTextLayout) engine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout6engineEv
   default:
     qtrt.ErrorResolve("QTextLayout", "engine", args)
- }
+  }
 
 }
 
@@ -665,12 +667,12 @@ func (this *QTextLayout) preeditAreaPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout19preeditAreaPositionEv
   default:
     qtrt.ErrorResolve("QTextLayout", "preeditAreaPosition", args)
- }
+  }
 
 }
 
@@ -683,12 +685,12 @@ func (this *QTextLayout) clearAdditionalFormats(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout22clearAdditionalFormatsEv
   default:
     qtrt.ErrorResolve("QTextLayout", "clearAdditionalFormats", args)
- }
+  }
 
 }
 
@@ -702,12 +704,12 @@ func (this *QTextLayout) leftCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout18leftCursorPositionEi
   default:
     qtrt.ErrorResolve("QTextLayout", "leftCursorPosition", args)
- }
+  }
 
 }
 
@@ -720,12 +722,12 @@ func (this *QTextLayout) lineCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout9lineCountEv
   default:
     qtrt.ErrorResolve("QTextLayout", "lineCount", args)
- }
+  }
 
 }
 
@@ -736,10 +738,10 @@ func (this *QTextLayout) FreeQTextLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextLayout", "~QTextLayout", args)
- }
+  }
 
 }
 
@@ -753,12 +755,12 @@ func (this *QTextLayout) setCacheEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout15setCacheEnabledEb
   default:
     qtrt.ErrorResolve("QTextLayout", "setCacheEnabled", args)
- }
+  }
 
 }
 
@@ -772,12 +774,12 @@ func (this *QTextLayout) lineAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout6lineAtEi
   default:
     qtrt.ErrorResolve("QTextLayout", "lineAt", args)
- }
+  }
 
 }
 
@@ -791,12 +793,12 @@ func (this *QTextLayout) rightCursorPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout19rightCursorPositionEi
   default:
     qtrt.ErrorResolve("QTextLayout", "rightCursorPosition", args)
- }
+  }
 
 }
 
@@ -809,12 +811,12 @@ func (this *QTextLayout) minimumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout12minimumWidthEv
   default:
     qtrt.ErrorResolve("QTextLayout", "minimumWidth", args)
- }
+  }
 
 }
 
@@ -836,14 +838,14 @@ func (this *QTextLayout) drawCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi
   case 1:
     // invoke: _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii
   default:
     qtrt.ErrorResolve("QTextLayout", "drawCursor", args)
- }
+  }
 
 }
 
@@ -856,12 +858,12 @@ func (this *QTextLayout) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout4fontEv
   default:
     qtrt.ErrorResolve("QTextLayout", "font", args)
- }
+  }
 
 }
 
@@ -876,12 +878,12 @@ func (this *QTextLayout) setPreeditArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout14setPreeditAreaEiRK7QString
   default:
     qtrt.ErrorResolve("QTextLayout", "setPreeditArea", args)
- }
+  }
 
 }
 
@@ -894,12 +896,12 @@ func (this *QTextLayout) beginLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout11beginLayoutEv
   default:
     qtrt.ErrorResolve("QTextLayout", "beginLayout", args)
- }
+  }
 
 }
 
@@ -913,12 +915,12 @@ func (this *QTextLayout) setFlags(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout8setFlagsEi
   default:
     qtrt.ErrorResolve("QTextLayout", "setFlags", args)
- }
+  }
 
 }
 
@@ -931,12 +933,12 @@ func (this *QTextLayout) position(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout8positionEv
   default:
     qtrt.ErrorResolve("QTextLayout", "position", args)
- }
+  }
 
 }
 
@@ -949,12 +951,12 @@ func (this *QTextLayout) clearLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout11clearLayoutEv
   default:
     qtrt.ErrorResolve("QTextLayout", "clearLayout", args)
- }
+  }
 
 }
 
@@ -967,12 +969,12 @@ func (this *QTextLayout) cacheEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout12cacheEnabledEv
   default:
     qtrt.ErrorResolve("QTextLayout", "cacheEnabled", args)
- }
+  }
 
 }
 
@@ -985,12 +987,12 @@ func (this *QTextLayout) maximumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout12maximumWidthEv
   default:
     qtrt.ErrorResolve("QTextLayout", "maximumWidth", args)
- }
+  }
 
 }
 
@@ -1003,12 +1005,12 @@ func (this *QTextLayout) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout4textEv
   default:
     qtrt.ErrorResolve("QTextLayout", "text", args)
- }
+  }
 
 }
 
@@ -1021,12 +1023,12 @@ func (this *QTextLayout) createLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout10createLineEv
   default:
     qtrt.ErrorResolve("QTextLayout", "createLine", args)
- }
+  }
 
 }
 
@@ -1039,12 +1041,12 @@ func (this *QTextLayout) preeditAreaText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout15preeditAreaTextEv
   default:
     qtrt.ErrorResolve("QTextLayout", "preeditAreaText", args)
- }
+  }
 
 }
 
@@ -1057,12 +1059,12 @@ func (this *QTextLayout) endLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout9endLayoutEv
   default:
     qtrt.ErrorResolve("QTextLayout", "endLayout", args)
- }
+  }
 
 }
 
@@ -1077,12 +1079,12 @@ func (this *QTextLayout) glyphRuns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout9glyphRunsEii
   default:
     qtrt.ErrorResolve("QTextLayout", "glyphRuns", args)
- }
+  }
 
 }
 
@@ -1096,12 +1098,12 @@ func (this *QTextInlineObject) setAscent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject9setAscentEd
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setAscent", args)
- }
+  }
 
 }
 
@@ -1114,12 +1116,12 @@ func (this *QTextInlineObject) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject5widthEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "width", args)
- }
+  }
 
 }
 
@@ -1132,12 +1134,12 @@ func (this *QTextInlineObject) formatIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject11formatIndexEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "formatIndex", args)
- }
+  }
 
 }
 
@@ -1150,12 +1152,12 @@ func (this *QTextInlineObject) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject4rectEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "rect", args)
- }
+  }
 
 }
 
@@ -1168,12 +1170,12 @@ func (this *QTextInlineObject) textPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject12textPositionEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "textPosition", args)
- }
+  }
 
 }
 
@@ -1187,12 +1189,12 @@ func (this *QTextInlineObject) setDescent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject10setDescentEd
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setDescent", args)
- }
+  }
 
 }
 
@@ -1205,12 +1207,12 @@ func (this *QTextInlineObject) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject6heightEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "height", args)
- }
+  }
 
 }
 
@@ -1223,17 +1225,18 @@ func (this *QTextInlineObject) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject7isValidEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "isValid", args)
- }
+  }
 
 }
 
 
-func NewQTextInlineObject(args ...interface{})() {
+func NewQTextInlineObject(args ...interface{}) QTextInlineObject {
+  return QTextInlineObject{}
 }
 
 
@@ -1245,12 +1248,12 @@ func (this *QTextInlineObject) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject6formatEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "format", args)
- }
+  }
 
 }
 
@@ -1263,12 +1266,12 @@ func (this *QTextInlineObject) descent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject7descentEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "descent", args)
- }
+  }
 
 }
 
@@ -1281,12 +1284,12 @@ func (this *QTextInlineObject) ascent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QTextInlineObject6ascentEv
   default:
     qtrt.ErrorResolve("QTextInlineObject", "ascent", args)
- }
+  }
 
 }
 
@@ -1300,12 +1303,12 @@ func (this *QTextInlineObject) setWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject8setWidthEd
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setWidth", args)
- }
+  }
 
 }
 

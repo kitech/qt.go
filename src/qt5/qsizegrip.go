@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -42,7 +42,8 @@ type QSizeGrip struct {
 }
 
 
-func NewQSizeGrip(args ...interface{})() {
+func NewQSizeGrip(args ...interface{}) QSizeGrip {
+  return QSizeGrip{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QSizeGrip) FreeQSizeGrip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSizeGrip", "~QSizeGrip", args)
- }
+  }
 
 }
 
@@ -69,12 +70,12 @@ func (this *QSizeGrip) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSizeGrip10setVisibleEb
   default:
     qtrt.ErrorResolve("QSizeGrip", "setVisible", args)
- }
+  }
 
 }
 
@@ -87,12 +88,12 @@ func (this *QSizeGrip) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSizeGrip10metaObjectEv
   default:
     qtrt.ErrorResolve("QSizeGrip", "metaObject", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QSizeGrip) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSizeGrip8sizeHintEv
   default:
     qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -50,12 +50,12 @@ func (this *QAccessibleWidget) childCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget10childCountEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "childCount", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QAccessibleWidget) child(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget5childEi
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "child", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QAccessibleWidget) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget6windowEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "window", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QAccessibleWidget) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget4rectEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "rect", args)
- }
+  }
 
 }
 
@@ -123,12 +123,12 @@ func (this *QAccessibleWidget) foregroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget15foregroundColorEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "foregroundColor", args)
- }
+  }
 
 }
 
@@ -141,12 +141,12 @@ func (this *QAccessibleWidget) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget7isValidEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "isValid", args)
- }
+  }
 
 }
 
@@ -159,17 +159,18 @@ func (this *QAccessibleWidget) focusChild(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget10focusChildEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "focusChild", args)
- }
+  }
 
 }
 
 
-func NewQAccessibleWidget(args ...interface{})() {
+func NewQAccessibleWidget(args ...interface{}) QAccessibleWidget {
+  return QAccessibleWidget{}
 }
 
 
@@ -181,12 +182,12 @@ func (this *QAccessibleWidget) backgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget15backgroundColorEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "backgroundColor", args)
- }
+  }
 
 }
 
@@ -197,10 +198,10 @@ func (this *QAccessibleWidget) FreeQAccessibleWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "~QAccessibleWidget", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QAccessibleWidget) actionNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget11actionNamesEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "actionNames", args)
- }
+  }
 
 }
 
@@ -231,12 +232,12 @@ func (this *QAccessibleWidget) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget6parentEv
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "parent", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QAccessibleWidget) doAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleWidget8doActionERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "doAction", args)
- }
+  }
 
 }
 
@@ -269,12 +270,12 @@ func (this *QAccessibleWidget) keyBindingsForAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "keyBindingsForAction", args)
- }
+  }
 
 }
 
@@ -288,12 +289,12 @@ func (this *QAccessibleWidget) indexOfChild(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "indexOfChild", args)
- }
+  }
 
 }
 

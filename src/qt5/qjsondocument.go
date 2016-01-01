@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -56,12 +56,12 @@ func (this *QJsonDocument) object(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument6objectEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "object", args)
- }
+  }
 
 }
 
@@ -72,10 +72,10 @@ func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QJsonDocument", "fromVariant", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QJsonDocument) array(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument5arrayEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "array", args)
- }
+  }
 
 }
 
@@ -109,14 +109,14 @@ func (this *QJsonDocument) toJson(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument6toJsonEv
   case 1:
     // invoke: _ZNK13QJsonDocument6toJsonENS_10JsonFormatE
   default:
     qtrt.ErrorResolve("QJsonDocument", "toJson", args)
- }
+  }
 
 }
 
@@ -129,17 +129,18 @@ func (this *QJsonDocument) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument6isNullEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "isNull", args)
- }
+  }
 
 }
 
 
-func NewQJsonDocument(args ...interface{})() {
+func NewQJsonDocument(args ...interface{}) QJsonDocument {
+  return QJsonDocument{}
 }
 
 
@@ -151,12 +152,12 @@ func (this *QJsonDocument) toVariant(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument9toVariantEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "toVariant", args)
- }
+  }
 
 }
 
@@ -169,12 +170,12 @@ func (this *QJsonDocument) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument7isEmptyEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "isEmpty", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QJsonDocument) rawData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument7rawDataEPi
   default:
     qtrt.ErrorResolve("QJsonDocument", "rawData", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QJsonDocument) isObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument8isObjectEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "isObject", args)
- }
+  }
 
 }
 
@@ -222,10 +223,10 @@ func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QJsonDocument", "~QJsonDocument", args)
- }
+  }
 
 }
 
@@ -238,12 +239,12 @@ func (this *QJsonDocument) isArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument7isArrayEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "isArray", args)
- }
+  }
 
 }
 
@@ -256,12 +257,12 @@ func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument12toBinaryDataEv
   default:
     qtrt.ErrorResolve("QJsonDocument", "toBinaryData", args)
- }
+  }
 
 }
 
@@ -274,12 +275,12 @@ func (this *QJsonParseError) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QJsonParseError11errorStringEv
   default:
     qtrt.ErrorResolve("QJsonParseError", "errorString", args)
- }
+  }
 
 }
 

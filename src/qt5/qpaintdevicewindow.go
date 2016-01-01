@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -56,7 +56,7 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
   case 1:
@@ -65,12 +65,13 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
     // invoke: _ZN18QPaintDeviceWindow6updateERK5QRect
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
- }
+  }
 
 }
 
 
-func NewQPaintDeviceWindow(args ...interface{})() {
+func NewQPaintDeviceWindow(args ...interface{}) QPaintDeviceWindow {
+  return QPaintDeviceWindow{}
 }
 
 
@@ -82,12 +83,12 @@ func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QPaintDeviceWindow10metaObjectEv
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "metaObject", args)
- }
+  }
 
 }
 

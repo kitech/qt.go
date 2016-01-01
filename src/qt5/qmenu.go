@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -54,12 +54,12 @@ func (this *QMenu) isTearOffEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu16isTearOffEnabledEv
   default:
     qtrt.ErrorResolve("QMenu", "isTearOffEnabled", args)
- }
+  }
 
 }
 
@@ -72,12 +72,12 @@ func (this *QMenu) toolTipsVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu15toolTipsVisibleEv
   default:
     qtrt.ErrorResolve("QMenu", "toolTipsVisible", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QMenu) menuAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu10menuActionEv
   default:
     qtrt.ErrorResolve("QMenu", "menuAction", args)
- }
+  }
 
 }
 
@@ -126,7 +126,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QString
   case 1:
@@ -137,7 +137,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence
   default:
     qtrt.ErrorResolve("QMenu", "addAction", args)
- }
+  }
 
 }
 
@@ -151,12 +151,12 @@ func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu17setTearOffEnabledEb
   default:
     qtrt.ErrorResolve("QMenu", "setTearOffEnabled", args)
- }
+  }
 
 }
 
@@ -174,14 +174,14 @@ func (this *QMenu) addSection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu10addSectionERK7QString
   case 1:
     // invoke: _ZN5QMenu10addSectionERK5QIconRK7QString
   default:
     qtrt.ErrorResolve("QMenu", "addSection", args)
- }
+  }
 
 }
 
@@ -194,12 +194,12 @@ func (this *QMenu) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu10metaObjectEv
   default:
     qtrt.ErrorResolve("QMenu", "metaObject", args)
- }
+  }
 
 }
 
@@ -212,12 +212,12 @@ func (this *QMenu) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu5clearEv
   default:
     qtrt.ErrorResolve("QMenu", "clear", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QMenu) insertMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu10insertMenuEP7QActionPS_
   default:
     qtrt.ErrorResolve("QMenu", "insertMenu", args)
- }
+  }
 
 }
 
@@ -250,12 +250,12 @@ func (this *QMenu) icon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu4iconEv
   default:
     qtrt.ErrorResolve("QMenu", "icon", args)
- }
+  }
 
 }
 
@@ -275,14 +275,14 @@ func (this *QMenu) insertSection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu13insertSectionEP7QActionRK7QString
   case 1:
     // invoke: _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString
   default:
     qtrt.ErrorResolve("QMenu", "insertSection", args)
- }
+  }
 
 }
 
@@ -295,12 +295,12 @@ func (this *QMenu) platformMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu12platformMenuEv
   default:
     qtrt.ErrorResolve("QMenu", "platformMenu", args)
- }
+  }
 
 }
 
@@ -314,12 +314,12 @@ func (this *QMenu) setNoReplayFor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu14setNoReplayForEP7QWidget
   default:
     qtrt.ErrorResolve("QMenu", "setNoReplayFor", args)
- }
+  }
 
 }
 
@@ -333,12 +333,12 @@ func (this *QMenu) setIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu7setIconERK5QIcon
   default:
     qtrt.ErrorResolve("QMenu", "setIcon", args)
- }
+  }
 
 }
 
@@ -361,7 +361,7 @@ func (this *QMenu) exec(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu4execERK6QPointP7QAction
   case 1:
@@ -370,7 +370,7 @@ func (this *QMenu) exec(args ...interface{}) () {
     // invoke: _ZN5QMenu4execEv
   default:
     qtrt.ErrorResolve("QMenu", "exec", args)
- }
+  }
 
 }
 
@@ -383,12 +383,12 @@ func (this *QMenu) separatorsCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu21separatorsCollapsibleEv
   default:
     qtrt.ErrorResolve("QMenu", "separatorsCollapsible", args)
- }
+  }
 
 }
 
@@ -409,7 +409,7 @@ func (this *QMenu) addMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu7addMenuERK7QString
   case 1:
@@ -418,7 +418,7 @@ func (this *QMenu) addMenu(args ...interface{}) () {
     // invoke: _ZN5QMenu7addMenuERK5QIconRK7QString
   default:
     qtrt.ErrorResolve("QMenu", "addMenu", args)
- }
+  }
 
 }
 
@@ -431,12 +431,12 @@ func (this *QMenu) addSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu12addSeparatorEv
   default:
     qtrt.ErrorResolve("QMenu", "addSeparator", args)
- }
+  }
 
 }
 
@@ -449,17 +449,18 @@ func (this *QMenu) hideTearOffMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu15hideTearOffMenuEv
   default:
     qtrt.ErrorResolve("QMenu", "hideTearOffMenu", args)
- }
+  }
 
 }
 
 
-func NewQMenu(args ...interface{})() {
+func NewQMenu(args ...interface{}) QMenu {
+  return QMenu{}
 }
 
 
@@ -472,12 +473,12 @@ func (this *QMenu) setActiveAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu15setActiveActionEP7QAction
   default:
     qtrt.ErrorResolve("QMenu", "setActiveAction", args)
- }
+  }
 
 }
 
@@ -491,12 +492,12 @@ func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu24setSeparatorsCollapsibleEb
   default:
     qtrt.ErrorResolve("QMenu", "setSeparatorsCollapsible", args)
- }
+  }
 
 }
 
@@ -509,12 +510,12 @@ func (this *QMenu) activeAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu12activeActionEv
   default:
     qtrt.ErrorResolve("QMenu", "activeAction", args)
- }
+  }
 
 }
 
@@ -527,12 +528,12 @@ func (this *QMenu) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu7isEmptyEv
   default:
     qtrt.ErrorResolve("QMenu", "isEmpty", args)
- }
+  }
 
 }
 
@@ -546,12 +547,12 @@ func (this *QMenu) actionGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu14actionGeometryEP7QAction
   default:
     qtrt.ErrorResolve("QMenu", "actionGeometry", args)
- }
+  }
 
 }
 
@@ -565,12 +566,12 @@ func (this *QMenu) insertSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu15insertSeparatorEP7QAction
   default:
     qtrt.ErrorResolve("QMenu", "insertSeparator", args)
- }
+  }
 
 }
 
@@ -583,12 +584,12 @@ func (this *QMenu) isTearOffMenuVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu20isTearOffMenuVisibleEv
   default:
     qtrt.ErrorResolve("QMenu", "isTearOffMenuVisible", args)
- }
+  }
 
 }
 
@@ -599,10 +600,10 @@ func (this *QMenu) FreeQMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMenu", "~QMenu", args)
- }
+  }
 
 }
 
@@ -615,12 +616,12 @@ func (this *QMenu) title(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu5titleEv
   default:
     qtrt.ErrorResolve("QMenu", "title", args)
- }
+  }
 
 }
 
@@ -633,12 +634,12 @@ func (this *QMenu) defaultAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu13defaultActionEv
   default:
     qtrt.ErrorResolve("QMenu", "defaultAction", args)
- }
+  }
 
 }
 
@@ -651,12 +652,12 @@ func (this *QMenu) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu8sizeHintEv
   default:
     qtrt.ErrorResolve("QMenu", "sizeHint", args)
- }
+  }
 
 }
 
@@ -670,12 +671,12 @@ func (this *QMenu) setDefaultAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu16setDefaultActionEP7QAction
   default:
     qtrt.ErrorResolve("QMenu", "setDefaultAction", args)
- }
+  }
 
 }
 
@@ -689,12 +690,12 @@ func (this *QMenu) actionAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu8actionAtERK6QPoint
   default:
     qtrt.ErrorResolve("QMenu", "actionAt", args)
- }
+  }
 
 }
 
@@ -709,12 +710,12 @@ func (this *QMenu) popup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu5popupERK6QPointP7QAction
   default:
     qtrt.ErrorResolve("QMenu", "popup", args)
- }
+  }
 
 }
 
@@ -728,12 +729,12 @@ func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu18setToolTipsVisibleEb
   default:
     qtrt.ErrorResolve("QMenu", "setToolTipsVisible", args)
- }
+  }
 
 }
 
@@ -747,12 +748,12 @@ func (this *QMenu) setTitle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QMenu8setTitleERK7QString
   default:
     qtrt.ErrorResolve("QMenu", "setTitle", args)
- }
+  }
 
 }
 

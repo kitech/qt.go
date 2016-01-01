@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.go
 //
@@ -42,7 +42,8 @@ type QLibraryInfo struct {
 }
 
 
-func NewQLibraryInfo(args ...interface{})() {
+func NewQLibraryInfo(args ...interface{}) QLibraryInfo {
+  return QLibraryInfo{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QLibraryInfo) platformPluginArguments_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "platformPluginArguments", args)
- }
+  }
 
 }
 
@@ -66,10 +67,10 @@ func (this *QLibraryInfo) licensee_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensee", args)
- }
+  }
 
 }
 
@@ -80,10 +81,10 @@ func (this *QLibraryInfo) licensedProducts_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensedProducts", args)
- }
+  }
 
 }
 
@@ -94,10 +95,10 @@ func (this *QLibraryInfo) isDebugBuild_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "isDebugBuild", args)
- }
+  }
 
 }
 
@@ -108,10 +109,10 @@ func (this *QLibraryInfo) build_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "build", args)
- }
+  }
 
 }
 
@@ -122,10 +123,10 @@ func (this *QLibraryInfo) buildDate_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibraryInfo", "buildDate", args)
- }
+  }
 
 }
 

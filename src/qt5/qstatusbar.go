@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -49,10 +49,10 @@ func (this *QStatusBar) FreeQStatusBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStatusBar", "~QStatusBar", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QStatusBar) insertPermanentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti
   default:
     qtrt.ErrorResolve("QStatusBar", "insertPermanentWidget", args)
- }
+  }
 
 }
 
@@ -87,17 +87,18 @@ func (this *QStatusBar) removeWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12removeWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QStatusBar", "removeWidget", args)
- }
+  }
 
 }
 
 
-func NewQStatusBar(args ...interface{})() {
+func NewQStatusBar(args ...interface{}) QStatusBar {
+  return QStatusBar{}
 }
 
 
@@ -110,12 +111,12 @@ func (this *QStatusBar) setSizeGripEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar18setSizeGripEnabledEb
   default:
     qtrt.ErrorResolve("QStatusBar", "setSizeGripEnabled", args)
- }
+  }
 
 }
 
@@ -130,12 +131,12 @@ func (this *QStatusBar) addPermanentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti
   default:
     qtrt.ErrorResolve("QStatusBar", "addPermanentWidget", args)
- }
+  }
 
 }
 
@@ -148,12 +149,12 @@ func (this *QStatusBar) isSizeGripEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar17isSizeGripEnabledEv
   default:
     qtrt.ErrorResolve("QStatusBar", "isSizeGripEnabled", args)
- }
+  }
 
 }
 
@@ -166,12 +167,12 @@ func (this *QStatusBar) clearMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12clearMessageEv
   default:
     qtrt.ErrorResolve("QStatusBar", "clearMessage", args)
- }
+  }
 
 }
 
@@ -184,12 +185,12 @@ func (this *QStatusBar) currentMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar14currentMessageEv
   default:
     qtrt.ErrorResolve("QStatusBar", "currentMessage", args)
- }
+  }
 
 }
 
@@ -202,12 +203,12 @@ func (this *QStatusBar) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar10metaObjectEv
   default:
     qtrt.ErrorResolve("QStatusBar", "metaObject", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QStatusBar) showMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar11showMessageERK7QStringi
   default:
     qtrt.ErrorResolve("QStatusBar", "showMessage", args)
- }
+  }
 
 }
 
@@ -243,12 +244,12 @@ func (this *QStatusBar) insertWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12insertWidgetEiP7QWidgeti
   default:
     qtrt.ErrorResolve("QStatusBar", "insertWidget", args)
- }
+  }
 
 }
 
@@ -263,12 +264,12 @@ func (this *QStatusBar) addWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar9addWidgetEP7QWidgeti
   default:
     qtrt.ErrorResolve("QStatusBar", "addWidget", args)
- }
+  }
 
 }
 

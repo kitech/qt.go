@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -52,12 +52,12 @@ func (this *QVariantAnimation) setDuration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation11setDurationEi
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
- }
+  }
 
 }
 
@@ -72,12 +72,12 @@ func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QVariantAnimation) endValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation8endValueEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "endValue", args)
- }
+  }
 
 }
 
@@ -109,12 +109,12 @@ func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation10keyValueAtEd
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
- }
+  }
 
 }
 
@@ -125,10 +125,10 @@ func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QVariantAnimation", "~QVariantAnimation", args)
- }
+  }
 
 }
 
@@ -141,12 +141,12 @@ func (this *QVariantAnimation) currentValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation12currentValueEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "currentValue", args)
- }
+  }
 
 }
 
@@ -159,12 +159,12 @@ func (this *QVariantAnimation) duration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation8durationEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "duration", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QVariantAnimation) keyValues(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation9keyValuesEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValues", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation13setStartValueERK8QVariant
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
- }
+  }
 
 }
 
@@ -214,12 +214,12 @@ func (this *QVariantAnimation) startValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation10startValueEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "startValue", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QVariantAnimation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation10metaObjectEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "metaObject", args)
- }
+  }
 
 }
 
@@ -251,12 +251,12 @@ func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation11setEndValueERK8QVariant
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
- }
+  }
 
 }
 
@@ -269,17 +269,18 @@ func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation11easingCurveEv
   default:
     qtrt.ErrorResolve("QVariantAnimation", "easingCurve", args)
- }
+  }
 
 }
 
 
-func NewQVariantAnimation(args ...interface{})() {
+func NewQVariantAnimation(args ...interface{}) QVariantAnimation {
+  return QVariantAnimation{}
 }
 
 
@@ -292,12 +293,12 @@ func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
- }
+  }
 
 }
 

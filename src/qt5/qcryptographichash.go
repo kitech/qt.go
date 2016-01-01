@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -58,7 +58,7 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCryptographicHash7addDataEP9QIODevice
   case 1:
@@ -67,7 +67,7 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
     // invoke: _ZN18QCryptographicHash7addDataERK10QByteArray
   default:
     qtrt.ErrorResolve("QCryptographicHash", "addData", args)
- }
+  }
 
 }
 
@@ -78,10 +78,10 @@ func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCryptographicHash", "~QCryptographicHash", args)
- }
+  }
 
 }
 
@@ -94,12 +94,12 @@ func (this *QCryptographicHash) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCryptographicHash5resetEv
   default:
     qtrt.ErrorResolve("QCryptographicHash", "reset", args)
- }
+  }
 
 }
 
@@ -112,17 +112,18 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCryptographicHash6resultEv
   default:
     qtrt.ErrorResolve("QCryptographicHash", "result", args)
- }
+  }
 
 }
 
 
-func NewQCryptographicHash(args ...interface{})() {
+func NewQCryptographicHash(args ...interface{}) QCryptographicHash {
+  return QCryptographicHash{}
 }
 
 // <= body block end

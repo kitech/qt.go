@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -48,10 +48,10 @@ func (this *QMimeType) FreeQMimeType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMimeType", "~QMimeType", args)
- }
+  }
 
 }
 
@@ -64,12 +64,12 @@ func (this *QMimeType) comment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType7commentEv
   default:
     qtrt.ErrorResolve("QMimeType", "comment", args)
- }
+  }
 
 }
 
@@ -82,12 +82,12 @@ func (this *QMimeType) aliases(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType7aliasesEv
   default:
     qtrt.ErrorResolve("QMimeType", "aliases", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QMimeType) filterString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType12filterStringEv
   default:
     qtrt.ErrorResolve("QMimeType", "filterString", args)
- }
+  }
 
 }
 
@@ -118,17 +118,18 @@ func (this *QMimeType) parentMimeTypes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType15parentMimeTypesEv
   default:
     qtrt.ErrorResolve("QMimeType", "parentMimeTypes", args)
- }
+  }
 
 }
 
 
-func NewQMimeType(args ...interface{})() {
+func NewQMimeType(args ...interface{}) QMimeType {
+  return QMimeType{}
 }
 
 
@@ -141,12 +142,12 @@ func (this *QMimeType) inherits(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType8inheritsERK7QString
   default:
     qtrt.ErrorResolve("QMimeType", "inherits", args)
- }
+  }
 
 }
 
@@ -159,12 +160,12 @@ func (this *QMimeType) isDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType9isDefaultEv
   default:
     qtrt.ErrorResolve("QMimeType", "isDefault", args)
- }
+  }
 
 }
 
@@ -177,12 +178,12 @@ func (this *QMimeType) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType7isValidEv
   default:
     qtrt.ErrorResolve("QMimeType", "isValid", args)
- }
+  }
 
 }
 
@@ -196,12 +197,12 @@ func (this *QMimeType) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMimeType4swapERS_
   default:
     qtrt.ErrorResolve("QMimeType", "swap", args)
- }
+  }
 
 }
 
@@ -214,12 +215,12 @@ func (this *QMimeType) suffixes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType8suffixesEv
   default:
     qtrt.ErrorResolve("QMimeType", "suffixes", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QMimeType) genericIconName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType15genericIconNameEv
   default:
     qtrt.ErrorResolve("QMimeType", "genericIconName", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QMimeType) iconName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType8iconNameEv
   default:
     qtrt.ErrorResolve("QMimeType", "iconName", args)
- }
+  }
 
 }
 
@@ -268,12 +269,12 @@ func (this *QMimeType) allAncestors(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType12allAncestorsEv
   default:
     qtrt.ErrorResolve("QMimeType", "allAncestors", args)
- }
+  }
 
 }
 
@@ -286,12 +287,12 @@ func (this *QMimeType) globPatterns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType12globPatternsEv
   default:
     qtrt.ErrorResolve("QMimeType", "globPatterns", args)
- }
+  }
 
 }
 
@@ -304,12 +305,12 @@ func (this *QMimeType) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType4nameEv
   default:
     qtrt.ErrorResolve("QMimeType", "name", args)
- }
+  }
 
 }
 
@@ -322,12 +323,12 @@ func (this *QMimeType) preferredSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeType15preferredSuffixEv
   default:
     qtrt.ErrorResolve("QMimeType", "preferredSuffix", args)
- }
+  }
 
 }
 

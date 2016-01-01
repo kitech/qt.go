@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -50,12 +50,12 @@ func (this *QTextBoundaryFinder) isAtBoundary(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder12isAtBoundaryEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isAtBoundary", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QTextBoundaryFinder) toNextBoundary(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder14toNextBoundaryEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toNextBoundary", args)
- }
+  }
 
 }
 
@@ -86,17 +86,18 @@ func (this *QTextBoundaryFinder) toEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder5toEndEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toEnd", args)
- }
+  }
 
 }
 
 
-func NewQTextBoundaryFinder(args ...interface{})() {
+func NewQTextBoundaryFinder(args ...interface{}) QTextBoundaryFinder {
+  return QTextBoundaryFinder{}
 }
 
 
@@ -109,12 +110,12 @@ func (this *QTextBoundaryFinder) setPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder11setPositionEi
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "setPosition", args)
- }
+  }
 
 }
 
@@ -127,12 +128,12 @@ func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder18toPreviousBoundaryEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toPreviousBoundary", args)
- }
+  }
 
 }
 
@@ -145,12 +146,12 @@ func (this *QTextBoundaryFinder) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder7isValidEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isValid", args)
- }
+  }
 
 }
 
@@ -161,10 +162,10 @@ func (this *QTextBoundaryFinder) FreeQTextBoundaryFinder(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "~QTextBoundaryFinder", args)
- }
+  }
 
 }
 
@@ -177,12 +178,12 @@ func (this *QTextBoundaryFinder) string(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder6stringEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "string", args)
- }
+  }
 
 }
 
@@ -195,12 +196,12 @@ func (this *QTextBoundaryFinder) toStart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder7toStartEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toStart", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QTextBoundaryFinder) position(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder8positionEv
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "position", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -60,10 +60,10 @@ func (this *QTextEncoder) FreeQTextEncoder(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextEncoder", "~QTextEncoder", args)
- }
+  }
 
 }
 
@@ -81,14 +81,14 @@ func (this *QTextEncoder) fromUnicode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QTextEncoder11fromUnicodeERK7QString
   case 1:
     // invoke: _ZN12QTextEncoder11fromUnicodeEPK5QChari
   default:
     qtrt.ErrorResolve("QTextEncoder", "fromUnicode", args)
- }
+  }
 
 }
 
@@ -101,17 +101,18 @@ func (this *QTextEncoder) hasFailure(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QTextEncoder10hasFailureEv
   default:
     qtrt.ErrorResolve("QTextEncoder", "hasFailure", args)
- }
+  }
 
 }
 
 
-func NewQTextEncoder(args ...interface{})() {
+func NewQTextEncoder(args ...interface{}) QTextEncoder {
+  return QTextEncoder{}
 }
 
 
@@ -123,12 +124,12 @@ func (this *QTextCodec) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec4nameEv
   default:
     qtrt.ErrorResolve("QTextCodec", "name", args)
- }
+  }
 
 }
 
@@ -150,7 +151,7 @@ func (this *QTextCodec) toUnicode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKciPNS_14ConverterStateE
   case 1:
@@ -159,7 +160,7 @@ func (this *QTextCodec) toUnicode(args ...interface{}) () {
     // invoke: _ZNK10QTextCodec9toUnicodeEPKc
   default:
     qtrt.ErrorResolve("QTextCodec", "toUnicode", args)
- }
+  }
 
 }
 
@@ -178,14 +179,14 @@ func (this *QTextCodec) fromUnicode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec11fromUnicodeERK7QString
   case 1:
     // invoke: _ZNK10QTextCodec11fromUnicodeEPK5QChariPNS_14ConverterStateE
   default:
     qtrt.ErrorResolve("QTextCodec", "fromUnicode", args)
- }
+  }
 
 }
 
@@ -196,10 +197,10 @@ func (this *QTextCodec) codecForLocale_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForLocale", args)
- }
+  }
 
 }
 
@@ -210,10 +211,10 @@ func (this *QTextCodec) availableMibs_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "availableMibs", args)
- }
+  }
 
 }
 
@@ -224,15 +225,16 @@ func (this *QTextCodec) codecForHtml_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForHtml", args)
- }
+  }
 
 }
 
 
-func NewQTextCodec(args ...interface{})() {
+func NewQTextCodec(args ...interface{}) QTextCodec {
+  return QTextCodec{}
 }
 
 
@@ -242,10 +244,10 @@ func (this *QTextCodec) setCodecForLocale_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "setCodecForLocale", args)
- }
+  }
 
 }
 
@@ -256,10 +258,10 @@ func (this *QTextCodec) codecForUtfText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForUtfText", args)
- }
+  }
 
 }
 
@@ -272,12 +274,12 @@ func (this *QTextCodec) mibEnum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec7mibEnumEv
   default:
     qtrt.ErrorResolve("QTextCodec", "mibEnum", args)
- }
+  }
 
 }
 
@@ -288,10 +290,10 @@ func (this *QTextCodec) codecForName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForName", args)
- }
+  }
 
 }
 
@@ -308,14 +310,14 @@ func (this *QTextCodec) canEncode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec9canEncodeERK7QString
   case 1:
     // invoke: _ZNK10QTextCodec9canEncodeE5QChar
   default:
     qtrt.ErrorResolve("QTextCodec", "canEncode", args)
- }
+  }
 
 }
 
@@ -328,12 +330,12 @@ func (this *QTextCodec) aliases(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec7aliasesEv
   default:
     qtrt.ErrorResolve("QTextCodec", "aliases", args)
- }
+  }
 
 }
 
@@ -344,10 +346,10 @@ func (this *QTextCodec) availableCodecs_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "availableCodecs", args)
- }
+  }
 
 }
 
@@ -358,10 +360,10 @@ func (this *QTextCodec) FreeQTextCodec(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "~QTextCodec", args)
- }
+  }
 
 }
 
@@ -372,10 +374,10 @@ func (this *QTextCodec) codecForMib_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextCodec", "codecForMib", args)
- }
+  }
 
 }
 
@@ -398,7 +400,7 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QTextDecoder9toUnicodeEPKci
   case 1:
@@ -407,12 +409,13 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
     // invoke: _ZN12QTextDecoder9toUnicodeEP7QStringPKci
   default:
     qtrt.ErrorResolve("QTextDecoder", "toUnicode", args)
- }
+  }
 
 }
 
 
-func NewQTextDecoder(args ...interface{})() {
+func NewQTextDecoder(args ...interface{}) QTextDecoder {
+  return QTextDecoder{}
 }
 
 
@@ -424,12 +427,12 @@ func (this *QTextDecoder) hasFailure(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QTextDecoder10hasFailureEv
   default:
     qtrt.ErrorResolve("QTextDecoder", "hasFailure", args)
- }
+  }
 
 }
 
@@ -440,10 +443,10 @@ func (this *QTextDecoder) FreeQTextDecoder(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextDecoder", "~QTextDecoder", args)
- }
+  }
 
 }
 

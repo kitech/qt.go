@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -65,10 +65,10 @@ func (this *QItemSelection) split_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemSelection", "split", args)
- }
+  }
 
 }
 
@@ -81,17 +81,18 @@ func (this *QItemSelection) indexes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QItemSelection7indexesEv
   default:
     qtrt.ErrorResolve("QItemSelection", "indexes", args)
- }
+  }
 
 }
 
 
-func NewQItemSelection(args ...interface{})() {
+func NewQItemSelection(args ...interface{}) QItemSelection {
+  return QItemSelection{}
 }
 
 
@@ -104,12 +105,12 @@ func (this *QItemSelection) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QItemSelection8containsERK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelection", "contains", args)
- }
+  }
 
 }
 
@@ -120,10 +121,10 @@ func (this *QItemSelection) select_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemSelection", "select", args)
- }
+  }
 
 }
 
@@ -136,12 +137,12 @@ func (this *QItemSelectionRange) left(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange4leftEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "left", args)
- }
+  }
 
 }
 
@@ -160,14 +161,14 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange8containsERK11QModelIndex
   case 1:
     // invoke: _ZNK19QItemSelectionRange8containsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "contains", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QItemSelectionRange) intersected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange11intersectedERKS_
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersected", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QItemSelectionRange) bottom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6bottomEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottom", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QItemSelectionRange) indexes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7indexesEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "indexes", args)
- }
+  }
 
 }
 
@@ -235,12 +236,12 @@ func (this *QItemSelectionRange) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isValidEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isValid", args)
- }
+  }
 
 }
 
@@ -253,12 +254,12 @@ func (this *QItemSelectionRange) model(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5modelEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "model", args)
- }
+  }
 
 }
 
@@ -271,12 +272,12 @@ func (this *QItemSelectionRange) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6heightEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "height", args)
- }
+  }
 
 }
 
@@ -289,12 +290,12 @@ func (this *QItemSelectionRange) right(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5rightEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "right", args)
- }
+  }
 
 }
 
@@ -307,17 +308,18 @@ func (this *QItemSelectionRange) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6parentEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "parent", args)
- }
+  }
 
 }
 
 
-func NewQItemSelectionRange(args ...interface{})() {
+func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
+  return QItemSelectionRange{}
 }
 
 
@@ -329,12 +331,12 @@ func (this *QItemSelectionRange) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5widthEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "width", args)
- }
+  }
 
 }
 
@@ -347,12 +349,12 @@ func (this *QItemSelectionRange) topLeft(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7topLeftEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "topLeft", args)
- }
+  }
 
 }
 
@@ -366,12 +368,12 @@ func (this *QItemSelectionRange) intersects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange10intersectsERKS_
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
- }
+  }
 
 }
 
@@ -384,12 +386,12 @@ func (this *QItemSelectionRange) bottomRight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange11bottomRightEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottomRight", args)
- }
+  }
 
 }
 
@@ -402,12 +404,12 @@ func (this *QItemSelectionRange) top(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange3topEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "top", args)
- }
+  }
 
 }
 
@@ -420,12 +422,12 @@ func (this *QItemSelectionRange) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isEmptyEv
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isEmpty", args)
- }
+  }
 
 }
 
@@ -438,12 +440,12 @@ func (this *QItemSelectionModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -456,12 +458,12 @@ func (this *QItemSelectionModel) selection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel9selectionEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selection", args)
- }
+  }
 
 }
 
@@ -475,12 +477,12 @@ func (this *QItemSelectionModel) isSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel10isSelectedERK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isSelected", args)
- }
+  }
 
 }
 
@@ -493,12 +495,12 @@ func (this *QItemSelectionModel) clearSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel14clearSelectionEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clearSelection", args)
- }
+  }
 
 }
 
@@ -511,12 +513,12 @@ func (this *QItemSelectionModel) currentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12currentIndexEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "currentIndex", args)
- }
+  }
 
 }
 
@@ -530,17 +532,18 @@ func (this *QItemSelectionModel) setModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel8setModelEP18QAbstractItemModel
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "setModel", args)
- }
+  }
 
 }
 
 
-func NewQItemSelectionModel(args ...interface{})() {
+func NewQItemSelectionModel(args ...interface{}) QItemSelectionModel {
+  return QItemSelectionModel{}
 }
 
 
@@ -554,12 +557,12 @@ func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "rowIntersectsSelection", args)
- }
+  }
 
 }
 
@@ -572,12 +575,12 @@ func (this *QItemSelectionModel) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel5resetEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "reset", args)
- }
+  }
 
 }
 
@@ -590,12 +593,12 @@ func (this *QItemSelectionModel) clearCurrentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel17clearCurrentIndexEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clearCurrentIndex", args)
- }
+  }
 
 }
 
@@ -608,12 +611,12 @@ func (this *QItemSelectionModel) selectedIndexes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel15selectedIndexesEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedIndexes", args)
- }
+  }
 
 }
 
@@ -627,12 +630,12 @@ func (this *QItemSelectionModel) selectedColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel15selectedColumnsEi
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedColumns", args)
- }
+  }
 
 }
 
@@ -647,12 +650,12 @@ func (this *QItemSelectionModel) isColumnSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isColumnSelected", args)
- }
+  }
 
 }
 
@@ -667,12 +670,12 @@ func (this *QItemSelectionModel) columnIntersectsSelection(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "columnIntersectsSelection", args)
- }
+  }
 
 }
 
@@ -683,10 +686,10 @@ func (this *QItemSelectionModel) FreeQItemSelectionModel(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "~QItemSelectionModel", args)
- }
+  }
 
 }
 
@@ -701,12 +704,12 @@ func (this *QItemSelectionModel) isRowSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isRowSelected", args)
- }
+  }
 
 }
 
@@ -719,12 +722,12 @@ func (this *QItemSelectionModel) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel5clearEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "clear", args)
- }
+  }
 
 }
 
@@ -737,12 +740,12 @@ func (this *QItemSelectionModel) hasSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12hasSelectionEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "hasSelection", args)
- }
+  }
 
 }
 
@@ -757,14 +760,14 @@ func (this *QItemSelectionModel) model(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel5modelEv
   case 1:
     // invoke: _ZN19QItemSelectionModel5modelEv
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "model", args)
- }
+  }
 
 }
 
@@ -778,12 +781,12 @@ func (this *QItemSelectionModel) selectedRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12selectedRowsEi
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedRows", args)
- }
+  }
 
 }
 

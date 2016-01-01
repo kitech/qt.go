@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -57,12 +57,12 @@ func (this *QEventLoop) exit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop4exitEi
   default:
     qtrt.ErrorResolve("QEventLoop", "exit", args)
- }
+  }
 
 }
 
@@ -75,17 +75,18 @@ func (this *QEventLoop) quit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop4quitEv
   default:
     qtrt.ErrorResolve("QEventLoop", "quit", args)
- }
+  }
 
 }
 
 
-func NewQEventLoop(args ...interface{})() {
+func NewQEventLoop(args ...interface{}) QEventLoop {
+  return QEventLoop{}
 }
 
 
@@ -97,12 +98,12 @@ func (this *QEventLoop) isRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QEventLoop9isRunningEv
   default:
     qtrt.ErrorResolve("QEventLoop", "isRunning", args)
- }
+  }
 
 }
 
@@ -115,12 +116,12 @@ func (this *QEventLoop) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QEventLoop10metaObjectEv
   default:
     qtrt.ErrorResolve("QEventLoop", "metaObject", args)
- }
+  }
 
 }
 
@@ -133,12 +134,12 @@ func (this *QEventLoop) wakeUp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop6wakeUpEv
   default:
     qtrt.ErrorResolve("QEventLoop", "wakeUp", args)
- }
+  }
 
 }
 
@@ -149,10 +150,10 @@ func (this *QEventLoop) FreeQEventLoop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QEventLoop", "~QEventLoop", args)
- }
+  }
 
 }
 
@@ -166,17 +167,18 @@ func (this *QEventLoop) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QEventLoop", "event", args)
- }
+  }
 
 }
 
 
-func NewQEventLoopLocker(args ...interface{})() {
+func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
+  return QEventLoopLocker{}
 }
 
 
@@ -186,10 +188,10 @@ func (this *QEventLoopLocker) FreeQEventLoopLocker(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "~QEventLoopLocker", args)
- }
+  }
 
 }
 

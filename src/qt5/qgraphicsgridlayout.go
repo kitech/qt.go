@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.go
 //
@@ -52,12 +52,12 @@ func (this *QGraphicsGridLayout) setRowPreferredHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout21setRowPreferredHeightEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowPreferredHeight", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QGraphicsGridLayout) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout11columnCountEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnCount", args)
- }
+  }
 
 }
 
@@ -93,14 +93,14 @@ func (this *QGraphicsGridLayout) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout6itemAtEi
   case 1:
     // invoke: _ZNK19QGraphicsGridLayout6itemAtEii
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "itemAt", args)
- }
+  }
 
 }
 
@@ -113,12 +113,12 @@ func (this *QGraphicsGridLayout) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout5countEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "count", args)
- }
+  }
 
 }
 
@@ -133,12 +133,12 @@ func (this *QGraphicsGridLayout) setColumnFixedWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout19setColumnFixedWidthEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnFixedWidth", args)
- }
+  }
 
 }
 
@@ -153,12 +153,12 @@ func (this *QGraphicsGridLayout) setColumnMaximumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout21setColumnMaximumWidthEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnMaximumWidth", args)
- }
+  }
 
 }
 
@@ -172,12 +172,12 @@ func (this *QGraphicsGridLayout) rowStretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout16rowStretchFactorEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowStretchFactor", args)
- }
+  }
 
 }
 
@@ -190,12 +190,12 @@ func (this *QGraphicsGridLayout) verticalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout15verticalSpacingEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "verticalSpacing", args)
- }
+  }
 
 }
 
@@ -209,12 +209,12 @@ func (this *QGraphicsGridLayout) columnStretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout19columnStretchFactorEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnStretchFactor", args)
- }
+  }
 
 }
 
@@ -229,12 +229,12 @@ func (this *QGraphicsGridLayout) setRowMaximumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout19setRowMaximumHeightEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowMaximumHeight", args)
- }
+  }
 
 }
 
@@ -248,12 +248,12 @@ func (this *QGraphicsGridLayout) removeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "removeItem", args)
- }
+  }
 
 }
 
@@ -264,10 +264,10 @@ func (this *QGraphicsGridLayout) FreeQGraphicsGridLayout(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "~QGraphicsGridLayout", args)
- }
+  }
 
 }
 
@@ -281,12 +281,12 @@ func (this *QGraphicsGridLayout) rowMinimumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout16rowMinimumHeightEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowMinimumHeight", args)
- }
+  }
 
 }
 
@@ -300,17 +300,18 @@ func (this *QGraphicsGridLayout) rowMaximumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout16rowMaximumHeightEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowMaximumHeight", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsGridLayout(args ...interface{})() {
+func NewQGraphicsGridLayout(args ...interface{}) QGraphicsGridLayout {
+  return QGraphicsGridLayout{}
 }
 
 
@@ -324,12 +325,12 @@ func (this *QGraphicsGridLayout) setColumnSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout16setColumnSpacingEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnSpacing", args)
- }
+  }
 
 }
 
@@ -343,12 +344,12 @@ func (this *QGraphicsGridLayout) rowSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout10rowSpacingEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowSpacing", args)
- }
+  }
 
 }
 
@@ -362,12 +363,12 @@ func (this *QGraphicsGridLayout) columnMaximumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout18columnMaximumWidthEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnMaximumWidth", args)
- }
+  }
 
 }
 
@@ -382,12 +383,12 @@ func (this *QGraphicsGridLayout) setRowFixedHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout17setRowFixedHeightEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowFixedHeight", args)
- }
+  }
 
 }
 
@@ -401,12 +402,12 @@ func (this *QGraphicsGridLayout) rowPreferredHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout18rowPreferredHeightEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowPreferredHeight", args)
- }
+  }
 
 }
 
@@ -420,12 +421,12 @@ func (this *QGraphicsGridLayout) setVerticalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout18setVerticalSpacingEd
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setVerticalSpacing", args)
- }
+  }
 
 }
 
@@ -439,12 +440,12 @@ func (this *QGraphicsGridLayout) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout11setGeometryERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setGeometry", args)
- }
+  }
 
 }
 
@@ -457,12 +458,12 @@ func (this *QGraphicsGridLayout) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout8rowCountEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "rowCount", args)
- }
+  }
 
 }
 
@@ -476,12 +477,12 @@ func (this *QGraphicsGridLayout) setSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout10setSpacingEd
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setSpacing", args)
- }
+  }
 
 }
 
@@ -496,12 +497,12 @@ func (this *QGraphicsGridLayout) setRowStretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout19setRowStretchFactorEii
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowStretchFactor", args)
- }
+  }
 
 }
 
@@ -515,12 +516,12 @@ func (this *QGraphicsGridLayout) columnMinimumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout18columnMinimumWidthEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnMinimumWidth", args)
- }
+  }
 
 }
 
@@ -535,12 +536,12 @@ func (this *QGraphicsGridLayout) setColumnMinimumWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout21setColumnMinimumWidthEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnMinimumWidth", args)
- }
+  }
 
 }
 
@@ -555,12 +556,12 @@ func (this *QGraphicsGridLayout) setRowMinimumHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout19setRowMinimumHeightEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowMinimumHeight", args)
- }
+  }
 
 }
 
@@ -574,12 +575,12 @@ func (this *QGraphicsGridLayout) setHorizontalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout20setHorizontalSpacingEd
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setHorizontalSpacing", args)
- }
+  }
 
 }
 
@@ -592,12 +593,12 @@ func (this *QGraphicsGridLayout) horizontalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout17horizontalSpacingEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "horizontalSpacing", args)
- }
+  }
 
 }
 
@@ -612,12 +613,12 @@ func (this *QGraphicsGridLayout) setColumnStretchFactor(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout22setColumnStretchFactorEii
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnStretchFactor", args)
- }
+  }
 
 }
 
@@ -630,12 +631,12 @@ func (this *QGraphicsGridLayout) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout10invalidateEv
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "invalidate", args)
- }
+  }
 
 }
 
@@ -649,12 +650,12 @@ func (this *QGraphicsGridLayout) columnPreferredWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout20columnPreferredWidthEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnPreferredWidth", args)
- }
+  }
 
 }
 
@@ -669,12 +670,12 @@ func (this *QGraphicsGridLayout) setColumnPreferredWidth(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout23setColumnPreferredWidthEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setColumnPreferredWidth", args)
- }
+  }
 
 }
 
@@ -688,12 +689,12 @@ func (this *QGraphicsGridLayout) columnSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsGridLayout13columnSpacingEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "columnSpacing", args)
- }
+  }
 
 }
 
@@ -708,12 +709,12 @@ func (this *QGraphicsGridLayout) setRowSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout13setRowSpacingEid
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "setRowSpacing", args)
- }
+  }
 
 }
 
@@ -727,12 +728,12 @@ func (this *QGraphicsGridLayout) removeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsGridLayout8removeAtEi
   default:
     qtrt.ErrorResolve("QGraphicsGridLayout", "removeAt", args)
- }
+  }
 
 }
 

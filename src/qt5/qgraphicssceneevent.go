@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -98,12 +98,12 @@ func (this *QGraphicsSceneMoveEvent) newPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6newPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "newPos", args)
- }
+  }
 
 }
 
@@ -116,12 +116,12 @@ func (this *QGraphicsSceneMoveEvent) oldPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6oldPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "oldPos", args)
- }
+  }
 
 }
 
@@ -132,15 +132,16 @@ func (this *QGraphicsSceneMoveEvent) FreeQGraphicsSceneMoveEvent(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "~QGraphicsSceneMoveEvent", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneMoveEvent(args ...interface{})() {
+func NewQGraphicsSceneMoveEvent(args ...interface{}) QGraphicsSceneMoveEvent {
+  return QGraphicsSceneMoveEvent{}
 }
 
 
@@ -153,12 +154,12 @@ func (this *QGraphicsSceneMoveEvent) setNewPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setNewPos", args)
- }
+  }
 
 }
 
@@ -172,17 +173,18 @@ func (this *QGraphicsSceneMoveEvent) setOldPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setOldPos", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneContextMenuEvent(args ...interface{})() {
+func NewQGraphicsSceneContextMenuEvent(args ...interface{}) QGraphicsSceneContextMenuEvent {
+  return QGraphicsSceneContextMenuEvent{}
 }
 
 
@@ -194,12 +196,12 @@ func (this *QGraphicsSceneContextMenuEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -210,10 +212,10 @@ func (this *QGraphicsSceneContextMenuEvent) FreeQGraphicsSceneContextMenuEvent(a
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "~QGraphicsSceneContextMenuEvent", args)
- }
+  }
 
 }
 
@@ -226,12 +228,12 @@ func (this *QGraphicsSceneContextMenuEvent) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent3posEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "pos", args)
- }
+  }
 
 }
 
@@ -245,12 +247,12 @@ func (this *QGraphicsSceneContextMenuEvent) setScreenPos(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -264,12 +266,12 @@ func (this *QGraphicsSceneContextMenuEvent) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setPos", args)
- }
+  }
 
 }
 
@@ -282,12 +284,12 @@ func (this *QGraphicsSceneContextMenuEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "screenPos", args)
- }
+  }
 
 }
 
@@ -301,12 +303,12 @@ func (this *QGraphicsSceneContextMenuEvent) setScenePos(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScenePos", args)
- }
+  }
 
 }
 
@@ -319,17 +321,18 @@ func (this *QGraphicsSceneMouseEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "screenPos", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneMouseEvent(args ...interface{})() {
+func NewQGraphicsSceneMouseEvent(args ...interface{}) QGraphicsSceneMouseEvent {
+  return QGraphicsSceneMouseEvent{}
 }
 
 
@@ -341,12 +344,12 @@ func (this *QGraphicsSceneMouseEvent) lastScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScenePos", args)
- }
+  }
 
 }
 
@@ -357,10 +360,10 @@ func (this *QGraphicsSceneMouseEvent) FreeQGraphicsSceneMouseEvent(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "~QGraphicsSceneMouseEvent", args)
- }
+  }
 
 }
 
@@ -373,12 +376,12 @@ func (this *QGraphicsSceneMouseEvent) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent3posEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "pos", args)
- }
+  }
 
 }
 
@@ -392,12 +395,12 @@ func (this *QGraphicsSceneMouseEvent) setLastPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastPos", args)
- }
+  }
 
 }
 
@@ -411,12 +414,12 @@ func (this *QGraphicsSceneMouseEvent) setLastScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScenePos", args)
- }
+  }
 
 }
 
@@ -429,12 +432,12 @@ func (this *QGraphicsSceneMouseEvent) lastScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScreenPos", args)
- }
+  }
 
 }
 
@@ -448,12 +451,12 @@ func (this *QGraphicsSceneMouseEvent) setScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -467,12 +470,12 @@ func (this *QGraphicsSceneMouseEvent) setLastScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScreenPos", args)
- }
+  }
 
 }
 
@@ -486,12 +489,12 @@ func (this *QGraphicsSceneMouseEvent) setScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScenePos", args)
- }
+  }
 
 }
 
@@ -504,12 +507,12 @@ func (this *QGraphicsSceneMouseEvent) lastPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7lastPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastPos", args)
- }
+  }
 
 }
 
@@ -522,12 +525,12 @@ func (this *QGraphicsSceneMouseEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -541,12 +544,12 @@ func (this *QGraphicsSceneMouseEvent) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setPos", args)
- }
+  }
 
 }
 
@@ -560,12 +563,12 @@ func (this *QGraphicsSceneHelpEvent) setScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScenePos", args)
- }
+  }
 
 }
 
@@ -578,12 +581,12 @@ func (this *QGraphicsSceneHelpEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "screenPos", args)
- }
+  }
 
 }
 
@@ -594,15 +597,16 @@ func (this *QGraphicsSceneHelpEvent) FreeQGraphicsSceneHelpEvent(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "~QGraphicsSceneHelpEvent", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneHelpEvent(args ...interface{})() {
+func NewQGraphicsSceneHelpEvent(args ...interface{}) QGraphicsSceneHelpEvent {
+  return QGraphicsSceneHelpEvent{}
 }
 
 
@@ -615,12 +619,12 @@ func (this *QGraphicsSceneHelpEvent) setScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -633,12 +637,12 @@ func (this *QGraphicsSceneHelpEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -651,12 +655,12 @@ func (this *QGraphicsSceneHoverEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -670,12 +674,12 @@ func (this *QGraphicsSceneHoverEvent) setLastPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastPos", args)
- }
+  }
 
 }
 
@@ -688,17 +692,18 @@ func (this *QGraphicsSceneHoverEvent) lastPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent7lastPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastPos", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneHoverEvent(args ...interface{})() {
+func NewQGraphicsSceneHoverEvent(args ...interface{}) QGraphicsSceneHoverEvent {
+  return QGraphicsSceneHoverEvent{}
 }
 
 
@@ -710,12 +715,12 @@ func (this *QGraphicsSceneHoverEvent) lastScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScenePos", args)
- }
+  }
 
 }
 
@@ -729,12 +734,12 @@ func (this *QGraphicsSceneHoverEvent) setLastScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScreenPos", args)
- }
+  }
 
 }
 
@@ -748,12 +753,12 @@ func (this *QGraphicsSceneHoverEvent) setScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScenePos", args)
- }
+  }
 
 }
 
@@ -767,12 +772,12 @@ func (this *QGraphicsSceneHoverEvent) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setPos", args)
- }
+  }
 
 }
 
@@ -785,12 +790,12 @@ func (this *QGraphicsSceneHoverEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "screenPos", args)
- }
+  }
 
 }
 
@@ -803,12 +808,12 @@ func (this *QGraphicsSceneHoverEvent) lastScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScreenPos", args)
- }
+  }
 
 }
 
@@ -822,12 +827,12 @@ func (this *QGraphicsSceneHoverEvent) setLastScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScenePos", args)
- }
+  }
 
 }
 
@@ -840,12 +845,12 @@ func (this *QGraphicsSceneHoverEvent) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent3posEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "pos", args)
- }
+  }
 
 }
 
@@ -859,12 +864,12 @@ func (this *QGraphicsSceneHoverEvent) setScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -875,10 +880,10 @@ func (this *QGraphicsSceneHoverEvent) FreeQGraphicsSceneHoverEvent(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "~QGraphicsSceneHoverEvent", args)
- }
+  }
 
 }
 
@@ -891,12 +896,12 @@ func (this *QGraphicsSceneWheelEvent) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent3posEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "pos", args)
- }
+  }
 
 }
 
@@ -907,10 +912,10 @@ func (this *QGraphicsSceneWheelEvent) FreeQGraphicsSceneWheelEvent(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "~QGraphicsSceneWheelEvent", args)
- }
+  }
 
 }
 
@@ -924,12 +929,12 @@ func (this *QGraphicsSceneWheelEvent) setDelta(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent8setDeltaEi
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setDelta", args)
- }
+  }
 
 }
 
@@ -943,17 +948,18 @@ func (this *QGraphicsSceneWheelEvent) setScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScenePos", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneWheelEvent(args ...interface{})() {
+func NewQGraphicsSceneWheelEvent(args ...interface{}) QGraphicsSceneWheelEvent {
+  return QGraphicsSceneWheelEvent{}
 }
 
 
@@ -966,12 +972,12 @@ func (this *QGraphicsSceneWheelEvent) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setPos", args)
- }
+  }
 
 }
 
@@ -985,12 +991,12 @@ func (this *QGraphicsSceneWheelEvent) setScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -1003,12 +1009,12 @@ func (this *QGraphicsSceneWheelEvent) delta(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent5deltaEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "delta", args)
- }
+  }
 
 }
 
@@ -1021,12 +1027,12 @@ func (this *QGraphicsSceneWheelEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -1039,12 +1045,12 @@ func (this *QGraphicsSceneWheelEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "screenPos", args)
- }
+  }
 
 }
 
@@ -1057,12 +1063,12 @@ func (this *QGraphicsSceneDragDropEvent) source(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent6sourceEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "source", args)
- }
+  }
 
 }
 
@@ -1075,12 +1081,12 @@ func (this *QGraphicsSceneDragDropEvent) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "scenePos", args)
- }
+  }
 
 }
 
@@ -1094,17 +1100,18 @@ func (this *QGraphicsSceneDragDropEvent) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setPos", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneDragDropEvent(args ...interface{})() {
+func NewQGraphicsSceneDragDropEvent(args ...interface{}) QGraphicsSceneDragDropEvent {
+  return QGraphicsSceneDragDropEvent{}
 }
 
 
@@ -1117,12 +1124,12 @@ func (this *QGraphicsSceneDragDropEvent) setScreenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScreenPos", args)
- }
+  }
 
 }
 
@@ -1135,12 +1142,12 @@ func (this *QGraphicsSceneDragDropEvent) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent3posEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "pos", args)
- }
+  }
 
 }
 
@@ -1153,12 +1160,12 @@ func (this *QGraphicsSceneDragDropEvent) screenPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9screenPosEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "screenPos", args)
- }
+  }
 
 }
 
@@ -1171,12 +1178,12 @@ func (this *QGraphicsSceneDragDropEvent) mimeData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "mimeData", args)
- }
+  }
 
 }
 
@@ -1187,10 +1194,10 @@ func (this *QGraphicsSceneDragDropEvent) FreeQGraphicsSceneDragDropEvent(args ..
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "~QGraphicsSceneDragDropEvent", args)
- }
+  }
 
 }
 
@@ -1204,12 +1211,12 @@ func (this *QGraphicsSceneDragDropEvent) setMimeData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setMimeData", args)
- }
+  }
 
 }
 
@@ -1223,12 +1230,12 @@ func (this *QGraphicsSceneDragDropEvent) setSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setSource", args)
- }
+  }
 
 }
 
@@ -1242,12 +1249,12 @@ func (this *QGraphicsSceneDragDropEvent) setScenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScenePos", args)
- }
+  }
 
 }
 
@@ -1260,17 +1267,18 @@ func (this *QGraphicsSceneDragDropEvent) acceptProposedAction(args ...interface{
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "acceptProposedAction", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneEvent(args ...interface{})() {
+func NewQGraphicsSceneEvent(args ...interface{}) QGraphicsSceneEvent {
+  return QGraphicsSceneEvent{}
 }
 
 
@@ -1282,12 +1290,12 @@ func (this *QGraphicsSceneEvent) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsSceneEvent6widgetEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "widget", args)
- }
+  }
 
 }
 
@@ -1301,12 +1309,12 @@ func (this *QGraphicsSceneEvent) setWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "setWidget", args)
- }
+  }
 
 }
 
@@ -1317,10 +1325,10 @@ func (this *QGraphicsSceneEvent) FreeQGraphicsSceneEvent(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "~QGraphicsSceneEvent", args)
- }
+  }
 
 }
 
@@ -1333,12 +1341,12 @@ func (this *QGraphicsSceneResizeEvent) newSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7newSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "newSize", args)
- }
+  }
 
 }
 
@@ -1351,12 +1359,12 @@ func (this *QGraphicsSceneResizeEvent) oldSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7oldSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "oldSize", args)
- }
+  }
 
 }
 
@@ -1367,10 +1375,10 @@ func (this *QGraphicsSceneResizeEvent) FreeQGraphicsSceneResizeEvent(args ...int
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "~QGraphicsSceneResizeEvent", args)
- }
+  }
 
 }
 
@@ -1384,17 +1392,18 @@ func (this *QGraphicsSceneResizeEvent) setNewSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setNewSize", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSceneResizeEvent(args ...interface{})() {
+func NewQGraphicsSceneResizeEvent(args ...interface{}) QGraphicsSceneResizeEvent {
+  return QGraphicsSceneResizeEvent{}
 }
 
 
@@ -1407,12 +1416,12 @@ func (this *QGraphicsSceneResizeEvent) setOldSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setOldSize", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -48,7 +48,8 @@ type QMessageLogger struct {
 }
 
 
-func NewQMessageLogContext(args ...interface{})() {
+func NewQMessageLogContext(args ...interface{}) QMessageLogContext {
+  return QMessageLogContext{}
 }
 
 
@@ -61,12 +62,12 @@ func (this *QMessageLogContext) copy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QMessageLogContext4copyERKS_
   default:
     qtrt.ErrorResolve("QMessageLogContext", "copy", args)
- }
+  }
 
 }
 
@@ -96,7 +97,7 @@ func (this *QMessageLogger) info(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz
   case 1:
@@ -111,7 +112,7 @@ func (this *QMessageLogger) info(args ...interface{}) () {
     // invoke: _ZNK14QMessageLogger4infoEPKcz
   default:
     qtrt.ErrorResolve("QMessageLogger", "info", args)
- }
+  }
 
 }
 
@@ -141,7 +142,7 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger5debugEPKcz
   case 1:
@@ -156,7 +157,7 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
     // invoke: _ZNK14QMessageLogger5debugEPFRK16QLoggingCategoryvE
   default:
     qtrt.ErrorResolve("QMessageLogger", "debug", args)
- }
+  }
 
 }
 
@@ -186,7 +187,7 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz
   case 1:
@@ -201,7 +202,7 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
     // invoke: _ZNK14QMessageLogger7warningEv
   default:
     qtrt.ErrorResolve("QMessageLogger", "warning", args)
- }
+  }
 
 }
 
@@ -215,12 +216,12 @@ func (this *QMessageLogger) fatal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger5fatalEPKcz
   default:
     qtrt.ErrorResolve("QMessageLogger", "fatal", args)
- }
+  }
 
 }
 
@@ -250,7 +251,7 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger8criticalEPFRK16QLoggingCategoryvE
   case 1:
@@ -265,12 +266,13 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz
   default:
     qtrt.ErrorResolve("QMessageLogger", "critical", args)
- }
+  }
 
 }
 
 
-func NewQMessageLogger(args ...interface{})() {
+func NewQMessageLogger(args ...interface{}) QMessageLogger {
+  return QMessageLogger{}
 }
 
 
@@ -285,14 +287,14 @@ func (this *QMessageLogger) noDebug(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger7noDebugEPKcz
   case 1:
     // invoke: _ZNK14QMessageLogger7noDebugEv
   default:
     qtrt.ErrorResolve("QMessageLogger", "noDebug", args)
- }
+  }
 
 }
 

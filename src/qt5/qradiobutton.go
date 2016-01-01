@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.go
 //
@@ -50,17 +50,18 @@ func (this *QRadioButton) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton10metaObjectEv
   default:
     qtrt.ErrorResolve("QRadioButton", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQRadioButton(args ...interface{})() {
+func NewQRadioButton(args ...interface{}) QRadioButton {
+  return QRadioButton{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QRadioButton) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton8sizeHintEv
   default:
     qtrt.ErrorResolve("QRadioButton", "sizeHint", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QRadioButton) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QRadioButton", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -106,10 +107,10 @@ func (this *QRadioButton) FreeQRadioButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRadioButton", "~QRadioButton", args)
- }
+  }
 
 }
 

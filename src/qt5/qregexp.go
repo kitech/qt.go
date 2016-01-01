@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -42,7 +42,8 @@ type QRegExp struct {
 }
 
 
-func NewQRegExp(args ...interface{})() {
+func NewQRegExp(args ...interface{}) QRegExp {
+  return QRegExp{}
 }
 
 
@@ -56,14 +57,14 @@ func (this *QRegExp) capturedTexts(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp13capturedTextsEv
   case 1:
     // invoke: _ZNK7QRegExp13capturedTextsEv
   default:
     qtrt.ErrorResolve("QRegExp", "capturedTexts", args)
- }
+  }
 
 }
 
@@ -76,12 +77,12 @@ func (this *QRegExp) captureCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp12captureCountEv
   default:
     qtrt.ErrorResolve("QRegExp", "captureCount", args)
- }
+  }
 
 }
 
@@ -92,10 +93,10 @@ func (this *QRegExp) escape_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRegExp", "escape", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QRegExp) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7isEmptyEv
   default:
     qtrt.ErrorResolve("QRegExp", "isEmpty", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QRegExp) isMinimal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp9isMinimalEv
   default:
     qtrt.ErrorResolve("QRegExp", "isMinimal", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QRegExp) matchedLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp13matchedLengthEv
   default:
     qtrt.ErrorResolve("QRegExp", "matchedLength", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QRegExp) pattern(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7patternEv
   default:
     qtrt.ErrorResolve("QRegExp", "pattern", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QRegExp) setPattern(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setPatternERK7QString
   default:
     qtrt.ErrorResolve("QRegExp", "setPattern", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QRegExp) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7isValidEv
   default:
     qtrt.ErrorResolve("QRegExp", "isValid", args)
- }
+  }
 
 }
 
@@ -215,10 +216,10 @@ func (this *QRegExp) FreeQRegExp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRegExp", "~QRegExp", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp10exactMatchERK7QString
   default:
     qtrt.ErrorResolve("QRegExp", "exactMatch", args)
- }
+  }
 
 }
 
@@ -251,12 +252,12 @@ func (this *QRegExp) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp4swapERS_
   default:
     qtrt.ErrorResolve("QRegExp", "swap", args)
- }
+  }
 
 }
 
@@ -273,14 +274,14 @@ func (this *QRegExp) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp3posEi
   case 1:
     // invoke: _ZNK7QRegExp3posEi
   default:
     qtrt.ErrorResolve("QRegExp", "pos", args)
- }
+  }
 
 }
 
@@ -297,14 +298,14 @@ func (this *QRegExp) cap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp3capEi
   case 1:
     // invoke: _ZN7QRegExp3capEi
   default:
     qtrt.ErrorResolve("QRegExp", "cap", args)
- }
+  }
 
 }
 
@@ -319,14 +320,14 @@ func (this *QRegExp) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp11errorStringEv
   case 1:
     // invoke: _ZN7QRegExp11errorStringEv
   default:
     qtrt.ErrorResolve("QRegExp", "errorString", args)
- }
+  }
 
 }
 
@@ -340,12 +341,12 @@ func (this *QRegExp) setMinimal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setMinimalEb
   default:
     qtrt.ErrorResolve("QRegExp", "setMinimal", args)
- }
+  }
 
 }
 

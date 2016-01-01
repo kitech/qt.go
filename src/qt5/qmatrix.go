@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -50,17 +50,18 @@ func (this *QMatrix) dx(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix2dxEv
   default:
     qtrt.ErrorResolve("QMatrix", "dx", args)
- }
+  }
 
 }
 
 
-func NewQMatrix(args ...interface{})() {
+func NewQMatrix(args ...interface{}) QMatrix {
+  return QMatrix{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QMatrix) dy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix2dyEv
   default:
     qtrt.ErrorResolve("QMatrix", "dy", args)
- }
+  }
 
 }
 
@@ -92,12 +93,12 @@ func (this *QMatrix) scale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix5scaleEdd
   default:
     qtrt.ErrorResolve("QMatrix", "scale", args)
- }
+  }
 
 }
 
@@ -112,12 +113,12 @@ func (this *QMatrix) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix9translateEdd
   default:
     qtrt.ErrorResolve("QMatrix", "translate", args)
- }
+  }
 
 }
 
@@ -130,12 +131,12 @@ func (this *QMatrix) determinant(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix11determinantEv
   default:
     qtrt.ErrorResolve("QMatrix", "determinant", args)
- }
+  }
 
 }
 
@@ -150,12 +151,12 @@ func (this *QMatrix) shear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix5shearEdd
   default:
     qtrt.ErrorResolve("QMatrix", "shear", args)
- }
+  }
 
 }
 
@@ -168,12 +169,12 @@ func (this *QMatrix) m21(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix3m21Ev
   default:
     qtrt.ErrorResolve("QMatrix", "m21", args)
- }
+  }
 
 }
 
@@ -184,10 +185,10 @@ func (this *QMatrix) map_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMatrix", "map", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QMatrix) rotate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix6rotateEd
   default:
     qtrt.ErrorResolve("QMatrix", "rotate", args)
- }
+  }
 
 }
 
@@ -225,12 +226,12 @@ func (this *QMatrix) setMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix9setMatrixEdddddd
   default:
     qtrt.ErrorResolve("QMatrix", "setMatrix", args)
- }
+  }
 
 }
 
@@ -243,12 +244,12 @@ func (this *QMatrix) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix5resetEv
   default:
     qtrt.ErrorResolve("QMatrix", "reset", args)
- }
+  }
 
 }
 
@@ -261,12 +262,12 @@ func (this *QMatrix) m11(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix3m11Ev
   default:
     qtrt.ErrorResolve("QMatrix", "m11", args)
- }
+  }
 
 }
 
@@ -280,12 +281,12 @@ func (this *QMatrix) mapToPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix12mapToPolygonERK5QRect
   default:
     qtrt.ErrorResolve("QMatrix", "mapToPolygon", args)
- }
+  }
 
 }
 
@@ -299,12 +300,12 @@ func (this *QMatrix) inverted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix8invertedEPb
   default:
     qtrt.ErrorResolve("QMatrix", "inverted", args)
- }
+  }
 
 }
 
@@ -321,14 +322,14 @@ func (this *QMatrix) mapRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix7mapRectERK6QRectF
   case 1:
     // invoke: _ZNK7QMatrix7mapRectERK5QRect
   default:
     qtrt.ErrorResolve("QMatrix", "mapRect", args)
- }
+  }
 
 }
 
@@ -341,12 +342,12 @@ func (this *QMatrix) isIdentity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix10isIdentityEv
   default:
     qtrt.ErrorResolve("QMatrix", "isIdentity", args)
- }
+  }
 
 }
 
@@ -359,12 +360,12 @@ func (this *QMatrix) m12(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix3m12Ev
   default:
     qtrt.ErrorResolve("QMatrix", "m12", args)
- }
+  }
 
 }
 
@@ -377,12 +378,12 @@ func (this *QMatrix) isInvertible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix12isInvertibleEv
   default:
     qtrt.ErrorResolve("QMatrix", "isInvertible", args)
- }
+  }
 
 }
 
@@ -395,12 +396,12 @@ func (this *QMatrix) m22(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix3m22Ev
   default:
     qtrt.ErrorResolve("QMatrix", "m22", args)
- }
+  }
 
 }
 

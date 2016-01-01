@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.go
 //
@@ -56,12 +56,12 @@ func (this *QFontMetrics) maxWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics8maxWidthEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "maxWidth", args)
- }
+  }
 
 }
 
@@ -72,10 +72,10 @@ func (this *QFontMetrics) FreeQFontMetrics(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFontMetrics", "~QFontMetrics", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QFontMetrics) lineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics9lineWidthEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "lineWidth", args)
- }
+  }
 
 }
 
@@ -127,7 +127,7 @@ func (this *QFontMetrics) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi
   case 1:
@@ -138,7 +138,7 @@ func (this *QFontMetrics) boundingRect(args ...interface{}) () {
     // invoke: _ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi
   default:
     qtrt.ErrorResolve("QFontMetrics", "boundingRect", args)
- }
+  }
 
 }
 
@@ -151,12 +151,12 @@ func (this *QFontMetrics) minLeftBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics14minLeftBearingEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "minLeftBearing", args)
- }
+  }
 
 }
 
@@ -170,12 +170,12 @@ func (this *QFontMetrics) rightBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12rightBearingE5QChar
   default:
     qtrt.ErrorResolve("QFontMetrics", "rightBearing", args)
- }
+  }
 
 }
 
@@ -188,12 +188,12 @@ func (this *QFontMetrics) ascent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics6ascentEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "ascent", args)
- }
+  }
 
 }
 
@@ -210,12 +210,12 @@ func (this *QFontMetrics) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics4sizeEiRK7QStringiPi
   default:
     qtrt.ErrorResolve("QFontMetrics", "size", args)
- }
+  }
 
 }
 
@@ -228,12 +228,12 @@ func (this *QFontMetrics) overlinePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics11overlinePosEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "overlinePos", args)
- }
+  }
 
 }
 
@@ -246,12 +246,12 @@ func (this *QFontMetrics) leading(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics7leadingEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "leading", args)
- }
+  }
 
 }
 
@@ -265,12 +265,12 @@ func (this *QFontMetrics) tightBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics17tightBoundingRectERK7QString
   default:
     qtrt.ErrorResolve("QFontMetrics", "tightBoundingRect", args)
- }
+  }
 
 }
 
@@ -283,12 +283,12 @@ func (this *QFontMetrics) averageCharWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics16averageCharWidthEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "averageCharWidth", args)
- }
+  }
 
 }
 
@@ -301,12 +301,12 @@ func (this *QFontMetrics) underlinePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12underlinePosEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "underlinePos", args)
- }
+  }
 
 }
 
@@ -320,12 +320,12 @@ func (this *QFontMetrics) inFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics6inFontE5QChar
   default:
     qtrt.ErrorResolve("QFontMetrics", "inFont", args)
- }
+  }
 
 }
 
@@ -338,12 +338,12 @@ func (this *QFontMetrics) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics6heightEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "height", args)
- }
+  }
 
 }
 
@@ -366,7 +366,7 @@ func (this *QFontMetrics) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics5widthE5QChar
   case 1:
@@ -375,7 +375,7 @@ func (this *QFontMetrics) width(args ...interface{}) () {
     // invoke: _ZNK12QFontMetrics5widthERK7QStringi
   default:
     qtrt.ErrorResolve("QFontMetrics", "width", args)
- }
+  }
 
 }
 
@@ -388,12 +388,12 @@ func (this *QFontMetrics) xHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics7xHeightEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "xHeight", args)
- }
+  }
 
 }
 
@@ -406,12 +406,12 @@ func (this *QFontMetrics) strikeOutPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12strikeOutPosEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "strikeOutPos", args)
- }
+  }
 
 }
 
@@ -424,17 +424,18 @@ func (this *QFontMetrics) lineSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics11lineSpacingEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "lineSpacing", args)
- }
+  }
 
 }
 
 
-func NewQFontMetrics(args ...interface{})() {
+func NewQFontMetrics(args ...interface{}) QFontMetrics {
+  return QFontMetrics{}
 }
 
 
@@ -446,12 +447,12 @@ func (this *QFontMetrics) minRightBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics15minRightBearingEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "minRightBearing", args)
- }
+  }
 
 }
 
@@ -465,12 +466,12 @@ func (this *QFontMetrics) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QFontMetrics4swapERS_
   default:
     qtrt.ErrorResolve("QFontMetrics", "swap", args)
- }
+  }
 
 }
 
@@ -485,12 +486,12 @@ func (this *QFontMetrics) charWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics9charWidthERK7QStringi
   default:
     qtrt.ErrorResolve("QFontMetrics", "charWidth", args)
- }
+  }
 
 }
 
@@ -504,12 +505,12 @@ func (this *QFontMetrics) leftBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics11leftBearingE5QChar
   default:
     qtrt.ErrorResolve("QFontMetrics", "leftBearing", args)
- }
+  }
 
 }
 
@@ -523,12 +524,12 @@ func (this *QFontMetrics) inFontUcs4(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics10inFontUcs4Ej
   default:
     qtrt.ErrorResolve("QFontMetrics", "inFontUcs4", args)
- }
+  }
 
 }
 
@@ -541,12 +542,12 @@ func (this *QFontMetrics) descent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics7descentEv
   default:
     qtrt.ErrorResolve("QFontMetrics", "descent", args)
- }
+  }
 
 }
 
@@ -560,12 +561,12 @@ func (this *QFontMetricsF) inFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF6inFontE5QChar
   default:
     qtrt.ErrorResolve("QFontMetricsF", "inFont", args)
- }
+  }
 
 }
 
@@ -582,12 +583,12 @@ func (this *QFontMetricsF) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF4sizeEiRK7QStringiPi
   default:
     qtrt.ErrorResolve("QFontMetricsF", "size", args)
- }
+  }
 
 }
 
@@ -600,17 +601,18 @@ func (this *QFontMetricsF) minRightBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF15minRightBearingEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "minRightBearing", args)
- }
+  }
 
 }
 
 
-func NewQFontMetricsF(args ...interface{})() {
+func NewQFontMetricsF(args ...interface{}) QFontMetricsF {
+  return QFontMetricsF{}
 }
 
 
@@ -622,12 +624,12 @@ func (this *QFontMetricsF) xHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF7xHeightEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "xHeight", args)
- }
+  }
 
 }
 
@@ -644,14 +646,14 @@ func (this *QFontMetricsF) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF5widthE5QChar
   case 1:
     // invoke: _ZNK13QFontMetricsF5widthERK7QString
   default:
     qtrt.ErrorResolve("QFontMetricsF", "width", args)
- }
+  }
 
 }
 
@@ -662,10 +664,10 @@ func (this *QFontMetricsF) FreeQFontMetricsF(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFontMetricsF", "~QFontMetricsF", args)
- }
+  }
 
 }
 
@@ -689,7 +691,7 @@ func (this *QFontMetricsF) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi
   case 1:
@@ -698,7 +700,7 @@ func (this *QFontMetricsF) boundingRect(args ...interface{}) () {
     // invoke: _ZNK13QFontMetricsF12boundingRectE5QChar
   default:
     qtrt.ErrorResolve("QFontMetricsF", "boundingRect", args)
- }
+  }
 
 }
 
@@ -712,12 +714,12 @@ func (this *QFontMetricsF) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QFontMetricsF4swapERS_
   default:
     qtrt.ErrorResolve("QFontMetricsF", "swap", args)
- }
+  }
 
 }
 
@@ -731,12 +733,12 @@ func (this *QFontMetricsF) tightBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF17tightBoundingRectERK7QString
   default:
     qtrt.ErrorResolve("QFontMetricsF", "tightBoundingRect", args)
- }
+  }
 
 }
 
@@ -750,12 +752,12 @@ func (this *QFontMetricsF) leftBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF11leftBearingE5QChar
   default:
     qtrt.ErrorResolve("QFontMetricsF", "leftBearing", args)
- }
+  }
 
 }
 
@@ -769,12 +771,12 @@ func (this *QFontMetricsF) rightBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12rightBearingE5QChar
   default:
     qtrt.ErrorResolve("QFontMetricsF", "rightBearing", args)
- }
+  }
 
 }
 
@@ -787,12 +789,12 @@ func (this *QFontMetricsF) overlinePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF11overlinePosEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "overlinePos", args)
- }
+  }
 
 }
 
@@ -805,12 +807,12 @@ func (this *QFontMetricsF) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF6heightEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "height", args)
- }
+  }
 
 }
 
@@ -823,12 +825,12 @@ func (this *QFontMetricsF) descent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF7descentEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "descent", args)
- }
+  }
 
 }
 
@@ -841,12 +843,12 @@ func (this *QFontMetricsF) lineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF9lineWidthEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "lineWidth", args)
- }
+  }
 
 }
 
@@ -859,12 +861,12 @@ func (this *QFontMetricsF) strikeOutPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12strikeOutPosEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "strikeOutPos", args)
- }
+  }
 
 }
 
@@ -877,12 +879,12 @@ func (this *QFontMetricsF) lineSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF11lineSpacingEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "lineSpacing", args)
- }
+  }
 
 }
 
@@ -895,12 +897,12 @@ func (this *QFontMetricsF) averageCharWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF16averageCharWidthEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "averageCharWidth", args)
- }
+  }
 
 }
 
@@ -913,12 +915,12 @@ func (this *QFontMetricsF) leading(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF7leadingEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "leading", args)
- }
+  }
 
 }
 
@@ -932,12 +934,12 @@ func (this *QFontMetricsF) inFontUcs4(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF10inFontUcs4Ej
   default:
     qtrt.ErrorResolve("QFontMetricsF", "inFontUcs4", args)
- }
+  }
 
 }
 
@@ -950,12 +952,12 @@ func (this *QFontMetricsF) minLeftBearing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF14minLeftBearingEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "minLeftBearing", args)
- }
+  }
 
 }
 
@@ -968,12 +970,12 @@ func (this *QFontMetricsF) ascent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF6ascentEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "ascent", args)
- }
+  }
 
 }
 
@@ -986,12 +988,12 @@ func (this *QFontMetricsF) maxWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF8maxWidthEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "maxWidth", args)
- }
+  }
 
 }
 
@@ -1004,12 +1006,12 @@ func (this *QFontMetricsF) underlinePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12underlinePosEv
   default:
     qtrt.ErrorResolve("QFontMetricsF", "underlinePos", args)
- }
+  }
 
 }
 

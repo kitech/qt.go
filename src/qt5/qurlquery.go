@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -42,7 +42,8 @@ type QUrlQuery struct {
 }
 
 
-func NewQUrlQuery(args ...interface{})() {
+func NewQUrlQuery(args ...interface{}) QUrlQuery {
+  return QUrlQuery{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QUrlQuery) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery5clearEv
   default:
     qtrt.ErrorResolve("QUrlQuery", "clear", args)
- }
+  }
 
 }
 
@@ -73,12 +74,12 @@ func (this *QUrlQuery) setQuery(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery8setQueryERK7QString
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQuery", args)
- }
+  }
 
 }
 
@@ -91,12 +92,12 @@ func (this *QUrlQuery) queryValueDelimiter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery19queryValueDelimiterEv
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryValueDelimiter", args)
- }
+  }
 
 }
 
@@ -109,12 +110,12 @@ func (this *QUrlQuery) queryPairDelimiter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery18queryPairDelimiterEv
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryPairDelimiter", args)
- }
+  }
 
 }
 
@@ -125,10 +126,10 @@ func (this *QUrlQuery) defaultQueryValueDelimiter_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryValueDelimiter", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QUrlQuery) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery4swapERS_
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QUrlQuery) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery10isDetachedEv
   default:
     qtrt.ErrorResolve("QUrlQuery", "isDetached", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QUrlQuery) setQueryDelimiters(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQueryDelimiters", args)
- }
+  }
 
 }
 
@@ -196,10 +197,10 @@ func (this *QUrlQuery) FreeQUrlQuery(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrlQuery", "~QUrlQuery", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QUrlQuery) removeAllQueryItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery19removeAllQueryItemsERK7QString
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeAllQueryItems", args)
- }
+  }
 
 }
 
@@ -231,12 +232,12 @@ func (this *QUrlQuery) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery7isEmptyEv
   default:
     qtrt.ErrorResolve("QUrlQuery", "isEmpty", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QUrlQuery) removeQueryItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery15removeQueryItemERK7QString
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeQueryItem", args)
- }
+  }
 
 }
 
@@ -266,10 +267,10 @@ func (this *QUrlQuery) defaultQueryPairDelimiter_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryPairDelimiter", args)
- }
+  }
 
 }
 
@@ -284,12 +285,12 @@ func (this *QUrlQuery) addQueryItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery12addQueryItemERK7QStringS2_
   default:
     qtrt.ErrorResolve("QUrlQuery", "addQueryItem", args)
- }
+  }
 
 }
 
@@ -303,12 +304,12 @@ func (this *QUrlQuery) hasQueryItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery12hasQueryItemERK7QString
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
- }
+  }
 
 }
 

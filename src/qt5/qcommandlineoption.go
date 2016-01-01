@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -51,12 +51,12 @@ func (this *QCommandLineOption) setValueName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption12setValueNameERK7QString
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setValueName", args)
- }
+  }
 
 }
 
@@ -69,17 +69,18 @@ func (this *QCommandLineOption) names(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption5namesEv
   default:
     qtrt.ErrorResolve("QCommandLineOption", "names", args)
- }
+  }
 
 }
 
 
-func NewQCommandLineOption(args ...interface{})() {
+func NewQCommandLineOption(args ...interface{}) QCommandLineOption {
+  return QCommandLineOption{}
 }
 
 
@@ -92,12 +93,12 @@ func (this *QCommandLineOption) setDescription(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption14setDescriptionERK7QString
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDescription", args)
- }
+  }
 
 }
 
@@ -110,12 +111,12 @@ func (this *QCommandLineOption) valueName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption9valueNameEv
   default:
     qtrt.ErrorResolve("QCommandLineOption", "valueName", args)
- }
+  }
 
 }
 
@@ -129,12 +130,12 @@ func (this *QCommandLineOption) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption4swapERS_
   default:
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
- }
+  }
 
 }
 
@@ -147,12 +148,12 @@ func (this *QCommandLineOption) description(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption11descriptionEv
   default:
     qtrt.ErrorResolve("QCommandLineOption", "description", args)
- }
+  }
 
 }
 
@@ -163,10 +164,10 @@ func (this *QCommandLineOption) FreeQCommandLineOption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCommandLineOption", "~QCommandLineOption", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption15setDefaultValueERK7QString
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValue", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption16setDefaultValuesERK11QStringList
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValues", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QCommandLineOption) defaultValues(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption13defaultValuesEv
   default:
     qtrt.ErrorResolve("QCommandLineOption", "defaultValues", args)
- }
+  }
 
 }
 

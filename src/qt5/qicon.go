@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -42,7 +42,8 @@ type QIcon struct {
 }
 
 
-func NewQIcon(args ...interface{})() {
+func NewQIcon(args ...interface{}) QIcon {
+  return QIcon{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QIcon) themeSearchPaths_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "themeSearchPaths", args)
- }
+  }
 
 }
 
@@ -68,12 +69,12 @@ func (this *QIcon) detach(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QIcon6detachEv
   default:
     qtrt.ErrorResolve("QIcon", "detach", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QIcon) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon6isNullEv
   default:
     qtrt.ErrorResolve("QIcon", "isNull", args)
- }
+  }
 
 }
 
@@ -102,10 +103,10 @@ func (this *QIcon) setThemeSearchPaths_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "setThemeSearchPaths", args)
- }
+  }
 
 }
 
@@ -116,10 +117,10 @@ func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "hasThemeIcon", args)
- }
+  }
 
 }
 
@@ -130,10 +131,10 @@ func (this *QIcon) fromTheme_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "fromTheme", args)
- }
+  }
 
 }
 
@@ -144,10 +145,10 @@ func (this *QIcon) themeName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "themeName", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QIcon) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon4nameEv
   default:
     qtrt.ErrorResolve("QIcon", "name", args)
- }
+  }
 
 }
 
@@ -176,10 +177,10 @@ func (this *QIcon) FreeQIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "~QIcon", args)
- }
+  }
 
 }
 
@@ -192,12 +193,12 @@ func (this *QIcon) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon10isDetachedEv
   default:
     qtrt.ErrorResolve("QIcon", "isDetached", args)
- }
+  }
 
 }
 
@@ -210,12 +211,12 @@ func (this *QIcon) cacheKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon8cacheKeyEv
   default:
     qtrt.ErrorResolve("QIcon", "cacheKey", args)
- }
+  }
 
 }
 
@@ -229,12 +230,12 @@ func (this *QIcon) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QIcon4swapERS_
   default:
     qtrt.ErrorResolve("QIcon", "swap", args)
- }
+  }
 
 }
 
@@ -245,10 +246,10 @@ func (this *QIcon) setThemeName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIcon", "setThemeName", args)
- }
+  }
 
 }
 

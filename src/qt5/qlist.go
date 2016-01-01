@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -50,12 +50,12 @@ func (this *QListData) prepend(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData7prependEv
   default:
     qtrt.ErrorResolve("QListData", "prepend", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QListData) realloc(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData7reallocEi
   default:
     qtrt.ErrorResolve("QListData", "realloc", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QListData) end(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QListData3endEv
   default:
     qtrt.ErrorResolve("QListData", "end", args)
- }
+  }
 
 }
 
@@ -110,14 +110,14 @@ func (this *QListData) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData6removeEii
   case 1:
     // invoke: _ZN9QListData6removeEi
   default:
     qtrt.ErrorResolve("QListData", "remove", args)
- }
+  }
 
 }
 
@@ -136,7 +136,7 @@ func (this *QListData) append(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData6appendERKS_
   case 1:
@@ -145,7 +145,7 @@ func (this *QListData) append(args ...interface{}) () {
     // invoke: _ZN9QListData6appendEi
   default:
     qtrt.ErrorResolve("QListData", "append", args)
- }
+  }
 
 }
 
@@ -161,14 +161,14 @@ func (this *QListData) dispose(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData7disposeEPNS_4DataE
   case 1:
     // invoke: _ZN9QListData7disposeEv
   default:
     qtrt.ErrorResolve("QListData", "dispose", args)
- }
+  }
 
 }
 
@@ -181,12 +181,12 @@ func (this *QListData) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QListData4sizeEv
   default:
     qtrt.ErrorResolve("QListData", "size", args)
- }
+  }
 
 }
 
@@ -199,12 +199,12 @@ func (this *QListData) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QListData7isEmptyEv
   default:
     qtrt.ErrorResolve("QListData", "isEmpty", args)
- }
+  }
 
 }
 
@@ -218,12 +218,12 @@ func (this *QListData) at(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QListData2atEi
   default:
     qtrt.ErrorResolve("QListData", "at", args)
- }
+  }
 
 }
 
@@ -237,12 +237,12 @@ func (this *QListData) erase(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData5eraseEPPv
   default:
     qtrt.ErrorResolve("QListData", "erase", args)
- }
+  }
 
 }
 
@@ -253,10 +253,10 @@ func (this *QListData) move_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QListData", "move", args)
- }
+  }
 
 }
 
@@ -269,12 +269,12 @@ func (this *QListData) begin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QListData5beginEv
   default:
     qtrt.ErrorResolve("QListData", "begin", args)
- }
+  }
 
 }
 
@@ -288,12 +288,12 @@ func (this *QListData) insert(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QListData6insertEi
   default:
     qtrt.ErrorResolve("QListData", "insert", args)
- }
+  }
 
 }
 

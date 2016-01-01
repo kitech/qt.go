@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -50,10 +50,10 @@ func (this *QSystemTrayIcon) FreeQSystemTrayIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "~QSystemTrayIcon", args)
- }
+  }
 
 }
 
@@ -67,12 +67,12 @@ func (this *QSystemTrayIcon) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setVisibleEb
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setVisible", args)
- }
+  }
 
 }
 
@@ -85,17 +85,18 @@ func (this *QSystemTrayIcon) toolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon7toolTipEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "toolTip", args)
- }
+  }
 
 }
 
 
-func NewQSystemTrayIcon(args ...interface{})() {
+func NewQSystemTrayIcon(args ...interface{}) QSystemTrayIcon {
+  return QSystemTrayIcon{}
 }
 
 
@@ -107,12 +108,12 @@ func (this *QSystemTrayIcon) hide(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4hideEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "hide", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QSystemTrayIcon) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon10metaObjectEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "metaObject", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QSystemTrayIcon) setIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon7setIconERK5QIcon
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setIcon", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QSystemTrayIcon) isVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon9isVisibleEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "isVisible", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QSystemTrayIcon) show(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4showEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "show", args)
- }
+  }
 
 }
 
@@ -196,10 +197,10 @@ func (this *QSystemTrayIcon) supportsMessages_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "supportsMessages", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QSystemTrayIcon) setContextMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon14setContextMenuEP5QMenu
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setContextMenu", args)
- }
+  }
 
 }
 
@@ -231,12 +232,12 @@ func (this *QSystemTrayIcon) geometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon8geometryEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "geometry", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QSystemTrayIcon) setToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setToolTipERK7QString
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setToolTip", args)
- }
+  }
 
 }
 
@@ -268,12 +269,12 @@ func (this *QSystemTrayIcon) icon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon4iconEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "icon", args)
- }
+  }
 
 }
 
@@ -286,12 +287,12 @@ func (this *QSystemTrayIcon) contextMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon11contextMenuEv
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "contextMenu", args)
- }
+  }
 
 }
 
@@ -302,10 +303,10 @@ func (this *QSystemTrayIcon) isSystemTrayAvailable_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "isSystemTrayAvailable", args)
- }
+  }
 
 }
 

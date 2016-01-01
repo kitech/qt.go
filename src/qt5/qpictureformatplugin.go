@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -53,12 +53,12 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
- }
+  }
 
 }
 
@@ -74,12 +74,12 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
- }
+  }
 
 }
 
@@ -90,15 +90,16 @@ func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "~QPictureFormatPlugin", args)
- }
+  }
 
 }
 
 
-func NewQPictureFormatPlugin(args ...interface{})() {
+func NewQPictureFormatPlugin(args ...interface{}) QPictureFormatPlugin {
+  return QPictureFormatPlugin{}
 }
 
 
@@ -111,12 +112,12 @@ func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin16installIOHandlerERK7QString
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "installIOHandler", args)
- }
+  }
 
 }
 
@@ -129,12 +130,12 @@ func (this *QPictureFormatPlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QPictureFormatPlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "metaObject", args)
- }
+  }
 
 }
 

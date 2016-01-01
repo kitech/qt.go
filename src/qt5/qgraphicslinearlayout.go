@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.go
 //
@@ -50,17 +50,18 @@ func (this *QGraphicsLinearLayout) spacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout7spacingEv
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "spacing", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsLinearLayout(args ...interface{})() {
+func NewQGraphicsLinearLayout(args ...interface{}) QGraphicsLinearLayout {
+  return QGraphicsLinearLayout{}
 }
 
 
@@ -73,12 +74,12 @@ func (this *QGraphicsLinearLayout) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout6itemAtEi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemAt", args)
- }
+  }
 
 }
 
@@ -91,12 +92,12 @@ func (this *QGraphicsLinearLayout) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10invalidateEv
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "invalidate", args)
- }
+  }
 
 }
 
@@ -110,12 +111,12 @@ func (this *QGraphicsLinearLayout) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout11setGeometryERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setGeometry", args)
- }
+  }
 
 }
 
@@ -129,12 +130,12 @@ func (this *QGraphicsLinearLayout) addStretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10addStretchEi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addStretch", args)
- }
+  }
 
 }
 
@@ -147,12 +148,12 @@ func (this *QGraphicsLinearLayout) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout5countEv
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "count", args)
- }
+  }
 
 }
 
@@ -166,12 +167,12 @@ func (this *QGraphicsLinearLayout) setSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10setSpacingEd
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setSpacing", args)
- }
+  }
 
 }
 
@@ -186,12 +187,12 @@ func (this *QGraphicsLinearLayout) insertItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertItem", args)
- }
+  }
 
 }
 
@@ -202,10 +203,10 @@ func (this *QGraphicsLinearLayout) FreeQGraphicsLinearLayout(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "~QGraphicsLinearLayout", args)
- }
+  }
 
 }
 
@@ -219,12 +220,12 @@ func (this *QGraphicsLinearLayout) dump(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout4dumpEi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "dump", args)
- }
+  }
 
 }
 
@@ -239,12 +240,12 @@ func (this *QGraphicsLinearLayout) setStretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setStretchFactor", args)
- }
+  }
 
 }
 
@@ -258,12 +259,12 @@ func (this *QGraphicsLinearLayout) addItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addItem", args)
- }
+  }
 
 }
 
@@ -277,12 +278,12 @@ func (this *QGraphicsLinearLayout) itemSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout11itemSpacingEi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemSpacing", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QGraphicsLinearLayout) removeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout8removeAtEi
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeAt", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QGraphicsLinearLayout) insertStretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout13insertStretchEii
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertStretch", args)
- }
+  }
 
 }
 
@@ -336,12 +337,12 @@ func (this *QGraphicsLinearLayout) setItemSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout14setItemSpacingEid
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setItemSpacing", args)
- }
+  }
 
 }
 
@@ -355,12 +356,12 @@ func (this *QGraphicsLinearLayout) removeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeItem", args)
- }
+  }
 
 }
 
@@ -374,12 +375,12 @@ func (this *QGraphicsLinearLayout) stretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "stretchFactor", args)
- }
+  }
 
 }
 

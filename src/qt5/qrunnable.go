@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -48,10 +48,10 @@ func (this *QRunnable) FreeQRunnable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRunnable", "~QRunnable", args)
- }
+  }
 
 }
 
@@ -65,17 +65,18 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QRunnable13setAutoDeleteEb
   default:
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
- }
+  }
 
 }
 
 
-func NewQRunnable(args ...interface{})() {
+func NewQRunnable(args ...interface{}) QRunnable {
+  return QRunnable{}
 }
 
 
@@ -87,12 +88,12 @@ func (this *QRunnable) run(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QRunnable3runEv
   default:
     qtrt.ErrorResolve("QRunnable", "run", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QRunnable) autoDelete(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
- }
+  }
 
 }
 

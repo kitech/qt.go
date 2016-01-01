@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -51,12 +51,12 @@ func (this *QThreadStorageData) set(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QThreadStorageData3setEPv
   default:
     qtrt.ErrorResolve("QThreadStorageData", "set", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QThreadStorageData) get(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QThreadStorageData3getEv
   default:
     qtrt.ErrorResolve("QThreadStorageData", "get", args)
- }
+  }
 
 }
 
@@ -85,10 +85,10 @@ func (this *QThreadStorageData) finish_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThreadStorageData", "finish", args)
- }
+  }
 
 }
 
@@ -99,10 +99,10 @@ func (this *QThreadStorageData) FreeQThreadStorageData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThreadStorageData", "~QThreadStorageData", args)
- }
+  }
 
 }
 

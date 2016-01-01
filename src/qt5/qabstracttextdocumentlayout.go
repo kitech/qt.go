@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -58,10 +58,10 @@ func (this *QTextObjectInterface) FreeQTextObjectInterface(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "~QTextObjectInterface", args)
- }
+  }
 
 }
 
@@ -77,12 +77,12 @@ func (this *QTextObjectInterface) intrinsicSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "intrinsicSize", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "drawObject", args)
- }
+  }
 
 }
 
@@ -118,12 +118,12 @@ func (this *QAbstractTextDocumentLayout) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "metaObject", args)
- }
+  }
 
 }
 
@@ -138,12 +138,12 @@ func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "registerHandler", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QAbstractTextDocumentLayout) pageCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout9pageCountEv
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "pageCount", args)
- }
+  }
 
 }
 
@@ -172,10 +172,10 @@ func (this *QAbstractTextDocumentLayout) FreeQAbstractTextDocumentLayout(args ..
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "~QAbstractTextDocumentLayout", args)
- }
+  }
 
 }
 
@@ -189,12 +189,12 @@ func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "setPaintDevice", args)
- }
+  }
 
 }
 
@@ -207,12 +207,12 @@ func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8documentEv
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "document", args)
- }
+  }
 
 }
 
@@ -227,17 +227,18 @@ func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "unregisterHandler", args)
- }
+  }
 
 }
 
 
-func NewQAbstractTextDocumentLayout(args ...interface{})() {
+func NewQAbstractTextDocumentLayout(args ...interface{}) QAbstractTextDocumentLayout {
+  return QAbstractTextDocumentLayout{}
 }
 
 
@@ -249,12 +250,12 @@ func (this *QAbstractTextDocumentLayout) documentSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout12documentSizeEv
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "documentSize", args)
- }
+  }
 
 }
 
@@ -267,12 +268,12 @@ func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout11paintDeviceEv
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "paintDevice", args)
- }
+  }
 
 }
 
@@ -286,12 +287,12 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
- }
+  }
 
 }
 
@@ -305,12 +306,12 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
- }
+  }
 
 }
 
@@ -324,12 +325,12 @@ func (this *QAbstractTextDocumentLayout) frameBoundingRect(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "frameBoundingRect", args)
- }
+  }
 
 }
 
@@ -343,12 +344,12 @@ func (this *QAbstractTextDocumentLayout) blockBoundingRect(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "blockBoundingRect", args)
- }
+  }
 
 }
 

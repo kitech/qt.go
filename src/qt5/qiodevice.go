@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -55,12 +55,12 @@ func (this *QIODevice) ungetChar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice9ungetCharEc
   default:
     qtrt.ErrorResolve("QIODevice", "ungetChar", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QIODevice) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice11errorStringEv
   default:
     qtrt.ErrorResolve("QIODevice", "errorString", args)
- }
+  }
 
 }
 
@@ -99,7 +99,7 @@ func (this *QIODevice) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice5writeERK10QByteArray
   case 1:
@@ -108,7 +108,7 @@ func (this *QIODevice) write(args ...interface{}) () {
     // invoke: _ZN9QIODevice5writeEPKcx
   default:
     qtrt.ErrorResolve("QIODevice", "write", args)
- }
+  }
 
 }
 
@@ -121,12 +121,12 @@ func (this *QIODevice) isReadable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice10isReadableEv
   default:
     qtrt.ErrorResolve("QIODevice", "isReadable", args)
- }
+  }
 
 }
 
@@ -144,14 +144,14 @@ func (this *QIODevice) readLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice8readLineEPcx
   case 1:
     // invoke: _ZN9QIODevice8readLineEx
   default:
     qtrt.ErrorResolve("QIODevice", "readLine", args)
- }
+  }
 
 }
 
@@ -165,12 +165,12 @@ func (this *QIODevice) waitForReadyRead(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice16waitForReadyReadEi
   default:
     qtrt.ErrorResolve("QIODevice", "waitForReadyRead", args)
- }
+  }
 
 }
 
@@ -183,12 +183,12 @@ func (this *QIODevice) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice4sizeEv
   default:
     qtrt.ErrorResolve("QIODevice", "size", args)
- }
+  }
 
 }
 
@@ -202,12 +202,12 @@ func (this *QIODevice) getChar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice7getCharEPc
   default:
     qtrt.ErrorResolve("QIODevice", "getChar", args)
- }
+  }
 
 }
 
@@ -221,12 +221,12 @@ func (this *QIODevice) putChar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice7putCharEc
   default:
     qtrt.ErrorResolve("QIODevice", "putChar", args)
- }
+  }
 
 }
 
@@ -239,12 +239,12 @@ func (this *QIODevice) isTextModeEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice17isTextModeEnabledEv
   default:
     qtrt.ErrorResolve("QIODevice", "isTextModeEnabled", args)
- }
+  }
 
 }
 
@@ -257,12 +257,12 @@ func (this *QIODevice) isSequential(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice12isSequentialEv
   default:
     qtrt.ErrorResolve("QIODevice", "isSequential", args)
- }
+  }
 
 }
 
@@ -275,12 +275,12 @@ func (this *QIODevice) bytesAvailable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice14bytesAvailableEv
   default:
     qtrt.ErrorResolve("QIODevice", "bytesAvailable", args)
- }
+  }
 
 }
 
@@ -293,12 +293,12 @@ func (this *QIODevice) close(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice5closeEv
   default:
     qtrt.ErrorResolve("QIODevice", "close", args)
- }
+  }
 
 }
 
@@ -311,12 +311,12 @@ func (this *QIODevice) readAll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice7readAllEv
   default:
     qtrt.ErrorResolve("QIODevice", "readAll", args)
- }
+  }
 
 }
 
@@ -329,12 +329,12 @@ func (this *QIODevice) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice5atEndEv
   default:
     qtrt.ErrorResolve("QIODevice", "atEnd", args)
- }
+  }
 
 }
 
@@ -348,17 +348,18 @@ func (this *QIODevice) seek(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4seekEx
   default:
     qtrt.ErrorResolve("QIODevice", "seek", args)
- }
+  }
 
 }
 
 
-func NewQIODevice(args ...interface{})() {
+func NewQIODevice(args ...interface{}) QIODevice {
+  return QIODevice{}
 }
 
 
@@ -370,12 +371,12 @@ func (this *QIODevice) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice3posEv
   default:
     qtrt.ErrorResolve("QIODevice", "pos", args)
- }
+  }
 
 }
 
@@ -393,14 +394,14 @@ func (this *QIODevice) read(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4readEx
   case 1:
     // invoke: _ZN9QIODevice4readEPcx
   default:
     qtrt.ErrorResolve("QIODevice", "read", args)
- }
+  }
 
 }
 
@@ -418,14 +419,14 @@ func (this *QIODevice) peek(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4peekEPcx
   case 1:
     // invoke: _ZN9QIODevice4peekEx
   default:
     qtrt.ErrorResolve("QIODevice", "peek", args)
- }
+  }
 
 }
 
@@ -439,12 +440,12 @@ func (this *QIODevice) waitForBytesWritten(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice19waitForBytesWrittenEi
   default:
     qtrt.ErrorResolve("QIODevice", "waitForBytesWritten", args)
- }
+  }
 
 }
 
@@ -457,12 +458,12 @@ func (this *QIODevice) bytesToWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice12bytesToWriteEv
   default:
     qtrt.ErrorResolve("QIODevice", "bytesToWrite", args)
- }
+  }
 
 }
 
@@ -475,12 +476,12 @@ func (this *QIODevice) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice5resetEv
   default:
     qtrt.ErrorResolve("QIODevice", "reset", args)
- }
+  }
 
 }
 
@@ -493,12 +494,12 @@ func (this *QIODevice) isWritable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice10isWritableEv
   default:
     qtrt.ErrorResolve("QIODevice", "isWritable", args)
- }
+  }
 
 }
 
@@ -511,12 +512,12 @@ func (this *QIODevice) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice10metaObjectEv
   default:
     qtrt.ErrorResolve("QIODevice", "metaObject", args)
- }
+  }
 
 }
 
@@ -530,12 +531,12 @@ func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice18setTextModeEnabledEb
   default:
     qtrt.ErrorResolve("QIODevice", "setTextModeEnabled", args)
- }
+  }
 
 }
 
@@ -548,12 +549,12 @@ func (this *QIODevice) isOpen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice6isOpenEv
   default:
     qtrt.ErrorResolve("QIODevice", "isOpen", args)
- }
+  }
 
 }
 
@@ -566,12 +567,12 @@ func (this *QIODevice) canReadLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QIODevice11canReadLineEv
   default:
     qtrt.ErrorResolve("QIODevice", "canReadLine", args)
- }
+  }
 
 }
 
@@ -582,10 +583,10 @@ func (this *QIODevice) FreeQIODevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIODevice", "~QIODevice", args)
- }
+  }
 
 }
 

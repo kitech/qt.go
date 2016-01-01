@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.go
 //
@@ -53,12 +53,12 @@ func (this *QGraphicsView) scale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView5scaleEdd
   default:
     qtrt.ErrorResolve("QGraphicsView", "scale", args)
- }
+  }
 
 }
 
@@ -91,7 +91,7 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView10mapToSceneERK5QRect
   case 1:
@@ -106,7 +106,7 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsView10mapToSceneERK12QPainterPath
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapToScene", args)
- }
+  }
 
 }
 
@@ -139,7 +139,7 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK6QRectF
   case 1:
@@ -154,7 +154,7 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath
   default:
     qtrt.ErrorResolve("QGraphicsView", "mapFromScene", args)
- }
+  }
 
 }
 
@@ -169,12 +169,12 @@ func (this *QGraphicsView) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView9translateEdd
   default:
     qtrt.ErrorResolve("QGraphicsView", "translate", args)
- }
+  }
 
 }
 
@@ -187,12 +187,12 @@ func (this *QGraphicsView) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "metaObject", args)
- }
+  }
 
 }
 
@@ -212,14 +212,14 @@ func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView12setSceneRectEdddd
   case 1:
     // invoke: _ZN13QGraphicsView12setSceneRectERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsView", "setSceneRect", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView14rubberBandRectEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "rubberBandRect", args)
- }
+  }
 
 }
 
@@ -252,12 +252,12 @@ func (this *QGraphicsView) setMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView9setMatrixERK7QMatrixb
   default:
     qtrt.ErrorResolve("QGraphicsView", "setMatrix", args)
- }
+  }
 
 }
 
@@ -270,17 +270,18 @@ func (this *QGraphicsView) isInteractive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView13isInteractiveEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "isInteractive", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsView(args ...interface{})() {
+func NewQGraphicsView(args ...interface{}) QGraphicsView {
+  return QGraphicsView{}
 }
 
 
@@ -293,12 +294,12 @@ func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView18setBackgroundBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsView", "setBackgroundBrush", args)
- }
+  }
 
 }
 
@@ -311,12 +312,12 @@ func (this *QGraphicsView) isTransformed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView13isTransformedEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "isTransformed", args)
- }
+  }
 
 }
 
@@ -334,14 +335,14 @@ func (this *QGraphicsView) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView6itemAtEii
   case 1:
     // invoke: _ZNK13QGraphicsView6itemAtERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsView", "itemAt", args)
- }
+  }
 
 }
 
@@ -362,7 +363,7 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView8centerOnERK7QPointF
   case 1:
@@ -371,7 +372,7 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
     // invoke: _ZN13QGraphicsView8centerOnEdd
   default:
     qtrt.ErrorResolve("QGraphicsView", "centerOn", args)
- }
+  }
 
 }
 
@@ -385,12 +386,12 @@ func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView18setForegroundBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QGraphicsView", "setForegroundBrush", args)
- }
+  }
 
 }
 
@@ -405,12 +406,12 @@ func (this *QGraphicsView) shear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView5shearEdd
   default:
     qtrt.ErrorResolve("QGraphicsView", "shear", args)
- }
+  }
 
 }
 
@@ -423,12 +424,12 @@ func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView15foregroundBrushEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "foregroundBrush", args)
- }
+  }
 
 }
 
@@ -442,12 +443,12 @@ func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView15updateSceneRectERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsView", "updateSceneRect", args)
- }
+  }
 
 }
 
@@ -461,12 +462,12 @@ func (this *QGraphicsView) setInteractive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView14setInteractiveEb
   default:
     qtrt.ErrorResolve("QGraphicsView", "setInteractive", args)
- }
+  }
 
 }
 
@@ -479,12 +480,12 @@ func (this *QGraphicsView) matrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView6matrixEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "matrix", args)
- }
+  }
 
 }
 
@@ -497,12 +498,12 @@ func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView17viewportTransformEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "viewportTransform", args)
- }
+  }
 
 }
 
@@ -515,12 +516,12 @@ func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView18resetCachedContentEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetCachedContent", args)
- }
+  }
 
 }
 
@@ -549,7 +550,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii
   case 1:
@@ -558,7 +559,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
     // invoke: _ZN13QGraphicsView13ensureVisibleEddddii
   default:
     qtrt.ErrorResolve("QGraphicsView", "ensureVisible", args)
- }
+  }
 
 }
 
@@ -571,12 +572,12 @@ func (this *QGraphicsView) sceneRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView9sceneRectEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "sceneRect", args)
- }
+  }
 
 }
 
@@ -589,12 +590,12 @@ func (this *QGraphicsView) scene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView5sceneEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "scene", args)
- }
+  }
 
 }
 
@@ -607,12 +608,12 @@ func (this *QGraphicsView) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView8sizeHintEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "sizeHint", args)
- }
+  }
 
 }
 
@@ -625,12 +626,12 @@ func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView15backgroundBrushEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "backgroundBrush", args)
- }
+  }
 
 }
 
@@ -669,7 +670,7 @@ func (this *QGraphicsView) items(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView5itemsEiiiiN2Qt17ItemSelectionModeE
   case 1:
@@ -686,7 +687,7 @@ func (this *QGraphicsView) items(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsView5itemsERK6QPoint
   default:
     qtrt.ErrorResolve("QGraphicsView", "items", args)
- }
+  }
 
 }
 
@@ -699,12 +700,12 @@ func (this *QGraphicsView) transform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsView9transformEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "transform", args)
- }
+  }
 
 }
 
@@ -718,12 +719,12 @@ func (this *QGraphicsView) rotate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView6rotateEd
   default:
     qtrt.ErrorResolve("QGraphicsView", "rotate", args)
- }
+  }
 
 }
 
@@ -738,12 +739,12 @@ func (this *QGraphicsView) setTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView12setTransformERK10QTransformb
   default:
     qtrt.ErrorResolve("QGraphicsView", "setTransform", args)
- }
+  }
 
 }
 
@@ -754,10 +755,10 @@ func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsView", "~QGraphicsView", args)
- }
+  }
 
 }
 
@@ -770,12 +771,12 @@ func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView11resetMatrixEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetMatrix", args)
- }
+  }
 
 }
 
@@ -788,12 +789,12 @@ func (this *QGraphicsView) resetTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView14resetTransformEv
   default:
     qtrt.ErrorResolve("QGraphicsView", "resetTransform", args)
- }
+  }
 
 }
 
@@ -807,12 +808,12 @@ func (this *QGraphicsView) setScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsView8setSceneEP14QGraphicsScene
   default:
     qtrt.ErrorResolve("QGraphicsView", "setScene", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -48,10 +48,10 @@ func (this *QSysInfo) kernelType_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelType", args)
- }
+  }
 
 }
 
@@ -62,10 +62,10 @@ func (this *QSysInfo) productType_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "productType", args)
- }
+  }
 
 }
 
@@ -76,10 +76,10 @@ func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "prettyProductName", args)
- }
+  }
 
 }
 
@@ -90,10 +90,10 @@ func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "currentCpuArchitecture", args)
- }
+  }
 
 }
 
@@ -104,10 +104,10 @@ func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
- }
+  }
 
 }
 
@@ -118,10 +118,10 @@ func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelVersion", args)
- }
+  }
 
 }
 
@@ -132,10 +132,10 @@ func (this *QSysInfo) productVersion_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "productVersion", args)
- }
+  }
 
 }
 
@@ -146,10 +146,10 @@ func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSysInfo", "buildAbi", args)
- }
+  }
 
 }
 

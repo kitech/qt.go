@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.go
 //
@@ -70,12 +70,12 @@ func (this *QGraphicsRotation) origin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation6originEv
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "origin", args)
- }
+  }
 
 }
 
@@ -89,17 +89,18 @@ func (this *QGraphicsRotation) setAngle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation8setAngleEd
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setAngle", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsRotation(args ...interface{})() {
+func NewQGraphicsRotation(args ...interface{}) QGraphicsRotation {
+  return QGraphicsRotation{}
 }
 
 
@@ -111,12 +112,12 @@ func (this *QGraphicsRotation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "metaObject", args)
- }
+  }
 
 }
 
@@ -127,10 +128,10 @@ func (this *QGraphicsRotation) FreeQGraphicsRotation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "~QGraphicsRotation", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QGraphicsRotation) setOrigin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation9setOriginERK9QVector3D
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setOrigin", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QGraphicsRotation) axis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation4axisEv
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "axis", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QGraphicsRotation) applyTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "applyTo", args)
- }
+  }
 
 }
 
@@ -203,14 +204,14 @@ func (this *QGraphicsRotation) setAxis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation7setAxisEN2Qt4AxisE
   case 1:
     // invoke: _ZN17QGraphicsRotation7setAxisERK9QVector3D
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setAxis", args)
- }
+  }
 
 }
 
@@ -223,12 +224,12 @@ func (this *QGraphicsRotation) angle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation5angleEv
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "angle", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QGraphicsScale) applyTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale7applyToEP10QMatrix4x4
   default:
     qtrt.ErrorResolve("QGraphicsScale", "applyTo", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QGraphicsScale) zScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale6zScaleEv
   default:
     qtrt.ErrorResolve("QGraphicsScale", "zScale", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QGraphicsScale) xScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale6xScaleEv
   default:
     qtrt.ErrorResolve("QGraphicsScale", "xScale", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QGraphicsScale) yScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale6yScaleEv
   default:
     qtrt.ErrorResolve("QGraphicsScale", "yScale", args)
- }
+  }
 
 }
 
@@ -315,12 +316,12 @@ func (this *QGraphicsScale) setOrigin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setOriginERK9QVector3D
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setOrigin", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QGraphicsScale) setYScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setYScaleEd
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setYScale", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QGraphicsScale) origin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale6originEv
   default:
     qtrt.ErrorResolve("QGraphicsScale", "origin", args)
- }
+  }
 
 }
 
@@ -371,12 +372,12 @@ func (this *QGraphicsScale) setZScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setZScaleEd
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setZScale", args)
- }
+  }
 
 }
 
@@ -390,12 +391,12 @@ func (this *QGraphicsScale) setXScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setXScaleEd
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setXScale", args)
- }
+  }
 
 }
 
@@ -408,17 +409,18 @@ func (this *QGraphicsScale) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsScale", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsScale(args ...interface{})() {
+func NewQGraphicsScale(args ...interface{}) QGraphicsScale {
+  return QGraphicsScale{}
 }
 
 
@@ -428,10 +430,10 @@ func (this *QGraphicsScale) FreeQGraphicsScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsScale", "~QGraphicsScale", args)
- }
+  }
 
 }
 
@@ -445,12 +447,12 @@ func (this *QGraphicsTransform) applyTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "applyTo", args)
- }
+  }
 
 }
 
@@ -461,15 +463,16 @@ func (this *QGraphicsTransform) FreeQGraphicsTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "~QGraphicsTransform", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsTransform(args ...interface{})() {
+func NewQGraphicsTransform(args ...interface{}) QGraphicsTransform {
+  return QGraphicsTransform{}
 }
 
 
@@ -481,12 +484,12 @@ func (this *QGraphicsTransform) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsTransform10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "metaObject", args)
- }
+  }
 
 }
 

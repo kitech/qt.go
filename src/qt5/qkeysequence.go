@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.go
 //
@@ -50,12 +50,12 @@ func (this *QKeySequence) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence10isDetachedEv
   default:
     qtrt.ErrorResolve("QKeySequence", "isDetached", args)
- }
+  }
 
 }
 
@@ -68,17 +68,18 @@ func (this *QKeySequence) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence7isEmptyEv
   default:
     qtrt.ErrorResolve("QKeySequence", "isEmpty", args)
- }
+  }
 
 }
 
 
-func NewQKeySequence(args ...interface{})() {
+func NewQKeySequence(args ...interface{}) QKeySequence {
+  return QKeySequence{}
 }
 
 
@@ -90,12 +91,12 @@ func (this *QKeySequence) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence5countEv
   default:
     qtrt.ErrorResolve("QKeySequence", "count", args)
- }
+  }
 
 }
 
@@ -106,10 +107,10 @@ func (this *QKeySequence) mnemonic_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QKeySequence", "mnemonic", args)
- }
+  }
 
 }
 
@@ -120,10 +121,10 @@ func (this *QKeySequence) FreeQKeySequence(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QKeySequence", "~QKeySequence", args)
- }
+  }
 
 }
 
@@ -137,12 +138,12 @@ func (this *QKeySequence) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QKeySequence4swapERS_
   default:
     qtrt.ErrorResolve("QKeySequence", "swap", args)
- }
+  }
 
 }
 

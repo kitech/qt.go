@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -42,7 +42,8 @@ type QStylePainter struct {
 }
 
 
-func NewQStylePainter(args ...interface{})() {
+func NewQStylePainter(args ...interface{}) QStylePainter {
+  return QStylePainter{}
 }
 
 
@@ -59,14 +60,14 @@ func (this *QStylePainter) begin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget
   case 1:
     // invoke: _ZN13QStylePainter5beginEP7QWidget
   default:
     qtrt.ErrorResolve("QStylePainter", "begin", args)
- }
+  }
 
 }
 
@@ -82,12 +83,12 @@ func (this *QStylePainter) drawItemPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap
   default:
     qtrt.ErrorResolve("QStylePainter", "drawItemPixmap", args)
- }
+  }
 
 }
 
@@ -100,12 +101,12 @@ func (this *QStylePainter) style(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QStylePainter5styleEv
   default:
     qtrt.ErrorResolve("QStylePainter", "style", args)
- }
+  }
 
 }
 

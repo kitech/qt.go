@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.go
 //
@@ -99,17 +99,18 @@ func (this *QTextLength) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLength5valueEd
   default:
     qtrt.ErrorResolve("QTextLength", "value", args)
- }
+  }
 
 }
 
 
-func NewQTextLength(args ...interface{})() {
+func NewQTextLength(args ...interface{}) QTextLength {
+  return QTextLength{}
 }
 
 
@@ -121,17 +122,18 @@ func (this *QTextLength) rawValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLength8rawValueEv
   default:
     qtrt.ErrorResolve("QTextLength", "rawValue", args)
- }
+  }
 
 }
 
 
-func NewQTextImageFormat(args ...interface{})() {
+func NewQTextImageFormat(args ...interface{}) QTextImageFormat {
+  return QTextImageFormat{}
 }
 
 
@@ -143,12 +145,12 @@ func (this *QTextImageFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextImageFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextImageFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -161,12 +163,12 @@ func (this *QTextImageFormat) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextImageFormat5widthEv
   default:
     qtrt.ErrorResolve("QTextImageFormat", "width", args)
- }
+  }
 
 }
 
@@ -180,12 +182,12 @@ func (this *QTextImageFormat) setHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextImageFormat9setHeightEd
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setHeight", args)
- }
+  }
 
 }
 
@@ -199,12 +201,12 @@ func (this *QTextImageFormat) setWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextImageFormat8setWidthEd
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setWidth", args)
- }
+  }
 
 }
 
@@ -218,12 +220,12 @@ func (this *QTextImageFormat) setName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextImageFormat7setNameERK7QString
   default:
     qtrt.ErrorResolve("QTextImageFormat", "setName", args)
- }
+  }
 
 }
 
@@ -236,12 +238,12 @@ func (this *QTextImageFormat) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextImageFormat4nameEv
   default:
     qtrt.ErrorResolve("QTextImageFormat", "name", args)
- }
+  }
 
 }
 
@@ -254,12 +256,12 @@ func (this *QTextImageFormat) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextImageFormat6heightEv
   default:
     qtrt.ErrorResolve("QTextImageFormat", "height", args)
- }
+  }
 
 }
 
@@ -272,12 +274,12 @@ func (this *QTextFormat) toBlockFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13toBlockFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toBlockFormat", args)
- }
+  }
 
 }
 
@@ -291,12 +293,12 @@ func (this *QTextFormat) stringProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat14stringPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "stringProperty", args)
- }
+  }
 
 }
 
@@ -310,12 +312,12 @@ func (this *QTextFormat) lengthVectorProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat20lengthVectorPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthVectorProperty", args)
- }
+  }
 
 }
 
@@ -328,12 +330,12 @@ func (this *QTextFormat) objectIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat11objectIndexEv
   default:
     qtrt.ErrorResolve("QTextFormat", "objectIndex", args)
- }
+  }
 
 }
 
@@ -347,12 +349,12 @@ func (this *QTextFormat) setObjectIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat14setObjectIndexEi
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectIndex", args)
- }
+  }
 
 }
 
@@ -365,12 +367,12 @@ func (this *QTextFormat) clearForeground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat15clearForegroundEv
   default:
     qtrt.ErrorResolve("QTextFormat", "clearForeground", args)
- }
+  }
 
 }
 
@@ -383,12 +385,12 @@ func (this *QTextFormat) isTableCellFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat17isTableCellFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableCellFormat", args)
- }
+  }
 
 }
 
@@ -399,10 +401,10 @@ func (this *QTextFormat) FreeQTextFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextFormat", "~QTextFormat", args)
- }
+  }
 
 }
 
@@ -415,17 +417,18 @@ func (this *QTextFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isValid", args)
- }
+  }
 
 }
 
 
-func NewQTextFormat(args ...interface{})() {
+func NewQTextFormat(args ...interface{}) QTextFormat {
+  return QTextFormat{}
 }
 
 
@@ -438,12 +441,12 @@ func (this *QTextFormat) lengthProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat14lengthPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "lengthProperty", args)
- }
+  }
 
 }
 
@@ -457,12 +460,12 @@ func (this *QTextFormat) merge(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat5mergeERKS_
   default:
     qtrt.ErrorResolve("QTextFormat", "merge", args)
- }
+  }
 
 }
 
@@ -476,12 +479,12 @@ func (this *QTextFormat) colorProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13colorPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "colorProperty", args)
- }
+  }
 
 }
 
@@ -495,12 +498,12 @@ func (this *QTextFormat) setForeground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat13setForegroundERK6QBrush
   default:
     qtrt.ErrorResolve("QTextFormat", "setForeground", args)
- }
+  }
 
 }
 
@@ -514,12 +517,12 @@ func (this *QTextFormat) boolProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat12boolPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "boolProperty", args)
- }
+  }
 
 }
 
@@ -532,12 +535,12 @@ func (this *QTextFormat) isListFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat12isListFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isListFormat", args)
- }
+  }
 
 }
 
@@ -550,12 +553,12 @@ func (this *QTextFormat) isImageFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13isImageFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isImageFormat", args)
- }
+  }
 
 }
 
@@ -569,12 +572,12 @@ func (this *QTextFormat) clearProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat13clearPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "clearProperty", args)
- }
+  }
 
 }
 
@@ -587,12 +590,12 @@ func (this *QTextFormat) toFrameFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13toFrameFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toFrameFormat", args)
- }
+  }
 
 }
 
@@ -606,12 +609,12 @@ func (this *QTextFormat) brushProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13brushPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "brushProperty", args)
- }
+  }
 
 }
 
@@ -624,12 +627,12 @@ func (this *QTextFormat) propertyCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13propertyCountEv
   default:
     qtrt.ErrorResolve("QTextFormat", "propertyCount", args)
- }
+  }
 
 }
 
@@ -643,12 +646,12 @@ func (this *QTextFormat) penProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat11penPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "penProperty", args)
- }
+  }
 
 }
 
@@ -662,12 +665,12 @@ func (this *QTextFormat) property(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat8propertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "property", args)
- }
+  }
 
 }
 
@@ -680,12 +683,12 @@ func (this *QTextFormat) isTableFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13isTableFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isTableFormat", args)
- }
+  }
 
 }
 
@@ -704,14 +707,14 @@ func (this *QTextFormat) setProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat11setPropertyEiRK7QVectorI11QTextLengthE
   case 1:
     // invoke: _ZN11QTextFormat11setPropertyEiRK8QVariant
   default:
     qtrt.ErrorResolve("QTextFormat", "setProperty", args)
- }
+  }
 
 }
 
@@ -722,10 +725,10 @@ func (this *QTextFormat) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextFormat", "type", args)
- }
+  }
 
 }
 
@@ -738,12 +741,12 @@ func (this *QTextFormat) isCharFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat12isCharFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isCharFormat", args)
- }
+  }
 
 }
 
@@ -756,12 +759,12 @@ func (this *QTextFormat) clearBackground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat15clearBackgroundEv
   default:
     qtrt.ErrorResolve("QTextFormat", "clearBackground", args)
- }
+  }
 
 }
 
@@ -774,12 +777,12 @@ func (this *QTextFormat) isBlockFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13isBlockFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isBlockFormat", args)
- }
+  }
 
 }
 
@@ -792,12 +795,12 @@ func (this *QTextFormat) background(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat10backgroundEv
   default:
     qtrt.ErrorResolve("QTextFormat", "background", args)
- }
+  }
 
 }
 
@@ -811,12 +814,12 @@ func (this *QTextFormat) doubleProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat14doublePropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "doubleProperty", args)
- }
+  }
 
 }
 
@@ -830,12 +833,12 @@ func (this *QTextFormat) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat4swapERS_
   default:
     qtrt.ErrorResolve("QTextFormat", "swap", args)
- }
+  }
 
 }
 
@@ -848,12 +851,12 @@ func (this *QTextFormat) toImageFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13toImageFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toImageFormat", args)
- }
+  }
 
 }
 
@@ -867,12 +870,12 @@ func (this *QTextFormat) hasProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat11hasPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "hasProperty", args)
- }
+  }
 
 }
 
@@ -885,12 +888,12 @@ func (this *QTextFormat) foreground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat10foregroundEv
   default:
     qtrt.ErrorResolve("QTextFormat", "foreground", args)
- }
+  }
 
 }
 
@@ -904,12 +907,12 @@ func (this *QTextFormat) setObjectType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat13setObjectTypeEi
   default:
     qtrt.ErrorResolve("QTextFormat", "setObjectType", args)
- }
+  }
 
 }
 
@@ -923,12 +926,12 @@ func (this *QTextFormat) setBackground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QTextFormat13setBackgroundERK6QBrush
   default:
     qtrt.ErrorResolve("QTextFormat", "setBackground", args)
- }
+  }
 
 }
 
@@ -941,12 +944,12 @@ func (this *QTextFormat) toTableFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13toTableFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableFormat", args)
- }
+  }
 
 }
 
@@ -959,12 +962,12 @@ func (this *QTextFormat) isFrameFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat13isFrameFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isFrameFormat", args)
- }
+  }
 
 }
 
@@ -978,12 +981,12 @@ func (this *QTextFormat) intProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat11intPropertyEi
   default:
     qtrt.ErrorResolve("QTextFormat", "intProperty", args)
- }
+  }
 
 }
 
@@ -996,12 +999,12 @@ func (this *QTextFormat) toCharFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat12toCharFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toCharFormat", args)
- }
+  }
 
 }
 
@@ -1014,12 +1017,12 @@ func (this *QTextFormat) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat7isEmptyEv
   default:
     qtrt.ErrorResolve("QTextFormat", "isEmpty", args)
- }
+  }
 
 }
 
@@ -1032,12 +1035,12 @@ func (this *QTextFormat) toTableCellFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat17toTableCellFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toTableCellFormat", args)
- }
+  }
 
 }
 
@@ -1050,12 +1053,12 @@ func (this *QTextFormat) objectType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat10objectTypeEv
   default:
     qtrt.ErrorResolve("QTextFormat", "objectType", args)
- }
+  }
 
 }
 
@@ -1068,12 +1071,12 @@ func (this *QTextFormat) toListFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat12toListFormatEv
   default:
     qtrt.ErrorResolve("QTextFormat", "toListFormat", args)
- }
+  }
 
 }
 
@@ -1086,12 +1089,12 @@ func (this *QTextFormat) properties(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QTextFormat10propertiesEv
   default:
     qtrt.ErrorResolve("QTextFormat", "properties", args)
- }
+  }
 
 }
 
@@ -1104,12 +1107,12 @@ func (this *QTextBlockFormat) indent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat6indentEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "indent", args)
- }
+  }
 
 }
 
@@ -1123,12 +1126,12 @@ func (this *QTextBlockFormat) setTextIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setTextIndentEd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTextIndent", args)
- }
+  }
 
 }
 
@@ -1142,12 +1145,12 @@ func (this *QTextBlockFormat) setNonBreakableLines(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat20setNonBreakableLinesEb
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setNonBreakableLines", args)
- }
+  }
 
 }
 
@@ -1161,12 +1164,12 @@ func (this *QTextBlockFormat) setIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat9setIndentEi
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setIndent", args)
- }
+  }
 
 }
 
@@ -1179,12 +1182,12 @@ func (this *QTextBlockFormat) textIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10textIndentEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "textIndent", args)
- }
+  }
 
 }
 
@@ -1201,19 +1204,20 @@ func (this *QTextBlockFormat) lineHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEv
   case 1:
     // invoke: _ZNK16QTextBlockFormat10lineHeightEdd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeight", args)
- }
+  }
 
 }
 
 
-func NewQTextBlockFormat(args ...interface{})() {
+func NewQTextBlockFormat(args ...interface{}) QTextBlockFormat {
+  return QTextBlockFormat{}
 }
 
 
@@ -1226,12 +1230,12 @@ func (this *QTextBlockFormat) setRightMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat14setRightMarginEd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setRightMargin", args)
- }
+  }
 
 }
 
@@ -1244,12 +1248,12 @@ func (this *QTextBlockFormat) topMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat9topMarginEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "topMargin", args)
- }
+  }
 
 }
 
@@ -1262,12 +1266,12 @@ func (this *QTextBlockFormat) rightMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat11rightMarginEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "rightMargin", args)
- }
+  }
 
 }
 
@@ -1280,12 +1284,12 @@ func (this *QTextBlockFormat) bottomMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat12bottomMarginEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "bottomMargin", args)
- }
+  }
 
 }
 
@@ -1299,12 +1303,12 @@ func (this *QTextBlockFormat) setTopMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat12setTopMarginEd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setTopMargin", args)
- }
+  }
 
 }
 
@@ -1317,12 +1321,12 @@ func (this *QTextBlockFormat) leftMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat10leftMarginEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "leftMargin", args)
- }
+  }
 
 }
 
@@ -1337,12 +1341,12 @@ func (this *QTextBlockFormat) setLineHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setLineHeightEdi
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLineHeight", args)
- }
+  }
 
 }
 
@@ -1356,12 +1360,12 @@ func (this *QTextBlockFormat) setBottomMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat15setBottomMarginEd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setBottomMargin", args)
- }
+  }
 
 }
 
@@ -1374,12 +1378,12 @@ func (this *QTextBlockFormat) lineHeightType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat14lineHeightTypeEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "lineHeightType", args)
- }
+  }
 
 }
 
@@ -1393,12 +1397,12 @@ func (this *QTextBlockFormat) setLeftMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextBlockFormat13setLeftMarginEd
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "setLeftMargin", args)
- }
+  }
 
 }
 
@@ -1411,12 +1415,12 @@ func (this *QTextBlockFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -1429,12 +1433,12 @@ func (this *QTextBlockFormat) nonBreakableLines(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextBlockFormat17nonBreakableLinesEv
   default:
     qtrt.ErrorResolve("QTextBlockFormat", "nonBreakableLines", args)
- }
+  }
 
 }
 
@@ -1448,12 +1452,12 @@ func (this *QTextCharFormat) setFontLetterSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat20setFontLetterSpacingEd
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontLetterSpacing", args)
- }
+  }
 
 }
 
@@ -1466,12 +1470,12 @@ func (this *QTextCharFormat) isAnchor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat8isAnchorEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isAnchor", args)
- }
+  }
 
 }
 
@@ -1489,14 +1493,14 @@ func (this *QTextCharFormat) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat7setFontERK5QFont
   case 1:
     // invoke: _ZN15QTextCharFormat7setFontERK5QFontNS_33FontPropertiesInheritanceBehaviorE
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFont", args)
- }
+  }
 
 }
 
@@ -1509,12 +1513,12 @@ func (this *QTextCharFormat) fontOverline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat12fontOverlineEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontOverline", args)
- }
+  }
 
 }
 
@@ -1527,12 +1531,12 @@ func (this *QTextCharFormat) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat4fontEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "font", args)
- }
+  }
 
 }
 
@@ -1545,12 +1549,12 @@ func (this *QTextCharFormat) fontFamily(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontFamilyEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFamily", args)
- }
+  }
 
 }
 
@@ -1563,12 +1567,12 @@ func (this *QTextCharFormat) fontStrikeOut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontStrikeOutEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStrikeOut", args)
- }
+  }
 
 }
 
@@ -1582,12 +1586,12 @@ func (this *QTextCharFormat) setFontPointSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontPointSizeEd
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontPointSize", args)
- }
+  }
 
 }
 
@@ -1601,12 +1605,12 @@ func (this *QTextCharFormat) setUnderlineColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat17setUnderlineColorERK6QColor
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setUnderlineColor", args)
- }
+  }
 
 }
 
@@ -1619,12 +1623,12 @@ func (this *QTextCharFormat) tableCellRowSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat16tableCellRowSpanEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellRowSpan", args)
- }
+  }
 
 }
 
@@ -1638,12 +1642,12 @@ func (this *QTextCharFormat) setFontUnderline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontUnderlineEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontUnderline", args)
- }
+  }
 
 }
 
@@ -1656,12 +1660,12 @@ func (this *QTextCharFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -1674,12 +1678,12 @@ func (this *QTextCharFormat) fontItalic(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontItalicEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontItalic", args)
- }
+  }
 
 }
 
@@ -1693,12 +1697,12 @@ func (this *QTextCharFormat) setToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat10setToolTipERK7QString
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setToolTip", args)
- }
+  }
 
 }
 
@@ -1712,12 +1716,12 @@ func (this *QTextCharFormat) setTextOutline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat14setTextOutlineERK4QPen
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTextOutline", args)
- }
+  }
 
 }
 
@@ -1731,12 +1735,12 @@ func (this *QTextCharFormat) setTableCellRowSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat19setTableCellRowSpanEi
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellRowSpan", args)
- }
+  }
 
 }
 
@@ -1750,12 +1754,12 @@ func (this *QTextCharFormat) setAnchor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat9setAnchorEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchor", args)
- }
+  }
 
 }
 
@@ -1768,17 +1772,18 @@ func (this *QTextCharFormat) fontPointSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontPointSizeEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontPointSize", args)
- }
+  }
 
 }
 
 
-func NewQTextCharFormat(args ...interface{})() {
+func NewQTextCharFormat(args ...interface{}) QTextCharFormat {
+  return QTextCharFormat{}
 }
 
 
@@ -1791,12 +1796,12 @@ func (this *QTextCharFormat) setFontStrikeOut(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontStrikeOutEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStrikeOut", args)
- }
+  }
 
 }
 
@@ -1809,12 +1814,12 @@ func (this *QTextCharFormat) fontWordSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat15fontWordSpacingEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWordSpacing", args)
- }
+  }
 
 }
 
@@ -1827,12 +1832,12 @@ func (this *QTextCharFormat) toolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat7toolTipEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "toolTip", args)
- }
+  }
 
 }
 
@@ -1846,12 +1851,12 @@ func (this *QTextCharFormat) setAnchorNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat14setAnchorNamesERK11QStringList
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorNames", args)
- }
+  }
 
 }
 
@@ -1864,12 +1869,12 @@ func (this *QTextCharFormat) anchorNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat11anchorNamesEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorNames", args)
- }
+  }
 
 }
 
@@ -1883,12 +1888,12 @@ func (this *QTextCharFormat) setFontFixedPitch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat17setFontFixedPitchEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFixedPitch", args)
- }
+  }
 
 }
 
@@ -1902,12 +1907,12 @@ func (this *QTextCharFormat) setFontItalic(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontItalicEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontItalic", args)
- }
+  }
 
 }
 
@@ -1921,12 +1926,12 @@ func (this *QTextCharFormat) setFontFamily(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontFamilyERK7QString
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontFamily", args)
- }
+  }
 
 }
 
@@ -1939,12 +1944,12 @@ func (this *QTextCharFormat) fontFixedPitch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat14fontFixedPitchEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontFixedPitch", args)
- }
+  }
 
 }
 
@@ -1958,12 +1963,12 @@ func (this *QTextCharFormat) setAnchorHref(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat13setAnchorHrefERK7QString
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorHref", args)
- }
+  }
 
 }
 
@@ -1976,12 +1981,12 @@ func (this *QTextCharFormat) fontStretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontStretchEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontStretch", args)
- }
+  }
 
 }
 
@@ -1995,12 +2000,12 @@ func (this *QTextCharFormat) setFontKerning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat14setFontKerningEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontKerning", args)
- }
+  }
 
 }
 
@@ -2013,12 +2018,12 @@ func (this *QTextCharFormat) tableCellColumnSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat19tableCellColumnSpanEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "tableCellColumnSpan", args)
- }
+  }
 
 }
 
@@ -2031,12 +2036,12 @@ func (this *QTextCharFormat) fontLetterSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat17fontLetterSpacingEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontLetterSpacing", args)
- }
+  }
 
 }
 
@@ -2049,12 +2054,12 @@ func (this *QTextCharFormat) anchorHref(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorHrefEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorHref", args)
- }
+  }
 
 }
 
@@ -2067,12 +2072,12 @@ func (this *QTextCharFormat) anchorName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat10anchorNameEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "anchorName", args)
- }
+  }
 
 }
 
@@ -2086,12 +2091,12 @@ func (this *QTextCharFormat) setFontStretch(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat14setFontStretchEi
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontStretch", args)
- }
+  }
 
 }
 
@@ -2105,12 +2110,12 @@ func (this *QTextCharFormat) setAnchorName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat13setAnchorNameERK7QString
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setAnchorName", args)
- }
+  }
 
 }
 
@@ -2123,12 +2128,12 @@ func (this *QTextCharFormat) fontKerning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat11fontKerningEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontKerning", args)
- }
+  }
 
 }
 
@@ -2142,12 +2147,12 @@ func (this *QTextCharFormat) setFontWeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontWeightEi
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWeight", args)
- }
+  }
 
 }
 
@@ -2160,12 +2165,12 @@ func (this *QTextCharFormat) fontUnderline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat13fontUnderlineEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontUnderline", args)
- }
+  }
 
 }
 
@@ -2179,12 +2184,12 @@ func (this *QTextCharFormat) setFontWordSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat18setFontWordSpacingEd
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontWordSpacing", args)
- }
+  }
 
 }
 
@@ -2197,12 +2202,12 @@ func (this *QTextCharFormat) underlineColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat14underlineColorEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "underlineColor", args)
- }
+  }
 
 }
 
@@ -2215,12 +2220,12 @@ func (this *QTextCharFormat) fontWeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat10fontWeightEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "fontWeight", args)
- }
+  }
 
 }
 
@@ -2234,12 +2239,12 @@ func (this *QTextCharFormat) setFontOverline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat15setFontOverlineEb
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setFontOverline", args)
- }
+  }
 
 }
 
@@ -2253,12 +2258,12 @@ func (this *QTextCharFormat) setTableCellColumnSpan(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextCharFormat22setTableCellColumnSpanEi
   default:
     qtrt.ErrorResolve("QTextCharFormat", "setTableCellColumnSpan", args)
- }
+  }
 
 }
 
@@ -2271,17 +2276,18 @@ func (this *QTextCharFormat) textOutline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextCharFormat11textOutlineEv
   default:
     qtrt.ErrorResolve("QTextCharFormat", "textOutline", args)
- }
+  }
 
 }
 
 
-func NewQTextTableFormat(args ...interface{})() {
+func NewQTextTableFormat(args ...interface{}) QTextTableFormat {
+  return QTextTableFormat{}
 }
 
 
@@ -2293,12 +2299,12 @@ func (this *QTextTableFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -2311,12 +2317,12 @@ func (this *QTextTableFormat) headerRowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat14headerRowCountEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "headerRowCount", args)
- }
+  }
 
 }
 
@@ -2329,12 +2335,12 @@ func (this *QTextTableFormat) columns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat7columnsEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columns", args)
- }
+  }
 
 }
 
@@ -2347,12 +2353,12 @@ func (this *QTextTableFormat) columnWidthConstraints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat22columnWidthConstraintsEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "columnWidthConstraints", args)
- }
+  }
 
 }
 
@@ -2366,12 +2372,12 @@ func (this *QTextTableFormat) setCellPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextTableFormat14setCellPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellPadding", args)
- }
+  }
 
 }
 
@@ -2384,12 +2390,12 @@ func (this *QTextTableFormat) cellPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellPaddingEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellPadding", args)
- }
+  }
 
 }
 
@@ -2403,12 +2409,12 @@ func (this *QTextTableFormat) setCellSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextTableFormat14setCellSpacingEd
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setCellSpacing", args)
- }
+  }
 
 }
 
@@ -2422,12 +2428,12 @@ func (this *QTextTableFormat) setColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextTableFormat10setColumnsEi
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setColumns", args)
- }
+  }
 
 }
 
@@ -2440,12 +2446,12 @@ func (this *QTextTableFormat) clearColumnWidthConstraints(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextTableFormat27clearColumnWidthConstraintsEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "clearColumnWidthConstraints", args)
- }
+  }
 
 }
 
@@ -2459,12 +2465,12 @@ func (this *QTextTableFormat) setHeaderRowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextTableFormat17setHeaderRowCountEi
   default:
     qtrt.ErrorResolve("QTextTableFormat", "setHeaderRowCount", args)
- }
+  }
 
 }
 
@@ -2477,17 +2483,18 @@ func (this *QTextTableFormat) cellSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextTableFormat11cellSpacingEv
   default:
     qtrt.ErrorResolve("QTextTableFormat", "cellSpacing", args)
- }
+  }
 
 }
 
 
-func NewQTextTableCellFormat(args ...interface{})() {
+func NewQTextTableCellFormat(args ...interface{}) QTextTableCellFormat {
+  return QTextTableCellFormat{}
 }
 
 
@@ -2500,12 +2507,12 @@ func (this *QTextTableCellFormat) setLeftPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextTableCellFormat14setLeftPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setLeftPadding", args)
- }
+  }
 
 }
 
@@ -2518,12 +2525,12 @@ func (this *QTextTableCellFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -2537,12 +2544,12 @@ func (this *QTextTableCellFormat) setTopPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextTableCellFormat13setTopPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setTopPadding", args)
- }
+  }
 
 }
 
@@ -2555,12 +2562,12 @@ func (this *QTextTableCellFormat) leftPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat11leftPaddingEv
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "leftPadding", args)
- }
+  }
 
 }
 
@@ -2574,12 +2581,12 @@ func (this *QTextTableCellFormat) setPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextTableCellFormat10setPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setPadding", args)
- }
+  }
 
 }
 
@@ -2592,12 +2599,12 @@ func (this *QTextTableCellFormat) topPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat10topPaddingEv
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "topPadding", args)
- }
+  }
 
 }
 
@@ -2610,12 +2617,12 @@ func (this *QTextTableCellFormat) rightPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat12rightPaddingEv
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "rightPadding", args)
- }
+  }
 
 }
 
@@ -2628,12 +2635,12 @@ func (this *QTextTableCellFormat) bottomPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QTextTableCellFormat13bottomPaddingEv
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "bottomPadding", args)
- }
+  }
 
 }
 
@@ -2647,12 +2654,12 @@ func (this *QTextTableCellFormat) setRightPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextTableCellFormat15setRightPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setRightPadding", args)
- }
+  }
 
 }
 
@@ -2666,12 +2673,12 @@ func (this *QTextTableCellFormat) setBottomPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QTextTableCellFormat16setBottomPaddingEd
   default:
     qtrt.ErrorResolve("QTextTableCellFormat", "setBottomPadding", args)
- }
+  }
 
 }
 
@@ -2684,17 +2691,18 @@ func (this *QTextListFormat) indent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextListFormat6indentEv
   default:
     qtrt.ErrorResolve("QTextListFormat", "indent", args)
- }
+  }
 
 }
 
 
-func NewQTextListFormat(args ...interface{})() {
+func NewQTextListFormat(args ...interface{}) QTextListFormat {
+  return QTextListFormat{}
 }
 
 
@@ -2707,12 +2715,12 @@ func (this *QTextListFormat) setIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextListFormat9setIndentEi
   default:
     qtrt.ErrorResolve("QTextListFormat", "setIndent", args)
- }
+  }
 
 }
 
@@ -2725,12 +2733,12 @@ func (this *QTextListFormat) numberSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextListFormat12numberSuffixEv
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberSuffix", args)
- }
+  }
 
 }
 
@@ -2743,12 +2751,12 @@ func (this *QTextListFormat) numberPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextListFormat12numberPrefixEv
   default:
     qtrt.ErrorResolve("QTextListFormat", "numberPrefix", args)
- }
+  }
 
 }
 
@@ -2761,12 +2769,12 @@ func (this *QTextListFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QTextListFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextListFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -2780,12 +2788,12 @@ func (this *QTextListFormat) setNumberSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextListFormat15setNumberSuffixERK7QString
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberSuffix", args)
- }
+  }
 
 }
 
@@ -2799,12 +2807,12 @@ func (this *QTextListFormat) setNumberPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QTextListFormat15setNumberPrefixERK7QString
   default:
     qtrt.ErrorResolve("QTextListFormat", "setNumberPrefix", args)
- }
+  }
 
 }
 
@@ -2817,12 +2825,12 @@ func (this *QTextFrameFormat) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7isValidEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "isValid", args)
- }
+  }
 
 }
 
@@ -2839,14 +2847,14 @@ func (this *QTextFrameFormat) setHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setHeightEd
   case 1:
     // invoke: _ZN16QTextFrameFormat9setHeightERK11QTextLength
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setHeight", args)
- }
+  }
 
 }
 
@@ -2860,12 +2868,12 @@ func (this *QTextFrameFormat) setBorderBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat14setBorderBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorderBrush", args)
- }
+  }
 
 }
 
@@ -2878,12 +2886,12 @@ func (this *QTextFrameFormat) margin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6marginEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "margin", args)
- }
+  }
 
 }
 
@@ -2896,12 +2904,12 @@ func (this *QTextFrameFormat) borderBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11borderBrushEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "borderBrush", args)
- }
+  }
 
 }
 
@@ -2915,12 +2923,12 @@ func (this *QTextFrameFormat) setRightMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat14setRightMarginEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setRightMargin", args)
- }
+  }
 
 }
 
@@ -2934,12 +2942,12 @@ func (this *QTextFrameFormat) setMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setMarginEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setMargin", args)
- }
+  }
 
 }
 
@@ -2953,12 +2961,12 @@ func (this *QTextFrameFormat) setBorder(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat9setBorderEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBorder", args)
- }
+  }
 
 }
 
@@ -2975,14 +2983,14 @@ func (this *QTextFrameFormat) setWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat8setWidthERK11QTextLength
   case 1:
     // invoke: _ZN16QTextFrameFormat8setWidthEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setWidth", args)
- }
+  }
 
 }
 
@@ -2995,12 +3003,12 @@ func (this *QTextFrameFormat) bottomMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat12bottomMarginEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "bottomMargin", args)
- }
+  }
 
 }
 
@@ -3014,12 +3022,12 @@ func (this *QTextFrameFormat) setBottomMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat15setBottomMarginEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setBottomMargin", args)
- }
+  }
 
 }
 
@@ -3032,12 +3040,12 @@ func (this *QTextFrameFormat) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6heightEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "height", args)
- }
+  }
 
 }
 
@@ -3050,12 +3058,12 @@ func (this *QTextFrameFormat) rightMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat11rightMarginEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "rightMargin", args)
- }
+  }
 
 }
 
@@ -3069,12 +3077,12 @@ func (this *QTextFrameFormat) setPadding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat10setPaddingEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setPadding", args)
- }
+  }
 
 }
 
@@ -3088,12 +3096,12 @@ func (this *QTextFrameFormat) setTopMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat12setTopMarginEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setTopMargin", args)
- }
+  }
 
 }
 
@@ -3106,12 +3114,12 @@ func (this *QTextFrameFormat) topMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat9topMarginEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "topMargin", args)
- }
+  }
 
 }
 
@@ -3124,17 +3132,18 @@ func (this *QTextFrameFormat) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat5widthEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "width", args)
- }
+  }
 
 }
 
 
-func NewQTextFrameFormat(args ...interface{})() {
+func NewQTextFrameFormat(args ...interface{}) QTextFrameFormat {
+  return QTextFrameFormat{}
 }
 
 
@@ -3146,12 +3155,12 @@ func (this *QTextFrameFormat) padding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7paddingEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "padding", args)
- }
+  }
 
 }
 
@@ -3165,12 +3174,12 @@ func (this *QTextFrameFormat) setLeftMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QTextFrameFormat13setLeftMarginEd
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "setLeftMargin", args)
- }
+  }
 
 }
 
@@ -3183,12 +3192,12 @@ func (this *QTextFrameFormat) border(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat6borderEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "border", args)
- }
+  }
 
 }
 
@@ -3201,12 +3210,12 @@ func (this *QTextFrameFormat) leftMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QTextFrameFormat10leftMarginEv
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "leftMargin", args)
- }
+  }
 
 }
 

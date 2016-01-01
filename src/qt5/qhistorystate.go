@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -52,17 +52,18 @@ func (this *QHistoryState) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QHistoryState10metaObjectEv
   default:
     qtrt.ErrorResolve("QHistoryState", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQHistoryState(args ...interface{})() {
+func NewQHistoryState(args ...interface{}) QHistoryState {
+  return QHistoryState{}
 }
 
 
@@ -75,12 +76,12 @@ func (this *QHistoryState) setDefaultState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QHistoryState15setDefaultStateEP14QAbstractState
   default:
     qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QHistoryState) defaultState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QHistoryState12defaultStateEv
   default:
     qtrt.ErrorResolve("QHistoryState", "defaultState", args)
- }
+  }
 
 }
 
@@ -109,10 +110,10 @@ func (this *QHistoryState) FreeQHistoryState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QHistoryState", "~QHistoryState", args)
- }
+  }
 
 }
 

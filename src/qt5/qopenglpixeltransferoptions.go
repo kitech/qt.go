@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.go
 //
@@ -42,7 +42,8 @@ type QOpenGLPixelTransferOptions struct {
 }
 
 
-func NewQOpenGLPixelTransferOptions(args ...interface{})() {
+func NewQOpenGLPixelTransferOptions(args ...interface{}) QOpenGLPixelTransferOptions {
+  return QOpenGLPixelTransferOptions{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QOpenGLPixelTransferOptions) FreeQOpenGLPixelTransferOptions(args ..
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "~QOpenGLPixelTransferOptions", args)
- }
+  }
 
 }
 
@@ -68,12 +69,12 @@ func (this *QOpenGLPixelTransferOptions) isSwapBytesEnabled(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "isSwapBytesEnabled", args)
- }
+  }
 
 }
 
@@ -87,12 +88,12 @@ func (this *QOpenGLPixelTransferOptions) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions4swapERS_
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "swap", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QOpenGLPixelTransferOptions) skipImages(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions10skipImagesEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipImages", args)
- }
+  }
 
 }
 
@@ -124,12 +125,12 @@ func (this *QOpenGLPixelTransferOptions) setSkipRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions11setSkipRowsEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipRows", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QOpenGLPixelTransferOptions) skipPixels(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions10skipPixelsEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipPixels", args)
- }
+  }
 
 }
 
@@ -161,12 +162,12 @@ func (this *QOpenGLPixelTransferOptions) setRowLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions12setRowLengthEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setRowLength", args)
- }
+  }
 
 }
 
@@ -179,12 +180,12 @@ func (this *QOpenGLPixelTransferOptions) imageHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions11imageHeightEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "imageHeight", args)
- }
+  }
 
 }
 
@@ -198,12 +199,12 @@ func (this *QOpenGLPixelTransferOptions) setImageHeight(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions14setImageHeightEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setImageHeight", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QOpenGLPixelTransferOptions) skipRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions8skipRowsEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipRows", args)
- }
+  }
 
 }
 
@@ -235,12 +236,12 @@ func (this *QOpenGLPixelTransferOptions) setAlignment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions12setAlignmentEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setAlignment", args)
- }
+  }
 
 }
 
@@ -254,12 +255,12 @@ func (this *QOpenGLPixelTransferOptions) setSkipImages(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions13setSkipImagesEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipImages", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QOpenGLPixelTransferOptions) alignment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions9alignmentEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "alignment", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QOpenGLPixelTransferOptions) setSkipPixels(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions13setSkipPixelsEi
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipPixels", args)
- }
+  }
 
 }
 
@@ -310,12 +311,12 @@ func (this *QOpenGLPixelTransferOptions) setSwapBytesEnabled(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions19setSwapBytesEnabledEb
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSwapBytesEnabled", args)
- }
+  }
 
 }
 
@@ -329,12 +330,12 @@ func (this *QOpenGLPixelTransferOptions) setLeastSignificantByteFirst(args ...in
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions28setLeastSignificantByteFirstEb
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setLeastSignificantByteFirst", args)
- }
+  }
 
 }
 
@@ -347,12 +348,12 @@ func (this *QOpenGLPixelTransferOptions) isLeastSignificantBitFirst(args ...inte
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "isLeastSignificantBitFirst", args)
- }
+  }
 
 }
 
@@ -365,12 +366,12 @@ func (this *QOpenGLPixelTransferOptions) rowLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions9rowLengthEv
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "rowLength", args)
- }
+  }
 
 }
 

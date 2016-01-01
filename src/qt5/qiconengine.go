@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -51,12 +51,12 @@ func (this *QIconEngine) read(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine4readER11QDataStream
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QIconEngine) iconName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine8iconNameEv
   default:
     qtrt.ErrorResolve("QIconEngine", "iconName", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QIconEngine) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine5writeER11QDataStream
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
- }
+  }
 
 }
 
@@ -108,12 +108,12 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine12virtual_hookEiPv
   default:
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
- }
+  }
 
 }
 
@@ -126,12 +126,12 @@ func (this *QIconEngine) clone(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine5cloneEv
   default:
     qtrt.ErrorResolve("QIconEngine", "clone", args)
- }
+  }
 
 }
 
@@ -144,12 +144,12 @@ func (this *QIconEngine) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine3keyEv
   default:
     qtrt.ErrorResolve("QIconEngine", "key", args)
- }
+  }
 
 }
 
@@ -160,10 +160,10 @@ func (this *QIconEngine) FreeQIconEngine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QIconEngine", "~QIconEngine", args)
- }
+  }
 
 }
 

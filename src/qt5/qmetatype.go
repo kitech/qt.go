@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -48,10 +48,10 @@ func (this *QMetaType) destroy_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "destroy", args)
- }
+  }
 
 }
 
@@ -62,10 +62,10 @@ func (this *QMetaType) hasRegisteredConverterFunction_s(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredConverterFunction", args)
- }
+  }
 
 }
 
@@ -78,12 +78,12 @@ func (this *QMetaType) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMetaType10metaObjectEv
   default:
     qtrt.ErrorResolve("QMetaType", "metaObject", args)
- }
+  }
 
 }
 
@@ -94,10 +94,10 @@ func (this *QMetaType) hasRegisteredDebugStreamOperator_s(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredDebugStreamOperator", args)
- }
+  }
 
 }
 
@@ -108,10 +108,10 @@ func (this *QMetaType) create_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "create", args)
- }
+  }
 
 }
 
@@ -129,14 +129,14 @@ func (this *QMetaType) destroy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType7destroyEiPv
   case 1:
     // invoke: _ZNK9QMetaType7destroyEPv
   default:
     qtrt.ErrorResolve("QMetaType", "destroy", args)
- }
+  }
 
 }
 
@@ -147,10 +147,10 @@ func (this *QMetaType) registerTypedef_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "registerTypedef", args)
- }
+  }
 
 }
 
@@ -161,10 +161,10 @@ func (this *QMetaType) destruct_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "destruct", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QMetaType) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QMetaType7isValidEv
   default:
     qtrt.ErrorResolve("QMetaType", "isValid", args)
- }
+  }
 
 }
 
@@ -193,10 +193,10 @@ func (this *QMetaType) construct_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "construct", args)
- }
+  }
 
 }
 
@@ -207,10 +207,10 @@ func (this *QMetaType) equals_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "equals", args)
- }
+  }
 
 }
 
@@ -230,14 +230,14 @@ func (this *QMetaType) construct(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType9constructEiPvPKv
   case 1:
     // invoke: _ZNK9QMetaType9constructEPvPKv
   default:
     qtrt.ErrorResolve("QMetaType", "construct", args)
- }
+  }
 
 }
 
@@ -248,10 +248,10 @@ func (this *QMetaType) isRegistered_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "isRegistered", args)
- }
+  }
 
 }
 
@@ -262,15 +262,16 @@ func (this *QMetaType) unregisterType_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "unregisterType", args)
- }
+  }
 
 }
 
 
-func NewQMetaType(args ...interface{})() {
+func NewQMetaType(args ...interface{}) QMetaType {
+  return QMetaType{}
 }
 
 
@@ -280,10 +281,10 @@ func (this *QMetaType) metaObjectForType_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "metaObjectForType", args)
- }
+  }
 
 }
 
@@ -294,10 +295,10 @@ func (this *QMetaType) load_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "load", args)
- }
+  }
 
 }
 
@@ -315,14 +316,14 @@ func (this *QMetaType) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType6createEiPKv
   case 1:
     // invoke: _ZNK9QMetaType6createEPKv
   default:
     qtrt.ErrorResolve("QMetaType", "create", args)
- }
+  }
 
 }
 
@@ -333,10 +334,10 @@ func (this *QMetaType) sizeOf_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "sizeOf", args)
- }
+  }
 
 }
 
@@ -347,10 +348,10 @@ func (this *QMetaType) hasRegisteredComparators_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredComparators", args)
- }
+  }
 
 }
 
@@ -361,10 +362,10 @@ func (this *QMetaType) save_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "save", args)
- }
+  }
 
 }
 
@@ -382,14 +383,14 @@ func (this *QMetaType) destruct(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType8destructEiPv
   case 1:
     // invoke: _ZNK9QMetaType8destructEPv
   default:
     qtrt.ErrorResolve("QMetaType", "destruct", args)
- }
+  }
 
 }
 
@@ -400,10 +401,10 @@ func (this *QMetaType) FreeQMetaType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "~QMetaType", args)
- }
+  }
 
 }
 
@@ -414,10 +415,10 @@ func (this *QMetaType) type_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "type", args)
- }
+  }
 
 }
 
@@ -428,10 +429,10 @@ func (this *QMetaType) debugStream_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "debugStream", args)
- }
+  }
 
 }
 
@@ -447,14 +448,14 @@ func (this *QMetaType) sizeOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType6sizeOfEi
   case 1:
     // invoke: _ZNK9QMetaType6sizeOfEv
   default:
     qtrt.ErrorResolve("QMetaType", "sizeOf", args)
- }
+  }
 
 }
 
@@ -465,10 +466,10 @@ func (this *QMetaType) typeName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "typeName", args)
- }
+  }
 
 }
 
@@ -479,10 +480,10 @@ func (this *QMetaType) convert_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "convert", args)
- }
+  }
 
 }
 
@@ -493,10 +494,10 @@ func (this *QMetaType) registerNormalizedTypedef_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "registerNormalizedTypedef", args)
- }
+  }
 
 }
 
@@ -507,10 +508,10 @@ func (this *QMetaType) compare_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaType", "compare", args)
- }
+  }
 
 }
 
@@ -526,14 +527,14 @@ func (this *QMetaType) isRegistered(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType12isRegisteredEi
   case 1:
     // invoke: _ZNK9QMetaType12isRegisteredEv
   default:
     qtrt.ErrorResolve("QMetaType", "isRegistered", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -52,12 +52,12 @@ func (this *QToolButton) setAutoRaise(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton12setAutoRaiseEb
   default:
     qtrt.ErrorResolve("QToolButton", "setAutoRaise", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QToolButton) defaultAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton13defaultActionEv
   default:
     qtrt.ErrorResolve("QToolButton", "defaultAction", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QToolButton) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton10metaObjectEv
   default:
     qtrt.ErrorResolve("QToolButton", "metaObject", args)
- }
+  }
 
 }
 
@@ -106,12 +106,12 @@ func (this *QToolButton) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QToolButton", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -122,10 +122,10 @@ func (this *QToolButton) FreeQToolButton(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QToolButton", "~QToolButton", args)
- }
+  }
 
 }
 
@@ -138,12 +138,12 @@ func (this *QToolButton) showMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton8showMenuEv
   default:
     qtrt.ErrorResolve("QToolButton", "showMenu", args)
- }
+  }
 
 }
 
@@ -156,17 +156,18 @@ func (this *QToolButton) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton8sizeHintEv
   default:
     qtrt.ErrorResolve("QToolButton", "sizeHint", args)
- }
+  }
 
 }
 
 
-func NewQToolButton(args ...interface{})() {
+func NewQToolButton(args ...interface{}) QToolButton {
+  return QToolButton{}
 }
 
 
@@ -178,12 +179,12 @@ func (this *QToolButton) autoRaise(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton9autoRaiseEv
   default:
     qtrt.ErrorResolve("QToolButton", "autoRaise", args)
- }
+  }
 
 }
 
@@ -196,12 +197,12 @@ func (this *QToolButton) menu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton4menuEv
   default:
     qtrt.ErrorResolve("QToolButton", "menu", args)
- }
+  }
 
 }
 
@@ -215,12 +216,12 @@ func (this *QToolButton) setMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton7setMenuEP5QMenu
   default:
     qtrt.ErrorResolve("QToolButton", "setMenu", args)
- }
+  }
 
 }
 
@@ -234,12 +235,12 @@ func (this *QToolButton) setDefaultAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton16setDefaultActionEP7QAction
   default:
     qtrt.ErrorResolve("QToolButton", "setDefaultAction", args)
- }
+  }
 
 }
 

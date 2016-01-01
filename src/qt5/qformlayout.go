@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.go
 //
@@ -50,12 +50,12 @@ func (this *QFormLayout) horizontalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout17horizontalSpacingEv
   default:
     qtrt.ErrorResolve("QFormLayout", "horizontalSpacing", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QFormLayout) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout8rowCountEv
   default:
     qtrt.ErrorResolve("QFormLayout", "rowCount", args)
- }
+  }
 
 }
 
@@ -90,14 +90,14 @@ func (this *QFormLayout) labelForField(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout13labelForFieldEP7QLayout
   case 1:
     // invoke: _ZNK11QFormLayout13labelForFieldEP7QWidget
   default:
     qtrt.ErrorResolve("QFormLayout", "labelForField", args)
- }
+  }
 
 }
 
@@ -130,7 +130,7 @@ func (this *QFormLayout) addRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout6addRowERK7QStringP7QLayout
   case 1:
@@ -145,7 +145,7 @@ func (this *QFormLayout) addRow(args ...interface{}) () {
     // invoke: _ZN11QFormLayout6addRowEP7QWidgetS1_
   default:
     qtrt.ErrorResolve("QFormLayout", "addRow", args)
- }
+  }
 
 }
 
@@ -184,7 +184,7 @@ func (this *QFormLayout) insertRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout9insertRowEiRK7QStringP7QLayout
   case 1:
@@ -199,7 +199,7 @@ func (this *QFormLayout) insertRow(args ...interface{}) () {
     // invoke: _ZN11QFormLayout9insertRowEiP7QWidget
   default:
     qtrt.ErrorResolve("QFormLayout", "insertRow", args)
- }
+  }
 
 }
 
@@ -212,12 +212,12 @@ func (this *QFormLayout) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout5countEv
   default:
     qtrt.ErrorResolve("QFormLayout", "count", args)
- }
+  }
 
 }
 
@@ -230,17 +230,18 @@ func (this *QFormLayout) spacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout7spacingEv
   default:
     qtrt.ErrorResolve("QFormLayout", "spacing", args)
- }
+  }
 
 }
 
 
-func NewQFormLayout(args ...interface{})() {
+func NewQFormLayout(args ...interface{}) QFormLayout {
+  return QFormLayout{}
 }
 
 
@@ -253,12 +254,12 @@ func (this *QFormLayout) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout11setGeometryERK5QRect
   default:
     qtrt.ErrorResolve("QFormLayout", "setGeometry", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QFormLayout) setVerticalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout18setVerticalSpacingEi
   default:
     qtrt.ErrorResolve("QFormLayout", "setVerticalSpacing", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QFormLayout) setHorizontalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout20setHorizontalSpacingEi
   default:
     qtrt.ErrorResolve("QFormLayout", "setHorizontalSpacing", args)
- }
+  }
 
 }
 
@@ -309,12 +310,12 @@ func (this *QFormLayout) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout10metaObjectEv
   default:
     qtrt.ErrorResolve("QFormLayout", "metaObject", args)
- }
+  }
 
 }
 
@@ -328,12 +329,12 @@ func (this *QFormLayout) setSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout10setSpacingEi
   default:
     qtrt.ErrorResolve("QFormLayout", "setSpacing", args)
- }
+  }
 
 }
 
@@ -344,10 +345,10 @@ func (this *QFormLayout) FreeQFormLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFormLayout", "~QFormLayout", args)
- }
+  }
 
 }
 
@@ -360,12 +361,12 @@ func (this *QFormLayout) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout8sizeHintEv
   default:
     qtrt.ErrorResolve("QFormLayout", "sizeHint", args)
- }
+  }
 
 }
 
@@ -378,12 +379,12 @@ func (this *QFormLayout) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout10invalidateEv
   default:
     qtrt.ErrorResolve("QFormLayout", "invalidate", args)
- }
+  }
 
 }
 
@@ -401,14 +402,14 @@ func (this *QFormLayout) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout6itemAtEiNS_8ItemRoleE
   case 1:
     // invoke: _ZNK11QFormLayout6itemAtEi
   default:
     qtrt.ErrorResolve("QFormLayout", "itemAt", args)
- }
+  }
 
 }
 
@@ -422,12 +423,12 @@ func (this *QFormLayout) takeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout6takeAtEi
   default:
     qtrt.ErrorResolve("QFormLayout", "takeAt", args)
- }
+  }
 
 }
 
@@ -440,12 +441,12 @@ func (this *QFormLayout) minimumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout11minimumSizeEv
   default:
     qtrt.ErrorResolve("QFormLayout", "minimumSize", args)
- }
+  }
 
 }
 
@@ -458,12 +459,12 @@ func (this *QFormLayout) verticalSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout15verticalSpacingEv
   default:
     qtrt.ErrorResolve("QFormLayout", "verticalSpacing", args)
- }
+  }
 
 }
 
@@ -477,12 +478,12 @@ func (this *QFormLayout) heightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout14heightForWidthEi
   default:
     qtrt.ErrorResolve("QFormLayout", "heightForWidth", args)
- }
+  }
 
 }
 
@@ -496,12 +497,12 @@ func (this *QFormLayout) addItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFormLayout7addItemEP11QLayoutItem
   default:
     qtrt.ErrorResolve("QFormLayout", "addItem", args)
- }
+  }
 
 }
 
@@ -514,12 +515,12 @@ func (this *QFormLayout) hasHeightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFormLayout17hasHeightForWidthEv
   default:
     qtrt.ErrorResolve("QFormLayout", "hasHeightForWidth", args)
- }
+  }
 
 }
 

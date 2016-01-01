@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.go
 //
@@ -52,12 +52,12 @@ func (this *QStyledItemDelegate) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "sizeHint", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QStyledItemDelegate) createEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "createEditor", args)
- }
+  }
 
 }
 
@@ -89,10 +89,10 @@ func (this *QStyledItemDelegate) FreeQStyledItemDelegate(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "~QStyledItemDelegate", args)
- }
+  }
 
 }
 
@@ -108,12 +108,12 @@ func (this *QStyledItemDelegate) updateEditorGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "updateEditorGeometry", args)
- }
+  }
 
 }
 
@@ -128,12 +128,12 @@ func (this *QStyledItemDelegate) setEditorData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setEditorData", args)
- }
+  }
 
 }
 
@@ -149,17 +149,18 @@ func (this *QStyledItemDelegate) setModelData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setModelData", args)
- }
+  }
 
 }
 
 
-func NewQStyledItemDelegate(args ...interface{})() {
+func NewQStyledItemDelegate(args ...interface{}) QStyledItemDelegate {
+  return QStyledItemDelegate{}
 }
 
 
@@ -172,12 +173,12 @@ func (this *QStyledItemDelegate) setItemEditorFactory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setItemEditorFactory", args)
- }
+  }
 
 }
 
@@ -193,12 +194,12 @@ func (this *QStyledItemDelegate) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "paint", args)
- }
+  }
 
 }
 
@@ -211,12 +212,12 @@ func (this *QStyledItemDelegate) itemEditorFactory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate17itemEditorFactoryEv
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "itemEditorFactory", args)
- }
+  }
 
 }
 
@@ -231,12 +232,12 @@ func (this *QStyledItemDelegate) displayText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "displayText", args)
- }
+  }
 
 }
 
@@ -249,12 +250,12 @@ func (this *QStyledItemDelegate) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate10metaObjectEv
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "metaObject", args)
- }
+  }
 
 }
 

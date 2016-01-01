@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -53,12 +53,12 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4readEiPvi
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "read", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QOpenGLBuffer) bind(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4bindEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bind", args)
- }
+  }
 
 }
 
@@ -89,12 +89,12 @@ func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7destroyEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "destroy", args)
- }
+  }
 
 }
 
@@ -112,14 +112,14 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer8allocateEi
   case 1:
     // invoke: _ZN13QOpenGLBuffer8allocateEPKvi
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "allocate", args)
- }
+  }
 
 }
 
@@ -132,17 +132,18 @@ func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5unmapEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "unmap", args)
- }
+  }
 
 }
 
 
-func NewQOpenGLBuffer(args ...interface{})() {
+func NewQOpenGLBuffer(args ...interface{}) QOpenGLBuffer {
+  return QOpenGLBuffer{}
 }
 
 
@@ -154,12 +155,12 @@ func (this *QOpenGLBuffer) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer4sizeEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "size", args)
- }
+  }
 
 }
 
@@ -172,12 +173,12 @@ func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer8bufferIdEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bufferId", args)
- }
+  }
 
 }
 
@@ -190,12 +191,12 @@ func (this *QOpenGLBuffer) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer6createEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "create", args)
- }
+  }
 
 }
 
@@ -206,10 +207,10 @@ func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "~QOpenGLBuffer", args)
- }
+  }
 
 }
 
@@ -225,14 +226,14 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7releaseENS_4TypeE
   case 1:
     // invoke: _ZN13QOpenGLBuffer7releaseEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "release", args)
- }
+  }
 
 }
 
@@ -245,12 +246,12 @@ func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer9isCreatedEv
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "isCreated", args)
- }
+  }
 
 }
 
@@ -266,12 +267,12 @@ func (this *QOpenGLBuffer) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5writeEiPKvi
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "write", args)
- }
+  }
 
 }
 

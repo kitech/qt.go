@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -52,12 +52,12 @@ func (this *QMdiSubWindow) keyboardSingleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow18keyboardSingleStepEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardSingleStep", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QMdiSubWindow) keyboardPageStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow16keyboardPageStepEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardPageStep", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QMdiSubWindow) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow10metaObjectEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "metaObject", args)
- }
+  }
 
 }
 
@@ -106,12 +106,12 @@ func (this *QMdiSubWindow) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8sizeHintEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "sizeHint", args)
- }
+  }
 
 }
 
@@ -124,12 +124,12 @@ func (this *QMdiSubWindow) maximizedSystemMenuIconWidget(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedSystemMenuIconWidget", args)
- }
+  }
 
 }
 
@@ -143,12 +143,12 @@ func (this *QMdiSubWindow) setSystemMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow13setSystemMenuEP5QMenu
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setSystemMenu", args)
- }
+  }
 
 }
 
@@ -159,10 +159,10 @@ func (this *QMdiSubWindow) FreeQMdiSubWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "~QMdiSubWindow", args)
- }
+  }
 
 }
 
@@ -176,12 +176,12 @@ func (this *QMdiSubWindow) setKeyboardSingleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow21setKeyboardSingleStepEi
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardSingleStep", args)
- }
+  }
 
 }
 
@@ -194,12 +194,12 @@ func (this *QMdiSubWindow) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow6widgetEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "widget", args)
- }
+  }
 
 }
 
@@ -212,12 +212,12 @@ func (this *QMdiSubWindow) showShaded(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow10showShadedEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "showShaded", args)
- }
+  }
 
 }
 
@@ -230,12 +230,12 @@ func (this *QMdiSubWindow) maximizedButtonsWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow22maximizedButtonsWidgetEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedButtonsWidget", args)
- }
+  }
 
 }
 
@@ -248,12 +248,12 @@ func (this *QMdiSubWindow) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -266,12 +266,12 @@ func (this *QMdiSubWindow) showSystemMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow14showSystemMenuEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "showSystemMenu", args)
- }
+  }
 
 }
 
@@ -284,17 +284,18 @@ func (this *QMdiSubWindow) systemMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow10systemMenuEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "systemMenu", args)
- }
+  }
 
 }
 
 
-func NewQMdiSubWindow(args ...interface{})() {
+func NewQMdiSubWindow(args ...interface{}) QMdiSubWindow {
+  return QMdiSubWindow{}
 }
 
 
@@ -307,12 +308,12 @@ func (this *QMdiSubWindow) setWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow9setWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setWidget", args)
- }
+  }
 
 }
 
@@ -325,12 +326,12 @@ func (this *QMdiSubWindow) isShaded(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8isShadedEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "isShaded", args)
- }
+  }
 
 }
 
@@ -343,12 +344,12 @@ func (this *QMdiSubWindow) mdiArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QMdiSubWindow7mdiAreaEv
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "mdiArea", args)
- }
+  }
 
 }
 
@@ -362,12 +363,12 @@ func (this *QMdiSubWindow) setKeyboardPageStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow19setKeyboardPageStepEi
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardPageStep", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qflags.h
 // dst-file: /src/core/qflags.go
 //
@@ -48,11 +48,13 @@ type QFlag struct {
 }
 
 
-func NewQIncompatibleFlag(args ...interface{})() {
+func NewQIncompatibleFlag(args ...interface{}) QIncompatibleFlag {
+  return QIncompatibleFlag{}
 }
 
 
-func NewQFlag(args ...interface{})() {
+func NewQFlag(args ...interface{}) QFlag {
+  return QFlag{}
 }
 
 // <= body block end

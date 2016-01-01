@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -51,12 +51,12 @@ func (this *QFrame) setFrameRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QFrame12setFrameRectERK5QRect
   default:
     qtrt.ErrorResolve("QFrame", "setFrameRect", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame9lineWidthEv
   default:
     qtrt.ErrorResolve("QFrame", "lineWidth", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QFrame) setFrameStyle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QFrame13setFrameStyleEi
   default:
     qtrt.ErrorResolve("QFrame", "setFrameStyle", args)
- }
+  }
 
 }
 
@@ -106,12 +106,12 @@ func (this *QFrame) frameRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame9frameRectEv
   default:
     qtrt.ErrorResolve("QFrame", "frameRect", args)
- }
+  }
 
 }
 
@@ -124,17 +124,18 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame8sizeHintEv
   default:
     qtrt.ErrorResolve("QFrame", "sizeHint", args)
- }
+  }
 
 }
 
 
-func NewQFrame(args ...interface{})() {
+func NewQFrame(args ...interface{}) QFrame {
+  return QFrame{}
 }
 
 
@@ -146,12 +147,12 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10frameStyleEv
   default:
     qtrt.ErrorResolve("QFrame", "frameStyle", args)
- }
+  }
 
 }
 
@@ -164,12 +165,12 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame12midLineWidthEv
   default:
     qtrt.ErrorResolve("QFrame", "midLineWidth", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QFrame) setLineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QFrame12setLineWidthEi
   default:
     qtrt.ErrorResolve("QFrame", "setLineWidth", args)
- }
+  }
 
 }
 
@@ -202,12 +203,12 @@ func (this *QFrame) setMidLineWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QFrame15setMidLineWidthEi
   default:
     qtrt.ErrorResolve("QFrame", "setMidLineWidth", args)
- }
+  }
 
 }
 
@@ -220,12 +221,12 @@ func (this *QFrame) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10metaObjectEv
   default:
     qtrt.ErrorResolve("QFrame", "metaObject", args)
- }
+  }
 
 }
 
@@ -238,12 +239,12 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10frameWidthEv
   default:
     qtrt.ErrorResolve("QFrame", "frameWidth", args)
- }
+  }
 
 }
 
@@ -254,10 +255,10 @@ func (this *QFrame) FreeQFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFrame", "~QFrame", args)
- }
+  }
 
 }
 

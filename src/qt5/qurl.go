@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.go
 //
@@ -50,12 +50,12 @@ func (this *QUrl) isLocalFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl11isLocalFileEv
   default:
     qtrt.ErrorResolve("QUrl", "isLocalFile", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QUrl) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl7isEmptyEv
   default:
     qtrt.ErrorResolve("QUrl", "isEmpty", args)
- }
+  }
 
 }
 
@@ -91,14 +91,14 @@ func (this *QUrl) setQuery(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl8setQueryERK9QUrlQuery
   case 1:
     // invoke: _ZN4QUrl8setQueryERK7QStringNS_11ParsingModeE
   default:
     qtrt.ErrorResolve("QUrl", "setQuery", args)
- }
+  }
 
 }
 
@@ -109,10 +109,10 @@ func (this *QUrl) idnWhitelist_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "idnWhitelist", args)
- }
+  }
 
 }
 
@@ -123,10 +123,10 @@ func (this *QUrl) FreeQUrl(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "~QUrl", args)
- }
+  }
 
 }
 
@@ -140,12 +140,12 @@ func (this *QUrl) setScheme(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl9setSchemeERK7QString
   default:
     qtrt.ErrorResolve("QUrl", "setScheme", args)
- }
+  }
 
 }
 
@@ -159,12 +159,12 @@ func (this *QUrl) isParentOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl10isParentOfERKS_
   default:
     qtrt.ErrorResolve("QUrl", "isParentOf", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QUrl) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl11errorStringEv
   default:
     qtrt.ErrorResolve("QUrl", "errorString", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QUrl) port(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl4portEi
   default:
     qtrt.ErrorResolve("QUrl", "port", args)
- }
+  }
 
 }
 
@@ -215,17 +215,18 @@ func (this *QUrl) setPort(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl7setPortEi
   default:
     qtrt.ErrorResolve("QUrl", "setPort", args)
- }
+  }
 
 }
 
 
-func NewQUrl(args ...interface{})() {
+func NewQUrl(args ...interface{}) QUrl {
+  return QUrl{}
 }
 
 
@@ -235,10 +236,10 @@ func (this *QUrl) fromAce_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "fromAce", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QUrl) resolved(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl8resolvedERKS_
   default:
     qtrt.ErrorResolve("QUrl", "resolved", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QUrl) toLocalFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl11toLocalFileEv
   default:
     qtrt.ErrorResolve("QUrl", "toLocalFile", args)
- }
+  }
 
 }
 
@@ -288,12 +289,12 @@ func (this *QUrl) detach(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl6detachEv
   default:
     qtrt.ErrorResolve("QUrl", "detach", args)
- }
+  }
 
 }
 
@@ -306,12 +307,12 @@ func (this *QUrl) hasFragment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl11hasFragmentEv
   default:
     qtrt.ErrorResolve("QUrl", "hasFragment", args)
- }
+  }
 
 }
 
@@ -322,10 +323,10 @@ func (this *QUrl) toAce_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "toAce", args)
- }
+  }
 
 }
 
@@ -338,12 +339,12 @@ func (this *QUrl) hasQuery(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl8hasQueryEv
   default:
     qtrt.ErrorResolve("QUrl", "hasQuery", args)
- }
+  }
 
 }
 
@@ -354,10 +355,10 @@ func (this *QUrl) fromLocalFile_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "fromLocalFile", args)
- }
+  }
 
 }
 
@@ -370,12 +371,12 @@ func (this *QUrl) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl7isValidEv
   default:
     qtrt.ErrorResolve("QUrl", "isValid", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QUrl) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl10isDetachedEv
   default:
     qtrt.ErrorResolve("QUrl", "isDetached", args)
- }
+  }
 
 }
 
@@ -406,12 +407,12 @@ func (this *QUrl) isRelative(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl10isRelativeEv
   default:
     qtrt.ErrorResolve("QUrl", "isRelative", args)
- }
+  }
 
 }
 
@@ -424,12 +425,12 @@ func (this *QUrl) scheme(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl6schemeEv
   default:
     qtrt.ErrorResolve("QUrl", "scheme", args)
- }
+  }
 
 }
 
@@ -440,10 +441,10 @@ func (this *QUrl) toPercentEncoding_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "toPercentEncoding", args)
- }
+  }
 
 }
 
@@ -454,10 +455,10 @@ func (this *QUrl) setIdnWhitelist_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "setIdnWhitelist", args)
- }
+  }
 
 }
 
@@ -471,12 +472,12 @@ func (this *QUrl) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl4swapERS_
   default:
     qtrt.ErrorResolve("QUrl", "swap", args)
- }
+  }
 
 }
 
@@ -487,10 +488,10 @@ func (this *QUrl) fromPercentEncoding_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "fromPercentEncoding", args)
- }
+  }
 
 }
 
@@ -501,10 +502,10 @@ func (this *QUrl) fromUserInput_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUrl", "fromUserInput", args)
- }
+  }
 
 }
 
@@ -517,12 +518,12 @@ func (this *QUrl) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN4QUrl5clearEv
   default:
     qtrt.ErrorResolve("QUrl", "clear", args)
- }
+  }
 
 }
 

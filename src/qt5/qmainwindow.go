@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -52,12 +52,12 @@ func (this *QMainWindow) statusBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow9statusBarEv
   default:
     qtrt.ErrorResolve("QMainWindow", "statusBar", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QMainWindow) setAnimated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow11setAnimatedEb
   default:
     qtrt.ErrorResolve("QMainWindow", "setAnimated", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow21setDockNestingEnabledEb
   default:
     qtrt.ErrorResolve("QMainWindow", "setDockNestingEnabled", args)
- }
+  }
 
 }
 
@@ -108,12 +108,12 @@ func (this *QMainWindow) unifiedTitleAndToolBarOnMac(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv
   default:
     qtrt.ErrorResolve("QMainWindow", "unifiedTitleAndToolBarOnMac", args)
- }
+  }
 
 }
 
@@ -126,12 +126,12 @@ func (this *QMainWindow) menuWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow10menuWidgetEv
   default:
     qtrt.ErrorResolve("QMainWindow", "menuWidget", args)
- }
+  }
 
 }
 
@@ -146,12 +146,12 @@ func (this *QMainWindow) tabifyDockWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifyDockWidget", args)
- }
+  }
 
 }
 
@@ -165,12 +165,12 @@ func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow15setDocumentModeEb
   default:
     qtrt.ErrorResolve("QMainWindow", "setDocumentMode", args)
- }
+  }
 
 }
 
@@ -183,12 +183,12 @@ func (this *QMainWindow) centralWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow13centralWidgetEv
   default:
     qtrt.ErrorResolve("QMainWindow", "centralWidget", args)
- }
+  }
 
 }
 
@@ -202,17 +202,18 @@ func (this *QMainWindow) removeDockWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16removeDockWidgetEP11QDockWidget
   default:
     qtrt.ErrorResolve("QMainWindow", "removeDockWidget", args)
- }
+  }
 
 }
 
 
-func NewQMainWindow(args ...interface{})() {
+func NewQMainWindow(args ...interface{}) QMainWindow {
+  return QMainWindow{}
 }
 
 
@@ -224,12 +225,12 @@ func (this *QMainWindow) isAnimated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow10isAnimatedEv
   default:
     qtrt.ErrorResolve("QMainWindow", "isAnimated", args)
- }
+  }
 
 }
 
@@ -250,7 +251,7 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow10addToolBarERK7QString
   case 1:
@@ -259,7 +260,7 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
     // invoke: _ZN11QMainWindow10addToolBarEN2Qt11ToolBarAreaEP8QToolBar
   default:
     qtrt.ErrorResolve("QMainWindow", "addToolBar", args)
- }
+  }
 
 }
 
@@ -273,12 +274,12 @@ func (this *QMainWindow) setIconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow11setIconSizeERK5QSize
   default:
     qtrt.ErrorResolve("QMainWindow", "setIconSize", args)
- }
+  }
 
 }
 
@@ -292,12 +293,12 @@ func (this *QMainWindow) saveState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow9saveStateEi
   default:
     qtrt.ErrorResolve("QMainWindow", "saveState", args)
- }
+  }
 
 }
 
@@ -312,12 +313,12 @@ func (this *QMainWindow) restoreState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow12restoreStateERK10QByteArrayi
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreState", args)
- }
+  }
 
 }
 
@@ -332,12 +333,12 @@ func (this *QMainWindow) insertToolBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13insertToolBarEP8QToolBarS1_
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBar", args)
- }
+  }
 
 }
 
@@ -350,12 +351,12 @@ func (this *QMainWindow) createPopupMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow15createPopupMenuEv
   default:
     qtrt.ErrorResolve("QMainWindow", "createPopupMenu", args)
- }
+  }
 
 }
 
@@ -369,12 +370,12 @@ func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb
   default:
     qtrt.ErrorResolve("QMainWindow", "setUnifiedTitleAndToolBarOnMac", args)
- }
+  }
 
 }
 
@@ -388,12 +389,12 @@ func (this *QMainWindow) removeToolBarBreak(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow18removeToolBarBreakEP8QToolBar
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBarBreak", args)
- }
+  }
 
 }
 
@@ -407,12 +408,12 @@ func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow12toolBarBreakEP8QToolBar
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarBreak", args)
- }
+  }
 
 }
 
@@ -426,12 +427,12 @@ func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreDockWidget", args)
- }
+  }
 
 }
 
@@ -444,12 +445,12 @@ func (this *QMainWindow) menuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow7menuBarEv
   default:
     qtrt.ErrorResolve("QMainWindow", "menuBar", args)
- }
+  }
 
 }
 
@@ -463,12 +464,12 @@ func (this *QMainWindow) setStatusBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow12setStatusBarEP10QStatusBar
   default:
     qtrt.ErrorResolve("QMainWindow", "setStatusBar", args)
- }
+  }
 
 }
 
@@ -479,10 +480,10 @@ func (this *QMainWindow) FreeQMainWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMainWindow", "~QMainWindow", args)
- }
+  }
 
 }
 
@@ -496,12 +497,12 @@ func (this *QMainWindow) isSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow11isSeparatorERK6QPoint
   default:
     qtrt.ErrorResolve("QMainWindow", "isSeparator", args)
- }
+  }
 
 }
 
@@ -514,12 +515,12 @@ func (this *QMainWindow) iconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow8iconSizeEv
   default:
     qtrt.ErrorResolve("QMainWindow", "iconSize", args)
- }
+  }
 
 }
 
@@ -532,12 +533,12 @@ func (this *QMainWindow) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow10metaObjectEv
   default:
     qtrt.ErrorResolve("QMainWindow", "metaObject", args)
- }
+  }
 
 }
 
@@ -551,12 +552,12 @@ func (this *QMainWindow) insertToolBarBreak(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow18insertToolBarBreakEP8QToolBar
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBarBreak", args)
- }
+  }
 
 }
 
@@ -569,12 +570,12 @@ func (this *QMainWindow) takeCentralWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow17takeCentralWidgetEv
   default:
     qtrt.ErrorResolve("QMainWindow", "takeCentralWidget", args)
- }
+  }
 
 }
 
@@ -587,12 +588,12 @@ func (this *QMainWindow) isDockNestingEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow20isDockNestingEnabledEv
   default:
     qtrt.ErrorResolve("QMainWindow", "isDockNestingEnabled", args)
- }
+  }
 
 }
 
@@ -605,12 +606,12 @@ func (this *QMainWindow) documentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow12documentModeEv
   default:
     qtrt.ErrorResolve("QMainWindow", "documentMode", args)
- }
+  }
 
 }
 
@@ -624,12 +625,12 @@ func (this *QMainWindow) setMenuWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13setMenuWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuWidget", args)
- }
+  }
 
 }
 
@@ -643,12 +644,12 @@ func (this *QMainWindow) removeToolBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13removeToolBarEP8QToolBar
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBar", args)
- }
+  }
 
 }
 
@@ -662,12 +663,12 @@ func (this *QMainWindow) setCentralWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16setCentralWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QMainWindow", "setCentralWidget", args)
- }
+  }
 
 }
 
@@ -681,12 +682,12 @@ func (this *QMainWindow) setMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow10setMenuBarEP8QMenuBar
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuBar", args)
- }
+  }
 
 }
 
@@ -700,12 +701,12 @@ func (this *QMainWindow) tabifiedDockWidgets(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifiedDockWidgets", args)
- }
+  }
 
 }
 

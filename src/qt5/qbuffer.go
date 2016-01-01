@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -51,12 +51,12 @@ func (this *QBuffer) seek(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer4seekEx
   default:
     qtrt.ErrorResolve("QBuffer", "seek", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QBuffer) canReadLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer11canReadLineEv
   default:
     qtrt.ErrorResolve("QBuffer", "canReadLine", args)
- }
+  }
 
 }
 
@@ -85,10 +85,10 @@ func (this *QBuffer) FreeQBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QBuffer", "~QBuffer", args)
- }
+  }
 
 }
 
@@ -106,14 +106,14 @@ func (this *QBuffer) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer7setDataERK10QByteArray
   case 1:
     // invoke: _ZN7QBuffer7setDataEPKci
   default:
     qtrt.ErrorResolve("QBuffer", "setData", args)
- }
+  }
 
 }
 
@@ -126,17 +126,18 @@ func (this *QBuffer) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer4dataEv
   default:
     qtrt.ErrorResolve("QBuffer", "data", args)
- }
+  }
 
 }
 
 
-func NewQBuffer(args ...interface{})() {
+func NewQBuffer(args ...interface{}) QBuffer {
+  return QBuffer{}
 }
 
 
@@ -149,12 +150,12 @@ func (this *QBuffer) setBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer9setBufferEP10QByteArray
   default:
     qtrt.ErrorResolve("QBuffer", "setBuffer", args)
- }
+  }
 
 }
 
@@ -169,14 +170,14 @@ func (this *QBuffer) buffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer6bufferEv
   case 1:
     // invoke: _ZN7QBuffer6bufferEv
   default:
     qtrt.ErrorResolve("QBuffer", "buffer", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QBuffer) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer3posEv
   default:
     qtrt.ErrorResolve("QBuffer", "pos", args)
- }
+  }
 
 }
 
@@ -207,12 +208,12 @@ func (this *QBuffer) close(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer5closeEv
   default:
     qtrt.ErrorResolve("QBuffer", "close", args)
- }
+  }
 
 }
 
@@ -225,12 +226,12 @@ func (this *QBuffer) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer10metaObjectEv
   default:
     qtrt.ErrorResolve("QBuffer", "metaObject", args)
- }
+  }
 
 }
 
@@ -243,12 +244,12 @@ func (this *QBuffer) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer4sizeEv
   default:
     qtrt.ErrorResolve("QBuffer", "size", args)
- }
+  }
 
 }
 
@@ -261,12 +262,12 @@ func (this *QBuffer) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer5atEndEv
   default:
     qtrt.ErrorResolve("QBuffer", "atEnd", args)
- }
+  }
 
 }
 

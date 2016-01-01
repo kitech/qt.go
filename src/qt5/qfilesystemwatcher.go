@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -50,10 +50,10 @@ func (this *QFileSystemWatcher) FreeQFileSystemWatcher(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "~QFileSystemWatcher", args)
- }
+  }
 
 }
 
@@ -67,12 +67,12 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher10removePathERK7QString
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
- }
+  }
 
 }
 
@@ -85,12 +85,12 @@ func (this *QFileSystemWatcher) directories(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher11directoriesEv
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "directories", args)
- }
+  }
 
 }
 
@@ -103,12 +103,12 @@ func (this *QFileSystemWatcher) files(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher5filesEv
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "files", args)
- }
+  }
 
 }
 
@@ -122,12 +122,12 @@ func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher8addPathsERK11QStringList
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPaths", args)
- }
+  }
 
 }
 
@@ -141,17 +141,18 @@ func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher11removePathsERK11QStringList
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePaths", args)
- }
+  }
 
 }
 
 
-func NewQFileSystemWatcher(args ...interface{})() {
+func NewQFileSystemWatcher(args ...interface{}) QFileSystemWatcher {
+  return QFileSystemWatcher{}
 }
 
 
@@ -164,12 +165,12 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher7addPathERK7QString
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
- }
+  }
 
 }
 
@@ -182,12 +183,12 @@ func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher10metaObjectEv
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "metaObject", args)
- }
+  }
 
 }
 

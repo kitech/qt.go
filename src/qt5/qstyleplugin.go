@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -51,12 +51,12 @@ func (this *QStylePlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QStylePlugin6createERK7QString
   default:
     qtrt.ErrorResolve("QStylePlugin", "create", args)
- }
+  }
 
 }
 
@@ -69,17 +69,18 @@ func (this *QStylePlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QStylePlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QStylePlugin", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQStylePlugin(args ...interface{})() {
+func NewQStylePlugin(args ...interface{}) QStylePlugin {
+  return QStylePlugin{}
 }
 
 
@@ -89,10 +90,10 @@ func (this *QStylePlugin) FreeQStylePlugin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStylePlugin", "~QStylePlugin", args)
- }
+  }
 
 }
 

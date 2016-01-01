@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.go
 //
@@ -71,7 +71,7 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption
   case 1:
@@ -82,7 +82,7 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     // invoke: _ZN8QPainter12boundingRectERK6QRectFiRK7QString
   default:
     qtrt.ErrorResolve("QPainter", "boundingRect", args)
- }
+  }
 
 }
 
@@ -106,7 +106,7 @@ func (this *QPainter) drawPicture(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11drawPictureERK7QPointFRK8QPicture
   case 1:
@@ -115,7 +115,7 @@ func (this *QPainter) drawPicture(args ...interface{}) () {
     // invoke: _ZN8QPainter11drawPictureEiiRK8QPicture
   default:
     qtrt.ErrorResolve("QPainter", "drawPicture", args)
- }
+  }
 
 }
 
@@ -128,12 +128,12 @@ func (this *QPainter) worldMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11worldMatrixEv
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrix", args)
- }
+  }
 
 }
 
@@ -189,7 +189,7 @@ func (this *QPainter) drawText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawTextERK7QPointFRK7QStringii
   case 1:
@@ -208,7 +208,7 @@ func (this *QPainter) drawText(args ...interface{}) () {
     // invoke: _ZN8QPainter8drawTextERK6QPointRK7QString
   default:
     qtrt.ErrorResolve("QPainter", "drawText", args)
- }
+  }
 
 }
 
@@ -279,7 +279,7 @@ func (this *QPainter) fillRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8fillRectERK5QRectN2Qt11GlobalColorE
   case 1:
@@ -306,7 +306,7 @@ func (this *QPainter) fillRect(args ...interface{}) () {
     // invoke: _ZN8QPainter8fillRectERK6QRectFRK6QColor
   default:
     qtrt.ErrorResolve("QPainter", "fillRect", args)
- }
+  }
 
 }
 
@@ -319,12 +319,12 @@ func (this *QPainter) matrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6matrixEv
   default:
     qtrt.ErrorResolve("QPainter", "matrix", args)
- }
+  }
 
 }
 
@@ -337,12 +337,12 @@ func (this *QPainter) opacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter7opacityEv
   default:
     qtrt.ErrorResolve("QPainter", "opacity", args)
- }
+  }
 
 }
 
@@ -372,7 +372,7 @@ func (this *QPainter) drawTiledPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF
   case 1:
@@ -381,7 +381,7 @@ func (this *QPainter) drawTiledPixmap(args ...interface{}) () {
     // invoke: _ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii
   default:
     qtrt.ErrorResolve("QPainter", "drawTiledPixmap", args)
- }
+  }
 
 }
 
@@ -395,12 +395,12 @@ func (this *QPainter) setBackground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter13setBackgroundERK6QBrush
   default:
     qtrt.ErrorResolve("QPainter", "setBackground", args)
- }
+  }
 
 }
 
@@ -429,7 +429,7 @@ func (this *QPainter) drawChord(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawChordERK6QRectFii
   case 1:
@@ -438,7 +438,7 @@ func (this *QPainter) drawChord(args ...interface{}) () {
     // invoke: _ZN8QPainter9drawChordEiiiiii
   default:
     qtrt.ErrorResolve("QPainter", "drawChord", args)
- }
+  }
 
 }
 
@@ -499,7 +499,7 @@ func (this *QPainter) drawImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawImageERK6QRectFRK6QImage
   case 1:
@@ -520,7 +520,7 @@ func (this *QPainter) drawImage(args ...interface{}) () {
     // invoke: _ZN8QPainter9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE
   default:
     qtrt.ErrorResolve("QPainter", "drawImage", args)
- }
+  }
 
 }
 
@@ -534,12 +534,12 @@ func (this *QPainter) setClipping(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11setClippingEb
   default:
     qtrt.ErrorResolve("QPainter", "setClipping", args)
- }
+  }
 
 }
 
@@ -556,14 +556,14 @@ func (this *QPainter) setBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8setBrushERK6QBrush
   case 1:
     // invoke: _ZN8QPainter8setBrushEN2Qt10BrushStyleE
   default:
     qtrt.ErrorResolve("QPainter", "setBrush", args)
- }
+  }
 
 }
 
@@ -578,12 +578,12 @@ func (this *QPainter) setMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9setMatrixERK7QMatrixb
   default:
     qtrt.ErrorResolve("QPainter", "setMatrix", args)
- }
+  }
 
 }
 
@@ -606,7 +606,7 @@ func (this *QPainter) eraseRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9eraseRectERK6QRectF
   case 1:
@@ -615,7 +615,7 @@ func (this *QPainter) eraseRect(args ...interface{}) () {
     // invoke: _ZN8QPainter9eraseRectERK5QRect
   default:
     qtrt.ErrorResolve("QPainter", "eraseRect", args)
- }
+  }
 
 }
 
@@ -636,7 +636,7 @@ func (this *QPainter) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9translateERK6QPoint
   case 1:
@@ -645,7 +645,7 @@ func (this *QPainter) translate(args ...interface{}) () {
     // invoke: _ZN8QPainter9translateERK7QPointF
   default:
     qtrt.ErrorResolve("QPainter", "translate", args)
- }
+  }
 
 }
 
@@ -658,12 +658,12 @@ func (this *QPainter) viewTransformEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter20viewTransformEnabledEv
   default:
     qtrt.ErrorResolve("QPainter", "viewTransformEnabled", args)
- }
+  }
 
 }
 
@@ -683,7 +683,7 @@ func (this *QPainter) setPen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter6setPenERK4QPen
   case 1:
@@ -692,7 +692,7 @@ func (this *QPainter) setPen(args ...interface{}) () {
     // invoke: _ZN8QPainter6setPenERK6QColor
   default:
     qtrt.ErrorResolve("QPainter", "setPen", args)
- }
+  }
 
 }
 
@@ -731,7 +731,7 @@ func (this *QPainter) drawLines(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawLinesEPK6QLineFi
   case 1:
@@ -750,7 +750,7 @@ func (this *QPainter) drawLines(args ...interface{}) () {
     // invoke: _ZN8QPainter9drawLinesERK7QVectorI7QPointFE
   default:
     qtrt.ErrorResolve("QPainter", "drawLines", args)
- }
+  }
 
 }
 
@@ -771,7 +771,7 @@ func (this *QPainter) setBrushOrigin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14setBrushOriginEii
   case 1:
@@ -780,7 +780,7 @@ func (this *QPainter) setBrushOrigin(args ...interface{}) () {
     // invoke: _ZN8QPainter14setBrushOriginERK6QPoint
   default:
     qtrt.ErrorResolve("QPainter", "setBrushOrigin", args)
- }
+  }
 
 }
 
@@ -793,12 +793,12 @@ func (this *QPainter) worldTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter14worldTransformEv
   default:
     qtrt.ErrorResolve("QPainter", "worldTransform", args)
- }
+  }
 
 }
 
@@ -823,7 +823,7 @@ func (this *QPainter) drawRects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawRectsERK7QVectorI5QRectE
   case 1:
@@ -834,7 +834,7 @@ func (this *QPainter) drawRects(args ...interface{}) () {
     // invoke: _ZN8QPainter9drawRectsERK7QVectorI6QRectFE
   default:
     qtrt.ErrorResolve("QPainter", "drawRects", args)
- }
+  }
 
 }
 
@@ -867,7 +867,7 @@ func (this *QPainter) drawEllipse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11drawEllipseERK6QPointii
   case 1:
@@ -880,7 +880,7 @@ func (this *QPainter) drawEllipse(args ...interface{}) () {
     // invoke: _ZN8QPainter11drawEllipseEiiii
   default:
     qtrt.ErrorResolve("QPainter", "drawEllipse", args)
- }
+  }
 
 }
 
@@ -909,7 +909,7 @@ func (this *QPainter) drawArc(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7drawArcEiiiiii
   case 1:
@@ -918,7 +918,7 @@ func (this *QPainter) drawArc(args ...interface{}) () {
     // invoke: _ZN8QPainter7drawArcERK5QRectii
   default:
     qtrt.ErrorResolve("QPainter", "drawArc", args)
- }
+  }
 
 }
 
@@ -943,7 +943,7 @@ func (this *QPainter) drawPolyline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawPolylineERK9QPolygonF
   case 1:
@@ -954,7 +954,7 @@ func (this *QPainter) drawPolyline(args ...interface{}) () {
     // invoke: _ZN8QPainter12drawPolylineEPK7QPointFi
   default:
     qtrt.ErrorResolve("QPainter", "drawPolyline", args)
- }
+  }
 
 }
 
@@ -967,12 +967,12 @@ func (this *QPainter) hasClipping(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11hasClippingEv
   default:
     qtrt.ErrorResolve("QPainter", "hasClipping", args)
- }
+  }
 
 }
 
@@ -1047,7 +1047,7 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_
   case 1:
@@ -1072,7 +1072,7 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
     // invoke: _ZN8QPainter10drawPixmapERK5QRectRK7QPixmapS2_
   default:
     qtrt.ErrorResolve("QPainter", "drawPixmap", args)
- }
+  }
 
 }
 
@@ -1096,7 +1096,7 @@ func (this *QPainter) drawStaticText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14drawStaticTextEiiRK11QStaticText
   case 1:
@@ -1105,7 +1105,7 @@ func (this *QPainter) drawStaticText(args ...interface{}) () {
     // invoke: _ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText
   default:
     qtrt.ErrorResolve("QPainter", "drawStaticText", args)
- }
+  }
 
 }
 
@@ -1120,12 +1120,12 @@ func (this *QPainter) strokePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10strokePathERK12QPainterPathRK4QPen
   default:
     qtrt.ErrorResolve("QPainter", "strokePath", args)
- }
+  }
 
 }
 
@@ -1150,7 +1150,7 @@ func (this *QPainter) drawConvexPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17drawConvexPolygonEPK6QPointi
   case 1:
@@ -1161,7 +1161,7 @@ func (this *QPainter) drawConvexPolygon(args ...interface{}) () {
     // invoke: _ZN8QPainter17drawConvexPolygonERK8QPolygon
   default:
     qtrt.ErrorResolve("QPainter", "drawConvexPolygon", args)
- }
+  }
 
 }
 
@@ -1175,12 +1175,12 @@ func (this *QPainter) drawPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawPathERK12QPainterPath
   default:
     qtrt.ErrorResolve("QPainter", "drawPath", args)
- }
+  }
 
 }
 
@@ -1193,12 +1193,12 @@ func (this *QPainter) combinedMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter14combinedMatrixEv
   default:
     qtrt.ErrorResolve("QPainter", "combinedMatrix", args)
- }
+  }
 
 }
 
@@ -1212,12 +1212,12 @@ func (this *QPainter) setMatrixEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter16setMatrixEnabledEb
   default:
     qtrt.ErrorResolve("QPainter", "setMatrixEnabled", args)
- }
+  }
 
 }
 
@@ -1231,12 +1231,12 @@ func (this *QPainter) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QPainter", "setFont", args)
- }
+  }
 
 }
 
@@ -1256,14 +1256,14 @@ func (this *QPainter) setWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9setWindowERK5QRect
   case 1:
     // invoke: _ZN8QPainter9setWindowEiiii
   default:
     qtrt.ErrorResolve("QPainter", "setWindow", args)
- }
+  }
 
 }
 
@@ -1276,12 +1276,12 @@ func (this *QPainter) deviceMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter12deviceMatrixEv
   default:
     qtrt.ErrorResolve("QPainter", "deviceMatrix", args)
- }
+  }
 
 }
 
@@ -1310,7 +1310,7 @@ func (this *QPainter) drawPie(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7drawPieEiiiiii
   case 1:
@@ -1319,7 +1319,7 @@ func (this *QPainter) drawPie(args ...interface{}) () {
     // invoke: _ZN8QPainter7drawPieERK6QRectFii
   default:
     qtrt.ErrorResolve("QPainter", "drawPie", args)
- }
+  }
 
 }
 
@@ -1333,17 +1333,18 @@ func (this *QPainter) setWorldMatrixEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter21setWorldMatrixEnabledEb
   default:
     qtrt.ErrorResolve("QPainter", "setWorldMatrixEnabled", args)
- }
+  }
 
 }
 
 
-func NewQPainter(args ...interface{})() {
+func NewQPainter(args ...interface{}) QPainter {
+  return QPainter{}
 }
 
 
@@ -1367,7 +1368,7 @@ func (this *QPainter) drawPoints(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10drawPointsERK8QPolygon
   case 1:
@@ -1378,7 +1379,7 @@ func (this *QPainter) drawPoints(args ...interface{}) () {
     // invoke: _ZN8QPainter10drawPointsEPK6QPointi
   default:
     qtrt.ErrorResolve("QPainter", "drawPoints", args)
- }
+  }
 
 }
 
@@ -1401,7 +1402,7 @@ func (this *QPainter) drawRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawRectEiiii
   case 1:
@@ -1410,7 +1411,7 @@ func (this *QPainter) drawRect(args ...interface{}) () {
     // invoke: _ZN8QPainter8drawRectERK5QRect
   default:
     qtrt.ErrorResolve("QPainter", "drawRect", args)
- }
+  }
 
 }
 
@@ -1423,12 +1424,12 @@ func (this *QPainter) clipRegion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter10clipRegionEv
   default:
     qtrt.ErrorResolve("QPainter", "clipRegion", args)
- }
+  }
 
 }
 
@@ -1459,7 +1460,7 @@ func (this *QPainter) drawLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawLineERK6QLineF
   case 1:
@@ -1472,7 +1473,7 @@ func (this *QPainter) drawLine(args ...interface{}) () {
     // invoke: _ZN8QPainter8drawLineERK6QPointS2_
   default:
     qtrt.ErrorResolve("QPainter", "drawLine", args)
- }
+  }
 
 }
 
@@ -1485,12 +1486,12 @@ func (this *QPainter) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6deviceEv
   default:
     qtrt.ErrorResolve("QPainter", "device", args)
- }
+  }
 
 }
 
@@ -1510,14 +1511,14 @@ func (this *QPainter) setViewport(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11setViewportERK5QRect
   case 1:
     // invoke: _ZN8QPainter11setViewportEiiii
   default:
     qtrt.ErrorResolve("QPainter", "setViewport", args)
- }
+  }
 
 }
 
@@ -1541,7 +1542,7 @@ func (this *QPainter) drawTextItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawTextItemEiiRK9QTextItem
   case 1:
@@ -1550,7 +1551,7 @@ func (this *QPainter) drawTextItem(args ...interface{}) () {
     // invoke: _ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem
   default:
     qtrt.ErrorResolve("QPainter", "drawTextItem", args)
- }
+  }
 
 }
 
@@ -1563,12 +1564,12 @@ func (this *QPainter) save(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter4saveEv
   default:
     qtrt.ErrorResolve("QPainter", "save", args)
- }
+  }
 
 }
 
@@ -1581,12 +1582,12 @@ func (this *QPainter) combinedTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter17combinedTransformEv
   default:
     qtrt.ErrorResolve("QPainter", "combinedTransform", args)
- }
+  }
 
 }
 
@@ -1599,12 +1600,12 @@ func (this *QPainter) end(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter3endEv
   default:
     qtrt.ErrorResolve("QPainter", "end", args)
- }
+  }
 
 }
 
@@ -1633,7 +1634,7 @@ func (this *QPainter) drawRoundRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter13drawRoundRectERK5QRectii
   case 1:
@@ -1642,7 +1643,7 @@ func (this *QPainter) drawRoundRect(args ...interface{}) () {
     // invoke: _ZN8QPainter13drawRoundRectEiiiiii
   default:
     qtrt.ErrorResolve("QPainter", "drawRoundRect", args)
- }
+  }
 
 }
 
@@ -1657,12 +1658,12 @@ func (this *QPainter) setWorldTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17setWorldTransformERK10QTransformb
   default:
     qtrt.ErrorResolve("QPainter", "setWorldTransform", args)
- }
+  }
 
 }
 
@@ -1675,12 +1676,12 @@ func (this *QPainter) restore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7restoreEv
   default:
     qtrt.ErrorResolve("QPainter", "restore", args)
- }
+  }
 
 }
 
@@ -1701,7 +1702,7 @@ func (this *QPainter) drawPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawPointERK6QPoint
   case 1:
@@ -1710,7 +1711,7 @@ func (this *QPainter) drawPoint(args ...interface{}) () {
     // invoke: _ZN8QPainter9drawPointERK7QPointF
   default:
     qtrt.ErrorResolve("QPainter", "drawPoint", args)
- }
+  }
 
 }
 
@@ -1721,10 +1722,10 @@ func (this *QPainter) redirected_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainter", "redirected", args)
- }
+  }
 
 }
 
@@ -1739,12 +1740,12 @@ func (this *QPainter) shear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5shearEdd
   default:
     qtrt.ErrorResolve("QPainter", "shear", args)
- }
+  }
 
 }
 
@@ -1757,12 +1758,12 @@ func (this *QPainter) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter4fontEv
   default:
     qtrt.ErrorResolve("QPainter", "font", args)
- }
+  }
 
 }
 
@@ -1775,12 +1776,12 @@ func (this *QPainter) deviceTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter15deviceTransformEv
   default:
     qtrt.ErrorResolve("QPainter", "deviceTransform", args)
- }
+  }
 
 }
 
@@ -1793,12 +1794,12 @@ func (this *QPainter) resetMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11resetMatrixEv
   default:
     qtrt.ErrorResolve("QPainter", "resetMatrix", args)
- }
+  }
 
 }
 
@@ -1811,12 +1812,12 @@ func (this *QPainter) paintEngine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11paintEngineEv
   default:
     qtrt.ErrorResolve("QPainter", "paintEngine", args)
- }
+  }
 
 }
 
@@ -1829,12 +1830,12 @@ func (this *QPainter) isActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8isActiveEv
   default:
     qtrt.ErrorResolve("QPainter", "isActive", args)
- }
+  }
 
 }
 
@@ -1845,10 +1846,10 @@ func (this *QPainter) restoreRedirected_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainter", "restoreRedirected", args)
- }
+  }
 
 }
 
@@ -1861,12 +1862,12 @@ func (this *QPainter) worldMatrixEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter18worldMatrixEnabledEv
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrixEnabled", args)
- }
+  }
 
 }
 
@@ -1879,12 +1880,12 @@ func (this *QPainter) transform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter9transformEv
   default:
     qtrt.ErrorResolve("QPainter", "transform", args)
- }
+  }
 
 }
 
@@ -1895,10 +1896,10 @@ func (this *QPainter) setRedirected_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainter", "setRedirected", args)
- }
+  }
 
 }
 
@@ -1911,12 +1912,12 @@ func (this *QPainter) fontMetrics(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11fontMetricsEv
   default:
     qtrt.ErrorResolve("QPainter", "fontMetrics", args)
- }
+  }
 
 }
 
@@ -1931,12 +1932,12 @@ func (this *QPainter) drawGlyphRun(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawGlyphRunERK7QPointFRK9QGlyphRun
   default:
     qtrt.ErrorResolve("QPainter", "drawGlyphRun", args)
- }
+  }
 
 }
 
@@ -1949,12 +1950,12 @@ func (this *QPainter) resetTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14resetTransformEv
   default:
     qtrt.ErrorResolve("QPainter", "resetTransform", args)
- }
+  }
 
 }
 
@@ -1967,12 +1968,12 @@ func (this *QPainter) brush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter5brushEv
   default:
     qtrt.ErrorResolve("QPainter", "brush", args)
- }
+  }
 
 }
 
@@ -1983,10 +1984,10 @@ func (this *QPainter) FreeQPainter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainter", "~QPainter", args)
- }
+  }
 
 }
 
@@ -2000,12 +2001,12 @@ func (this *QPainter) begin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5beginEP12QPaintDevice
   default:
     qtrt.ErrorResolve("QPainter", "begin", args)
- }
+  }
 
 }
 
@@ -2020,12 +2021,12 @@ func (this *QPainter) scale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5scaleEdd
   default:
     qtrt.ErrorResolve("QPainter", "scale", args)
- }
+  }
 
 }
 
@@ -2040,12 +2041,12 @@ func (this *QPainter) setWorldMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14setWorldMatrixERK7QMatrixb
   default:
     qtrt.ErrorResolve("QPainter", "setWorldMatrix", args)
- }
+  }
 
 }
 
@@ -2058,12 +2059,12 @@ func (this *QPainter) clipPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8clipPathEv
   default:
     qtrt.ErrorResolve("QPainter", "clipPath", args)
- }
+  }
 
 }
 
@@ -2076,12 +2077,12 @@ func (this *QPainter) brushOrigin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11brushOriginEv
   default:
     qtrt.ErrorResolve("QPainter", "brushOrigin", args)
- }
+  }
 
 }
 
@@ -2094,12 +2095,12 @@ func (this *QPainter) background(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter10backgroundEv
   default:
     qtrt.ErrorResolve("QPainter", "background", args)
- }
+  }
 
 }
 
@@ -2112,12 +2113,12 @@ func (this *QPainter) viewport(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8viewportEv
   default:
     qtrt.ErrorResolve("QPainter", "viewport", args)
- }
+  }
 
 }
 
@@ -2132,12 +2133,12 @@ func (this *QPainter) fillPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8fillPathERK12QPainterPathRK6QBrush
   default:
     qtrt.ErrorResolve("QPainter", "fillPath", args)
- }
+  }
 
 }
 
@@ -2150,12 +2151,12 @@ func (this *QPainter) matrixEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter13matrixEnabledEv
   default:
     qtrt.ErrorResolve("QPainter", "matrixEnabled", args)
- }
+  }
 
 }
 
@@ -2170,12 +2171,12 @@ func (this *QPainter) setTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12setTransformERK10QTransformb
   default:
     qtrt.ErrorResolve("QPainter", "setTransform", args)
- }
+  }
 
 }
 
@@ -2188,12 +2189,12 @@ func (this *QPainter) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6windowEv
   default:
     qtrt.ErrorResolve("QPainter", "window", args)
- }
+  }
 
 }
 
@@ -2207,12 +2208,12 @@ func (this *QPainter) initFrom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8initFromEPK12QPaintDevice
   default:
     qtrt.ErrorResolve("QPainter", "initFrom", args)
- }
+  }
 
 }
 
@@ -2225,12 +2226,12 @@ func (this *QPainter) fontInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8fontInfoEv
   default:
     qtrt.ErrorResolve("QPainter", "fontInfo", args)
- }
+  }
 
 }
 
@@ -2243,12 +2244,12 @@ func (this *QPainter) endNativePainting(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17endNativePaintingEv
   default:
     qtrt.ErrorResolve("QPainter", "endNativePainting", args)
- }
+  }
 
 }
 
@@ -2262,12 +2263,12 @@ func (this *QPainter) setViewTransformEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter23setViewTransformEnabledEb
   default:
     qtrt.ErrorResolve("QPainter", "setViewTransformEnabled", args)
- }
+  }
 
 }
 
@@ -2281,12 +2282,12 @@ func (this *QPainter) setOpacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10setOpacityEd
   default:
     qtrt.ErrorResolve("QPainter", "setOpacity", args)
- }
+  }
 
 }
 
@@ -2299,12 +2300,12 @@ func (this *QPainter) pen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter3penEv
   default:
     qtrt.ErrorResolve("QPainter", "pen", args)
- }
+  }
 
 }
 
@@ -2318,12 +2319,12 @@ func (this *QPainter) rotate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter6rotateEd
   default:
     qtrt.ErrorResolve("QPainter", "rotate", args)
- }
+  }
 
 }
 
@@ -2336,12 +2337,12 @@ func (this *QPainter) clipBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter16clipBoundingRectEv
   default:
     qtrt.ErrorResolve("QPainter", "clipBoundingRect", args)
- }
+  }
 
 }
 
@@ -2354,12 +2355,12 @@ func (this *QPainter) beginNativePainting(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QPainter19beginNativePaintingEv
   default:
     qtrt.ErrorResolve("QPainter", "beginNativePainting", args)
- }
+  }
 
 }
 

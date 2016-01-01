@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -48,10 +48,10 @@ func (this *QTimeZone) availableTimeZoneIds_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "availableTimeZoneIds", args)
- }
+  }
 
 }
 
@@ -65,12 +65,12 @@ func (this *QTimeZone) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTimeZone4swapERS_
   default:
     qtrt.ErrorResolve("QTimeZone", "swap", args)
- }
+  }
 
 }
 
@@ -83,12 +83,12 @@ func (this *QTimeZone) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone7isValidEv
   default:
     qtrt.ErrorResolve("QTimeZone", "isValid", args)
- }
+  }
 
 }
 
@@ -101,12 +101,12 @@ func (this *QTimeZone) hasDaylightTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone15hasDaylightTimeEv
   default:
     qtrt.ErrorResolve("QTimeZone", "hasDaylightTime", args)
- }
+  }
 
 }
 
@@ -117,15 +117,16 @@ func (this *QTimeZone) utc_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "utc", args)
- }
+  }
 
 }
 
 
-func NewQTimeZone(args ...interface{})() {
+func NewQTimeZone(args ...interface{}) QTimeZone {
+  return QTimeZone{}
 }
 
 
@@ -138,12 +139,12 @@ func (this *QTimeZone) abbreviation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone12abbreviationERK9QDateTime
   default:
     qtrt.ErrorResolve("QTimeZone", "abbreviation", args)
- }
+  }
 
 }
 
@@ -154,10 +155,10 @@ func (this *QTimeZone) ianaIdToWindowsId_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "ianaIdToWindowsId", args)
- }
+  }
 
 }
 
@@ -168,10 +169,10 @@ func (this *QTimeZone) systemTimeZoneId_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "systemTimeZoneId", args)
- }
+  }
 
 }
 
@@ -185,12 +186,12 @@ func (this *QTimeZone) isDaylightTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone14isDaylightTimeERK9QDateTime
   default:
     qtrt.ErrorResolve("QTimeZone", "isDaylightTime", args)
- }
+  }
 
 }
 
@@ -201,10 +202,10 @@ func (this *QTimeZone) isTimeZoneIdAvailable_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "isTimeZoneIdAvailable", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QTimeZone) comment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone7commentEv
   default:
     qtrt.ErrorResolve("QTimeZone", "comment", args)
- }
+  }
 
 }
 
@@ -233,10 +234,10 @@ func (this *QTimeZone) windowsIdToDefaultIanaId_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "windowsIdToDefaultIanaId", args)
- }
+  }
 
 }
 
@@ -249,12 +250,12 @@ func (this *QTimeZone) hasTransitions(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone14hasTransitionsEv
   default:
     qtrt.ErrorResolve("QTimeZone", "hasTransitions", args)
- }
+  }
 
 }
 
@@ -268,12 +269,12 @@ func (this *QTimeZone) daylightTimeOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime
   default:
     qtrt.ErrorResolve("QTimeZone", "daylightTimeOffset", args)
- }
+  }
 
 }
 
@@ -284,10 +285,10 @@ func (this *QTimeZone) systemTimeZone_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "systemTimeZone", args)
- }
+  }
 
 }
 
@@ -298,10 +299,10 @@ func (this *QTimeZone) FreeQTimeZone(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "~QTimeZone", args)
- }
+  }
 
 }
 
@@ -315,12 +316,12 @@ func (this *QTimeZone) standardTimeOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18standardTimeOffsetERK9QDateTime
   default:
     qtrt.ErrorResolve("QTimeZone", "standardTimeOffset", args)
- }
+  }
 
 }
 
@@ -333,12 +334,12 @@ func (this *QTimeZone) id(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone2idEv
   default:
     qtrt.ErrorResolve("QTimeZone", "id", args)
- }
+  }
 
 }
 
@@ -352,12 +353,12 @@ func (this *QTimeZone) offsetFromUtc(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone13offsetFromUtcERK9QDateTime
   default:
     qtrt.ErrorResolve("QTimeZone", "offsetFromUtc", args)
- }
+  }
 
 }
 
@@ -368,10 +369,10 @@ func (this *QTimeZone) windowsIdToIanaIds_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeZone", "windowsIdToIanaIds", args)
- }
+  }
 
 }
 

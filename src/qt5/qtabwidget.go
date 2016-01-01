@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.go
 //
@@ -55,12 +55,12 @@ func (this *QTabWidget) setCurrentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget16setCurrentWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QTabWidget", "setCurrentWidget", args)
- }
+  }
 
 }
 
@@ -73,12 +73,12 @@ func (this *QTabWidget) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget5countEv
   default:
     qtrt.ErrorResolve("QTabWidget", "count", args)
- }
+  }
 
 }
 
@@ -92,12 +92,12 @@ func (this *QTabWidget) setDocumentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget15setDocumentModeEb
   default:
     qtrt.ErrorResolve("QTabWidget", "setDocumentMode", args)
- }
+  }
 
 }
 
@@ -111,12 +111,12 @@ func (this *QTabWidget) heightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget14heightForWidthEi
   default:
     qtrt.ErrorResolve("QTabWidget", "heightForWidth", args)
- }
+  }
 
 }
 
@@ -136,14 +136,14 @@ func (this *QTabWidget) addTab(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget6addTabEP7QWidgetRK7QString
   case 1:
     // invoke: _ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString
   default:
     qtrt.ErrorResolve("QTabWidget", "addTab", args)
- }
+  }
 
 }
 
@@ -157,12 +157,12 @@ func (this *QTabWidget) tabText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget7tabTextEi
   default:
     qtrt.ErrorResolve("QTabWidget", "tabText", args)
- }
+  }
 
 }
 
@@ -175,12 +175,12 @@ func (this *QTabWidget) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget5clearEv
   default:
     qtrt.ErrorResolve("QTabWidget", "clear", args)
- }
+  }
 
 }
 
@@ -193,12 +193,12 @@ func (this *QTabWidget) hasHeightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget17hasHeightForWidthEv
   default:
     qtrt.ErrorResolve("QTabWidget", "hasHeightForWidth", args)
- }
+  }
 
 }
 
@@ -211,12 +211,12 @@ func (this *QTabWidget) tabBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget6tabBarEv
   default:
     qtrt.ErrorResolve("QTabWidget", "tabBar", args)
- }
+  }
 
 }
 
@@ -229,12 +229,12 @@ func (this *QTabWidget) tabsClosable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget12tabsClosableEv
   default:
     qtrt.ErrorResolve("QTabWidget", "tabsClosable", args)
- }
+  }
 
 }
 
@@ -256,14 +256,14 @@ func (this *QTabWidget) insertTab(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString
   case 1:
     // invoke: _ZN10QTabWidget9insertTabEiP7QWidgetRK7QString
   default:
     qtrt.ErrorResolve("QTabWidget", "insertTab", args)
- }
+  }
 
 }
 
@@ -277,12 +277,12 @@ func (this *QTabWidget) setUsesScrollButtons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget20setUsesScrollButtonsEb
   default:
     qtrt.ErrorResolve("QTabWidget", "setUsesScrollButtons", args)
- }
+  }
 
 }
 
@@ -295,12 +295,12 @@ func (this *QTabWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QTabWidget", "metaObject", args)
- }
+  }
 
 }
 
@@ -314,12 +314,12 @@ func (this *QTabWidget) tabToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget10tabToolTipEi
   default:
     qtrt.ErrorResolve("QTabWidget", "tabToolTip", args)
- }
+  }
 
 }
 
@@ -332,12 +332,12 @@ func (this *QTabWidget) currentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget13currentWidgetEv
   default:
     qtrt.ErrorResolve("QTabWidget", "currentWidget", args)
- }
+  }
 
 }
 
@@ -351,12 +351,12 @@ func (this *QTabWidget) setIconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget11setIconSizeERK5QSize
   default:
     qtrt.ErrorResolve("QTabWidget", "setIconSize", args)
- }
+  }
 
 }
 
@@ -370,12 +370,12 @@ func (this *QTabWidget) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget6widgetEi
   default:
     qtrt.ErrorResolve("QTabWidget", "widget", args)
- }
+  }
 
 }
 
@@ -389,12 +389,12 @@ func (this *QTabWidget) setMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget10setMovableEb
   default:
     qtrt.ErrorResolve("QTabWidget", "setMovable", args)
- }
+  }
 
 }
 
@@ -407,12 +407,12 @@ func (this *QTabWidget) documentMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget12documentModeEv
   default:
     qtrt.ErrorResolve("QTabWidget", "documentMode", args)
- }
+  }
 
 }
 
@@ -426,12 +426,12 @@ func (this *QTabWidget) tabWhatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget12tabWhatsThisEi
   default:
     qtrt.ErrorResolve("QTabWidget", "tabWhatsThis", args)
- }
+  }
 
 }
 
@@ -446,17 +446,18 @@ func (this *QTabWidget) setTabText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget10setTabTextEiRK7QString
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabText", args)
- }
+  }
 
 }
 
 
-func NewQTabWidget(args ...interface{})() {
+func NewQTabWidget(args ...interface{}) QTabWidget {
+  return QTabWidget{}
 }
 
 
@@ -468,12 +469,12 @@ func (this *QTabWidget) tabBarAutoHide(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget14tabBarAutoHideEv
   default:
     qtrt.ErrorResolve("QTabWidget", "tabBarAutoHide", args)
- }
+  }
 
 }
 
@@ -488,12 +489,12 @@ func (this *QTabWidget) setTabIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget10setTabIconEiRK5QIcon
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabIcon", args)
- }
+  }
 
 }
 
@@ -507,12 +508,12 @@ func (this *QTabWidget) tabIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget7tabIconEi
   default:
     qtrt.ErrorResolve("QTabWidget", "tabIcon", args)
- }
+  }
 
 }
 
@@ -526,12 +527,12 @@ func (this *QTabWidget) isTabEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget12isTabEnabledEi
   default:
     qtrt.ErrorResolve("QTabWidget", "isTabEnabled", args)
- }
+  }
 
 }
 
@@ -545,12 +546,12 @@ func (this *QTabWidget) setTabBarAutoHide(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget17setTabBarAutoHideEb
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabBarAutoHide", args)
- }
+  }
 
 }
 
@@ -563,12 +564,12 @@ func (this *QTabWidget) iconSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget8iconSizeEv
   default:
     qtrt.ErrorResolve("QTabWidget", "iconSize", args)
- }
+  }
 
 }
 
@@ -582,12 +583,12 @@ func (this *QTabWidget) setTabsClosable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget15setTabsClosableEb
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabsClosable", args)
- }
+  }
 
 }
 
@@ -600,12 +601,12 @@ func (this *QTabWidget) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QTabWidget", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -619,12 +620,12 @@ func (this *QTabWidget) setCurrentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget15setCurrentIndexEi
   default:
     qtrt.ErrorResolve("QTabWidget", "setCurrentIndex", args)
- }
+  }
 
 }
 
@@ -635,10 +636,10 @@ func (this *QTabWidget) FreeQTabWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTabWidget", "~QTabWidget", args)
- }
+  }
 
 }
 
@@ -653,12 +654,12 @@ func (this *QTabWidget) setTabWhatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget15setTabWhatsThisEiRK7QString
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabWhatsThis", args)
- }
+  }
 
 }
 
@@ -671,12 +672,12 @@ func (this *QTabWidget) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget8sizeHintEv
   default:
     qtrt.ErrorResolve("QTabWidget", "sizeHint", args)
- }
+  }
 
 }
 
@@ -690,12 +691,12 @@ func (this *QTabWidget) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget7indexOfEP7QWidget
   default:
     qtrt.ErrorResolve("QTabWidget", "indexOf", args)
- }
+  }
 
 }
 
@@ -709,12 +710,12 @@ func (this *QTabWidget) removeTab(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget9removeTabEi
   default:
     qtrt.ErrorResolve("QTabWidget", "removeTab", args)
- }
+  }
 
 }
 
@@ -729,12 +730,12 @@ func (this *QTabWidget) setTabToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget13setTabToolTipEiRK7QString
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabToolTip", args)
- }
+  }
 
 }
 
@@ -747,12 +748,12 @@ func (this *QTabWidget) isMovable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget9isMovableEv
   default:
     qtrt.ErrorResolve("QTabWidget", "isMovable", args)
- }
+  }
 
 }
 
@@ -765,12 +766,12 @@ func (this *QTabWidget) usesScrollButtons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget17usesScrollButtonsEv
   default:
     qtrt.ErrorResolve("QTabWidget", "usesScrollButtons", args)
- }
+  }
 
 }
 
@@ -783,12 +784,12 @@ func (this *QTabWidget) currentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QTabWidget12currentIndexEv
   default:
     qtrt.ErrorResolve("QTabWidget", "currentIndex", args)
- }
+  }
 
 }
 
@@ -803,12 +804,12 @@ func (this *QTabWidget) setTabEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QTabWidget13setTabEnabledEib
   default:
     qtrt.ErrorResolve("QTabWidget", "setTabEnabled", args)
- }
+  }
 
 }
 

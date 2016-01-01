@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -49,7 +49,8 @@ type QMovie struct {
 }
 
 
-func NewQMovie(args ...interface{})() {
+func NewQMovie(args ...interface{}) QMovie {
+  return QMovie{}
 }
 
 
@@ -61,12 +62,12 @@ func (this *QMovie) speed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie5speedEv
   default:
     qtrt.ErrorResolve("QMovie", "speed", args)
- }
+  }
 
 }
 
@@ -79,12 +80,12 @@ func (this *QMovie) jumpToNextFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie15jumpToNextFrameEv
   default:
     qtrt.ErrorResolve("QMovie", "jumpToNextFrame", args)
- }
+  }
 
 }
 
@@ -97,12 +98,12 @@ func (this *QMovie) frameCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie10frameCountEv
   default:
     qtrt.ErrorResolve("QMovie", "frameCount", args)
- }
+  }
 
 }
 
@@ -116,12 +117,12 @@ func (this *QMovie) setScaledSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie13setScaledSizeERK5QSize
   default:
     qtrt.ErrorResolve("QMovie", "setScaledSize", args)
- }
+  }
 
 }
 
@@ -135,12 +136,12 @@ func (this *QMovie) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QMovie", "setDevice", args)
- }
+  }
 
 }
 
@@ -153,12 +154,12 @@ func (this *QMovie) currentImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie12currentImageEv
   default:
     qtrt.ErrorResolve("QMovie", "currentImage", args)
- }
+  }
 
 }
 
@@ -172,12 +173,12 @@ func (this *QMovie) jumpToFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11jumpToFrameEi
   default:
     qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
- }
+  }
 
 }
 
@@ -190,12 +191,12 @@ func (this *QMovie) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie10metaObjectEv
   default:
     qtrt.ErrorResolve("QMovie", "metaObject", args)
- }
+  }
 
 }
 
@@ -206,10 +207,10 @@ func (this *QMovie) FreeQMovie(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMovie", "~QMovie", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QMovie) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie5startEv
   default:
     qtrt.ErrorResolve("QMovie", "start", args)
- }
+  }
 
 }
 
@@ -240,12 +241,12 @@ func (this *QMovie) loopCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie9loopCountEv
   default:
     qtrt.ErrorResolve("QMovie", "loopCount", args)
- }
+  }
 
 }
 
@@ -259,12 +260,12 @@ func (this *QMovie) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setFormatERK10QByteArray
   default:
     qtrt.ErrorResolve("QMovie", "setFormat", args)
- }
+  }
 
 }
 
@@ -275,10 +276,10 @@ func (this *QMovie) supportedFormats_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMovie", "supportedFormats", args)
- }
+  }
 
 }
 
@@ -291,12 +292,12 @@ func (this *QMovie) frameRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie9frameRectEv
   default:
     qtrt.ErrorResolve("QMovie", "frameRect", args)
- }
+  }
 
 }
 
@@ -310,12 +311,12 @@ func (this *QMovie) setPaused(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setPausedEb
   default:
     qtrt.ErrorResolve("QMovie", "setPaused", args)
- }
+  }
 
 }
 
@@ -328,12 +329,12 @@ func (this *QMovie) scaledSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie10scaledSizeEv
   default:
     qtrt.ErrorResolve("QMovie", "scaledSize", args)
- }
+  }
 
 }
 
@@ -346,12 +347,12 @@ func (this *QMovie) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie6deviceEv
   default:
     qtrt.ErrorResolve("QMovie", "device", args)
- }
+  }
 
 }
 
@@ -365,12 +366,12 @@ func (this *QMovie) setBackgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie18setBackgroundColorERK6QColor
   default:
     qtrt.ErrorResolve("QMovie", "setBackgroundColor", args)
- }
+  }
 
 }
 
@@ -383,12 +384,12 @@ func (this *QMovie) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie7isValidEv
   default:
     qtrt.ErrorResolve("QMovie", "isValid", args)
- }
+  }
 
 }
 
@@ -402,12 +403,12 @@ func (this *QMovie) setSpeed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie8setSpeedEi
   default:
     qtrt.ErrorResolve("QMovie", "setSpeed", args)
- }
+  }
 
 }
 
@@ -420,12 +421,12 @@ func (this *QMovie) stop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie4stopEv
   default:
     qtrt.ErrorResolve("QMovie", "stop", args)
- }
+  }
 
 }
 
@@ -438,12 +439,12 @@ func (this *QMovie) currentFrameNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie18currentFrameNumberEv
   default:
     qtrt.ErrorResolve("QMovie", "currentFrameNumber", args)
- }
+  }
 
 }
 
@@ -456,12 +457,12 @@ func (this *QMovie) nextFrameDelay(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie14nextFrameDelayEv
   default:
     qtrt.ErrorResolve("QMovie", "nextFrameDelay", args)
- }
+  }
 
 }
 
@@ -474,12 +475,12 @@ func (this *QMovie) currentPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie13currentPixmapEv
   default:
     qtrt.ErrorResolve("QMovie", "currentPixmap", args)
- }
+  }
 
 }
 
@@ -492,12 +493,12 @@ func (this *QMovie) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie6formatEv
   default:
     qtrt.ErrorResolve("QMovie", "format", args)
- }
+  }
 
 }
 
@@ -510,12 +511,12 @@ func (this *QMovie) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie8fileNameEv
   default:
     qtrt.ErrorResolve("QMovie", "fileName", args)
- }
+  }
 
 }
 
@@ -528,12 +529,12 @@ func (this *QMovie) backgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie15backgroundColorEv
   default:
     qtrt.ErrorResolve("QMovie", "backgroundColor", args)
- }
+  }
 
 }
 
@@ -547,12 +548,12 @@ func (this *QMovie) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QMovie", "setFileName", args)
- }
+  }
 
 }
 

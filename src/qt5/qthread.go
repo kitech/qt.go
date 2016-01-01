@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -44,7 +44,8 @@ type QThread struct {
 }
 
 
-func NewQThread(args ...interface{})() {
+func NewQThread(args ...interface{}) QThread {
+  return QThread{}
 }
 
 
@@ -57,12 +58,12 @@ func (this *QThread) setEventDispatcher(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher
   default:
     qtrt.ErrorResolve("QThread", "setEventDispatcher", args)
- }
+  }
 
 }
 
@@ -75,12 +76,12 @@ func (this *QThread) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread10metaObjectEv
   default:
     qtrt.ErrorResolve("QThread", "metaObject", args)
- }
+  }
 
 }
 
@@ -91,10 +92,10 @@ func (this *QThread) yieldCurrentThread_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "yieldCurrentThread", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QThread) isInterruptionRequested(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread23isInterruptionRequestedEv
   default:
     qtrt.ErrorResolve("QThread", "isInterruptionRequested", args)
- }
+  }
 
 }
 
@@ -123,10 +124,10 @@ func (this *QThread) msleep_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "msleep", args)
- }
+  }
 
 }
 
@@ -139,12 +140,12 @@ func (this *QThread) requestInterruption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread19requestInterruptionEv
   default:
     qtrt.ErrorResolve("QThread", "requestInterruption", args)
- }
+  }
 
 }
 
@@ -158,12 +159,12 @@ func (this *QThread) exit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread4exitEi
   default:
     qtrt.ErrorResolve("QThread", "exit", args)
- }
+  }
 
 }
 
@@ -177,12 +178,12 @@ func (this *QThread) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QThread", "event", args)
- }
+  }
 
 }
 
@@ -195,12 +196,12 @@ func (this *QThread) stackSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread9stackSizeEv
   default:
     qtrt.ErrorResolve("QThread", "stackSize", args)
- }
+  }
 
 }
 
@@ -213,12 +214,12 @@ func (this *QThread) eventDispatcher(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread15eventDispatcherEv
   default:
     qtrt.ErrorResolve("QThread", "eventDispatcher", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QThread) setStackSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread12setStackSizeEj
   default:
     qtrt.ErrorResolve("QThread", "setStackSize", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QThread) isFinished(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread10isFinishedEv
   default:
     qtrt.ErrorResolve("QThread", "isFinished", args)
- }
+  }
 
 }
 
@@ -266,10 +267,10 @@ func (this *QThread) sleep_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "sleep", args)
- }
+  }
 
 }
 
@@ -280,10 +281,10 @@ func (this *QThread) usleep_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "usleep", args)
- }
+  }
 
 }
 
@@ -294,10 +295,10 @@ func (this *QThread) idealThreadCount_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "idealThreadCount", args)
- }
+  }
 
 }
 
@@ -311,12 +312,12 @@ func (this *QThread) wait(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread4waitEm
   default:
     qtrt.ErrorResolve("QThread", "wait", args)
- }
+  }
 
 }
 
@@ -327,10 +328,10 @@ func (this *QThread) currentThread_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "currentThread", args)
- }
+  }
 
 }
 
@@ -343,12 +344,12 @@ func (this *QThread) isRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread9isRunningEv
   default:
     qtrt.ErrorResolve("QThread", "isRunning", args)
- }
+  }
 
 }
 
@@ -361,12 +362,12 @@ func (this *QThread) terminate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread9terminateEv
   default:
     qtrt.ErrorResolve("QThread", "terminate", args)
- }
+  }
 
 }
 
@@ -377,10 +378,10 @@ func (this *QThread) FreeQThread(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThread", "~QThread", args)
- }
+  }
 
 }
 
@@ -393,12 +394,12 @@ func (this *QThread) quit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QThread4quitEv
   default:
     qtrt.ErrorResolve("QThread", "quit", args)
- }
+  }
 
 }
 
@@ -411,12 +412,12 @@ func (this *QThread) loopLevel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QThread9loopLevelEv
   default:
     qtrt.ErrorResolve("QThread", "loopLevel", args)
- }
+  }
 
 }
 

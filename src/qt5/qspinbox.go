@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -59,12 +59,12 @@ func (this *QSpinBox) setMinimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox10setMinimumEi
   default:
     qtrt.ErrorResolve("QSpinBox", "setMinimum", args)
- }
+  }
 
 }
 
@@ -77,12 +77,12 @@ func (this *QSpinBox) cleanText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox9cleanTextEv
   default:
     qtrt.ErrorResolve("QSpinBox", "cleanText", args)
- }
+  }
 
 }
 
@@ -95,12 +95,12 @@ func (this *QSpinBox) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox5valueEv
   default:
     qtrt.ErrorResolve("QSpinBox", "value", args)
- }
+  }
 
 }
 
@@ -111,10 +111,10 @@ func (this *QSpinBox) FreeQSpinBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSpinBox", "~QSpinBox", args)
- }
+  }
 
 }
 
@@ -128,12 +128,12 @@ func (this *QSpinBox) setMaximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox10setMaximumEi
   default:
     qtrt.ErrorResolve("QSpinBox", "setMaximum", args)
- }
+  }
 
 }
 
@@ -147,12 +147,12 @@ func (this *QSpinBox) setValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox8setValueEi
   default:
     qtrt.ErrorResolve("QSpinBox", "setValue", args)
- }
+  }
 
 }
 
@@ -166,17 +166,18 @@ func (this *QSpinBox) setDisplayIntegerBase(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox21setDisplayIntegerBaseEi
   default:
     qtrt.ErrorResolve("QSpinBox", "setDisplayIntegerBase", args)
- }
+  }
 
 }
 
 
-func NewQSpinBox(args ...interface{})() {
+func NewQSpinBox(args ...interface{}) QSpinBox {
+  return QSpinBox{}
 }
 
 
@@ -188,12 +189,12 @@ func (this *QSpinBox) singleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox10singleStepEv
   default:
     qtrt.ErrorResolve("QSpinBox", "singleStep", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QSpinBox) displayIntegerBase(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox18displayIntegerBaseEv
   default:
     qtrt.ErrorResolve("QSpinBox", "displayIntegerBase", args)
- }
+  }
 
 }
 
@@ -225,12 +226,12 @@ func (this *QSpinBox) setSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox9setSuffixERK7QString
   default:
     qtrt.ErrorResolve("QSpinBox", "setSuffix", args)
- }
+  }
 
 }
 
@@ -243,12 +244,12 @@ func (this *QSpinBox) maximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox7maximumEv
   default:
     qtrt.ErrorResolve("QSpinBox", "maximum", args)
- }
+  }
 
 }
 
@@ -262,12 +263,12 @@ func (this *QSpinBox) setPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox9setPrefixERK7QString
   default:
     qtrt.ErrorResolve("QSpinBox", "setPrefix", args)
- }
+  }
 
 }
 
@@ -280,12 +281,12 @@ func (this *QSpinBox) prefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox6prefixEv
   default:
     qtrt.ErrorResolve("QSpinBox", "prefix", args)
- }
+  }
 
 }
 
@@ -298,12 +299,12 @@ func (this *QSpinBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QSpinBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -316,12 +317,12 @@ func (this *QSpinBox) suffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox6suffixEv
   default:
     qtrt.ErrorResolve("QSpinBox", "suffix", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QSpinBox) minimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QSpinBox7minimumEv
   default:
     qtrt.ErrorResolve("QSpinBox", "minimum", args)
- }
+  }
 
 }
 
@@ -353,12 +354,12 @@ func (this *QSpinBox) setSingleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox13setSingleStepEi
   default:
     qtrt.ErrorResolve("QSpinBox", "setSingleStep", args)
- }
+  }
 
 }
 
@@ -373,12 +374,12 @@ func (this *QSpinBox) setRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox8setRangeEii
   default:
     qtrt.ErrorResolve("QSpinBox", "setRange", args)
- }
+  }
 
 }
 
@@ -392,12 +393,12 @@ func (this *QDoubleSpinBox) textFromValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox13textFromValueEd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "textFromValue", args)
- }
+  }
 
 }
 
@@ -411,12 +412,12 @@ func (this *QDoubleSpinBox) setSingleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox13setSingleStepEd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setSingleStep", args)
- }
+  }
 
 }
 
@@ -429,12 +430,12 @@ func (this *QDoubleSpinBox) minimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox7minimumEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "minimum", args)
- }
+  }
 
 }
 
@@ -448,12 +449,12 @@ func (this *QDoubleSpinBox) valueFromText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox13valueFromTextERK7QString
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "valueFromText", args)
- }
+  }
 
 }
 
@@ -466,12 +467,12 @@ func (this *QDoubleSpinBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -485,12 +486,12 @@ func (this *QDoubleSpinBox) setValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox8setValueEd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setValue", args)
- }
+  }
 
 }
 
@@ -504,12 +505,12 @@ func (this *QDoubleSpinBox) setSuffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox9setSuffixERK7QString
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setSuffix", args)
- }
+  }
 
 }
 
@@ -522,12 +523,12 @@ func (this *QDoubleSpinBox) decimals(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox8decimalsEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "decimals", args)
- }
+  }
 
 }
 
@@ -540,12 +541,12 @@ func (this *QDoubleSpinBox) prefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox6prefixEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "prefix", args)
- }
+  }
 
 }
 
@@ -558,12 +559,12 @@ func (this *QDoubleSpinBox) singleStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox10singleStepEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "singleStep", args)
- }
+  }
 
 }
 
@@ -574,10 +575,10 @@ func (this *QDoubleSpinBox) FreeQDoubleSpinBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "~QDoubleSpinBox", args)
- }
+  }
 
 }
 
@@ -591,17 +592,18 @@ func (this *QDoubleSpinBox) fixup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox5fixupER7QString
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "fixup", args)
- }
+  }
 
 }
 
 
-func NewQDoubleSpinBox(args ...interface{})() {
+func NewQDoubleSpinBox(args ...interface{}) QDoubleSpinBox {
+  return QDoubleSpinBox{}
 }
 
 
@@ -614,12 +616,12 @@ func (this *QDoubleSpinBox) setPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox9setPrefixERK7QString
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setPrefix", args)
- }
+  }
 
 }
 
@@ -632,12 +634,12 @@ func (this *QDoubleSpinBox) cleanText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox9cleanTextEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "cleanText", args)
- }
+  }
 
 }
 
@@ -651,12 +653,12 @@ func (this *QDoubleSpinBox) setMinimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox10setMinimumEd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setMinimum", args)
- }
+  }
 
 }
 
@@ -670,12 +672,12 @@ func (this *QDoubleSpinBox) setMaximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox10setMaximumEd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setMaximum", args)
- }
+  }
 
 }
 
@@ -689,12 +691,12 @@ func (this *QDoubleSpinBox) setDecimals(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox11setDecimalsEi
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setDecimals", args)
- }
+  }
 
 }
 
@@ -707,12 +709,12 @@ func (this *QDoubleSpinBox) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox5valueEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "value", args)
- }
+  }
 
 }
 
@@ -727,12 +729,12 @@ func (this *QDoubleSpinBox) setRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox8setRangeEdd
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setRange", args)
- }
+  }
 
 }
 
@@ -745,12 +747,12 @@ func (this *QDoubleSpinBox) maximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox7maximumEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "maximum", args)
- }
+  }
 
 }
 
@@ -763,12 +765,12 @@ func (this *QDoubleSpinBox) suffix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox6suffixEv
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "suffix", args)
- }
+  }
 
 }
 

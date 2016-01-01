@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -50,12 +50,12 @@ func (this *QFileSelector) allSelectors(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector12allSelectorsEv
   default:
     qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QFileSelector) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector10metaObjectEv
   default:
     qtrt.ErrorResolve("QFileSelector", "metaObject", args)
- }
+  }
 
 }
 
@@ -84,15 +84,16 @@ func (this *QFileSelector) select_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileSelector", "select", args)
- }
+  }
 
 }
 
 
-func NewQFileSelector(args ...interface{})() {
+func NewQFileSelector(args ...interface{}) QFileSelector {
+  return QFileSelector{}
 }
 
 
@@ -105,12 +106,12 @@ func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QFileSelector17setExtraSelectorsERK11QStringList
   default:
     qtrt.ErrorResolve("QFileSelector", "setExtraSelectors", args)
- }
+  }
 
 }
 
@@ -121,10 +122,10 @@ func (this *QFileSelector) FreeQFileSelector(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
- }
+  }
 
 }
 
@@ -137,12 +138,12 @@ func (this *QFileSelector) extraSelectors(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector14extraSelectorsEv
   default:
     qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
- }
+  }
 
 }
 

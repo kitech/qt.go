@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -52,12 +52,12 @@ func (this *QGroupBox) isCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox11isCheckableEv
   default:
     qtrt.ErrorResolve("QGroupBox", "isCheckable", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QGroupBox) setCheckable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox12setCheckableEb
   default:
     qtrt.ErrorResolve("QGroupBox", "setCheckable", args)
- }
+  }
 
 }
 
@@ -89,12 +89,12 @@ func (this *QGroupBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QGroupBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -107,12 +107,12 @@ func (this *QGroupBox) isFlat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox6isFlatEv
   default:
     qtrt.ErrorResolve("QGroupBox", "isFlat", args)
- }
+  }
 
 }
 
@@ -125,12 +125,12 @@ func (this *QGroupBox) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QGroupBox", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -144,12 +144,12 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox7setFlatEb
   default:
     qtrt.ErrorResolve("QGroupBox", "setFlat", args)
- }
+  }
 
 }
 
@@ -160,15 +160,16 @@ func (this *QGroupBox) FreeQGroupBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGroupBox", "~QGroupBox", args)
- }
+  }
 
 }
 
 
-func NewQGroupBox(args ...interface{})() {
+func NewQGroupBox(args ...interface{}) QGroupBox {
+  return QGroupBox{}
 }
 
 
@@ -180,12 +181,12 @@ func (this *QGroupBox) isChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox9isCheckedEv
   default:
     qtrt.ErrorResolve("QGroupBox", "isChecked", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QGroupBox) setChecked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox10setCheckedEb
   default:
     qtrt.ErrorResolve("QGroupBox", "setChecked", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QGroupBox) title(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QGroupBox5titleEv
   default:
     qtrt.ErrorResolve("QGroupBox", "title", args)
- }
+  }
 
 }
 
@@ -236,12 +237,12 @@ func (this *QGroupBox) setAlignment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox12setAlignmentEi
   default:
     qtrt.ErrorResolve("QGroupBox", "setAlignment", args)
- }
+  }
 
 }
 
@@ -255,12 +256,12 @@ func (this *QGroupBox) setTitle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox8setTitleERK7QString
   default:
     qtrt.ErrorResolve("QGroupBox", "setTitle", args)
- }
+  }
 
 }
 

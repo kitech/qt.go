@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -49,10 +49,10 @@ func (this *QTimer) FreeQTimer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimer", "~QTimer", args)
- }
+  }
 
 }
 
@@ -65,12 +65,12 @@ func (this *QTimer) stop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QTimer4stopEv
   default:
     qtrt.ErrorResolve("QTimer", "stop", args)
- }
+  }
 
 }
 
@@ -83,12 +83,12 @@ func (this *QTimer) timerId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer7timerIdEv
   default:
     qtrt.ErrorResolve("QTimer", "timerId", args)
- }
+  }
 
 }
 
@@ -102,12 +102,12 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QTimer13setSingleShotEb
   default:
     qtrt.ErrorResolve("QTimer", "setSingleShot", args)
- }
+  }
 
 }
 
@@ -118,10 +118,10 @@ func (this *QTimer) singleShot_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimer", "singleShot", args)
- }
+  }
 
 }
 
@@ -137,14 +137,14 @@ func (this *QTimer) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QTimer5startEv
   case 1:
     // invoke: _ZN6QTimer5startEi
   default:
     qtrt.ErrorResolve("QTimer", "start", args)
- }
+  }
 
 }
 
@@ -157,12 +157,12 @@ func (this *QTimer) interval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer8intervalEv
   default:
     qtrt.ErrorResolve("QTimer", "interval", args)
- }
+  }
 
 }
 
@@ -176,17 +176,18 @@ func (this *QTimer) setInterval(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QTimer11setIntervalEi
   default:
     qtrt.ErrorResolve("QTimer", "setInterval", args)
- }
+  }
 
 }
 
 
-func NewQTimer(args ...interface{})() {
+func NewQTimer(args ...interface{}) QTimer {
+  return QTimer{}
 }
 
 
@@ -198,12 +199,12 @@ func (this *QTimer) remainingTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer13remainingTimeEv
   default:
     qtrt.ErrorResolve("QTimer", "remainingTime", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QTimer) isSingleShot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer12isSingleShotEv
   default:
     qtrt.ErrorResolve("QTimer", "isSingleShot", args)
- }
+  }
 
 }
 
@@ -234,12 +235,12 @@ func (this *QTimer) isActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer8isActiveEv
   default:
     qtrt.ErrorResolve("QTimer", "isActive", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QTimer) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer10metaObjectEv
   default:
     qtrt.ErrorResolve("QTimer", "metaObject", args)
- }
+  }
 
 }
 

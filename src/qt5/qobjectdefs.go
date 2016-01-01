@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -60,7 +60,8 @@ type QGenericArgument struct {
 }
 
 
-func NewConnection(args ...interface{})() {
+func NewConnection(args ...interface{}) Connection {
+  return Connection{}
 }
 
 
@@ -70,15 +71,16 @@ func (this *Connection) FreeConnection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("Connection", "~Connection", args)
- }
+  }
 
 }
 
 
-func NewQGenericReturnArgument(args ...interface{})() {
+func NewQGenericReturnArgument(args ...interface{}) QGenericReturnArgument {
+  return QGenericReturnArgument{}
 }
 
 
@@ -88,10 +90,10 @@ func (this *QMetaObject) normalizedSignature_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "normalizedSignature", args)
- }
+  }
 
 }
 
@@ -102,10 +104,10 @@ func (this *QMetaObject) disconnectOne_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "disconnectOne", args)
- }
+  }
 
 }
 
@@ -119,12 +121,12 @@ func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11indexOfSlotEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSlot", args)
- }
+  }
 
 }
 
@@ -138,12 +140,12 @@ func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject18indexOfConstructorEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfConstructor", args)
- }
+  }
 
 }
 
@@ -157,12 +159,12 @@ func (this *QMetaObject) enumerator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject10enumeratorEi
   default:
     qtrt.ErrorResolve("QMetaObject", "enumerator", args)
- }
+  }
 
 }
 
@@ -176,12 +178,12 @@ func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfMethodEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfMethod", args)
- }
+  }
 
 }
 
@@ -195,12 +197,12 @@ func (this *QMetaObject) constructor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11constructorEi
   default:
     qtrt.ErrorResolve("QMetaObject", "constructor", args)
- }
+  }
 
 }
 
@@ -211,10 +213,10 @@ func (this *QMetaObject) checkConnectArgs_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "checkConnectArgs", args)
- }
+  }
 
 }
 
@@ -227,12 +229,12 @@ func (this *QMetaObject) enumeratorOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16enumeratorOffsetEv
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorOffset", args)
- }
+  }
 
 }
 
@@ -246,12 +248,12 @@ func (this *QMetaObject) property(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject8propertyEi
   default:
     qtrt.ErrorResolve("QMetaObject", "property", args)
- }
+  }
 
 }
 
@@ -262,10 +264,10 @@ func (this *QMetaObject) connectSlotsByName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "connectSlotsByName", args)
- }
+  }
 
 }
 
@@ -278,12 +280,12 @@ func (this *QMetaObject) userProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject12userPropertyEv
   default:
     qtrt.ErrorResolve("QMetaObject", "userProperty", args)
- }
+  }
 
 }
 
@@ -297,12 +299,12 @@ func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15indexOfPropertyEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfProperty", args)
- }
+  }
 
 }
 
@@ -316,12 +318,12 @@ func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16indexOfClassInfoEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfClassInfo", args)
- }
+  }
 
 }
 
@@ -332,10 +334,10 @@ func (this *QMetaObject) activate_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "activate", args)
- }
+  }
 
 }
 
@@ -352,14 +354,14 @@ func (this *QMetaObject) cast(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject4castEPK7QObject
   case 1:
     // invoke: _ZNK11QMetaObject4castEP7QObject
   default:
     qtrt.ErrorResolve("QMetaObject", "cast", args)
- }
+  }
 
 }
 
@@ -373,12 +375,12 @@ func (this *QMetaObject) method(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject6methodEi
   default:
     qtrt.ErrorResolve("QMetaObject", "method", args)
- }
+  }
 
 }
 
@@ -391,12 +393,12 @@ func (this *QMetaObject) superClass(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject10superClassEv
   default:
     qtrt.ErrorResolve("QMetaObject", "superClass", args)
- }
+  }
 
 }
 
@@ -409,12 +411,12 @@ func (this *QMetaObject) propertyCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13propertyCountEv
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyCount", args)
- }
+  }
 
 }
 
@@ -428,12 +430,12 @@ func (this *QMetaObject) classInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject9classInfoEi
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfo", args)
- }
+  }
 
 }
 
@@ -446,12 +448,12 @@ func (this *QMetaObject) className(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject9classNameEv
   default:
     qtrt.ErrorResolve("QMetaObject", "className", args)
- }
+  }
 
 }
 
@@ -465,12 +467,12 @@ func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfSignalEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSignal", args)
- }
+  }
 
 }
 
@@ -481,10 +483,10 @@ func (this *QMetaObject) normalizedType_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "normalizedType", args)
- }
+  }
 
 }
 
@@ -497,12 +499,12 @@ func (this *QMetaObject) constructorCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16constructorCountEv
   default:
     qtrt.ErrorResolve("QMetaObject", "constructorCount", args)
- }
+  }
 
 }
 
@@ -515,12 +517,12 @@ func (this *QMetaObject) propertyOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject14propertyOffsetEv
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyOffset", args)
- }
+  }
 
 }
 
@@ -531,10 +533,10 @@ func (this *QMetaObject) disconnect_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMetaObject", "disconnect", args)
- }
+  }
 
 }
 
@@ -547,12 +549,12 @@ func (this *QMetaObject) enumeratorCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15enumeratorCountEv
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorCount", args)
- }
+  }
 
 }
 
@@ -565,12 +567,12 @@ func (this *QMetaObject) classInfoOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15classInfoOffsetEv
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoOffset", args)
- }
+  }
 
 }
 
@@ -583,12 +585,12 @@ func (this *QMetaObject) methodOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject12methodOffsetEv
   default:
     qtrt.ErrorResolve("QMetaObject", "methodOffset", args)
- }
+  }
 
 }
 
@@ -602,12 +604,12 @@ func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject17indexOfEnumeratorEPKc
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfEnumerator", args)
- }
+  }
 
 }
 
@@ -620,12 +622,12 @@ func (this *QMetaObject) methodCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11methodCountEv
   default:
     qtrt.ErrorResolve("QMetaObject", "methodCount", args)
- }
+  }
 
 }
 
@@ -638,12 +640,12 @@ func (this *QMetaObject) classInfoCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject14classInfoCountEv
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoCount", args)
- }
+  }
 
 }
 
@@ -656,12 +658,12 @@ func (this *QGenericArgument) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QGenericArgument4nameEv
   default:
     qtrt.ErrorResolve("QGenericArgument", "name", args)
- }
+  }
 
 }
 
@@ -674,17 +676,18 @@ func (this *QGenericArgument) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QGenericArgument4dataEv
   default:
     qtrt.ErrorResolve("QGenericArgument", "data", args)
- }
+  }
 
 }
 
 
-func NewQGenericArgument(args ...interface{})() {
+func NewQGenericArgument(args ...interface{}) QGenericArgument {
+  return QGenericArgument{}
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -50,12 +50,12 @@ func (this *QFileDevice) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice4sizeEv
   default:
     qtrt.ErrorResolve("QFileDevice", "size", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QFileDevice) seek(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice4seekEx
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5unmapEPh
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
- }
+  }
 
 }
 
@@ -106,12 +106,12 @@ func (this *QFileDevice) close(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5closeEv
   default:
     qtrt.ErrorResolve("QFileDevice", "close", args)
- }
+  }
 
 }
 
@@ -124,12 +124,12 @@ func (this *QFileDevice) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice3posEv
   default:
     qtrt.ErrorResolve("QFileDevice", "pos", args)
- }
+  }
 
 }
 
@@ -142,12 +142,12 @@ func (this *QFileDevice) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice6handleEv
   default:
     qtrt.ErrorResolve("QFileDevice", "handle", args)
- }
+  }
 
 }
 
@@ -160,17 +160,18 @@ func (this *QFileDevice) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice8fileNameEv
   default:
     qtrt.ErrorResolve("QFileDevice", "fileName", args)
- }
+  }
 
 }
 
 
-func NewQFileDevice(args ...interface{})() {
+func NewQFileDevice(args ...interface{}) QFileDevice {
+  return QFileDevice{}
 }
 
 
@@ -180,10 +181,10 @@ func (this *QFileDevice) FreeQFileDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFileDevice", "~QFileDevice", args)
- }
+  }
 
 }
 
@@ -196,12 +197,12 @@ func (this *QFileDevice) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice5atEndEv
   default:
     qtrt.ErrorResolve("QFileDevice", "atEnd", args)
- }
+  }
 
 }
 
@@ -214,12 +215,12 @@ func (this *QFileDevice) isSequential(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice12isSequentialEv
   default:
     qtrt.ErrorResolve("QFileDevice", "isSequential", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QFileDevice) flush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5flushEv
   default:
     qtrt.ErrorResolve("QFileDevice", "flush", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QFileDevice) unsetError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice10unsetErrorEv
   default:
     qtrt.ErrorResolve("QFileDevice", "unsetError", args)
- }
+  }
 
 }
 
@@ -268,12 +269,12 @@ func (this *QFileDevice) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice10metaObjectEv
   default:
     qtrt.ErrorResolve("QFileDevice", "metaObject", args)
- }
+  }
 
 }
 
@@ -287,12 +288,12 @@ func (this *QFileDevice) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice6resizeEx
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
- }
+  }
 
 }
 

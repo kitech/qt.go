@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -59,12 +59,12 @@ func (this *QPainterPath) setElementPositionAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath20setElementPositionAtEidd
   default:
     qtrt.ErrorResolve("QPainterPath", "setElementPositionAt", args)
- }
+  }
 
 }
 
@@ -81,14 +81,14 @@ func (this *QPainterPath) toFillPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath13toFillPolygonERK7QMatrix
   case 1:
     // invoke: _ZNK12QPainterPath13toFillPolygonERK10QTransform
   default:
     qtrt.ErrorResolve("QPainterPath", "toFillPolygon", args)
- }
+  }
 
 }
 
@@ -106,14 +106,14 @@ func (this *QPainterPath) translated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10translatedEdd
   case 1:
     // invoke: _ZNK12QPainterPath10translatedERK7QPointF
   default:
     qtrt.ErrorResolve("QPainterPath", "translated", args)
- }
+  }
 
 }
 
@@ -124,10 +124,10 @@ func (this *QPainterPath) FreeQPainterPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainterPath", "~QPainterPath", args)
- }
+  }
 
 }
 
@@ -144,14 +144,14 @@ func (this *QPainterPath) toSubpathPolygons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath17toSubpathPolygonsERK10QTransform
   case 1:
     // invoke: _ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix
   default:
     qtrt.ErrorResolve("QPainterPath", "toSubpathPolygons", args)
- }
+  }
 
 }
 
@@ -164,12 +164,12 @@ func (this *QPainterPath) controlPointRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath16controlPointRectEv
   default:
     qtrt.ErrorResolve("QPainterPath", "controlPointRect", args)
- }
+  }
 
 }
 
@@ -186,14 +186,14 @@ func (this *QPainterPath) toFillPolygons(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14toFillPolygonsERK7QMatrix
   case 1:
     // invoke: _ZNK12QPainterPath14toFillPolygonsERK10QTransform
   default:
     qtrt.ErrorResolve("QPainterPath", "toFillPolygons", args)
- }
+  }
 
 }
 
@@ -214,14 +214,14 @@ func (this *QPainterPath) quadTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6quadToERK7QPointFS2_
   case 1:
     // invoke: _ZN12QPainterPath6quadToEdddd
   default:
     qtrt.ErrorResolve("QPainterPath", "quadTo", args)
- }
+  }
 
 }
 
@@ -245,14 +245,14 @@ func (this *QPainterPath) arcTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath5arcToEdddddd
   case 1:
     // invoke: _ZN12QPainterPath5arcToERK6QRectFdd
   default:
     qtrt.ErrorResolve("QPainterPath", "arcTo", args)
- }
+  }
 
 }
 
@@ -272,14 +272,14 @@ func (this *QPainterPath) addRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addRectERK6QRectF
   case 1:
     // invoke: _ZN12QPainterPath7addRectEdddd
   default:
     qtrt.ErrorResolve("QPainterPath", "addRect", args)
- }
+  }
 
 }
 
@@ -314,7 +314,7 @@ func (this *QPainterPath) addRoundRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath12addRoundRectERK6QRectFii
   case 1:
@@ -325,7 +325,7 @@ func (this *QPainterPath) addRoundRect(args ...interface{}) () {
     // invoke: _ZN12QPainterPath12addRoundRectEddddii
   default:
     qtrt.ErrorResolve("QPainterPath", "addRoundRect", args)
- }
+  }
 
 }
 
@@ -347,14 +347,14 @@ func (this *QPainterPath) addText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addTextEddRK5QFontRK7QString
   case 1:
     // invoke: _ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString
   default:
     qtrt.ErrorResolve("QPainterPath", "addText", args)
- }
+  }
 
 }
 
@@ -371,14 +371,14 @@ func (this *QPainterPath) intersects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10intersectsERK6QRectF
   case 1:
     // invoke: _ZNK12QPainterPath10intersectsERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "intersects", args)
- }
+  }
 
 }
 
@@ -398,7 +398,7 @@ func (this *QPainterPath) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath8containsERK7QPointF
   case 1:
@@ -407,7 +407,7 @@ func (this *QPainterPath) contains(args ...interface{}) () {
     // invoke: _ZNK12QPainterPath8containsERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "contains", args)
- }
+  }
 
 }
 
@@ -432,7 +432,7 @@ func (this *QPainterPath) addEllipse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath10addEllipseERK7QPointFdd
   case 1:
@@ -441,7 +441,7 @@ func (this *QPainterPath) addEllipse(args ...interface{}) () {
     // invoke: _ZN12QPainterPath10addEllipseERK6QRectF
   default:
     qtrt.ErrorResolve("QPainterPath", "addEllipse", args)
- }
+  }
 
 }
 
@@ -459,14 +459,14 @@ func (this *QPainterPath) lineTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6lineToEdd
   case 1:
     // invoke: _ZN12QPainterPath6lineToERK7QPointF
   default:
     qtrt.ErrorResolve("QPainterPath", "lineTo", args)
- }
+  }
 
 }
 
@@ -490,14 +490,14 @@ func (this *QPainterPath) cubicTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7cubicToERK7QPointFS2_S2_
   case 1:
     // invoke: _ZN12QPainterPath7cubicToEdddddd
   default:
     qtrt.ErrorResolve("QPainterPath", "cubicTo", args)
- }
+  }
 
 }
 
@@ -511,17 +511,18 @@ func (this *QPainterPath) slopeAtPercent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14slopeAtPercentEd
   default:
     qtrt.ErrorResolve("QPainterPath", "slopeAtPercent", args)
- }
+  }
 
 }
 
 
-func NewQPainterPath(args ...interface{})() {
+func NewQPainterPath(args ...interface{}) QPainterPath {
+  return QPainterPath{}
 }
 
 
@@ -534,12 +535,12 @@ func (this *QPainterPath) intersected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath11intersectedERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "intersected", args)
- }
+  }
 
 }
 
@@ -557,14 +558,14 @@ func (this *QPainterPath) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9translateEdd
   case 1:
     // invoke: _ZN12QPainterPath9translateERK7QPointF
   default:
     qtrt.ErrorResolve("QPainterPath", "translate", args)
- }
+  }
 
 }
 
@@ -578,12 +579,12 @@ func (this *QPainterPath) addPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath10addPolygonERK9QPolygonF
   default:
     qtrt.ErrorResolve("QPainterPath", "addPolygon", args)
- }
+  }
 
 }
 
@@ -597,12 +598,12 @@ func (this *QPainterPath) addPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addPathERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "addPath", args)
- }
+  }
 
 }
 
@@ -615,12 +616,12 @@ func (this *QPainterPath) elementCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath12elementCountEv
   default:
     qtrt.ErrorResolve("QPainterPath", "elementCount", args)
- }
+  }
 
 }
 
@@ -633,12 +634,12 @@ func (this *QPainterPath) simplified(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10simplifiedEv
   default:
     qtrt.ErrorResolve("QPainterPath", "simplified", args)
- }
+  }
 
 }
 
@@ -651,12 +652,12 @@ func (this *QPainterPath) length(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath6lengthEv
   default:
     qtrt.ErrorResolve("QPainterPath", "length", args)
- }
+  }
 
 }
 
@@ -670,12 +671,12 @@ func (this *QPainterPath) connectPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath11connectPathERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "connectPath", args)
- }
+  }
 
 }
 
@@ -689,12 +690,12 @@ func (this *QPainterPath) addRegion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9addRegionERK7QRegion
   default:
     qtrt.ErrorResolve("QPainterPath", "addRegion", args)
- }
+  }
 
 }
 
@@ -707,12 +708,12 @@ func (this *QPainterPath) currentPosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath15currentPositionEv
   default:
     qtrt.ErrorResolve("QPainterPath", "currentPosition", args)
- }
+  }
 
 }
 
@@ -725,12 +726,12 @@ func (this *QPainterPath) toReversed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10toReversedEv
   default:
     qtrt.ErrorResolve("QPainterPath", "toReversed", args)
- }
+  }
 
 }
 
@@ -743,12 +744,12 @@ func (this *QPainterPath) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath12boundingRectEv
   default:
     qtrt.ErrorResolve("QPainterPath", "boundingRect", args)
- }
+  }
 
 }
 
@@ -762,12 +763,12 @@ func (this *QPainterPath) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath4swapERS_
   default:
     qtrt.ErrorResolve("QPainterPath", "swap", args)
- }
+  }
 
 }
 
@@ -785,14 +786,14 @@ func (this *QPainterPath) moveTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6moveToEdd
   case 1:
     // invoke: _ZN12QPainterPath6moveToERK7QPointF
   default:
     qtrt.ErrorResolve("QPainterPath", "moveTo", args)
- }
+  }
 
 }
 
@@ -806,12 +807,12 @@ func (this *QPainterPath) subtracted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10subtractedERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "subtracted", args)
- }
+  }
 
 }
 
@@ -825,12 +826,12 @@ func (this *QPainterPath) pointAtPercent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14pointAtPercentEd
   default:
     qtrt.ErrorResolve("QPainterPath", "pointAtPercent", args)
- }
+  }
 
 }
 
@@ -844,12 +845,12 @@ func (this *QPainterPath) percentAtLength(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath15percentAtLengthEd
   default:
     qtrt.ErrorResolve("QPainterPath", "percentAtLength", args)
- }
+  }
 
 }
 
@@ -863,12 +864,12 @@ func (this *QPainterPath) subtractedInverted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath18subtractedInvertedERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "subtractedInverted", args)
- }
+  }
 
 }
 
@@ -890,14 +891,14 @@ func (this *QPainterPath) arcMoveTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9arcMoveToEddddd
   case 1:
     // invoke: _ZN12QPainterPath9arcMoveToERK6QRectFd
   default:
     qtrt.ErrorResolve("QPainterPath", "arcMoveTo", args)
- }
+  }
 
 }
 
@@ -910,12 +911,12 @@ func (this *QPainterPath) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath7isEmptyEv
   default:
     qtrt.ErrorResolve("QPainterPath", "isEmpty", args)
- }
+  }
 
 }
 
@@ -929,12 +930,12 @@ func (this *QPainterPath) united(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath6unitedERKS_
   default:
     qtrt.ErrorResolve("QPainterPath", "united", args)
- }
+  }
 
 }
 
@@ -948,12 +949,12 @@ func (this *QPainterPath) angleAtPercent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14angleAtPercentEd
   default:
     qtrt.ErrorResolve("QPainterPath", "angleAtPercent", args)
- }
+  }
 
 }
 
@@ -966,12 +967,12 @@ func (this *QPainterPath) closeSubpath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath12closeSubpathEv
   default:
     qtrt.ErrorResolve("QPainterPath", "closeSubpath", args)
- }
+  }
 
 }
 
@@ -984,12 +985,12 @@ func (this *QPainterPathStroker) curveThreshold(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker14curveThresholdEv
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "curveThreshold", args)
- }
+  }
 
 }
 
@@ -1003,12 +1004,12 @@ func (this *QPainterPathStroker) setWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker8setWidthEd
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setWidth", args)
- }
+  }
 
 }
 
@@ -1019,10 +1020,10 @@ func (this *QPainterPathStroker) FreeQPainterPathStroker(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "~QPainterPathStroker", args)
- }
+  }
 
 }
 
@@ -1036,17 +1037,18 @@ func (this *QPainterPathStroker) setMiterLimit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker13setMiterLimitEd
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setMiterLimit", args)
- }
+  }
 
 }
 
 
-func NewQPainterPathStroker(args ...interface{})() {
+func NewQPainterPathStroker(args ...interface{}) QPainterPathStroker {
+  return QPainterPathStroker{}
 }
 
 
@@ -1059,12 +1061,12 @@ func (this *QPainterPathStroker) setCurveThreshold(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker17setCurveThresholdEd
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setCurveThreshold", args)
- }
+  }
 
 }
 
@@ -1077,12 +1079,12 @@ func (this *QPainterPathStroker) dashPattern(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker11dashPatternEv
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "dashPattern", args)
- }
+  }
 
 }
 
@@ -1095,12 +1097,12 @@ func (this *QPainterPathStroker) dashOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker10dashOffsetEv
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "dashOffset", args)
- }
+  }
 
 }
 
@@ -1114,12 +1116,12 @@ func (this *QPainterPathStroker) createStroke(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker12createStrokeERK12QPainterPath
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "createStroke", args)
- }
+  }
 
 }
 
@@ -1133,12 +1135,12 @@ func (this *QPainterPathStroker) setDashOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker13setDashOffsetEd
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setDashOffset", args)
- }
+  }
 
 }
 
@@ -1151,12 +1153,12 @@ func (this *QPainterPathStroker) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker5widthEv
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "width", args)
- }
+  }
 
 }
 
@@ -1169,12 +1171,12 @@ func (this *QPainterPathStroker) miterLimit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker10miterLimitEv
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "miterLimit", args)
- }
+  }
 
 }
 

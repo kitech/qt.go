@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -48,10 +48,10 @@ func (this *QCursor) setPos_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCursor", "setPos", args)
- }
+  }
 
 }
 
@@ -64,17 +64,18 @@ func (this *QCursor) pixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor6pixmapEv
   default:
     qtrt.ErrorResolve("QCursor", "pixmap", args)
- }
+  }
 
 }
 
 
-func NewQCursor(args ...interface{})() {
+func NewQCursor(args ...interface{}) QCursor {
+  return QCursor{}
 }
 
 
@@ -84,10 +85,10 @@ func (this *QCursor) FreeQCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCursor", "~QCursor", args)
- }
+  }
 
 }
 
@@ -100,12 +101,12 @@ func (this *QCursor) mask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor4maskEv
   default:
     qtrt.ErrorResolve("QCursor", "mask", args)
- }
+  }
 
 }
 
@@ -118,12 +119,12 @@ func (this *QCursor) bitmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor6bitmapEv
   default:
     qtrt.ErrorResolve("QCursor", "bitmap", args)
- }
+  }
 
 }
 
@@ -134,10 +135,10 @@ func (this *QCursor) pos_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCursor", "pos", args)
- }
+  }
 
 }
 
@@ -150,12 +151,12 @@ func (this *QCursor) hotSpot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor7hotSpotEv
   default:
     qtrt.ErrorResolve("QCursor", "hotSpot", args)
- }
+  }
 
 }
 

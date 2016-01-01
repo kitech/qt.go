@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -48,10 +48,10 @@ func (this *QPixmapCache) cacheLimit_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "cacheLimit", args)
- }
+  }
 
 }
 
@@ -62,10 +62,10 @@ func (this *QPixmapCache) clear_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "clear", args)
- }
+  }
 
 }
 
@@ -76,10 +76,10 @@ func (this *QPixmapCache) insert_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "insert", args)
- }
+  }
 
 }
 
@@ -90,10 +90,10 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "find", args)
- }
+  }
 
 }
 
@@ -104,10 +104,10 @@ func (this *QPixmapCache) remove_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "remove", args)
- }
+  }
 
 }
 
@@ -118,10 +118,10 @@ func (this *QPixmapCache) setCacheLimit_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmapCache", "setCacheLimit", args)
- }
+  }
 
 }
 

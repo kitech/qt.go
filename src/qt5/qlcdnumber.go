@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -58,7 +58,7 @@ func (this *QLCDNumber) display(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber7displayEi
   case 1:
@@ -67,7 +67,7 @@ func (this *QLCDNumber) display(args ...interface{}) () {
     // invoke: _ZN10QLCDNumber7displayERK7QString
   default:
     qtrt.ErrorResolve("QLCDNumber", "display", args)
- }
+  }
 
 }
 
@@ -80,12 +80,12 @@ func (this *QLCDNumber) setHexMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setHexModeEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
- }
+  }
 
 }
 
@@ -98,17 +98,18 @@ func (this *QLCDNumber) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber10metaObjectEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQLCDNumber(args ...interface{})() {
+func NewQLCDNumber(args ...interface{}) QLCDNumber {
+  return QLCDNumber{}
 }
 
 
@@ -120,12 +121,12 @@ func (this *QLCDNumber) digitCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber10digitCountEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
- }
+  }
 
 }
 
@@ -136,10 +137,10 @@ func (this *QLCDNumber) FreeQLCDNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
- }
+  }
 
 }
 
@@ -156,14 +157,14 @@ func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber13checkOverflowEi
   case 1:
     // invoke: _ZNK10QLCDNumber13checkOverflowEd
   default:
     qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
- }
+  }
 
 }
 
@@ -176,12 +177,12 @@ func (this *QLCDNumber) setDecMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setDecModeEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
- }
+  }
 
 }
 
@@ -194,12 +195,12 @@ func (this *QLCDNumber) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber8sizeHintEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
- }
+  }
 
 }
 
@@ -212,12 +213,12 @@ func (this *QLCDNumber) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber5valueEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "value", args)
- }
+  }
 
 }
 
@@ -230,12 +231,12 @@ func (this *QLCDNumber) setBinMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setBinModeEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
- }
+  }
 
 }
 
@@ -248,12 +249,12 @@ func (this *QLCDNumber) intValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber8intValueEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "intValue", args)
- }
+  }
 
 }
 
@@ -267,12 +268,12 @@ func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber13setDigitCountEi
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
- }
+  }
 
 }
 
@@ -286,12 +287,12 @@ func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
   default:
     qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
- }
+  }
 
 }
 
@@ -304,12 +305,12 @@ func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
- }
+  }
 
 }
 
@@ -322,12 +323,12 @@ func (this *QLCDNumber) setOctMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setOctModeEv
   default:
     qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
- }
+  }
 
 }
 

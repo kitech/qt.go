@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -60,12 +60,12 @@ func (this *QFutureWatcherBase) isRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isRunningEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isRunning", args)
- }
+  }
 
 }
 
@@ -79,12 +79,12 @@ func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase9setPausedEb
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
- }
+  }
 
 }
 
@@ -97,12 +97,12 @@ func (this *QFutureWatcherBase) progressMinimum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMinimumEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMinimum", args)
- }
+  }
 
 }
 
@@ -115,12 +115,12 @@ func (this *QFutureWatcherBase) resume(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6resumeEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "resume", args)
- }
+  }
 
 }
 
@@ -133,12 +133,12 @@ func (this *QFutureWatcherBase) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10metaObjectEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "metaObject", args)
- }
+  }
 
 }
 
@@ -151,12 +151,12 @@ func (this *QFutureWatcherBase) isFinished(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isFinishedEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isFinished", args)
- }
+  }
 
 }
 
@@ -169,12 +169,12 @@ func (this *QFutureWatcherBase) progressMaximum(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMaximumEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMaximum", args)
- }
+  }
 
 }
 
@@ -188,12 +188,12 @@ func (this *QFutureWatcherBase) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "event", args)
- }
+  }
 
 }
 
@@ -206,12 +206,12 @@ func (this *QFutureWatcherBase) isCanceled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isCanceledEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isCanceled", args)
- }
+  }
 
 }
 
@@ -224,12 +224,12 @@ func (this *QFutureWatcherBase) progressValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase13progressValueEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressValue", args)
- }
+  }
 
 }
 
@@ -242,12 +242,12 @@ func (this *QFutureWatcherBase) isStarted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isStartedEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isStarted", args)
- }
+  }
 
 }
 
@@ -261,12 +261,12 @@ func (this *QFutureWatcherBase) setPendingResultsLimit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase22setPendingResultsLimitEi
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPendingResultsLimit", args)
- }
+  }
 
 }
 
@@ -279,12 +279,12 @@ func (this *QFutureWatcherBase) cancel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6cancelEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "cancel", args)
- }
+  }
 
 }
 
@@ -297,12 +297,12 @@ func (this *QFutureWatcherBase) isPaused(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase8isPausedEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isPaused", args)
- }
+  }
 
 }
 
@@ -315,12 +315,12 @@ func (this *QFutureWatcherBase) pause(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5pauseEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "pause", args)
- }
+  }
 
 }
 
@@ -333,17 +333,18 @@ func (this *QFutureWatcherBase) progressText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase12progressTextEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressText", args)
- }
+  }
 
 }
 
 
-func NewQFutureWatcherBase(args ...interface{})() {
+func NewQFutureWatcherBase(args ...interface{}) QFutureWatcherBase {
+  return QFutureWatcherBase{}
 }
 
 
@@ -355,12 +356,12 @@ func (this *QFutureWatcherBase) togglePaused(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase12togglePausedEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "togglePaused", args)
- }
+  }
 
 }
 
@@ -373,12 +374,12 @@ func (this *QFutureWatcherBase) waitForFinished(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase15waitForFinishedEv
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "waitForFinished", args)
- }
+  }
 
 }
 

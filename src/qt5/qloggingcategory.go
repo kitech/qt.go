@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -42,7 +42,8 @@ type QLoggingCategory struct {
 }
 
 
-func NewQLoggingCategory(args ...interface{})() {
+func NewQLoggingCategory(args ...interface{}) QLoggingCategory {
+  return QLoggingCategory{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QLoggingCategory) isDebugEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory14isDebugEnabledEv
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isDebugEnabled", args)
- }
+  }
 
 }
 
@@ -70,10 +71,10 @@ func (this *QLoggingCategory) FreeQLoggingCategory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLoggingCategory", "~QLoggingCategory", args)
- }
+  }
 
 }
 
@@ -88,12 +89,12 @@ func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb
   default:
     qtrt.ErrorResolve("QLoggingCategory", "setEnabled", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory9isEnabledE9QtMsgType
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isEnabled", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QLoggingCategory) isWarningEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory16isWarningEnabledEv
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isWarningEnabled", args)
- }
+  }
 
 }
 
@@ -143,12 +144,12 @@ func (this *QLoggingCategory) isInfoEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory13isInfoEnabledEv
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isInfoEnabled", args)
- }
+  }
 
 }
 
@@ -161,12 +162,12 @@ func (this *QLoggingCategory) categoryName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory12categoryNameEv
   default:
     qtrt.ErrorResolve("QLoggingCategory", "categoryName", args)
- }
+  }
 
 }
 
@@ -179,12 +180,12 @@ func (this *QLoggingCategory) isCriticalEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory17isCriticalEnabledEv
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isCriticalEnabled", args)
- }
+  }
 
 }
 
@@ -195,10 +196,10 @@ func (this *QLoggingCategory) defaultCategory_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLoggingCategory", "defaultCategory", args)
- }
+  }
 
 }
 
@@ -209,10 +210,10 @@ func (this *QLoggingCategory) setFilterRules_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLoggingCategory", "setFilterRules", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.go
 //
@@ -48,15 +48,16 @@ func (this *QParallelAnimationGroup) FreeQParallelAnimationGroup(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "~QParallelAnimationGroup", args)
- }
+  }
 
 }
 
 
-func NewQParallelAnimationGroup(args ...interface{})() {
+func NewQParallelAnimationGroup(args ...interface{}) QParallelAnimationGroup {
+  return QParallelAnimationGroup{}
 }
 
 
@@ -68,12 +69,12 @@ func (this *QParallelAnimationGroup) duration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup8durationEv
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "duration", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QParallelAnimationGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "metaObject", args)
- }
+  }
 
 }
 

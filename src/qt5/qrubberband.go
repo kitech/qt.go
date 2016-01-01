@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.go
 //
@@ -55,14 +55,14 @@ func (this *QRubberBand) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QRubberBand6resizeERK5QSize
   case 1:
     // invoke: _ZN11QRubberBand6resizeEii
   default:
     qtrt.ErrorResolve("QRubberBand", "resize", args)
- }
+  }
 
 }
 
@@ -82,14 +82,14 @@ func (this *QRubberBand) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QRubberBand11setGeometryEiiii
   case 1:
     // invoke: _ZN11QRubberBand11setGeometryERK5QRect
   default:
     qtrt.ErrorResolve("QRubberBand", "setGeometry", args)
- }
+  }
 
 }
 
@@ -100,10 +100,10 @@ func (this *QRubberBand) move_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRubberBand", "move", args)
- }
+  }
 
 }
 
@@ -114,10 +114,10 @@ func (this *QRubberBand) FreeQRubberBand(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRubberBand", "~QRubberBand", args)
- }
+  }
 
 }
 
@@ -130,12 +130,12 @@ func (this *QRubberBand) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QRubberBand10metaObjectEv
   default:
     qtrt.ErrorResolve("QRubberBand", "metaObject", args)
- }
+  }
 
 }
 

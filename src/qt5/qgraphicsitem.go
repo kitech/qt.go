@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.go
 //
@@ -130,12 +130,12 @@ func (this *QGraphicsTextItem) openExternalLinks(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem17openExternalLinksEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "openExternalLinks", args)
- }
+  }
 
 }
 
@@ -148,12 +148,12 @@ func (this *QGraphicsTextItem) textWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem9textWidthEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textWidth", args)
- }
+  }
 
 }
 
@@ -167,12 +167,12 @@ func (this *QGraphicsTextItem) setTextWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setTextWidthEd
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextWidth", args)
- }
+  }
 
 }
 
@@ -186,12 +186,12 @@ func (this *QGraphicsTextItem) setTextCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextCursor", args)
- }
+  }
 
 }
 
@@ -202,10 +202,10 @@ func (this *QGraphicsTextItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "type", args)
- }
+  }
 
 }
 
@@ -218,17 +218,18 @@ func (this *QGraphicsTextItem) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4fontEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "font", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsTextItem(args ...interface{})() {
+func NewQGraphicsTextItem(args ...interface{}) QGraphicsTextItem {
+  return QGraphicsTextItem{}
 }
 
 
@@ -240,12 +241,12 @@ func (this *QGraphicsTextItem) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "metaObject", args)
- }
+  }
 
 }
 
@@ -259,12 +260,12 @@ func (this *QGraphicsTextItem) setOpenExternalLinks(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem20setOpenExternalLinksEb
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setOpenExternalLinks", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QGraphicsTextItem) setTabChangesFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem18setTabChangesFocusEb
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTabChangesFocus", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QGraphicsTextItem) toHtml(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem6toHtmlEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toHtml", args)
- }
+  }
 
 }
 
@@ -315,12 +316,12 @@ func (this *QGraphicsTextItem) setDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem11setDocumentEP13QTextDocument
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDocument", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QGraphicsTextItem) setPlainText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setPlainTextERK7QString
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setPlainText", args)
- }
+  }
 
 }
 
@@ -355,12 +356,12 @@ func (this *QGraphicsTextItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "paint", args)
- }
+  }
 
 }
 
@@ -374,12 +375,12 @@ func (this *QGraphicsTextItem) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setFont", args)
- }
+  }
 
 }
 
@@ -393,12 +394,12 @@ func (this *QGraphicsTextItem) setDefaultTextColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDefaultTextColor", args)
- }
+  }
 
 }
 
@@ -411,12 +412,12 @@ func (this *QGraphicsTextItem) defaultTextColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem16defaultTextColorEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "defaultTextColor", args)
- }
+  }
 
 }
 
@@ -427,10 +428,10 @@ func (this *QGraphicsTextItem) FreeQGraphicsTextItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "~QGraphicsTextItem", args)
- }
+  }
 
 }
 
@@ -443,12 +444,12 @@ func (this *QGraphicsTextItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "shape", args)
- }
+  }
 
 }
 
@@ -461,12 +462,12 @@ func (this *QGraphicsTextItem) textCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10textCursorEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textCursor", args)
- }
+  }
 
 }
 
@@ -479,12 +480,12 @@ func (this *QGraphicsTextItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -497,12 +498,12 @@ func (this *QGraphicsTextItem) toPlainText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem11toPlainTextEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toPlainText", args)
- }
+  }
 
 }
 
@@ -516,12 +517,12 @@ func (this *QGraphicsTextItem) setHtml(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setHtmlERK7QString
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setHtml", args)
- }
+  }
 
 }
 
@@ -534,12 +535,12 @@ func (this *QGraphicsTextItem) tabChangesFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem15tabChangesFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "tabChangesFocus", args)
- }
+  }
 
 }
 
@@ -552,12 +553,12 @@ func (this *QGraphicsTextItem) document(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8documentEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "document", args)
- }
+  }
 
 }
 
@@ -571,12 +572,12 @@ func (this *QGraphicsTextItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -589,12 +590,12 @@ func (this *QGraphicsTextItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -608,12 +609,12 @@ func (this *QGraphicsTextItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "contains", args)
- }
+  }
 
 }
 
@@ -626,17 +627,18 @@ func (this *QGraphicsTextItem) adjustSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem10adjustSizeEv
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "adjustSize", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsPixmapItem(args ...interface{})() {
+func NewQGraphicsPixmapItem(args ...interface{}) QGraphicsPixmapItem {
+  return QGraphicsPixmapItem{}
 }
 
 
@@ -646,10 +648,10 @@ func (this *QGraphicsPixmapItem) FreeQGraphicsPixmapItem(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "~QGraphicsPixmapItem", args)
- }
+  }
 
 }
 
@@ -662,12 +664,12 @@ func (this *QGraphicsPixmapItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -681,12 +683,12 @@ func (this *QGraphicsPixmapItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -697,10 +699,10 @@ func (this *QGraphicsPixmapItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "type", args)
- }
+  }
 
 }
 
@@ -713,12 +715,12 @@ func (this *QGraphicsPixmapItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shape", args)
- }
+  }
 
 }
 
@@ -731,12 +733,12 @@ func (this *QGraphicsPixmapItem) pixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6pixmapEv
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "pixmap", args)
- }
+  }
 
 }
 
@@ -754,14 +756,14 @@ func (this *QGraphicsPixmapItem) setOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetEdd
   case 1:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setOffset", args)
- }
+  }
 
 }
 
@@ -777,12 +779,12 @@ func (this *QGraphicsPixmapItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "paint", args)
- }
+  }
 
 }
 
@@ -795,12 +797,12 @@ func (this *QGraphicsPixmapItem) offset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6offsetEv
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "offset", args)
- }
+  }
 
 }
 
@@ -813,12 +815,12 @@ func (this *QGraphicsPixmapItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -832,12 +834,12 @@ func (this *QGraphicsPixmapItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "contains", args)
- }
+  }
 
 }
 
@@ -851,12 +853,12 @@ func (this *QGraphicsPixmapItem) setPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setPixmap", args)
- }
+  }
 
 }
 
@@ -870,12 +872,12 @@ func (this *QGraphicsRectItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -888,17 +890,18 @@ func (this *QGraphicsRectItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "boundingRect", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsRectItem(args ...interface{})() {
+func NewQGraphicsRectItem(args ...interface{}) QGraphicsRectItem {
+  return QGraphicsRectItem{}
 }
 
 
@@ -908,10 +911,10 @@ func (this *QGraphicsRectItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "type", args)
- }
+  }
 
 }
 
@@ -924,12 +927,12 @@ func (this *QGraphicsRectItem) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4rectEv
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "rect", args)
- }
+  }
 
 }
 
@@ -942,12 +945,12 @@ func (this *QGraphicsRectItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "shape", args)
- }
+  }
 
 }
 
@@ -958,10 +961,10 @@ func (this *QGraphicsRectItem) FreeQGraphicsRectItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "~QGraphicsRectItem", args)
- }
+  }
 
 }
 
@@ -974,12 +977,12 @@ func (this *QGraphicsRectItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -999,14 +1002,14 @@ func (this *QGraphicsRectItem) setRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRectItem7setRectERK6QRectF
   case 1:
     // invoke: _ZN17QGraphicsRectItem7setRectEdddd
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "setRect", args)
- }
+  }
 
 }
 
@@ -1020,12 +1023,12 @@ func (this *QGraphicsRectItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "contains", args)
- }
+  }
 
 }
 
@@ -1041,12 +1044,12 @@ func (this *QGraphicsRectItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "paint", args)
- }
+  }
 
 }
 
@@ -1060,17 +1063,18 @@ func (this *QGraphicsEllipseItem) setStartAngle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem13setStartAngleEi
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setStartAngle", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsEllipseItem(args ...interface{})() {
+func NewQGraphicsEllipseItem(args ...interface{}) QGraphicsEllipseItem {
+  return QGraphicsEllipseItem{}
 }
 
 
@@ -1083,12 +1087,12 @@ func (this *QGraphicsEllipseItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "contains", args)
- }
+  }
 
 }
 
@@ -1108,14 +1112,14 @@ func (this *QGraphicsEllipseItem) setRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem7setRectERK6QRectF
   case 1:
     // invoke: _ZN20QGraphicsEllipseItem7setRectEdddd
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setRect", args)
- }
+  }
 
 }
 
@@ -1131,12 +1135,12 @@ func (this *QGraphicsEllipseItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "paint", args)
- }
+  }
 
 }
 
@@ -1150,12 +1154,12 @@ func (this *QGraphicsEllipseItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -1168,12 +1172,12 @@ func (this *QGraphicsEllipseItem) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4rectEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "rect", args)
- }
+  }
 
 }
 
@@ -1186,12 +1190,12 @@ func (this *QGraphicsEllipseItem) spanAngle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem9spanAngleEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "spanAngle", args)
- }
+  }
 
 }
 
@@ -1204,12 +1208,12 @@ func (this *QGraphicsEllipseItem) startAngle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10startAngleEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "startAngle", args)
- }
+  }
 
 }
 
@@ -1223,12 +1227,12 @@ func (this *QGraphicsEllipseItem) setSpanAngle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem12setSpanAngleEi
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setSpanAngle", args)
- }
+  }
 
 }
 
@@ -1239,10 +1243,10 @@ func (this *QGraphicsEllipseItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "type", args)
- }
+  }
 
 }
 
@@ -1255,12 +1259,12 @@ func (this *QGraphicsEllipseItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -1273,12 +1277,12 @@ func (this *QGraphicsEllipseItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "shape", args)
- }
+  }
 
 }
 
@@ -1289,10 +1293,10 @@ func (this *QGraphicsEllipseItem) FreeQGraphicsEllipseItem(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "~QGraphicsEllipseItem", args)
- }
+  }
 
 }
 
@@ -1305,12 +1309,12 @@ func (this *QGraphicsEllipseItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -1323,12 +1327,12 @@ func (this *QGraphicsPolygonItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "shape", args)
- }
+  }
 
 }
 
@@ -1342,12 +1346,12 @@ func (this *QGraphicsPolygonItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -1363,17 +1367,18 @@ func (this *QGraphicsPolygonItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "paint", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsPolygonItem(args ...interface{})() {
+func NewQGraphicsPolygonItem(args ...interface{}) QGraphicsPolygonItem {
+  return QGraphicsPolygonItem{}
 }
 
 
@@ -1385,12 +1390,12 @@ func (this *QGraphicsPolygonItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -1401,10 +1406,10 @@ func (this *QGraphicsPolygonItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "type", args)
- }
+  }
 
 }
 
@@ -1415,10 +1420,10 @@ func (this *QGraphicsPolygonItem) FreeQGraphicsPolygonItem(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "~QGraphicsPolygonItem", args)
- }
+  }
 
 }
 
@@ -1431,12 +1436,12 @@ func (this *QGraphicsPolygonItem) polygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem7polygonEv
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "polygon", args)
- }
+  }
 
 }
 
@@ -1449,12 +1454,12 @@ func (this *QGraphicsPolygonItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -1468,12 +1473,12 @@ func (this *QGraphicsPolygonItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "contains", args)
- }
+  }
 
 }
 
@@ -1487,12 +1492,12 @@ func (this *QGraphicsPolygonItem) setPolygon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "setPolygon", args)
- }
+  }
 
 }
 
@@ -1506,17 +1511,18 @@ func (this *QGraphicsPathItem) setPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsPathItem7setPathERK12QPainterPath
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "setPath", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsPathItem(args ...interface{})() {
+func NewQGraphicsPathItem(args ...interface{}) QGraphicsPathItem {
+  return QGraphicsPathItem{}
 }
 
 
@@ -1529,12 +1535,12 @@ func (this *QGraphicsPathItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "contains", args)
- }
+  }
 
 }
 
@@ -1547,12 +1553,12 @@ func (this *QGraphicsPathItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -1563,10 +1569,10 @@ func (this *QGraphicsPathItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "type", args)
- }
+  }
 
 }
 
@@ -1579,12 +1585,12 @@ func (this *QGraphicsPathItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -1597,12 +1603,12 @@ func (this *QGraphicsPathItem) path(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4pathEv
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "path", args)
- }
+  }
 
 }
 
@@ -1613,10 +1619,10 @@ func (this *QGraphicsPathItem) FreeQGraphicsPathItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "~QGraphicsPathItem", args)
- }
+  }
 
 }
 
@@ -1629,12 +1635,12 @@ func (this *QGraphicsPathItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "shape", args)
- }
+  }
 
 }
 
@@ -1648,12 +1654,12 @@ func (this *QGraphicsPathItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -1669,12 +1675,12 @@ func (this *QGraphicsPathItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "paint", args)
- }
+  }
 
 }
 
@@ -1688,17 +1694,18 @@ func (this *QGraphicsLineItem) setPen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem6setPenERK4QPen
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setPen", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsLineItem(args ...interface{})() {
+func NewQGraphicsLineItem(args ...interface{}) QGraphicsLineItem {
+  return QGraphicsLineItem{}
 }
 
 
@@ -1711,12 +1718,12 @@ func (this *QGraphicsLineItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -1729,12 +1736,12 @@ func (this *QGraphicsLineItem) line(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4lineEv
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "line", args)
- }
+  }
 
 }
 
@@ -1747,12 +1754,12 @@ func (this *QGraphicsLineItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -1772,14 +1779,14 @@ func (this *QGraphicsLineItem) setLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem7setLineEdddd
   case 1:
     // invoke: _ZN17QGraphicsLineItem7setLineERK6QLineF
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setLine", args)
- }
+  }
 
 }
 
@@ -1792,12 +1799,12 @@ func (this *QGraphicsLineItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -1810,12 +1817,12 @@ func (this *QGraphicsLineItem) pen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem3penEv
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "pen", args)
- }
+  }
 
 }
 
@@ -1828,12 +1835,12 @@ func (this *QGraphicsLineItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "shape", args)
- }
+  }
 
 }
 
@@ -1849,12 +1856,12 @@ func (this *QGraphicsLineItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "paint", args)
- }
+  }
 
 }
 
@@ -1865,10 +1872,10 @@ func (this *QGraphicsLineItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "type", args)
- }
+  }
 
 }
 
@@ -1882,12 +1889,12 @@ func (this *QGraphicsLineItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "contains", args)
- }
+  }
 
 }
 
@@ -1898,10 +1905,10 @@ func (this *QGraphicsLineItem) FreeQGraphicsLineItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "~QGraphicsLineItem", args)
- }
+  }
 
 }
 
@@ -1915,12 +1922,12 @@ func (this *QGraphicsItemGroup) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -1931,15 +1938,16 @@ func (this *QGraphicsItemGroup) FreeQGraphicsItemGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "~QGraphicsItemGroup", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsItemGroup(args ...interface{})() {
+func NewQGraphicsItemGroup(args ...interface{}) QGraphicsItemGroup {
+  return QGraphicsItemGroup{}
 }
 
 
@@ -1949,10 +1957,10 @@ func (this *QGraphicsItemGroup) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "type", args)
- }
+  }
 
 }
 
@@ -1965,12 +1973,12 @@ func (this *QGraphicsItemGroup) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "boundingRect", args)
- }
+  }
 
 }
 
@@ -1986,12 +1994,12 @@ func (this *QGraphicsItemGroup) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "paint", args)
- }
+  }
 
 }
 
@@ -2005,12 +2013,12 @@ func (this *QGraphicsItemGroup) removeFromGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "removeFromGroup", args)
- }
+  }
 
 }
 
@@ -2024,12 +2032,12 @@ func (this *QGraphicsItemGroup) addToGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "addToGroup", args)
- }
+  }
 
 }
 
@@ -2042,12 +2050,12 @@ func (this *QGraphicsItemGroup) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -2061,12 +2069,12 @@ func (this *QAbstractGraphicsShapeItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -2079,17 +2087,18 @@ func (this *QAbstractGraphicsShapeItem) brush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem5brushEv
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "brush", args)
- }
+  }
 
 }
 
 
-func NewQAbstractGraphicsShapeItem(args ...interface{})() {
+func NewQAbstractGraphicsShapeItem(args ...interface{}) QAbstractGraphicsShapeItem {
+  return QAbstractGraphicsShapeItem{}
 }
 
 
@@ -2101,12 +2110,12 @@ func (this *QAbstractGraphicsShapeItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -2120,12 +2129,12 @@ func (this *QAbstractGraphicsShapeItem) setBrush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setBrush", args)
- }
+  }
 
 }
 
@@ -2139,12 +2148,12 @@ func (this *QAbstractGraphicsShapeItem) setPen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem6setPenERK4QPen
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setPen", args)
- }
+  }
 
 }
 
@@ -2157,12 +2166,12 @@ func (this *QAbstractGraphicsShapeItem) pen(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem3penEv
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "pen", args)
- }
+  }
 
 }
 
@@ -2173,15 +2182,16 @@ func (this *QAbstractGraphicsShapeItem) FreeQAbstractGraphicsShapeItem(args ...i
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "~QAbstractGraphicsShapeItem", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsItem(args ...interface{})() {
+func NewQGraphicsItem(args ...interface{}) QGraphicsItem {
+  return QGraphicsItem{}
 }
 
 
@@ -2213,7 +2223,7 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath
   case 1:
@@ -2228,7 +2238,7 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromParent", args)
- }
+  }
 
 }
 
@@ -2267,7 +2277,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF
   case 1:
@@ -2282,7 +2292,7 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromItem", args)
- }
+  }
 
 }
 
@@ -2295,12 +2305,12 @@ func (this *QGraphicsItem) focusItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9focusItemEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusItem", args)
- }
+  }
 
 }
 
@@ -2313,12 +2323,12 @@ func (this *QGraphicsItem) parentObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentObject", args)
- }
+  }
 
 }
 
@@ -2336,14 +2346,14 @@ func (this *QGraphicsItem) setTransformOriginPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointERK7QPointF
   case 1:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointEdd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransformOriginPoint", args)
- }
+  }
 
 }
 
@@ -2356,12 +2366,12 @@ func (this *QGraphicsItem) ungrabMouse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11ungrabMouseEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabMouse", args)
- }
+  }
 
 }
 
@@ -2372,10 +2382,10 @@ func (this *QGraphicsItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsItem", "type", args)
- }
+  }
 
 }
 
@@ -2388,12 +2398,12 @@ func (this *QGraphicsItem) isSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isSelectedEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isSelected", args)
- }
+  }
 
 }
 
@@ -2406,12 +2416,12 @@ func (this *QGraphicsItem) parentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentWidgetEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentWidget", args)
- }
+  }
 
 }
 
@@ -2424,12 +2434,12 @@ func (this *QGraphicsItem) resetTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14resetTransformEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetTransform", args)
- }
+  }
 
 }
 
@@ -2443,12 +2453,12 @@ func (this *QGraphicsItem) boundingRegion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14boundingRegionERK10QTransform
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegion", args)
- }
+  }
 
 }
 
@@ -2464,12 +2474,12 @@ func (this *QGraphicsItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsItem", "paint", args)
- }
+  }
 
 }
 
@@ -2482,12 +2492,12 @@ func (this *QGraphicsItem) isActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isActiveEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isActive", args)
- }
+  }
 
 }
 
@@ -2520,7 +2530,7 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK9QPolygonF
   case 1:
@@ -2535,7 +2545,7 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem11mapToParentERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToParent", args)
- }
+  }
 
 }
 
@@ -2548,12 +2558,12 @@ func (this *QGraphicsItem) isWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWidgetEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWidget", args)
- }
+  }
 
 }
 
@@ -2567,12 +2577,12 @@ func (this *QGraphicsItem) setParentItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13setParentItemEPS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setParentItem", args)
- }
+  }
 
 }
 
@@ -2611,7 +2621,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF
   case 1:
@@ -2626,7 +2636,7 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToItem", args)
- }
+  }
 
 }
 
@@ -2639,12 +2649,12 @@ func (this *QGraphicsItem) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6windowEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "window", args)
- }
+  }
 
 }
 
@@ -2657,12 +2667,12 @@ func (this *QGraphicsItem) scenePos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8scenePosEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scenePos", args)
- }
+  }
 
 }
 
@@ -2675,12 +2685,12 @@ func (this *QGraphicsItem) handlesChildEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18handlesChildEventsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "handlesChildEvents", args)
- }
+  }
 
 }
 
@@ -2694,12 +2704,12 @@ func (this *QGraphicsItem) setOpacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setOpacityEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setOpacity", args)
- }
+  }
 
 }
 
@@ -2712,12 +2722,12 @@ func (this *QGraphicsItem) sceneTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14sceneTransformEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneTransform", args)
- }
+  }
 
 }
 
@@ -2731,12 +2741,12 @@ func (this *QGraphicsItem) setZValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setZValueEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setZValue", args)
- }
+  }
 
 }
 
@@ -2756,14 +2766,14 @@ func (this *QGraphicsItem) isObscured(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isObscuredEdddd
   case 1:
     // invoke: _ZNK13QGraphicsItem10isObscuredERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscured", args)
- }
+  }
 
 }
 
@@ -2777,12 +2787,12 @@ func (this *QGraphicsItem) installSceneEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem23installSceneEventFilterEPS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "installSceneEventFilter", args)
- }
+  }
 
 }
 
@@ -2796,12 +2806,12 @@ func (this *QGraphicsItem) setY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4setYEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setY", args)
- }
+  }
 
 }
 
@@ -2823,14 +2833,14 @@ func (this *QGraphicsItem) mapRectToItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_dddd
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToItem", args)
- }
+  }
 
 }
 
@@ -2843,12 +2853,12 @@ func (this *QGraphicsItem) parentItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10parentItemEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentItem", args)
- }
+  }
 
 }
 
@@ -2861,12 +2871,12 @@ func (this *QGraphicsItem) clearFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10clearFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clearFocus", args)
- }
+  }
 
 }
 
@@ -2879,12 +2889,12 @@ func (this *QGraphicsItem) isWindow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWindowEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWindow", args)
- }
+  }
 
 }
 
@@ -2897,12 +2907,12 @@ func (this *QGraphicsItem) transformOriginPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem20transformOriginPointEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformOriginPoint", args)
- }
+  }
 
 }
 
@@ -2915,12 +2925,12 @@ func (this *QGraphicsItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -2933,12 +2943,12 @@ func (this *QGraphicsItem) childrenBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem20childrenBoundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childrenBoundingRect", args)
- }
+  }
 
 }
 
@@ -2971,7 +2981,7 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK6QRectF
   case 1:
@@ -2986,7 +2996,7 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromScene", args)
- }
+  }
 
 }
 
@@ -2999,12 +3009,12 @@ func (this *QGraphicsItem) hasCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9hasCursorEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasCursor", args)
- }
+  }
 
 }
 
@@ -3018,12 +3028,12 @@ func (this *QGraphicsItem) setGraphicsEffect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGraphicsEffect", args)
- }
+  }
 
 }
 
@@ -3047,14 +3057,14 @@ func (this *QGraphicsItem) ensureVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13ensureVisibleEddddii
   case 1:
     // invoke: _ZN13QGraphicsItem13ensureVisibleERK6QRectFii
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ensureVisible", args)
- }
+  }
 
 }
 
@@ -3074,14 +3084,14 @@ func (this *QGraphicsItem) mapRectToParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentERK6QRectF
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentEdddd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToParent", args)
- }
+  }
 
 }
 
@@ -3095,12 +3105,12 @@ func (this *QGraphicsItem) setToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setToolTipERK7QString
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setToolTip", args)
- }
+  }
 
 }
 
@@ -3113,12 +3123,12 @@ func (this *QGraphicsItem) rotation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8rotationEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "rotation", args)
- }
+  }
 
 }
 
@@ -3131,12 +3141,12 @@ func (this *QGraphicsItem) scene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5sceneEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scene", args)
- }
+  }
 
 }
 
@@ -3156,14 +3166,14 @@ func (this *QGraphicsItem) mapRectFromParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentERK6QRectF
   case 1:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentEdddd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromParent", args)
- }
+  }
 
 }
 
@@ -3177,12 +3187,12 @@ func (this *QGraphicsItem) setFocusProxy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13setFocusProxyEPS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFocusProxy", args)
- }
+  }
 
 }
 
@@ -3195,12 +3205,12 @@ func (this *QGraphicsItem) acceptDrops(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11acceptDropsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptDrops", args)
- }
+  }
 
 }
 
@@ -3220,14 +3230,14 @@ func (this *QGraphicsItem) mapRectFromScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF
   case 1:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneEdddd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromScene", args)
- }
+  }
 
 }
 
@@ -3240,12 +3250,12 @@ func (this *QGraphicsItem) focusScopeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14focusScopeItemEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusScopeItem", args)
- }
+  }
 
 }
 
@@ -3259,12 +3269,12 @@ func (this *QGraphicsItem) removeSceneEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem22removeSceneEventFilterEPS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "removeSceneEventFilter", args)
- }
+  }
 
 }
 
@@ -3277,12 +3287,12 @@ func (this *QGraphicsItem) focusProxy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10focusProxyEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusProxy", args)
- }
+  }
 
 }
 
@@ -3295,12 +3305,12 @@ func (this *QGraphicsItem) sceneBoundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17sceneBoundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneBoundingRect", args)
- }
+  }
 
 }
 
@@ -3311,10 +3321,10 @@ func (this *QGraphicsItem) FreeQGraphicsItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsItem", "~QGraphicsItem", args)
- }
+  }
 
 }
 
@@ -3328,12 +3338,12 @@ func (this *QGraphicsItem) setX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4setXEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setX", args)
- }
+  }
 
 }
 
@@ -3353,14 +3363,14 @@ func (this *QGraphicsItem) update(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6updateEdddd
   case 1:
     // invoke: _ZN13QGraphicsItem6updateERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "update", args)
- }
+  }
 
 }
 
@@ -3374,12 +3384,12 @@ func (this *QGraphicsItem) setSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11setSelectedEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setSelected", args)
- }
+  }
 
 }
 
@@ -3393,12 +3403,12 @@ func (this *QGraphicsItem) stackBefore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11stackBeforeEPKS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "stackBefore", args)
- }
+  }
 
 }
 
@@ -3411,12 +3421,12 @@ func (this *QGraphicsItem) resetMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11resetMatrixEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetMatrix", args)
- }
+  }
 
 }
 
@@ -3429,12 +3439,12 @@ func (this *QGraphicsItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -3447,12 +3457,12 @@ func (this *QGraphicsItem) unsetCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11unsetCursorEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "unsetCursor", args)
- }
+  }
 
 }
 
@@ -3472,14 +3482,14 @@ func (this *QGraphicsItem) mapRectToScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneERK6QRectF
   case 1:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneEdddd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToScene", args)
- }
+  }
 
 }
 
@@ -3501,14 +3511,14 @@ func (this *QGraphicsItem) mapRectFromItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromItem", args)
- }
+  }
 
 }
 
@@ -3521,12 +3531,12 @@ func (this *QGraphicsItem) scale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5scaleEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scale", args)
- }
+  }
 
 }
 
@@ -3540,12 +3550,12 @@ func (this *QGraphicsItem) setBoundingRegionGranularity(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem28setBoundingRegionGranularityEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setBoundingRegionGranularity", args)
- }
+  }
 
 }
 
@@ -3559,12 +3569,12 @@ func (this *QGraphicsItem) setAcceptDrops(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14setAcceptDropsEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptDrops", args)
- }
+  }
 
 }
 
@@ -3577,12 +3587,12 @@ func (this *QGraphicsItem) ungrabKeyboard(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14ungrabKeyboardEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabKeyboard", args)
- }
+  }
 
 }
 
@@ -3596,12 +3606,12 @@ func (this *QGraphicsItem) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setEnabledEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setEnabled", args)
- }
+  }
 
 }
 
@@ -3614,12 +3624,12 @@ func (this *QGraphicsItem) graphicsEffect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14graphicsEffectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "graphicsEffect", args)
- }
+  }
 
 }
 
@@ -3632,12 +3642,12 @@ func (this *QGraphicsItem) acceptHoverEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptHoverEventsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptHoverEvents", args)
- }
+  }
 
 }
 
@@ -3650,12 +3660,12 @@ func (this *QGraphicsItem) topLevelWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14topLevelWidgetEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelWidget", args)
- }
+  }
 
 }
 
@@ -3668,12 +3678,12 @@ func (this *QGraphicsItem) transformations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15transformationsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformations", args)
- }
+  }
 
 }
 
@@ -3706,7 +3716,7 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdddd
   case 1:
@@ -3721,7 +3731,7 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToScene", args)
- }
+  }
 
 }
 
@@ -3735,12 +3745,12 @@ func (this *QGraphicsItem) advance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem7advanceEi
   default:
     qtrt.ErrorResolve("QGraphicsItem", "advance", args)
- }
+  }
 
 }
 
@@ -3753,12 +3763,12 @@ func (this *QGraphicsItem) sceneMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11sceneMatrixEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneMatrix", args)
- }
+  }
 
 }
 
@@ -3772,12 +3782,12 @@ func (this *QGraphicsItem) setFiltersChildEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem21setFiltersChildEventsEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFiltersChildEvents", args)
- }
+  }
 
 }
 
@@ -3792,12 +3802,12 @@ func (this *QGraphicsItem) itemTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13itemTransformEPKS_Pb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "itemTransform", args)
- }
+  }
 
 }
 
@@ -3812,12 +3822,12 @@ func (this *QGraphicsItem) moveBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6moveByEdd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "moveBy", args)
- }
+  }
 
 }
 
@@ -3830,12 +3840,12 @@ func (this *QGraphicsItem) group(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5groupEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "group", args)
- }
+  }
 
 }
 
@@ -3848,12 +3858,12 @@ func (this *QGraphicsItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "shape", args)
- }
+  }
 
 }
 
@@ -3869,12 +3879,12 @@ func (this *QGraphicsItem) scroll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6scrollEddRK6QRectF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scroll", args)
- }
+  }
 
 }
 
@@ -3888,12 +3898,12 @@ func (this *QGraphicsItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isObscuredByEPKS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -3908,12 +3918,12 @@ func (this *QGraphicsItem) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem7setDataEiRK8QVariant
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setData", args)
- }
+  }
 
 }
 
@@ -3927,12 +3937,12 @@ func (this *QGraphicsItem) commonAncestorItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18commonAncestorItemEPKS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "commonAncestorItem", args)
- }
+  }
 
 }
 
@@ -3946,12 +3956,12 @@ func (this *QGraphicsItem) setGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGroup", args)
- }
+  }
 
 }
 
@@ -3964,12 +3974,12 @@ func (this *QGraphicsItem) show(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4showEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "show", args)
- }
+  }
 
 }
 
@@ -3982,12 +3992,12 @@ func (this *QGraphicsItem) y(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem1yEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "y", args)
- }
+  }
 
 }
 
@@ -4000,12 +4010,12 @@ func (this *QGraphicsItem) hasFocus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8hasFocusEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasFocus", args)
- }
+  }
 
 }
 
@@ -4018,12 +4028,12 @@ func (this *QGraphicsItem) clipPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8clipPathEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clipPath", args)
- }
+  }
 
 }
 
@@ -4041,14 +4051,14 @@ func (this *QGraphicsItem) setPos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6setPosEdd
   case 1:
     // invoke: _ZN13QGraphicsItem6setPosERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setPos", args)
- }
+  }
 
 }
 
@@ -4061,12 +4071,12 @@ func (this *QGraphicsItem) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isEnabledEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isEnabled", args)
- }
+  }
 
 }
 
@@ -4080,12 +4090,12 @@ func (this *QGraphicsItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsItem", "contains", args)
- }
+  }
 
 }
 
@@ -4098,12 +4108,12 @@ func (this *QGraphicsItem) isPanel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7isPanelEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isPanel", args)
- }
+  }
 
 }
 
@@ -4116,12 +4126,12 @@ func (this *QGraphicsItem) filtersChildEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18filtersChildEventsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "filtersChildEvents", args)
- }
+  }
 
 }
 
@@ -4134,12 +4144,12 @@ func (this *QGraphicsItem) grabKeyboard(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem12grabKeyboardEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabKeyboard", args)
- }
+  }
 
 }
 
@@ -4153,12 +4163,12 @@ func (this *QGraphicsItem) setActive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setActiveEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setActive", args)
- }
+  }
 
 }
 
@@ -4173,14 +4183,14 @@ func (this *QGraphicsItem) toGraphicsObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem16toGraphicsObjectEv
   case 1:
     // invoke: _ZNK13QGraphicsItem16toGraphicsObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toGraphicsObject", args)
- }
+  }
 
 }
 
@@ -4194,12 +4204,12 @@ func (this *QGraphicsItem) setHandlesChildEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem21setHandlesChildEventsEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setHandlesChildEvents", args)
- }
+  }
 
 }
 
@@ -4214,12 +4224,12 @@ func (this *QGraphicsItem) setMatrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setMatrixERK7QMatrixb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setMatrix", args)
- }
+  }
 
 }
 
@@ -4232,12 +4242,12 @@ func (this *QGraphicsItem) transform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9transformEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transform", args)
- }
+  }
 
 }
 
@@ -4251,12 +4261,12 @@ func (this *QGraphicsItem) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem4dataEi
   default:
     qtrt.ErrorResolve("QGraphicsItem", "data", args)
- }
+  }
 
 }
 
@@ -4269,12 +4279,12 @@ func (this *QGraphicsItem) hide(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4hideEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hide", args)
- }
+  }
 
 }
 
@@ -4287,12 +4297,12 @@ func (this *QGraphicsItem) isUnderMouse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isUnderMouseEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isUnderMouse", args)
- }
+  }
 
 }
 
@@ -4306,12 +4316,12 @@ func (this *QGraphicsItem) setAcceptTouchEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem20setAcceptTouchEventsEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptTouchEvents", args)
- }
+  }
 
 }
 
@@ -4325,12 +4335,12 @@ func (this *QGraphicsItem) setAcceptHoverEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem20setAcceptHoverEventsEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptHoverEvents", args)
- }
+  }
 
 }
 
@@ -4343,12 +4353,12 @@ func (this *QGraphicsItem) childItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10childItemsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childItems", args)
- }
+  }
 
 }
 
@@ -4362,12 +4372,12 @@ func (this *QGraphicsItem) isAncestorOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isAncestorOfEPKS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isAncestorOf", args)
- }
+  }
 
 }
 
@@ -4380,12 +4390,12 @@ func (this *QGraphicsItem) opacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7opacityEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opacity", args)
- }
+  }
 
 }
 
@@ -4399,12 +4409,12 @@ func (this *QGraphicsItem) isVisibleTo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11isVisibleToEPKS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisibleTo", args)
- }
+  }
 
 }
 
@@ -4417,12 +4427,12 @@ func (this *QGraphicsItem) toolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7toolTipEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toolTip", args)
- }
+  }
 
 }
 
@@ -4435,12 +4445,12 @@ func (this *QGraphicsItem) cursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6cursorEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cursor", args)
- }
+  }
 
 }
 
@@ -4453,12 +4463,12 @@ func (this *QGraphicsItem) zValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6zValueEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "zValue", args)
- }
+  }
 
 }
 
@@ -4471,12 +4481,12 @@ func (this *QGraphicsItem) matrix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6matrixEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "matrix", args)
- }
+  }
 
 }
 
@@ -4489,12 +4499,12 @@ func (this *QGraphicsItem) panel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5panelEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panel", args)
- }
+  }
 
 }
 
@@ -4507,12 +4517,12 @@ func (this *QGraphicsItem) isClipped(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isClippedEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isClipped", args)
- }
+  }
 
 }
 
@@ -4525,12 +4535,12 @@ func (this *QGraphicsItem) topLevelItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12topLevelItemEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelItem", args)
- }
+  }
 
 }
 
@@ -4544,12 +4554,12 @@ func (this *QGraphicsItem) setScale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem8setScaleEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setScale", args)
- }
+  }
 
 }
 
@@ -4563,12 +4573,12 @@ func (this *QGraphicsItem) setCursor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setCursorERK7QCursor
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setCursor", args)
- }
+  }
 
 }
 
@@ -4581,12 +4591,12 @@ func (this *QGraphicsItem) isVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isVisibleEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisible", args)
- }
+  }
 
 }
 
@@ -4599,12 +4609,12 @@ func (this *QGraphicsItem) pos(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem3posEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "pos", args)
- }
+  }
 
 }
 
@@ -4618,12 +4628,12 @@ func (this *QGraphicsItem) isBlockedByModalPanel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isBlockedByModalPanel", args)
- }
+  }
 
 }
 
@@ -4636,12 +4646,12 @@ func (this *QGraphicsItem) effectiveOpacity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem16effectiveOpacityEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "effectiveOpacity", args)
- }
+  }
 
 }
 
@@ -4654,12 +4664,12 @@ func (this *QGraphicsItem) boundingRegionGranularity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem25boundingRegionGranularityEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegionGranularity", args)
- }
+  }
 
 }
 
@@ -4672,12 +4682,12 @@ func (this *QGraphicsItem) x(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem1xEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "x", args)
- }
+  }
 
 }
 
@@ -4690,12 +4700,12 @@ func (this *QGraphicsItem) grabMouse(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9grabMouseEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabMouse", args)
- }
+  }
 
 }
 
@@ -4709,12 +4719,12 @@ func (this *QGraphicsItem) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setVisibleEb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setVisible", args)
- }
+  }
 
 }
 
@@ -4728,12 +4738,12 @@ func (this *QGraphicsItem) setRotation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11setRotationEd
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setRotation", args)
- }
+  }
 
 }
 
@@ -4747,12 +4757,12 @@ func (this *QGraphicsItem) deviceTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15deviceTransformERK10QTransform
   default:
     qtrt.ErrorResolve("QGraphicsItem", "deviceTransform", args)
- }
+  }
 
 }
 
@@ -4765,12 +4775,12 @@ func (this *QGraphicsItem) acceptTouchEvents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptTouchEventsEv
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptTouchEvents", args)
- }
+  }
 
 }
 
@@ -4785,17 +4795,18 @@ func (this *QGraphicsItem) setTransform(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem12setTransformERK10QTransformb
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransform", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsObject(args ...interface{})() {
+func NewQGraphicsObject(args ...interface{}) QGraphicsObject {
+  return QGraphicsObject{}
 }
 
 
@@ -4805,10 +4816,10 @@ func (this *QGraphicsObject) FreeQGraphicsObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsObject", "~QGraphicsObject", args)
- }
+  }
 
 }
 
@@ -4821,12 +4832,12 @@ func (this *QGraphicsObject) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsObject10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsObject", "metaObject", args)
- }
+  }
 
 }
 
@@ -4837,10 +4848,10 @@ func (this *QGraphicsSimpleTextItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "type", args)
- }
+  }
 
 }
 
@@ -4853,12 +4864,12 @@ func (this *QGraphicsSimpleTextItem) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4fontEv
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "font", args)
- }
+  }
 
 }
 
@@ -4874,12 +4885,12 @@ func (this *QGraphicsSimpleTextItem) paint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "paint", args)
- }
+  }
 
 }
 
@@ -4890,10 +4901,10 @@ func (this *QGraphicsSimpleTextItem) FreeQGraphicsSimpleTextItem(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "~QGraphicsSimpleTextItem", args)
- }
+  }
 
 }
 
@@ -4907,12 +4918,12 @@ func (this *QGraphicsSimpleTextItem) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setTextERK7QString
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setText", args)
- }
+  }
 
 }
 
@@ -4925,17 +4936,18 @@ func (this *QGraphicsSimpleTextItem) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4textEv
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "text", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsSimpleTextItem(args ...interface{})() {
+func NewQGraphicsSimpleTextItem(args ...interface{}) QGraphicsSimpleTextItem {
+  return QGraphicsSimpleTextItem{}
 }
 
 
@@ -4948,12 +4960,12 @@ func (this *QGraphicsSimpleTextItem) isObscuredBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "isObscuredBy", args)
- }
+  }
 
 }
 
@@ -4966,12 +4978,12 @@ func (this *QGraphicsSimpleTextItem) shape(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem5shapeEv
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "shape", args)
- }
+  }
 
 }
 
@@ -4985,12 +4997,12 @@ func (this *QGraphicsSimpleTextItem) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setFont", args)
- }
+  }
 
 }
 
@@ -5003,12 +5015,12 @@ func (this *QGraphicsSimpleTextItem) opaqueArea(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "opaqueArea", args)
- }
+  }
 
 }
 
@@ -5021,12 +5033,12 @@ func (this *QGraphicsSimpleTextItem) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12boundingRectEv
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "boundingRect", args)
- }
+  }
 
 }
 
@@ -5040,12 +5052,12 @@ func (this *QGraphicsSimpleTextItem) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "contains", args)
- }
+  }
 
 }
 

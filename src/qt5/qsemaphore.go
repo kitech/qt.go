@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -51,12 +51,12 @@ func (this *QSemaphore) acquire(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore7acquireEi
   default:
     qtrt.ErrorResolve("QSemaphore", "acquire", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QSemaphore) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore7releaseEi
   default:
     qtrt.ErrorResolve("QSemaphore", "release", args)
- }
+  }
 
 }
 
@@ -88,12 +88,12 @@ func (this *QSemaphore) available(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QSemaphore9availableEv
   default:
     qtrt.ErrorResolve("QSemaphore", "available", args)
- }
+  }
 
 }
 
@@ -111,19 +111,20 @@ func (this *QSemaphore) tryAcquire(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore10tryAcquireEii
   case 1:
     // invoke: _ZN10QSemaphore10tryAcquireEi
   default:
     qtrt.ErrorResolve("QSemaphore", "tryAcquire", args)
- }
+  }
 
 }
 
 
-func NewQSemaphore(args ...interface{})() {
+func NewQSemaphore(args ...interface{}) QSemaphore {
+  return QSemaphore{}
 }
 
 
@@ -133,10 +134,10 @@ func (this *QSemaphore) FreeQSemaphore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSemaphore", "~QSemaphore", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -51,12 +51,12 @@ func (this *QTextList) item(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList4itemEi
   default:
     qtrt.ErrorResolve("QTextList", "item", args)
- }
+  }
 
 }
 
@@ -70,12 +70,12 @@ func (this *QTextList) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextList6removeERK10QTextBlock
   default:
     qtrt.ErrorResolve("QTextList", "remove", args)
- }
+  }
 
 }
 
@@ -89,17 +89,18 @@ func (this *QTextList) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextList9setFormatERK15QTextListFormat
   default:
     qtrt.ErrorResolve("QTextList", "setFormat", args)
- }
+  }
 
 }
 
 
-func NewQTextList(args ...interface{})() {
+func NewQTextList(args ...interface{}) QTextList {
+  return QTextList{}
 }
 
 
@@ -112,12 +113,12 @@ func (this *QTextList) add(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextList3addERK10QTextBlock
   default:
     qtrt.ErrorResolve("QTextList", "add", args)
- }
+  }
 
 }
 
@@ -131,12 +132,12 @@ func (this *QTextList) itemText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList8itemTextERK10QTextBlock
   default:
     qtrt.ErrorResolve("QTextList", "itemText", args)
- }
+  }
 
 }
 
@@ -150,12 +151,12 @@ func (this *QTextList) removeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QTextList10removeItemEi
   default:
     qtrt.ErrorResolve("QTextList", "removeItem", args)
- }
+  }
 
 }
 
@@ -169,12 +170,12 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList10itemNumberERK10QTextBlock
   default:
     qtrt.ErrorResolve("QTextList", "itemNumber", args)
- }
+  }
 
 }
 
@@ -187,12 +188,12 @@ func (this *QTextList) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList5countEv
   default:
     qtrt.ErrorResolve("QTextList", "count", args)
- }
+  }
 
 }
 
@@ -205,12 +206,12 @@ func (this *QTextList) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList6formatEv
   default:
     qtrt.ErrorResolve("QTextList", "format", args)
- }
+  }
 
 }
 
@@ -221,10 +222,10 @@ func (this *QTextList) FreeQTextList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTextList", "~QTextList", args)
- }
+  }
 
 }
 
@@ -237,12 +238,12 @@ func (this *QTextList) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList7isEmptyEv
   default:
     qtrt.ErrorResolve("QTextList", "isEmpty", args)
- }
+  }
 
 }
 
@@ -255,12 +256,12 @@ func (this *QTextList) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList10metaObjectEv
   default:
     qtrt.ErrorResolve("QTextList", "metaObject", args)
- }
+  }
 
 }
 

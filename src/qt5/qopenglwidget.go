@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.go
 //
@@ -52,10 +52,10 @@ func (this *QOpenGLWidget) FreeQOpenGLWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "~QOpenGLWidget", args)
- }
+  }
 
 }
 
@@ -68,17 +68,18 @@ func (this *QOpenGLWidget) defaultFramebufferObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget24defaultFramebufferObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "defaultFramebufferObject", args)
- }
+  }
 
 }
 
 
-func NewQOpenGLWidget(args ...interface{})() {
+func NewQOpenGLWidget(args ...interface{}) QOpenGLWidget {
+  return QOpenGLWidget{}
 }
 
 
@@ -90,12 +91,12 @@ func (this *QOpenGLWidget) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7isValidEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "isValid", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QOpenGLWidget) context(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7contextEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "context", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QOpenGLWidget) doneCurrent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget11doneCurrentEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "doneCurrent", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QOpenGLWidget) makeCurrent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget11makeCurrentEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "makeCurrent", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QOpenGLWidget) grabFramebuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget15grabFramebufferEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "grabFramebuffer", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QOpenGLWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "metaObject", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QOpenGLWidget) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "setFormat", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QOpenGLWidget) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget6formatEv
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "format", args)
- }
+  }
 
 }
 

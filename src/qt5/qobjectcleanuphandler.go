@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.go
 //
@@ -50,12 +50,12 @@ func (this *QObjectCleanupHandler) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler5clearEv
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "clear", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QObjectCleanupHandler) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler7isEmptyEv
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "isEmpty", args)
- }
+  }
 
 }
 
@@ -84,10 +84,10 @@ func (this *QObjectCleanupHandler) FreeQObjectCleanupHandler(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "~QObjectCleanupHandler", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QObjectCleanupHandler) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler10metaObjectEv
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "metaObject", args)
- }
+  }
 
 }
 
@@ -119,12 +119,12 @@ func (this *QObjectCleanupHandler) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler6removeEP7QObject
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
- }
+  }
 
 }
 
@@ -138,17 +138,18 @@ func (this *QObjectCleanupHandler) add(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler3addEP7QObject
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
- }
+  }
 
 }
 
 
-func NewQObjectCleanupHandler(args ...interface{})() {
+func NewQObjectCleanupHandler(args ...interface{}) QObjectCleanupHandler {
+  return QObjectCleanupHandler{}
 }
 
 // <= body block end

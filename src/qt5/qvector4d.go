@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -50,12 +50,12 @@ func (this *QVector4D) normalized(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10normalizedEv
   default:
     qtrt.ErrorResolve("QVector4D", "normalized", args)
- }
+  }
 
 }
 
@@ -69,17 +69,18 @@ func (this *QVector4D) setW(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setWEf
   default:
     qtrt.ErrorResolve("QVector4D", "setW", args)
- }
+  }
 
 }
 
 
-func NewQVector4D(args ...interface{})() {
+func NewQVector4D(args ...interface{}) QVector4D {
+  return QVector4D{}
 }
 
 
@@ -91,12 +92,12 @@ func (this *QVector4D) toPointF(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D8toPointFEv
   default:
     qtrt.ErrorResolve("QVector4D", "toPointF", args)
- }
+  }
 
 }
 
@@ -109,12 +110,12 @@ func (this *QVector4D) y(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1yEv
   default:
     qtrt.ErrorResolve("QVector4D", "y", args)
- }
+  }
 
 }
 
@@ -127,12 +128,12 @@ func (this *QVector4D) toVector2D(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10toVector2DEv
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2D", args)
- }
+  }
 
 }
 
@@ -146,12 +147,12 @@ func (this *QVector4D) setZ(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setZEf
   default:
     qtrt.ErrorResolve("QVector4D", "setZ", args)
- }
+  }
 
 }
 
@@ -164,12 +165,12 @@ func (this *QVector4D) normalize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D9normalizeEv
   default:
     qtrt.ErrorResolve("QVector4D", "normalize", args)
- }
+  }
 
 }
 
@@ -182,12 +183,12 @@ func (this *QVector4D) z(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1zEv
   default:
     qtrt.ErrorResolve("QVector4D", "z", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QVector4D) setX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setXEf
   default:
     qtrt.ErrorResolve("QVector4D", "setX", args)
- }
+  }
 
 }
 
@@ -220,12 +221,12 @@ func (this *QVector4D) setY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setYEf
   default:
     qtrt.ErrorResolve("QVector4D", "setY", args)
- }
+  }
 
 }
 
@@ -238,12 +239,12 @@ func (this *QVector4D) toVector3D(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10toVector3DEv
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3D", args)
- }
+  }
 
 }
 
@@ -256,12 +257,12 @@ func (this *QVector4D) x(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1xEv
   default:
     qtrt.ErrorResolve("QVector4D", "x", args)
- }
+  }
 
 }
 
@@ -274,12 +275,12 @@ func (this *QVector4D) toVector2DAffine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D16toVector2DAffineEv
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2DAffine", args)
- }
+  }
 
 }
 
@@ -292,12 +293,12 @@ func (this *QVector4D) length(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D6lengthEv
   default:
     qtrt.ErrorResolve("QVector4D", "length", args)
- }
+  }
 
 }
 
@@ -308,10 +309,10 @@ func (this *QVector4D) dotProduct_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QVector4D", "dotProduct", args)
- }
+  }
 
 }
 
@@ -324,12 +325,12 @@ func (this *QVector4D) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D6isNullEv
   default:
     qtrt.ErrorResolve("QVector4D", "isNull", args)
- }
+  }
 
 }
 
@@ -342,12 +343,12 @@ func (this *QVector4D) lengthSquared(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D13lengthSquaredEv
   default:
     qtrt.ErrorResolve("QVector4D", "lengthSquared", args)
- }
+  }
 
 }
 
@@ -360,12 +361,12 @@ func (this *QVector4D) toVector3DAffine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D16toVector3DAffineEv
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3DAffine", args)
- }
+  }
 
 }
 
@@ -378,12 +379,12 @@ func (this *QVector4D) toPoint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D7toPointEv
   default:
     qtrt.ErrorResolve("QVector4D", "toPoint", args)
- }
+  }
 
 }
 
@@ -396,12 +397,12 @@ func (this *QVector4D) w(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1wEv
   default:
     qtrt.ErrorResolve("QVector4D", "w", args)
- }
+  }
 
 }
 

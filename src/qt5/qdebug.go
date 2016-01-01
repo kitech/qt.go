@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -63,12 +63,12 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug10maybeQuoteEc
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
- }
+  }
 
 }
 
@@ -81,12 +81,12 @@ func (this *QNoDebug) quote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug5quoteEv
   default:
     qtrt.ErrorResolve("QNoDebug", "quote", args)
- }
+  }
 
 }
 
@@ -99,12 +99,12 @@ func (this *QNoDebug) space(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug5spaceEv
   default:
     qtrt.ErrorResolve("QNoDebug", "space", args)
- }
+  }
 
 }
 
@@ -117,12 +117,12 @@ func (this *QNoDebug) nospace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug7nospaceEv
   default:
     qtrt.ErrorResolve("QNoDebug", "nospace", args)
- }
+  }
 
 }
 
@@ -135,12 +135,12 @@ func (this *QNoDebug) noquote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug7noquoteEv
   default:
     qtrt.ErrorResolve("QNoDebug", "noquote", args)
- }
+  }
 
 }
 
@@ -153,17 +153,18 @@ func (this *QNoDebug) maybeSpace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug10maybeSpaceEv
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
- }
+  }
 
 }
 
 
-func NewQDebugStateSaver(args ...interface{})() {
+func NewQDebugStateSaver(args ...interface{}) QDebugStateSaver {
+  return QDebugStateSaver{}
 }
 
 
@@ -173,10 +174,10 @@ func (this *QDebugStateSaver) FreeQDebugStateSaver(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "~QDebugStateSaver", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QDebug) noquote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug7noquoteEv
   default:
     qtrt.ErrorResolve("QDebug", "noquote", args)
- }
+  }
 
 }
 
@@ -205,15 +206,16 @@ func (this *QDebug) FreeQDebug(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDebug", "~QDebug", args)
- }
+  }
 
 }
 
 
-func NewQDebug(args ...interface{})() {
+func NewQDebug(args ...interface{}) QDebug {
+  return QDebug{}
 }
 
 
@@ -225,12 +227,12 @@ func (this *QDebug) space(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug5spaceEv
   default:
     qtrt.ErrorResolve("QDebug", "space", args)
- }
+  }
 
 }
 
@@ -243,12 +245,12 @@ func (this *QDebug) maybeSpace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug10maybeSpaceEv
   default:
     qtrt.ErrorResolve("QDebug", "maybeSpace", args)
- }
+  }
 
 }
 
@@ -261,12 +263,12 @@ func (this *QDebug) resetFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug11resetFormatEv
   default:
     qtrt.ErrorResolve("QDebug", "resetFormat", args)
- }
+  }
 
 }
 
@@ -280,12 +282,12 @@ func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug19setAutoInsertSpacesEb
   default:
     qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
- }
+  }
 
 }
 
@@ -299,12 +301,12 @@ func (this *QDebug) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug4swapERS_
   default:
     qtrt.ErrorResolve("QDebug", "swap", args)
- }
+  }
 
 }
 
@@ -317,12 +319,12 @@ func (this *QDebug) nospace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug7nospaceEv
   default:
     qtrt.ErrorResolve("QDebug", "nospace", args)
- }
+  }
 
 }
 
@@ -335,12 +337,12 @@ func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK6QDebug16autoInsertSpacesEv
   default:
     qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
- }
+  }
 
 }
 
@@ -353,12 +355,12 @@ func (this *QDebug) quote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug5quoteEv
   default:
     qtrt.ErrorResolve("QDebug", "quote", args)
- }
+  }
 
 }
 
@@ -372,12 +374,12 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN6QDebug10maybeQuoteEc
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
- }
+  }
 
 }
 

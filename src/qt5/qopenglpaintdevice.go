@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -50,12 +50,12 @@ func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice11paintEngineEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintEngine", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice4sizeEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "size", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice15setPaintFlippedEb
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setPaintFlipped", args)
- }
+  }
 
 }
 
@@ -103,15 +103,16 @@ func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "~QOpenGLPaintDevice", args)
- }
+  }
 
 }
 
 
-func NewQOpenGLPaintDevice(args ...interface{})() {
+func NewQOpenGLPaintDevice(args ...interface{}) QOpenGLPaintDevice {
+  return QOpenGLPaintDevice{}
 }
 
 
@@ -123,12 +124,12 @@ func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7contextEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "context", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDevicePixelRatio", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7devTypeEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "devType", args)
- }
+  }
 
 }
 
@@ -178,12 +179,12 @@ func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterX", args)
- }
+  }
 
 }
 
@@ -197,12 +198,12 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterX", args)
- }
+  }
 
 }
 
@@ -215,12 +216,12 @@ func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterY", args)
- }
+  }
 
 }
 
@@ -234,12 +235,12 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterY", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice12paintFlippedEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintFlipped", args)
- }
+  }
 
 }
 
@@ -271,12 +272,12 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice7setSizeERK5QSize
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setSize", args)
- }
+  }
 
 }
 
@@ -289,12 +290,12 @@ func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice18ensureActiveTargetEv
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "ensureActiveTarget", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -57,7 +57,7 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle6polishEP7QWidget
   case 1:
@@ -66,12 +66,13 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
     // invoke: _ZN12QCommonStyle6polishEP12QApplication
   default:
     qtrt.ErrorResolve("QCommonStyle", "polish", args)
- }
+  }
 
 }
 
 
-func NewQCommonStyle(args ...interface{})() {
+func NewQCommonStyle(args ...interface{}) QCommonStyle {
+  return QCommonStyle{}
 }
 
 
@@ -87,14 +88,14 @@ func (this *QCommonStyle) unpolish(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle8unpolishEP7QWidget
   case 1:
     // invoke: _ZN12QCommonStyle8unpolishEP12QApplication
   default:
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QCommonStyle) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QCommonStyle10metaObjectEv
   default:
     qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
- }
+  }
 
 }
 
@@ -123,10 +124,10 @@ func (this *QCommonStyle) FreeQCommonStyle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
- }
+  }
 
 }
 

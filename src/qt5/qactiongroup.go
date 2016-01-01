@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -44,7 +44,8 @@ type QActionGroup struct {
 }
 
 
-func NewQActionGroup(args ...interface{})() {
+func NewQActionGroup(args ...interface{}) QActionGroup {
+  return QActionGroup{}
 }
 
 
@@ -56,12 +57,12 @@ func (this *QActionGroup) actions(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup7actionsEv
   default:
     qtrt.ErrorResolve("QActionGroup", "actions", args)
- }
+  }
 
 }
 
@@ -75,12 +76,12 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup11setDisabledEb
   default:
     qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
- }
+  }
 
 }
 
@@ -94,12 +95,12 @@ func (this *QActionGroup) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup10setEnabledEb
   default:
     qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
- }
+  }
 
 }
 
@@ -112,12 +113,12 @@ func (this *QActionGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QActionGroup", "metaObject", args)
- }
+  }
 
 }
 
@@ -138,7 +139,7 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup9addActionEP7QAction
   case 1:
@@ -147,7 +148,7 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
     // invoke: _ZN12QActionGroup9addActionERK7QString
   default:
     qtrt.ErrorResolve("QActionGroup", "addAction", args)
- }
+  }
 
 }
 
@@ -158,10 +159,10 @@ func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
- }
+  }
 
 }
 
@@ -174,12 +175,12 @@ func (this *QActionGroup) checkedAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup13checkedActionEv
   default:
     qtrt.ErrorResolve("QActionGroup", "checkedAction", args)
- }
+  }
 
 }
 
@@ -193,12 +194,12 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup10setVisibleEb
   default:
     qtrt.ErrorResolve("QActionGroup", "setVisible", args)
- }
+  }
 
 }
 
@@ -211,12 +212,12 @@ func (this *QActionGroup) isVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup9isVisibleEv
   default:
     qtrt.ErrorResolve("QActionGroup", "isVisible", args)
- }
+  }
 
 }
 
@@ -230,12 +231,12 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup12setExclusiveEb
   default:
     qtrt.ErrorResolve("QActionGroup", "setExclusive", args)
- }
+  }
 
 }
 
@@ -248,12 +249,12 @@ func (this *QActionGroup) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup9isEnabledEv
   default:
     qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
- }
+  }
 
 }
 
@@ -266,12 +267,12 @@ func (this *QActionGroup) isExclusive(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QActionGroup11isExclusiveEv
   default:
     qtrt.ErrorResolve("QActionGroup", "isExclusive", args)
- }
+  }
 
 }
 
@@ -285,12 +286,12 @@ func (this *QActionGroup) removeAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup12removeActionEP7QAction
   default:
     qtrt.ErrorResolve("QActionGroup", "removeAction", args)
- }
+  }
 
 }
 

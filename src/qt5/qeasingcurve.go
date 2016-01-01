@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -42,7 +42,8 @@ type QEasingCurve struct {
 }
 
 
-func NewQEasingCurve(args ...interface{})() {
+func NewQEasingCurve(args ...interface{}) QEasingCurve {
+  return QEasingCurve{}
 }
 
 
@@ -52,10 +53,10 @@ func (this *QEasingCurve) FreeQEasingCurve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QEasingCurve", "~QEasingCurve", args)
- }
+  }
 
 }
 
@@ -68,12 +69,12 @@ func (this *QEasingCurve) customType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve10customTypeEv
   default:
     qtrt.ErrorResolve("QEasingCurve", "customType", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QEasingCurve) overshoot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve9overshootEv
   default:
     qtrt.ErrorResolve("QEasingCurve", "overshoot", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QEasingCurve) setPeriod(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve9setPeriodEd
   default:
     qtrt.ErrorResolve("QEasingCurve", "setPeriod", args)
- }
+  }
 
 }
 
@@ -127,12 +128,12 @@ func (this *QEasingCurve) addTCBSegment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd
   default:
     qtrt.ErrorResolve("QEasingCurve", "addTCBSegment", args)
- }
+  }
 
 }
 
@@ -148,12 +149,12 @@ func (this *QEasingCurve) addCubicBezierSegment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_
   default:
     qtrt.ErrorResolve("QEasingCurve", "addCubicBezierSegment", args)
- }
+  }
 
 }
 
@@ -166,12 +167,12 @@ func (this *QEasingCurve) period(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve6periodEv
   default:
     qtrt.ErrorResolve("QEasingCurve", "period", args)
- }
+  }
 
 }
 
@@ -185,12 +186,12 @@ func (this *QEasingCurve) valueForProgress(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve16valueForProgressEd
   default:
     qtrt.ErrorResolve("QEasingCurve", "valueForProgress", args)
- }
+  }
 
 }
 
@@ -204,12 +205,12 @@ func (this *QEasingCurve) setAmplitude(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve12setAmplitudeEd
   default:
     qtrt.ErrorResolve("QEasingCurve", "setAmplitude", args)
- }
+  }
 
 }
 
@@ -223,12 +224,12 @@ func (this *QEasingCurve) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve4swapERS_
   default:
     qtrt.ErrorResolve("QEasingCurve", "swap", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QEasingCurve) setOvershoot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve12setOvershootEd
   default:
     qtrt.ErrorResolve("QEasingCurve", "setOvershoot", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QEasingCurve) toCubicSpline(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve13toCubicSplineEv
   default:
     qtrt.ErrorResolve("QEasingCurve", "toCubicSpline", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QEasingCurve) amplitude(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve9amplitudeEv
   default:
     qtrt.ErrorResolve("QEasingCurve", "amplitude", args)
- }
+  }
 
 }
 

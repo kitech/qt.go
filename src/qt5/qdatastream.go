@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -52,12 +52,12 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9readBytesERPcRj
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
- }
+  }
 
 }
 
@@ -70,17 +70,18 @@ func (this *QDataStream) unsetDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11unsetDeviceEv
   default:
     qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
- }
+  }
 
 }
 
 
-func NewQDataStream(args ...interface{})() {
+func NewQDataStream(args ...interface{}) QDataStream {
+  return QDataStream{}
 }
 
 
@@ -90,10 +91,10 @@ func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDataStream", "~QDataStream", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11skipRawDataEi
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
- }
+  }
 
 }
 
@@ -127,12 +128,12 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10writeBytesEPKcj
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
- }
+  }
 
 }
 
@@ -145,12 +146,12 @@ func (this *QDataStream) resetStatus(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11resetStatusEv
   default:
     qtrt.ErrorResolve("QDataStream", "resetStatus", args)
- }
+  }
 
 }
 
@@ -163,12 +164,12 @@ func (this *QDataStream) version(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
- }
+  }
 
 }
 
@@ -181,12 +182,12 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
- }
+  }
 
 }
 
@@ -200,12 +201,12 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10setVersionEi
   default:
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
- }
+  }
 
 }
 
@@ -219,12 +220,12 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
- }
+  }
 
 }
 
@@ -239,12 +240,12 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream12writeRawDataEPKci
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
- }
+  }
 
 }
 
@@ -259,12 +260,12 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11readRawDataEPci
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
- }
+  }
 
 }
 
@@ -277,12 +278,12 @@ func (this *QDataStream) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
- }
+  }
 
 }
 

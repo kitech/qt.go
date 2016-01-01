@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -48,10 +48,10 @@ func (this *QThreadPool) FreeQThreadPool(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThreadPool", "~QThreadPool", args)
- }
+  }
 
 }
 
@@ -64,12 +64,12 @@ func (this *QThreadPool) expiryTimeout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QThreadPool13expiryTimeoutEv
   default:
     qtrt.ErrorResolve("QThreadPool", "expiryTimeout", args)
- }
+  }
 
 }
 
@@ -83,12 +83,12 @@ func (this *QThreadPool) waitForDone(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool11waitForDoneEi
   default:
     qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
- }
+  }
 
 }
 
@@ -101,12 +101,12 @@ func (this *QThreadPool) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QThreadPool10metaObjectEv
   default:
     qtrt.ErrorResolve("QThreadPool", "metaObject", args)
- }
+  }
 
 }
 
@@ -120,12 +120,12 @@ func (this *QThreadPool) cancel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool6cancelEP9QRunnable
   default:
     qtrt.ErrorResolve("QThreadPool", "cancel", args)
- }
+  }
 
 }
 
@@ -139,12 +139,12 @@ func (this *QThreadPool) tryStart(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool8tryStartEP9QRunnable
   default:
     qtrt.ErrorResolve("QThreadPool", "tryStart", args)
- }
+  }
 
 }
 
@@ -155,10 +155,10 @@ func (this *QThreadPool) globalInstance_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QThreadPool", "globalInstance", args)
- }
+  }
 
 }
 
@@ -172,12 +172,12 @@ func (this *QThreadPool) setMaxThreadCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool17setMaxThreadCountEi
   default:
     qtrt.ErrorResolve("QThreadPool", "setMaxThreadCount", args)
- }
+  }
 
 }
 
@@ -191,12 +191,12 @@ func (this *QThreadPool) setExpiryTimeout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool16setExpiryTimeoutEi
   default:
     qtrt.ErrorResolve("QThreadPool", "setExpiryTimeout", args)
- }
+  }
 
 }
 
@@ -209,12 +209,12 @@ func (this *QThreadPool) reserveThread(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool13reserveThreadEv
   default:
     qtrt.ErrorResolve("QThreadPool", "reserveThread", args)
- }
+  }
 
 }
 
@@ -227,17 +227,18 @@ func (this *QThreadPool) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool5clearEv
   default:
     qtrt.ErrorResolve("QThreadPool", "clear", args)
- }
+  }
 
 }
 
 
-func NewQThreadPool(args ...interface{})() {
+func NewQThreadPool(args ...interface{}) QThreadPool {
+  return QThreadPool{}
 }
 
 
@@ -251,12 +252,12 @@ func (this *QThreadPool) start(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool5startEP9QRunnablei
   default:
     qtrt.ErrorResolve("QThreadPool", "start", args)
- }
+  }
 
 }
 
@@ -269,12 +270,12 @@ func (this *QThreadPool) maxThreadCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QThreadPool14maxThreadCountEv
   default:
     qtrt.ErrorResolve("QThreadPool", "maxThreadCount", args)
- }
+  }
 
 }
 
@@ -287,12 +288,12 @@ func (this *QThreadPool) releaseThread(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool13releaseThreadEv
   default:
     qtrt.ErrorResolve("QThreadPool", "releaseThread", args)
- }
+  }
 
 }
 
@@ -305,12 +306,12 @@ func (this *QThreadPool) activeThreadCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QThreadPool17activeThreadCountEv
   default:
     qtrt.ErrorResolve("QThreadPool", "activeThreadCount", args)
- }
+  }
 
 }
 

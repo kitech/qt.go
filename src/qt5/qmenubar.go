@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -58,14 +58,14 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar9addActionERK7QString
   case 1:
     // invoke: _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc
   default:
     qtrt.ErrorResolve("QMenuBar", "addAction", args)
- }
+  }
 
 }
 
@@ -78,12 +78,12 @@ func (this *QMenuBar) platformMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15platformMenuBarEv
   default:
     qtrt.ErrorResolve("QMenuBar", "platformMenuBar", args)
- }
+  }
 
 }
 
@@ -97,12 +97,12 @@ func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar16setNativeMenuBarEb
   default:
     qtrt.ErrorResolve("QMenuBar", "setNativeMenuBar", args)
- }
+  }
 
 }
 
@@ -113,10 +113,10 @@ func (this *QMenuBar) FreeQMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMenuBar", "~QMenuBar", args)
- }
+  }
 
 }
 
@@ -137,7 +137,7 @@ func (this *QMenuBar) addMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar7addMenuEP5QMenu
   case 1:
@@ -146,7 +146,7 @@ func (this *QMenuBar) addMenu(args ...interface{}) () {
     // invoke: _ZN8QMenuBar7addMenuERK7QString
   default:
     qtrt.ErrorResolve("QMenuBar", "addMenu", args)
- }
+  }
 
 }
 
@@ -159,12 +159,12 @@ func (this *QMenuBar) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar8sizeHintEv
   default:
     qtrt.ErrorResolve("QMenuBar", "sizeHint", args)
- }
+  }
 
 }
 
@@ -178,12 +178,12 @@ func (this *QMenuBar) actionAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar8actionAtERK6QPoint
   default:
     qtrt.ErrorResolve("QMenuBar", "actionAt", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QMenuBar) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar10metaObjectEv
   default:
     qtrt.ErrorResolve("QMenuBar", "metaObject", args)
- }
+  }
 
 }
 
@@ -214,12 +214,12 @@ func (this *QMenuBar) isNativeMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar15isNativeMenuBarEv
   default:
     qtrt.ErrorResolve("QMenuBar", "isNativeMenuBar", args)
- }
+  }
 
 }
 
@@ -233,12 +233,12 @@ func (this *QMenuBar) insertSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15insertSeparatorEP7QAction
   default:
     qtrt.ErrorResolve("QMenuBar", "insertSeparator", args)
- }
+  }
 
 }
 
@@ -251,12 +251,12 @@ func (this *QMenuBar) addSeparator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar12addSeparatorEv
   default:
     qtrt.ErrorResolve("QMenuBar", "addSeparator", args)
- }
+  }
 
 }
 
@@ -269,12 +269,12 @@ func (this *QMenuBar) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QMenuBar", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -287,17 +287,18 @@ func (this *QMenuBar) isDefaultUp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar11isDefaultUpEv
   default:
     qtrt.ErrorResolve("QMenuBar", "isDefaultUp", args)
- }
+  }
 
 }
 
 
-func NewQMenuBar(args ...interface{})() {
+func NewQMenuBar(args ...interface{}) QMenuBar {
+  return QMenuBar{}
 }
 
 
@@ -310,12 +311,12 @@ func (this *QMenuBar) setActiveAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15setActiveActionEP7QAction
   default:
     qtrt.ErrorResolve("QMenuBar", "setActiveAction", args)
- }
+  }
 
 }
 
@@ -328,12 +329,12 @@ func (this *QMenuBar) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar5clearEv
   default:
     qtrt.ErrorResolve("QMenuBar", "clear", args)
- }
+  }
 
 }
 
@@ -346,12 +347,12 @@ func (this *QMenuBar) activeAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar12activeActionEv
   default:
     qtrt.ErrorResolve("QMenuBar", "activeAction", args)
- }
+  }
 
 }
 
@@ -365,12 +366,12 @@ func (this *QMenuBar) actionGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar14actionGeometryEP7QAction
   default:
     qtrt.ErrorResolve("QMenuBar", "actionGeometry", args)
- }
+  }
 
 }
 
@@ -385,12 +386,12 @@ func (this *QMenuBar) insertMenu(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar10insertMenuEP7QActionP5QMenu
   default:
     qtrt.ErrorResolve("QMenuBar", "insertMenu", args)
- }
+  }
 
 }
 
@@ -404,12 +405,12 @@ func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar12setDefaultUpEb
   default:
     qtrt.ErrorResolve("QMenuBar", "setDefaultUp", args)
- }
+  }
 
 }
 
@@ -423,12 +424,12 @@ func (this *QMenuBar) setVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar10setVisibleEb
   default:
     qtrt.ErrorResolve("QMenuBar", "setVisible", args)
- }
+  }
 
 }
 
@@ -442,12 +443,12 @@ func (this *QMenuBar) heightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar14heightForWidthEi
   default:
     qtrt.ErrorResolve("QMenuBar", "heightForWidth", args)
- }
+  }
 
 }
 

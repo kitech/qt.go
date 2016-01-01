@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -44,7 +44,8 @@ type QCompleter struct {
 }
 
 
-func NewQCompleter(args ...interface{})() {
+func NewQCompleter(args ...interface{}) QCompleter {
+  return QCompleter{}
 }
 
 
@@ -56,12 +57,12 @@ func (this *QCompleter) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter10metaObjectEv
   default:
     qtrt.ErrorResolve("QCompleter", "metaObject", args)
- }
+  }
 
 }
 
@@ -74,12 +75,12 @@ func (this *QCompleter) popup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter5popupEv
   default:
     qtrt.ErrorResolve("QCompleter", "popup", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QCompleter) complete(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8completeERK5QRect
   default:
     qtrt.ErrorResolve("QCompleter", "complete", args)
- }
+  }
 
 }
 
@@ -112,12 +113,12 @@ func (this *QCompleter) setCompletionRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter17setCompletionRoleEi
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionRole", args)
- }
+  }
 
 }
 
@@ -130,12 +131,12 @@ func (this *QCompleter) completionCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter15completionCountEv
   default:
     qtrt.ErrorResolve("QCompleter", "completionCount", args)
- }
+  }
 
 }
 
@@ -148,12 +149,12 @@ func (this *QCompleter) currentIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter12currentIndexEv
   default:
     qtrt.ErrorResolve("QCompleter", "currentIndex", args)
- }
+  }
 
 }
 
@@ -167,12 +168,12 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter13pathFromIndexERK11QModelIndex
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
- }
+  }
 
 }
 
@@ -186,12 +187,12 @@ func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter18setMaxVisibleItemsEi
   default:
     qtrt.ErrorResolve("QCompleter", "setMaxVisibleItems", args)
- }
+  }
 
 }
 
@@ -204,12 +205,12 @@ func (this *QCompleter) completionColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter16completionColumnEv
   default:
     qtrt.ErrorResolve("QCompleter", "completionColumn", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter15maxVisibleItemsEv
   default:
     qtrt.ErrorResolve("QCompleter", "maxVisibleItems", args)
- }
+  }
 
 }
 
@@ -238,10 +239,10 @@ func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCompleter", "~QCompleter", args)
- }
+  }
 
 }
 
@@ -255,12 +256,12 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter13setWrapAroundEb
   default:
     qtrt.ErrorResolve("QCompleter", "setWrapAround", args)
- }
+  }
 
 }
 
@@ -274,12 +275,12 @@ func (this *QCompleter) splitPath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter9splitPathERK7QString
   default:
     qtrt.ErrorResolve("QCompleter", "splitPath", args)
- }
+  }
 
 }
 
@@ -292,12 +293,12 @@ func (this *QCompleter) model(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter5modelEv
   default:
     qtrt.ErrorResolve("QCompleter", "model", args)
- }
+  }
 
 }
 
@@ -310,12 +311,12 @@ func (this *QCompleter) currentCompletion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter17currentCompletionEv
   default:
     qtrt.ErrorResolve("QCompleter", "currentCompletion", args)
- }
+  }
 
 }
 
@@ -329,12 +330,12 @@ func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionColumnEi
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionColumn", args)
- }
+  }
 
 }
 
@@ -348,12 +349,12 @@ func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionPrefixERK7QString
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionPrefix", args)
- }
+  }
 
 }
 
@@ -366,12 +367,12 @@ func (this *QCompleter) completionModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter15completionModelEv
   default:
     qtrt.ErrorResolve("QCompleter", "completionModel", args)
- }
+  }
 
 }
 
@@ -385,12 +386,12 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter13setCurrentRowEi
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
- }
+  }
 
 }
 
@@ -403,12 +404,12 @@ func (this *QCompleter) currentRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter10currentRowEv
   default:
     qtrt.ErrorResolve("QCompleter", "currentRow", args)
- }
+  }
 
 }
 
@@ -422,12 +423,12 @@ func (this *QCompleter) setModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8setModelEP18QAbstractItemModel
   default:
     qtrt.ErrorResolve("QCompleter", "setModel", args)
- }
+  }
 
 }
 
@@ -440,12 +441,12 @@ func (this *QCompleter) wrapAround(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter10wrapAroundEv
   default:
     qtrt.ErrorResolve("QCompleter", "wrapAround", args)
- }
+  }
 
 }
 
@@ -459,12 +460,12 @@ func (this *QCompleter) setPopup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8setPopupEP17QAbstractItemView
   default:
     qtrt.ErrorResolve("QCompleter", "setPopup", args)
- }
+  }
 
 }
 
@@ -477,12 +478,12 @@ func (this *QCompleter) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter6widgetEv
   default:
     qtrt.ErrorResolve("QCompleter", "widget", args)
- }
+  }
 
 }
 
@@ -495,12 +496,12 @@ func (this *QCompleter) completionRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter14completionRoleEv
   default:
     qtrt.ErrorResolve("QCompleter", "completionRole", args)
- }
+  }
 
 }
 
@@ -513,12 +514,12 @@ func (this *QCompleter) completionPrefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter16completionPrefixEv
   default:
     qtrt.ErrorResolve("QCompleter", "completionPrefix", args)
- }
+  }
 
 }
 
@@ -532,12 +533,12 @@ func (this *QCompleter) setWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter9setWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QCompleter", "setWidget", args)
- }
+  }
 
 }
 

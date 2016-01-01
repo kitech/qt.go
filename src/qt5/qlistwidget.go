@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.go
 //
@@ -64,10 +64,10 @@ func (this *QListWidgetItem) FreeQListWidgetItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QListWidgetItem", "~QListWidgetItem", args)
- }
+  }
 
 }
 
@@ -80,12 +80,12 @@ func (this *QListWidgetItem) isHidden(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem8isHiddenEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "isHidden", args)
- }
+  }
 
 }
 
@@ -100,12 +100,12 @@ func (this *QListWidgetItem) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem7setDataEiRK8QVariant
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setData", args)
- }
+  }
 
 }
 
@@ -119,12 +119,12 @@ func (this *QListWidgetItem) setBackground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem13setBackgroundERK6QBrush
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setBackground", args)
- }
+  }
 
 }
 
@@ -138,12 +138,12 @@ func (this *QListWidgetItem) setSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem11setSelectedEb
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setSelected", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QListWidgetItem) font(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem4fontEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "font", args)
- }
+  }
 
 }
 
@@ -175,17 +175,18 @@ func (this *QListWidgetItem) setTextAlignment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem16setTextAlignmentEi
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setTextAlignment", args)
- }
+  }
 
 }
 
 
-func NewQListWidgetItem(args ...interface{})() {
+func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
+  return QListWidgetItem{}
 }
 
 
@@ -198,12 +199,12 @@ func (this *QListWidgetItem) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem5writeER11QDataStream
   default:
     qtrt.ErrorResolve("QListWidgetItem", "write", args)
- }
+  }
 
 }
 
@@ -216,12 +217,12 @@ func (this *QListWidgetItem) whatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem9whatsThisEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "whatsThis", args)
- }
+  }
 
 }
 
@@ -232,10 +233,10 @@ func (this *QListWidgetItem) type_(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QListWidgetItem", "type", args)
- }
+  }
 
 }
 
@@ -248,12 +249,12 @@ func (this *QListWidgetItem) icon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem4iconEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "icon", args)
- }
+  }
 
 }
 
@@ -266,12 +267,12 @@ func (this *QListWidgetItem) textColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem9textColorEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "textColor", args)
- }
+  }
 
 }
 
@@ -284,12 +285,12 @@ func (this *QListWidgetItem) foreground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem10foregroundEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "foreground", args)
- }
+  }
 
 }
 
@@ -302,12 +303,12 @@ func (this *QListWidgetItem) background(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem10backgroundEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "background", args)
- }
+  }
 
 }
 
@@ -321,12 +322,12 @@ func (this *QListWidgetItem) setStatusTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem12setStatusTipERK7QString
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setStatusTip", args)
- }
+  }
 
 }
 
@@ -339,12 +340,12 @@ func (this *QListWidgetItem) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem4textEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "text", args)
- }
+  }
 
 }
 
@@ -357,12 +358,12 @@ func (this *QListWidgetItem) backgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem15backgroundColorEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "backgroundColor", args)
- }
+  }
 
 }
 
@@ -375,12 +376,12 @@ func (this *QListWidgetItem) isSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem10isSelectedEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "isSelected", args)
- }
+  }
 
 }
 
@@ -394,12 +395,12 @@ func (this *QListWidgetItem) setFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem7setFontERK5QFont
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setFont", args)
- }
+  }
 
 }
 
@@ -413,12 +414,12 @@ func (this *QListWidgetItem) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem7setTextERK7QString
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setText", args)
- }
+  }
 
 }
 
@@ -432,12 +433,12 @@ func (this *QListWidgetItem) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem4dataEi
   default:
     qtrt.ErrorResolve("QListWidgetItem", "data", args)
- }
+  }
 
 }
 
@@ -450,12 +451,12 @@ func (this *QListWidgetItem) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem8sizeHintEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "sizeHint", args)
- }
+  }
 
 }
 
@@ -469,12 +470,12 @@ func (this *QListWidgetItem) setWhatsThis(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem12setWhatsThisERK7QString
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setWhatsThis", args)
- }
+  }
 
 }
 
@@ -488,12 +489,12 @@ func (this *QListWidgetItem) read(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem4readER11QDataStream
   default:
     qtrt.ErrorResolve("QListWidgetItem", "read", args)
- }
+  }
 
 }
 
@@ -507,12 +508,12 @@ func (this *QListWidgetItem) setTextColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem12setTextColorERK6QColor
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setTextColor", args)
- }
+  }
 
 }
 
@@ -526,12 +527,12 @@ func (this *QListWidgetItem) setSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem11setSizeHintERK5QSize
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setSizeHint", args)
- }
+  }
 
 }
 
@@ -544,12 +545,12 @@ func (this *QListWidgetItem) listWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem10listWidgetEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "listWidget", args)
- }
+  }
 
 }
 
@@ -563,12 +564,12 @@ func (this *QListWidgetItem) setIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem7setIconERK5QIcon
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setIcon", args)
- }
+  }
 
 }
 
@@ -581,12 +582,12 @@ func (this *QListWidgetItem) clone(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem5cloneEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "clone", args)
- }
+  }
 
 }
 
@@ -600,12 +601,12 @@ func (this *QListWidgetItem) setBackgroundColor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem18setBackgroundColorERK6QColor
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setBackgroundColor", args)
- }
+  }
 
 }
 
@@ -619,12 +620,12 @@ func (this *QListWidgetItem) setForeground(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem13setForegroundERK6QBrush
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setForeground", args)
- }
+  }
 
 }
 
@@ -638,12 +639,12 @@ func (this *QListWidgetItem) setHidden(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem9setHiddenEb
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setHidden", args)
- }
+  }
 
 }
 
@@ -656,12 +657,12 @@ func (this *QListWidgetItem) toolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem7toolTipEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "toolTip", args)
- }
+  }
 
 }
 
@@ -674,12 +675,12 @@ func (this *QListWidgetItem) textAlignment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem13textAlignmentEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "textAlignment", args)
- }
+  }
 
 }
 
@@ -692,12 +693,12 @@ func (this *QListWidgetItem) statusTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QListWidgetItem9statusTipEv
   default:
     qtrt.ErrorResolve("QListWidgetItem", "statusTip", args)
- }
+  }
 
 }
 
@@ -711,12 +712,12 @@ func (this *QListWidgetItem) setToolTip(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QListWidgetItem10setToolTipERK7QString
   default:
     qtrt.ErrorResolve("QListWidgetItem", "setToolTip", args)
- }
+  }
 
 }
 
@@ -730,12 +731,12 @@ func (this *QListWidget) dropEvent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget9dropEventEP10QDropEvent
   default:
     qtrt.ErrorResolve("QListWidget", "dropEvent", args)
- }
+  }
 
 }
 
@@ -749,17 +750,18 @@ func (this *QListWidget) itemWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget10itemWidgetEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "itemWidget", args)
- }
+  }
 
 }
 
 
-func NewQListWidget(args ...interface{})() {
+func NewQListWidget(args ...interface{}) QListWidget {
+  return QListWidget{}
 }
 
 
@@ -771,12 +773,12 @@ func (this *QListWidget) currentRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget10currentRowEv
   default:
     qtrt.ErrorResolve("QListWidget", "currentRow", args)
- }
+  }
 
 }
 
@@ -790,12 +792,12 @@ func (this *QListWidget) item(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget4itemEi
   default:
     qtrt.ErrorResolve("QListWidget", "item", args)
- }
+  }
 
 }
 
@@ -813,14 +815,14 @@ func (this *QListWidget) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget6itemAtERK6QPoint
   case 1:
     // invoke: _ZNK11QListWidget6itemAtEii
   default:
     qtrt.ErrorResolve("QListWidget", "itemAt", args)
- }
+  }
 
 }
 
@@ -839,14 +841,14 @@ func (this *QListWidget) insertItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget10insertItemEiRK7QString
   case 1:
     // invoke: _ZN11QListWidget10insertItemEiP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "insertItem", args)
- }
+  }
 
 }
 
@@ -860,12 +862,12 @@ func (this *QListWidget) row(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget3rowEPK15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "row", args)
- }
+  }
 
 }
 
@@ -879,12 +881,12 @@ func (this *QListWidget) openPersistentEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget20openPersistentEditorEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "openPersistentEditor", args)
- }
+  }
 
 }
 
@@ -897,12 +899,12 @@ func (this *QListWidget) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget5clearEv
   default:
     qtrt.ErrorResolve("QListWidget", "clear", args)
- }
+  }
 
 }
 
@@ -916,12 +918,12 @@ func (this *QListWidget) editItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget8editItemEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "editItem", args)
- }
+  }
 
 }
 
@@ -934,12 +936,12 @@ func (this *QListWidget) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget5countEv
   default:
     qtrt.ErrorResolve("QListWidget", "count", args)
- }
+  }
 
 }
 
@@ -954,12 +956,12 @@ func (this *QListWidget) setItemHidden(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb
   default:
     qtrt.ErrorResolve("QListWidget", "setItemHidden", args)
- }
+  }
 
 }
 
@@ -970,10 +972,10 @@ func (this *QListWidget) FreeQListWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QListWidget", "~QListWidget", args)
- }
+  }
 
 }
 
@@ -990,14 +992,14 @@ func (this *QListWidget) addItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget7addItemEP15QListWidgetItem
   case 1:
     // invoke: _ZN11QListWidget7addItemERK7QString
   default:
     qtrt.ErrorResolve("QListWidget", "addItem", args)
- }
+  }
 
 }
 
@@ -1011,12 +1013,12 @@ func (this *QListWidget) takeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget8takeItemEi
   default:
     qtrt.ErrorResolve("QListWidget", "takeItem", args)
- }
+  }
 
 }
 
@@ -1029,12 +1031,12 @@ func (this *QListWidget) isSortingEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget16isSortingEnabledEv
   default:
     qtrt.ErrorResolve("QListWidget", "isSortingEnabled", args)
- }
+  }
 
 }
 
@@ -1048,12 +1050,12 @@ func (this *QListWidget) addItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget8addItemsERK11QStringList
   default:
     qtrt.ErrorResolve("QListWidget", "addItems", args)
- }
+  }
 
 }
 
@@ -1066,12 +1068,12 @@ func (this *QListWidget) selectedItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget13selectedItemsEv
   default:
     qtrt.ErrorResolve("QListWidget", "selectedItems", args)
- }
+  }
 
 }
 
@@ -1084,12 +1086,12 @@ func (this *QListWidget) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget10metaObjectEv
   default:
     qtrt.ErrorResolve("QListWidget", "metaObject", args)
- }
+  }
 
 }
 
@@ -1104,12 +1106,12 @@ func (this *QListWidget) setItemSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb
   default:
     qtrt.ErrorResolve("QListWidget", "setItemSelected", args)
- }
+  }
 
 }
 
@@ -1127,14 +1129,14 @@ func (this *QListWidget) setCurrentRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget13setCurrentRowEi6QFlagsIN19QItemSelectionModel13SelectionFlagEE
   case 1:
     // invoke: _ZN11QListWidget13setCurrentRowEi
   default:
     qtrt.ErrorResolve("QListWidget", "setCurrentRow", args)
- }
+  }
 
 }
 
@@ -1148,12 +1150,12 @@ func (this *QListWidget) setSortingEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget17setSortingEnabledEb
   default:
     qtrt.ErrorResolve("QListWidget", "setSortingEnabled", args)
- }
+  }
 
 }
 
@@ -1167,12 +1169,12 @@ func (this *QListWidget) visualItemRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget14visualItemRectEPK15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "visualItemRect", args)
- }
+  }
 
 }
 
@@ -1186,12 +1188,12 @@ func (this *QListWidget) removeItemWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget16removeItemWidgetEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "removeItemWidget", args)
- }
+  }
 
 }
 
@@ -1205,12 +1207,12 @@ func (this *QListWidget) closePersistentEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget21closePersistentEditorEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "closePersistentEditor", args)
- }
+  }
 
 }
 
@@ -1224,12 +1226,12 @@ func (this *QListWidget) isItemHidden(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "isItemHidden", args)
- }
+  }
 
 }
 
@@ -1244,12 +1246,12 @@ func (this *QListWidget) insertItems(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget11insertItemsEiRK11QStringList
   default:
     qtrt.ErrorResolve("QListWidget", "insertItems", args)
- }
+  }
 
 }
 
@@ -1262,12 +1264,12 @@ func (this *QListWidget) currentItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget11currentItemEv
   default:
     qtrt.ErrorResolve("QListWidget", "currentItem", args)
- }
+  }
 
 }
 
@@ -1285,14 +1287,14 @@ func (this *QListWidget) setCurrentItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget14setCurrentItemEP15QListWidgetItem6QFlagsIN19QItemSelectionModel13SelectionFlagEE
   case 1:
     // invoke: _ZN11QListWidget14setCurrentItemEP15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "setCurrentItem", args)
- }
+  }
 
 }
 
@@ -1307,12 +1309,12 @@ func (this *QListWidget) setItemWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QListWidget13setItemWidgetEP15QListWidgetItemP7QWidget
   default:
     qtrt.ErrorResolve("QListWidget", "setItemWidget", args)
- }
+  }
 
 }
 
@@ -1326,12 +1328,12 @@ func (this *QListWidget) isItemSelected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem
   default:
     qtrt.ErrorResolve("QListWidget", "isItemSelected", args)
- }
+  }
 
 }
 

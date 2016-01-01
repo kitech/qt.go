@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -50,12 +50,12 @@ func (this *QJsonArray) first(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray5firstEv
   default:
     qtrt.ErrorResolve("QJsonArray", "first", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QJsonArray) empty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray5emptyEv
   default:
     qtrt.ErrorResolve("QJsonArray", "empty", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QJsonArray) takeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray6takeAtEi
   default:
     qtrt.ErrorResolve("QJsonArray", "takeAt", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QJsonArray) removeLast(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray10removeLastEv
   default:
     qtrt.ErrorResolve("QJsonArray", "removeLast", args)
- }
+  }
 
 }
 
@@ -123,12 +123,12 @@ func (this *QJsonArray) pop_front(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray9pop_frontEv
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_front", args)
- }
+  }
 
 }
 
@@ -141,12 +141,12 @@ func (this *QJsonArray) toVariantList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray13toVariantListEv
   default:
     qtrt.ErrorResolve("QJsonArray", "toVariantList", args)
- }
+  }
 
 }
 
@@ -157,10 +157,10 @@ func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QJsonArray", "~QJsonArray", args)
- }
+  }
 
 }
 
@@ -173,12 +173,12 @@ func (this *QJsonArray) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray4sizeEv
   default:
     qtrt.ErrorResolve("QJsonArray", "size", args)
- }
+  }
 
 }
 
@@ -191,17 +191,18 @@ func (this *QJsonArray) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray5countEv
   default:
     qtrt.ErrorResolve("QJsonArray", "count", args)
- }
+  }
 
 }
 
 
-func NewQJsonArray(args ...interface{})() {
+func NewQJsonArray(args ...interface{}) QJsonArray {
+  return QJsonArray{}
 }
 
 
@@ -214,12 +215,12 @@ func (this *QJsonArray) at(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray2atEi
   default:
     qtrt.ErrorResolve("QJsonArray", "at", args)
- }
+  }
 
 }
 
@@ -232,12 +233,12 @@ func (this *QJsonArray) pop_back(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray8pop_backEv
   default:
     qtrt.ErrorResolve("QJsonArray", "pop_back", args)
- }
+  }
 
 }
 
@@ -250,12 +251,12 @@ func (this *QJsonArray) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray7isEmptyEv
   default:
     qtrt.ErrorResolve("QJsonArray", "isEmpty", args)
- }
+  }
 
 }
 
@@ -266,10 +267,10 @@ func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QJsonArray", "fromStringList", args)
- }
+  }
 
 }
 
@@ -282,12 +283,12 @@ func (this *QJsonArray) last(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonArray4lastEv
   default:
     qtrt.ErrorResolve("QJsonArray", "last", args)
- }
+  }
 
 }
 
@@ -300,12 +301,12 @@ func (this *QJsonArray) removeFirst(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray11removeFirstEv
   default:
     qtrt.ErrorResolve("QJsonArray", "removeFirst", args)
- }
+  }
 
 }
 
@@ -319,12 +320,12 @@ func (this *QJsonArray) removeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QJsonArray8removeAtEi
   default:
     qtrt.ErrorResolve("QJsonArray", "removeAt", args)
- }
+  }
 
 }
 

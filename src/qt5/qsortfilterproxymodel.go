@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.go
 //
@@ -54,14 +54,14 @@ func (this *QSortFilterProxyModel) setFilterRegExp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel15setFilterRegExpERK7QString
   case 1:
     // invoke: _ZN21QSortFilterProxyModel15setFilterRegExpERK7QRegExp
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setFilterRegExp", args)
- }
+  }
 
 }
 
@@ -75,12 +75,12 @@ func (this *QSortFilterProxyModel) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "rowCount", args)
- }
+  }
 
 }
 
@@ -96,12 +96,12 @@ func (this *QSortFilterProxyModel) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel7siblingEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sibling", args)
- }
+  }
 
 }
 
@@ -115,12 +115,12 @@ func (this *QSortFilterProxyModel) span(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel4spanERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "span", args)
- }
+  }
 
 }
 
@@ -134,12 +134,12 @@ func (this *QSortFilterProxyModel) mapFromSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapFromSource", args)
- }
+  }
 
 }
 
@@ -153,12 +153,12 @@ func (this *QSortFilterProxyModel) setFilterWildcard(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel17setFilterWildcardERK7QString
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setFilterWildcard", args)
- }
+  }
 
 }
 
@@ -172,12 +172,12 @@ func (this *QSortFilterProxyModel) hasChildren(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "hasChildren", args)
- }
+  }
 
 }
 
@@ -191,12 +191,12 @@ func (this *QSortFilterProxyModel) setFilterFixedString(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel20setFilterFixedStringERK7QString
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setFilterFixedString", args)
- }
+  }
 
 }
 
@@ -212,12 +212,12 @@ func (this *QSortFilterProxyModel) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setData", args)
- }
+  }
 
 }
 
@@ -231,12 +231,12 @@ func (this *QSortFilterProxyModel) setSortRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel11setSortRoleEi
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setSortRole", args)
- }
+  }
 
 }
 
@@ -251,12 +251,12 @@ func (this *QSortFilterProxyModel) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel4dataERK11QModelIndexi
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "data", args)
- }
+  }
 
 }
 
@@ -269,12 +269,12 @@ func (this *QSortFilterProxyModel) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel10invalidateEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "invalidate", args)
- }
+  }
 
 }
 
@@ -287,12 +287,12 @@ func (this *QSortFilterProxyModel) sortColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel10sortColumnEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sortColumn", args)
- }
+  }
 
 }
 
@@ -308,12 +308,12 @@ func (this *QSortFilterProxyModel) insertRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "insertRows", args)
- }
+  }
 
 }
 
@@ -326,12 +326,12 @@ func (this *QSortFilterProxyModel) filterKeyColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel15filterKeyColumnEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterKeyColumn", args)
- }
+  }
 
 }
 
@@ -345,12 +345,12 @@ func (this *QSortFilterProxyModel) canFetchMore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel12canFetchMoreERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "canFetchMore", args)
- }
+  }
 
 }
 
@@ -363,12 +363,12 @@ func (this *QSortFilterProxyModel) isSortLocaleAware(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel17isSortLocaleAwareEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "isSortLocaleAware", args)
- }
+  }
 
 }
 
@@ -382,12 +382,12 @@ func (this *QSortFilterProxyModel) fetchMore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel9fetchMoreERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "fetchMore", args)
- }
+  }
 
 }
 
@@ -401,12 +401,12 @@ func (this *QSortFilterProxyModel) mapSelectionFromSource(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapSelectionFromSource", args)
- }
+  }
 
 }
 
@@ -420,12 +420,12 @@ func (this *QSortFilterProxyModel) mapSelectionToSource(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapSelectionToSource", args)
- }
+  }
 
 }
 
@@ -438,12 +438,12 @@ func (this *QSortFilterProxyModel) mimeTypes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel9mimeTypesEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mimeTypes", args)
- }
+  }
 
 }
 
@@ -457,12 +457,12 @@ func (this *QSortFilterProxyModel) buddy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel5buddyERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "buddy", args)
- }
+  }
 
 }
 
@@ -475,12 +475,12 @@ func (this *QSortFilterProxyModel) filterRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel10filterRoleEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterRole", args)
- }
+  }
 
 }
 
@@ -493,12 +493,12 @@ func (this *QSortFilterProxyModel) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel5clearEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "clear", args)
- }
+  }
 
 }
 
@@ -512,12 +512,12 @@ func (this *QSortFilterProxyModel) setFilterKeyColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel18setFilterKeyColumnEi
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setFilterKeyColumn", args)
- }
+  }
 
 }
 
@@ -530,12 +530,12 @@ func (this *QSortFilterProxyModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -548,12 +548,12 @@ func (this *QSortFilterProxyModel) sortRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel8sortRoleEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sortRole", args)
- }
+  }
 
 }
 
@@ -567,12 +567,12 @@ func (this *QSortFilterProxyModel) setSortLocaleAware(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel18setSortLocaleAwareEb
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setSortLocaleAware", args)
- }
+  }
 
 }
 
@@ -586,12 +586,12 @@ func (this *QSortFilterProxyModel) mapToSource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapToSource", args)
- }
+  }
 
 }
 
@@ -605,17 +605,18 @@ func (this *QSortFilterProxyModel) setSourceModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel14setSourceModelEP18QAbstractItemModel
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setSourceModel", args)
- }
+  }
 
 }
 
 
-func NewQSortFilterProxyModel(args ...interface{})() {
+func NewQSortFilterProxyModel(args ...interface{}) QSortFilterProxyModel {
+  return QSortFilterProxyModel{}
 }
 
 
@@ -630,12 +631,12 @@ func (this *QSortFilterProxyModel) removeColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "removeColumns", args)
- }
+  }
 
 }
 
@@ -646,10 +647,10 @@ func (this *QSortFilterProxyModel) FreeQSortFilterProxyModel(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "~QSortFilterProxyModel", args)
- }
+  }
 
 }
 
@@ -662,12 +663,12 @@ func (this *QSortFilterProxyModel) dynamicSortFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel17dynamicSortFilterEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "dynamicSortFilter", args)
- }
+  }
 
 }
 
@@ -683,12 +684,12 @@ func (this *QSortFilterProxyModel) insertColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "insertColumns", args)
- }
+  }
 
 }
 
@@ -702,12 +703,12 @@ func (this *QSortFilterProxyModel) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "columnCount", args)
- }
+  }
 
 }
 
@@ -721,12 +722,12 @@ func (this *QSortFilterProxyModel) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel6parentERK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "parent", args)
- }
+  }
 
 }
 
@@ -739,12 +740,12 @@ func (this *QSortFilterProxyModel) filterRegExp(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel12filterRegExpEv
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterRegExp", args)
- }
+  }
 
 }
 
@@ -758,12 +759,12 @@ func (this *QSortFilterProxyModel) setFilterRole(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel13setFilterRoleEi
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setFilterRole", args)
- }
+  }
 
 }
 
@@ -779,12 +780,12 @@ func (this *QSortFilterProxyModel) removeRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "removeRows", args)
- }
+  }
 
 }
 
@@ -800,12 +801,12 @@ func (this *QSortFilterProxyModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "index", args)
- }
+  }
 
 }
 
@@ -819,12 +820,12 @@ func (this *QSortFilterProxyModel) setDynamicSortFilter(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QSortFilterProxyModel20setDynamicSortFilterEb
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setDynamicSortFilter", args)
- }
+  }
 
 }
 

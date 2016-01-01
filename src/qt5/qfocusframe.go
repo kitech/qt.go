@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -48,10 +48,10 @@ func (this *QFocusFrame) FreeQFocusFrame(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
- }
+  }
 
 }
 
@@ -64,17 +64,18 @@ func (this *QFocusFrame) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusFrame10metaObjectEv
   default:
     qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQFocusFrame(args ...interface{})() {
+func NewQFocusFrame(args ...interface{}) QFocusFrame {
+  return QFocusFrame{}
 }
 
 
@@ -86,12 +87,12 @@ func (this *QFocusFrame) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusFrame6widgetEv
   default:
     qtrt.ErrorResolve("QFocusFrame", "widget", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QFocusFrame) setWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QFocusFrame9setWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QFocusFrame", "setWidget", args)
- }
+  }
 
 }
 

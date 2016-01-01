@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -50,12 +50,12 @@ func (this *QBackingStore) paintDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore11paintDeviceEv
   default:
     qtrt.ErrorResolve("QBackingStore", "paintDevice", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QBackingStore) window(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore6windowEv
   default:
     qtrt.ErrorResolve("QBackingStore", "window", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QBackingStore) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore4sizeEv
   default:
     qtrt.ErrorResolve("QBackingStore", "size", args)
- }
+  }
 
 }
 
@@ -104,12 +104,12 @@ func (this *QBackingStore) staticContents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore14staticContentsEv
   default:
     qtrt.ErrorResolve("QBackingStore", "staticContents", args)
- }
+  }
 
 }
 
@@ -120,10 +120,10 @@ func (this *QBackingStore) FreeQBackingStore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
- }
+  }
 
 }
 
@@ -137,12 +137,12 @@ func (this *QBackingStore) setStaticContents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore17setStaticContentsERK7QRegion
   default:
     qtrt.ErrorResolve("QBackingStore", "setStaticContents", args)
- }
+  }
 
 }
 
@@ -156,12 +156,12 @@ func (this *QBackingStore) resize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6resizeERK5QSize
   default:
     qtrt.ErrorResolve("QBackingStore", "resize", args)
- }
+  }
 
 }
 
@@ -177,12 +177,12 @@ func (this *QBackingStore) flush(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint
   default:
     qtrt.ErrorResolve("QBackingStore", "flush", args)
- }
+  }
 
 }
 
@@ -196,12 +196,12 @@ func (this *QBackingStore) beginPaint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
   default:
     qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
- }
+  }
 
 }
 
@@ -214,12 +214,12 @@ func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore17hasStaticContentsEv
   default:
     qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QBackingStore) endPaint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore8endPaintEv
   default:
     qtrt.ErrorResolve("QBackingStore", "endPaint", args)
- }
+  }
 
 }
 
@@ -253,12 +253,12 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6scrollERK7QRegionii
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
- }
+  }
 
 }
 
@@ -271,17 +271,18 @@ func (this *QBackingStore) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore6handleEv
   default:
     qtrt.ErrorResolve("QBackingStore", "handle", args)
- }
+  }
 
 }
 
 
-func NewQBackingStore(args ...interface{})() {
+func NewQBackingStore(args ...interface{}) QBackingStore {
+  return QBackingStore{}
 }
 
 // <= body block end

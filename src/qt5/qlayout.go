@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.go
 //
@@ -57,14 +57,14 @@ func (this *QLayout) setContentsMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout18setContentsMarginsEiiii
   case 1:
     // invoke: _ZN7QLayout18setContentsMarginsERK8QMargins
   default:
     qtrt.ErrorResolve("QLayout", "setContentsMargins", args)
- }
+  }
 
 }
 
@@ -77,17 +77,18 @@ func (this *QLayout) spacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7spacingEv
   default:
     qtrt.ErrorResolve("QLayout", "spacing", args)
- }
+  }
 
 }
 
 
-func NewQLayout(args ...interface{})() {
+func NewQLayout(args ...interface{}) QLayout {
+  return QLayout{}
 }
 
 
@@ -99,12 +100,12 @@ func (this *QLayout) geometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout8geometryEv
   default:
     qtrt.ErrorResolve("QLayout", "geometry", args)
- }
+  }
 
 }
 
@@ -117,12 +118,12 @@ func (this *QLayout) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout5countEv
   default:
     qtrt.ErrorResolve("QLayout", "count", args)
- }
+  }
 
 }
 
@@ -135,12 +136,12 @@ func (this *QLayout) maximumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout11maximumSizeEv
   default:
     qtrt.ErrorResolve("QLayout", "maximumSize", args)
- }
+  }
 
 }
 
@@ -154,12 +155,12 @@ func (this *QLayout) setMenuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setMenuBarEP7QWidget
   default:
     qtrt.ErrorResolve("QLayout", "setMenuBar", args)
- }
+  }
 
 }
 
@@ -173,12 +174,12 @@ func (this *QLayout) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7indexOfEP7QWidget
   default:
     qtrt.ErrorResolve("QLayout", "indexOf", args)
- }
+  }
 
 }
 
@@ -192,12 +193,12 @@ func (this *QLayout) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setEnabledEb
   default:
     qtrt.ErrorResolve("QLayout", "setEnabled", args)
- }
+  }
 
 }
 
@@ -210,12 +211,12 @@ func (this *QLayout) minimumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout11minimumSizeEv
   default:
     qtrt.ErrorResolve("QLayout", "minimumSize", args)
- }
+  }
 
 }
 
@@ -229,12 +230,12 @@ func (this *QLayout) takeAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6takeAtEi
   default:
     qtrt.ErrorResolve("QLayout", "takeAt", args)
- }
+  }
 
 }
 
@@ -247,12 +248,12 @@ func (this *QLayout) totalMaximumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout16totalMaximumSizeEv
   default:
     qtrt.ErrorResolve("QLayout", "totalMaximumSize", args)
- }
+  }
 
 }
 
@@ -265,12 +266,12 @@ func (this *QLayout) invalidate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10invalidateEv
   default:
     qtrt.ErrorResolve("QLayout", "invalidate", args)
- }
+  }
 
 }
 
@@ -283,12 +284,12 @@ func (this *QLayout) update(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6updateEv
   default:
     qtrt.ErrorResolve("QLayout", "update", args)
- }
+  }
 
 }
 
@@ -301,12 +302,12 @@ func (this *QLayout) contentsRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout12contentsRectEv
   default:
     qtrt.ErrorResolve("QLayout", "contentsRect", args)
- }
+  }
 
 }
 
@@ -319,12 +320,12 @@ func (this *QLayout) totalSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout13totalSizeHintEv
   default:
     qtrt.ErrorResolve("QLayout", "totalSizeHint", args)
- }
+  }
 
 }
 
@@ -338,12 +339,12 @@ func (this *QLayout) addItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout7addItemEP11QLayoutItem
   default:
     qtrt.ErrorResolve("QLayout", "addItem", args)
- }
+  }
 
 }
 
@@ -357,12 +358,12 @@ func (this *QLayout) totalHeightForWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout19totalHeightForWidthEi
   default:
     qtrt.ErrorResolve("QLayout", "totalHeightForWidth", args)
- }
+  }
 
 }
 
@@ -376,12 +377,12 @@ func (this *QLayout) setMargin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout9setMarginEi
   default:
     qtrt.ErrorResolve("QLayout", "setMargin", args)
- }
+  }
 
 }
 
@@ -394,12 +395,12 @@ func (this *QLayout) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7isEmptyEv
   default:
     qtrt.ErrorResolve("QLayout", "isEmpty", args)
- }
+  }
 
 }
 
@@ -413,12 +414,12 @@ func (this *QLayout) addWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout9addWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QLayout", "addWidget", args)
- }
+  }
 
 }
 
@@ -435,12 +436,12 @@ func (this *QLayout) getContentsMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_
   default:
     qtrt.ErrorResolve("QLayout", "getContentsMargins", args)
- }
+  }
 
 }
 
@@ -453,12 +454,12 @@ func (this *QLayout) layout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6layoutEv
   default:
     qtrt.ErrorResolve("QLayout", "layout", args)
- }
+  }
 
 }
 
@@ -471,12 +472,12 @@ func (this *QLayout) activate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout8activateEv
   default:
     qtrt.ErrorResolve("QLayout", "activate", args)
- }
+  }
 
 }
 
@@ -489,12 +490,12 @@ func (this *QLayout) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout9isEnabledEv
   default:
     qtrt.ErrorResolve("QLayout", "isEnabled", args)
- }
+  }
 
 }
 
@@ -505,10 +506,10 @@ func (this *QLayout) FreeQLayout(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLayout", "~QLayout", args)
- }
+  }
 
 }
 
@@ -521,12 +522,12 @@ func (this *QLayout) margin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout6marginEv
   default:
     qtrt.ErrorResolve("QLayout", "margin", args)
- }
+  }
 
 }
 
@@ -540,12 +541,12 @@ func (this *QLayout) setSpacing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setSpacingEi
   default:
     qtrt.ErrorResolve("QLayout", "setSpacing", args)
- }
+  }
 
 }
 
@@ -558,12 +559,12 @@ func (this *QLayout) menuBar(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7menuBarEv
   default:
     qtrt.ErrorResolve("QLayout", "menuBar", args)
- }
+  }
 
 }
 
@@ -576,12 +577,12 @@ func (this *QLayout) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout10metaObjectEv
   default:
     qtrt.ErrorResolve("QLayout", "metaObject", args)
- }
+  }
 
 }
 
@@ -595,12 +596,12 @@ func (this *QLayout) itemAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout6itemAtEi
   default:
     qtrt.ErrorResolve("QLayout", "itemAt", args)
- }
+  }
 
 }
 
@@ -613,12 +614,12 @@ func (this *QLayout) parentWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout12parentWidgetEv
   default:
     qtrt.ErrorResolve("QLayout", "parentWidget", args)
- }
+  }
 
 }
 
@@ -632,12 +633,12 @@ func (this *QLayout) removeWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout12removeWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QLayout", "removeWidget", args)
- }
+  }
 
 }
 
@@ -651,12 +652,12 @@ func (this *QLayout) removeItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10removeItemEP11QLayoutItem
   default:
     qtrt.ErrorResolve("QLayout", "removeItem", args)
- }
+  }
 
 }
 
@@ -669,12 +670,12 @@ func (this *QLayout) contentsMargins(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout15contentsMarginsEv
   default:
     qtrt.ErrorResolve("QLayout", "contentsMargins", args)
- }
+  }
 
 }
 
@@ -687,12 +688,12 @@ func (this *QLayout) totalMinimumSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout16totalMinimumSizeEv
   default:
     qtrt.ErrorResolve("QLayout", "totalMinimumSize", args)
- }
+  }
 
 }
 
@@ -706,12 +707,12 @@ func (this *QLayout) setGeometry(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QLayout11setGeometryERK5QRect
   default:
     qtrt.ErrorResolve("QLayout", "setGeometry", args)
- }
+  }
 
 }
 
@@ -722,10 +723,10 @@ func (this *QLayout) closestAcceptableSize_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLayout", "closestAcceptableSize", args)
- }
+  }
 
 }
 

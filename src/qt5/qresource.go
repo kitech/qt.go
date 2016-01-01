@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -42,7 +42,8 @@ type QResource struct {
 }
 
 
-func NewQResource(args ...interface{})() {
+func NewQResource(args ...interface{}) QResource {
+  return QResource{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QResource) locale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource6localeEv
   default:
     qtrt.ErrorResolve("QResource", "locale", args)
- }
+  }
 
 }
 
@@ -73,12 +74,12 @@ func (this *QResource) setLocale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QResource9setLocaleERK7QLocale
   default:
     qtrt.ErrorResolve("QResource", "setLocale", args)
- }
+  }
 
 }
 
@@ -89,10 +90,10 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QResource", "registerResource", args)
- }
+  }
 
 }
 
@@ -105,12 +106,12 @@ func (this *QResource) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource4dataEv
   default:
     qtrt.ErrorResolve("QResource", "data", args)
- }
+  }
 
 }
 
@@ -121,10 +122,10 @@ func (this *QResource) searchPaths_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QResource", "searchPaths", args)
- }
+  }
 
 }
 
@@ -137,12 +138,12 @@ func (this *QResource) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource8fileNameEv
   default:
     qtrt.ErrorResolve("QResource", "fileName", args)
- }
+  }
 
 }
 
@@ -155,12 +156,12 @@ func (this *QResource) absoluteFilePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource16absoluteFilePathEv
   default:
     qtrt.ErrorResolve("QResource", "absoluteFilePath", args)
- }
+  }
 
 }
 
@@ -171,10 +172,10 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QResource", "unregisterResource", args)
- }
+  }
 
 }
 
@@ -185,10 +186,10 @@ func (this *QResource) addSearchPath_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QResource", "addSearchPath", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QResource) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource4sizeEv
   default:
     qtrt.ErrorResolve("QResource", "size", args)
- }
+  }
 
 }
 
@@ -217,10 +218,10 @@ func (this *QResource) FreeQResource(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QResource", "~QResource", args)
- }
+  }
 
 }
 
@@ -233,12 +234,12 @@ func (this *QResource) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource7isValidEv
   default:
     qtrt.ErrorResolve("QResource", "isValid", args)
- }
+  }
 
 }
 
@@ -252,12 +253,12 @@ func (this *QResource) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QResource11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QResource", "setFileName", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QResource) isCompressed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QResource12isCompressedEv
   default:
     qtrt.ErrorResolve("QResource", "isCompressed", args)
- }
+  }
 
 }
 

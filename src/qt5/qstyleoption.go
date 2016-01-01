@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -198,11 +198,13 @@ type QStyleOptionTabWidgetFrame struct {
 }
 
 
-func NewQStyleOptionComboBox(args ...interface{})() {
+func NewQStyleOptionComboBox(args ...interface{}) QStyleOptionComboBox {
+  return QStyleOptionComboBox{}
 }
 
 
-func NewQStyleOptionMenuItem(args ...interface{})() {
+func NewQStyleOptionMenuItem(args ...interface{}) QStyleOptionMenuItem {
+  return QStyleOptionMenuItem{}
 }
 
 
@@ -212,23 +214,26 @@ func (this *QStyleHintReturnVariant) FreeQStyleHintReturnVariant(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "~QStyleHintReturnVariant", args)
- }
+  }
 
 }
 
 
-func NewQStyleHintReturnVariant(args ...interface{})() {
+func NewQStyleHintReturnVariant(args ...interface{}) QStyleHintReturnVariant {
+  return QStyleHintReturnVariant{}
 }
 
 
-func NewQStyleOptionTitleBar(args ...interface{})() {
+func NewQStyleOptionTitleBar(args ...interface{}) QStyleOptionTitleBar {
+  return QStyleOptionTitleBar{}
 }
 
 
-func NewQStyleOptionGraphicsItem(args ...interface{})() {
+func NewQStyleOptionGraphicsItem(args ...interface{}) QStyleOptionGraphicsItem {
+  return QStyleOptionGraphicsItem{}
 }
 
 
@@ -238,10 +243,10 @@ func (this *QStyleOptionGraphicsItem) levelOfDetailFromTransform_s(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyleOptionGraphicsItem", "levelOfDetailFromTransform", args)
- }
+  }
 
 }
 
@@ -252,10 +257,10 @@ func (this *QStyleOption) FreeQStyleOption(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyleOption", "~QStyleOption", args)
- }
+  }
 
 }
 
@@ -269,17 +274,18 @@ func (this *QStyleOption) init(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QStyleOption4initEPK7QWidget
   default:
     qtrt.ErrorResolve("QStyleOption", "init", args)
- }
+  }
 
 }
 
 
-func NewQStyleOption(args ...interface{})() {
+func NewQStyleOption(args ...interface{}) QStyleOption {
+  return QStyleOption{}
 }
 
 
@@ -292,33 +298,38 @@ func (this *QStyleOption) initFrom(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QStyleOption8initFromEPK7QWidget
   default:
     qtrt.ErrorResolve("QStyleOption", "initFrom", args)
- }
+  }
 
 }
 
 
-func NewQStyleOptionDockWidget(args ...interface{})() {
+func NewQStyleOptionDockWidget(args ...interface{}) QStyleOptionDockWidget {
+  return QStyleOptionDockWidget{}
 }
 
 
-func NewQStyleOptionProgressBar(args ...interface{})() {
+func NewQStyleOptionProgressBar(args ...interface{}) QStyleOptionProgressBar {
+  return QStyleOptionProgressBar{}
 }
 
 
-func NewQStyleOptionSlider(args ...interface{})() {
+func NewQStyleOptionSlider(args ...interface{}) QStyleOptionSlider {
+  return QStyleOptionSlider{}
 }
 
 
-func NewQStyleOptionFrame(args ...interface{})() {
+func NewQStyleOptionFrame(args ...interface{}) QStyleOptionFrame {
+  return QStyleOptionFrame{}
 }
 
 
-func NewQStyleOptionComplex(args ...interface{})() {
+func NewQStyleOptionComplex(args ...interface{}) QStyleOptionComplex {
+  return QStyleOptionComplex{}
 }
 
 
@@ -328,51 +339,61 @@ func (this *QStyleHintReturn) FreeQStyleHintReturn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "~QStyleHintReturn", args)
- }
+  }
 
 }
 
 
-func NewQStyleHintReturn(args ...interface{})() {
+func NewQStyleHintReturn(args ...interface{}) QStyleHintReturn {
+  return QStyleHintReturn{}
 }
 
 
-func NewQStyleOptionHeader(args ...interface{})() {
+func NewQStyleOptionHeader(args ...interface{}) QStyleOptionHeader {
+  return QStyleOptionHeader{}
 }
 
 
-func NewQStyleOptionToolBox(args ...interface{})() {
+func NewQStyleOptionToolBox(args ...interface{}) QStyleOptionToolBox {
+  return QStyleOptionToolBox{}
 }
 
 
-func NewQStyleOptionFocusRect(args ...interface{})() {
+func NewQStyleOptionFocusRect(args ...interface{}) QStyleOptionFocusRect {
+  return QStyleOptionFocusRect{}
 }
 
 
-func NewQStyleOptionGroupBox(args ...interface{})() {
+func NewQStyleOptionGroupBox(args ...interface{}) QStyleOptionGroupBox {
+  return QStyleOptionGroupBox{}
 }
 
 
-func NewQStyleOptionTab(args ...interface{})() {
+func NewQStyleOptionTab(args ...interface{}) QStyleOptionTab {
+  return QStyleOptionTab{}
 }
 
 
-func NewQStyleOptionTabBarBase(args ...interface{})() {
+func NewQStyleOptionTabBarBase(args ...interface{}) QStyleOptionTabBarBase {
+  return QStyleOptionTabBarBase{}
 }
 
 
-func NewQStyleOptionRubberBand(args ...interface{})() {
+func NewQStyleOptionRubberBand(args ...interface{}) QStyleOptionRubberBand {
+  return QStyleOptionRubberBand{}
 }
 
 
-func NewQStyleOptionButton(args ...interface{})() {
+func NewQStyleOptionButton(args ...interface{}) QStyleOptionButton {
+  return QStyleOptionButton{}
 }
 
 
-func NewQStyleHintReturnMask(args ...interface{})() {
+func NewQStyleHintReturnMask(args ...interface{}) QStyleHintReturnMask {
+  return QStyleHintReturnMask{}
 }
 
 
@@ -382,35 +403,41 @@ func (this *QStyleHintReturnMask) FreeQStyleHintReturnMask(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "~QStyleHintReturnMask", args)
- }
+  }
 
 }
 
 
-func NewQStyleOptionToolButton(args ...interface{})() {
+func NewQStyleOptionToolButton(args ...interface{}) QStyleOptionToolButton {
+  return QStyleOptionToolButton{}
 }
 
 
-func NewQStyleOptionSizeGrip(args ...interface{})() {
+func NewQStyleOptionSizeGrip(args ...interface{}) QStyleOptionSizeGrip {
+  return QStyleOptionSizeGrip{}
 }
 
 
-func NewQStyleOptionViewItem(args ...interface{})() {
+func NewQStyleOptionViewItem(args ...interface{}) QStyleOptionViewItem {
+  return QStyleOptionViewItem{}
 }
 
 
-func NewQStyleOptionSpinBox(args ...interface{})() {
+func NewQStyleOptionSpinBox(args ...interface{}) QStyleOptionSpinBox {
+  return QStyleOptionSpinBox{}
 }
 
 
-func NewQStyleOptionToolBar(args ...interface{})() {
+func NewQStyleOptionToolBar(args ...interface{}) QStyleOptionToolBar {
+  return QStyleOptionToolBar{}
 }
 
 
-func NewQStyleOptionTabWidgetFrame(args ...interface{})() {
+func NewQStyleOptionTabWidgetFrame(args ...interface{}) QStyleOptionTabWidgetFrame {
+  return QStyleOptionTabWidgetFrame{}
 }
 
 // <= body block end

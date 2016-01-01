@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.go
 //
@@ -58,12 +58,12 @@ func (this *QUndoGroup) addStack(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup8addStackEP10QUndoStack
   default:
     qtrt.ErrorResolve("QUndoGroup", "addStack", args)
- }
+  }
 
 }
 
@@ -76,12 +76,12 @@ func (this *QUndoGroup) undo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup4undoEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "undo", args)
- }
+  }
 
 }
 
@@ -94,12 +94,12 @@ func (this *QUndoGroup) stacks(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup6stacksEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "stacks", args)
- }
+  }
 
 }
 
@@ -112,17 +112,18 @@ func (this *QUndoGroup) redo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup4redoEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "redo", args)
- }
+  }
 
 }
 
 
-func NewQUndoGroup(args ...interface{})() {
+func NewQUndoGroup(args ...interface{}) QUndoGroup {
+  return QUndoGroup{}
 }
 
 
@@ -135,12 +136,12 @@ func (this *QUndoGroup) setActiveStack(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup14setActiveStackEP10QUndoStack
   default:
     qtrt.ErrorResolve("QUndoGroup", "setActiveStack", args)
- }
+  }
 
 }
 
@@ -155,12 +156,12 @@ func (this *QUndoGroup) createRedoAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString
   default:
     qtrt.ErrorResolve("QUndoGroup", "createRedoAction", args)
- }
+  }
 
 }
 
@@ -173,12 +174,12 @@ func (this *QUndoGroup) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup10metaObjectEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "metaObject", args)
- }
+  }
 
 }
 
@@ -191,12 +192,12 @@ func (this *QUndoGroup) canRedo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup7canRedoEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "canRedo", args)
- }
+  }
 
 }
 
@@ -209,12 +210,12 @@ func (this *QUndoGroup) redoText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup8redoTextEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "redoText", args)
- }
+  }
 
 }
 
@@ -227,12 +228,12 @@ func (this *QUndoGroup) activeStack(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup11activeStackEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "activeStack", args)
- }
+  }
 
 }
 
@@ -245,12 +246,12 @@ func (this *QUndoGroup) undoText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup8undoTextEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "undoText", args)
- }
+  }
 
 }
 
@@ -263,12 +264,12 @@ func (this *QUndoGroup) canUndo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup7canUndoEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "canUndo", args)
- }
+  }
 
 }
 
@@ -279,10 +280,10 @@ func (this *QUndoGroup) FreeQUndoGroup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUndoGroup", "~QUndoGroup", args)
- }
+  }
 
 }
 
@@ -295,12 +296,12 @@ func (this *QUndoGroup) isClean(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup7isCleanEv
   default:
     qtrt.ErrorResolve("QUndoGroup", "isClean", args)
- }
+  }
 
 }
 
@@ -315,12 +316,12 @@ func (this *QUndoGroup) createUndoAction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString
   default:
     qtrt.ErrorResolve("QUndoGroup", "createUndoAction", args)
- }
+  }
 
 }
 
@@ -334,12 +335,12 @@ func (this *QUndoGroup) removeStack(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup11removeStackEP10QUndoStack
   default:
     qtrt.ErrorResolve("QUndoGroup", "removeStack", args)
- }
+  }
 
 }
 

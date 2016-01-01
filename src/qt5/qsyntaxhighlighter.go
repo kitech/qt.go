@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -48,10 +48,10 @@ func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "~QSyntaxHighlighter", args)
- }
+  }
 
 }
 
@@ -64,17 +64,18 @@ func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter11rehighlightEv
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlight", args)
- }
+  }
 
 }
 
 
-func NewQSyntaxHighlighter(args ...interface{})() {
+func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
+  return QSyntaxHighlighter{}
 }
 
 
@@ -87,12 +88,12 @@ func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
- }
+  }
 
 }
 
@@ -106,12 +107,12 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "setDocument", args)
- }
+  }
 
 }
 
@@ -124,12 +125,12 @@ func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter10metaObjectEv
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "metaObject", args)
- }
+  }
 
 }
 
@@ -142,12 +143,12 @@ func (this *QSyntaxHighlighter) document(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter8documentEv
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
- }
+  }
 
 }
 

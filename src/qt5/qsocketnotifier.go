@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -43,7 +43,8 @@ type QSocketNotifier struct {
 }
 
 
-func NewQSocketNotifier(args ...interface{})() {
+func NewQSocketNotifier(args ...interface{}) QSocketNotifier {
+  return QSocketNotifier{}
 }
 
 
@@ -55,12 +56,12 @@ func (this *QSocketNotifier) socket(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier6socketEv
   default:
     qtrt.ErrorResolve("QSocketNotifier", "socket", args)
- }
+  }
 
 }
 
@@ -73,12 +74,12 @@ func (this *QSocketNotifier) isEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier9isEnabledEv
   default:
     qtrt.ErrorResolve("QSocketNotifier", "isEnabled", args)
- }
+  }
 
 }
 
@@ -92,12 +93,12 @@ func (this *QSocketNotifier) setEnabled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSocketNotifier10setEnabledEb
   default:
     qtrt.ErrorResolve("QSocketNotifier", "setEnabled", args)
- }
+  }
 
 }
 
@@ -110,12 +111,12 @@ func (this *QSocketNotifier) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier10metaObjectEv
   default:
     qtrt.ErrorResolve("QSocketNotifier", "metaObject", args)
- }
+  }
 
 }
 
@@ -126,10 +127,10 @@ func (this *QSocketNotifier) FreeQSocketNotifier(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSocketNotifier", "~QSocketNotifier", args)
- }
+  }
 
 }
 

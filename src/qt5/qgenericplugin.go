@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -42,7 +42,8 @@ type QGenericPlugin struct {
 }
 
 
-func NewQGenericPlugin(args ...interface{})() {
+func NewQGenericPlugin(args ...interface{}) QGenericPlugin {
+  return QGenericPlugin{}
 }
 
 
@@ -56,12 +57,12 @@ func (this *QGenericPlugin) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QGenericPlugin6createERK7QStringS2_
   default:
     qtrt.ErrorResolve("QGenericPlugin", "create", args)
- }
+  }
 
 }
 
@@ -72,10 +73,10 @@ func (this *QGenericPlugin) FreeQGenericPlugin(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
- }
+  }
 
 }
 
@@ -88,12 +89,12 @@ func (this *QGenericPlugin) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QGenericPlugin10metaObjectEv
   default:
     qtrt.ErrorResolve("QGenericPlugin", "metaObject", args)
- }
+  }
 
 }
 

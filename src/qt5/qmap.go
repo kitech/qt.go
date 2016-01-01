@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -57,12 +57,12 @@ func (this *QMapDataBase) rebalance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase9rebalanceEP12QMapNodeBase
   default:
     qtrt.ErrorResolve("QMapDataBase", "rebalance", args)
- }
+  }
 
 }
 
@@ -73,10 +73,10 @@ func (this *QMapDataBase) createData_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMapDataBase", "createData", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QMapDataBase) rotateRight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase11rotateRightEP12QMapNodeBase
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateRight", args)
- }
+  }
 
 }
 
@@ -110,12 +110,12 @@ func (this *QMapDataBase) freeTree(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeTree", args)
- }
+  }
 
 }
 
@@ -126,10 +126,10 @@ func (this *QMapDataBase) freeData_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeData", args)
- }
+  }
 
 }
 
@@ -143,12 +143,12 @@ func (this *QMapDataBase) rotateLeft(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateLeft", args)
- }
+  }
 
 }
 
@@ -161,12 +161,12 @@ func (this *QMapDataBase) recalcMostLeftNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase18recalcMostLeftNodeEv
   default:
     qtrt.ErrorResolve("QMapDataBase", "recalcMostLeftNode", args)
- }
+  }
 
 }
 
@@ -183,12 +183,12 @@ func (this *QMapDataBase) createNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb
   default:
     qtrt.ErrorResolve("QMapDataBase", "createNode", args)
- }
+  }
 
 }
 
@@ -202,12 +202,12 @@ func (this *QMapDataBase) freeNodeAndRebalance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeNodeAndRebalance", args)
- }
+  }
 
 }
 
@@ -221,12 +221,12 @@ func (this *QMapNodeBase) setParent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QMapNodeBase9setParentEPS_
   default:
     qtrt.ErrorResolve("QMapNodeBase", "setParent", args)
- }
+  }
 
 }
 
@@ -241,14 +241,14 @@ func (this *QMapNodeBase) previousNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QMapNodeBase12previousNodeEv
   case 1:
     // invoke: _ZN12QMapNodeBase12previousNodeEv
   default:
     qtrt.ErrorResolve("QMapNodeBase", "previousNode", args)
- }
+  }
 
 }
 
@@ -263,14 +263,14 @@ func (this *QMapNodeBase) nextNode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QMapNodeBase8nextNodeEv
   case 1:
     // invoke: _ZN12QMapNodeBase8nextNodeEv
   default:
     qtrt.ErrorResolve("QMapNodeBase", "nextNode", args)
- }
+  }
 
 }
 
@@ -283,12 +283,12 @@ func (this *QMapNodeBase) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QMapNodeBase6parentEv
   default:
     qtrt.ErrorResolve("QMapNodeBase", "parent", args)
- }
+  }
 
 }
 

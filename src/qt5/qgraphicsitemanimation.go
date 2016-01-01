@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.go
 //
@@ -52,17 +52,18 @@ func (this *QGraphicsItemAnimation) setPosAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setPosAt", args)
- }
+  }
 
 }
 
 
-func NewQGraphicsItemAnimation(args ...interface{})() {
+func NewQGraphicsItemAnimation(args ...interface{}) QGraphicsItemAnimation {
+  return QGraphicsItemAnimation{}
 }
 
 
@@ -75,12 +76,12 @@ func (this *QGraphicsItemAnimation) xTranslationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation14xTranslationAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "xTranslationAt", args)
- }
+  }
 
 }
 
@@ -95,12 +96,12 @@ func (this *QGraphicsItemAnimation) setRotationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation13setRotationAtEdd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setRotationAt", args)
- }
+  }
 
 }
 
@@ -113,12 +114,12 @@ func (this *QGraphicsItemAnimation) posList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation7posListEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "posList", args)
- }
+  }
 
 }
 
@@ -132,12 +133,12 @@ func (this *QGraphicsItemAnimation) verticalScaleAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation15verticalScaleAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalScaleAt", args)
- }
+  }
 
 }
 
@@ -151,12 +152,12 @@ func (this *QGraphicsItemAnimation) posAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation5posAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "posAt", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QGraphicsItemAnimation) horizontalShearAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation17horizontalShearAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalShearAt", args)
- }
+  }
 
 }
 
@@ -189,12 +190,12 @@ func (this *QGraphicsItemAnimation) yTranslationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation14yTranslationAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "yTranslationAt", args)
- }
+  }
 
 }
 
@@ -208,12 +209,12 @@ func (this *QGraphicsItemAnimation) matrixAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation8matrixAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "matrixAt", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QGraphicsItemAnimation) item(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation4itemEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "item", args)
- }
+  }
 
 }
 
@@ -242,10 +243,10 @@ func (this *QGraphicsItemAnimation) FreeQGraphicsItemAnimation(args ...interface
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "~QGraphicsItemAnimation", args)
- }
+  }
 
 }
 
@@ -261,12 +262,12 @@ func (this *QGraphicsItemAnimation) setScaleAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation10setScaleAtEddd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setScaleAt", args)
- }
+  }
 
 }
 
@@ -282,12 +283,12 @@ func (this *QGraphicsItemAnimation) setTranslationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation16setTranslationAtEddd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTranslationAt", args)
- }
+  }
 
 }
 
@@ -303,12 +304,12 @@ func (this *QGraphicsItemAnimation) setShearAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation10setShearAtEddd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setShearAt", args)
- }
+  }
 
 }
 
@@ -322,12 +323,12 @@ func (this *QGraphicsItemAnimation) rotationAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation10rotationAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "rotationAt", args)
- }
+  }
 
 }
 
@@ -340,12 +341,12 @@ func (this *QGraphicsItemAnimation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation10metaObjectEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "metaObject", args)
- }
+  }
 
 }
 
@@ -358,12 +359,12 @@ func (this *QGraphicsItemAnimation) scaleList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation9scaleListEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "scaleList", args)
- }
+  }
 
 }
 
@@ -376,12 +377,12 @@ func (this *QGraphicsItemAnimation) rotationList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation12rotationListEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "rotationList", args)
- }
+  }
 
 }
 
@@ -394,12 +395,12 @@ func (this *QGraphicsItemAnimation) reset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation5resetEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "reset", args)
- }
+  }
 
 }
 
@@ -413,12 +414,12 @@ func (this *QGraphicsItemAnimation) setTimeLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTimeLine", args)
- }
+  }
 
 }
 
@@ -431,12 +432,12 @@ func (this *QGraphicsItemAnimation) shearList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation9shearListEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "shearList", args)
- }
+  }
 
 }
 
@@ -449,12 +450,12 @@ func (this *QGraphicsItemAnimation) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation5clearEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "clear", args)
- }
+  }
 
 }
 
@@ -467,12 +468,12 @@ func (this *QGraphicsItemAnimation) translationList(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation15translationListEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "translationList", args)
- }
+  }
 
 }
 
@@ -486,12 +487,12 @@ func (this *QGraphicsItemAnimation) setItem(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setItem", args)
- }
+  }
 
 }
 
@@ -505,12 +506,12 @@ func (this *QGraphicsItemAnimation) setStep(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation7setStepEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setStep", args)
- }
+  }
 
 }
 
@@ -523,12 +524,12 @@ func (this *QGraphicsItemAnimation) timeLine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation8timeLineEv
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "timeLine", args)
- }
+  }
 
 }
 
@@ -542,12 +543,12 @@ func (this *QGraphicsItemAnimation) horizontalScaleAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation17horizontalScaleAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalScaleAt", args)
- }
+  }
 
 }
 
@@ -561,12 +562,12 @@ func (this *QGraphicsItemAnimation) verticalShearAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation15verticalShearAtEd
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalShearAt", args)
- }
+  }
 
 }
 

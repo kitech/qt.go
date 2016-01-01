@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -52,12 +52,12 @@ func (this *QDrag) target(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6targetEv
   default:
     qtrt.ErrorResolve("QDrag", "target", args)
- }
+  }
 
 }
 
@@ -70,17 +70,18 @@ func (this *QDrag) mimeData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag8mimeDataEv
   default:
     qtrt.ErrorResolve("QDrag", "mimeData", args)
- }
+  }
 
 }
 
 
-func NewQDrag(args ...interface{})() {
+func NewQDrag(args ...interface{}) QDrag {
+  return QDrag{}
 }
 
 
@@ -90,10 +91,10 @@ func (this *QDrag) FreeQDrag(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDrag", "~QDrag", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QDrag) setHotSpot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QDrag10setHotSpotERK6QPoint
   default:
     qtrt.ErrorResolve("QDrag", "setHotSpot", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QDrag) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag10metaObjectEv
   default:
     qtrt.ErrorResolve("QDrag", "metaObject", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QDrag11setMimeDataEP9QMimeData
   default:
     qtrt.ErrorResolve("QDrag", "setMimeData", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QDrag) pixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6pixmapEv
   default:
     qtrt.ErrorResolve("QDrag", "pixmap", args)
- }
+  }
 
 }
 
@@ -180,12 +181,12 @@ func (this *QDrag) hotSpot(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag7hotSpotEv
   default:
     qtrt.ErrorResolve("QDrag", "hotSpot", args)
- }
+  }
 
 }
 
@@ -199,12 +200,12 @@ func (this *QDrag) setPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN5QDrag9setPixmapERK7QPixmap
   default:
     qtrt.ErrorResolve("QDrag", "setPixmap", args)
- }
+  }
 
 }
 
@@ -217,12 +218,12 @@ func (this *QDrag) source(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6sourceEv
   default:
     qtrt.ErrorResolve("QDrag", "source", args)
- }
+  }
 
 }
 

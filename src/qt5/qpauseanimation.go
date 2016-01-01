@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -42,7 +42,8 @@ type QPauseAnimation struct {
 }
 
 
-func NewQPauseAnimation(args ...interface{})() {
+func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
+  return QPauseAnimation{}
 }
 
 
@@ -55,12 +56,12 @@ func (this *QPauseAnimation) setDuration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QPauseAnimation11setDurationEi
   default:
     qtrt.ErrorResolve("QPauseAnimation", "setDuration", args)
- }
+  }
 
 }
 
@@ -73,12 +74,12 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QPauseAnimation8durationEv
   default:
     qtrt.ErrorResolve("QPauseAnimation", "duration", args)
- }
+  }
 
 }
 
@@ -91,12 +92,12 @@ func (this *QPauseAnimation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QPauseAnimation10metaObjectEv
   default:
     qtrt.ErrorResolve("QPauseAnimation", "metaObject", args)
- }
+  }
 
 }
 
@@ -107,10 +108,10 @@ func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPauseAnimation", "~QPauseAnimation", args)
- }
+  }
 
 }
 

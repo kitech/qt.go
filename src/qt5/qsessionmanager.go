@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -50,12 +50,12 @@ func (this *QSessionManager) sessionId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager9sessionIdEv
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionId", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QSessionManager) sessionKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager10sessionKeyEv
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionKey", args)
- }
+  }
 
 }
 
@@ -87,12 +87,12 @@ func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setRestartCommandERK11QStringList
   default:
     qtrt.ErrorResolve("QSessionManager", "setRestartCommand", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QSessionManager) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager10metaObjectEv
   default:
     qtrt.ErrorResolve("QSessionManager", "metaObject", args)
- }
+  }
 
 }
 
@@ -123,12 +123,12 @@ func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager22allowsErrorInteractionEv
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsErrorInteraction", args)
- }
+  }
 
 }
 
@@ -139,10 +139,10 @@ func (this *QSessionManager) FreeQSessionManager(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSessionManager", "~QSessionManager", args)
- }
+  }
 
 }
 
@@ -155,12 +155,12 @@ func (this *QSessionManager) restartCommand(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager14restartCommandEv
   default:
     qtrt.ErrorResolve("QSessionManager", "restartCommand", args)
- }
+  }
 
 }
 
@@ -173,12 +173,12 @@ func (this *QSessionManager) requestPhase2(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager13requestPhase2Ev
   default:
     qtrt.ErrorResolve("QSessionManager", "requestPhase2", args)
- }
+  }
 
 }
 
@@ -191,12 +191,12 @@ func (this *QSessionManager) isPhase2(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager8isPhase2Ev
   default:
     qtrt.ErrorResolve("QSessionManager", "isPhase2", args)
- }
+  }
 
 }
 
@@ -209,12 +209,12 @@ func (this *QSessionManager) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager7releaseEv
   default:
     qtrt.ErrorResolve("QSessionManager", "release", args)
- }
+  }
 
 }
 
@@ -233,14 +233,14 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringS2_
   case 1:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList
   default:
     qtrt.ErrorResolve("QSessionManager", "setManagerProperty", args)
- }
+  }
 
 }
 
@@ -253,17 +253,18 @@ func (this *QSessionManager) discardCommand(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager14discardCommandEv
   default:
     qtrt.ErrorResolve("QSessionManager", "discardCommand", args)
- }
+  }
 
 }
 
 
-func NewQSessionManager(args ...interface{})() {
+func NewQSessionManager(args ...interface{}) QSessionManager {
+  return QSessionManager{}
 }
 
 
@@ -275,12 +276,12 @@ func (this *QSessionManager) cancel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager6cancelEv
   default:
     qtrt.ErrorResolve("QSessionManager", "cancel", args)
- }
+  }
 
 }
 
@@ -294,12 +295,12 @@ func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setDiscardCommandERK11QStringList
   default:
     qtrt.ErrorResolve("QSessionManager", "setDiscardCommand", args)
- }
+  }
 
 }
 
@@ -312,12 +313,12 @@ func (this *QSessionManager) allowsInteraction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17allowsInteractionEv
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsInteraction", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -98,12 +98,12 @@ func (this *QXmlStreamStringRef) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef4sizeEv
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "size", args)
- }
+  }
 
 }
 
@@ -116,12 +116,12 @@ func (this *QXmlStreamStringRef) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN19QXmlStreamStringRef5clearEv
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "clear", args)
- }
+  }
 
 }
 
@@ -134,17 +134,18 @@ func (this *QXmlStreamStringRef) string(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef6stringEv
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "string", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamStringRef(args ...interface{})() {
+func NewQXmlStreamStringRef(args ...interface{}) QXmlStreamStringRef {
+  return QXmlStreamStringRef{}
 }
 
 
@@ -154,10 +155,10 @@ func (this *QXmlStreamStringRef) FreeQXmlStreamStringRef(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "~QXmlStreamStringRef", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QXmlStreamStringRef) position(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef8positionEv
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "position", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QXmlStreamReader) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4nameEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "name", args)
- }
+  }
 
 }
 
@@ -206,12 +207,12 @@ func (this *QXmlStreamReader) entityResolver(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14entityResolverEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityResolver", args)
- }
+  }
 
 }
 
@@ -224,12 +225,12 @@ func (this *QXmlStreamReader) namespaceProcessing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader19namespaceProcessingEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceProcessing", args)
- }
+  }
 
 }
 
@@ -242,12 +243,12 @@ func (this *QXmlStreamReader) isStartElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14isStartElementEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartElement", args)
- }
+  }
 
 }
 
@@ -260,12 +261,12 @@ func (this *QXmlStreamReader) isStandaloneDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20isStandaloneDocumentEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStandaloneDocument", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QXmlStreamReader) lineNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10lineNumberEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "lineNumber", args)
- }
+  }
 
 }
 
@@ -296,12 +297,12 @@ func (this *QXmlStreamReader) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader5clearEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "clear", args)
- }
+  }
 
 }
 
@@ -314,12 +315,12 @@ func (this *QXmlStreamReader) processingInstructionData(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader25processingInstructionDataEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionData", args)
- }
+  }
 
 }
 
@@ -339,7 +340,7 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader7addDataERK7QString
   case 1:
@@ -348,7 +349,7 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
     // invoke: _ZN16QXmlStreamReader7addDataERK10QByteArray
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addData", args)
- }
+  }
 
 }
 
@@ -361,12 +362,12 @@ func (this *QXmlStreamReader) dtdPublicId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdPublicIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdPublicId", args)
- }
+  }
 
 }
 
@@ -379,12 +380,12 @@ func (this *QXmlStreamReader) documentEncoding(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader16documentEncodingEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentEncoding", args)
- }
+  }
 
 }
 
@@ -397,12 +398,12 @@ func (this *QXmlStreamReader) characterOffset(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15characterOffsetEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "characterOffset", args)
- }
+  }
 
 }
 
@@ -415,12 +416,12 @@ func (this *QXmlStreamReader) attributes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10attributesEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "attributes", args)
- }
+  }
 
 }
 
@@ -433,12 +434,12 @@ func (this *QXmlStreamReader) tokenString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11tokenStringEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "tokenString", args)
- }
+  }
 
 }
 
@@ -452,17 +453,18 @@ func (this *QXmlStreamReader) addExtraNamespaceDeclaration(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addExtraNamespaceDeclaration", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamReader(args ...interface{})() {
+func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
+  return QXmlStreamReader{}
 }
 
 
@@ -474,12 +476,12 @@ func (this *QXmlStreamReader) qualifiedName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13qualifiedNameEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "qualifiedName", args)
- }
+  }
 
 }
 
@@ -492,12 +494,12 @@ func (this *QXmlStreamReader) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6deviceEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "device", args)
- }
+  }
 
 }
 
@@ -510,12 +512,12 @@ func (this *QXmlStreamReader) namespaceUri(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12namespaceUriEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceUri", args)
- }
+  }
 
 }
 
@@ -528,12 +530,12 @@ func (this *QXmlStreamReader) text(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4textEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "text", args)
- }
+  }
 
 }
 
@@ -547,12 +549,12 @@ func (this *QXmlStreamReader) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setDevice", args)
- }
+  }
 
 }
 
@@ -565,12 +567,12 @@ func (this *QXmlStreamReader) documentVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15documentVersionEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentVersion", args)
- }
+  }
 
 }
 
@@ -583,12 +585,12 @@ func (this *QXmlStreamReader) isDTD(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5isDTDEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isDTD", args)
- }
+  }
 
 }
 
@@ -601,12 +603,12 @@ func (this *QXmlStreamReader) isStartDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15isStartDocumentEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartDocument", args)
- }
+  }
 
 }
 
@@ -619,12 +621,12 @@ func (this *QXmlStreamReader) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11errorStringEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "errorString", args)
- }
+  }
 
 }
 
@@ -637,12 +639,12 @@ func (this *QXmlStreamReader) isProcessingInstruction(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader23isProcessingInstructionEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isProcessingInstruction", args)
- }
+  }
 
 }
 
@@ -656,12 +658,12 @@ func (this *QXmlStreamReader) setEntityResolver(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setEntityResolver", args)
- }
+  }
 
 }
 
@@ -674,12 +676,12 @@ func (this *QXmlStreamReader) isCharacters(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isCharactersEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCharacters", args)
- }
+  }
 
 }
 
@@ -692,12 +694,12 @@ func (this *QXmlStreamReader) entityDeclarations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader18entityDeclarationsEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityDeclarations", args)
- }
+  }
 
 }
 
@@ -710,12 +712,12 @@ func (this *QXmlStreamReader) isWhitespace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isWhitespaceEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isWhitespace", args)
- }
+  }
 
 }
 
@@ -728,12 +730,12 @@ func (this *QXmlStreamReader) columnNumber(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12columnNumberEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "columnNumber", args)
- }
+  }
 
 }
 
@@ -746,12 +748,12 @@ func (this *QXmlStreamReader) hasError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader8hasErrorEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "hasError", args)
- }
+  }
 
 }
 
@@ -764,12 +766,12 @@ func (this *QXmlStreamReader) isCDATA(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7isCDATAEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCDATA", args)
- }
+  }
 
 }
 
@@ -780,10 +782,10 @@ func (this *QXmlStreamReader) FreeQXmlStreamReader(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "~QXmlStreamReader", args)
- }
+  }
 
 }
 
@@ -796,12 +798,12 @@ func (this *QXmlStreamReader) processingInstructionTarget(args ...interface{}) (
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader27processingInstructionTargetEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionTarget", args)
- }
+  }
 
 }
 
@@ -814,12 +816,12 @@ func (this *QXmlStreamReader) dtdSystemId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdSystemIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdSystemId", args)
- }
+  }
 
 }
 
@@ -832,12 +834,12 @@ func (this *QXmlStreamReader) prefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6prefixEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "prefix", args)
- }
+  }
 
 }
 
@@ -850,12 +852,12 @@ func (this *QXmlStreamReader) isEndElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isEndElementEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndElement", args)
- }
+  }
 
 }
 
@@ -868,12 +870,12 @@ func (this *QXmlStreamReader) notationDeclarations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20notationDeclarationsEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "notationDeclarations", args)
- }
+  }
 
 }
 
@@ -886,12 +888,12 @@ func (this *QXmlStreamReader) namespaceDeclarations(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader21namespaceDeclarationsEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceDeclarations", args)
- }
+  }
 
 }
 
@@ -905,12 +907,12 @@ func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader22setNamespaceProcessingEb
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setNamespaceProcessing", args)
- }
+  }
 
 }
 
@@ -924,12 +926,12 @@ func (this *QXmlStreamReader) raiseError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader10raiseErrorERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "raiseError", args)
- }
+  }
 
 }
 
@@ -942,12 +944,12 @@ func (this *QXmlStreamReader) dtdName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7dtdNameEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdName", args)
- }
+  }
 
 }
 
@@ -960,12 +962,12 @@ func (this *QXmlStreamReader) isEndDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13isEndDocumentEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndDocument", args)
- }
+  }
 
 }
 
@@ -978,12 +980,12 @@ func (this *QXmlStreamReader) readNextStartElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader20readNextStartElementEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "readNextStartElement", args)
- }
+  }
 
 }
 
@@ -996,12 +998,12 @@ func (this *QXmlStreamReader) isComment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader9isCommentEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isComment", args)
- }
+  }
 
 }
 
@@ -1014,12 +1016,12 @@ func (this *QXmlStreamReader) skipCurrentElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader18skipCurrentElementEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "skipCurrentElement", args)
- }
+  }
 
 }
 
@@ -1032,12 +1034,12 @@ func (this *QXmlStreamReader) isEntityReference(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader17isEntityReferenceEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEntityReference", args)
- }
+  }
 
 }
 
@@ -1050,12 +1052,12 @@ func (this *QXmlStreamReader) atEnd(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5atEndEv
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "atEnd", args)
- }
+  }
 
 }
 
@@ -1070,12 +1072,12 @@ func (this *QXmlStreamEntityResolver) resolveEntity(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveEntity", args)
- }
+  }
 
 }
 
@@ -1089,12 +1091,12 @@ func (this *QXmlStreamEntityResolver) resolveUndeclaredEntity(args ...interface{
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveUndeclaredEntity", args)
- }
+  }
 
 }
 
@@ -1105,10 +1107,10 @@ func (this *QXmlStreamEntityResolver) FreeQXmlStreamEntityResolver(args ...inter
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "~QXmlStreamEntityResolver", args)
- }
+  }
 
 }
 
@@ -1121,17 +1123,18 @@ func (this *QXmlStreamNamespaceDeclaration) namespaceUri(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "namespaceUri", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamNamespaceDeclaration(args ...interface{})() {
+func NewQXmlStreamNamespaceDeclaration(args ...interface{}) QXmlStreamNamespaceDeclaration {
+  return QXmlStreamNamespaceDeclaration{}
 }
 
 
@@ -1143,12 +1146,12 @@ func (this *QXmlStreamNamespaceDeclaration) prefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration6prefixEv
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "prefix", args)
- }
+  }
 
 }
 
@@ -1159,10 +1162,10 @@ func (this *QXmlStreamNamespaceDeclaration) FreeQXmlStreamNamespaceDeclaration(a
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "~QXmlStreamNamespaceDeclaration", args)
- }
+  }
 
 }
 
@@ -1173,10 +1176,10 @@ func (this *QXmlStreamEntityDeclaration) FreeQXmlStreamEntityDeclaration(args ..
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "~QXmlStreamEntityDeclaration", args)
- }
+  }
 
 }
 
@@ -1189,12 +1192,12 @@ func (this *QXmlStreamEntityDeclaration) publicId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8publicIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "publicId", args)
- }
+  }
 
 }
 
@@ -1207,17 +1210,18 @@ func (this *QXmlStreamEntityDeclaration) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration4nameEv
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "name", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamEntityDeclaration(args ...interface{})() {
+func NewQXmlStreamEntityDeclaration(args ...interface{}) QXmlStreamEntityDeclaration {
+  return QXmlStreamEntityDeclaration{}
 }
 
 
@@ -1229,12 +1233,12 @@ func (this *QXmlStreamEntityDeclaration) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration5valueEv
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "value", args)
- }
+  }
 
 }
 
@@ -1247,12 +1251,12 @@ func (this *QXmlStreamEntityDeclaration) notationName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration12notationNameEv
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "notationName", args)
- }
+  }
 
 }
 
@@ -1265,12 +1269,12 @@ func (this *QXmlStreamEntityDeclaration) systemId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8systemIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "systemId", args)
- }
+  }
 
 }
 
@@ -1299,7 +1303,7 @@ func (this *QXmlStreamAttributes) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QXmlStreamAttributes5valueERK7QString
   case 1:
@@ -1312,12 +1316,13 @@ func (this *QXmlStreamAttributes) value(args ...interface{}) () {
     // invoke: _ZNK20QXmlStreamAttributes5valueE13QLatin1String
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "value", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamAttributes(args ...interface{})() {
+func NewQXmlStreamAttributes(args ...interface{}) QXmlStreamAttributes {
+  return QXmlStreamAttributes{}
 }
 
 
@@ -1337,7 +1342,7 @@ func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QXmlStreamAttributes12hasAttributeERK7QString
   case 1:
@@ -1346,7 +1351,7 @@ func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
     // invoke: _ZNK20QXmlStreamAttributes12hasAttributeE13QLatin1String
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "hasAttribute", args)
- }
+  }
 
 }
 
@@ -1366,14 +1371,14 @@ func (this *QXmlStreamAttributes) append(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_
   case 1:
     // invoke: _ZN20QXmlStreamAttributes6appendERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "append", args)
- }
+  }
 
 }
 
@@ -1386,17 +1391,18 @@ func (this *QXmlStreamWriter) writeEndElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeEndElementEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndElement", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamWriter(args ...interface{})() {
+func NewQXmlStreamWriter(args ...interface{}) QXmlStreamWriter {
+  return QXmlStreamWriter{}
 }
 
 
@@ -1408,12 +1414,12 @@ func (this *QXmlStreamWriter) writeEndDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter16writeEndDocumentEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndDocument", args)
- }
+  }
 
 }
 
@@ -1426,12 +1432,12 @@ func (this *QXmlStreamWriter) autoFormatting(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter14autoFormattingEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormatting", args)
- }
+  }
 
 }
 
@@ -1451,7 +1457,7 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb
   case 1:
@@ -1460,7 +1466,7 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartDocument", args)
- }
+  }
 
 }
 
@@ -1477,14 +1483,14 @@ func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter8setCodecEP10QTextCodec
   case 1:
     // invoke: _ZN16QXmlStreamWriter8setCodecEPKc
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setCodec", args)
- }
+  }
 
 }
 
@@ -1499,12 +1505,12 @@ func (this *QXmlStreamWriter) writeProcessingInstruction(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeProcessingInstruction", args)
- }
+  }
 
 }
 
@@ -1518,12 +1524,12 @@ func (this *QXmlStreamWriter) writeCharacters(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeCharactersERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCharacters", args)
- }
+  }
 
 }
 
@@ -1537,12 +1543,12 @@ func (this *QXmlStreamWriter) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setDevice", args)
- }
+  }
 
 }
 
@@ -1562,14 +1568,14 @@ func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_
   case 1:
     // invoke: _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeTextElement", args)
- }
+  }
 
 }
 
@@ -1592,7 +1598,7 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_
   case 1:
@@ -1601,7 +1607,7 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttribute", args)
- }
+  }
 
 }
 
@@ -1619,14 +1625,14 @@ func (this *QXmlStreamWriter) writeEmptyElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeEmptyElementERK7QString
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEmptyElement", args)
- }
+  }
 
 }
 
@@ -1640,12 +1646,12 @@ func (this *QXmlStreamWriter) writeDTD(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter8writeDTDERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDTD", args)
- }
+  }
 
 }
 
@@ -1659,12 +1665,12 @@ func (this *QXmlStreamWriter) setAutoFormattingIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter23setAutoFormattingIndentEi
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormattingIndent", args)
- }
+  }
 
 }
 
@@ -1682,14 +1688,14 @@ func (this *QXmlStreamWriter) writeStartElement(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeStartElementERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartElement", args)
- }
+  }
 
 }
 
@@ -1703,12 +1709,12 @@ func (this *QXmlStreamWriter) writeComment(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter12writeCommentERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeComment", args)
- }
+  }
 
 }
 
@@ -1721,12 +1727,12 @@ func (this *QXmlStreamWriter) codec(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter5codecEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "codec", args)
- }
+  }
 
 }
 
@@ -1741,12 +1747,12 @@ func (this *QXmlStreamWriter) writeNamespace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeNamespace", args)
- }
+  }
 
 }
 
@@ -1759,12 +1765,12 @@ func (this *QXmlStreamWriter) hasError(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter8hasErrorEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "hasError", args)
- }
+  }
 
 }
 
@@ -1778,12 +1784,12 @@ func (this *QXmlStreamWriter) writeCDATA(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter10writeCDATAERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCDATA", args)
- }
+  }
 
 }
 
@@ -1797,12 +1803,12 @@ func (this *QXmlStreamWriter) writeEntityReference(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEntityReference", args)
- }
+  }
 
 }
 
@@ -1816,12 +1822,12 @@ func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17setAutoFormattingEb
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormatting", args)
- }
+  }
 
 }
 
@@ -1834,12 +1840,12 @@ func (this *QXmlStreamWriter) autoFormattingIndent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter20autoFormattingIndentEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormattingIndent", args)
- }
+  }
 
 }
 
@@ -1850,10 +1856,10 @@ func (this *QXmlStreamWriter) FreeQXmlStreamWriter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "~QXmlStreamWriter", args)
- }
+  }
 
 }
 
@@ -1867,12 +1873,12 @@ func (this *QXmlStreamWriter) writeAttributes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttributes", args)
- }
+  }
 
 }
 
@@ -1886,12 +1892,12 @@ func (this *QXmlStreamWriter) writeDefaultNamespace(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDefaultNamespace", args)
- }
+  }
 
 }
 
@@ -1904,12 +1910,12 @@ func (this *QXmlStreamWriter) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter6deviceEv
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "device", args)
- }
+  }
 
 }
 
@@ -1923,17 +1929,18 @@ func (this *QXmlStreamWriter) writeCurrentToken(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCurrentToken", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamNotationDeclaration(args ...interface{})() {
+func NewQXmlStreamNotationDeclaration(args ...interface{}) QXmlStreamNotationDeclaration {
+  return QXmlStreamNotationDeclaration{}
 }
 
 
@@ -1945,12 +1952,12 @@ func (this *QXmlStreamNotationDeclaration) publicId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8publicIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "publicId", args)
- }
+  }
 
 }
 
@@ -1963,12 +1970,12 @@ func (this *QXmlStreamNotationDeclaration) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration4nameEv
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "name", args)
- }
+  }
 
 }
 
@@ -1979,10 +1986,10 @@ func (this *QXmlStreamNotationDeclaration) FreeQXmlStreamNotationDeclaration(arg
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "~QXmlStreamNotationDeclaration", args)
- }
+  }
 
 }
 
@@ -1995,17 +2002,18 @@ func (this *QXmlStreamNotationDeclaration) systemId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8systemIdEv
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "systemId", args)
- }
+  }
 
 }
 
 
-func NewQXmlStreamAttribute(args ...interface{})() {
+func NewQXmlStreamAttribute(args ...interface{}) QXmlStreamAttribute {
+  return QXmlStreamAttribute{}
 }
 
 
@@ -2017,12 +2025,12 @@ func (this *QXmlStreamAttribute) qualifiedName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute13qualifiedNameEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "qualifiedName", args)
- }
+  }
 
 }
 
@@ -2033,10 +2041,10 @@ func (this *QXmlStreamAttribute) FreeQXmlStreamAttribute(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "~QXmlStreamAttribute", args)
- }
+  }
 
 }
 
@@ -2049,12 +2057,12 @@ func (this *QXmlStreamAttribute) value(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute5valueEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "value", args)
- }
+  }
 
 }
 
@@ -2067,12 +2075,12 @@ func (this *QXmlStreamAttribute) namespaceUri(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute12namespaceUriEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "namespaceUri", args)
- }
+  }
 
 }
 
@@ -2085,12 +2093,12 @@ func (this *QXmlStreamAttribute) isDefault(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute9isDefaultEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "isDefault", args)
- }
+  }
 
 }
 
@@ -2103,12 +2111,12 @@ func (this *QXmlStreamAttribute) prefix(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute6prefixEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "prefix", args)
- }
+  }
 
 }
 
@@ -2121,12 +2129,12 @@ func (this *QXmlStreamAttribute) name(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute4nameEv
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "name", args)
- }
+  }
 
 }
 

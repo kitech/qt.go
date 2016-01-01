@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -42,7 +42,8 @@ type QSharedData struct {
 }
 
 
-func NewQSharedData(args ...interface{})() {
+func NewQSharedData(args ...interface{}) QSharedData {
+  return QSharedData{}
 }
 
 // <= body block end

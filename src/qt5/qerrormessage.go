@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -50,17 +50,18 @@ func (this *QErrorMessage) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QErrorMessage10metaObjectEv
   default:
     qtrt.ErrorResolve("QErrorMessage", "metaObject", args)
- }
+  }
 
 }
 
 
-func NewQErrorMessage(args ...interface{})() {
+func NewQErrorMessage(args ...interface{}) QErrorMessage {
+  return QErrorMessage{}
 }
 
 
@@ -70,10 +71,10 @@ func (this *QErrorMessage) qtHandler_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QErrorMessage", "qtHandler", args)
- }
+  }
 
 }
 
@@ -91,14 +92,14 @@ func (this *QErrorMessage) showMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QErrorMessage11showMessageERK7QStringS2_
   case 1:
     // invoke: _ZN13QErrorMessage11showMessageERK7QString
   default:
     qtrt.ErrorResolve("QErrorMessage", "showMessage", args)
- }
+  }
 
 }
 
@@ -109,10 +110,10 @@ func (this *QErrorMessage) FreeQErrorMessage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QErrorMessage", "~QErrorMessage", args)
- }
+  }
 
 }
 

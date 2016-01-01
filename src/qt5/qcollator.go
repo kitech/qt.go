@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.go
 //
@@ -56,17 +56,18 @@ func (this *QCollator) numericMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCollator11numericModeEv
   default:
     qtrt.ErrorResolve("QCollator", "numericMode", args)
- }
+  }
 
 }
 
 
-func NewQCollator(args ...interface{})() {
+func NewQCollator(args ...interface{}) QCollator {
+  return QCollator{}
 }
 
 
@@ -79,12 +80,12 @@ func (this *QCollator) setLocale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QCollator9setLocaleERK7QLocale
   default:
     qtrt.ErrorResolve("QCollator", "setLocale", args)
- }
+  }
 
 }
 
@@ -98,12 +99,12 @@ func (this *QCollator) setNumericMode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QCollator14setNumericModeEb
   default:
     qtrt.ErrorResolve("QCollator", "setNumericMode", args)
- }
+  }
 
 }
 
@@ -128,7 +129,7 @@ func (this *QCollator) compare(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCollator7compareERK10QStringRefS2_
   case 1:
@@ -137,7 +138,7 @@ func (this *QCollator) compare(args ...interface{}) () {
     // invoke: _ZNK9QCollator7compareERK7QStringS2_
   default:
     qtrt.ErrorResolve("QCollator", "compare", args)
- }
+  }
 
 }
 
@@ -151,12 +152,12 @@ func (this *QCollator) sortKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCollator7sortKeyERK7QString
   default:
     qtrt.ErrorResolve("QCollator", "sortKey", args)
- }
+  }
 
 }
 
@@ -167,10 +168,10 @@ func (this *QCollator) FreeQCollator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCollator", "~QCollator", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QCollator) ignorePunctuation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCollator17ignorePunctuationEv
   default:
     qtrt.ErrorResolve("QCollator", "ignorePunctuation", args)
- }
+  }
 
 }
 
@@ -201,12 +202,12 @@ func (this *QCollator) locale(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCollator6localeEv
   default:
     qtrt.ErrorResolve("QCollator", "locale", args)
- }
+  }
 
 }
 
@@ -220,12 +221,12 @@ func (this *QCollator) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QCollator4swapERS_
   default:
     qtrt.ErrorResolve("QCollator", "swap", args)
- }
+  }
 
 }
 
@@ -239,12 +240,12 @@ func (this *QCollator) setIgnorePunctuation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QCollator20setIgnorePunctuationEb
   default:
     qtrt.ErrorResolve("QCollator", "setIgnorePunctuation", args)
- }
+  }
 
 }
 
@@ -255,10 +256,10 @@ func (this *QCollatorSortKey) FreeQCollatorSortKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "~QCollatorSortKey", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QCollatorSortKey) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QCollatorSortKey4swapERS_
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "swap", args)
- }
+  }
 
 }
 
@@ -291,17 +292,18 @@ func (this *QCollatorSortKey) compare(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QCollatorSortKey7compareERKS_
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "compare", args)
- }
+  }
 
 }
 
 
-func NewQCollatorSortKey(args ...interface{})() {
+func NewQCollatorSortKey(args ...interface{}) QCollatorSortKey {
+  return QCollatorSortKey{}
 }
 
 // <= body block end

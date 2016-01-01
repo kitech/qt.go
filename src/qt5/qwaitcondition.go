@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -56,14 +56,14 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QWaitCondition4waitEP14QReadWriteLockm
   case 1:
     // invoke: _ZN14QWaitCondition4waitEP6QMutexm
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
- }
+  }
 
 }
 
@@ -76,12 +76,12 @@ func (this *QWaitCondition) wakeAll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeAllEv
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeAll", args)
- }
+  }
 
 }
 
@@ -94,17 +94,18 @@ func (this *QWaitCondition) wakeOne(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QWaitCondition7wakeOneEv
   default:
     qtrt.ErrorResolve("QWaitCondition", "wakeOne", args)
- }
+  }
 
 }
 
 
-func NewQWaitCondition(args ...interface{})() {
+func NewQWaitCondition(args ...interface{}) QWaitCondition {
+  return QWaitCondition{}
 }
 
 
@@ -114,10 +115,10 @@ func (this *QWaitCondition) FreeQWaitCondition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
- }
+  }
 
 }
 

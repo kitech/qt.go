@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -50,12 +50,12 @@ func (this *QDirModel) iconProvider(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel12iconProviderEv
   default:
     qtrt.ErrorResolve("QDirModel", "iconProvider", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QDirModel) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel6parentERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "parent", args)
- }
+  }
 
 }
 
@@ -89,12 +89,12 @@ func (this *QDirModel) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel4dataERK11QModelIndexi
   default:
     qtrt.ErrorResolve("QDirModel", "data", args)
- }
+  }
 
 }
 
@@ -107,12 +107,12 @@ func (this *QDirModel) nameFilters(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel11nameFiltersEv
   default:
     qtrt.ErrorResolve("QDirModel", "nameFilters", args)
- }
+  }
 
 }
 
@@ -125,12 +125,12 @@ func (this *QDirModel) isReadOnly(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel10isReadOnlyEv
   default:
     qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
- }
+  }
 
 }
 
@@ -144,12 +144,12 @@ func (this *QDirModel) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel11columnCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "columnCount", args)
- }
+  }
 
 }
 
@@ -162,12 +162,12 @@ func (this *QDirModel) mimeTypes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel9mimeTypesEv
   default:
     qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
- }
+  }
 
 }
 
@@ -178,10 +178,10 @@ func (this *QDirModel) FreeQDirModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
- }
+  }
 
 }
 
@@ -195,12 +195,12 @@ func (this *QDirModel) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel6removeERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "remove", args)
- }
+  }
 
 }
 
@@ -214,12 +214,12 @@ func (this *QDirModel) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel8fileNameERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "fileName", args)
- }
+  }
 
 }
 
@@ -232,12 +232,12 @@ func (this *QDirModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QDirModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -250,12 +250,12 @@ func (this *QDirModel) resolveSymlinks(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel15resolveSymlinksEv
   default:
     qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
- }
+  }
 
 }
 
@@ -269,12 +269,12 @@ func (this *QDirModel) refresh(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel7refreshERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "refresh", args)
- }
+  }
 
 }
 
@@ -288,12 +288,12 @@ func (this *QDirModel) setNameFilters(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel14setNameFiltersERK11QStringList
   default:
     qtrt.ErrorResolve("QDirModel", "setNameFilters", args)
- }
+  }
 
 }
 
@@ -307,12 +307,12 @@ func (this *QDirModel) setIconProvider(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel15setIconProviderEP17QFileIconProvider
   default:
     qtrt.ErrorResolve("QDirModel", "setIconProvider", args)
- }
+  }
 
 }
 
@@ -332,19 +332,20 @@ func (this *QDirModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel5indexEiiRK11QModelIndex
   case 1:
     // invoke: _ZNK9QDirModel5indexERK7QStringi
   default:
     qtrt.ErrorResolve("QDirModel", "index", args)
- }
+  }
 
 }
 
 
-func NewQDirModel(args ...interface{})() {
+func NewQDirModel(args ...interface{}) QDirModel {
+  return QDirModel{}
 }
 
 
@@ -359,12 +360,12 @@ func (this *QDirModel) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti
   default:
     qtrt.ErrorResolve("QDirModel", "setData", args)
- }
+  }
 
 }
 
@@ -378,12 +379,12 @@ func (this *QDirModel) setLazyChildCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel17setLazyChildCountEb
   default:
     qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
- }
+  }
 
 }
 
@@ -397,12 +398,12 @@ func (this *QDirModel) fileIcon(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel8fileIconERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "fileIcon", args)
- }
+  }
 
 }
 
@@ -416,12 +417,12 @@ func (this *QDirModel) hasChildren(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel11hasChildrenERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "hasChildren", args)
- }
+  }
 
 }
 
@@ -435,12 +436,12 @@ func (this *QDirModel) isDir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel5isDirERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "isDir", args)
- }
+  }
 
 }
 
@@ -455,12 +456,12 @@ func (this *QDirModel) mkdir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel5mkdirERK11QModelIndexRK7QString
   default:
     qtrt.ErrorResolve("QDirModel", "mkdir", args)
- }
+  }
 
 }
 
@@ -474,12 +475,12 @@ func (this *QDirModel) rmdir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel5rmdirERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "rmdir", args)
- }
+  }
 
 }
 
@@ -493,12 +494,12 @@ func (this *QDirModel) filePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel8filePathERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "filePath", args)
- }
+  }
 
 }
 
@@ -512,12 +513,12 @@ func (this *QDirModel) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel8rowCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "rowCount", args)
- }
+  }
 
 }
 
@@ -531,12 +532,12 @@ func (this *QDirModel) setReadOnly(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel11setReadOnlyEb
   default:
     qtrt.ErrorResolve("QDirModel", "setReadOnly", args)
- }
+  }
 
 }
 
@@ -550,12 +551,12 @@ func (this *QDirModel) setResolveSymlinks(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QDirModel18setResolveSymlinksEb
   default:
     qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
- }
+  }
 
 }
 
@@ -568,12 +569,12 @@ func (this *QDirModel) lazyChildCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel14lazyChildCountEv
   default:
     qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
- }
+  }
 
 }
 
@@ -587,12 +588,12 @@ func (this *QDirModel) fileInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDirModel8fileInfoERK11QModelIndex
   default:
     qtrt.ErrorResolve("QDirModel", "fileInfo", args)
- }
+  }
 
 }
 

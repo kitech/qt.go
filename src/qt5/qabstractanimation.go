@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -62,17 +62,18 @@ func (this *QAbstractAnimation) resume(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation6resumeEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "resume", args)
- }
+  }
 
 }
 
 
-func NewQAbstractAnimation(args ...interface{})() {
+func NewQAbstractAnimation(args ...interface{}) QAbstractAnimation {
+  return QAbstractAnimation{}
 }
 
 
@@ -84,12 +85,12 @@ func (this *QAbstractAnimation) stop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation4stopEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "stop", args)
- }
+  }
 
 }
 
@@ -102,12 +103,12 @@ func (this *QAbstractAnimation) pause(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation5pauseEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "pause", args)
- }
+  }
 
 }
 
@@ -121,12 +122,12 @@ func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation12setLoopCountEi
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setLoopCount", args)
- }
+  }
 
 }
 
@@ -139,12 +140,12 @@ func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentLoopEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoop", args)
- }
+  }
 
 }
 
@@ -157,12 +158,12 @@ func (this *QAbstractAnimation) group(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation5groupEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "group", args)
- }
+  }
 
 }
 
@@ -176,12 +177,12 @@ func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation9setPausedEb
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setPaused", args)
- }
+  }
 
 }
 
@@ -194,12 +195,12 @@ func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation13totalDurationEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
- }
+  }
 
 }
 
@@ -212,12 +213,12 @@ func (this *QAbstractAnimation) duration(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation8durationEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "duration", args)
- }
+  }
 
 }
 
@@ -230,12 +231,12 @@ func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "metaObject", args)
- }
+  }
 
 }
 
@@ -248,12 +249,12 @@ func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation15currentLoopTimeEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoopTime", args)
- }
+  }
 
 }
 
@@ -266,12 +267,12 @@ func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentTimeEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentTime", args)
- }
+  }
 
 }
 
@@ -285,12 +286,12 @@ func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation14setCurrentTimeEi
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setCurrentTime", args)
- }
+  }
 
 }
 
@@ -301,10 +302,10 @@ func (this *QAbstractAnimation) FreeQAbstractAnimation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "~QAbstractAnimation", args)
- }
+  }
 
 }
 
@@ -317,12 +318,12 @@ func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation9loopCountEv
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "loopCount", args)
- }
+  }
 
 }
 
@@ -335,12 +336,12 @@ func (this *QAnimationDriver) advance(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver7advanceEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "advance", args)
- }
+  }
 
 }
 
@@ -351,15 +352,16 @@ func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAnimationDriver", "~QAnimationDriver", args)
- }
+  }
 
 }
 
 
-func NewQAnimationDriver(args ...interface{})() {
+func NewQAnimationDriver(args ...interface{}) QAnimationDriver {
+  return QAnimationDriver{}
 }
 
 
@@ -371,12 +373,12 @@ func (this *QAnimationDriver) elapsed(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver7elapsedEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "elapsed", args)
- }
+  }
 
 }
 
@@ -389,12 +391,12 @@ func (this *QAnimationDriver) install(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver7installEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "install", args)
- }
+  }
 
 }
 
@@ -407,12 +409,12 @@ func (this *QAnimationDriver) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver10metaObjectEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "metaObject", args)
- }
+  }
 
 }
 
@@ -425,12 +427,12 @@ func (this *QAnimationDriver) uninstall(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver9uninstallEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "uninstall", args)
- }
+  }
 
 }
 
@@ -443,12 +445,12 @@ func (this *QAnimationDriver) isRunning(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver9isRunningEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "isRunning", args)
- }
+  }
 
 }
 
@@ -461,12 +463,12 @@ func (this *QAnimationDriver) startTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver9startTimeEv
   default:
     qtrt.ErrorResolve("QAnimationDriver", "startTime", args)
- }
+  }
 
 }
 
@@ -480,12 +482,12 @@ func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver12setStartTimeEx
   default:
     qtrt.ErrorResolve("QAnimationDriver", "setStartTime", args)
- }
+  }
 
 }
 

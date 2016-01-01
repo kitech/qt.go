@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -50,12 +50,12 @@ func (this *QTemporaryFile) autoRemove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile10autoRemoveEv
   default:
     qtrt.ErrorResolve("QTemporaryFile", "autoRemove", args)
- }
+  }
 
 }
 
@@ -66,15 +66,16 @@ func (this *QTemporaryFile) createLocalFile_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTemporaryFile", "createLocalFile", args)
- }
+  }
 
 }
 
 
-func NewQTemporaryFile(args ...interface{})() {
+func NewQTemporaryFile(args ...interface{}) QTemporaryFile {
+  return QTemporaryFile{}
 }
 
 
@@ -84,10 +85,10 @@ func (this *QTemporaryFile) FreeQTemporaryFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTemporaryFile", "~QTemporaryFile", args)
- }
+  }
 
 }
 
@@ -100,12 +101,12 @@ func (this *QTemporaryFile) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile10metaObjectEv
   default:
     qtrt.ErrorResolve("QTemporaryFile", "metaObject", args)
- }
+  }
 
 }
 
@@ -119,12 +120,12 @@ func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile13setAutoRemoveEb
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setAutoRemove", args)
- }
+  }
 
 }
 
@@ -137,12 +138,12 @@ func (this *QTemporaryFile) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile8fileNameEv
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileName", args)
- }
+  }
 
 }
 
@@ -155,12 +156,12 @@ func (this *QTemporaryFile) fileTemplate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile12fileTemplateEv
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileTemplate", args)
- }
+  }
 
 }
 
@@ -171,10 +172,10 @@ func (this *QTemporaryFile) createNativeFile_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTemporaryFile", "createNativeFile", args)
- }
+  }
 
 }
 
@@ -190,14 +191,14 @@ func (this *QTemporaryFile) open(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile4openEv
   case 1:
     // invoke: _ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE
   default:
     qtrt.ErrorResolve("QTemporaryFile", "open", args)
- }
+  }
 
 }
 
@@ -211,12 +212,12 @@ func (this *QTemporaryFile) setFileTemplate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile15setFileTemplateERK7QString
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setFileTemplate", args)
- }
+  }
 
 }
 

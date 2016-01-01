@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -50,12 +50,12 @@ func (this *QDirIterator) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8fileNameEv
   default:
     qtrt.ErrorResolve("QDirIterator", "fileName", args)
- }
+  }
 
 }
 
@@ -68,17 +68,18 @@ func (this *QDirIterator) path(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator4pathEv
   default:
     qtrt.ErrorResolve("QDirIterator", "path", args)
- }
+  }
 
 }
 
 
-func NewQDirIterator(args ...interface{})() {
+func NewQDirIterator(args ...interface{}) QDirIterator {
+  return QDirIterator{}
 }
 
 
@@ -90,12 +91,12 @@ func (this *QDirIterator) next(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QDirIterator4nextEv
   default:
     qtrt.ErrorResolve("QDirIterator", "next", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QDirIterator) filePath(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8filePathEv
   default:
     qtrt.ErrorResolve("QDirIterator", "filePath", args)
- }
+  }
 
 }
 
@@ -124,10 +125,10 @@ func (this *QDirIterator) FreeQDirIterator(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDirIterator", "~QDirIterator", args)
- }
+  }
 
 }
 
@@ -140,12 +141,12 @@ func (this *QDirIterator) fileInfo(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8fileInfoEv
   default:
     qtrt.ErrorResolve("QDirIterator", "fileInfo", args)
- }
+  }
 
 }
 
@@ -158,12 +159,12 @@ func (this *QDirIterator) hasNext(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator7hasNextEv
   default:
     qtrt.ErrorResolve("QDirIterator", "hasNext", args)
- }
+  }
 
 }
 

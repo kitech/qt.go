@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -53,10 +53,10 @@ func (this *QCoreApplication) sendPostedEvents_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "sendPostedEvents", args)
- }
+  }
 
 }
 
@@ -67,10 +67,10 @@ func (this *QCoreApplication) addLibraryPath_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "addLibraryPath", args)
- }
+  }
 
 }
 
@@ -81,10 +81,10 @@ func (this *QCoreApplication) applicationPid_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationPid", args)
- }
+  }
 
 }
 
@@ -95,10 +95,10 @@ func (this *QCoreApplication) setApplicationName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setApplicationName", args)
- }
+  }
 
 }
 
@@ -109,10 +109,10 @@ func (this *QCoreApplication) organizationName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationName", args)
- }
+  }
 
 }
 
@@ -126,12 +126,12 @@ func (this *QCoreApplication) installNativeEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter
   default:
     qtrt.ErrorResolve("QCoreApplication", "installNativeEventFilter", args)
- }
+  }
 
 }
 
@@ -142,10 +142,10 @@ func (this *QCoreApplication) instance_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "instance", args)
- }
+  }
 
 }
 
@@ -156,10 +156,10 @@ func (this *QCoreApplication) isSetuidAllowed_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "isSetuidAllowed", args)
- }
+  }
 
 }
 
@@ -170,15 +170,16 @@ func (this *QCoreApplication) applicationName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationName", args)
- }
+  }
 
 }
 
 
-func NewQCoreApplication(args ...interface{})() {
+func NewQCoreApplication(args ...interface{}) QCoreApplication {
+  return QCoreApplication{}
 }
 
 
@@ -188,10 +189,10 @@ func (this *QCoreApplication) setSetuidAllowed_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setSetuidAllowed", args)
- }
+  }
 
 }
 
@@ -202,10 +203,10 @@ func (this *QCoreApplication) postEvent_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "postEvent", args)
- }
+  }
 
 }
 
@@ -216,10 +217,10 @@ func (this *QCoreApplication) libraryPaths_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "libraryPaths", args)
- }
+  }
 
 }
 
@@ -230,10 +231,10 @@ func (this *QCoreApplication) removeLibraryPath_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeLibraryPath", args)
- }
+  }
 
 }
 
@@ -244,10 +245,10 @@ func (this *QCoreApplication) translate_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "translate", args)
- }
+  }
 
 }
 
@@ -258,10 +259,10 @@ func (this *QCoreApplication) applicationFilePath_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationFilePath", args)
- }
+  }
 
 }
 
@@ -272,10 +273,10 @@ func (this *QCoreApplication) removeTranslator_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeTranslator", args)
- }
+  }
 
 }
 
@@ -286,10 +287,10 @@ func (this *QCoreApplication) setOrganizationName_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setOrganizationName", args)
- }
+  }
 
 }
 
@@ -300,10 +301,10 @@ func (this *QCoreApplication) exit_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "exit", args)
- }
+  }
 
 }
 
@@ -314,10 +315,10 @@ func (this *QCoreApplication) applicationVersion_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationVersion", args)
- }
+  }
 
 }
 
@@ -328,10 +329,10 @@ func (this *QCoreApplication) quit_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "quit", args)
- }
+  }
 
 }
 
@@ -342,10 +343,10 @@ func (this *QCoreApplication) closingDown_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "closingDown", args)
- }
+  }
 
 }
 
@@ -356,10 +357,10 @@ func (this *QCoreApplication) setQuitLockEnabled_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setQuitLockEnabled", args)
- }
+  }
 
 }
 
@@ -370,10 +371,10 @@ func (this *QCoreApplication) hasPendingEvents_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "hasPendingEvents", args)
- }
+  }
 
 }
 
@@ -384,10 +385,10 @@ func (this *QCoreApplication) setOrganizationDomain_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setOrganizationDomain", args)
- }
+  }
 
 }
 
@@ -398,10 +399,10 @@ func (this *QCoreApplication) FreeQCoreApplication(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "~QCoreApplication", args)
- }
+  }
 
 }
 
@@ -415,12 +416,12 @@ func (this *QCoreApplication) removeNativeEventFilter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeNativeEventFilter", args)
- }
+  }
 
 }
 
@@ -431,10 +432,10 @@ func (this *QCoreApplication) organizationDomain_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationDomain", args)
- }
+  }
 
 }
 
@@ -445,10 +446,10 @@ func (this *QCoreApplication) installTranslator_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "installTranslator", args)
- }
+  }
 
 }
 
@@ -459,10 +460,10 @@ func (this *QCoreApplication) applicationDirPath_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationDirPath", args)
- }
+  }
 
 }
 
@@ -473,10 +474,10 @@ func (this *QCoreApplication) flush_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "flush", args)
- }
+  }
 
 }
 
@@ -487,10 +488,10 @@ func (this *QCoreApplication) exec_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "exec", args)
- }
+  }
 
 }
 
@@ -501,10 +502,10 @@ func (this *QCoreApplication) arguments_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "arguments", args)
- }
+  }
 
 }
 
@@ -515,10 +516,10 @@ func (this *QCoreApplication) setLibraryPaths_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setLibraryPaths", args)
- }
+  }
 
 }
 
@@ -529,10 +530,10 @@ func (this *QCoreApplication) eventDispatcher_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "eventDispatcher", args)
- }
+  }
 
 }
 
@@ -543,10 +544,10 @@ func (this *QCoreApplication) startingUp_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "startingUp", args)
- }
+  }
 
 }
 
@@ -557,10 +558,10 @@ func (this *QCoreApplication) sendEvent_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "sendEvent", args)
- }
+  }
 
 }
 
@@ -575,12 +576,12 @@ func (this *QCoreApplication) notify(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication6notifyEP7QObjectP6QEvent
   default:
     qtrt.ErrorResolve("QCoreApplication", "notify", args)
- }
+  }
 
 }
 
@@ -591,10 +592,10 @@ func (this *QCoreApplication) isQuitLockEnabled_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "isQuitLockEnabled", args)
- }
+  }
 
 }
 
@@ -605,10 +606,10 @@ func (this *QCoreApplication) removePostedEvents_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "removePostedEvents", args)
- }
+  }
 
 }
 
@@ -621,12 +622,12 @@ func (this *QCoreApplication) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK16QCoreApplication10metaObjectEv
   default:
     qtrt.ErrorResolve("QCoreApplication", "metaObject", args)
- }
+  }
 
 }
 
@@ -637,10 +638,10 @@ func (this *QCoreApplication) setApplicationVersion_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setApplicationVersion", args)
- }
+  }
 
 }
 
@@ -651,10 +652,10 @@ func (this *QCoreApplication) setEventDispatcher_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCoreApplication", "setEventDispatcher", args)
- }
+  }
 
 }
 

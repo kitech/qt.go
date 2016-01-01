@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -60,7 +60,7 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni
   case 1:
@@ -69,12 +69,13 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
     // invoke: _ZNK11QStringList11lastIndexOfER7QRegExpi
   default:
     qtrt.ErrorResolve("QStringList", "lastIndexOf", args)
- }
+  }
 
 }
 
 
-func NewQStringList(args ...interface{})() {
+func NewQStringList(args ...interface{}) QStringList {
+  return QStringList{}
 }
 
 
@@ -96,7 +97,7 @@ func (this *QStringList) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QStringList7indexOfERK7QRegExpi
   case 1:
@@ -105,7 +106,7 @@ func (this *QStringList) indexOf(args ...interface{}) () {
     // invoke: _ZNK11QStringList7indexOfERK18QRegularExpressioni
   default:
     qtrt.ErrorResolve("QStringList", "indexOf", args)
- }
+  }
 
 }
 

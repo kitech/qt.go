@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -59,7 +59,8 @@ type QDateTimeEdit struct {
 }
 
 
-func NewQTimeEdit(args ...interface{})() {
+func NewQTimeEdit(args ...interface{}) QTimeEdit {
+  return QTimeEdit{}
 }
 
 
@@ -71,12 +72,12 @@ func (this *QTimeEdit) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeEdit10metaObjectEv
   default:
     qtrt.ErrorResolve("QTimeEdit", "metaObject", args)
- }
+  }
 
 }
 
@@ -87,15 +88,16 @@ func (this *QTimeEdit) FreeQTimeEdit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTimeEdit", "~QTimeEdit", args)
- }
+  }
 
 }
 
 
-func NewQDateEdit(args ...interface{})() {
+func NewQDateEdit(args ...interface{}) QDateEdit {
+  return QDateEdit{}
 }
 
 
@@ -107,12 +109,12 @@ func (this *QDateEdit) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QDateEdit10metaObjectEv
   default:
     qtrt.ErrorResolve("QDateEdit", "metaObject", args)
- }
+  }
 
 }
 
@@ -123,15 +125,16 @@ func (this *QDateEdit) FreeQDateEdit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDateEdit", "~QDateEdit", args)
- }
+  }
 
 }
 
 
-func NewQDateTimeEdit(args ...interface{})() {
+func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
+  return QDateTimeEdit{}
 }
 
 
@@ -143,12 +146,12 @@ func (this *QDateTimeEdit) date(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4dateEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "date", args)
- }
+  }
 
 }
 
@@ -161,12 +164,12 @@ func (this *QDateTimeEdit) clearMinimumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit20clearMinimumDateTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumDateTime", args)
- }
+  }
 
 }
 
@@ -179,12 +182,12 @@ func (this *QDateTimeEdit) clear(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit5clearEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clear", args)
- }
+  }
 
 }
 
@@ -198,12 +201,12 @@ func (this *QDateTimeEdit) setDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit7setDateERK5QDate
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setDate", args)
- }
+  }
 
 }
 
@@ -216,12 +219,12 @@ func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15maximumDateTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDateTime", args)
- }
+  }
 
 }
 
@@ -235,12 +238,12 @@ func (this *QDateTimeEdit) setMinimumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit14setMinimumDateERK5QDate
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumDate", args)
- }
+  }
 
 }
 
@@ -254,12 +257,12 @@ func (this *QDateTimeEdit) setMaximumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit14setMaximumDateERK5QDate
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumDate", args)
- }
+  }
 
 }
 
@@ -272,12 +275,12 @@ func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumTime", args)
- }
+  }
 
 }
 
@@ -290,12 +293,12 @@ func (this *QDateTimeEdit) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit10metaObjectEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "metaObject", args)
- }
+  }
 
 }
 
@@ -306,10 +309,10 @@ func (this *QDateTimeEdit) FreeQDateTimeEdit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "~QDateTimeEdit", args)
- }
+  }
 
 }
 
@@ -322,12 +325,12 @@ func (this *QDateTimeEdit) clearMinimumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16clearMinimumDateEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumDate", args)
- }
+  }
 
 }
 
@@ -342,12 +345,12 @@ func (this *QDateTimeEdit) setDateRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit12setDateRangeERK5QDateS2_
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setDateRange", args)
- }
+  }
 
 }
 
@@ -361,12 +364,12 @@ func (this *QDateTimeEdit) setMinimumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit14setMinimumTimeERK5QTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumTime", args)
- }
+  }
 
 }
 
@@ -379,12 +382,12 @@ func (this *QDateTimeEdit) time(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4timeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "time", args)
- }
+  }
 
 }
 
@@ -397,12 +400,12 @@ func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit19currentSectionIndexEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "currentSectionIndex", args)
- }
+  }
 
 }
 
@@ -416,12 +419,12 @@ func (this *QDateTimeEdit) event(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit5eventEP6QEvent
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "event", args)
- }
+  }
 
 }
 
@@ -435,12 +438,12 @@ func (this *QDateTimeEdit) setDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit11setDateTimeERK9QDateTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setDateTime", args)
- }
+  }
 
 }
 
@@ -454,12 +457,12 @@ func (this *QDateTimeEdit) setCalendarWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setCalendarWidget", args)
- }
+  }
 
 }
 
@@ -474,12 +477,12 @@ func (this *QDateTimeEdit) setDateTimeRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setDateTimeRange", args)
- }
+  }
 
 }
 
@@ -493,12 +496,12 @@ func (this *QDateTimeEdit) setTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit7setTimeERK5QTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setTime", args)
- }
+  }
 
 }
 
@@ -511,12 +514,12 @@ func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8dateTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "dateTime", args)
- }
+  }
 
 }
 
@@ -530,12 +533,12 @@ func (this *QDateTimeEdit) setMaximumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit14setMaximumTimeERK5QTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumTime", args)
- }
+  }
 
 }
 
@@ -549,12 +552,12 @@ func (this *QDateTimeEdit) setMinimumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMinimumDateTime", args)
- }
+  }
 
 }
 
@@ -567,12 +570,12 @@ func (this *QDateTimeEdit) clearMaximumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16clearMaximumTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumTime", args)
- }
+  }
 
 }
 
@@ -585,12 +588,12 @@ func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13calendarPopupEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarPopup", args)
- }
+  }
 
 }
 
@@ -604,12 +607,12 @@ func (this *QDateTimeEdit) setMaximumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setMaximumDateTime", args)
- }
+  }
 
 }
 
@@ -622,12 +625,12 @@ func (this *QDateTimeEdit) clearMaximumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit20clearMaximumDateTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumDateTime", args)
- }
+  }
 
 }
 
@@ -640,12 +643,12 @@ func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15minimumDateTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDateTime", args)
- }
+  }
 
 }
 
@@ -658,12 +661,12 @@ func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit14calendarWidgetEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarWidget", args)
- }
+  }
 
 }
 
@@ -677,12 +680,12 @@ func (this *QDateTimeEdit) setDisplayFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16setDisplayFormatERK7QString
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setDisplayFormat", args)
- }
+  }
 
 }
 
@@ -695,12 +698,12 @@ func (this *QDateTimeEdit) clearMaximumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16clearMaximumDateEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMaximumDate", args)
- }
+  }
 
 }
 
@@ -714,12 +717,12 @@ func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16setCalendarPopupEb
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setCalendarPopup", args)
- }
+  }
 
 }
 
@@ -733,12 +736,12 @@ func (this *QDateTimeEdit) stepBy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit6stepByEi
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "stepBy", args)
- }
+  }
 
 }
 
@@ -751,12 +754,12 @@ func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13displayFormatEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "displayFormat", args)
- }
+  }
 
 }
 
@@ -769,12 +772,12 @@ func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumTime", args)
- }
+  }
 
 }
 
@@ -787,12 +790,12 @@ func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8sizeHintEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sizeHint", args)
- }
+  }
 
 }
 
@@ -805,12 +808,12 @@ func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit12sectionCountEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sectionCount", args)
- }
+  }
 
 }
 
@@ -824,12 +827,12 @@ func (this *QDateTimeEdit) setCurrentSectionIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit22setCurrentSectionIndexEi
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setCurrentSectionIndex", args)
- }
+  }
 
 }
 
@@ -842,12 +845,12 @@ func (this *QDateTimeEdit) clearMinimumTime(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit16clearMinimumTimeEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "clearMinimumTime", args)
- }
+  }
 
 }
 
@@ -862,12 +865,12 @@ func (this *QDateTimeEdit) setTimeRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "setTimeRange", args)
- }
+  }
 
 }
 
@@ -880,12 +883,12 @@ func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumDateEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDate", args)
- }
+  }
 
 }
 
@@ -898,12 +901,12 @@ func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumDateEv
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDate", args)
- }
+  }
 
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -59,12 +59,12 @@ func (this *QSplitter) insertWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12insertWidgetEiP7QWidget
   default:
     qtrt.ErrorResolve("QSplitter", "insertWidget", args)
- }
+  }
 
 }
 
@@ -77,12 +77,12 @@ func (this *QSplitter) childrenCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter19childrenCollapsibleEv
   default:
     qtrt.ErrorResolve("QSplitter", "childrenCollapsible", args)
- }
+  }
 
 }
 
@@ -95,12 +95,12 @@ func (this *QSplitter) count(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter5countEv
   default:
     qtrt.ErrorResolve("QSplitter", "count", args)
- }
+  }
 
 }
 
@@ -113,12 +113,12 @@ func (this *QSplitter) saveState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter9saveStateEv
   default:
     qtrt.ErrorResolve("QSplitter", "saveState", args)
- }
+  }
 
 }
 
@@ -131,12 +131,12 @@ func (this *QSplitter) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter10metaObjectEv
   default:
     qtrt.ErrorResolve("QSplitter", "metaObject", args)
- }
+  }
 
 }
 
@@ -149,12 +149,12 @@ func (this *QSplitter) opaqueResize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter12opaqueResizeEv
   default:
     qtrt.ErrorResolve("QSplitter", "opaqueResize", args)
- }
+  }
 
 }
 
@@ -168,17 +168,18 @@ func (this *QSplitter) addWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter9addWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QSplitter", "addWidget", args)
- }
+  }
 
 }
 
 
-func NewQSplitter(args ...interface{})() {
+func NewQSplitter(args ...interface{}) QSplitter {
+  return QSplitter{}
 }
 
 
@@ -191,12 +192,12 @@ func (this *QSplitter) setHandleWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setHandleWidthEi
   default:
     qtrt.ErrorResolve("QSplitter", "setHandleWidth", args)
- }
+  }
 
 }
 
@@ -211,12 +212,12 @@ func (this *QSplitter) setStretchFactor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter16setStretchFactorEii
   default:
     qtrt.ErrorResolve("QSplitter", "setStretchFactor", args)
- }
+  }
 
 }
 
@@ -229,12 +230,12 @@ func (this *QSplitter) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QSplitter", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -248,12 +249,12 @@ func (this *QSplitter) setOpaqueResize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter15setOpaqueResizeEb
   default:
     qtrt.ErrorResolve("QSplitter", "setOpaqueResize", args)
- }
+  }
 
 }
 
@@ -267,12 +268,12 @@ func (this *QSplitter) widget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6widgetEi
   default:
     qtrt.ErrorResolve("QSplitter", "widget", args)
- }
+  }
 
 }
 
@@ -285,12 +286,12 @@ func (this *QSplitter) sizes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter5sizesEv
   default:
     qtrt.ErrorResolve("QSplitter", "sizes", args)
- }
+  }
 
 }
 
@@ -304,12 +305,12 @@ func (this *QSplitter) isCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter13isCollapsibleEi
   default:
     qtrt.ErrorResolve("QSplitter", "isCollapsible", args)
- }
+  }
 
 }
 
@@ -324,12 +325,12 @@ func (this *QSplitter) setCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setCollapsibleEib
   default:
     qtrt.ErrorResolve("QSplitter", "setCollapsible", args)
- }
+  }
 
 }
 
@@ -343,12 +344,12 @@ func (this *QSplitter) restoreState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12restoreStateERK10QByteArray
   default:
     qtrt.ErrorResolve("QSplitter", "restoreState", args)
- }
+  }
 
 }
 
@@ -359,10 +360,10 @@ func (this *QSplitter) FreeQSplitter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSplitter", "~QSplitter", args)
- }
+  }
 
 }
 
@@ -376,12 +377,12 @@ func (this *QSplitter) setChildrenCollapsible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter22setChildrenCollapsibleEb
   default:
     qtrt.ErrorResolve("QSplitter", "setChildrenCollapsible", args)
- }
+  }
 
 }
 
@@ -394,12 +395,12 @@ func (this *QSplitter) handleWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter11handleWidthEv
   default:
     qtrt.ErrorResolve("QSplitter", "handleWidth", args)
- }
+  }
 
 }
 
@@ -412,12 +413,12 @@ func (this *QSplitter) refresh(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter7refreshEv
   default:
     qtrt.ErrorResolve("QSplitter", "refresh", args)
- }
+  }
 
 }
 
@@ -430,12 +431,12 @@ func (this *QSplitter) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter8sizeHintEv
   default:
     qtrt.ErrorResolve("QSplitter", "sizeHint", args)
- }
+  }
 
 }
 
@@ -449,12 +450,12 @@ func (this *QSplitter) indexOf(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter7indexOfEP7QWidget
   default:
     qtrt.ErrorResolve("QSplitter", "indexOf", args)
- }
+  }
 
 }
 
@@ -470,12 +471,12 @@ func (this *QSplitter) getRange(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter8getRangeEiPiS0_
   default:
     qtrt.ErrorResolve("QSplitter", "getRange", args)
- }
+  }
 
 }
 
@@ -489,12 +490,12 @@ func (this *QSplitter) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6handleEi
   default:
     qtrt.ErrorResolve("QSplitter", "handle", args)
- }
+  }
 
 }
 
@@ -505,15 +506,16 @@ func (this *QSplitterHandle) FreeQSplitterHandle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSplitterHandle", "~QSplitterHandle", args)
- }
+  }
 
 }
 
 
-func NewQSplitterHandle(args ...interface{})() {
+func NewQSplitterHandle(args ...interface{}) QSplitterHandle {
+  return QSplitterHandle{}
 }
 
 
@@ -525,12 +527,12 @@ func (this *QSplitterHandle) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle8sizeHintEv
   default:
     qtrt.ErrorResolve("QSplitterHandle", "sizeHint", args)
- }
+  }
 
 }
 
@@ -543,12 +545,12 @@ func (this *QSplitterHandle) opaqueResize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle12opaqueResizeEv
   default:
     qtrt.ErrorResolve("QSplitterHandle", "opaqueResize", args)
- }
+  }
 
 }
 
@@ -561,12 +563,12 @@ func (this *QSplitterHandle) splitter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle8splitterEv
   default:
     qtrt.ErrorResolve("QSplitterHandle", "splitter", args)
- }
+  }
 
 }
 
@@ -579,12 +581,12 @@ func (this *QSplitterHandle) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle10metaObjectEv
   default:
     qtrt.ErrorResolve("QSplitterHandle", "metaObject", args)
- }
+  }
 
 }
 

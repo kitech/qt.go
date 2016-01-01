@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.go
 //
@@ -48,7 +48,8 @@ type QOpenGLShaderProgram struct {
 }
 
 
-func NewQOpenGLShader(args ...interface{})() {
+func NewQOpenGLShader(args ...interface{}) QOpenGLShader {
+  return QOpenGLShader{}
 }
 
 
@@ -60,12 +61,12 @@ func (this *QOpenGLShader) isCompiled(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLShader10isCompiledEv
   default:
     qtrt.ErrorResolve("QOpenGLShader", "isCompiled", args)
- }
+  }
 
 }
 
@@ -78,12 +79,12 @@ func (this *QOpenGLShader) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLShader10metaObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLShader", "metaObject", args)
- }
+  }
 
 }
 
@@ -96,12 +97,12 @@ func (this *QOpenGLShader) log(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLShader3logEv
   default:
     qtrt.ErrorResolve("QOpenGLShader", "log", args)
- }
+  }
 
 }
 
@@ -121,7 +122,7 @@ func (this *QOpenGLShader) compileSourceCode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLShader17compileSourceCodeERK7QString
   case 1:
@@ -130,7 +131,7 @@ func (this *QOpenGLShader) compileSourceCode(args ...interface{}) () {
     // invoke: _ZN13QOpenGLShader17compileSourceCodeEPKc
   default:
     qtrt.ErrorResolve("QOpenGLShader", "compileSourceCode", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QOpenGLShader) compileSourceFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLShader17compileSourceFileERK7QString
   default:
     qtrt.ErrorResolve("QOpenGLShader", "compileSourceFile", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QOpenGLShader) sourceCode(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLShader10sourceCodeEv
   default:
     qtrt.ErrorResolve("QOpenGLShader", "sourceCode", args)
- }
+  }
 
 }
 
@@ -178,10 +179,10 @@ func (this *QOpenGLShader) FreeQOpenGLShader(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLShader", "~QOpenGLShader", args)
- }
+  }
 
 }
 
@@ -194,12 +195,12 @@ func (this *QOpenGLShader) shaderId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLShader8shaderIdEv
   default:
     qtrt.ErrorResolve("QOpenGLShader", "shaderId", args)
- }
+  }
 
 }
 
@@ -212,12 +213,12 @@ func (this *QOpenGLShaderProgram) isLinked(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram8isLinkedEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "isLinked", args)
- }
+  }
 
 }
 
@@ -456,7 +457,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector3D
   case 1:
@@ -567,7 +568,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector2D
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setUniformValue", args)
- }
+  }
 
 }
 
@@ -666,7 +667,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector3D
   case 1:
@@ -705,7 +706,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcfff
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setAttributeValue", args)
- }
+  }
 
 }
 
@@ -868,7 +869,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector3Di
   case 1:
@@ -931,7 +932,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKfii
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setUniformValueArray", args)
- }
+  }
 
 }
 
@@ -956,14 +957,14 @@ func (this *QOpenGLShaderProgram) setAttributeBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram18setAttributeBufferEijiii
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setAttributeBuffer", args)
- }
+  }
 
 }
 
@@ -974,10 +975,10 @@ func (this *QOpenGLShaderProgram) hasOpenGLShaderPrograms_s(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "hasOpenGLShaderPrograms", args)
- }
+  }
 
 }
 
@@ -991,12 +992,12 @@ func (this *QOpenGLShaderProgram) setPatchVertexCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram19setPatchVertexCountEi
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setPatchVertexCount", args)
- }
+  }
 
 }
 
@@ -1063,7 +1064,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii
   case 1:
@@ -1086,7 +1087,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "setAttributeArray", args)
- }
+  }
 
 }
 
@@ -1109,7 +1110,7 @@ func (this *QOpenGLShaderProgram) bindAttributeLocation(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram21bindAttributeLocationERK10QByteArrayi
   case 1:
@@ -1118,7 +1119,7 @@ func (this *QOpenGLShaderProgram) bindAttributeLocation(args ...interface{}) () 
     // invoke: _ZN20QOpenGLShaderProgram21bindAttributeLocationERK7QStringi
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "bindAttributeLocation", args)
- }
+  }
 
 }
 
@@ -1131,12 +1132,12 @@ func (this *QOpenGLShaderProgram) bind(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram4bindEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "bind", args)
- }
+  }
 
 }
 
@@ -1153,14 +1154,14 @@ func (this *QOpenGLShaderProgram) enableAttributeArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram20enableAttributeArrayEi
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "enableAttributeArray", args)
- }
+  }
 
 }
 
@@ -1174,12 +1175,12 @@ func (this *QOpenGLShaderProgram) addShader(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "addShader", args)
- }
+  }
 
 }
 
@@ -1199,7 +1200,7 @@ func (this *QOpenGLShaderProgram) attributeLocation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram17attributeLocationERK7QString
   case 1:
@@ -1208,7 +1209,7 @@ func (this *QOpenGLShaderProgram) attributeLocation(args ...interface{}) () {
     // invoke: _ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "attributeLocation", args)
- }
+  }
 
 }
 
@@ -1221,12 +1222,12 @@ func (this *QOpenGLShaderProgram) programId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram9programIdEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "programId", args)
- }
+  }
 
 }
 
@@ -1243,14 +1244,14 @@ func (this *QOpenGLShaderProgram) disableAttributeArray(args ...interface{}) () 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram21disableAttributeArrayEi
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram21disableAttributeArrayEPKc
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "disableAttributeArray", args)
- }
+  }
 
 }
 
@@ -1270,7 +1271,7 @@ func (this *QOpenGLShaderProgram) uniformLocation(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram15uniformLocationERK7QString
   case 1:
@@ -1279,7 +1280,7 @@ func (this *QOpenGLShaderProgram) uniformLocation(args ...interface{}) () {
     // invoke: _ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "uniformLocation", args)
- }
+  }
 
 }
 
@@ -1290,10 +1291,10 @@ func (this *QOpenGLShaderProgram) FreeQOpenGLShaderProgram(args ...interface{}) 
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "~QOpenGLShaderProgram", args)
- }
+  }
 
 }
 
@@ -1306,12 +1307,12 @@ func (this *QOpenGLShaderProgram) defaultInnerTessellationLevels(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "defaultInnerTessellationLevels", args)
- }
+  }
 
 }
 
@@ -1324,12 +1325,12 @@ func (this *QOpenGLShaderProgram) link(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram4linkEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "link", args)
- }
+  }
 
 }
 
@@ -1342,12 +1343,12 @@ func (this *QOpenGLShaderProgram) shaders(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram7shadersEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "shaders", args)
- }
+  }
 
 }
 
@@ -1360,12 +1361,12 @@ func (this *QOpenGLShaderProgram) defaultOuterTessellationLevels(args ...interfa
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "defaultOuterTessellationLevels", args)
- }
+  }
 
 }
 
@@ -1378,12 +1379,12 @@ func (this *QOpenGLShaderProgram) log(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram3logEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "log", args)
- }
+  }
 
 }
 
@@ -1396,12 +1397,12 @@ func (this *QOpenGLShaderProgram) patchVertexCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram16patchVertexCountEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "patchVertexCount", args)
- }
+  }
 
 }
 
@@ -1414,12 +1415,12 @@ func (this *QOpenGLShaderProgram) create(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram6createEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "create", args)
- }
+  }
 
 }
 
@@ -1433,17 +1434,18 @@ func (this *QOpenGLShaderProgram) removeShader(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram12removeShaderEP13QOpenGLShader
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "removeShader", args)
- }
+  }
 
 }
 
 
-func NewQOpenGLShaderProgram(args ...interface{})() {
+func NewQOpenGLShaderProgram(args ...interface{}) QOpenGLShaderProgram {
+  return QOpenGLShaderProgram{}
 }
 
 
@@ -1455,12 +1457,12 @@ func (this *QOpenGLShaderProgram) removeAllShaders(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram16removeAllShadersEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "removeAllShaders", args)
- }
+  }
 
 }
 
@@ -1473,12 +1475,12 @@ func (this *QOpenGLShaderProgram) maxGeometryOutputVertices(args ...interface{})
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "maxGeometryOutputVertices", args)
- }
+  }
 
 }
 
@@ -1491,12 +1493,12 @@ func (this *QOpenGLShaderProgram) release(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram7releaseEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "release", args)
- }
+  }
 
 }
 
@@ -1509,12 +1511,12 @@ func (this *QOpenGLShaderProgram) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram10metaObjectEv
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "metaObject", args)
- }
+  }
 
 }
 

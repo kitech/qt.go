@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -56,12 +56,12 @@ func (this *QItemEditorCreatorBase) valuePropertyName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QItemEditorCreatorBase17valuePropertyNameEv
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "valuePropertyName", args)
- }
+  }
 
 }
 
@@ -75,12 +75,12 @@ func (this *QItemEditorCreatorBase) createWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "createWidget", args)
- }
+  }
 
 }
 
@@ -91,15 +91,16 @@ func (this *QItemEditorCreatorBase) FreeQItemEditorCreatorBase(args ...interface
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "~QItemEditorCreatorBase", args)
- }
+  }
 
 }
 
 
-func NewQItemEditorFactory(args ...interface{})() {
+func NewQItemEditorFactory(args ...interface{}) QItemEditorFactory {
+  return QItemEditorFactory{}
 }
 
 
@@ -112,12 +113,12 @@ func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QItemEditorFactory17valuePropertyNameEi
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "valuePropertyName", args)
- }
+  }
 
 }
 
@@ -128,10 +129,10 @@ func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "defaultFactory", args)
- }
+  }
 
 }
 
@@ -142,10 +143,10 @@ func (this *QItemEditorFactory) FreeQItemEditorFactory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "~QItemEditorFactory", args)
- }
+  }
 
 }
 
@@ -160,12 +161,12 @@ func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "registerEditor", args)
- }
+  }
 
 }
 
@@ -176,10 +177,10 @@ func (this *QItemEditorFactory) setDefaultFactory_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "setDefaultFactory", args)
- }
+  }
 
 }
 
@@ -194,12 +195,12 @@ func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QItemEditorFactory12createEditorEiP7QWidget
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "createEditor", args)
- }
+  }
 
 }
 

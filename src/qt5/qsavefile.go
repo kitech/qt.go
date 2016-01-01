@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -50,17 +50,18 @@ func (this *QSaveFile) cancelWriting(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile13cancelWritingEv
   default:
     qtrt.ErrorResolve("QSaveFile", "cancelWriting", args)
- }
+  }
 
 }
 
 
-func NewQSaveFile(args ...interface{})() {
+func NewQSaveFile(args ...interface{}) QSaveFile {
+  return QSaveFile{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QSaveFile) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile10metaObjectEv
   default:
     qtrt.ErrorResolve("QSaveFile", "metaObject", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QSaveFile) commit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
- }
+  }
 
 }
 
@@ -124,10 +125,10 @@ func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSaveFile", "~QSaveFile", args)
- }
+  }
 
 }
 
@@ -141,12 +142,12 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
- }
+  }
 
 }
 
@@ -159,12 +160,12 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
- }
+  }
 
 }
 
@@ -178,12 +179,12 @@ func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile22setDirectWriteFallbackEb
   default:
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
- }
+  }
 
 }
 

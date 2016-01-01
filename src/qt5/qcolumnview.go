@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcolumnview.h
 // dst-file: /src/widgets/qcolumnview.go
 //
@@ -43,7 +43,8 @@ type QColumnView struct {
 }
 
 
-func NewQColumnView(args ...interface{})() {
+func NewQColumnView(args ...interface{}) QColumnView {
+  return QColumnView{}
 }
 
 
@@ -55,12 +56,12 @@ func (this *QColumnView) selectAll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView9selectAllEv
   default:
     qtrt.ErrorResolve("QColumnView", "selectAll", args)
- }
+  }
 
 }
 
@@ -74,12 +75,12 @@ func (this *QColumnView) setPreviewWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView16setPreviewWidgetEP7QWidget
   default:
     qtrt.ErrorResolve("QColumnView", "setPreviewWidget", args)
- }
+  }
 
 }
 
@@ -93,12 +94,12 @@ func (this *QColumnView) indexAt(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView7indexAtERK6QPoint
   default:
     qtrt.ErrorResolve("QColumnView", "indexAt", args)
- }
+  }
 
 }
 
@@ -111,12 +112,12 @@ func (this *QColumnView) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView10metaObjectEv
   default:
     qtrt.ErrorResolve("QColumnView", "metaObject", args)
- }
+  }
 
 }
 
@@ -129,12 +130,12 @@ func (this *QColumnView) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView8sizeHintEv
   default:
     qtrt.ErrorResolve("QColumnView", "sizeHint", args)
- }
+  }
 
 }
 
@@ -147,12 +148,12 @@ func (this *QColumnView) columnWidths(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView12columnWidthsEv
   default:
     qtrt.ErrorResolve("QColumnView", "columnWidths", args)
- }
+  }
 
 }
 
@@ -166,12 +167,12 @@ func (this *QColumnView) setResizeGripsVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView21setResizeGripsVisibleEb
   default:
     qtrt.ErrorResolve("QColumnView", "setResizeGripsVisible", args)
- }
+  }
 
 }
 
@@ -184,12 +185,12 @@ func (this *QColumnView) resizeGripsVisible(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView18resizeGripsVisibleEv
   default:
     qtrt.ErrorResolve("QColumnView", "resizeGripsVisible", args)
- }
+  }
 
 }
 
@@ -203,12 +204,12 @@ func (this *QColumnView) setModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView8setModelEP18QAbstractItemModel
   default:
     qtrt.ErrorResolve("QColumnView", "setModel", args)
- }
+  }
 
 }
 
@@ -222,12 +223,12 @@ func (this *QColumnView) setRootIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView12setRootIndexERK11QModelIndex
   default:
     qtrt.ErrorResolve("QColumnView", "setRootIndex", args)
- }
+  }
 
 }
 
@@ -240,12 +241,12 @@ func (this *QColumnView) previewWidget(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView13previewWidgetEv
   default:
     qtrt.ErrorResolve("QColumnView", "previewWidget", args)
- }
+  }
 
 }
 
@@ -259,12 +260,12 @@ func (this *QColumnView) setSelectionModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN11QColumnView17setSelectionModelEP19QItemSelectionModel
   default:
     qtrt.ErrorResolve("QColumnView", "setSelectionModel", args)
- }
+  }
 
 }
 
@@ -278,12 +279,12 @@ func (this *QColumnView) visualRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QColumnView10visualRectERK11QModelIndex
   default:
     qtrt.ErrorResolve("QColumnView", "visualRect", args)
- }
+  }
 
 }
 
@@ -294,10 +295,10 @@ func (this *QColumnView) FreeQColumnView(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QColumnView", "~QColumnView", args)
- }
+  }
 
 }
 

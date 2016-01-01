@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -50,12 +50,12 @@ func (this *QRawFont) averageCharWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont16averageCharWidthEv
   default:
     qtrt.ErrorResolve("QRawFont", "averageCharWidth", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QRawFont) ascent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont6ascentEv
   default:
     qtrt.ErrorResolve("QRawFont", "ascent", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QRawFont) leading(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont7leadingEv
   default:
     qtrt.ErrorResolve("QRawFont", "leading", args)
- }
+  }
 
 }
 
@@ -104,12 +104,12 @@ func (this *QRawFont) lineThickness(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont13lineThicknessEv
   default:
     qtrt.ErrorResolve("QRawFont", "lineThickness", args)
- }
+  }
 
 }
 
@@ -122,12 +122,12 @@ func (this *QRawFont) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont7isValidEv
   default:
     qtrt.ErrorResolve("QRawFont", "isValid", args)
- }
+  }
 
 }
 
@@ -141,12 +141,12 @@ func (this *QRawFont) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont12boundingRectEj
   default:
     qtrt.ErrorResolve("QRawFont", "boundingRect", args)
- }
+  }
 
 }
 
@@ -163,14 +163,14 @@ func (this *QRawFont) supportsCharacter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont17supportsCharacterEj
   case 1:
     // invoke: _ZNK8QRawFont17supportsCharacterE5QChar
   default:
     qtrt.ErrorResolve("QRawFont", "supportsCharacter", args)
- }
+  }
 
 }
 
@@ -184,12 +184,12 @@ func (this *QRawFont) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QRawFont4swapERS_
   default:
     qtrt.ErrorResolve("QRawFont", "swap", args)
- }
+  }
 
 }
 
@@ -202,17 +202,18 @@ func (this *QRawFont) descent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont7descentEv
   default:
     qtrt.ErrorResolve("QRawFont", "descent", args)
- }
+  }
 
 }
 
 
-func NewQRawFont(args ...interface{})() {
+func NewQRawFont(args ...interface{}) QRawFont {
+  return QRawFont{}
 }
 
 
@@ -225,12 +226,12 @@ func (this *QRawFont) setPixelSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QRawFont12setPixelSizeEd
   default:
     qtrt.ErrorResolve("QRawFont", "setPixelSize", args)
- }
+  }
 
 }
 
@@ -247,12 +248,12 @@ func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForChars", args)
- }
+  }
 
 }
 
@@ -265,12 +266,12 @@ func (this *QRawFont) styleName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont9styleNameEv
   default:
     qtrt.ErrorResolve("QRawFont", "styleName", args)
- }
+  }
 
 }
 
@@ -283,12 +284,12 @@ func (this *QRawFont) underlinePosition(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont17underlinePositionEv
   default:
     qtrt.ErrorResolve("QRawFont", "underlinePosition", args)
- }
+  }
 
 }
 
@@ -301,12 +302,12 @@ func (this *QRawFont) unitsPerEm(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont10unitsPerEmEv
   default:
     qtrt.ErrorResolve("QRawFont", "unitsPerEm", args)
- }
+  }
 
 }
 
@@ -319,12 +320,12 @@ func (this *QRawFont) familyName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont10familyNameEv
   default:
     qtrt.ErrorResolve("QRawFont", "familyName", args)
- }
+  }
 
 }
 
@@ -353,7 +354,7 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesERK7QVectorIjE6QFlagsINS_10LayoutFlagEE
   case 1:
@@ -364,7 +365,7 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE
   default:
     qtrt.ErrorResolve("QRawFont", "advancesForGlyphIndexes", args)
- }
+  }
 
 }
 
@@ -377,12 +378,12 @@ func (this *QRawFont) pixelSize(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont9pixelSizeEv
   default:
     qtrt.ErrorResolve("QRawFont", "pixelSize", args)
- }
+  }
 
 }
 
@@ -395,12 +396,12 @@ func (this *QRawFont) weight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont6weightEv
   default:
     qtrt.ErrorResolve("QRawFont", "weight", args)
- }
+  }
 
 }
 
@@ -413,12 +414,12 @@ func (this *QRawFont) xHeight(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont7xHeightEv
   default:
     qtrt.ErrorResolve("QRawFont", "xHeight", args)
- }
+  }
 
 }
 
@@ -429,10 +430,10 @@ func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRawFont", "~QRawFont", args)
- }
+  }
 
 }
 
@@ -446,12 +447,12 @@ func (this *QRawFont) pathForGlyph(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont12pathForGlyphEj
   default:
     qtrt.ErrorResolve("QRawFont", "pathForGlyph", args)
- }
+  }
 
 }
 
@@ -465,12 +466,12 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont9fontTableEPKc
   default:
     qtrt.ErrorResolve("QRawFont", "fontTable", args)
- }
+  }
 
 }
 
@@ -483,12 +484,12 @@ func (this *QRawFont) maxCharWidth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont12maxCharWidthEv
   default:
     qtrt.ErrorResolve("QRawFont", "maxCharWidth", args)
- }
+  }
 
 }
 
@@ -502,12 +503,12 @@ func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont21glyphIndexesForStringERK7QString
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForString", args)
- }
+  }
 
 }
 

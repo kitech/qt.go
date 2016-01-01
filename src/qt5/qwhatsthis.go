@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.go
 //
@@ -48,10 +48,10 @@ func (this *QWhatsThis) hideText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "hideText", args)
- }
+  }
 
 }
 
@@ -62,10 +62,10 @@ func (this *QWhatsThis) enterWhatsThisMode_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "enterWhatsThisMode", args)
- }
+  }
 
 }
 
@@ -76,10 +76,10 @@ func (this *QWhatsThis) inWhatsThisMode_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "inWhatsThisMode", args)
- }
+  }
 
 }
 
@@ -90,15 +90,16 @@ func (this *QWhatsThis) leaveWhatsThisMode_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "leaveWhatsThisMode", args)
- }
+  }
 
 }
 
 
-func NewQWhatsThis(args ...interface{})() {
+func NewQWhatsThis(args ...interface{}) QWhatsThis {
+  return QWhatsThis{}
 }
 
 
@@ -108,10 +109,10 @@ func (this *QWhatsThis) showText_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "showText", args)
- }
+  }
 
 }
 
@@ -122,10 +123,10 @@ func (this *QWhatsThis) createAction_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QWhatsThis", "createAction", args)
- }
+  }
 
 }
 

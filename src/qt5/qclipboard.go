@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -52,15 +52,16 @@ func (this *QClipboard) FreeQClipboard(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QClipboard", "~QClipboard", args)
- }
+  }
 
 }
 
 
-func NewQClipboard(args ...interface{})() {
+func NewQClipboard(args ...interface{}) QClipboard {
+  return QClipboard{}
 }
 
 
@@ -72,12 +73,12 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
- }
+  }
 
 }
 
@@ -108,12 +109,12 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
- }
+  }
 
 }
 
@@ -126,12 +127,12 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard10metaObjectEv
   default:
     qtrt.ErrorResolve("QClipboard", "metaObject", args)
- }
+  }
 
 }
 
@@ -144,12 +145,12 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
- }
+  }
 
 }
 
@@ -162,12 +163,12 @@ func (this *QClipboard) ownsSelection(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
- }
+  }
 
 }
 

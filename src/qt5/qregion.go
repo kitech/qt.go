@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.go
 //
@@ -50,12 +50,12 @@ func (this *QRegion) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion6isNullEv
   default:
     qtrt.ErrorResolve("QRegion", "isNull", args)
- }
+  }
 
 }
 
@@ -68,17 +68,18 @@ func (this *QRegion) boundingRect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion12boundingRectEv
   default:
     qtrt.ErrorResolve("QRegion", "boundingRect", args)
- }
+  }
 
 }
 
 
-func NewQRegion(args ...interface{})() {
+func NewQRegion(args ...interface{}) QRegion {
+  return QRegion{}
 }
 
 
@@ -90,12 +91,12 @@ func (this *QRegion) rectCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion9rectCountEv
   default:
     qtrt.ErrorResolve("QRegion", "rectCount", args)
- }
+  }
 
 }
 
@@ -113,14 +114,14 @@ func (this *QRegion) translate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegion9translateEii
   case 1:
     // invoke: _ZN7QRegion9translateERK6QPoint
   default:
     qtrt.ErrorResolve("QRegion", "translate", args)
- }
+  }
 
 }
 
@@ -137,14 +138,14 @@ func (this *QRegion) united(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion6unitedERKS_
   case 1:
     // invoke: _ZNK7QRegion6unitedERK5QRect
   default:
     qtrt.ErrorResolve("QRegion", "united", args)
- }
+  }
 
 }
 
@@ -162,14 +163,14 @@ func (this *QRegion) translated(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10translatedERK6QPoint
   case 1:
     // invoke: _ZNK7QRegion10translatedEii
   default:
     qtrt.ErrorResolve("QRegion", "translated", args)
- }
+  }
 
 }
 
@@ -183,12 +184,12 @@ func (this *QRegion) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegion4swapERS_
   default:
     qtrt.ErrorResolve("QRegion", "swap", args)
- }
+  }
 
 }
 
@@ -199,10 +200,10 @@ func (this *QRegion) FreeQRegion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QRegion", "~QRegion", args)
- }
+  }
 
 }
 
@@ -219,14 +220,14 @@ func (this *QRegion) contains(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion8containsERK5QRect
   case 1:
     // invoke: _ZNK7QRegion8containsERK6QPoint
   default:
     qtrt.ErrorResolve("QRegion", "contains", args)
- }
+  }
 
 }
 
@@ -239,12 +240,12 @@ func (this *QRegion) isEmpty(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion7isEmptyEv
   default:
     qtrt.ErrorResolve("QRegion", "isEmpty", args)
- }
+  }
 
 }
 
@@ -261,14 +262,14 @@ func (this *QRegion) intersected(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion11intersectedERK5QRect
   case 1:
     // invoke: _ZNK7QRegion11intersectedERKS_
   default:
     qtrt.ErrorResolve("QRegion", "intersected", args)
- }
+  }
 
 }
 
@@ -283,12 +284,12 @@ func (this *QRegion) setRects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QRegion8setRectsEPK5QRecti
   default:
     qtrt.ErrorResolve("QRegion", "setRects", args)
- }
+  }
 
 }
 
@@ -301,12 +302,12 @@ func (this *QRegion) rects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion5rectsEv
   default:
     qtrt.ErrorResolve("QRegion", "rects", args)
- }
+  }
 
 }
 
@@ -320,12 +321,12 @@ func (this *QRegion) subtracted(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10subtractedERKS_
   default:
     qtrt.ErrorResolve("QRegion", "subtracted", args)
- }
+  }
 
 }
 
@@ -342,14 +343,14 @@ func (this *QRegion) intersects(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10intersectsERK5QRect
   case 1:
     // invoke: _ZNK7QRegion10intersectsERKS_
   default:
     qtrt.ErrorResolve("QRegion", "intersects", args)
- }
+  }
 
 }
 
@@ -363,12 +364,12 @@ func (this *QRegion) xored(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion5xoredERKS_
   default:
     qtrt.ErrorResolve("QRegion", "xored", args)
- }
+  }
 
 }
 

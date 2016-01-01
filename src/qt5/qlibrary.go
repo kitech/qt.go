@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -48,15 +48,16 @@ func (this *QLibrary) resolve_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibrary", "resolve", args)
- }
+  }
 
 }
 
 
-func NewQLibrary(args ...interface{})() {
+func NewQLibrary(args ...interface{}) QLibrary {
+  return QLibrary{}
 }
 
 
@@ -68,12 +69,12 @@ func (this *QLibrary) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary10metaObjectEv
   default:
     qtrt.ErrorResolve("QLibrary", "metaObject", args)
- }
+  }
 
 }
 
@@ -86,12 +87,12 @@ func (this *QLibrary) isLoaded(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary8isLoadedEv
   default:
     qtrt.ErrorResolve("QLibrary", "isLoaded", args)
- }
+  }
 
 }
 
@@ -104,12 +105,12 @@ func (this *QLibrary) load(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary4loadEv
   default:
     qtrt.ErrorResolve("QLibrary", "load", args)
- }
+  }
 
 }
 
@@ -122,12 +123,12 @@ func (this *QLibrary) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary8fileNameEv
   default:
     qtrt.ErrorResolve("QLibrary", "fileName", args)
- }
+  }
 
 }
 
@@ -141,12 +142,12 @@ func (this *QLibrary) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QLibrary", "setFileName", args)
- }
+  }
 
 }
 
@@ -157,10 +158,10 @@ func (this *QLibrary) isLibrary_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibrary", "isLibrary", args)
- }
+  }
 
 }
 
@@ -173,12 +174,12 @@ func (this *QLibrary) unload(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary6unloadEv
   default:
     qtrt.ErrorResolve("QLibrary", "unload", args)
- }
+  }
 
 }
 
@@ -206,7 +207,7 @@ func (this *QLibrary) resolve(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary7resolveERK7QStringS2_PKc
   case 1:
@@ -217,7 +218,7 @@ func (this *QLibrary) resolve(args ...interface{}) () {
     // invoke: _ZN8QLibrary7resolveERK7QStringiPKc
   default:
     qtrt.ErrorResolve("QLibrary", "resolve", args)
- }
+  }
 
 }
 
@@ -236,14 +237,14 @@ func (this *QLibrary) setFileNameAndVersion(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_
   case 1:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringi
   default:
     qtrt.ErrorResolve("QLibrary", "setFileNameAndVersion", args)
- }
+  }
 
 }
 
@@ -254,10 +255,10 @@ func (this *QLibrary) FreeQLibrary(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QLibrary", "~QLibrary", args)
- }
+  }
 
 }
 
@@ -270,12 +271,12 @@ func (this *QLibrary) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary11errorStringEv
   default:
     qtrt.ErrorResolve("QLibrary", "errorString", args)
- }
+  }
 
 }
 

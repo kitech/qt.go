@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.go
 //
@@ -50,12 +50,12 @@ func (this *QSharedMemory) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory4sizeEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "size", args)
- }
+  }
 
 }
 
@@ -69,17 +69,18 @@ func (this *QSharedMemory) setNativeKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory12setNativeKeyERK7QString
   default:
     qtrt.ErrorResolve("QSharedMemory", "setNativeKey", args)
- }
+  }
 
 }
 
 
-func NewQSharedMemory(args ...interface{})() {
+func NewQSharedMemory(args ...interface{}) QSharedMemory {
+  return QSharedMemory{}
 }
 
 
@@ -91,12 +92,12 @@ func (this *QSharedMemory) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory11errorStringEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "errorString", args)
- }
+  }
 
 }
 
@@ -110,12 +111,12 @@ func (this *QSharedMemory) setKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6setKeyERK7QString
   default:
     qtrt.ErrorResolve("QSharedMemory", "setKey", args)
- }
+  }
 
 }
 
@@ -128,12 +129,12 @@ func (this *QSharedMemory) key(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory3keyEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "key", args)
- }
+  }
 
 }
 
@@ -146,12 +147,12 @@ func (this *QSharedMemory) constData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory9constDataEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "constData", args)
- }
+  }
 
 }
 
@@ -166,14 +167,14 @@ func (this *QSharedMemory) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory4dataEv
   case 1:
     // invoke: _ZN13QSharedMemory4dataEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "data", args)
- }
+  }
 
 }
 
@@ -186,12 +187,12 @@ func (this *QSharedMemory) isAttached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory10isAttachedEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "isAttached", args)
- }
+  }
 
 }
 
@@ -204,12 +205,12 @@ func (this *QSharedMemory) lock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory4lockEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "lock", args)
- }
+  }
 
 }
 
@@ -220,10 +221,10 @@ func (this *QSharedMemory) FreeQSharedMemory(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QSharedMemory", "~QSharedMemory", args)
- }
+  }
 
 }
 
@@ -236,12 +237,12 @@ func (this *QSharedMemory) unlock(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6unlockEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "unlock", args)
- }
+  }
 
 }
 
@@ -254,12 +255,12 @@ func (this *QSharedMemory) detach(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6detachEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "detach", args)
- }
+  }
 
 }
 
@@ -272,12 +273,12 @@ func (this *QSharedMemory) nativeKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory9nativeKeyEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "nativeKey", args)
- }
+  }
 
 }
 
@@ -290,12 +291,12 @@ func (this *QSharedMemory) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory10metaObjectEv
   default:
     qtrt.ErrorResolve("QSharedMemory", "metaObject", args)
- }
+  }
 
 }
 

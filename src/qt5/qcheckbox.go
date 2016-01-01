@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.go
 //
@@ -51,12 +51,12 @@ func (this *QCheckBox) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox10metaObjectEv
   default:
     qtrt.ErrorResolve("QCheckBox", "metaObject", args)
- }
+  }
 
 }
 
@@ -69,12 +69,12 @@ func (this *QCheckBox) minimumSizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox15minimumSizeHintEv
   default:
     qtrt.ErrorResolve("QCheckBox", "minimumSizeHint", args)
- }
+  }
 
 }
 
@@ -85,10 +85,10 @@ func (this *QCheckBox) FreeQCheckBox(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QCheckBox", "~QCheckBox", args)
- }
+  }
 
 }
 
@@ -101,12 +101,12 @@ func (this *QCheckBox) sizeHint(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox8sizeHintEv
   default:
     qtrt.ErrorResolve("QCheckBox", "sizeHint", args)
- }
+  }
 
 }
 
@@ -120,17 +120,18 @@ func (this *QCheckBox) setTristate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN9QCheckBox11setTristateEb
   default:
     qtrt.ErrorResolve("QCheckBox", "setTristate", args)
- }
+  }
 
 }
 
 
-func NewQCheckBox(args ...interface{})() {
+func NewQCheckBox(args ...interface{}) QCheckBox {
+  return QCheckBox{}
 }
 
 
@@ -142,12 +143,12 @@ func (this *QCheckBox) isTristate(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox10isTristateEv
   default:
     qtrt.ErrorResolve("QCheckBox", "isTristate", args)
- }
+  }
 
 }
 

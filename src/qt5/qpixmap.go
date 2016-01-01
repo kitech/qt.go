@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -58,14 +58,14 @@ func (this *QPixmap) save(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap4saveERK7QStringPKci
   case 1:
     // invoke: _ZNK7QPixmap4saveEP9QIODevicePKci
   default:
     qtrt.ErrorResolve("QPixmap", "save", args)
- }
+  }
 
 }
 
@@ -79,12 +79,12 @@ func (this *QPixmap) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap4swapERS_
   default:
     qtrt.ErrorResolve("QPixmap", "swap", args)
- }
+  }
 
 }
 
@@ -97,12 +97,12 @@ func (this *QPixmap) isQBitmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap9isQBitmapEv
   default:
     qtrt.ErrorResolve("QPixmap", "isQBitmap", args)
- }
+  }
 
 }
 
@@ -115,17 +115,18 @@ func (this *QPixmap) devicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap16devicePixelRatioEv
   default:
     qtrt.ErrorResolve("QPixmap", "devicePixelRatio", args)
- }
+  }
 
 }
 
 
-func NewQPixmap(args ...interface{})() {
+func NewQPixmap(args ...interface{}) QPixmap {
+  return QPixmap{}
 }
 
 
@@ -147,7 +148,7 @@ func (this *QPixmap) fill(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap4fillEPK12QPaintDeviceii
   case 1:
@@ -156,7 +157,7 @@ func (this *QPixmap) fill(args ...interface{}) () {
     // invoke: _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint
   default:
     qtrt.ErrorResolve("QPixmap", "fill", args)
- }
+  }
 
 }
 
@@ -169,12 +170,12 @@ func (this *QPixmap) devType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap7devTypeEv
   default:
     qtrt.ErrorResolve("QPixmap", "devType", args)
- }
+  }
 
 }
 
@@ -200,14 +201,14 @@ func (this *QPixmap) scroll(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap6scrollEiiiiiiP7QRegion
   case 1:
     // invoke: _ZN7QPixmap6scrollEiiRK5QRectP7QRegion
   default:
     qtrt.ErrorResolve("QPixmap", "scroll", args)
- }
+  }
 
 }
 
@@ -227,14 +228,14 @@ func (this *QPixmap) copy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap4copyERK5QRect
   case 1:
     // invoke: _ZNK7QPixmap4copyEiiii
   default:
     qtrt.ErrorResolve("QPixmap", "copy", args)
- }
+  }
 
 }
 
@@ -245,10 +246,10 @@ func (this *QPixmap) trueMatrix_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmap", "trueMatrix", args)
- }
+  }
 
 }
 
@@ -259,10 +260,10 @@ func (this *QPixmap) grabWindow_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmap", "grabWindow", args)
- }
+  }
 
 }
 
@@ -275,12 +276,12 @@ func (this *QPixmap) isDetached(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap10isDetachedEv
   default:
     qtrt.ErrorResolve("QPixmap", "isDetached", args)
- }
+  }
 
 }
 
@@ -293,12 +294,12 @@ func (this *QPixmap) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap6isNullEv
   default:
     qtrt.ErrorResolve("QPixmap", "isNull", args)
- }
+  }
 
 }
 
@@ -309,10 +310,10 @@ func (this *QPixmap) defaultDepth_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmap", "defaultDepth", args)
- }
+  }
 
 }
 
@@ -325,12 +326,12 @@ func (this *QPixmap) detach(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap6detachEv
   default:
     qtrt.ErrorResolve("QPixmap", "detach", args)
- }
+  }
 
 }
 
@@ -344,12 +345,12 @@ func (this *QPixmap) setMask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap7setMaskERK7QBitmap
   default:
     qtrt.ErrorResolve("QPixmap", "setMask", args)
- }
+  }
 
 }
 
@@ -360,10 +361,10 @@ func (this *QPixmap) grabWidget_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmap", "grabWidget", args)
- }
+  }
 
 }
 
@@ -377,12 +378,12 @@ func (this *QPixmap) setDevicePixelRatio(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN7QPixmap19setDevicePixelRatioEd
   default:
     qtrt.ErrorResolve("QPixmap", "setDevicePixelRatio", args)
- }
+  }
 
 }
 
@@ -395,12 +396,12 @@ func (this *QPixmap) cacheKey(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap8cacheKeyEv
   default:
     qtrt.ErrorResolve("QPixmap", "cacheKey", args)
- }
+  }
 
 }
 
@@ -414,12 +415,12 @@ func (this *QPixmap) createHeuristicMask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap19createHeuristicMaskEb
   default:
     qtrt.ErrorResolve("QPixmap", "createHeuristicMask", args)
- }
+  }
 
 }
 
@@ -432,12 +433,12 @@ func (this *QPixmap) depth(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap5depthEv
   default:
     qtrt.ErrorResolve("QPixmap", "depth", args)
- }
+  }
 
 }
 
@@ -450,12 +451,12 @@ func (this *QPixmap) toImage(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap7toImageEv
   default:
     qtrt.ErrorResolve("QPixmap", "toImage", args)
- }
+  }
 
 }
 
@@ -468,12 +469,12 @@ func (this *QPixmap) handle(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap6handleEv
   default:
     qtrt.ErrorResolve("QPixmap", "handle", args)
- }
+  }
 
 }
 
@@ -486,12 +487,12 @@ func (this *QPixmap) hasAlphaChannel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap15hasAlphaChannelEv
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlphaChannel", args)
- }
+  }
 
 }
 
@@ -504,12 +505,12 @@ func (this *QPixmap) rect(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap4rectEv
   default:
     qtrt.ErrorResolve("QPixmap", "rect", args)
- }
+  }
 
 }
 
@@ -522,12 +523,12 @@ func (this *QPixmap) mask(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap4maskEv
   default:
     qtrt.ErrorResolve("QPixmap", "mask", args)
- }
+  }
 
 }
 
@@ -540,12 +541,12 @@ func (this *QPixmap) width(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap5widthEv
   default:
     qtrt.ErrorResolve("QPixmap", "width", args)
- }
+  }
 
 }
 
@@ -558,12 +559,12 @@ func (this *QPixmap) paintEngine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap11paintEngineEv
   default:
     qtrt.ErrorResolve("QPixmap", "paintEngine", args)
- }
+  }
 
 }
 
@@ -574,10 +575,10 @@ func (this *QPixmap) FreeQPixmap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPixmap", "~QPixmap", args)
- }
+  }
 
 }
 
@@ -590,12 +591,12 @@ func (this *QPixmap) height(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap6heightEv
   default:
     qtrt.ErrorResolve("QPixmap", "height", args)
- }
+  }
 
 }
 
@@ -608,12 +609,12 @@ func (this *QPixmap) size(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap4sizeEv
   default:
     qtrt.ErrorResolve("QPixmap", "size", args)
- }
+  }
 
 }
 
@@ -626,12 +627,12 @@ func (this *QPixmap) hasAlpha(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK7QPixmap8hasAlphaEv
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlpha", args)
- }
+  }
 
 }
 

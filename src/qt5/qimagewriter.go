@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -52,12 +52,12 @@ func (this *QImageWriter) setText(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter7setTextERK7QStringS2_
   default:
     qtrt.ErrorResolve("QImageWriter", "setText", args)
- }
+  }
 
 }
 
@@ -71,12 +71,12 @@ func (this *QImageWriter) setGamma(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter8setGammaEf
   default:
     qtrt.ErrorResolve("QImageWriter", "setGamma", args)
- }
+  }
 
 }
 
@@ -90,12 +90,12 @@ func (this *QImageWriter) setFileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter11setFileNameERK7QString
   default:
     qtrt.ErrorResolve("QImageWriter", "setFileName", args)
- }
+  }
 
 }
 
@@ -108,12 +108,12 @@ func (this *QImageWriter) optimizedWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter14optimizedWriteEv
   default:
     qtrt.ErrorResolve("QImageWriter", "optimizedWrite", args)
- }
+  }
 
 }
 
@@ -124,10 +124,10 @@ func (this *QImageWriter) FreeQImageWriter(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QImageWriter", "~QImageWriter", args)
- }
+  }
 
 }
 
@@ -140,12 +140,12 @@ func (this *QImageWriter) device(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter6deviceEv
   default:
     qtrt.ErrorResolve("QImageWriter", "device", args)
- }
+  }
 
 }
 
@@ -158,12 +158,12 @@ func (this *QImageWriter) subType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter7subTypeEv
   default:
     qtrt.ErrorResolve("QImageWriter", "subType", args)
- }
+  }
 
 }
 
@@ -174,10 +174,10 @@ func (this *QImageWriter) supportedMimeTypes_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QImageWriter", "supportedMimeTypes", args)
- }
+  }
 
 }
 
@@ -190,12 +190,12 @@ func (this *QImageWriter) quality(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter7qualityEv
   default:
     qtrt.ErrorResolve("QImageWriter", "quality", args)
- }
+  }
 
 }
 
@@ -209,12 +209,12 @@ func (this *QImageWriter) write(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter5writeERK6QImage
   default:
     qtrt.ErrorResolve("QImageWriter", "write", args)
- }
+  }
 
 }
 
@@ -228,12 +228,12 @@ func (this *QImageWriter) setCompression(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter14setCompressionEi
   default:
     qtrt.ErrorResolve("QImageWriter", "setCompression", args)
- }
+  }
 
 }
 
@@ -244,10 +244,10 @@ func (this *QImageWriter) supportedImageFormats_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QImageWriter", "supportedImageFormats", args)
- }
+  }
 
 }
 
@@ -260,12 +260,12 @@ func (this *QImageWriter) fileName(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter8fileNameEv
   default:
     qtrt.ErrorResolve("QImageWriter", "fileName", args)
- }
+  }
 
 }
 
@@ -279,12 +279,12 @@ func (this *QImageWriter) setOptimizedWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter17setOptimizedWriteEb
   default:
     qtrt.ErrorResolve("QImageWriter", "setOptimizedWrite", args)
- }
+  }
 
 }
 
@@ -297,12 +297,12 @@ func (this *QImageWriter) errorString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter11errorStringEv
   default:
     qtrt.ErrorResolve("QImageWriter", "errorString", args)
- }
+  }
 
 }
 
@@ -316,12 +316,12 @@ func (this *QImageWriter) setQuality(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter10setQualityEi
   default:
     qtrt.ErrorResolve("QImageWriter", "setQuality", args)
- }
+  }
 
 }
 
@@ -334,12 +334,12 @@ func (this *QImageWriter) gamma(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter5gammaEv
   default:
     qtrt.ErrorResolve("QImageWriter", "gamma", args)
- }
+  }
 
 }
 
@@ -352,17 +352,18 @@ func (this *QImageWriter) description(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter11descriptionEv
   default:
     qtrt.ErrorResolve("QImageWriter", "description", args)
- }
+  }
 
 }
 
 
-func NewQImageWriter(args ...interface{})() {
+func NewQImageWriter(args ...interface{}) QImageWriter {
+  return QImageWriter{}
 }
 
 
@@ -375,12 +376,12 @@ func (this *QImageWriter) setFormat(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter9setFormatERK10QByteArray
   default:
     qtrt.ErrorResolve("QImageWriter", "setFormat", args)
- }
+  }
 
 }
 
@@ -394,12 +395,12 @@ func (this *QImageWriter) setDevice(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter9setDeviceEP9QIODevice
   default:
     qtrt.ErrorResolve("QImageWriter", "setDevice", args)
- }
+  }
 
 }
 
@@ -413,12 +414,12 @@ func (this *QImageWriter) setSubType(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter10setSubTypeERK10QByteArray
   default:
     qtrt.ErrorResolve("QImageWriter", "setSubType", args)
- }
+  }
 
 }
 
@@ -431,12 +432,12 @@ func (this *QImageWriter) progressiveScanWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter20progressiveScanWriteEv
   default:
     qtrt.ErrorResolve("QImageWriter", "progressiveScanWrite", args)
- }
+  }
 
 }
 
@@ -449,12 +450,12 @@ func (this *QImageWriter) format(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter6formatEv
   default:
     qtrt.ErrorResolve("QImageWriter", "format", args)
- }
+  }
 
 }
 
@@ -467,12 +468,12 @@ func (this *QImageWriter) supportedSubTypes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter17supportedSubTypesEv
   default:
     qtrt.ErrorResolve("QImageWriter", "supportedSubTypes", args)
- }
+  }
 
 }
 
@@ -485,12 +486,12 @@ func (this *QImageWriter) canWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter8canWriteEv
   default:
     qtrt.ErrorResolve("QImageWriter", "canWrite", args)
- }
+  }
 
 }
 
@@ -503,12 +504,12 @@ func (this *QImageWriter) compression(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK12QImageWriter11compressionEv
   default:
     qtrt.ErrorResolve("QImageWriter", "compression", args)
- }
+  }
 
 }
 
@@ -522,12 +523,12 @@ func (this *QImageWriter) setProgressiveScanWrite(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter23setProgressiveScanWriteEb
   default:
     qtrt.ErrorResolve("QImageWriter", "setProgressiveScanWrite", args)
- }
+  }
 
 }
 
@@ -541,12 +542,12 @@ func (this *QImageWriter) setDescription(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter14setDescriptionERK7QString
   default:
     qtrt.ErrorResolve("QImageWriter", "setDescription", args)
- }
+  }
 
 }
 

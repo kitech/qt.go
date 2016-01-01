@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -51,15 +51,16 @@ func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
- }
+  }
 
 }
 
 
-func NewQAbstractState(args ...interface{})() {
+func NewQAbstractState(args ...interface{}) QAbstractState {
+  return QAbstractState{}
 }
 
 
@@ -71,12 +72,12 @@ func (this *QAbstractState) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractState", "metaObject", args)
- }
+  }
 
 }
 
@@ -89,12 +90,12 @@ func (this *QAbstractState) parentState(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
- }
+  }
 
 }
 
@@ -107,12 +108,12 @@ func (this *QAbstractState) machine(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
- }
+  }
 
 }
 
@@ -125,12 +126,12 @@ func (this *QAbstractState) active(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
- }
+  }
 
 }
 

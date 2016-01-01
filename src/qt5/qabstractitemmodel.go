@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.go
 //
@@ -84,7 +84,8 @@ type QAbstractListModel struct {
 }
 
 
-func NewQModelIndex(args ...interface{})() {
+func NewQModelIndex(args ...interface{}) QModelIndex {
+  return QModelIndex{}
 }
 
 
@@ -96,12 +97,12 @@ func (this *QModelIndex) column(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex6columnEv
   default:
     qtrt.ErrorResolve("QModelIndex", "column", args)
- }
+  }
 
 }
 
@@ -114,12 +115,12 @@ func (this *QModelIndex) internalId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex10internalIdEv
   default:
     qtrt.ErrorResolve("QModelIndex", "internalId", args)
- }
+  }
 
 }
 
@@ -134,12 +135,12 @@ func (this *QModelIndex) child(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex5childEii
   default:
     qtrt.ErrorResolve("QModelIndex", "child", args)
- }
+  }
 
 }
 
@@ -152,12 +153,12 @@ func (this *QModelIndex) internalPointer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex15internalPointerEv
   default:
     qtrt.ErrorResolve("QModelIndex", "internalPointer", args)
- }
+  }
 
 }
 
@@ -170,12 +171,12 @@ func (this *QModelIndex) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex7isValidEv
   default:
     qtrt.ErrorResolve("QModelIndex", "isValid", args)
- }
+  }
 
 }
 
@@ -188,12 +189,12 @@ func (this *QModelIndex) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex6parentEv
   default:
     qtrt.ErrorResolve("QModelIndex", "parent", args)
- }
+  }
 
 }
 
@@ -208,12 +209,12 @@ func (this *QModelIndex) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex7siblingEii
   default:
     qtrt.ErrorResolve("QModelIndex", "sibling", args)
- }
+  }
 
 }
 
@@ -226,12 +227,12 @@ func (this *QModelIndex) model(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex5modelEv
   default:
     qtrt.ErrorResolve("QModelIndex", "model", args)
- }
+  }
 
 }
 
@@ -245,12 +246,12 @@ func (this *QModelIndex) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex4dataEi
   default:
     qtrt.ErrorResolve("QModelIndex", "data", args)
- }
+  }
 
 }
 
@@ -263,12 +264,12 @@ func (this *QModelIndex) row(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex3rowEv
   default:
     qtrt.ErrorResolve("QModelIndex", "row", args)
- }
+  }
 
 }
 
@@ -283,12 +284,12 @@ func (this *QPersistentModelIndex) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex7siblingEii
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "sibling", args)
- }
+  }
 
 }
 
@@ -302,12 +303,12 @@ func (this *QPersistentModelIndex) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex4dataEi
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "data", args)
- }
+  }
 
 }
 
@@ -320,17 +321,18 @@ func (this *QPersistentModelIndex) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex6parentEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "parent", args)
- }
+  }
 
 }
 
 
-func NewQPersistentModelIndex(args ...interface{})() {
+func NewQPersistentModelIndex(args ...interface{}) QPersistentModelIndex {
+  return QPersistentModelIndex{}
 }
 
 
@@ -342,12 +344,12 @@ func (this *QPersistentModelIndex) internalPointer(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex15internalPointerEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "internalPointer", args)
- }
+  }
 
 }
 
@@ -360,12 +362,12 @@ func (this *QPersistentModelIndex) row(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex3rowEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "row", args)
- }
+  }
 
 }
 
@@ -378,12 +380,12 @@ func (this *QPersistentModelIndex) internalId(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex10internalIdEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "internalId", args)
- }
+  }
 
 }
 
@@ -396,12 +398,12 @@ func (this *QPersistentModelIndex) model(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex5modelEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "model", args)
- }
+  }
 
 }
 
@@ -412,10 +414,10 @@ func (this *QPersistentModelIndex) FreeQPersistentModelIndex(args ...interface{}
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "~QPersistentModelIndex", args)
- }
+  }
 
 }
 
@@ -428,12 +430,12 @@ func (this *QPersistentModelIndex) column(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex6columnEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "column", args)
- }
+  }
 
 }
 
@@ -447,12 +449,12 @@ func (this *QPersistentModelIndex) swap(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN21QPersistentModelIndex4swapERS_
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "swap", args)
- }
+  }
 
 }
 
@@ -467,12 +469,12 @@ func (this *QPersistentModelIndex) child(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex5childEii
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "child", args)
- }
+  }
 
 }
 
@@ -485,17 +487,18 @@ func (this *QPersistentModelIndex) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex7isValidEv
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "isValid", args)
- }
+  }
 
 }
 
 
-func NewQAbstractTableModel(args ...interface{})() {
+func NewQAbstractTableModel(args ...interface{}) QAbstractTableModel {
+  return QAbstractTableModel{}
 }
 
 
@@ -510,12 +513,12 @@ func (this *QAbstractTableModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel5indexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "index", args)
- }
+  }
 
 }
 
@@ -531,12 +534,12 @@ func (this *QAbstractTableModel) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "sibling", args)
- }
+  }
 
 }
 
@@ -547,10 +550,10 @@ func (this *QAbstractTableModel) FreeQAbstractTableModel(args ...interface{}) ()
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "~QAbstractTableModel", args)
- }
+  }
 
 }
 
@@ -563,12 +566,12 @@ func (this *QAbstractTableModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -584,12 +587,12 @@ func (this *QAbstractItemModel) removeColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeColumns", args)
- }
+  }
 
 }
 
@@ -600,10 +603,10 @@ func (this *QAbstractItemModel) FreeQAbstractItemModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "~QAbstractItemModel", args)
- }
+  }
 
 }
 
@@ -617,12 +620,12 @@ func (this *QAbstractItemModel) canFetchMore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "canFetchMore", args)
- }
+  }
 
 }
 
@@ -635,12 +638,12 @@ func (this *QAbstractItemModel) submit(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel6submitEv
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "submit", args)
- }
+  }
 
 }
 
@@ -656,12 +659,12 @@ func (this *QAbstractItemModel) hasIndex(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "hasIndex", args)
- }
+  }
 
 }
 
@@ -674,12 +677,12 @@ func (this *QAbstractItemModel) roleNames(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel9roleNamesEv
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "roleNames", args)
- }
+  }
 
 }
 
@@ -696,12 +699,12 @@ func (this *QAbstractItemModel) moveColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveColumn", args)
- }
+  }
 
 }
 
@@ -715,12 +718,12 @@ func (this *QAbstractItemModel) fetchMore(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "fetchMore", args)
- }
+  }
 
 }
 
@@ -736,12 +739,12 @@ func (this *QAbstractItemModel) insertRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertRows", args)
- }
+  }
 
 }
 
@@ -755,17 +758,18 @@ func (this *QAbstractItemModel) span(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel4spanERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "span", args)
- }
+  }
 
 }
 
 
-func NewQAbstractItemModel(args ...interface{})() {
+func NewQAbstractItemModel(args ...interface{}) QAbstractItemModel {
+  return QAbstractItemModel{}
 }
 
 
@@ -780,12 +784,12 @@ func (this *QAbstractItemModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel5indexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "index", args)
- }
+  }
 
 }
 
@@ -800,12 +804,12 @@ func (this *QAbstractItemModel) insertRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9insertRowEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertRow", args)
- }
+  }
 
 }
 
@@ -818,12 +822,12 @@ func (this *QAbstractItemModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -838,12 +842,12 @@ func (this *QAbstractItemModel) removeRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9removeRowEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeRow", args)
- }
+  }
 
 }
 
@@ -859,12 +863,12 @@ func (this *QAbstractItemModel) setData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "setData", args)
- }
+  }
 
 }
 
@@ -878,12 +882,12 @@ func (this *QAbstractItemModel) rowCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8rowCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "rowCount", args)
- }
+  }
 
 }
 
@@ -899,12 +903,12 @@ func (this *QAbstractItemModel) removeRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeRows", args)
- }
+  }
 
 }
 
@@ -918,12 +922,12 @@ func (this *QAbstractItemModel) hasChildren(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "hasChildren", args)
- }
+  }
 
 }
 
@@ -940,12 +944,12 @@ func (this *QAbstractItemModel) moveRow(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveRow", args)
- }
+  }
 
 }
 
@@ -958,12 +962,12 @@ func (this *QAbstractItemModel) revert(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel6revertEv
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "revert", args)
- }
+  }
 
 }
 
@@ -978,12 +982,12 @@ func (this *QAbstractItemModel) removeColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeColumn", args)
- }
+  }
 
 }
 
@@ -999,12 +1003,12 @@ func (this *QAbstractItemModel) insertColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertColumns", args)
- }
+  }
 
 }
 
@@ -1019,12 +1023,12 @@ func (this *QAbstractItemModel) insertColumn(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertColumn", args)
- }
+  }
 
 }
 
@@ -1042,12 +1046,12 @@ func (this *QAbstractItemModel) moveColumns(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveColumns", args)
- }
+  }
 
 }
 
@@ -1061,12 +1065,12 @@ func (this *QAbstractItemModel) itemData(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8itemDataERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "itemData", args)
- }
+  }
 
 }
 
@@ -1079,12 +1083,12 @@ func (this *QAbstractItemModel) mimeTypes(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel9mimeTypesEv
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "mimeTypes", args)
- }
+  }
 
 }
 
@@ -1098,12 +1102,12 @@ func (this *QAbstractItemModel) parent(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel6parentERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "parent", args)
- }
+  }
 
 }
 
@@ -1117,12 +1121,12 @@ func (this *QAbstractItemModel) buddy(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel5buddyERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "buddy", args)
- }
+  }
 
 }
 
@@ -1136,12 +1140,12 @@ func (this *QAbstractItemModel) columnCount(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel11columnCountERK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "columnCount", args)
- }
+  }
 
 }
 
@@ -1156,12 +1160,12 @@ func (this *QAbstractItemModel) data(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel4dataERK11QModelIndexi
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "data", args)
- }
+  }
 
 }
 
@@ -1177,12 +1181,12 @@ func (this *QAbstractItemModel) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "sibling", args)
- }
+  }
 
 }
 
@@ -1200,12 +1204,12 @@ func (this *QAbstractItemModel) moveRows(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveRows", args)
- }
+  }
 
 }
 
@@ -1221,17 +1225,18 @@ func (this *QAbstractListModel) sibling(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractListModel", "sibling", args)
- }
+  }
 
 }
 
 
-func NewQAbstractListModel(args ...interface{})() {
+func NewQAbstractListModel(args ...interface{}) QAbstractListModel {
+  return QAbstractListModel{}
 }
 
 
@@ -1243,12 +1248,12 @@ func (this *QAbstractListModel) metaObject(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel10metaObjectEv
   default:
     qtrt.ErrorResolve("QAbstractListModel", "metaObject", args)
- }
+  }
 
 }
 
@@ -1264,12 +1269,12 @@ func (this *QAbstractListModel) index(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel5indexEiiRK11QModelIndex
   default:
     qtrt.ErrorResolve("QAbstractListModel", "index", args)
- }
+  }
 
 }
 
@@ -1280,10 +1285,10 @@ func (this *QAbstractListModel) FreeQAbstractListModel(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QAbstractListModel", "~QAbstractListModel", args)
- }
+  }
 
 }
 

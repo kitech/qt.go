@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.go
 //
@@ -42,7 +42,8 @@ type QUuid struct {
 }
 
 
-func NewQUuid(args ...interface{})() {
+func NewQUuid(args ...interface{}) QUuid {
+  return QUuid{}
 }
 
 
@@ -54,12 +55,12 @@ func (this *QUuid) toRfc4122(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid9toRfc4122Ev
   default:
     qtrt.ErrorResolve("QUuid", "toRfc4122", args)
- }
+  }
 
 }
 
@@ -72,12 +73,12 @@ func (this *QUuid) toString(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid8toStringEv
   default:
     qtrt.ErrorResolve("QUuid", "toString", args)
- }
+  }
 
 }
 
@@ -90,12 +91,12 @@ func (this *QUuid) isNull(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid6isNullEv
   default:
     qtrt.ErrorResolve("QUuid", "isNull", args)
- }
+  }
 
 }
 
@@ -106,10 +107,10 @@ func (this *QUuid) createUuidV5_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUuid", "createUuidV5", args)
- }
+  }
 
 }
 
@@ -120,10 +121,10 @@ func (this *QUuid) createUuid_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUuid", "createUuid", args)
- }
+  }
 
 }
 
@@ -134,10 +135,10 @@ func (this *QUuid) createUuidV3_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUuid", "createUuidV3", args)
- }
+  }
 
 }
 
@@ -150,12 +151,12 @@ func (this *QUuid) toByteArray(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid11toByteArrayEv
   default:
     qtrt.ErrorResolve("QUuid", "toByteArray", args)
- }
+  }
 
 }
 
@@ -166,10 +167,10 @@ func (this *QUuid) fromRfc4122_s(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QUuid", "fromRfc4122", args)
- }
+  }
 
 }
 

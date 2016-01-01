@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 00:56:29 2016
+// created: Sat Jan  2 01:07:50 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -50,12 +50,12 @@ func (this *QTemporaryDir) remove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QTemporaryDir6removeEv
   default:
     qtrt.ErrorResolve("QTemporaryDir", "remove", args)
- }
+  }
 
 }
 
@@ -68,12 +68,12 @@ func (this *QTemporaryDir) autoRemove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir10autoRemoveEv
   default:
     qtrt.ErrorResolve("QTemporaryDir", "autoRemove", args)
- }
+  }
 
 }
 
@@ -86,12 +86,12 @@ func (this *QTemporaryDir) isValid(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir7isValidEv
   default:
     qtrt.ErrorResolve("QTemporaryDir", "isValid", args)
- }
+  }
 
 }
 
@@ -105,12 +105,12 @@ func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZN13QTemporaryDir13setAutoRemoveEb
   default:
     qtrt.ErrorResolve("QTemporaryDir", "setAutoRemove", args)
- }
+  }
 
 }
 
@@ -121,15 +121,16 @@ func (this *QTemporaryDir) FreeQTemporaryDir(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   default:
     qtrt.ErrorResolve("QTemporaryDir", "~QTemporaryDir", args)
- }
+  }
 
 }
 
 
-func NewQTemporaryDir(args ...interface{})() {
+func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
+  return QTemporaryDir{}
 }
 
 
@@ -141,12 +142,12 @@ func (this *QTemporaryDir) path(args ...interface{}) () {
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
- switch matched_index {
+  switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir4pathEv
   default:
     qtrt.ErrorResolve("QTemporaryDir", "path", args)
- }
+  }
 
 }
 
