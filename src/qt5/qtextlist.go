@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -93,6 +93,8 @@ func (this *QTextList) item(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList4itemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "item", args)
   }
@@ -112,6 +114,8 @@ func (this *QTextList) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList6removeERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "remove", args)
   }
@@ -131,6 +135,8 @@ func (this *QTextList) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList9setFormatERK15QTextListFormat
+    var arg0 = args[0].(QTextListFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "setFormat", args)
   }
@@ -155,6 +161,8 @@ func (this *QTextList) add(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList3addERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "add", args)
   }
@@ -174,6 +182,8 @@ func (this *QTextList) itemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList8itemTextERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "itemText", args)
   }
@@ -193,6 +203,8 @@ func (this *QTextList) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList10removeItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "removeItem", args)
   }
@@ -212,6 +224,8 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList10itemNumberERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextList", "itemNumber", args)
   }

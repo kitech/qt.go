@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.go
 //
@@ -108,6 +108,8 @@ func (this *QUndoGroup) addStack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup8addStackEP10QUndoStack
+    var arg0 = args[0].(QUndoStack).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoGroup", "addStack", args)
   }
@@ -186,6 +188,8 @@ func (this *QUndoGroup) setActiveStack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup14setActiveStackEP10QUndoStack
+    var arg0 = args[0].(QUndoStack).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoGroup", "setActiveStack", args)
   }
@@ -206,6 +210,10 @@ func (this *QUndoGroup) createRedoAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup16createRedoActionEP7QObjectRK7QString
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUndoGroup", "createRedoAction", args)
   }
@@ -366,6 +374,10 @@ func (this *QUndoGroup) createUndoAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoGroup16createUndoActionEP7QObjectRK7QString
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUndoGroup", "createUndoAction", args)
   }
@@ -385,6 +397,8 @@ func (this *QUndoGroup) removeStack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoGroup11removeStackEP10QUndoStack
+    var arg0 = args[0].(QUndoStack).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoGroup", "removeStack", args)
   }

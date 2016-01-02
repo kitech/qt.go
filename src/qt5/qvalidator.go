@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.go
 //
@@ -253,6 +253,8 @@ func (this *QRegularExpressionValidator) setRegularExpression(args ...interface{
   switch matched_index {
   case 0:
     // invoke: _ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegularExpression
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "setRegularExpression", args)
   }
@@ -340,6 +342,8 @@ func (this *QDoubleValidator) setDecimals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator11setDecimalsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setDecimals", args)
   }
@@ -364,6 +368,8 @@ func (this *QDoubleValidator) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator9setBottomEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setBottom", args)
   }
@@ -385,6 +391,12 @@ func (this *QDoubleValidator) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator8setRangeEddi
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setRange", args)
   }
@@ -422,6 +434,8 @@ func (this *QDoubleValidator) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDoubleValidator6setTopEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "setTop", args)
   }
@@ -446,6 +460,8 @@ func (this *QIntValidator) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator9setBottomEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIntValidator", "setBottom", args)
   }
@@ -466,6 +482,10 @@ func (this *QIntValidator) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator8setRangeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QIntValidator", "setRange", args)
   }
@@ -521,6 +541,8 @@ func (this *QIntValidator) fixup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QIntValidator5fixupER7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIntValidator", "fixup", args)
   }
@@ -554,6 +576,8 @@ func (this *QIntValidator) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QIntValidator6setTopEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIntValidator", "setTop", args)
   }
@@ -614,6 +638,8 @@ func (this *QValidator) setLocale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QValidator9setLocaleERK7QLocale
+    var arg0 = args[0].(QLocale).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QValidator", "setLocale", args)
   }
@@ -633,6 +659,8 @@ func (this *QValidator) fixup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QValidator5fixupER7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QValidator", "fixup", args)
   }
@@ -739,6 +767,8 @@ func (this *QRegExpValidator) setRegExp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QRegExpValidator9setRegExpERK7QRegExp
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExpValidator", "setRegExp", args)
   }

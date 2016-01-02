@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.go
 //
@@ -87,6 +87,8 @@ func (this *QColormap) pixel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap5pixelERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColormap", "pixel", args)
   }
@@ -124,6 +126,8 @@ func (this *QColormap) colorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap7colorAtEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColormap", "colorAt", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -105,8 +105,12 @@ func (this *QStyle) unpolish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QStyle8unpolishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QStyle8unpolishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyle", "unpolish", args)
   }
@@ -146,10 +150,16 @@ func (this *QStyle) polish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QStyle6polishER8QPalette
+    var arg0 = args[0].(QPalette).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QStyle6polishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN6QStyle6polishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyle", "polish", args)
   }
@@ -171,6 +181,12 @@ func (this *QStyle) itemPixmapRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPixmap).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStyle", "itemPixmapRect", args)
   }
@@ -194,6 +210,16 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString
+    var arg0 = args[0].(QFontMetrics).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRect).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int8_t(args[3].(int8))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QStyle", "itemTextRect", args)
   }
@@ -270,6 +296,14 @@ func (this *QStyle) drawItemPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRect).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QPixmap).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QStyle", "drawItemPixmap", args)
   }

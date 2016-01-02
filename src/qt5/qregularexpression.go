@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.go
 //
@@ -274,6 +274,8 @@ func (this *QRegularExpressionMatchIterator) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN31QRegularExpressionMatchIterator4swapERS_
+    var arg0 = args[0].(QRegularExpressionMatchIterator).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "swap", args)
   }
@@ -380,6 +382,8 @@ func (this *QRegularExpression) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QRegularExpression4swapERS_
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpression", "swap", args)
   }
@@ -471,6 +475,8 @@ func (this *QRegularExpression) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QRegularExpression10setPatternERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpression", "setPattern", args)
   }
@@ -534,8 +540,12 @@ func (this *QRegularExpressionMatch) capturedLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch14capturedLengthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch14capturedLengthERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedLength", args)
   }
@@ -558,8 +568,12 @@ func (this *QRegularExpressionMatch) capturedRef(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch11capturedRefEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch11capturedRefERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedRef", args)
   }
@@ -582,8 +596,12 @@ func (this *QRegularExpressionMatch) capturedEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch11capturedEndERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch11capturedEndEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedEnd", args)
   }
@@ -606,8 +624,12 @@ func (this *QRegularExpressionMatch) captured(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch8capturedERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch8capturedEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "captured", args)
   }
@@ -645,6 +667,8 @@ func (this *QRegularExpressionMatch) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QRegularExpressionMatch4swapERS_
+    var arg0 = args[0].(QRegularExpressionMatch).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "swap", args)
   }
@@ -699,8 +723,12 @@ func (this *QRegularExpressionMatch) capturedStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QRegularExpressionMatch13capturedStartERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK23QRegularExpressionMatch13capturedStartEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "capturedStart", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -98,6 +98,10 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup9addButtonEP15QAbstractButtoni
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "addButton", args)
   }
@@ -149,6 +153,8 @@ func (this *QButtonGroup) id(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup2idEP15QAbstractButton
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
   }
@@ -168,6 +174,8 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12removeButtonEP15QAbstractButton
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "removeButton", args)
   }
@@ -210,6 +218,8 @@ func (this *QButtonGroup) button(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup6buttonEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "button", args)
   }
@@ -265,6 +275,8 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12setExclusiveEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "setExclusive", args)
   }
@@ -285,6 +297,10 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup5setIdEP15QAbstractButtoni
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "setId", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -139,6 +139,8 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice15setPaintFlippedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setPaintFlipped", args)
   }
@@ -195,6 +197,8 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDevicePixelRatio", args)
   }
@@ -250,6 +254,8 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterX", args)
   }
@@ -287,6 +293,8 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterY", args)
   }
@@ -324,6 +332,8 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice7setSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setSize", args)
   }

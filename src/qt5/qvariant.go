@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.go
 //
@@ -323,6 +323,8 @@ func (this *QVariant) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toDoubleEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toDouble", args)
   }
@@ -347,6 +349,8 @@ func (this *QVariant) toLongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10toLongLongEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toLongLong", args)
   }
@@ -402,6 +406,8 @@ func (this *QVariant) toReal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toRealEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toReal", args)
   }
@@ -421,6 +427,8 @@ func (this *QVariant) toFloat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toFloatEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toFloat", args)
   }
@@ -584,6 +592,8 @@ func (this *QVariant) toUInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toUIntEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toUInt", args)
   }
@@ -657,6 +667,8 @@ func (this *QVariant) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant5toIntEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toInt", args)
   }
@@ -766,6 +778,8 @@ func (this *QVariant) canConvert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10canConvertEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "canConvert", args)
   }
@@ -875,6 +889,8 @@ func (this *QVariant) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant4loadER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "load", args)
   }
@@ -980,6 +996,8 @@ func (this *QVariant) save(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant4saveER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "save", args)
   }
@@ -1043,8 +1061,14 @@ func (this *QVariant) convert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7convertEiPv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QVariant7convertEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "convert", args)
   }
@@ -1132,6 +1156,8 @@ func (this *QVariant) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant4swapERS_
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "swap", args)
   }
@@ -1205,6 +1231,8 @@ func (this *QVariant) toULongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant11toULongLongEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariant", "toULongLong", args)
   }
@@ -1368,6 +1396,8 @@ func (this *QSequentialIterable) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QSequentialIterable2atEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSequentialIterable", "at", args)
   }
@@ -1405,6 +1435,8 @@ func (this *QAssociativeIterable) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAssociativeIterable5valueERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "value", args)
   }

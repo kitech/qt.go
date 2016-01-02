@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -113,6 +113,8 @@ func (this *QListData) realloc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData7reallocEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "realloc", args)
   }
@@ -154,8 +156,14 @@ func (this *QListData) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData6removeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QListData6removeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "remove", args)
   }
@@ -180,10 +188,14 @@ func (this *QListData) append(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData6appendERKS_
+    var arg0 = args[0].(QListData).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QListData6appendEv
   case 2:
     // invoke: _ZN9QListData6appendEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "append", args)
   }
@@ -205,6 +217,7 @@ func (this *QListData) dispose(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData7disposeEPNS_4DataE
+    // var arg0 = args[0].(QListData::Data).qclsinst
   case 1:
     // invoke: _ZN9QListData7disposeEv
   default:
@@ -262,6 +275,8 @@ func (this *QListData) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListData2atEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "at", args)
   }
@@ -281,6 +296,8 @@ func (this *QListData) erase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData5eraseEPPv
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "erase", args)
   }
@@ -332,6 +349,8 @@ func (this *QListData) insert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListData6insertEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QListData", "insert", args)
   }

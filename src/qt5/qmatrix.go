@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -178,6 +178,10 @@ func (this *QMatrix) scale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix5scaleEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix", "scale", args)
   }
@@ -198,6 +202,10 @@ func (this *QMatrix) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix", "translate", args)
   }
@@ -236,6 +244,10 @@ func (this *QMatrix) shear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix5shearEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix", "shear", args)
   }
@@ -287,6 +299,8 @@ func (this *QMatrix) rotate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix6rotateEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix", "rotate", args)
   }
@@ -311,6 +325,18 @@ func (this *QMatrix) setMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QMatrix9setMatrixEdddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.double(args[5].(float64))
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QMatrix", "setMatrix", args)
   }
@@ -366,6 +392,8 @@ func (this *QMatrix) mapToPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix12mapToPolygonERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix", "mapToPolygon", args)
   }
@@ -385,6 +413,8 @@ func (this *QMatrix) inverted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix8invertedEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix", "inverted", args)
   }
@@ -407,8 +437,12 @@ func (this *QMatrix) mapRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QMatrix7mapRectERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK7QMatrix7mapRectERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix", "mapRect", args)
   }

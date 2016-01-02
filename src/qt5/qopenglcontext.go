@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.go
 //
@@ -247,6 +247,10 @@ func (this *QOpenGLVersionProfile) setVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QOpenGLVersionProfile10setVersionEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLVersionProfile", "setVersion", args)
   }
@@ -302,6 +306,8 @@ func (this *QOpenGLContext) setScreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext9setScreenEP7QScreen
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setScreen", args)
   }
@@ -358,6 +364,8 @@ func (this *QOpenGLContext) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext9setFormatERK14QSurfaceFormat
+    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setFormat", args)
   }
@@ -395,6 +403,8 @@ func (this *QOpenGLContext) hasExtension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLContext12hasExtensionERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "hasExtension", args)
   }
@@ -450,6 +460,8 @@ func (this *QOpenGLContext) versionFunctions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLContext16versionFunctionsERK21QOpenGLVersionProfile
+    var arg0 = args[0].(QOpenGLVersionProfile).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "versionFunctions", args)
   }
@@ -469,6 +481,8 @@ func (this *QOpenGLContext) setShareContext(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext15setShareContextEPS_
+    var arg0 = args[0].(QOpenGLContext).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setShareContext", args)
   }
@@ -588,6 +602,8 @@ func (this *QOpenGLContext) makeCurrent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext11makeCurrentEP8QSurface
+    var arg0 = args[0].(QSurface).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "makeCurrent", args)
   }
@@ -775,6 +791,8 @@ func (this *QOpenGLContext) setNativeHandle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext15setNativeHandleERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "setNativeHandle", args)
   }
@@ -794,6 +812,8 @@ func (this *QOpenGLContext) getProcAddress(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLContext14getProcAddressERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "getProcAddress", args)
   }
@@ -813,6 +833,8 @@ func (this *QOpenGLContext) swapBuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLContext11swapBuffersEP8QSurface
+    var arg0 = args[0].(QSurface).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLContext", "swapBuffers", args)
   }

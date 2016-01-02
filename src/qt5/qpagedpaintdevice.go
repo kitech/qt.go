@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -118,8 +118,14 @@ func (this *QPagedPaintDevice) setPageMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF
+    var arg0 = args[0].(QMarginsF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsFN11QPageLayout4UnitE
+    var arg0 = args[0].(QMarginsF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageMargins", args)
   }
@@ -160,8 +166,12 @@ func (this *QPagedPaintDevice) setPageSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QPagedPaintDevice11setPageSizeENS_8PageSizeE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN17QPagedPaintDevice11setPageSizeERK9QPageSize
+    var arg0 = args[0].(QPageSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageSize", args)
   }
@@ -186,6 +196,8 @@ func (this *QPagedPaintDevice) setPageSizeMM(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageSizeMM", args)
   }
@@ -205,6 +217,8 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout
+    var arg0 = args[0].(QPageLayout).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageLayout", args)
   }

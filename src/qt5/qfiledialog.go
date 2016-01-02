@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.go
 //
@@ -180,6 +180,8 @@ func (this *QFileDialog) setDirectoryUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog15setDirectoryUrlERK4QUrl
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setDirectoryUrl", args)
   }
@@ -217,6 +219,8 @@ func (this *QFileDialog) setConfirmOverwrite(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog19setConfirmOverwriteEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setConfirmOverwrite", args)
   }
@@ -236,6 +240,8 @@ func (this *QFileDialog) setDefaultSuffix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog16setDefaultSuffixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setDefaultSuffix", args)
   }
@@ -255,6 +261,8 @@ func (this *QFileDialog) setItemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate
+    var arg0 = args[0].(QAbstractItemDelegate).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setItemDelegate", args)
   }
@@ -310,6 +318,8 @@ func (this *QFileDialog) setProxyModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel
+    var arg0 = args[0].(QAbstractProxyModel).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setProxyModel", args)
   }
@@ -329,6 +339,8 @@ func (this *QFileDialog) selectFile(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog10selectFileERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "selectFile", args)
   }
@@ -369,8 +381,12 @@ func (this *QFileDialog) setDirectory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog12setDirectoryERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QFileDialog12setDirectoryERK4QDir
+    var arg0 = args[0].(QDir).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setDirectory", args)
   }
@@ -390,6 +406,8 @@ func (this *QFileDialog) selectUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog9selectUrlERK4QUrl
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "selectUrl", args)
   }
@@ -482,6 +500,10 @@ func (this *QFileDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog4openEP7QObjectPKc
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFileDialog", "open", args)
   }
@@ -519,6 +541,8 @@ func (this *QFileDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setVisible", args)
   }
@@ -538,6 +562,8 @@ func (this *QFileDialog) setIconProvider(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog15setIconProviderEP17QFileIconProvider
+    var arg0 = args[0].(QFileIconProvider).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setIconProvider", args)
   }
@@ -557,6 +583,8 @@ func (this *QFileDialog) selectMimeTypeFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog20selectMimeTypeFilterERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "selectMimeTypeFilter", args)
   }
@@ -594,6 +622,8 @@ func (this *QFileDialog) setMimeTypeFilters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setMimeTypeFilters", args)
   }
@@ -613,6 +643,8 @@ func (this *QFileDialog) setResolveSymlinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog18setResolveSymlinksEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setResolveSymlinks", args)
   }
@@ -632,6 +664,8 @@ func (this *QFileDialog) setReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog11setReadOnlyEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setReadOnly", args)
   }
@@ -651,6 +685,8 @@ func (this *QFileDialog) setNameFilterDetailsVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog27setNameFilterDetailsVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilterDetailsVisible", args)
   }
@@ -670,6 +706,8 @@ func (this *QFileDialog) selectNameFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog16selectNameFilterERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "selectNameFilter", args)
   }
@@ -689,6 +727,8 @@ func (this *QFileDialog) restoreState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog12restoreStateERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "restoreState", args)
   }
@@ -794,6 +834,8 @@ func (this *QFileDialog) setHistory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog10setHistoryERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setHistory", args)
   }
@@ -813,6 +855,8 @@ func (this *QFileDialog) setNameFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog13setNameFilterERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilter", args)
   }
@@ -850,6 +894,8 @@ func (this *QFileDialog) setNameFilters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDialog14setNameFiltersERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDialog", "setNameFilters", args)
   }

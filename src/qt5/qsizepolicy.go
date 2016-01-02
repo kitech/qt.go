@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qsizepolicy.h
 // dst-file: /src/widgets/qsizepolicy.go
 //
@@ -163,6 +163,8 @@ func (this *QSizePolicy) setWidthForHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSizePolicy17setWidthForHeightEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizePolicy", "setWidthForHeight", args)
   }
@@ -182,6 +184,8 @@ func (this *QSizePolicy) setVerticalStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSizePolicy18setVerticalStretchEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizePolicy", "setVerticalStretch", args)
   }
@@ -201,6 +205,8 @@ func (this *QSizePolicy) setHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSizePolicy17setHeightForWidthEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizePolicy", "setHeightForWidth", args)
   }
@@ -220,6 +226,8 @@ func (this *QSizePolicy) setRetainSizeWhenHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSizePolicy23setRetainSizeWhenHiddenEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizePolicy", "setRetainSizeWhenHidden", args)
   }
@@ -257,6 +265,8 @@ func (this *QSizePolicy) setHorizontalStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSizePolicy20setHorizontalStretchEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizePolicy", "setHorizontalStretch", args)
   }

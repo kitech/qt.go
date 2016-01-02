@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -275,6 +275,8 @@ func (this *QObject) inherits(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8inheritsEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "inherits", args)
   }
@@ -294,6 +296,8 @@ func (this *QObject) moveToThread(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject12moveToThreadEP7QThread
+    var arg0 = args[0].(QThread).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "moveToThread", args)
   }
@@ -313,6 +317,8 @@ func (this *QObject) removeEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject17removeEventFilterEPS_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "removeEventFilter", args)
   }
@@ -351,6 +357,10 @@ func (this *QObject) eventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject11eventFilterEPS_P6QEvent
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QEvent).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QObject", "eventFilter", args)
   }
@@ -371,6 +381,10 @@ func (this *QObject) setUserData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject11setUserDataEjP15QObjectUserData
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObjectUserData).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QObject", "setUserData", args)
   }
@@ -409,6 +423,8 @@ func (this *QObject) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject5eventEP6QEvent
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "event", args)
   }
@@ -464,6 +480,8 @@ func (this *QObject) property(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8propertyEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "property", args)
   }
@@ -519,6 +537,8 @@ func (this *QObject) setParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject9setParentEPS_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "setParent", args)
   }
@@ -559,14 +579,41 @@ func (this *QObject) disconnect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QMetaMethod).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QMetaMethod).qclsinst
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN7QObject10disconnectERKN11QMetaObject10ConnectionE
+    // var arg0 = args[0].(QMetaObject::Connection).qclsinst
   case 2:
     // invoke: _ZNK7QObject10disconnectEPKS_PKc
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK7QObject10disconnectEPKcPKS_S1_
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   case 4:
     // invoke: _ZN7QObject10disconnectEPKS_PKcS1_S3_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QObject", "disconnect", args)
   }
@@ -673,6 +720,10 @@ func (this *QObject) setProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject11setPropertyEPKcRK8QVariant
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QObject", "setProperty", args)
   }
@@ -724,6 +775,8 @@ func (this *QObject) userData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QObject8userDataEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "userData", args)
   }
@@ -761,6 +814,8 @@ func (this *QObject) installEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject18installEventFilterEPS_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "installEventFilter", args)
   }
@@ -780,6 +835,8 @@ func (this *QObject) blockSignals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject12blockSignalsEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "blockSignals", args)
   }
@@ -799,6 +856,8 @@ func (this *QObject) setObjectName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject13setObjectNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "setObjectName", args)
   }
@@ -836,6 +895,8 @@ func (this *QObject) killTimer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QObject9killTimerEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObject", "killTimer", args)
   }

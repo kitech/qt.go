@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.go
 //
@@ -158,8 +158,20 @@ func (this *QQuaternion) getAxisAndAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QQuaternion15getAxisAndAngleEPfS0_S0_S0_
+    var arg0 = (*C.float)(args[0].(*float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.float)(args[3].(*float32))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZNK11QQuaternion15getAxisAndAngleEP9QVector3DPf
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QQuaternion", "getAxisAndAngle", args)
   }
@@ -197,6 +209,8 @@ func (this *QQuaternion) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QQuaternion4setXEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QQuaternion", "setX", args)
   }
@@ -221,8 +235,16 @@ func (this *QQuaternion) setVector(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QQuaternion9setVectorERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QQuaternion9setVectorEfff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QQuaternion", "setVector", args)
   }
@@ -263,6 +285,12 @@ func (this *QQuaternion) getEulerAngles(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QQuaternion14getEulerAnglesEPfS0_S0_
+    var arg0 = (*C.float)(args[0].(*float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QQuaternion", "getEulerAngles", args)
   }
@@ -282,6 +310,8 @@ func (this *QQuaternion) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QQuaternion4setYEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QQuaternion", "setY", args)
   }
@@ -337,6 +367,8 @@ func (this *QQuaternion) setZ(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QQuaternion4setZEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QQuaternion", "setZ", args)
   }
@@ -358,6 +390,12 @@ func (this *QQuaternion) getAxes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QQuaternion7getAxesEP9QVector3DS1_S1_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVector3D).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QQuaternion", "getAxes", args)
   }
@@ -555,6 +593,8 @@ func (this *QQuaternion) rotatedVector(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QQuaternion13rotatedVectorERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QQuaternion", "rotatedVector", args)
   }
@@ -592,6 +632,8 @@ func (this *QQuaternion) setScalar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QQuaternion9setScalarEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QQuaternion", "setScalar", args)
   }

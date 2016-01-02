@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.go
 //
@@ -99,6 +99,8 @@ func (this *QTextDocumentWriter) setCodec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextDocumentWriter8setCodecEP10QTextCodec
+    var arg0 = args[0].(QTextCodec).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setCodec", args)
   }
@@ -123,6 +125,8 @@ func (this *QTextDocumentWriter) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextDocumentWriter11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setFileName", args)
   }
@@ -160,6 +164,8 @@ func (this *QTextDocumentWriter) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextDocumentWriter9setDeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setDevice", args)
   }
@@ -179,6 +185,8 @@ func (this *QTextDocumentWriter) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextDocumentWriter9setFormatERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "setFormat", args)
   }
@@ -201,8 +209,12 @@ func (this *QTextDocumentWriter) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextDocumentWriter5writeEPK13QTextDocument
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment
+    var arg0 = args[0].(QTextDocumentFragment).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "write", args)
   }

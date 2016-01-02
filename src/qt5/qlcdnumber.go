@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -115,10 +115,16 @@ func (this *QLCDNumber) display(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber7displayEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN10QLCDNumber7displayEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN10QLCDNumber7displayERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLCDNumber", "display", args)
   }
@@ -214,8 +220,12 @@ func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber13checkOverflowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QLCDNumber13checkOverflowEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
   }
@@ -325,6 +335,8 @@ func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber13setDigitCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
   }
@@ -344,6 +356,8 @@ func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
   }

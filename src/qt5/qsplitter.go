@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -138,6 +138,10 @@ func (this *QSplitter) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12insertWidgetEiP7QWidget
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSplitter", "insertWidget", args)
   }
@@ -247,6 +251,8 @@ func (this *QSplitter) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter9addWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "addWidget", args)
   }
@@ -271,6 +277,8 @@ func (this *QSplitter) setHandleWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setHandleWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "setHandleWidth", args)
   }
@@ -291,6 +299,10 @@ func (this *QSplitter) setStretchFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter16setStretchFactorEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSplitter", "setStretchFactor", args)
   }
@@ -328,6 +340,8 @@ func (this *QSplitter) setOpaqueResize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter15setOpaqueResizeEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "setOpaqueResize", args)
   }
@@ -347,6 +361,8 @@ func (this *QSplitter) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6widgetEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "widget", args)
   }
@@ -384,6 +400,8 @@ func (this *QSplitter) isCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter13isCollapsibleEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "isCollapsible", args)
   }
@@ -404,6 +422,10 @@ func (this *QSplitter) setCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setCollapsibleEib
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSplitter", "setCollapsible", args)
   }
@@ -423,6 +445,8 @@ func (this *QSplitter) restoreState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12restoreStateERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "restoreState", args)
   }
@@ -456,6 +480,8 @@ func (this *QSplitter) setChildrenCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter22setChildrenCollapsibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "setChildrenCollapsible", args)
   }
@@ -529,6 +555,8 @@ func (this *QSplitter) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter7indexOfEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "indexOf", args)
   }
@@ -550,6 +578,12 @@ func (this *QSplitter) getRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter8getRangeEiPiS0_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QSplitter", "getRange", args)
   }
@@ -569,6 +603,8 @@ func (this *QSplitter) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6handleEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplitter", "handle", args)
   }

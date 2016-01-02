@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -134,6 +134,8 @@ func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setRestartCommandERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSessionManager", "setRestartCommand", args)
   }
@@ -280,8 +282,16 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStringList).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSessionManager", "setManagerProperty", args)
   }
@@ -342,6 +352,8 @@ func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setDiscardCommandERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSessionManager", "setDiscardCommand", args)
   }

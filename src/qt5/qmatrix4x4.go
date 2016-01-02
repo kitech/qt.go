@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.go
 //
@@ -178,6 +178,8 @@ func (this *QMatrix4x4) toTransform(args ...interface{}) () {
     // invoke: _ZNK10QMatrix4x411toTransformEv
   case 1:
     // invoke: _ZNK10QMatrix4x411toTransformEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "toTransform", args)
   }
@@ -209,12 +211,26 @@ func (this *QMatrix4x4) scale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x45scaleERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN10QMatrix4x45scaleEfff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZN10QMatrix4x45scaleEff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZN10QMatrix4x45scaleEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "scale", args)
   }
@@ -243,10 +259,22 @@ func (this *QMatrix4x4) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x49translateEfff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN10QMatrix4x49translateERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN10QMatrix4x49translateEff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "translate", args)
   }
@@ -306,6 +334,8 @@ func (this *QMatrix4x4) inverted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x48invertedEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "inverted", args)
   }
@@ -325,6 +355,8 @@ func (this *QMatrix4x4) mapVector(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x49mapVectorERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "mapVector", args)
   }
@@ -355,10 +387,26 @@ func (this *QMatrix4x4) ortho(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x45orthoEffffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.float(args[4].(float32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.float(args[5].(float32))
+    if false {fmt.Println(arg5)}
   case 1:
     // invoke: _ZN10QMatrix4x45orthoERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN10QMatrix4x45orthoERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "ortho", args)
   }
@@ -404,8 +452,12 @@ func (this *QMatrix4x4) mapRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x47mapRectERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QMatrix4x47mapRectERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "mapRect", args)
   }
@@ -426,6 +478,10 @@ func (this *QMatrix4x4) setColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x49setColumnEiRK9QVector4D
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector4D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "setColumn", args)
   }
@@ -463,6 +519,8 @@ func (this *QMatrix4x4) column(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x46columnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "column", args)
   }
@@ -483,6 +541,10 @@ func (this *QMatrix4x4) setRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x46setRowEiRK9QVector4D
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector4D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "setRow", args)
   }
@@ -546,8 +608,22 @@ func (this *QMatrix4x4) viewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x48viewportEffffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.float(args[4].(float32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.float(args[5].(float32))
+    if false {fmt.Println(arg5)}
   case 1:
     // invoke: _ZN10QMatrix4x48viewportERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "viewport", args)
   }
@@ -567,6 +643,8 @@ func (this *QMatrix4x4) copyDataTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x410copyDataToEPf
+    var arg0 = (*C.float)(args[0].(*float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "copyDataTo", args)
   }
@@ -614,10 +692,24 @@ func (this *QMatrix4x4) rotate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x46rotateERK11QQuaternion
+    var arg0 = args[0].(QQuaternion).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN10QMatrix4x46rotateEffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN10QMatrix4x46rotateEfRK9QVector3D
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "rotate", args)
   }
@@ -640,6 +732,14 @@ func (this *QMatrix4x4) perspective(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x411perspectiveEffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "perspective", args)
   }
@@ -682,6 +782,18 @@ func (this *QMatrix4x4) frustum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x47frustumEffffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.float(args[4].(float32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.float(args[5].(float32))
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "frustum", args)
   }
@@ -753,6 +865,12 @@ func (this *QMatrix4x4) lookAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x46lookAtERK9QVector3DS2_S2_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVector3D).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "lookAt", args)
   }
@@ -772,6 +890,8 @@ func (this *QMatrix4x4) fill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QMatrix4x44fillEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "fill", args)
   }
@@ -809,6 +929,8 @@ func (this *QMatrix4x4) row(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMatrix4x43rowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "row", args)
   }

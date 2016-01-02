@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.go
 //
@@ -138,6 +138,8 @@ func (this *QSize) boundedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize9boundedToERKS_
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSize", "boundedTo", args)
   }
@@ -198,6 +200,8 @@ func (this *QSize) expandedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize10expandedToERKS_
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSize", "expandedTo", args)
   }
@@ -307,6 +311,8 @@ func (this *QSize) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize9setHeightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSize", "setHeight", args)
   }
@@ -344,6 +350,8 @@ func (this *QSize) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize8setWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSize", "setWidth", args)
   }
@@ -453,6 +461,8 @@ func (this *QSizeF) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF9setHeightEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizeF", "setHeight", args)
   }
@@ -513,6 +523,8 @@ func (this *QSizeF) boundedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF9boundedToERKS_
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizeF", "boundedTo", args)
   }
@@ -568,6 +580,8 @@ func (this *QSizeF) expandedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF10expandedToERKS_
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizeF", "expandedTo", args)
   }
@@ -605,6 +619,8 @@ func (this *QSizeF) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF8setWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSizeF", "setWidth", args)
   }

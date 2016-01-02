@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.go
 //
@@ -364,8 +364,14 @@ func (this *QRect) moveTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect6moveToERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN5QRect6moveToEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QRect", "moveTo", args)
   }
@@ -385,6 +391,8 @@ func (this *QRect) moveTopLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect11moveTopLeftERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveTopLeft", args)
   }
@@ -404,6 +412,8 @@ func (this *QRect) moveRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect9moveRightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveRight", args)
   }
@@ -432,8 +442,14 @@ func (this *QRect) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect10translatedEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK5QRect10translatedERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "translated", args)
   }
@@ -471,6 +487,8 @@ func (this *QRect) moveTopRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect12moveTopRightERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveTopRight", args)
   }
@@ -490,6 +508,8 @@ func (this *QRect) setLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect7setLeftEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setLeft", args)
   }
@@ -527,6 +547,8 @@ func (this *QRect) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect11intersectedERKS_
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "intersected", args)
   }
@@ -560,12 +582,30 @@ func (this *QRect) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect8containsEiib
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int8_t(args[2].(int8))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK5QRect8containsERKS_b
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK5QRect8containsERK6QPointb
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK5QRect8containsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QRect", "contains", args)
   }
@@ -639,6 +679,8 @@ func (this *QRect) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect6unitedERKS_
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "united", args)
   }
@@ -661,6 +703,14 @@ func (this *QRect) adjust(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect6adjustEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "adjust", args)
   }
@@ -698,6 +748,8 @@ func (this *QRect) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect9setBottomEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setBottom", args)
   }
@@ -717,6 +769,8 @@ func (this *QRect) setSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect7setSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setSize", args)
   }
@@ -775,6 +829,14 @@ func (this *QRect) adjusted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect8adjustedEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "adjusted", args)
   }
@@ -812,6 +874,8 @@ func (this *QRect) moveBottomLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect14moveBottomLeftERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveBottomLeft", args)
   }
@@ -852,6 +916,14 @@ func (this *QRect) getRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect7getRectEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "getRect", args)
   }
@@ -871,6 +943,8 @@ func (this *QRect) marginsRemoved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect14marginsRemovedERK8QMargins
+    var arg0 = args[0].(QMargins).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "marginsRemoved", args)
   }
@@ -894,8 +968,14 @@ func (this *QRect) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect9translateEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QRect9translateERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "translate", args)
   }
@@ -954,6 +1034,14 @@ func (this *QRect) setRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect7setRectEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "setRect", args)
   }
@@ -973,6 +1061,8 @@ func (this *QRect) moveCenter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect10moveCenterERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveCenter", args)
   }
@@ -992,6 +1082,8 @@ func (this *QRect) intersects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect10intersectsERKS_
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "intersects", args)
   }
@@ -1011,6 +1103,8 @@ func (this *QRect) setTopRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect11setTopRightERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setTopRight", args)
   }
@@ -1033,6 +1127,14 @@ func (this *QRect) setCoords(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect9setCoordsEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "setCoords", args)
   }
@@ -1052,6 +1154,8 @@ func (this *QRect) moveBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect10moveBottomEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveBottom", args)
   }
@@ -1071,6 +1175,8 @@ func (this *QRect) setBottomLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect13setBottomLeftERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setBottomLeft", args)
   }
@@ -1093,6 +1199,14 @@ func (this *QRect) getCoords(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect9getCoordsEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRect", "getCoords", args)
   }
@@ -1130,6 +1244,8 @@ func (this *QRect) setBottomRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect14setBottomRightERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setBottomRight", args)
   }
@@ -1149,6 +1265,8 @@ func (this *QRect) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect9setHeightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setHeight", args)
   }
@@ -1186,6 +1304,8 @@ func (this *QRect) moveBottomRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect15moveBottomRightERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveBottomRight", args)
   }
@@ -1223,6 +1343,8 @@ func (this *QRect) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect6setTopEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setTop", args)
   }
@@ -1260,6 +1382,8 @@ func (this *QRect) marginsAdded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QRect12marginsAddedERK8QMargins
+    var arg0 = args[0].(QMargins).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "marginsAdded", args)
   }
@@ -1297,6 +1421,8 @@ func (this *QRect) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect8setWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setWidth", args)
   }
@@ -1316,6 +1442,8 @@ func (this *QRect) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect4setYEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setY", args)
   }
@@ -1335,6 +1463,8 @@ func (this *QRect) moveTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect7moveTopEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveTop", args)
   }
@@ -1354,6 +1484,8 @@ func (this *QRect) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect4setXEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setX", args)
   }
@@ -1373,6 +1505,8 @@ func (this *QRect) setRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect8setRightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setRight", args)
   }
@@ -1392,6 +1526,8 @@ func (this *QRect) setTopLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect10setTopLeftERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "setTopLeft", args)
   }
@@ -1411,6 +1547,8 @@ func (this *QRect) moveLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QRect8moveLeftEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRect", "moveLeft", args)
   }
@@ -1435,6 +1573,8 @@ func (this *QRectF) moveBottomRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF15moveBottomRightERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveBottomRight", args)
   }
@@ -1458,8 +1598,14 @@ func (this *QRectF) moveTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF6moveToEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN6QRectF6moveToERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveTo", args)
   }
@@ -1515,6 +1661,8 @@ func (this *QRectF) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF9setHeightEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setHeight", args)
   }
@@ -1534,6 +1682,8 @@ func (this *QRectF) setSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF7setSizeERK6QSizeF
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setSize", args)
   }
@@ -1571,6 +1721,8 @@ func (this *QRectF) setRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF8setRightEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setRight", args)
   }
@@ -1590,6 +1742,8 @@ func (this *QRectF) setBottomLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF13setBottomLeftERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setBottomLeft", args)
   }
@@ -1648,6 +1802,14 @@ func (this *QRectF) adjust(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF6adjustEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "adjust", args)
   }
@@ -1667,6 +1829,8 @@ func (this *QRectF) moveRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF9moveRightEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveRight", args)
   }
@@ -1722,6 +1886,8 @@ func (this *QRectF) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF9setBottomEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setBottom", args)
   }
@@ -1741,6 +1907,8 @@ func (this *QRectF) moveBottomLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF14moveBottomLeftERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveBottomLeft", args)
   }
@@ -1760,6 +1928,8 @@ func (this *QRectF) moveBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF10moveBottomEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveBottom", args)
   }
@@ -1782,6 +1952,14 @@ func (this *QRectF) getRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF7getRectEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "getRect", args)
   }
@@ -1855,6 +2033,8 @@ func (this *QRectF) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF8setWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setWidth", args)
   }
@@ -1896,8 +2076,14 @@ func (this *QRectF) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF9translateERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QRectF9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QRectF", "translate", args)
   }
@@ -1917,6 +2103,8 @@ func (this *QRectF) moveCenter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF10moveCenterERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveCenter", args)
   }
@@ -1943,10 +2131,18 @@ func (this *QRectF) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF8containsERKS_
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QRectF8containsEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK6QRectF8containsERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "contains", args)
   }
@@ -1966,6 +2162,8 @@ func (this *QRectF) marginsRemoved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF14marginsRemovedERK9QMarginsF
+    var arg0 = args[0].(QMarginsF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "marginsRemoved", args)
   }
@@ -1985,6 +2183,8 @@ func (this *QRectF) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF4setXEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setX", args)
   }
@@ -2007,6 +2207,14 @@ func (this *QRectF) setRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF7setRectEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "setRect", args)
   }
@@ -2044,6 +2252,8 @@ func (this *QRectF) setLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF7setLeftEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setLeft", args)
   }
@@ -2063,6 +2273,8 @@ func (this *QRectF) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF11intersectedERKS_
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "intersected", args)
   }
@@ -2118,6 +2330,8 @@ func (this *QRectF) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF4setYEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setY", args)
   }
@@ -2137,6 +2351,8 @@ func (this *QRectF) moveTopLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF11moveTopLeftERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveTopLeft", args)
   }
@@ -2174,6 +2390,8 @@ func (this *QRectF) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF6setTopEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setTop", args)
   }
@@ -2229,6 +2447,8 @@ func (this *QRectF) moveLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF8moveLeftEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveLeft", args)
   }
@@ -2248,6 +2468,8 @@ func (this *QRectF) setTopLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF10setTopLeftERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setTopLeft", args)
   }
@@ -2267,6 +2489,8 @@ func (this *QRectF) setBottomRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF14setBottomRightERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setBottomRight", args)
   }
@@ -2286,6 +2510,8 @@ func (this *QRectF) marginsAdded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF12marginsAddedERK9QMarginsF
+    var arg0 = args[0].(QMarginsF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "marginsAdded", args)
   }
@@ -2309,8 +2535,14 @@ func (this *QRectF) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF10translatedERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QRectF10translatedEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QRectF", "translated", args)
   }
@@ -2351,6 +2583,14 @@ func (this *QRectF) getCoords(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF9getCoordsEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "getCoords", args)
   }
@@ -2370,6 +2610,8 @@ func (this *QRectF) setTopRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF11setTopRightERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "setTopRight", args)
   }
@@ -2389,6 +2631,8 @@ func (this *QRectF) intersects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF10intersectsERKS_
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "intersects", args)
   }
@@ -2408,6 +2652,8 @@ func (this *QRectF) moveTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF7moveTopEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveTop", args)
   }
@@ -2430,6 +2676,14 @@ func (this *QRectF) setCoords(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF9setCoordsEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "setCoords", args)
   }
@@ -2467,6 +2721,8 @@ func (this *QRectF) moveTopRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QRectF12moveTopRightERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "moveTopRight", args)
   }
@@ -2486,6 +2742,8 @@ func (this *QRectF) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF6unitedERKS_
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRectF", "united", args)
   }
@@ -2526,6 +2784,14 @@ func (this *QRectF) adjusted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QRectF8adjustedEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRectF", "adjusted", args)
   }

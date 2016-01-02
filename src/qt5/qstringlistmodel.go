@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.go
 //
@@ -97,6 +97,12 @@ func (this *QStringListModel) insertRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QStringListModel10insertRowsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStringListModel", "insertRows", args)
   }
@@ -117,6 +123,10 @@ func (this *QStringListModel) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QStringListModel4dataERK11QModelIndexi
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringListModel", "data", args)
   }
@@ -174,6 +184,12 @@ func (this *QStringListModel) removeRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QStringListModel10removeRowsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStringListModel", "removeRows", args)
   }
@@ -195,6 +211,12 @@ func (this *QStringListModel) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStringListModel", "setData", args)
   }
@@ -214,6 +236,8 @@ func (this *QStringListModel) rowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QStringListModel8rowCountERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringListModel", "rowCount", args)
   }
@@ -235,6 +259,12 @@ func (this *QStringListModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QStringListModel7siblingEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStringListModel", "sibling", args)
   }
@@ -254,6 +284,8 @@ func (this *QStringListModel) setStringList(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QStringListModel13setStringListERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringListModel", "setStringList", args)
   }

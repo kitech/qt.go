@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.go
 //
@@ -170,6 +170,10 @@ func (this *QColorDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog4openEP7QObjectPKc
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QColorDialog", "open", args)
   }
@@ -221,6 +225,8 @@ func (this *QColorDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColorDialog", "setVisible", args)
   }
@@ -240,6 +246,8 @@ func (this *QColorDialog) setCurrentColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog15setCurrentColorERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColorDialog", "setCurrentColor", args)
   }

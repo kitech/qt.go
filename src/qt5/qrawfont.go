@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -209,6 +209,8 @@ func (this *QRawFont) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont12boundingRectEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "boundingRect", args)
   }
@@ -231,8 +233,12 @@ func (this *QRawFont) supportsCharacter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont17supportsCharacterEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK8QRawFont17supportsCharacterE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "supportsCharacter", args)
   }
@@ -252,6 +258,8 @@ func (this *QRawFont) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QRawFont4swapERS_
+    var arg0 = args[0].(QRawFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "swap", args)
   }
@@ -294,6 +302,8 @@ func (this *QRawFont) setPixelSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QRawFont12setPixelSizeEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "setPixelSize", args)
   }
@@ -316,6 +326,14 @@ func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForChars", args)
   }
@@ -422,12 +440,30 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesERK7QVectorIjE6QFlagsINS_10LayoutFlagEE
+    // var arg0 = args[0].(QVector<unsigned int>).qclsinst
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesERK7QVectorIjE
+    // var arg0 = args[0].(QVector<unsigned int>).qclsinst
   case 3:
     // invoke: _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi6QFlagsINS_10LayoutFlagEE
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(unsafe.Pointer)
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QRawFont", "advancesForGlyphIndexes", args)
   }
@@ -515,6 +551,8 @@ func (this *QRawFont) pathForGlyph(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont12pathForGlyphEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "pathForGlyph", args)
   }
@@ -534,6 +572,8 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont9fontTableEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "fontTable", args)
   }
@@ -571,6 +611,8 @@ func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QRawFont21glyphIndexesForStringERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRawFont", "glyphIndexesForString", args)
   }

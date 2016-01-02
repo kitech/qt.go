@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -98,6 +98,8 @@ func (this *QGraphicsProxyWidget) createProxyForChildWidget(args ...interface{})
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "createProxyForChildWidget", args)
   }
@@ -117,6 +119,8 @@ func (this *QGraphicsProxyWidget) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget9setWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setWidget", args)
   }
@@ -136,6 +140,8 @@ func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "subWidgetRect", args)
   }
@@ -180,6 +186,12 @@ func (this *QGraphicsProxyWidget) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QWidget).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "paint", args)
   }
@@ -199,6 +211,8 @@ func (this *QGraphicsProxyWidget) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget11setGeometryERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setGeometry", args)
   }

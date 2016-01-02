@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -88,6 +88,8 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QRunnable13setAutoDeleteEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
   }

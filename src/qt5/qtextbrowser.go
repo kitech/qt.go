@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -209,6 +209,8 @@ func (this *QTextBrowser) historyUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser10historyUrlEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyUrl", args)
   }
@@ -319,6 +321,8 @@ func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser12setOpenLinksEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "setOpenLinks", args)
   }
@@ -356,6 +360,8 @@ func (this *QTextBrowser) historyTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser12historyTitleEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyTitle", args)
   }
@@ -375,6 +381,8 @@ func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser14setSearchPathsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "setSearchPaths", args)
   }
@@ -395,6 +403,10 @@ func (this *QTextBrowser) loadResource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser12loadResourceEiRK4QUrl
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QUrl).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "loadResource", args)
   }
@@ -432,6 +444,8 @@ func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser20setOpenExternalLinksEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "setOpenExternalLinks", args)
   }
@@ -451,6 +465,8 @@ func (this *QTextBrowser) setSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser9setSourceERK4QUrl
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBrowser", "setSource", args)
   }

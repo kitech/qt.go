@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -102,6 +102,10 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9readBytesERPcRj
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
@@ -158,6 +162,8 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11skipRawDataEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
@@ -178,6 +184,10 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10writeBytesEPKcj
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
@@ -251,6 +261,8 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10setVersionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
   }
@@ -270,6 +282,8 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9setDeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
   }
@@ -290,6 +304,10 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream12writeRawDataEPKci
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
@@ -310,6 +328,10 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11readRawDataEPci
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }

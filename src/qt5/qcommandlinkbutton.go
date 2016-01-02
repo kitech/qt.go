@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -138,6 +138,8 @@ func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLinkButton14setDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "setDescription", args)
   }

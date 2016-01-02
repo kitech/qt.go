@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -180,6 +180,8 @@ func (this *QUndoStack) command(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoStack7commandEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "command", args)
   }
@@ -254,6 +256,10 @@ func (this *QUndoStack) createUndoAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUndoStack", "createUndoAction", args)
   }
@@ -292,6 +298,10 @@ func (this *QUndoStack) createRedoAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUndoStack", "createRedoAction", args)
   }
@@ -456,6 +466,8 @@ func (this *QUndoStack) beginMacro(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoStack10beginMacroERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "beginMacro", args)
   }
@@ -475,6 +487,8 @@ func (this *QUndoStack) setActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoStack9setActiveEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "setActive", args)
   }
@@ -530,6 +544,8 @@ func (this *QUndoStack) setIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoStack8setIndexEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "setIndex", args)
   }
@@ -567,6 +583,8 @@ func (this *QUndoStack) setUndoLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoStack12setUndoLimitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "setUndoLimit", args)
   }
@@ -604,6 +622,8 @@ func (this *QUndoStack) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QUndoStack4textEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "text", args)
   }
@@ -623,6 +643,8 @@ func (this *QUndoStack) push(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QUndoStack4pushEP12QUndoCommand
+    var arg0 = args[0].(QUndoCommand).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoStack", "push", args)
   }
@@ -701,6 +723,8 @@ func (this *QUndoCommand) mergeWith(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QUndoCommand9mergeWithEPKS_
+    var arg0 = args[0].(QUndoCommand).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "mergeWith", args)
   }
@@ -788,6 +812,8 @@ func (this *QUndoCommand) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QUndoCommand5childEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "child", args)
   }
@@ -807,6 +833,8 @@ func (this *QUndoCommand) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QUndoCommand7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "setText", args)
   }

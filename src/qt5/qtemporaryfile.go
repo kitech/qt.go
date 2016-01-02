@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -171,6 +171,8 @@ func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile13setAutoRemoveEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setAutoRemove", args)
   }
@@ -244,6 +246,8 @@ func (this *QTemporaryFile) open(args ...interface{}) () {
     // invoke: _ZN14QTemporaryFile4openEv
   case 1:
     // invoke: _ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTemporaryFile", "open", args)
   }
@@ -263,6 +267,8 @@ func (this *QTemporaryFile) setFileTemplate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile15setFileTemplateERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setFileTemplate", args)
   }

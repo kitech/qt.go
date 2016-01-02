@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -101,8 +101,12 @@ func (this *QProxyStyle) unpolish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QProxyStyle8unpolishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QProxyStyle8unpolishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "unpolish", args)
   }
@@ -145,6 +149,8 @@ func (this *QProxyStyle) setBaseStyle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QProxyStyle12setBaseStyleEP6QStyle
+    var arg0 = args[0].(QStyle).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "setBaseStyle", args)
   }
@@ -170,10 +176,16 @@ func (this *QProxyStyle) polish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QProxyStyle6polishER8QPalette
+    var arg0 = args[0].(QPalette).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QProxyStyle6polishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN11QProxyStyle6polishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "polish", args)
   }
@@ -196,6 +208,14 @@ func (this *QProxyStyle) drawItemPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRect).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QPixmap).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "drawItemPixmap", args)
   }
@@ -251,6 +271,16 @@ func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString
+    var arg0 = args[0].(QFontMetrics).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRect).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int8_t(args[3].(int8))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemTextRect", args)
   }
@@ -272,6 +302,12 @@ func (this *QProxyStyle) itemPixmapRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPixmap).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemPixmapRect", args)
   }

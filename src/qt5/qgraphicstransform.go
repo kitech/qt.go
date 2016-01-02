@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.go
 //
@@ -156,6 +156,8 @@ func (this *QGraphicsRotation) setAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation8setAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setAngle", args)
   }
@@ -212,6 +214,8 @@ func (this *QGraphicsRotation) setOrigin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation9setOriginERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setOrigin", args)
   }
@@ -249,6 +253,8 @@ func (this *QGraphicsRotation) applyTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRotation7applyToEP10QMatrix4x4
+    var arg0 = args[0].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "applyTo", args)
   }
@@ -271,8 +277,12 @@ func (this *QGraphicsRotation) setAxis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRotation7setAxisEN2Qt4AxisE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN17QGraphicsRotation7setAxisERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsRotation", "setAxis", args)
   }
@@ -310,6 +320,8 @@ func (this *QGraphicsScale) applyTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScale7applyToEP10QMatrix4x4
+    var arg0 = args[0].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "applyTo", args)
   }
@@ -383,6 +395,8 @@ func (this *QGraphicsScale) setOrigin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setOriginERK9QVector3D
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setOrigin", args)
   }
@@ -402,6 +416,8 @@ func (this *QGraphicsScale) setYScale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setYScaleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setYScale", args)
   }
@@ -439,6 +455,8 @@ func (this *QGraphicsScale) setZScale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setZScaleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setZScale", args)
   }
@@ -458,6 +476,8 @@ func (this *QGraphicsScale) setXScale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScale9setXScaleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScale", "setXScale", args)
   }
@@ -514,6 +534,8 @@ func (this *QGraphicsTransform) applyTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4
+    var arg0 = args[0].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsTransform", "applyTo", args)
   }

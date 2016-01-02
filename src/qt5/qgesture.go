@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -269,6 +269,8 @@ func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSwipeGesture13setSwipeAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSwipeGesture", "setSwipeAngle", args)
   }
@@ -388,6 +390,8 @@ func (this *QGesture) setHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QGesture10setHotSpotERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGesture", "setHotSpot", args)
   }
@@ -424,8 +428,12 @@ func (this *QGestureEvent) isAccepted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent10isAcceptedEP8QGesture
+    var arg0 = args[0].(QGesture).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "isAccepted", args)
   }
@@ -466,8 +474,12 @@ func (this *QGestureEvent) ignore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent6ignoreEP8QGesture
+    var arg0 = args[0].(QGesture).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "ignore", args)
   }
@@ -490,8 +502,12 @@ func (this *QGestureEvent) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent6acceptEP8QGesture
+    var arg0 = args[0].(QGesture).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QGestureEvent6acceptEN2Qt11GestureTypeE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "accept", args)
   }
@@ -552,8 +568,16 @@ func (this *QGestureEvent) setAccepted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QGestureEvent11setAcceptedEP8QGestureb
+    var arg0 = args[0].(QGesture).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "setAccepted", args)
   }
@@ -573,6 +597,8 @@ func (this *QGestureEvent) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent9setWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "setWidget", args)
   }
@@ -624,6 +650,8 @@ func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGestureEvent", "mapToGraphicsScene", args)
   }
@@ -679,6 +707,8 @@ func (this *QPanGesture) setOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture9setOffsetERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPanGesture", "setOffset", args)
   }
@@ -753,6 +783,8 @@ func (this *QPanGesture) setAcceleration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture15setAccelerationEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPanGesture", "setAcceleration", args)
   }
@@ -790,6 +822,8 @@ func (this *QPanGesture) setLastOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture13setLastOffsetERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPanGesture", "setLastOffset", args)
   }
@@ -892,6 +926,8 @@ func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QTapAndHoldGesture11setPositionERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "setPosition", args)
   }
@@ -929,6 +965,8 @@ func (this *QTapGesture) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTapGesture11setPositionERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTapGesture", "setPosition", args)
   }
@@ -985,6 +1023,8 @@ func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture16setRotationAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setRotationAngle", args)
   }
@@ -1117,6 +1157,8 @@ func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture19setTotalScaleFactorEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setTotalScaleFactor", args)
   }
@@ -1154,6 +1196,8 @@ func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture18setLastScaleFactorEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastScaleFactor", args)
   }
@@ -1173,6 +1217,8 @@ func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture18setLastCenterPointERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastCenterPoint", args)
   }
@@ -1210,6 +1256,8 @@ func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture20setLastRotationAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastRotationAngle", args)
   }
@@ -1247,6 +1295,8 @@ func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture14setCenterPointERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setCenterPoint", args)
   }
@@ -1266,6 +1316,8 @@ func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture21setTotalRotationAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setTotalRotationAngle", args)
   }
@@ -1285,6 +1337,8 @@ func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture14setScaleFactorEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setScaleFactor", args)
   }
@@ -1318,6 +1372,8 @@ func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture19setStartCenterPointERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPinchGesture", "setStartCenterPoint", args)
   }

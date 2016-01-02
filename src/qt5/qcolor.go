@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qcolor.h
 // dst-file: /src/gui/qcolor.go
 //
@@ -250,6 +250,14 @@ func (this *QColor) getHsvF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor7getHsvFEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getHsvF", args)
   }
@@ -305,6 +313,8 @@ func (this *QColor) setAlphaF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor9setAlphaFEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setAlphaF", args)
   }
@@ -327,6 +337,14 @@ func (this *QColor) getRgb(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor6getRgbEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getRgb", args)
   }
@@ -382,6 +400,8 @@ func (this *QColor) setAlpha(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor8setAlphaEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setAlpha", args)
   }
@@ -419,6 +439,16 @@ func (this *QColor) getCmyk(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7getCmykEPiS0_S0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.int32_t)(args[4].(*int32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QColor", "getCmyk", args)
   }
@@ -497,6 +527,8 @@ func (this *QColor) setBlue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setBlueEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setBlue", args)
   }
@@ -538,6 +570,16 @@ func (this *QColor) setCmykF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor8setCmykFEddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QColor", "setCmykF", args)
   }
@@ -571,6 +613,8 @@ func (this *QColor) light(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor5lightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "light", args)
   }
@@ -593,6 +637,14 @@ func (this *QColor) getHslF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor7getHslFEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getHslF", args)
   }
@@ -647,6 +699,14 @@ func (this *QColor) getRgbF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor7getRgbFEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getRgbF", args)
   }
@@ -672,8 +732,18 @@ func (this *QColor) setRgb(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor6setRgbEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN6QColor6setRgbEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setRgb", args)
   }
@@ -697,6 +767,8 @@ func (this *QColor) name(args ...interface{}) () {
     // invoke: _ZNK6QColor4nameEv
   case 1:
     // invoke: _ZNK6QColor4nameENS_10NameFormatE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "name", args)
   }
@@ -755,6 +827,14 @@ func (this *QColor) setHsvF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setHsvFEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "setHsvF", args)
   }
@@ -846,6 +926,8 @@ func (this *QColor) setGreenF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor9setGreenFEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setGreenF", args)
   }
@@ -940,6 +1022,14 @@ func (this *QColor) setRgbF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setRgbFEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "setRgbF", args)
   }
@@ -1027,6 +1117,8 @@ func (this *QColor) setBlueF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor8setBlueFEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setBlueF", args)
   }
@@ -1082,6 +1174,8 @@ func (this *QColor) darker(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor6darkerEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "darker", args)
   }
@@ -1137,6 +1231,8 @@ func (this *QColor) setRgba(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setRgbaEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setRgba", args)
   }
@@ -1156,6 +1252,8 @@ func (this *QColor) setNamedColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor13setNamedColorERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setNamedColor", args)
   }
@@ -1193,6 +1291,8 @@ func (this *QColor) lighter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor7lighterEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "lighter", args)
   }
@@ -1284,6 +1384,16 @@ func (this *QColor) setCmyk(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setCmykEiiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QColor", "setCmyk", args)
   }
@@ -1320,6 +1430,14 @@ func (this *QColor) getHsv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor6getHsvEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getHsv", args)
   }
@@ -1343,6 +1461,16 @@ func (this *QColor) getCmykF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor8getCmykFEPdS0_S0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.double)(args[4].(*float64))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QColor", "getCmykF", args)
   }
@@ -1362,6 +1490,8 @@ func (this *QColor) setRed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor6setRedEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setRed", args)
   }
@@ -1398,6 +1528,14 @@ func (this *QColor) setHsv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor6setHsvEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "setHsv", args)
   }
@@ -1438,6 +1576,14 @@ func (this *QColor) setHslF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setHslFEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "setHslF", args)
   }
@@ -1525,6 +1671,8 @@ func (this *QColor) dark(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor4darkEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "dark", args)
   }
@@ -1544,6 +1692,8 @@ func (this *QColor) setRedF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor7setRedFEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setRedF", args)
   }
@@ -1580,6 +1730,14 @@ func (this *QColor) setHsl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor6setHslEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "setHsl", args)
   }
@@ -1599,6 +1757,8 @@ func (this *QColor) setGreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QColor8setGreenEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QColor", "setGreen", args)
   }
@@ -1621,6 +1781,14 @@ func (this *QColor) getHsl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QColor6getHslEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QColor", "getHsl", args)
   }

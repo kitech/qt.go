@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -235,6 +235,8 @@ func (this *QInputMethod) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QInputMethod", "setVisible", args)
   }
@@ -254,6 +256,8 @@ func (this *QInputMethod) setInputItemRectangle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemRectangleERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemRectangle", args)
   }
@@ -291,6 +295,8 @@ func (this *QInputMethod) setInputItemTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemTransformERK10QTransform
+    var arg0 = args[0].(QTransform).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemTransform", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -199,6 +199,8 @@ func (this *QLibrary) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLibrary", "setFileName", args)
   }
@@ -264,12 +266,30 @@ func (this *QLibrary) resolve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary7resolveERK7QStringS2_PKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN8QLibrary7resolveERK7QStringPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN8QLibrary7resolveEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZN8QLibrary7resolveERK7QStringiPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QLibrary", "resolve", args)
   }
@@ -294,8 +314,16 @@ func (this *QLibrary) setFileNameAndVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringi
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLibrary", "setFileNameAndVersion", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -197,6 +197,8 @@ func (this *QMovie) setScaledSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie13setScaledSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setScaledSize", args)
   }
@@ -216,6 +218,8 @@ func (this *QMovie) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setDeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setDevice", args)
   }
@@ -253,6 +257,8 @@ func (this *QMovie) jumpToFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11jumpToFrameEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
   }
@@ -340,6 +346,8 @@ func (this *QMovie) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setFormatERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setFormat", args)
   }
@@ -391,6 +399,8 @@ func (this *QMovie) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setPausedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setPaused", args)
   }
@@ -446,6 +456,8 @@ func (this *QMovie) setBackgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie18setBackgroundColorERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setBackgroundColor", args)
   }
@@ -483,6 +495,8 @@ func (this *QMovie) setSpeed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie8setSpeedEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setSpeed", args)
   }
@@ -628,6 +642,8 @@ func (this *QMovie) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMovie", "setFileName", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -130,6 +130,10 @@ func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLoggingCategory", "setEnabled", args)
   }
@@ -149,6 +153,8 @@ func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory9isEnabledE9QtMsgType
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isEnabled", args)
   }

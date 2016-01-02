@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -113,6 +113,8 @@ func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction16setDefaultWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetAction", "setDefaultWidget", args)
   }
@@ -132,6 +134,8 @@ func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13releaseWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetAction", "releaseWidget", args)
   }
@@ -156,6 +160,8 @@ func (this *QWidgetAction) requestWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13requestWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetAction", "requestWidget", args)
   }

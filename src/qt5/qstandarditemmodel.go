@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.go
 //
@@ -340,6 +340,10 @@ func (this *QStandardItemModel) item(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel4itemEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "item", args)
   }
@@ -368,10 +372,21 @@ func (this *QStandardItemModel) insertRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel9insertRowEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN18QStandardItemModel9insertRowEiP13QStandardItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN18QStandardItemModel9insertRowEiRK5QListIP13QStandardItemE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    // var arg1 = args[1].(QList<QStandardItem *>).qclsinst
   default:
     qtrt.ErrorResolve("QStandardItemModel", "insertRow", args)
   }
@@ -397,8 +412,18 @@ func (this *QStandardItemModel) setItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel7setItemEiP13QStandardItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN18QStandardItemModel7setItemEiiP13QStandardItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QStandardItem).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setItem", args)
   }
@@ -420,6 +445,12 @@ func (this *QStandardItemModel) index(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel5indexEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "index", args)
   }
@@ -441,6 +472,12 @@ func (this *QStandardItemModel) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel7setDataERK11QModelIndexRK8QVarianti
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setData", args)
   }
@@ -460,6 +497,8 @@ func (this *QStandardItemModel) columnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel11columnCountERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "columnCount", args)
   }
@@ -480,6 +519,10 @@ func (this *QStandardItemModel) takeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel8takeItemEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "takeItem", args)
   }
@@ -499,6 +542,8 @@ func (this *QStandardItemModel) setRowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel11setRowCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setRowCount", args)
   }
@@ -518,6 +563,8 @@ func (this *QStandardItemModel) itemFromIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "itemFromIndex", args)
   }
@@ -542,8 +589,15 @@ func (this *QStandardItemModel) insertColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel12insertColumnEiRK5QListIP13QStandardItemE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    // var arg1 = args[1].(QList<QStandardItem *>).qclsinst
   case 1:
     // invoke: _ZN18QStandardItemModel12insertColumnEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "insertColumn", args)
   }
@@ -564,6 +618,10 @@ func (this *QStandardItemModel) setVerticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setVerticalHeaderItem", args)
   }
@@ -583,6 +641,8 @@ func (this *QStandardItemModel) takeColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel10takeColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "takeColumn", args)
   }
@@ -602,6 +662,8 @@ func (this *QStandardItemModel) takeVerticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel22takeVerticalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "takeVerticalHeaderItem", args)
   }
@@ -623,6 +685,12 @@ func (this *QStandardItemModel) insertColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel13insertColumnsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "insertColumns", args)
   }
@@ -662,6 +730,12 @@ func (this *QStandardItemModel) insertRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "insertRows", args)
   }
@@ -699,6 +773,8 @@ func (this *QStandardItemModel) setItemPrototype(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel16setItemPrototypeEPK13QStandardItem
+    var arg0 = args[0].(QStandardItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setItemPrototype", args)
   }
@@ -718,6 +794,8 @@ func (this *QStandardItemModel) setHorizontalHeaderLabels(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel25setHorizontalHeaderLabelsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setHorizontalHeaderLabels", args)
   }
@@ -737,6 +815,8 @@ func (this *QStandardItemModel) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel6parentERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "parent", args)
   }
@@ -758,6 +838,12 @@ func (this *QStandardItemModel) removeColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel13removeColumnsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "removeColumns", args)
   }
@@ -779,6 +865,12 @@ func (this *QStandardItemModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel7siblingEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "sibling", args)
   }
@@ -816,6 +908,8 @@ func (this *QStandardItemModel) takeHorizontalHeaderItem(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel24takeHorizontalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "takeHorizontalHeaderItem", args)
   }
@@ -835,6 +929,8 @@ func (this *QStandardItemModel) indexFromItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem
+    var arg0 = args[0].(QStandardItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "indexFromItem", args)
   }
@@ -873,6 +969,10 @@ func (this *QStandardItemModel) setHorizontalHeaderItem(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setHorizontalHeaderItem", args)
   }
@@ -892,6 +992,8 @@ func (this *QStandardItemModel) horizontalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel20horizontalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "horizontalHeaderItem", args)
   }
@@ -914,8 +1016,11 @@ func (this *QStandardItemModel) appendRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel9appendRowEP13QStandardItem
+    var arg0 = args[0].(QStandardItem).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN18QStandardItemModel9appendRowERK5QListIP13QStandardItemE
+    // var arg0 = args[0].(QList<QStandardItem *>).qclsinst
   default:
     qtrt.ErrorResolve("QStandardItemModel", "appendRow", args)
   }
@@ -935,6 +1040,8 @@ func (this *QStandardItemModel) itemData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel8itemDataERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "itemData", args)
   }
@@ -954,6 +1061,8 @@ func (this *QStandardItemModel) setSortRole(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel11setSortRoleEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setSortRole", args)
   }
@@ -973,6 +1082,8 @@ func (this *QStandardItemModel) hasChildren(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel11hasChildrenERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "hasChildren", args)
   }
@@ -1007,6 +1118,10 @@ func (this *QStandardItemModel) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel4dataERK11QModelIndexi
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "data", args)
   }
@@ -1026,6 +1141,8 @@ func (this *QStandardItemModel) takeRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel7takeRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "takeRow", args)
   }
@@ -1045,6 +1162,8 @@ func (this *QStandardItemModel) setColumnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel14setColumnCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setColumnCount", args)
   }
@@ -1064,6 +1183,8 @@ func (this *QStandardItemModel) verticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel18verticalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "verticalHeaderItem", args)
   }
@@ -1085,6 +1206,12 @@ func (this *QStandardItemModel) removeRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel10removeRowsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "removeRows", args)
   }
@@ -1104,6 +1231,8 @@ func (this *QStandardItemModel) setVerticalHeaderLabels(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN18QStandardItemModel23setVerticalHeaderLabelsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "setVerticalHeaderLabels", args)
   }
@@ -1141,6 +1270,8 @@ func (this *QStandardItemModel) rowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QStandardItemModel8rowCountERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItemModel", "rowCount", args)
   }
@@ -1166,8 +1297,18 @@ func (this *QStandardItem) setChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem8setChildEiPS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QStandardItem8setChildEiiPS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QStandardItem).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setChild", args)
   }
@@ -1206,6 +1347,10 @@ func (this *QStandardItem) insertColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem13insertColumnsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "insertColumns", args)
   }
@@ -1225,6 +1370,8 @@ func (this *QStandardItem) setSelectable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem13setSelectableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setSelectable", args)
   }
@@ -1280,6 +1427,8 @@ func (this *QStandardItem) takeColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem10takeColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "takeColumn", args)
   }
@@ -1299,6 +1448,8 @@ func (this *QStandardItem) setForeground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem13setForegroundERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setForeground", args)
   }
@@ -1354,6 +1505,8 @@ func (this *QStandardItem) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem12setWhatsThisERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setWhatsThis", args)
   }
@@ -1374,6 +1527,10 @@ func (this *QStandardItem) takeChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem9takeChildEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "takeChild", args)
   }
@@ -1407,6 +1564,8 @@ func (this *QStandardItem) takeRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem7takeRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "takeRow", args)
   }
@@ -1485,8 +1644,15 @@ func (this *QStandardItem) insertRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem10insertRowsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QStandardItem10insertRowsEiRK5QListIPS_E
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    // var arg1 = args[1].(QList<QStandardItem *>).qclsinst
   default:
     qtrt.ErrorResolve("QStandardItem", "insertRows", args)
   }
@@ -1560,6 +1726,8 @@ func (this *QStandardItem) setStatusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem12setStatusTipERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setStatusTip", args)
   }
@@ -1582,8 +1750,11 @@ func (this *QStandardItem) appendRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem9appendRowEPS_
+    var arg0 = args[0].(QStandardItem).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QStandardItem9appendRowERK5QListIPS_E
+    // var arg0 = args[0].(QList<QStandardItem *>).qclsinst
   default:
     qtrt.ErrorResolve("QStandardItem", "appendRow", args)
   }
@@ -1621,6 +1792,8 @@ func (this *QStandardItem) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem7setIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setIcon", args)
   }
@@ -1640,6 +1813,8 @@ func (this *QStandardItem) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem10setToolTipERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setToolTip", args)
   }
@@ -1660,6 +1835,10 @@ func (this *QStandardItem) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem7setDataERK8QVarianti
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setData", args)
   }
@@ -1697,6 +1876,8 @@ func (this *QStandardItem) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QStandardItem4dataEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "data", args)
   }
@@ -1722,6 +1903,10 @@ func (this *QStandardItem) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QStandardItem5childEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "child", args)
   }
@@ -1777,6 +1962,8 @@ func (this *QStandardItem) setRowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem11setRowCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setRowCount", args)
   }
@@ -1796,6 +1983,8 @@ func (this *QStandardItem) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QStandardItem5writeER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "write", args)
   }
@@ -1833,6 +2022,8 @@ func (this *QStandardItem) setAccessibleText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem17setAccessibleTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setAccessibleText", args)
   }
@@ -1870,6 +2061,8 @@ func (this *QStandardItem) removeColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem12removeColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "removeColumn", args)
   }
@@ -1889,6 +2082,8 @@ func (this *QStandardItem) removeRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem9removeRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "removeRow", args)
   }
@@ -1967,8 +2162,15 @@ func (this *QStandardItem) insertRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem9insertRowEiPS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStandardItem).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QStandardItem9insertRowEiRK5QListIPS_E
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    // var arg1 = args[1].(QList<QStandardItem *>).qclsinst
   default:
     qtrt.ErrorResolve("QStandardItem", "insertRow", args)
   }
@@ -1988,6 +2190,8 @@ func (this *QStandardItem) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem7setFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setFont", args)
   }
@@ -2008,6 +2212,10 @@ func (this *QStandardItem) removeColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem13removeColumnsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "removeColumns", args)
   }
@@ -2059,6 +2267,8 @@ func (this *QStandardItem) setEditable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem11setEditableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setEditable", args)
   }
@@ -2078,6 +2288,8 @@ func (this *QStandardItem) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setText", args)
   }
@@ -2115,6 +2327,8 @@ func (this *QStandardItem) setDropEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem14setDropEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setDropEnabled", args)
   }
@@ -2134,6 +2348,8 @@ func (this *QStandardItem) setColumnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem14setColumnCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setColumnCount", args)
   }
@@ -2171,6 +2387,8 @@ func (this *QStandardItem) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem4readER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "read", args)
   }
@@ -2190,6 +2408,8 @@ func (this *QStandardItem) setCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem12setCheckableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setCheckable", args)
   }
@@ -2209,6 +2429,8 @@ func (this *QStandardItem) setDragEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem14setDragEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setDragEnabled", args)
   }
@@ -2265,6 +2487,10 @@ func (this *QStandardItem) removeRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem10removeRowsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStandardItem", "removeRows", args)
   }
@@ -2302,6 +2528,8 @@ func (this *QStandardItem) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem10setEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setEnabled", args)
   }
@@ -2321,6 +2549,8 @@ func (this *QStandardItem) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem13setBackgroundERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setBackground", args)
   }
@@ -2340,6 +2570,8 @@ func (this *QStandardItem) setAccessibleDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem24setAccessibleDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setAccessibleDescription", args)
   }
@@ -2359,6 +2591,8 @@ func (this *QStandardItem) setSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem11setSizeHintERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setSizeHint", args)
   }
@@ -2396,6 +2630,8 @@ func (this *QStandardItem) setTristate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStandardItem11setTristateEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStandardItem", "setTristate", args)
   }

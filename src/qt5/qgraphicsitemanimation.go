@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicsitemanimation.h
 // dst-file: /src/widgets/qgraphicsitemanimation.go
 //
@@ -126,6 +126,10 @@ func (this *QGraphicsItemAnimation) setPosAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation8setPosAtEdRK7QPointF
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setPosAt", args)
   }
@@ -150,6 +154,8 @@ func (this *QGraphicsItemAnimation) xTranslationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation14xTranslationAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "xTranslationAt", args)
   }
@@ -170,6 +176,10 @@ func (this *QGraphicsItemAnimation) setRotationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation13setRotationAtEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setRotationAt", args)
   }
@@ -207,6 +217,8 @@ func (this *QGraphicsItemAnimation) verticalScaleAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation15verticalScaleAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalScaleAt", args)
   }
@@ -226,6 +238,8 @@ func (this *QGraphicsItemAnimation) posAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation5posAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "posAt", args)
   }
@@ -245,6 +259,8 @@ func (this *QGraphicsItemAnimation) horizontalShearAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation17horizontalShearAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalShearAt", args)
   }
@@ -264,6 +280,8 @@ func (this *QGraphicsItemAnimation) yTranslationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation14yTranslationAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "yTranslationAt", args)
   }
@@ -283,6 +301,8 @@ func (this *QGraphicsItemAnimation) matrixAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation8matrixAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "matrixAt", args)
   }
@@ -336,6 +356,12 @@ func (this *QGraphicsItemAnimation) setScaleAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation10setScaleAtEddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setScaleAt", args)
   }
@@ -357,6 +383,12 @@ func (this *QGraphicsItemAnimation) setTranslationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation16setTranslationAtEddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTranslationAt", args)
   }
@@ -378,6 +410,12 @@ func (this *QGraphicsItemAnimation) setShearAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation10setShearAtEddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setShearAt", args)
   }
@@ -397,6 +435,8 @@ func (this *QGraphicsItemAnimation) rotationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation10rotationAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "rotationAt", args)
   }
@@ -488,6 +528,8 @@ func (this *QGraphicsItemAnimation) setTimeLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation11setTimeLineEP9QTimeLine
+    var arg0 = args[0].(QTimeLine).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setTimeLine", args)
   }
@@ -561,6 +603,8 @@ func (this *QGraphicsItemAnimation) setItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation7setItemEP13QGraphicsItem
+    var arg0 = args[0].(QGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setItem", args)
   }
@@ -580,6 +624,8 @@ func (this *QGraphicsItemAnimation) setStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QGraphicsItemAnimation7setStepEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "setStep", args)
   }
@@ -617,6 +663,8 @@ func (this *QGraphicsItemAnimation) horizontalScaleAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation17horizontalScaleAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "horizontalScaleAt", args)
   }
@@ -636,6 +684,8 @@ func (this *QGraphicsItemAnimation) verticalShearAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QGraphicsItemAnimation15verticalShearAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsItemAnimation", "verticalShearAt", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -89,6 +89,8 @@ func (this *QAnimationGroup) animationAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup11animationAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
   }
@@ -127,6 +129,8 @@ func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
   }
@@ -164,6 +168,8 @@ func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "addAnimation", args)
   }
@@ -201,6 +207,8 @@ func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup13takeAnimationEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
   }
@@ -221,6 +229,10 @@ func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "insertAnimation", args)
   }
@@ -258,6 +270,8 @@ func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
   }

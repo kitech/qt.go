@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -84,8 +84,16 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QWaitCondition4waitEP14QReadWriteLockm
+    var arg0 = args[0].(QReadWriteLock).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN14QWaitCondition4waitEP6QMutexm
+    var arg0 = args[0].(QMutex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
   }

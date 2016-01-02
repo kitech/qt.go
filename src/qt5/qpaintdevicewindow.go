@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -79,10 +79,14 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN18QPaintDeviceWindow6updateEv
   case 2:
     // invoke: _ZN18QPaintDeviceWindow6updateERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
   }

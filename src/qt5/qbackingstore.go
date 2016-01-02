@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -178,6 +178,8 @@ func (this *QBackingStore) setStaticContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore17setStaticContentsERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBackingStore", "setStaticContents", args)
   }
@@ -197,6 +199,8 @@ func (this *QBackingStore) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6resizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBackingStore", "resize", args)
   }
@@ -218,6 +222,12 @@ func (this *QBackingStore) flush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWindow).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPoint).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QBackingStore", "flush", args)
   }
@@ -237,6 +247,8 @@ func (this *QBackingStore) beginPaint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
   }
@@ -294,6 +306,12 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6scrollERK7QRegionii
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
   }

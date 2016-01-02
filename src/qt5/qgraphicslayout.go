@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -149,6 +149,8 @@ func (this *QGraphicsLayout) removeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsLayout8removeAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "removeAt", args)
   }
@@ -168,6 +170,8 @@ func (this *QGraphicsLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsLayout6itemAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "itemAt", args)
   }
@@ -195,6 +199,14 @@ func (this *QGraphicsLayout) getContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_
+    var arg0 = (*C.double)(args[0].(*float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.double)(args[1].(*float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.double)(args[2].(*float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.double)(args[3].(*float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "getContentsMargins", args)
   }
@@ -217,6 +229,14 @@ func (this *QGraphicsLayout) setContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsLayout18setContentsMarginsEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "setContentsMargins", args)
   }
@@ -236,6 +256,8 @@ func (this *QGraphicsLayout) widgetEvent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsLayout11widgetEventEP6QEvent
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "widgetEvent", args)
   }

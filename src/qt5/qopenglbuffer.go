@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -97,6 +97,12 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4readEiPvi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "read", args)
   }
@@ -156,8 +162,14 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer8allocateEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QOpenGLBuffer8allocateEPKvi
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "allocate", args)
   }
@@ -270,6 +282,8 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7releaseENS_4TypeE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QOpenGLBuffer7releaseEv
   default:
@@ -311,6 +325,12 @@ func (this *QOpenGLBuffer) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5writeEiPKvi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "write", args)
   }

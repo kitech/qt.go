@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -161,6 +161,8 @@ func (this *QSpinBox) setMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox10setMinimumEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setMinimum", args)
   }
@@ -230,6 +232,8 @@ func (this *QSpinBox) setMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox10setMaximumEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setMaximum", args)
   }
@@ -249,6 +253,8 @@ func (this *QSpinBox) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox8setValueEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setValue", args)
   }
@@ -268,6 +274,8 @@ func (this *QSpinBox) setDisplayIntegerBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox21setDisplayIntegerBaseEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setDisplayIntegerBase", args)
   }
@@ -328,6 +336,8 @@ func (this *QSpinBox) setSuffix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox9setSuffixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setSuffix", args)
   }
@@ -365,6 +375,8 @@ func (this *QSpinBox) setPrefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox9setPrefixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setPrefix", args)
   }
@@ -456,6 +468,8 @@ func (this *QSpinBox) setSingleStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox13setSingleStepEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setSingleStep", args)
   }
@@ -476,6 +490,10 @@ func (this *QSpinBox) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QSpinBox8setRangeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSpinBox", "setRange", args)
   }
@@ -495,6 +513,8 @@ func (this *QDoubleSpinBox) textFromValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox13textFromValueEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "textFromValue", args)
   }
@@ -514,6 +534,8 @@ func (this *QDoubleSpinBox) setSingleStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox13setSingleStepEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setSingleStep", args)
   }
@@ -551,6 +573,8 @@ func (this *QDoubleSpinBox) valueFromText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox13valueFromTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "valueFromText", args)
   }
@@ -588,6 +612,8 @@ func (this *QDoubleSpinBox) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox8setValueEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setValue", args)
   }
@@ -607,6 +633,8 @@ func (this *QDoubleSpinBox) setSuffix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox9setSuffixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setSuffix", args)
   }
@@ -694,6 +722,8 @@ func (this *QDoubleSpinBox) fixup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox5fixupER7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "fixup", args)
   }
@@ -718,6 +748,8 @@ func (this *QDoubleSpinBox) setPrefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox9setPrefixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setPrefix", args)
   }
@@ -755,6 +787,8 @@ func (this *QDoubleSpinBox) setMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox10setMinimumEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setMinimum", args)
   }
@@ -774,6 +808,8 @@ func (this *QDoubleSpinBox) setMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox10setMaximumEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setMaximum", args)
   }
@@ -793,6 +829,8 @@ func (this *QDoubleSpinBox) setDecimals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox11setDecimalsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setDecimals", args)
   }
@@ -831,6 +869,10 @@ func (this *QDoubleSpinBox) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDoubleSpinBox8setRangeEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "setRange", args)
   }

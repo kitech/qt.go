@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -130,6 +130,8 @@ func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase9setPausedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
   }
@@ -239,6 +241,8 @@ func (this *QFutureWatcherBase) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5eventEP6QEvent
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "event", args)
   }
@@ -312,6 +316,8 @@ func (this *QFutureWatcherBase) setPendingResultsLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase22setPendingResultsLimitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPendingResultsLimit", args)
   }

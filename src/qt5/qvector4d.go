@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -145,6 +145,8 @@ func (this *QVector4D) setW(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setWEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector4D", "setW", args)
   }
@@ -223,6 +225,8 @@ func (this *QVector4D) setZ(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setZEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector4D", "setZ", args)
   }
@@ -278,6 +282,8 @@ func (this *QVector4D) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setXEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector4D", "setX", args)
   }
@@ -297,6 +303,8 @@ func (this *QVector4D) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setYEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector4D", "setY", args)
   }

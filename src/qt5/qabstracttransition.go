@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -165,6 +165,8 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition14setTargetStateEP14QAbstractState
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "setTargetState", args)
   }
@@ -184,6 +186,8 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "addAnimation", args)
   }
@@ -221,6 +225,8 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "removeAnimation", args)
   }

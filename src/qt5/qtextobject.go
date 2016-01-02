@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -431,6 +431,8 @@ func (this *QTextFragment) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextFragment8containsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextFragment", "contains", args)
   }
@@ -469,6 +471,10 @@ func (this *QTextFragment) glyphRuns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextFragment9glyphRunsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextFragment", "glyphRuns", args)
   }
@@ -669,6 +675,8 @@ func (this *QTextBlock) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextBlock8containsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "contains", args)
   }
@@ -706,6 +714,8 @@ func (this *QTextBlock) setRevision(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextBlock11setRevisionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "setRevision", args)
   }
@@ -725,6 +735,8 @@ func (this *QTextBlock) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextBlock10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "setVisible", args)
   }
@@ -906,6 +918,8 @@ func (this *QTextBlock) setUserData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextBlock11setUserDataEP18QTextBlockUserData
+    var arg0 = args[0].(QTextBlockUserData).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserData", args)
   }
@@ -943,6 +957,8 @@ func (this *QTextBlock) setUserState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextBlock12setUserStateEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "setUserState", args)
   }
@@ -998,6 +1014,8 @@ func (this *QTextBlock) setLineCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextBlock12setLineCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextBlock", "setLineCount", args)
   }
@@ -1162,6 +1180,8 @@ func (this *QTextFrame) setLayoutData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData
+    var arg0 = args[0].(QTextFrameLayoutData).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextFrame", "setLayoutData", args)
   }
@@ -1181,6 +1201,8 @@ func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat
+    var arg0 = args[0].(QTextFrameFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextFrame", "setFrameFormat", args)
   }

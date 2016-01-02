@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -78,6 +78,12 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPicture).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
   }
@@ -99,6 +105,12 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPicture).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
   }
@@ -137,6 +149,8 @@ func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin16installIOHandlerERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "installIOHandler", args)
   }

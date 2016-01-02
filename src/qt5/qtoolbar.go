@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -141,12 +141,32 @@ func (this *QToolBar) addAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN8QToolBar9addActionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QString
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QToolBar", "addAction", args)
   }
@@ -202,6 +222,8 @@ func (this *QToolBar) actionGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar14actionGeometryEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "actionGeometry", args)
   }
@@ -221,6 +243,8 @@ func (this *QToolBar) widgetForAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar15widgetForActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "widgetForAction", args)
   }
@@ -263,6 +287,8 @@ func (this *QToolBar) setMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar10setMovableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "setMovable", args)
   }
@@ -300,6 +326,8 @@ func (this *QToolBar) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar11setIconSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "setIconSize", args)
   }
@@ -337,6 +365,8 @@ func (this *QToolBar) setFloatable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar12setFloatableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "setFloatable", args)
   }
@@ -360,8 +390,14 @@ func (this *QToolBar) actionAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBar8actionAtERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK8QToolBar8actionAtEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBar", "actionAt", args)
   }
@@ -432,6 +468,10 @@ func (this *QToolBar) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar12insertWidgetEP7QActionP7QWidget
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBar", "insertWidget", args)
   }
@@ -451,6 +491,8 @@ func (this *QToolBar) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar9addWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "addWidget", args)
   }
@@ -488,6 +530,8 @@ func (this *QToolBar) insertSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBar15insertSeparatorEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBar", "insertSeparator", args)
   }

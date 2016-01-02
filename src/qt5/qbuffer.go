@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -98,6 +98,8 @@ func (this *QBuffer) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer4seekEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBuffer", "seek", args)
   }
@@ -153,8 +155,14 @@ func (this *QBuffer) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer7setDataERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QBuffer7setDataEPKci
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBuffer", "setData", args)
   }
@@ -197,6 +205,8 @@ func (this *QBuffer) setBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer9setBufferEP10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBuffer", "setBuffer", args)
   }

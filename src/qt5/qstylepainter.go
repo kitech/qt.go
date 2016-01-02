@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -92,8 +92,14 @@ func (this *QStylePainter) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget
+    var arg0 = args[0].(QPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QStylePainter5beginEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStylePainter", "begin", args)
   }
@@ -115,6 +121,12 @@ func (this *QStylePainter) drawItemPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPixmap).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStylePainter", "drawItemPixmap", args)
   }

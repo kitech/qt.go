@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.go
 //
@@ -304,6 +304,8 @@ func (this *QTreeWidget) setColumnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget14setColumnCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setColumnCount", args)
   }
@@ -355,6 +357,8 @@ func (this *QTreeWidget) isItemExpanded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget14isItemExpandedEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemExpanded", args)
   }
@@ -380,6 +384,10 @@ func (this *QTreeWidget) setItemHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemHidden", args)
   }
@@ -399,6 +407,8 @@ func (this *QTreeWidget) indexOfTopLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "indexOfTopLevelItem", args)
   }
@@ -419,6 +429,10 @@ func (this *QTreeWidget) insertTopLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "insertTopLevelItem", args)
   }
@@ -440,6 +454,12 @@ func (this *QTreeWidget) setItemWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QWidget).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemWidget", args)
   }
@@ -459,6 +479,8 @@ func (this *QTreeWidget) isItemSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemSelected", args)
   }
@@ -496,6 +518,8 @@ func (this *QTreeWidget) isFirstItemColumnSpanned(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget24isFirstItemColumnSpannedEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "isFirstItemColumnSpanned", args)
   }
@@ -533,6 +557,8 @@ func (this *QTreeWidget) setHeaderLabels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget15setHeaderLabelsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabels", args)
   }
@@ -588,6 +614,8 @@ func (this *QTreeWidget) itemBelow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemBelow", args)
   }
@@ -629,8 +657,14 @@ func (this *QTreeWidget) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget6itemAtEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK11QTreeWidget6itemAtERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAt", args)
   }
@@ -677,10 +711,22 @@ func (this *QTreeWidget) setCurrentItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi6QFlagsIN19QItemSelectionModel13SelectionFlagEE
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(unsafe.Pointer)
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setCurrentItem", args)
   }
@@ -700,6 +746,8 @@ func (this *QTreeWidget) topLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget12topLevelItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "topLevelItem", args)
   }
@@ -756,6 +804,10 @@ func (this *QTreeWidget) setFirstItemColumnSpanned(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setFirstItemColumnSpanned", args)
   }
@@ -776,6 +828,10 @@ func (this *QTreeWidget) removeItemWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "removeItemWidget", args)
   }
@@ -795,6 +851,8 @@ func (this *QTreeWidget) itemAbove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemAbove", args)
   }
@@ -814,6 +872,8 @@ func (this *QTreeWidget) expandItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget10expandItemEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "expandItem", args)
   }
@@ -833,6 +893,8 @@ func (this *QTreeWidget) setHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderItem", args)
   }
@@ -852,6 +914,8 @@ func (this *QTreeWidget) collapseItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "collapseItem", args)
   }
@@ -871,6 +935,8 @@ func (this *QTreeWidget) takeTopLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget16takeTopLevelItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "takeTopLevelItem", args)
   }
@@ -891,6 +957,10 @@ func (this *QTreeWidget) itemWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "itemWidget", args)
   }
@@ -911,6 +981,10 @@ func (this *QTreeWidget) editItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget8editItemEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "editItem", args)
   }
@@ -931,6 +1005,10 @@ func (this *QTreeWidget) setItemExpanded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemExpanded", args)
   }
@@ -950,6 +1028,8 @@ func (this *QTreeWidget) addTopLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "addTopLevelItem", args)
   }
@@ -970,6 +1050,10 @@ func (this *QTreeWidget) closePersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "closePersistentEditor", args)
   }
@@ -989,6 +1073,8 @@ func (this *QTreeWidget) setSelectionModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget17setSelectionModelEP19QItemSelectionModel
+    var arg0 = args[0].(QItemSelectionModel).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setSelectionModel", args)
   }
@@ -1008,6 +1094,8 @@ func (this *QTreeWidget) visualItemRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget14visualItemRectEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "visualItemRect", args)
   }
@@ -1027,6 +1115,8 @@ func (this *QTreeWidget) setHeaderLabel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget14setHeaderLabelERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setHeaderLabel", args)
   }
@@ -1046,6 +1136,8 @@ func (this *QTreeWidget) isItemHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "isItemHidden", args)
   }
@@ -1066,6 +1158,10 @@ func (this *QTreeWidget) openPersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "openPersistentEditor", args)
   }
@@ -1104,6 +1200,10 @@ func (this *QTreeWidget) setItemSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidget", "setItemSelected", args)
   }
@@ -1123,6 +1223,8 @@ func (this *QTreeWidgetItem) setFirstColumnSpanned(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem21setFirstColumnSpannedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setFirstColumnSpanned", args)
   }
@@ -1142,6 +1244,8 @@ func (this *QTreeWidgetItem) indexOfChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem12indexOfChildEPS_
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "indexOfChild", args)
   }
@@ -1162,6 +1266,10 @@ func (this *QTreeWidgetItem) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4dataEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "data", args)
   }
@@ -1200,6 +1308,10 @@ func (this *QTreeWidgetItem) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem7setFontEiRK5QFont
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QFont).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setFont", args)
   }
@@ -1221,6 +1333,12 @@ func (this *QTreeWidgetItem) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem7setDataEiiRK8QVariant
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVariant).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setData", args)
   }
@@ -1240,6 +1358,8 @@ func (this *QTreeWidgetItem) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4fontEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "font", args)
   }
@@ -1260,6 +1380,10 @@ func (this *QTreeWidgetItem) setStatusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem12setStatusTipEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setStatusTip", args)
   }
@@ -1279,6 +1403,8 @@ func (this *QTreeWidgetItem) setExpanded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setExpandedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setExpanded", args)
   }
@@ -1298,6 +1424,8 @@ func (this *QTreeWidgetItem) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem5writeER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "write", args)
   }
@@ -1359,6 +1487,10 @@ func (this *QTreeWidgetItem) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem7setIconEiRK5QIcon
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QIcon).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setIcon", args)
   }
@@ -1378,6 +1510,8 @@ func (this *QTreeWidgetItem) toolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem7toolTipEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "toolTip", args)
   }
@@ -1397,6 +1531,8 @@ func (this *QTreeWidgetItem) backgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem15backgroundColorEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "backgroundColor", args)
   }
@@ -1416,6 +1552,8 @@ func (this *QTreeWidgetItem) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4textEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "text", args)
   }
@@ -1454,6 +1592,10 @@ func (this *QTreeWidgetItem) setTextAlignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem16setTextAlignmentEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextAlignment", args)
   }
@@ -1474,6 +1616,10 @@ func (this *QTreeWidgetItem) insertChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11insertChildEiPS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "insertChild", args)
   }
@@ -1512,6 +1658,10 @@ func (this *QTreeWidgetItem) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem7setTextEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setText", args)
   }
@@ -1532,6 +1682,10 @@ func (this *QTreeWidgetItem) setTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem12setTextColorEiRK6QColor
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QColor).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setTextColor", args)
   }
@@ -1551,6 +1705,8 @@ func (this *QTreeWidgetItem) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem8sizeHintEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "sizeHint", args)
   }
@@ -1570,6 +1726,8 @@ func (this *QTreeWidgetItem) whatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem9whatsThisEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "whatsThis", args)
   }
@@ -1590,6 +1748,10 @@ func (this *QTreeWidgetItem) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem12setWhatsThisEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setWhatsThis", args)
   }
@@ -1609,6 +1771,8 @@ func (this *QTreeWidgetItem) textColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem9textColorEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textColor", args)
   }
@@ -1628,6 +1792,8 @@ func (this *QTreeWidgetItem) icon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem4iconEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "icon", args)
   }
@@ -1648,6 +1814,10 @@ func (this *QTreeWidgetItem) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem10setToolTipEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setToolTip", args)
   }
@@ -1685,6 +1855,8 @@ func (this *QTreeWidgetItem) textAlignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem13textAlignmentEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "textAlignment", args)
   }
@@ -1704,6 +1876,8 @@ func (this *QTreeWidgetItem) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem5childEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "child", args)
   }
@@ -1723,6 +1897,8 @@ func (this *QTreeWidgetItem) setSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setSelectedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setSelected", args)
   }
@@ -1756,6 +1932,8 @@ func (this *QTreeWidgetItem) setHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem9setHiddenEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setHidden", args)
   }
@@ -1793,6 +1971,8 @@ func (this *QTreeWidgetItem) takeChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem9takeChildEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "takeChild", args)
   }
@@ -1812,6 +1992,8 @@ func (this *QTreeWidgetItem) setDisabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setDisabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setDisabled", args)
   }
@@ -1832,6 +2014,10 @@ func (this *QTreeWidgetItem) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QBrush).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackground", args)
   }
@@ -1851,6 +2037,8 @@ func (this *QTreeWidgetItem) addChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem8addChildEPS_
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "addChild", args)
   }
@@ -1870,6 +2058,8 @@ func (this *QTreeWidgetItem) removeChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11removeChildEPS_
+    var arg0 = args[0].(QTreeWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "removeChild", args)
   }
@@ -1908,6 +2098,10 @@ func (this *QTreeWidgetItem) setSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setSizeHintEiRK5QSize
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QSize).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setSizeHint", args)
   }
@@ -1927,6 +2121,8 @@ func (this *QTreeWidgetItem) foreground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10foregroundEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "foreground", args)
   }
@@ -1965,6 +2161,10 @@ func (this *QTreeWidgetItem) setBackgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QColor).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setBackgroundColor", args)
   }
@@ -1984,6 +2184,8 @@ func (this *QTreeWidgetItem) statusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem9statusTipEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "statusTip", args)
   }
@@ -2003,6 +2205,8 @@ func (this *QTreeWidgetItem) background(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QTreeWidgetItem10backgroundEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "background", args)
   }
@@ -2054,6 +2258,8 @@ func (this *QTreeWidgetItem) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem4readER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "read", args)
   }
@@ -2074,6 +2280,10 @@ func (this *QTreeWidgetItem) setForeground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QTreeWidgetItem13setForegroundEiRK6QBrush
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QBrush).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTreeWidgetItem", "setForeground", args)
   }

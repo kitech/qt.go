@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -146,6 +146,8 @@ func (this *QDrag) setHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag10setHotSpotERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDrag", "setHotSpot", args)
   }
@@ -183,6 +185,8 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag11setMimeDataEP9QMimeData
+    var arg0 = args[0].(QMimeData).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDrag", "setMimeData", args)
   }
@@ -238,6 +242,8 @@ func (this *QDrag) setPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag9setPixmapERK7QPixmap
+    var arg0 = args[0].(QPixmap).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDrag", "setPixmap", args)
   }

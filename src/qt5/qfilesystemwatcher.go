@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -101,6 +101,8 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher10removePathERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
   }
@@ -156,6 +158,8 @@ func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher8addPathsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPaths", args)
   }
@@ -175,6 +179,8 @@ func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher11removePathsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePaths", args)
   }
@@ -199,6 +205,8 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher7addPathERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
   }

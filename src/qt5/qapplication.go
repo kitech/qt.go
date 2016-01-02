@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.go
 //
@@ -334,6 +334,8 @@ func (this *QApplication) setStyleSheet(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication13setStyleSheetERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QApplication", "setStyleSheet", args)
   }
@@ -353,6 +355,8 @@ func (this *QApplication) setAutoSipEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication17setAutoSipEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QApplication", "setAutoSipEnabled", args)
   }
@@ -788,6 +792,10 @@ func (this *QApplication) notify(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication6notifyEP7QObjectP6QEvent
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QEvent).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QApplication", "notify", args)
   }

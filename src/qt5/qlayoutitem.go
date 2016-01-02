@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.go
 //
@@ -241,6 +241,8 @@ func (this *QLayoutItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLayoutItem", "setGeometry", args)
   }
@@ -346,6 +348,8 @@ func (this *QLayoutItem) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem14heightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLayoutItem", "heightForWidth", args)
   }
@@ -401,6 +405,8 @@ func (this *QLayoutItem) minimumHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem21minimumHeightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLayoutItem", "minimumHeightForWidth", args)
   }
@@ -542,6 +548,8 @@ func (this *QSpacerItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSpacerItem11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSpacerItem", "setGeometry", args)
   }
@@ -670,6 +678,8 @@ func (this *QWidgetItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWidgetItem11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetItem", "setGeometry", args)
   }
@@ -689,6 +699,8 @@ func (this *QWidgetItem) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem14heightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetItem", "heightForWidth", args)
   }
@@ -798,6 +810,8 @@ func (this *QWidgetItemV2) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetItemV214heightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "heightForWidth", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.go
 //
@@ -185,8 +185,18 @@ func (this *QPolygon) setPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon8setPointEiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN8QPolygon8setPointEiRK6QPoint
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPoint).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPolygon", "setPoint", args)
   }
@@ -234,10 +244,32 @@ func (this *QPolygon) putPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9putPointsEiiRKS_i
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPolygon).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN8QPolygon9putPointsEiiiiz
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN8QPolygon9putPointsEiiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPolygon", "putPoints", args)
   }
@@ -261,8 +293,14 @@ func (this *QPolygon) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon10translatedERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK8QPolygon10translatedEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPolygon", "translated", args)
   }
@@ -282,6 +320,8 @@ func (this *QPolygon) subtracted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon10subtractedERKS_
+    var arg0 = args[0].(QPolygon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "subtracted", args)
   }
@@ -301,6 +341,8 @@ func (this *QPolygon) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon11intersectedERKS_
+    var arg0 = args[0].(QPolygon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "intersected", args)
   }
@@ -325,8 +367,16 @@ func (this *QPolygon) point(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon5pointEiPiS0_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK8QPolygon5pointEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "point", args)
   }
@@ -350,8 +400,14 @@ func (this *QPolygon) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9translateEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QPolygon9translateERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "translate", args)
   }
@@ -377,8 +433,18 @@ func (this *QPolygon) setPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon9setPointsEiiiz
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN8QPolygon9setPointsEiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPolygon", "setPoints", args)
   }
@@ -398,6 +464,8 @@ func (this *QPolygon) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPolygon4swapERS_
+    var arg0 = args[0].(QPolygon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "swap", args)
   }
@@ -422,6 +490,8 @@ func (this *QPolygon) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPolygon6unitedERKS_
+    var arg0 = args[0].(QPolygon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygon", "united", args)
   }
@@ -459,6 +529,8 @@ func (this *QPolygonF) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF11intersectedERKS_
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygonF", "intersected", args)
   }
@@ -515,6 +587,8 @@ func (this *QPolygonF) subtracted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF10subtractedERKS_
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygonF", "subtracted", args)
   }
@@ -538,8 +612,14 @@ func (this *QPolygonF) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QPolygonF9translateERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QPolygonF9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPolygonF", "translate", args)
   }
@@ -559,6 +639,8 @@ func (this *QPolygonF) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QPolygonF4swapERS_
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygonF", "swap", args)
   }
@@ -582,8 +664,14 @@ func (this *QPolygonF) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF10translatedERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK9QPolygonF10translatedEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPolygonF", "translated", args)
   }
@@ -621,6 +709,8 @@ func (this *QPolygonF) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPolygonF6unitedERKS_
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPolygonF", "united", args)
   }

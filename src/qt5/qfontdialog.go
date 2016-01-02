@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.go
 //
@@ -96,6 +96,10 @@ func (this *QFontDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog4openEP7QObjectPKc
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFontDialog", "open", args)
   }
@@ -133,6 +137,8 @@ func (this *QFontDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontDialog", "setVisible", args)
   }
@@ -216,6 +222,8 @@ func (this *QFontDialog) setCurrentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog14setCurrentFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontDialog", "setCurrentFont", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -92,8 +92,12 @@ func (this *QFileIconProvider) icon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QFileIconProvider4iconERK9QFileInfo
+    var arg0 = args[0].(QFileInfo).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK17QFileIconProvider4iconENS_8IconTypeE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileIconProvider", "icon", args)
   }

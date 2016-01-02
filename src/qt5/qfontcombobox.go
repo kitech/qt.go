@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -153,6 +153,8 @@ func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QFontComboBox14setCurrentFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
   }

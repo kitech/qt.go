@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.go
 //
@@ -111,6 +111,8 @@ func (this *QToolBox) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox10removeItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "removeItem", args)
   }
@@ -138,8 +140,22 @@ func (this *QToolBox) insertItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox10insertItemEiP7QWidgetRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QIcon).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QToolBox", "insertItem", args)
   }
@@ -159,6 +175,8 @@ func (this *QToolBox) itemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox8itemTextEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "itemText", args)
   }
@@ -178,6 +196,8 @@ func (this *QToolBox) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox7indexOfEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "indexOf", args)
   }
@@ -197,6 +217,8 @@ func (this *QToolBox) itemToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox11itemToolTipEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "itemToolTip", args)
   }
@@ -221,6 +243,8 @@ func (this *QToolBox) setCurrentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox16setCurrentWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "setCurrentWidget", args)
   }
@@ -240,6 +264,8 @@ func (this *QToolBox) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox15setCurrentIndexEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "setCurrentIndex", args)
   }
@@ -260,6 +286,10 @@ func (this *QToolBox) setItemIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox11setItemIconEiRK5QIcon
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QIcon).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBox", "setItemIcon", args)
   }
@@ -280,6 +310,10 @@ func (this *QToolBox) setItemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox11setItemTextEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBox", "setItemText", args)
   }
@@ -335,6 +369,8 @@ func (this *QToolBox) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox6widgetEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "widget", args)
   }
@@ -355,6 +391,10 @@ func (this *QToolBox) setItemToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox14setItemToolTipEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBox", "setItemToolTip", args)
   }
@@ -416,8 +456,18 @@ func (this *QToolBox) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox7addItemEP7QWidgetRK7QString
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QIcon).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QToolBox", "addItem", args)
   }
@@ -437,6 +487,8 @@ func (this *QToolBox) isItemEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox13isItemEnabledEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "isItemEnabled", args)
   }
@@ -457,6 +509,10 @@ func (this *QToolBox) setItemEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QToolBox14setItemEnabledEib
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QToolBox", "setItemEnabled", args)
   }
@@ -476,6 +532,8 @@ func (this *QToolBox) itemIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QToolBox8itemIconEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolBox", "itemIcon", args)
   }

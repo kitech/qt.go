@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.go
 //
@@ -188,6 +188,8 @@ func (this *QStorageInfo) setPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStorageInfo7setPathERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStorageInfo", "setPath", args)
   }
@@ -411,6 +413,8 @@ func (this *QStorageInfo) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStorageInfo4swapERS_
+    var arg0 = args[0].(QStorageInfo).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStorageInfo", "swap", args)
   }

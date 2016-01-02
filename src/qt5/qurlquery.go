@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -128,6 +128,8 @@ func (this *QUrlQuery) setQuery(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery8setQueryERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQuery", args)
   }
@@ -197,6 +199,8 @@ func (this *QUrlQuery) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery4swapERS_
+    var arg0 = args[0].(QUrlQuery).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
   }
@@ -235,6 +239,10 @@ func (this *QUrlQuery) setQueryDelimiters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQueryDelimiters", args)
   }
@@ -268,6 +276,8 @@ func (this *QUrlQuery) removeAllQueryItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery19removeAllQueryItemsERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeAllQueryItems", args)
   }
@@ -305,6 +315,8 @@ func (this *QUrlQuery) removeQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery15removeQueryItemERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeQueryItem", args)
   }
@@ -339,6 +351,10 @@ func (this *QUrlQuery) addQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery12addQueryItemERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "addQueryItem", args)
   }
@@ -358,6 +374,8 @@ func (this *QUrlQuery) hasQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery12hasQueryItemERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
   }

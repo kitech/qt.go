@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -134,6 +134,12 @@ func (this *QAbstractItemDelegate) updateEditorGeometry(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "updateEditorGeometry", args)
   }
@@ -154,6 +160,10 @@ func (this *QAbstractItemDelegate) setEditorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setEditorData", args)
   }
@@ -180,6 +190,12 @@ func (this *QAbstractItemDelegate) createEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "createEditor", args)
   }
@@ -201,6 +217,12 @@ func (this *QAbstractItemDelegate) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "paint", args)
   }
@@ -221,6 +243,10 @@ func (this *QAbstractItemDelegate) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "sizeHint", args)
   }
@@ -243,6 +269,14 @@ func (this *QAbstractItemDelegate) editorEvent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QModelIndex).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "editorEvent", args)
   }
@@ -265,6 +299,14 @@ func (this *QAbstractItemDelegate) helpEvent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QHelpEvent).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAbstractItemView).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QModelIndex).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "helpEvent", args)
   }
@@ -300,6 +342,12 @@ func (this *QAbstractItemDelegate) setModelData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "setModelData", args)
   }
@@ -320,6 +368,10 @@ func (this *QAbstractItemDelegate) destroyEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "destroyEditor", args)
   }

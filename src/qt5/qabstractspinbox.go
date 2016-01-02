@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -126,6 +126,8 @@ func (this *QAbstractSpinBox) stepBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox6stepByEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "stepBy", args)
   }
@@ -145,6 +147,8 @@ func (this *QAbstractSpinBox) setReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox11setReadOnlyEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setReadOnly", args)
   }
@@ -164,6 +168,8 @@ func (this *QAbstractSpinBox) setFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox8setFrameEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setFrame", args)
   }
@@ -183,6 +189,8 @@ func (this *QAbstractSpinBox) setSpecialValueText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox19setSpecialValueTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setSpecialValueText", args)
   }
@@ -202,6 +210,8 @@ func (this *QAbstractSpinBox) setAccelerated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox14setAcceleratedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setAccelerated", args)
   }
@@ -239,6 +249,8 @@ func (this *QAbstractSpinBox) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox5eventEP6QEvent
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "event", args)
   }
@@ -331,6 +343,8 @@ func (this *QAbstractSpinBox) fixup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAbstractSpinBox5fixupER7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "fixup", args)
   }
@@ -494,6 +508,8 @@ func (this *QAbstractSpinBox) setWrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox11setWrappingEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setWrapping", args)
   }
@@ -513,6 +529,8 @@ func (this *QAbstractSpinBox) setKeyboardTracking(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox19setKeyboardTrackingEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setKeyboardTracking", args)
   }
@@ -550,6 +568,8 @@ func (this *QAbstractSpinBox) setGroupSeparatorShown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAbstractSpinBox22setGroupSeparatorShownEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractSpinBox", "setGroupSeparatorShown", args)
   }

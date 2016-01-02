@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -155,8 +155,18 @@ func (this *QBasicTimer) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN11QBasicTimer5startEiP7QObject
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBasicTimer", "start", args)
   }

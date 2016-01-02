@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.go
 //
@@ -120,8 +120,12 @@ func (this *QCommandLineParser) process(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser7processERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN18QCommandLineParser7processERK16QCoreApplication
+    var arg0 = args[0].(QCoreApplication).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "process", args)
   }
@@ -144,8 +148,12 @@ func (this *QCommandLineParser) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineParser5valueERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK18QCommandLineParser5valueERK18QCommandLineOption
+    var arg0 = args[0].(QCommandLineOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "value", args)
   }
@@ -204,8 +212,12 @@ func (this *QCommandLineParser) values(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineParser6valuesERK18QCommandLineOption
+    var arg0 = args[0].(QCommandLineOption).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK18QCommandLineParser6valuesERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "values", args)
   }
@@ -228,8 +240,12 @@ func (this *QCommandLineParser) isSet(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineParser5isSetERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK18QCommandLineParser5isSetERK18QCommandLineOption
+    var arg0 = args[0].(QCommandLineOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "isSet", args)
   }
@@ -249,6 +265,8 @@ func (this *QCommandLineParser) showHelp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser8showHelpEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "showHelp", args)
   }
@@ -268,6 +286,8 @@ func (this *QCommandLineParser) addOption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser9addOptionERK18QCommandLineOption
+    var arg0 = args[0].(QCommandLineOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addOption", args)
   }
@@ -348,6 +368,12 @@ func (this *QCommandLineParser) addPositionalArgument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser21addPositionalArgumentERK7QStringS2_S2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "addPositionalArgument", args)
   }
@@ -453,6 +479,8 @@ func (this *QCommandLineParser) setApplicationDescription(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser25setApplicationDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "setApplicationDescription", args)
   }
@@ -472,6 +500,8 @@ func (this *QCommandLineParser) parse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineParser5parseERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineParser", "parse", args)
   }

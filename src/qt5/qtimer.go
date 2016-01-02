@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -146,6 +146,8 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer13setSingleShotEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimer", "setSingleShot", args)
   }
@@ -183,6 +185,8 @@ func (this *QTimer) start(args ...interface{}) () {
     // invoke: _ZN6QTimer5startEv
   case 1:
     // invoke: _ZN6QTimer5startEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimer", "start", args)
   }
@@ -220,6 +224,8 @@ func (this *QTimer) setInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer11setIntervalEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimer", "setInterval", args)
   }

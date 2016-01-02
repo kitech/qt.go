@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -150,6 +150,12 @@ func (this *QState) assignProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVariant).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QState", "assignProperty", args)
   }
@@ -192,6 +198,8 @@ func (this *QState) setErrorState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QState13setErrorStateEP14QAbstractState
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QState", "setErrorState", args)
   }
@@ -219,10 +227,20 @@ func (this *QState) addTransition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QState13addTransitionEP19QAbstractTransition
+    var arg0 = args[0].(QAbstractTransition).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QAbstractState).qclsinst
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZN6QState13addTransitionEP14QAbstractState
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QState", "addTransition", args)
   }
@@ -242,6 +260,8 @@ func (this *QState) removeTransition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QState16removeTransitionEP19QAbstractTransition
+    var arg0 = args[0].(QAbstractTransition).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QState", "removeTransition", args)
   }
@@ -279,6 +299,8 @@ func (this *QState) setInitialState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QState15setInitialStateEP14QAbstractState
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QState", "setInitialState", args)
   }

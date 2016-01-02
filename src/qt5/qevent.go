@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.go
 //
@@ -809,6 +809,12 @@ func (this *QInputMethodEvent) setCommitString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QInputMethodEvent15setCommitStringERK7QStringii
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "setCommitString", args)
   }
@@ -1611,6 +1617,8 @@ func (this *QTouchEvent) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setDeviceEP12QTouchDevice
+    var arg0 = args[0].(QTouchDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTouchEvent", "setDevice", args)
   }
@@ -1698,6 +1706,8 @@ func (this *QTouchEvent) setWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setWindowEP7QWindow
+    var arg0 = args[0].(QWindow).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTouchEvent", "setWindow", args)
   }
@@ -1717,6 +1727,8 @@ func (this *QTouchEvent) setTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setTargetEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTouchEvent", "setTarget", args)
   }
@@ -2170,6 +2182,8 @@ func (this *QDragMoveEvent) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDragMoveEvent6acceptERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN14QDragMoveEvent6acceptEv
   default:
@@ -2211,6 +2225,8 @@ func (this *QDragMoveEvent) ignore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDragMoveEvent6ignoreERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN14QDragMoveEvent6ignoreEv
   default:
@@ -2962,6 +2978,8 @@ func (this *QInputEvent) setTimestamp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QInputEvent12setTimestampEm
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QInputEvent", "setTimestamp", args)
   }
@@ -3275,6 +3293,8 @@ func (this *QScrollPrepareEvent) setContentPosRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPosRange", args)
   }
@@ -3294,6 +3314,8 @@ func (this *QScrollPrepareEvent) setContentPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent13setContentPosERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPos", args)
   }
@@ -3349,6 +3371,8 @@ func (this *QScrollPrepareEvent) setViewportSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setViewportSize", args)
   }

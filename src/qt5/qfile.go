@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -130,6 +130,8 @@ func (this *QFile) symLinkTarget(args ...interface{}) () {
     // invoke: _ZNK5QFile13symLinkTargetEv
   case 1:
     // invoke: _ZN5QFile13symLinkTargetERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
   }
@@ -186,8 +188,14 @@ func (this *QFile) link(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile4linkERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QFile4linkERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "link", args)
   }
@@ -279,6 +287,8 @@ func (this *QFile) exists(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6existsERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK5QFile6existsEv
   default:
@@ -322,8 +332,14 @@ func (this *QFile) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6resizeERK7QStringx
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int64_t(args[1].(int64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QFile6resizeEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
   }
@@ -343,6 +359,8 @@ func (this *QFile) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "setFileName", args)
   }
@@ -366,6 +384,8 @@ func (this *QFile) remove(args ...interface{}) () {
     // invoke: _ZN5QFile6removeEv
   case 1:
     // invoke: _ZN5QFile6removeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
   }
@@ -389,8 +409,14 @@ func (this *QFile) copy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile4copyERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QFile4copyERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
   }
@@ -442,8 +468,14 @@ func (this *QFile) rename(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6renameERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QFile6renameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
   }
@@ -529,6 +561,8 @@ func (this *QFile) readLink(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile8readLinkERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK5QFile8readLinkEv
   default:

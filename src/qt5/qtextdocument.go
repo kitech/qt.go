@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.go
 //
@@ -236,6 +236,8 @@ func (this *QTextDocument) setDefaultStyleSheet(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument20setDefaultStyleSheetERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setDefaultStyleSheet", args)
   }
@@ -329,6 +331,8 @@ func (this *QTextDocument) redo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument4redoEP11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QTextDocument4redoEv
   default:
@@ -368,6 +372,8 @@ func (this *QTextDocument) print(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument5printEP17QPagedPaintDevice
+    var arg0 = args[0].(QPagedPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "print", args)
   }
@@ -405,6 +411,8 @@ func (this *QTextDocument) toHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument6toHtmlERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "toHtml", args)
   }
@@ -442,6 +450,8 @@ func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument18setUndoRedoEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setUndoRedoEnabled", args)
   }
@@ -463,6 +473,8 @@ func (this *QTextDocument) undo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument4undoEP11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN13QTextDocument4undoEv
   default:
@@ -504,6 +516,12 @@ func (this *QTextDocument) addResource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QUrl).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVariant).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTextDocument", "addResource", args)
   }
@@ -541,6 +559,8 @@ func (this *QTextDocument) object(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument6objectEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "object", args)
   }
@@ -560,6 +580,8 @@ func (this *QTextDocument) clone(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument5cloneEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "clone", args)
   }
@@ -580,6 +602,10 @@ func (this *QTextDocument) markContentsDirty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument17markContentsDirtyEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextDocument", "markContentsDirty", args)
   }
@@ -820,6 +846,8 @@ func (this *QTextDocument) setTextWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument12setTextWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setTextWidth", args)
   }
@@ -839,6 +867,8 @@ func (this *QTextDocument) setDocumentMargin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument17setDocumentMarginEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setDocumentMargin", args)
   }
@@ -894,6 +924,8 @@ func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument19setUseDesignMetricsEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setUseDesignMetrics", args)
   }
@@ -913,6 +945,8 @@ func (this *QTextDocument) setDocumentLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout
+    var arg0 = args[0].(QAbstractTextDocumentLayout).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setDocumentLayout", args)
   }
@@ -932,6 +966,8 @@ func (this *QTextDocument) setIndentWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument14setIndentWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setIndentWidth", args)
   }
@@ -969,6 +1005,8 @@ func (this *QTextDocument) frameAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument7frameAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "frameAt", args)
   }
@@ -988,6 +1026,8 @@ func (this *QTextDocument) setDefaultTextOption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument20setDefaultTextOptionERK11QTextOption
+    var arg0 = args[0].(QTextOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setDefaultTextOption", args)
   }
@@ -1025,6 +1065,8 @@ func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument17findBlockByNumberEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByNumber", args)
   }
@@ -1062,6 +1104,8 @@ func (this *QTextDocument) findBlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument9findBlockEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlock", args)
   }
@@ -1081,6 +1125,8 @@ func (this *QTextDocument) setBaseUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument10setBaseUrlERK4QUrl
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setBaseUrl", args)
   }
@@ -1100,6 +1146,8 @@ func (this *QTextDocument) appendUndoItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem
+    var arg0 = args[0].(QAbstractUndoItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "appendUndoItem", args)
   }
@@ -1120,6 +1168,10 @@ func (this *QTextDocument) drawContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRectF).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextDocument", "drawContents", args)
   }
@@ -1139,6 +1191,8 @@ func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument21findBlockByLineNumberEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByLineNumber", args)
   }
@@ -1212,6 +1266,8 @@ func (this *QTextDocument) characterAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument11characterAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "characterAt", args)
   }
@@ -1231,6 +1287,8 @@ func (this *QTextDocument) setDefaultFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument14setDefaultFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setDefaultFont", args)
   }
@@ -1250,6 +1308,8 @@ func (this *QTextDocument) objectForFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument15objectForFormatERK11QTextFormat
+    var arg0 = args[0].(QTextFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "objectForFormat", args)
   }
@@ -1337,6 +1397,8 @@ func (this *QTextDocument) setPageSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument11setPageSizeERK6QSizeF
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setPageSize", args)
   }
@@ -1356,6 +1418,8 @@ func (this *QTextDocument) setHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument7setHtmlERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setHtml", args)
   }
@@ -1411,6 +1475,8 @@ func (this *QTextDocument) setPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument12setPlainTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setPlainText", args)
   }
@@ -1449,6 +1515,10 @@ func (this *QTextDocument) resource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTextDocument8resourceEiRK4QUrl
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QUrl).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextDocument", "resource", args)
   }
@@ -1486,6 +1556,8 @@ func (this *QTextDocument) setMaximumBlockCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument20setMaximumBlockCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setMaximumBlockCount", args)
   }
@@ -1505,6 +1577,8 @@ func (this *QTextDocument) setModified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTextDocument11setModifiedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocument", "setModified", args)
   }

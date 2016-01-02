@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -165,6 +165,8 @@ func (this *QPen) setWidthF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen9setWidthFEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setWidthF", args)
   }
@@ -184,6 +186,8 @@ func (this *QPen) setBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setBrushERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setBrush", args)
   }
@@ -221,6 +225,8 @@ func (this *QPen) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setWidth", args)
   }
@@ -258,6 +264,8 @@ func (this *QPen) setCosmetic(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen11setCosmeticEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setCosmetic", args)
   }
@@ -295,6 +303,8 @@ func (this *QPen) setColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setColorERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setColor", args)
   }
@@ -350,6 +360,8 @@ func (this *QPen) setMiterLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen13setMiterLimitEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setMiterLimit", args)
   }
@@ -387,6 +399,8 @@ func (this *QPen) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen4swapERS_
+    var arg0 = args[0].(QPen).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "swap", args)
   }
@@ -442,6 +456,8 @@ func (this *QPen) setDashOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen13setDashOffsetEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPen", "setDashOffset", args)
   }

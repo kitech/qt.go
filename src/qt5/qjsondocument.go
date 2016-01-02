@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -152,6 +152,8 @@ func (this *QJsonDocument) toJson(args ...interface{}) () {
     // invoke: _ZNK13QJsonDocument6toJsonEv
   case 1:
     // invoke: _ZNK13QJsonDocument6toJsonENS_10JsonFormatE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonDocument", "toJson", args)
   }
@@ -230,6 +232,8 @@ func (this *QJsonDocument) rawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonDocument7rawDataEPi
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonDocument", "rawData", args)
   }

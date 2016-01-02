@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.go
 //
@@ -128,6 +128,8 @@ func (this *QGraphicsLinearLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout6itemAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemAt", args)
   }
@@ -165,6 +167,8 @@ func (this *QGraphicsLinearLayout) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout11setGeometryERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setGeometry", args)
   }
@@ -184,6 +188,8 @@ func (this *QGraphicsLinearLayout) addStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10addStretchEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addStretch", args)
   }
@@ -221,6 +227,8 @@ func (this *QGraphicsLinearLayout) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10setSpacingEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setSpacing", args)
   }
@@ -241,6 +249,10 @@ func (this *QGraphicsLinearLayout) insertItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertItem", args)
   }
@@ -274,6 +286,8 @@ func (this *QGraphicsLinearLayout) dump(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout4dumpEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "dump", args)
   }
@@ -294,6 +308,10 @@ func (this *QGraphicsLinearLayout) setStretchFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi
+    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setStretchFactor", args)
   }
@@ -313,6 +331,8 @@ func (this *QGraphicsLinearLayout) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem
+    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "addItem", args)
   }
@@ -332,6 +352,8 @@ func (this *QGraphicsLinearLayout) itemSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout11itemSpacingEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "itemSpacing", args)
   }
@@ -351,6 +373,8 @@ func (this *QGraphicsLinearLayout) removeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout8removeAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeAt", args)
   }
@@ -371,6 +395,10 @@ func (this *QGraphicsLinearLayout) insertStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout13insertStretchEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "insertStretch", args)
   }
@@ -391,6 +419,10 @@ func (this *QGraphicsLinearLayout) setItemSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout14setItemSpacingEid
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "setItemSpacing", args)
   }
@@ -410,6 +442,8 @@ func (this *QGraphicsLinearLayout) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem
+    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "removeItem", args)
   }
@@ -429,6 +463,8 @@ func (this *QGraphicsLinearLayout) stretchFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsLinearLayout13stretchFactorEP19QGraphicsLayoutItem
+    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsLinearLayout", "stretchFactor", args)
   }

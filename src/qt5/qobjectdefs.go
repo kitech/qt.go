@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -223,6 +223,8 @@ func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11indexOfSlotEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSlot", args)
   }
@@ -242,6 +244,8 @@ func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject18indexOfConstructorEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfConstructor", args)
   }
@@ -261,6 +265,8 @@ func (this *QMetaObject) enumerator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject10enumeratorEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "enumerator", args)
   }
@@ -280,6 +286,8 @@ func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfMethodEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfMethod", args)
   }
@@ -299,6 +307,8 @@ func (this *QMetaObject) constructor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11constructorEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "constructor", args)
   }
@@ -350,6 +360,8 @@ func (this *QMetaObject) property(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject8propertyEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "property", args)
   }
@@ -401,6 +413,8 @@ func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15indexOfPropertyEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfProperty", args)
   }
@@ -420,6 +434,8 @@ func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16indexOfClassInfoEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfClassInfo", args)
   }
@@ -456,8 +472,12 @@ func (this *QMetaObject) cast(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject4castEPK7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK11QMetaObject4castEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "cast", args)
   }
@@ -477,6 +497,8 @@ func (this *QMetaObject) method(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject6methodEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "method", args)
   }
@@ -532,6 +554,8 @@ func (this *QMetaObject) classInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject9classInfoEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfo", args)
   }
@@ -569,6 +593,8 @@ func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfSignalEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSignal", args)
   }
@@ -706,6 +732,8 @@ func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject17indexOfEnumeratorEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfEnumerator", args)
   }

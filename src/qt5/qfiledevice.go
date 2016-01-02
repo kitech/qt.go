@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -118,6 +118,8 @@ func (this *QFileDevice) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice4seekEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
   }
@@ -137,6 +139,8 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5unmapEPh
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
   }
@@ -337,6 +341,8 @@ func (this *QFileDevice) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice6resizeEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
   }

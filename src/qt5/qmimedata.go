@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -114,6 +114,10 @@ func (this *QMimeData) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setDataERK7QStringRK10QByteArray
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QByteArray).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMimeData", "setData", args)
   }
@@ -206,6 +210,8 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9hasFormatERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
   }
@@ -225,6 +231,8 @@ func (this *QMimeData) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "setText", args)
   }
@@ -280,6 +288,8 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setHtmlERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
   }
@@ -299,6 +309,8 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setImageDataERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
   }
@@ -354,6 +366,8 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12removeFormatERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
   }
@@ -409,6 +423,8 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setColorDataERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
   }
@@ -464,6 +480,8 @@ func (this *QMimeData) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4dataERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
   }

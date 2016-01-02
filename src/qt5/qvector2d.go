@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qvector2d.h
 // dst-file: /src/gui/qvector2d.go
 //
@@ -131,6 +131,8 @@ func (this *QVector2D) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector2D4setXEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector2D", "setX", args)
   }
@@ -191,6 +193,8 @@ func (this *QVector2D) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector2D4setYEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector2D", "setY", args)
   }
@@ -229,6 +233,10 @@ func (this *QVector2D) distanceToLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector2D14distanceToLineERKS_S1_
+    var arg0 = args[0].(QVector2D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector2D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QVector2D", "distanceToLine", args)
   }
@@ -320,6 +328,8 @@ func (this *QVector2D) distanceToPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector2D15distanceToPointERKS_
+    var arg0 = args[0].(QVector2D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector2D", "distanceToPoint", args)
   }

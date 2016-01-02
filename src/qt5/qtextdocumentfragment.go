@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -122,6 +122,8 @@ func (this *QTextDocumentFragment) toHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
   }

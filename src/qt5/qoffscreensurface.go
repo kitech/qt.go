@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -131,6 +131,8 @@ func (this *QOffscreenSurface) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat
+    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setFormat", args)
   }
@@ -150,6 +152,8 @@ func (this *QOffscreenSurface) setScreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setScreenEP7QScreen
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setScreen", args)
   }

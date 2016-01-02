@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -124,6 +124,12 @@ func (this *QTextObjectInterface) intrinsicSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QTextFormat).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "intrinsicSize", args)
   }
@@ -147,6 +153,16 @@ func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRectF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QTextDocument).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QTextFormat).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "drawObject", args)
   }
@@ -185,6 +201,10 @@ func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "registerHandler", args)
   }
@@ -236,6 +256,8 @@ func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice
+    var arg0 = args[0].(QPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "setPaintDevice", args)
   }
@@ -274,6 +296,10 @@ func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "unregisterHandler", args)
   }
@@ -334,6 +360,8 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
   }
@@ -353,6 +381,8 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
   }
@@ -372,6 +402,8 @@ func (this *QAbstractTextDocumentLayout) frameBoundingRect(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame
+    var arg0 = args[0].(QTextFrame).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "frameBoundingRect", args)
   }
@@ -391,6 +423,8 @@ func (this *QAbstractTextDocumentLayout) blockBoundingRect(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "blockBoundingRect", args)
   }

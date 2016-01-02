@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.go
 //
@@ -274,12 +274,42 @@ func (this *QFontMetrics) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.int32_t)(args[4].(*int32))
+    if false {fmt.Println(arg4)}
   case 1:
     // invoke: _ZNK12QFontMetrics12boundingRectERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK12QFontMetrics12boundingRectE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QString).qclsinst
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = (*C.int32_t)(args[7].(*int32))
+    if false {fmt.Println(arg7)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "boundingRect", args)
   }
@@ -317,6 +347,8 @@ func (this *QFontMetrics) rightBearing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics12rightBearingE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "rightBearing", args)
   }
@@ -357,6 +389,14 @@ func (this *QFontMetrics) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics4sizeEiRK7QStringiPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "size", args)
   }
@@ -412,6 +452,8 @@ func (this *QFontMetrics) tightBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics17tightBoundingRectERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "tightBoundingRect", args)
   }
@@ -467,6 +509,8 @@ func (this *QFontMetrics) inFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics6inFontE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "inFont", args)
   }
@@ -513,10 +557,22 @@ func (this *QFontMetrics) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics5widthE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QFontMetrics5widthERK7QStringii
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZNK12QFontMetrics5widthERK7QStringi
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "width", args)
   }
@@ -613,6 +669,8 @@ func (this *QFontMetrics) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QFontMetrics4swapERS_
+    var arg0 = args[0].(QFontMetrics).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "swap", args)
   }
@@ -633,6 +691,10 @@ func (this *QFontMetrics) charWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics9charWidthERK7QStringi
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "charWidth", args)
   }
@@ -652,6 +714,8 @@ func (this *QFontMetrics) leftBearing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics11leftBearingE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "leftBearing", args)
   }
@@ -671,6 +735,8 @@ func (this *QFontMetrics) inFontUcs4(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QFontMetrics10inFontUcs4Ej
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetrics", "inFontUcs4", args)
   }
@@ -708,6 +774,8 @@ func (this *QFontMetricsF) inFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF6inFontE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "inFont", args)
   }
@@ -730,6 +798,14 @@ func (this *QFontMetricsF) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF4sizeEiRK7QStringiPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "size", args)
   }
@@ -793,8 +869,12 @@ func (this *QFontMetricsF) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF5widthE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK13QFontMetricsF5widthERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "width", args)
   }
@@ -838,10 +918,24 @@ func (this *QFontMetricsF) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.int32_t)(args[4].(*int32))
+    if false {fmt.Println(arg4)}
   case 1:
     // invoke: _ZNK13QFontMetricsF12boundingRectERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK13QFontMetricsF12boundingRectE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "boundingRect", args)
   }
@@ -861,6 +955,8 @@ func (this *QFontMetricsF) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QFontMetricsF4swapERS_
+    var arg0 = args[0].(QFontMetricsF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "swap", args)
   }
@@ -880,6 +976,8 @@ func (this *QFontMetricsF) tightBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF17tightBoundingRectERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "tightBoundingRect", args)
   }
@@ -899,6 +997,8 @@ func (this *QFontMetricsF) leftBearing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF11leftBearingE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "leftBearing", args)
   }
@@ -918,6 +1018,8 @@ func (this *QFontMetricsF) rightBearing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF12rightBearingE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "rightBearing", args)
   }
@@ -1081,6 +1183,8 @@ func (this *QFontMetricsF) inFontUcs4(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontMetricsF10inFontUcs4Ej
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFontMetricsF", "inFontUcs4", args)
   }

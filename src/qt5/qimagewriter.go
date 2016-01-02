@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -132,6 +132,10 @@ func (this *QImageWriter) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter7setTextERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setText", args)
   }
@@ -151,6 +155,8 @@ func (this *QImageWriter) setGamma(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter8setGammaEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setGamma", args)
   }
@@ -170,6 +176,8 @@ func (this *QImageWriter) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setFileName", args)
   }
@@ -289,6 +297,8 @@ func (this *QImageWriter) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter5writeERK6QImage
+    var arg0 = args[0].(QImage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "write", args)
   }
@@ -308,6 +318,8 @@ func (this *QImageWriter) setCompression(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter14setCompressionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setCompression", args)
   }
@@ -359,6 +371,8 @@ func (this *QImageWriter) setOptimizedWrite(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter17setOptimizedWriteEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setOptimizedWrite", args)
   }
@@ -396,6 +410,8 @@ func (this *QImageWriter) setQuality(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter10setQualityEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setQuality", args)
   }
@@ -456,6 +472,8 @@ func (this *QImageWriter) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter9setFormatERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setFormat", args)
   }
@@ -475,6 +493,8 @@ func (this *QImageWriter) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter9setDeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setDevice", args)
   }
@@ -494,6 +514,8 @@ func (this *QImageWriter) setSubType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter10setSubTypeERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setSubType", args)
   }
@@ -603,6 +625,8 @@ func (this *QImageWriter) setProgressiveScanWrite(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter23setProgressiveScanWriteEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setProgressiveScanWrite", args)
   }
@@ -622,6 +646,8 @@ func (this *QImageWriter) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageWriter14setDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageWriter", "setDescription", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -135,6 +135,8 @@ func (this *QMessageLogContext) copy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QMessageLogContext4copyERKS_
+    var arg0 = args[0].(QMessageLogContext).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageLogContext", "copy", args)
   }
@@ -170,16 +172,30 @@ func (this *QMessageLogger) info(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK14QMessageLogger4infoEPFRK16QLoggingCategoryvE
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategory
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK14QMessageLogger4infoEPFRK16QLoggingCategoryvEPKcz
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZNK14QMessageLogger4infoEv
   case 5:
     // invoke: _ZNK14QMessageLogger4infoEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "info", args)
   }
@@ -215,16 +231,30 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger5debugEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK14QMessageLogger5debugEPFRK16QLoggingCategoryvEPKcz
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK14QMessageLogger5debugEv
   case 4:
     // invoke: _ZNK14QMessageLogger5debugERK16QLoggingCategory
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
   case 5:
     // invoke: _ZNK14QMessageLogger5debugEPFRK16QLoggingCategoryvE
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "debug", args)
   }
@@ -260,14 +290,28 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK14QMessageLogger7warningEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK14QMessageLogger7warningEPFRK16QLoggingCategoryvE
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK14QMessageLogger7warningERK16QLoggingCategory
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
   case 4:
     // invoke: _ZNK14QMessageLogger7warningEPFRK16QLoggingCategoryvEPKcz
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK14QMessageLogger7warningEv
   default:
@@ -289,6 +333,8 @@ func (this *QMessageLogger) fatal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger5fatalEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "fatal", args)
   }
@@ -324,16 +370,30 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger8criticalEPFRK16QLoggingCategoryvE
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QMessageLogger8criticalEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategory
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK14QMessageLogger8criticalEv
   case 4:
     // invoke: _ZNK14QMessageLogger8criticalEPFRK16QLoggingCategoryvEPKcz
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz
+    var arg0 = args[0].(QLoggingCategory).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "critical", args)
   }
@@ -360,6 +420,8 @@ func (this *QMessageLogger) noDebug(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QMessageLogger7noDebugEPKcz
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QMessageLogger7noDebugEv
   default:

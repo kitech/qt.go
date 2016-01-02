@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -98,6 +98,8 @@ func (this *QCommandLineOption) setValueName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption12setValueNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setValueName", args)
   }
@@ -140,6 +142,8 @@ func (this *QCommandLineOption) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption14setDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDescription", args)
   }
@@ -177,6 +181,8 @@ func (this *QCommandLineOption) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption4swapERS_
+    var arg0 = args[0].(QCommandLineOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
   }
@@ -228,6 +234,8 @@ func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption15setDefaultValueERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValue", args)
   }
@@ -247,6 +255,8 @@ func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption16setDefaultValuesERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValues", args)
   }

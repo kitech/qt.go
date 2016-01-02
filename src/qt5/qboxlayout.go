@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -237,6 +237,8 @@ func (this *QBoxLayout) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout7addItemEP11QLayoutItem
+    var arg0 = args[0].(QLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addItem", args)
   }
@@ -289,6 +291,10 @@ func (this *QBoxLayout) insertSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout13insertSpacingEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacing", args)
   }
@@ -309,6 +315,10 @@ func (this *QBoxLayout) setStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout10setStretchEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretch", args)
   }
@@ -334,6 +344,10 @@ func (this *QBoxLayout) insertStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout13insertStretchEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertStretch", args)
   }
@@ -354,6 +368,10 @@ func (this *QBoxLayout) addLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout9addLayoutEP7QLayouti
+    var arg0 = args[0].(QLayout).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addLayout", args)
   }
@@ -378,8 +396,16 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QWidgeti
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QLayouti
+    var arg0 = args[0].(QLayout).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretchFactor", args)
   }
@@ -417,6 +443,8 @@ func (this *QBoxLayout) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "setGeometry", args)
   }
@@ -436,6 +464,8 @@ func (this *QBoxLayout) addStretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout10addStretchEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStretch", args)
   }
@@ -457,6 +487,12 @@ func (this *QBoxLayout) insertLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout12insertLayoutEiP7QLayouti
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLayout).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertLayout", args)
   }
@@ -494,6 +530,8 @@ func (this *QBoxLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QBoxLayout6itemAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "itemAt", args)
   }
@@ -532,6 +570,10 @@ func (this *QBoxLayout) insertSpacerItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QSpacerItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertSpacerItem", args)
   }
@@ -551,6 +593,8 @@ func (this *QBoxLayout) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QBoxLayout14heightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "heightForWidth", args)
   }
@@ -570,6 +614,8 @@ func (this *QBoxLayout) addStrut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout8addStrutEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addStrut", args)
   }
@@ -607,6 +653,8 @@ func (this *QBoxLayout) stretch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QBoxLayout7stretchEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "stretch", args)
   }
@@ -626,6 +674,8 @@ func (this *QBoxLayout) addSpacerItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout13addSpacerItemEP11QSpacerItem
+    var arg0 = args[0].(QSpacerItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacerItem", args)
   }
@@ -645,6 +695,8 @@ func (this *QBoxLayout) minimumHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QBoxLayout21minimumHeightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumHeightForWidth", args)
   }
@@ -682,6 +734,8 @@ func (this *QBoxLayout) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout10setSpacingEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "setSpacing", args)
   }
@@ -701,6 +755,8 @@ func (this *QBoxLayout) takeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout6takeAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "takeAt", args)
   }
@@ -721,6 +777,10 @@ func (this *QBoxLayout) insertItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout10insertItemEiP11QLayoutItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLayoutItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "insertItem", args)
   }
@@ -740,6 +800,8 @@ func (this *QBoxLayout) addSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QBoxLayout10addSpacingEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "addSpacing", args)
   }

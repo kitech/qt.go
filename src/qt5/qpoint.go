@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.go
 //
@@ -195,6 +195,8 @@ func (this *QPoint) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint4setXEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPoint", "setX", args)
   }
@@ -232,6 +234,8 @@ func (this *QPoint) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint4setYEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPoint", "setY", args)
   }
@@ -400,6 +404,8 @@ func (this *QPointF) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF4setXEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPointF", "setX", args)
   }
@@ -451,6 +457,8 @@ func (this *QPointF) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF4setYEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPointF", "setY", args)
   }

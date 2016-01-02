@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.go
 //
@@ -146,6 +146,8 @@ func (this *QAbstractProxyModel) mapSelectionToSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection
+    var arg0 = args[0].(QItemSelection).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapSelectionToSource", args)
   }
@@ -165,6 +167,8 @@ func (this *QAbstractProxyModel) mapSelectionFromSource(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection
+    var arg0 = args[0].(QItemSelection).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapSelectionFromSource", args)
   }
@@ -185,6 +189,10 @@ func (this *QAbstractProxyModel) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel4dataERK11QModelIndexi
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "data", args)
   }
@@ -222,6 +230,8 @@ func (this *QAbstractProxyModel) span(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel4spanERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "span", args)
   }
@@ -241,6 +251,8 @@ func (this *QAbstractProxyModel) canFetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "canFetchMore", args)
   }
@@ -283,6 +295,8 @@ func (this *QAbstractProxyModel) mapToSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapToSource", args)
   }
@@ -302,6 +316,8 @@ func (this *QAbstractProxyModel) mapFromSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "mapFromSource", args)
   }
@@ -321,6 +337,8 @@ func (this *QAbstractProxyModel) itemData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel8itemDataERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "itemData", args)
   }
@@ -340,6 +358,8 @@ func (this *QAbstractProxyModel) buddy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel5buddyERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "buddy", args)
   }
@@ -359,6 +379,8 @@ func (this *QAbstractProxyModel) setSourceModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel
+    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "setSourceModel", args)
   }
@@ -380,6 +402,12 @@ func (this *QAbstractProxyModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "sibling", args)
   }
@@ -401,6 +429,12 @@ func (this *QAbstractProxyModel) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "setData", args)
   }
@@ -420,6 +454,8 @@ func (this *QAbstractProxyModel) fetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "fetchMore", args)
   }
@@ -453,6 +489,8 @@ func (this *QAbstractProxyModel) hasChildren(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractProxyModel", "hasChildren", args)
   }

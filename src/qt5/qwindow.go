@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.go
 //
@@ -306,6 +306,8 @@ func (this *QWindow) setScreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow9setScreenEP7QScreen
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setScreen", args)
   }
@@ -343,6 +345,8 @@ func (this *QWindow) setTransientParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow18setTransientParentEPS_
+    var arg0 = args[0].(QWindow).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setTransientParent", args)
   }
@@ -403,6 +407,8 @@ func (this *QWindow) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow7setIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setIcon", args)
   }
@@ -440,6 +446,8 @@ func (this *QWindow) setMinimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow14setMinimumSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumSize", args)
   }
@@ -499,8 +507,14 @@ func (this *QWindow) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow6resizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QWindow6resizeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QWindow", "resize", args)
   }
@@ -520,6 +534,8 @@ func (this *QWindow) setTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow8setTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setTitle", args)
   }
@@ -575,6 +591,8 @@ func (this *QWindow) mapToGlobal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QWindow11mapToGlobalERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "mapToGlobal", args)
   }
@@ -626,6 +644,8 @@ func (this *QWindow) setMaximumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow15setMaximumWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumWidth", args)
   }
@@ -699,6 +719,8 @@ func (this *QWindow) setParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow9setParentEPS_
+    var arg0 = args[0].(QWindow).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setParent", args)
   }
@@ -754,6 +776,8 @@ func (this *QWindow) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow9setHeightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setHeight", args)
   }
@@ -791,6 +815,8 @@ func (this *QWindow) mapFromGlobal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QWindow13mapFromGlobalERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "mapFromGlobal", args)
   }
@@ -846,6 +872,8 @@ func (this *QWindow) setFilePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow11setFilePathERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setFilePath", args)
   }
@@ -865,6 +893,8 @@ func (this *QWindow) setCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow9setCursorERK7QCursor
+    var arg0 = args[0].(QCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setCursor", args)
   }
@@ -884,6 +914,8 @@ func (this *QWindow) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setVisible", args)
   }
@@ -917,6 +949,8 @@ func (this *QWindow) setMouseGrabEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow19setMouseGrabEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMouseGrabEnabled", args)
   }
@@ -976,8 +1010,14 @@ func (this *QWindow) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow11setPositionERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QWindow11setPositionEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QWindow", "setPosition", args)
   }
@@ -1033,6 +1073,8 @@ func (this *QWindow) setMinimumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow15setMinimumWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumWidth", args)
   }
@@ -1088,6 +1130,8 @@ func (this *QWindow) setFramePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow16setFramePositionERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setFramePosition", args)
   }
@@ -1113,8 +1157,18 @@ func (this *QWindow) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow11setGeometryEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN7QWindow11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setGeometry", args)
   }
@@ -1134,6 +1188,8 @@ func (this *QWindow) setKeyboardGrabEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow22setKeyboardGrabEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setKeyboardGrabEnabled", args)
   }
@@ -1171,6 +1227,8 @@ func (this *QWindow) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow8setWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setWidth", args)
   }
@@ -1190,6 +1248,8 @@ func (this *QWindow) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow4setYEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setY", args)
   }
@@ -1227,6 +1287,8 @@ func (this *QWindow) setBaseSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow11setBaseSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setBaseSize", args)
   }
@@ -1246,6 +1308,8 @@ func (this *QWindow) alert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow5alertEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "alert", args)
   }
@@ -1319,6 +1383,8 @@ func (this *QWindow) setMinimumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow16setMinimumHeightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMinimumHeight", args)
   }
@@ -1446,6 +1512,8 @@ func (this *QWindow) setOpacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow10setOpacityEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setOpacity", args)
   }
@@ -1465,6 +1533,8 @@ func (this *QWindow) setSizeIncrement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow16setSizeIncrementERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setSizeIncrement", args)
   }
@@ -1574,6 +1644,8 @@ func (this *QWindow) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow9setFormatERK14QSurfaceFormat
+    var arg0 = args[0].(QSurfaceFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setFormat", args)
   }
@@ -1611,6 +1683,8 @@ func (this *QWindow) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow4setXEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setX", args)
   }
@@ -1684,6 +1758,8 @@ func (this *QWindow) setMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow7setMaskERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMask", args)
   }
@@ -1703,6 +1779,8 @@ func (this *QWindow) setMaximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow14setMaximumSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumSize", args)
   }
@@ -1794,6 +1872,8 @@ func (this *QWindow) setMaximumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWindow16setMaximumHeightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWindow", "setMaximumHeight", args)
   }

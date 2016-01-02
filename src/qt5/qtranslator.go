@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -153,10 +153,34 @@ func (this *QTranslator) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTranslator4loadERK7QStringS2_S2_S2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
+    var arg0 = args[0].(QLocale).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
   }
@@ -179,6 +203,14 @@ func (this *QTranslator) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator9translateEPKcS1_S1_i
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
   }

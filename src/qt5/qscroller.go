@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -131,8 +131,13 @@ func (this *QScroller) setSnapPositionsY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller17setSnapPositionsYEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QScroller17setSnapPositionsYERK5QListIdE
+    // var arg0 = args[0].(QList<double>).qclsinst
   default:
     qtrt.ErrorResolve("QScroller", "setSnapPositionsY", args)
   }
@@ -184,6 +189,8 @@ func (this *QScroller) setScrollerProperties(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties
+    var arg0 = args[0].(QScrollerProperties).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScroller", "setScrollerProperties", args)
   }
@@ -265,8 +272,22 @@ func (this *QScroller) ensureVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller13ensureVisibleERK6QRectFdd
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN9QScroller13ensureVisibleERK6QRectFddi
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QScroller", "ensureVisible", args)
   }
@@ -290,8 +311,13 @@ func (this *QScroller) setSnapPositionsX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller17setSnapPositionsXEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QScroller17setSnapPositionsXERK5QListIdE
+    // var arg0 = args[0].(QList<double>).qclsinst
   default:
     qtrt.ErrorResolve("QScroller", "setSnapPositionsX", args)
   }
@@ -334,8 +360,14 @@ func (this *QScroller) scrollTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller8scrollToERK7QPointFi
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QScroller8scrollToERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScroller", "scrollTo", args)
   }

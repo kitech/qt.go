@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -235,6 +235,12 @@ func (this *QPainterPath) setElementPositionAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath20setElementPositionAtEidd
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPainterPath", "setElementPositionAt", args)
   }
@@ -257,8 +263,12 @@ func (this *QPainterPath) toFillPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath13toFillPolygonERK7QMatrix
+    var arg0 = args[0].(QMatrix).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QPainterPath13toFillPolygonERK10QTransform
+    var arg0 = args[0].(QTransform).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "toFillPolygon", args)
   }
@@ -282,8 +292,14 @@ func (this *QPainterPath) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10translatedEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK12QPainterPath10translatedERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "translated", args)
   }
@@ -320,8 +336,12 @@ func (this *QPainterPath) toSubpathPolygons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath17toSubpathPolygonsERK10QTransform
+    var arg0 = args[0].(QTransform).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix
+    var arg0 = args[0].(QMatrix).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "toSubpathPolygons", args)
   }
@@ -362,8 +382,12 @@ func (this *QPainterPath) toFillPolygons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14toFillPolygonsERK7QMatrix
+    var arg0 = args[0].(QMatrix).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QPainterPath14toFillPolygonsERK10QTransform
+    var arg0 = args[0].(QTransform).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "toFillPolygons", args)
   }
@@ -390,8 +414,20 @@ func (this *QPainterPath) quadTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6quadToERK7QPointFS2_
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPainterPath6quadToEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QPainterPath", "quadTo", args)
   }
@@ -421,8 +457,26 @@ func (this *QPainterPath) arcTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath5arcToEdddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.double(args[5].(float64))
+    if false {fmt.Println(arg5)}
   case 1:
     // invoke: _ZN12QPainterPath5arcToERK6QRectFdd
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPainterPath", "arcTo", args)
   }
@@ -448,8 +502,18 @@ func (this *QPainterPath) addRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addRectERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QPainterPath7addRectEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addRect", args)
   }
@@ -490,12 +554,44 @@ func (this *QPainterPath) addRoundRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath12addRoundRectERK6QRectFii
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN12QPainterPath12addRoundRectERK6QRectFi
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN12QPainterPath12addRoundRectEddddi
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   case 3:
     // invoke: _ZN12QPainterPath12addRoundRectEddddii
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addRoundRect", args)
   }
@@ -523,8 +619,22 @@ func (this *QPainterPath) addText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addTextEddRK5QFontRK7QString
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QFont).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN12QPainterPath7addTextERK7QPointFRK5QFontRK7QString
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QFont).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addText", args)
   }
@@ -547,8 +657,12 @@ func (this *QPainterPath) intersects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10intersectsERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QPainterPath10intersectsERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "intersects", args)
   }
@@ -574,10 +688,16 @@ func (this *QPainterPath) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath8containsERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QPainterPath8containsERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK12QPainterPath8containsERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "contains", args)
   }
@@ -608,10 +728,26 @@ func (this *QPainterPath) addEllipse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath10addEllipseERK7QPointFdd
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN12QPainterPath10addEllipseEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN12QPainterPath10addEllipseERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addEllipse", args)
   }
@@ -635,8 +771,14 @@ func (this *QPainterPath) lineTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6lineToEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPainterPath6lineToERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "lineTo", args)
   }
@@ -666,8 +808,26 @@ func (this *QPainterPath) cubicTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7cubicToERK7QPointFS2_S2_
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPointF).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN12QPainterPath7cubicToEdddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.double(args[5].(float64))
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QPainterPath", "cubicTo", args)
   }
@@ -687,6 +847,8 @@ func (this *QPainterPath) slopeAtPercent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14slopeAtPercentEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "slopeAtPercent", args)
   }
@@ -711,6 +873,8 @@ func (this *QPainterPath) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath11intersectedERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "intersected", args)
   }
@@ -734,8 +898,14 @@ func (this *QPainterPath) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPainterPath9translateERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "translate", args)
   }
@@ -755,6 +925,8 @@ func (this *QPainterPath) addPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath10addPolygonERK9QPolygonF
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addPolygon", args)
   }
@@ -774,6 +946,8 @@ func (this *QPainterPath) addPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath7addPathERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addPath", args)
   }
@@ -847,6 +1021,8 @@ func (this *QPainterPath) connectPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath11connectPathERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "connectPath", args)
   }
@@ -866,6 +1042,8 @@ func (this *QPainterPath) addRegion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9addRegionERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "addRegion", args)
   }
@@ -939,6 +1117,8 @@ func (this *QPainterPath) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath4swapERS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "swap", args)
   }
@@ -962,8 +1142,14 @@ func (this *QPainterPath) moveTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath6moveToEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPainterPath6moveToERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "moveTo", args)
   }
@@ -983,6 +1169,8 @@ func (this *QPainterPath) subtracted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath10subtractedERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "subtracted", args)
   }
@@ -1002,6 +1190,8 @@ func (this *QPainterPath) pointAtPercent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14pointAtPercentEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "pointAtPercent", args)
   }
@@ -1021,6 +1211,8 @@ func (this *QPainterPath) percentAtLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath15percentAtLengthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "percentAtLength", args)
   }
@@ -1040,6 +1232,8 @@ func (this *QPainterPath) subtractedInverted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath18subtractedInvertedERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "subtractedInverted", args)
   }
@@ -1067,8 +1261,22 @@ func (this *QPainterPath) arcMoveTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPainterPath9arcMoveToEddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
   case 1:
     // invoke: _ZN12QPainterPath9arcMoveToERK6QRectFd
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPainterPath", "arcMoveTo", args)
   }
@@ -1106,6 +1314,8 @@ func (this *QPainterPath) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath6unitedERKS_
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "united", args)
   }
@@ -1125,6 +1335,8 @@ func (this *QPainterPath) angleAtPercent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPainterPath14angleAtPercentEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPath", "angleAtPercent", args)
   }
@@ -1180,6 +1392,8 @@ func (this *QPainterPathStroker) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker8setWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setWidth", args)
   }
@@ -1213,6 +1427,8 @@ func (this *QPainterPathStroker) setMiterLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker13setMiterLimitEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setMiterLimit", args)
   }
@@ -1237,6 +1453,8 @@ func (this *QPainterPathStroker) setCurveThreshold(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker17setCurveThresholdEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setCurveThreshold", args)
   }
@@ -1292,6 +1510,8 @@ func (this *QPainterPathStroker) createStroke(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QPainterPathStroker12createStrokeERK12QPainterPath
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "createStroke", args)
   }
@@ -1311,6 +1531,8 @@ func (this *QPainterPathStroker) setDashOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QPainterPathStroker13setDashOffsetEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "setDashOffset", args)
   }

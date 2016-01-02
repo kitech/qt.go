@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.go
 //
@@ -118,6 +118,8 @@ func (this *QSharedMemory) setNativeKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory12setNativeKeyERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSharedMemory", "setNativeKey", args)
   }
@@ -160,6 +162,8 @@ func (this *QSharedMemory) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6setKeyERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSharedMemory", "setKey", args)
   }

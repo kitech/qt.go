@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -169,8 +169,14 @@ func (this *QTextEncoder) fromUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextEncoder11fromUnicodeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QTextEncoder11fromUnicodeEPK5QChari
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextEncoder", "fromUnicode", args)
   }
@@ -239,10 +245,19 @@ func (this *QTextCodec) toUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKciPNS_14ConverterStateE
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    // var arg2 = args[2].(QTextCodec::ConverterState).qclsinst
   case 1:
     // invoke: _ZNK10QTextCodec9toUnicodeERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextCodec", "toUnicode", args)
   }
@@ -267,8 +282,15 @@ func (this *QTextCodec) fromUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec11fromUnicodeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QTextCodec11fromUnicodeEPK5QChariPNS_14ConverterStateE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    // var arg2 = args[2].(QTextCodec::ConverterState).qclsinst
   default:
     qtrt.ErrorResolve("QTextCodec", "fromUnicode", args)
   }
@@ -398,8 +420,12 @@ func (this *QTextCodec) canEncode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec9canEncodeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QTextCodec9canEncodeE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextCodec", "canEncode", args)
   }
@@ -488,10 +514,22 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextDecoder9toUnicodeEPKci
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QTextDecoder9toUnicodeERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN12QTextDecoder9toUnicodeEP7QStringPKci
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTextDecoder", "toUnicode", args)
   }

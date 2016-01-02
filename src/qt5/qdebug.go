@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -129,6 +129,8 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug10maybeQuoteEc
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
   }
@@ -348,6 +350,8 @@ func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug19setAutoInsertSpacesEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
   }
@@ -367,6 +371,8 @@ func (this *QDebug) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug4swapERS_
+    var arg0 = args[0].(QDebug).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDebug", "swap", args)
   }
@@ -440,6 +446,8 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug10maybeQuoteEc
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
   }

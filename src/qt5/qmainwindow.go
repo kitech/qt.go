@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -158,6 +158,8 @@ func (this *QMainWindow) setAnimated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow11setAnimatedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setAnimated", args)
   }
@@ -177,6 +179,8 @@ func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow21setDockNestingEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setDockNestingEnabled", args)
   }
@@ -233,6 +237,10 @@ func (this *QMainWindow) tabifyDockWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_
+    var arg0 = args[0].(QDockWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QDockWidget).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifyDockWidget", args)
   }
@@ -252,6 +260,8 @@ func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow15setDocumentModeEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setDocumentMode", args)
   }
@@ -289,6 +299,8 @@ func (this *QMainWindow) removeDockWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16removeDockWidgetEP11QDockWidget
+    var arg0 = args[0].(QDockWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "removeDockWidget", args)
   }
@@ -338,10 +350,18 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow10addToolBarERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QMainWindow10addToolBarEP8QToolBar
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN11QMainWindow10addToolBarEN2Qt11ToolBarAreaEP8QToolBar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QToolBar).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMainWindow", "addToolBar", args)
   }
@@ -361,6 +381,8 @@ func (this *QMainWindow) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow11setIconSizeERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setIconSize", args)
   }
@@ -380,6 +402,8 @@ func (this *QMainWindow) saveState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow9saveStateEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "saveState", args)
   }
@@ -400,6 +424,10 @@ func (this *QMainWindow) restoreState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow12restoreStateERK10QByteArrayi
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreState", args)
   }
@@ -420,6 +448,10 @@ func (this *QMainWindow) insertToolBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13insertToolBarEP8QToolBarS1_
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QToolBar).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBar", args)
   }
@@ -457,6 +489,8 @@ func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setUnifiedTitleAndToolBarOnMac", args)
   }
@@ -476,6 +510,8 @@ func (this *QMainWindow) removeToolBarBreak(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow18removeToolBarBreakEP8QToolBar
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBarBreak", args)
   }
@@ -495,6 +531,8 @@ func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow12toolBarBreakEP8QToolBar
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarBreak", args)
   }
@@ -514,6 +552,8 @@ func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget
+    var arg0 = args[0].(QDockWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreDockWidget", args)
   }
@@ -551,6 +591,8 @@ func (this *QMainWindow) setStatusBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow12setStatusBarEP10QStatusBar
+    var arg0 = args[0].(QStatusBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setStatusBar", args)
   }
@@ -584,6 +626,8 @@ func (this *QMainWindow) isSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow11isSeparatorERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "isSeparator", args)
   }
@@ -639,6 +683,8 @@ func (this *QMainWindow) insertToolBarBreak(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow18insertToolBarBreakEP8QToolBar
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "insertToolBarBreak", args)
   }
@@ -712,6 +758,8 @@ func (this *QMainWindow) setMenuWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13setMenuWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuWidget", args)
   }
@@ -731,6 +779,8 @@ func (this *QMainWindow) removeToolBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow13removeToolBarEP8QToolBar
+    var arg0 = args[0].(QToolBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "removeToolBar", args)
   }
@@ -750,6 +800,8 @@ func (this *QMainWindow) setCentralWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow16setCentralWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setCentralWidget", args)
   }
@@ -769,6 +821,8 @@ func (this *QMainWindow) setMenuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMainWindow10setMenuBarEP8QMenuBar
+    var arg0 = args[0].(QMenuBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "setMenuBar", args)
   }
@@ -788,6 +842,8 @@ func (this *QMainWindow) tabifiedDockWidgets(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget
+    var arg0 = args[0].(QDockWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMainWindow", "tabifiedDockWidgets", args)
   }

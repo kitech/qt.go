@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -78,6 +78,8 @@ func (this *QTouchDevice) setName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice7setNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTouchDevice", "setName", args)
   }
@@ -115,6 +117,8 @@ func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice21setMaximumTouchPointsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTouchDevice", "setMaximumTouchPoints", args)
   }

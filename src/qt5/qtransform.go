@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -213,6 +213,24 @@ func (this *QTransform) setMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTransform9setMatrixEddddddddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.double(args[4].(float64))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.double(args[5].(float64))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.double(args[6].(float64))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.double(args[7].(float64))
+    if false {fmt.Println(arg7)}
+    var arg8 = C.double(args[8].(float64))
+    if false {fmt.Println(arg8)}
   default:
     qtrt.ErrorResolve("QTransform", "setMatrix", args)
   }
@@ -318,6 +336,8 @@ func (this *QTransform) mapToPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTransform12mapToPolygonERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTransform", "mapToPolygon", args)
   }
@@ -358,8 +378,12 @@ func (this *QTransform) mapRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTransform7mapRectERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QTransform7mapRectERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTransform", "mapRect", args)
   }
@@ -403,6 +427,10 @@ func (this *QTransform) shear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTransform5shearEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTransform", "shear", args)
   }
@@ -423,6 +451,10 @@ func (this *QTransform) scale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTransform5scaleEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTransform", "scale", args)
   }
@@ -461,6 +493,10 @@ func (this *QTransform) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTransform9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTransform", "translate", args)
   }
@@ -648,6 +684,8 @@ func (this *QTransform) inverted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTransform8invertedEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTransform", "inverted", args)
   }

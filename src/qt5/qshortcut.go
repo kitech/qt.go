@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -92,6 +92,8 @@ func (this *QShortcut) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut6setKeyERK12QKeySequence
+    var arg0 = args[0].(QKeySequence).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QShortcut", "setKey", args)
   }
@@ -147,6 +149,8 @@ func (this *QShortcut) setAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut13setAutoRepeatEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
   }
@@ -216,6 +220,8 @@ func (this *QShortcut) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut12setWhatsThisERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
   }
@@ -235,6 +241,8 @@ func (this *QShortcut) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut10setEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QShortcut", "setEnabled", args)
   }

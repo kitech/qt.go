@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.go
 //
@@ -210,6 +210,8 @@ func (this *QLocale) toLower(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toLowerERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLocale", "toLower", args)
   }
@@ -294,20 +296,52 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale16toCurrencyStringExRK7QString
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale16toCurrencyStringEjRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK7QLocale16toCurrencyStringEsRK7QString
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK7QLocale16toCurrencyStringEdRK7QString
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZNK7QLocale16toCurrencyStringEyRK7QString
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK7QLocale16toCurrencyStringEtRK7QString
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 6:
     // invoke: _ZNK7QLocale16toCurrencyStringEfRK7QString
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 7:
     // invoke: _ZNK7QLocale16toCurrencyStringEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toCurrencyString", args)
   }
@@ -332,8 +366,16 @@ func (this *QLocale) toFloat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toFloatERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale7toFloatERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toFloat", args)
   }
@@ -367,6 +409,8 @@ func (this *QLocale) createSeparatedList(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale19createSeparatedListERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLocale", "createSeparatedList", args)
   }
@@ -391,8 +435,16 @@ func (this *QLocale) toUInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toUIntERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale6toUIntERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toUInt", args)
   }
@@ -453,8 +505,16 @@ func (this *QLocale) toLongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale10toLongLongERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale10toLongLongERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toLongLong", args)
   }
@@ -479,8 +539,16 @@ func (this *QLocale) toShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toShortERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale7toShortERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toShort", args)
   }
@@ -549,32 +617,80 @@ func (this *QLocale) toString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toStringERK5QTimeNS_10FormatTypeE
+    var arg0 = args[0].(QTime).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale8toStringEfci
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZNK7QLocale8toStringERK9QDateTimeNS_10FormatTypeE
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK7QLocale8toStringERK9QDateTimeRK7QString
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZNK7QLocale8toStringERK5QTimeRK7QString
+    var arg0 = args[0].(QTime).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK7QLocale8toStringERK5QDateRK7QString
+    var arg0 = args[0].(QDate).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 6:
     // invoke: _ZNK7QLocale8toStringEdci
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 7:
     // invoke: _ZNK7QLocale8toStringEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 8:
     // invoke: _ZNK7QLocale8toStringEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 9:
     // invoke: _ZNK7QLocale8toStringERK5QDateNS_10FormatTypeE
+    var arg0 = args[0].(QDate).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 10:
     // invoke: _ZNK7QLocale8toStringEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   case 11:
     // invoke: _ZNK7QLocale8toStringEy
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   case 12:
     // invoke: _ZNK7QLocale8toStringEt
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
   case 13:
     // invoke: _ZNK7QLocale8toStringEs
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLocale", "toString", args)
   }
@@ -599,8 +715,16 @@ func (this *QLocale) toDateTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale10toDateTimeERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale10toDateTimeERK7QStringNS_10FormatTypeE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toDateTime", args)
   }
@@ -648,8 +772,16 @@ func (this *QLocale) toDate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toDateERK7QStringNS_10FormatTypeE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale6toDateERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toDate", args)
   }
@@ -719,6 +851,8 @@ func (this *QLocale) toUpper(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale7toUpperERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLocale", "toUpper", args)
   }
@@ -761,8 +895,16 @@ func (this *QLocale) toULongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale11toULongLongERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale11toULongLongERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toULongLong", args)
   }
@@ -823,8 +965,16 @@ func (this *QLocale) toTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale6toTimeERK7QStringNS_10FormatTypeE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale6toTimeERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toTime", args)
   }
@@ -849,8 +999,16 @@ func (this *QLocale) toUShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toUShortERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale8toUShortERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toUShort", args)
   }
@@ -875,8 +1033,16 @@ func (this *QLocale) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale8toDoubleERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale8toDoubleERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toDouble", args)
   }
@@ -965,8 +1131,16 @@ func (this *QLocale) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLocale5toIntERK10QStringRefPb
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QLocale5toIntERK7QStringPb
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.bool)(args[1].(*bool))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLocale", "toInt", args)
   }

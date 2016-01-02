@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -400,8 +400,14 @@ func (this *QTextLine) setNumColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine13setNumColumnsEid
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QTextLine13setNumColumnsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLine", "setNumColumns", args)
   }
@@ -439,6 +445,8 @@ func (this *QTextLine) setLeadingIncluded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine18setLeadingIncludedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLine", "setLeadingIncluded", args)
   }
@@ -458,6 +466,8 @@ func (this *QTextLine) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine11setPositionERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLine", "setPosition", args)
   }
@@ -555,6 +565,10 @@ func (this *QTextLine) glyphRuns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextLine9glyphRunsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextLine", "glyphRuns", args)
   }
@@ -610,6 +624,8 @@ func (this *QTextLine) setLineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextLine12setLineWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLine", "setLineWidth", args)
   }
@@ -647,6 +663,8 @@ func (this *QTextLayout) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout7setFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setFont", args)
   }
@@ -666,6 +684,8 @@ func (this *QTextLayout) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setText", args)
   }
@@ -685,6 +705,8 @@ func (this *QTextLayout) isValidCursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout21isValidCursorPositionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "isValidCursorPosition", args)
   }
@@ -722,6 +744,8 @@ func (this *QTextLayout) setRawFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout10setRawFontERK8QRawFont
+    var arg0 = args[0].(QRawFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setRawFont", args)
   }
@@ -741,6 +765,8 @@ func (this *QTextLayout) setTextOption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout13setTextOptionERK11QTextOption
+    var arg0 = args[0].(QTextOption).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setTextOption", args)
   }
@@ -765,6 +791,8 @@ func (this *QTextLayout) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout11setPositionERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setPosition", args)
   }
@@ -784,6 +812,8 @@ func (this *QTextLayout) lineForTextPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout19lineForTextPositionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "lineForTextPosition", args)
   }
@@ -875,6 +905,8 @@ func (this *QTextLayout) leftCursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout18leftCursorPositionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "leftCursorPosition", args)
   }
@@ -926,6 +958,8 @@ func (this *QTextLayout) setCacheEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout15setCacheEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setCacheEnabled", args)
   }
@@ -945,6 +979,8 @@ func (this *QTextLayout) lineAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout6lineAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "lineAt", args)
   }
@@ -964,6 +1000,8 @@ func (this *QTextLayout) rightCursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout19rightCursorPositionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "rightCursorPosition", args)
   }
@@ -1009,8 +1047,22 @@ func (this *QTextLayout) drawCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QTextLayout", "drawCursor", args)
   }
@@ -1049,6 +1101,10 @@ func (this *QTextLayout) setPreeditArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout14setPreeditAreaEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setPreeditArea", args)
   }
@@ -1086,6 +1142,8 @@ func (this *QTextLayout) setFlags(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextLayout8setFlagsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextLayout", "setFlags", args)
   }
@@ -1250,6 +1308,10 @@ func (this *QTextLayout) glyphRuns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextLayout9glyphRunsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextLayout", "glyphRuns", args)
   }
@@ -1269,6 +1331,8 @@ func (this *QTextInlineObject) setAscent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject9setAscentEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setAscent", args)
   }
@@ -1360,6 +1424,8 @@ func (this *QTextInlineObject) setDescent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject10setDescentEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setDescent", args)
   }
@@ -1474,6 +1540,8 @@ func (this *QTextInlineObject) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QTextInlineObject8setWidthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "setWidth", args)
   }

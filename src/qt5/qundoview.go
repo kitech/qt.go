@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -100,6 +100,8 @@ func (this *QUndoView) setStack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView8setStackEP10QUndoStack
+    var arg0 = args[0].(QUndoStack).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoView", "setStack", args)
   }
@@ -119,6 +121,8 @@ func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView13setEmptyLabelERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoView", "setEmptyLabel", args)
   }
@@ -138,6 +142,8 @@ func (this *QUndoView) setCleanIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView12setCleanIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoView", "setCleanIcon", args)
   }
@@ -157,6 +163,8 @@ func (this *QUndoView) setGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView8setGroupEP10QUndoGroup
+    var arg0 = args[0].(QUndoGroup).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUndoView", "setGroup", args)
   }

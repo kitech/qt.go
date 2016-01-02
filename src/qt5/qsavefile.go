@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -182,6 +182,8 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
   }
@@ -219,6 +221,8 @@ func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile22setDirectWriteFallbackEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
   }

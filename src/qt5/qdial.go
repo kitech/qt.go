@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -159,6 +159,8 @@ func (this *QDial) setNotchTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial14setNotchTargetEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDial", "setNotchTarget", args)
   }
@@ -178,6 +180,8 @@ func (this *QDial) setWrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial11setWrappingEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDial", "setWrapping", args)
   }
@@ -215,6 +219,8 @@ func (this *QDial) setNotchesVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial17setNotchesVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDial", "setNotchesVisible", args)
   }

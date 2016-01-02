@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -157,6 +157,8 @@ func (this *QTextTableCell) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTextTableCell9setFormatERK15QTextCharFormat
+    var arg0 = args[0].(QTextCharFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTableCell", "setFormat", args)
   }
@@ -395,10 +397,18 @@ func (this *QTextTable) cellAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable6cellAtEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK10QTextTable6cellAtERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK10QTextTable6cellAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "cellAt", args)
   }
@@ -437,6 +447,10 @@ func (this *QTextTable) removeRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10removeRowsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextTable", "removeRows", args)
   }
@@ -474,6 +488,8 @@ func (this *QTextTable) appendRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10appendRowsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "appendRows", args)
   }
@@ -494,6 +510,10 @@ func (this *QTextTable) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable6resizeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextTable", "resize", args)
   }
@@ -518,6 +538,8 @@ func (this *QTextTable) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable9setFormatERK16QTextTableFormat
+    var arg0 = args[0].(QTextTableFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "setFormat", args)
   }
@@ -538,6 +560,10 @@ func (this *QTextTable) insertColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13insertColumnsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextTable", "insertColumns", args)
   }
@@ -560,6 +586,14 @@ func (this *QTextTable) splitCell(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable9splitCellEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QTextTable", "splitCell", args)
   }
@@ -585,8 +619,18 @@ func (this *QTextTable) mergeCells(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10mergeCellsEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 1:
     // invoke: _ZN10QTextTable10mergeCellsERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "mergeCells", args)
   }
@@ -607,6 +651,10 @@ func (this *QTextTable) insertRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable10insertRowsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextTable", "insertRows", args)
   }
@@ -640,6 +688,8 @@ func (this *QTextTable) rowStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable8rowStartERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "rowStart", args)
   }
@@ -677,6 +727,8 @@ func (this *QTextTable) rowEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextTable6rowEndERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "rowEnd", args)
   }
@@ -715,6 +767,10 @@ func (this *QTextTable) removeColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13removeColumnsEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTextTable", "removeColumns", args)
   }
@@ -734,6 +790,8 @@ func (this *QTextTable) appendColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QTextTable13appendColumnsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTextTable", "appendColumns", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -132,6 +132,8 @@ func (this *QMdiArea) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea13setBackgroundERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "setBackground", args)
   }
@@ -165,6 +167,8 @@ func (this *QMdiArea) removeSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15removeSubWindowEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "removeSubWindow", args)
   }
@@ -184,6 +188,8 @@ func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setTabsClosableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsClosable", args)
   }
@@ -257,6 +263,8 @@ func (this *QMdiArea) setDocumentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setDocumentModeEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "setDocumentMode", args)
   }
@@ -294,6 +302,8 @@ func (this *QMdiArea) setActiveSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow
+    var arg0 = args[0].(QMdiSubWindow).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "setActiveSubWindow", args)
   }
@@ -331,6 +341,8 @@ func (this *QMdiArea) setTabsMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea14setTabsMovableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsMovable", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -128,6 +128,8 @@ func (this *QThreadPool) waitForDone(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool11waitForDoneEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
   }
@@ -165,6 +167,8 @@ func (this *QThreadPool) cancel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool6cancelEP9QRunnable
+    var arg0 = args[0].(QRunnable).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadPool", "cancel", args)
   }
@@ -184,6 +188,8 @@ func (this *QThreadPool) tryStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool8tryStartEP9QRunnable
+    var arg0 = args[0].(QRunnable).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadPool", "tryStart", args)
   }
@@ -217,6 +223,8 @@ func (this *QThreadPool) setMaxThreadCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool17setMaxThreadCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadPool", "setMaxThreadCount", args)
   }
@@ -236,6 +244,8 @@ func (this *QThreadPool) setExpiryTimeout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool16setExpiryTimeoutEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadPool", "setExpiryTimeout", args)
   }
@@ -297,6 +307,10 @@ func (this *QThreadPool) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QThreadPool5startEP9QRunnablei
+    var arg0 = args[0].(QRunnable).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QThreadPool", "start", args)
   }

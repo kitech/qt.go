@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.go
 //
@@ -211,8 +211,18 @@ func (this *QImage) copy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage4copyERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QImage4copyEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QImage", "copy", args)
   }
@@ -268,6 +278,8 @@ func (this *QImage) setAlphaChannel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage15setAlphaChannelERKS_
+    var arg0 = args[0].(QImage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setAlphaChannel", args)
   }
@@ -287,6 +299,8 @@ func (this *QImage) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage4textERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "text", args)
   }
@@ -329,6 +343,8 @@ func (this *QImage) createHeuristicMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage19createHeuristicMaskEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "createHeuristicMask", args)
   }
@@ -398,6 +414,8 @@ func (this *QImage) setOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage9setOffsetERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setOffset", args)
   }
@@ -442,8 +460,20 @@ func (this *QImage) save(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage4saveEP9QIODevicePKci
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK6QImage4saveERK7QStringPKci
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QImage", "save", args)
   }
@@ -523,8 +553,18 @@ func (this *QImage) loadFromData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage12loadFromDataEPKhiPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN6QImage12loadFromDataERK10QByteArrayPKc
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "loadFromData", args)
   }
@@ -580,6 +620,8 @@ func (this *QImage) setColorCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage13setColorCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setColorCount", args)
   }
@@ -603,8 +645,14 @@ func (this *QImage) pixel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage5pixelERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QImage5pixelEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "pixel", args)
   }
@@ -624,6 +672,8 @@ func (this *QImage) setDevicePixelRatio(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage19setDevicePixelRatioEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setDevicePixelRatio", args)
   }
@@ -644,6 +694,10 @@ func (this *QImage) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage7setTextERK7QStringS2_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "setText", args)
   }
@@ -663,6 +717,8 @@ func (this *QImage) color(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage5colorEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "color", args)
   }
@@ -688,8 +744,18 @@ func (this *QImage) setPixel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage8setPixelERK6QPointj
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN6QImage8setPixelEiij
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QImage", "setPixel", args)
   }
@@ -727,6 +793,8 @@ func (this *QImage) constScanLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage13constScanLineEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "constScanLine", args)
   }
@@ -788,10 +856,16 @@ func (this *QImage) fill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage4fillEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QImage4fillERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN6QImage4fillEN2Qt11GlobalColorE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "fill", args)
   }
@@ -847,6 +921,8 @@ func (this *QImage) setDotsPerMeterY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage16setDotsPerMeterYEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setDotsPerMeterY", args)
   }
@@ -920,6 +996,8 @@ func (this *QImage) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage4swapERS_
+    var arg0 = args[0].(QImage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "swap", args)
   }
@@ -979,8 +1057,14 @@ func (this *QImage) valid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage5validERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QImage5validEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "valid", args)
   }
@@ -1004,8 +1088,14 @@ func (this *QImage) pixelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage10pixelIndexERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK6QImage10pixelIndexEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "pixelIndex", args)
   }
@@ -1025,6 +1115,8 @@ func (this *QImage) setDotsPerMeterX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage16setDotsPerMeterXEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "setDotsPerMeterX", args)
   }
@@ -1049,8 +1141,16 @@ func (this *QImage) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage4loadERK7QStringPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN6QImage4loadEP9QIODevicePKc
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "load", args)
   }
@@ -1145,8 +1245,12 @@ func (this *QImage) scanLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QImage8scanLineEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN6QImage8scanLineEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImage", "scanLine", args)
   }
@@ -1217,6 +1321,10 @@ func (this *QImage) setColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QImage8setColorEij
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImage", "setColor", args)
   }

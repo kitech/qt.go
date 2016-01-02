@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -114,6 +114,10 @@ func (this *QStackedLayout) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout12insertWidgetEiP7QWidget
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "insertWidget", args)
   }
@@ -138,6 +142,8 @@ func (this *QStackedLayout) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout11setGeometryERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "setGeometry", args)
   }
@@ -175,6 +181,8 @@ func (this *QStackedLayout) takeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout6takeAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "takeAt", args)
   }
@@ -266,6 +274,8 @@ func (this *QStackedLayout) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout7addItemEP11QLayoutItem
+    var arg0 = args[0].(QLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "addItem", args)
   }
@@ -285,6 +295,8 @@ func (this *QStackedLayout) setCurrentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout16setCurrentWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "setCurrentWidget", args)
   }
@@ -322,6 +334,8 @@ func (this *QStackedLayout) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout15setCurrentIndexEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "setCurrentIndex", args)
   }
@@ -341,6 +355,8 @@ func (this *QStackedLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedLayout6itemAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "itemAt", args)
   }
@@ -374,6 +390,8 @@ func (this *QStackedLayout) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedLayout9addWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "addWidget", args)
   }
@@ -393,6 +411,8 @@ func (this *QStackedLayout) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedLayout14heightForWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "heightForWidth", args)
   }
@@ -430,6 +450,8 @@ func (this *QStackedLayout) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedLayout6widgetEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "widget", args)
   }

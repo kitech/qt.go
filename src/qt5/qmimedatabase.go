@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qmimedatabase.h
 // dst-file: /src/core/qmimedatabase.go
 //
@@ -89,6 +89,8 @@ func (this *QMimeDatabase) mimeTypeForUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase14mimeTypeForUrlERK4QUrl
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForUrl", args)
   }
@@ -116,8 +118,12 @@ func (this *QMimeDatabase) mimeTypeForData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForDataERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForDataEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForData", args)
   }
@@ -137,6 +143,8 @@ func (this *QMimeDatabase) mimeTypeForName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase15mimeTypeForNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForName", args)
   }
@@ -156,6 +164,8 @@ func (this *QMimeDatabase) suffixForFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase17suffixForFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "suffixForFileName", args)
   }
@@ -175,6 +185,8 @@ func (this *QMimeDatabase) mimeTypesForFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase20mimeTypesForFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypesForFileName", args)
   }
@@ -199,8 +211,16 @@ func (this *QMimeDatabase) mimeTypeForFileNameAndData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringP9QIODevice
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QIODevice).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK13QMimeDatabase26mimeTypeForFileNameAndDataERK7QStringRK10QByteArray
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QByteArray).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMimeDatabase", "mimeTypeForFileNameAndData", args)
   }

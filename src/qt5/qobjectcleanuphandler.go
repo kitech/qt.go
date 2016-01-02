@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.go
 //
@@ -146,6 +146,8 @@ func (this *QObjectCleanupHandler) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler6removeEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
   }
@@ -165,6 +167,8 @@ func (this *QObjectCleanupHandler) add(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler3addEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -116,6 +116,8 @@ func (this *QGroupBox) setCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox12setCheckableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGroupBox", "setCheckable", args)
   }
@@ -189,6 +191,8 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox7setFlatEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGroupBox", "setFlat", args)
   }
@@ -245,6 +249,8 @@ func (this *QGroupBox) setChecked(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox10setCheckedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGroupBox", "setChecked", args)
   }
@@ -282,6 +288,8 @@ func (this *QGroupBox) setAlignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox12setAlignmentEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGroupBox", "setAlignment", args)
   }
@@ -301,6 +309,8 @@ func (this *QGroupBox) setTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGroupBox8setTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGroupBox", "setTitle", args)
   }

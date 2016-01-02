@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.go
 //
@@ -171,6 +171,10 @@ func (this *QVector3D) distanceToLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector3D14distanceToLineERKS_S1_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToLine", args)
   }
@@ -260,6 +264,12 @@ func (this *QVector3D) unproject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector3D9unprojectERK10QMatrix4x4S2_RK5QRect
+    var arg0 = args[0].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QRect).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QVector3D", "unproject", args)
   }
@@ -279,6 +289,8 @@ func (this *QVector3D) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector3D4setYEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector3D", "setY", args)
   }
@@ -300,6 +312,12 @@ func (this *QVector3D) project(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect
+    var arg0 = args[0].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QMatrix4x4).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QRect).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QVector3D", "project", args)
   }
@@ -351,6 +369,8 @@ func (this *QVector3D) setZ(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector3D4setZEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector3D", "setZ", args)
   }
@@ -394,8 +414,18 @@ func (this *QVector3D) distanceToPlane(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector3D15distanceToPlaneERKS_S1_S1_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QVector3D).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK9QVector3D15distanceToPlaneERKS_S1_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVector3D).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToPlane", args)
   }
@@ -420,6 +450,8 @@ func (this *QVector3D) distanceToPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector3D15distanceToPointERKS_
+    var arg0 = args[0].(QVector3D).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector3D", "distanceToPoint", args)
   }
@@ -543,6 +575,8 @@ func (this *QVector3D) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector3D4setXEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVector3D", "setX", args)
   }

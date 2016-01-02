@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.go
 //
@@ -109,8 +109,18 @@ func (this *QByteArrayMatcher) indexIn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QByteArrayMatcher7indexInEPKcii
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "indexIn", args)
   }
@@ -130,6 +140,8 @@ func (this *QByteArrayMatcher) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QByteArrayMatcher10setPatternERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "setPattern", args)
   }

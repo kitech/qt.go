@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.go
 //
@@ -373,6 +373,12 @@ func (this *QOpenGLFunctions) glBindAttribLocation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBindAttribLocation", args)
   }
@@ -393,6 +399,10 @@ func (this *QOpenGLFunctions) glGenFramebuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glGenFramebuffersEiPj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGenFramebuffers", args)
   }
@@ -414,6 +424,12 @@ func (this *QOpenGLFunctions) glUniform3iv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform3ivEiiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform3iv", args)
   }
@@ -434,6 +450,10 @@ func (this *QOpenGLFunctions) glVertexAttrib4fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glVertexAttrib4fvEjPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib4fv", args)
   }
@@ -453,6 +473,8 @@ func (this *QOpenGLFunctions) glIsBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions10glIsBufferEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsBuffer", args)
   }
@@ -472,6 +494,8 @@ func (this *QOpenGLFunctions) glLineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glLineWidthEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glLineWidth", args)
   }
@@ -498,6 +522,22 @@ func (this *QOpenGLFunctions) glCompressedTexImage2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions22glCompressedTexImage2DEjijiiiiPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = args[7].(unsafe.Pointer)
+    if false {fmt.Println(arg7)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCompressedTexImage2D", args)
   }
@@ -518,6 +558,10 @@ func (this *QOpenGLFunctions) glDepthRangef(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glDepthRangefEff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDepthRangef", args)
   }
@@ -538,6 +582,10 @@ func (this *QOpenGLFunctions) glVertexAttrib1fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glVertexAttrib1fvEjPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib1fv", args)
   }
@@ -559,6 +607,12 @@ func (this *QOpenGLFunctions) glTexParameteriv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glTexParameterivEjjPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexParameteriv", args)
   }
@@ -586,6 +640,24 @@ func (this *QOpenGLFunctions) glTexSubImage2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glTexSubImage2DEjiiiiijjPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.int32_t(args[7].(int32))
+    if false {fmt.Println(arg7)}
+    var arg8 = args[8].(unsafe.Pointer)
+    if false {fmt.Println(arg8)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexSubImage2D", args)
   }
@@ -605,6 +677,8 @@ func (this *QOpenGLFunctions) glDeleteProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glDeleteProgramEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteProgram", args)
   }
@@ -625,6 +699,10 @@ func (this *QOpenGLFunctions) glBlendEquationSeparate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions23glBlendEquationSeparateEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBlendEquationSeparate", args)
   }
@@ -645,6 +723,10 @@ func (this *QOpenGLFunctions) glStencilMaskSeparate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions21glStencilMaskSeparateEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilMaskSeparate", args)
   }
@@ -666,6 +748,12 @@ func (this *QOpenGLFunctions) glDrawArrays(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glDrawArraysEjii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDrawArrays", args)
   }
@@ -705,6 +793,12 @@ func (this *QOpenGLFunctions) glGetVertexAttribPointerv(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions25glGetVertexAttribPointervEjjPPv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(unsafe.Pointer)
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetVertexAttribPointerv", args)
   }
@@ -724,6 +818,8 @@ func (this *QOpenGLFunctions) glActiveTexture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glActiveTextureEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glActiveTexture", args)
   }
@@ -743,6 +839,8 @@ func (this *QOpenGLFunctions) glFrontFace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glFrontFaceEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glFrontFace", args)
   }
@@ -764,6 +862,12 @@ func (this *QOpenGLFunctions) glGetTexParameterfv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetTexParameterfvEjjPf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetTexParameterfv", args)
   }
@@ -784,6 +888,10 @@ func (this *QOpenGLFunctions) glPixelStorei(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glPixelStoreiEji
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glPixelStorei", args)
   }
@@ -803,6 +911,8 @@ func (this *QOpenGLFunctions) glCullFace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions10glCullFaceEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCullFace", args)
   }
@@ -824,6 +934,12 @@ func (this *QOpenGLFunctions) glGetShaderiv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glGetShaderivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetShaderiv", args)
   }
@@ -847,6 +963,16 @@ func (this *QOpenGLFunctions) glUniform4i(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform4iEiiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform4i", args)
   }
@@ -872,6 +998,20 @@ func (this *QOpenGLFunctions) glReadPixels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glReadPixelsEiiiijjPv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = args[6].(unsafe.Pointer)
+    if false {fmt.Println(arg6)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glReadPixels", args)
   }
@@ -893,6 +1033,12 @@ func (this *QOpenGLFunctions) glTexParameteri(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glTexParameteriEjji
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexParameteri", args)
   }
@@ -914,6 +1060,12 @@ func (this *QOpenGLFunctions) glGetVertexAttribiv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetVertexAttribivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetVertexAttribiv", args)
   }
@@ -936,6 +1088,14 @@ func (this *QOpenGLFunctions) glClearColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glClearColorEffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glClearColor", args)
   }
@@ -955,6 +1115,8 @@ func (this *QOpenGLFunctions) glClearDepthf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glClearDepthfEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glClearDepthf", args)
   }
@@ -976,6 +1138,12 @@ func (this *QOpenGLFunctions) glUniform2i(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform2iEiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform2i", args)
   }
@@ -995,6 +1163,8 @@ func (this *QOpenGLFunctions) glGenerateMipmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glGenerateMipmapEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGenerateMipmap", args)
   }
@@ -1022,6 +1192,24 @@ func (this *QOpenGLFunctions) glCompressedTexSubImage2D(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions25glCompressedTexSubImage2DEjiiiiijiPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.int32_t(args[7].(int32))
+    if false {fmt.Println(arg7)}
+    var arg8 = args[8].(unsafe.Pointer)
+    if false {fmt.Println(arg8)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCompressedTexSubImage2D", args)
   }
@@ -1044,6 +1232,14 @@ func (this *QOpenGLFunctions) glUniform3i(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform3iEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform3i", args)
   }
@@ -1064,6 +1260,10 @@ func (this *QOpenGLFunctions) glGenTextures(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glGenTexturesEiPj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGenTextures", args)
   }
@@ -1086,6 +1286,14 @@ func (this *QOpenGLFunctions) glGetShaderPrecisionFormat(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetShaderPrecisionFormat", args)
   }
@@ -1121,6 +1329,12 @@ func (this *QOpenGLFunctions) glUniform4fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform4fvEiiPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform4fv", args)
   }
@@ -1142,6 +1356,12 @@ func (this *QOpenGLFunctions) glGetProgramiv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glGetProgramivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetProgramiv", args)
   }
@@ -1162,6 +1382,10 @@ func (this *QOpenGLFunctions) glVertexAttrib2fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glVertexAttrib2fvEjPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib2fv", args)
   }
@@ -1187,6 +1411,20 @@ func (this *QOpenGLFunctions) glGetActiveAttrib(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glGetActiveAttribEjjiPiS0_PjPc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.int32_t)(args[4].(*int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = (*C.int32_t)(args[5].(*int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.CString(args[6].(string))
+    if false {fmt.Println(arg6)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetActiveAttrib", args)
   }
@@ -1206,6 +1444,8 @@ func (this *QOpenGLFunctions) glIsRenderbuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glIsRenderbufferEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsRenderbuffer", args)
   }
@@ -1232,6 +1472,22 @@ func (this *QOpenGLFunctions) glCopyTexSubImage2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glCopyTexSubImage2DEjiiiiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.int32_t(args[7].(int32))
+    if false {fmt.Println(arg7)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCopyTexSubImage2D", args)
   }
@@ -1254,6 +1510,14 @@ func (this *QOpenGLFunctions) glShaderSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glShaderSourceEjiPPKcPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glShaderSource", args)
   }
@@ -1275,6 +1539,12 @@ func (this *QOpenGLFunctions) glGetVertexAttribfv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetVertexAttribfvEjjPf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetVertexAttribfv", args)
   }
@@ -1294,6 +1564,8 @@ func (this *QOpenGLFunctions) glDepthFunc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glDepthFuncEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDepthFunc", args)
   }
@@ -1321,6 +1593,24 @@ func (this *QOpenGLFunctions) glTexImage2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glTexImage2DEjiiiiijjPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.int32_t(args[7].(int32))
+    if false {fmt.Println(arg7)}
+    var arg8 = args[8].(unsafe.Pointer)
+    if false {fmt.Println(arg8)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexImage2D", args)
   }
@@ -1341,6 +1631,10 @@ func (this *QOpenGLFunctions) glDeleteFramebuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions20glDeleteFramebuffersEiPKj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteFramebuffers", args)
   }
@@ -1361,6 +1655,10 @@ func (this *QOpenGLFunctions) glHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions6glHintEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glHint", args)
   }
@@ -1381,6 +1679,10 @@ func (this *QOpenGLFunctions) glGetUniformLocation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions20glGetUniformLocationEjPKc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetUniformLocation", args)
   }
@@ -1400,6 +1702,8 @@ func (this *QOpenGLFunctions) glIsFramebuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glIsFramebufferEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsFramebuffer", args)
   }
@@ -1421,6 +1725,12 @@ func (this *QOpenGLFunctions) glUniform1fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform1fvEiiPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform1fv", args)
   }
@@ -1440,6 +1750,8 @@ func (this *QOpenGLFunctions) glGetString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glGetStringEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetString", args)
   }
@@ -1462,6 +1774,14 @@ func (this *QOpenGLFunctions) glUniformMatrix2fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glUniformMatrix2fvEiihPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.char(args[2].(byte))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.float)(args[3].(*float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniformMatrix2fv", args)
   }
@@ -1489,6 +1809,14 @@ func (this *QOpenGLFunctions) glUniformMatrix3fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glUniformMatrix3fvEiihPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.char(args[2].(byte))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.float)(args[3].(*float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniformMatrix3fv", args)
   }
@@ -1509,6 +1837,10 @@ func (this *QOpenGLFunctions) glBindBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glBindBufferEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBindBuffer", args)
   }
@@ -1530,6 +1862,12 @@ func (this *QOpenGLFunctions) glUniform2f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform2fEiff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform2f", args)
   }
@@ -1551,6 +1889,12 @@ func (this *QOpenGLFunctions) glUniform3fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform3fvEiiPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform3fv", args)
   }
@@ -1572,6 +1916,12 @@ func (this *QOpenGLFunctions) glUniform2fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform2fvEiiPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform2fv", args)
   }
@@ -1593,6 +1943,12 @@ func (this *QOpenGLFunctions) glGetRenderbufferParameteriv(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions28glGetRenderbufferParameterivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetRenderbufferParameteriv", args)
   }
@@ -1614,6 +1970,12 @@ func (this *QOpenGLFunctions) glGetBufferParameteriv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions22glGetBufferParameterivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetBufferParameteriv", args)
   }
@@ -1635,6 +1997,12 @@ func (this *QOpenGLFunctions) glUniform1iv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform1ivEiiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform1iv", args)
   }
@@ -1657,6 +2025,14 @@ func (this *QOpenGLFunctions) glBlendColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glBlendColorEffff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBlendColor", args)
   }
@@ -1679,6 +2055,14 @@ func (this *QOpenGLFunctions) glDrawElements(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glDrawElementsEjijPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(unsafe.Pointer)
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDrawElements", args)
   }
@@ -1699,6 +2083,10 @@ func (this *QOpenGLFunctions) glBindFramebuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glBindFramebufferEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBindFramebuffer", args)
   }
@@ -1718,6 +2106,8 @@ func (this *QOpenGLFunctions) glIsProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glIsProgramEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsProgram", args)
   }
@@ -1737,6 +2127,8 @@ func (this *QOpenGLFunctions) glBlendEquation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glBlendEquationEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBlendEquation", args)
   }
@@ -1760,6 +2152,16 @@ func (this *QOpenGLFunctions) glShaderBinary(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glShaderBinaryEiPKjjPKvi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(unsafe.Pointer)
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glShaderBinary", args)
   }
@@ -1782,6 +2184,14 @@ func (this *QOpenGLFunctions) glGetProgramInfoLog(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetProgramInfoLogEjiPiPc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetProgramInfoLog", args)
   }
@@ -1802,6 +2212,10 @@ func (this *QOpenGLFunctions) glDeleteBuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glDeleteBuffersEiPKj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteBuffers", args)
   }
@@ -1824,6 +2238,14 @@ func (this *QOpenGLFunctions) glScissor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions9glScissorEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glScissor", args)
   }
@@ -1844,6 +2266,10 @@ func (this *QOpenGLFunctions) glGenRenderbuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glGenRenderbuffersEiPj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGenRenderbuffers", args)
   }
@@ -1866,6 +2292,14 @@ func (this *QOpenGLFunctions) glVertexAttrib3f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glVertexAttrib3fEjfff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib3f", args)
   }
@@ -1905,6 +2339,12 @@ func (this *QOpenGLFunctions) glUniform4iv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform4ivEiiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform4iv", args)
   }
@@ -1924,6 +2364,8 @@ func (this *QOpenGLFunctions) glEnable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions8glEnableEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glEnable", args)
   }
@@ -1944,6 +2386,10 @@ func (this *QOpenGLFunctions) glBindTexture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glBindTextureEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBindTexture", args)
   }
@@ -1965,6 +2411,12 @@ func (this *QOpenGLFunctions) glTexParameterf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glTexParameterfEjjf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexParameterf", args)
   }
@@ -1987,6 +2439,14 @@ func (this *QOpenGLFunctions) glViewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions10glViewportEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glViewport", args)
   }
@@ -2007,6 +2467,10 @@ func (this *QOpenGLFunctions) glSampleCoverage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glSampleCoverageEfh
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glSampleCoverage", args)
   }
@@ -2030,6 +2494,16 @@ func (this *QOpenGLFunctions) glFramebufferTexture2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions22glFramebufferTexture2DEjjjji
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glFramebufferTexture2D", args)
   }
@@ -2054,6 +2528,18 @@ func (this *QOpenGLFunctions) glVertexAttribPointer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions21glVertexAttribPointerEjijhiPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.char(args[3].(byte))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(unsafe.Pointer)
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttribPointer", args)
   }
@@ -2074,6 +2560,10 @@ func (this *QOpenGLFunctions) glPolygonOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glPolygonOffsetEff
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glPolygonOffset", args)
   }
@@ -2093,6 +2583,8 @@ func (this *QOpenGLFunctions) glCreateShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glCreateShaderEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCreateShader", args)
   }
@@ -2115,6 +2607,14 @@ func (this *QOpenGLFunctions) glGetShaderSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetShaderSource", args)
   }
@@ -2134,6 +2634,8 @@ func (this *QOpenGLFunctions) glIsTexture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glIsTextureEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsTexture", args)
   }
@@ -2154,6 +2656,10 @@ func (this *QOpenGLFunctions) glDeleteTextures(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glDeleteTexturesEiPKj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteTextures", args)
   }
@@ -2174,6 +2680,10 @@ func (this *QOpenGLFunctions) glGetIntegerv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glGetIntegervEjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetIntegerv", args)
   }
@@ -2194,6 +2704,10 @@ func (this *QOpenGLFunctions) glGetBooleanv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glGetBooleanvEjPh
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetBooleanv", args)
   }
@@ -2214,6 +2728,10 @@ func (this *QOpenGLFunctions) glGetFloatv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glGetFloatvEjPf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetFloatv", args)
   }
@@ -2234,6 +2752,10 @@ func (this *QOpenGLFunctions) glDeleteRenderbuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions21glDeleteRenderbuffersEiPKj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteRenderbuffers", args)
   }
@@ -2272,6 +2794,10 @@ func (this *QOpenGLFunctions) glDetachShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glDetachShaderEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDetachShader", args)
   }
@@ -2293,6 +2819,12 @@ func (this *QOpenGLFunctions) glVertexAttrib2f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glVertexAttrib2fEjff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib2f", args)
   }
@@ -2313,6 +2845,10 @@ func (this *QOpenGLFunctions) glVertexAttrib1f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glVertexAttrib1fEjf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib1f", args)
   }
@@ -2333,6 +2869,10 @@ func (this *QOpenGLFunctions) glGenBuffers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glGenBuffersEiPj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGenBuffers", args)
   }
@@ -2352,6 +2892,8 @@ func (this *QOpenGLFunctions) glClearStencil(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glClearStencilEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glClearStencil", args)
   }
@@ -2371,6 +2913,8 @@ func (this *QOpenGLFunctions) glStencilMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glStencilMaskEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilMask", args)
   }
@@ -2393,6 +2937,14 @@ func (this *QOpenGLFunctions) glGetShaderInfoLog(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glGetShaderInfoLogEjiPiPc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetShaderInfoLog", args)
   }
@@ -2430,6 +2982,8 @@ func (this *QOpenGLFunctions) glDepthMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glDepthMaskEh
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDepthMask", args)
   }
@@ -2452,6 +3006,14 @@ func (this *QOpenGLFunctions) glGetFramebufferAttachmentParameteriv(args ...inte
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions37glGetFramebufferAttachmentParameterivEjjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetFramebufferAttachmentParameteriv", args)
   }
@@ -2472,6 +3034,10 @@ func (this *QOpenGLFunctions) glUniform1f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform1fEif
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform1f", args)
   }
@@ -2494,6 +3060,14 @@ func (this *QOpenGLFunctions) glGetAttachedShaders(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions20glGetAttachedShadersEjiPiPj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetAttachedShaders", args)
   }
@@ -2515,6 +3089,12 @@ func (this *QOpenGLFunctions) glStencilOp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glStencilOpEjjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilOp", args)
   }
@@ -2536,6 +3116,12 @@ func (this *QOpenGLFunctions) glStencilFunc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glStencilFuncEjij
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilFunc", args)
   }
@@ -2556,6 +3142,10 @@ func (this *QOpenGLFunctions) glAttachShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glAttachShaderEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glAttachShader", args)
   }
@@ -2575,6 +3165,8 @@ func (this *QOpenGLFunctions) glDeleteShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glDeleteShaderEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDeleteShader", args)
   }
@@ -2594,6 +3186,8 @@ func (this *QOpenGLFunctions) glCompileShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glCompileShaderEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCompileShader", args)
   }
@@ -2613,6 +3207,8 @@ func (this *QOpenGLFunctions) glEnableVertexAttribArray(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions25glEnableVertexAttribArrayEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glEnableVertexAttribArray", args)
   }
@@ -2635,6 +3231,14 @@ func (this *QOpenGLFunctions) glFramebufferRenderbuffer(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions25glFramebufferRenderbufferEjjjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glFramebufferRenderbuffer", args)
   }
@@ -2657,6 +3261,14 @@ func (this *QOpenGLFunctions) glColorMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glColorMaskEhhhh
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.char(args[2].(byte))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.char(args[3].(byte))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glColorMask", args)
   }
@@ -2676,6 +3288,8 @@ func (this *QOpenGLFunctions) glIsEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glIsEnabledEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsEnabled", args)
   }
@@ -2696,6 +3310,10 @@ func (this *QOpenGLFunctions) glBindRenderbuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glBindRenderbufferEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBindRenderbuffer", args)
   }
@@ -2716,6 +3334,10 @@ func (this *QOpenGLFunctions) glVertexAttrib3fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glVertexAttrib3fvEjPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.float)(args[1].(*float32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib3fv", args)
   }
@@ -2736,6 +3358,10 @@ func (this *QOpenGLFunctions) glBlendFunc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glBlendFuncEjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBlendFunc", args)
   }
@@ -2758,6 +3384,14 @@ func (this *QOpenGLFunctions) glUniform3f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform3fEifff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform3f", args)
   }
@@ -2781,6 +3415,16 @@ func (this *QOpenGLFunctions) glVertexAttrib4f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glVertexAttrib4fEjffff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.float(args[4].(float32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glVertexAttrib4f", args)
   }
@@ -2801,6 +3445,10 @@ func (this *QOpenGLFunctions) glGetAttribLocation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetAttribLocationEjPKc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetAttribLocation", args)
   }
@@ -2822,6 +3470,12 @@ func (this *QOpenGLFunctions) glUniform2iv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUniform2ivEiiPKi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform2iv", args)
   }
@@ -2843,6 +3497,12 @@ func (this *QOpenGLFunctions) glGetUniformiv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glGetUniformivEjiPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetUniformiv", args)
   }
@@ -2865,6 +3525,14 @@ func (this *QOpenGLFunctions) glBufferSubData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions15glBufferSubDataEjiiPKv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(unsafe.Pointer)
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBufferSubData", args)
   }
@@ -2884,6 +3552,8 @@ func (this *QOpenGLFunctions) glUseProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glUseProgramEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUseProgram", args)
   }
@@ -2903,6 +3573,8 @@ func (this *QOpenGLFunctions) glDisable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions9glDisableEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDisable", args)
   }
@@ -2926,6 +3598,16 @@ func (this *QOpenGLFunctions) glUniform4f(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform4fEiffff
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.float(args[1].(float32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.float(args[2].(float32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.float(args[3].(float32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.float(args[4].(float32))
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform4f", args)
   }
@@ -2948,6 +3630,14 @@ func (this *QOpenGLFunctions) glStencilFuncSeparate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions21glStencilFuncSeparateEjjij
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilFuncSeparate", args)
   }
@@ -2974,6 +3664,22 @@ func (this *QOpenGLFunctions) glCopyTexImage2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glCopyTexImage2DEjijiiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = C.int32_t(args[5].(int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.int32_t(args[6].(int32))
+    if false {fmt.Println(arg6)}
+    var arg7 = C.int32_t(args[7].(int32))
+    if false {fmt.Println(arg7)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCopyTexImage2D", args)
   }
@@ -2993,6 +3699,8 @@ func (this *QOpenGLFunctions) glLinkProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions13glLinkProgramEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glLinkProgram", args)
   }
@@ -3015,6 +3723,14 @@ func (this *QOpenGLFunctions) glBufferData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions12glBufferDataEjiPKvj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(unsafe.Pointer)
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBufferData", args)
   }
@@ -3036,6 +3752,12 @@ func (this *QOpenGLFunctions) glGetUniformfv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions14glGetUniformfvEjiPf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetUniformfv", args)
   }
@@ -3058,6 +3780,14 @@ func (this *QOpenGLFunctions) glRenderbufferStorage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions21glRenderbufferStorageEjjii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glRenderbufferStorage", args)
   }
@@ -3077,6 +3807,8 @@ func (this *QOpenGLFunctions) glIsShader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions10glIsShaderEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glIsShader", args)
   }
@@ -3115,6 +3847,10 @@ func (this *QOpenGLFunctions) glUniform1i(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glUniform1iEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniform1i", args)
   }
@@ -3137,6 +3873,14 @@ func (this *QOpenGLFunctions) glBlendFuncSeparate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glBlendFuncSeparateEjjjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glBlendFuncSeparate", args)
   }
@@ -3158,6 +3902,12 @@ func (this *QOpenGLFunctions) glTexParameterfv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions16glTexParameterfvEjjPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.float)(args[2].(*float32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glTexParameterfv", args)
   }
@@ -3180,6 +3930,14 @@ func (this *QOpenGLFunctions) glUniformMatrix4fv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glUniformMatrix4fvEiihPKf
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.char(args[2].(byte))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.float)(args[3].(*float32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glUniformMatrix4fv", args)
   }
@@ -3199,6 +3957,8 @@ func (this *QOpenGLFunctions) glValidateProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions17glValidateProgramEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glValidateProgram", args)
   }
@@ -3236,6 +3996,8 @@ func (this *QOpenGLFunctions) glCheckFramebufferStatus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions24glCheckFramebufferStatusEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glCheckFramebufferStatus", args)
   }
@@ -3258,6 +4020,14 @@ func (this *QOpenGLFunctions) glStencilOpSeparate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glStencilOpSeparateEjjjj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glStencilOpSeparate", args)
   }
@@ -3279,6 +4049,12 @@ func (this *QOpenGLFunctions) glGetTexParameteriv(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions19glGetTexParameterivEjjPi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetTexParameteriv", args)
   }
@@ -3298,6 +4074,8 @@ func (this *QOpenGLFunctions) glClear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions7glClearEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glClear", args)
   }
@@ -3323,6 +4101,20 @@ func (this *QOpenGLFunctions) glGetActiveUniform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = (*C.int32_t)(args[4].(*int32))
+    if false {fmt.Println(arg4)}
+    var arg5 = (*C.int32_t)(args[5].(*int32))
+    if false {fmt.Println(arg5)}
+    var arg6 = C.CString(args[6].(string))
+    if false {fmt.Println(arg6)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glGetActiveUniform", args)
   }
@@ -3342,6 +4134,8 @@ func (this *QOpenGLFunctions) glDisableVertexAttribArray(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN16QOpenGLFunctions26glDisableVertexAttribArrayEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFunctions", "glDisableVertexAttribArray", args)
   }

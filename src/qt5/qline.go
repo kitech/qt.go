@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.go
 //
@@ -202,8 +202,14 @@ func (this *QLine) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QLine10translatedERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK5QLine10translatedEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLine", "translated", args)
   }
@@ -223,6 +229,8 @@ func (this *QLine) setP2(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QLine5setP2ERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLine", "setP2", args)
   }
@@ -265,6 +273,8 @@ func (this *QLine) setP1(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QLine5setP1ERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLine", "setP1", args)
   }
@@ -288,8 +298,14 @@ func (this *QLine) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QLine9translateERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN5QLine9translateEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLine", "translate", args)
   }
@@ -418,6 +434,10 @@ func (this *QLine) setPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QLine9setPointsERK6QPointS2_
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPoint).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLine", "setPoints", args)
   }
@@ -440,6 +460,14 @@ func (this *QLine) setLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QLine7setLineEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QLine", "setLine", args)
   }
@@ -481,8 +509,14 @@ func (this *QLineF) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF9translateEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN6QLineF9translateERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "translate", args)
   }
@@ -503,6 +537,10 @@ func (this *QLineF) setPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF9setPointsERK7QPointFS2_
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPointF).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QLineF", "setPoints", args)
   }
@@ -522,6 +560,8 @@ func (this *QLineF) setP2(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF5setP2ERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "setP2", args)
   }
@@ -545,8 +585,14 @@ func (this *QLineF) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLineF10translatedEdd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK6QLineF10translatedERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "translated", args)
   }
@@ -566,6 +612,8 @@ func (this *QLineF) setLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF9setLengthEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "setLength", args)
   }
@@ -607,6 +655,8 @@ func (this *QLineF) angle(args ...interface{}) () {
     // invoke: _ZNK6QLineF5angleEv
   case 1:
     // invoke: _ZNK6QLineF5angleERKS_
+    var arg0 = args[0].(QLineF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "angle", args)
   }
@@ -649,6 +699,8 @@ func (this *QLineF) setAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF8setAngleEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "setAngle", args)
   }
@@ -758,6 +810,8 @@ func (this *QLineF) pointAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLineF7pointAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "pointAt", args)
   }
@@ -885,6 +939,8 @@ func (this *QLineF) angleTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLineF7angleToERKS_
+    var arg0 = args[0].(QLineF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "angleTo", args)
   }
@@ -907,6 +963,14 @@ func (this *QLineF) setLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF7setLineEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QLineF", "setLine", args)
   }
@@ -940,6 +1004,8 @@ func (this *QLineF) setP1(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLineF5setP1ERK7QPointF
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLineF", "setP1", args)
   }

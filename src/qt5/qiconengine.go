@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -77,6 +77,8 @@ func (this *QIconEngine) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine4readER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
   }
@@ -114,6 +116,8 @@ func (this *QIconEngine) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine5writeER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
   }
@@ -134,6 +138,10 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine12virtual_hookEiPv
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
   }

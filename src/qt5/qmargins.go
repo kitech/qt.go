@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qmargins.h
 // dst-file: /src/core/qmargins.go
 //
@@ -176,6 +176,8 @@ func (this *QMarginsF) setRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMarginsF8setRightEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMarginsF", "setRight", args)
   }
@@ -195,6 +197,8 @@ func (this *QMarginsF) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMarginsF6setTopEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMarginsF", "setTop", args)
   }
@@ -255,6 +259,8 @@ func (this *QMarginsF) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMarginsF9setBottomEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMarginsF", "setBottom", args)
   }
@@ -292,6 +298,8 @@ func (this *QMarginsF) setLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMarginsF7setLeftEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMarginsF", "setLeft", args)
   }
@@ -311,6 +319,8 @@ func (this *QMargins) setLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMargins7setLeftEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMargins", "setLeft", args)
   }
@@ -330,6 +340,8 @@ func (this *QMargins) setRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMargins8setRightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMargins", "setRight", args)
   }
@@ -385,6 +397,8 @@ func (this *QMargins) setTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMargins6setTopEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMargins", "setTop", args)
   }
@@ -404,6 +418,8 @@ func (this *QMargins) setBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMargins9setBottomEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMargins", "setBottom", args)
   }

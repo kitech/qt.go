@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -95,6 +95,8 @@ func (this *QMapDataBase) rebalance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase9rebalanceEP12QMapNodeBase
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "rebalance", args)
   }
@@ -128,6 +130,8 @@ func (this *QMapDataBase) rotateRight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase11rotateRightEP12QMapNodeBase
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateRight", args)
   }
@@ -148,6 +152,10 @@ func (this *QMapDataBase) freeTree(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeTree", args)
   }
@@ -181,6 +189,8 @@ func (this *QMapDataBase) rotateLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "rotateLeft", args)
   }
@@ -221,6 +231,14 @@ func (this *QMapDataBase) createNode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int8_t(args[3].(int8))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "createNode", args)
   }
@@ -240,6 +258,8 @@ func (this *QMapDataBase) freeNodeAndRebalance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "freeNodeAndRebalance", args)
   }
@@ -259,6 +279,8 @@ func (this *QMapNodeBase) setParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMapNodeBase9setParentEPS_
+    var arg0 = args[0].(QMapNodeBase).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMapNodeBase", "setParent", args)
   }

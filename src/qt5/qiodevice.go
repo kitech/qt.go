@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -142,6 +142,8 @@ func (this *QIODevice) ungetChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice9ungetCharEc
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "ungetChar", args)
   }
@@ -186,10 +188,18 @@ func (this *QIODevice) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice5writeERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QIODevice5writeEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN9QIODevice5writeEPKcx
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int64_t(args[1].(int64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QIODevice", "write", args)
   }
@@ -231,8 +241,14 @@ func (this *QIODevice) readLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice8readLineEPcx
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int64_t(args[1].(int64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QIODevice8readLineEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "readLine", args)
   }
@@ -252,6 +268,8 @@ func (this *QIODevice) waitForReadyRead(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice16waitForReadyReadEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "waitForReadyRead", args)
   }
@@ -289,6 +307,8 @@ func (this *QIODevice) getChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice7getCharEPc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "getChar", args)
   }
@@ -308,6 +328,8 @@ func (this *QIODevice) putChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice7putCharEc
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "putChar", args)
   }
@@ -435,6 +457,8 @@ func (this *QIODevice) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4seekEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "seek", args)
   }
@@ -481,8 +505,14 @@ func (this *QIODevice) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4readEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QIODevice4readEPcx
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int64_t(args[1].(int64))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QIODevice", "read", args)
   }
@@ -506,8 +536,14 @@ func (this *QIODevice) peek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice4peekEPcx
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int64_t(args[1].(int64))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN9QIODevice4peekEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "peek", args)
   }
@@ -527,6 +563,8 @@ func (this *QIODevice) waitForBytesWritten(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice19waitForBytesWrittenEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "waitForBytesWritten", args)
   }
@@ -618,6 +656,8 @@ func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QIODevice18setTextModeEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIODevice", "setTextModeEnabled", args)
   }

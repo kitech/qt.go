@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -151,6 +151,10 @@ func (this *QMessageBox) setButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox13setButtonTextEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setButtonText", args)
   }
@@ -184,6 +188,8 @@ func (this *QMessageBox) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setText", args)
   }
@@ -203,6 +209,8 @@ func (this *QMessageBox) setIconPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox13setIconPixmapERK7QPixmap
+    var arg0 = args[0].(QPixmap).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setIconPixmap", args)
   }
@@ -324,6 +332,10 @@ func (this *QMessageBox) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox4openEP7QObjectPKc
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMessageBox", "open", args)
   }
@@ -393,6 +405,8 @@ func (this *QMessageBox) setInformativeText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox18setInformativeTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setInformativeText", args)
   }
@@ -412,6 +426,8 @@ func (this *QMessageBox) setDetailedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox15setDetailedTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setDetailedText", args)
   }
@@ -452,8 +468,12 @@ func (this *QMessageBox) setDefaultButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox16setDefaultButtonENS_14StandardButtonE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QMessageBox16setDefaultButtonEP11QPushButton
+    var arg0 = args[0].(QPushButton).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setDefaultButton", args)
   }
@@ -476,8 +496,12 @@ func (this *QMessageBox) setEscapeButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN11QMessageBox15setEscapeButtonENS_14StandardButtonE
+    var arg0 = C.int(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setEscapeButton", args)
   }
@@ -511,6 +535,8 @@ func (this *QMessageBox) setCheckBox(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox11setCheckBoxEP9QCheckBox
+    var arg0 = args[0].(QCheckBox).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setCheckBox", args)
   }
@@ -530,6 +556,8 @@ func (this *QMessageBox) setWindowTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox14setWindowTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "setWindowTitle", args)
   }
@@ -585,6 +613,8 @@ func (this *QMessageBox) removeButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QMessageBox12removeButtonEP15QAbstractButton
+    var arg0 = args[0].(QAbstractButton).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "removeButton", args)
   }
@@ -640,6 +670,8 @@ func (this *QMessageBox) buttonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMessageBox10buttonTextEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonText", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -100,6 +100,8 @@ func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "setHitTestPath", args)
   }

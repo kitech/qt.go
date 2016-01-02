@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -89,10 +89,16 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle6polishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QCommonStyle6polishER8QPalette
+    var arg0 = args[0].(QPalette).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN12QCommonStyle6polishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommonStyle", "polish", args)
   }
@@ -120,8 +126,12 @@ func (this *QCommonStyle) unpolish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle8unpolishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QCommonStyle8unpolishEP12QApplication
+    var arg0 = args[0].(QApplication).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
   }

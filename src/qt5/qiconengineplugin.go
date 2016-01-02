@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -95,6 +95,8 @@ func (this *QIconEnginePlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QIconEnginePlugin6createERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "create", args)
   }

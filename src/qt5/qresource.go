@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -121,6 +121,8 @@ func (this *QResource) setLocale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QResource9setLocaleERK7QLocale
+    var arg0 = args[0].(QLocale).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QResource", "setLocale", args)
   }
@@ -300,6 +302,8 @@ func (this *QResource) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QResource11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QResource", "setFileName", args)
   }

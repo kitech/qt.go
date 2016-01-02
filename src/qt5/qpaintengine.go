@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -519,8 +519,12 @@ func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine11drawEllipseERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QPaintEngine11drawEllipseERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawEllipse", args)
   }
@@ -568,8 +572,16 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine10drawPointsEPK7QPointFi
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPaintEngine10drawPointsEPK6QPointi
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPoints", args)
   }
@@ -607,6 +619,8 @@ func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice
+    var arg0 = args[0].(QPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "setPaintDevice", args)
   }
@@ -626,6 +640,8 @@ func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine13setSystemRectERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemRect", args)
   }
@@ -679,6 +695,12 @@ func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPixmap).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QPointF).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTiledPixmap", args)
   }
@@ -698,6 +720,8 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9setActiveEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "setActive", args)
   }
@@ -719,6 +743,12 @@ func (this *QPaintEngine) drawPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPixmap).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QRectF).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPixmap", args)
   }
@@ -743,8 +773,16 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9drawLinesEPK5QLinei
+    var arg0 = args[0].(QLine).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPaintEngine9drawLinesEPK6QLineFi
+    var arg0 = args[0].(QLineF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawLines", args)
   }
@@ -764,6 +802,8 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine8drawPathERK12QPainterPath
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPath", args)
   }
@@ -783,6 +823,8 @@ func (this *QPaintEngine) updateState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine11updateStateERK17QPaintEngineState
+    var arg0 = args[0].(QPaintEngineState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "updateState", args)
   }
@@ -802,6 +844,8 @@ func (this *QPaintEngine) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine5beginEP12QPaintDevice
+    var arg0 = args[0].(QPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "begin", args)
   }
@@ -844,8 +888,16 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9drawRectsEPK6QRectFi
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QPaintEngine9drawRectsEPK5QRecti
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawRects", args)
   }
@@ -865,6 +917,8 @@ func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine13setSystemClipERK7QRegion
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemClip", args)
   }
@@ -957,6 +1011,10 @@ func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTextItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTextItem", args)
   }
@@ -979,6 +1037,14 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_
+    var arg0 = (*C.int32_t)(args[0].(*int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = (*C.int32_t)(args[1].(*int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.int32_t)(args[2].(*int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = (*C.int32_t)(args[3].(*int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "fix_neg_rect", args)
   }

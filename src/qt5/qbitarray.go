@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -151,8 +151,14 @@ func (this *QBitArray) setBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray6setBitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QBitArray6setBitEib
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBitArray", "setBit", args)
   }
@@ -190,6 +196,8 @@ func (this *QBitArray) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray4swapERS_
+    var arg0 = args[0].(QBitArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "swap", args)
   }
@@ -213,6 +221,8 @@ func (this *QBitArray) count(args ...interface{}) () {
     // invoke: _ZNK9QBitArray5countEv
   case 1:
     // invoke: _ZNK9QBitArray5countEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "count", args)
   }
@@ -250,6 +260,8 @@ func (this *QBitArray) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray2atEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "at", args)
   }
@@ -287,6 +299,8 @@ func (this *QBitArray) clearBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray8clearBitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "clearBit", args)
   }
@@ -306,6 +320,8 @@ func (this *QBitArray) testBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray7testBitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "testBit", args)
   }
@@ -325,6 +341,8 @@ func (this *QBitArray) truncate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray8truncateEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "truncate", args)
   }
@@ -344,6 +362,8 @@ func (this *QBitArray) toggleBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray9toggleBitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "toggleBit", args)
   }
@@ -369,8 +389,18 @@ func (this *QBitArray) fill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray4fillEbii
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN9QBitArray4fillEbi
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QBitArray", "fill", args)
   }
@@ -408,6 +438,8 @@ func (this *QBitArray) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray6resizeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QBitArray", "resize", args)
   }

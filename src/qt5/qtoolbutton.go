@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -92,6 +92,8 @@ func (this *QToolButton) setAutoRaise(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton12setAutoRaiseEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolButton", "setAutoRaise", args)
   }
@@ -256,6 +258,8 @@ func (this *QToolButton) setMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton7setMenuEP5QMenu
+    var arg0 = args[0].(QMenu).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolButton", "setMenu", args)
   }
@@ -275,6 +279,8 @@ func (this *QToolButton) setDefaultAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton16setDefaultActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QToolButton", "setDefaultAction", args)
   }

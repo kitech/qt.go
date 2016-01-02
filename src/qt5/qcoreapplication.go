@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -228,6 +228,8 @@ func (this *QCoreApplication) installNativeEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter
+    var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "installNativeEventFilter", args)
   }
@@ -518,6 +520,8 @@ func (this *QCoreApplication) removeNativeEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter
+    var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeNativeEventFilter", args)
   }
@@ -678,6 +682,10 @@ func (this *QCoreApplication) notify(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication6notifyEP7QObjectP6QEvent
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QEvent).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "notify", args)
   }

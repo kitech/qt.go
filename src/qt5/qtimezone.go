@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -131,6 +131,8 @@ func (this *QTimeZone) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeZone4swapERS_
+    var arg0 = args[0].(QTimeZone).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "swap", args)
   }
@@ -205,6 +207,8 @@ func (this *QTimeZone) abbreviation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone12abbreviationERK9QDateTime
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "abbreviation", args)
   }
@@ -252,6 +256,8 @@ func (this *QTimeZone) isDaylightTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone14isDaylightTimeERK9QDateTime
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "isDaylightTime", args)
   }
@@ -335,6 +341,8 @@ func (this *QTimeZone) daylightTimeOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "daylightTimeOffset", args)
   }
@@ -382,6 +390,8 @@ func (this *QTimeZone) standardTimeOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18standardTimeOffsetERK9QDateTime
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "standardTimeOffset", args)
   }
@@ -419,6 +429,8 @@ func (this *QTimeZone) offsetFromUtc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone13offsetFromUtcERK9QDateTime
+    var arg0 = args[0].(QDateTime).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTimeZone", "offsetFromUtc", args)
   }

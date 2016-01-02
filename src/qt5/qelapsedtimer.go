@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -161,6 +161,8 @@ func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7msecsToERKS_
+    var arg0 = args[0].(QElapsedTimer).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
   }
@@ -198,6 +200,8 @@ func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer10hasExpiredEx
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
   }
@@ -253,6 +257,8 @@ func (this *QElapsedTimer) secsTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer6secsToERKS_
+    var arg0 = args[0].(QElapsedTimer).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QElapsedTimer", "secsTo", args)
   }

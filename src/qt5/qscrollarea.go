@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -96,6 +96,8 @@ func (this *QScrollArea) setWidgetResizable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea18setWidgetResizableEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidgetResizable", args)
   }
@@ -115,6 +117,8 @@ func (this *QScrollArea) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea9setWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidget", args)
   }
@@ -155,6 +159,14 @@ func (this *QScrollArea) ensureVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea13ensureVisibleEiiii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureVisible", args)
   }
@@ -176,6 +188,12 @@ func (this *QScrollArea) ensureWidgetVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureWidgetVisible", args)
   }
@@ -263,6 +281,8 @@ func (this *QScrollArea) focusNextPrevChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea18focusNextPrevChildEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QScrollArea", "focusNextPrevChild", args)
   }

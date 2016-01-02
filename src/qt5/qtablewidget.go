@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.go
 //
@@ -433,6 +433,8 @@ func (this *QTableWidget) setColumnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget14setColumnCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setColumnCount", args)
   }
@@ -525,6 +527,8 @@ func (this *QTableWidget) closePersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "closePersistentEditor", args)
   }
@@ -544,6 +548,8 @@ func (this *QTableWidget) setHorizontalHeaderLabels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderLabels", args)
   }
@@ -564,6 +570,10 @@ func (this *QTableWidget) setItemSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemSelected", args)
   }
@@ -584,6 +594,10 @@ func (this *QTableWidget) takeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget8takeItemEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "takeItem", args)
   }
@@ -604,6 +618,10 @@ func (this *QTableWidget) removeCellWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget16removeCellWidgetEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "removeCellWidget", args)
   }
@@ -624,6 +642,10 @@ func (this *QTableWidget) setVerticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderItem", args)
   }
@@ -643,6 +665,8 @@ func (this *QTableWidget) visualItemRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "visualItemRect", args)
   }
@@ -680,6 +704,8 @@ func (this *QTableWidget) row(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget3rowEPK16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "row", args)
   }
@@ -699,6 +725,8 @@ func (this *QTableWidget) removeRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget9removeRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "removeRow", args)
   }
@@ -718,6 +746,8 @@ func (this *QTableWidget) setItemPrototype(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setItemPrototype", args)
   }
@@ -737,6 +767,8 @@ func (this *QTableWidget) visualRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget9visualRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "visualRow", args)
   }
@@ -758,6 +790,12 @@ func (this *QTableWidget) setCellWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget13setCellWidgetEiiP7QWidget
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QWidget).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setCellWidget", args)
   }
@@ -777,6 +815,8 @@ func (this *QTableWidget) openPersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "openPersistentEditor", args)
   }
@@ -836,8 +876,14 @@ func (this *QTableWidget) setCurrentItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem6QFlagsIN19QItemSelectionModel13SelectionFlagEE
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(unsafe.Pointer)
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentItem", args)
   }
@@ -858,6 +904,10 @@ func (this *QTableWidget) cellWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget10cellWidgetEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "cellWidget", args)
   }
@@ -877,6 +927,8 @@ func (this *QTableWidget) setSortingEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget17setSortingEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setSortingEnabled", args)
   }
@@ -898,6 +950,12 @@ func (this *QTableWidget) setItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget7setItemEiiP16QTableWidgetItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setItem", args)
   }
@@ -917,6 +975,8 @@ func (this *QTableWidget) horizontalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget20horizontalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "horizontalHeaderItem", args)
   }
@@ -936,6 +996,8 @@ func (this *QTableWidget) editItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget8editItemEP16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "editItem", args)
   }
@@ -991,6 +1053,8 @@ func (this *QTableWidget) removeColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget12removeColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "removeColumn", args)
   }
@@ -1011,6 +1075,10 @@ func (this *QTableWidget) setRangeSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb
+    var arg0 = args[0].(QTableWidgetSelectionRange).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int8_t(args[1].(int8))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setRangeSelected", args)
   }
@@ -1030,6 +1098,8 @@ func (this *QTableWidget) column(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget6columnEPK16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "column", args)
   }
@@ -1049,6 +1119,8 @@ func (this *QTableWidget) isItemSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem
+    var arg0 = args[0].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "isItemSelected", args)
   }
@@ -1068,6 +1140,8 @@ func (this *QTableWidget) takeVerticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget22takeVerticalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "takeVerticalHeaderItem", args)
   }
@@ -1087,6 +1161,8 @@ func (this *QTableWidget) insertRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget9insertRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "insertRow", args)
   }
@@ -1125,6 +1201,10 @@ func (this *QTableWidget) item(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget4itemEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "item", args)
   }
@@ -1144,6 +1224,8 @@ func (this *QTableWidget) setVerticalHeaderLabels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setVerticalHeaderLabels", args)
   }
@@ -1185,8 +1267,14 @@ func (this *QTableWidget) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget6itemAtERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK12QTableWidget6itemAtEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "itemAt", args)
   }
@@ -1230,8 +1318,18 @@ func (this *QTableWidget) setCurrentCell(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget14setCurrentCellEii6QFlagsIN19QItemSelectionModel13SelectionFlagEE
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(unsafe.Pointer)
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN12QTableWidget14setCurrentCellEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setCurrentCell", args)
   }
@@ -1251,6 +1349,8 @@ func (this *QTableWidget) setRowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget11setRowCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setRowCount", args)
   }
@@ -1271,6 +1371,10 @@ func (this *QTableWidget) setHorizontalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTableWidgetItem).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidget", "setHorizontalHeaderItem", args)
   }
@@ -1290,6 +1394,8 @@ func (this *QTableWidget) visualColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget12visualColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "visualColumn", args)
   }
@@ -1309,6 +1415,8 @@ func (this *QTableWidget) takeHorizontalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget24takeHorizontalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "takeHorizontalHeaderItem", args)
   }
@@ -1328,6 +1436,8 @@ func (this *QTableWidget) verticalHeaderItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTableWidget18verticalHeaderItemEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "verticalHeaderItem", args)
   }
@@ -1365,6 +1475,8 @@ func (this *QTableWidget) insertColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTableWidget12insertColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidget", "insertColumn", args)
   }
@@ -1402,6 +1514,8 @@ func (this *QTableWidgetItem) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QTableWidgetItem4dataEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "data", args)
   }
@@ -1421,6 +1535,8 @@ func (this *QTableWidgetItem) setSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem11setSelectedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSelected", args)
   }
@@ -1440,6 +1556,8 @@ func (this *QTableWidgetItem) setStatusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setStatusTipERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setStatusTip", args)
   }
@@ -1509,6 +1627,8 @@ func (this *QTableWidgetItem) setSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem11setSizeHintERK5QSize
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setSizeHint", args)
   }
@@ -1578,6 +1698,8 @@ func (this *QTableWidgetItem) setTextAlignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem16setTextAlignmentEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextAlignment", args)
   }
@@ -1633,6 +1755,8 @@ func (this *QTableWidgetItem) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QTableWidgetItem5writeER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "write", args)
   }
@@ -1675,6 +1799,8 @@ func (this *QTableWidgetItem) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setIcon", args)
   }
@@ -1730,6 +1856,8 @@ func (this *QTableWidgetItem) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setWhatsThisERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setWhatsThis", args)
   }
@@ -1767,6 +1895,8 @@ func (this *QTableWidgetItem) setForeground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem13setForegroundERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setForeground", args)
   }
@@ -1805,6 +1935,10 @@ func (this *QTableWidgetItem) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setDataEiRK8QVariant
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setData", args)
   }
@@ -1860,6 +1994,8 @@ func (this *QTableWidgetItem) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem4readER11QDataStream
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "read", args)
   }
@@ -1915,6 +2051,8 @@ func (this *QTableWidgetItem) setBackgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem18setBackgroundColorERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackgroundColor", args)
   }
@@ -1934,6 +2072,8 @@ func (this *QTableWidgetItem) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem13setBackgroundERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setBackground", args)
   }
@@ -1953,6 +2093,8 @@ func (this *QTableWidgetItem) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setFont", args)
   }
@@ -1972,6 +2114,8 @@ func (this *QTableWidgetItem) setTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem12setTextColorERK6QColor
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setTextColor", args)
   }
@@ -1991,6 +2135,8 @@ func (this *QTableWidgetItem) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem7setTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setText", args)
   }
@@ -2028,6 +2174,8 @@ func (this *QTableWidgetItem) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QTableWidgetItem10setToolTipERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QTableWidgetItem", "setToolTip", args)
   }

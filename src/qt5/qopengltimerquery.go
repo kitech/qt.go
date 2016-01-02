@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -348,6 +348,8 @@ func (this *QOpenGLTimeMonitor) setSampleCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor14setSampleCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "setSampleCount", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -194,6 +194,8 @@ func (this *QMdiSubWindow) setSystemMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow13setSystemMenuEP5QMenu
+    var arg0 = args[0].(QMenu).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setSystemMenu", args)
   }
@@ -227,6 +229,8 @@ func (this *QMdiSubWindow) setKeyboardSingleStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow21setKeyboardSingleStepEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardSingleStep", args)
   }
@@ -359,6 +363,8 @@ func (this *QMdiSubWindow) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow9setWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setWidget", args)
   }
@@ -414,6 +420,8 @@ func (this *QMdiSubWindow) setKeyboardPageStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QMdiSubWindow19setKeyboardPageStepEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "setKeyboardPageStep", args)
   }

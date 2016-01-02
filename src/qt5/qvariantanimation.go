@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -98,6 +98,8 @@ func (this *QVariantAnimation) setDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation11setDurationEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setDuration", args)
   }
@@ -118,6 +120,10 @@ func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setKeyValueAt", args)
   }
@@ -155,6 +161,8 @@ func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QVariantAnimation10keyValueAtEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "keyValueAt", args)
   }
@@ -242,6 +250,8 @@ func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation13setStartValueERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setStartValue", args)
   }
@@ -297,6 +307,8 @@ func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation11setEndValueERK8QVariant
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEndValue", args)
   }
@@ -339,6 +351,8 @@ func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve
+    var arg0 = args[0].(QEasingCurve).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QVariantAnimation", "setEasingCurve", args)
   }

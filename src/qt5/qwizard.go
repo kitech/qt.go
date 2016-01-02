@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.go
 //
@@ -331,6 +331,8 @@ func (this *QWizardPage) setFinalPage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWizardPage12setFinalPageEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizardPage", "setFinalPage", args)
   }
@@ -350,6 +352,8 @@ func (this *QWizardPage) setSubTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWizardPage11setSubTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizardPage", "setSubTitle", args)
   }
@@ -383,6 +387,8 @@ func (this *QWizardPage) setCommitPage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWizardPage13setCommitPageEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizardPage", "setCommitPage", args)
   }
@@ -420,6 +426,8 @@ func (this *QWizardPage) setTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWizardPage8setTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizardPage", "setTitle", args)
   }
@@ -439,6 +447,8 @@ func (this *QWizard) setSideWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard13setSideWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "setSideWidget", args)
   }
@@ -494,6 +504,8 @@ func (this *QWizard) page(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QWizard4pageEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "page", args)
   }
@@ -532,6 +544,10 @@ func (this *QWizard) setField(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard8setFieldERK7QStringRK8QVariant
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QWizard", "setField", args)
   }
@@ -552,6 +568,10 @@ func (this *QWizard) setPage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard7setPageEiP11QWizardPage
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWizardPage).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QWizard", "setPage", args)
   }
@@ -627,6 +647,12 @@ func (this *QWizard) setDefaultProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard18setDefaultPropertyEPKcS1_S1_
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QWizard", "setDefaultProperty", args)
   }
@@ -646,6 +672,8 @@ func (this *QWizard) setStartId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard10setStartIdEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "setStartId", args)
   }
@@ -738,6 +766,8 @@ func (this *QWizard) addPage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard7addPageEP11QWizardPage
+    var arg0 = args[0].(QWizardPage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "addPage", args)
   }
@@ -757,6 +787,8 @@ func (this *QWizard) removePage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard10removePageEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "removePage", args)
   }
@@ -812,6 +844,8 @@ func (this *QWizard) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QWizard10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "setVisible", args)
   }
@@ -831,6 +865,8 @@ func (this *QWizard) hasVisitedPage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QWizard14hasVisitedPageEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "hasVisitedPage", args)
   }
@@ -850,6 +886,8 @@ func (this *QWizard) field(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QWizard5fieldERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QWizard", "field", args)
   }

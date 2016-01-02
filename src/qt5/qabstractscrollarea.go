@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -138,6 +138,8 @@ func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea11setViewportEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setViewport", args)
   }
@@ -175,6 +177,8 @@ func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setCornerWidget", args)
   }
@@ -212,6 +216,8 @@ func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea13setupViewportEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setupViewport", args)
   }
@@ -317,6 +323,8 @@ func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar
+    var arg0 = args[0].(QScrollBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setHorizontalScrollBar", args)
   }
@@ -336,6 +344,8 @@ func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar
+    var arg0 = args[0].(QScrollBar).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAbstractScrollArea", "setVerticalScrollBar", args)
   }

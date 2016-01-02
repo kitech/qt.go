@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -90,10 +90,22 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStringList11lastIndexOfERK18QRegularExpressioni
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK11QStringList11lastIndexOfERK7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK11QStringList11lastIndexOfER7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringList", "lastIndexOf", args)
   }
@@ -127,10 +139,22 @@ func (this *QStringList) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStringList7indexOfERK7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK11QStringList7indexOfER7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK11QStringList7indexOfERK18QRegularExpressioni
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringList", "indexOf", args)
   }

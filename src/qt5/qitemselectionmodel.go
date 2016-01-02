@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -224,6 +224,8 @@ func (this *QItemSelection) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QItemSelection8containsERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelection", "contains", args)
   }
@@ -280,8 +282,16 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange8containsERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK19QItemSelectionRange8containsEiiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "contains", args)
   }
@@ -301,6 +311,8 @@ func (this *QItemSelectionRange) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange11intersectedERKS_
+    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersected", args)
   }
@@ -487,6 +499,8 @@ func (this *QItemSelectionRange) intersects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionRange10intersectsERKS_
+    var arg0 = args[0].(QItemSelectionRange).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
   }
@@ -596,6 +610,8 @@ func (this *QItemSelectionModel) isSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel10isSelectedERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isSelected", args)
   }
@@ -651,6 +667,8 @@ func (this *QItemSelectionModel) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QItemSelectionModel8setModelEP18QAbstractItemModel
+    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "setModel", args)
   }
@@ -676,6 +694,10 @@ func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "rowIntersectsSelection", args)
   }
@@ -749,6 +771,8 @@ func (this *QItemSelectionModel) selectedColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel15selectedColumnsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedColumns", args)
   }
@@ -769,6 +793,10 @@ func (this *QItemSelectionModel) isColumnSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isColumnSelected", args)
   }
@@ -789,6 +817,10 @@ func (this *QItemSelectionModel) columnIntersectsSelection(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "columnIntersectsSelection", args)
   }
@@ -823,6 +855,10 @@ func (this *QItemSelectionModel) isRowSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isRowSelected", args)
   }
@@ -900,6 +936,8 @@ func (this *QItemSelectionModel) selectedRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12selectedRowsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selectedRows", args)
   }

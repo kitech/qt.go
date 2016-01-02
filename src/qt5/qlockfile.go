@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -178,6 +178,8 @@ func (this *QLockFile) tryLock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLockFile7tryLockEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLockFile", "tryLock", args)
   }
@@ -215,6 +217,8 @@ func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLockFile16setStaleLockTimeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QLockFile", "setStaleLockTime", args)
   }
@@ -236,6 +240,12 @@ func (this *QLockFile) getLockInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLockFile11getLockInfoEPxP7QStringS2_
+    var arg0 = (*C.int64_t)(args[0].(*int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QLockFile", "getLockInfo", args)
   }

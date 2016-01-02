@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -117,6 +117,8 @@ func (this *QThread) setEventDispatcher(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher
+    var arg0 = args[0].(QAbstractEventDispatcher).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThread", "setEventDispatcher", args)
   }
@@ -218,6 +220,8 @@ func (this *QThread) exit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QThread4exitEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThread", "exit", args)
   }
@@ -237,6 +241,8 @@ func (this *QThread) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QThread5eventEP6QEvent
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThread", "event", args)
   }
@@ -292,6 +298,8 @@ func (this *QThread) setStackSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QThread12setStackSizeEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThread", "setStackSize", args)
   }
@@ -371,6 +379,8 @@ func (this *QThread) wait(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QThread4waitEm
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThread", "wait", args)
   }

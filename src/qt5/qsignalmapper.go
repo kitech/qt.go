@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -96,6 +96,8 @@ func (this *QSignalMapper) removeMappings(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper14removeMappingsEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSignalMapper", "removeMappings", args)
   }
@@ -165,12 +167,28 @@ func (this *QSignalMapper) setMapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectS1_
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjecti
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectRK7QString
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QSignalMapper", "setMapping", args)
   }
@@ -199,12 +217,20 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSignalMapper7mappingEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK13QSignalMapper7mappingERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK13QSignalMapper7mappingEP7QObject
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK13QSignalMapper7mappingEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSignalMapper", "mapping", args)
   }

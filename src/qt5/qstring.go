@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.go
 //
@@ -562,6 +562,10 @@ func (this *QString) toLongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString10toLongLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toLongLong", args)
   }
@@ -618,18 +622,34 @@ func (this *QString) append(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString6appendEPK5QChari
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN7QString6appendERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN7QString6appendERK10QStringRef
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZN7QString6appendE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 4:
     // invoke: _ZN7QString6appendERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 5:
     // invoke: _ZN7QString6appendEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 6:
     // invoke: _ZN7QString6appendE13QLatin1String
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "append", args)
   }
@@ -661,14 +681,24 @@ func (this *QString) prepend(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString7prependE13QLatin1String
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QString7prependE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN7QString7prependEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZN7QString7prependERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 4:
     // invoke: _ZN7QString7prependERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "prepend", args)
   }
@@ -702,12 +732,30 @@ func (this *QString) insert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString6insertEi5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN7QString6insertEiPK5QChari
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZN7QString6insertEiRKS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZN7QString6insertEi13QLatin1String
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLatin1String).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "insert", args)
   }
@@ -727,6 +775,8 @@ func (this *QString) left(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString4leftEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "left", args)
   }
@@ -785,20 +835,62 @@ func (this *QString) lastIndexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString11lastIndexOfERK18QRegularExpressioni
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QString11lastIndexOfE13QLatin1StringiN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 2:
     // invoke: _ZNK7QString11lastIndexOfER7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QRegularExpressionMatch).qclsinst
+    if false {fmt.Println(arg2)}
   case 4:
     // invoke: _ZNK7QString11lastIndexOfERK7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK7QString11lastIndexOfERK10QStringRefiN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 6:
     // invoke: _ZNK7QString11lastIndexOfERKS_iN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 7:
     // invoke: _ZNK7QString11lastIndexOfE5QChariN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QString", "lastIndexOf", args)
   }
@@ -832,6 +924,8 @@ func (this *QString) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString6resizeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "resize", args)
   }
@@ -854,8 +948,12 @@ func (this *QString) push_front(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString10push_frontE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QString10push_frontERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "push_front", args)
   }
@@ -875,6 +973,8 @@ func (this *QString) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString8toDoubleEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "toDouble", args)
   }
@@ -1021,44 +1121,224 @@ func (this *QString) arg(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QString).qclsinst
+    if false {fmt.Println(arg5)}
+    var arg6 = args[6].(QString).qclsinst
+    if false {fmt.Println(arg6)}
+    var arg7 = args[7].(QString).qclsinst
+    if false {fmt.Println(arg7)}
   case 1:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZNK7QString3argElii5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 3:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
   case 4:
     // invoke: _ZNK7QString3argERKS_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   case 5:
     // invoke: _ZNK7QString3argEdici5QChar
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.char(args[2].(byte))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QChar).qclsinst
+    if false {fmt.Println(arg4)}
   case 6:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QString).qclsinst
+    if false {fmt.Println(arg5)}
+    var arg6 = args[6].(QString).qclsinst
+    if false {fmt.Println(arg6)}
   case 7:
     // invoke: _ZNK7QString3argERKS_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 8:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QString).qclsinst
+    if false {fmt.Println(arg5)}
+    var arg6 = args[6].(QString).qclsinst
+    if false {fmt.Println(arg6)}
+    var arg7 = args[7].(QString).qclsinst
+    if false {fmt.Println(arg7)}
+    var arg8 = args[8].(QString).qclsinst
+    if false {fmt.Println(arg8)}
   case 9:
     // invoke: _ZNK7QString3argERKS_S1_S1_S1_S1_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QString).qclsinst
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QString).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QString).qclsinst
+    if false {fmt.Println(arg5)}
   case 10:
     // invoke: _ZNK7QString3argExii5QChar
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 11:
     // invoke: _ZNK7QString3argEjii5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 12:
     // invoke: _ZNK7QString3argEtii5QChar
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 13:
     // invoke: _ZNK7QString3argEsii5QChar
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 14:
     // invoke: _ZNK7QString3argEiii5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 15:
     // invoke: _ZNK7QString3argE5QChariS0_
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
   case 16:
     // invoke: _ZNK7QString3argEci5QChar
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
   case 17:
     // invoke: _ZNK7QString3argERKS_i5QChar
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
   case 18:
     // invoke: _ZNK7QString3argEyii5QChar
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   case 19:
     // invoke: _ZNK7QString3argEmii5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QChar).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QString", "arg", args)
   }
@@ -1078,6 +1358,8 @@ func (this *QString) rightRef(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString8rightRefEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "rightRef", args)
   }
@@ -1136,24 +1418,68 @@ func (this *QString) setNum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString6setNumEsi
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN7QString6setNumEyi
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN7QString6setNumEfci
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 3:
     // invoke: _ZN7QString6setNumExi
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZN7QString6setNumEji
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZN7QString6setNumEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 6:
     // invoke: _ZN7QString6setNumEli
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 7:
     // invoke: _ZN7QString6setNumEmi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 8:
     // invoke: _ZN7QString6setNumEti
+    var arg0 = C.int16_t(args[0].(int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 9:
     // invoke: _ZN7QString6setNumEdci
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.char(args[1].(byte))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QString", "setNum", args)
   }
@@ -1173,6 +1499,8 @@ func (this *QString) toFloat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString7toFloatEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "toFloat", args)
   }
@@ -1209,16 +1537,32 @@ func (this *QString) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString5countERK10QStringRefN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QString5countERK18QRegularExpression
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK7QString5countEv
   case 3:
     // invoke: _ZNK7QString5countERK7QRegExp
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   case 4:
     // invoke: _ZNK7QString5countERKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK7QString5countE5QCharN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "count", args)
   }
@@ -1239,6 +1583,10 @@ func (this *QString) midRef(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString6midRefEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "midRef", args)
   }
@@ -1293,8 +1641,12 @@ func (this *QString) push_back(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString9push_backE5QChar
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QString9push_backERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "push_back", args)
   }
@@ -1395,30 +1747,110 @@ func (this *QString) replace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString7replaceERKS_S1_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN7QString7replaceEiiPK5QChari
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN7QString7replaceERKS_13QLatin1StringN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLatin1String).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 3:
     // invoke: _ZN7QString7replaceE5QChar13QLatin1StringN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLatin1String).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 4:
     // invoke: _ZN7QString7replaceE13QLatin1StringRKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 5:
     // invoke: _ZN7QString7replaceERK7QRegExpRKS_
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 6:
     // invoke: _ZN7QString7replaceE5QCharRKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 7:
     // invoke: _ZN7QString7replaceEiiRKS_
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   case 8:
     // invoke: _ZN7QString7replaceEPK5QChariS2_iN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var arg4 = C.int32_t(args[4].(int32))
+    if false {fmt.Println(arg4)}
   case 9:
     // invoke: _ZN7QString7replaceE13QLatin1StringS0_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLatin1String).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 10:
     // invoke: _ZN7QString7replaceE5QCharS0_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 11:
     // invoke: _ZN7QString7replaceERK18QRegularExpressionRKS_
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 12:
     // invoke: _ZN7QString7replaceEii5QChar
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QChar).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QString", "replace", args)
   }
@@ -1453,6 +1885,10 @@ func (this *QString) setRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString10setRawDataEPK5QChari
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "setRawData", args)
   }
@@ -1473,6 +1909,10 @@ func (this *QString) toULong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString7toULongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toULong", args)
   }
@@ -1492,6 +1932,8 @@ func (this *QString) chop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString4chopEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "chop", args)
   }
@@ -1544,6 +1986,10 @@ func (this *QString) mid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString3midEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "mid", args)
   }
@@ -1577,6 +2023,8 @@ func (this *QString) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString4swapERS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "swap", args)
   }
@@ -1626,6 +2074,12 @@ func (this *QString) leftJustified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString13leftJustifiedEi5QCharb
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int8_t(args[2].(int8))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QString", "leftJustified", args)
   }
@@ -1679,20 +2133,62 @@ func (this *QString) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString7indexOfERKS_iN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK7QString7indexOfERK7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QRegularExpressionMatch).qclsinst
+    if false {fmt.Println(arg2)}
   case 3:
     // invoke: _ZNK7QString7indexOfERK10QStringRefiN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 4:
     // invoke: _ZNK7QString7indexOfERK18QRegularExpressioni
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 5:
     // invoke: _ZNK7QString7indexOfE5QChariN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 6:
     // invoke: _ZNK7QString7indexOfE13QLatin1StringiN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
   case 7:
     // invoke: _ZNK7QString7indexOfER7QRegExpi
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "indexOf", args)
   }
@@ -1731,6 +2227,10 @@ func (this *QString) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString5toIntEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toInt", args)
   }
@@ -1786,6 +2286,8 @@ func (this *QString) repeated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString8repeatedEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "repeated", args)
   }
@@ -1806,6 +2308,10 @@ func (this *QString) setUtf16(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString8setUtf16EPKti
+    var arg0 = (*C.int16_t)(args[0].(*int16))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "setUtf16", args)
   }
@@ -1883,20 +2389,46 @@ func (this *QString) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString8containsE13QLatin1StringN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QLatin1String).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK7QString8containsERK7QRegExp
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK7QString8containsERK10QStringRefN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QRegularExpressionMatch).qclsinst
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZNK7QString8containsER7QRegExp
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   case 5:
     // invoke: _ZNK7QString8containsE5QCharN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 6:
     // invoke: _ZNK7QString8containsERK18QRegularExpression
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
   case 7:
     // invoke: _ZNK7QString8containsERKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "contains", args)
   }
@@ -1916,6 +2448,8 @@ func (this *QString) isSharedWith(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString12isSharedWithERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "isSharedWith", args)
   }
@@ -1978,14 +2512,30 @@ func (this *QString) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString6removeE5QCharN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN7QString6removeERK18QRegularExpression
+    var arg0 = args[0].(QRegularExpression).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN7QString6removeERK7QRegExp
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZN7QString6removeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 4:
     // invoke: _ZN7QString6removeERKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "remove", args)
   }
@@ -2041,6 +2591,8 @@ func (this *QString) toWCharArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString12toWCharArrayEPw
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "toWCharArray", args)
   }
@@ -2107,6 +2659,10 @@ func (this *QString) fill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString4fillE5QChari
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "fill", args)
   }
@@ -2145,6 +2701,10 @@ func (this *QString) toLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString6toLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toLong", args)
   }
@@ -2200,6 +2760,8 @@ func (this *QString) leftRef(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString7leftRefEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "leftRef", args)
   }
@@ -2238,6 +2800,10 @@ func (this *QString) setUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString10setUnicodeEPK5QChari
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "setUnicode", args)
   }
@@ -2293,6 +2859,8 @@ func (this *QString) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString2atEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "at", args)
   }
@@ -2357,6 +2925,10 @@ func (this *QString) toUInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString6toUIntEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toUInt", args)
   }
@@ -2391,6 +2963,10 @@ func (this *QString) toUShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString8toUShortEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toUShort", args)
   }
@@ -2411,6 +2987,10 @@ func (this *QString) toULongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString11toULongLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toULongLong", args)
   }
@@ -2466,6 +3046,8 @@ func (this *QString) truncate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString8truncateEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "truncate", args)
   }
@@ -2496,12 +3078,24 @@ func (this *QString) localeAwareCompare(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString18localeAwareCompareERKS_S1_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN7QString18localeAwareCompareERKS_RK10QStringRef
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStringRef).qclsinst
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK7QString18localeAwareCompareERK10QStringRef
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZNK7QString18localeAwareCompareERKS_
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "localeAwareCompare", args)
   }
@@ -2575,6 +3169,8 @@ func (this *QString) right(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString5rightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "right", args)
   }
@@ -2596,6 +3192,12 @@ func (this *QString) rightJustified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString14rightJustifiedEi5QCharb
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QChar).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int8_t(args[2].(int8))
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QString", "rightJustified", args)
   }
@@ -2615,6 +3217,8 @@ func (this *QString) reserve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QString7reserveEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QString", "reserve", args)
   }
@@ -2635,6 +3239,10 @@ func (this *QString) toShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QString7toShortEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QString", "toShort", args)
   }
@@ -2767,6 +3375,8 @@ func (this *QCharRef) setCell(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QCharRef7setCellEh
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCharRef", "setCell", args)
   }
@@ -2899,6 +3509,8 @@ func (this *QCharRef) setRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QCharRef6setRowEh
+    var arg0 = C.char(args[0].(byte))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCharRef", "setRow", args)
   }
@@ -3193,6 +3805,10 @@ func (this *QStringRef) toShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef7toShortEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toShort", args)
   }
@@ -3218,6 +3834,10 @@ func (this *QStringRef) toULongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef11toULongLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toULongLong", args)
   }
@@ -3274,6 +3894,10 @@ func (this *QStringRef) toLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef6toLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toLong", args)
   }
@@ -3312,6 +3936,10 @@ func (this *QStringRef) toUShort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef8toUShortEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toUShort", args)
   }
@@ -3332,6 +3960,10 @@ func (this *QStringRef) toUInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef6toUIntEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toUInt", args)
   }
@@ -3380,12 +4012,24 @@ func (this *QStringRef) localeAwareCompare(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef18localeAwareCompareERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK10QStringRef18localeAwareCompareERKS_
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN10QStringRef18localeAwareCompareERKS_RK7QString
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 3:
     // invoke: _ZN10QStringRef18localeAwareCompareERKS_S1_
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStringRef).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "localeAwareCompare", args)
   }
@@ -3459,6 +4103,8 @@ func (this *QStringRef) left(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef4leftEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "left", args)
   }
@@ -3507,12 +4153,24 @@ func (this *QStringRef) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef5countERKS_N2Qt15CaseSensitivityE
+    var arg0 = args[0].(QStringRef).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZNK10QStringRef5countERK7QStringN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZNK10QStringRef5countEv
   case 3:
     // invoke: _ZNK10QStringRef5countE5QCharN2Qt15CaseSensitivityE
+    var arg0 = args[0].(QChar).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "count", args)
   }
@@ -3532,6 +4190,8 @@ func (this *QStringRef) right(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef5rightEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "right", args)
   }
@@ -3551,6 +4211,8 @@ func (this *QStringRef) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef2atEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "at", args)
   }
@@ -3570,6 +4232,8 @@ func (this *QStringRef) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef8toDoubleEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "toDouble", args)
   }
@@ -3626,6 +4290,10 @@ func (this *QStringRef) toLongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef10toLongLongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toLongLong", args)
   }
@@ -3700,6 +4368,10 @@ func (this *QStringRef) mid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef3midEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "mid", args)
   }
@@ -3719,6 +4391,8 @@ func (this *QStringRef) toFloat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef7toFloatEPb
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "toFloat", args)
   }
@@ -3793,6 +4467,10 @@ func (this *QStringRef) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef5toIntEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toInt", args)
   }
@@ -3830,6 +4508,8 @@ func (this *QStringRef) appendTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef8appendToEP7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStringRef", "appendTo", args)
   }
@@ -3900,6 +4580,10 @@ func (this *QStringRef) toULong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStringRef7toULongEPbi
+    var arg0 = (*C.bool)(args[0].(*bool))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStringRef", "toULong", args)
   }

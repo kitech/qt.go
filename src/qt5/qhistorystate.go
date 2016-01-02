@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -102,6 +102,8 @@ func (this *QHistoryState) setDefaultState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QHistoryState15setDefaultStateEP14QAbstractState
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
   }

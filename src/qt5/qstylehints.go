@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -113,6 +113,8 @@ func (this *QStyleHints) setMouseDoubleClickInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints27setMouseDoubleClickIntervalEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setMouseDoubleClickInterval", args)
   }
@@ -186,6 +188,8 @@ func (this *QStyleHints) setKeyboardInputInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints24setKeyboardInputIntervalEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setKeyboardInputInterval", args)
   }
@@ -246,6 +250,8 @@ func (this *QStyleHints) setStartDragDistance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints20setStartDragDistanceEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragDistance", args)
   }
@@ -337,6 +343,8 @@ func (this *QStyleHints) setStartDragTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints16setStartDragTimeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setStartDragTime", args)
   }
@@ -356,6 +364,8 @@ func (this *QStyleHints) setCursorFlashTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStyleHints18setCursorFlashTimeEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setCursorFlashTime", args)
   }

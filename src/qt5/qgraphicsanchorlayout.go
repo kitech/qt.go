@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -133,6 +133,8 @@ func (this *QGraphicsAnchorLayout) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayout10setSpacingEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "setSpacing", args)
   }
@@ -206,6 +208,8 @@ func (this *QGraphicsAnchorLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QGraphicsAnchorLayout6itemAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "itemAt", args)
   }
@@ -225,6 +229,8 @@ func (this *QGraphicsAnchorLayout) setVerticalSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "setVerticalSpacing", args)
   }
@@ -244,6 +250,8 @@ func (this *QGraphicsAnchorLayout) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "setGeometry", args)
   }
@@ -263,6 +271,8 @@ func (this *QGraphicsAnchorLayout) setHorizontalSpacing(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "setHorizontalSpacing", args)
   }
@@ -296,6 +306,8 @@ func (this *QGraphicsAnchorLayout) removeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QGraphicsAnchorLayout8removeAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "removeAt", args)
   }
@@ -347,6 +359,8 @@ func (this *QGraphicsAnchor) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsAnchor10setSpacingEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchor", "setSpacing", args)
   }

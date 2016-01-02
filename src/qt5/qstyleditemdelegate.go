@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.go
 //
@@ -92,6 +92,10 @@ func (this *QStyledItemDelegate) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "sizeHint", args)
   }
@@ -113,6 +117,12 @@ func (this *QStyledItemDelegate) createEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "createEditor", args)
   }
@@ -148,6 +158,12 @@ func (this *QStyledItemDelegate) updateEditorGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "updateEditorGeometry", args)
   }
@@ -168,6 +184,10 @@ func (this *QStyledItemDelegate) setEditorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setEditorData", args)
   }
@@ -189,6 +209,12 @@ func (this *QStyledItemDelegate) setModelData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setModelData", args)
   }
@@ -213,6 +239,8 @@ func (this *QStyledItemDelegate) setItemEditorFactory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory
+    var arg0 = args[0].(QItemEditorFactory).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "setItemEditorFactory", args)
   }
@@ -234,6 +262,12 @@ func (this *QStyledItemDelegate) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "paint", args)
   }
@@ -272,6 +306,10 @@ func (this *QStyledItemDelegate) displayText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QLocale).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "displayText", args)
   }

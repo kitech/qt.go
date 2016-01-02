@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -108,10 +108,16 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget14screenGeometryERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QDesktopWidget14screenGeometryEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK14QDesktopWidget14screenGeometryEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenGeometry", args)
   }
@@ -131,6 +137,8 @@ func (this *QDesktopWidget) screen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDesktopWidget6screenEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screen", args)
   }
@@ -188,10 +196,16 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QDesktopWidget17availableGeometryERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDesktopWidget", "availableGeometry", args)
   }
@@ -219,8 +233,12 @@ func (this *QDesktopWidget) screenNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget12screenNumberERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK14QDesktopWidget12screenNumberEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenNumber", args)
   }

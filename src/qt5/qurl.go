@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.go
 //
@@ -165,8 +165,14 @@ func (this *QUrl) setQuery(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QUrl8setQueryERK9QUrlQuery
+    var arg0 = args[0].(QUrlQuery).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN4QUrl8setQueryERK7QStringNS_11ParsingModeE
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QUrl", "setQuery", args)
   }
@@ -214,6 +220,8 @@ func (this *QUrl) setScheme(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QUrl9setSchemeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "setScheme", args)
   }
@@ -233,6 +241,8 @@ func (this *QUrl) isParentOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl10isParentOfERKS_
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "isParentOf", args)
   }
@@ -270,6 +280,8 @@ func (this *QUrl) port(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl4portEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "port", args)
   }
@@ -289,6 +301,8 @@ func (this *QUrl) setPort(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QUrl7setPortEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "setPort", args)
   }
@@ -327,6 +341,8 @@ func (this *QUrl) resolved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QUrl8resolvedERKS_
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "resolved", args)
   }
@@ -546,6 +562,8 @@ func (this *QUrl) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QUrl4swapERS_
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QUrl", "swap", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -118,6 +118,8 @@ func (this *QSystemTrayIcon) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setVisible", args)
   }
@@ -196,6 +198,8 @@ func (this *QSystemTrayIcon) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon7setIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setIcon", args)
   }
@@ -265,6 +269,8 @@ func (this *QSystemTrayIcon) setContextMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon14setContextMenuEP5QMenu
+    var arg0 = args[0].(QMenu).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setContextMenu", args)
   }
@@ -302,6 +308,8 @@ func (this *QSystemTrayIcon) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setToolTipERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setToolTip", args)
   }

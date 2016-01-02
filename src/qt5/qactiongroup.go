@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -124,6 +124,8 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup11setDisabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
   }
@@ -143,6 +145,8 @@ func (this *QActionGroup) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup10setEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
   }
@@ -187,10 +191,18 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup9addActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN12QActionGroup9addActionERK5QIconRK7QString
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN12QActionGroup9addActionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "addAction", args)
   }
@@ -242,6 +254,8 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "setVisible", args)
   }
@@ -279,6 +293,8 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup12setExclusiveEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "setExclusive", args)
   }
@@ -334,6 +350,8 @@ func (this *QActionGroup) removeAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QActionGroup12removeActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QActionGroup", "removeAction", args)
   }

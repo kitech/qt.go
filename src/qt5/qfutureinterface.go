@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.go
 //
@@ -190,6 +190,8 @@ func (this *QFutureInterfaceBase) isResultReadyAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase15isResultReadyAtEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isResultReadyAt", args)
   }
@@ -209,6 +211,8 @@ func (this *QFutureInterfaceBase) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase9setPausedEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setPaused", args)
   }
@@ -332,6 +336,8 @@ func (this *QFutureInterfaceBase) setRunnable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase11setRunnableEP9QRunnable
+    var arg0 = args[0].(QRunnable).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setRunnable", args)
   }
@@ -405,6 +411,8 @@ func (this *QFutureInterfaceBase) setExpectedResultCount(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase22setExpectedResultCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setExpectedResultCount", args)
   }
@@ -425,6 +433,10 @@ func (this *QFutureInterfaceBase) reportResultsReady(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase18reportResultsReadyEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "reportResultsReady", args)
   }
@@ -522,6 +534,10 @@ func (this *QFutureInterfaceBase) setProgressRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase16setProgressRangeEii
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressRange", args)
   }
@@ -541,6 +557,8 @@ func (this *QFutureInterfaceBase) setThrottled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase12setThrottledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setThrottled", args)
   }
@@ -561,6 +579,10 @@ func (this *QFutureInterfaceBase) setProgressValueAndText(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase23setProgressValueAndTextEiRK7QString
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressValueAndText", args)
   }
@@ -598,6 +620,8 @@ func (this *QFutureInterfaceBase) waitForResult(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase13waitForResultEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForResult", args)
   }
@@ -671,6 +695,8 @@ func (this *QFutureInterfaceBase) setFilterMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase13setFilterModeEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setFilterMode", args)
   }
@@ -708,6 +734,8 @@ func (this *QFutureInterfaceBase) setThreadPool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase13setThreadPoolEP11QThreadPool
+    var arg0 = args[0].(QThreadPool).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setThreadPool", args)
   }
@@ -745,6 +773,8 @@ func (this *QFutureInterfaceBase) setProgressValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase16setProgressValueEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "setProgressValue", args)
   }

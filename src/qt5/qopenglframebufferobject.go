@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.go
 //
@@ -160,6 +160,8 @@ func (this *QOpenGLFramebufferObjectFormat) setTextureTarget(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setTextureTarget", args)
   }
@@ -179,6 +181,8 @@ func (this *QOpenGLFramebufferObjectFormat) setInternalTextureFormat(args ...int
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setInternalTextureFormat", args)
   }
@@ -239,6 +243,8 @@ func (this *QOpenGLFramebufferObjectFormat) setSamples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setSamples", args)
   }
@@ -258,6 +264,8 @@ func (this *QOpenGLFramebufferObjectFormat) setMipmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setMipmap", args)
   }
@@ -434,6 +442,8 @@ func (this *QOpenGLFramebufferObject) toImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEv
   default:

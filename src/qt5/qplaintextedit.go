@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.go
 //
@@ -242,6 +242,8 @@ func (this *QPlainTextDocumentLayout) setCursorWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QPlainTextDocumentLayout14setCursorWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "setCursorWidth", args)
   }
@@ -261,6 +263,8 @@ func (this *QPlainTextDocumentLayout) frameBoundingRect(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame
+    var arg0 = args[0].(QTextFrame).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "frameBoundingRect", args)
   }
@@ -316,6 +320,8 @@ func (this *QPlainTextDocumentLayout) ensureBlockLayout(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout17ensureBlockLayoutERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "ensureBlockLayout", args)
   }
@@ -349,6 +355,8 @@ func (this *QPlainTextDocumentLayout) blockBoundingRect(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK24QPlainTextDocumentLayout17blockBoundingRectERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextDocumentLayout", "blockBoundingRect", args)
   }
@@ -411,6 +419,8 @@ func (this *QPlainTextEdit) createStandardContextMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit25createStandardContextMenuERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN14QPlainTextEdit25createStandardContextMenuEv
   default:
@@ -472,6 +482,8 @@ func (this *QPlainTextEdit) cursorRect(args ...interface{}) () {
     // invoke: _ZNK14QPlainTextEdit10cursorRectEv
   case 1:
     // invoke: _ZNK14QPlainTextEdit10cursorRectERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "cursorRect", args)
   }
@@ -491,6 +503,8 @@ func (this *QPlainTextEdit) setTabChangesFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit18setTabChangesFocusEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setTabChangesFocus", args)
   }
@@ -529,6 +543,10 @@ func (this *QPlainTextEdit) loadResource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit12loadResourceEiRK4QUrl
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QUrl).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "loadResource", args)
   }
@@ -584,6 +602,8 @@ func (this *QPlainTextEdit) setReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit11setReadOnlyEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setReadOnly", args)
   }
@@ -621,6 +641,8 @@ func (this *QPlainTextEdit) setCenterOnScroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit17setCenterOnScrollEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setCenterOnScroll", args)
   }
@@ -676,6 +698,8 @@ func (this *QPlainTextEdit) setCurrentCharFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit20setCurrentCharFormatERK15QTextCharFormat
+    var arg0 = args[0].(QTextCharFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setCurrentCharFormat", args)
   }
@@ -695,6 +719,8 @@ func (this *QPlainTextEdit) setDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit11setDocumentEP13QTextDocument
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setDocument", args)
   }
@@ -714,6 +740,8 @@ func (this *QPlainTextEdit) print(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QPlainTextEdit5printEP17QPagedPaintDevice
+    var arg0 = args[0].(QPagedPaintDevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "print", args)
   }
@@ -733,6 +761,8 @@ func (this *QPlainTextEdit) setTabStopWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit15setTabStopWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setTabStopWidth", args)
   }
@@ -793,6 +823,8 @@ func (this *QPlainTextEdit) setOverwriteMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit16setOverwriteModeEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setOverwriteMode", args)
   }
@@ -848,6 +880,8 @@ func (this *QPlainTextEdit) mergeCurrentCharFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit22mergeCurrentCharFormatERK15QTextCharFormat
+    var arg0 = args[0].(QTextCharFormat).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "mergeCurrentCharFormat", args)
   }
@@ -885,6 +919,8 @@ func (this *QPlainTextEdit) insertPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit15insertPlainTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "insertPlainText", args)
   }
@@ -904,6 +940,8 @@ func (this *QPlainTextEdit) setTextCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit13setTextCursorERK11QTextCursor
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setTextCursor", args)
   }
@@ -941,6 +979,8 @@ func (this *QPlainTextEdit) zoomIn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit6zoomInEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "zoomIn", args)
   }
@@ -960,6 +1000,8 @@ func (this *QPlainTextEdit) setMaximumBlockCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit20setMaximumBlockCountEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setMaximumBlockCount", args)
   }
@@ -997,6 +1039,8 @@ func (this *QPlainTextEdit) setCursorWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit14setCursorWidthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setCursorWidth", args)
   }
@@ -1052,6 +1096,8 @@ func (this *QPlainTextEdit) setPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit12setPlainTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setPlainText", args)
   }
@@ -1071,6 +1117,8 @@ func (this *QPlainTextEdit) setBackgroundVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit20setBackgroundVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setBackgroundVisible", args)
   }
@@ -1090,6 +1138,8 @@ func (this *QPlainTextEdit) setUndoRedoEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit18setUndoRedoEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setUndoRedoEnabled", args)
   }
@@ -1163,6 +1213,8 @@ func (this *QPlainTextEdit) setDocumentTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit16setDocumentTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setDocumentTitle", args)
   }
@@ -1214,6 +1266,8 @@ func (this *QPlainTextEdit) anchorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QPlainTextEdit8anchorAtERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "anchorAt", args)
   }
@@ -1269,6 +1323,8 @@ func (this *QPlainTextEdit) appendHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit10appendHtmlERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "appendHtml", args)
   }
@@ -1306,6 +1362,8 @@ func (this *QPlainTextEdit) zoomOut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit7zoomOutEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "zoomOut", args)
   }
@@ -1325,6 +1383,8 @@ func (this *QPlainTextEdit) setPlaceholderText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit18setPlaceholderTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "setPlaceholderText", args)
   }
@@ -1362,6 +1422,8 @@ func (this *QPlainTextEdit) cursorForPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QPlainTextEdit17cursorForPositionERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "cursorForPosition", args)
   }
@@ -1399,6 +1461,8 @@ func (this *QPlainTextEdit) appendPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QPlainTextEdit15appendPlainTextERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPlainTextEdit", "appendPlainText", args)
   }

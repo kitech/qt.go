@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.go
 //
@@ -218,6 +218,8 @@ func (this *QPictureIO) setGamma(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO8setGammaEf
+    var arg0 = C.float(args[0].(float32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setGamma", args)
   }
@@ -291,6 +293,8 @@ func (this *QPictureIO) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO11setFileNameERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setFileName", args)
   }
@@ -410,6 +414,8 @@ func (this *QPictureIO) setQuality(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO10setQualityEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setQuality", args)
   }
@@ -447,6 +453,8 @@ func (this *QPictureIO) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO9setFormatEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setFormat", args)
   }
@@ -466,6 +474,8 @@ func (this *QPictureIO) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO14setDescriptionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setDescription", args)
   }
@@ -485,6 +495,8 @@ func (this *QPictureIO) setIODevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO11setIODeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setIODevice", args)
   }
@@ -504,6 +516,8 @@ func (this *QPictureIO) setStatus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO9setStatusEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setStatus", args)
   }
@@ -573,6 +587,8 @@ func (this *QPictureIO) setPicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO10setPictureERK8QPicture
+    var arg0 = args[0].(QPicture).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setPicture", args)
   }
@@ -592,6 +608,8 @@ func (this *QPictureIO) setParameters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPictureIO13setParametersEPKc
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPictureIO", "setParameters", args)
   }
@@ -643,6 +661,8 @@ func (this *QPicture) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture4swapERS_
+    var arg0 = args[0].(QPicture).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPicture", "swap", args)
   }
@@ -703,8 +723,16 @@ func (this *QPicture) save(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture4saveEP9QIODevicePKc
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QPicture4saveERK7QStringPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPicture", "save", args)
   }
@@ -794,6 +822,10 @@ func (this *QPicture) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture7setDataEPKcj
+    var arg0 = C.CString(args[0].(string))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPicture", "setData", args)
   }
@@ -864,8 +896,16 @@ func (this *QPicture) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture4loadERK7QStringPKc
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN8QPicture4loadEP9QIODevicePKc
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.CString(args[1].(string))
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QPicture", "load", args)
   }
@@ -899,6 +939,8 @@ func (this *QPicture) setBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture15setBoundingRectERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPicture", "setBoundingRect", args)
   }
@@ -936,6 +978,8 @@ func (this *QPicture) play(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPicture4playEP8QPainter
+    var arg0 = args[0].(QPainter).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPicture", "play", args)
   }

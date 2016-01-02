@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -160,6 +160,12 @@ func (this *QSplashScreen) showMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QColor).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QSplashScreen", "showMessage", args)
   }
@@ -179,6 +185,8 @@ func (this *QSplashScreen) setPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen9setPixmapERK7QPixmap
+    var arg0 = args[0].(QPixmap).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplashScreen", "setPixmap", args)
   }
@@ -234,6 +242,8 @@ func (this *QSplashScreen) finish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSplashScreen6finishEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSplashScreen", "finish", args)
   }

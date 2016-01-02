@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.go
 //
@@ -201,6 +201,8 @@ func (this *QGraphicsScene) setForegroundBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene18setForegroundBrushERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setForegroundBrush", args)
   }
@@ -226,8 +228,18 @@ func (this *QGraphicsScene) setSceneRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene12setSceneRectERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN14QGraphicsScene12setSceneRectEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSceneRect", args)
   }
@@ -302,6 +314,10 @@ func (this *QGraphicsScene) sendEvent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene9sendEventEP13QGraphicsItemP6QEvent
+    var arg0 = args[0].(QGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QEvent).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "sendEvent", args)
   }
@@ -363,8 +379,18 @@ func (this *QGraphicsScene) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene6updateERK6QRectF
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN14QGraphicsScene6updateEdddd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "update", args)
   }
@@ -386,6 +412,12 @@ func (this *QGraphicsScene) addPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10addPolygonERK9QPolygonFRK4QPenRK6QBrush
+    var arg0 = args[0].(QPolygonF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPen).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QBrush).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPolygon", args)
   }
@@ -413,8 +445,22 @@ func (this *QGraphicsScene) addLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addLineERK6QLineFRK4QPen
+    var arg0 = args[0].(QLineF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPen).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN14QGraphicsScene7addLineEddddRK4QPen
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QPen).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addLine", args)
   }
@@ -512,6 +558,10 @@ func (this *QGraphicsScene) addSimpleText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QFont).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addSimpleText", args)
   }
@@ -531,6 +581,8 @@ func (this *QGraphicsScene) setBspTreeDepth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene15setBspTreeDepthEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setBspTreeDepth", args)
   }
@@ -610,8 +662,18 @@ func (this *QGraphicsScene) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QGraphicsScene6itemAtEddRK10QTransform
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QTransform).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZNK14QGraphicsScene6itemAtERK7QPointFRK10QTransform
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTransform).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "itemAt", args)
   }
@@ -649,6 +711,8 @@ func (this *QGraphicsScene) setStickyFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene14setStickyFocusEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setStickyFocus", args)
   }
@@ -704,6 +768,8 @@ func (this *QGraphicsScene) setActivePanel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene14setActivePanelEP13QGraphicsItem
+    var arg0 = args[0].(QGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setActivePanel", args)
   }
@@ -723,6 +789,8 @@ func (this *QGraphicsScene) addPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene9addPixmapERK7QPixmap
+    var arg0 = args[0].(QPixmap).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPixmap", args)
   }
@@ -802,8 +870,26 @@ func (this *QGraphicsScene) addRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addRectEddddRK4QPenRK6QBrush
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QPen).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QBrush).qclsinst
+    if false {fmt.Println(arg5)}
   case 1:
     // invoke: _ZN14QGraphicsScene7addRectERK6QRectFRK4QPenRK6QBrush
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPen).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QBrush).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addRect", args)
   }
@@ -841,6 +927,8 @@ func (this *QGraphicsScene) setStyle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene8setStyleEP6QStyle
+    var arg0 = args[0].(QStyle).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setStyle", args)
   }
@@ -860,6 +948,8 @@ func (this *QGraphicsScene) setPalette(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10setPaletteERK8QPalette
+    var arg0 = args[0].(QPalette).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setPalette", args)
   }
@@ -879,6 +969,8 @@ func (this *QGraphicsScene) setMinimumRenderSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene20setMinimumRenderSizeEd
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setMinimumRenderSize", args)
   }
@@ -926,8 +1018,26 @@ func (this *QGraphicsScene) addEllipse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10addEllipseERK6QRectFRK4QPenRK6QBrush
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPen).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QBrush).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN14QGraphicsScene10addEllipseEddddRK4QPenRK6QBrush
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.double(args[2].(float64))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.double(args[3].(float64))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QPen).qclsinst
+    if false {fmt.Println(arg4)}
+    var arg5 = args[5].(QBrush).qclsinst
+    if false {fmt.Println(arg5)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addEllipse", args)
   }
@@ -977,10 +1087,28 @@ func (this *QGraphicsScene) setSelectionArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt17ItemSelectionModeERK10QTransform
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QTransform).qclsinst
+    if false {fmt.Println(arg2)}
   case 1:
     // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathRK10QTransform
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QTransform).qclsinst
+    if false {fmt.Println(arg1)}
   case 2:
     // invoke: _ZN14QGraphicsScene16setSelectionAreaERK12QPainterPathN2Qt22ItemSelectionOperationENS3_17ItemSelectionModeERK10QTransform
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QTransform).qclsinst
+    if false {fmt.Println(arg3)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSelectionArea", args)
   }
@@ -1036,6 +1164,8 @@ func (this *QGraphicsScene) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene10removeItemEP13QGraphicsItem
+    var arg0 = args[0].(QGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "removeItem", args)
   }
@@ -1055,6 +1185,8 @@ func (this *QGraphicsScene) setActiveWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene15setActiveWindowEP15QGraphicsWidget
+    var arg0 = args[0].(QGraphicsWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setActiveWindow", args)
   }
@@ -1093,6 +1225,10 @@ func (this *QGraphicsScene) addText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addTextERK7QStringRK5QFont
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QFont).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addText", args)
   }
@@ -1112,6 +1248,8 @@ func (this *QGraphicsScene) setSortCacheEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene19setSortCacheEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setSortCacheEnabled", args)
   }
@@ -1131,6 +1269,8 @@ func (this *QGraphicsScene) destroyItemGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene16destroyItemGroupEP18QGraphicsItemGroup
+    var arg0 = args[0].(QGraphicsItemGroup).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "destroyItemGroup", args)
   }
@@ -1168,6 +1308,8 @@ func (this *QGraphicsScene) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addItemEP13QGraphicsItem
+    var arg0 = args[0].(QGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addItem", args)
   }
@@ -1187,6 +1329,8 @@ func (this *QGraphicsScene) setBackgroundBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene18setBackgroundBrushERK6QBrush
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setBackgroundBrush", args)
   }
@@ -1242,6 +1386,8 @@ func (this *QGraphicsScene) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7setFontERK5QFont
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "setFont", args)
   }
@@ -1263,6 +1409,12 @@ func (this *QGraphicsScene) addPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGraphicsScene7addPathERK12QPainterPathRK4QPenRK6QBrush
+    var arg0 = args[0].(QPainterPath).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPen).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QBrush).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QGraphicsScene", "addPath", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -519,6 +519,8 @@ func (this *QStyleOption) init(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStyleOption4initEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleOption", "init", args)
   }
@@ -543,6 +545,8 @@ func (this *QStyleOption) initFrom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStyleOption8initFromEPK7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QStyleOption", "initFrom", args)
   }

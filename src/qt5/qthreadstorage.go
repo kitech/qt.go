@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -71,6 +71,8 @@ func (this *QThreadStorageData) set(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QThreadStorageData3setEPv
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QThreadStorageData", "set", args)
   }

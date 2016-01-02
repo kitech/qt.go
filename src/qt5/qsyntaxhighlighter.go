@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -121,6 +121,8 @@ func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
   }
@@ -140,6 +142,8 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "setDocument", args)
   }

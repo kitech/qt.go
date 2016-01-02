@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.go
 //
@@ -342,10 +342,18 @@ func (this *QFileInfo) setFile(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo7setFileERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN9QFileInfo7setFileERK5QFile
+    var arg0 = args[0].(QFile).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN9QFileInfo7setFileERK4QDirRK7QString
+    var arg0 = args[0].(QDir).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QFileInfo", "setFile", args)
   }
@@ -563,6 +571,8 @@ func (this *QFileInfo) setCaching(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo10setCachingEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileInfo", "setCaching", args)
   }
@@ -920,6 +930,8 @@ func (this *QFileInfo) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo4swapERS_
+    var arg0 = args[0].(QFileInfo).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QFileInfo", "swap", args)
   }
@@ -941,6 +953,8 @@ func (this *QFileInfo) exists(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QFileInfo6existsERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK9QFileInfo6existsEv
   default:

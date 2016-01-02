@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -232,6 +232,8 @@ func (this *QRegExp) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setPatternERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "setPattern", args)
   }
@@ -283,6 +285,8 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp10exactMatchERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "exactMatch", args)
   }
@@ -302,6 +306,8 @@ func (this *QRegExp) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp4swapERS_
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "swap", args)
   }
@@ -324,8 +330,12 @@ func (this *QRegExp) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp3posEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK7QRegExp3posEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "pos", args)
   }
@@ -348,8 +358,12 @@ func (this *QRegExp) cap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp3capEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN7QRegExp3capEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "cap", args)
   }
@@ -391,6 +405,8 @@ func (this *QRegExp) setMinimal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setMinimalEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QRegExp", "setMinimal", args)
   }

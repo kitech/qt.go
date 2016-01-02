@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -128,6 +128,8 @@ func (this *QJsonObject) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject6removeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonObject", "remove", args)
   }
@@ -161,6 +163,8 @@ func (this *QJsonObject) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5valueERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonObject", "value", args)
   }
@@ -234,6 +238,8 @@ func (this *QJsonObject) take(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject4takeERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonObject", "take", args)
   }
@@ -289,6 +295,8 @@ func (this *QJsonObject) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject8containsERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
   }

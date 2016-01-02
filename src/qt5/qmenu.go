@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -233,12 +233,36 @@ func (this *QMenu) addAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QString
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.CString(args[2].(string))
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QKeySequence).qclsinst
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN5QMenu9addActionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 3:
     // invoke: _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.CString(args[3].(string))
+    if false {fmt.Println(arg3)}
+    var arg4 = args[4].(QKeySequence).qclsinst
+    if false {fmt.Println(arg4)}
   default:
     qtrt.ErrorResolve("QMenu", "addAction", args)
   }
@@ -258,6 +282,8 @@ func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu17setTearOffEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setTearOffEnabled", args)
   }
@@ -281,8 +307,14 @@ func (this *QMenu) addSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu10addSectionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN5QMenu10addSectionERK5QIconRK7QString
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMenu", "addSection", args)
   }
@@ -339,6 +371,10 @@ func (this *QMenu) insertMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu10insertMenuEP7QActionPS_
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QMenu).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMenu", "insertMenu", args)
   }
@@ -382,8 +418,18 @@ func (this *QMenu) insertSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu13insertSectionEP7QActionRK7QString
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QIcon).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QString).qclsinst
+    if false {fmt.Println(arg2)}
   default:
     qtrt.ErrorResolve("QMenu", "insertSection", args)
   }
@@ -421,6 +467,8 @@ func (this *QMenu) setNoReplayFor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu14setNoReplayForEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setNoReplayFor", args)
   }
@@ -440,6 +488,8 @@ func (this *QMenu) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu7setIconERK5QIcon
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setIcon", args)
   }
@@ -468,8 +518,20 @@ func (this *QMenu) exec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu4execERK6QPointP7QAction
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAction).qclsinst
+    if false {fmt.Println(arg1)}
   case 1:
     // invoke: _ZN5QMenu4execE5QListIP7QActionERK6QPointS2_P7QWidget
+    var arg0 = args[0].(unsafe.Pointer)
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPoint).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QAction).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = args[3].(QWidget).qclsinst
+    if false {fmt.Println(arg3)}
   case 2:
     // invoke: _ZN5QMenu4execEv
   default:
@@ -516,10 +578,18 @@ func (this *QMenu) addMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu7addMenuERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZN5QMenu7addMenuEPS_
+    var arg0 = args[0].(QMenu).qclsinst
+    if false {fmt.Println(arg0)}
   case 2:
     // invoke: _ZN5QMenu7addMenuERK5QIconRK7QString
+    var arg0 = args[0].(QIcon).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMenu", "addMenu", args)
   }
@@ -580,6 +650,8 @@ func (this *QMenu) setActiveAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu15setActiveActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setActiveAction", args)
   }
@@ -599,6 +671,8 @@ func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu24setSeparatorsCollapsibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setSeparatorsCollapsible", args)
   }
@@ -654,6 +728,8 @@ func (this *QMenu) actionGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu14actionGeometryEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "actionGeometry", args)
   }
@@ -673,6 +749,8 @@ func (this *QMenu) insertSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu15insertSeparatorEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "insertSeparator", args)
   }
@@ -778,6 +856,8 @@ func (this *QMenu) setDefaultAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu16setDefaultActionEP7QAction
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setDefaultAction", args)
   }
@@ -797,6 +877,8 @@ func (this *QMenu) actionAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QMenu8actionAtERK6QPoint
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "actionAt", args)
   }
@@ -817,6 +899,10 @@ func (this *QMenu) popup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu5popupERK6QPointP7QAction
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QAction).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QMenu", "popup", args)
   }
@@ -836,6 +922,8 @@ func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu18setToolTipsVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setToolTipsVisible", args)
   }
@@ -855,6 +943,8 @@ func (this *QMenu) setTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QMenu8setTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QMenu", "setTitle", args)
   }

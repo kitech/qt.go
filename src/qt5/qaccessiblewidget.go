@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -112,6 +112,8 @@ func (this *QAccessibleWidget) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget5childEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "child", args)
   }
@@ -294,6 +296,8 @@ func (this *QAccessibleWidget) doAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleWidget8doActionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "doAction", args)
   }
@@ -313,6 +317,8 @@ func (this *QAccessibleWidget) keyBindingsForAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "keyBindingsForAction", args)
   }
@@ -332,6 +338,8 @@ func (this *QAccessibleWidget) indexOfChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface
+    var arg0 = args[0].(QAccessibleInterface).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "indexOfChild", args)
   }

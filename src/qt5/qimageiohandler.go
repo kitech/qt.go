@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -157,6 +157,8 @@ func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler11jumpToImageEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
   }
@@ -197,8 +199,12 @@ func (this *QImageIOHandler) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler9setFormatERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   case 1:
     // invoke: _ZNK15QImageIOHandler9setFormatERK10QByteArray
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
   }
@@ -268,6 +274,8 @@ func (this *QImageIOHandler) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler4readEP6QImage
+    var arg0 = args[0].(QImage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "read", args)
   }
@@ -341,6 +349,8 @@ func (this *QImageIOHandler) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler9setDeviceEP9QIODevice
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
   }
@@ -396,6 +406,8 @@ func (this *QImageIOHandler) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QImageIOHandler5writeERK6QImage
+    var arg0 = args[0].(QImage).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QImageIOHandler", "write", args)
   }
@@ -448,6 +460,10 @@ func (this *QImageIOPlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QByteArray).qclsinst
+    if false {fmt.Println(arg1)}
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "create", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -105,6 +105,8 @@ func (this *QDialog) setExtension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog12setExtensionEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "setExtension", args)
   }
@@ -142,6 +144,8 @@ func (this *QDialog) done(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog4doneEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "done", args)
   }
@@ -193,6 +197,8 @@ func (this *QDialog) setResult(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog9setResultEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "setResult", args)
   }
@@ -212,6 +218,8 @@ func (this *QDialog) setSizeGripEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog18setSizeGripEnabledEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "setSizeGripEnabled", args)
   }
@@ -231,6 +239,8 @@ func (this *QDialog) showExtension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog13showExtensionEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "showExtension", args)
   }
@@ -322,6 +332,8 @@ func (this *QDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog10setVisibleEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "setVisible", args)
   }
@@ -418,6 +430,8 @@ func (this *QDialog) setModal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog8setModalEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QDialog", "setModal", args)
   }

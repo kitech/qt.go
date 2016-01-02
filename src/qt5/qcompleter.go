@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -172,6 +172,8 @@ func (this *QCompleter) complete(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8completeERK5QRect
+    var arg0 = args[0].(QRect).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "complete", args)
   }
@@ -191,6 +193,8 @@ func (this *QCompleter) setCompletionRole(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter17setCompletionRoleEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionRole", args)
   }
@@ -246,6 +250,8 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter13pathFromIndexERK11QModelIndex
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
   }
@@ -265,6 +271,8 @@ func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter18setMaxVisibleItemsEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setMaxVisibleItems", args)
   }
@@ -334,6 +342,8 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter13setWrapAroundEb
+    var arg0 = C.int8_t(args[0].(int8))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setWrapAround", args)
   }
@@ -353,6 +363,8 @@ func (this *QCompleter) splitPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QCompleter9splitPathERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "splitPath", args)
   }
@@ -408,6 +420,8 @@ func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionColumnEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionColumn", args)
   }
@@ -427,6 +441,8 @@ func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter19setCompletionPrefixERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setCompletionPrefix", args)
   }
@@ -464,6 +480,8 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter13setCurrentRowEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
   }
@@ -501,6 +519,8 @@ func (this *QCompleter) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8setModelEP18QAbstractItemModel
+    var arg0 = args[0].(QAbstractItemModel).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setModel", args)
   }
@@ -538,6 +558,8 @@ func (this *QCompleter) setPopup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter8setPopupEP17QAbstractItemView
+    var arg0 = args[0].(QAbstractItemView).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setPopup", args)
   }
@@ -611,6 +633,8 @@ func (this *QCompleter) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QCompleter9setWidgetEP7QWidget
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QCompleter", "setWidget", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 12:23:25 2016
+// created: Sat Jan  2 16:11:29 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -106,6 +106,8 @@ func (this *QPdfWriter) setCreator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter10setCreatorERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPdfWriter", "setCreator", args)
   }
@@ -125,6 +127,8 @@ func (this *QPdfWriter) setPageSizeMM(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter13setPageSizeMMERK6QSizeF
+    var arg0 = args[0].(QSizeF).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPdfWriter", "setPageSizeMM", args)
   }
@@ -144,6 +148,8 @@ func (this *QPdfWriter) setResolution(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter13setResolutionEi
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPdfWriter", "setResolution", args)
   }
@@ -258,6 +264,8 @@ func (this *QPdfWriter) setTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QPdfWriter8setTitleERK7QString
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
   default:
     qtrt.ErrorResolve("QPdfWriter", "setTitle", args)
   }
