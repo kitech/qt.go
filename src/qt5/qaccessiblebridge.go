@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,39 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
+extern void* dector_ZN23QAccessibleBridgePluginC1EP7QObject(void* arg0);
+extern void _ZN23QAccessibleBridgePluginC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
+extern void _ZN23QAccessibleBridgePlugin6createERK7QString(void* qthis, void* arg0);
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
+extern void _ZN23QAccessibleBridgePluginD0Ev(void* qthis);
+  // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
+extern void _ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis);
+  // proto:  void QAccessibleBridge::~QAccessibleBridge();
+extern void _ZN17QAccessibleBridgeD0Ev(void* qthis);
+  // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
+extern void _ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(void* qthis, void* arg0);
+  // proto:  void QAccessibleBridge::setRootObject(QAccessibleInterface * );
+extern void _ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAccessibleBridgePlugin)=1
 type QAccessibleBridgePlugin struct {
   /*qbase*/ QObject;
@@ -47,12 +71,12 @@ type QAccessibleBridge struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
 func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
   return QAccessibleBridgePlugin{}
 }
 
-
+  // proto:  QAccessibleBridge * QAccessibleBridgePlugin::create(const QString & key);
 func (this *QAccessibleBridgePlugin) create(args ...interface{}) () {
   // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +95,7 @@ func (this *QAccessibleBridgePlugin) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
 func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -85,7 +109,7 @@ func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interfa
 
 }
 
-
+  // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
 func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +127,7 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleBridge::~QAccessibleBridge();
 func (this *QAccessibleBridge) FreeQAccessibleBridge(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +141,7 @@ func (this *QAccessibleBridge) FreeQAccessibleBridge(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleBridge::notifyAccessibilityUpdate(QAccessibleEvent * event);
 func (this *QAccessibleBridge) notifyAccessibilityUpdate(args ...interface{}) () {
   // notifyAccessibilityUpdate(class QAccessibleEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +160,7 @@ func (this *QAccessibleBridge) notifyAccessibilityUpdate(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QAccessibleBridge::setRootObject(QAccessibleInterface * );
 func (this *QAccessibleBridge) setRootObject(args ...interface{}) () {
   // setRootObject(class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)

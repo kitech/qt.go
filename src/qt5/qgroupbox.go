@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,57 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QGroupBox::isCheckable();
+extern void _ZNK9QGroupBox11isCheckableEv(void* qthis);
+  // proto:  void QGroupBox::setCheckable(bool checkable);
+extern void _ZN9QGroupBox12setCheckableEb(void* qthis, bool arg0);
+  // proto:  const QMetaObject * QGroupBox::metaObject();
+extern void _ZNK9QGroupBox10metaObjectEv(void* qthis);
+  // proto:  bool QGroupBox::isFlat();
+extern void _ZNK9QGroupBox6isFlatEv(void* qthis);
+  // proto:  QSize QGroupBox::minimumSizeHint();
+extern void _ZNK9QGroupBox15minimumSizeHintEv(void* qthis);
+  // proto:  void QGroupBox::setFlat(bool flat);
+extern void _ZN9QGroupBox7setFlatEb(void* qthis, bool arg0);
+  // proto:  void QGroupBox::~QGroupBox();
+extern void _ZN9QGroupBoxD0Ev(void* qthis);
+  // proto:  void QGroupBox::QGroupBox(QWidget * parent);
+extern void* dector_ZN9QGroupBoxC1EP7QWidget(void* arg0);
+extern void _ZN9QGroupBoxC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  bool QGroupBox::isChecked();
+extern void _ZNK9QGroupBox9isCheckedEv(void* qthis);
+  // proto:  void QGroupBox::setChecked(bool checked);
+extern void _ZN9QGroupBox10setCheckedEb(void* qthis, bool arg0);
+  // proto:  void QGroupBox::QGroupBox(const QGroupBox & );
+extern void* dector_ZN9QGroupBoxC1ERKS_(void* arg0);
+extern void _ZN9QGroupBoxC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QGroupBox::title();
+extern void _ZNK9QGroupBox5titleEv(void* qthis);
+  // proto:  void QGroupBox::setAlignment(int alignment);
+extern void _ZN9QGroupBox12setAlignmentEi(void* qthis, int arg0);
+  // proto:  void QGroupBox::setTitle(const QString & title);
+extern void _ZN9QGroupBox8setTitleERK7QString(void* qthis, void* arg0);
+  // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
+extern void* dector_ZN9QGroupBoxC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QGroupBoxC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGroupBox)=1
 type QGroupBox struct {
   /*qbase*/ QWidget;
@@ -43,7 +85,7 @@ type QGroupBox struct {
 //  _toggled QGroupBox_toggled_signal;
 }
 
-
+  // proto:  bool QGroupBox::isCheckable();
 func (this *QGroupBox) isCheckable(args ...interface{}) () {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +103,7 @@ func (this *QGroupBox) isCheckable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::setCheckable(bool checkable);
 func (this *QGroupBox) setCheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +122,7 @@ func (this *QGroupBox) setCheckable(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QGroupBox::metaObject();
 func (this *QGroupBox) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +140,7 @@ func (this *QGroupBox) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGroupBox::isFlat();
 func (this *QGroupBox) isFlat(args ...interface{}) () {
   // isFlat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +158,7 @@ func (this *QGroupBox) isFlat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QGroupBox::minimumSizeHint();
 func (this *QGroupBox) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +176,7 @@ func (this *QGroupBox) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::setFlat(bool flat);
 func (this *QGroupBox) setFlat(args ...interface{}) () {
   // setFlat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,7 +195,7 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::~QGroupBox();
 func (this *QGroupBox) FreeQGroupBox(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -167,12 +209,12 @@ func (this *QGroupBox) FreeQGroupBox(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::QGroupBox(QWidget * parent);
 func NewQGroupBox(args ...interface{}) QGroupBox {
   return QGroupBox{}
 }
 
-
+  // proto:  bool QGroupBox::isChecked();
 func (this *QGroupBox) isChecked(args ...interface{}) () {
   // isChecked()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +232,7 @@ func (this *QGroupBox) isChecked(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::setChecked(bool checked);
 func (this *QGroupBox) setChecked(args ...interface{}) () {
   // setChecked(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +251,7 @@ func (this *QGroupBox) setChecked(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QGroupBox::title();
 func (this *QGroupBox) title(args ...interface{}) () {
   // title()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +269,7 @@ func (this *QGroupBox) title(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::setAlignment(int alignment);
 func (this *QGroupBox) setAlignment(args ...interface{}) () {
   // setAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +288,7 @@ func (this *QGroupBox) setAlignment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGroupBox::setTitle(const QString & title);
 func (this *QGroupBox) setTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,85 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
+extern void* dector_ZN18QMessageLogContextC1EPKciS1_S1_(char* arg0, int arg1, char* arg2, char* arg3);
+extern void _ZN18QMessageLogContextC1EPKciS1_S1_(void* qthis, char* arg0, int arg1, char* arg2, char* arg3);
+  // proto:  void QMessageLogContext::copy(const QMessageLogContext & logContext);
+extern void _ZN18QMessageLogContext4copyERKS_(void* qthis, void* arg0);
+  // proto:  void QMessageLogContext::QMessageLogContext();
+extern void* dector_ZN18QMessageLogContextC1Ev();
+extern void _ZN18QMessageLogContextC1Ev(void* qthis);
+  // proto:  void QMessageLogContext::QMessageLogContext(const QMessageLogContext & );
+extern void* dector_ZN18QMessageLogContextC1ERKS_(void* arg0);
+extern void _ZN18QMessageLogContextC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QMessageLogger::info(const QLoggingCategory & cat, const char * msg);
+extern void _ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz(void* qthis, void* arg0, char* arg1);
+  // proto:  void QMessageLogger::debug(const char * msg);
+extern void _ZNK14QMessageLogger5debugEPKcz(void* qthis, char* arg0);
+  // proto:  void QMessageLogger::warning(const QLoggingCategory & cat, const char * msg);
+extern void _ZNK14QMessageLogger7warningERK16QLoggingCategoryPKcz(void* qthis, void* arg0, char* arg1);
+  // proto:  void QMessageLogger::fatal(const char * msg);
+extern void _ZNK14QMessageLogger5fatalEPKcz(void* qthis, char* arg0);
+  // proto:  QDebug QMessageLogger::info(const QLoggingCategory & cat);
+extern void _ZNK14QMessageLogger4infoERK16QLoggingCategory(void* qthis, void* arg0);
+  // proto:  void QMessageLogger::debug(const QLoggingCategory & cat, const char * msg);
+extern void _ZNK14QMessageLogger5debugERK16QLoggingCategoryPKcz(void* qthis, void* arg0, char* arg1);
+  // proto:  void QMessageLogger::critical(const char * msg);
+extern void _ZNK14QMessageLogger8criticalEPKcz(void* qthis, char* arg0);
+  // proto:  void QMessageLogger::QMessageLogger();
+extern void* dector_ZN14QMessageLoggerC1Ev();
+extern void _ZN14QMessageLoggerC1Ev(void* qthis);
+  // proto:  QDebug QMessageLogger::info();
+extern void _ZNK14QMessageLogger4infoEv(void* qthis);
+  // proto:  void QMessageLogger::warning(const char * msg);
+extern void _ZNK14QMessageLogger7warningEPKcz(void* qthis, char* arg0);
+  // proto:  QDebug QMessageLogger::critical(const QLoggingCategory & cat);
+extern void _ZNK14QMessageLogger8criticalERK16QLoggingCategory(void* qthis, void* arg0);
+  // proto:  QDebug QMessageLogger::critical();
+extern void _ZNK14QMessageLogger8criticalEv(void* qthis);
+  // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function);
+extern void* dector_ZN14QMessageLoggerC1EPKciS1_(char* arg0, int arg1, char* arg2);
+extern void _ZN14QMessageLoggerC1EPKciS1_(void* qthis, char* arg0, int arg1, char* arg2);
+  // proto:  QDebug QMessageLogger::debug();
+extern void _ZNK14QMessageLogger5debugEv(void* qthis);
+  // proto:  QDebug QMessageLogger::debug(const QLoggingCategory & cat);
+extern void _ZNK14QMessageLogger5debugERK16QLoggingCategory(void* qthis, void* arg0);
+  // proto:  void QMessageLogger::QMessageLogger(const QMessageLogger & );
+extern void* dector_ZN14QMessageLoggerC1ERKS_(void* arg0);
+extern void _ZN14QMessageLoggerC1ERKS_(void* qthis, void* arg0);
+  // proto:  QDebug QMessageLogger::warning(const QLoggingCategory & cat);
+extern void _ZNK14QMessageLogger7warningERK16QLoggingCategory(void* qthis, void* arg0);
+  // proto:  void QMessageLogger::info(const char * msg);
+extern void _ZNK14QMessageLogger4infoEPKcz(void* qthis, char* arg0);
+  // proto:  void QMessageLogger::noDebug(const char * );
+extern void _ZNK14QMessageLogger7noDebugEPKcz(void* qthis, char* arg0);
+  // proto:  QDebug QMessageLogger::warning();
+extern void _ZNK14QMessageLogger7warningEv(void* qthis);
+  // proto:  QNoDebug QMessageLogger::noDebug();
+extern void _ZNK14QMessageLogger7noDebugEv(void* qthis);
+  // proto:  void QMessageLogger::critical(const QLoggingCategory & cat, const char * msg);
+extern void _ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz(void* qthis, void* arg0, char* arg1);
+  // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function, const char * category);
+extern void* dector_ZN14QMessageLoggerC1EPKciS1_S1_(char* arg0, int arg1, char* arg2, char* arg3);
+extern void _ZN14QMessageLoggerC1EPKciS1_S1_(void* qthis, char* arg0, int arg1, char* arg2, char* arg3);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMessageLogContext)=32
 type QMessageLogContext struct {
   // qbase: None;
@@ -47,12 +117,12 @@ type QMessageLogger struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
 func NewQMessageLogContext(args ...interface{}) QMessageLogContext {
   return QMessageLogContext{}
 }
 
-
+  // proto:  void QMessageLogContext::copy(const QMessageLogContext & logContext);
 func (this *QMessageLogContext) copy(args ...interface{}) () {
   // copy(const class QMessageLogContext &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +141,7 @@ func (this *QMessageLogContext) copy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::info(const QLoggingCategory & cat, const char * msg);
 func (this *QMessageLogger) info(args ...interface{}) () {
   // info(const class QLoggingCategory &, const char *, ...)
   // info(CategoryFunction)
@@ -116,7 +186,7 @@ func (this *QMessageLogger) info(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::debug(const char * msg);
 func (this *QMessageLogger) debug(args ...interface{}) () {
   // debug(const char *, ...)
   // debug(const class QLoggingCategory &, const char *, ...)
@@ -161,7 +231,7 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::warning(const QLoggingCategory & cat, const char * msg);
 func (this *QMessageLogger) warning(args ...interface{}) () {
   // warning(const class QLoggingCategory &, const char *, ...)
   // warning(const char *, ...)
@@ -206,7 +276,7 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::fatal(const char * msg);
 func (this *QMessageLogger) fatal(args ...interface{}) () {
   // fatal(const char *, ...)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,7 +295,7 @@ func (this *QMessageLogger) fatal(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::critical(const char * msg);
 func (this *QMessageLogger) critical(args ...interface{}) () {
   // critical(CategoryFunction)
   // critical(const char *, ...)
@@ -270,12 +340,12 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageLogger::QMessageLogger();
 func NewQMessageLogger(args ...interface{}) QMessageLogger {
   return QMessageLogger{}
 }
 
-
+  // proto:  void QMessageLogger::noDebug(const char * );
 func (this *QMessageLogger) noDebug(args ...interface{}) () {
   // noDebug(const char *, ...)
   // noDebug()

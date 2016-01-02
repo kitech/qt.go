@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,53 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QJsonObject QJsonDocument::object();
+extern void _ZNK13QJsonDocument6objectEv(void* qthis);
+  // proto: static QJsonDocument QJsonDocument::fromVariant(const QVariant & variant);
+extern void _ZN13QJsonDocument11fromVariantERK8QVariant(void* arg0);
+  // proto:  QJsonArray QJsonDocument::array();
+extern void _ZNK13QJsonDocument5arrayEv(void* qthis);
+  // proto:  QByteArray QJsonDocument::toJson();
+extern void _ZNK13QJsonDocument6toJsonEv(void* qthis);
+  // proto:  bool QJsonDocument::isNull();
+extern void _ZNK13QJsonDocument6isNullEv(void* qthis);
+  // proto:  void QJsonDocument::QJsonDocument();
+extern void* dector_ZN13QJsonDocumentC1Ev();
+extern void _ZN13QJsonDocumentC1Ev(void* qthis);
+  // proto:  QVariant QJsonDocument::toVariant();
+extern void _ZNK13QJsonDocument9toVariantEv(void* qthis);
+  // proto:  bool QJsonDocument::isEmpty();
+extern void _ZNK13QJsonDocument7isEmptyEv(void* qthis);
+  // proto:  const char * QJsonDocument::rawData(int * size);
+extern void _ZNK13QJsonDocument7rawDataEPi(void* qthis, int* arg0);
+  // proto:  bool QJsonDocument::isObject();
+extern void _ZNK13QJsonDocument8isObjectEv(void* qthis);
+  // proto:  void QJsonDocument::~QJsonDocument();
+extern void _ZN13QJsonDocumentD0Ev(void* qthis);
+  // proto:  bool QJsonDocument::isArray();
+extern void _ZNK13QJsonDocument7isArrayEv(void* qthis);
+  // proto:  QByteArray QJsonDocument::toBinaryData();
+extern void _ZNK13QJsonDocument12toBinaryDataEv(void* qthis);
+  // proto:  QString QJsonParseError::errorString();
+extern void _ZNK15QJsonParseError11errorStringEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QJsonDocument)=8
 type QJsonDocument struct {
   // qbase: None;
@@ -47,7 +85,7 @@ type QJsonParseError struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QJsonObject QJsonDocument::object();
 func (this *QJsonDocument) object(args ...interface{}) () {
   // object()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +103,7 @@ func (this *QJsonDocument) object(args ...interface{}) () {
 
 }
 
-
+  // proto: static QJsonDocument QJsonDocument::fromVariant(const QVariant & variant);
 func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -79,7 +117,7 @@ func (this *QJsonDocument) fromVariant_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonArray QJsonDocument::array();
 func (this *QJsonDocument) array(args ...interface{}) () {
   // array()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +135,7 @@ func (this *QJsonDocument) array(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QJsonDocument::toJson();
 func (this *QJsonDocument) toJson(args ...interface{}) () {
   // toJson()
   // toJson(enum QJsonDocument::JsonFormat)
@@ -120,7 +158,7 @@ func (this *QJsonDocument) toJson(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonDocument::isNull();
 func (this *QJsonDocument) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,12 +176,12 @@ func (this *QJsonDocument) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonDocument::QJsonDocument();
 func NewQJsonDocument(args ...interface{}) QJsonDocument {
   return QJsonDocument{}
 }
 
-
+  // proto:  QVariant QJsonDocument::toVariant();
 func (this *QJsonDocument) toVariant(args ...interface{}) () {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -161,7 +199,7 @@ func (this *QJsonDocument) toVariant(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonDocument::isEmpty();
 func (this *QJsonDocument) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -179,7 +217,7 @@ func (this *QJsonDocument) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QJsonDocument::rawData(int * size);
 func (this *QJsonDocument) rawData(args ...interface{}) () {
   // rawData(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +236,7 @@ func (this *QJsonDocument) rawData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonDocument::isObject();
 func (this *QJsonDocument) isObject(args ...interface{}) () {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +254,7 @@ func (this *QJsonDocument) isObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonDocument::~QJsonDocument();
 func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -230,7 +268,7 @@ func (this *QJsonDocument) FreeQJsonDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonDocument::isArray();
 func (this *QJsonDocument) isArray(args ...interface{}) () {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +286,7 @@ func (this *QJsonDocument) isArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QJsonDocument::toBinaryData();
 func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
   // toBinaryData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +304,7 @@ func (this *QJsonDocument) toBinaryData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QJsonParseError::errorString();
 func (this *QJsonParseError) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)

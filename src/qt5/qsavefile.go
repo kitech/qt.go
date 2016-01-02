@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,59 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSaveFile::cancelWriting();
+extern void _ZN9QSaveFile13cancelWritingEv(void* qthis);
+  // proto:  void QSaveFile::QSaveFile(QObject * parent);
+extern void* dector_ZN9QSaveFileC1EP7QObject(void* arg0);
+extern void _ZN9QSaveFileC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QSaveFile::QSaveFile(const QSaveFile & );
+extern void* dector_ZN9QSaveFileC1ERKS_(void* arg0);
+extern void _ZN9QSaveFileC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
+extern void* dector_ZN9QSaveFileC1ERK7QStringP7QObject(void* arg0, void* arg1);
+extern void _ZN9QSaveFileC1ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  QString QSaveFile::fileName();
+extern void _ZNK9QSaveFile8fileNameEv(void* qthis);
+  // proto:  void QSaveFile::QSaveFile(const QString & name);
+extern void* dector_ZN9QSaveFileC1ERK7QString(void* arg0);
+extern void _ZN9QSaveFileC1ERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QSaveFile::metaObject();
+extern void _ZNK9QSaveFile10metaObjectEv(void* qthis);
+  // proto:  bool QSaveFile::commit();
+extern void _ZN9QSaveFile6commitEv(void* qthis);
+  // proto:  void QSaveFile::~QSaveFile();
+extern void _ZN9QSaveFileD0Ev(void* qthis);
+  // proto:  void QSaveFile::setFileName(const QString & name);
+extern void _ZN9QSaveFile11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto:  bool QSaveFile::directWriteFallback();
+extern void _ZNK9QSaveFile19directWriteFallbackEv(void* qthis);
+  // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
+extern void _ZN9QSaveFile22setDirectWriteFallbackEb(void* qthis, bool arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSaveFile)=1
 type QSaveFile struct {
   /*qbase*/ QFileDevice;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QSaveFile::cancelWriting();
 func (this *QSaveFile) cancelWriting(args ...interface{}) () {
   // cancelWriting()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,12 +96,12 @@ func (this *QSaveFile) cancelWriting(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSaveFile::QSaveFile(QObject * parent);
 func NewQSaveFile(args ...interface{}) QSaveFile {
   return QSaveFile{}
 }
 
-
+  // proto:  QString QSaveFile::fileName();
 func (this *QSaveFile) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +119,7 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QSaveFile::metaObject();
 func (this *QSaveFile) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +137,7 @@ func (this *QSaveFile) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSaveFile::commit();
 func (this *QSaveFile) commit(args ...interface{}) () {
   // commit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +155,7 @@ func (this *QSaveFile) commit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSaveFile::~QSaveFile();
 func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,7 +169,7 @@ func (this *QSaveFile) FreeQSaveFile(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSaveFile::setFileName(const QString & name);
 func (this *QSaveFile) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +188,7 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSaveFile::directWriteFallback();
 func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
   // directWriteFallback()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -169,7 +206,7 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSaveFile::setDirectWriteFallback(bool enabled);
 func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
   // setDirectWriteFallback(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)

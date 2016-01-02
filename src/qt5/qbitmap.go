@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,61 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QBitmap::QBitmap(const QPixmap & );
+extern void* dector_ZN7QBitmapC1ERK7QPixmap(void* arg0);
+extern void _ZN7QBitmapC1ERK7QPixmap(void* qthis, void* arg0);
+  // proto:  void QBitmap::QBitmap(const QSize & );
+extern void* dector_ZN7QBitmapC1ERK5QSize(void* arg0);
+extern void _ZN7QBitmapC1ERK5QSize(void* qthis, void* arg0);
+  // proto:  void QBitmap::QBitmap(int w, int h);
+extern void* dector_ZN7QBitmapC1Eii(int arg0, int arg1);
+extern void _ZN7QBitmapC1Eii(void* qthis, int arg0, int arg1);
+  // proto:  void QBitmap::~QBitmap();
+extern void _ZN7QBitmapD0Ev(void* qthis);
+  // proto:  void QBitmap::swap(QBitmap & other);
+extern void demth_ZN7QBitmap4swapERS_(void* qthis, void* arg0);
+  // proto:  QBitmap QBitmap::transformed(const QMatrix & );
+extern void _ZNK7QBitmap11transformedERK7QMatrix(void* qthis, void* arg0);
+  // proto:  void QBitmap::clear();
+extern void demth_ZN7QBitmap5clearEv(void* qthis);
+  // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
+extern void* dector_ZN7QBitmapC1ERK7QStringPKc(void* arg0, char* arg1);
+extern void _ZN7QBitmapC1ERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+  // proto:  void QBitmap::QBitmap();
+extern void* dector_ZN7QBitmapC1Ev();
+extern void _ZN7QBitmapC1Ev(void* qthis);
+  // proto:  QBitmap QBitmap::transformed(const QTransform & matrix);
+extern void _ZNK7QBitmap11transformedERK10QTransform(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QBitmap)=1
 type QBitmap struct {
   /*qbase*/ QPixmap;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QBitmap::QBitmap(const QPixmap & );
 func NewQBitmap(args ...interface{}) QBitmap {
   return QBitmap{}
 }
 
-
+  // proto:  void QBitmap::~QBitmap();
 func (this *QBitmap) FreeQBitmap(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -60,7 +94,7 @@ func (this *QBitmap) FreeQBitmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitmap::swap(QBitmap & other);
 func (this *QBitmap) swap(args ...interface{}) () {
   // swap(class QBitmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +113,7 @@ func (this *QBitmap) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBitmap QBitmap::transformed(const QMatrix & );
 func (this *QBitmap) transformed(args ...interface{}) () {
   // transformed(const class QMatrix &)
   // transformed(const class QTransform &)
@@ -103,7 +137,7 @@ func (this *QBitmap) transformed(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitmap::clear();
 func (this *QBitmap) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,48 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QDirIterator::fileName();
+extern void _ZNK12QDirIterator8fileNameEv(void* qthis);
+  // proto:  QString QDirIterator::path();
+extern void _ZNK12QDirIterator4pathEv(void* qthis);
+  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
+extern void* dector_ZN12QDirIteratorC1ERKS_(void* arg0);
+extern void _ZN12QDirIteratorC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QDirIterator::next();
+extern void _ZN12QDirIterator4nextEv(void* qthis);
+  // proto:  QString QDirIterator::filePath();
+extern void _ZNK12QDirIterator8filePathEv(void* qthis);
+  // proto:  void QDirIterator::~QDirIterator();
+extern void _ZN12QDirIteratorD0Ev(void* qthis);
+  // proto:  QFileInfo QDirIterator::fileInfo();
+extern void _ZNK12QDirIterator8fileInfoEv(void* qthis);
+  // proto:  bool QDirIterator::hasNext();
+extern void _ZNK12QDirIterator7hasNextEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDirIterator)=1
 type QDirIterator struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QDirIterator::fileName();
 func (this *QDirIterator) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +85,7 @@ func (this *QDirIterator) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDirIterator::path();
 func (this *QDirIterator) path(args ...interface{}) () {
   // path()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,12 +103,12 @@ func (this *QDirIterator) path(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDirIterator::QDirIterator(const QDirIterator & );
 func NewQDirIterator(args ...interface{}) QDirIterator {
   return QDirIterator{}
 }
 
-
+  // proto:  QString QDirIterator::next();
 func (this *QDirIterator) next(args ...interface{}) () {
   // next()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +126,7 @@ func (this *QDirIterator) next(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDirIterator::filePath();
 func (this *QDirIterator) filePath(args ...interface{}) () {
   // filePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +144,7 @@ func (this *QDirIterator) filePath(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDirIterator::~QDirIterator();
 func (this *QDirIterator) FreeQDirIterator(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,7 +158,7 @@ func (this *QDirIterator) FreeQDirIterator(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFileInfo QDirIterator::fileInfo();
 func (this *QDirIterator) fileInfo(args ...interface{}) () {
   // fileInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +176,7 @@ func (this *QDirIterator) fileInfo(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDirIterator::hasNext();
 func (this *QDirIterator) hasNext(args ...interface{}) () {
   // hasNext()
   var vtys = make(map[int32]map[int32]reflect.Type)

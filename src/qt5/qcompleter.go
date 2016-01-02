@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,90 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QCompleter::QCompleter(QObject * parent);
+extern void* dector_ZN10QCompleterC1EP7QObject(void* arg0);
+extern void _ZN10QCompleterC1EP7QObject(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QCompleter::metaObject();
+extern void _ZNK10QCompleter10metaObjectEv(void* qthis);
+  // proto:  QAbstractItemView * QCompleter::popup();
+extern void _ZNK10QCompleter5popupEv(void* qthis);
+  // proto:  void QCompleter::complete(const QRect & rect);
+extern void _ZN10QCompleter8completeERK5QRect(void* qthis, void* arg0);
+  // proto:  void QCompleter::setCompletionRole(int role);
+extern void _ZN10QCompleter17setCompletionRoleEi(void* qthis, int arg0);
+  // proto:  int QCompleter::completionCount();
+extern void _ZNK10QCompleter15completionCountEv(void* qthis);
+  // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
+extern void* dector_ZN10QCompleterC1ERK11QStringListP7QObject(void* arg0, void* arg1);
+extern void _ZN10QCompleterC1ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  QModelIndex QCompleter::currentIndex();
+extern void _ZNK10QCompleter12currentIndexEv(void* qthis);
+  // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
+extern void _ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
+extern void _ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int arg0);
+  // proto:  int QCompleter::completionColumn();
+extern void _ZNK10QCompleter16completionColumnEv(void* qthis);
+  // proto:  int QCompleter::maxVisibleItems();
+extern void _ZNK10QCompleter15maxVisibleItemsEv(void* qthis);
+  // proto:  void QCompleter::~QCompleter();
+extern void _ZN10QCompleterD0Ev(void* qthis);
+  // proto:  void QCompleter::setWrapAround(bool wrap);
+extern void _ZN10QCompleter13setWrapAroundEb(void* qthis, bool arg0);
+  // proto:  QStringList QCompleter::splitPath(const QString & path);
+extern void _ZNK10QCompleter9splitPathERK7QString(void* qthis, void* arg0);
+  // proto:  QAbstractItemModel * QCompleter::model();
+extern void _ZNK10QCompleter5modelEv(void* qthis);
+  // proto:  QString QCompleter::currentCompletion();
+extern void _ZNK10QCompleter17currentCompletionEv(void* qthis);
+  // proto:  void QCompleter::setCompletionColumn(int column);
+extern void _ZN10QCompleter19setCompletionColumnEi(void* qthis, int arg0);
+  // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
+extern void _ZN10QCompleter19setCompletionPrefixERK7QString(void* qthis, void* arg0);
+  // proto:  QAbstractItemModel * QCompleter::completionModel();
+extern void _ZNK10QCompleter15completionModelEv(void* qthis);
+  // proto:  bool QCompleter::setCurrentRow(int row);
+extern void _ZN10QCompleter13setCurrentRowEi(void* qthis, int arg0);
+  // proto:  int QCompleter::currentRow();
+extern void _ZNK10QCompleter10currentRowEv(void* qthis);
+  // proto:  void QCompleter::setModel(QAbstractItemModel * c);
+extern void _ZN10QCompleter8setModelEP18QAbstractItemModel(void* qthis, void* arg0);
+  // proto:  bool QCompleter::wrapAround();
+extern void _ZNK10QCompleter10wrapAroundEv(void* qthis);
+  // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
+extern void* dector_ZN10QCompleterC1EP18QAbstractItemModelP7QObject(void* arg0, void* arg1);
+extern void _ZN10QCompleterC1EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  void QCompleter::setPopup(QAbstractItemView * popup);
+extern void _ZN10QCompleter8setPopupEP17QAbstractItemView(void* qthis, void* arg0);
+  // proto:  void QCompleter::QCompleter(const QCompleter & );
+extern void* dector_ZN10QCompleterC1ERKS_(void* arg0);
+extern void _ZN10QCompleterC1ERKS_(void* qthis, void* arg0);
+  // proto:  QWidget * QCompleter::widget();
+extern void _ZNK10QCompleter6widgetEv(void* qthis);
+  // proto:  int QCompleter::completionRole();
+extern void _ZNK10QCompleter14completionRoleEv(void* qthis);
+  // proto:  QString QCompleter::completionPrefix();
+extern void _ZNK10QCompleter16completionPrefixEv(void* qthis);
+  // proto:  void QCompleter::setWidget(QWidget * widget);
+extern void _ZN10QCompleter9setWidgetEP7QWidget(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QCompleter)=1
 type QCompleter struct {
   /*qbase*/ QObject;
@@ -43,12 +118,12 @@ type QCompleter struct {
 //  _activated QCompleter_activated_signal;
 }
 
-
+  // proto:  void QCompleter::QCompleter(QObject * parent);
 func NewQCompleter(args ...interface{}) QCompleter {
   return QCompleter{}
 }
 
-
+  // proto:  const QMetaObject * QCompleter::metaObject();
 func (this *QCompleter) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +141,7 @@ func (this *QCompleter) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemView * QCompleter::popup();
 func (this *QCompleter) popup(args ...interface{}) () {
   // popup()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +159,7 @@ func (this *QCompleter) popup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::complete(const QRect & rect);
 func (this *QCompleter) complete(args ...interface{}) () {
   // complete(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +178,7 @@ func (this *QCompleter) complete(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setCompletionRole(int role);
 func (this *QCompleter) setCompletionRole(args ...interface{}) () {
   // setCompletionRole(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +197,7 @@ func (this *QCompleter) setCompletionRole(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCompleter::completionCount();
 func (this *QCompleter) completionCount(args ...interface{}) () {
   // completionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +215,7 @@ func (this *QCompleter) completionCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QCompleter::currentIndex();
 func (this *QCompleter) currentIndex(args ...interface{}) () {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +233,7 @@ func (this *QCompleter) currentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
 func (this *QCompleter) pathFromIndex(args ...interface{}) () {
   // pathFromIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +252,7 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
 func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
   // setMaxVisibleItems(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -196,7 +271,7 @@ func (this *QCompleter) setMaxVisibleItems(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCompleter::completionColumn();
 func (this *QCompleter) completionColumn(args ...interface{}) () {
   // completionColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +289,7 @@ func (this *QCompleter) completionColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCompleter::maxVisibleItems();
 func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
   // maxVisibleItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,7 +307,7 @@ func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::~QCompleter();
 func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -246,7 +321,7 @@ func (this *QCompleter) FreeQCompleter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setWrapAround(bool wrap);
 func (this *QCompleter) setWrapAround(args ...interface{}) () {
   // setWrapAround(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +340,7 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QCompleter::splitPath(const QString & path);
 func (this *QCompleter) splitPath(args ...interface{}) () {
   // splitPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +359,7 @@ func (this *QCompleter) splitPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemModel * QCompleter::model();
 func (this *QCompleter) model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +377,7 @@ func (this *QCompleter) model(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCompleter::currentCompletion();
 func (this *QCompleter) currentCompletion(args ...interface{}) () {
   // currentCompletion()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +395,7 @@ func (this *QCompleter) currentCompletion(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setCompletionColumn(int column);
 func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
   // setCompletionColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -339,7 +414,7 @@ func (this *QCompleter) setCompletionColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
 func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
   // setCompletionPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -358,7 +433,7 @@ func (this *QCompleter) setCompletionPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemModel * QCompleter::completionModel();
 func (this *QCompleter) completionModel(args ...interface{}) () {
   // completionModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +451,7 @@ func (this *QCompleter) completionModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCompleter::setCurrentRow(int row);
 func (this *QCompleter) setCurrentRow(args ...interface{}) () {
   // setCurrentRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +470,7 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCompleter::currentRow();
 func (this *QCompleter) currentRow(args ...interface{}) () {
   // currentRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -413,7 +488,7 @@ func (this *QCompleter) currentRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setModel(QAbstractItemModel * c);
 func (this *QCompleter) setModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +507,7 @@ func (this *QCompleter) setModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCompleter::wrapAround();
 func (this *QCompleter) wrapAround(args ...interface{}) () {
   // wrapAround()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -450,7 +525,7 @@ func (this *QCompleter) wrapAround(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setPopup(QAbstractItemView * popup);
 func (this *QCompleter) setPopup(args ...interface{}) () {
   // setPopup(class QAbstractItemView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -469,7 +544,7 @@ func (this *QCompleter) setPopup(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QCompleter::widget();
 func (this *QCompleter) widget(args ...interface{}) () {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -487,7 +562,7 @@ func (this *QCompleter) widget(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCompleter::completionRole();
 func (this *QCompleter) completionRole(args ...interface{}) () {
   // completionRole()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -505,7 +580,7 @@ func (this *QCompleter) completionRole(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCompleter::completionPrefix();
 func (this *QCompleter) completionPrefix(args ...interface{}) () {
   // completionPrefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -523,7 +598,7 @@ func (this *QCompleter) completionPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCompleter::setWidget(QWidget * widget);
 func (this *QCompleter) setWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)

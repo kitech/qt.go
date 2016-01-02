@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,143 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTimeEdit::QTimeEdit(QWidget * parent);
+extern void* dector_ZN9QTimeEditC1EP7QWidget(void* arg0);
+extern void _ZN9QTimeEditC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTimeEdit::metaObject();
+extern void _ZNK9QTimeEdit10metaObjectEv(void* qthis);
+  // proto:  void QTimeEdit::QTimeEdit(const QTime & time, QWidget * parent);
+extern void* dector_ZN9QTimeEditC1ERK5QTimeP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QTimeEditC1ERK5QTimeP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QTimeEdit::~QTimeEdit();
+extern void _ZN9QTimeEditD0Ev(void* qthis);
+  // proto:  void QDateEdit::QDateEdit(const QDate & date, QWidget * parent);
+extern void* dector_ZN9QDateEditC1ERK5QDateP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QDateEditC1ERK5QDateP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  const QMetaObject * QDateEdit::metaObject();
+extern void _ZNK9QDateEdit10metaObjectEv(void* qthis);
+  // proto:  void QDateEdit::QDateEdit(QWidget * parent);
+extern void* dector_ZN9QDateEditC1EP7QWidget(void* arg0);
+extern void _ZN9QDateEditC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QDateEdit::~QDateEdit();
+extern void _ZN9QDateEditD0Ev(void* qthis);
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
+extern void* dector_ZN13QDateTimeEditC1ERKS_(void* arg0);
+extern void _ZN13QDateTimeEditC1ERKS_(void* qthis, void* arg0);
+  // proto:  QDate QDateTimeEdit::date();
+extern void _ZNK13QDateTimeEdit4dateEv(void* qthis);
+  // proto:  void QDateTimeEdit::clearMinimumDateTime();
+extern void _ZN13QDateTimeEdit20clearMinimumDateTimeEv(void* qthis);
+  // proto:  void QDateTimeEdit::clear();
+extern void _ZN13QDateTimeEdit5clearEv(void* qthis);
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
+extern void* dector_ZN13QDateTimeEditC1ERK5QTimeP7QWidget(void* arg0, void* arg1);
+extern void _ZN13QDateTimeEditC1ERK5QTimeP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QDateTimeEdit::setDate(const QDate & date);
+extern void _ZN13QDateTimeEdit7setDateERK5QDate(void* qthis, void* arg0);
+  // proto:  QDateTime QDateTimeEdit::maximumDateTime();
+extern void _ZNK13QDateTimeEdit15maximumDateTimeEv(void* qthis);
+  // proto:  void QDateTimeEdit::setMinimumDate(const QDate & min);
+extern void _ZN13QDateTimeEdit14setMinimumDateERK5QDate(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDate & d, QWidget * parent);
+extern void* dector_ZN13QDateTimeEditC1ERK5QDateP7QWidget(void* arg0, void* arg1);
+extern void _ZN13QDateTimeEditC1ERK5QDateP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QDateTimeEdit::setMaximumDate(const QDate & max);
+extern void _ZN13QDateTimeEdit14setMaximumDateERK5QDate(void* qthis, void* arg0);
+  // proto:  QTime QDateTimeEdit::maximumTime();
+extern void _ZNK13QDateTimeEdit11maximumTimeEv(void* qthis);
+  // proto:  const QMetaObject * QDateTimeEdit::metaObject();
+extern void _ZNK13QDateTimeEdit10metaObjectEv(void* qthis);
+  // proto:  void QDateTimeEdit::~QDateTimeEdit();
+extern void _ZN13QDateTimeEditD0Ev(void* qthis);
+  // proto:  void QDateTimeEdit::clearMinimumDate();
+extern void _ZN13QDateTimeEdit16clearMinimumDateEv(void* qthis);
+  // proto:  void QDateTimeEdit::setDateRange(const QDate & min, const QDate & max);
+extern void _ZN13QDateTimeEdit12setDateRangeERK5QDateS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QDateTimeEdit::setMinimumTime(const QTime & min);
+extern void _ZN13QDateTimeEdit14setMinimumTimeERK5QTime(void* qthis, void* arg0);
+  // proto:  QTime QDateTimeEdit::time();
+extern void _ZNK13QDateTimeEdit4timeEv(void* qthis);
+  // proto:  int QDateTimeEdit::currentSectionIndex();
+extern void _ZNK13QDateTimeEdit19currentSectionIndexEv(void* qthis);
+  // proto:  bool QDateTimeEdit::event(QEvent * event);
+extern void _ZN13QDateTimeEdit5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::setDateTime(const QDateTime & dateTime);
+extern void _ZN13QDateTimeEdit11setDateTimeERK9QDateTime(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::setCalendarWidget(QCalendarWidget * calendarWidget);
+extern void _ZN13QDateTimeEdit17setCalendarWidgetEP15QCalendarWidget(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::setDateTimeRange(const QDateTime & min, const QDateTime & max);
+extern void _ZN13QDateTimeEdit16setDateTimeRangeERK9QDateTimeS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QDateTimeEdit::setTime(const QTime & time);
+extern void _ZN13QDateTimeEdit7setTimeERK5QTime(void* qthis, void* arg0);
+  // proto:  QDateTime QDateTimeEdit::dateTime();
+extern void _ZNK13QDateTimeEdit8dateTimeEv(void* qthis);
+  // proto:  void QDateTimeEdit::setMaximumTime(const QTime & max);
+extern void _ZN13QDateTimeEdit14setMaximumTimeERK5QTime(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::setMinimumDateTime(const QDateTime & dt);
+extern void _ZN13QDateTimeEdit18setMinimumDateTimeERK9QDateTime(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::clearMaximumTime();
+extern void _ZN13QDateTimeEdit16clearMaximumTimeEv(void* qthis);
+  // proto:  bool QDateTimeEdit::calendarPopup();
+extern void _ZNK13QDateTimeEdit13calendarPopupEv(void* qthis);
+  // proto:  void QDateTimeEdit::setMaximumDateTime(const QDateTime & dt);
+extern void _ZN13QDateTimeEdit18setMaximumDateTimeERK9QDateTime(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::clearMaximumDateTime();
+extern void _ZN13QDateTimeEdit20clearMaximumDateTimeEv(void* qthis);
+  // proto:  void QDateTimeEdit::QDateTimeEdit(QWidget * parent);
+extern void* dector_ZN13QDateTimeEditC1EP7QWidget(void* arg0);
+extern void _ZN13QDateTimeEditC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  QDateTime QDateTimeEdit::minimumDateTime();
+extern void _ZNK13QDateTimeEdit15minimumDateTimeEv(void* qthis);
+  // proto:  QCalendarWidget * QDateTimeEdit::calendarWidget();
+extern void _ZNK13QDateTimeEdit14calendarWidgetEv(void* qthis);
+  // proto:  void QDateTimeEdit::setDisplayFormat(const QString & format);
+extern void _ZN13QDateTimeEdit16setDisplayFormatERK7QString(void* qthis, void* arg0);
+  // proto:  void QDateTimeEdit::clearMaximumDate();
+extern void _ZN13QDateTimeEdit16clearMaximumDateEv(void* qthis);
+  // proto:  void QDateTimeEdit::setCalendarPopup(bool enable);
+extern void _ZN13QDateTimeEdit16setCalendarPopupEb(void* qthis, bool arg0);
+  // proto:  void QDateTimeEdit::stepBy(int steps);
+extern void _ZN13QDateTimeEdit6stepByEi(void* qthis, int arg0);
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTime & dt, QWidget * parent);
+extern void* dector_ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget(void* arg0, void* arg1);
+extern void _ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  QString QDateTimeEdit::displayFormat();
+extern void _ZNK13QDateTimeEdit13displayFormatEv(void* qthis);
+  // proto:  QTime QDateTimeEdit::minimumTime();
+extern void _ZNK13QDateTimeEdit11minimumTimeEv(void* qthis);
+  // proto:  QSize QDateTimeEdit::sizeHint();
+extern void _ZNK13QDateTimeEdit8sizeHintEv(void* qthis);
+  // proto:  int QDateTimeEdit::sectionCount();
+extern void _ZNK13QDateTimeEdit12sectionCountEv(void* qthis);
+  // proto:  void QDateTimeEdit::setCurrentSectionIndex(int index);
+extern void _ZN13QDateTimeEdit22setCurrentSectionIndexEi(void* qthis, int arg0);
+  // proto:  void QDateTimeEdit::clearMinimumTime();
+extern void _ZN13QDateTimeEdit16clearMinimumTimeEv(void* qthis);
+  // proto:  void QDateTimeEdit::setTimeRange(const QTime & min, const QTime & max);
+extern void _ZN13QDateTimeEdit12setTimeRangeERK5QTimeS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QDate QDateTimeEdit::minimumDate();
+extern void _ZNK13QDateTimeEdit11minimumDateEv(void* qthis);
+  // proto:  QDate QDateTimeEdit::maximumDate();
+extern void _ZNK13QDateTimeEdit11maximumDateEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTimeEdit)=1
 type QTimeEdit struct {
   /*qbase*/ QDateTimeEdit;
@@ -58,12 +186,12 @@ type QDateTimeEdit struct {
 //  _dateTimeChanged QDateTimeEdit_dateTimeChanged_signal;
 }
 
-
+  // proto:  void QTimeEdit::QTimeEdit(QWidget * parent);
 func NewQTimeEdit(args ...interface{}) QTimeEdit {
   return QTimeEdit{}
 }
 
-
+  // proto:  const QMetaObject * QTimeEdit::metaObject();
 func (this *QTimeEdit) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +209,7 @@ func (this *QTimeEdit) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeEdit::~QTimeEdit();
 func (this *QTimeEdit) FreeQTimeEdit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,12 +223,12 @@ func (this *QTimeEdit) FreeQTimeEdit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateEdit::QDateEdit(const QDate & date, QWidget * parent);
 func NewQDateEdit(args ...interface{}) QDateEdit {
   return QDateEdit{}
 }
 
-
+  // proto:  const QMetaObject * QDateEdit::metaObject();
 func (this *QDateEdit) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +246,7 @@ func (this *QDateEdit) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateEdit::~QDateEdit();
 func (this *QDateEdit) FreeQDateEdit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,12 +260,12 @@ func (this *QDateEdit) FreeQDateEdit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTimeEdit & );
 func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
   return QDateTimeEdit{}
 }
 
-
+  // proto:  QDate QDateTimeEdit::date();
 func (this *QDateTimeEdit) date(args ...interface{}) () {
   // date()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +283,7 @@ func (this *QDateTimeEdit) date(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMinimumDateTime();
 func (this *QDateTimeEdit) clearMinimumDateTime(args ...interface{}) () {
   // clearMinimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +301,7 @@ func (this *QDateTimeEdit) clearMinimumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clear();
 func (this *QDateTimeEdit) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +319,7 @@ func (this *QDateTimeEdit) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setDate(const QDate & date);
 func (this *QDateTimeEdit) setDate(args ...interface{}) () {
   // setDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,7 +338,7 @@ func (this *QDateTimeEdit) setDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDateTime QDateTimeEdit::maximumDateTime();
 func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
   // maximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -228,7 +356,7 @@ func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMinimumDate(const QDate & min);
 func (this *QDateTimeEdit) setMinimumDate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +375,7 @@ func (this *QDateTimeEdit) setMinimumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMaximumDate(const QDate & max);
 func (this *QDateTimeEdit) setMaximumDate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +394,7 @@ func (this *QDateTimeEdit) setMaximumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTime QDateTimeEdit::maximumTime();
 func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
   // maximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +412,7 @@ func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDateTimeEdit::metaObject();
 func (this *QDateTimeEdit) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +430,7 @@ func (this *QDateTimeEdit) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::~QDateTimeEdit();
 func (this *QDateTimeEdit) FreeQDateTimeEdit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,7 +444,7 @@ func (this *QDateTimeEdit) FreeQDateTimeEdit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMinimumDate();
 func (this *QDateTimeEdit) clearMinimumDate(args ...interface{}) () {
   // clearMinimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -334,7 +462,7 @@ func (this *QDateTimeEdit) clearMinimumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setDateRange(const QDate & min, const QDate & max);
 func (this *QDateTimeEdit) setDateRange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -354,7 +482,7 @@ func (this *QDateTimeEdit) setDateRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMinimumTime(const QTime & min);
 func (this *QDateTimeEdit) setMinimumTime(args ...interface{}) () {
   // setMinimumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -373,7 +501,7 @@ func (this *QDateTimeEdit) setMinimumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTime QDateTimeEdit::time();
 func (this *QDateTimeEdit) time(args ...interface{}) () {
   // time()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -391,7 +519,7 @@ func (this *QDateTimeEdit) time(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDateTimeEdit::currentSectionIndex();
 func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
   // currentSectionIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -409,7 +537,7 @@ func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDateTimeEdit::event(QEvent * event);
 func (this *QDateTimeEdit) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -428,7 +556,7 @@ func (this *QDateTimeEdit) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setDateTime(const QDateTime & dateTime);
 func (this *QDateTimeEdit) setDateTime(args ...interface{}) () {
   // setDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -447,7 +575,7 @@ func (this *QDateTimeEdit) setDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setCalendarWidget(QCalendarWidget * calendarWidget);
 func (this *QDateTimeEdit) setCalendarWidget(args ...interface{}) () {
   // setCalendarWidget(class QCalendarWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -466,7 +594,7 @@ func (this *QDateTimeEdit) setCalendarWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setDateTimeRange(const QDateTime & min, const QDateTime & max);
 func (this *QDateTimeEdit) setDateTimeRange(args ...interface{}) () {
   // setDateTimeRange(const class QDateTime &, const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -486,7 +614,7 @@ func (this *QDateTimeEdit) setDateTimeRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setTime(const QTime & time);
 func (this *QDateTimeEdit) setTime(args ...interface{}) () {
   // setTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -505,7 +633,7 @@ func (this *QDateTimeEdit) setTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDateTime QDateTimeEdit::dateTime();
 func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
   // dateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -523,7 +651,7 @@ func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMaximumTime(const QTime & max);
 func (this *QDateTimeEdit) setMaximumTime(args ...interface{}) () {
   // setMaximumTime(const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -542,7 +670,7 @@ func (this *QDateTimeEdit) setMaximumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMinimumDateTime(const QDateTime & dt);
 func (this *QDateTimeEdit) setMinimumDateTime(args ...interface{}) () {
   // setMinimumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -561,7 +689,7 @@ func (this *QDateTimeEdit) setMinimumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMaximumTime();
 func (this *QDateTimeEdit) clearMaximumTime(args ...interface{}) () {
   // clearMaximumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -579,7 +707,7 @@ func (this *QDateTimeEdit) clearMaximumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDateTimeEdit::calendarPopup();
 func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
   // calendarPopup()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -597,7 +725,7 @@ func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setMaximumDateTime(const QDateTime & dt);
 func (this *QDateTimeEdit) setMaximumDateTime(args ...interface{}) () {
   // setMaximumDateTime(const class QDateTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -616,7 +744,7 @@ func (this *QDateTimeEdit) setMaximumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMaximumDateTime();
 func (this *QDateTimeEdit) clearMaximumDateTime(args ...interface{}) () {
   // clearMaximumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -634,7 +762,7 @@ func (this *QDateTimeEdit) clearMaximumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDateTime QDateTimeEdit::minimumDateTime();
 func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
   // minimumDateTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -652,7 +780,7 @@ func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  QCalendarWidget * QDateTimeEdit::calendarWidget();
 func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
   // calendarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -670,7 +798,7 @@ func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setDisplayFormat(const QString & format);
 func (this *QDateTimeEdit) setDisplayFormat(args ...interface{}) () {
   // setDisplayFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -689,7 +817,7 @@ func (this *QDateTimeEdit) setDisplayFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMaximumDate();
 func (this *QDateTimeEdit) clearMaximumDate(args ...interface{}) () {
   // clearMaximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -707,7 +835,7 @@ func (this *QDateTimeEdit) clearMaximumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setCalendarPopup(bool enable);
 func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
   // setCalendarPopup(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -726,7 +854,7 @@ func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::stepBy(int steps);
 func (this *QDateTimeEdit) stepBy(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -745,7 +873,7 @@ func (this *QDateTimeEdit) stepBy(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDateTimeEdit::displayFormat();
 func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
   // displayFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -763,7 +891,7 @@ func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTime QDateTimeEdit::minimumTime();
 func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
   // minimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -781,7 +909,7 @@ func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QDateTimeEdit::sizeHint();
 func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -799,7 +927,7 @@ func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDateTimeEdit::sectionCount();
 func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
   // sectionCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -817,7 +945,7 @@ func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setCurrentSectionIndex(int index);
 func (this *QDateTimeEdit) setCurrentSectionIndex(args ...interface{}) () {
   // setCurrentSectionIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -836,7 +964,7 @@ func (this *QDateTimeEdit) setCurrentSectionIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::clearMinimumTime();
 func (this *QDateTimeEdit) clearMinimumTime(args ...interface{}) () {
   // clearMinimumTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -854,7 +982,7 @@ func (this *QDateTimeEdit) clearMinimumTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDateTimeEdit::setTimeRange(const QTime & min, const QTime & max);
 func (this *QDateTimeEdit) setTimeRange(args ...interface{}) () {
   // setTimeRange(const class QTime &, const class QTime &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -874,7 +1002,7 @@ func (this *QDateTimeEdit) setTimeRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDate QDateTimeEdit::minimumDate();
 func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -892,7 +1020,7 @@ func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDate QDateTimeEdit::maximumDate();
 func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)

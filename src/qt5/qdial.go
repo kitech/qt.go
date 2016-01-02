@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,59 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QDial::wrapping();
+extern void _ZNK5QDial8wrappingEv(void* qthis);
+  // proto:  void QDial::~QDial();
+extern void _ZN5QDialD0Ev(void* qthis);
+  // proto:  const QMetaObject * QDial::metaObject();
+extern void _ZNK5QDial10metaObjectEv(void* qthis);
+  // proto:  bool QDial::notchesVisible();
+extern void _ZNK5QDial14notchesVisibleEv(void* qthis);
+  // proto:  void QDial::setNotchTarget(double target);
+extern void _ZN5QDial14setNotchTargetEd(void* qthis, double arg0);
+  // proto:  void QDial::setWrapping(bool on);
+extern void _ZN5QDial11setWrappingEb(void* qthis, bool arg0);
+  // proto:  int QDial::notchSize();
+extern void _ZNK5QDial9notchSizeEv(void* qthis);
+  // proto:  void QDial::setNotchesVisible(bool visible);
+extern void _ZN5QDial17setNotchesVisibleEb(void* qthis, bool arg0);
+  // proto:  QSize QDial::minimumSizeHint();
+extern void _ZNK5QDial15minimumSizeHintEv(void* qthis);
+  // proto:  void QDial::QDial(const QDial & );
+extern void* dector_ZN5QDialC1ERKS_(void* arg0);
+extern void _ZN5QDialC1ERKS_(void* qthis, void* arg0);
+  // proto:  qreal QDial::notchTarget();
+extern void _ZNK5QDial11notchTargetEv(void* qthis);
+  // proto:  QSize QDial::sizeHint();
+extern void _ZNK5QDial8sizeHintEv(void* qthis);
+  // proto:  void QDial::QDial(QWidget * parent);
+extern void* dector_ZN5QDialC1EP7QWidget(void* arg0);
+extern void _ZN5QDialC1EP7QWidget(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDial)=1
 type QDial struct {
   /*qbase*/ QAbstractSlider;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QDial::wrapping();
 func (this *QDial) wrapping(args ...interface{}) () {
   // wrapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +96,7 @@ func (this *QDial) wrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDial::~QDial();
 func (this *QDial) FreeQDial(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +110,7 @@ func (this *QDial) FreeQDial(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDial::metaObject();
 func (this *QDial) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -91,7 +128,7 @@ func (this *QDial) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDial::notchesVisible();
 func (this *QDial) notchesVisible(args ...interface{}) () {
   // notchesVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +146,7 @@ func (this *QDial) notchesVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDial::setNotchTarget(double target);
 func (this *QDial) setNotchTarget(args ...interface{}) () {
   // setNotchTarget(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -128,7 +165,7 @@ func (this *QDial) setNotchTarget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDial::setWrapping(bool on);
 func (this *QDial) setWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -147,7 +184,7 @@ func (this *QDial) setWrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDial::notchSize();
 func (this *QDial) notchSize(args ...interface{}) () {
   // notchSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -165,7 +202,7 @@ func (this *QDial) notchSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDial::setNotchesVisible(bool visible);
 func (this *QDial) setNotchesVisible(args ...interface{}) () {
   // setNotchesVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +221,7 @@ func (this *QDial) setNotchesVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QDial::minimumSizeHint();
 func (this *QDial) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -202,12 +239,12 @@ func (this *QDial) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDial::QDial(const QDial & );
 func NewQDial(args ...interface{}) QDial {
   return QDial{}
 }
 
-
+  // proto:  qreal QDial::notchTarget();
 func (this *QDial) notchTarget(args ...interface{}) () {
   // notchTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,7 +262,7 @@ func (this *QDial) notchTarget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QDial::sizeHint();
 func (this *QDial) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)

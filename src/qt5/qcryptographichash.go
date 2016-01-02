@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,46 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QCryptographicHash::addData(QIODevice * device);
+extern void _ZN18QCryptographicHash7addDataEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QCryptographicHash::~QCryptographicHash();
+extern void _ZN18QCryptographicHashD0Ev(void* qthis);
+  // proto:  void QCryptographicHash::reset();
+extern void _ZN18QCryptographicHash5resetEv(void* qthis);
+  // proto:  void QCryptographicHash::addData(const char * data, int length);
+extern void _ZN18QCryptographicHash7addDataEPKci(void* qthis, char* arg0, int arg1);
+  // proto:  QByteArray QCryptographicHash::result();
+extern void _ZNK18QCryptographicHash6resultEv(void* qthis);
+  // proto:  void QCryptographicHash::addData(const QByteArray & data);
+extern void _ZN18QCryptographicHash7addDataERK10QByteArray(void* qthis, void* arg0);
+  // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
+extern void* dector_ZN18QCryptographicHashC1ERKS_(void* arg0);
+extern void _ZN18QCryptographicHashC1ERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QCryptographicHash)=8
 type QCryptographicHash struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QCryptographicHash::addData(QIODevice * device);
 func (this *QCryptographicHash) addData(args ...interface{}) () {
   // addData(class QIODevice *)
   // addData(const char *, int)
@@ -71,7 +95,7 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCryptographicHash::~QCryptographicHash();
 func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -85,7 +109,7 @@ func (this *QCryptographicHash) FreeQCryptographicHash(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCryptographicHash::reset();
 func (this *QCryptographicHash) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +127,7 @@ func (this *QCryptographicHash) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QCryptographicHash::result();
 func (this *QCryptographicHash) result(args ...interface{}) () {
   // result()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +145,7 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCryptographicHash::QCryptographicHash(const QCryptographicHash & );
 func NewQCryptographicHash(args ...interface{}) QCryptographicHash {
   return QCryptographicHash{}
 }

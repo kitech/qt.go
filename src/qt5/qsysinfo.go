@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,47 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static QString QSysInfo::kernelType();
+extern void _ZN8QSysInfo10kernelTypeEv();
+  // proto: static QString QSysInfo::productType();
+extern void _ZN8QSysInfo11productTypeEv();
+  // proto: static QString QSysInfo::prettyProductName();
+extern void _ZN8QSysInfo17prettyProductNameEv();
+  // proto: static QString QSysInfo::currentCpuArchitecture();
+extern void _ZN8QSysInfo22currentCpuArchitectureEv();
+  // proto: static QString QSysInfo::buildCpuArchitecture();
+extern void _ZN8QSysInfo20buildCpuArchitectureEv();
+  // proto: static QString QSysInfo::kernelVersion();
+extern void _ZN8QSysInfo13kernelVersionEv();
+  // proto: static QString QSysInfo::productVersion();
+extern void _ZN8QSysInfo14productVersionEv();
+  // proto: static QString QSysInfo::buildAbi();
+extern void _ZN8QSysInfo8buildAbiEv();
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSysInfo)=1
 type QSysInfo struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto: static QString QSysInfo::kernelType();
 func (this *QSysInfo) kernelType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +80,7 @@ func (this *QSysInfo) kernelType_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::productType();
 func (this *QSysInfo) productType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,7 +94,7 @@ func (this *QSysInfo) productType_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::prettyProductName();
 func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -83,7 +108,7 @@ func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::currentCpuArchitecture();
 func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +122,7 @@ func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::buildCpuArchitecture();
 func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,7 +136,7 @@ func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::kernelVersion();
 func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,7 +150,7 @@ func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::productVersion();
 func (this *QSysInfo) productVersion_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,7 +164,7 @@ func (this *QSysInfo) productVersion_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QSysInfo::buildAbi();
 func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

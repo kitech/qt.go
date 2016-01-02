@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,53 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QByteArray QByteArrayMatcher::pattern();
+extern void demth_ZNK17QByteArrayMatcher7patternEv(void* qthis);
+  // proto:  int QByteArrayMatcher::indexIn(const char * str, int len, int from);
+extern void _ZNK17QByteArrayMatcher7indexInEPKcii(void* qthis, char* arg0, int arg1, int arg2);
+  // proto:  void QByteArrayMatcher::setPattern(const QByteArray & pattern);
+extern void _ZN17QByteArrayMatcher10setPatternERK10QByteArray(void* qthis, void* arg0);
+  // proto:  void QByteArrayMatcher::QByteArrayMatcher();
+extern void* dector_ZN17QByteArrayMatcherC1Ev();
+extern void _ZN17QByteArrayMatcherC1Ev(void* qthis);
+  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const char * pattern, int length);
+extern void* dector_ZN17QByteArrayMatcherC1EPKci(char* arg0, int arg1);
+extern void _ZN17QByteArrayMatcherC1EPKci(void* qthis, char* arg0, int arg1);
+  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArray & pattern);
+extern void* dector_ZN17QByteArrayMatcherC1ERK10QByteArray(void* arg0);
+extern void _ZN17QByteArrayMatcherC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  int QByteArrayMatcher::indexIn(const QByteArray & ba, int from);
+extern void _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(void* qthis, void* arg0, int arg1);
+  // proto:  void QByteArrayMatcher::QByteArrayMatcher(const QByteArrayMatcher & other);
+extern void* dector_ZN17QByteArrayMatcherC1ERKS_(void* arg0);
+extern void _ZN17QByteArrayMatcherC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
+extern void _ZN17QByteArrayMatcherD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QByteArrayMatcher)=1040
 type QByteArrayMatcher struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QByteArray QByteArrayMatcher::pattern();
 func (this *QByteArrayMatcher) pattern(args ...interface{}) () {
   // pattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +90,7 @@ func (this *QByteArrayMatcher) pattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QByteArrayMatcher::indexIn(const char * str, int len, int from);
 func (this *QByteArrayMatcher) indexIn(args ...interface{}) () {
   // indexIn(const char *, int, int)
   // indexIn(const class QByteArray &, int)
@@ -86,7 +117,7 @@ func (this *QByteArrayMatcher) indexIn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QByteArrayMatcher::setPattern(const QByteArray & pattern);
 func (this *QByteArrayMatcher) setPattern(args ...interface{}) () {
   // setPattern(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -105,12 +136,12 @@ func (this *QByteArrayMatcher) setPattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QByteArrayMatcher::QByteArrayMatcher();
 func NewQByteArrayMatcher(args ...interface{}) QByteArrayMatcher {
   return QByteArrayMatcher{}
 }
 
-
+  // proto:  void QByteArrayMatcher::~QByteArrayMatcher();
 func (this *QByteArrayMatcher) FreeQByteArrayMatcher(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

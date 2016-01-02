@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,87 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  qreal QRawFont::averageCharWidth();
+extern void _ZNK8QRawFont16averageCharWidthEv(void* qthis);
+  // proto:  qreal QRawFont::ascent();
+extern void _ZNK8QRawFont6ascentEv(void* qthis);
+  // proto:  qreal QRawFont::leading();
+extern void _ZNK8QRawFont7leadingEv(void* qthis);
+  // proto:  qreal QRawFont::lineThickness();
+extern void _ZNK8QRawFont13lineThicknessEv(void* qthis);
+  // proto:  bool QRawFont::isValid();
+extern void _ZNK8QRawFont7isValidEv(void* qthis);
+  // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
+extern void _ZNK8QRawFont12boundingRectEj(void* qthis, unsigned int arg0);
+  // proto:  bool QRawFont::supportsCharacter(uint ucs4);
+extern void _ZNK8QRawFont17supportsCharacterEj(void* qthis, unsigned int arg0);
+  // proto:  void QRawFont::swap(QRawFont & other);
+extern void _ZN8QRawFont4swapERS_(void* qthis, void* arg0);
+  // proto:  qreal QRawFont::descent();
+extern void _ZNK8QRawFont7descentEv(void* qthis);
+  // proto:  void QRawFont::QRawFont();
+extern void* dector_ZN8QRawFontC1Ev();
+extern void _ZN8QRawFontC1Ev(void* qthis);
+  // proto:  void QRawFont::setPixelSize(qreal pixelSize);
+extern void _ZN8QRawFont12setPixelSizeEd(void* qthis, double arg0);
+  // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
+extern void _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int arg1, unsigned int* arg2, int* arg3);
+  // proto:  QString QRawFont::styleName();
+extern void _ZNK8QRawFont9styleNameEv(void* qthis);
+  // proto:  qreal QRawFont::underlinePosition();
+extern void _ZNK8QRawFont17underlinePositionEv(void* qthis);
+  // proto:  qreal QRawFont::unitsPerEm();
+extern void _ZNK8QRawFont10unitsPerEmEv(void* qthis);
+  // proto:  bool QRawFont::supportsCharacter(QChar character);
+extern void _ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0);
+  // proto:  QString QRawFont::familyName();
+extern void _ZNK8QRawFont10familyNameEv(void* qthis);
+  // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
+extern void _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, unsigned int* arg0, void* arg1, int arg2);
+  // proto:  qreal QRawFont::pixelSize();
+extern void _ZNK8QRawFont9pixelSizeEv(void* qthis);
+  // proto:  int QRawFont::weight();
+extern void _ZNK8QRawFont6weightEv(void* qthis);
+  // proto:  void QRawFont::QRawFont(const QRawFont & other);
+extern void* dector_ZN8QRawFontC1ERKS_(void* arg0);
+extern void _ZN8QRawFontC1ERKS_(void* qthis, void* arg0);
+  // proto:  qreal QRawFont::xHeight();
+extern void _ZNK8QRawFont7xHeightEv(void* qthis);
+  // proto:  void QRawFont::~QRawFont();
+extern void _ZN8QRawFontD0Ev(void* qthis);
+  // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
+extern void _ZNK8QRawFont12pathForGlyphEj(void* qthis, unsigned int arg0);
+  // proto:  QByteArray QRawFont::fontTable(const char * tagName);
+extern void _ZNK8QRawFont9fontTableEPKc(void* qthis, char* arg0);
+  // proto:  qreal QRawFont::maxCharWidth();
+extern void _ZNK8QRawFont12maxCharWidthEv(void* qthis);
+  // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
+extern void _ZNK8QRawFont21glyphIndexesForStringERK7QString(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QRawFont)=1
 type QRawFont struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  qreal QRawFont::averageCharWidth();
 func (this *QRawFont) averageCharWidth(args ...interface{}) () {
   // averageCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +124,7 @@ func (this *QRawFont) averageCharWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::ascent();
 func (this *QRawFont) ascent(args ...interface{}) () {
   // ascent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +142,7 @@ func (this *QRawFont) ascent(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::leading();
 func (this *QRawFont) leading(args ...interface{}) () {
   // leading()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,7 +160,7 @@ func (this *QRawFont) leading(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::lineThickness();
 func (this *QRawFont) lineThickness(args ...interface{}) () {
   // lineThickness()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -113,7 +178,7 @@ func (this *QRawFont) lineThickness(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRawFont::isValid();
 func (this *QRawFont) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,7 +196,7 @@ func (this *QRawFont) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
 func (this *QRawFont) boundingRect(args ...interface{}) () {
   // boundingRect(quint32)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +215,7 @@ func (this *QRawFont) boundingRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRawFont::supportsCharacter(uint ucs4);
 func (this *QRawFont) supportsCharacter(args ...interface{}) () {
   // supportsCharacter(uint)
   // supportsCharacter(class QChar)
@@ -174,7 +239,7 @@ func (this *QRawFont) supportsCharacter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRawFont::swap(QRawFont & other);
 func (this *QRawFont) swap(args ...interface{}) () {
   // swap(class QRawFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +258,7 @@ func (this *QRawFont) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::descent();
 func (this *QRawFont) descent(args ...interface{}) () {
   // descent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,12 +276,12 @@ func (this *QRawFont) descent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRawFont::QRawFont();
 func NewQRawFont(args ...interface{}) QRawFont {
   return QRawFont{}
 }
 
-
+  // proto:  void QRawFont::setPixelSize(qreal pixelSize);
 func (this *QRawFont) setPixelSize(args ...interface{}) () {
   // setPixelSize(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -235,7 +300,7 @@ func (this *QRawFont) setPixelSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
 func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
   // glyphIndexesForChars(const class QChar *, int, quint32 *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -257,7 +322,7 @@ func (this *QRawFont) glyphIndexesForChars(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QRawFont::styleName();
 func (this *QRawFont) styleName(args ...interface{}) () {
   // styleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -275,7 +340,7 @@ func (this *QRawFont) styleName(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::underlinePosition();
 func (this *QRawFont) underlinePosition(args ...interface{}) () {
   // underlinePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -293,7 +358,7 @@ func (this *QRawFont) underlinePosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::unitsPerEm();
 func (this *QRawFont) unitsPerEm(args ...interface{}) () {
   // unitsPerEm()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -311,7 +376,7 @@ func (this *QRawFont) unitsPerEm(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QRawFont::familyName();
 func (this *QRawFont) familyName(args ...interface{}) () {
   // familyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -329,7 +394,7 @@ func (this *QRawFont) familyName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
 func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
   // advancesForGlyphIndexes(const QVector<quint32> &, LayoutFlags)
   // advancesForGlyphIndexes(const quint32 *, class QPointF *, int)
@@ -369,7 +434,7 @@ func (this *QRawFont) advancesForGlyphIndexes(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::pixelSize();
 func (this *QRawFont) pixelSize(args ...interface{}) () {
   // pixelSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -387,7 +452,7 @@ func (this *QRawFont) pixelSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QRawFont::weight();
 func (this *QRawFont) weight(args ...interface{}) () {
   // weight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -405,7 +470,7 @@ func (this *QRawFont) weight(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::xHeight();
 func (this *QRawFont) xHeight(args ...interface{}) () {
   // xHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -423,7 +488,7 @@ func (this *QRawFont) xHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRawFont::~QRawFont();
 func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -437,7 +502,7 @@ func (this *QRawFont) FreeQRawFont(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
 func (this *QRawFont) pathForGlyph(args ...interface{}) () {
   // pathForGlyph(quint32)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -456,7 +521,7 @@ func (this *QRawFont) pathForGlyph(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QRawFont::fontTable(const char * tagName);
 func (this *QRawFont) fontTable(args ...interface{}) () {
   // fontTable(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -475,7 +540,7 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QRawFont::maxCharWidth();
 func (this *QRawFont) maxCharWidth(args ...interface{}) () {
   // maxCharWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -493,7 +558,7 @@ func (this *QRawFont) maxCharWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
 func (this *QRawFont) glyphIndexesForString(args ...interface{}) () {
   // glyphIndexesForString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

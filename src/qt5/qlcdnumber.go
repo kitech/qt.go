@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,69 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QLCDNumber::display(int num);
+extern void _ZN10QLCDNumber7displayEi(void* qthis, int arg0);
+  // proto:  void QLCDNumber::setHexMode();
+extern void _ZN10QLCDNumber10setHexModeEv(void* qthis);
+  // proto:  void QLCDNumber::display(double num);
+extern void _ZN10QLCDNumber7displayEd(void* qthis, double arg0);
+  // proto:  const QMetaObject * QLCDNumber::metaObject();
+extern void _ZNK10QLCDNumber10metaObjectEv(void* qthis);
+  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
+extern void* dector_ZN10QLCDNumberC1ERKS_(void* arg0);
+extern void _ZN10QLCDNumberC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QLCDNumber::digitCount();
+extern void _ZNK10QLCDNumber10digitCountEv(void* qthis);
+  // proto:  void QLCDNumber::~QLCDNumber();
+extern void _ZN10QLCDNumberD0Ev(void* qthis);
+  // proto:  bool QLCDNumber::checkOverflow(int num);
+extern void _ZNK10QLCDNumber13checkOverflowEi(void* qthis, int arg0);
+  // proto:  void QLCDNumber::setDecMode();
+extern void _ZN10QLCDNumber10setDecModeEv(void* qthis);
+  // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
+extern void* dector_ZN10QLCDNumberC1EjP7QWidget(unsigned int arg0, void* arg1);
+extern void _ZN10QLCDNumberC1EjP7QWidget(void* qthis, unsigned int arg0, void* arg1);
+  // proto:  bool QLCDNumber::checkOverflow(double num);
+extern void _ZNK10QLCDNumber13checkOverflowEd(void* qthis, double arg0);
+  // proto:  QSize QLCDNumber::sizeHint();
+extern void _ZNK10QLCDNumber8sizeHintEv(void* qthis);
+  // proto:  void QLCDNumber::display(const QString & str);
+extern void _ZN10QLCDNumber7displayERK7QString(void* qthis, void* arg0);
+  // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
+extern void* dector_ZN10QLCDNumberC1EP7QWidget(void* arg0);
+extern void _ZN10QLCDNumberC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  double QLCDNumber::value();
+extern void _ZNK10QLCDNumber5valueEv(void* qthis);
+  // proto:  void QLCDNumber::setBinMode();
+extern void _ZN10QLCDNumber10setBinModeEv(void* qthis);
+  // proto:  int QLCDNumber::intValue();
+extern void _ZNK10QLCDNumber8intValueEv(void* qthis);
+  // proto:  void QLCDNumber::setDigitCount(int nDigits);
+extern void _ZN10QLCDNumber13setDigitCountEi(void* qthis, int arg0);
+  // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
+extern void _ZN10QLCDNumber20setSmallDecimalPointEb(void* qthis, bool arg0);
+  // proto:  bool QLCDNumber::smallDecimalPoint();
+extern void _ZNK10QLCDNumber17smallDecimalPointEv(void* qthis);
+  // proto:  void QLCDNumber::setOctMode();
+extern void _ZN10QLCDNumber10setOctModeEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLCDNumber)=1
 type QLCDNumber struct {
   /*qbase*/ QFrame;
@@ -42,7 +96,7 @@ type QLCDNumber struct {
 //  _overflow QLCDNumber_overflow_signal;
 }
 
-
+  // proto:  void QLCDNumber::display(int num);
 func (this *QLCDNumber) display(args ...interface{}) () {
   // display(int)
   // display(double)
@@ -71,7 +125,7 @@ func (this *QLCDNumber) display(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setHexMode();
 func (this *QLCDNumber) setHexMode(args ...interface{}) () {
   // setHexMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +143,7 @@ func (this *QLCDNumber) setHexMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QLCDNumber::metaObject();
 func (this *QLCDNumber) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,12 +161,12 @@ func (this *QLCDNumber) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
 func NewQLCDNumber(args ...interface{}) QLCDNumber {
   return QLCDNumber{}
 }
 
-
+  // proto:  int QLCDNumber::digitCount();
 func (this *QLCDNumber) digitCount(args ...interface{}) () {
   // digitCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -130,7 +184,7 @@ func (this *QLCDNumber) digitCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::~QLCDNumber();
 func (this *QLCDNumber) FreeQLCDNumber(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,7 +198,7 @@ func (this *QLCDNumber) FreeQLCDNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLCDNumber::checkOverflow(int num);
 func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
   // checkOverflow(int)
   // checkOverflow(double)
@@ -168,7 +222,7 @@ func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setDecMode();
 func (this *QLCDNumber) setDecMode(args ...interface{}) () {
   // setDecMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +240,7 @@ func (this *QLCDNumber) setDecMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QLCDNumber::sizeHint();
 func (this *QLCDNumber) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -204,7 +258,7 @@ func (this *QLCDNumber) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QLCDNumber::value();
 func (this *QLCDNumber) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -222,7 +276,7 @@ func (this *QLCDNumber) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setBinMode();
 func (this *QLCDNumber) setBinMode(args ...interface{}) () {
   // setBinMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -240,7 +294,7 @@ func (this *QLCDNumber) setBinMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLCDNumber::intValue();
 func (this *QLCDNumber) intValue(args ...interface{}) () {
   // intValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,7 +312,7 @@ func (this *QLCDNumber) intValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setDigitCount(int nDigits);
 func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
   // setDigitCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -277,7 +331,7 @@ func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
 func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
   // setSmallDecimalPoint(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,7 +350,7 @@ func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLCDNumber::smallDecimalPoint();
 func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
   // smallDecimalPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -314,7 +368,7 @@ func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLCDNumber::setOctMode();
 func (this *QLCDNumber) setOctMode(args ...interface{}) () {
   // setOctMode()
   var vtys = make(map[int32]map[int32]reflect.Type)

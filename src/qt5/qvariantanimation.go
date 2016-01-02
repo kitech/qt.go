@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,58 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QVariantAnimation::setDuration(int msecs);
+extern void _ZN17QVariantAnimation11setDurationEi(void* qthis, int arg0);
+  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
+extern void _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1);
+  // proto:  QVariant QVariantAnimation::endValue();
+extern void _ZNK17QVariantAnimation8endValueEv(void* qthis);
+  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
+extern void _ZNK17QVariantAnimation10keyValueAtEd(void* qthis, double arg0);
+  // proto:  void QVariantAnimation::~QVariantAnimation();
+extern void _ZN17QVariantAnimationD0Ev(void* qthis);
+  // proto:  QVariant QVariantAnimation::currentValue();
+extern void _ZNK17QVariantAnimation12currentValueEv(void* qthis);
+  // proto:  int QVariantAnimation::duration();
+extern void _ZNK17QVariantAnimation8durationEv(void* qthis);
+  // proto:  KeyValues QVariantAnimation::keyValues();
+extern void _ZNK17QVariantAnimation9keyValuesEv(void* qthis);
+  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
+extern void _ZN17QVariantAnimation13setStartValueERK8QVariant(void* qthis, void* arg0);
+  // proto:  QVariant QVariantAnimation::startValue();
+extern void _ZNK17QVariantAnimation10startValueEv(void* qthis);
+  // proto:  const QMetaObject * QVariantAnimation::metaObject();
+extern void _ZNK17QVariantAnimation10metaObjectEv(void* qthis);
+  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
+extern void _ZN17QVariantAnimation11setEndValueERK8QVariant(void* qthis, void* arg0);
+  // proto:  QEasingCurve QVariantAnimation::easingCurve();
+extern void _ZNK17QVariantAnimation11easingCurveEv(void* qthis);
+  // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
+extern void* dector_ZN17QVariantAnimationC1ERKS_(void* arg0);
+extern void _ZN17QVariantAnimationC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QVariantAnimation::QVariantAnimation(QObject * parent);
+extern void* dector_ZN17QVariantAnimationC1EP7QObject(void* arg0);
+extern void _ZN17QVariantAnimationC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
+extern void _ZN17QVariantAnimation14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QVariantAnimation)=1
 type QVariantAnimation struct {
   /*qbase*/ QAbstractAnimation;
@@ -42,7 +85,7 @@ type QVariantAnimation struct {
 //  _valueChanged QVariantAnimation_valueChanged_signal;
 }
 
-
+  // proto:  void QVariantAnimation::setDuration(int msecs);
 func (this *QVariantAnimation) setDuration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +104,7 @@ func (this *QVariantAnimation) setDuration(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
 func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
   // setKeyValueAt(qreal, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +124,7 @@ func (this *QVariantAnimation) setKeyValueAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QVariantAnimation::endValue();
 func (this *QVariantAnimation) endValue(args ...interface{}) () {
   // endValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +142,7 @@ func (this *QVariantAnimation) endValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QVariantAnimation::keyValueAt(qreal step);
 func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
   // keyValueAt(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +161,7 @@ func (this *QVariantAnimation) keyValueAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QVariantAnimation::~QVariantAnimation();
 func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -132,7 +175,7 @@ func (this *QVariantAnimation) FreeQVariantAnimation(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QVariantAnimation::currentValue();
 func (this *QVariantAnimation) currentValue(args ...interface{}) () {
   // currentValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +193,7 @@ func (this *QVariantAnimation) currentValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QVariantAnimation::duration();
 func (this *QVariantAnimation) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,7 +211,7 @@ func (this *QVariantAnimation) duration(args ...interface{}) () {
 
 }
 
-
+  // proto:  KeyValues QVariantAnimation::keyValues();
 func (this *QVariantAnimation) keyValues(args ...interface{}) () {
   // keyValues()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +229,7 @@ func (this *QVariantAnimation) keyValues(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QVariantAnimation::setStartValue(const QVariant & value);
 func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
   // setStartValue(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +248,7 @@ func (this *QVariantAnimation) setStartValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QVariantAnimation::startValue();
 func (this *QVariantAnimation) startValue(args ...interface{}) () {
   // startValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +266,7 @@ func (this *QVariantAnimation) startValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QVariantAnimation::metaObject();
 func (this *QVariantAnimation) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +284,7 @@ func (this *QVariantAnimation) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QVariantAnimation::setEndValue(const QVariant & value);
 func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
   // setEndValue(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +303,7 @@ func (this *QVariantAnimation) setEndValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  QEasingCurve QVariantAnimation::easingCurve();
 func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
   // easingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -278,12 +321,12 @@ func (this *QVariantAnimation) easingCurve(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QVariantAnimation::QVariantAnimation(const QVariantAnimation & );
 func NewQVariantAnimation(args ...interface{}) QVariantAnimation {
   return QVariantAnimation{}
 }
 
-
+  // proto:  void QVariantAnimation::setEasingCurve(const QEasingCurve & easing);
 func (this *QVariantAnimation) setEasingCurve(args ...interface{}) () {
   // setEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)

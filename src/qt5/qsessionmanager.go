@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,66 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QSessionManager::sessionId();
+extern void _ZNK15QSessionManager9sessionIdEv(void* qthis);
+  // proto:  QString QSessionManager::sessionKey();
+extern void _ZNK15QSessionManager10sessionKeyEv(void* qthis);
+  // proto:  void QSessionManager::setRestartCommand(const QStringList & );
+extern void _ZN15QSessionManager17setRestartCommandERK11QStringList(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QSessionManager::metaObject();
+extern void _ZNK15QSessionManager10metaObjectEv(void* qthis);
+  // proto:  bool QSessionManager::allowsErrorInteraction();
+extern void _ZN15QSessionManager22allowsErrorInteractionEv(void* qthis);
+  // proto:  void QSessionManager::~QSessionManager();
+extern void _ZN15QSessionManagerD0Ev(void* qthis);
+  // proto:  QStringList QSessionManager::restartCommand();
+extern void _ZNK15QSessionManager14restartCommandEv(void* qthis);
+  // proto:  void QSessionManager::requestPhase2();
+extern void _ZN15QSessionManager13requestPhase2Ev(void* qthis);
+  // proto:  bool QSessionManager::isPhase2();
+extern void _ZNK15QSessionManager8isPhase2Ev(void* qthis);
+  // proto:  void QSessionManager::release();
+extern void _ZN15QSessionManager7releaseEv(void* qthis);
+  // proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
+extern void _ZN15QSessionManager18setManagerPropertyERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QSessionManager::setManagerProperty(const QString & name, const QStringList & value);
+extern void _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(void* qthis, void* arg0, void* arg1);
+  // proto:  QStringList QSessionManager::discardCommand();
+extern void _ZNK15QSessionManager14discardCommandEv(void* qthis);
+  // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
+extern void* dector_ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(void* arg0, void* arg1, void* arg2);
+extern void _ZN15QSessionManagerC1EP15QGuiApplicationR7QStringS3_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QSessionManager::cancel();
+extern void _ZN15QSessionManager6cancelEv(void* qthis);
+  // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
+extern void _ZN15QSessionManager17setDiscardCommandERK11QStringList(void* qthis, void* arg0);
+  // proto:  bool QSessionManager::allowsInteraction();
+extern void _ZN15QSessionManager17allowsInteractionEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSessionManager)=1
 type QSessionManager struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QSessionManager::sessionId();
 func (this *QSessionManager) sessionId(args ...interface{}) () {
   // sessionId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +103,7 @@ func (this *QSessionManager) sessionId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QSessionManager::sessionKey();
 func (this *QSessionManager) sessionKey(args ...interface{}) () {
   // sessionKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +121,7 @@ func (this *QSessionManager) sessionKey(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::setRestartCommand(const QStringList & );
 func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
   // setRestartCommand(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +140,7 @@ func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QSessionManager::metaObject();
 func (this *QSessionManager) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +158,7 @@ func (this *QSessionManager) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSessionManager::allowsErrorInteraction();
 func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
   // allowsErrorInteraction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +176,7 @@ func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::~QSessionManager();
 func (this *QSessionManager) FreeQSessionManager(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -146,7 +190,7 @@ func (this *QSessionManager) FreeQSessionManager(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QSessionManager::restartCommand();
 func (this *QSessionManager) restartCommand(args ...interface{}) () {
   // restartCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -164,7 +208,7 @@ func (this *QSessionManager) restartCommand(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::requestPhase2();
 func (this *QSessionManager) requestPhase2(args ...interface{}) () {
   // requestPhase2()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -182,7 +226,7 @@ func (this *QSessionManager) requestPhase2(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSessionManager::isPhase2();
 func (this *QSessionManager) isPhase2(args ...interface{}) () {
   // isPhase2()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,7 +244,7 @@ func (this *QSessionManager) isPhase2(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::release();
 func (this *QSessionManager) release(args ...interface{}) () {
   // release()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -218,7 +262,7 @@ func (this *QSessionManager) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::setManagerProperty(const QString & name, const QString & value);
 func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
   // setManagerProperty(const class QString &, const class QString &)
   // setManagerProperty(const class QString &, const class QStringList &)
@@ -244,7 +288,7 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QSessionManager::discardCommand();
 func (this *QSessionManager) discardCommand(args ...interface{}) () {
   // discardCommand()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -262,12 +306,12 @@ func (this *QSessionManager) discardCommand(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::QSessionManager(QGuiApplication * app, QString & id, QString & key);
 func NewQSessionManager(args ...interface{}) QSessionManager {
   return QSessionManager{}
 }
 
-
+  // proto:  void QSessionManager::cancel();
 func (this *QSessionManager) cancel(args ...interface{}) () {
   // cancel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -285,7 +329,7 @@ func (this *QSessionManager) cancel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSessionManager::setDiscardCommand(const QStringList & );
 func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
   // setDiscardCommand(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -304,7 +348,7 @@ func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSessionManager::allowsInteraction();
 func (this *QSessionManager) allowsInteraction(args ...interface{}) () {
   // allowsInteraction()
   var vtys = make(map[int32]map[int32]reflect.Type)

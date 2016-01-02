@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,79 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
+extern void _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2, char* arg3);
+  // proto:  bool QToolBar::isFloatable();
+extern void _ZNK8QToolBar11isFloatableEv(void* qthis);
+  // proto:  QSize QToolBar::iconSize();
+extern void _ZNK8QToolBar8iconSizeEv(void* qthis);
+  // proto:  QRect QToolBar::actionGeometry(QAction * action);
+extern void _ZNK8QToolBar14actionGeometryEP7QAction(void* qthis, void* arg0);
+  // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
+extern void _ZNK8QToolBar15widgetForActionEP7QAction(void* qthis, void* arg0);
+  // proto:  void QToolBar::clear();
+extern void _ZN8QToolBar5clearEv(void* qthis);
+  // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
+extern void* dector_ZN8QToolBarC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN8QToolBarC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QToolBar::setMovable(bool movable);
+extern void _ZN8QToolBar10setMovableEb(void* qthis, bool arg0);
+  // proto:  bool QToolBar::isMovable();
+extern void _ZNK8QToolBar9isMovableEv(void* qthis);
+  // proto:  void QToolBar::setIconSize(const QSize & iconSize);
+extern void _ZN8QToolBar11setIconSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  QAction * QToolBar::addSeparator();
+extern void _ZN8QToolBar12addSeparatorEv(void* qthis);
+  // proto:  void QToolBar::setFloatable(bool floatable);
+extern void _ZN8QToolBar12setFloatableEb(void* qthis, bool arg0);
+  // proto:  QAction * QToolBar::addAction(const QString & text);
+extern void _ZN8QToolBar9addActionERK7QString(void* qthis, void* arg0);
+  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
+extern void _ZN8QToolBar9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  void QToolBar::QToolBar(QWidget * parent);
+extern void* dector_ZN8QToolBarC1EP7QWidget(void* arg0);
+extern void _ZN8QToolBarC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  QAction * QToolBar::actionAt(const QPoint & p);
+extern void _ZNK8QToolBar8actionAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  QAction * QToolBar::actionAt(int x, int y);
+extern void demth_ZNK8QToolBar8actionAtEii(void* qthis, int arg0, int arg1);
+  // proto:  bool QToolBar::isFloating();
+extern void _ZNK8QToolBar10isFloatingEv(void* qthis);
+  // proto:  QAction * QToolBar::toggleViewAction();
+extern void _ZNK8QToolBar16toggleViewActionEv(void* qthis);
+  // proto:  void QToolBar::QToolBar(const QToolBar & );
+extern void* dector_ZN8QToolBarC1ERKS_(void* arg0);
+extern void _ZN8QToolBarC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QToolBar::~QToolBar();
+extern void _ZN8QToolBarD0Ev(void* qthis);
+  // proto:  QAction * QToolBar::addAction(const QString & text, const QObject * receiver, const char * member);
+extern void _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, char* arg2);
+  // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
+extern void _ZN8QToolBar12insertWidgetEP7QActionP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  QAction * QToolBar::addWidget(QWidget * widget);
+extern void _ZN8QToolBar9addWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QToolBar::metaObject();
+extern void _ZNK8QToolBar10metaObjectEv(void* qthis);
+  // proto:  QAction * QToolBar::insertSeparator(QAction * before);
+extern void _ZN8QToolBar15insertSeparatorEP7QAction(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QToolBar)=1
 type QToolBar struct {
   /*qbase*/ QWidget;
@@ -49,7 +113,7 @@ type QToolBar struct {
 //  _visibilityChanged QToolBar_visibilityChanged_signal;
 }
 
-
+  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
 func (this *QToolBar) addAction(args ...interface{}) () {
   // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
   // addAction(const class QString &)
@@ -89,7 +153,7 @@ func (this *QToolBar) addAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QToolBar::isFloatable();
 func (this *QToolBar) isFloatable(args ...interface{}) () {
   // isFloatable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +171,7 @@ func (this *QToolBar) isFloatable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QToolBar::iconSize();
 func (this *QToolBar) iconSize(args ...interface{}) () {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +189,7 @@ func (this *QToolBar) iconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QToolBar::actionGeometry(QAction * action);
 func (this *QToolBar) actionGeometry(args ...interface{}) () {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -144,7 +208,7 @@ func (this *QToolBar) actionGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
 func (this *QToolBar) widgetForAction(args ...interface{}) () {
   // widgetForAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -163,7 +227,7 @@ func (this *QToolBar) widgetForAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolBar::clear();
 func (this *QToolBar) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -181,12 +245,12 @@ func (this *QToolBar) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
 func NewQToolBar(args ...interface{}) QToolBar {
   return QToolBar{}
 }
 
-
+  // proto:  void QToolBar::setMovable(bool movable);
 func (this *QToolBar) setMovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +269,7 @@ func (this *QToolBar) setMovable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QToolBar::isMovable();
 func (this *QToolBar) isMovable(args ...interface{}) () {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +287,7 @@ func (this *QToolBar) isMovable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolBar::setIconSize(const QSize & iconSize);
 func (this *QToolBar) setIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +306,7 @@ func (this *QToolBar) setIconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::addSeparator();
 func (this *QToolBar) addSeparator(args ...interface{}) () {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +324,7 @@ func (this *QToolBar) addSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolBar::setFloatable(bool floatable);
 func (this *QToolBar) setFloatable(args ...interface{}) () {
   // setFloatable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -279,7 +343,7 @@ func (this *QToolBar) setFloatable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::actionAt(const QPoint & p);
 func (this *QToolBar) actionAt(args ...interface{}) () {
   // actionAt(const class QPoint &)
   // actionAt(int, int)
@@ -304,7 +368,7 @@ func (this *QToolBar) actionAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QToolBar::isFloating();
 func (this *QToolBar) isFloating(args ...interface{}) () {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -322,7 +386,7 @@ func (this *QToolBar) isFloating(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::toggleViewAction();
 func (this *QToolBar) toggleViewAction(args ...interface{}) () {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -340,7 +404,7 @@ func (this *QToolBar) toggleViewAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolBar::~QToolBar();
 func (this *QToolBar) FreeQToolBar(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -354,7 +418,7 @@ func (this *QToolBar) FreeQToolBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
 func (this *QToolBar) insertWidget(args ...interface{}) () {
   // insertWidget(class QAction *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -374,7 +438,7 @@ func (this *QToolBar) insertWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::addWidget(QWidget * widget);
 func (this *QToolBar) addWidget(args ...interface{}) () {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -393,7 +457,7 @@ func (this *QToolBar) addWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QToolBar::metaObject();
 func (this *QToolBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -411,7 +475,7 @@ func (this *QToolBar) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QToolBar::insertSeparator(QAction * before);
 func (this *QToolBar) insertSeparator(args ...interface{}) () {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)

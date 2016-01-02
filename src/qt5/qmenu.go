@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,119 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QMenu::isTearOffEnabled();
+extern void _ZNK5QMenu16isTearOffEnabledEv(void* qthis);
+  // proto:  bool QMenu::toolTipsVisible();
+extern void _ZNK5QMenu15toolTipsVisibleEv(void* qthis);
+  // proto:  QAction * QMenu::menuAction();
+extern void _ZNK5QMenu10menuActionEv(void* qthis);
+  // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
+extern void _ZN5QMenu9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  void QMenu::setTearOffEnabled(bool );
+extern void _ZN5QMenu17setTearOffEnabledEb(void* qthis, bool arg0);
+  // proto:  QAction * QMenu::addSection(const QString & text);
+extern void _ZN5QMenu10addSectionERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QMenu::metaObject();
+extern void _ZNK5QMenu10metaObjectEv(void* qthis);
+  // proto:  void QMenu::clear();
+extern void _ZN5QMenu5clearEv(void* qthis);
+  // proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
+extern void _ZN5QMenu10insertMenuEP7QActionPS_(void* qthis, void* arg0, void* arg1);
+  // proto:  QIcon QMenu::icon();
+extern void _ZNK5QMenu4iconEv(void* qthis);
+  // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
+extern void _ZN5QMenu13insertSectionEP7QActionRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  QPlatformMenu * QMenu::platformMenu();
+extern void _ZN5QMenu12platformMenuEv(void* qthis);
+  // proto:  void QMenu::setNoReplayFor(QWidget * widget);
+extern void _ZN5QMenu14setNoReplayForEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QMenu::setIcon(const QIcon & icon);
+extern void _ZN5QMenu7setIconERK5QIcon(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
+extern void _ZN5QMenu4execERK6QPointP7QAction(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QMenu::separatorsCollapsible();
+extern void _ZNK5QMenu21separatorsCollapsibleEv(void* qthis);
+  // proto:  QMenu * QMenu::addMenu(const QString & title);
+extern void _ZN5QMenu7addMenuERK7QString(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::addSeparator();
+extern void _ZN5QMenu12addSeparatorEv(void* qthis);
+  // proto:  void QMenu::hideTearOffMenu();
+extern void _ZN5QMenu15hideTearOffMenuEv(void* qthis);
+  // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
+extern void _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, char* arg2, void* arg3);
+  // proto:  void QMenu::QMenu(QWidget * parent);
+extern void* dector_ZN5QMenuC1EP7QWidget(void* arg0);
+extern void _ZN5QMenuC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QMenu::setActiveAction(QAction * act);
+extern void _ZN5QMenu15setActiveActionEP7QAction(void* qthis, void* arg0);
+  // proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
+extern void _ZN5QMenu24setSeparatorsCollapsibleEb(void* qthis, bool arg0);
+  // proto:  void QMenu::QMenu(const QMenu & );
+extern void* dector_ZN5QMenuC1ERKS_(void* arg0);
+extern void _ZN5QMenuC1ERKS_(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::addAction(const QString & text);
+extern void _ZN5QMenu9addActionERK7QString(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::activeAction();
+extern void _ZNK5QMenu12activeActionEv(void* qthis);
+  // proto:  bool QMenu::isEmpty();
+extern void _ZNK5QMenu7isEmptyEv(void* qthis);
+  // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
+extern void _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, void* arg2, char* arg3, void* arg4);
+  // proto:  QRect QMenu::actionGeometry(QAction * );
+extern void _ZNK5QMenu14actionGeometryEP7QAction(void* qthis, void* arg0);
+  // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
+extern void* dector_ZN5QMenuC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN5QMenuC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  QAction * QMenu::insertSeparator(QAction * before);
+extern void _ZN5QMenu15insertSeparatorEP7QAction(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::addSection(const QIcon & icon, const QString & text);
+extern void _ZN5QMenu10addSectionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QMenu::isTearOffMenuVisible();
+extern void _ZNK5QMenu20isTearOffMenuVisibleEv(void* qthis);
+  // proto:  void QMenu::~QMenu();
+extern void _ZN5QMenuD0Ev(void* qthis);
+  // proto:  QString QMenu::title();
+extern void _ZNK5QMenu5titleEv(void* qthis);
+  // proto:  QAction * QMenu::defaultAction();
+extern void _ZNK5QMenu13defaultActionEv(void* qthis);
+  // proto:  QAction * QMenu::addMenu(QMenu * menu);
+extern void _ZN5QMenu7addMenuEPS_(void* qthis, void* arg0);
+  // proto:  QSize QMenu::sizeHint();
+extern void _ZNK5QMenu8sizeHintEv(void* qthis);
+  // proto:  void QMenu::setDefaultAction(QAction * );
+extern void _ZN5QMenu16setDefaultActionEP7QAction(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::actionAt(const QPoint & );
+extern void _ZNK5QMenu8actionAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  QAction * QMenu::insertSection(QAction * before, const QIcon & icon, const QString & text);
+extern void _ZN5QMenu13insertSectionEP7QActionRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
+extern void _ZN5QMenu5popupERK6QPointP7QAction(void* qthis, void* arg0, void* arg1);
+  // proto:  void QMenu::setToolTipsVisible(bool visible);
+extern void _ZN5QMenu18setToolTipsVisibleEb(void* qthis, bool arg0);
+  // proto:  void QMenu::setTitle(const QString & title);
+extern void _ZN5QMenu8setTitleERK7QString(void* qthis, void* arg0);
+  // proto:  QMenu * QMenu::addMenu(const QIcon & icon, const QString & title);
+extern void _ZN5QMenu7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  QAction * QMenu::exec();
+extern void _ZN5QMenu4execEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMenu)=1
 type QMenu struct {
   /*qbase*/ QWidget;
@@ -45,7 +149,7 @@ type QMenu struct {
 //  _aboutToHide QMenu_aboutToHide_signal;
 }
 
-
+  // proto:  bool QMenu::isTearOffEnabled();
 func (this *QMenu) isTearOffEnabled(args ...interface{}) () {
   // isTearOffEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -63,7 +167,7 @@ func (this *QMenu) isTearOffEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenu::toolTipsVisible();
 func (this *QMenu) toolTipsVisible(args ...interface{}) () {
   // toolTipsVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +185,7 @@ func (this *QMenu) toolTipsVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::menuAction();
 func (this *QMenu) menuAction(args ...interface{}) () {
   // menuAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +203,7 @@ func (this *QMenu) menuAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text);
 func (this *QMenu) addAction(args ...interface{}) () {
   // addAction(const class QIcon &, const class QString &)
   // addAction(const class QString &, const class QObject *, const char *, const class QKeySequence &)
@@ -141,7 +245,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setTearOffEnabled(bool );
 func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
   // setTearOffEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -160,7 +264,7 @@ func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::addSection(const QString & text);
 func (this *QMenu) addSection(args ...interface{}) () {
   // addSection(const class QString &)
   // addSection(const class QIcon &, const class QString &)
@@ -185,7 +289,7 @@ func (this *QMenu) addSection(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMenu::metaObject();
 func (this *QMenu) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +307,7 @@ func (this *QMenu) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::clear();
 func (this *QMenu) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +325,7 @@ func (this *QMenu) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::insertMenu(QAction * before, QMenu * menu);
 func (this *QMenu) insertMenu(args ...interface{}) () {
   // insertMenu(class QAction *, class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +345,7 @@ func (this *QMenu) insertMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QMenu::icon();
 func (this *QMenu) icon(args ...interface{}) () {
   // icon()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -259,7 +363,7 @@ func (this *QMenu) icon(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::insertSection(QAction * before, const QString & text);
 func (this *QMenu) insertSection(args ...interface{}) () {
   // insertSection(class QAction *, const class QString &)
   // insertSection(class QAction *, const class QIcon &, const class QString &)
@@ -286,7 +390,7 @@ func (this *QMenu) insertSection(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformMenu * QMenu::platformMenu();
 func (this *QMenu) platformMenu(args ...interface{}) () {
   // platformMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -304,7 +408,7 @@ func (this *QMenu) platformMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setNoReplayFor(QWidget * widget);
 func (this *QMenu) setNoReplayFor(args ...interface{}) () {
   // setNoReplayFor(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -323,7 +427,7 @@ func (this *QMenu) setNoReplayFor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setIcon(const QIcon & icon);
 func (this *QMenu) setIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -342,7 +446,7 @@ func (this *QMenu) setIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::exec(const QPoint & pos, QAction * at);
 func (this *QMenu) exec(args ...interface{}) () {
   // exec(const class QPoint &, class QAction *)
   // exec(QList<class QAction *>, const class QPoint &, class QAction *, class QWidget *)
@@ -374,7 +478,7 @@ func (this *QMenu) exec(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenu::separatorsCollapsible();
 func (this *QMenu) separatorsCollapsible(args ...interface{}) () {
   // separatorsCollapsible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,7 +496,7 @@ func (this *QMenu) separatorsCollapsible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMenu * QMenu::addMenu(const QString & title);
 func (this *QMenu) addMenu(args ...interface{}) () {
   // addMenu(const class QString &)
   // addMenu(class QMenu *)
@@ -422,7 +526,7 @@ func (this *QMenu) addMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::addSeparator();
 func (this *QMenu) addSeparator(args ...interface{}) () {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -440,7 +544,7 @@ func (this *QMenu) addSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::hideTearOffMenu();
 func (this *QMenu) hideTearOffMenu(args ...interface{}) () {
   // hideTearOffMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -458,12 +562,12 @@ func (this *QMenu) hideTearOffMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::QMenu(QWidget * parent);
 func NewQMenu(args ...interface{}) QMenu {
   return QMenu{}
 }
 
-
+  // proto:  void QMenu::setActiveAction(QAction * act);
 func (this *QMenu) setActiveAction(args ...interface{}) () {
   // setActiveAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -482,7 +586,7 @@ func (this *QMenu) setActiveAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setSeparatorsCollapsible(bool collapse);
 func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
   // setSeparatorsCollapsible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -501,7 +605,7 @@ func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::activeAction();
 func (this *QMenu) activeAction(args ...interface{}) () {
   // activeAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -519,7 +623,7 @@ func (this *QMenu) activeAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenu::isEmpty();
 func (this *QMenu) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -537,7 +641,7 @@ func (this *QMenu) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QMenu::actionGeometry(QAction * );
 func (this *QMenu) actionGeometry(args ...interface{}) () {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -556,7 +660,7 @@ func (this *QMenu) actionGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::insertSeparator(QAction * before);
 func (this *QMenu) insertSeparator(args ...interface{}) () {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -575,7 +679,7 @@ func (this *QMenu) insertSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenu::isTearOffMenuVisible();
 func (this *QMenu) isTearOffMenuVisible(args ...interface{}) () {
   // isTearOffMenuVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -593,7 +697,7 @@ func (this *QMenu) isTearOffMenuVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::~QMenu();
 func (this *QMenu) FreeQMenu(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -607,7 +711,7 @@ func (this *QMenu) FreeQMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMenu::title();
 func (this *QMenu) title(args ...interface{}) () {
   // title()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -625,7 +729,7 @@ func (this *QMenu) title(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::defaultAction();
 func (this *QMenu) defaultAction(args ...interface{}) () {
   // defaultAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -643,7 +747,7 @@ func (this *QMenu) defaultAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QMenu::sizeHint();
 func (this *QMenu) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -661,7 +765,7 @@ func (this *QMenu) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setDefaultAction(QAction * );
 func (this *QMenu) setDefaultAction(args ...interface{}) () {
   // setDefaultAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -680,7 +784,7 @@ func (this *QMenu) setDefaultAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenu::actionAt(const QPoint & );
 func (this *QMenu) actionAt(args ...interface{}) () {
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -699,7 +803,7 @@ func (this *QMenu) actionAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::popup(const QPoint & pos, QAction * at);
 func (this *QMenu) popup(args ...interface{}) () {
   // popup(const class QPoint &, class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -719,7 +823,7 @@ func (this *QMenu) popup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setToolTipsVisible(bool visible);
 func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
   // setToolTipsVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -738,7 +842,7 @@ func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenu::setTitle(const QString & title);
 func (this *QMenu) setTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,46 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
+extern void _ZN18QFileSystemWatcherD0Ev(void* qthis);
+  // proto:  bool QFileSystemWatcher::removePath(const QString & file);
+extern void _ZN18QFileSystemWatcher10removePathERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QFileSystemWatcher::directories();
+extern void _ZNK18QFileSystemWatcher11directoriesEv(void* qthis);
+  // proto:  QStringList QFileSystemWatcher::files();
+extern void _ZNK18QFileSystemWatcher5filesEv(void* qthis);
+  // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
+extern void _ZN18QFileSystemWatcher8addPathsERK11QStringList(void* qthis, void* arg0);
+  // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
+extern void _ZN18QFileSystemWatcher11removePathsERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
+extern void* dector_ZN18QFileSystemWatcherC1EP7QObject(void* arg0);
+extern void _ZN18QFileSystemWatcherC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QFileSystemWatcher::addPath(const QString & file);
+extern void _ZN18QFileSystemWatcher7addPathERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
+extern void _ZNK18QFileSystemWatcher10metaObjectEv(void* qthis);
+  // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
+extern void* dector_ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(void* arg0, void* arg1);
+extern void _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFileSystemWatcher)=1
 type QFileSystemWatcher struct {
   /*qbase*/ QObject;
@@ -43,7 +74,7 @@ type QFileSystemWatcher struct {
 //  _fileChanged QFileSystemWatcher_fileChanged_signal;
 }
 
-
+  // proto:  void QFileSystemWatcher::~QFileSystemWatcher();
 func (this *QFileSystemWatcher) FreeQFileSystemWatcher(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -57,7 +88,7 @@ func (this *QFileSystemWatcher) FreeQFileSystemWatcher(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemWatcher::removePath(const QString & file);
 func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
   // removePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -76,7 +107,7 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemWatcher::directories();
 func (this *QFileSystemWatcher) directories(args ...interface{}) () {
   // directories()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -94,7 +125,7 @@ func (this *QFileSystemWatcher) directories(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemWatcher::files();
 func (this *QFileSystemWatcher) files(args ...interface{}) () {
   // files()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,7 +143,7 @@ func (this *QFileSystemWatcher) files(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemWatcher::addPaths(const QStringList & files);
 func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
   // addPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,7 +162,7 @@ func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
 func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
   // removePaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,12 +181,12 @@ func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
 func NewQFileSystemWatcher(args ...interface{}) QFileSystemWatcher {
   return QFileSystemWatcher{}
 }
 
-
+  // proto:  bool QFileSystemWatcher::addPath(const QString & file);
 func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
   // addPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +205,7 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
 func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

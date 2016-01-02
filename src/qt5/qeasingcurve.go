@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,65 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
+extern void* dector_ZN12QEasingCurveC1ERKS_(void* arg0);
+extern void _ZN12QEasingCurveC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QEasingCurve::~QEasingCurve();
+extern void _ZN12QEasingCurveD0Ev(void* qthis);
+  // proto:  EasingFunction QEasingCurve::customType();
+extern void _ZNK12QEasingCurve10customTypeEv(void* qthis);
+  // proto:  qreal QEasingCurve::overshoot();
+extern void _ZNK12QEasingCurve9overshootEv(void* qthis);
+  // proto:  void QEasingCurve::setPeriod(qreal period);
+extern void _ZN12QEasingCurve9setPeriodEd(void* qthis, double arg0);
+  // proto:  void QEasingCurve::addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b);
+extern void _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(void* qthis, void* arg0, double arg1, double arg2, double arg3);
+  // proto:  void QEasingCurve::addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint);
+extern void _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  qreal QEasingCurve::period();
+extern void _ZNK12QEasingCurve6periodEv(void* qthis);
+  // proto:  qreal QEasingCurve::valueForProgress(qreal progress);
+extern void _ZNK12QEasingCurve16valueForProgressEd(void* qthis, double arg0);
+  // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
+extern void _ZN12QEasingCurve12setAmplitudeEd(void* qthis, double arg0);
+  // proto:  void QEasingCurve::swap(QEasingCurve & other);
+extern void demth_ZN12QEasingCurve4swapERS_(void* qthis, void* arg0);
+  // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
+extern void _ZN12QEasingCurve12setOvershootEd(void* qthis, double arg0);
+  // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
+extern void _ZNK12QEasingCurve13toCubicSplineEv(void* qthis);
+  // proto:  qreal QEasingCurve::amplitude();
+extern void _ZNK12QEasingCurve9amplitudeEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QEasingCurve)=8
 type QEasingCurve struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);
 func NewQEasingCurve(args ...interface{}) QEasingCurve {
   return QEasingCurve{}
 }
 
-
+  // proto:  void QEasingCurve::~QEasingCurve();
 func (this *QEasingCurve) FreeQEasingCurve(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -60,7 +98,7 @@ func (this *QEasingCurve) FreeQEasingCurve(args ...interface{}) () {
 
 }
 
-
+  // proto:  EasingFunction QEasingCurve::customType();
 func (this *QEasingCurve) customType(args ...interface{}) () {
   // customType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +116,7 @@ func (this *QEasingCurve) customType(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QEasingCurve::overshoot();
 func (this *QEasingCurve) overshoot(args ...interface{}) () {
   // overshoot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +134,7 @@ func (this *QEasingCurve) overshoot(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::setPeriod(qreal period);
 func (this *QEasingCurve) setPeriod(args ...interface{}) () {
   // setPeriod(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +153,7 @@ func (this *QEasingCurve) setPeriod(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::addTCBSegment(const QPointF & nextPoint, qreal t, qreal c, qreal b);
 func (this *QEasingCurve) addTCBSegment(args ...interface{}) () {
   // addTCBSegment(const class QPointF &, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +175,7 @@ func (this *QEasingCurve) addTCBSegment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::addCubicBezierSegment(const QPointF & c1, const QPointF & c2, const QPointF & endPoint);
 func (this *QEasingCurve) addCubicBezierSegment(args ...interface{}) () {
   // addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +196,7 @@ func (this *QEasingCurve) addCubicBezierSegment(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QEasingCurve::period();
 func (this *QEasingCurve) period(args ...interface{}) () {
   // period()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,7 +214,7 @@ func (this *QEasingCurve) period(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QEasingCurve::valueForProgress(qreal progress);
 func (this *QEasingCurve) valueForProgress(args ...interface{}) () {
   // valueForProgress(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,7 +233,7 @@ func (this *QEasingCurve) valueForProgress(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::setAmplitude(qreal amplitude);
 func (this *QEasingCurve) setAmplitude(args ...interface{}) () {
   // setAmplitude(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +252,7 @@ func (this *QEasingCurve) setAmplitude(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::swap(QEasingCurve & other);
 func (this *QEasingCurve) swap(args ...interface{}) () {
   // swap(class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +271,7 @@ func (this *QEasingCurve) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEasingCurve::setOvershoot(qreal overshoot);
 func (this *QEasingCurve) setOvershoot(args ...interface{}) () {
   // setOvershoot(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +290,7 @@ func (this *QEasingCurve) setOvershoot(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<QPointF> QEasingCurve::toCubicSpline();
 func (this *QEasingCurve) toCubicSpline(args ...interface{}) () {
   // toCubicSpline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +308,7 @@ func (this *QEasingCurve) toCubicSpline(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QEasingCurve::amplitude();
 func (this *QEasingCurve) amplitude(args ...interface{}) () {
   // amplitude()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,62 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QAccessibleWidget::childCount();
+extern void _ZNK17QAccessibleWidget10childCountEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
+extern void _ZNK17QAccessibleWidget5childEi(void* qthis, int arg0);
+  // proto:  QWindow * QAccessibleWidget::window();
+extern void _ZNK17QAccessibleWidget6windowEv(void* qthis);
+  // proto:  QRect QAccessibleWidget::rect();
+extern void _ZNK17QAccessibleWidget4rectEv(void* qthis);
+  // proto:  QColor QAccessibleWidget::foregroundColor();
+extern void _ZNK17QAccessibleWidget15foregroundColorEv(void* qthis);
+  // proto:  bool QAccessibleWidget::isValid();
+extern void _ZNK17QAccessibleWidget7isValidEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
+extern void _ZNK17QAccessibleWidget10focusChildEv(void* qthis);
+  // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
+extern void* dector_ZN17QAccessibleWidgetC1ERKS_(void* arg0);
+extern void _ZN17QAccessibleWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  QColor QAccessibleWidget::backgroundColor();
+extern void _ZNK17QAccessibleWidget15backgroundColorEv(void* qthis);
+  // proto:  void QAccessibleWidget::~QAccessibleWidget();
+extern void _ZN17QAccessibleWidgetD0Ev(void* qthis);
+  // proto:  QStringList QAccessibleWidget::actionNames();
+extern void _ZNK17QAccessibleWidget11actionNamesEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleWidget::parent();
+extern void _ZNK17QAccessibleWidget6parentEv(void* qthis);
+  // proto:  void QAccessibleWidget::doAction(const QString & actionName);
+extern void _ZN17QAccessibleWidget8doActionERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
+extern void _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(void* qthis, void* arg0);
+  // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
+extern void _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAccessibleWidget)=32
 type QAccessibleWidget struct {
   /*qbase*/ QAccessibleObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QAccessibleWidget::childCount();
 func (this *QAccessibleWidget) childCount(args ...interface{}) () {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +99,7 @@ func (this *QAccessibleWidget) childCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
 func (this *QAccessibleWidget) child(args ...interface{}) () {
   // child(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +118,7 @@ func (this *QAccessibleWidget) child(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWindow * QAccessibleWidget::window();
 func (this *QAccessibleWidget) window(args ...interface{}) () {
   // window()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +136,7 @@ func (this *QAccessibleWidget) window(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QAccessibleWidget::rect();
 func (this *QAccessibleWidget) rect(args ...interface{}) () {
   // rect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +154,7 @@ func (this *QAccessibleWidget) rect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QAccessibleWidget::foregroundColor();
 func (this *QAccessibleWidget) foregroundColor(args ...interface{}) () {
   // foregroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +172,7 @@ func (this *QAccessibleWidget) foregroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAccessibleWidget::isValid();
 func (this *QAccessibleWidget) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +190,7 @@ func (this *QAccessibleWidget) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleWidget::focusChild();
 func (this *QAccessibleWidget) focusChild(args ...interface{}) () {
   // focusChild()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,12 +208,12 @@ func (this *QAccessibleWidget) focusChild(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleWidget::QAccessibleWidget(const QAccessibleWidget & );
 func NewQAccessibleWidget(args ...interface{}) QAccessibleWidget {
   return QAccessibleWidget{}
 }
 
-
+  // proto:  QColor QAccessibleWidget::backgroundColor();
 func (this *QAccessibleWidget) backgroundColor(args ...interface{}) () {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +231,7 @@ func (this *QAccessibleWidget) backgroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleWidget::~QAccessibleWidget();
 func (this *QAccessibleWidget) FreeQAccessibleWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,7 +245,7 @@ func (this *QAccessibleWidget) FreeQAccessibleWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QAccessibleWidget::actionNames();
 func (this *QAccessibleWidget) actionNames(args ...interface{}) () {
   // actionNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +263,7 @@ func (this *QAccessibleWidget) actionNames(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleWidget::parent();
 func (this *QAccessibleWidget) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +281,7 @@ func (this *QAccessibleWidget) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleWidget::doAction(const QString & actionName);
 func (this *QAccessibleWidget) doAction(args ...interface{}) () {
   // doAction(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +300,7 @@ func (this *QAccessibleWidget) doAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QAccessibleWidget::keyBindingsForAction(const QString & actionName);
 func (this *QAccessibleWidget) keyBindingsForAction(args ...interface{}) () {
   // keyBindingsForAction(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -279,7 +319,7 @@ func (this *QAccessibleWidget) keyBindingsForAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAccessibleWidget::indexOfChild(const QAccessibleInterface * child);
 func (this *QAccessibleWidget) indexOfChild(args ...interface{}) () {
   // indexOfChild(const class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)

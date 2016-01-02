@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,59 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1);
+  // proto:  QWidget * QStyledItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
+extern void _ZN19QStyledItemDelegateD0Ev(void* qthis);
+  // proto:  void QStyledItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1);
+  // proto:  void QStyledItemDelegate::setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QStyledItemDelegate::QStyledItemDelegate(const QStyledItemDelegate & );
+extern void* dector_ZN19QStyledItemDelegateC1ERKS_(void* arg0);
+extern void _ZN19QStyledItemDelegateC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
+extern void _ZN19QStyledItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(void* qthis, void* arg0);
+  // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
+extern void _ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
+extern void _ZNK19QStyledItemDelegate17itemEditorFactoryEv(void* qthis);
+  // proto:  void QStyledItemDelegate::QStyledItemDelegate(QObject * parent);
+extern void* dector_ZN19QStyledItemDelegateC1EP7QObject(void* arg0);
+extern void _ZN19QStyledItemDelegateC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
+extern void _ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(void* qthis, void* arg0, void* arg1);
+  // proto:  const QMetaObject * QStyledItemDelegate::metaObject();
+extern void _ZNK19QStyledItemDelegate10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStyledItemDelegate)=1
 type QStyledItemDelegate struct {
   /*qbase*/ QAbstractItemDelegate;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QSize QStyledItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
 func (this *QStyledItemDelegate) sizeHint(args ...interface{}) () {
   // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +98,7 @@ func (this *QStyledItemDelegate) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QStyledItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
 func (this *QStyledItemDelegate) createEditor(args ...interface{}) () {
   // createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +119,7 @@ func (this *QStyledItemDelegate) createEditor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyledItemDelegate::~QStyledItemDelegate();
 func (this *QStyledItemDelegate) FreeQStyledItemDelegate(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,7 +133,7 @@ func (this *QStyledItemDelegate) FreeQStyledItemDelegate(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QStyledItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
 func (this *QStyledItemDelegate) updateEditorGeometry(args ...interface{}) () {
   // updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +154,7 @@ func (this *QStyledItemDelegate) updateEditorGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyledItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
 func (this *QStyledItemDelegate) setEditorData(args ...interface{}) () {
   // setEditorData(class QWidget *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +174,7 @@ func (this *QStyledItemDelegate) setEditorData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyledItemDelegate::setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index);
 func (this *QStyledItemDelegate) setModelData(args ...interface{}) () {
   // setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,12 +195,12 @@ func (this *QStyledItemDelegate) setModelData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyledItemDelegate::QStyledItemDelegate(const QStyledItemDelegate & );
 func NewQStyledItemDelegate(args ...interface{}) QStyledItemDelegate {
   return QStyledItemDelegate{}
 }
 
-
+  // proto:  void QStyledItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
 func (this *QStyledItemDelegate) setItemEditorFactory(args ...interface{}) () {
   // setItemEditorFactory(class QItemEditorFactory *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -182,7 +219,7 @@ func (this *QStyledItemDelegate) setItemEditorFactory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
 func (this *QStyledItemDelegate) paint(args ...interface{}) () {
   // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +240,7 @@ func (this *QStyledItemDelegate) paint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QItemEditorFactory * QStyledItemDelegate::itemEditorFactory();
 func (this *QStyledItemDelegate) itemEditorFactory(args ...interface{}) () {
   // itemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +258,7 @@ func (this *QStyledItemDelegate) itemEditorFactory(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QStyledItemDelegate::displayText(const QVariant & value, const QLocale & locale);
 func (this *QStyledItemDelegate) displayText(args ...interface{}) () {
   // displayText(const class QVariant &, const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +278,7 @@ func (this *QStyledItemDelegate) displayText(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QStyledItemDelegate::metaObject();
 func (this *QStyledItemDelegate) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

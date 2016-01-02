@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,181 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
+extern void _ZN13QTextDocument20setDefaultStyleSheetERK7QString(void* qthis, void* arg0);
+  // proto:  QAbstractTextDocumentLayout * QTextDocument::documentLayout();
+extern void _ZNK13QTextDocument14documentLayoutEv(void* qthis);
+  // proto:  bool QTextDocument::isModified();
+extern void _ZNK13QTextDocument10isModifiedEv(void* qthis);
+  // proto:  int QTextDocument::revision();
+extern void _ZNK13QTextDocument8revisionEv(void* qthis);
+  // proto:  QSizeF QTextDocument::pageSize();
+extern void _ZNK13QTextDocument8pageSizeEv(void* qthis);
+  // proto:  void QTextDocument::redo(QTextCursor * cursor);
+extern void _ZN13QTextDocument4redoEP11QTextCursor(void* qthis, void* arg0);
+  // proto:  int QTextDocument::lineCount();
+extern void _ZNK13QTextDocument9lineCountEv(void* qthis);
+  // proto:  void QTextDocument::print(QPagedPaintDevice * printer);
+extern void _ZNK13QTextDocument5printEP17QPagedPaintDevice(void* qthis, void* arg0);
+  // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
+extern void _ZNK13QTextDocument9docHandleEv(void* qthis);
+  // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
+extern void _ZNK13QTextDocument6toHtmlERK10QByteArray(void* qthis, void* arg0);
+  // proto:  int QTextDocument::availableUndoSteps();
+extern void _ZNK13QTextDocument18availableUndoStepsEv(void* qthis);
+  // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
+extern void _ZN13QTextDocument18setUndoRedoEnabledEb(void* qthis, bool arg0);
+  // proto:  void QTextDocument::undo(QTextCursor * cursor);
+extern void _ZN13QTextDocument4undoEP11QTextCursor(void* qthis, void* arg0);
+  // proto:  QString QTextDocument::toPlainText();
+extern void _ZNK13QTextDocument11toPlainTextEv(void* qthis);
+  // proto:  void QTextDocument::addResource(int type, const QUrl & name, const QVariant & resource);
+extern void _ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant(void* qthis, int arg0, void* arg1, void* arg2);
+  // proto:  QSizeF QTextDocument::size();
+extern void _ZNK13QTextDocument4sizeEv(void* qthis);
+  // proto:  QTextObject * QTextDocument::object(int objectIndex);
+extern void _ZNK13QTextDocument6objectEi(void* qthis, int arg0);
+  // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
+extern void _ZNK13QTextDocument5cloneEP7QObject(void* qthis, void* arg0);
+  // proto:  void QTextDocument::markContentsDirty(int from, int length);
+extern void _ZN13QTextDocument17markContentsDirtyEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTextDocument::QTextDocument(QObject * parent);
+extern void* dector_ZN13QTextDocumentC1EP7QObject(void* arg0);
+extern void _ZN13QTextDocumentC1EP7QObject(void* qthis, void* arg0);
+  // proto:  int QTextDocument::characterCount();
+extern void _ZNK13QTextDocument14characterCountEv(void* qthis);
+  // proto:  QTextFrame * QTextDocument::rootFrame();
+extern void _ZNK13QTextDocument9rootFrameEv(void* qthis);
+  // proto:  QTextBlock QTextDocument::firstBlock();
+extern void _ZNK13QTextDocument10firstBlockEv(void* qthis);
+  // proto:  int QTextDocument::blockCount();
+extern void _ZNK13QTextDocument10blockCountEv(void* qthis);
+  // proto:  qreal QTextDocument::idealWidth();
+extern void _ZNK13QTextDocument10idealWidthEv(void* qthis);
+  // proto:  void QTextDocument::adjustSize();
+extern void _ZN13QTextDocument10adjustSizeEv(void* qthis);
+  // proto:  bool QTextDocument::isRedoAvailable();
+extern void _ZNK13QTextDocument15isRedoAvailableEv(void* qthis);
+  // proto:  QVector<QTextFormat> QTextDocument::allFormats();
+extern void _ZNK13QTextDocument10allFormatsEv(void* qthis);
+  // proto:  QString QTextDocument::defaultStyleSheet();
+extern void _ZNK13QTextDocument17defaultStyleSheetEv(void* qthis);
+  // proto:  QTextBlock QTextDocument::lastBlock();
+extern void _ZNK13QTextDocument9lastBlockEv(void* qthis);
+  // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
+extern void* dector_ZN13QTextDocumentC1ERK7QStringP7QObject(void* arg0, void* arg1);
+extern void _ZN13QTextDocumentC1ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QTextDocument::useDesignMetrics();
+extern void _ZNK13QTextDocument16useDesignMetricsEv(void* qthis);
+  // proto:  int QTextDocument::pageCount();
+extern void _ZNK13QTextDocument9pageCountEv(void* qthis);
+  // proto:  void QTextDocument::setTextWidth(qreal width);
+extern void _ZN13QTextDocument12setTextWidthEd(void* qthis, double arg0);
+  // proto:  void QTextDocument::setDocumentMargin(qreal margin);
+extern void _ZN13QTextDocument17setDocumentMarginEd(void* qthis, double arg0);
+  // proto:  bool QTextDocument::isUndoAvailable();
+extern void _ZNK13QTextDocument15isUndoAvailableEv(void* qthis);
+  // proto:  qreal QTextDocument::indentWidth();
+extern void _ZNK13QTextDocument11indentWidthEv(void* qthis);
+  // proto:  void QTextDocument::setUseDesignMetrics(bool b);
+extern void _ZN13QTextDocument19setUseDesignMetricsEb(void* qthis, bool arg0);
+  // proto:  void QTextDocument::setDocumentLayout(QAbstractTextDocumentLayout * layout);
+extern void _ZN13QTextDocument17setDocumentLayoutEP27QAbstractTextDocumentLayout(void* qthis, void* arg0);
+  // proto:  void QTextDocument::setIndentWidth(qreal width);
+extern void _ZN13QTextDocument14setIndentWidthEd(void* qthis, double arg0);
+  // proto:  QUrl QTextDocument::baseUrl();
+extern void _ZNK13QTextDocument7baseUrlEv(void* qthis);
+  // proto:  QTextFrame * QTextDocument::frameAt(int pos);
+extern void _ZNK13QTextDocument7frameAtEi(void* qthis, int arg0);
+  // proto:  void QTextDocument::QTextDocument(const QTextDocument & );
+extern void* dector_ZN13QTextDocumentC1ERKS_(void* arg0);
+extern void _ZN13QTextDocumentC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextDocument::setDefaultTextOption(const QTextOption & option);
+extern void _ZN13QTextDocument20setDefaultTextOptionERK11QTextOption(void* qthis, void* arg0);
+  // proto:  QFont QTextDocument::defaultFont();
+extern void _ZNK13QTextDocument11defaultFontEv(void* qthis);
+  // proto:  QTextBlock QTextDocument::findBlockByNumber(int blockNumber);
+extern void _ZNK13QTextDocument17findBlockByNumberEi(void* qthis, int arg0);
+  // proto:  QTextOption QTextDocument::defaultTextOption();
+extern void _ZNK13QTextDocument17defaultTextOptionEv(void* qthis);
+  // proto:  QTextBlock QTextDocument::findBlock(int pos);
+extern void _ZNK13QTextDocument9findBlockEi(void* qthis, int arg0);
+  // proto:  void QTextDocument::setBaseUrl(const QUrl & url);
+extern void _ZN13QTextDocument10setBaseUrlERK4QUrl(void* qthis, void* arg0);
+  // proto:  void QTextDocument::appendUndoItem(QAbstractUndoItem * );
+extern void _ZN13QTextDocument14appendUndoItemEP17QAbstractUndoItem(void* qthis, void* arg0);
+  // proto:  void QTextDocument::redo();
+extern void _ZN13QTextDocument4redoEv(void* qthis);
+  // proto:  void QTextDocument::drawContents(QPainter * painter, const QRectF & rect);
+extern void _ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF(void* qthis, void* arg0, void* arg1);
+  // proto:  QTextBlock QTextDocument::findBlockByLineNumber(int blockNumber);
+extern void _ZNK13QTextDocument21findBlockByLineNumberEi(void* qthis, int arg0);
+  // proto:  void QTextDocument::undo();
+extern void _ZN13QTextDocument4undoEv(void* qthis);
+  // proto:  qreal QTextDocument::textWidth();
+extern void _ZNK13QTextDocument9textWidthEv(void* qthis);
+  // proto:  const QMetaObject * QTextDocument::metaObject();
+extern void _ZNK13QTextDocument10metaObjectEv(void* qthis);
+  // proto:  int QTextDocument::availableRedoSteps();
+extern void _ZNK13QTextDocument18availableRedoStepsEv(void* qthis);
+  // proto:  QChar QTextDocument::characterAt(int pos);
+extern void _ZNK13QTextDocument11characterAtEi(void* qthis, int arg0);
+  // proto:  void QTextDocument::setDefaultFont(const QFont & font);
+extern void _ZN13QTextDocument14setDefaultFontERK5QFont(void* qthis, void* arg0);
+  // proto:  QTextObject * QTextDocument::objectForFormat(const QTextFormat & );
+extern void _ZNK13QTextDocument15objectForFormatERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  bool QTextDocument::isEmpty();
+extern void _ZNK13QTextDocument7isEmptyEv(void* qthis);
+  // proto:  bool QTextDocument::isUndoRedoEnabled();
+extern void _ZNK13QTextDocument17isUndoRedoEnabledEv(void* qthis);
+  // proto:  void QTextDocument::~QTextDocument();
+extern void _ZN13QTextDocumentD0Ev(void* qthis);
+  // proto:  qreal QTextDocument::documentMargin();
+extern void _ZNK13QTextDocument14documentMarginEv(void* qthis);
+  // proto:  void QTextDocument::setPageSize(const QSizeF & size);
+extern void _ZN13QTextDocument11setPageSizeERK6QSizeF(void* qthis, void* arg0);
+  // proto:  void QTextDocument::setHtml(const QString & html);
+extern void _ZN13QTextDocument7setHtmlERK7QString(void* qthis, void* arg0);
+  // proto:  QTextBlock QTextDocument::end();
+extern void _ZNK13QTextDocument3endEv(void* qthis);
+  // proto:  int QTextDocument::maximumBlockCount();
+extern void _ZNK13QTextDocument17maximumBlockCountEv(void* qthis);
+  // proto:  void QTextDocument::setPlainText(const QString & text);
+extern void _ZN13QTextDocument12setPlainTextERK7QString(void* qthis, void* arg0);
+  // proto:  void QTextDocument::clear();
+extern void _ZN13QTextDocument5clearEv(void* qthis);
+  // proto:  QVariant QTextDocument::resource(int type, const QUrl & name);
+extern void _ZNK13QTextDocument8resourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+  // proto:  QTextBlock QTextDocument::begin();
+extern void _ZNK13QTextDocument5beginEv(void* qthis);
+  // proto:  void QTextDocument::setMaximumBlockCount(int maximum);
+extern void _ZN13QTextDocument20setMaximumBlockCountEi(void* qthis, int arg0);
+  // proto:  void QTextDocument::setModified(bool m);
+extern void _ZN13QTextDocument11setModifiedEb(void* qthis, bool arg0);
+  // proto:  void QAbstractUndoItem::undo();
+extern void _ZN17QAbstractUndoItem4undoEv(void* qthis);
+  // proto:  void QAbstractUndoItem::redo();
+extern void _ZN17QAbstractUndoItem4redoEv(void* qthis);
+  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
+extern void _ZN17QAbstractUndoItemD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextDocument)=1
 type QTextDocument struct {
   /*qbase*/ QObject;
@@ -57,7 +223,7 @@ type QAbstractUndoItem struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
 func (this *QTextDocument) setDefaultStyleSheet(args ...interface{}) () {
   // setDefaultStyleSheet(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -76,7 +242,7 @@ func (this *QTextDocument) setDefaultStyleSheet(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractTextDocumentLayout * QTextDocument::documentLayout();
 func (this *QTextDocument) documentLayout(args ...interface{}) () {
   // documentLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -94,7 +260,7 @@ func (this *QTextDocument) documentLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::isModified();
 func (this *QTextDocument) isModified(args ...interface{}) () {
   // isModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,7 +278,7 @@ func (this *QTextDocument) isModified(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::revision();
 func (this *QTextDocument) revision(args ...interface{}) () {
   // revision()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -130,7 +296,7 @@ func (this *QTextDocument) revision(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSizeF QTextDocument::pageSize();
 func (this *QTextDocument) pageSize(args ...interface{}) () {
   // pageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -148,7 +314,7 @@ func (this *QTextDocument) pageSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::redo(QTextCursor * cursor);
 func (this *QTextDocument) redo(args ...interface{}) () {
   // redo(class QTextCursor *)
   // redo()
@@ -171,7 +337,7 @@ func (this *QTextDocument) redo(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::lineCount();
 func (this *QTextDocument) lineCount(args ...interface{}) () {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +355,7 @@ func (this *QTextDocument) lineCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::print(QPagedPaintDevice * printer);
 func (this *QTextDocument) print(args ...interface{}) () {
   // print(class QPagedPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +374,7 @@ func (this *QTextDocument) print(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocumentPrivate * QTextDocument::docHandle();
 func (this *QTextDocument) docHandle(args ...interface{}) () {
   // docHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +392,7 @@ func (this *QTextDocument) docHandle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextDocument::toHtml(const QByteArray & encoding);
 func (this *QTextDocument) toHtml(args ...interface{}) () {
   // toHtml(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +411,7 @@ func (this *QTextDocument) toHtml(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::availableUndoSteps();
 func (this *QTextDocument) availableUndoSteps(args ...interface{}) () {
   // availableUndoSteps()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -263,7 +429,7 @@ func (this *QTextDocument) availableUndoSteps(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setUndoRedoEnabled(bool enable);
 func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
   // setUndoRedoEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,7 +448,7 @@ func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::undo(QTextCursor * cursor);
 func (this *QTextDocument) undo(args ...interface{}) () {
   // undo(class QTextCursor *)
   // undo()
@@ -305,7 +471,7 @@ func (this *QTextDocument) undo(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextDocument::toPlainText();
 func (this *QTextDocument) toPlainText(args ...interface{}) () {
   // toPlainText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -323,7 +489,7 @@ func (this *QTextDocument) toPlainText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::addResource(int type, const QUrl & name, const QVariant & resource);
 func (this *QTextDocument) addResource(args ...interface{}) () {
   // addResource(int, const class QUrl &, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -344,7 +510,7 @@ func (this *QTextDocument) addResource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSizeF QTextDocument::size();
 func (this *QTextDocument) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,7 +528,7 @@ func (this *QTextDocument) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextObject * QTextDocument::object(int objectIndex);
 func (this *QTextDocument) object(args ...interface{}) () {
   // object(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -381,7 +547,7 @@ func (this *QTextDocument) object(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
 func (this *QTextDocument) clone(args ...interface{}) () {
   // clone(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -400,7 +566,7 @@ func (this *QTextDocument) clone(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::markContentsDirty(int from, int length);
 func (this *QTextDocument) markContentsDirty(args ...interface{}) () {
   // markContentsDirty(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -420,12 +586,12 @@ func (this *QTextDocument) markContentsDirty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::QTextDocument(QObject * parent);
 func NewQTextDocument(args ...interface{}) QTextDocument {
   return QTextDocument{}
 }
 
-
+  // proto:  int QTextDocument::characterCount();
 func (this *QTextDocument) characterCount(args ...interface{}) () {
   // characterCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -443,7 +609,7 @@ func (this *QTextDocument) characterCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrame * QTextDocument::rootFrame();
 func (this *QTextDocument) rootFrame(args ...interface{}) () {
   // rootFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -461,7 +627,7 @@ func (this *QTextDocument) rootFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::firstBlock();
 func (this *QTextDocument) firstBlock(args ...interface{}) () {
   // firstBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -479,7 +645,7 @@ func (this *QTextDocument) firstBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::blockCount();
 func (this *QTextDocument) blockCount(args ...interface{}) () {
   // blockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -497,7 +663,7 @@ func (this *QTextDocument) blockCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextDocument::idealWidth();
 func (this *QTextDocument) idealWidth(args ...interface{}) () {
   // idealWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -515,7 +681,7 @@ func (this *QTextDocument) idealWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::adjustSize();
 func (this *QTextDocument) adjustSize(args ...interface{}) () {
   // adjustSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -533,7 +699,7 @@ func (this *QTextDocument) adjustSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::isRedoAvailable();
 func (this *QTextDocument) isRedoAvailable(args ...interface{}) () {
   // isRedoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -551,7 +717,7 @@ func (this *QTextDocument) isRedoAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<QTextFormat> QTextDocument::allFormats();
 func (this *QTextDocument) allFormats(args ...interface{}) () {
   // allFormats()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -569,7 +735,7 @@ func (this *QTextDocument) allFormats(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextDocument::defaultStyleSheet();
 func (this *QTextDocument) defaultStyleSheet(args ...interface{}) () {
   // defaultStyleSheet()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -587,7 +753,7 @@ func (this *QTextDocument) defaultStyleSheet(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::lastBlock();
 func (this *QTextDocument) lastBlock(args ...interface{}) () {
   // lastBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -605,7 +771,7 @@ func (this *QTextDocument) lastBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::useDesignMetrics();
 func (this *QTextDocument) useDesignMetrics(args ...interface{}) () {
   // useDesignMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -623,7 +789,7 @@ func (this *QTextDocument) useDesignMetrics(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::pageCount();
 func (this *QTextDocument) pageCount(args ...interface{}) () {
   // pageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -641,7 +807,7 @@ func (this *QTextDocument) pageCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setTextWidth(qreal width);
 func (this *QTextDocument) setTextWidth(args ...interface{}) () {
   // setTextWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -660,7 +826,7 @@ func (this *QTextDocument) setTextWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setDocumentMargin(qreal margin);
 func (this *QTextDocument) setDocumentMargin(args ...interface{}) () {
   // setDocumentMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -679,7 +845,7 @@ func (this *QTextDocument) setDocumentMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::isUndoAvailable();
 func (this *QTextDocument) isUndoAvailable(args ...interface{}) () {
   // isUndoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -697,7 +863,7 @@ func (this *QTextDocument) isUndoAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextDocument::indentWidth();
 func (this *QTextDocument) indentWidth(args ...interface{}) () {
   // indentWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -715,7 +881,7 @@ func (this *QTextDocument) indentWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setUseDesignMetrics(bool b);
 func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
   // setUseDesignMetrics(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -734,7 +900,7 @@ func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setDocumentLayout(QAbstractTextDocumentLayout * layout);
 func (this *QTextDocument) setDocumentLayout(args ...interface{}) () {
   // setDocumentLayout(class QAbstractTextDocumentLayout *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +919,7 @@ func (this *QTextDocument) setDocumentLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setIndentWidth(qreal width);
 func (this *QTextDocument) setIndentWidth(args ...interface{}) () {
   // setIndentWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -772,7 +938,7 @@ func (this *QTextDocument) setIndentWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUrl QTextDocument::baseUrl();
 func (this *QTextDocument) baseUrl(args ...interface{}) () {
   // baseUrl()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -790,7 +956,7 @@ func (this *QTextDocument) baseUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrame * QTextDocument::frameAt(int pos);
 func (this *QTextDocument) frameAt(args ...interface{}) () {
   // frameAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -809,7 +975,7 @@ func (this *QTextDocument) frameAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setDefaultTextOption(const QTextOption & option);
 func (this *QTextDocument) setDefaultTextOption(args ...interface{}) () {
   // setDefaultTextOption(const class QTextOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -828,7 +994,7 @@ func (this *QTextDocument) setDefaultTextOption(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFont QTextDocument::defaultFont();
 func (this *QTextDocument) defaultFont(args ...interface{}) () {
   // defaultFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -846,7 +1012,7 @@ func (this *QTextDocument) defaultFont(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::findBlockByNumber(int blockNumber);
 func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
   // findBlockByNumber(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -865,7 +1031,7 @@ func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextOption QTextDocument::defaultTextOption();
 func (this *QTextDocument) defaultTextOption(args ...interface{}) () {
   // defaultTextOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -883,7 +1049,7 @@ func (this *QTextDocument) defaultTextOption(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::findBlock(int pos);
 func (this *QTextDocument) findBlock(args ...interface{}) () {
   // findBlock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -902,7 +1068,7 @@ func (this *QTextDocument) findBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setBaseUrl(const QUrl & url);
 func (this *QTextDocument) setBaseUrl(args ...interface{}) () {
   // setBaseUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -921,7 +1087,7 @@ func (this *QTextDocument) setBaseUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::appendUndoItem(QAbstractUndoItem * );
 func (this *QTextDocument) appendUndoItem(args ...interface{}) () {
   // appendUndoItem(class QAbstractUndoItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -940,7 +1106,7 @@ func (this *QTextDocument) appendUndoItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::drawContents(QPainter * painter, const QRectF & rect);
 func (this *QTextDocument) drawContents(args ...interface{}) () {
   // drawContents(class QPainter *, const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -960,7 +1126,7 @@ func (this *QTextDocument) drawContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::findBlockByLineNumber(int blockNumber);
 func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
   // findBlockByLineNumber(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -979,7 +1145,7 @@ func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextDocument::textWidth();
 func (this *QTextDocument) textWidth(args ...interface{}) () {
   // textWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -997,7 +1163,7 @@ func (this *QTextDocument) textWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTextDocument::metaObject();
 func (this *QTextDocument) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1015,7 +1181,7 @@ func (this *QTextDocument) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::availableRedoSteps();
 func (this *QTextDocument) availableRedoSteps(args ...interface{}) () {
   // availableRedoSteps()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1033,7 +1199,7 @@ func (this *QTextDocument) availableRedoSteps(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QTextDocument::characterAt(int pos);
 func (this *QTextDocument) characterAt(args ...interface{}) () {
   // characterAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1052,7 +1218,7 @@ func (this *QTextDocument) characterAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setDefaultFont(const QFont & font);
 func (this *QTextDocument) setDefaultFont(args ...interface{}) () {
   // setDefaultFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1071,7 +1237,7 @@ func (this *QTextDocument) setDefaultFont(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextObject * QTextDocument::objectForFormat(const QTextFormat & );
 func (this *QTextDocument) objectForFormat(args ...interface{}) () {
   // objectForFormat(const class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1090,7 +1256,7 @@ func (this *QTextDocument) objectForFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::isEmpty();
 func (this *QTextDocument) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1108,7 +1274,7 @@ func (this *QTextDocument) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextDocument::isUndoRedoEnabled();
 func (this *QTextDocument) isUndoRedoEnabled(args ...interface{}) () {
   // isUndoRedoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1126,7 +1292,7 @@ func (this *QTextDocument) isUndoRedoEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::~QTextDocument();
 func (this *QTextDocument) FreeQTextDocument(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1140,7 +1306,7 @@ func (this *QTextDocument) FreeQTextDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextDocument::documentMargin();
 func (this *QTextDocument) documentMargin(args ...interface{}) () {
   // documentMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1158,7 +1324,7 @@ func (this *QTextDocument) documentMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setPageSize(const QSizeF & size);
 func (this *QTextDocument) setPageSize(args ...interface{}) () {
   // setPageSize(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1177,7 +1343,7 @@ func (this *QTextDocument) setPageSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setHtml(const QString & html);
 func (this *QTextDocument) setHtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1196,7 +1362,7 @@ func (this *QTextDocument) setHtml(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::end();
 func (this *QTextDocument) end(args ...interface{}) () {
   // end()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1214,7 +1380,7 @@ func (this *QTextDocument) end(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextDocument::maximumBlockCount();
 func (this *QTextDocument) maximumBlockCount(args ...interface{}) () {
   // maximumBlockCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1232,7 +1398,7 @@ func (this *QTextDocument) maximumBlockCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setPlainText(const QString & text);
 func (this *QTextDocument) setPlainText(args ...interface{}) () {
   // setPlainText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1251,7 +1417,7 @@ func (this *QTextDocument) setPlainText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::clear();
 func (this *QTextDocument) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1269,7 +1435,7 @@ func (this *QTextDocument) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QTextDocument::resource(int type, const QUrl & name);
 func (this *QTextDocument) resource(args ...interface{}) () {
   // resource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1289,7 +1455,7 @@ func (this *QTextDocument) resource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextDocument::begin();
 func (this *QTextDocument) begin(args ...interface{}) () {
   // begin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1307,7 +1473,7 @@ func (this *QTextDocument) begin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setMaximumBlockCount(int maximum);
 func (this *QTextDocument) setMaximumBlockCount(args ...interface{}) () {
   // setMaximumBlockCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1326,7 +1492,7 @@ func (this *QTextDocument) setMaximumBlockCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextDocument::setModified(bool m);
 func (this *QTextDocument) setModified(args ...interface{}) () {
   // setModified(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1345,7 +1511,7 @@ func (this *QTextDocument) setModified(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractUndoItem::undo();
 func (this *QAbstractUndoItem) undo(args ...interface{}) () {
   // undo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1363,7 +1529,7 @@ func (this *QAbstractUndoItem) undo(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractUndoItem::redo();
 func (this *QAbstractUndoItem) redo(args ...interface{}) () {
   // redo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1381,7 +1547,7 @@ func (this *QAbstractUndoItem) redo(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
 func (this *QAbstractUndoItem) FreeQAbstractUndoItem(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

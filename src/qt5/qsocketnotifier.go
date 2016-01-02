@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,37 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
+extern void* dector_ZN15QSocketNotifierC1ERKS_(void* arg0);
+extern void _ZN15QSocketNotifierC1ERKS_(void* qthis, void* arg0);
+  // proto:  qintptr QSocketNotifier::socket();
+extern void _ZNK15QSocketNotifier6socketEv(void* qthis);
+  // proto:  bool QSocketNotifier::isEnabled();
+extern void _ZNK15QSocketNotifier9isEnabledEv(void* qthis);
+  // proto:  void QSocketNotifier::setEnabled(bool );
+extern void _ZN15QSocketNotifier10setEnabledEb(void* qthis, bool arg0);
+  // proto:  const QMetaObject * QSocketNotifier::metaObject();
+extern void _ZNK15QSocketNotifier10metaObjectEv(void* qthis);
+  // proto:  void QSocketNotifier::~QSocketNotifier();
+extern void _ZN15QSocketNotifierD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSocketNotifier)=1
 type QSocketNotifier struct {
   /*qbase*/ QObject;
@@ -42,12 +64,12 @@ type QSocketNotifier struct {
 //  _activated QSocketNotifier_activated_signal;
 }
 
-
+  // proto:  void QSocketNotifier::QSocketNotifier(const QSocketNotifier & );
 func NewQSocketNotifier(args ...interface{}) QSocketNotifier {
   return QSocketNotifier{}
 }
 
-
+  // proto:  qintptr QSocketNotifier::socket();
 func (this *QSocketNotifier) socket(args ...interface{}) () {
   // socket()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +87,7 @@ func (this *QSocketNotifier) socket(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSocketNotifier::isEnabled();
 func (this *QSocketNotifier) isEnabled(args ...interface{}) () {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +105,7 @@ func (this *QSocketNotifier) isEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSocketNotifier::setEnabled(bool );
 func (this *QSocketNotifier) setEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +124,7 @@ func (this *QSocketNotifier) setEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QSocketNotifier::metaObject();
 func (this *QSocketNotifier) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -120,7 +142,7 @@ func (this *QSocketNotifier) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSocketNotifier::~QSocketNotifier();
 func (this *QSocketNotifier) FreeQSocketNotifier(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

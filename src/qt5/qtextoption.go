@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTextOption::QTextOption(const QTextOption & o);
+extern void* dector_ZN11QTextOptionC1ERKS_(void* arg0);
+extern void _ZN11QTextOptionC1ERKS_(void* qthis, void* arg0);
+  // proto:  qreal QTextOption::tabStop();
+extern void demth_ZNK11QTextOption7tabStopEv(void* qthis);
+  // proto:  void QTextOption::setUseDesignMetrics(bool b);
+extern void _ZN11QTextOption19setUseDesignMetricsEb(void* qthis, bool arg0);
+  // proto:  void QTextOption::setTabStop(qreal tabStop);
+extern void demth_ZN11QTextOption10setTabStopEd(void* qthis, double arg0);
+  // proto:  bool QTextOption::useDesignMetrics();
+extern void _ZNK11QTextOption16useDesignMetricsEv(void* qthis);
+  // proto:  void QTextOption::QTextOption();
+extern void* dector_ZN11QTextOptionC1Ev();
+extern void _ZN11QTextOptionC1Ev(void* qthis);
+  // proto:  QList<qreal> QTextOption::tabArray();
+extern void _ZNK11QTextOption8tabArrayEv(void* qthis);
+  // proto:  void QTextOption::~QTextOption();
+extern void _ZN11QTextOptionD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextOption)=32
 type QTextOption struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTextOption::QTextOption(const QTextOption & o);
 func NewQTextOption(args ...interface{}) QTextOption {
   return QTextOption{}
 }
 
-
+  // proto:  qreal QTextOption::tabStop();
 func (this *QTextOption) tabStop(args ...interface{}) () {
   // tabStop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +91,7 @@ func (this *QTextOption) tabStop(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextOption::setUseDesignMetrics(bool b);
 func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
   // setUseDesignMetrics(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +110,7 @@ func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextOption::setTabStop(qreal tabStop);
 func (this *QTextOption) setTabStop(args ...interface{}) () {
   // setTabStop(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +129,7 @@ func (this *QTextOption) setTabStop(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextOption::useDesignMetrics();
 func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
   // useDesignMetrics()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -120,7 +147,7 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<qreal> QTextOption::tabArray();
 func (this *QTextOption) tabArray(args ...interface{}) () {
   // tabArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,7 +165,7 @@ func (this *QTextOption) tabArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextOption::~QTextOption();
 func (this *QTextOption) FreeQTextOption(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

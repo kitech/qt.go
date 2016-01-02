@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,61 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QTextBlock QTextList::item(int i);
+extern void _ZNK9QTextList4itemEi(void* qthis, int arg0);
+  // proto:  void QTextList::remove(const QTextBlock & );
+extern void _ZN9QTextList6removeERK10QTextBlock(void* qthis, void* arg0);
+  // proto:  void QTextList::setFormat(const QTextListFormat & format);
+extern void demth_ZN9QTextList9setFormatERK15QTextListFormat(void* qthis, void* arg0);
+  // proto:  void QTextList::QTextList(QTextDocument * doc);
+extern void* dector_ZN9QTextListC1EP13QTextDocument(void* arg0);
+extern void _ZN9QTextListC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  void QTextList::QTextList(const QTextList & );
+extern void* dector_ZN9QTextListC1ERKS_(void* arg0);
+extern void _ZN9QTextListC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextList::add(const QTextBlock & block);
+extern void _ZN9QTextList3addERK10QTextBlock(void* qthis, void* arg0);
+  // proto:  QString QTextList::itemText(const QTextBlock & );
+extern void _ZNK9QTextList8itemTextERK10QTextBlock(void* qthis, void* arg0);
+  // proto:  void QTextList::removeItem(int i);
+extern void _ZN9QTextList10removeItemEi(void* qthis, int arg0);
+  // proto:  int QTextList::itemNumber(const QTextBlock & );
+extern void _ZNK9QTextList10itemNumberERK10QTextBlock(void* qthis, void* arg0);
+  // proto:  int QTextList::count();
+extern void _ZNK9QTextList5countEv(void* qthis);
+  // proto:  QTextListFormat QTextList::format();
+extern void _ZNK9QTextList6formatEv(void* qthis);
+  // proto:  void QTextList::~QTextList();
+extern void _ZN9QTextListD0Ev(void* qthis);
+  // proto:  bool QTextList::isEmpty();
+extern void demth_ZNK9QTextList7isEmptyEv(void* qthis);
+  // proto:  const QMetaObject * QTextList::metaObject();
+extern void _ZNK9QTextList10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextList)=1
 type QTextList struct {
   /*qbase*/ QTextBlockGroup;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QTextBlock QTextList::item(int i);
 func (this *QTextList) item(args ...interface{}) () {
   // item(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +99,7 @@ func (this *QTextList) item(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextList::remove(const QTextBlock & );
 func (this *QTextList) remove(args ...interface{}) () {
   // remove(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +118,7 @@ func (this *QTextList) remove(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextList::setFormat(const QTextListFormat & format);
 func (this *QTextList) setFormat(args ...interface{}) () {
   // setFormat(const class QTextListFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,12 +137,12 @@ func (this *QTextList) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextList::QTextList(QTextDocument * doc);
 func NewQTextList(args ...interface{}) QTextList {
   return QTextList{}
 }
 
-
+  // proto:  void QTextList::add(const QTextBlock & block);
 func (this *QTextList) add(args ...interface{}) () {
   // add(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +161,7 @@ func (this *QTextList) add(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextList::itemText(const QTextBlock & );
 func (this *QTextList) itemText(args ...interface{}) () {
   // itemText(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -141,7 +180,7 @@ func (this *QTextList) itemText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextList::removeItem(int i);
 func (this *QTextList) removeItem(args ...interface{}) () {
   // removeItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -160,7 +199,7 @@ func (this *QTextList) removeItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextList::itemNumber(const QTextBlock & );
 func (this *QTextList) itemNumber(args ...interface{}) () {
   // itemNumber(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -179,7 +218,7 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextList::count();
 func (this *QTextList) count(args ...interface{}) () {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +236,7 @@ func (this *QTextList) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextListFormat QTextList::format();
 func (this *QTextList) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +254,7 @@ func (this *QTextList) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextList::~QTextList();
 func (this *QTextList) FreeQTextList(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -229,7 +268,7 @@ func (this *QTextList) FreeQTextList(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextList::isEmpty();
 func (this *QTextList) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +286,7 @@ func (this *QTextList) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTextList::metaObject();
 func (this *QTextList) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

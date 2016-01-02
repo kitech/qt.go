@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,113 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QJsonObject QJsonValue::toObject();
+extern void _ZNK10QJsonValue8toObjectEv(void* qthis);
+  // proto:  bool QJsonValue::isDouble();
+extern void demth_ZNK10QJsonValue8isDoubleEv(void* qthis);
+  // proto:  void QJsonValue::QJsonValue(const QString & s);
+extern void* dector_ZN10QJsonValueC1ERK7QString(void* arg0);
+extern void _ZN10QJsonValueC1ERK7QString(void* qthis, void* arg0);
+  // proto:  int QJsonValue::toInt(int defaultValue);
+extern void _ZNK10QJsonValue5toIntEi(void* qthis, int arg0);
+  // proto:  void QJsonValue::QJsonValue(const void * );
+extern void* dector_ZN10QJsonValueC1EPKv(void* arg0);
+extern void demth_ZN10QJsonValueC1EPKv(void* qthis, void* arg0);
+  // proto:  QJsonArray QJsonValue::toArray();
+extern void _ZNK10QJsonValue7toArrayEv(void* qthis);
+  // proto:  bool QJsonValue::isArray();
+extern void demth_ZNK10QJsonValue7isArrayEv(void* qthis);
+  // proto:  void QJsonValue::QJsonValue(const char * s);
+extern void* dector_ZN10QJsonValueC1EPKc(char* arg0);
+extern void demth_ZN10QJsonValueC1EPKc(void* qthis, char* arg0);
+  // proto:  QString QJsonValue::toString(const QString & defaultValue);
+extern void _ZNK10QJsonValue8toStringERK7QString(void* qthis, void* arg0);
+  // proto:  double QJsonValue::toDouble(double defaultValue);
+extern void _ZNK10QJsonValue8toDoubleEd(void* qthis, double arg0);
+  // proto:  void QJsonValue::~QJsonValue();
+extern void _ZN10QJsonValueD0Ev(void* qthis);
+  // proto:  QVariant QJsonValue::toVariant();
+extern void _ZNK10QJsonValue9toVariantEv(void* qthis);
+  // proto:  bool QJsonValue::isObject();
+extern void demth_ZNK10QJsonValue8isObjectEv(void* qthis);
+  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
+extern void _ZN10QJsonValue11fromVariantERK8QVariant(void* arg0);
+  // proto:  bool QJsonValue::toBool(bool defaultValue);
+extern void _ZNK10QJsonValue6toBoolEb(void* qthis, bool arg0);
+  // proto:  void QJsonValue::QJsonValue(double n);
+extern void* dector_ZN10QJsonValueC1Ed(double arg0);
+extern void _ZN10QJsonValueC1Ed(void* qthis, double arg0);
+  // proto:  bool QJsonValue::isBool();
+extern void demth_ZNK10QJsonValue6isBoolEv(void* qthis);
+  // proto:  void QJsonValue::QJsonValue(bool b);
+extern void* dector_ZN10QJsonValueC1Eb(bool arg0);
+extern void _ZN10QJsonValueC1Eb(void* qthis, bool arg0);
+  // proto:  bool QJsonValue::isUndefined();
+extern void demth_ZNK10QJsonValue11isUndefinedEv(void* qthis);
+  // proto:  bool QJsonValue::isNull();
+extern void demth_ZNK10QJsonValue6isNullEv(void* qthis);
+  // proto:  bool QJsonValue::isString();
+extern void demth_ZNK10QJsonValue8isStringEv(void* qthis);
+  // proto:  void QJsonValue::QJsonValue(int n);
+extern void* dector_ZN10QJsonValueC1Ei(int arg0);
+extern void _ZN10QJsonValueC1Ei(void* qthis, int arg0);
+  // proto:  void QJsonValue::QJsonValue(qint64 n);
+extern void* dector_ZN10QJsonValueC1Ex(long long arg0);
+extern void _ZN10QJsonValueC1Ex(void* qthis, long long arg0);
+  // proto:  QJsonArray QJsonValueRef::toArray();
+extern void _ZNK13QJsonValueRef7toArrayEv(void* qthis);
+  // proto:  QJsonObject QJsonValueRef::toObject();
+extern void _ZNK13QJsonValueRef8toObjectEv(void* qthis);
+  // proto:  bool QJsonValueRef::isBool();
+extern void demth_ZNK13QJsonValueRef6isBoolEv(void* qthis);
+  // proto:  bool QJsonValueRef::isDouble();
+extern void demth_ZNK13QJsonValueRef8isDoubleEv(void* qthis);
+  // proto:  double QJsonValueRef::toDouble();
+extern void demth_ZNK13QJsonValueRef8toDoubleEv(void* qthis);
+  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
+extern void demth_ZNK13QJsonValueRef6toBoolEb(void* qthis, bool arg0);
+  // proto:  double QJsonValueRef::toDouble(double defaultValue);
+extern void demth_ZNK13QJsonValueRef8toDoubleEd(void* qthis, double arg0);
+  // proto:  bool QJsonValueRef::toBool();
+extern void demth_ZNK13QJsonValueRef6toBoolEv(void* qthis);
+  // proto:  QVariant QJsonValueRef::toVariant();
+extern void _ZNK13QJsonValueRef9toVariantEv(void* qthis);
+  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
+extern void demth_ZNK13QJsonValueRef8toStringERK7QString(void* qthis, void* arg0);
+  // proto:  bool QJsonValueRef::isObject();
+extern void demth_ZNK13QJsonValueRef8isObjectEv(void* qthis);
+  // proto:  bool QJsonValueRef::isString();
+extern void demth_ZNK13QJsonValueRef8isStringEv(void* qthis);
+  // proto:  QString QJsonValueRef::toString();
+extern void demth_ZNK13QJsonValueRef8toStringEv(void* qthis);
+  // proto:  int QJsonValueRef::toInt(int defaultValue);
+extern void demth_ZNK13QJsonValueRef5toIntEi(void* qthis, int arg0);
+  // proto:  bool QJsonValueRef::isArray();
+extern void demth_ZNK13QJsonValueRef7isArrayEv(void* qthis);
+  // proto:  bool QJsonValueRef::isNull();
+extern void demth_ZNK13QJsonValueRef6isNullEv(void* qthis);
+  // proto:  int QJsonValueRef::toInt();
+extern void demth_ZNK13QJsonValueRef5toIntEv(void* qthis);
+  // proto:  bool QJsonValueRef::isUndefined();
+extern void demth_ZNK13QJsonValueRef11isUndefinedEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QJsonValueRefPtr)=16
 type QJsonValueRefPtr struct {
   // qbase: None;
@@ -59,7 +157,7 @@ type QJsonValueRef struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QJsonObject QJsonValue::toObject();
 func (this *QJsonValue) toObject(args ...interface{}) () {
   // toObject()
   // toObject(const class QJsonObject &)
@@ -82,7 +180,7 @@ func (this *QJsonValue) toObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isDouble();
 func (this *QJsonValue) isDouble(args ...interface{}) () {
   // isDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,12 +198,12 @@ func (this *QJsonValue) isDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonValue::QJsonValue(const QString & s);
 func NewQJsonValue(args ...interface{}) QJsonValue {
   return QJsonValue{}
 }
 
-
+  // proto:  int QJsonValue::toInt(int defaultValue);
 func (this *QJsonValue) toInt(args ...interface{}) () {
   // toInt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -124,7 +222,7 @@ func (this *QJsonValue) toInt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonArray QJsonValue::toArray();
 func (this *QJsonValue) toArray(args ...interface{}) () {
   // toArray(const class QJsonArray &)
   // toArray()
@@ -147,7 +245,7 @@ func (this *QJsonValue) toArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isArray();
 func (this *QJsonValue) isArray(args ...interface{}) () {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -165,7 +263,7 @@ func (this *QJsonValue) isArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QJsonValue::toString(const QString & defaultValue);
 func (this *QJsonValue) toString(args ...interface{}) () {
   // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +282,7 @@ func (this *QJsonValue) toString(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QJsonValue::toDouble(double defaultValue);
 func (this *QJsonValue) toDouble(args ...interface{}) () {
   // toDouble(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +301,7 @@ func (this *QJsonValue) toDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonValue::~QJsonValue();
 func (this *QJsonValue) FreeQJsonValue(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -217,7 +315,7 @@ func (this *QJsonValue) FreeQJsonValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QJsonValue::toVariant();
 func (this *QJsonValue) toVariant(args ...interface{}) () {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -235,7 +333,7 @@ func (this *QJsonValue) toVariant(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isObject();
 func (this *QJsonValue) isObject(args ...interface{}) () {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +351,7 @@ func (this *QJsonValue) isObject(args ...interface{}) () {
 
 }
 
-
+  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
 func (this *QJsonValue) fromVariant_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -267,7 +365,7 @@ func (this *QJsonValue) fromVariant_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::toBool(bool defaultValue);
 func (this *QJsonValue) toBool(args ...interface{}) () {
   // toBool(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -286,7 +384,7 @@ func (this *QJsonValue) toBool(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isBool();
 func (this *QJsonValue) isBool(args ...interface{}) () {
   // isBool()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -304,7 +402,7 @@ func (this *QJsonValue) isBool(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isUndefined();
 func (this *QJsonValue) isUndefined(args ...interface{}) () {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -322,7 +420,7 @@ func (this *QJsonValue) isUndefined(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isNull();
 func (this *QJsonValue) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -340,7 +438,7 @@ func (this *QJsonValue) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValue::isString();
 func (this *QJsonValue) isString(args ...interface{}) () {
   // isString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -358,7 +456,7 @@ func (this *QJsonValue) isString(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonArray QJsonValueRef::toArray();
 func (this *QJsonValueRef) toArray(args ...interface{}) () {
   // toArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +474,7 @@ func (this *QJsonValueRef) toArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonObject QJsonValueRef::toObject();
 func (this *QJsonValueRef) toObject(args ...interface{}) () {
   // toObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -394,7 +492,7 @@ func (this *QJsonValueRef) toObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isBool();
 func (this *QJsonValueRef) isBool(args ...interface{}) () {
   // isBool()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -412,7 +510,7 @@ func (this *QJsonValueRef) isBool(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isDouble();
 func (this *QJsonValueRef) isDouble(args ...interface{}) () {
   // isDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -430,7 +528,7 @@ func (this *QJsonValueRef) isDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QJsonValueRef::toDouble();
 func (this *QJsonValueRef) toDouble(args ...interface{}) () {
   // toDouble()
   // toDouble(double)
@@ -453,7 +551,7 @@ func (this *QJsonValueRef) toDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
 func (this *QJsonValueRef) toBool(args ...interface{}) () {
   // toBool(_Bool)
   // toBool()
@@ -476,7 +574,7 @@ func (this *QJsonValueRef) toBool(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QJsonValueRef::toVariant();
 func (this *QJsonValueRef) toVariant(args ...interface{}) () {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -494,7 +592,7 @@ func (this *QJsonValueRef) toVariant(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
 func (this *QJsonValueRef) toString(args ...interface{}) () {
   // toString(const class QString &)
   // toString()
@@ -517,7 +615,7 @@ func (this *QJsonValueRef) toString(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isObject();
 func (this *QJsonValueRef) isObject(args ...interface{}) () {
   // isObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -535,7 +633,7 @@ func (this *QJsonValueRef) isObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isString();
 func (this *QJsonValueRef) isString(args ...interface{}) () {
   // isString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -553,7 +651,7 @@ func (this *QJsonValueRef) isString(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QJsonValueRef::toInt(int defaultValue);
 func (this *QJsonValueRef) toInt(args ...interface{}) () {
   // toInt(int)
   // toInt()
@@ -576,7 +674,7 @@ func (this *QJsonValueRef) toInt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isArray();
 func (this *QJsonValueRef) isArray(args ...interface{}) () {
   // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -594,7 +692,7 @@ func (this *QJsonValueRef) isArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isNull();
 func (this *QJsonValueRef) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -612,7 +710,7 @@ func (this *QJsonValueRef) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonValueRef::isUndefined();
 func (this *QJsonValueRef) isUndefined(args ...interface{}) () {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)

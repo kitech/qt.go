@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,94 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QFile::symLinkTarget();
+extern void demth_ZNK5QFile13symLinkTargetEv(void* qthis);
+  // proto:  void QFile::QFile();
+extern void* dector_ZN5QFileC1Ev();
+extern void _ZN5QFileC1Ev(void* qthis);
+  // proto:  void QFile::QFile(QObject * parent);
+extern void* dector_ZN5QFileC1EP7QObject(void* arg0);
+extern void _ZN5QFileC1EP7QObject(void* qthis, void* arg0);
+  // proto: static bool QFile::link(const QString & oldname, const QString & newName);
+extern void _ZN5QFile4linkERK7QStringS2_(void* arg0, void* arg1);
+  // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
+extern void _ZN5QFile6renameERK7QStringS2_(void* arg0, void* arg1);
+  // proto:  bool QFile::link(const QString & newName);
+extern void _ZN5QFile4linkERK7QString(void* qthis, void* arg0);
+  // proto: static bool QFile::resize(const QString & filename, qint64 sz);
+extern void _ZN5QFile6resizeERK7QStringx(void* arg0, long long arg1);
+  // proto: static bool QFile::exists(const QString & fileName);
+extern void _ZN5QFile6existsERK7QString(void* arg0);
+  // proto:  void QFile::~QFile();
+extern void _ZN5QFileD0Ev(void* qthis);
+  // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
+extern void _ZN5QFile4copyERK7QStringS2_(void* arg0, void* arg1);
+  // proto: static QString QFile::readLink(const QString & fileName);
+extern void _ZN5QFile8readLinkERK7QString(void* arg0);
+  // proto:  bool QFile::exists();
+extern void _ZNK5QFile6existsEv(void* qthis);
+  // proto:  qint64 QFile::size();
+extern void _ZNK5QFile4sizeEv(void* qthis);
+  // proto:  bool QFile::resize(qint64 sz);
+extern void _ZN5QFile6resizeEx(void* qthis, long long arg0);
+  // proto:  void QFile::QFile(const QFile & );
+extern void* dector_ZN5QFileC1ERKS_(void* arg0);
+extern void _ZN5QFileC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QFile::setFileName(const QString & name);
+extern void _ZN5QFile11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto:  bool QFile::remove();
+extern void _ZN5QFile6removeEv(void* qthis);
+  // proto:  bool QFile::copy(const QString & newName);
+extern void _ZN5QFile4copyERK7QString(void* qthis, void* arg0);
+  // proto: static QByteArray QFile::encodeName(const QString & fileName);
+extern void demth_ZN5QFile10encodeNameERK7QString(void* arg0);
+  // proto: static QString QFile::decodeName(const QByteArray & localFileName);
+extern void _ZN5QFile10decodeNameERK10QByteArray(void* arg0);
+  // proto:  bool QFile::rename(const QString & newName);
+extern void _ZN5QFile6renameERK7QString(void* qthis, void* arg0);
+  // proto:  QString QFile::fileName();
+extern void _ZNK5QFile8fileNameEv(void* qthis);
+  // proto: static QString QFile::decodeName(const char * localFileName);
+extern void demth_ZN5QFile10decodeNameEPKc(char* arg0);
+  // proto:  const QMetaObject * QFile::metaObject();
+extern void _ZNK5QFile10metaObjectEv(void* qthis);
+  // proto:  void QFile::QFile(const QString & name, QObject * parent);
+extern void* dector_ZN5QFileC1ERK7QStringP7QObject(void* arg0, void* arg1);
+extern void _ZN5QFileC1ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto: static QString QFile::symLinkTarget(const QString & fileName);
+extern void demth_ZN5QFile13symLinkTargetERK7QString(void* arg0);
+  // proto: static bool QFile::remove(const QString & fileName);
+extern void _ZN5QFile6removeERK7QString(void* arg0);
+  // proto:  void QFile::QFile(const QString & name);
+extern void* dector_ZN5QFileC1ERK7QString(void* arg0);
+extern void _ZN5QFileC1ERK7QString(void* qthis, void* arg0);
+  // proto:  QString QFile::readLink();
+extern void _ZNK5QFile8readLinkEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFile)=1
 type QFile struct {
   /*qbase*/ QFileDevice;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QFile::symLinkTarget();
 func (this *QFile) symLinkTarget(args ...interface{}) () {
   // symLinkTarget()
   // symLinkTarget(const class QString &)
@@ -64,12 +136,12 @@ func (this *QFile) symLinkTarget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFile::QFile();
 func NewQFile(args ...interface{}) QFile {
   return QFile{}
 }
 
-
+  // proto: static bool QFile::link(const QString & oldname, const QString & newName);
 func (this *QFile) link_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -83,7 +155,7 @@ func (this *QFile) link_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QFile::rename(const QString & oldName, const QString & newName);
 func (this *QFile) rename_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +169,7 @@ func (this *QFile) rename_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::link(const QString & newName);
 func (this *QFile) link(args ...interface{}) () {
   // link(const class QString &, const class QString &)
   // link(const class QString &)
@@ -122,7 +194,7 @@ func (this *QFile) link(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QFile::resize(const QString & filename, qint64 sz);
 func (this *QFile) resize_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +208,7 @@ func (this *QFile) resize_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QFile::exists(const QString & fileName);
 func (this *QFile) exists_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,7 +222,7 @@ func (this *QFile) exists_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFile::~QFile();
 func (this *QFile) FreeQFile(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,7 +236,7 @@ func (this *QFile) FreeQFile(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QFile::copy(const QString & fileName, const QString & newName);
 func (this *QFile) copy_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,7 +250,7 @@ func (this *QFile) copy_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QFile::readLink(const QString & fileName);
 func (this *QFile) readLink_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -192,7 +264,7 @@ func (this *QFile) readLink_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::exists();
 func (this *QFile) exists(args ...interface{}) () {
   // exists(const class QString &)
   // exists()
@@ -215,7 +287,7 @@ func (this *QFile) exists(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QFile::size();
 func (this *QFile) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +305,7 @@ func (this *QFile) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::resize(qint64 sz);
 func (this *QFile) resize(args ...interface{}) () {
   // resize(const class QString &, qint64)
   // resize(qint64)
@@ -258,7 +330,7 @@ func (this *QFile) resize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFile::setFileName(const QString & name);
 func (this *QFile) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -277,7 +349,7 @@ func (this *QFile) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::remove();
 func (this *QFile) remove(args ...interface{}) () {
   // remove()
   // remove(const class QString &)
@@ -300,7 +372,7 @@ func (this *QFile) remove(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::copy(const QString & newName);
 func (this *QFile) copy(args ...interface{}) () {
   // copy(const class QString &, const class QString &)
   // copy(const class QString &)
@@ -325,7 +397,7 @@ func (this *QFile) copy(args ...interface{}) () {
 
 }
 
-
+  // proto: static QByteArray QFile::encodeName(const QString & fileName);
 func (this *QFile) encodeName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -339,7 +411,7 @@ func (this *QFile) encodeName_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QFile::decodeName(const QByteArray & localFileName);
 func (this *QFile) decodeName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -353,7 +425,7 @@ func (this *QFile) decodeName_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFile::rename(const QString & newName);
 func (this *QFile) rename(args ...interface{}) () {
   // rename(const class QString &, const class QString &)
   // rename(const class QString &)
@@ -378,7 +450,7 @@ func (this *QFile) rename(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFile::fileName();
 func (this *QFile) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -396,7 +468,7 @@ func (this *QFile) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QFile::metaObject();
 func (this *QFile) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +486,7 @@ func (this *QFile) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QFile::symLinkTarget(const QString & fileName);
 func (this *QFile) symLinkTarget_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -428,7 +500,7 @@ func (this *QFile) symLinkTarget_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QFile::remove(const QString & fileName);
 func (this *QFile) remove_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -442,7 +514,7 @@ func (this *QFile) remove_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFile::readLink();
 func (this *QFile) readLink(args ...interface{}) () {
   // readLink(const class QString &)
   // readLink()

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,42 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
+extern void _ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int arg0, int arg1);
+  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
+extern void* dector_ZN25QSequentialAnimationGroupC1EP7QObject(void* arg0);
+extern void _ZN25QSequentialAnimationGroupC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
+extern void _ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int arg0);
+  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
+extern void _ZN25QSequentialAnimationGroupD0Ev(void* qthis);
+  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
+extern void* dector_ZN25QSequentialAnimationGroupC1ERKS_(void* arg0);
+extern void _ZN25QSequentialAnimationGroupC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
+extern void _ZNK25QSequentialAnimationGroup10metaObjectEv(void* qthis);
+  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
+extern void _ZNK25QSequentialAnimationGroup16currentAnimationEv(void* qthis);
+  // proto:  int QSequentialAnimationGroup::duration();
+extern void _ZNK25QSequentialAnimationGroup8durationEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSequentialAnimationGroup)=1
 type QSequentialAnimationGroup struct {
   /*qbase*/ QAnimationGroup;
@@ -42,7 +69,7 @@ type QSequentialAnimationGroup struct {
 //  _currentAnimationChanged QSequentialAnimationGroup_currentAnimationChanged_signal;
 }
 
-
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
 func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
   // insertPause(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -62,12 +89,12 @@ func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
 func NewQSequentialAnimationGroup(args ...interface{}) QSequentialAnimationGroup {
   return QSequentialAnimationGroup{}
 }
 
-
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
 func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
   // addPause(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +113,7 @@ func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
 func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,7 +127,7 @@ func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...int
 
 }
 
-
+  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
 func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +145,7 @@ func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
 func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () {
   // currentAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +163,7 @@ func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () 
 
 }
 
-
+  // proto:  int QSequentialAnimationGroup::duration();
 func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)

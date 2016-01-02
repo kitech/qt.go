@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,51 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QMetaObject * QTranslator::metaObject();
+extern void _ZNK11QTranslator10metaObjectEv(void* qthis);
+  // proto:  void QTranslator::QTranslator(QObject * parent);
+extern void* dector_ZN11QTranslatorC1EP7QObject(void* arg0);
+extern void _ZN11QTranslatorC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QTranslator::isEmpty();
+extern void _ZNK11QTranslator7isEmptyEv(void* qthis);
+  // proto:  void QTranslator::QTranslator(const QTranslator & );
+extern void* dector_ZN11QTranslatorC1ERKS_(void* arg0);
+extern void _ZN11QTranslatorC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTranslator::~QTranslator();
+extern void _ZN11QTranslatorD0Ev(void* qthis);
+  // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
+extern void _ZN11QTranslator4loadERK7QStringS2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
+extern void _ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, char* arg0, char* arg1, char* arg2, int arg3);
+  // proto:  bool QTranslator::load(const uchar * data, int len, const QString & directory);
+extern void _ZN11QTranslator4loadEPKhiRK7QString(void* qthis, unsigned char* arg0, int arg1, void* arg2);
+  // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
+extern void _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTranslator)=1
 type QTranslator struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  const QMetaObject * QTranslator::metaObject();
 func (this *QTranslator) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,12 +88,12 @@ func (this *QTranslator) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTranslator::QTranslator(QObject * parent);
 func NewQTranslator(args ...interface{}) QTranslator {
   return QTranslator{}
 }
 
-
+  // proto:  bool QTranslator::isEmpty();
 func (this *QTranslator) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +111,7 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTranslator::~QTranslator();
 func (this *QTranslator) FreeQTranslator(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,7 +125,7 @@ func (this *QTranslator) FreeQTranslator(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
 func (this *QTranslator) load(args ...interface{}) () {
   // load(const class QString &, const class QString &, const class QString &, const class QString &)
   // load(const uchar *, int, const class QString &)
@@ -134,7 +163,7 @@ func (this *QTranslator) load(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
 func (this *QTranslator) translate(args ...interface{}) () {
   // translate(const char *, const char *, const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)

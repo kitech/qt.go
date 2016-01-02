@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qabstractproxymodel.h
 // dst-file: /src/core/qabstractproxymodel.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,70 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QStringList QAbstractProxyModel::mimeTypes();
+extern void _ZNK19QAbstractProxyModel9mimeTypesEv(void* qthis);
+  // proto:  void QAbstractProxyModel::revert();
+extern void _ZN19QAbstractProxyModel6revertEv(void* qthis);
+  // proto:  QItemSelection QAbstractProxyModel::mapSelectionToSource(const QItemSelection & selection);
+extern void _ZNK19QAbstractProxyModel20mapSelectionToSourceERK14QItemSelection(void* qthis, void* arg0);
+  // proto:  QItemSelection QAbstractProxyModel::mapSelectionFromSource(const QItemSelection & selection);
+extern void _ZNK19QAbstractProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0);
+  // proto:  QVariant QAbstractProxyModel::data(const QModelIndex & proxyIndex, int role);
+extern void _ZNK19QAbstractProxyModel4dataERK11QModelIndexi(void* qthis, void* arg0, int arg1);
+  // proto:  bool QAbstractProxyModel::submit();
+extern void _ZN19QAbstractProxyModel6submitEv(void* qthis);
+  // proto:  QSize QAbstractProxyModel::span(const QModelIndex & index);
+extern void _ZNK19QAbstractProxyModel4spanERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QAbstractProxyModel::canFetchMore(const QModelIndex & parent);
+extern void _ZNK19QAbstractProxyModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QAbstractProxyModel::metaObject();
+extern void _ZNK19QAbstractProxyModel10metaObjectEv(void* qthis);
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
+extern void* dector_ZN19QAbstractProxyModelC1ERKS_(void* arg0);
+extern void _ZN19QAbstractProxyModelC1ERKS_(void* qthis, void* arg0);
+  // proto:  QModelIndex QAbstractProxyModel::mapToSource(const QModelIndex & proxyIndex);
+extern void _ZNK19QAbstractProxyModel11mapToSourceERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QAbstractProxyModel::mapFromSource(const QModelIndex & sourceIndex);
+extern void _ZNK19QAbstractProxyModel13mapFromSourceERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
+extern void _ZNK19QAbstractProxyModel8itemDataERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QAbstractProxyModel::buddy(const QModelIndex & index);
+extern void _ZNK19QAbstractProxyModel5buddyERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
+extern void _ZN19QAbstractProxyModel14setSourceModelEP18QAbstractItemModel(void* qthis, void* arg0);
+  // proto:  QModelIndex QAbstractProxyModel::sibling(int row, int column, const QModelIndex & idx);
+extern void _ZNK19QAbstractProxyModel7siblingEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  bool QAbstractProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
+extern void _ZN19QAbstractProxyModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int arg2);
+  // proto:  void QAbstractProxyModel::fetchMore(const QModelIndex & parent);
+extern void _ZN19QAbstractProxyModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
+extern void _ZN19QAbstractProxyModelD0Ev(void* qthis);
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(QObject * parent);
+extern void* dector_ZN19QAbstractProxyModelC1EP7QObject(void* arg0);
+extern void _ZN19QAbstractProxyModelC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
+extern void _ZNK19QAbstractProxyModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QAbstractItemModel * QAbstractProxyModel::sourceModel();
+extern void _ZNK19QAbstractProxyModel11sourceModelEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractProxyModel)=1
 type QAbstractProxyModel struct {
   /*qbase*/ QAbstractItemModel;
@@ -42,7 +97,7 @@ type QAbstractProxyModel struct {
 //  _sourceModelChanged QAbstractProxyModel_sourceModelChanged_signal;
 }
 
-
+  // proto:  QStringList QAbstractProxyModel::mimeTypes();
 func (this *QAbstractProxyModel) mimeTypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +115,7 @@ func (this *QAbstractProxyModel) mimeTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractProxyModel::revert();
 func (this *QAbstractProxyModel) revert(args ...interface{}) () {
   // revert()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +133,7 @@ func (this *QAbstractProxyModel) revert(args ...interface{}) () {
 
 }
 
-
+  // proto:  QItemSelection QAbstractProxyModel::mapSelectionToSource(const QItemSelection & selection);
 func (this *QAbstractProxyModel) mapSelectionToSource(args ...interface{}) () {
   // mapSelectionToSource(const class QItemSelection &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +152,7 @@ func (this *QAbstractProxyModel) mapSelectionToSource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QItemSelection QAbstractProxyModel::mapSelectionFromSource(const QItemSelection & selection);
 func (this *QAbstractProxyModel) mapSelectionFromSource(args ...interface{}) () {
   // mapSelectionFromSource(const class QItemSelection &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +171,7 @@ func (this *QAbstractProxyModel) mapSelectionFromSource(args ...interface{}) () 
 
 }
 
-
+  // proto:  QVariant QAbstractProxyModel::data(const QModelIndex & proxyIndex, int role);
 func (this *QAbstractProxyModel) data(args ...interface{}) () {
   // data(const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +191,7 @@ func (this *QAbstractProxyModel) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractProxyModel::submit();
 func (this *QAbstractProxyModel) submit(args ...interface{}) () {
   // submit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +209,7 @@ func (this *QAbstractProxyModel) submit(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QAbstractProxyModel::span(const QModelIndex & index);
 func (this *QAbstractProxyModel) span(args ...interface{}) () {
   // span(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +228,7 @@ func (this *QAbstractProxyModel) span(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractProxyModel::canFetchMore(const QModelIndex & parent);
 func (this *QAbstractProxyModel) canFetchMore(args ...interface{}) () {
   // canFetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,7 +247,7 @@ func (this *QAbstractProxyModel) canFetchMore(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractProxyModel::metaObject();
 func (this *QAbstractProxyModel) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,12 +265,12 @@ func (this *QAbstractProxyModel) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractProxyModel::QAbstractProxyModel(const QAbstractProxyModel & );
 func NewQAbstractProxyModel(args ...interface{}) QAbstractProxyModel {
   return QAbstractProxyModel{}
 }
 
-
+  // proto:  QModelIndex QAbstractProxyModel::mapToSource(const QModelIndex & proxyIndex);
 func (this *QAbstractProxyModel) mapToSource(args ...interface{}) () {
   // mapToSource(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +289,7 @@ func (this *QAbstractProxyModel) mapToSource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QAbstractProxyModel::mapFromSource(const QModelIndex & sourceIndex);
 func (this *QAbstractProxyModel) mapFromSource(args ...interface{}) () {
   // mapFromSource(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +308,7 @@ func (this *QAbstractProxyModel) mapFromSource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMap<int, QVariant> QAbstractProxyModel::itemData(const QModelIndex & index);
 func (this *QAbstractProxyModel) itemData(args ...interface{}) () {
   // itemData(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +327,7 @@ func (this *QAbstractProxyModel) itemData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QAbstractProxyModel::buddy(const QModelIndex & index);
 func (this *QAbstractProxyModel) buddy(args ...interface{}) () {
   // buddy(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -291,7 +346,7 @@ func (this *QAbstractProxyModel) buddy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractProxyModel::setSourceModel(QAbstractItemModel * sourceModel);
 func (this *QAbstractProxyModel) setSourceModel(args ...interface{}) () {
   // setSourceModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +365,7 @@ func (this *QAbstractProxyModel) setSourceModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QAbstractProxyModel::sibling(int row, int column, const QModelIndex & idx);
 func (this *QAbstractProxyModel) sibling(args ...interface{}) () {
   // sibling(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -331,7 +386,7 @@ func (this *QAbstractProxyModel) sibling(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractProxyModel::setData(const QModelIndex & index, const QVariant & value, int role);
 func (this *QAbstractProxyModel) setData(args ...interface{}) () {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -352,7 +407,7 @@ func (this *QAbstractProxyModel) setData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractProxyModel::fetchMore(const QModelIndex & parent);
 func (this *QAbstractProxyModel) fetchMore(args ...interface{}) () {
   // fetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,7 +426,7 @@ func (this *QAbstractProxyModel) fetchMore(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractProxyModel::~QAbstractProxyModel();
 func (this *QAbstractProxyModel) FreeQAbstractProxyModel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +440,7 @@ func (this *QAbstractProxyModel) FreeQAbstractProxyModel(args ...interface{}) ()
 
 }
 
-
+  // proto:  bool QAbstractProxyModel::hasChildren(const QModelIndex & parent);
 func (this *QAbstractProxyModel) hasChildren(args ...interface{}) () {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -404,7 +459,7 @@ func (this *QAbstractProxyModel) hasChildren(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemModel * QAbstractProxyModel::sourceModel();
 func (this *QAbstractProxyModel) sourceModel(args ...interface{}) () {
   // sourceModel()
   var vtys = make(map[int32]map[int32]reflect.Type)

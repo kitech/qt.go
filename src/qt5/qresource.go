@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,71 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
+extern void* dector_ZN9QResourceC1ERK7QStringRK7QLocale(void* arg0, void* arg1);
+extern void _ZN9QResourceC1ERK7QStringRK7QLocale(void* qthis, void* arg0, void* arg1);
+  // proto:  QLocale QResource::locale();
+extern void _ZNK9QResource6localeEv(void* qthis);
+  // proto:  void QResource::setLocale(const QLocale & locale);
+extern void _ZN9QResource9setLocaleERK7QLocale(void* qthis, void* arg0);
+  // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
+extern void _ZN9QResource16registerResourceEPKhRK7QString(unsigned char* arg0, void* arg1);
+  // proto:  const uchar * QResource::data();
+extern void _ZNK9QResource4dataEv(void* qthis);
+  // proto: static QStringList QResource::searchPaths();
+extern void _ZN9QResource11searchPathsEv();
+  // proto:  QString QResource::fileName();
+extern void _ZNK9QResource8fileNameEv(void* qthis);
+  // proto:  QString QResource::absoluteFilePath();
+extern void _ZNK9QResource16absoluteFilePathEv(void* qthis);
+  // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
+extern void _ZN9QResource18unregisterResourceEPKhRK7QString(unsigned char* arg0, void* arg1);
+  // proto: static bool QResource::registerResource(const QString & rccFilename, const QString & resourceRoot);
+extern void _ZN9QResource16registerResourceERK7QStringS2_(void* arg0, void* arg1);
+  // proto: static void QResource::addSearchPath(const QString & path);
+extern void _ZN9QResource13addSearchPathERK7QString(void* arg0);
+  // proto:  qint64 QResource::size();
+extern void _ZNK9QResource4sizeEv(void* qthis);
+  // proto:  void QResource::~QResource();
+extern void _ZN9QResourceD0Ev(void* qthis);
+  // proto:  bool QResource::isValid();
+extern void _ZNK9QResource7isValidEv(void* qthis);
+  // proto:  void QResource::setFileName(const QString & file);
+extern void _ZN9QResource11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto: static bool QResource::unregisterResource(const QString & rccFilename, const QString & resourceRoot);
+extern void _ZN9QResource18unregisterResourceERK7QStringS2_(void* arg0, void* arg1);
+  // proto:  bool QResource::isCompressed();
+extern void _ZNK9QResource12isCompressedEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QResource)=1
 type QResource struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
 func NewQResource(args ...interface{}) QResource {
   return QResource{}
 }
 
-
+  // proto:  QLocale QResource::locale();
 func (this *QResource) locale(args ...interface{}) () {
   // locale()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +108,7 @@ func (this *QResource) locale(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QResource::setLocale(const QLocale & locale);
 func (this *QResource) setLocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +127,7 @@ func (this *QResource) setLocale(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QResource::registerResource(const uchar * rccData, const QString & resourceRoot);
 func (this *QResource) registerResource_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +141,7 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  const uchar * QResource::data();
 func (this *QResource) data(args ...interface{}) () {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +159,7 @@ func (this *QResource) data(args ...interface{}) () {
 
 }
 
-
+  // proto: static QStringList QResource::searchPaths();
 func (this *QResource) searchPaths_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -129,7 +173,7 @@ func (this *QResource) searchPaths_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QResource::fileName();
 func (this *QResource) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -147,7 +191,7 @@ func (this *QResource) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QResource::absoluteFilePath();
 func (this *QResource) absoluteFilePath(args ...interface{}) () {
   // absoluteFilePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -165,7 +209,7 @@ func (this *QResource) absoluteFilePath(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QResource::unregisterResource(const uchar * rccData, const QString & resourceRoot);
 func (this *QResource) unregisterResource_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,7 +223,7 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QResource::addSearchPath(const QString & path);
 func (this *QResource) addSearchPath_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -193,7 +237,7 @@ func (this *QResource) addSearchPath_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QResource::size();
 func (this *QResource) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +255,7 @@ func (this *QResource) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QResource::~QResource();
 func (this *QResource) FreeQResource(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +269,7 @@ func (this *QResource) FreeQResource(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QResource::isValid();
 func (this *QResource) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -243,7 +287,7 @@ func (this *QResource) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QResource::setFileName(const QString & file);
 func (this *QResource) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -262,7 +306,7 @@ func (this *QResource) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QResource::isCompressed();
 func (this *QResource) isCompressed(args ...interface{}) () {
   // isCompressed()
   var vtys = make(map[int32]map[int32]reflect.Type)

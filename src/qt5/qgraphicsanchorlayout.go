@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,65 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
+extern void* dector_ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(void* arg0);
+extern void _ZN21QGraphicsAnchorLayoutC1EP19QGraphicsLayoutItem(void* qthis, void* arg0);
+  // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(const QGraphicsAnchorLayout & );
+extern void* dector_ZN21QGraphicsAnchorLayoutC1ERKS_(void* arg0);
+extern void _ZN21QGraphicsAnchorLayoutC1ERKS_(void* qthis, void* arg0);
+  // proto:  qreal QGraphicsAnchorLayout::verticalSpacing();
+extern void _ZNK21QGraphicsAnchorLayout15verticalSpacingEv(void* qthis);
+  // proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
+extern void _ZN21QGraphicsAnchorLayout10setSpacingEd(void* qthis, double arg0);
+  // proto:  int QGraphicsAnchorLayout::count();
+extern void _ZNK21QGraphicsAnchorLayout5countEv(void* qthis);
+  // proto:  qreal QGraphicsAnchorLayout::horizontalSpacing();
+extern void _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(void* qthis);
+  // proto:  void QGraphicsAnchorLayout::invalidate();
+extern void _ZN21QGraphicsAnchorLayout10invalidateEv(void* qthis);
+  // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
+extern void _ZNK21QGraphicsAnchorLayout6itemAtEi(void* qthis, int arg0);
+  // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
+extern void _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(void* qthis, double arg0);
+  // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
+extern void _ZN21QGraphicsAnchorLayout11setGeometryERK6QRectF(void* qthis, void* arg0);
+  // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
+extern void _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(void* qthis, double arg0);
+  // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
+extern void _ZN21QGraphicsAnchorLayoutD0Ev(void* qthis);
+  // proto:  void QGraphicsAnchorLayout::removeAt(int index);
+extern void _ZN21QGraphicsAnchorLayout8removeAtEi(void* qthis, int arg0);
+  // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
+extern void _ZN15QGraphicsAnchorD0Ev(void* qthis);
+  // proto:  void QGraphicsAnchor::unsetSpacing();
+extern void _ZN15QGraphicsAnchor12unsetSpacingEv(void* qthis);
+  // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
+extern void _ZN15QGraphicsAnchor10setSpacingEd(void* qthis, double arg0);
+  // proto:  void QGraphicsAnchor::QGraphicsAnchor(QGraphicsAnchorLayout * parent);
+extern void* dector_ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(void* arg0);
+extern void _ZN15QGraphicsAnchorC1EP21QGraphicsAnchorLayout(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QGraphicsAnchor::metaObject();
+extern void _ZNK15QGraphicsAnchor10metaObjectEv(void* qthis);
+  // proto:  qreal QGraphicsAnchor::spacing();
+extern void _ZNK15QGraphicsAnchor7spacingEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGraphicsAnchorLayout)=1
 type QGraphicsAnchorLayout struct {
   /*qbase*/ QGraphicsLayout;
@@ -47,12 +97,12 @@ type QGraphicsAnchor struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
 func NewQGraphicsAnchorLayout(args ...interface{}) QGraphicsAnchorLayout {
   return QGraphicsAnchorLayout{}
 }
 
-
+  // proto:  qreal QGraphicsAnchorLayout::verticalSpacing();
 func (this *QGraphicsAnchorLayout) verticalSpacing(args ...interface{}) () {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -70,7 +120,7 @@ func (this *QGraphicsAnchorLayout) verticalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::setSpacing(qreal spacing);
 func (this *QGraphicsAnchorLayout) setSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +139,7 @@ func (this *QGraphicsAnchorLayout) setSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGraphicsAnchorLayout::count();
 func (this *QGraphicsAnchorLayout) count(args ...interface{}) () {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +157,7 @@ func (this *QGraphicsAnchorLayout) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QGraphicsAnchorLayout::horizontalSpacing();
 func (this *QGraphicsAnchorLayout) horizontalSpacing(args ...interface{}) () {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +175,7 @@ func (this *QGraphicsAnchorLayout) horizontalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::invalidate();
 func (this *QGraphicsAnchorLayout) invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,7 +193,7 @@ func (this *QGraphicsAnchorLayout) invalidate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
 func (this *QGraphicsAnchorLayout) itemAt(args ...interface{}) () {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,7 +212,7 @@ func (this *QGraphicsAnchorLayout) itemAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
 func (this *QGraphicsAnchorLayout) setVerticalSpacing(args ...interface{}) () {
   // setVerticalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -181,7 +231,7 @@ func (this *QGraphicsAnchorLayout) setVerticalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
 func (this *QGraphicsAnchorLayout) setGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,7 +250,7 @@ func (this *QGraphicsAnchorLayout) setGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
 func (this *QGraphicsAnchorLayout) setHorizontalSpacing(args ...interface{}) () {
   // setHorizontalSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -219,7 +269,7 @@ func (this *QGraphicsAnchorLayout) setHorizontalSpacing(args ...interface{}) () 
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
 func (this *QGraphicsAnchorLayout) FreeQGraphicsAnchorLayout(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -233,7 +283,7 @@ func (this *QGraphicsAnchorLayout) FreeQGraphicsAnchorLayout(args ...interface{}
 
 }
 
-
+  // proto:  void QGraphicsAnchorLayout::removeAt(int index);
 func (this *QGraphicsAnchorLayout) removeAt(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +302,7 @@ func (this *QGraphicsAnchorLayout) removeAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
 func (this *QGraphicsAnchor) FreeQGraphicsAnchor(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -266,7 +316,7 @@ func (this *QGraphicsAnchor) FreeQGraphicsAnchor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchor::unsetSpacing();
 func (this *QGraphicsAnchor) unsetSpacing(args ...interface{}) () {
   // unsetSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +334,7 @@ func (this *QGraphicsAnchor) unsetSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
 func (this *QGraphicsAnchor) setSpacing(args ...interface{}) () {
   // setSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,12 +353,12 @@ func (this *QGraphicsAnchor) setSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsAnchor::QGraphicsAnchor(QGraphicsAnchorLayout * parent);
 func NewQGraphicsAnchor(args ...interface{}) QGraphicsAnchor {
   return QGraphicsAnchor{}
 }
 
-
+  // proto:  const QMetaObject * QGraphicsAnchor::metaObject();
 func (this *QGraphicsAnchor) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -326,7 +376,7 @@ func (this *QGraphicsAnchor) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QGraphicsAnchor::spacing();
 func (this *QGraphicsAnchor) spacing(args ...interface{}) () {
   // spacing()
   var vtys = make(map[int32]map[int32]reflect.Type)

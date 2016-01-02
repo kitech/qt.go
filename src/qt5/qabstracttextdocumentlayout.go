@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,59 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTextObjectInterface::~QTextObjectInterface();
+extern void _ZN20QTextObjectInterfaceD0Ev(void* qthis);
+  // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
+extern void _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
+extern void _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(void* qthis, void* arg0, void* arg1, void* arg2, int arg3, void* arg4);
+  // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
+extern void _ZNK27QAbstractTextDocumentLayout10metaObjectEv(void* qthis);
+  // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
+extern void _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(void* qthis, int arg0, void* arg1);
+  // proto:  int QAbstractTextDocumentLayout::pageCount();
+extern void _ZNK27QAbstractTextDocumentLayout9pageCountEv(void* qthis);
+  // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
+extern void _ZN27QAbstractTextDocumentLayoutD0Ev(void* qthis);
+  // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
+extern void _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0);
+  // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
+extern void _ZNK27QAbstractTextDocumentLayout8documentEv(void* qthis);
+  // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
+extern void _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(void* qthis, int arg0, void* arg1);
+  // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
+extern void* dector_ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(void* arg0);
+extern void _ZN27QAbstractTextDocumentLayoutC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
+extern void _ZNK27QAbstractTextDocumentLayout12documentSizeEv(void* qthis);
+  // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
+extern void _ZNK27QAbstractTextDocumentLayout11paintDeviceEv(void* qthis);
+  // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
+extern void _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(void* qthis, void* arg0);
+  // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
+extern void _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(void* qthis, int arg0);
+  // proto:  QRectF QAbstractTextDocumentLayout::frameBoundingRect(QTextFrame * frame);
+extern void _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(void* qthis, void* arg0);
+  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
+extern void _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextObjectInterface)=8
 type QTextObjectInterface struct {
   // qbase: None;
@@ -51,7 +95,7 @@ type QAbstractTextDocumentLayout struct {
 //  _documentSizeChanged QAbstractTextDocumentLayout_documentSizeChanged_signal;
 }
 
-
+  // proto:  void QTextObjectInterface::~QTextObjectInterface();
 func (this *QTextObjectInterface) FreeQTextObjectInterface(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -65,7 +109,7 @@ func (this *QTextObjectInterface) FreeQTextObjectInterface(args ...interface{}) 
 
 }
 
-
+  // proto:  QSizeF QTextObjectInterface::intrinsicSize(QTextDocument * doc, int posInDocument, const QTextFormat & format);
 func (this *QTextObjectInterface) intrinsicSize(args ...interface{}) () {
   // intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +130,7 @@ func (this *QTextObjectInterface) intrinsicSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextObjectInterface::drawObject(QPainter * painter, const QRectF & rect, QTextDocument * doc, int posInDocument, const QTextFormat & format);
 func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
   // drawObject(class QPainter *, const class QRectF &, class QTextDocument *, int, const class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +153,7 @@ func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractTextDocumentLayout::metaObject();
 func (this *QAbstractTextDocumentLayout) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -127,7 +171,7 @@ func (this *QAbstractTextDocumentLayout) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTextDocumentLayout::registerHandler(int objectType, QObject * component);
 func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) () {
   // registerHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -147,7 +191,7 @@ func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) ()
 
 }
 
-
+  // proto:  int QAbstractTextDocumentLayout::pageCount();
 func (this *QAbstractTextDocumentLayout) pageCount(args ...interface{}) () {
   // pageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -165,7 +209,7 @@ func (this *QAbstractTextDocumentLayout) pageCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTextDocumentLayout::~QAbstractTextDocumentLayout();
 func (this *QAbstractTextDocumentLayout) FreeQAbstractTextDocumentLayout(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,7 +223,7 @@ func (this *QAbstractTextDocumentLayout) FreeQAbstractTextDocumentLayout(args ..
 
 }
 
-
+  // proto:  void QAbstractTextDocumentLayout::setPaintDevice(QPaintDevice * device);
 func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () {
   // setPaintDevice(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +242,7 @@ func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () 
 
 }
 
-
+  // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
 func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +260,7 @@ func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTextDocumentLayout::unregisterHandler(int objectType, QObject * component);
 func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) () {
   // unregisterHandler(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,12 +280,12 @@ func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) 
 
 }
 
-
+  // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
 func NewQAbstractTextDocumentLayout(args ...interface{}) QAbstractTextDocumentLayout {
   return QAbstractTextDocumentLayout{}
 }
 
-
+  // proto:  QSizeF QAbstractTextDocumentLayout::documentSize();
 func (this *QAbstractTextDocumentLayout) documentSize(args ...interface{}) () {
   // documentSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -259,7 +303,7 @@ func (this *QAbstractTextDocumentLayout) documentSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
 func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -277,7 +321,7 @@ func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
 func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
   // anchorAt(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,7 +340,7 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextObjectInterface * QAbstractTextDocumentLayout::handlerForObject(int objectType);
 func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) () {
   // handlerForObject(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -315,7 +359,7 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
 
 }
 
-
+  // proto:  QRectF QAbstractTextDocumentLayout::frameBoundingRect(QTextFrame * frame);
 func (this *QAbstractTextDocumentLayout) frameBoundingRect(args ...interface{}) () {
   // frameBoundingRect(class QTextFrame *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -334,7 +378,7 @@ func (this *QAbstractTextDocumentLayout) frameBoundingRect(args ...interface{}) 
 
 }
 
-
+  // proto:  QRectF QAbstractTextDocumentLayout::blockBoundingRect(const QTextBlock & block);
 func (this *QAbstractTextDocumentLayout) blockBoundingRect(args ...interface{}) () {
   // blockBoundingRect(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,162 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSwipeGesture::~QSwipeGesture();
+extern void _ZN13QSwipeGestureD0Ev(void* qthis);
+  // proto:  const QMetaObject * QSwipeGesture::metaObject();
+extern void _ZNK13QSwipeGesture10metaObjectEv(void* qthis);
+  // proto:  void QSwipeGesture::setSwipeAngle(qreal value);
+extern void _ZN13QSwipeGesture13setSwipeAngleEd(void* qthis, double arg0);
+  // proto:  void QSwipeGesture::QSwipeGesture(QObject * parent);
+extern void* dector_ZN13QSwipeGestureC1EP7QObject(void* arg0);
+extern void _ZN13QSwipeGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  qreal QSwipeGesture::swipeAngle();
+extern void _ZNK13QSwipeGesture10swipeAngleEv(void* qthis);
+  // proto:  QPointF QGesture::hotSpot();
+extern void _ZNK8QGesture7hotSpotEv(void* qthis);
+  // proto:  bool QGesture::hasHotSpot();
+extern void _ZNK8QGesture10hasHotSpotEv(void* qthis);
+  // proto:  void QGesture::unsetHotSpot();
+extern void _ZN8QGesture12unsetHotSpotEv(void* qthis);
+  // proto:  const QMetaObject * QGesture::metaObject();
+extern void _ZNK8QGesture10metaObjectEv(void* qthis);
+  // proto:  void QGesture::QGesture(QObject * parent);
+extern void* dector_ZN8QGestureC1EP7QObject(void* arg0);
+extern void _ZN8QGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QGesture::setHotSpot(const QPointF & value);
+extern void _ZN8QGesture10setHotSpotERK7QPointF(void* qthis, void* arg0);
+  // proto:  void QGesture::~QGesture();
+extern void _ZN8QGestureD0Ev(void* qthis);
+  // proto:  bool QGestureEvent::isAccepted(QGesture * );
+extern void _ZNK13QGestureEvent10isAcceptedEP8QGesture(void* qthis, void* arg0);
+  // proto:  QWidget * QGestureEvent::widget();
+extern void _ZNK13QGestureEvent6widgetEv(void* qthis);
+  // proto:  void QGestureEvent::ignore(QGesture * );
+extern void _ZN13QGestureEvent6ignoreEP8QGesture(void* qthis, void* arg0);
+  // proto:  void QGestureEvent::accept(QGesture * );
+extern void _ZN13QGestureEvent6acceptEP8QGesture(void* qthis, void* arg0);
+  // proto:  QList<QGesture *> QGestureEvent::activeGestures();
+extern void _ZNK13QGestureEvent14activeGesturesEv(void* qthis);
+  // proto:  QList<QGesture *> QGestureEvent::gestures();
+extern void _ZNK13QGestureEvent8gesturesEv(void* qthis);
+  // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
+extern void _ZN13QGestureEvent11setAcceptedEP8QGestureb(void* qthis, void* arg0, bool arg1);
+  // proto:  void QGestureEvent::setWidget(QWidget * widget);
+extern void _ZN13QGestureEvent9setWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QGestureEvent::~QGestureEvent();
+extern void _ZN13QGestureEventD0Ev(void* qthis);
+  // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
+extern void _ZNK13QGestureEvent16canceledGesturesEv(void* qthis);
+  // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
+extern void _ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(void* qthis, void* arg0);
+  // proto:  QPointF QPanGesture::offset();
+extern void _ZNK11QPanGesture6offsetEv(void* qthis);
+  // proto:  QPointF QPanGesture::delta();
+extern void _ZNK11QPanGesture5deltaEv(void* qthis);
+  // proto:  void QPanGesture::setOffset(const QPointF & value);
+extern void _ZN11QPanGesture9setOffsetERK7QPointF(void* qthis, void* arg0);
+  // proto:  qreal QPanGesture::acceleration();
+extern void _ZNK11QPanGesture12accelerationEv(void* qthis);
+  // proto:  void QPanGesture::~QPanGesture();
+extern void _ZN11QPanGestureD0Ev(void* qthis);
+  // proto:  void QPanGesture::QPanGesture(QObject * parent);
+extern void* dector_ZN11QPanGestureC1EP7QObject(void* arg0);
+extern void _ZN11QPanGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QPanGesture::metaObject();
+extern void _ZNK11QPanGesture10metaObjectEv(void* qthis);
+  // proto:  void QPanGesture::setAcceleration(qreal value);
+extern void _ZN11QPanGesture15setAccelerationEd(void* qthis, double arg0);
+  // proto:  QPointF QPanGesture::lastOffset();
+extern void _ZNK11QPanGesture10lastOffsetEv(void* qthis);
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
+extern void _ZN11QPanGesture13setLastOffsetERK7QPointF(void* qthis, void* arg0);
+  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
+extern void* dector_ZN18QTapAndHoldGestureC1EP7QObject(void* arg0);
+extern void _ZN18QTapAndHoldGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QTapAndHoldGesture::~QTapAndHoldGesture();
+extern void _ZN18QTapAndHoldGestureD0Ev(void* qthis);
+  // proto:  QPointF QTapAndHoldGesture::position();
+extern void _ZNK18QTapAndHoldGesture8positionEv(void* qthis);
+  // proto: static void QTapAndHoldGesture::setTimeout(int msecs);
+extern void _ZN18QTapAndHoldGesture10setTimeoutEi(int arg0);
+  // proto: static int QTapAndHoldGesture::timeout();
+extern void _ZN18QTapAndHoldGesture7timeoutEv();
+  // proto:  const QMetaObject * QTapAndHoldGesture::metaObject();
+extern void _ZNK18QTapAndHoldGesture10metaObjectEv(void* qthis);
+  // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
+extern void _ZN18QTapAndHoldGesture11setPositionERK7QPointF(void* qthis, void* arg0);
+  // proto:  QPointF QTapGesture::position();
+extern void _ZNK11QTapGesture8positionEv(void* qthis);
+  // proto:  void QTapGesture::setPosition(const QPointF & pos);
+extern void _ZN11QTapGesture11setPositionERK7QPointF(void* qthis, void* arg0);
+  // proto:  void QTapGesture::QTapGesture(QObject * parent);
+extern void* dector_ZN11QTapGestureC1EP7QObject(void* arg0);
+extern void _ZN11QTapGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTapGesture::metaObject();
+extern void _ZNK11QTapGesture10metaObjectEv(void* qthis);
+  // proto:  void QTapGesture::~QTapGesture();
+extern void _ZN11QTapGestureD0Ev(void* qthis);
+  // proto:  void QPinchGesture::setRotationAngle(qreal value);
+extern void _ZN13QPinchGesture16setRotationAngleEd(void* qthis, double arg0);
+  // proto:  qreal QPinchGesture::lastScaleFactor();
+extern void _ZNK13QPinchGesture15lastScaleFactorEv(void* qthis);
+  // proto:  qreal QPinchGesture::lastRotationAngle();
+extern void _ZNK13QPinchGesture17lastRotationAngleEv(void* qthis);
+  // proto:  QPointF QPinchGesture::startCenterPoint();
+extern void _ZNK13QPinchGesture16startCenterPointEv(void* qthis);
+  // proto:  qreal QPinchGesture::rotationAngle();
+extern void _ZNK13QPinchGesture13rotationAngleEv(void* qthis);
+  // proto:  QPointF QPinchGesture::lastCenterPoint();
+extern void _ZNK13QPinchGesture15lastCenterPointEv(void* qthis);
+  // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
+extern void* dector_ZN13QPinchGestureC1EP7QObject(void* arg0);
+extern void _ZN13QPinchGestureC1EP7QObject(void* qthis, void* arg0);
+  // proto:  qreal QPinchGesture::totalScaleFactor();
+extern void _ZNK13QPinchGesture16totalScaleFactorEv(void* qthis);
+  // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
+extern void _ZN13QPinchGesture19setTotalScaleFactorEd(void* qthis, double arg0);
+  // proto:  qreal QPinchGesture::totalRotationAngle();
+extern void _ZNK13QPinchGesture18totalRotationAngleEv(void* qthis);
+  // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
+extern void _ZN13QPinchGesture18setLastScaleFactorEd(void* qthis, double arg0);
+  // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
+extern void _ZN13QPinchGesture18setLastCenterPointERK7QPointF(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QPinchGesture::metaObject();
+extern void _ZNK13QPinchGesture10metaObjectEv(void* qthis);
+  // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
+extern void _ZN13QPinchGesture20setLastRotationAngleEd(void* qthis, double arg0);
+  // proto:  QPointF QPinchGesture::centerPoint();
+extern void _ZNK13QPinchGesture11centerPointEv(void* qthis);
+  // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
+extern void _ZN13QPinchGesture14setCenterPointERK7QPointF(void* qthis, void* arg0);
+  // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
+extern void _ZN13QPinchGesture21setTotalRotationAngleEd(void* qthis, double arg0);
+  // proto:  void QPinchGesture::setScaleFactor(qreal value);
+extern void _ZN13QPinchGesture14setScaleFactorEd(void* qthis, double arg0);
+  // proto:  void QPinchGesture::~QPinchGesture();
+extern void _ZN13QPinchGestureD0Ev(void* qthis);
+  // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
+extern void _ZN13QPinchGesture19setStartCenterPointERK7QPointF(void* qthis, void* arg0);
+  // proto:  qreal QPinchGesture::scaleFactor();
+extern void _ZNK13QPinchGesture11scaleFactorEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSwipeGesture)=1
 type QSwipeGesture struct {
   /*qbase*/ QGesture;
@@ -77,7 +224,7 @@ type QPinchGesture struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QSwipeGesture::~QSwipeGesture();
 func (this *QSwipeGesture) FreeQSwipeGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,7 +238,7 @@ func (this *QSwipeGesture) FreeQSwipeGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QSwipeGesture::metaObject();
 func (this *QSwipeGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +256,7 @@ func (this *QSwipeGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSwipeGesture::setSwipeAngle(qreal value);
 func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
   // setSwipeAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -128,12 +275,12 @@ func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSwipeGesture::QSwipeGesture(QObject * parent);
 func NewQSwipeGesture(args ...interface{}) QSwipeGesture {
   return QSwipeGesture{}
 }
 
-
+  // proto:  qreal QSwipeGesture::swipeAngle();
 func (this *QSwipeGesture) swipeAngle(args ...interface{}) () {
   // swipeAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +298,7 @@ func (this *QSwipeGesture) swipeAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QGesture::hotSpot();
 func (this *QGesture) hotSpot(args ...interface{}) () {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -169,7 +316,7 @@ func (this *QGesture) hotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGesture::hasHotSpot();
 func (this *QGesture) hasHotSpot(args ...interface{}) () {
   // hasHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +334,7 @@ func (this *QGesture) hasHotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGesture::unsetHotSpot();
 func (this *QGesture) unsetHotSpot(args ...interface{}) () {
   // unsetHotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +352,7 @@ func (this *QGesture) unsetHotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QGesture::metaObject();
 func (this *QGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,12 +370,12 @@ func (this *QGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGesture::QGesture(QObject * parent);
 func NewQGesture(args ...interface{}) QGesture {
   return QGesture{}
 }
 
-
+  // proto:  void QGesture::setHotSpot(const QPointF & value);
 func (this *QGesture) setHotSpot(args ...interface{}) () {
   // setHotSpot(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +394,7 @@ func (this *QGesture) setHotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGesture::~QGesture();
 func (this *QGesture) FreeQGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -261,7 +408,7 @@ func (this *QGesture) FreeQGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGestureEvent::isAccepted(QGesture * );
 func (this *QGestureEvent) isAccepted(args ...interface{}) () {
   // isAccepted(class QGesture *)
   // isAccepted(Qt::GestureType)
@@ -285,7 +432,7 @@ func (this *QGestureEvent) isAccepted(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QGestureEvent::widget();
 func (this *QGestureEvent) widget(args ...interface{}) () {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +450,7 @@ func (this *QGestureEvent) widget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureEvent::ignore(QGesture * );
 func (this *QGestureEvent) ignore(args ...interface{}) () {
   // ignore(class QGesture *)
   // ignore(Qt::GestureType)
@@ -327,7 +474,7 @@ func (this *QGestureEvent) ignore(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureEvent::accept(QGesture * );
 func (this *QGestureEvent) accept(args ...interface{}) () {
   // accept(class QGesture *)
   // accept(Qt::GestureType)
@@ -351,7 +498,7 @@ func (this *QGestureEvent) accept(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QGesture *> QGestureEvent::activeGestures();
 func (this *QGestureEvent) activeGestures(args ...interface{}) () {
   // activeGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -369,7 +516,7 @@ func (this *QGestureEvent) activeGestures(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QGesture *> QGestureEvent::gestures();
 func (this *QGestureEvent) gestures(args ...interface{}) () {
   // gestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -387,7 +534,7 @@ func (this *QGestureEvent) gestures(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureEvent::setAccepted(QGesture * , bool );
 func (this *QGestureEvent) setAccepted(args ...interface{}) () {
   // setAccepted(Qt::GestureType, _Bool)
   // setAccepted(class QGesture *, _Bool)
@@ -413,7 +560,7 @@ func (this *QGestureEvent) setAccepted(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureEvent::setWidget(QWidget * widget);
 func (this *QGestureEvent) setWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +579,7 @@ func (this *QGestureEvent) setWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureEvent::~QGestureEvent();
 func (this *QGestureEvent) FreeQGestureEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -446,7 +593,7 @@ func (this *QGestureEvent) FreeQGestureEvent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QGesture *> QGestureEvent::canceledGestures();
 func (this *QGestureEvent) canceledGestures(args ...interface{}) () {
   // canceledGestures()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -464,7 +611,7 @@ func (this *QGestureEvent) canceledGestures(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QGestureEvent::mapToGraphicsScene(const QPointF & gesturePoint);
 func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
   // mapToGraphicsScene(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -483,7 +630,7 @@ func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPanGesture::offset();
 func (this *QPanGesture) offset(args ...interface{}) () {
   // offset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -501,7 +648,7 @@ func (this *QPanGesture) offset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPanGesture::delta();
 func (this *QPanGesture) delta(args ...interface{}) () {
   // delta()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -519,7 +666,7 @@ func (this *QPanGesture) delta(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPanGesture::setOffset(const QPointF & value);
 func (this *QPanGesture) setOffset(args ...interface{}) () {
   // setOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -538,7 +685,7 @@ func (this *QPanGesture) setOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPanGesture::acceleration();
 func (this *QPanGesture) acceleration(args ...interface{}) () {
   // acceleration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -556,7 +703,7 @@ func (this *QPanGesture) acceleration(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPanGesture::~QPanGesture();
 func (this *QPanGesture) FreeQPanGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -570,12 +717,12 @@ func (this *QPanGesture) FreeQPanGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPanGesture::QPanGesture(QObject * parent);
 func NewQPanGesture(args ...interface{}) QPanGesture {
   return QPanGesture{}
 }
 
-
+  // proto:  const QMetaObject * QPanGesture::metaObject();
 func (this *QPanGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -593,7 +740,7 @@ func (this *QPanGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPanGesture::setAcceleration(qreal value);
 func (this *QPanGesture) setAcceleration(args ...interface{}) () {
   // setAcceleration(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -612,7 +759,7 @@ func (this *QPanGesture) setAcceleration(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPanGesture::lastOffset();
 func (this *QPanGesture) lastOffset(args ...interface{}) () {
   // lastOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -630,7 +777,7 @@ func (this *QPanGesture) lastOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPanGesture::setLastOffset(const QPointF & value);
 func (this *QPanGesture) setLastOffset(args ...interface{}) () {
   // setLastOffset(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -649,12 +796,12 @@ func (this *QPanGesture) setLastOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTapAndHoldGesture::QTapAndHoldGesture(QObject * parent);
 func NewQTapAndHoldGesture(args ...interface{}) QTapAndHoldGesture {
   return QTapAndHoldGesture{}
 }
 
-
+  // proto:  void QTapAndHoldGesture::~QTapAndHoldGesture();
 func (this *QTapAndHoldGesture) FreeQTapAndHoldGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -668,7 +815,7 @@ func (this *QTapAndHoldGesture) FreeQTapAndHoldGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QTapAndHoldGesture::position();
 func (this *QTapAndHoldGesture) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -686,7 +833,7 @@ func (this *QTapAndHoldGesture) position(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QTapAndHoldGesture::setTimeout(int msecs);
 func (this *QTapAndHoldGesture) setTimeout_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -700,7 +847,7 @@ func (this *QTapAndHoldGesture) setTimeout_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QTapAndHoldGesture::timeout();
 func (this *QTapAndHoldGesture) timeout_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -714,7 +861,7 @@ func (this *QTapAndHoldGesture) timeout_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTapAndHoldGesture::metaObject();
 func (this *QTapAndHoldGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -732,7 +879,7 @@ func (this *QTapAndHoldGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTapAndHoldGesture::setPosition(const QPointF & pos);
 func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -751,7 +898,7 @@ func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QTapGesture::position();
 func (this *QTapGesture) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -769,7 +916,7 @@ func (this *QTapGesture) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTapGesture::setPosition(const QPointF & pos);
 func (this *QTapGesture) setPosition(args ...interface{}) () {
   // setPosition(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -788,12 +935,12 @@ func (this *QTapGesture) setPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTapGesture::QTapGesture(QObject * parent);
 func NewQTapGesture(args ...interface{}) QTapGesture {
   return QTapGesture{}
 }
 
-
+  // proto:  const QMetaObject * QTapGesture::metaObject();
 func (this *QTapGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -811,7 +958,7 @@ func (this *QTapGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTapGesture::~QTapGesture();
 func (this *QTapGesture) FreeQTapGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -825,7 +972,7 @@ func (this *QTapGesture) FreeQTapGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setRotationAngle(qreal value);
 func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
   // setRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -844,7 +991,7 @@ func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPinchGesture::lastScaleFactor();
 func (this *QPinchGesture) lastScaleFactor(args ...interface{}) () {
   // lastScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -862,7 +1009,7 @@ func (this *QPinchGesture) lastScaleFactor(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPinchGesture::lastRotationAngle();
 func (this *QPinchGesture) lastRotationAngle(args ...interface{}) () {
   // lastRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -880,7 +1027,7 @@ func (this *QPinchGesture) lastRotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPinchGesture::startCenterPoint();
 func (this *QPinchGesture) startCenterPoint(args ...interface{}) () {
   // startCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -898,7 +1045,7 @@ func (this *QPinchGesture) startCenterPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPinchGesture::rotationAngle();
 func (this *QPinchGesture) rotationAngle(args ...interface{}) () {
   // rotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -916,7 +1063,7 @@ func (this *QPinchGesture) rotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPinchGesture::lastCenterPoint();
 func (this *QPinchGesture) lastCenterPoint(args ...interface{}) () {
   // lastCenterPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -934,12 +1081,12 @@ func (this *QPinchGesture) lastCenterPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::QPinchGesture(QObject * parent);
 func NewQPinchGesture(args ...interface{}) QPinchGesture {
   return QPinchGesture{}
 }
 
-
+  // proto:  qreal QPinchGesture::totalScaleFactor();
 func (this *QPinchGesture) totalScaleFactor(args ...interface{}) () {
   // totalScaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -957,7 +1104,7 @@ func (this *QPinchGesture) totalScaleFactor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setTotalScaleFactor(qreal value);
 func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
   // setTotalScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -976,7 +1123,7 @@ func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPinchGesture::totalRotationAngle();
 func (this *QPinchGesture) totalRotationAngle(args ...interface{}) () {
   // totalRotationAngle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -994,7 +1141,7 @@ func (this *QPinchGesture) totalRotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setLastScaleFactor(qreal value);
 func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
   // setLastScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1013,7 +1160,7 @@ func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setLastCenterPoint(const QPointF & value);
 func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
   // setLastCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1032,7 +1179,7 @@ func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QPinchGesture::metaObject();
 func (this *QPinchGesture) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1050,7 +1197,7 @@ func (this *QPinchGesture) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setLastRotationAngle(qreal value);
 func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
   // setLastRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1069,7 +1216,7 @@ func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPinchGesture::centerPoint();
 func (this *QPinchGesture) centerPoint(args ...interface{}) () {
   // centerPoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1087,7 +1234,7 @@ func (this *QPinchGesture) centerPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setCenterPoint(const QPointF & value);
 func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
   // setCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1106,7 +1253,7 @@ func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setTotalRotationAngle(qreal value);
 func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
   // setTotalRotationAngle(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1125,7 +1272,7 @@ func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setScaleFactor(qreal value);
 func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
   // setScaleFactor(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1144,7 +1291,7 @@ func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::~QPinchGesture();
 func (this *QPinchGesture) FreeQPinchGesture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1158,7 +1305,7 @@ func (this *QPinchGesture) FreeQPinchGesture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPinchGesture::setStartCenterPoint(const QPointF & value);
 func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
   // setStartCenterPoint(const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1177,7 +1324,7 @@ func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPinchGesture::scaleFactor();
 func (this *QPinchGesture) scaleFactor(args ...interface{}) () {
   // scaleFactor()
   var vtys = make(map[int32]map[int32]reflect.Type)

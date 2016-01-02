@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,45 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
+extern void _ZNK22QItemEditorCreatorBase17valuePropertyNameEv(void* qthis);
+  // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
+extern void _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
+extern void _ZN22QItemEditorCreatorBaseD0Ev(void* qthis);
+  // proto:  void QItemEditorFactory::QItemEditorFactory();
+extern void* dector_ZN18QItemEditorFactoryC1Ev();
+extern void demth_ZN18QItemEditorFactoryC1Ev(void* qthis);
+  // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
+extern void _ZNK18QItemEditorFactory17valuePropertyNameEi(void* qthis, int arg0);
+  // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
+extern void _ZN18QItemEditorFactory14defaultFactoryEv();
+  // proto:  void QItemEditorFactory::~QItemEditorFactory();
+extern void _ZN18QItemEditorFactoryD0Ev(void* qthis);
+  // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
+extern void _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(void* qthis, int arg0, void* arg1);
+  // proto: static void QItemEditorFactory::setDefaultFactory(QItemEditorFactory * factory);
+extern void _ZN18QItemEditorFactory17setDefaultFactoryEPS_(void* arg0);
+  // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
+extern void _ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QItemEditorCreatorBase)=8
 type QItemEditorCreatorBase struct {
   // qbase: None;
@@ -47,7 +77,7 @@ type QItemEditorFactory struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
 func (this *QItemEditorCreatorBase) valuePropertyName(args ...interface{}) () {
   // valuePropertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +95,7 @@ func (this *QItemEditorCreatorBase) valuePropertyName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
 func (this *QItemEditorCreatorBase) createWidget(args ...interface{}) () {
   // createWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +114,7 @@ func (this *QItemEditorCreatorBase) createWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
 func (this *QItemEditorCreatorBase) FreeQItemEditorCreatorBase(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,12 +128,12 @@ func (this *QItemEditorCreatorBase) FreeQItemEditorCreatorBase(args ...interface
 
 }
 
-
+  // proto:  void QItemEditorFactory::QItemEditorFactory();
 func NewQItemEditorFactory(args ...interface{}) QItemEditorFactory {
   return QItemEditorFactory{}
 }
 
-
+  // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
 func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
   // valuePropertyName(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +152,7 @@ func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
 
 }
 
-
+  // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
 func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +166,7 @@ func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemEditorFactory::~QItemEditorFactory();
 func (this *QItemEditorFactory) FreeQItemEditorFactory(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -150,7 +180,7 @@ func (this *QItemEditorFactory) FreeQItemEditorFactory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
 func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
   // registerEditor(int, class QItemEditorCreatorBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +200,7 @@ func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QItemEditorFactory::setDefaultFactory(QItemEditorFactory * factory);
 func (this *QItemEditorFactory) setDefaultFactory_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,7 +214,7 @@ func (this *QItemEditorFactory) setDefaultFactory_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
 func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
   // createEditor(int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)

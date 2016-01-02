@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,78 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions();
+extern void* dector_ZN27QOpenGLPixelTransferOptionsC1Ev();
+extern void _ZN27QOpenGLPixelTransferOptionsC1Ev(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::~QOpenGLPixelTransferOptions();
+extern void _ZN27QOpenGLPixelTransferOptionsD0Ev(void* qthis);
+  // proto:  bool QOpenGLPixelTransferOptions::isSwapBytesEnabled();
+extern void _ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::swap(QOpenGLPixelTransferOptions & other);
+extern void _ZN27QOpenGLPixelTransferOptions4swapERS_(void* qthis, void* arg0);
+  // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions(const QOpenGLPixelTransferOptions & );
+extern void* dector_ZN27QOpenGLPixelTransferOptionsC1ERKS_(void* arg0);
+extern void _ZN27QOpenGLPixelTransferOptionsC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QOpenGLPixelTransferOptions::skipImages();
+extern void _ZNK27QOpenGLPixelTransferOptions10skipImagesEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::setSkipRows(int skipRows);
+extern void _ZN27QOpenGLPixelTransferOptions11setSkipRowsEi(void* qthis, int arg0);
+  // proto:  int QOpenGLPixelTransferOptions::skipPixels();
+extern void _ZNK27QOpenGLPixelTransferOptions10skipPixelsEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::setRowLength(int rowLength);
+extern void _ZN27QOpenGLPixelTransferOptions12setRowLengthEi(void* qthis, int arg0);
+  // proto:  int QOpenGLPixelTransferOptions::imageHeight();
+extern void _ZNK27QOpenGLPixelTransferOptions11imageHeightEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::setImageHeight(int imageHeight);
+extern void _ZN27QOpenGLPixelTransferOptions14setImageHeightEi(void* qthis, int arg0);
+  // proto:  int QOpenGLPixelTransferOptions::skipRows();
+extern void _ZNK27QOpenGLPixelTransferOptions8skipRowsEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::setAlignment(int alignment);
+extern void _ZN27QOpenGLPixelTransferOptions12setAlignmentEi(void* qthis, int arg0);
+  // proto:  void QOpenGLPixelTransferOptions::setSkipImages(int skipImages);
+extern void _ZN27QOpenGLPixelTransferOptions13setSkipImagesEi(void* qthis, int arg0);
+  // proto:  int QOpenGLPixelTransferOptions::alignment();
+extern void _ZNK27QOpenGLPixelTransferOptions9alignmentEv(void* qthis);
+  // proto:  void QOpenGLPixelTransferOptions::setSkipPixels(int skipPixels);
+extern void _ZN27QOpenGLPixelTransferOptions13setSkipPixelsEi(void* qthis, int arg0);
+  // proto:  void QOpenGLPixelTransferOptions::setSwapBytesEnabled(bool swapBytes);
+extern void _ZN27QOpenGLPixelTransferOptions19setSwapBytesEnabledEb(void* qthis, bool arg0);
+  // proto:  void QOpenGLPixelTransferOptions::setLeastSignificantByteFirst(bool lsbFirst);
+extern void _ZN27QOpenGLPixelTransferOptions28setLeastSignificantByteFirstEb(void* qthis, bool arg0);
+  // proto:  bool QOpenGLPixelTransferOptions::isLeastSignificantBitFirst();
+extern void _ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv(void* qthis);
+  // proto:  int QOpenGLPixelTransferOptions::rowLength();
+extern void _ZNK27QOpenGLPixelTransferOptions9rowLengthEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLPixelTransferOptions)=1
 type QOpenGLPixelTransferOptions struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::QOpenGLPixelTransferOptions();
 func NewQOpenGLPixelTransferOptions(args ...interface{}) QOpenGLPixelTransferOptions {
   return QOpenGLPixelTransferOptions{}
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::~QOpenGLPixelTransferOptions();
 func (this *QOpenGLPixelTransferOptions) FreeQOpenGLPixelTransferOptions(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -60,7 +111,7 @@ func (this *QOpenGLPixelTransferOptions) FreeQOpenGLPixelTransferOptions(args ..
 
 }
 
-
+  // proto:  bool QOpenGLPixelTransferOptions::isSwapBytesEnabled();
 func (this *QOpenGLPixelTransferOptions) isSwapBytesEnabled(args ...interface{}) () {
   // isSwapBytesEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +129,7 @@ func (this *QOpenGLPixelTransferOptions) isSwapBytesEnabled(args ...interface{})
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::swap(QOpenGLPixelTransferOptions & other);
 func (this *QOpenGLPixelTransferOptions) swap(args ...interface{}) () {
   // swap(class QOpenGLPixelTransferOptions &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +148,7 @@ func (this *QOpenGLPixelTransferOptions) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::skipImages();
 func (this *QOpenGLPixelTransferOptions) skipImages(args ...interface{}) () {
   // skipImages()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +166,7 @@ func (this *QOpenGLPixelTransferOptions) skipImages(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setSkipRows(int skipRows);
 func (this *QOpenGLPixelTransferOptions) setSkipRows(args ...interface{}) () {
   // setSkipRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +185,7 @@ func (this *QOpenGLPixelTransferOptions) setSkipRows(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::skipPixels();
 func (this *QOpenGLPixelTransferOptions) skipPixels(args ...interface{}) () {
   // skipPixels()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +203,7 @@ func (this *QOpenGLPixelTransferOptions) skipPixels(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setRowLength(int rowLength);
 func (this *QOpenGLPixelTransferOptions) setRowLength(args ...interface{}) () {
   // setRowLength(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -171,7 +222,7 @@ func (this *QOpenGLPixelTransferOptions) setRowLength(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::imageHeight();
 func (this *QOpenGLPixelTransferOptions) imageHeight(args ...interface{}) () {
   // imageHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +240,7 @@ func (this *QOpenGLPixelTransferOptions) imageHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setImageHeight(int imageHeight);
 func (this *QOpenGLPixelTransferOptions) setImageHeight(args ...interface{}) () {
   // setImageHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +259,7 @@ func (this *QOpenGLPixelTransferOptions) setImageHeight(args ...interface{}) () 
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::skipRows();
 func (this *QOpenGLPixelTransferOptions) skipRows(args ...interface{}) () {
   // skipRows()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +277,7 @@ func (this *QOpenGLPixelTransferOptions) skipRows(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setAlignment(int alignment);
 func (this *QOpenGLPixelTransferOptions) setAlignment(args ...interface{}) () {
   // setAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +296,7 @@ func (this *QOpenGLPixelTransferOptions) setAlignment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setSkipImages(int skipImages);
 func (this *QOpenGLPixelTransferOptions) setSkipImages(args ...interface{}) () {
   // setSkipImages(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -264,7 +315,7 @@ func (this *QOpenGLPixelTransferOptions) setSkipImages(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::alignment();
 func (this *QOpenGLPixelTransferOptions) alignment(args ...interface{}) () {
   // alignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,7 +333,7 @@ func (this *QOpenGLPixelTransferOptions) alignment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setSkipPixels(int skipPixels);
 func (this *QOpenGLPixelTransferOptions) setSkipPixels(args ...interface{}) () {
   // setSkipPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -301,7 +352,7 @@ func (this *QOpenGLPixelTransferOptions) setSkipPixels(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setSwapBytesEnabled(bool swapBytes);
 func (this *QOpenGLPixelTransferOptions) setSwapBytesEnabled(args ...interface{}) () {
   // setSwapBytesEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +371,7 @@ func (this *QOpenGLPixelTransferOptions) setSwapBytesEnabled(args ...interface{}
 
 }
 
-
+  // proto:  void QOpenGLPixelTransferOptions::setLeastSignificantByteFirst(bool lsbFirst);
 func (this *QOpenGLPixelTransferOptions) setLeastSignificantByteFirst(args ...interface{}) () {
   // setLeastSignificantByteFirst(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -339,7 +390,7 @@ func (this *QOpenGLPixelTransferOptions) setLeastSignificantByteFirst(args ...in
 
 }
 
-
+  // proto:  bool QOpenGLPixelTransferOptions::isLeastSignificantBitFirst();
 func (this *QOpenGLPixelTransferOptions) isLeastSignificantBitFirst(args ...interface{}) () {
   // isLeastSignificantBitFirst()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,7 +408,7 @@ func (this *QOpenGLPixelTransferOptions) isLeastSignificantBitFirst(args ...inte
 
 }
 
-
+  // proto:  int QOpenGLPixelTransferOptions::rowLength();
 func (this *QOpenGLPixelTransferOptions) rowLength(args ...interface{}) () {
   // rowLength()
   var vtys = make(map[int32]map[int32]reflect.Type)

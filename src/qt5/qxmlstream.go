@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,337 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QXmlStreamStringRef::size();
+extern void demth_ZNK19QXmlStreamStringRef4sizeEv(void* qthis);
+  // proto:  void QXmlStreamStringRef::clear();
+extern void demth_ZN19QXmlStreamStringRef5clearEv(void* qthis);
+  // proto:  const QString * QXmlStreamStringRef::string();
+extern void demth_ZNK19QXmlStreamStringRef6stringEv(void* qthis);
+  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
+extern void* dector_ZN19QXmlStreamStringRefC1ERK7QString(void* arg0);
+extern void demth_ZN19QXmlStreamStringRefC1ERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
+extern void demth_ZN19QXmlStreamStringRefD0Ev(void* qthis);
+  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef();
+extern void* dector_ZN19QXmlStreamStringRefC1Ev();
+extern void demth_ZN19QXmlStreamStringRefC1Ev(void* qthis);
+  // proto:  int QXmlStreamStringRef::position();
+extern void demth_ZNK19QXmlStreamStringRef8positionEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::name();
+extern void _ZNK16QXmlStreamReader4nameEv(void* qthis);
+  // proto:  QXmlStreamEntityResolver * QXmlStreamReader::entityResolver();
+extern void _ZNK16QXmlStreamReader14entityResolverEv(void* qthis);
+  // proto:  bool QXmlStreamReader::namespaceProcessing();
+extern void _ZNK16QXmlStreamReader19namespaceProcessingEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isStartElement();
+extern void demth_ZNK16QXmlStreamReader14isStartElementEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isStandaloneDocument();
+extern void _ZNK16QXmlStreamReader20isStandaloneDocumentEv(void* qthis);
+  // proto:  qint64 QXmlStreamReader::lineNumber();
+extern void _ZNK16QXmlStreamReader10lineNumberEv(void* qthis);
+  // proto:  void QXmlStreamReader::clear();
+extern void _ZN16QXmlStreamReader5clearEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::processingInstructionData();
+extern void _ZNK16QXmlStreamReader25processingInstructionDataEv(void* qthis);
+  // proto:  void QXmlStreamReader::addData(const QString & data);
+extern void _ZN16QXmlStreamReader7addDataERK7QString(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamReader::dtdPublicId();
+extern void _ZNK16QXmlStreamReader11dtdPublicIdEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::documentEncoding();
+extern void _ZNK16QXmlStreamReader16documentEncodingEv(void* qthis);
+  // proto:  qint64 QXmlStreamReader::characterOffset();
+extern void _ZNK16QXmlStreamReader15characterOffsetEv(void* qthis);
+  // proto:  QXmlStreamAttributes QXmlStreamReader::attributes();
+extern void _ZNK16QXmlStreamReader10attributesEv(void* qthis);
+  // proto:  QString QXmlStreamReader::tokenString();
+extern void _ZNK16QXmlStreamReader11tokenStringEv(void* qthis);
+  // proto:  void QXmlStreamReader::addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction);
+extern void _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(void* qthis, void* arg0);
+  // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
+extern void* dector_ZN16QXmlStreamReaderC1ERK10QByteArray(void* arg0);
+extern void _ZN16QXmlStreamReaderC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamReader::qualifiedName();
+extern void _ZNK16QXmlStreamReader13qualifiedNameEv(void* qthis);
+  // proto:  QIODevice * QXmlStreamReader::device();
+extern void _ZNK16QXmlStreamReader6deviceEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::namespaceUri();
+extern void _ZNK16QXmlStreamReader12namespaceUriEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::text();
+extern void _ZNK16QXmlStreamReader4textEv(void* qthis);
+  // proto:  void QXmlStreamReader::setDevice(QIODevice * device);
+extern void _ZN16QXmlStreamReader9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QXmlStreamReader::QXmlStreamReader(QIODevice * device);
+extern void* dector_ZN16QXmlStreamReaderC1EP9QIODevice(void* arg0);
+extern void _ZN16QXmlStreamReaderC1EP9QIODevice(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamReader::documentVersion();
+extern void _ZNK16QXmlStreamReader15documentVersionEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isDTD();
+extern void demth_ZNK16QXmlStreamReader5isDTDEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isStartDocument();
+extern void demth_ZNK16QXmlStreamReader15isStartDocumentEv(void* qthis);
+  // proto:  QString QXmlStreamReader::errorString();
+extern void _ZNK16QXmlStreamReader11errorStringEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isProcessingInstruction();
+extern void demth_ZNK16QXmlStreamReader23isProcessingInstructionEv(void* qthis);
+  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
+extern void _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(void* qthis, void* arg0);
+  // proto:  bool QXmlStreamReader::isCharacters();
+extern void demth_ZNK16QXmlStreamReader12isCharactersEv(void* qthis);
+  // proto:  void QXmlStreamReader::QXmlStreamReader();
+extern void* dector_ZN16QXmlStreamReaderC1Ev();
+extern void _ZN16QXmlStreamReaderC1Ev(void* qthis);
+  // proto:  void QXmlStreamReader::QXmlStreamReader(const QString & data);
+extern void* dector_ZN16QXmlStreamReaderC1ERK7QString(void* arg0);
+extern void _ZN16QXmlStreamReaderC1ERK7QString(void* qthis, void* arg0);
+  // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
+extern void _ZNK16QXmlStreamReader18entityDeclarationsEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isWhitespace();
+extern void _ZNK16QXmlStreamReader12isWhitespaceEv(void* qthis);
+  // proto:  void QXmlStreamReader::QXmlStreamReader(const QXmlStreamReader & );
+extern void* dector_ZN16QXmlStreamReaderC1ERKS_(void* arg0);
+extern void _ZN16QXmlStreamReaderC1ERKS_(void* qthis, void* arg0);
+  // proto:  qint64 QXmlStreamReader::columnNumber();
+extern void _ZNK16QXmlStreamReader12columnNumberEv(void* qthis);
+  // proto:  bool QXmlStreamReader::hasError();
+extern void demth_ZNK16QXmlStreamReader8hasErrorEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isCDATA();
+extern void _ZNK16QXmlStreamReader7isCDATAEv(void* qthis);
+  // proto:  void QXmlStreamReader::~QXmlStreamReader();
+extern void _ZN16QXmlStreamReaderD0Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::processingInstructionTarget();
+extern void _ZNK16QXmlStreamReader27processingInstructionTargetEv(void* qthis);
+  // proto:  void QXmlStreamReader::addData(const char * data);
+extern void _ZN16QXmlStreamReader7addDataEPKc(void* qthis, char* arg0);
+  // proto:  QStringRef QXmlStreamReader::dtdSystemId();
+extern void _ZNK16QXmlStreamReader11dtdSystemIdEv(void* qthis);
+  // proto:  QStringRef QXmlStreamReader::prefix();
+extern void _ZNK16QXmlStreamReader6prefixEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isEndElement();
+extern void demth_ZNK16QXmlStreamReader12isEndElementEv(void* qthis);
+  // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
+extern void _ZNK16QXmlStreamReader20notationDeclarationsEv(void* qthis);
+  // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
+extern void _ZNK16QXmlStreamReader21namespaceDeclarationsEv(void* qthis);
+  // proto:  void QXmlStreamReader::setNamespaceProcessing(bool );
+extern void _ZN16QXmlStreamReader22setNamespaceProcessingEb(void* qthis, bool arg0);
+  // proto:  void QXmlStreamReader::raiseError(const QString & message);
+extern void _ZN16QXmlStreamReader10raiseErrorERK7QString(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamReader::dtdName();
+extern void _ZNK16QXmlStreamReader7dtdNameEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isEndDocument();
+extern void demth_ZNK16QXmlStreamReader13isEndDocumentEv(void* qthis);
+  // proto:  bool QXmlStreamReader::readNextStartElement();
+extern void _ZN16QXmlStreamReader20readNextStartElementEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isComment();
+extern void demth_ZNK16QXmlStreamReader9isCommentEv(void* qthis);
+  // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
+extern void* dector_ZN16QXmlStreamReaderC1EPKc(char* arg0);
+extern void _ZN16QXmlStreamReaderC1EPKc(void* qthis, char* arg0);
+  // proto:  void QXmlStreamReader::skipCurrentElement();
+extern void _ZN16QXmlStreamReader18skipCurrentElementEv(void* qthis);
+  // proto:  bool QXmlStreamReader::isEntityReference();
+extern void demth_ZNK16QXmlStreamReader17isEntityReferenceEv(void* qthis);
+  // proto:  void QXmlStreamReader::addData(const QByteArray & data);
+extern void _ZN16QXmlStreamReader7addDataERK10QByteArray(void* qthis, void* arg0);
+  // proto:  bool QXmlStreamReader::atEnd();
+extern void _ZNK16QXmlStreamReader5atEndEv(void* qthis);
+  // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
+extern void _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
+extern void _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
+extern void _ZN24QXmlStreamEntityResolverD0Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
+extern void demth_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(void* qthis);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
+extern void* dector_ZN30QXmlStreamNamespaceDeclarationC1ERKS_(void* arg0);
+extern void _ZN30QXmlStreamNamespaceDeclarationC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration();
+extern void* dector_ZN30QXmlStreamNamespaceDeclarationC1Ev();
+extern void _ZN30QXmlStreamNamespaceDeclarationC1Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
+extern void demth_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(void* qthis);
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QString & prefix, const QString & namespaceUri);
+extern void* dector_ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(void* arg0, void* arg1);
+extern void _ZN30QXmlStreamNamespaceDeclarationC1ERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
+extern void _ZN30QXmlStreamNamespaceDeclarationD0Ev(void* qthis);
+  // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
+extern void _ZN27QXmlStreamEntityDeclarationD0Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
+extern void demth_ZNK27QXmlStreamEntityDeclaration8publicIdEv(void* qthis);
+  // proto:  QStringRef QXmlStreamEntityDeclaration::name();
+extern void demth_ZNK27QXmlStreamEntityDeclaration4nameEv(void* qthis);
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
+extern void* dector_ZN27QXmlStreamEntityDeclarationC1Ev();
+extern void _ZN27QXmlStreamEntityDeclarationC1Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamEntityDeclaration::value();
+extern void demth_ZNK27QXmlStreamEntityDeclaration5valueEv(void* qthis);
+  // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
+extern void demth_ZNK27QXmlStreamEntityDeclaration12notationNameEv(void* qthis);
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration(const QXmlStreamEntityDeclaration & );
+extern void* dector_ZN27QXmlStreamEntityDeclarationC1ERKS_(void* arg0);
+extern void _ZN27QXmlStreamEntityDeclarationC1ERKS_(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
+extern void demth_ZNK27QXmlStreamEntityDeclaration8systemIdEv(void* qthis);
+  // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
+extern void _ZNK20QXmlStreamAttributes5valueERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
+extern void* dector_ZN20QXmlStreamAttributesC1Ev();
+extern void demth_ZN20QXmlStreamAttributesC1Ev(void* qthis);
+  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
+extern void demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(void* qthis, void* arg0);
+  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & namespaceUri, const QString & name);
+extern void demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
+extern void _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QXmlStreamAttributes::append(const QString & qualifiedName, const QString & value);
+extern void _ZN20QXmlStreamAttributes6appendERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QStringRef QXmlStreamAttributes::value(const QString & namespaceUri, const QString & name);
+extern void _ZNK20QXmlStreamAttributes5valueERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::writeEndElement();
+extern void _ZN16QXmlStreamWriter15writeEndElementEv(void* qthis);
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter();
+extern void* dector_ZN16QXmlStreamWriterC1Ev();
+extern void _ZN16QXmlStreamWriterC1Ev(void* qthis);
+  // proto:  void QXmlStreamWriter::writeEndDocument();
+extern void _ZN16QXmlStreamWriter16writeEndDocumentEv(void* qthis);
+  // proto:  bool QXmlStreamWriter::autoFormatting();
+extern void _ZNK16QXmlStreamWriter14autoFormattingEv(void* qthis);
+  // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
+extern void _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(void* qthis, void* arg0, bool arg1);
+  // proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
+extern void _ZN16QXmlStreamWriter8setCodecEP10QTextCodec(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
+extern void _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
+extern void _ZN16QXmlStreamWriter15writeCharactersERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
+extern void _ZN16QXmlStreamWriter9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version);
+extern void _ZN16QXmlStreamWriter18writeStartDocumentERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
+extern void _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
+extern void _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
+extern void _ZN16QXmlStreamWriter17writeEmptyElementERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
+extern void _ZN16QXmlStreamWriter8writeDTDERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
+extern void _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(void* qthis, int arg0);
+  // proto:  void QXmlStreamWriter::writeAttribute(const QXmlStreamAttribute & attribute);
+extern void _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
+extern void _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter(QString * string);
+extern void* dector_ZN16QXmlStreamWriterC1EP7QString(void* arg0);
+extern void _ZN16QXmlStreamWriterC1EP7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeComment(const QString & text);
+extern void _ZN16QXmlStreamWriter12writeCommentERK7QString(void* qthis, void* arg0);
+  // proto:  QTextCodec * QXmlStreamWriter::codec();
+extern void _ZNK16QXmlStreamWriter5codecEv(void* qthis);
+  // proto:  void QXmlStreamWriter::writeAttribute(const QString & namespaceUri, const QString & name, const QString & value);
+extern void _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
+extern void _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter(const QXmlStreamWriter & );
+extern void* dector_ZN16QXmlStreamWriterC1ERKS_(void* arg0);
+extern void _ZN16QXmlStreamWriterC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QXmlStreamWriter::hasError();
+extern void _ZNK16QXmlStreamWriter8hasErrorEv(void* qthis);
+  // proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
+extern void _ZN16QXmlStreamWriter10writeCDATAERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeStartDocument();
+extern void _ZN16QXmlStreamWriter18writeStartDocumentEv(void* qthis);
+  // proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
+extern void _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
+extern void _ZN16QXmlStreamWriter17setAutoFormattingEb(void* qthis, bool arg0);
+  // proto:  void QXmlStreamWriter::setCodec(const char * codecName);
+extern void _ZN16QXmlStreamWriter8setCodecEPKc(void* qthis, char* arg0);
+  // proto:  int QXmlStreamWriter::autoFormattingIndent();
+extern void _ZNK16QXmlStreamWriter20autoFormattingIndentEv(void* qthis);
+  // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
+extern void _ZN16QXmlStreamWriterD0Ev(void* qthis);
+  // proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
+extern void _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
+extern void _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(void* qthis, void* arg0);
+  // proto:  QIODevice * QXmlStreamWriter::device();
+extern void _ZNK16QXmlStreamWriter6deviceEv(void* qthis);
+  // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
+extern void _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter(QByteArray * array);
+extern void* dector_ZN16QXmlStreamWriterC1EP10QByteArray(void* arg0);
+extern void _ZN16QXmlStreamWriterC1EP10QByteArray(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeTextElement(const QString & qualifiedName, const QString & text);
+extern void _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & namespaceUri, const QString & name);
+extern void _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter(QIODevice * device);
+extern void* dector_ZN16QXmlStreamWriterC1EP9QIODevice(void* arg0);
+extern void _ZN16QXmlStreamWriterC1EP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QXmlStreamWriter::writeStartElement(const QString & qualifiedName);
+extern void _ZN16QXmlStreamWriter17writeStartElementERK7QString(void* qthis, void* arg0);
+  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
+extern void* dector_ZN29QXmlStreamNotationDeclarationC1ERKS_(void* arg0);
+extern void _ZN29QXmlStreamNotationDeclarationC1ERKS_(void* qthis, void* arg0);
+  // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
+extern void demth_ZNK29QXmlStreamNotationDeclaration8publicIdEv(void* qthis);
+  // proto:  QStringRef QXmlStreamNotationDeclaration::name();
+extern void demth_ZNK29QXmlStreamNotationDeclaration4nameEv(void* qthis);
+  // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
+extern void _ZN29QXmlStreamNotationDeclarationD0Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
+extern void demth_ZNK29QXmlStreamNotationDeclaration8systemIdEv(void* qthis);
+  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration();
+extern void* dector_ZN29QXmlStreamNotationDeclarationC1Ev();
+extern void _ZN29QXmlStreamNotationDeclarationC1Ev(void* qthis);
+  // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
+extern void* dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_(void* arg0, void* arg1);
+extern void _ZN19QXmlStreamAttributeC1ERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
+extern void demth_ZNK19QXmlStreamAttribute13qualifiedNameEv(void* qthis);
+  // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
+extern void _ZN19QXmlStreamAttributeD0Ev(void* qthis);
+  // proto:  QStringRef QXmlStreamAttribute::value();
+extern void demth_ZNK19QXmlStreamAttribute5valueEv(void* qthis);
+  // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
+extern void demth_ZNK19QXmlStreamAttribute12namespaceUriEv(void* qthis);
+  // proto:  void QXmlStreamAttribute::QXmlStreamAttribute();
+extern void* dector_ZN19QXmlStreamAttributeC1Ev();
+extern void _ZN19QXmlStreamAttributeC1Ev(void* qthis);
+  // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QXmlStreamAttribute & );
+extern void* dector_ZN19QXmlStreamAttributeC1ERKS_(void* arg0);
+extern void _ZN19QXmlStreamAttributeC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & namespaceUri, const QString & name, const QString & value);
+extern void* dector_ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(void* arg0, void* arg1, void* arg2);
+extern void _ZN19QXmlStreamAttributeC1ERK7QStringS2_S2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  bool QXmlStreamAttribute::isDefault();
+extern void demth_ZNK19QXmlStreamAttribute9isDefaultEv(void* qthis);
+  // proto:  QStringRef QXmlStreamAttribute::prefix();
+extern void demth_ZNK19QXmlStreamAttribute6prefixEv(void* qthis);
+  // proto:  QStringRef QXmlStreamAttribute::name();
+extern void demth_ZNK19QXmlStreamAttribute4nameEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QXmlStreamStringRef)=16
 type QXmlStreamStringRef struct {
   // qbase: None;
@@ -89,7 +411,7 @@ type QXmlStreamAttribute struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QXmlStreamStringRef::size();
 func (this *QXmlStreamStringRef) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +429,7 @@ func (this *QXmlStreamStringRef) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamStringRef::clear();
 func (this *QXmlStreamStringRef) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +447,7 @@ func (this *QXmlStreamStringRef) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QString * QXmlStreamStringRef::string();
 func (this *QXmlStreamStringRef) string(args ...interface{}) () {
   // string()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,12 +465,12 @@ func (this *QXmlStreamStringRef) string(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamStringRef::QXmlStreamStringRef(const QString & aString);
 func NewQXmlStreamStringRef(args ...interface{}) QXmlStreamStringRef {
   return QXmlStreamStringRef{}
 }
 
-
+  // proto:  void QXmlStreamStringRef::~QXmlStreamStringRef();
 func (this *QXmlStreamStringRef) FreeQXmlStreamStringRef(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +484,7 @@ func (this *QXmlStreamStringRef) FreeQXmlStreamStringRef(args ...interface{}) ()
 
 }
 
-
+  // proto:  int QXmlStreamStringRef::position();
 func (this *QXmlStreamStringRef) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +502,7 @@ func (this *QXmlStreamStringRef) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::name();
 func (this *QXmlStreamReader) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +520,7 @@ func (this *QXmlStreamReader) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  QXmlStreamEntityResolver * QXmlStreamReader::entityResolver();
 func (this *QXmlStreamReader) entityResolver(args ...interface{}) () {
   // entityResolver()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +538,7 @@ func (this *QXmlStreamReader) entityResolver(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::namespaceProcessing();
 func (this *QXmlStreamReader) namespaceProcessing(args ...interface{}) () {
   // namespaceProcessing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +556,7 @@ func (this *QXmlStreamReader) namespaceProcessing(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isStartElement();
 func (this *QXmlStreamReader) isStartElement(args ...interface{}) () {
   // isStartElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +574,7 @@ func (this *QXmlStreamReader) isStartElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isStandaloneDocument();
 func (this *QXmlStreamReader) isStandaloneDocument(args ...interface{}) () {
   // isStandaloneDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +592,7 @@ func (this *QXmlStreamReader) isStandaloneDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QXmlStreamReader::lineNumber();
 func (this *QXmlStreamReader) lineNumber(args ...interface{}) () {
   // lineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -288,7 +610,7 @@ func (this *QXmlStreamReader) lineNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::clear();
 func (this *QXmlStreamReader) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -306,7 +628,7 @@ func (this *QXmlStreamReader) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::processingInstructionData();
 func (this *QXmlStreamReader) processingInstructionData(args ...interface{}) () {
   // processingInstructionData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -324,7 +646,7 @@ func (this *QXmlStreamReader) processingInstructionData(args ...interface{}) () 
 
 }
 
-
+  // proto:  void QXmlStreamReader::addData(const QString & data);
 func (this *QXmlStreamReader) addData(args ...interface{}) () {
   // addData(const class QString &)
   // addData(const char *)
@@ -353,7 +675,7 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::dtdPublicId();
 func (this *QXmlStreamReader) dtdPublicId(args ...interface{}) () {
   // dtdPublicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,7 +693,7 @@ func (this *QXmlStreamReader) dtdPublicId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::documentEncoding();
 func (this *QXmlStreamReader) documentEncoding(args ...interface{}) () {
   // documentEncoding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,7 +711,7 @@ func (this *QXmlStreamReader) documentEncoding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QXmlStreamReader::characterOffset();
 func (this *QXmlStreamReader) characterOffset(args ...interface{}) () {
   // characterOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -407,7 +729,7 @@ func (this *QXmlStreamReader) characterOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QXmlStreamAttributes QXmlStreamReader::attributes();
 func (this *QXmlStreamReader) attributes(args ...interface{}) () {
   // attributes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -425,7 +747,7 @@ func (this *QXmlStreamReader) attributes(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QXmlStreamReader::tokenString();
 func (this *QXmlStreamReader) tokenString(args ...interface{}) () {
   // tokenString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -443,7 +765,7 @@ func (this *QXmlStreamReader) tokenString(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::addExtraNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & extraNamespaceDeclaraction);
 func (this *QXmlStreamReader) addExtraNamespaceDeclaration(args ...interface{}) () {
   // addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -462,12 +784,12 @@ func (this *QXmlStreamReader) addExtraNamespaceDeclaration(args ...interface{}) 
 
 }
 
-
+  // proto:  void QXmlStreamReader::QXmlStreamReader(const QByteArray & data);
 func NewQXmlStreamReader(args ...interface{}) QXmlStreamReader {
   return QXmlStreamReader{}
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::qualifiedName();
 func (this *QXmlStreamReader) qualifiedName(args ...interface{}) () {
   // qualifiedName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -485,7 +807,7 @@ func (this *QXmlStreamReader) qualifiedName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QXmlStreamReader::device();
 func (this *QXmlStreamReader) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -503,7 +825,7 @@ func (this *QXmlStreamReader) device(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::namespaceUri();
 func (this *QXmlStreamReader) namespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +843,7 @@ func (this *QXmlStreamReader) namespaceUri(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::text();
 func (this *QXmlStreamReader) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +861,7 @@ func (this *QXmlStreamReader) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::setDevice(QIODevice * device);
 func (this *QXmlStreamReader) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +880,7 @@ func (this *QXmlStreamReader) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::documentVersion();
 func (this *QXmlStreamReader) documentVersion(args ...interface{}) () {
   // documentVersion()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -576,7 +898,7 @@ func (this *QXmlStreamReader) documentVersion(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isDTD();
 func (this *QXmlStreamReader) isDTD(args ...interface{}) () {
   // isDTD()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -594,7 +916,7 @@ func (this *QXmlStreamReader) isDTD(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isStartDocument();
 func (this *QXmlStreamReader) isStartDocument(args ...interface{}) () {
   // isStartDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -612,7 +934,7 @@ func (this *QXmlStreamReader) isStartDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QXmlStreamReader::errorString();
 func (this *QXmlStreamReader) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -630,7 +952,7 @@ func (this *QXmlStreamReader) errorString(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isProcessingInstruction();
 func (this *QXmlStreamReader) isProcessingInstruction(args ...interface{}) () {
   // isProcessingInstruction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -648,7 +970,7 @@ func (this *QXmlStreamReader) isProcessingInstruction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::setEntityResolver(QXmlStreamEntityResolver * resolver);
 func (this *QXmlStreamReader) setEntityResolver(args ...interface{}) () {
   // setEntityResolver(class QXmlStreamEntityResolver *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -667,7 +989,7 @@ func (this *QXmlStreamReader) setEntityResolver(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isCharacters();
 func (this *QXmlStreamReader) isCharacters(args ...interface{}) () {
   // isCharacters()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -685,7 +1007,7 @@ func (this *QXmlStreamReader) isCharacters(args ...interface{}) () {
 
 }
 
-
+  // proto:  QXmlStreamEntityDeclarations QXmlStreamReader::entityDeclarations();
 func (this *QXmlStreamReader) entityDeclarations(args ...interface{}) () {
   // entityDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -703,7 +1025,7 @@ func (this *QXmlStreamReader) entityDeclarations(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isWhitespace();
 func (this *QXmlStreamReader) isWhitespace(args ...interface{}) () {
   // isWhitespace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -721,7 +1043,7 @@ func (this *QXmlStreamReader) isWhitespace(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QXmlStreamReader::columnNumber();
 func (this *QXmlStreamReader) columnNumber(args ...interface{}) () {
   // columnNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -739,7 +1061,7 @@ func (this *QXmlStreamReader) columnNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::hasError();
 func (this *QXmlStreamReader) hasError(args ...interface{}) () {
   // hasError()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -757,7 +1079,7 @@ func (this *QXmlStreamReader) hasError(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isCDATA();
 func (this *QXmlStreamReader) isCDATA(args ...interface{}) () {
   // isCDATA()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -775,7 +1097,7 @@ func (this *QXmlStreamReader) isCDATA(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::~QXmlStreamReader();
 func (this *QXmlStreamReader) FreeQXmlStreamReader(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -789,7 +1111,7 @@ func (this *QXmlStreamReader) FreeQXmlStreamReader(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::processingInstructionTarget();
 func (this *QXmlStreamReader) processingInstructionTarget(args ...interface{}) () {
   // processingInstructionTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -807,7 +1129,7 @@ func (this *QXmlStreamReader) processingInstructionTarget(args ...interface{}) (
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::dtdSystemId();
 func (this *QXmlStreamReader) dtdSystemId(args ...interface{}) () {
   // dtdSystemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -825,7 +1147,7 @@ func (this *QXmlStreamReader) dtdSystemId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::prefix();
 func (this *QXmlStreamReader) prefix(args ...interface{}) () {
   // prefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -843,7 +1165,7 @@ func (this *QXmlStreamReader) prefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isEndElement();
 func (this *QXmlStreamReader) isEndElement(args ...interface{}) () {
   // isEndElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -861,7 +1183,7 @@ func (this *QXmlStreamReader) isEndElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  QXmlStreamNotationDeclarations QXmlStreamReader::notationDeclarations();
 func (this *QXmlStreamReader) notationDeclarations(args ...interface{}) () {
   // notationDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -879,7 +1201,7 @@ func (this *QXmlStreamReader) notationDeclarations(args ...interface{}) () {
 
 }
 
-
+  // proto:  QXmlStreamNamespaceDeclarations QXmlStreamReader::namespaceDeclarations();
 func (this *QXmlStreamReader) namespaceDeclarations(args ...interface{}) () {
   // namespaceDeclarations()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -897,7 +1219,7 @@ func (this *QXmlStreamReader) namespaceDeclarations(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::setNamespaceProcessing(bool );
 func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
   // setNamespaceProcessing(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -916,7 +1238,7 @@ func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::raiseError(const QString & message);
 func (this *QXmlStreamReader) raiseError(args ...interface{}) () {
   // raiseError(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -935,7 +1257,7 @@ func (this *QXmlStreamReader) raiseError(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamReader::dtdName();
 func (this *QXmlStreamReader) dtdName(args ...interface{}) () {
   // dtdName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -953,7 +1275,7 @@ func (this *QXmlStreamReader) dtdName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isEndDocument();
 func (this *QXmlStreamReader) isEndDocument(args ...interface{}) () {
   // isEndDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -971,7 +1293,7 @@ func (this *QXmlStreamReader) isEndDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::readNextStartElement();
 func (this *QXmlStreamReader) readNextStartElement(args ...interface{}) () {
   // readNextStartElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -989,7 +1311,7 @@ func (this *QXmlStreamReader) readNextStartElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isComment();
 func (this *QXmlStreamReader) isComment(args ...interface{}) () {
   // isComment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1007,7 +1329,7 @@ func (this *QXmlStreamReader) isComment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamReader::skipCurrentElement();
 func (this *QXmlStreamReader) skipCurrentElement(args ...interface{}) () {
   // skipCurrentElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1025,7 +1347,7 @@ func (this *QXmlStreamReader) skipCurrentElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::isEntityReference();
 func (this *QXmlStreamReader) isEntityReference(args ...interface{}) () {
   // isEntityReference()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1043,7 +1365,7 @@ func (this *QXmlStreamReader) isEntityReference(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamReader::atEnd();
 func (this *QXmlStreamReader) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1061,7 +1383,7 @@ func (this *QXmlStreamReader) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QXmlStreamEntityResolver::resolveEntity(const QString & publicId, const QString & systemId);
 func (this *QXmlStreamEntityResolver) resolveEntity(args ...interface{}) () {
   // resolveEntity(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1081,7 +1403,7 @@ func (this *QXmlStreamEntityResolver) resolveEntity(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QXmlStreamEntityResolver::resolveUndeclaredEntity(const QString & name);
 func (this *QXmlStreamEntityResolver) resolveUndeclaredEntity(args ...interface{}) () {
   // resolveUndeclaredEntity(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1100,7 +1422,7 @@ func (this *QXmlStreamEntityResolver) resolveUndeclaredEntity(args ...interface{
 
 }
 
-
+  // proto:  void QXmlStreamEntityResolver::~QXmlStreamEntityResolver();
 func (this *QXmlStreamEntityResolver) FreeQXmlStreamEntityResolver(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1114,7 +1436,7 @@ func (this *QXmlStreamEntityResolver) FreeQXmlStreamEntityResolver(args ...inter
 
 }
 
-
+  // proto:  QStringRef QXmlStreamNamespaceDeclaration::namespaceUri();
 func (this *QXmlStreamNamespaceDeclaration) namespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1132,12 +1454,12 @@ func (this *QXmlStreamNamespaceDeclaration) namespaceUri(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QXmlStreamNamespaceDeclaration::QXmlStreamNamespaceDeclaration(const QXmlStreamNamespaceDeclaration & );
 func NewQXmlStreamNamespaceDeclaration(args ...interface{}) QXmlStreamNamespaceDeclaration {
   return QXmlStreamNamespaceDeclaration{}
 }
 
-
+  // proto:  QStringRef QXmlStreamNamespaceDeclaration::prefix();
 func (this *QXmlStreamNamespaceDeclaration) prefix(args ...interface{}) () {
   // prefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1155,7 +1477,7 @@ func (this *QXmlStreamNamespaceDeclaration) prefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamNamespaceDeclaration::~QXmlStreamNamespaceDeclaration();
 func (this *QXmlStreamNamespaceDeclaration) FreeQXmlStreamNamespaceDeclaration(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1169,7 +1491,7 @@ func (this *QXmlStreamNamespaceDeclaration) FreeQXmlStreamNamespaceDeclaration(a
 
 }
 
-
+  // proto:  void QXmlStreamEntityDeclaration::~QXmlStreamEntityDeclaration();
 func (this *QXmlStreamEntityDeclaration) FreeQXmlStreamEntityDeclaration(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1183,7 +1505,7 @@ func (this *QXmlStreamEntityDeclaration) FreeQXmlStreamEntityDeclaration(args ..
 
 }
 
-
+  // proto:  QStringRef QXmlStreamEntityDeclaration::publicId();
 func (this *QXmlStreamEntityDeclaration) publicId(args ...interface{}) () {
   // publicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1201,7 +1523,7 @@ func (this *QXmlStreamEntityDeclaration) publicId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamEntityDeclaration::name();
 func (this *QXmlStreamEntityDeclaration) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1219,12 +1541,12 @@ func (this *QXmlStreamEntityDeclaration) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamEntityDeclaration::QXmlStreamEntityDeclaration();
 func NewQXmlStreamEntityDeclaration(args ...interface{}) QXmlStreamEntityDeclaration {
   return QXmlStreamEntityDeclaration{}
 }
 
-
+  // proto:  QStringRef QXmlStreamEntityDeclaration::value();
 func (this *QXmlStreamEntityDeclaration) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1242,7 +1564,7 @@ func (this *QXmlStreamEntityDeclaration) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamEntityDeclaration::notationName();
 func (this *QXmlStreamEntityDeclaration) notationName(args ...interface{}) () {
   // notationName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1260,7 +1582,7 @@ func (this *QXmlStreamEntityDeclaration) notationName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamEntityDeclaration::systemId();
 func (this *QXmlStreamEntityDeclaration) systemId(args ...interface{}) () {
   // systemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1278,7 +1600,7 @@ func (this *QXmlStreamEntityDeclaration) systemId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamAttributes::value(const QString & qualifiedName);
 func (this *QXmlStreamAttributes) value(args ...interface{}) () {
   // value(const class QString &)
   // value(class QLatin1String, class QLatin1String)
@@ -1320,12 +1642,12 @@ func (this *QXmlStreamAttributes) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamAttributes::QXmlStreamAttributes();
 func NewQXmlStreamAttributes(args ...interface{}) QXmlStreamAttributes {
   return QXmlStreamAttributes{}
 }
 
-
+  // proto:  bool QXmlStreamAttributes::hasAttribute(const QString & qualifiedName);
 func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
   // hasAttribute(const class QString &)
   // hasAttribute(const class QString &, const class QString &)
@@ -1355,7 +1677,7 @@ func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamAttributes::append(const QString & namespaceUri, const QString & name, const QString & value);
 func (this *QXmlStreamAttributes) append(args ...interface{}) () {
   // append(const class QString &, const class QString &, const class QString &)
   // append(const class QString &, const class QString &)
@@ -1382,7 +1704,7 @@ func (this *QXmlStreamAttributes) append(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeEndElement();
 func (this *QXmlStreamWriter) writeEndElement(args ...interface{}) () {
   // writeEndElement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1400,12 +1722,12 @@ func (this *QXmlStreamWriter) writeEndElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::QXmlStreamWriter();
 func NewQXmlStreamWriter(args ...interface{}) QXmlStreamWriter {
   return QXmlStreamWriter{}
 }
 
-
+  // proto:  void QXmlStreamWriter::writeEndDocument();
 func (this *QXmlStreamWriter) writeEndDocument(args ...interface{}) () {
   // writeEndDocument()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1423,7 +1745,7 @@ func (this *QXmlStreamWriter) writeEndDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamWriter::autoFormatting();
 func (this *QXmlStreamWriter) autoFormatting(args ...interface{}) () {
   // autoFormatting()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1441,7 +1763,7 @@ func (this *QXmlStreamWriter) autoFormatting(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeStartDocument(const QString & version, bool standalone);
 func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
   // writeStartDocument(const class QString &, _Bool)
   // writeStartDocument(const class QString &)
@@ -1470,7 +1792,7 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::setCodec(QTextCodec * codec);
 func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   // setCodec(const char *)
@@ -1494,7 +1816,7 @@ func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeProcessingInstruction(const QString & target, const QString & data);
 func (this *QXmlStreamWriter) writeProcessingInstruction(args ...interface{}) () {
   // writeProcessingInstruction(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1514,7 +1836,7 @@ func (this *QXmlStreamWriter) writeProcessingInstruction(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeCharacters(const QString & text);
 func (this *QXmlStreamWriter) writeCharacters(args ...interface{}) () {
   // writeCharacters(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1533,7 +1855,7 @@ func (this *QXmlStreamWriter) writeCharacters(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::setDevice(QIODevice * device);
 func (this *QXmlStreamWriter) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1552,7 +1874,7 @@ func (this *QXmlStreamWriter) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeTextElement(const QString & namespaceUri, const QString & name, const QString & text);
 func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
   // writeTextElement(const class QString &, const class QString &, const class QString &)
   // writeTextElement(const class QString &, const class QString &)
@@ -1579,7 +1901,7 @@ func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeAttribute(const QString & qualifiedName, const QString & value);
 func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
   // writeAttribute(const class QString &, const class QString &)
   // writeAttribute(const class QXmlStreamAttribute &)
@@ -1611,7 +1933,7 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeEmptyElement(const QString & qualifiedName);
 func (this *QXmlStreamWriter) writeEmptyElement(args ...interface{}) () {
   // writeEmptyElement(const class QString &)
   // writeEmptyElement(const class QString &, const class QString &)
@@ -1636,7 +1958,7 @@ func (this *QXmlStreamWriter) writeEmptyElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
 func (this *QXmlStreamWriter) writeDTD(args ...interface{}) () {
   // writeDTD(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1655,7 +1977,7 @@ func (this *QXmlStreamWriter) writeDTD(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
 func (this *QXmlStreamWriter) setAutoFormattingIndent(args ...interface{}) () {
   // setAutoFormattingIndent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1674,7 +1996,7 @@ func (this *QXmlStreamWriter) setAutoFormattingIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
 func (this *QXmlStreamWriter) writeStartElement(args ...interface{}) () {
   // writeStartElement(const class QString &, const class QString &)
   // writeStartElement(const class QString &)
@@ -1699,7 +2021,7 @@ func (this *QXmlStreamWriter) writeStartElement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeComment(const QString & text);
 func (this *QXmlStreamWriter) writeComment(args ...interface{}) () {
   // writeComment(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1718,7 +2040,7 @@ func (this *QXmlStreamWriter) writeComment(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCodec * QXmlStreamWriter::codec();
 func (this *QXmlStreamWriter) codec(args ...interface{}) () {
   // codec()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1736,7 +2058,7 @@ func (this *QXmlStreamWriter) codec(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeNamespace(const QString & namespaceUri, const QString & prefix);
 func (this *QXmlStreamWriter) writeNamespace(args ...interface{}) () {
   // writeNamespace(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1756,7 +2078,7 @@ func (this *QXmlStreamWriter) writeNamespace(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamWriter::hasError();
 func (this *QXmlStreamWriter) hasError(args ...interface{}) () {
   // hasError()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1774,7 +2096,7 @@ func (this *QXmlStreamWriter) hasError(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeCDATA(const QString & text);
 func (this *QXmlStreamWriter) writeCDATA(args ...interface{}) () {
   // writeCDATA(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1793,7 +2115,7 @@ func (this *QXmlStreamWriter) writeCDATA(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeEntityReference(const QString & name);
 func (this *QXmlStreamWriter) writeEntityReference(args ...interface{}) () {
   // writeEntityReference(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1812,7 +2134,7 @@ func (this *QXmlStreamWriter) writeEntityReference(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
 func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
   // setAutoFormatting(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1831,7 +2153,7 @@ func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QXmlStreamWriter::autoFormattingIndent();
 func (this *QXmlStreamWriter) autoFormattingIndent(args ...interface{}) () {
   // autoFormattingIndent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1849,7 +2171,7 @@ func (this *QXmlStreamWriter) autoFormattingIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
 func (this *QXmlStreamWriter) FreeQXmlStreamWriter(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1863,7 +2185,7 @@ func (this *QXmlStreamWriter) FreeQXmlStreamWriter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeAttributes(const QXmlStreamAttributes & attributes);
 func (this *QXmlStreamWriter) writeAttributes(args ...interface{}) () {
   // writeAttributes(const class QXmlStreamAttributes &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1882,7 +2204,7 @@ func (this *QXmlStreamWriter) writeAttributes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeDefaultNamespace(const QString & namespaceUri);
 func (this *QXmlStreamWriter) writeDefaultNamespace(args ...interface{}) () {
   // writeDefaultNamespace(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1901,7 +2223,7 @@ func (this *QXmlStreamWriter) writeDefaultNamespace(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QXmlStreamWriter::device();
 func (this *QXmlStreamWriter) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1919,7 +2241,7 @@ func (this *QXmlStreamWriter) device(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamWriter::writeCurrentToken(const QXmlStreamReader & reader);
 func (this *QXmlStreamWriter) writeCurrentToken(args ...interface{}) () {
   // writeCurrentToken(const class QXmlStreamReader &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1938,12 +2260,12 @@ func (this *QXmlStreamWriter) writeCurrentToken(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamNotationDeclaration::QXmlStreamNotationDeclaration(const QXmlStreamNotationDeclaration & );
 func NewQXmlStreamNotationDeclaration(args ...interface{}) QXmlStreamNotationDeclaration {
   return QXmlStreamNotationDeclaration{}
 }
 
-
+  // proto:  QStringRef QXmlStreamNotationDeclaration::publicId();
 func (this *QXmlStreamNotationDeclaration) publicId(args ...interface{}) () {
   // publicId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1961,7 +2283,7 @@ func (this *QXmlStreamNotationDeclaration) publicId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamNotationDeclaration::name();
 func (this *QXmlStreamNotationDeclaration) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1979,7 +2301,7 @@ func (this *QXmlStreamNotationDeclaration) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamNotationDeclaration::~QXmlStreamNotationDeclaration();
 func (this *QXmlStreamNotationDeclaration) FreeQXmlStreamNotationDeclaration(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1993,7 +2315,7 @@ func (this *QXmlStreamNotationDeclaration) FreeQXmlStreamNotationDeclaration(arg
 
 }
 
-
+  // proto:  QStringRef QXmlStreamNotationDeclaration::systemId();
 func (this *QXmlStreamNotationDeclaration) systemId(args ...interface{}) () {
   // systemId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2011,12 +2333,12 @@ func (this *QXmlStreamNotationDeclaration) systemId(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamAttribute::QXmlStreamAttribute(const QString & qualifiedName, const QString & value);
 func NewQXmlStreamAttribute(args ...interface{}) QXmlStreamAttribute {
   return QXmlStreamAttribute{}
 }
 
-
+  // proto:  QStringRef QXmlStreamAttribute::qualifiedName();
 func (this *QXmlStreamAttribute) qualifiedName(args ...interface{}) () {
   // qualifiedName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2034,7 +2356,7 @@ func (this *QXmlStreamAttribute) qualifiedName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QXmlStreamAttribute::~QXmlStreamAttribute();
 func (this *QXmlStreamAttribute) FreeQXmlStreamAttribute(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -2048,7 +2370,7 @@ func (this *QXmlStreamAttribute) FreeQXmlStreamAttribute(args ...interface{}) ()
 
 }
 
-
+  // proto:  QStringRef QXmlStreamAttribute::value();
 func (this *QXmlStreamAttribute) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2066,7 +2388,7 @@ func (this *QXmlStreamAttribute) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamAttribute::namespaceUri();
 func (this *QXmlStreamAttribute) namespaceUri(args ...interface{}) () {
   // namespaceUri()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2084,7 +2406,7 @@ func (this *QXmlStreamAttribute) namespaceUri(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QXmlStreamAttribute::isDefault();
 func (this *QXmlStreamAttribute) isDefault(args ...interface{}) () {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2102,7 +2424,7 @@ func (this *QXmlStreamAttribute) isDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamAttribute::prefix();
 func (this *QXmlStreamAttribute) prefix(args ...interface{}) () {
   // prefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2120,7 +2442,7 @@ func (this *QXmlStreamAttribute) prefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QXmlStreamAttribute::name();
 func (this *QXmlStreamAttribute) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)

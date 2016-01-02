@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,72 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QDeferredDeleteEvent::loopLevel();
+extern void _ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis);
+  // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
+extern void _ZN20QDeferredDeleteEventD0Ev(void* qthis);
+  // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
+extern void* dector_ZN20QDeferredDeleteEventC1Ev();
+extern void _ZN20QDeferredDeleteEventC1Ev(void* qthis);
+  // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
+extern void _ZN27QDynamicPropertyChangeEventD0Ev(void* qthis);
+  // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
+extern void* dector_ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(void* arg0);
+extern void _ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
+extern void demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis);
+  // proto:  void QTimerEvent::QTimerEvent(int timerId);
+extern void* dector_ZN11QTimerEventC1Ei(int arg0);
+extern void _ZN11QTimerEventC1Ei(void* qthis, int arg0);
+  // proto:  void QTimerEvent::~QTimerEvent();
+extern void _ZN11QTimerEventD0Ev(void* qthis);
+  // proto:  int QTimerEvent::timerId();
+extern void _ZNK11QTimerEvent7timerIdEv(void* qthis);
+  // proto:  bool QChildEvent::added();
+extern void _ZNK11QChildEvent5addedEv(void* qthis);
+  // proto:  bool QChildEvent::polished();
+extern void _ZNK11QChildEvent8polishedEv(void* qthis);
+  // proto:  void QChildEvent::~QChildEvent();
+extern void _ZN11QChildEventD0Ev(void* qthis);
+  // proto:  bool QChildEvent::removed();
+extern void _ZNK11QChildEvent7removedEv(void* qthis);
+  // proto:  QObject * QChildEvent::child();
+extern void _ZNK11QChildEvent5childEv(void* qthis);
+  // proto:  void QEvent::setAccepted(bool accepted);
+extern void demth_ZN6QEvent11setAcceptedEb(void* qthis, bool arg0);
+  // proto:  void QEvent::ignore();
+extern void demth_ZN6QEvent6ignoreEv(void* qthis);
+  // proto:  bool QEvent::isAccepted();
+extern void demth_ZNK6QEvent10isAcceptedEv(void* qthis);
+  // proto:  void QEvent::~QEvent();
+extern void _ZN6QEventD0Ev(void* qthis);
+  // proto:  void QEvent::QEvent(const QEvent & other);
+extern void* dector_ZN6QEventC1ERKS_(void* arg0);
+extern void _ZN6QEventC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QEvent::accept();
+extern void demth_ZN6QEvent6acceptEv(void* qthis);
+  // proto: static int QEvent::registerEventType(int hint);
+extern void _ZN6QEvent17registerEventTypeEi(int arg0);
+  // proto:  bool QEvent::spontaneous();
+extern void demth_ZNK6QEvent11spontaneousEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDeferredDeleteEvent)=24
 type QDeferredDeleteEvent struct {
   /*qbase*/ QEvent;
@@ -65,7 +122,7 @@ type QEvent struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QDeferredDeleteEvent::loopLevel();
 func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +140,7 @@ func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
 func (this *QDeferredDeleteEvent) FreeQDeferredDeleteEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,12 +154,12 @@ func (this *QDeferredDeleteEvent) FreeQDeferredDeleteEvent(args ...interface{}) 
 
 }
 
-
+  // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
 func NewQDeferredDeleteEvent(args ...interface{}) QDeferredDeleteEvent {
   return QDeferredDeleteEvent{}
 }
 
-
+  // proto:  void QDynamicPropertyChangeEvent::~QDynamicPropertyChangeEvent();
 func (this *QDynamicPropertyChangeEvent) FreeQDynamicPropertyChangeEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,12 +173,12 @@ func (this *QDynamicPropertyChangeEvent) FreeQDynamicPropertyChangeEvent(args ..
 
 }
 
-
+  // proto:  void QDynamicPropertyChangeEvent::QDynamicPropertyChangeEvent(const QByteArray & name);
 func NewQDynamicPropertyChangeEvent(args ...interface{}) QDynamicPropertyChangeEvent {
   return QDynamicPropertyChangeEvent{}
 }
 
-
+  // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
 func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
   // propertyName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,12 +196,12 @@ func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimerEvent::QTimerEvent(int timerId);
 func NewQTimerEvent(args ...interface{}) QTimerEvent {
   return QTimerEvent{}
 }
 
-
+  // proto:  void QTimerEvent::~QTimerEvent();
 func (this *QTimerEvent) FreeQTimerEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -158,7 +215,7 @@ func (this *QTimerEvent) FreeQTimerEvent(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimerEvent::timerId();
 func (this *QTimerEvent) timerId(args ...interface{}) () {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,7 +233,7 @@ func (this *QTimerEvent) timerId(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChildEvent::added();
 func (this *QChildEvent) added(args ...interface{}) () {
   // added()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -194,7 +251,7 @@ func (this *QChildEvent) added(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChildEvent::polished();
 func (this *QChildEvent) polished(args ...interface{}) () {
   // polished()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -212,7 +269,7 @@ func (this *QChildEvent) polished(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QChildEvent::~QChildEvent();
 func (this *QChildEvent) FreeQChildEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -226,7 +283,7 @@ func (this *QChildEvent) FreeQChildEvent(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChildEvent::removed();
 func (this *QChildEvent) removed(args ...interface{}) () {
   // removed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,7 +301,7 @@ func (this *QChildEvent) removed(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObject * QChildEvent::child();
 func (this *QChildEvent) child(args ...interface{}) () {
   // child()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -262,7 +319,7 @@ func (this *QChildEvent) child(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEvent::setAccepted(bool accepted);
 func (this *QEvent) setAccepted(args ...interface{}) () {
   // setAccepted(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -281,7 +338,7 @@ func (this *QEvent) setAccepted(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEvent::ignore();
 func (this *QEvent) ignore(args ...interface{}) () {
   // ignore()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -299,7 +356,7 @@ func (this *QEvent) ignore(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QEvent::isAccepted();
 func (this *QEvent) isAccepted(args ...interface{}) () {
   // isAccepted()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -317,7 +374,7 @@ func (this *QEvent) isAccepted(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEvent::~QEvent();
 func (this *QEvent) FreeQEvent(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -331,12 +388,12 @@ func (this *QEvent) FreeQEvent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEvent::QEvent(const QEvent & other);
 func NewQEvent(args ...interface{}) QEvent {
   return QEvent{}
 }
 
-
+  // proto:  void QEvent::accept();
 func (this *QEvent) accept(args ...interface{}) () {
   // accept()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -354,7 +411,7 @@ func (this *QEvent) accept(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QEvent::registerEventType(int hint);
 func (this *QEvent) registerEventType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -368,7 +425,7 @@ func (this *QEvent) registerEventType_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QEvent::spontaneous();
 func (this *QEvent) spontaneous(args ...interface{}) () {
   // spontaneous()
   var vtys = make(map[int32]map[int32]reflect.Type)

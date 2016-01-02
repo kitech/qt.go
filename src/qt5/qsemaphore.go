@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,49 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSemaphore::acquire(int n);
+extern void _ZN10QSemaphore7acquireEi(void* qthis, int arg0);
+  // proto:  void QSemaphore::release(int n);
+extern void _ZN10QSemaphore7releaseEi(void* qthis, int arg0);
+  // proto:  int QSemaphore::available();
+extern void _ZNK10QSemaphore9availableEv(void* qthis);
+  // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
+extern void _ZN10QSemaphore10tryAcquireEii(void* qthis, int arg0, int arg1);
+  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
+extern void* dector_ZN10QSemaphoreC1ERKS_(void* arg0);
+extern void _ZN10QSemaphoreC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QSemaphore::tryAcquire(int n);
+extern void _ZN10QSemaphore10tryAcquireEi(void* qthis, int arg0);
+  // proto:  void QSemaphore::QSemaphore(int n);
+extern void* dector_ZN10QSemaphoreC1Ei(int arg0);
+extern void _ZN10QSemaphoreC1Ei(void* qthis, int arg0);
+  // proto:  void QSemaphore::~QSemaphore();
+extern void _ZN10QSemaphoreD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSemaphore)=8
 type QSemaphore struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QSemaphore::acquire(int n);
 func (this *QSemaphore) acquire(args ...interface{}) () {
   // acquire(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +87,7 @@ func (this *QSemaphore) acquire(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSemaphore::release(int n);
 func (this *QSemaphore) release(args ...interface{}) () {
   // release(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +106,7 @@ func (this *QSemaphore) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QSemaphore::available();
 func (this *QSemaphore) available(args ...interface{}) () {
   // available()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +124,7 @@ func (this *QSemaphore) available(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
 func (this *QSemaphore) tryAcquire(args ...interface{}) () {
   // tryAcquire(int, int)
   // tryAcquire(int)
@@ -122,12 +149,12 @@ func (this *QSemaphore) tryAcquire(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
 func NewQSemaphore(args ...interface{}) QSemaphore {
   return QSemaphore{}
 }
 
-
+  // proto:  void QSemaphore::~QSemaphore();
 func (this *QSemaphore) FreeQSemaphore(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,55 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  uint QColormap::pixel(const QColor & color);
+extern void _ZNK9QColormap5pixelERK6QColor(void* qthis, void* arg0);
+  // proto:  const QVector<QColor> QColormap::colormap();
+extern void _ZNK9QColormap8colormapEv(void* qthis);
+  // proto:  const QColor QColormap::colorAt(uint pixel);
+extern void _ZNK9QColormap7colorAtEj(void* qthis, unsigned int arg0);
+  // proto:  void QColormap::~QColormap();
+extern void _ZN9QColormapD0Ev(void* qthis);
+  // proto:  void QColormap::QColormap();
+extern void* dector_ZN9QColormapC1Ev();
+extern void _ZN9QColormapC1Ev(void* qthis);
+  // proto: static QColormap QColormap::instance(int screen);
+extern void _ZN9QColormap8instanceEi(int arg0);
+  // proto:  int QColormap::size();
+extern void _ZNK9QColormap4sizeEv(void* qthis);
+  // proto:  void QColormap::QColormap(const QColormap & colormap);
+extern void* dector_ZN9QColormapC1ERKS_(void* arg0);
+extern void _ZN9QColormapC1ERKS_(void* qthis, void* arg0);
+  // proto: static void QColormap::initialize();
+extern void _ZN9QColormap10initializeEv();
+  // proto:  int QColormap::depth();
+extern void _ZNK9QColormap5depthEv(void* qthis);
+  // proto: static void QColormap::cleanup();
+extern void _ZN9QColormap7cleanupEv();
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QColormap)=8
 type QColormap struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  uint QColormap::pixel(const QColor & color);
 func (this *QColormap) pixel(args ...interface{}) () {
   // pixel(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +93,7 @@ func (this *QColormap) pixel(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QVector<QColor> QColormap::colormap();
 func (this *QColormap) colormap(args ...interface{}) () {
   // colormap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +111,7 @@ func (this *QColormap) colormap(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QColor QColormap::colorAt(uint pixel);
 func (this *QColormap) colorAt(args ...interface{}) () {
   // colorAt(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +130,7 @@ func (this *QColormap) colorAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QColormap::~QColormap();
 func (this *QColormap) FreeQColormap(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,12 +144,12 @@ func (this *QColormap) FreeQColormap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QColormap::QColormap();
 func NewQColormap(args ...interface{}) QColormap {
   return QColormap{}
 }
 
-
+  // proto: static QColormap QColormap::instance(int screen);
 func (this *QColormap) instance_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,7 +163,7 @@ func (this *QColormap) instance_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QColormap::size();
 func (this *QColormap) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -148,7 +181,7 @@ func (this *QColormap) size(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QColormap::initialize();
 func (this *QColormap) initialize_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +195,7 @@ func (this *QColormap) initialize_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QColormap::depth();
 func (this *QColormap) depth(args ...interface{}) () {
   // depth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +213,7 @@ func (this *QColormap) depth(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QColormap::cleanup();
 func (this *QColormap) cleanup_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

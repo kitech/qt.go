@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,48 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QByteArray QMessageAuthenticationCode::result();
+extern void _ZNK26QMessageAuthenticationCode6resultEv(void* qthis);
+  // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
+extern void _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, void* arg0);
+  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
+extern void* dector_ZN26QMessageAuthenticationCodeC1ERKS_(void* arg0);
+extern void _ZN26QMessageAuthenticationCodeC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
+extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, char* arg0, int arg1);
+  // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
+extern void _ZN26QMessageAuthenticationCodeD0Ev(void* qthis);
+  // proto:  void QMessageAuthenticationCode::reset();
+extern void _ZN26QMessageAuthenticationCode5resetEv(void* qthis);
+  // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
+extern void _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
+extern void _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMessageAuthenticationCode)=8
 type QMessageAuthenticationCode struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QByteArray QMessageAuthenticationCode::result();
 func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
   // result()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +85,7 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
 func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
   // addData(const class QByteArray &)
   // addData(const char *, int)
@@ -89,12 +115,12 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
 func NewQMessageAuthenticationCode(args ...interface{}) QMessageAuthenticationCode {
   return QMessageAuthenticationCode{}
 }
 
-
+  // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
 func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,7 +134,7 @@ func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...i
 
 }
 
-
+  // proto:  void QMessageAuthenticationCode::reset();
 func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -126,7 +152,7 @@ func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
 func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
   // setKey(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)

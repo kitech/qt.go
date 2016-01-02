@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,50 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QObject * QDrag::target();
+extern void _ZNK5QDrag6targetEv(void* qthis);
+  // proto:  QMimeData * QDrag::mimeData();
+extern void _ZNK5QDrag8mimeDataEv(void* qthis);
+  // proto:  void QDrag::QDrag(QObject * dragSource);
+extern void* dector_ZN5QDragC1EP7QObject(void* arg0);
+extern void _ZN5QDragC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QDrag::~QDrag();
+extern void _ZN5QDragD0Ev(void* qthis);
+  // proto:  void QDrag::QDrag(const QDrag & );
+extern void* dector_ZN5QDragC1ERKS_(void* arg0);
+extern void _ZN5QDragC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
+extern void _ZN5QDrag10setHotSpotERK6QPoint(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QDrag::metaObject();
+extern void _ZNK5QDrag10metaObjectEv(void* qthis);
+  // proto:  void QDrag::setMimeData(QMimeData * data);
+extern void _ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0);
+  // proto:  QPixmap QDrag::pixmap();
+extern void _ZNK5QDrag6pixmapEv(void* qthis);
+  // proto:  QPoint QDrag::hotSpot();
+extern void _ZNK5QDrag7hotSpotEv(void* qthis);
+  // proto:  void QDrag::setPixmap(const QPixmap & );
+extern void _ZN5QDrag9setPixmapERK7QPixmap(void* qthis, void* arg0);
+  // proto:  QObject * QDrag::source();
+extern void _ZNK5QDrag6sourceEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDrag)=1
 type QDrag struct {
   /*qbase*/ QObject;
@@ -43,7 +78,7 @@ type QDrag struct {
 //  _actionChanged QDrag_actionChanged_signal;
 }
 
-
+  // proto:  QObject * QDrag::target();
 func (this *QDrag) target(args ...interface{}) () {
   // target()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +96,7 @@ func (this *QDrag) target(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMimeData * QDrag::mimeData();
 func (this *QDrag) mimeData(args ...interface{}) () {
   // mimeData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,12 +114,12 @@ func (this *QDrag) mimeData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDrag::QDrag(QObject * dragSource);
 func NewQDrag(args ...interface{}) QDrag {
   return QDrag{}
 }
 
-
+  // proto:  void QDrag::~QDrag();
 func (this *QDrag) FreeQDrag(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,7 +133,7 @@ func (this *QDrag) FreeQDrag(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDrag::setHotSpot(const QPoint & hotspot);
 func (this *QDrag) setHotSpot(args ...interface{}) () {
   // setHotSpot(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +152,7 @@ func (this *QDrag) setHotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDrag::metaObject();
 func (this *QDrag) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +170,7 @@ func (this *QDrag) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDrag::setMimeData(QMimeData * data);
 func (this *QDrag) setMimeData(args ...interface{}) () {
   // setMimeData(class QMimeData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +189,7 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPixmap QDrag::pixmap();
 func (this *QDrag) pixmap(args ...interface{}) () {
   // pixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +207,7 @@ func (this *QDrag) pixmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QDrag::hotSpot();
 func (this *QDrag) hotSpot(args ...interface{}) () {
   // hotSpot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +225,7 @@ func (this *QDrag) hotSpot(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDrag::setPixmap(const QPixmap & );
 func (this *QDrag) setPixmap(args ...interface{}) () {
   // setPixmap(const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +244,7 @@ func (this *QDrag) setPixmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObject * QDrag::source();
 func (this *QDrag) source(args ...interface{}) () {
   // source()
   var vtys = make(map[int32]map[int32]reflect.Type)

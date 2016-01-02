@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,74 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QRegExp::QRegExp(const QRegExp & rx);
+extern void* dector_ZN7QRegExpC1ERKS_(void* arg0);
+extern void _ZN7QRegExpC1ERKS_(void* qthis, void* arg0);
+  // proto:  QStringList QRegExp::capturedTexts();
+extern void _ZN7QRegExp13capturedTextsEv(void* qthis);
+  // proto:  int QRegExp::captureCount();
+extern void _ZNK7QRegExp12captureCountEv(void* qthis);
+  // proto: static QString QRegExp::escape(const QString & str);
+extern void _ZN7QRegExp6escapeERK7QString(void* arg0);
+  // proto:  bool QRegExp::isEmpty();
+extern void _ZNK7QRegExp7isEmptyEv(void* qthis);
+  // proto:  bool QRegExp::isMinimal();
+extern void _ZNK7QRegExp9isMinimalEv(void* qthis);
+  // proto:  int QRegExp::matchedLength();
+extern void _ZNK7QRegExp13matchedLengthEv(void* qthis);
+  // proto:  QString QRegExp::pattern();
+extern void _ZNK7QRegExp7patternEv(void* qthis);
+  // proto:  void QRegExp::setPattern(const QString & pattern);
+extern void _ZN7QRegExp10setPatternERK7QString(void* qthis, void* arg0);
+  // proto:  bool QRegExp::isValid();
+extern void _ZNK7QRegExp7isValidEv(void* qthis);
+  // proto:  void QRegExp::~QRegExp();
+extern void _ZN7QRegExpD0Ev(void* qthis);
+  // proto:  bool QRegExp::exactMatch(const QString & str);
+extern void _ZNK7QRegExp10exactMatchERK7QString(void* qthis, void* arg0);
+  // proto:  void QRegExp::swap(QRegExp & other);
+extern void demth_ZN7QRegExp4swapERS_(void* qthis, void* arg0);
+  // proto:  int QRegExp::pos(int nth);
+extern void _ZN7QRegExp3posEi(void* qthis, int arg0);
+  // proto:  void QRegExp::QRegExp();
+extern void* dector_ZN7QRegExpC1Ev();
+extern void _ZN7QRegExpC1Ev(void* qthis);
+  // proto:  QString QRegExp::cap(int nth);
+extern void _ZN7QRegExp3capEi(void* qthis, int arg0);
+  // proto:  QString QRegExp::errorString();
+extern void _ZN7QRegExp11errorStringEv(void* qthis);
+  // proto:  void QRegExp::setMinimal(bool minimal);
+extern void _ZN7QRegExp10setMinimalEb(void* qthis, bool arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QRegExp)=8
 type QRegExp struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QRegExp::QRegExp(const QRegExp & rx);
 func NewQRegExp(args ...interface{}) QRegExp {
   return QRegExp{}
 }
 
-
+  // proto:  QStringList QRegExp::capturedTexts();
 func (this *QRegExp) capturedTexts(args ...interface{}) () {
   // capturedTexts()
   // capturedTexts()
@@ -68,7 +115,7 @@ func (this *QRegExp) capturedTexts(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QRegExp::captureCount();
 func (this *QRegExp) captureCount(args ...interface{}) () {
   // captureCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +133,7 @@ func (this *QRegExp) captureCount(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QRegExp::escape(const QString & str);
 func (this *QRegExp) escape_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -100,7 +147,7 @@ func (this *QRegExp) escape_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRegExp::isEmpty();
 func (this *QRegExp) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +165,7 @@ func (this *QRegExp) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRegExp::isMinimal();
 func (this *QRegExp) isMinimal(args ...interface{}) () {
   // isMinimal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +183,7 @@ func (this *QRegExp) isMinimal(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QRegExp::matchedLength();
 func (this *QRegExp) matchedLength(args ...interface{}) () {
   // matchedLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +201,7 @@ func (this *QRegExp) matchedLength(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QRegExp::pattern();
 func (this *QRegExp) pattern(args ...interface{}) () {
   // pattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +219,7 @@ func (this *QRegExp) pattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRegExp::setPattern(const QString & pattern);
 func (this *QRegExp) setPattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +238,7 @@ func (this *QRegExp) setPattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRegExp::isValid();
 func (this *QRegExp) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +256,7 @@ func (this *QRegExp) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRegExp::~QRegExp();
 func (this *QRegExp) FreeQRegExp(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,7 +270,7 @@ func (this *QRegExp) FreeQRegExp(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QRegExp::exactMatch(const QString & str);
 func (this *QRegExp) exactMatch(args ...interface{}) () {
   // exactMatch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +289,7 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRegExp::swap(QRegExp & other);
 func (this *QRegExp) swap(args ...interface{}) () {
   // swap(class QRegExp &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,7 +308,7 @@ func (this *QRegExp) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QRegExp::pos(int nth);
 func (this *QRegExp) pos(args ...interface{}) () {
   // pos(int)
   // pos(int)
@@ -285,7 +332,7 @@ func (this *QRegExp) pos(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QRegExp::cap(int nth);
 func (this *QRegExp) cap(args ...interface{}) () {
   // cap(int)
   // cap(int)
@@ -309,7 +356,7 @@ func (this *QRegExp) cap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QRegExp::errorString();
 func (this *QRegExp) errorString(args ...interface{}) () {
   // errorString()
   // errorString()
@@ -331,7 +378,7 @@ func (this *QRegExp) errorString(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QRegExp::setMinimal(bool minimal);
 func (this *QRegExp) setMinimal(args ...interface{}) () {
   // setMinimal(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)

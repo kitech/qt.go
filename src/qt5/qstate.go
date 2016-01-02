@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QAbstractState * QState::errorState();
+extern void _ZNK6QState10errorStateEv(void* qthis);
+  // proto:  QAbstractState * QState::initialState();
+extern void _ZNK6QState12initialStateEv(void* qthis);
+  // proto:  void QState::~QState();
+extern void _ZN6QStateD0Ev(void* qthis);
+  // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
+extern void _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(void* qthis, void* arg0, char* arg1, void* arg2);
+  // proto:  void QState::QState(const QState & );
+extern void* dector_ZN6QStateC1ERKS_(void* arg0);
+extern void _ZN6QStateC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QState::QState(QState * parent);
+extern void* dector_ZN6QStateC1EPS_(void* arg0);
+extern void _ZN6QStateC1EPS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QState::metaObject();
+extern void _ZNK6QState10metaObjectEv(void* qthis);
+  // proto:  void QState::setErrorState(QAbstractState * state);
+extern void _ZN6QState13setErrorStateEP14QAbstractState(void* qthis, void* arg0);
+  // proto:  void QState::addTransition(QAbstractTransition * transition);
+extern void _ZN6QState13addTransitionEP19QAbstractTransition(void* qthis, void* arg0);
+  // proto:  void QState::removeTransition(QAbstractTransition * transition);
+extern void _ZN6QState16removeTransitionEP19QAbstractTransition(void* qthis, void* arg0);
+  // proto:  QSignalTransition * QState::addTransition(const QObject * sender, const char * signal, QAbstractState * target);
+extern void _ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(void* qthis, void* arg0, char* arg1, void* arg2);
+  // proto:  QAbstractTransition * QState::addTransition(QAbstractState * target);
+extern void _ZN6QState13addTransitionEP14QAbstractState(void* qthis, void* arg0);
+  // proto:  QList<QAbstractTransition *> QState::transitions();
+extern void _ZNK6QState11transitionsEv(void* qthis);
+  // proto:  void QState::setInitialState(QAbstractState * state);
+extern void _ZN6QState15setInitialStateEP14QAbstractState(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QState)=1
 type QState struct {
   /*qbase*/ QAbstractState;
@@ -46,7 +85,7 @@ type QState struct {
 //  _initialStateChanged QState_initialStateChanged_signal;
 }
 
-
+  // proto:  QAbstractState * QState::errorState();
 func (this *QState) errorState(args ...interface{}) () {
   // errorState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +103,7 @@ func (this *QState) errorState(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractState * QState::initialState();
 func (this *QState) initialState(args ...interface{}) () {
   // initialState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +121,7 @@ func (this *QState) initialState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::~QState();
 func (this *QState) FreeQState(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,7 +135,7 @@ func (this *QState) FreeQState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
 func (this *QState) assignProperty(args ...interface{}) () {
   // assignProperty(class QObject *, const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,12 +156,12 @@ func (this *QState) assignProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::QState(const QState & );
 func NewQState(args ...interface{}) QState {
   return QState{}
 }
 
-
+  // proto:  const QMetaObject * QState::metaObject();
 func (this *QState) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +179,7 @@ func (this *QState) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::setErrorState(QAbstractState * state);
 func (this *QState) setErrorState(args ...interface{}) () {
   // setErrorState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +198,7 @@ func (this *QState) setErrorState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::addTransition(QAbstractTransition * transition);
 func (this *QState) addTransition(args ...interface{}) () {
   // addTransition(class QAbstractTransition *)
   // addTransition(const class QObject *, const char *, class QAbstractState *)
@@ -190,7 +229,7 @@ func (this *QState) addTransition(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::removeTransition(QAbstractTransition * transition);
 func (this *QState) removeTransition(args ...interface{}) () {
   // removeTransition(class QAbstractTransition *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +248,7 @@ func (this *QState) removeTransition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QAbstractTransition *> QState::transitions();
 func (this *QState) transitions(args ...interface{}) () {
   // transitions()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +266,7 @@ func (this *QState) transitions(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QState::setInitialState(QAbstractState * state);
 func (this *QState) setInitialState(args ...interface{}) () {
   // setInitialState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,131 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
+extern void _ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_(void* arg0, void* arg1, void* arg2);
+  // proto:  QModelIndexList QItemSelection::indexes();
+extern void _ZNK14QItemSelection7indexesEv(void* qthis);
+  // proto:  void QItemSelection::QItemSelection();
+extern void* dector_ZN14QItemSelectionC1Ev();
+extern void _ZN14QItemSelectionC1Ev(void* qthis);
+  // proto:  bool QItemSelection::contains(const QModelIndex & index);
+extern void _ZNK14QItemSelection8containsERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
+extern void _ZN14QItemSelection6selectERK11QModelIndexS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QItemSelection::QItemSelection(const QModelIndex & topLeft, const QModelIndex & bottomRight);
+extern void* dector_ZN14QItemSelectionC1ERK11QModelIndexS2_(void* arg0, void* arg1);
+extern void _ZN14QItemSelectionC1ERK11QModelIndexS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  int QItemSelectionRange::left();
+extern void demth_ZNK19QItemSelectionRange4leftEv(void* qthis);
+  // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
+extern void demth_ZNK19QItemSelectionRange8containsERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
+extern void _ZNK19QItemSelectionRange11intersectedERKS_(void* qthis, void* arg0);
+  // proto:  int QItemSelectionRange::bottom();
+extern void demth_ZNK19QItemSelectionRange6bottomEv(void* qthis);
+  // proto:  QModelIndexList QItemSelectionRange::indexes();
+extern void _ZNK19QItemSelectionRange7indexesEv(void* qthis);
+  // proto:  bool QItemSelectionRange::isValid();
+extern void demth_ZNK19QItemSelectionRange7isValidEv(void* qthis);
+  // proto:  const QAbstractItemModel * QItemSelectionRange::model();
+extern void demth_ZNK19QItemSelectionRange5modelEv(void* qthis);
+  // proto:  int QItemSelectionRange::height();
+extern void demth_ZNK19QItemSelectionRange6heightEv(void* qthis);
+  // proto:  int QItemSelectionRange::right();
+extern void demth_ZNK19QItemSelectionRange5rightEv(void* qthis);
+  // proto:  QModelIndex QItemSelectionRange::parent();
+extern void demth_ZNK19QItemSelectionRange6parentEv(void* qthis);
+  // proto:  void QItemSelectionRange::QItemSelectionRange();
+extern void* dector_ZN19QItemSelectionRangeC1Ev();
+extern void demth_ZN19QItemSelectionRangeC1Ev(void* qthis);
+  // proto:  int QItemSelectionRange::width();
+extern void demth_ZNK19QItemSelectionRange5widthEv(void* qthis);
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topLeft, const QModelIndex & bottomRight);
+extern void* dector_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(void* arg0, void* arg1);
+extern void demth_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
+extern void demth_ZNK19QItemSelectionRange7topLeftEv(void* qthis);
+  // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
+extern void demth_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
+extern void* dector_ZN19QItemSelectionRangeC1ERK11QModelIndex(void* arg0);
+extern void demth_ZN19QItemSelectionRangeC1ERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
+extern void _ZNK19QItemSelectionRange10intersectsERKS_(void* qthis, void* arg0);
+  // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
+extern void demth_ZNK19QItemSelectionRange11bottomRightEv(void* qthis);
+  // proto:  int QItemSelectionRange::top();
+extern void demth_ZNK19QItemSelectionRange3topEv(void* qthis);
+  // proto:  bool QItemSelectionRange::isEmpty();
+extern void _ZNK19QItemSelectionRange7isEmptyEv(void* qthis);
+  // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
+extern void* dector_ZN19QItemSelectionRangeC1ERKS_(void* arg0);
+extern void demth_ZN19QItemSelectionRangeC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QItemSelectionModel::metaObject();
+extern void _ZNK19QItemSelectionModel10metaObjectEv(void* qthis);
+  // proto:  const QItemSelection QItemSelectionModel::selection();
+extern void _ZNK19QItemSelectionModel9selectionEv(void* qthis);
+  // proto:  bool QItemSelectionModel::isSelected(const QModelIndex & index);
+extern void _ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QItemSelectionModel::clearSelection();
+extern void _ZN19QItemSelectionModel14clearSelectionEv(void* qthis);
+  // proto:  QModelIndex QItemSelectionModel::currentIndex();
+extern void _ZNK19QItemSelectionModel12currentIndexEv(void* qthis);
+  // proto:  void QItemSelectionModel::setModel(QAbstractItemModel * model);
+extern void _ZN19QItemSelectionModel8setModelEP18QAbstractItemModel(void* qthis, void* arg0);
+  // proto:  void QItemSelectionModel::QItemSelectionModel(const QItemSelectionModel & );
+extern void* dector_ZN19QItemSelectionModelC1ERKS_(void* arg0);
+extern void _ZN19QItemSelectionModelC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
+extern void _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+  // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model);
+extern void* dector_ZN19QItemSelectionModelC1EP18QAbstractItemModel(void* arg0);
+extern void _ZN19QItemSelectionModelC1EP18QAbstractItemModel(void* qthis, void* arg0);
+  // proto:  void QItemSelectionModel::reset();
+extern void _ZN19QItemSelectionModel5resetEv(void* qthis);
+  // proto:  void QItemSelectionModel::clearCurrentIndex();
+extern void _ZN19QItemSelectionModel17clearCurrentIndexEv(void* qthis);
+  // proto:  QModelIndexList QItemSelectionModel::selectedIndexes();
+extern void _ZNK19QItemSelectionModel15selectedIndexesEv(void* qthis);
+  // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
+extern void _ZNK19QItemSelectionModel15selectedColumnsEi(void* qthis, int arg0);
+  // proto:  bool QItemSelectionModel::isColumnSelected(int column, const QModelIndex & parent);
+extern void _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+  // proto:  bool QItemSelectionModel::columnIntersectsSelection(int column, const QModelIndex & parent);
+extern void _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+  // proto:  void QItemSelectionModel::~QItemSelectionModel();
+extern void _ZN19QItemSelectionModelD0Ev(void* qthis);
+  // proto:  bool QItemSelectionModel::isRowSelected(int row, const QModelIndex & parent);
+extern void _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+  // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model, QObject * parent);
+extern void* dector_ZN19QItemSelectionModelC1EP18QAbstractItemModelP7QObject(void* arg0, void* arg1);
+extern void _ZN19QItemSelectionModelC1EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  void QItemSelectionModel::clear();
+extern void _ZN19QItemSelectionModel5clearEv(void* qthis);
+  // proto:  bool QItemSelectionModel::hasSelection();
+extern void _ZNK19QItemSelectionModel12hasSelectionEv(void* qthis);
+  // proto:  QAbstractItemModel * QItemSelectionModel::model();
+extern void _ZN19QItemSelectionModel5modelEv(void* qthis);
+  // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
+extern void _ZNK19QItemSelectionModel12selectedRowsEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QItemSelection)=1
 type QItemSelection struct {
   // qbase: None;
@@ -58,7 +174,7 @@ type QItemSelectionModel struct {
 //  _currentChanged QItemSelectionModel_currentChanged_signal;
 }
 
-
+  // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
 func (this *QItemSelection) split_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -72,7 +188,7 @@ func (this *QItemSelection) split_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndexList QItemSelection::indexes();
 func (this *QItemSelection) indexes(args ...interface{}) () {
   // indexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -90,12 +206,12 @@ func (this *QItemSelection) indexes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelection::QItemSelection();
 func NewQItemSelection(args ...interface{}) QItemSelection {
   return QItemSelection{}
 }
 
-
+  // proto:  bool QItemSelection::contains(const QModelIndex & index);
 func (this *QItemSelection) contains(args ...interface{}) () {
   // contains(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +230,7 @@ func (this *QItemSelection) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
 func (this *QItemSelection) select_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -128,7 +244,7 @@ func (this *QItemSelection) select_(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QItemSelectionRange::left();
 func (this *QItemSelectionRange) left(args ...interface{}) () {
   // left()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -146,7 +262,7 @@ func (this *QItemSelectionRange) left(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionRange::contains(const QModelIndex & index);
 func (this *QItemSelectionRange) contains(args ...interface{}) () {
   // contains(const class QModelIndex &)
   // contains(int, int, const class QModelIndex &)
@@ -172,7 +288,7 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  QItemSelectionRange QItemSelectionRange::intersected(const QItemSelectionRange & other);
 func (this *QItemSelectionRange) intersected(args ...interface{}) () {
   // intersected(const class QItemSelectionRange &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +307,7 @@ func (this *QItemSelectionRange) intersected(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QItemSelectionRange::bottom();
 func (this *QItemSelectionRange) bottom(args ...interface{}) () {
   // bottom()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +325,7 @@ func (this *QItemSelectionRange) bottom(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndexList QItemSelectionRange::indexes();
 func (this *QItemSelectionRange) indexes(args ...interface{}) () {
   // indexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +343,7 @@ func (this *QItemSelectionRange) indexes(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionRange::isValid();
 func (this *QItemSelectionRange) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +361,7 @@ func (this *QItemSelectionRange) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QAbstractItemModel * QItemSelectionRange::model();
 func (this *QItemSelectionRange) model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -263,7 +379,7 @@ func (this *QItemSelectionRange) model(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QItemSelectionRange::height();
 func (this *QItemSelectionRange) height(args ...interface{}) () {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -281,7 +397,7 @@ func (this *QItemSelectionRange) height(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QItemSelectionRange::right();
 func (this *QItemSelectionRange) right(args ...interface{}) () {
   // right()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -299,7 +415,7 @@ func (this *QItemSelectionRange) right(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QItemSelectionRange::parent();
 func (this *QItemSelectionRange) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -317,12 +433,12 @@ func (this *QItemSelectionRange) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionRange::QItemSelectionRange();
 func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
   return QItemSelectionRange{}
 }
 
-
+  // proto:  int QItemSelectionRange::width();
 func (this *QItemSelectionRange) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -340,7 +456,7 @@ func (this *QItemSelectionRange) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
 func (this *QItemSelectionRange) topLeft(args ...interface{}) () {
   // topLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -358,7 +474,7 @@ func (this *QItemSelectionRange) topLeft(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionRange::intersects(const QItemSelectionRange & other);
 func (this *QItemSelectionRange) intersects(args ...interface{}) () {
   // intersects(const class QItemSelectionRange &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -377,7 +493,7 @@ func (this *QItemSelectionRange) intersects(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QPersistentModelIndex & QItemSelectionRange::bottomRight();
 func (this *QItemSelectionRange) bottomRight(args ...interface{}) () {
   // bottomRight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +511,7 @@ func (this *QItemSelectionRange) bottomRight(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QItemSelectionRange::top();
 func (this *QItemSelectionRange) top(args ...interface{}) () {
   // top()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -413,7 +529,7 @@ func (this *QItemSelectionRange) top(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionRange::isEmpty();
 func (this *QItemSelectionRange) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -431,7 +547,7 @@ func (this *QItemSelectionRange) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QItemSelectionModel::metaObject();
 func (this *QItemSelectionModel) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -449,7 +565,7 @@ func (this *QItemSelectionModel) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QItemSelection QItemSelectionModel::selection();
 func (this *QItemSelectionModel) selection(args ...interface{}) () {
   // selection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -467,7 +583,7 @@ func (this *QItemSelectionModel) selection(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionModel::isSelected(const QModelIndex & index);
 func (this *QItemSelectionModel) isSelected(args ...interface{}) () {
   // isSelected(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -486,7 +602,7 @@ func (this *QItemSelectionModel) isSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionModel::clearSelection();
 func (this *QItemSelectionModel) clearSelection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -504,7 +620,7 @@ func (this *QItemSelectionModel) clearSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QItemSelectionModel::currentIndex();
 func (this *QItemSelectionModel) currentIndex(args ...interface{}) () {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -522,7 +638,7 @@ func (this *QItemSelectionModel) currentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionModel::setModel(QAbstractItemModel * model);
 func (this *QItemSelectionModel) setModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -541,12 +657,12 @@ func (this *QItemSelectionModel) setModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionModel::QItemSelectionModel(const QItemSelectionModel & );
 func NewQItemSelectionModel(args ...interface{}) QItemSelectionModel {
   return QItemSelectionModel{}
 }
 
-
+  // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
 func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () {
   // rowIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -566,7 +682,7 @@ func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () 
 
 }
 
-
+  // proto:  void QItemSelectionModel::reset();
 func (this *QItemSelectionModel) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -584,7 +700,7 @@ func (this *QItemSelectionModel) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionModel::clearCurrentIndex();
 func (this *QItemSelectionModel) clearCurrentIndex(args ...interface{}) () {
   // clearCurrentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -602,7 +718,7 @@ func (this *QItemSelectionModel) clearCurrentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndexList QItemSelectionModel::selectedIndexes();
 func (this *QItemSelectionModel) selectedIndexes(args ...interface{}) () {
   // selectedIndexes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -620,7 +736,7 @@ func (this *QItemSelectionModel) selectedIndexes(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
 func (this *QItemSelectionModel) selectedColumns(args ...interface{}) () {
   // selectedColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -639,7 +755,7 @@ func (this *QItemSelectionModel) selectedColumns(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionModel::isColumnSelected(int column, const QModelIndex & parent);
 func (this *QItemSelectionModel) isColumnSelected(args ...interface{}) () {
   // isColumnSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -659,7 +775,7 @@ func (this *QItemSelectionModel) isColumnSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionModel::columnIntersectsSelection(int column, const QModelIndex & parent);
 func (this *QItemSelectionModel) columnIntersectsSelection(args ...interface{}) () {
   // columnIntersectsSelection(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -679,7 +795,7 @@ func (this *QItemSelectionModel) columnIntersectsSelection(args ...interface{}) 
 
 }
 
-
+  // proto:  void QItemSelectionModel::~QItemSelectionModel();
 func (this *QItemSelectionModel) FreeQItemSelectionModel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,7 +809,7 @@ func (this *QItemSelectionModel) FreeQItemSelectionModel(args ...interface{}) ()
 
 }
 
-
+  // proto:  bool QItemSelectionModel::isRowSelected(int row, const QModelIndex & parent);
 func (this *QItemSelectionModel) isRowSelected(args ...interface{}) () {
   // isRowSelected(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -713,7 +829,7 @@ func (this *QItemSelectionModel) isRowSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QItemSelectionModel::clear();
 func (this *QItemSelectionModel) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -731,7 +847,7 @@ func (this *QItemSelectionModel) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QItemSelectionModel::hasSelection();
 func (this *QItemSelectionModel) hasSelection(args ...interface{}) () {
   // hasSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -749,7 +865,7 @@ func (this *QItemSelectionModel) hasSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemModel * QItemSelectionModel::model();
 func (this *QItemSelectionModel) model(args ...interface{}) () {
   // model()
   // model()
@@ -771,7 +887,7 @@ func (this *QItemSelectionModel) model(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
 func (this *QItemSelectionModel) selectedRows(args ...interface{}) () {
   // selectedRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,213 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QWindow::unsetCursor();
+extern void _ZN7QWindow11unsetCursorEv(void* qthis);
+  // proto:  bool QWindow::isVisible();
+extern void _ZNK7QWindow9isVisibleEv(void* qthis);
+  // proto:  void QWindow::setScreen(QScreen * screen);
+extern void _ZN7QWindow9setScreenEP7QScreen(void* qthis, void* arg0);
+  // proto:  QSize QWindow::maximumSize();
+extern void _ZNK7QWindow11maximumSizeEv(void* qthis);
+  // proto:  void QWindow::setTransientParent(QWindow * parent);
+extern void _ZN7QWindow18setTransientParentEPS_(void* qthis, void* arg0);
+  // proto:  QSurfaceFormat QWindow::format();
+extern void _ZNK7QWindow6formatEv(void* qthis);
+  // proto:  bool QWindow::isTopLevel();
+extern void _ZNK7QWindow10isTopLevelEv(void* qthis);
+  // proto:  void QWindow::QWindow(const QWindow & );
+extern void* dector_ZN7QWindowC1ERKS_(void* arg0);
+extern void _ZN7QWindowC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QWindow::setIcon(const QIcon & icon);
+extern void _ZN7QWindow7setIconERK5QIcon(void* qthis, void* arg0);
+  // proto:  qreal QWindow::opacity();
+extern void _ZNK7QWindow7opacityEv(void* qthis);
+  // proto:  void QWindow::setMinimumSize(const QSize & size);
+extern void _ZN7QWindow14setMinimumSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  int QWindow::minimumHeight();
+extern void demth_ZNK7QWindow13minimumHeightEv(void* qthis);
+  // proto:  QSize QWindow::sizeIncrement();
+extern void _ZNK7QWindow13sizeIncrementEv(void* qthis);
+  // proto:  void QWindow::resize(const QSize & newSize);
+extern void _ZN7QWindow6resizeERK5QSize(void* qthis, void* arg0);
+  // proto:  void QWindow::setTitle(const QString & );
+extern void _ZN7QWindow8setTitleERK7QString(void* qthis, void* arg0);
+  // proto:  void QWindow::raise();
+extern void _ZN7QWindow5raiseEv(void* qthis);
+  // proto:  QSize QWindow::minimumSize();
+extern void _ZNK7QWindow11minimumSizeEv(void* qthis);
+  // proto:  QPoint QWindow::mapToGlobal(const QPoint & pos);
+extern void _ZNK7QWindow11mapToGlobalERK6QPoint(void* qthis, void* arg0);
+  // proto: static QWindow * QWindow::fromWinId(WId id);
+extern void _ZN7QWindow9fromWinIdEi(uint32_t* arg0);
+  // proto:  QMargins QWindow::frameMargins();
+extern void _ZNK7QWindow12frameMarginsEv(void* qthis);
+  // proto:  void QWindow::setMaximumWidth(int w);
+extern void _ZN7QWindow15setMaximumWidthEi(void* qthis, int arg0);
+  // proto:  int QWindow::maximumHeight();
+extern void demth_ZNK7QWindow13maximumHeightEv(void* qthis);
+  // proto:  bool QWindow::isModal();
+extern void _ZNK7QWindow7isModalEv(void* qthis);
+  // proto:  QRect QWindow::geometry();
+extern void _ZNK7QWindow8geometryEv(void* qthis);
+  // proto:  void QWindow::setParent(QWindow * parent);
+extern void _ZN7QWindow9setParentEPS_(void* qthis, void* arg0);
+  // proto:  QRect QWindow::frameGeometry();
+extern void _ZNK7QWindow13frameGeometryEv(void* qthis);
+  // proto:  QSurfaceFormat QWindow::requestedFormat();
+extern void _ZNK7QWindow15requestedFormatEv(void* qthis);
+  // proto:  void QWindow::setHeight(int arg);
+extern void _ZN7QWindow9setHeightEi(void* qthis, int arg0);
+  // proto:  void QWindow::requestActivate();
+extern void _ZN7QWindow15requestActivateEv(void* qthis);
+  // proto:  QPoint QWindow::mapFromGlobal(const QPoint & pos);
+extern void _ZNK7QWindow13mapFromGlobalERK6QPoint(void* qthis, void* arg0);
+  // proto:  int QWindow::y();
+extern void demth_ZNK7QWindow1yEv(void* qthis);
+  // proto:  int QWindow::width();
+extern void demth_ZNK7QWindow5widthEv(void* qthis);
+  // proto:  void QWindow::setFilePath(const QString & filePath);
+extern void _ZN7QWindow11setFilePathERK7QString(void* qthis, void* arg0);
+  // proto:  void QWindow::setCursor(const QCursor & );
+extern void _ZN7QWindow9setCursorERK7QCursor(void* qthis, void* arg0);
+  // proto:  void QWindow::setVisible(bool visible);
+extern void _ZN7QWindow10setVisibleEb(void* qthis, bool arg0);
+  // proto:  void QWindow::~QWindow();
+extern void _ZN7QWindowD0Ev(void* qthis);
+  // proto:  bool QWindow::setMouseGrabEnabled(bool grab);
+extern void _ZN7QWindow19setMouseGrabEnabledEb(void* qthis, bool arg0);
+  // proto:  bool QWindow::isExposed();
+extern void _ZNK7QWindow9isExposedEv(void* qthis);
+  // proto:  int QWindow::minimumWidth();
+extern void demth_ZNK7QWindow12minimumWidthEv(void* qthis);
+  // proto:  void QWindow::setPosition(const QPoint & pt);
+extern void _ZN7QWindow11setPositionERK6QPoint(void* qthis, void* arg0);
+  // proto:  bool QWindow::close();
+extern void _ZN7QWindow5closeEv(void* qthis);
+  // proto:  int QWindow::x();
+extern void demth_ZNK7QWindow1xEv(void* qthis);
+  // proto:  void QWindow::setMinimumWidth(int w);
+extern void _ZN7QWindow15setMinimumWidthEi(void* qthis, int arg0);
+  // proto:  QRegion QWindow::mask();
+extern void _ZNK7QWindow4maskEv(void* qthis);
+  // proto:  QWindow * QWindow::parent();
+extern void _ZNK7QWindow6parentEv(void* qthis);
+  // proto:  void QWindow::setFramePosition(const QPoint & point);
+extern void _ZN7QWindow16setFramePositionERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QWindow::QWindow(QScreen * screen);
+extern void* dector_ZN7QWindowC1EP7QScreen(void* arg0);
+extern void _ZN7QWindowC1EP7QScreen(void* qthis, void* arg0);
+  // proto:  void QWindow::setGeometry(int posx, int posy, int w, int h);
+extern void _ZN7QWindow11setGeometryEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  bool QWindow::setKeyboardGrabEnabled(bool grab);
+extern void _ZN7QWindow22setKeyboardGrabEnabledEb(void* qthis, bool arg0);
+  // proto:  const QMetaObject * QWindow::metaObject();
+extern void _ZNK7QWindow10metaObjectEv(void* qthis);
+  // proto:  void QWindow::QWindow(QWindow * parent);
+extern void* dector_ZN7QWindowC1EPS_(void* arg0);
+extern void _ZN7QWindowC1EPS_(void* qthis, void* arg0);
+  // proto:  void QWindow::setWidth(int arg);
+extern void _ZN7QWindow8setWidthEi(void* qthis, int arg0);
+  // proto:  void QWindow::setY(int arg);
+extern void _ZN7QWindow4setYEi(void* qthis, int arg0);
+  // proto:  qreal QWindow::devicePixelRatio();
+extern void _ZNK7QWindow16devicePixelRatioEv(void* qthis);
+  // proto:  void QWindow::setBaseSize(const QSize & size);
+extern void _ZN7QWindow11setBaseSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  void QWindow::alert(int msec);
+extern void _ZN7QWindow5alertEi(void* qthis, int arg0);
+  // proto:  QPlatformWindow * QWindow::handle();
+extern void _ZNK7QWindow6handleEv(void* qthis);
+  // proto:  void QWindow::destroy();
+extern void _ZN7QWindow7destroyEv(void* qthis);
+  // proto:  QWindow * QWindow::transientParent();
+extern void _ZNK7QWindow15transientParentEv(void* qthis);
+  // proto:  void QWindow::setMinimumHeight(int h);
+extern void _ZN7QWindow16setMinimumHeightEi(void* qthis, int arg0);
+  // proto:  void QWindow::show();
+extern void _ZN7QWindow4showEv(void* qthis);
+  // proto:  QSize QWindow::baseSize();
+extern void _ZNK7QWindow8baseSizeEv(void* qthis);
+  // proto:  QString QWindow::title();
+extern void _ZNK7QWindow5titleEv(void* qthis);
+  // proto:  void QWindow::showMaximized();
+extern void _ZN7QWindow13showMaximizedEv(void* qthis);
+  // proto:  void QWindow::create();
+extern void _ZN7QWindow6createEv(void* qthis);
+  // proto:  void QWindow::resize(int w, int h);
+extern void _ZN7QWindow6resizeEii(void* qthis, int arg0, int arg1);
+  // proto:  QScreen * QWindow::screen();
+extern void _ZNK7QWindow6screenEv(void* qthis);
+  // proto:  void QWindow::setPosition(int posx, int posy);
+extern void _ZN7QWindow11setPositionEii(void* qthis, int arg0, int arg1);
+  // proto:  void QWindow::setOpacity(qreal level);
+extern void _ZN7QWindow10setOpacityEd(void* qthis, double arg0);
+  // proto:  void QWindow::setGeometry(const QRect & rect);
+extern void _ZN7QWindow11setGeometryERK5QRect(void* qthis, void* arg0);
+  // proto:  void QWindow::setSizeIncrement(const QSize & size);
+extern void _ZN7QWindow16setSizeIncrementERK5QSize(void* qthis, void* arg0);
+  // proto:  void QWindow::showMinimized();
+extern void _ZN7QWindow13showMinimizedEv(void* qthis);
+  // proto:  QObject * QWindow::focusObject();
+extern void _ZNK7QWindow11focusObjectEv(void* qthis);
+  // proto:  bool QWindow::isActive();
+extern void _ZNK7QWindow8isActiveEv(void* qthis);
+  // proto:  QAccessibleInterface * QWindow::accessibleRoot();
+extern void _ZNK7QWindow14accessibleRootEv(void* qthis);
+  // proto:  QCursor QWindow::cursor();
+extern void _ZNK7QWindow6cursorEv(void* qthis);
+  // proto:  void QWindow::setFormat(const QSurfaceFormat & format);
+extern void _ZN7QWindow9setFormatERK14QSurfaceFormat(void* qthis, void* arg0);
+  // proto:  void QWindow::showFullScreen();
+extern void _ZN7QWindow14showFullScreenEv(void* qthis);
+  // proto:  void QWindow::setX(int arg);
+extern void _ZN7QWindow4setXEi(void* qthis, int arg0);
+  // proto:  void QWindow::lower();
+extern void _ZN7QWindow5lowerEv(void* qthis);
+  // proto:  void QWindow::requestUpdate();
+extern void _ZN7QWindow13requestUpdateEv(void* qthis);
+  // proto:  void QWindow::hide();
+extern void _ZN7QWindow4hideEv(void* qthis);
+  // proto:  void QWindow::setMask(const QRegion & region);
+extern void _ZN7QWindow7setMaskERK7QRegion(void* qthis, void* arg0);
+  // proto:  void QWindow::setMaximumSize(const QSize & size);
+extern void _ZN7QWindow14setMaximumSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  int QWindow::height();
+extern void demth_ZNK7QWindow6heightEv(void* qthis);
+  // proto:  QSize QWindow::size();
+extern void demth_ZNK7QWindow4sizeEv(void* qthis);
+  // proto:  int QWindow::maximumWidth();
+extern void demth_ZNK7QWindow12maximumWidthEv(void* qthis);
+  // proto:  QPoint QWindow::position();
+extern void demth_ZNK7QWindow8positionEv(void* qthis);
+  // proto:  void QWindow::setMaximumHeight(int h);
+extern void _ZN7QWindow16setMaximumHeightEi(void* qthis, int arg0);
+  // proto:  QString QWindow::filePath();
+extern void _ZNK7QWindow8filePathEv(void* qthis);
+  // proto:  void QWindow::showNormal();
+extern void _ZN7QWindow10showNormalEv(void* qthis);
+  // proto:  QPoint QWindow::framePosition();
+extern void _ZNK7QWindow13framePositionEv(void* qthis);
+  // proto:  QIcon QWindow::icon();
+extern void _ZNK7QWindow4iconEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QWindow)=1
 type QWindow struct {
   /*qbase*/ QObject;
@@ -59,7 +257,7 @@ type QWindow struct {
 //  _maximumWidthChanged QWindow_maximumWidthChanged_signal;
 }
 
-
+  // proto:  void QWindow::unsetCursor();
 func (this *QWindow) unsetCursor(args ...interface{}) () {
   // unsetCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +275,7 @@ func (this *QWindow) unsetCursor(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::isVisible();
 func (this *QWindow) isVisible(args ...interface{}) () {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,7 +293,7 @@ func (this *QWindow) isVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setScreen(QScreen * screen);
 func (this *QWindow) setScreen(args ...interface{}) () {
   // setScreen(class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +312,7 @@ func (this *QWindow) setScreen(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QWindow::maximumSize();
 func (this *QWindow) maximumSize(args ...interface{}) () {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +330,7 @@ func (this *QWindow) maximumSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setTransientParent(QWindow * parent);
 func (this *QWindow) setTransientParent(args ...interface{}) () {
   // setTransientParent(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +349,7 @@ func (this *QWindow) setTransientParent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSurfaceFormat QWindow::format();
 func (this *QWindow) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -169,7 +367,7 @@ func (this *QWindow) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::isTopLevel();
 func (this *QWindow) isTopLevel(args ...interface{}) () {
   // isTopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,12 +385,12 @@ func (this *QWindow) isTopLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::QWindow(const QWindow & );
 func NewQWindow(args ...interface{}) QWindow {
   return QWindow{}
 }
 
-
+  // proto:  void QWindow::setIcon(const QIcon & icon);
 func (this *QWindow) setIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +409,7 @@ func (this *QWindow) setIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QWindow::opacity();
 func (this *QWindow) opacity(args ...interface{}) () {
   // opacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +427,7 @@ func (this *QWindow) opacity(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMinimumSize(const QSize & size);
 func (this *QWindow) setMinimumSize(args ...interface{}) () {
   // setMinimumSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +446,7 @@ func (this *QWindow) setMinimumSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::minimumHeight();
 func (this *QWindow) minimumHeight(args ...interface{}) () {
   // minimumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +464,7 @@ func (this *QWindow) minimumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QWindow::sizeIncrement();
 func (this *QWindow) sizeIncrement(args ...interface{}) () {
   // sizeIncrement()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +482,7 @@ func (this *QWindow) sizeIncrement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::resize(const QSize & newSize);
 func (this *QWindow) resize(args ...interface{}) () {
   // resize(const class QSize &)
   // resize(int, int)
@@ -309,7 +507,7 @@ func (this *QWindow) resize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setTitle(const QString & );
 func (this *QWindow) setTitle(args ...interface{}) () {
   // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -328,7 +526,7 @@ func (this *QWindow) setTitle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::raise();
 func (this *QWindow) raise(args ...interface{}) () {
   // raise()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -346,7 +544,7 @@ func (this *QWindow) raise(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QWindow::minimumSize();
 func (this *QWindow) minimumSize(args ...interface{}) () {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +562,7 @@ func (this *QWindow) minimumSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QWindow::mapToGlobal(const QPoint & pos);
 func (this *QWindow) mapToGlobal(args ...interface{}) () {
   // mapToGlobal(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -383,7 +581,7 @@ func (this *QWindow) mapToGlobal(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindow * QWindow::fromWinId(WId id);
 func (this *QWindow) fromWinId_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +595,7 @@ func (this *QWindow) fromWinId_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMargins QWindow::frameMargins();
 func (this *QWindow) frameMargins(args ...interface{}) () {
   // frameMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -415,7 +613,7 @@ func (this *QWindow) frameMargins(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMaximumWidth(int w);
 func (this *QWindow) setMaximumWidth(args ...interface{}) () {
   // setMaximumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -434,7 +632,7 @@ func (this *QWindow) setMaximumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::maximumHeight();
 func (this *QWindow) maximumHeight(args ...interface{}) () {
   // maximumHeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -452,7 +650,7 @@ func (this *QWindow) maximumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::isModal();
 func (this *QWindow) isModal(args ...interface{}) () {
   // isModal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -470,7 +668,7 @@ func (this *QWindow) isModal(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QWindow::geometry();
 func (this *QWindow) geometry(args ...interface{}) () {
   // geometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,7 +686,7 @@ func (this *QWindow) geometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setParent(QWindow * parent);
 func (this *QWindow) setParent(args ...interface{}) () {
   // setParent(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -507,7 +705,7 @@ func (this *QWindow) setParent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QWindow::frameGeometry();
 func (this *QWindow) frameGeometry(args ...interface{}) () {
   // frameGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -525,7 +723,7 @@ func (this *QWindow) frameGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSurfaceFormat QWindow::requestedFormat();
 func (this *QWindow) requestedFormat(args ...interface{}) () {
   // requestedFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -543,7 +741,7 @@ func (this *QWindow) requestedFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setHeight(int arg);
 func (this *QWindow) setHeight(args ...interface{}) () {
   // setHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -562,7 +760,7 @@ func (this *QWindow) setHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::requestActivate();
 func (this *QWindow) requestActivate(args ...interface{}) () {
   // requestActivate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -580,7 +778,7 @@ func (this *QWindow) requestActivate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QWindow::mapFromGlobal(const QPoint & pos);
 func (this *QWindow) mapFromGlobal(args ...interface{}) () {
   // mapFromGlobal(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -599,7 +797,7 @@ func (this *QWindow) mapFromGlobal(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::y();
 func (this *QWindow) y(args ...interface{}) () {
   // y()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -617,7 +815,7 @@ func (this *QWindow) y(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::width();
 func (this *QWindow) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -635,7 +833,7 @@ func (this *QWindow) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setFilePath(const QString & filePath);
 func (this *QWindow) setFilePath(args ...interface{}) () {
   // setFilePath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -654,7 +852,7 @@ func (this *QWindow) setFilePath(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setCursor(const QCursor & );
 func (this *QWindow) setCursor(args ...interface{}) () {
   // setCursor(const class QCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -673,7 +871,7 @@ func (this *QWindow) setCursor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setVisible(bool visible);
 func (this *QWindow) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -692,7 +890,7 @@ func (this *QWindow) setVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::~QWindow();
 func (this *QWindow) FreeQWindow(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -706,7 +904,7 @@ func (this *QWindow) FreeQWindow(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::setMouseGrabEnabled(bool grab);
 func (this *QWindow) setMouseGrabEnabled(args ...interface{}) () {
   // setMouseGrabEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -725,7 +923,7 @@ func (this *QWindow) setMouseGrabEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::isExposed();
 func (this *QWindow) isExposed(args ...interface{}) () {
   // isExposed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -743,7 +941,7 @@ func (this *QWindow) isExposed(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::minimumWidth();
 func (this *QWindow) minimumWidth(args ...interface{}) () {
   // minimumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -761,7 +959,7 @@ func (this *QWindow) minimumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setPosition(const QPoint & pt);
 func (this *QWindow) setPosition(args ...interface{}) () {
   // setPosition(const class QPoint &)
   // setPosition(int, int)
@@ -786,7 +984,7 @@ func (this *QWindow) setPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::close();
 func (this *QWindow) close(args ...interface{}) () {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -804,7 +1002,7 @@ func (this *QWindow) close(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::x();
 func (this *QWindow) x(args ...interface{}) () {
   // x()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -822,7 +1020,7 @@ func (this *QWindow) x(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMinimumWidth(int w);
 func (this *QWindow) setMinimumWidth(args ...interface{}) () {
   // setMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -841,7 +1039,7 @@ func (this *QWindow) setMinimumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRegion QWindow::mask();
 func (this *QWindow) mask(args ...interface{}) () {
   // mask()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -859,7 +1057,7 @@ func (this *QWindow) mask(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWindow * QWindow::parent();
 func (this *QWindow) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -877,7 +1075,7 @@ func (this *QWindow) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setFramePosition(const QPoint & point);
 func (this *QWindow) setFramePosition(args ...interface{}) () {
   // setFramePosition(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -896,7 +1094,7 @@ func (this *QWindow) setFramePosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setGeometry(int posx, int posy, int w, int h);
 func (this *QWindow) setGeometry(args ...interface{}) () {
   // setGeometry(int, int, int, int)
   // setGeometry(const class QRect &)
@@ -923,7 +1121,7 @@ func (this *QWindow) setGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::setKeyboardGrabEnabled(bool grab);
 func (this *QWindow) setKeyboardGrabEnabled(args ...interface{}) () {
   // setKeyboardGrabEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -942,7 +1140,7 @@ func (this *QWindow) setKeyboardGrabEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QWindow::metaObject();
 func (this *QWindow) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -960,7 +1158,7 @@ func (this *QWindow) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setWidth(int arg);
 func (this *QWindow) setWidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -979,7 +1177,7 @@ func (this *QWindow) setWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setY(int arg);
 func (this *QWindow) setY(args ...interface{}) () {
   // setY(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -998,7 +1196,7 @@ func (this *QWindow) setY(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QWindow::devicePixelRatio();
 func (this *QWindow) devicePixelRatio(args ...interface{}) () {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1016,7 +1214,7 @@ func (this *QWindow) devicePixelRatio(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setBaseSize(const QSize & size);
 func (this *QWindow) setBaseSize(args ...interface{}) () {
   // setBaseSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1035,7 +1233,7 @@ func (this *QWindow) setBaseSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::alert(int msec);
 func (this *QWindow) alert(args ...interface{}) () {
   // alert(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1054,7 +1252,7 @@ func (this *QWindow) alert(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformWindow * QWindow::handle();
 func (this *QWindow) handle(args ...interface{}) () {
   // handle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1072,7 +1270,7 @@ func (this *QWindow) handle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::destroy();
 func (this *QWindow) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1090,7 +1288,7 @@ func (this *QWindow) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWindow * QWindow::transientParent();
 func (this *QWindow) transientParent(args ...interface{}) () {
   // transientParent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1108,7 +1306,7 @@ func (this *QWindow) transientParent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMinimumHeight(int h);
 func (this *QWindow) setMinimumHeight(args ...interface{}) () {
   // setMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1127,7 +1325,7 @@ func (this *QWindow) setMinimumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::show();
 func (this *QWindow) show(args ...interface{}) () {
   // show()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1145,7 +1343,7 @@ func (this *QWindow) show(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QWindow::baseSize();
 func (this *QWindow) baseSize(args ...interface{}) () {
   // baseSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1163,7 +1361,7 @@ func (this *QWindow) baseSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QWindow::title();
 func (this *QWindow) title(args ...interface{}) () {
   // title()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1181,7 +1379,7 @@ func (this *QWindow) title(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::showMaximized();
 func (this *QWindow) showMaximized(args ...interface{}) () {
   // showMaximized()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1199,7 +1397,7 @@ func (this *QWindow) showMaximized(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::create();
 func (this *QWindow) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1217,7 +1415,7 @@ func (this *QWindow) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  QScreen * QWindow::screen();
 func (this *QWindow) screen(args ...interface{}) () {
   // screen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1235,7 +1433,7 @@ func (this *QWindow) screen(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setOpacity(qreal level);
 func (this *QWindow) setOpacity(args ...interface{}) () {
   // setOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1254,7 +1452,7 @@ func (this *QWindow) setOpacity(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setSizeIncrement(const QSize & size);
 func (this *QWindow) setSizeIncrement(args ...interface{}) () {
   // setSizeIncrement(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1273,7 +1471,7 @@ func (this *QWindow) setSizeIncrement(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::showMinimized();
 func (this *QWindow) showMinimized(args ...interface{}) () {
   // showMinimized()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1291,7 +1489,7 @@ func (this *QWindow) showMinimized(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObject * QWindow::focusObject();
 func (this *QWindow) focusObject(args ...interface{}) () {
   // focusObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1309,7 +1507,7 @@ func (this *QWindow) focusObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QWindow::isActive();
 func (this *QWindow) isActive(args ...interface{}) () {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1327,7 +1525,7 @@ func (this *QWindow) isActive(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QWindow::accessibleRoot();
 func (this *QWindow) accessibleRoot(args ...interface{}) () {
   // accessibleRoot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1345,7 +1543,7 @@ func (this *QWindow) accessibleRoot(args ...interface{}) () {
 
 }
 
-
+  // proto:  QCursor QWindow::cursor();
 func (this *QWindow) cursor(args ...interface{}) () {
   // cursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1363,7 +1561,7 @@ func (this *QWindow) cursor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setFormat(const QSurfaceFormat & format);
 func (this *QWindow) setFormat(args ...interface{}) () {
   // setFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1382,7 +1580,7 @@ func (this *QWindow) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::showFullScreen();
 func (this *QWindow) showFullScreen(args ...interface{}) () {
   // showFullScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1400,7 +1598,7 @@ func (this *QWindow) showFullScreen(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setX(int arg);
 func (this *QWindow) setX(args ...interface{}) () {
   // setX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1419,7 +1617,7 @@ func (this *QWindow) setX(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::lower();
 func (this *QWindow) lower(args ...interface{}) () {
   // lower()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1437,7 +1635,7 @@ func (this *QWindow) lower(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::requestUpdate();
 func (this *QWindow) requestUpdate(args ...interface{}) () {
   // requestUpdate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1455,7 +1653,7 @@ func (this *QWindow) requestUpdate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::hide();
 func (this *QWindow) hide(args ...interface{}) () {
   // hide()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1473,7 +1671,7 @@ func (this *QWindow) hide(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMask(const QRegion & region);
 func (this *QWindow) setMask(args ...interface{}) () {
   // setMask(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1492,7 +1690,7 @@ func (this *QWindow) setMask(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMaximumSize(const QSize & size);
 func (this *QWindow) setMaximumSize(args ...interface{}) () {
   // setMaximumSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1511,7 +1709,7 @@ func (this *QWindow) setMaximumSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::height();
 func (this *QWindow) height(args ...interface{}) () {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1529,7 +1727,7 @@ func (this *QWindow) height(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QWindow::size();
 func (this *QWindow) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1547,7 +1745,7 @@ func (this *QWindow) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QWindow::maximumWidth();
 func (this *QWindow) maximumWidth(args ...interface{}) () {
   // maximumWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1565,7 +1763,7 @@ func (this *QWindow) maximumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QWindow::position();
 func (this *QWindow) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1583,7 +1781,7 @@ func (this *QWindow) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::setMaximumHeight(int h);
 func (this *QWindow) setMaximumHeight(args ...interface{}) () {
   // setMaximumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1602,7 +1800,7 @@ func (this *QWindow) setMaximumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QWindow::filePath();
 func (this *QWindow) filePath(args ...interface{}) () {
   // filePath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1620,7 +1818,7 @@ func (this *QWindow) filePath(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWindow::showNormal();
 func (this *QWindow) showNormal(args ...interface{}) () {
   // showNormal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1638,7 +1836,7 @@ func (this *QWindow) showNormal(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QWindow::framePosition();
 func (this *QWindow) framePosition(args ...interface{}) () {
   // framePosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1656,7 +1854,7 @@ func (this *QWindow) framePosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QWindow::icon();
 func (this *QWindow) icon(args ...interface{}) () {
   // icon()
   var vtys = make(map[int32]map[int32]reflect.Type)

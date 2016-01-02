@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,74 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QTextBrowser::isBackwardAvailable();
+extern void _ZNK12QTextBrowser19isBackwardAvailableEv(void* qthis);
+  // proto:  void QTextBrowser::reload();
+extern void _ZN12QTextBrowser6reloadEv(void* qthis);
+  // proto:  bool QTextBrowser::openLinks();
+extern void _ZNK12QTextBrowser9openLinksEv(void* qthis);
+  // proto:  void QTextBrowser::clearHistory();
+extern void _ZN12QTextBrowser12clearHistoryEv(void* qthis);
+  // proto:  const QMetaObject * QTextBrowser::metaObject();
+extern void _ZNK12QTextBrowser10metaObjectEv(void* qthis);
+  // proto:  QUrl QTextBrowser::historyUrl(int );
+extern void _ZNK12QTextBrowser10historyUrlEi(void* qthis, int arg0);
+  // proto:  bool QTextBrowser::isForwardAvailable();
+extern void _ZNK12QTextBrowser18isForwardAvailableEv(void* qthis);
+  // proto:  bool QTextBrowser::openExternalLinks();
+extern void _ZNK12QTextBrowser17openExternalLinksEv(void* qthis);
+  // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
+extern void* dector_ZN12QTextBrowserC1EP7QWidget(void* arg0);
+extern void _ZN12QTextBrowserC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  int QTextBrowser::backwardHistoryCount();
+extern void _ZNK12QTextBrowser20backwardHistoryCountEv(void* qthis);
+  // proto:  void QTextBrowser::home();
+extern void _ZN12QTextBrowser4homeEv(void* qthis);
+  // proto:  void QTextBrowser::~QTextBrowser();
+extern void _ZN12QTextBrowserD0Ev(void* qthis);
+  // proto:  void QTextBrowser::QTextBrowser(const QTextBrowser & );
+extern void* dector_ZN12QTextBrowserC1ERKS_(void* arg0);
+extern void _ZN12QTextBrowserC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextBrowser::setOpenLinks(bool open);
+extern void _ZN12QTextBrowser12setOpenLinksEb(void* qthis, bool arg0);
+  // proto:  void QTextBrowser::forward();
+extern void _ZN12QTextBrowser7forwardEv(void* qthis);
+  // proto:  QString QTextBrowser::historyTitle(int );
+extern void _ZNK12QTextBrowser12historyTitleEi(void* qthis, int arg0);
+  // proto:  void QTextBrowser::setSearchPaths(const QStringList & paths);
+extern void _ZN12QTextBrowser14setSearchPathsERK11QStringList(void* qthis, void* arg0);
+  // proto:  QVariant QTextBrowser::loadResource(int type, const QUrl & name);
+extern void _ZN12QTextBrowser12loadResourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+  // proto:  QUrl QTextBrowser::source();
+extern void _ZNK12QTextBrowser6sourceEv(void* qthis);
+  // proto:  void QTextBrowser::setOpenExternalLinks(bool open);
+extern void _ZN12QTextBrowser20setOpenExternalLinksEb(void* qthis, bool arg0);
+  // proto:  void QTextBrowser::setSource(const QUrl & name);
+extern void _ZN12QTextBrowser9setSourceERK4QUrl(void* qthis, void* arg0);
+  // proto:  QStringList QTextBrowser::searchPaths();
+extern void _ZNK12QTextBrowser11searchPathsEv(void* qthis);
+  // proto:  void QTextBrowser::backward();
+extern void _ZN12QTextBrowser8backwardEv(void* qthis);
+  // proto:  int QTextBrowser::forwardHistoryCount();
+extern void _ZNK12QTextBrowser19forwardHistoryCountEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextBrowser)=1
 type QTextBrowser struct {
   /*qbase*/ QTextEdit;
@@ -47,7 +106,7 @@ type QTextBrowser struct {
 //  _backwardAvailable QTextBrowser_backwardAvailable_signal;
 }
 
-
+  // proto:  bool QTextBrowser::isBackwardAvailable();
 func (this *QTextBrowser) isBackwardAvailable(args ...interface{}) () {
   // isBackwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +124,7 @@ func (this *QTextBrowser) isBackwardAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::reload();
 func (this *QTextBrowser) reload(args ...interface{}) () {
   // reload()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +142,7 @@ func (this *QTextBrowser) reload(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBrowser::openLinks();
 func (this *QTextBrowser) openLinks(args ...interface{}) () {
   // openLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -101,7 +160,7 @@ func (this *QTextBrowser) openLinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::clearHistory();
 func (this *QTextBrowser) clearHistory(args ...interface{}) () {
   // clearHistory()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +178,7 @@ func (this *QTextBrowser) clearHistory(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTextBrowser::metaObject();
 func (this *QTextBrowser) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +196,7 @@ func (this *QTextBrowser) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUrl QTextBrowser::historyUrl(int );
 func (this *QTextBrowser) historyUrl(args ...interface{}) () {
   // historyUrl(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +215,7 @@ func (this *QTextBrowser) historyUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBrowser::isForwardAvailable();
 func (this *QTextBrowser) isForwardAvailable(args ...interface{}) () {
   // isForwardAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +233,7 @@ func (this *QTextBrowser) isForwardAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBrowser::openExternalLinks();
 func (this *QTextBrowser) openExternalLinks(args ...interface{}) () {
   // openExternalLinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,12 +251,12 @@ func (this *QTextBrowser) openExternalLinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::QTextBrowser(QWidget * parent);
 func NewQTextBrowser(args ...interface{}) QTextBrowser {
   return QTextBrowser{}
 }
 
-
+  // proto:  int QTextBrowser::backwardHistoryCount();
 func (this *QTextBrowser) backwardHistoryCount(args ...interface{}) () {
   // backwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +274,7 @@ func (this *QTextBrowser) backwardHistoryCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::home();
 func (this *QTextBrowser) home(args ...interface{}) () {
   // home()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +292,7 @@ func (this *QTextBrowser) home(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::~QTextBrowser();
 func (this *QTextBrowser) FreeQTextBrowser(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +306,7 @@ func (this *QTextBrowser) FreeQTextBrowser(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::setOpenLinks(bool open);
 func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
   // setOpenLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +325,7 @@ func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::forward();
 func (this *QTextBrowser) forward(args ...interface{}) () {
   // forward()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +343,7 @@ func (this *QTextBrowser) forward(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextBrowser::historyTitle(int );
 func (this *QTextBrowser) historyTitle(args ...interface{}) () {
   // historyTitle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +362,7 @@ func (this *QTextBrowser) historyTitle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::setSearchPaths(const QStringList & paths);
 func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
   // setSearchPaths(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -322,7 +381,7 @@ func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QTextBrowser::loadResource(int type, const QUrl & name);
 func (this *QTextBrowser) loadResource(args ...interface{}) () {
   // loadResource(int, const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -342,7 +401,7 @@ func (this *QTextBrowser) loadResource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUrl QTextBrowser::source();
 func (this *QTextBrowser) source(args ...interface{}) () {
   // source()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -360,7 +419,7 @@ func (this *QTextBrowser) source(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::setOpenExternalLinks(bool open);
 func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
   // setOpenExternalLinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -379,7 +438,7 @@ func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::setSource(const QUrl & name);
 func (this *QTextBrowser) setSource(args ...interface{}) () {
   // setSource(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +457,7 @@ func (this *QTextBrowser) setSource(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QTextBrowser::searchPaths();
 func (this *QTextBrowser) searchPaths(args ...interface{}) () {
   // searchPaths()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -416,7 +475,7 @@ func (this *QTextBrowser) searchPaths(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBrowser::backward();
 func (this *QTextBrowser) backward(args ...interface{}) () {
   // backward()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -434,7 +493,7 @@ func (this *QTextBrowser) backward(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBrowser::forwardHistoryCount();
 func (this *QTextBrowser) forwardHistoryCount(args ...interface{}) () {
   // forwardHistoryCount()
   var vtys = make(map[int32]map[int32]reflect.Type)

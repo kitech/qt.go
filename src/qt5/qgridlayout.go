@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,106 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);
+extern void _ZN11QGridLayout19setRowMinimumHeightEii(void* qthis, int arg0, int arg1);
+  // proto:  QLayoutItem * QGridLayout::takeAt(int index);
+extern void _ZN11QGridLayout6takeAtEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::getItemPosition(int idx, int * row, int * column, int * rowSpan, int * columnSpan);
+extern void _ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_(void* qthis, int arg0, int* arg1, int* arg2, int* arg3, int* arg4);
+  // proto:  int QGridLayout::minimumHeightForWidth(int );
+extern void _ZNK11QGridLayout21minimumHeightForWidthEi(void* qthis, int arg0);
+  // proto:  int QGridLayout::rowMinimumHeight(int row);
+extern void _ZNK11QGridLayout16rowMinimumHeightEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::invalidate();
+extern void _ZN11QGridLayout10invalidateEv(void* qthis);
+  // proto:  int QGridLayout::count();
+extern void _ZNK11QGridLayout5countEv(void* qthis);
+  // proto:  void QGridLayout::setColumnStretch(int column, int stretch);
+extern void _ZN11QGridLayout16setColumnStretchEii(void* qthis, int arg0, int arg1);
+  // proto:  int QGridLayout::spacing();
+extern void _ZNK11QGridLayout7spacingEv(void* qthis);
+  // proto:  int QGridLayout::rowStretch(int row);
+extern void _ZNK11QGridLayout10rowStretchEi(void* qthis, int arg0);
+  // proto:  QSize QGridLayout::sizeHint();
+extern void _ZNK11QGridLayout8sizeHintEv(void* qthis);
+  // proto:  int QGridLayout::rowCount();
+extern void _ZNK11QGridLayout8rowCountEv(void* qthis);
+  // proto:  void QGridLayout::setGeometry(const QRect & );
+extern void _ZN11QGridLayout11setGeometryERK5QRect(void* qthis, void* arg0);
+  // proto:  void QGridLayout::setVerticalSpacing(int spacing);
+extern void _ZN11QGridLayout18setVerticalSpacingEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::setHorizontalSpacing(int spacing);
+extern void _ZN11QGridLayout20setHorizontalSpacingEi(void* qthis, int arg0);
+  // proto:  int QGridLayout::columnStretch(int column);
+extern void _ZNK11QGridLayout13columnStretchEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
+extern void* dector_ZN11QGridLayoutC1ERKS_(void* arg0);
+extern void _ZN11QGridLayoutC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QGridLayout::columnCount();
+extern void _ZNK11QGridLayout11columnCountEv(void* qthis);
+  // proto:  int QGridLayout::columnMinimumWidth(int column);
+extern void _ZNK11QGridLayout18columnMinimumWidthEi(void* qthis, int arg0);
+  // proto:  QSize QGridLayout::minimumSize();
+extern void _ZNK11QGridLayout11minimumSizeEv(void* qthis);
+  // proto:  bool QGridLayout::hasHeightForWidth();
+extern void _ZNK11QGridLayout17hasHeightForWidthEv(void* qthis);
+  // proto:  QRect QGridLayout::cellRect(int row, int column);
+extern void _ZNK11QGridLayout8cellRectEii(void* qthis, int arg0, int arg1);
+  // proto:  void QGridLayout::setRowStretch(int row, int stretch);
+extern void _ZN11QGridLayout13setRowStretchEii(void* qthis, int arg0, int arg1);
+  // proto:  QLayoutItem * QGridLayout::itemAtPosition(int row, int column);
+extern void _ZNK11QGridLayout14itemAtPositionEii(void* qthis, int arg0, int arg1);
+  // proto:  const QMetaObject * QGridLayout::metaObject();
+extern void _ZNK11QGridLayout10metaObjectEv(void* qthis);
+  // proto:  int QGridLayout::verticalSpacing();
+extern void _ZNK11QGridLayout15verticalSpacingEv(void* qthis);
+  // proto:  void QGridLayout::QGridLayout(QWidget * parent);
+extern void* dector_ZN11QGridLayoutC1EP7QWidget(void* arg0);
+extern void _ZN11QGridLayoutC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  int QGridLayout::horizontalSpacing();
+extern void _ZNK11QGridLayout17horizontalSpacingEv(void* qthis);
+  // proto:  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
+extern void _ZN11QGridLayout21setColumnMinimumWidthEii(void* qthis, int arg0, int arg1);
+  // proto:  void QGridLayout::QGridLayout();
+extern void* dector_ZN11QGridLayoutC1Ev();
+extern void _ZN11QGridLayoutC1Ev(void* qthis);
+  // proto:  int QGridLayout::heightForWidth(int );
+extern void _ZNK11QGridLayout14heightForWidthEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::~QGridLayout();
+extern void _ZN11QGridLayoutD0Ev(void* qthis);
+  // proto:  void QGridLayout::setSpacing(int spacing);
+extern void _ZN11QGridLayout10setSpacingEi(void* qthis, int arg0);
+  // proto:  void QGridLayout::addWidget(QWidget * w);
+extern void demth_ZN11QGridLayout9addWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  QLayoutItem * QGridLayout::itemAt(int index);
+extern void _ZNK11QGridLayout6itemAtEi(void* qthis, int arg0);
+  // proto:  QSize QGridLayout::maximumSize();
+extern void _ZNK11QGridLayout11maximumSizeEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGridLayout)=1
 type QGridLayout struct {
   /*qbase*/ QLayout;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);
 func (this *QGridLayout) setRowMinimumHeight(args ...interface{}) () {
   // setRowMinimumHeight(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +145,7 @@ func (this *QGridLayout) setRowMinimumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  QLayoutItem * QGridLayout::takeAt(int index);
 func (this *QGridLayout) takeAt(args ...interface{}) () {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +164,7 @@ func (this *QGridLayout) takeAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::getItemPosition(int idx, int * row, int * column, int * rowSpan, int * columnSpan);
 func (this *QGridLayout) getItemPosition(args ...interface{}) () {
   // getItemPosition(int, int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +187,7 @@ func (this *QGridLayout) getItemPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::minimumHeightForWidth(int );
 func (this *QGridLayout) minimumHeightForWidth(args ...interface{}) () {
   // minimumHeightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +206,7 @@ func (this *QGridLayout) minimumHeightForWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::rowMinimumHeight(int row);
 func (this *QGridLayout) rowMinimumHeight(args ...interface{}) () {
   // rowMinimumHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -141,7 +225,7 @@ func (this *QGridLayout) rowMinimumHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::invalidate();
 func (this *QGridLayout) invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +243,7 @@ func (this *QGridLayout) invalidate(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::count();
 func (this *QGridLayout) count(args ...interface{}) () {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +261,7 @@ func (this *QGridLayout) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setColumnStretch(int column, int stretch);
 func (this *QGridLayout) setColumnStretch(args ...interface{}) () {
   // setColumnStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +281,7 @@ func (this *QGridLayout) setColumnStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::spacing();
 func (this *QGridLayout) spacing(args ...interface{}) () {
   // spacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +299,7 @@ func (this *QGridLayout) spacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::rowStretch(int row);
 func (this *QGridLayout) rowStretch(args ...interface{}) () {
   // rowStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +318,7 @@ func (this *QGridLayout) rowStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QGridLayout::sizeHint();
 func (this *QGridLayout) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +336,7 @@ func (this *QGridLayout) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::rowCount();
 func (this *QGridLayout) rowCount(args ...interface{}) () {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +354,7 @@ func (this *QGridLayout) rowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setGeometry(const QRect & );
 func (this *QGridLayout) setGeometry(args ...interface{}) () {
   // setGeometry(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -289,7 +373,7 @@ func (this *QGridLayout) setGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setVerticalSpacing(int spacing);
 func (this *QGridLayout) setVerticalSpacing(args ...interface{}) () {
   // setVerticalSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -308,7 +392,7 @@ func (this *QGridLayout) setVerticalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setHorizontalSpacing(int spacing);
 func (this *QGridLayout) setHorizontalSpacing(args ...interface{}) () {
   // setHorizontalSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -327,7 +411,7 @@ func (this *QGridLayout) setHorizontalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::columnStretch(int column);
 func (this *QGridLayout) columnStretch(args ...interface{}) () {
   // columnStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -346,12 +430,12 @@ func (this *QGridLayout) columnStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
 func NewQGridLayout(args ...interface{}) QGridLayout {
   return QGridLayout{}
 }
 
-
+  // proto:  int QGridLayout::columnCount();
 func (this *QGridLayout) columnCount(args ...interface{}) () {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -369,7 +453,7 @@ func (this *QGridLayout) columnCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::columnMinimumWidth(int column);
 func (this *QGridLayout) columnMinimumWidth(args ...interface{}) () {
   // columnMinimumWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -388,7 +472,7 @@ func (this *QGridLayout) columnMinimumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QGridLayout::minimumSize();
 func (this *QGridLayout) minimumSize(args ...interface{}) () {
   // minimumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -406,7 +490,7 @@ func (this *QGridLayout) minimumSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGridLayout::hasHeightForWidth();
 func (this *QGridLayout) hasHeightForWidth(args ...interface{}) () {
   // hasHeightForWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -424,7 +508,7 @@ func (this *QGridLayout) hasHeightForWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QGridLayout::cellRect(int row, int column);
 func (this *QGridLayout) cellRect(args ...interface{}) () {
   // cellRect(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -444,7 +528,7 @@ func (this *QGridLayout) cellRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setRowStretch(int row, int stretch);
 func (this *QGridLayout) setRowStretch(args ...interface{}) () {
   // setRowStretch(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -464,7 +548,7 @@ func (this *QGridLayout) setRowStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  QLayoutItem * QGridLayout::itemAtPosition(int row, int column);
 func (this *QGridLayout) itemAtPosition(args ...interface{}) () {
   // itemAtPosition(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -484,7 +568,7 @@ func (this *QGridLayout) itemAtPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QGridLayout::metaObject();
 func (this *QGridLayout) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -502,7 +586,7 @@ func (this *QGridLayout) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::verticalSpacing();
 func (this *QGridLayout) verticalSpacing(args ...interface{}) () {
   // verticalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -520,7 +604,7 @@ func (this *QGridLayout) verticalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::horizontalSpacing();
 func (this *QGridLayout) horizontalSpacing(args ...interface{}) () {
   // horizontalSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -538,7 +622,7 @@ func (this *QGridLayout) horizontalSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
 func (this *QGridLayout) setColumnMinimumWidth(args ...interface{}) () {
   // setColumnMinimumWidth(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +642,7 @@ func (this *QGridLayout) setColumnMinimumWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGridLayout::heightForWidth(int );
 func (this *QGridLayout) heightForWidth(args ...interface{}) () {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -577,7 +661,7 @@ func (this *QGridLayout) heightForWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::~QGridLayout();
 func (this *QGridLayout) FreeQGridLayout(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -591,7 +675,7 @@ func (this *QGridLayout) FreeQGridLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::setSpacing(int spacing);
 func (this *QGridLayout) setSpacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -610,7 +694,7 @@ func (this *QGridLayout) setSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGridLayout::addWidget(QWidget * w);
 func (this *QGridLayout) addWidget(args ...interface{}) () {
   // addWidget(class QWidget *, int, int, Qt::Alignment)
   // addWidget(class QWidget *, int, int, int, int, Qt::Alignment)
@@ -647,7 +731,7 @@ func (this *QGridLayout) addWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QLayoutItem * QGridLayout::itemAt(int index);
 func (this *QGridLayout) itemAt(args ...interface{}) () {
   // itemAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -666,7 +750,7 @@ func (this *QGridLayout) itemAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QGridLayout::maximumSize();
 func (this *QGridLayout) maximumSize(args ...interface{}) () {
   // maximumSize()
   var vtys = make(map[int32]map[int32]reflect.Type)

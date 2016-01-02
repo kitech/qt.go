@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,99 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QIODevice::ungetChar(char c);
+extern void _ZN9QIODevice9ungetCharEc(void* qthis, char arg0);
+  // proto:  QString QIODevice::errorString();
+extern void _ZNK9QIODevice11errorStringEv(void* qthis);
+  // proto:  qint64 QIODevice::write(const QByteArray & data);
+extern void demth_ZN9QIODevice5writeERK10QByteArray(void* qthis, void* arg0);
+  // proto:  qint64 QIODevice::write(const char * data);
+extern void _ZN9QIODevice5writeEPKc(void* qthis, char* arg0);
+  // proto:  bool QIODevice::isReadable();
+extern void _ZNK9QIODevice10isReadableEv(void* qthis);
+  // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
+extern void _ZN9QIODevice8readLineEPcx(void* qthis, char* arg0, long long arg1);
+  // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
+extern void _ZN9QIODevice8readLineEx(void* qthis, long long arg0);
+  // proto:  bool QIODevice::waitForReadyRead(int msecs);
+extern void _ZN9QIODevice16waitForReadyReadEi(void* qthis, int arg0);
+  // proto:  qint64 QIODevice::size();
+extern void _ZNK9QIODevice4sizeEv(void* qthis);
+  // proto:  bool QIODevice::getChar(char * c);
+extern void _ZN9QIODevice7getCharEPc(void* qthis, char* arg0);
+  // proto:  bool QIODevice::putChar(char c);
+extern void _ZN9QIODevice7putCharEc(void* qthis, char arg0);
+  // proto:  bool QIODevice::isTextModeEnabled();
+extern void _ZNK9QIODevice17isTextModeEnabledEv(void* qthis);
+  // proto:  bool QIODevice::isSequential();
+extern void _ZNK9QIODevice12isSequentialEv(void* qthis);
+  // proto:  qint64 QIODevice::bytesAvailable();
+extern void _ZNK9QIODevice14bytesAvailableEv(void* qthis);
+  // proto:  qint64 QIODevice::write(const char * data, qint64 len);
+extern void _ZN9QIODevice5writeEPKcx(void* qthis, char* arg0, long long arg1);
+  // proto:  void QIODevice::close();
+extern void _ZN9QIODevice5closeEv(void* qthis);
+  // proto:  QByteArray QIODevice::readAll();
+extern void _ZN9QIODevice7readAllEv(void* qthis);
+  // proto:  bool QIODevice::atEnd();
+extern void _ZNK9QIODevice5atEndEv(void* qthis);
+  // proto:  bool QIODevice::seek(qint64 pos);
+extern void _ZN9QIODevice4seekEx(void* qthis, long long arg0);
+  // proto:  void QIODevice::QIODevice(const QIODevice & );
+extern void* dector_ZN9QIODeviceC1ERKS_(void* arg0);
+extern void _ZN9QIODeviceC1ERKS_(void* qthis, void* arg0);
+  // proto:  qint64 QIODevice::pos();
+extern void _ZNK9QIODevice3posEv(void* qthis);
+  // proto:  QByteArray QIODevice::read(qint64 maxlen);
+extern void _ZN9QIODevice4readEx(void* qthis, long long arg0);
+  // proto:  qint64 QIODevice::peek(char * data, qint64 maxlen);
+extern void _ZN9QIODevice4peekEPcx(void* qthis, char* arg0, long long arg1);
+  // proto:  qint64 QIODevice::read(char * data, qint64 maxlen);
+extern void _ZN9QIODevice4readEPcx(void* qthis, char* arg0, long long arg1);
+  // proto:  bool QIODevice::waitForBytesWritten(int msecs);
+extern void _ZN9QIODevice19waitForBytesWrittenEi(void* qthis, int arg0);
+  // proto:  qint64 QIODevice::bytesToWrite();
+extern void _ZNK9QIODevice12bytesToWriteEv(void* qthis);
+  // proto:  bool QIODevice::reset();
+extern void _ZN9QIODevice5resetEv(void* qthis);
+  // proto:  bool QIODevice::isWritable();
+extern void _ZNK9QIODevice10isWritableEv(void* qthis);
+  // proto:  QByteArray QIODevice::peek(qint64 maxlen);
+extern void _ZN9QIODevice4peekEx(void* qthis, long long arg0);
+  // proto:  void QIODevice::QIODevice(QObject * parent);
+extern void* dector_ZN9QIODeviceC1EP7QObject(void* arg0);
+extern void _ZN9QIODeviceC1EP7QObject(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QIODevice::metaObject();
+extern void _ZNK9QIODevice10metaObjectEv(void* qthis);
+  // proto:  void QIODevice::setTextModeEnabled(bool enabled);
+extern void _ZN9QIODevice18setTextModeEnabledEb(void* qthis, bool arg0);
+  // proto:  void QIODevice::QIODevice();
+extern void* dector_ZN9QIODeviceC1Ev();
+extern void _ZN9QIODeviceC1Ev(void* qthis);
+  // proto:  bool QIODevice::isOpen();
+extern void _ZNK9QIODevice6isOpenEv(void* qthis);
+  // proto:  bool QIODevice::canReadLine();
+extern void _ZNK9QIODevice11canReadLineEv(void* qthis);
+  // proto:  void QIODevice::~QIODevice();
+extern void _ZN9QIODeviceD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QIODevice)=1
 type QIODevice struct {
   /*qbase*/ QObject;
@@ -45,7 +129,7 @@ type QIODevice struct {
 //  _bytesWritten QIODevice_bytesWritten_signal;
 }
 
-
+  // proto:  void QIODevice::ungetChar(char c);
 func (this *QIODevice) ungetChar(args ...interface{}) () {
   // ungetChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +148,7 @@ func (this *QIODevice) ungetChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QIODevice::errorString();
 func (this *QIODevice) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +166,7 @@ func (this *QIODevice) errorString(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::write(const QByteArray & data);
 func (this *QIODevice) write(args ...interface{}) () {
   // write(const class QByteArray &)
   // write(const char *)
@@ -112,7 +196,7 @@ func (this *QIODevice) write(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::isReadable();
 func (this *QIODevice) isReadable(args ...interface{}) () {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -130,7 +214,7 @@ func (this *QIODevice) isReadable(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
 func (this *QIODevice) readLine(args ...interface{}) () {
   // readLine(char *, qint64)
   // readLine(qint64)
@@ -155,7 +239,7 @@ func (this *QIODevice) readLine(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::waitForReadyRead(int msecs);
 func (this *QIODevice) waitForReadyRead(args ...interface{}) () {
   // waitForReadyRead(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +258,7 @@ func (this *QIODevice) waitForReadyRead(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::size();
 func (this *QIODevice) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,7 +276,7 @@ func (this *QIODevice) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::getChar(char * c);
 func (this *QIODevice) getChar(args ...interface{}) () {
   // getChar(char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +295,7 @@ func (this *QIODevice) getChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::putChar(char c);
 func (this *QIODevice) putChar(args ...interface{}) () {
   // putChar(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -230,7 +314,7 @@ func (this *QIODevice) putChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::isTextModeEnabled();
 func (this *QIODevice) isTextModeEnabled(args ...interface{}) () {
   // isTextModeEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +332,7 @@ func (this *QIODevice) isTextModeEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::isSequential();
 func (this *QIODevice) isSequential(args ...interface{}) () {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +350,7 @@ func (this *QIODevice) isSequential(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::bytesAvailable();
 func (this *QIODevice) bytesAvailable(args ...interface{}) () {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +368,7 @@ func (this *QIODevice) bytesAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIODevice::close();
 func (this *QIODevice) close(args ...interface{}) () {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +386,7 @@ func (this *QIODevice) close(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QIODevice::readAll();
 func (this *QIODevice) readAll(args ...interface{}) () {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +404,7 @@ func (this *QIODevice) readAll(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::atEnd();
 func (this *QIODevice) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,7 +422,7 @@ func (this *QIODevice) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::seek(qint64 pos);
 func (this *QIODevice) seek(args ...interface{}) () {
   // seek(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,12 +441,12 @@ func (this *QIODevice) seek(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIODevice::QIODevice(const QIODevice & );
 func NewQIODevice(args ...interface{}) QIODevice {
   return QIODevice{}
 }
 
-
+  // proto:  qint64 QIODevice::pos();
 func (this *QIODevice) pos(args ...interface{}) () {
   // pos()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -380,7 +464,7 @@ func (this *QIODevice) pos(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QIODevice::read(qint64 maxlen);
 func (this *QIODevice) read(args ...interface{}) () {
   // read(qint64)
   // read(char *, qint64)
@@ -405,7 +489,7 @@ func (this *QIODevice) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::peek(char * data, qint64 maxlen);
 func (this *QIODevice) peek(args ...interface{}) () {
   // peek(char *, qint64)
   // peek(qint64)
@@ -430,7 +514,7 @@ func (this *QIODevice) peek(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::waitForBytesWritten(int msecs);
 func (this *QIODevice) waitForBytesWritten(args ...interface{}) () {
   // waitForBytesWritten(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -449,7 +533,7 @@ func (this *QIODevice) waitForBytesWritten(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIODevice::bytesToWrite();
 func (this *QIODevice) bytesToWrite(args ...interface{}) () {
   // bytesToWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -467,7 +551,7 @@ func (this *QIODevice) bytesToWrite(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::reset();
 func (this *QIODevice) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -485,7 +569,7 @@ func (this *QIODevice) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::isWritable();
 func (this *QIODevice) isWritable(args ...interface{}) () {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -503,7 +587,7 @@ func (this *QIODevice) isWritable(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QIODevice::metaObject();
 func (this *QIODevice) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +605,7 @@ func (this *QIODevice) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIODevice::setTextModeEnabled(bool enabled);
 func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
   // setTextModeEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -540,7 +624,7 @@ func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::isOpen();
 func (this *QIODevice) isOpen(args ...interface{}) () {
   // isOpen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +642,7 @@ func (this *QIODevice) isOpen(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIODevice::canReadLine();
 func (this *QIODevice) canReadLine(args ...interface{}) () {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -576,7 +660,7 @@ func (this *QIODevice) canReadLine(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIODevice::~QIODevice();
 func (this *QIODevice) FreeQIODevice(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

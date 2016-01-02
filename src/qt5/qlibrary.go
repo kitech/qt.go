@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,76 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
+extern void _ZN8QLibrary7resolveERK7QStringS2_PKc(void* arg0, void* arg1, char* arg2);
+  // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
+extern void* dector_ZN8QLibraryC1ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2);
+extern void _ZN8QLibraryC1ERK7QStringS2_P7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  const QMetaObject * QLibrary::metaObject();
+extern void _ZNK8QLibrary10metaObjectEv(void* qthis);
+  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
+extern void _ZN8QLibrary7resolveERK7QStringPKc(void* arg0, char* arg1);
+  // proto:  void QLibrary::QLibrary(QObject * parent);
+extern void* dector_ZN8QLibraryC1EP7QObject(void* arg0);
+extern void _ZN8QLibraryC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QLibrary::isLoaded();
+extern void _ZNK8QLibrary8isLoadedEv(void* qthis);
+  // proto:  bool QLibrary::load();
+extern void _ZN8QLibrary4loadEv(void* qthis);
+  // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
+extern void* dector_ZN8QLibraryC1ERK7QStringP7QObject(void* arg0, void* arg1);
+extern void _ZN8QLibraryC1ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1);
+  // proto:  QString QLibrary::fileName();
+extern void _ZNK8QLibrary8fileNameEv(void* qthis);
+  // proto:  void QLibrary::setFileName(const QString & fileName);
+extern void _ZN8QLibrary11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto:  void QLibrary::QLibrary(const QLibrary & );
+extern void* dector_ZN8QLibraryC1ERKS_(void* arg0);
+extern void _ZN8QLibraryC1ERKS_(void* qthis, void* arg0);
+  // proto: static bool QLibrary::isLibrary(const QString & fileName);
+extern void _ZN8QLibrary9isLibraryERK7QString(void* arg0);
+  // proto:  bool QLibrary::unload();
+extern void _ZN8QLibrary6unloadEv(void* qthis);
+  // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
+extern void _ZN8QLibrary7resolveEPKc(void* qthis, char* arg0);
+  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
+extern void _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
+extern void _ZN8QLibrary21setFileNameAndVersionERK7QStringi(void* qthis, void* arg0, int arg1);
+  // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
+extern void* dector_ZN8QLibraryC1ERK7QStringiP7QObject(void* arg0, int arg1, void* arg2);
+extern void _ZN8QLibraryC1ERK7QStringiP7QObject(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  void QLibrary::~QLibrary();
+extern void _ZN8QLibraryD0Ev(void* qthis);
+  // proto:  QString QLibrary::errorString();
+extern void _ZNK8QLibrary11errorStringEv(void* qthis);
+  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
+extern void _ZN8QLibrary7resolveERK7QStringiPKc(void* arg0, int arg1, char* arg2);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLibrary)=1
 type QLibrary struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
 func (this *QLibrary) resolve_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,12 +109,12 @@ func (this *QLibrary) resolve_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
 func NewQLibrary(args ...interface{}) QLibrary {
   return QLibrary{}
 }
 
-
+  // proto:  const QMetaObject * QLibrary::metaObject();
 func (this *QLibrary) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +132,7 @@ func (this *QLibrary) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLibrary::isLoaded();
 func (this *QLibrary) isLoaded(args ...interface{}) () {
   // isLoaded()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +150,7 @@ func (this *QLibrary) isLoaded(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLibrary::load();
 func (this *QLibrary) load(args ...interface{}) () {
   // load()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +168,7 @@ func (this *QLibrary) load(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLibrary::fileName();
 func (this *QLibrary) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +186,7 @@ func (this *QLibrary) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLibrary::setFileName(const QString & fileName);
 func (this *QLibrary) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +205,7 @@ func (this *QLibrary) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QLibrary::isLibrary(const QString & fileName);
 func (this *QLibrary) isLibrary_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -165,7 +219,7 @@ func (this *QLibrary) isLibrary_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLibrary::unload();
 func (this *QLibrary) unload(args ...interface{}) () {
   // unload()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -183,7 +237,7 @@ func (this *QLibrary) unload(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
 func (this *QLibrary) resolve(args ...interface{}) () {
   // resolve(const class QString &, const class QString &, const char *)
   // resolve(const class QString &, const char *)
@@ -222,7 +276,7 @@ func (this *QLibrary) resolve(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
 func (this *QLibrary) setFileNameAndVersion(args ...interface{}) () {
   // setFileNameAndVersion(const class QString &, const class QString &)
   // setFileNameAndVersion(const class QString &, int)
@@ -248,7 +302,7 @@ func (this *QLibrary) setFileNameAndVersion(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLibrary::~QLibrary();
 func (this *QLibrary) FreeQLibrary(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -262,7 +316,7 @@ func (this *QLibrary) FreeQLibrary(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLibrary::errorString();
 func (this *QLibrary) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)

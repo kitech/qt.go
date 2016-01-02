@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,40 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QStyle * QStylePlugin::create(const QString & key);
+extern void _ZN12QStylePlugin6createERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QStylePlugin::metaObject();
+extern void _ZNK12QStylePlugin10metaObjectEv(void* qthis);
+  // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
+extern void* dector_ZN12QStylePluginC1EP7QObject(void* arg0);
+extern void _ZN12QStylePluginC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QStylePlugin::~QStylePlugin();
+extern void _ZN12QStylePluginD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStylePlugin)=1
 type QStylePlugin struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QStyle * QStylePlugin::create(const QString & key);
 func (this *QStylePlugin) create(args ...interface{}) () {
   // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +78,7 @@ func (this *QStylePlugin) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QStylePlugin::metaObject();
 func (this *QStylePlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,12 +96,12 @@ func (this *QStylePlugin) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
 func NewQStylePlugin(args ...interface{}) QStylePlugin {
   return QStylePlugin{}
 }
 
-
+  // proto:  void QStylePlugin::~QStylePlugin();
 func (this *QStylePlugin) FreeQStylePlugin(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

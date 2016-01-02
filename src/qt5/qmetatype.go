@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,99 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static void QMetaType::destroy(int type, void * data);
+extern void _ZN9QMetaType7destroyEiPv(int arg0, void* arg1);
+  // proto: static bool QMetaType::hasRegisteredConverterFunction(int fromTypeId, int toTypeId);
+extern void _ZN9QMetaType30hasRegisteredConverterFunctionEii(int arg0, int arg1);
+  // proto:  const QMetaObject * QMetaType::metaObject();
+extern void demth_ZNK9QMetaType10metaObjectEv(void* qthis);
+  // proto: static bool QMetaType::hasRegisteredDebugStreamOperator(int typeId);
+extern void _ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(int arg0);
+  // proto: static void * QMetaType::create(int type, const void * copy);
+extern void _ZN9QMetaType6createEiPKv(int arg0, void* arg1);
+  // proto:  void QMetaType::destroy(void * data);
+extern void demth_ZNK9QMetaType7destroyEPv(void* qthis, void* arg0);
+  // proto: static int QMetaType::registerTypedef(const char * typeName, int aliasId);
+extern void _ZN9QMetaType15registerTypedefEPKci(char* arg0, int arg1);
+  // proto: static void QMetaType::destruct(int type, void * where);
+extern void _ZN9QMetaType8destructEiPv(int arg0, void* arg1);
+  // proto:  bool QMetaType::isValid();
+extern void demth_ZNK9QMetaType7isValidEv(void* qthis);
+  // proto: static void * QMetaType::construct(int type, void * where, const void * copy);
+extern void _ZN9QMetaType9constructEiPvPKv(int arg0, void* arg1, void* arg2);
+  // proto: static bool QMetaType::equals(const void * lhs, const void * rhs, int typeId, int * result);
+extern void _ZN9QMetaType6equalsEPKvS1_iPi(void* arg0, void* arg1, int arg2, int* arg3);
+  // proto:  void * QMetaType::construct(void * where, const void * copy);
+extern void demth_ZNK9QMetaType9constructEPvPKv(void* qthis, void* arg0, void* arg1);
+  // proto: static bool QMetaType::isRegistered(int type);
+extern void _ZN9QMetaType12isRegisteredEi(int arg0);
+  // proto: static bool QMetaType::unregisterType(int type);
+extern void _ZN9QMetaType14unregisterTypeEi(int arg0);
+  // proto:  void QMetaType::QMetaType(const QMetaType & other);
+extern void* dector_ZN9QMetaTypeC1ERKS_(void* arg0);
+extern void _ZN9QMetaTypeC1ERKS_(void* qthis, void* arg0);
+  // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
+extern void _ZN9QMetaType17metaObjectForTypeEi(int arg0);
+  // proto: static bool QMetaType::load(QDataStream & stream, int type, void * data);
+extern void _ZN9QMetaType4loadER11QDataStreamiPv(void* arg0, int arg1, void* arg2);
+  // proto:  void * QMetaType::create(const void * copy);
+extern void demth_ZNK9QMetaType6createEPKv(void* qthis, void* arg0);
+  // proto: static int QMetaType::sizeOf(int type);
+extern void _ZN9QMetaType6sizeOfEi(int arg0);
+  // proto: static bool QMetaType::hasRegisteredComparators(int typeId);
+extern void _ZN9QMetaType24hasRegisteredComparatorsEi(int arg0);
+  // proto: static bool QMetaType::save(QDataStream & stream, int type, const void * data);
+extern void _ZN9QMetaType4saveER11QDataStreamiPKv(void* arg0, int arg1, void* arg2);
+  // proto:  void QMetaType::destruct(void * data);
+extern void demth_ZNK9QMetaType8destructEPv(void* qthis, void* arg0);
+  // proto:  void QMetaType::~QMetaType();
+extern void demth_ZN9QMetaTypeD0Ev(void* qthis);
+  // proto: static int QMetaType::type(const char * typeName);
+extern void _ZN9QMetaType4typeEPKc(char* arg0);
+  // proto: static int QMetaType::type(const ::QByteArray & typeName);
+extern void _ZN9QMetaType4typeERK10QByteArray(void* arg0);
+  // proto: static bool QMetaType::debugStream(QDebug & dbg, const void * rhs, int typeId);
+extern void _ZN9QMetaType11debugStreamER6QDebugPKvi(void* arg0, void* arg1, int arg2);
+  // proto:  int QMetaType::sizeOf();
+extern void demth_ZNK9QMetaType6sizeOfEv(void* qthis);
+  // proto: static const char * QMetaType::typeName(int type);
+extern void _ZN9QMetaType8typeNameEi(int arg0);
+  // proto: static bool QMetaType::convert(const void * from, int fromTypeId, void * to, int toTypeId);
+extern void _ZN9QMetaType7convertEPKviPvi(void* arg0, int arg1, void* arg2, int arg3);
+  // proto:  void QMetaType::QMetaType(const int type);
+extern void* dector_ZN9QMetaTypeC1Ei(const int arg0);
+extern void _ZN9QMetaTypeC1Ei(void* qthis, const int arg0);
+  // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
+extern void _ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(void* arg0, int arg1);
+  // proto: static bool QMetaType::compare(const void * lhs, const void * rhs, int typeId, int * result);
+extern void _ZN9QMetaType7compareEPKvS1_iPi(void* arg0, void* arg1, int arg2, int* arg3);
+  // proto:  bool QMetaType::isRegistered();
+extern void demth_ZNK9QMetaType12isRegisteredEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMetaType)=80
 type QMetaType struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto: static void QMetaType::destroy(int type, void * data);
 func (this *QMetaType) destroy_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +132,7 @@ func (this *QMetaType) destroy_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::hasRegisteredConverterFunction(int fromTypeId, int toTypeId);
 func (this *QMetaType) hasRegisteredConverterFunction_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,7 +146,7 @@ func (this *QMetaType) hasRegisteredConverterFunction_s(args ...interface{}) () 
 
 }
 
-
+  // proto:  const QMetaObject * QMetaType::metaObject();
 func (this *QMetaType) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -87,7 +164,7 @@ func (this *QMetaType) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::hasRegisteredDebugStreamOperator(int typeId);
 func (this *QMetaType) hasRegisteredDebugStreamOperator_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -101,7 +178,7 @@ func (this *QMetaType) hasRegisteredDebugStreamOperator_s(args ...interface{}) (
 
 }
 
-
+  // proto: static void * QMetaType::create(int type, const void * copy);
 func (this *QMetaType) create_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,7 +192,7 @@ func (this *QMetaType) create_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaType::destroy(void * data);
 func (this *QMetaType) destroy(args ...interface{}) () {
   // destroy(int, void *)
   // destroy(void *)
@@ -140,7 +217,7 @@ func (this *QMetaType) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QMetaType::registerTypedef(const char * typeName, int aliasId);
 func (this *QMetaType) registerTypedef_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,7 +231,7 @@ func (this *QMetaType) registerTypedef_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QMetaType::destruct(int type, void * where);
 func (this *QMetaType) destruct_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,7 +245,7 @@ func (this *QMetaType) destruct_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaType::isValid();
 func (this *QMetaType) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +263,7 @@ func (this *QMetaType) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto: static void * QMetaType::construct(int type, void * where, const void * copy);
 func (this *QMetaType) construct_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -200,7 +277,7 @@ func (this *QMetaType) construct_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::equals(const void * lhs, const void * rhs, int typeId, int * result);
 func (this *QMetaType) equals_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,7 +291,7 @@ func (this *QMetaType) equals_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void * QMetaType::construct(void * where, const void * copy);
 func (this *QMetaType) construct(args ...interface{}) () {
   // construct(int, void *, const void *)
   // construct(void *, const void *)
@@ -241,7 +318,7 @@ func (this *QMetaType) construct(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::isRegistered(int type);
 func (this *QMetaType) isRegistered_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -255,7 +332,7 @@ func (this *QMetaType) isRegistered_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::unregisterType(int type);
 func (this *QMetaType) unregisterType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -269,12 +346,12 @@ func (this *QMetaType) unregisterType_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaType::QMetaType(const QMetaType & other);
 func NewQMetaType(args ...interface{}) QMetaType {
   return QMetaType{}
 }
 
-
+  // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
 func (this *QMetaType) metaObjectForType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,7 +365,7 @@ func (this *QMetaType) metaObjectForType_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::load(QDataStream & stream, int type, void * data);
 func (this *QMetaType) load_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -302,7 +379,7 @@ func (this *QMetaType) load_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void * QMetaType::create(const void * copy);
 func (this *QMetaType) create(args ...interface{}) () {
   // create(int, const void *)
   // create(const void *)
@@ -327,7 +404,7 @@ func (this *QMetaType) create(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QMetaType::sizeOf(int type);
 func (this *QMetaType) sizeOf_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +418,7 @@ func (this *QMetaType) sizeOf_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::hasRegisteredComparators(int typeId);
 func (this *QMetaType) hasRegisteredComparators_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -355,7 +432,7 @@ func (this *QMetaType) hasRegisteredComparators_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::save(QDataStream & stream, int type, const void * data);
 func (this *QMetaType) save_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,7 +446,7 @@ func (this *QMetaType) save_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaType::destruct(void * data);
 func (this *QMetaType) destruct(args ...interface{}) () {
   // destruct(int, void *)
   // destruct(void *)
@@ -394,7 +471,7 @@ func (this *QMetaType) destruct(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaType::~QMetaType();
 func (this *QMetaType) FreeQMetaType(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -408,7 +485,7 @@ func (this *QMetaType) FreeQMetaType(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QMetaType::type(const char * typeName);
 func (this *QMetaType) type_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -422,7 +499,7 @@ func (this *QMetaType) type_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::debugStream(QDebug & dbg, const void * rhs, int typeId);
 func (this *QMetaType) debugStream_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -436,7 +513,7 @@ func (this *QMetaType) debugStream_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaType::sizeOf();
 func (this *QMetaType) sizeOf(args ...interface{}) () {
   // sizeOf(int)
   // sizeOf()
@@ -459,7 +536,7 @@ func (this *QMetaType) sizeOf(args ...interface{}) () {
 
 }
 
-
+  // proto: static const char * QMetaType::typeName(int type);
 func (this *QMetaType) typeName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -473,7 +550,7 @@ func (this *QMetaType) typeName_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::convert(const void * from, int fromTypeId, void * to, int toTypeId);
 func (this *QMetaType) convert_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -487,7 +564,7 @@ func (this *QMetaType) convert_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
 func (this *QMetaType) registerNormalizedTypedef_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -501,7 +578,7 @@ func (this *QMetaType) registerNormalizedTypedef_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaType::compare(const void * lhs, const void * rhs, int typeId, int * result);
 func (this *QMetaType) compare_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -515,7 +592,7 @@ func (this *QMetaType) compare_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaType::isRegistered();
 func (this *QMetaType) isRegistered(args ...interface{}) () {
   // isRegistered(int)
   // isRegistered()

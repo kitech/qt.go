@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,50 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QAbstractState * QAbstractTransition::targetState();
+extern void _ZNK19QAbstractTransition11targetStateEv(void* qthis);
+  // proto:  QList<QAbstractState *> QAbstractTransition::targetStates();
+extern void _ZNK19QAbstractTransition12targetStatesEv(void* qthis);
+  // proto:  QState * QAbstractTransition::sourceState();
+extern void _ZNK19QAbstractTransition11sourceStateEv(void* qthis);
+  // proto:  void QAbstractTransition::~QAbstractTransition();
+extern void _ZN19QAbstractTransitionD0Ev(void* qthis);
+  // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
+extern void* dector_ZN19QAbstractTransitionC1EP6QState(void* arg0);
+extern void _ZN19QAbstractTransitionC1EP6QState(void* qthis, void* arg0);
+  // proto:  void QAbstractTransition::setTargetState(QAbstractState * target);
+extern void _ZN19QAbstractTransition14setTargetStateEP14QAbstractState(void* qthis, void* arg0);
+  // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
+extern void _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0);
+  // proto:  QList<QAbstractAnimation *> QAbstractTransition::animations();
+extern void _ZNK19QAbstractTransition10animationsEv(void* qthis);
+  // proto:  void QAbstractTransition::removeAnimation(QAbstractAnimation * animation);
+extern void _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QAbstractTransition::metaObject();
+extern void _ZNK19QAbstractTransition10metaObjectEv(void* qthis);
+  // proto:  void QAbstractTransition::QAbstractTransition(const QAbstractTransition & );
+extern void* dector_ZN19QAbstractTransitionC1ERKS_(void* arg0);
+extern void _ZN19QAbstractTransitionC1ERKS_(void* qthis, void* arg0);
+  // proto:  QStateMachine * QAbstractTransition::machine();
+extern void _ZNK19QAbstractTransition7machineEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractTransition)=1
 type QAbstractTransition struct {
   /*qbase*/ QObject;
@@ -44,7 +79,7 @@ type QAbstractTransition struct {
 //  _triggered QAbstractTransition_triggered_signal;
 }
 
-
+  // proto:  QAbstractState * QAbstractTransition::targetState();
 func (this *QAbstractTransition) targetState(args ...interface{}) () {
   // targetState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -62,7 +97,7 @@ func (this *QAbstractTransition) targetState(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QAbstractState *> QAbstractTransition::targetStates();
 func (this *QAbstractTransition) targetStates(args ...interface{}) () {
   // targetStates()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +115,7 @@ func (this *QAbstractTransition) targetStates(args ...interface{}) () {
 
 }
 
-
+  // proto:  QState * QAbstractTransition::sourceState();
 func (this *QAbstractTransition) sourceState(args ...interface{}) () {
   // sourceState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +133,7 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTransition::~QAbstractTransition();
 func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -112,12 +147,12 @@ func (this *QAbstractTransition) FreeQAbstractTransition(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
 func NewQAbstractTransition(args ...interface{}) QAbstractTransition {
   return QAbstractTransition{}
 }
 
-
+  // proto:  void QAbstractTransition::setTargetState(QAbstractState * target);
 func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
   // setTargetState(class QAbstractState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +171,7 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
 func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +190,7 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QAbstractAnimation *> QAbstractTransition::animations();
 func (this *QAbstractTransition) animations(args ...interface{}) () {
   // animations()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +208,7 @@ func (this *QAbstractTransition) animations(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractTransition::removeAnimation(QAbstractAnimation * animation);
 func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
   // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,7 +227,7 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractTransition::metaObject();
 func (this *QAbstractTransition) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,7 +245,7 @@ func (this *QAbstractTransition) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStateMachine * QAbstractTransition::machine();
 func (this *QAbstractTransition) machine(args ...interface{}) () {
   // machine()
   var vtys = make(map[int32]map[int32]reflect.Type)

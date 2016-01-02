@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,43 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
+extern void* dector_ZN16QKeySequenceEditC1ERKS_(void* arg0);
+extern void _ZN16QKeySequenceEditC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
+extern void* dector_ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget(void* arg0, void* arg1);
+extern void _ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QKeySequenceEdit::clear();
+extern void _ZN16QKeySequenceEdit5clearEv(void* qthis);
+  // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
+extern void _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(void* qthis, void* arg0);
+  // proto:  QKeySequence QKeySequenceEdit::keySequence();
+extern void _ZNK16QKeySequenceEdit11keySequenceEv(void* qthis);
+  // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
+extern void _ZN16QKeySequenceEditD0Ev(void* qthis);
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(QWidget * parent);
+extern void* dector_ZN16QKeySequenceEditC1EP7QWidget(void* arg0);
+extern void _ZN16QKeySequenceEditC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
+extern void _ZNK16QKeySequenceEdit10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QKeySequenceEdit)=1
 type QKeySequenceEdit struct {
   /*qbase*/ QWidget;
@@ -43,12 +71,12 @@ type QKeySequenceEdit struct {
 //  _keySequenceChanged QKeySequenceEdit_keySequenceChanged_signal;
 }
 
-
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
 func NewQKeySequenceEdit(args ...interface{}) QKeySequenceEdit {
   return QKeySequenceEdit{}
 }
 
-
+  // proto:  void QKeySequenceEdit::clear();
 func (this *QKeySequenceEdit) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +94,7 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
 func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
   // setKeySequence(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +113,7 @@ func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
 
 }
 
-
+  // proto:  QKeySequence QKeySequenceEdit::keySequence();
 func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
   // keySequence()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +131,7 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
 func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -117,7 +145,7 @@ func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
 func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

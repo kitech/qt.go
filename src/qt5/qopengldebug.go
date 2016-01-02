@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,62 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage();
+extern void* dector_ZN19QOpenGLDebugMessageC1Ev();
+extern void _ZN19QOpenGLDebugMessageC1Ev(void* qthis);
+  // proto:  void QOpenGLDebugMessage::~QOpenGLDebugMessage();
+extern void _ZN19QOpenGLDebugMessageD0Ev(void* qthis);
+  // proto:  GLuint QOpenGLDebugMessage::id();
+extern void _ZNK19QOpenGLDebugMessage2idEv(void* qthis);
+  // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage(const QOpenGLDebugMessage & debugMessage);
+extern void* dector_ZN19QOpenGLDebugMessageC1ERKS_(void* arg0);
+extern void _ZN19QOpenGLDebugMessageC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QOpenGLDebugMessage::message();
+extern void _ZNK19QOpenGLDebugMessage7messageEv(void* qthis);
+  // proto:  void QOpenGLDebugMessage::swap(QOpenGLDebugMessage & debugMessage);
+extern void demth_ZN19QOpenGLDebugMessage4swapERS_(void* qthis, void* arg0);
+  // proto:  void QOpenGLDebugLogger::~QOpenGLDebugLogger();
+extern void _ZN18QOpenGLDebugLoggerD0Ev(void* qthis);
+  // proto:  qint64 QOpenGLDebugLogger::maximumMessageLength();
+extern void _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(void* qthis);
+  // proto:  bool QOpenGLDebugLogger::isLogging();
+extern void _ZNK18QOpenGLDebugLogger9isLoggingEv(void* qthis);
+  // proto:  void QOpenGLDebugLogger::stopLogging();
+extern void _ZN18QOpenGLDebugLogger11stopLoggingEv(void* qthis);
+  // proto:  void QOpenGLDebugLogger::logMessage(const QOpenGLDebugMessage & debugMessage);
+extern void _ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage(void* qthis, void* arg0);
+  // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(const QOpenGLDebugLogger & );
+extern void* dector_ZN18QOpenGLDebugLoggerC1ERKS_(void* arg0);
+extern void _ZN18QOpenGLDebugLoggerC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(QObject * parent);
+extern void* dector_ZN18QOpenGLDebugLoggerC1EP7QObject(void* arg0);
+extern void _ZN18QOpenGLDebugLoggerC1EP7QObject(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QOpenGLDebugLogger::metaObject();
+extern void _ZNK18QOpenGLDebugLogger10metaObjectEv(void* qthis);
+  // proto:  QList<QOpenGLDebugMessage> QOpenGLDebugLogger::loggedMessages();
+extern void _ZNK18QOpenGLDebugLogger14loggedMessagesEv(void* qthis);
+  // proto:  void QOpenGLDebugLogger::popGroup();
+extern void _ZN18QOpenGLDebugLogger8popGroupEv(void* qthis);
+  // proto:  bool QOpenGLDebugLogger::initialize();
+extern void _ZN18QOpenGLDebugLogger10initializeEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLDebugMessage)=1
 type QOpenGLDebugMessage struct {
   // qbase: None;
@@ -48,12 +95,12 @@ type QOpenGLDebugLogger struct {
 //  _messageLogged QOpenGLDebugLogger_messageLogged_signal;
 }
 
-
+  // proto:  void QOpenGLDebugMessage::QOpenGLDebugMessage();
 func NewQOpenGLDebugMessage(args ...interface{}) QOpenGLDebugMessage {
   return QOpenGLDebugMessage{}
 }
 
-
+  // proto:  void QOpenGLDebugMessage::~QOpenGLDebugMessage();
 func (this *QOpenGLDebugMessage) FreeQOpenGLDebugMessage(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -67,7 +114,7 @@ func (this *QOpenGLDebugMessage) FreeQOpenGLDebugMessage(args ...interface{}) ()
 
 }
 
-
+  // proto:  GLuint QOpenGLDebugMessage::id();
 func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
   // id()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +132,7 @@ func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QOpenGLDebugMessage::message();
 func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
   // message()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +150,7 @@ func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugMessage::swap(QOpenGLDebugMessage & debugMessage);
 func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
   // swap(class QOpenGLDebugMessage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +169,7 @@ func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugLogger::~QOpenGLDebugLogger();
 func (this *QOpenGLDebugLogger) FreeQOpenGLDebugLogger(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +183,7 @@ func (this *QOpenGLDebugLogger) FreeQOpenGLDebugLogger(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QOpenGLDebugLogger::maximumMessageLength();
 func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
   // maximumMessageLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +201,7 @@ func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLDebugLogger::isLogging();
 func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
   // isLogging()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +219,7 @@ func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugLogger::stopLogging();
 func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
   // stopLogging()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +237,7 @@ func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugLogger::logMessage(const QOpenGLDebugMessage & debugMessage);
 func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
   // logMessage(const class QOpenGLDebugMessage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,12 +256,12 @@ func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugLogger::QOpenGLDebugLogger(const QOpenGLDebugLogger & );
 func NewQOpenGLDebugLogger(args ...interface{}) QOpenGLDebugLogger {
   return QOpenGLDebugLogger{}
 }
 
-
+  // proto:  const QMetaObject * QOpenGLDebugLogger::metaObject();
 func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,7 +279,7 @@ func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QOpenGLDebugMessage> QOpenGLDebugLogger::loggedMessages();
 func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
   // loggedMessages()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -250,7 +297,7 @@ func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLDebugLogger::popGroup();
 func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
   // popGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -268,7 +315,7 @@ func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLDebugLogger::initialize();
 func (this *QOpenGLDebugLogger) initialize(args ...interface{}) () {
   // initialize()
   var vtys = make(map[int32]map[int32]reflect.Type)

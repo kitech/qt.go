@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,45 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QKeyEventTransition::setKey(int key);
+extern void _ZN19QKeyEventTransition6setKeyEi(void* qthis, int arg0);
+  // proto:  const QMetaObject * QKeyEventTransition::metaObject();
+extern void _ZNK19QKeyEventTransition10metaObjectEv(void* qthis);
+  // proto:  void QKeyEventTransition::~QKeyEventTransition();
+extern void _ZN19QKeyEventTransitionD0Ev(void* qthis);
+  // proto:  int QKeyEventTransition::key();
+extern void _ZNK19QKeyEventTransition3keyEv(void* qthis);
+  // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
+extern void* dector_ZN19QKeyEventTransitionC1EP6QState(void* arg0);
+extern void _ZN19QKeyEventTransitionC1EP6QState(void* qthis, void* arg0);
+  // proto:  void QKeyEventTransition::QKeyEventTransition(const QKeyEventTransition & );
+extern void* dector_ZN19QKeyEventTransitionC1ERKS_(void* arg0);
+extern void _ZN19QKeyEventTransitionC1ERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QKeyEventTransition)=1
 type QKeyEventTransition struct {
   /*qbase*/ QEventTransition;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QKeyEventTransition::setKey(int key);
 func (this *QKeyEventTransition) setKey(args ...interface{}) () {
   // setKey(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +83,7 @@ func (this *QKeyEventTransition) setKey(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QKeyEventTransition::metaObject();
 func (this *QKeyEventTransition) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +101,7 @@ func (this *QKeyEventTransition) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QKeyEventTransition::~QKeyEventTransition();
 func (this *QKeyEventTransition) FreeQKeyEventTransition(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -92,7 +115,7 @@ func (this *QKeyEventTransition) FreeQKeyEventTransition(args ...interface{}) ()
 
 }
 
-
+  // proto:  int QKeyEventTransition::key();
 func (this *QKeyEventTransition) key(args ...interface{}) () {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -110,7 +133,7 @@ func (this *QKeyEventTransition) key(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
 func NewQKeyEventTransition(args ...interface{}) QKeyEventTransition {
   return QKeyEventTransition{}
 }

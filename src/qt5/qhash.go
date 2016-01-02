@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,34 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QHashData::hasShrunk();
+extern void _ZN9QHashData9hasShrunkEv(void* qthis);
+  // proto:  void * QHashData::allocateNode(int nodeAlign);
+extern void _ZN9QHashData12allocateNodeEi(void* qthis, int arg0);
+  // proto:  bool QHashData::willGrow();
+extern void _ZN9QHashData8willGrowEv(void* qthis);
+  // proto:  void QHashData::rehash(int hint);
+extern void _ZN9QHashData6rehashEi(void* qthis, int arg0);
+  // proto:  void QHashData::freeNode(void * node);
+extern void _ZN9QHashData8freeNodeEPv(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QHashDummyValue)=1
 type QHashDummyValue struct {
   // qbase: None;
@@ -47,7 +66,7 @@ type QHashData struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QHashData::hasShrunk();
 func (this *QHashData) hasShrunk(args ...interface{}) () {
   // hasShrunk()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +84,7 @@ func (this *QHashData) hasShrunk(args ...interface{}) () {
 
 }
 
-
+  // proto:  void * QHashData::allocateNode(int nodeAlign);
 func (this *QHashData) allocateNode(args ...interface{}) () {
   // allocateNode(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +103,7 @@ func (this *QHashData) allocateNode(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QHashData::willGrow();
 func (this *QHashData) willGrow(args ...interface{}) () {
   // willGrow()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +121,7 @@ func (this *QHashData) willGrow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QHashData::rehash(int hint);
 func (this *QHashData) rehash(args ...interface{}) () {
   // rehash(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +140,7 @@ func (this *QHashData) rehash(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QHashData::freeNode(void * node);
 func (this *QHashData) freeNode(args ...interface{}) () {
   // freeNode(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)

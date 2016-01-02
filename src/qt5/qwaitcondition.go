@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,47 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
+extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, unsigned long arg1);
+  // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
+extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, unsigned long arg1);
+  // proto:  void QWaitCondition::wakeAll();
+extern void _ZN14QWaitCondition7wakeAllEv(void* qthis);
+  // proto:  void QWaitCondition::wakeOne();
+extern void _ZN14QWaitCondition7wakeOneEv(void* qthis);
+  // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
+extern void* dector_ZN14QWaitConditionC1ERKS_(void* arg0);
+extern void _ZN14QWaitConditionC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QWaitCondition::~QWaitCondition();
+extern void _ZN14QWaitConditionD0Ev(void* qthis);
+  // proto:  void QWaitCondition::QWaitCondition();
+extern void* dector_ZN14QWaitConditionC1Ev();
+extern void _ZN14QWaitConditionC1Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QWaitCondition)=8
 type QWaitCondition struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
 func (this *QWaitCondition) wait(args ...interface{}) () {
   // wait(class QReadWriteLock *, unsigned long)
   // wait(class QMutex *, unsigned long)
@@ -67,7 +92,7 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWaitCondition::wakeAll();
 func (this *QWaitCondition) wakeAll(args ...interface{}) () {
   // wakeAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +110,7 @@ func (this *QWaitCondition) wakeAll(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWaitCondition::wakeOne();
 func (this *QWaitCondition) wakeOne(args ...interface{}) () {
   // wakeOne()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,12 +128,12 @@ func (this *QWaitCondition) wakeOne(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
 func NewQWaitCondition(args ...interface{}) QWaitCondition {
   return QWaitCondition{}
 }
 
-
+  // proto:  void QWaitCondition::~QWaitCondition();
 func (this *QWaitCondition) FreeQWaitCondition(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,69 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPushButton::setMenu(QMenu * menu);
+extern void _ZN11QPushButton7setMenuEP5QMenu(void* qthis, void* arg0);
+  // proto:  void QPushButton::setFlat(bool );
+extern void _ZN11QPushButton7setFlatEb(void* qthis, bool arg0);
+  // proto:  void QPushButton::setAutoDefault(bool );
+extern void _ZN11QPushButton14setAutoDefaultEb(void* qthis, bool arg0);
+  // proto:  QSize QPushButton::minimumSizeHint();
+extern void _ZNK11QPushButton15minimumSizeHintEv(void* qthis);
+  // proto:  void QPushButton::setDefault(bool );
+extern void _ZN11QPushButton10setDefaultEb(void* qthis, bool arg0);
+  // proto:  void QPushButton::~QPushButton();
+extern void _ZN11QPushButtonD0Ev(void* qthis);
+  // proto:  void QPushButton::QPushButton(const QPushButton & );
+extern void* dector_ZN11QPushButtonC1ERKS_(void* arg0);
+extern void _ZN11QPushButtonC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QPushButton::isDefault();
+extern void _ZNK11QPushButton9isDefaultEv(void* qthis);
+  // proto:  void QPushButton::QPushButton(const QIcon & icon, const QString & text, QWidget * parent);
+extern void* dector_ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2);
+extern void _ZN11QPushButtonC1ERK5QIconRK7QStringP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  bool QPushButton::autoDefault();
+extern void _ZNK11QPushButton11autoDefaultEv(void* qthis);
+  // proto:  QSize QPushButton::sizeHint();
+extern void _ZNK11QPushButton8sizeHintEv(void* qthis);
+  // proto:  const QMetaObject * QPushButton::metaObject();
+extern void _ZNK11QPushButton10metaObjectEv(void* qthis);
+  // proto:  QMenu * QPushButton::menu();
+extern void _ZNK11QPushButton4menuEv(void* qthis);
+  // proto:  void QPushButton::QPushButton(QWidget * parent);
+extern void* dector_ZN11QPushButtonC1EP7QWidget(void* arg0);
+extern void _ZN11QPushButtonC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QPushButton::showMenu();
+extern void _ZN11QPushButton8showMenuEv(void* qthis);
+  // proto:  void QPushButton::QPushButton(const QString & text, QWidget * parent);
+extern void* dector_ZN11QPushButtonC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN11QPushButtonC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QPushButton::isFlat();
+extern void _ZNK11QPushButton6isFlatEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPushButton)=1
 type QPushButton struct {
   /*qbase*/ QAbstractButton;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPushButton::setMenu(QMenu * menu);
 func (this *QPushButton) setMenu(args ...interface{}) () {
   // setMenu(class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +107,7 @@ func (this *QPushButton) setMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::setFlat(bool );
 func (this *QPushButton) setFlat(args ...interface{}) () {
   // setFlat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +126,7 @@ func (this *QPushButton) setFlat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::setAutoDefault(bool );
 func (this *QPushButton) setAutoDefault(args ...interface{}) () {
   // setAutoDefault(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +145,7 @@ func (this *QPushButton) setAutoDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QPushButton::minimumSizeHint();
 func (this *QPushButton) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +163,7 @@ func (this *QPushButton) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::setDefault(bool );
 func (this *QPushButton) setDefault(args ...interface{}) () {
   // setDefault(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +182,7 @@ func (this *QPushButton) setDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::~QPushButton();
 func (this *QPushButton) FreeQPushButton(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -149,12 +196,12 @@ func (this *QPushButton) FreeQPushButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::QPushButton(const QPushButton & );
 func NewQPushButton(args ...interface{}) QPushButton {
   return QPushButton{}
 }
 
-
+  // proto:  bool QPushButton::isDefault();
 func (this *QPushButton) isDefault(args ...interface{}) () {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +219,7 @@ func (this *QPushButton) isDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPushButton::autoDefault();
 func (this *QPushButton) autoDefault(args ...interface{}) () {
   // autoDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +237,7 @@ func (this *QPushButton) autoDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QPushButton::sizeHint();
 func (this *QPushButton) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +255,7 @@ func (this *QPushButton) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QPushButton::metaObject();
 func (this *QPushButton) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +273,7 @@ func (this *QPushButton) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMenu * QPushButton::menu();
 func (this *QPushButton) menu(args ...interface{}) () {
   // menu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,7 +291,7 @@ func (this *QPushButton) menu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPushButton::showMenu();
 func (this *QPushButton) showMenu(args ...interface{}) () {
   // showMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -262,7 +309,7 @@ func (this *QPushButton) showMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPushButton::isFlat();
 func (this *QPushButton) isFlat(args ...interface{}) () {
   // isFlat()
   var vtys = make(map[int32]map[int32]reflect.Type)

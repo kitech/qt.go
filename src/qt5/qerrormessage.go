@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,47 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QMetaObject * QErrorMessage::metaObject();
+extern void _ZNK13QErrorMessage10metaObjectEv(void* qthis);
+  // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
+extern void* dector_ZN13QErrorMessageC1EP7QWidget(void* arg0);
+extern void _ZN13QErrorMessageC1EP7QWidget(void* qthis, void* arg0);
+  // proto: static QErrorMessage * QErrorMessage::qtHandler();
+extern void _ZN13QErrorMessage9qtHandlerEv();
+  // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
+extern void _ZN13QErrorMessage11showMessageERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QErrorMessage::showMessage(const QString & message);
+extern void _ZN13QErrorMessage11showMessageERK7QString(void* qthis, void* arg0);
+  // proto:  void QErrorMessage::~QErrorMessage();
+extern void _ZN13QErrorMessageD0Ev(void* qthis);
+  // proto:  void QErrorMessage::QErrorMessage(const QErrorMessage & );
+extern void* dector_ZN13QErrorMessageC1ERKS_(void* arg0);
+extern void _ZN13QErrorMessageC1ERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QErrorMessage)=1
 type QErrorMessage struct {
   /*qbase*/ QDialog;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  const QMetaObject * QErrorMessage::metaObject();
 func (this *QErrorMessage) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,12 +84,12 @@ func (this *QErrorMessage) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
 func NewQErrorMessage(args ...interface{}) QErrorMessage {
   return QErrorMessage{}
 }
 
-
+  // proto: static QErrorMessage * QErrorMessage::qtHandler();
 func (this *QErrorMessage) qtHandler_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,7 +103,7 @@ func (this *QErrorMessage) qtHandler_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QErrorMessage::showMessage(const QString & message, const QString & type);
 func (this *QErrorMessage) showMessage(args ...interface{}) () {
   // showMessage(const class QString &, const class QString &)
   // showMessage(const class QString &)
@@ -103,7 +128,7 @@ func (this *QErrorMessage) showMessage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QErrorMessage::~QErrorMessage();
 func (this *QErrorMessage) FreeQErrorMessage(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

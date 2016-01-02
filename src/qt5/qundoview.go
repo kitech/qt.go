@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,68 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
+extern void* dector_ZN9QUndoViewC1EP10QUndoGroupP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QUndoViewC1EP10QUndoGroupP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QUndoView::setStack(QUndoStack * stack);
+extern void _ZN9QUndoView8setStackEP10QUndoStack(void* qthis, void* arg0);
+  // proto:  void QUndoView::setEmptyLabel(const QString & label);
+extern void _ZN9QUndoView13setEmptyLabelERK7QString(void* qthis, void* arg0);
+  // proto:  void QUndoView::setCleanIcon(const QIcon & icon);
+extern void _ZN9QUndoView12setCleanIconERK5QIcon(void* qthis, void* arg0);
+  // proto:  void QUndoView::setGroup(QUndoGroup * group);
+extern void _ZN9QUndoView8setGroupEP10QUndoGroup(void* qthis, void* arg0);
+  // proto:  QUndoGroup * QUndoView::group();
+extern void _ZNK9QUndoView5groupEv(void* qthis);
+  // proto:  const QMetaObject * QUndoView::metaObject();
+extern void _ZNK9QUndoView10metaObjectEv(void* qthis);
+  // proto:  QUndoStack * QUndoView::stack();
+extern void _ZNK9QUndoView5stackEv(void* qthis);
+  // proto:  QIcon QUndoView::cleanIcon();
+extern void _ZNK9QUndoView9cleanIconEv(void* qthis);
+  // proto:  QString QUndoView::emptyLabel();
+extern void _ZNK9QUndoView10emptyLabelEv(void* qthis);
+  // proto:  void QUndoView::QUndoView(const QUndoView & );
+extern void* dector_ZN9QUndoViewC1ERKS_(void* arg0);
+extern void _ZN9QUndoViewC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QUndoView::QUndoView(QWidget * parent);
+extern void* dector_ZN9QUndoViewC1EP7QWidget(void* arg0);
+extern void _ZN9QUndoViewC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QUndoView::~QUndoView();
+extern void _ZN9QUndoViewD0Ev(void* qthis);
+  // proto:  void QUndoView::QUndoView(QUndoStack * stack, QWidget * parent);
+extern void* dector_ZN9QUndoViewC1EP10QUndoStackP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QUndoViewC1EP10QUndoStackP7QWidget(void* qthis, void* arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QUndoView)=1
 type QUndoView struct {
   /*qbase*/ QListView;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QUndoView::QUndoView(QUndoGroup * group, QWidget * parent);
 func NewQUndoView(args ...interface{}) QUndoView {
   return QUndoView{}
 }
 
-
+  // proto:  void QUndoView::setStack(QUndoStack * stack);
 func (this *QUndoView) setStack(args ...interface{}) () {
   // setStack(class QUndoStack *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +106,7 @@ func (this *QUndoView) setStack(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QUndoView::setEmptyLabel(const QString & label);
 func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
   // setEmptyLabel(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +125,7 @@ func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QUndoView::setCleanIcon(const QIcon & icon);
 func (this *QUndoView) setCleanIcon(args ...interface{}) () {
   // setCleanIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +144,7 @@ func (this *QUndoView) setCleanIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QUndoView::setGroup(QUndoGroup * group);
 func (this *QUndoView) setGroup(args ...interface{}) () {
   // setGroup(class QUndoGroup *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +163,7 @@ func (this *QUndoView) setGroup(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUndoGroup * QUndoView::group();
 func (this *QUndoView) group(args ...interface{}) () {
   // group()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +181,7 @@ func (this *QUndoView) group(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QUndoView::metaObject();
 func (this *QUndoView) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +199,7 @@ func (this *QUndoView) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUndoStack * QUndoView::stack();
 func (this *QUndoView) stack(args ...interface{}) () {
   // stack()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,7 +217,7 @@ func (this *QUndoView) stack(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QUndoView::cleanIcon();
 func (this *QUndoView) cleanIcon(args ...interface{}) () {
   // cleanIcon()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -194,7 +235,7 @@ func (this *QUndoView) cleanIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QUndoView::emptyLabel();
 func (this *QUndoView) emptyLabel(args ...interface{}) () {
   // emptyLabel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -212,7 +253,7 @@ func (this *QUndoView) emptyLabel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QUndoView::~QUndoView();
 func (this *QUndoView) FreeQUndoView(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

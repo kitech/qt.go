@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,137 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
+extern void _ZN13QGraphicsView5scaleEdd(void* qthis, double arg0, double arg1);
+  // proto:  QPolygonF QGraphicsView::mapToScene(const QRect & rect);
+extern void _ZNK13QGraphicsView10mapToSceneERK5QRect(void* qthis, void* arg0);
+  // proto:  QPolygon QGraphicsView::mapFromScene(const QRectF & rect);
+extern void _ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
+extern void _ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double arg1);
+  // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
+extern void demth_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int arg0, int arg1);
+  // proto:  const QMetaObject * QGraphicsView::metaObject();
+extern void _ZNK13QGraphicsView10metaObjectEv(void* qthis);
+  // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
+extern void demth_ZN13QGraphicsView12setSceneRectEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
+  // proto:  QRect QGraphicsView::rubberBandRect();
+extern void _ZNK13QGraphicsView14rubberBandRectEv(void* qthis);
+  // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
+extern void _ZN13QGraphicsView9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1);
+  // proto:  bool QGraphicsView::isInteractive();
+extern void _ZNK13QGraphicsView13isInteractiveEv(void* qthis);
+  // proto:  void QGraphicsView::QGraphicsView(const QGraphicsView & );
+extern void* dector_ZN13QGraphicsViewC1ERKS_(void* arg0);
+extern void _ZN13QGraphicsViewC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::setBackgroundBrush(const QBrush & brush);
+extern void _ZN13QGraphicsView18setBackgroundBrushERK6QBrush(void* qthis, void* arg0);
+  // proto:  bool QGraphicsView::isTransformed();
+extern void _ZNK13QGraphicsView13isTransformedEv(void* qthis);
+  // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
+extern void demth_ZNK13QGraphicsView6itemAtEii(void* qthis, int arg0, int arg1);
+  // proto:  void QGraphicsView::centerOn(const QPointF & pos);
+extern void _ZN13QGraphicsView8centerOnERK7QPointF(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
+extern void _ZN13QGraphicsView18setForegroundBrushERK6QBrush(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::shear(qreal sh, qreal sv);
+extern void _ZN13QGraphicsView5shearEdd(void* qthis, double arg0, double arg1);
+  // proto:  QBrush QGraphicsView::foregroundBrush();
+extern void _ZNK13QGraphicsView15foregroundBrushEv(void* qthis);
+  // proto:  QGraphicsItem * QGraphicsView::itemAt(const QPoint & pos);
+extern void _ZNK13QGraphicsView6itemAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::updateSceneRect(const QRectF & rect);
+extern void _ZN13QGraphicsView15updateSceneRectERK6QRectF(void* qthis, void* arg0);
+  // proto:  QPointF QGraphicsView::mapToScene(const QPoint & point);
+extern void _ZNK13QGraphicsView10mapToSceneERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::setInteractive(bool allowed);
+extern void _ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0);
+  // proto:  QMatrix QGraphicsView::matrix();
+extern void _ZNK13QGraphicsView6matrixEv(void* qthis);
+  // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
+extern void demth_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
+extern void* dector_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(void* arg0, void* arg1);
+extern void _ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QGraphicsView::QGraphicsView(QWidget * parent);
+extern void* dector_ZN13QGraphicsViewC1EP7QWidget(void* arg0);
+extern void _ZN13QGraphicsViewC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::centerOn(const QGraphicsItem * item);
+extern void _ZN13QGraphicsView8centerOnEPK13QGraphicsItem(void* qthis, void* arg0);
+  // proto:  QTransform QGraphicsView::viewportTransform();
+extern void _ZNK13QGraphicsView17viewportTransformEv(void* qthis);
+  // proto:  void QGraphicsView::resetCachedContent();
+extern void _ZN13QGraphicsView18resetCachedContentEv(void* qthis);
+  // proto:  QPolygonF QGraphicsView::mapToScene(const QPolygon & polygon);
+extern void _ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
+extern void _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int arg1, int arg2);
+  // proto:  QRectF QGraphicsView::sceneRect();
+extern void _ZNK13QGraphicsView9sceneRectEv(void* qthis);
+  // proto:  QGraphicsScene * QGraphicsView::scene();
+extern void _ZNK13QGraphicsView5sceneEv(void* qthis);
+  // proto:  QSize QGraphicsView::sizeHint();
+extern void _ZNK13QGraphicsView8sizeHintEv(void* qthis);
+  // proto:  QBrush QGraphicsView::backgroundBrush();
+extern void _ZNK13QGraphicsView15backgroundBrushEv(void* qthis);
+  // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
+extern void demth_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1);
+  // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
+extern void _ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+  // proto:  QList<QGraphicsItem *> QGraphicsView::items();
+extern void _ZNK13QGraphicsView5itemsEv(void* qthis);
+  // proto:  QTransform QGraphicsView::transform();
+extern void _ZNK13QGraphicsView9transformEv(void* qthis);
+  // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
+extern void demth_ZNK13QGraphicsView5itemsEii(void* qthis, int arg0, int arg1);
+  // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
+extern void demth_ZN13QGraphicsView8centerOnEdd(void* qthis, double arg0, double arg1);
+  // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
+extern void demth_ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int arg4, int arg5);
+  // proto:  void QGraphicsView::rotate(qreal angle);
+extern void _ZN13QGraphicsView6rotateEd(void* qthis, double arg0);
+  // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
+extern void demth_ZNK13QGraphicsView12mapFromSceneEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
+  // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
+extern void _ZN13QGraphicsView12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1);
+  // proto:  void QGraphicsView::setSceneRect(const QRectF & rect);
+extern void _ZN13QGraphicsView12setSceneRectERK6QRectF(void* qthis, void* arg0);
+  // proto:  QPolygon QGraphicsView::mapFromScene(const QPolygonF & polygon);
+extern void _ZNK13QGraphicsView12mapFromSceneERK9QPolygonF(void* qthis, void* arg0);
+  // proto:  QPoint QGraphicsView::mapFromScene(const QPointF & point);
+extern void _ZNK13QGraphicsView12mapFromSceneERK7QPointF(void* qthis, void* arg0);
+  // proto:  QPainterPath QGraphicsView::mapFromScene(const QPainterPath & path);
+extern void _ZNK13QGraphicsView12mapFromSceneERK12QPainterPath(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::~QGraphicsView();
+extern void _ZN13QGraphicsViewD0Ev(void* qthis);
+  // proto:  QList<QGraphicsItem *> QGraphicsView::items(const QPoint & pos);
+extern void _ZNK13QGraphicsView5itemsERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::resetMatrix();
+extern void _ZN13QGraphicsView11resetMatrixEv(void* qthis);
+  // proto:  void QGraphicsView::resetTransform();
+extern void _ZN13QGraphicsView14resetTransformEv(void* qthis);
+  // proto:  QPainterPath QGraphicsView::mapToScene(const QPainterPath & path);
+extern void _ZNK13QGraphicsView10mapToSceneERK12QPainterPath(void* qthis, void* arg0);
+  // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
+extern void _ZN13QGraphicsView8setSceneEP14QGraphicsScene(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGraphicsView)=1
 type QGraphicsView struct {
   /*qbase*/ QAbstractScrollArea;
@@ -42,7 +164,7 @@ type QGraphicsView struct {
 //  _rubberBandChanged QGraphicsView_rubberBandChanged_signal;
 }
 
-
+  // proto:  void QGraphicsView::scale(qreal sx, qreal sy);
 func (this *QGraphicsView) scale(args ...interface{}) () {
   // scale(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -62,7 +184,7 @@ func (this *QGraphicsView) scale(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPolygonF QGraphicsView::mapToScene(const QRect & rect);
 func (this *QGraphicsView) mapToScene(args ...interface{}) () {
   // mapToScene(const class QRect &)
   // mapToScene(int, int)
@@ -110,7 +232,7 @@ func (this *QGraphicsView) mapToScene(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPolygon QGraphicsView::mapFromScene(const QRectF & rect);
 func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
   // mapFromScene(const class QRectF &)
   // mapFromScene(qreal, qreal)
@@ -158,7 +280,7 @@ func (this *QGraphicsView) mapFromScene(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
 func (this *QGraphicsView) translate(args ...interface{}) () {
   // translate(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -178,7 +300,7 @@ func (this *QGraphicsView) translate(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QGraphicsView::metaObject();
 func (this *QGraphicsView) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -196,7 +318,7 @@ func (this *QGraphicsView) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
 func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
   // setSceneRect(qreal, qreal, qreal, qreal)
   // setSceneRect(const class QRectF &)
@@ -223,7 +345,7 @@ func (this *QGraphicsView) setSceneRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QGraphicsView::rubberBandRect();
 func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
   // rubberBandRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +363,7 @@ func (this *QGraphicsView) rubberBandRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setMatrix(const QMatrix & matrix, bool combine);
 func (this *QGraphicsView) setMatrix(args ...interface{}) () {
   // setMatrix(const class QMatrix &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,7 +383,7 @@ func (this *QGraphicsView) setMatrix(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGraphicsView::isInteractive();
 func (this *QGraphicsView) isInteractive(args ...interface{}) () {
   // isInteractive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -279,12 +401,12 @@ func (this *QGraphicsView) isInteractive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::QGraphicsView(const QGraphicsView & );
 func NewQGraphicsView(args ...interface{}) QGraphicsView {
   return QGraphicsView{}
 }
 
-
+  // proto:  void QGraphicsView::setBackgroundBrush(const QBrush & brush);
 func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
   // setBackgroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +425,7 @@ func (this *QGraphicsView) setBackgroundBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGraphicsView::isTransformed();
 func (this *QGraphicsView) isTransformed(args ...interface{}) () {
   // isTransformed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -321,7 +443,7 @@ func (this *QGraphicsView) isTransformed(args ...interface{}) () {
 
 }
 
-
+  // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
 func (this *QGraphicsView) itemAt(args ...interface{}) () {
   // itemAt(int, int)
   // itemAt(const class QPoint &)
@@ -346,7 +468,7 @@ func (this *QGraphicsView) itemAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::centerOn(const QPointF & pos);
 func (this *QGraphicsView) centerOn(args ...interface{}) () {
   // centerOn(const class QPointF &)
   // centerOn(const class QGraphicsItem *)
@@ -376,7 +498,7 @@ func (this *QGraphicsView) centerOn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
 func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
   // setForegroundBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +517,7 @@ func (this *QGraphicsView) setForegroundBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::shear(qreal sh, qreal sv);
 func (this *QGraphicsView) shear(args ...interface{}) () {
   // shear(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -415,7 +537,7 @@ func (this *QGraphicsView) shear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QGraphicsView::foregroundBrush();
 func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
   // foregroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -433,7 +555,7 @@ func (this *QGraphicsView) foregroundBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::updateSceneRect(const QRectF & rect);
 func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
   // updateSceneRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -452,7 +574,7 @@ func (this *QGraphicsView) updateSceneRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setInteractive(bool allowed);
 func (this *QGraphicsView) setInteractive(args ...interface{}) () {
   // setInteractive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -471,7 +593,7 @@ func (this *QGraphicsView) setInteractive(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMatrix QGraphicsView::matrix();
 func (this *QGraphicsView) matrix(args ...interface{}) () {
   // matrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -489,7 +611,7 @@ func (this *QGraphicsView) matrix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QGraphicsView::viewportTransform();
 func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
   // viewportTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -507,7 +629,7 @@ func (this *QGraphicsView) viewportTransform(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::resetCachedContent();
 func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
   // resetCachedContent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -525,7 +647,7 @@ func (this *QGraphicsView) resetCachedContent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
 func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
   // ensureVisible(const class QGraphicsItem *, int, int)
   // ensureVisible(const class QRectF &, int, int)
@@ -563,7 +685,7 @@ func (this *QGraphicsView) ensureVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRectF QGraphicsView::sceneRect();
 func (this *QGraphicsView) sceneRect(args ...interface{}) () {
   // sceneRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -581,7 +703,7 @@ func (this *QGraphicsView) sceneRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QGraphicsScene * QGraphicsView::scene();
 func (this *QGraphicsView) scene(args ...interface{}) () {
   // scene()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -599,7 +721,7 @@ func (this *QGraphicsView) scene(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QGraphicsView::sizeHint();
 func (this *QGraphicsView) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -617,7 +739,7 @@ func (this *QGraphicsView) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QGraphicsView::backgroundBrush();
 func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
   // backgroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -635,7 +757,7 @@ func (this *QGraphicsView) backgroundBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QGraphicsItem *> QGraphicsView::items();
 func (this *QGraphicsView) items(args ...interface{}) () {
   // items(int, int, int, int, Qt::ItemSelectionMode)
   // items(const class QRect &, Qt::ItemSelectionMode)
@@ -691,7 +813,7 @@ func (this *QGraphicsView) items(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QGraphicsView::transform();
 func (this *QGraphicsView) transform(args ...interface{}) () {
   // transform()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -709,7 +831,7 @@ func (this *QGraphicsView) transform(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::rotate(qreal angle);
 func (this *QGraphicsView) rotate(args ...interface{}) () {
   // rotate(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -728,7 +850,7 @@ func (this *QGraphicsView) rotate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setTransform(const QTransform & matrix, bool combine);
 func (this *QGraphicsView) setTransform(args ...interface{}) () {
   // setTransform(const class QTransform &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -748,7 +870,7 @@ func (this *QGraphicsView) setTransform(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::~QGraphicsView();
 func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -762,7 +884,7 @@ func (this *QGraphicsView) FreeQGraphicsView(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::resetMatrix();
 func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
   // resetMatrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -780,7 +902,7 @@ func (this *QGraphicsView) resetMatrix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::resetTransform();
 func (this *QGraphicsView) resetTransform(args ...interface{}) () {
   // resetTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -798,7 +920,7 @@ func (this *QGraphicsView) resetTransform(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsView::setScene(QGraphicsScene * scene);
 func (this *QGraphicsView) setScene(args ...interface{}) () {
   // setScene(class QGraphicsScene *)
   var vtys = make(map[int32]map[int32]reflect.Type)

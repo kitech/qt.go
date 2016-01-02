@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,44 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QSystemSemaphore::key();
+extern void _ZNK16QSystemSemaphore3keyEv(void* qthis);
+  // proto:  bool QSystemSemaphore::release(int n);
+extern void _ZN16QSystemSemaphore7releaseEi(void* qthis, int arg0);
+  // proto:  QString QSystemSemaphore::errorString();
+extern void _ZNK16QSystemSemaphore11errorStringEv(void* qthis);
+  // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
+extern void* dector_ZN16QSystemSemaphoreC1ERKS_(void* arg0);
+extern void _ZN16QSystemSemaphoreC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QSystemSemaphore::acquire();
+extern void _ZN16QSystemSemaphore7acquireEv(void* qthis);
+  // proto:  void QSystemSemaphore::~QSystemSemaphore();
+extern void _ZN16QSystemSemaphoreD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSystemSemaphore)=1
 type QSystemSemaphore struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QSystemSemaphore::key();
 func (this *QSystemSemaphore) key(args ...interface{}) () {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +81,7 @@ func (this *QSystemSemaphore) key(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QSystemSemaphore::release(int n);
 func (this *QSystemSemaphore) release(args ...interface{}) () {
   // release(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +100,7 @@ func (this *QSystemSemaphore) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QSystemSemaphore::errorString();
 func (this *QSystemSemaphore) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,12 +118,12 @@ func (this *QSystemSemaphore) errorString(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
 func NewQSystemSemaphore(args ...interface{}) QSystemSemaphore {
   return QSystemSemaphore{}
 }
 
-
+  // proto:  bool QSystemSemaphore::acquire();
 func (this *QSystemSemaphore) acquire(args ...interface{}) () {
   // acquire()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +141,7 @@ func (this *QSystemSemaphore) acquire(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSystemSemaphore::~QSystemSemaphore();
 func (this *QSystemSemaphore) FreeQSystemSemaphore(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,44 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
+extern void _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
+extern void _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
+extern void _ZN20QPictureFormatPluginD0Ev(void* qthis);
+  // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
+extern void* dector_ZN20QPictureFormatPluginC1EP7QObject(void* arg0);
+extern void _ZN20QPictureFormatPluginC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
+extern void _ZN20QPictureFormatPlugin16installIOHandlerERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
+extern void _ZNK20QPictureFormatPlugin10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPictureFormatPlugin)=1
 type QPictureFormatPlugin struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
 func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
   // loadPicture(const class QString &, const class QString &, class QPicture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -62,7 +84,7 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPictureFormatPlugin::savePicture(const QString & format, const QString & filename, const QPicture & pic);
 func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
   // savePicture(const class QString &, const class QString &, const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +105,7 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
 func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,12 +119,12 @@ func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) 
 
 }
 
-
+  // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 func NewQPictureFormatPlugin(args ...interface{}) QPictureFormatPlugin {
   return QPictureFormatPlugin{}
 }
 
-
+  // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
 func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
   // installIOHandler(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +143,7 @@ func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
 func (this *QPictureFormatPlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

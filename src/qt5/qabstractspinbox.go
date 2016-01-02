@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,86 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QAbstractSpinBox::stepBy(int steps);
+extern void _ZN16QAbstractSpinBox6stepByEi(void* qthis, int arg0);
+  // proto:  void QAbstractSpinBox::setReadOnly(bool r);
+extern void _ZN16QAbstractSpinBox11setReadOnlyEb(void* qthis, bool arg0);
+  // proto:  void QAbstractSpinBox::setFrame(bool );
+extern void _ZN16QAbstractSpinBox8setFrameEb(void* qthis, bool arg0);
+  // proto:  void QAbstractSpinBox::setSpecialValueText(const QString & txt);
+extern void _ZN16QAbstractSpinBox19setSpecialValueTextERK7QString(void* qthis, void* arg0);
+  // proto:  void QAbstractSpinBox::setAccelerated(bool on);
+extern void _ZN16QAbstractSpinBox14setAcceleratedEb(void* qthis, bool arg0);
+  // proto:  void QAbstractSpinBox::interpretText();
+extern void _ZN16QAbstractSpinBox13interpretTextEv(void* qthis);
+  // proto:  bool QAbstractSpinBox::event(QEvent * event);
+extern void _ZN16QAbstractSpinBox5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  bool QAbstractSpinBox::keyboardTracking();
+extern void _ZNK16QAbstractSpinBox16keyboardTrackingEv(void* qthis);
+  // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
+extern void* dector_ZN16QAbstractSpinBoxC1ERKS_(void* arg0);
+extern void _ZN16QAbstractSpinBoxC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
+extern void _ZNK16QAbstractSpinBox10metaObjectEv(void* qthis);
+  // proto:  QSize QAbstractSpinBox::sizeHint();
+extern void _ZNK16QAbstractSpinBox8sizeHintEv(void* qthis);
+  // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
+extern void _ZN16QAbstractSpinBoxD0Ev(void* qthis);
+  // proto:  void QAbstractSpinBox::fixup(QString & input);
+extern void _ZNK16QAbstractSpinBox5fixupER7QString(void* qthis, void* arg0);
+  // proto:  void QAbstractSpinBox::selectAll();
+extern void _ZN16QAbstractSpinBox9selectAllEv(void* qthis);
+  // proto:  void QAbstractSpinBox::stepDown();
+extern void _ZN16QAbstractSpinBox8stepDownEv(void* qthis);
+  // proto:  void QAbstractSpinBox::clear();
+extern void _ZN16QAbstractSpinBox5clearEv(void* qthis);
+  // proto:  QString QAbstractSpinBox::text();
+extern void _ZNK16QAbstractSpinBox4textEv(void* qthis);
+  // proto:  QString QAbstractSpinBox::specialValueText();
+extern void _ZNK16QAbstractSpinBox16specialValueTextEv(void* qthis);
+  // proto:  QSize QAbstractSpinBox::minimumSizeHint();
+extern void _ZNK16QAbstractSpinBox15minimumSizeHintEv(void* qthis);
+  // proto:  bool QAbstractSpinBox::wrapping();
+extern void _ZNK16QAbstractSpinBox8wrappingEv(void* qthis);
+  // proto:  void QAbstractSpinBox::QAbstractSpinBox(QWidget * parent);
+extern void* dector_ZN16QAbstractSpinBoxC1EP7QWidget(void* arg0);
+extern void _ZN16QAbstractSpinBoxC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QAbstractSpinBox::stepUp();
+extern void _ZN16QAbstractSpinBox6stepUpEv(void* qthis);
+  // proto:  void QAbstractSpinBox::setWrapping(bool w);
+extern void _ZN16QAbstractSpinBox11setWrappingEb(void* qthis, bool arg0);
+  // proto:  void QAbstractSpinBox::setKeyboardTracking(bool kt);
+extern void _ZN16QAbstractSpinBox19setKeyboardTrackingEb(void* qthis, bool arg0);
+  // proto:  bool QAbstractSpinBox::isAccelerated();
+extern void _ZNK16QAbstractSpinBox13isAcceleratedEv(void* qthis);
+  // proto:  void QAbstractSpinBox::setGroupSeparatorShown(bool shown);
+extern void _ZN16QAbstractSpinBox22setGroupSeparatorShownEb(void* qthis, bool arg0);
+  // proto:  bool QAbstractSpinBox::isReadOnly();
+extern void _ZNK16QAbstractSpinBox10isReadOnlyEv(void* qthis);
+  // proto:  bool QAbstractSpinBox::hasAcceptableInput();
+extern void _ZNK16QAbstractSpinBox18hasAcceptableInputEv(void* qthis);
+  // proto:  bool QAbstractSpinBox::isGroupSeparatorShown();
+extern void _ZNK16QAbstractSpinBox21isGroupSeparatorShownEv(void* qthis);
+  // proto:  bool QAbstractSpinBox::hasFrame();
+extern void _ZNK16QAbstractSpinBox8hasFrameEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractSpinBox)=1
 type QAbstractSpinBox struct {
   /*qbase*/ QWidget;
@@ -42,7 +113,7 @@ type QAbstractSpinBox struct {
 //  _editingFinished QAbstractSpinBox_editingFinished_signal;
 }
 
-
+  // proto:  void QAbstractSpinBox::stepBy(int steps);
 func (this *QAbstractSpinBox) stepBy(args ...interface{}) () {
   // stepBy(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +132,7 @@ func (this *QAbstractSpinBox) stepBy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setReadOnly(bool r);
 func (this *QAbstractSpinBox) setReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +151,7 @@ func (this *QAbstractSpinBox) setReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setFrame(bool );
 func (this *QAbstractSpinBox) setFrame(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +170,7 @@ func (this *QAbstractSpinBox) setFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setSpecialValueText(const QString & txt);
 func (this *QAbstractSpinBox) setSpecialValueText(args ...interface{}) () {
   // setSpecialValueText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +189,7 @@ func (this *QAbstractSpinBox) setSpecialValueText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setAccelerated(bool on);
 func (this *QAbstractSpinBox) setAccelerated(args ...interface{}) () {
   // setAccelerated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +208,7 @@ func (this *QAbstractSpinBox) setAccelerated(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::interpretText();
 func (this *QAbstractSpinBox) interpretText(args ...interface{}) () {
   // interpretText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +226,7 @@ func (this *QAbstractSpinBox) interpretText(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::event(QEvent * event);
 func (this *QAbstractSpinBox) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +245,7 @@ func (this *QAbstractSpinBox) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::keyboardTracking();
 func (this *QAbstractSpinBox) keyboardTracking(args ...interface{}) () {
   // keyboardTracking()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,12 +263,12 @@ func (this *QAbstractSpinBox) keyboardTracking(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::QAbstractSpinBox(const QAbstractSpinBox & );
 func NewQAbstractSpinBox(args ...interface{}) QAbstractSpinBox {
   return QAbstractSpinBox{}
 }
 
-
+  // proto:  const QMetaObject * QAbstractSpinBox::metaObject();
 func (this *QAbstractSpinBox) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +286,7 @@ func (this *QAbstractSpinBox) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QAbstractSpinBox::sizeHint();
 func (this *QAbstractSpinBox) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +304,7 @@ func (this *QAbstractSpinBox) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::~QAbstractSpinBox();
 func (this *QAbstractSpinBox) FreeQAbstractSpinBox(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +318,7 @@ func (this *QAbstractSpinBox) FreeQAbstractSpinBox(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::fixup(QString & input);
 func (this *QAbstractSpinBox) fixup(args ...interface{}) () {
   // fixup(class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +337,7 @@ func (this *QAbstractSpinBox) fixup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::selectAll();
 func (this *QAbstractSpinBox) selectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +355,7 @@ func (this *QAbstractSpinBox) selectAll(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::stepDown();
 func (this *QAbstractSpinBox) stepDown(args ...interface{}) () {
   // stepDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +373,7 @@ func (this *QAbstractSpinBox) stepDown(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::clear();
 func (this *QAbstractSpinBox) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +391,7 @@ func (this *QAbstractSpinBox) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QAbstractSpinBox::text();
 func (this *QAbstractSpinBox) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,7 +409,7 @@ func (this *QAbstractSpinBox) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QAbstractSpinBox::specialValueText();
 func (this *QAbstractSpinBox) specialValueText(args ...interface{}) () {
   // specialValueText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -356,7 +427,7 @@ func (this *QAbstractSpinBox) specialValueText(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QAbstractSpinBox::minimumSizeHint();
 func (this *QAbstractSpinBox) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -374,7 +445,7 @@ func (this *QAbstractSpinBox) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::wrapping();
 func (this *QAbstractSpinBox) wrapping(args ...interface{}) () {
   // wrapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,7 +463,7 @@ func (this *QAbstractSpinBox) wrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::stepUp();
 func (this *QAbstractSpinBox) stepUp(args ...interface{}) () {
   // stepUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -410,7 +481,7 @@ func (this *QAbstractSpinBox) stepUp(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setWrapping(bool w);
 func (this *QAbstractSpinBox) setWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -429,7 +500,7 @@ func (this *QAbstractSpinBox) setWrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setKeyboardTracking(bool kt);
 func (this *QAbstractSpinBox) setKeyboardTracking(args ...interface{}) () {
   // setKeyboardTracking(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -448,7 +519,7 @@ func (this *QAbstractSpinBox) setKeyboardTracking(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::isAccelerated();
 func (this *QAbstractSpinBox) isAccelerated(args ...interface{}) () {
   // isAccelerated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -466,7 +537,7 @@ func (this *QAbstractSpinBox) isAccelerated(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractSpinBox::setGroupSeparatorShown(bool shown);
 func (this *QAbstractSpinBox) setGroupSeparatorShown(args ...interface{}) () {
   // setGroupSeparatorShown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -485,7 +556,7 @@ func (this *QAbstractSpinBox) setGroupSeparatorShown(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::isReadOnly();
 func (this *QAbstractSpinBox) isReadOnly(args ...interface{}) () {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -503,7 +574,7 @@ func (this *QAbstractSpinBox) isReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::hasAcceptableInput();
 func (this *QAbstractSpinBox) hasAcceptableInput(args ...interface{}) () {
   // hasAcceptableInput()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +592,7 @@ func (this *QAbstractSpinBox) hasAcceptableInput(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::isGroupSeparatorShown();
 func (this *QAbstractSpinBox) isGroupSeparatorShown(args ...interface{}) () {
   // isGroupSeparatorShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +610,7 @@ func (this *QAbstractSpinBox) isGroupSeparatorShown(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractSpinBox::hasFrame();
 func (this *QAbstractSpinBox) hasFrame(args ...interface{}) () {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)

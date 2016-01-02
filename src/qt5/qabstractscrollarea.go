@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qabstractscrollarea.h
 // dst-file: /src/widgets/qabstractscrollarea.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,65 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QScrollBar * QAbstractScrollArea::horizontalScrollBar();
+extern void _ZNK19QAbstractScrollArea19horizontalScrollBarEv(void* qthis);
+  // proto:  QSize QAbstractScrollArea::maximumViewportSize();
+extern void _ZNK19QAbstractScrollArea19maximumViewportSizeEv(void* qthis);
+  // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
+extern void* dector_ZN19QAbstractScrollAreaC1EP7QWidget(void* arg0);
+extern void _ZN19QAbstractScrollAreaC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QAbstractScrollArea::setViewport(QWidget * widget);
+extern void _ZN19QAbstractScrollArea11setViewportEP7QWidget(void* qthis, void* arg0);
+  // proto:  QSize QAbstractScrollArea::minimumSizeHint();
+extern void _ZNK19QAbstractScrollArea15minimumSizeHintEv(void* qthis);
+  // proto:  void QAbstractScrollArea::QAbstractScrollArea(const QAbstractScrollArea & );
+extern void* dector_ZN19QAbstractScrollAreaC1ERKS_(void* arg0);
+extern void _ZN19QAbstractScrollAreaC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QAbstractScrollArea::setCornerWidget(QWidget * widget);
+extern void _ZN19QAbstractScrollArea15setCornerWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QAbstractScrollArea::metaObject();
+extern void _ZNK19QAbstractScrollArea10metaObjectEv(void* qthis);
+  // proto:  void QAbstractScrollArea::setupViewport(QWidget * viewport);
+extern void _ZN19QAbstractScrollArea13setupViewportEP7QWidget(void* qthis, void* arg0);
+  // proto:  QWidget * QAbstractScrollArea::cornerWidget();
+extern void _ZNK19QAbstractScrollArea12cornerWidgetEv(void* qthis);
+  // proto:  QScrollBar * QAbstractScrollArea::verticalScrollBar();
+extern void _ZNK19QAbstractScrollArea17verticalScrollBarEv(void* qthis);
+  // proto:  QWidget * QAbstractScrollArea::viewport();
+extern void _ZNK19QAbstractScrollArea8viewportEv(void* qthis);
+  // proto:  void QAbstractScrollArea::~QAbstractScrollArea();
+extern void _ZN19QAbstractScrollAreaD0Ev(void* qthis);
+  // proto:  QSize QAbstractScrollArea::sizeHint();
+extern void _ZNK19QAbstractScrollArea8sizeHintEv(void* qthis);
+  // proto:  void QAbstractScrollArea::setHorizontalScrollBar(QScrollBar * scrollbar);
+extern void _ZN19QAbstractScrollArea22setHorizontalScrollBarEP10QScrollBar(void* qthis, void* arg0);
+  // proto:  void QAbstractScrollArea::setVerticalScrollBar(QScrollBar * scrollbar);
+extern void _ZN19QAbstractScrollArea20setVerticalScrollBarEP10QScrollBar(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractScrollArea)=1
 type QAbstractScrollArea struct {
   /*qbase*/ QFrame;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QScrollBar * QAbstractScrollArea::horizontalScrollBar();
 func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
   // horizontalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +102,7 @@ func (this *QAbstractScrollArea) horizontalScrollBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QAbstractScrollArea::maximumViewportSize();
 func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
   // maximumViewportSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,12 +120,12 @@ func (this *QAbstractScrollArea) maximumViewportSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractScrollArea::QAbstractScrollArea(QWidget * parent);
 func NewQAbstractScrollArea(args ...interface{}) QAbstractScrollArea {
   return QAbstractScrollArea{}
 }
 
-
+  // proto:  void QAbstractScrollArea::setViewport(QWidget * widget);
 func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
   // setViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -101,7 +144,7 @@ func (this *QAbstractScrollArea) setViewport(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QAbstractScrollArea::minimumSizeHint();
 func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +162,7 @@ func (this *QAbstractScrollArea) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractScrollArea::setCornerWidget(QWidget * widget);
 func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
   // setCornerWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,7 +181,7 @@ func (this *QAbstractScrollArea) setCornerWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractScrollArea::metaObject();
 func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +199,7 @@ func (this *QAbstractScrollArea) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractScrollArea::setupViewport(QWidget * viewport);
 func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
   // setupViewport(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,7 +218,7 @@ func (this *QAbstractScrollArea) setupViewport(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QAbstractScrollArea::cornerWidget();
 func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
   // cornerWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +236,7 @@ func (this *QAbstractScrollArea) cornerWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QScrollBar * QAbstractScrollArea::verticalScrollBar();
 func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
   // verticalScrollBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +254,7 @@ func (this *QAbstractScrollArea) verticalScrollBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QAbstractScrollArea::viewport();
 func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
   // viewport()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +272,7 @@ func (this *QAbstractScrollArea) viewport(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractScrollArea::~QAbstractScrollArea();
 func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -243,7 +286,7 @@ func (this *QAbstractScrollArea) FreeQAbstractScrollArea(args ...interface{}) ()
 
 }
 
-
+  // proto:  QSize QAbstractScrollArea::sizeHint();
 func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,7 +304,7 @@ func (this *QAbstractScrollArea) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractScrollArea::setHorizontalScrollBar(QScrollBar * scrollbar);
 func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () {
   // setHorizontalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -280,7 +323,7 @@ func (this *QAbstractScrollArea) setHorizontalScrollBar(args ...interface{}) () 
 
 }
 
-
+  // proto:  void QAbstractScrollArea::setVerticalScrollBar(QScrollBar * scrollbar);
 func (this *QAbstractScrollArea) setVerticalScrollBar(args ...interface{}) () {
   // setVerticalScrollBar(class QScrollBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)

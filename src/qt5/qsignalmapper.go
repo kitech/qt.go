@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,56 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSignalMapper::removeMappings(QObject * sender);
+extern void _ZN13QSignalMapper14removeMappingsEP7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::map(QObject * sender);
+extern void _ZN13QSignalMapper3mapEP7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::QSignalMapper(const QSignalMapper & );
+extern void* dector_ZN13QSignalMapperC1ERKS_(void* arg0);
+extern void _ZN13QSignalMapperC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QSignalMapper::metaObject();
+extern void _ZNK13QSignalMapper10metaObjectEv(void* qthis);
+  // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
+extern void _ZN13QSignalMapper10setMappingEP7QObjectS1_(void* qthis, void* arg0, void* arg1);
+  // proto:  QObject * QSignalMapper::mapping(int id);
+extern void _ZNK13QSignalMapper7mappingEi(void* qthis, int arg0);
+  // proto:  void QSignalMapper::QSignalMapper(QObject * parent);
+extern void* dector_ZN13QSignalMapperC1EP7QObject(void* arg0);
+extern void _ZN13QSignalMapperC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::~QSignalMapper();
+extern void _ZN13QSignalMapperD0Ev(void* qthis);
+  // proto:  void QSignalMapper::setMapping(QObject * sender, int id);
+extern void _ZN13QSignalMapper10setMappingEP7QObjecti(void* qthis, void* arg0, int arg1);
+  // proto:  QObject * QSignalMapper::mapping(const QString & text);
+extern void _ZNK13QSignalMapper7mappingERK7QString(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::map();
+extern void _ZN13QSignalMapper3mapEv(void* qthis);
+  // proto:  QObject * QSignalMapper::mapping(QObject * object);
+extern void _ZNK13QSignalMapper7mappingEP7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::setMapping(QObject * sender, const QString & text);
+extern void _ZN13QSignalMapper10setMappingEP7QObjectRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  QObject * QSignalMapper::mapping(QWidget * widget);
+extern void _ZNK13QSignalMapper7mappingEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QSignalMapper::setMapping(QObject * sender, QWidget * widget);
+extern void _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget(void* qthis, void* arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSignalMapper)=1
 type QSignalMapper struct {
   /*qbase*/ QObject;
@@ -42,7 +83,7 @@ type QSignalMapper struct {
 //  _mapped QSignalMapper_mapped_signal;
 }
 
-
+  // proto:  void QSignalMapper::removeMappings(QObject * sender);
 func (this *QSignalMapper) removeMappings(args ...interface{}) () {
   // removeMappings(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +102,7 @@ func (this *QSignalMapper) removeMappings(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalMapper::map(QObject * sender);
 func (this *QSignalMapper) map_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -75,12 +116,12 @@ func (this *QSignalMapper) map_(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalMapper::QSignalMapper(const QSignalMapper & );
 func NewQSignalMapper(args ...interface{}) QSignalMapper {
   return QSignalMapper{}
 }
 
-
+  // proto:  const QMetaObject * QSignalMapper::metaObject();
 func (this *QSignalMapper) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +139,7 @@ func (this *QSignalMapper) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
 func (this *QSignalMapper) setMapping(args ...interface{}) () {
   // setMapping(class QObject *, class QObject *)
   // setMapping(class QObject *, int)
@@ -136,7 +177,7 @@ func (this *QSignalMapper) setMapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObject * QSignalMapper::mapping(int id);
 func (this *QSignalMapper) mapping(args ...interface{}) () {
   // mapping(int)
   // mapping(const class QString &)
@@ -170,7 +211,7 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalMapper::~QSignalMapper();
 func (this *QSignalMapper) FreeQSignalMapper(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

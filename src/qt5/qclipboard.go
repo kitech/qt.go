@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,44 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QClipboard::~QClipboard();
+extern void _ZN10QClipboardD0Ev(void* qthis);
+  // proto:  void QClipboard::QClipboard(QObject * parent);
+extern void* dector_ZN10QClipboardC1EP7QObject(void* arg0);
+extern void _ZN10QClipboardC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QClipboard::QClipboard(const QClipboard & );
+extern void* dector_ZN10QClipboardC1ERKS_(void* arg0);
+extern void _ZN10QClipboardC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QClipboard::supportsFindBuffer();
+extern void _ZNK10QClipboard18supportsFindBufferEv(void* qthis);
+  // proto:  bool QClipboard::ownsFindBuffer();
+extern void _ZNK10QClipboard14ownsFindBufferEv(void* qthis);
+  // proto:  bool QClipboard::ownsClipboard();
+extern void _ZNK10QClipboard13ownsClipboardEv(void* qthis);
+  // proto:  const QMetaObject * QClipboard::metaObject();
+extern void _ZNK10QClipboard10metaObjectEv(void* qthis);
+  // proto:  bool QClipboard::supportsSelection();
+extern void _ZNK10QClipboard17supportsSelectionEv(void* qthis);
+  // proto:  bool QClipboard::ownsSelection();
+extern void _ZNK10QClipboard13ownsSelectionEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QClipboard)=1
 type QClipboard struct {
   /*qbase*/ QObject;
@@ -45,7 +74,7 @@ type QClipboard struct {
 //  _dataChanged QClipboard_dataChanged_signal;
 }
 
-
+  // proto:  void QClipboard::~QClipboard();
 func (this *QClipboard) FreeQClipboard(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -59,12 +88,12 @@ func (this *QClipboard) FreeQClipboard(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QClipboard::QClipboard(QObject * parent);
 func NewQClipboard(args ...interface{}) QClipboard {
   return QClipboard{}
 }
 
-
+  // proto:  bool QClipboard::supportsFindBuffer();
 func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
   // supportsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +111,7 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QClipboard::ownsFindBuffer();
 func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
   // ownsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +129,7 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QClipboard::ownsClipboard();
 func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   // ownsClipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +147,7 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QClipboard::metaObject();
 func (this *QClipboard) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +165,7 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QClipboard::supportsSelection();
 func (this *QClipboard) supportsSelection(args ...interface{}) () {
   // supportsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +183,7 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QClipboard::ownsSelection();
 func (this *QClipboard) ownsSelection(args ...interface{}) () {
   // ownsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,55 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QEventLoop::exit(int returnCode);
+extern void _ZN10QEventLoop4exitEi(void* qthis, int arg0);
+  // proto:  void QEventLoop::quit();
+extern void _ZN10QEventLoop4quitEv(void* qthis);
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
+extern void* dector_ZN10QEventLoopC1EP7QObject(void* arg0);
+extern void _ZN10QEventLoopC1EP7QObject(void* qthis, void* arg0);
+  // proto:  bool QEventLoop::isRunning();
+extern void _ZNK10QEventLoop9isRunningEv(void* qthis);
+  // proto:  const QMetaObject * QEventLoop::metaObject();
+extern void _ZNK10QEventLoop10metaObjectEv(void* qthis);
+  // proto:  void QEventLoop::wakeUp();
+extern void _ZN10QEventLoop6wakeUpEv(void* qthis);
+  // proto:  void QEventLoop::~QEventLoop();
+extern void _ZN10QEventLoopD0Ev(void* qthis);
+  // proto:  bool QEventLoop::event(QEvent * event);
+extern void _ZN10QEventLoop5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
+extern void* dector_ZN16QEventLoopLockerC1EP7QThread(void* arg0);
+extern void _ZN16QEventLoopLockerC1EP7QThread(void* qthis, void* arg0);
+  // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
+extern void* dector_ZN16QEventLoopLockerC1EP10QEventLoop(void* arg0);
+extern void _ZN16QEventLoopLockerC1EP10QEventLoop(void* qthis, void* arg0);
+  // proto:  void QEventLoopLocker::QEventLoopLocker();
+extern void* dector_ZN16QEventLoopLockerC1Ev();
+extern void _ZN16QEventLoopLockerC1Ev(void* qthis);
+  // proto:  void QEventLoopLocker::QEventLoopLocker(const QEventLoopLocker & );
+extern void* dector_ZN16QEventLoopLockerC1ERKS_(void* arg0);
+extern void _ZN16QEventLoopLockerC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QEventLoopLocker::~QEventLoopLocker();
+extern void _ZN16QEventLoopLockerD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QEventLoop)=1
 type QEventLoop struct {
   /*qbase*/ QObject;
@@ -47,7 +87,7 @@ type QEventLoopLocker struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QEventLoop::exit(int returnCode);
 func (this *QEventLoop) exit(args ...interface{}) () {
   // exit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +106,7 @@ func (this *QEventLoop) exit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEventLoop::quit();
 func (this *QEventLoop) quit(args ...interface{}) () {
   // quit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,12 +124,12 @@ func (this *QEventLoop) quit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
 func NewQEventLoop(args ...interface{}) QEventLoop {
   return QEventLoop{}
 }
 
-
+  // proto:  bool QEventLoop::isRunning();
 func (this *QEventLoop) isRunning(args ...interface{}) () {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +147,7 @@ func (this *QEventLoop) isRunning(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QEventLoop::metaObject();
 func (this *QEventLoop) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +165,7 @@ func (this *QEventLoop) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEventLoop::wakeUp();
 func (this *QEventLoop) wakeUp(args ...interface{}) () {
   // wakeUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,7 +183,7 @@ func (this *QEventLoop) wakeUp(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEventLoop::~QEventLoop();
 func (this *QEventLoop) FreeQEventLoop(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -157,7 +197,7 @@ func (this *QEventLoop) FreeQEventLoop(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QEventLoop::event(QEvent * event);
 func (this *QEventLoop) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,12 +216,12 @@ func (this *QEventLoop) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
 func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
   return QEventLoopLocker{}
 }
 
-
+  // proto:  void QEventLoopLocker::~QEventLoopLocker();
 func (this *QEventLoopLocker) FreeQEventLoopLocker(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

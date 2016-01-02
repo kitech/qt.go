@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,96 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QCalendarWidget::showPreviousYear();
+extern void _ZN15QCalendarWidget16showPreviousYearEv(void* qthis);
+  // proto:  QDate QCalendarWidget::maximumDate();
+extern void _ZNK15QCalendarWidget11maximumDateEv(void* qthis);
+  // proto:  void QCalendarWidget::showPreviousMonth();
+extern void _ZN15QCalendarWidget17showPreviousMonthEv(void* qthis);
+  // proto:  void QCalendarWidget::showSelectedDate();
+extern void _ZN15QCalendarWidget16showSelectedDateEv(void* qthis);
+  // proto:  QSize QCalendarWidget::minimumSizeHint();
+extern void _ZNK15QCalendarWidget15minimumSizeHintEv(void* qthis);
+  // proto:  void QCalendarWidget::setDateEditAcceptDelay(int delay);
+extern void _ZN15QCalendarWidget22setDateEditAcceptDelayEi(void* qthis, int arg0);
+  // proto:  void QCalendarWidget::setGridVisible(bool show);
+extern void _ZN15QCalendarWidget14setGridVisibleEb(void* qthis, bool arg0);
+  // proto:  void QCalendarWidget::~QCalendarWidget();
+extern void _ZN15QCalendarWidgetD0Ev(void* qthis);
+  // proto:  QSize QCalendarWidget::sizeHint();
+extern void _ZNK15QCalendarWidget8sizeHintEv(void* qthis);
+  // proto:  int QCalendarWidget::monthShown();
+extern void _ZNK15QCalendarWidget10monthShownEv(void* qthis);
+  // proto:  void QCalendarWidget::setSelectedDate(const QDate & date);
+extern void _ZN15QCalendarWidget15setSelectedDateERK5QDate(void* qthis, void* arg0);
+  // proto:  void QCalendarWidget::QCalendarWidget(QWidget * parent);
+extern void* dector_ZN15QCalendarWidgetC1EP7QWidget(void* arg0);
+extern void _ZN15QCalendarWidgetC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QCalendarWidget::metaObject();
+extern void _ZNK15QCalendarWidget10metaObjectEv(void* qthis);
+  // proto:  void QCalendarWidget::setNavigationBarVisible(bool visible);
+extern void _ZN15QCalendarWidget23setNavigationBarVisibleEb(void* qthis, bool arg0);
+  // proto:  bool QCalendarWidget::isNavigationBarVisible();
+extern void _ZNK15QCalendarWidget22isNavigationBarVisibleEv(void* qthis);
+  // proto:  QTextCharFormat QCalendarWidget::dateTextFormat(const QDate & date);
+extern void _ZNK15QCalendarWidget14dateTextFormatERK5QDate(void* qthis, void* arg0);
+  // proto:  void QCalendarWidget::setMinimumDate(const QDate & date);
+extern void _ZN15QCalendarWidget14setMinimumDateERK5QDate(void* qthis, void* arg0);
+  // proto:  int QCalendarWidget::dateEditAcceptDelay();
+extern void _ZNK15QCalendarWidget19dateEditAcceptDelayEv(void* qthis);
+  // proto:  QDate QCalendarWidget::minimumDate();
+extern void _ZNK15QCalendarWidget11minimumDateEv(void* qthis);
+  // proto:  void QCalendarWidget::QCalendarWidget(const QCalendarWidget & );
+extern void* dector_ZN15QCalendarWidgetC1ERKS_(void* arg0);
+extern void _ZN15QCalendarWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QCalendarWidget::isDateEditEnabled();
+extern void _ZNK15QCalendarWidget17isDateEditEnabledEv(void* qthis);
+  // proto:  QMap<QDate, QTextCharFormat> QCalendarWidget::dateTextFormat();
+extern void _ZNK15QCalendarWidget14dateTextFormatEv(void* qthis);
+  // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
+extern void _ZN15QCalendarWidget18setDateEditEnabledEb(void* qthis, bool arg0);
+  // proto:  void QCalendarWidget::setDateTextFormat(const QDate & date, const QTextCharFormat & format);
+extern void _ZN15QCalendarWidget17setDateTextFormatERK5QDateRK15QTextCharFormat(void* qthis, void* arg0, void* arg1);
+  // proto:  void QCalendarWidget::showNextMonth();
+extern void _ZN15QCalendarWidget13showNextMonthEv(void* qthis);
+  // proto:  void QCalendarWidget::setDateRange(const QDate & min, const QDate & max);
+extern void _ZN15QCalendarWidget12setDateRangeERK5QDateS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QDate QCalendarWidget::selectedDate();
+extern void _ZNK15QCalendarWidget12selectedDateEv(void* qthis);
+  // proto:  void QCalendarWidget::setHeaderTextFormat(const QTextCharFormat & format);
+extern void _ZN15QCalendarWidget19setHeaderTextFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  bool QCalendarWidget::isGridVisible();
+extern void _ZNK15QCalendarWidget13isGridVisibleEv(void* qthis);
+  // proto:  int QCalendarWidget::yearShown();
+extern void _ZNK15QCalendarWidget9yearShownEv(void* qthis);
+  // proto:  void QCalendarWidget::setMaximumDate(const QDate & date);
+extern void _ZN15QCalendarWidget14setMaximumDateERK5QDate(void* qthis, void* arg0);
+  // proto:  QTextCharFormat QCalendarWidget::headerTextFormat();
+extern void _ZNK15QCalendarWidget16headerTextFormatEv(void* qthis);
+  // proto:  void QCalendarWidget::setCurrentPage(int year, int month);
+extern void _ZN15QCalendarWidget14setCurrentPageEii(void* qthis, int arg0, int arg1);
+  // proto:  void QCalendarWidget::showToday();
+extern void _ZN15QCalendarWidget9showTodayEv(void* qthis);
+  // proto:  void QCalendarWidget::showNextYear();
+extern void _ZN15QCalendarWidget12showNextYearEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QCalendarWidget)=1
 type QCalendarWidget struct {
   /*qbase*/ QWidget;
@@ -45,7 +126,7 @@ type QCalendarWidget struct {
 //  _selectionChanged QCalendarWidget_selectionChanged_signal;
 }
 
-
+  // proto:  void QCalendarWidget::showPreviousYear();
 func (this *QCalendarWidget) showPreviousYear(args ...interface{}) () {
   // showPreviousYear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -63,7 +144,7 @@ func (this *QCalendarWidget) showPreviousYear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDate QCalendarWidget::maximumDate();
 func (this *QCalendarWidget) maximumDate(args ...interface{}) () {
   // maximumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +162,7 @@ func (this *QCalendarWidget) maximumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::showPreviousMonth();
 func (this *QCalendarWidget) showPreviousMonth(args ...interface{}) () {
   // showPreviousMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +180,7 @@ func (this *QCalendarWidget) showPreviousMonth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::showSelectedDate();
 func (this *QCalendarWidget) showSelectedDate(args ...interface{}) () {
   // showSelectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +198,7 @@ func (this *QCalendarWidget) showSelectedDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QCalendarWidget::minimumSizeHint();
 func (this *QCalendarWidget) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +216,7 @@ func (this *QCalendarWidget) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setDateEditAcceptDelay(int delay);
 func (this *QCalendarWidget) setDateEditAcceptDelay(args ...interface{}) () {
   // setDateEditAcceptDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +235,7 @@ func (this *QCalendarWidget) setDateEditAcceptDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setGridVisible(bool show);
 func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
   // setGridVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +254,7 @@ func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::~QCalendarWidget();
 func (this *QCalendarWidget) FreeQCalendarWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -187,7 +268,7 @@ func (this *QCalendarWidget) FreeQCalendarWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QCalendarWidget::sizeHint();
 func (this *QCalendarWidget) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +286,7 @@ func (this *QCalendarWidget) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCalendarWidget::monthShown();
 func (this *QCalendarWidget) monthShown(args ...interface{}) () {
   // monthShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +304,7 @@ func (this *QCalendarWidget) monthShown(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setSelectedDate(const QDate & date);
 func (this *QCalendarWidget) setSelectedDate(args ...interface{}) () {
   // setSelectedDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,12 +323,12 @@ func (this *QCalendarWidget) setSelectedDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::QCalendarWidget(QWidget * parent);
 func NewQCalendarWidget(args ...interface{}) QCalendarWidget {
   return QCalendarWidget{}
 }
 
-
+  // proto:  const QMetaObject * QCalendarWidget::metaObject();
 func (this *QCalendarWidget) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +346,7 @@ func (this *QCalendarWidget) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setNavigationBarVisible(bool visible);
 func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
   // setNavigationBarVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +365,7 @@ func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCalendarWidget::isNavigationBarVisible();
 func (this *QCalendarWidget) isNavigationBarVisible(args ...interface{}) () {
   // isNavigationBarVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +383,7 @@ func (this *QCalendarWidget) isNavigationBarVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QCalendarWidget::dateTextFormat(const QDate & date);
 func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
   // dateTextFormat(const class QDate &)
   // dateTextFormat()
@@ -325,7 +406,7 @@ func (this *QCalendarWidget) dateTextFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setMinimumDate(const QDate & date);
 func (this *QCalendarWidget) setMinimumDate(args ...interface{}) () {
   // setMinimumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -344,7 +425,7 @@ func (this *QCalendarWidget) setMinimumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCalendarWidget::dateEditAcceptDelay();
 func (this *QCalendarWidget) dateEditAcceptDelay(args ...interface{}) () {
   // dateEditAcceptDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,7 +443,7 @@ func (this *QCalendarWidget) dateEditAcceptDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDate QCalendarWidget::minimumDate();
 func (this *QCalendarWidget) minimumDate(args ...interface{}) () {
   // minimumDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -380,7 +461,7 @@ func (this *QCalendarWidget) minimumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCalendarWidget::isDateEditEnabled();
 func (this *QCalendarWidget) isDateEditEnabled(args ...interface{}) () {
   // isDateEditEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +479,7 @@ func (this *QCalendarWidget) isDateEditEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setDateEditEnabled(bool enable);
 func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
   // setDateEditEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -417,7 +498,7 @@ func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setDateTextFormat(const QDate & date, const QTextCharFormat & format);
 func (this *QCalendarWidget) setDateTextFormat(args ...interface{}) () {
   // setDateTextFormat(const class QDate &, const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -437,7 +518,7 @@ func (this *QCalendarWidget) setDateTextFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::showNextMonth();
 func (this *QCalendarWidget) showNextMonth(args ...interface{}) () {
   // showNextMonth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -455,7 +536,7 @@ func (this *QCalendarWidget) showNextMonth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setDateRange(const QDate & min, const QDate & max);
 func (this *QCalendarWidget) setDateRange(args ...interface{}) () {
   // setDateRange(const class QDate &, const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -475,7 +556,7 @@ func (this *QCalendarWidget) setDateRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDate QCalendarWidget::selectedDate();
 func (this *QCalendarWidget) selectedDate(args ...interface{}) () {
   // selectedDate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -493,7 +574,7 @@ func (this *QCalendarWidget) selectedDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setHeaderTextFormat(const QTextCharFormat & format);
 func (this *QCalendarWidget) setHeaderTextFormat(args ...interface{}) () {
   // setHeaderTextFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -512,7 +593,7 @@ func (this *QCalendarWidget) setHeaderTextFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCalendarWidget::isGridVisible();
 func (this *QCalendarWidget) isGridVisible(args ...interface{}) () {
   // isGridVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -530,7 +611,7 @@ func (this *QCalendarWidget) isGridVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QCalendarWidget::yearShown();
 func (this *QCalendarWidget) yearShown(args ...interface{}) () {
   // yearShown()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -548,7 +629,7 @@ func (this *QCalendarWidget) yearShown(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setMaximumDate(const QDate & date);
 func (this *QCalendarWidget) setMaximumDate(args ...interface{}) () {
   // setMaximumDate(const class QDate &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -567,7 +648,7 @@ func (this *QCalendarWidget) setMaximumDate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QCalendarWidget::headerTextFormat();
 func (this *QCalendarWidget) headerTextFormat(args ...interface{}) () {
   // headerTextFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -585,7 +666,7 @@ func (this *QCalendarWidget) headerTextFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::setCurrentPage(int year, int month);
 func (this *QCalendarWidget) setCurrentPage(args ...interface{}) () {
   // setCurrentPage(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -605,7 +686,7 @@ func (this *QCalendarWidget) setCurrentPage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::showToday();
 func (this *QCalendarWidget) showToday(args ...interface{}) () {
   // showToday()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -623,7 +704,7 @@ func (this *QCalendarWidget) showToday(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCalendarWidget::showNextYear();
 func (this *QCalendarWidget) showNextYear(args ...interface{}) () {
   // showNextYear()
   var vtys = make(map[int32]map[int32]reflect.Type)

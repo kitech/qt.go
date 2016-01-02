@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,49 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
+extern void demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+  // proto:  void QStringList::QStringList();
+extern void* dector_ZN11QStringListC1Ev();
+extern void demth_ZN11QStringListC1Ev(void* qthis);
+  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
+extern void demth_ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  int QStringList::indexOf(QRegExp & rx, int from);
+extern void demth_ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
+extern void demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+  // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
+extern void demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
+extern void demth_ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  void QStringList::QStringList(const QString & i);
+extern void* dector_ZN11QStringListC1ERK7QString(void* arg0);
+extern void demth_ZN11QStringListC1ERK7QString(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStringList)=1
 type QStringList struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
 func (this *QStringList) lastIndexOf(args ...interface{}) () {
   // lastIndexOf(const class QRegularExpression &, int)
   // lastIndexOf(const class QRegExp &, int)
@@ -73,12 +100,12 @@ func (this *QStringList) lastIndexOf(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringList::QStringList();
 func NewQStringList(args ...interface{}) QStringList {
   return QStringList{}
 }
 
-
+  // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
 func (this *QStringList) indexOf(args ...interface{}) () {
   // indexOf(const class QRegExp &, int)
   // indexOf(class QRegExp &, int)

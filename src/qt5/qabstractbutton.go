@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,86 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QSize QAbstractButton::iconSize();
+extern void _ZNK15QAbstractButton8iconSizeEv(void* qthis);
+  // proto:  void QAbstractButton::click();
+extern void _ZN15QAbstractButton5clickEv(void* qthis);
+  // proto:  void QAbstractButton::~QAbstractButton();
+extern void _ZN15QAbstractButtonD0Ev(void* qthis);
+  // proto:  void QAbstractButton::setChecked(bool );
+extern void _ZN15QAbstractButton10setCheckedEb(void* qthis, bool arg0);
+  // proto:  QKeySequence QAbstractButton::shortcut();
+extern void _ZNK15QAbstractButton8shortcutEv(void* qthis);
+  // proto:  QButtonGroup * QAbstractButton::group();
+extern void _ZNK15QAbstractButton5groupEv(void* qthis);
+  // proto:  bool QAbstractButton::isCheckable();
+extern void _ZNK15QAbstractButton11isCheckableEv(void* qthis);
+  // proto:  void QAbstractButton::QAbstractButton(QWidget * parent);
+extern void* dector_ZN15QAbstractButtonC1EP7QWidget(void* arg0);
+extern void _ZN15QAbstractButtonC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  bool QAbstractButton::isDown();
+extern void _ZNK15QAbstractButton6isDownEv(void* qthis);
+  // proto:  void QAbstractButton::setAutoExclusive(bool );
+extern void _ZN15QAbstractButton16setAutoExclusiveEb(void* qthis, bool arg0);
+  // proto:  const QMetaObject * QAbstractButton::metaObject();
+extern void _ZNK15QAbstractButton10metaObjectEv(void* qthis);
+  // proto:  bool QAbstractButton::isChecked();
+extern void _ZNK15QAbstractButton9isCheckedEv(void* qthis);
+  // proto:  void QAbstractButton::setAutoRepeatDelay(int );
+extern void _ZN15QAbstractButton18setAutoRepeatDelayEi(void* qthis, int arg0);
+  // proto:  int QAbstractButton::autoRepeatDelay();
+extern void _ZNK15QAbstractButton15autoRepeatDelayEv(void* qthis);
+  // proto:  bool QAbstractButton::autoExclusive();
+extern void _ZNK15QAbstractButton13autoExclusiveEv(void* qthis);
+  // proto:  void QAbstractButton::toggle();
+extern void _ZN15QAbstractButton6toggleEv(void* qthis);
+  // proto:  void QAbstractButton::setIcon(const QIcon & icon);
+extern void _ZN15QAbstractButton7setIconERK5QIcon(void* qthis, void* arg0);
+  // proto:  void QAbstractButton::setAutoRepeatInterval(int );
+extern void _ZN15QAbstractButton21setAutoRepeatIntervalEi(void* qthis, int arg0);
+  // proto:  void QAbstractButton::setAutoRepeat(bool );
+extern void _ZN15QAbstractButton13setAutoRepeatEb(void* qthis, bool arg0);
+  // proto:  void QAbstractButton::QAbstractButton(const QAbstractButton & );
+extern void* dector_ZN15QAbstractButtonC1ERKS_(void* arg0);
+extern void _ZN15QAbstractButtonC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QAbstractButton::animateClick(int msec);
+extern void _ZN15QAbstractButton12animateClickEi(void* qthis, int arg0);
+  // proto:  void QAbstractButton::setDown(bool );
+extern void _ZN15QAbstractButton7setDownEb(void* qthis, bool arg0);
+  // proto:  QString QAbstractButton::text();
+extern void _ZNK15QAbstractButton4textEv(void* qthis);
+  // proto:  void QAbstractButton::setShortcut(const QKeySequence & key);
+extern void _ZN15QAbstractButton11setShortcutERK12QKeySequence(void* qthis, void* arg0);
+  // proto:  void QAbstractButton::setCheckable(bool );
+extern void _ZN15QAbstractButton12setCheckableEb(void* qthis, bool arg0);
+  // proto:  QIcon QAbstractButton::icon();
+extern void _ZNK15QAbstractButton4iconEv(void* qthis);
+  // proto:  void QAbstractButton::setText(const QString & text);
+extern void _ZN15QAbstractButton7setTextERK7QString(void* qthis, void* arg0);
+  // proto:  int QAbstractButton::autoRepeatInterval();
+extern void _ZNK15QAbstractButton18autoRepeatIntervalEv(void* qthis);
+  // proto:  bool QAbstractButton::autoRepeat();
+extern void _ZNK15QAbstractButton10autoRepeatEv(void* qthis);
+  // proto:  void QAbstractButton::setIconSize(const QSize & size);
+extern void _ZN15QAbstractButton11setIconSizeERK5QSize(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractButton)=1
 type QAbstractButton struct {
   /*qbase*/ QWidget;
@@ -45,7 +116,7 @@ type QAbstractButton struct {
 //  _toggled QAbstractButton_toggled_signal;
 }
 
-
+  // proto:  QSize QAbstractButton::iconSize();
 func (this *QAbstractButton) iconSize(args ...interface{}) () {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -63,7 +134,7 @@ func (this *QAbstractButton) iconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::click();
 func (this *QAbstractButton) click(args ...interface{}) () {
   // click()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,7 +152,7 @@ func (this *QAbstractButton) click(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::~QAbstractButton();
 func (this *QAbstractButton) FreeQAbstractButton(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -95,7 +166,7 @@ func (this *QAbstractButton) FreeQAbstractButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setChecked(bool );
 func (this *QAbstractButton) setChecked(args ...interface{}) () {
   // setChecked(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +185,7 @@ func (this *QAbstractButton) setChecked(args ...interface{}) () {
 
 }
 
-
+  // proto:  QKeySequence QAbstractButton::shortcut();
 func (this *QAbstractButton) shortcut(args ...interface{}) () {
   // shortcut()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +203,7 @@ func (this *QAbstractButton) shortcut(args ...interface{}) () {
 
 }
 
-
+  // proto:  QButtonGroup * QAbstractButton::group();
 func (this *QAbstractButton) group(args ...interface{}) () {
   // group()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +221,7 @@ func (this *QAbstractButton) group(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractButton::isCheckable();
 func (this *QAbstractButton) isCheckable(args ...interface{}) () {
   // isCheckable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,12 +239,12 @@ func (this *QAbstractButton) isCheckable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::QAbstractButton(QWidget * parent);
 func NewQAbstractButton(args ...interface{}) QAbstractButton {
   return QAbstractButton{}
 }
 
-
+  // proto:  bool QAbstractButton::isDown();
 func (this *QAbstractButton) isDown(args ...interface{}) () {
   // isDown()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +262,7 @@ func (this *QAbstractButton) isDown(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setAutoExclusive(bool );
 func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
   // setAutoExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,7 +281,7 @@ func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractButton::metaObject();
 func (this *QAbstractButton) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -228,7 +299,7 @@ func (this *QAbstractButton) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractButton::isChecked();
 func (this *QAbstractButton) isChecked(args ...interface{}) () {
   // isChecked()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +317,7 @@ func (this *QAbstractButton) isChecked(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setAutoRepeatDelay(int );
 func (this *QAbstractButton) setAutoRepeatDelay(args ...interface{}) () {
   // setAutoRepeatDelay(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +336,7 @@ func (this *QAbstractButton) setAutoRepeatDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractButton::autoRepeatDelay();
 func (this *QAbstractButton) autoRepeatDelay(args ...interface{}) () {
   // autoRepeatDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +354,7 @@ func (this *QAbstractButton) autoRepeatDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractButton::autoExclusive();
 func (this *QAbstractButton) autoExclusive(args ...interface{}) () {
   // autoExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -301,7 +372,7 @@ func (this *QAbstractButton) autoExclusive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::toggle();
 func (this *QAbstractButton) toggle(args ...interface{}) () {
   // toggle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +390,7 @@ func (this *QAbstractButton) toggle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setIcon(const QIcon & icon);
 func (this *QAbstractButton) setIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,7 +409,7 @@ func (this *QAbstractButton) setIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setAutoRepeatInterval(int );
 func (this *QAbstractButton) setAutoRepeatInterval(args ...interface{}) () {
   // setAutoRepeatInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,7 +428,7 @@ func (this *QAbstractButton) setAutoRepeatInterval(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setAutoRepeat(bool );
 func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
   // setAutoRepeat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +447,7 @@ func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::animateClick(int msec);
 func (this *QAbstractButton) animateClick(args ...interface{}) () {
   // animateClick(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +466,7 @@ func (this *QAbstractButton) animateClick(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setDown(bool );
 func (this *QAbstractButton) setDown(args ...interface{}) () {
   // setDown(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +485,7 @@ func (this *QAbstractButton) setDown(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QAbstractButton::text();
 func (this *QAbstractButton) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +503,7 @@ func (this *QAbstractButton) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setShortcut(const QKeySequence & key);
 func (this *QAbstractButton) setShortcut(args ...interface{}) () {
   // setShortcut(const class QKeySequence &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -451,7 +522,7 @@ func (this *QAbstractButton) setShortcut(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setCheckable(bool );
 func (this *QAbstractButton) setCheckable(args ...interface{}) () {
   // setCheckable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -470,7 +541,7 @@ func (this *QAbstractButton) setCheckable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QAbstractButton::icon();
 func (this *QAbstractButton) icon(args ...interface{}) () {
   // icon()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,7 +559,7 @@ func (this *QAbstractButton) icon(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setText(const QString & text);
 func (this *QAbstractButton) setText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -507,7 +578,7 @@ func (this *QAbstractButton) setText(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractButton::autoRepeatInterval();
 func (this *QAbstractButton) autoRepeatInterval(args ...interface{}) () {
   // autoRepeatInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -525,7 +596,7 @@ func (this *QAbstractButton) autoRepeatInterval(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAbstractButton::autoRepeat();
 func (this *QAbstractButton) autoRepeat(args ...interface{}) () {
   // autoRepeat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -543,7 +614,7 @@ func (this *QAbstractButton) autoRepeat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractButton::setIconSize(const QSize & size);
 func (this *QAbstractButton) setIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)

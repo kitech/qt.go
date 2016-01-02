@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,69 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QFontInfo::rawMode();
+extern void _ZNK9QFontInfo7rawModeEv(void* qthis);
+  // proto:  bool QFontInfo::exactMatch();
+extern void _ZNK9QFontInfo10exactMatchEv(void* qthis);
+  // proto:  int QFontInfo::pointSize();
+extern void _ZNK9QFontInfo9pointSizeEv(void* qthis);
+  // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
+extern void* dector_ZN9QFontInfoC1ERKS_(void* arg0);
+extern void _ZN9QFontInfoC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QFontInfo::family();
+extern void _ZNK9QFontInfo6familyEv(void* qthis);
+  // proto:  bool QFontInfo::bold();
+extern void demth_ZNK9QFontInfo4boldEv(void* qthis);
+  // proto:  qreal QFontInfo::pointSizeF();
+extern void _ZNK9QFontInfo10pointSizeFEv(void* qthis);
+  // proto:  bool QFontInfo::fixedPitch();
+extern void _ZNK9QFontInfo10fixedPitchEv(void* qthis);
+  // proto:  bool QFontInfo::overline();
+extern void _ZNK9QFontInfo8overlineEv(void* qthis);
+  // proto:  void QFontInfo::swap(QFontInfo & other);
+extern void _ZN9QFontInfo4swapERS_(void* qthis, void* arg0);
+  // proto:  void QFontInfo::QFontInfo(const QFont & );
+extern void* dector_ZN9QFontInfoC1ERK5QFont(void* arg0);
+extern void _ZN9QFontInfoC1ERK5QFont(void* qthis, void* arg0);
+  // proto:  int QFontInfo::pixelSize();
+extern void _ZNK9QFontInfo9pixelSizeEv(void* qthis);
+  // proto:  bool QFontInfo::strikeOut();
+extern void _ZNK9QFontInfo9strikeOutEv(void* qthis);
+  // proto:  void QFontInfo::~QFontInfo();
+extern void _ZN9QFontInfoD0Ev(void* qthis);
+  // proto:  bool QFontInfo::italic();
+extern void _ZNK9QFontInfo6italicEv(void* qthis);
+  // proto:  bool QFontInfo::underline();
+extern void _ZNK9QFontInfo9underlineEv(void* qthis);
+  // proto:  QString QFontInfo::styleName();
+extern void _ZNK9QFontInfo9styleNameEv(void* qthis);
+  // proto:  int QFontInfo::weight();
+extern void _ZNK9QFontInfo6weightEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFontInfo)=1
 type QFontInfo struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QFontInfo::rawMode();
 func (this *QFontInfo) rawMode(args ...interface{}) () {
   // rawMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +106,7 @@ func (this *QFontInfo) rawMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::exactMatch();
 func (this *QFontInfo) exactMatch(args ...interface{}) () {
   // exactMatch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +124,7 @@ func (this *QFontInfo) exactMatch(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFontInfo::pointSize();
 func (this *QFontInfo) pointSize(args ...interface{}) () {
   // pointSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,12 +142,12 @@ func (this *QFontInfo) pointSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
 func NewQFontInfo(args ...interface{}) QFontInfo {
   return QFontInfo{}
 }
 
-
+  // proto:  QString QFontInfo::family();
 func (this *QFontInfo) family(args ...interface{}) () {
   // family()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +165,7 @@ func (this *QFontInfo) family(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::bold();
 func (this *QFontInfo) bold(args ...interface{}) () {
   // bold()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +183,7 @@ func (this *QFontInfo) bold(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QFontInfo::pointSizeF();
 func (this *QFontInfo) pointSizeF(args ...interface{}) () {
   // pointSizeF()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +201,7 @@ func (this *QFontInfo) pointSizeF(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::fixedPitch();
 func (this *QFontInfo) fixedPitch(args ...interface{}) () {
   // fixedPitch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +219,7 @@ func (this *QFontInfo) fixedPitch(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::overline();
 func (this *QFontInfo) overline(args ...interface{}) () {
   // overline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +237,7 @@ func (this *QFontInfo) overline(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFontInfo::swap(QFontInfo & other);
 func (this *QFontInfo) swap(args ...interface{}) () {
   // swap(class QFontInfo &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +256,7 @@ func (this *QFontInfo) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFontInfo::pixelSize();
 func (this *QFontInfo) pixelSize(args ...interface{}) () {
   // pixelSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +274,7 @@ func (this *QFontInfo) pixelSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::strikeOut();
 func (this *QFontInfo) strikeOut(args ...interface{}) () {
   // strikeOut()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +292,7 @@ func (this *QFontInfo) strikeOut(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFontInfo::~QFontInfo();
 func (this *QFontInfo) FreeQFontInfo(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -259,7 +306,7 @@ func (this *QFontInfo) FreeQFontInfo(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::italic();
 func (this *QFontInfo) italic(args ...interface{}) () {
   // italic()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -277,7 +324,7 @@ func (this *QFontInfo) italic(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFontInfo::underline();
 func (this *QFontInfo) underline(args ...interface{}) () {
   // underline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -295,7 +342,7 @@ func (this *QFontInfo) underline(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFontInfo::styleName();
 func (this *QFontInfo) styleName(args ...interface{}) () {
   // styleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -313,7 +360,7 @@ func (this *QFontInfo) styleName(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFontInfo::weight();
 func (this *QFontInfo) weight(args ...interface{}) () {
   // weight()
   var vtys = make(map[int32]map[int32]reflect.Type)

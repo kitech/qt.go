@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,106 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
+extern void demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
+extern void _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QStringList QFileSystemModel::mimeTypes();
+extern void _ZNK16QFileSystemModel9mimeTypesEv(void* qthis);
+  // proto:  void QFileSystemModel::~QFileSystemModel();
+extern void _ZN16QFileSystemModelD0Ev(void* qthis);
+  // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
+extern void _ZNK16QFileSystemModel5indexERK7QStringi(void* qthis, void* arg0, int arg1);
+  // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
+extern void _ZN16QFileSystemModel21setNameFilterDisablesEb(void* qthis, bool arg0);
+  // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
+extern void demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::resolveSymlinks();
+extern void _ZNK16QFileSystemModel15resolveSymlinksEv(void* qthis);
+  // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
+extern void _ZNK16QFileSystemModel8filePathERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
+extern void _ZNK16QFileSystemModel6parentERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::nameFilterDisables();
+extern void _ZNK16QFileSystemModel18nameFilterDisablesEv(void* qthis);
+  // proto:  const QMetaObject * QFileSystemModel::metaObject();
+extern void _ZNK16QFileSystemModel10metaObjectEv(void* qthis);
+  // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
+extern void _ZN16QFileSystemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
+extern void* dector_ZN16QFileSystemModelC1ERKS_(void* arg0);
+extern void _ZN16QFileSystemModelC1ERKS_(void* qthis, void* arg0);
+  // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
+extern void _ZNK16QFileSystemModel4sizeERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
+extern void _ZNK16QFileSystemModel12iconProviderEv(void* qthis);
+  // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
+extern void _ZN16QFileSystemModel14setNameFiltersERK11QStringList(void* qthis, void* arg0);
+  // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
+extern void _ZNK16QFileSystemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int arg1);
+  // proto:  QDir QFileSystemModel::rootDirectory();
+extern void _ZNK16QFileSystemModel13rootDirectoryEv(void* qthis);
+  // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
+extern void _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
+extern void _ZNK16QFileSystemModel8rowCountERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
+extern void _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int arg2);
+  // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
+extern void _ZNK16QFileSystemModel11columnCountERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QFileSystemModel::index(int row, int column, const QModelIndex & parent);
+extern void _ZNK16QFileSystemModel5indexEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
+extern void _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
+extern void _ZN16QFileSystemModel6removeERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
+extern void _ZN16QFileSystemModel11setRootPathERK7QString(void* qthis, void* arg0);
+  // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
+extern void _ZN16QFileSystemModel18setResolveSymlinksEb(void* qthis, bool arg0);
+  // proto:  void QFileSystemModel::setReadOnly(bool enable);
+extern void _ZN16QFileSystemModel11setReadOnlyEb(void* qthis, bool arg0);
+  // proto:  QStringList QFileSystemModel::nameFilters();
+extern void _ZNK16QFileSystemModel11nameFiltersEv(void* qthis);
+  // proto:  void QFileSystemModel::QFileSystemModel(QObject * parent);
+extern void* dector_ZN16QFileSystemModelC1EP7QObject(void* arg0);
+extern void _ZN16QFileSystemModelC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
+extern void demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QVariant QFileSystemModel::myComputer(int role);
+extern void _ZNK16QFileSystemModel10myComputerEi(void* qthis, int arg0);
+  // proto:  bool QFileSystemModel::isReadOnly();
+extern void _ZNK16QFileSystemModel10isReadOnlyEv(void* qthis);
+  // proto:  QString QFileSystemModel::type(const QModelIndex & index);
+extern void _ZNK16QFileSystemModel4typeERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QString QFileSystemModel::rootPath();
+extern void _ZNK16QFileSystemModel8rootPathEv(void* qthis);
+  // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
+extern void _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
+extern void _ZNK16QFileSystemModel5isDirERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
+extern void _ZN16QFileSystemModel5rmdirERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
+extern void _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFileSystemModel)=1
 type QFileSystemModel struct {
   /*qbase*/ QAbstractItemModel;
@@ -44,7 +135,7 @@ type QFileSystemModel struct {
 //  _fileRenamed QFileSystemModel_fileRenamed_signal;
 }
 
-
+  // proto:  QString QFileSystemModel::fileName(const QModelIndex & index);
 func (this *QFileSystemModel) fileName(args ...interface{}) () {
   // fileName(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -63,7 +154,7 @@ func (this *QFileSystemModel) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::hasChildren(const QModelIndex & parent);
 func (this *QFileSystemModel) hasChildren(args ...interface{}) () {
   // hasChildren(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +173,7 @@ func (this *QFileSystemModel) hasChildren(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemModel::mimeTypes();
 func (this *QFileSystemModel) mimeTypes(args ...interface{}) () {
   // mimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +191,7 @@ func (this *QFileSystemModel) mimeTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::~QFileSystemModel();
 func (this *QFileSystemModel) FreeQFileSystemModel(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,7 +205,7 @@ func (this *QFileSystemModel) FreeQFileSystemModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QFileSystemModel::index(const QString & path, int column);
 func (this *QFileSystemModel) index(args ...interface{}) () {
   // index(const class QString &, int)
   // index(int, int, const class QModelIndex &)
@@ -141,7 +232,7 @@ func (this *QFileSystemModel) index(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::setNameFilterDisables(bool enable);
 func (this *QFileSystemModel) setNameFilterDisables(args ...interface{}) () {
   // setNameFilterDisables(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -160,7 +251,7 @@ func (this *QFileSystemModel) setNameFilterDisables(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QFileSystemModel::fileIcon(const QModelIndex & index);
 func (this *QFileSystemModel) fileIcon(args ...interface{}) () {
   // fileIcon(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -179,7 +270,7 @@ func (this *QFileSystemModel) fileIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::resolveSymlinks();
 func (this *QFileSystemModel) resolveSymlinks(args ...interface{}) () {
   // resolveSymlinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +288,7 @@ func (this *QFileSystemModel) resolveSymlinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFileSystemModel::filePath(const QModelIndex & index);
 func (this *QFileSystemModel) filePath(args ...interface{}) () {
   // filePath(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +307,7 @@ func (this *QFileSystemModel) filePath(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QFileSystemModel::parent(const QModelIndex & child);
 func (this *QFileSystemModel) parent(args ...interface{}) () {
   // parent(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -235,7 +326,7 @@ func (this *QFileSystemModel) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::nameFilterDisables();
 func (this *QFileSystemModel) nameFilterDisables(args ...interface{}) () {
   // nameFilterDisables()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +344,7 @@ func (this *QFileSystemModel) nameFilterDisables(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QFileSystemModel::metaObject();
 func (this *QFileSystemModel) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -271,7 +362,7 @@ func (this *QFileSystemModel) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::fetchMore(const QModelIndex & parent);
 func (this *QFileSystemModel) fetchMore(args ...interface{}) () {
   // fetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -290,12 +381,12 @@ func (this *QFileSystemModel) fetchMore(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::QFileSystemModel(const QFileSystemModel & );
 func NewQFileSystemModel(args ...interface{}) QFileSystemModel {
   return QFileSystemModel{}
 }
 
-
+  // proto:  qint64 QFileSystemModel::size(const QModelIndex & index);
 func (this *QFileSystemModel) size(args ...interface{}) () {
   // size(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -314,7 +405,7 @@ func (this *QFileSystemModel) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFileIconProvider * QFileSystemModel::iconProvider();
 func (this *QFileSystemModel) iconProvider(args ...interface{}) () {
   // iconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -332,7 +423,7 @@ func (this *QFileSystemModel) iconProvider(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::setNameFilters(const QStringList & filters);
 func (this *QFileSystemModel) setNameFilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,7 +442,7 @@ func (this *QFileSystemModel) setNameFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QFileSystemModel::data(const QModelIndex & index, int role);
 func (this *QFileSystemModel) data(args ...interface{}) () {
   // data(const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,7 +462,7 @@ func (this *QFileSystemModel) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDir QFileSystemModel::rootDirectory();
 func (this *QFileSystemModel) rootDirectory(args ...interface{}) () {
   // rootDirectory()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,7 +480,7 @@ func (this *QFileSystemModel) rootDirectory(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QFileSystemModel::mkdir(const QModelIndex & parent, const QString & name);
 func (this *QFileSystemModel) mkdir(args ...interface{}) () {
   // mkdir(const class QModelIndex &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -409,7 +500,7 @@ func (this *QFileSystemModel) mkdir(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFileSystemModel::rowCount(const QModelIndex & parent);
 func (this *QFileSystemModel) rowCount(args ...interface{}) () {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -428,7 +519,7 @@ func (this *QFileSystemModel) rowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::setData(const QModelIndex & index, const QVariant & value, int role);
 func (this *QFileSystemModel) setData(args ...interface{}) () {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -449,7 +540,7 @@ func (this *QFileSystemModel) setData(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFileSystemModel::columnCount(const QModelIndex & parent);
 func (this *QFileSystemModel) columnCount(args ...interface{}) () {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -468,7 +559,7 @@ func (this *QFileSystemModel) columnCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::canFetchMore(const QModelIndex & parent);
 func (this *QFileSystemModel) canFetchMore(args ...interface{}) () {
   // canFetchMore(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -487,7 +578,7 @@ func (this *QFileSystemModel) canFetchMore(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::remove(const QModelIndex & index);
 func (this *QFileSystemModel) remove(args ...interface{}) () {
   // remove(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -506,7 +597,7 @@ func (this *QFileSystemModel) remove(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QFileSystemModel::setRootPath(const QString & path);
 func (this *QFileSystemModel) setRootPath(args ...interface{}) () {
   // setRootPath(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -525,7 +616,7 @@ func (this *QFileSystemModel) setRootPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::setResolveSymlinks(bool enable);
 func (this *QFileSystemModel) setResolveSymlinks(args ...interface{}) () {
   // setResolveSymlinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -544,7 +635,7 @@ func (this *QFileSystemModel) setResolveSymlinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::setReadOnly(bool enable);
 func (this *QFileSystemModel) setReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -563,7 +654,7 @@ func (this *QFileSystemModel) setReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileSystemModel::nameFilters();
 func (this *QFileSystemModel) nameFilters(args ...interface{}) () {
   // nameFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -581,7 +672,7 @@ func (this *QFileSystemModel) nameFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFileInfo QFileSystemModel::fileInfo(const QModelIndex & index);
 func (this *QFileSystemModel) fileInfo(args ...interface{}) () {
   // fileInfo(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -600,7 +691,7 @@ func (this *QFileSystemModel) fileInfo(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QFileSystemModel::myComputer(int role);
 func (this *QFileSystemModel) myComputer(args ...interface{}) () {
   // myComputer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -619,7 +710,7 @@ func (this *QFileSystemModel) myComputer(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::isReadOnly();
 func (this *QFileSystemModel) isReadOnly(args ...interface{}) () {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -637,7 +728,7 @@ func (this *QFileSystemModel) isReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFileSystemModel::type(const QModelIndex & index);
 func (this *QFileSystemModel) type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -651,7 +742,7 @@ func (this *QFileSystemModel) type_(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFileSystemModel::rootPath();
 func (this *QFileSystemModel) rootPath(args ...interface{}) () {
   // rootPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -669,7 +760,7 @@ func (this *QFileSystemModel) rootPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDateTime QFileSystemModel::lastModified(const QModelIndex & index);
 func (this *QFileSystemModel) lastModified(args ...interface{}) () {
   // lastModified(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -688,7 +779,7 @@ func (this *QFileSystemModel) lastModified(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::isDir(const QModelIndex & index);
 func (this *QFileSystemModel) isDir(args ...interface{}) () {
   // isDir(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -707,7 +798,7 @@ func (this *QFileSystemModel) isDir(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileSystemModel::rmdir(const QModelIndex & index);
 func (this *QFileSystemModel) rmdir(args ...interface{}) () {
   // rmdir(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -726,7 +817,7 @@ func (this *QFileSystemModel) rmdir(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileSystemModel::setIconProvider(QFileIconProvider * provider);
 func (this *QFileSystemModel) setIconProvider(args ...interface{}) () {
   // setIconProvider(class QFileIconProvider *)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,44 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QBasicTimer::~QBasicTimer();
+extern void demth_ZN11QBasicTimerD0Ev(void* qthis);
+  // proto:  void QBasicTimer::stop();
+extern void _ZN11QBasicTimer4stopEv(void* qthis);
+  // proto:  int QBasicTimer::timerId();
+extern void demth_ZNK11QBasicTimer7timerIdEv(void* qthis);
+  // proto:  bool QBasicTimer::isActive();
+extern void demth_ZNK11QBasicTimer8isActiveEv(void* qthis);
+  // proto:  void QBasicTimer::QBasicTimer();
+extern void* dector_ZN11QBasicTimerC1Ev();
+extern void demth_ZN11QBasicTimerC1Ev(void* qthis);
+  // proto:  void QBasicTimer::start(int msec, QObject * obj);
+extern void _ZN11QBasicTimer5startEiP7QObject(void* qthis, int arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QBasicTimer)=4
 type QBasicTimer struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QBasicTimer::~QBasicTimer();
 func (this *QBasicTimer) FreeQBasicTimer(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +77,7 @@ func (this *QBasicTimer) FreeQBasicTimer(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBasicTimer::stop();
 func (this *QBasicTimer) stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -73,7 +95,7 @@ func (this *QBasicTimer) stop(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QBasicTimer::timerId();
 func (this *QBasicTimer) timerId(args ...interface{}) () {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -91,7 +113,7 @@ func (this *QBasicTimer) timerId(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBasicTimer::isActive();
 func (this *QBasicTimer) isActive(args ...interface{}) () {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,12 +131,12 @@ func (this *QBasicTimer) isActive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBasicTimer::QBasicTimer();
 func NewQBasicTimer(args ...interface{}) QBasicTimer {
   return QBasicTimer{}
 }
 
-
+  // proto:  void QBasicTimer::start(int msec, QObject * obj);
 func (this *QBasicTimer) start(args ...interface{}) () {
   // start(int, Qt::TimerType, class QObject *)
   // start(int, class QObject *)

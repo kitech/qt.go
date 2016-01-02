@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,40 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
+extern void _ZNK17QIconEnginePlugin10metaObjectEv(void* qthis);
+  // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
+extern void* dector_ZN17QIconEnginePluginC1EP7QObject(void* arg0);
+extern void _ZN17QIconEnginePluginC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
+extern void _ZN17QIconEnginePlugin6createERK7QString(void* qthis, void* arg0);
+  // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
+extern void _ZN17QIconEnginePluginD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QIconEnginePlugin)=1
 type QIconEnginePlugin struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
 func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,12 +77,12 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
 func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
   return QIconEnginePlugin{}
 }
 
-
+  // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
 func (this *QIconEnginePlugin) create(args ...interface{}) () {
   // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +101,7 @@ func (this *QIconEnginePlugin) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
 func (this *QIconEnginePlugin) FreeQIconEnginePlugin(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

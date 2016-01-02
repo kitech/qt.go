@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,49 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QMetaObject * QWidgetAction::metaObject();
+extern void _ZNK13QWidgetAction10metaObjectEv(void* qthis);
+  // proto:  void QWidgetAction::~QWidgetAction();
+extern void _ZN13QWidgetActionD0Ev(void* qthis);
+  // proto:  void QWidgetAction::setDefaultWidget(QWidget * w);
+extern void _ZN13QWidgetAction16setDefaultWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QWidgetAction::releaseWidget(QWidget * widget);
+extern void _ZN13QWidgetAction13releaseWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QWidgetAction::QWidgetAction(const QWidgetAction & );
+extern void* dector_ZN13QWidgetActionC1ERKS_(void* arg0);
+extern void _ZN13QWidgetActionC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QWidgetAction::QWidgetAction(QObject * parent);
+extern void* dector_ZN13QWidgetActionC1EP7QObject(void* arg0);
+extern void _ZN13QWidgetActionC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QWidget * QWidgetAction::requestWidget(QWidget * parent);
+extern void _ZN13QWidgetAction13requestWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  QWidget * QWidgetAction::defaultWidget();
+extern void _ZNK13QWidgetAction13defaultWidgetEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QWidgetAction)=1
 type QWidgetAction struct {
   /*qbase*/ QAction;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  const QMetaObject * QWidgetAction::metaObject();
 func (this *QWidgetAction) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +86,7 @@ func (this *QWidgetAction) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWidgetAction::~QWidgetAction();
 func (this *QWidgetAction) FreeQWidgetAction(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +100,7 @@ func (this *QWidgetAction) FreeQWidgetAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWidgetAction::setDefaultWidget(QWidget * w);
 func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
   // setDefaultWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,7 +119,7 @@ func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWidgetAction::releaseWidget(QWidget * widget);
 func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
   // releaseWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -111,12 +138,12 @@ func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QWidgetAction::QWidgetAction(const QWidgetAction & );
 func NewQWidgetAction(args ...interface{}) QWidgetAction {
   return QWidgetAction{}
 }
 
-
+  // proto:  QWidget * QWidgetAction::requestWidget(QWidget * parent);
 func (this *QWidgetAction) requestWidget(args ...interface{}) () {
   // requestWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +162,7 @@ func (this *QWidgetAction) requestWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QWidgetAction::defaultWidget();
 func (this *QWidgetAction) defaultWidget(args ...interface{}) () {
   // defaultWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,72 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPageSize::QPageSize();
+extern void* dector_ZN9QPageSizeC1Ev();
+extern void _ZN9QPageSizeC1Ev(void* qthis);
+  // proto:  void QPageSize::QPageSize(const QString & key, const QSize & pointSize, const QString & name);
+extern void* dector_ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(void* arg0, void* arg1, void* arg2);
+extern void _ZN9QPageSizeC1ERK7QStringRK5QSizeS2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QPageSize::~QPageSize();
+extern void _ZN9QPageSizeD0Ev(void* qthis);
+  // proto:  QString QPageSize::key();
+extern void _ZNK9QPageSize3keyEv(void* qthis);
+  // proto:  QString QPageSize::name();
+extern void _ZNK9QPageSize4nameEv(void* qthis);
+  // proto:  QSizeF QPageSize::definitionSize();
+extern void _ZNK9QPageSize14definitionSizeEv(void* qthis);
+  // proto:  void QPageSize::swap(QPageSize & other);
+extern void _ZN9QPageSize4swapERS_(void* qthis, void* arg0);
+  // proto:  int QPageSize::windowsId();
+extern void _ZNK9QPageSize9windowsIdEv(void* qthis);
+  // proto:  QSize QPageSize::sizePixels(int resolution);
+extern void _ZNK9QPageSize10sizePixelsEi(void* qthis, int arg0);
+  // proto:  void QPageSize::QPageSize(const QPageSize & other);
+extern void* dector_ZN9QPageSizeC1ERKS_(void* arg0);
+extern void _ZN9QPageSizeC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QPageSize::isValid();
+extern void _ZNK9QPageSize7isValidEv(void* qthis);
+  // proto:  QRect QPageSize::rectPixels(int resolution);
+extern void _ZNK9QPageSize10rectPixelsEi(void* qthis, int arg0);
+  // proto:  QRect QPageSize::rectPoints();
+extern void _ZNK9QPageSize10rectPointsEv(void* qthis);
+  // proto:  void QPageSize::QPageSize(int windowsId, const QSize & pointSize, const QString & name);
+extern void* dector_ZN9QPageSizeC1EiRK5QSizeRK7QString(int arg0, void* arg1, void* arg2);
+extern void _ZN9QPageSizeC1EiRK5QSizeRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+  // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
+extern void _ZNK9QPageSize14isEquivalentToERKS_(void* qthis, void* arg0);
+  // proto:  QSize QPageSize::sizePoints();
+extern void _ZNK9QPageSize10sizePointsEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPageSize)=1
 type QPageSize struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPageSize::QPageSize();
 func NewQPageSize(args ...interface{}) QPageSize {
   return QPageSize{}
 }
 
-
+  // proto:  void QPageSize::~QPageSize();
 func (this *QPageSize) FreeQPageSize(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -60,7 +105,7 @@ func (this *QPageSize) FreeQPageSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QPageSize::key();
 func (this *QPageSize) key(args ...interface{}) () {
   // key()
   // key(enum QPageSize::PageSizeId)
@@ -83,7 +128,7 @@ func (this *QPageSize) key(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QPageSize::name();
 func (this *QPageSize) name(args ...interface{}) () {
   // name()
   // name(enum QPageSize::PageSizeId)
@@ -106,7 +151,7 @@ func (this *QPageSize) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSizeF QPageSize::definitionSize();
 func (this *QPageSize) definitionSize(args ...interface{}) () {
   // definitionSize()
   // definitionSize(enum QPageSize::PageSizeId)
@@ -129,7 +174,7 @@ func (this *QPageSize) definitionSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPageSize::swap(QPageSize & other);
 func (this *QPageSize) swap(args ...interface{}) () {
   // swap(class QPageSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -148,7 +193,7 @@ func (this *QPageSize) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPageSize::windowsId();
 func (this *QPageSize) windowsId(args ...interface{}) () {
   // windowsId(enum QPageSize::PageSizeId)
   // windowsId()
@@ -171,7 +216,7 @@ func (this *QPageSize) windowsId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QPageSize::sizePixels(int resolution);
 func (this *QPageSize) sizePixels(args ...interface{}) () {
   // sizePixels(int)
   // sizePixels(enum QPageSize::PageSizeId, int)
@@ -196,7 +241,7 @@ func (this *QPageSize) sizePixels(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPageSize::isValid();
 func (this *QPageSize) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +259,7 @@ func (this *QPageSize) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QPageSize::rectPixels(int resolution);
 func (this *QPageSize) rectPixels(args ...interface{}) () {
   // rectPixels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +278,7 @@ func (this *QPageSize) rectPixels(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QPageSize::rectPoints();
 func (this *QPageSize) rectPoints(args ...interface{}) () {
   // rectPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -251,7 +296,7 @@ func (this *QPageSize) rectPoints(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
 func (this *QPageSize) isEquivalentTo(args ...interface{}) () {
   // isEquivalentTo(const class QPageSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +315,7 @@ func (this *QPageSize) isEquivalentTo(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QPageSize::sizePoints();
 func (this *QPageSize) sizePoints(args ...interface{}) () {
   // sizePoints(enum QPageSize::PageSizeId)
   // sizePoints()

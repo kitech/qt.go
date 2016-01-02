@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,78 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+extern void demth_ZN8QNoDebug10maybeQuoteEc(void* qthis, const char arg0);
+  // proto:  QNoDebug & QNoDebug::quote();
+extern void demth_ZN8QNoDebug5quoteEv(void* qthis);
+  // proto:  QNoDebug & QNoDebug::space();
+extern void demth_ZN8QNoDebug5spaceEv(void* qthis);
+  // proto:  QNoDebug & QNoDebug::nospace();
+extern void demth_ZN8QNoDebug7nospaceEv(void* qthis);
+  // proto:  QNoDebug & QNoDebug::noquote();
+extern void demth_ZN8QNoDebug7noquoteEv(void* qthis);
+  // proto:  QNoDebug & QNoDebug::maybeSpace();
+extern void demth_ZN8QNoDebug10maybeSpaceEv(void* qthis);
+  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
+extern void* dector_ZN16QDebugStateSaverC1ER6QDebug(void* arg0);
+extern void _ZN16QDebugStateSaverC1ER6QDebug(void* qthis, void* arg0);
+  // proto:  void QDebugStateSaver::QDebugStateSaver(const QDebugStateSaver & );
+extern void* dector_ZN16QDebugStateSaverC1ERKS_(void* arg0);
+extern void _ZN16QDebugStateSaverC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QDebugStateSaver::~QDebugStateSaver();
+extern void _ZN16QDebugStateSaverD0Ev(void* qthis);
+  // proto:  QDebug & QDebug::noquote();
+extern void demth_ZN6QDebug7noquoteEv(void* qthis);
+  // proto:  void QDebug::~QDebug();
+extern void _ZN6QDebugD0Ev(void* qthis);
+  // proto:  void QDebug::QDebug(const QDebug & o);
+extern void* dector_ZN6QDebugC1ERKS_(void* arg0);
+extern void demth_ZN6QDebugC1ERKS_(void* qthis, void* arg0);
+  // proto:  QDebug & QDebug::space();
+extern void demth_ZN6QDebug5spaceEv(void* qthis);
+  // proto:  void QDebug::QDebug(QtMsgType t);
+extern void* dector_ZN6QDebugC1E9QtMsgType(int arg0);
+extern void demth_ZN6QDebugC1E9QtMsgType(void* qthis, int arg0);
+  // proto:  QDebug & QDebug::maybeSpace();
+extern void demth_ZN6QDebug10maybeSpaceEv(void* qthis);
+  // proto:  QDebug & QDebug::resetFormat();
+extern void _ZN6QDebug11resetFormatEv(void* qthis);
+  // proto:  void QDebug::setAutoInsertSpaces(bool b);
+extern void demth_ZN6QDebug19setAutoInsertSpacesEb(void* qthis, bool arg0);
+  // proto:  void QDebug::QDebug(QString * string);
+extern void* dector_ZN6QDebugC1EP7QString(void* arg0);
+extern void demth_ZN6QDebugC1EP7QString(void* qthis, void* arg0);
+  // proto:  void QDebug::swap(QDebug & other);
+extern void demth_ZN6QDebug4swapERS_(void* qthis, void* arg0);
+  // proto:  QDebug & QDebug::nospace();
+extern void demth_ZN6QDebug7nospaceEv(void* qthis);
+  // proto:  bool QDebug::autoInsertSpaces();
+extern void _ZNK6QDebug16autoInsertSpacesEv(void* qthis);
+  // proto:  void QDebug::QDebug(QIODevice * device);
+extern void* dector_ZN6QDebugC1EP9QIODevice(void* arg0);
+extern void demth_ZN6QDebugC1EP9QIODevice(void* qthis, void* arg0);
+  // proto:  QDebug & QDebug::quote();
+extern void demth_ZN6QDebug5quoteEv(void* qthis);
+  // proto:  QDebug & QDebug::maybeQuote(char c);
+extern void demth_ZN6QDebug10maybeQuoteEc(void* qthis, char arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QNoDebug)=1
 type QNoDebug struct {
   // qbase: None;
@@ -53,7 +116,7 @@ type QDebug struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
 func (this *QNoDebug) maybeQuote(args ...interface{}) () {
   // maybeQuote(const char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -72,7 +135,7 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
 
 }
 
-
+  // proto:  QNoDebug & QNoDebug::quote();
 func (this *QNoDebug) quote(args ...interface{}) () {
   // quote()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -90,7 +153,7 @@ func (this *QNoDebug) quote(args ...interface{}) () {
 
 }
 
-
+  // proto:  QNoDebug & QNoDebug::space();
 func (this *QNoDebug) space(args ...interface{}) () {
   // space()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -108,7 +171,7 @@ func (this *QNoDebug) space(args ...interface{}) () {
 
 }
 
-
+  // proto:  QNoDebug & QNoDebug::nospace();
 func (this *QNoDebug) nospace(args ...interface{}) () {
   // nospace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -126,7 +189,7 @@ func (this *QNoDebug) nospace(args ...interface{}) () {
 
 }
 
-
+  // proto:  QNoDebug & QNoDebug::noquote();
 func (this *QNoDebug) noquote(args ...interface{}) () {
   // noquote()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -144,7 +207,7 @@ func (this *QNoDebug) noquote(args ...interface{}) () {
 
 }
 
-
+  // proto:  QNoDebug & QNoDebug::maybeSpace();
 func (this *QNoDebug) maybeSpace(args ...interface{}) () {
   // maybeSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,12 +225,12 @@ func (this *QNoDebug) maybeSpace(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
 func NewQDebugStateSaver(args ...interface{}) QDebugStateSaver {
   return QDebugStateSaver{}
 }
 
-
+  // proto:  void QDebugStateSaver::~QDebugStateSaver();
 func (this *QDebugStateSaver) FreeQDebugStateSaver(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +244,7 @@ func (this *QDebugStateSaver) FreeQDebugStateSaver(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::noquote();
 func (this *QDebug) noquote(args ...interface{}) () {
   // noquote()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -199,7 +262,7 @@ func (this *QDebug) noquote(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDebug::~QDebug();
 func (this *QDebug) FreeQDebug(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -213,12 +276,12 @@ func (this *QDebug) FreeQDebug(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDebug::QDebug(const QDebug & o);
 func NewQDebug(args ...interface{}) QDebug {
   return QDebug{}
 }
 
-
+  // proto:  QDebug & QDebug::space();
 func (this *QDebug) space(args ...interface{}) () {
   // space()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +299,7 @@ func (this *QDebug) space(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::maybeSpace();
 func (this *QDebug) maybeSpace(args ...interface{}) () {
   // maybeSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -254,7 +317,7 @@ func (this *QDebug) maybeSpace(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::resetFormat();
 func (this *QDebug) resetFormat(args ...interface{}) () {
   // resetFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +335,7 @@ func (this *QDebug) resetFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDebug::setAutoInsertSpaces(bool b);
 func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
   // setAutoInsertSpaces(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -291,7 +354,7 @@ func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDebug::swap(QDebug & other);
 func (this *QDebug) swap(args ...interface{}) () {
   // swap(class QDebug &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +373,7 @@ func (this *QDebug) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::nospace();
 func (this *QDebug) nospace(args ...interface{}) () {
   // nospace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -328,7 +391,7 @@ func (this *QDebug) nospace(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDebug::autoInsertSpaces();
 func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
   // autoInsertSpaces()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -346,7 +409,7 @@ func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::quote();
 func (this *QDebug) quote(args ...interface{}) () {
   // quote()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +427,7 @@ func (this *QDebug) quote(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDebug & QDebug::maybeQuote(char c);
 func (this *QDebug) maybeQuote(args ...interface{}) () {
   // maybeQuote(char)
   var vtys = make(map[int32]map[int32]reflect.Type)

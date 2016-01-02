@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,74 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
+extern void* dector_ZN7QBitRefC1ER9QBitArrayi(void* arg0, int arg1);
+extern void demth_ZN7QBitRefC1ER9QBitArrayi(void* qthis, void* arg0, int arg1);
+  // proto:  void QBitArray::QBitArray(int size, bool val);
+extern void* dector_ZN9QBitArrayC1Eib(int arg0, bool arg1);
+extern void _ZN9QBitArrayC1Eib(void* qthis, int arg0, bool arg1);
+  // proto:  bool QBitArray::isEmpty();
+extern void demth_ZNK9QBitArray7isEmptyEv(void* qthis);
+  // proto:  void QBitArray::setBit(int i);
+extern void _ZN9QBitArray6setBitEi(void* qthis, int arg0);
+  // proto:  int QBitArray::size();
+extern void demth_ZNK9QBitArray4sizeEv(void* qthis);
+  // proto:  void QBitArray::swap(QBitArray & other);
+extern void demth_ZN9QBitArray4swapERS_(void* qthis, void* arg0);
+  // proto:  int QBitArray::count();
+extern void demth_ZNK9QBitArray5countEv(void* qthis);
+  // proto:  int QBitArray::count(bool on);
+extern void _ZNK9QBitArray5countEb(void* qthis, bool arg0);
+  // proto:  void QBitArray::detach();
+extern void demth_ZN9QBitArray6detachEv(void* qthis);
+  // proto:  void QBitArray::QBitArray();
+extern void* dector_ZN9QBitArrayC1Ev();
+extern void demth_ZN9QBitArrayC1Ev(void* qthis);
+  // proto:  bool QBitArray::at(int i);
+extern void _ZNK9QBitArray2atEi(void* qthis, int arg0);
+  // proto:  void QBitArray::clear();
+extern void demth_ZN9QBitArray5clearEv(void* qthis);
+  // proto:  void QBitArray::clearBit(int i);
+extern void _ZN9QBitArray8clearBitEi(void* qthis, int arg0);
+  // proto:  bool QBitArray::testBit(int i);
+extern void _ZNK9QBitArray7testBitEi(void* qthis, int arg0);
+  // proto:  void QBitArray::truncate(int pos);
+extern void demth_ZN9QBitArray8truncateEi(void* qthis, int arg0);
+  // proto:  bool QBitArray::toggleBit(int i);
+extern void _ZN9QBitArray9toggleBitEi(void* qthis, int arg0);
+  // proto:  void QBitArray::QBitArray(const QBitArray & other);
+extern void* dector_ZN9QBitArrayC1ERKS_(void* arg0);
+extern void demth_ZN9QBitArrayC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QBitArray::fill(bool val, int first, int last);
+extern void _ZN9QBitArray4fillEbii(void* qthis, bool arg0, int arg1, int arg2);
+  // proto:  bool QBitArray::isNull();
+extern void demth_ZNK9QBitArray6isNullEv(void* qthis);
+  // proto:  void QBitArray::setBit(int i, bool val);
+extern void _ZN9QBitArray6setBitEib(void* qthis, int arg0, bool arg1);
+  // proto:  void QBitArray::resize(int size);
+extern void _ZN9QBitArray6resizeEi(void* qthis, int arg0);
+  // proto:  bool QBitArray::isDetached();
+extern void demth_ZNK9QBitArray10isDetachedEv(void* qthis);
+  // proto:  bool QBitArray::fill(bool val, int size);
+extern void demth_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QBitRef)=16
 type QBitRef struct {
   // qbase: None;
@@ -47,17 +106,17 @@ type QBitArray struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
 func NewQBitRef(args ...interface{}) QBitRef {
   return QBitRef{}
 }
 
-
+  // proto:  void QBitArray::QBitArray(int size, bool val);
 func NewQBitArray(args ...interface{}) QBitArray {
   return QBitArray{}
 }
 
-
+  // proto:  bool QBitArray::isEmpty();
 func (this *QBitArray) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -75,7 +134,7 @@ func (this *QBitArray) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::setBit(int i);
 func (this *QBitArray) setBit(args ...interface{}) () {
   // setBit(int)
   // setBit(int, _Bool)
@@ -100,7 +159,7 @@ func (this *QBitArray) setBit(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QBitArray::size();
 func (this *QBitArray) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +177,7 @@ func (this *QBitArray) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::swap(QBitArray & other);
 func (this *QBitArray) swap(args ...interface{}) () {
   // swap(class QBitArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +196,7 @@ func (this *QBitArray) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QBitArray::count();
 func (this *QBitArray) count(args ...interface{}) () {
   // count()
   // count(_Bool)
@@ -160,7 +219,7 @@ func (this *QBitArray) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::detach();
 func (this *QBitArray) detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -178,7 +237,7 @@ func (this *QBitArray) detach(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBitArray::at(int i);
 func (this *QBitArray) at(args ...interface{}) () {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +256,7 @@ func (this *QBitArray) at(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::clear();
 func (this *QBitArray) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +274,7 @@ func (this *QBitArray) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::clearBit(int i);
 func (this *QBitArray) clearBit(args ...interface{}) () {
   // clearBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +293,7 @@ func (this *QBitArray) clearBit(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBitArray::testBit(int i);
 func (this *QBitArray) testBit(args ...interface{}) () {
   // testBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +312,7 @@ func (this *QBitArray) testBit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::truncate(int pos);
 func (this *QBitArray) truncate(args ...interface{}) () {
   // truncate(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +331,7 @@ func (this *QBitArray) truncate(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBitArray::toggleBit(int i);
 func (this *QBitArray) toggleBit(args ...interface{}) () {
   // toggleBit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -291,7 +350,7 @@ func (this *QBitArray) toggleBit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::fill(bool val, int first, int last);
 func (this *QBitArray) fill(args ...interface{}) () {
   // fill(_Bool, int, int)
   // fill(_Bool, int)
@@ -318,7 +377,7 @@ func (this *QBitArray) fill(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBitArray::isNull();
 func (this *QBitArray) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -336,7 +395,7 @@ func (this *QBitArray) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBitArray::resize(int size);
 func (this *QBitArray) resize(args ...interface{}) () {
   // resize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -355,7 +414,7 @@ func (this *QBitArray) resize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBitArray::isDetached();
 func (this *QBitArray) isDetached(args ...interface{}) () {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)

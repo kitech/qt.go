@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,136 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
+extern void* dector_ZN10QPictureIOC1ERK7QStringPKc(void* arg0, char* arg1);
+extern void _ZN10QPictureIOC1ERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+  // proto:  QString QPictureIO::description();
+extern void _ZNK10QPictureIO11descriptionEv(void* qthis);
+  // proto: static QList<QByteArray> QPictureIO::inputFormats();
+extern void _ZN10QPictureIO12inputFormatsEv();
+  // proto:  void QPictureIO::setGamma(float );
+extern void _ZN10QPictureIO8setGammaEf(void* qthis, float arg0);
+  // proto:  int QPictureIO::status();
+extern void _ZNK10QPictureIO6statusEv(void* qthis);
+  // proto:  int QPictureIO::quality();
+extern void _ZNK10QPictureIO7qualityEv(void* qthis);
+  // proto:  bool QPictureIO::write();
+extern void _ZN10QPictureIO5writeEv(void* qthis);
+  // proto:  void QPictureIO::setFileName(const QString & );
+extern void _ZN10QPictureIO11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto:  void QPictureIO::~QPictureIO();
+extern void _ZN10QPictureIOD0Ev(void* qthis);
+  // proto:  const char * QPictureIO::parameters();
+extern void _ZNK10QPictureIO10parametersEv(void* qthis);
+  // proto: static QByteArray QPictureIO::pictureFormat(QIODevice * );
+extern void _ZN10QPictureIO13pictureFormatEP9QIODevice(void* arg0);
+  // proto:  void QPictureIO::QPictureIO(const QPictureIO & );
+extern void* dector_ZN10QPictureIOC1ERKS_(void* arg0);
+extern void _ZN10QPictureIOC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QPictureIO::read();
+extern void _ZN10QPictureIO4readEv(void* qthis);
+  // proto:  QString QPictureIO::fileName();
+extern void _ZNK10QPictureIO8fileNameEv(void* qthis);
+  // proto:  void QPictureIO::QPictureIO(QIODevice * ioDevice, const char * format);
+extern void* dector_ZN10QPictureIOC1EP9QIODevicePKc(void* arg0, char* arg1);
+extern void _ZN10QPictureIOC1EP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+  // proto:  const char * QPictureIO::format();
+extern void _ZNK10QPictureIO6formatEv(void* qthis);
+  // proto:  void QPictureIO::setQuality(int );
+extern void _ZN10QPictureIO10setQualityEi(void* qthis, int arg0);
+  // proto:  const QPicture & QPictureIO::picture();
+extern void _ZNK10QPictureIO7pictureEv(void* qthis);
+  // proto:  void QPictureIO::setFormat(const char * );
+extern void _ZN10QPictureIO9setFormatEPKc(void* qthis, char* arg0);
+  // proto:  void QPictureIO::setDescription(const QString & );
+extern void _ZN10QPictureIO14setDescriptionERK7QString(void* qthis, void* arg0);
+  // proto: static QByteArray QPictureIO::pictureFormat(const QString & fileName);
+extern void _ZN10QPictureIO13pictureFormatERK7QString(void* arg0);
+  // proto:  void QPictureIO::setIODevice(QIODevice * );
+extern void _ZN10QPictureIO11setIODeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QPictureIO::setStatus(int );
+extern void _ZN10QPictureIO9setStatusEi(void* qthis, int arg0);
+  // proto:  QIODevice * QPictureIO::ioDevice();
+extern void _ZNK10QPictureIO8ioDeviceEv(void* qthis);
+  // proto:  float QPictureIO::gamma();
+extern void _ZNK10QPictureIO5gammaEv(void* qthis);
+  // proto: static QList<QByteArray> QPictureIO::outputFormats();
+extern void _ZN10QPictureIO13outputFormatsEv();
+  // proto:  void QPictureIO::setPicture(const QPicture & );
+extern void _ZN10QPictureIO10setPictureERK8QPicture(void* qthis, void* arg0);
+  // proto:  void QPictureIO::setParameters(const char * );
+extern void _ZN10QPictureIO13setParametersEPKc(void* qthis, char* arg0);
+  // proto:  void QPictureIO::QPictureIO();
+extern void* dector_ZN10QPictureIOC1Ev();
+extern void _ZN10QPictureIOC1Ev(void* qthis);
+  // proto:  const char * QPicture::data();
+extern void _ZNK8QPicture4dataEv(void* qthis);
+  // proto: static QStringList QPicture::inputFormatList();
+extern void _ZN8QPicture15inputFormatListEv();
+  // proto:  void QPicture::swap(QPicture & other);
+extern void demth_ZN8QPicture4swapERS_(void* qthis, void* arg0);
+  // proto:  uint QPicture::size();
+extern void _ZNK8QPicture4sizeEv(void* qthis);
+  // proto:  bool QPicture::isNull();
+extern void _ZNK8QPicture6isNullEv(void* qthis);
+  // proto:  bool QPicture::save(QIODevice * dev, const char * format);
+extern void _ZN8QPicture4saveEP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+  // proto:  void QPicture::detach();
+extern void _ZN8QPicture6detachEv(void* qthis);
+  // proto: static QList<QByteArray> QPicture::inputFormats();
+extern void _ZN8QPicture12inputFormatsEv();
+  // proto:  void QPicture::QPicture(int formatVersion);
+extern void* dector_ZN8QPictureC1Ei(int arg0);
+extern void _ZN8QPictureC1Ei(void* qthis, int arg0);
+  // proto:  void QPicture::QPicture(const QPicture & );
+extern void* dector_ZN8QPictureC1ERKS_(void* arg0);
+extern void _ZN8QPictureC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QPicture::isDetached();
+extern void _ZNK8QPicture10isDetachedEv(void* qthis);
+  // proto: static QStringList QPicture::outputFormatList();
+extern void _ZN8QPicture16outputFormatListEv();
+  // proto:  void QPicture::setData(const char * data, uint size);
+extern void _ZN8QPicture7setDataEPKcj(void* qthis, char* arg0, unsigned int arg1);
+  // proto: static QList<QByteArray> QPicture::outputFormats();
+extern void _ZN8QPicture13outputFormatsEv();
+  // proto:  int QPicture::devType();
+extern void _ZNK8QPicture7devTypeEv(void* qthis);
+  // proto: static const char * QPicture::pictureFormat(const QString & fileName);
+extern void _ZN8QPicture13pictureFormatERK7QString(void* arg0);
+  // proto:  bool QPicture::save(const QString & fileName, const char * format);
+extern void _ZN8QPicture4saveERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+  // proto:  bool QPicture::load(const QString & fileName, const char * format);
+extern void _ZN8QPicture4loadERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+  // proto:  void QPicture::~QPicture();
+extern void _ZN8QPictureD0Ev(void* qthis);
+  // proto:  void QPicture::setBoundingRect(const QRect & r);
+extern void _ZN8QPicture15setBoundingRectERK5QRect(void* qthis, void* arg0);
+  // proto:  bool QPicture::load(QIODevice * dev, const char * format);
+extern void _ZN8QPicture4loadEP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+  // proto:  QRect QPicture::boundingRect();
+extern void _ZNK8QPicture12boundingRectEv(void* qthis);
+  // proto:  bool QPicture::play(QPainter * p);
+extern void _ZN8QPicture4playEP8QPainter(void* qthis, void* arg0);
+  // proto:  QPaintEngine * QPicture::paintEngine();
+extern void _ZNK8QPicture11paintEngineEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPictureIO)=8
 type QPictureIO struct {
   // qbase: None;
@@ -47,12 +168,12 @@ type QPicture struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
 func NewQPictureIO(args ...interface{}) QPictureIO {
   return QPictureIO{}
 }
 
-
+  // proto:  QString QPictureIO::description();
 func (this *QPictureIO) description(args ...interface{}) () {
   // description()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -70,7 +191,7 @@ func (this *QPictureIO) description(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QPictureIO::inputFormats();
 func (this *QPictureIO) inputFormats_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -84,7 +205,7 @@ func (this *QPictureIO) inputFormats_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setGamma(float );
 func (this *QPictureIO) setGamma(args ...interface{}) () {
   // setGamma(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +224,7 @@ func (this *QPictureIO) setGamma(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPictureIO::status();
 func (this *QPictureIO) status(args ...interface{}) () {
   // status()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +242,7 @@ func (this *QPictureIO) status(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPictureIO::quality();
 func (this *QPictureIO) quality(args ...interface{}) () {
   // quality()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,7 +260,7 @@ func (this *QPictureIO) quality(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPictureIO::write();
 func (this *QPictureIO) write(args ...interface{}) () {
   // write()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -157,7 +278,7 @@ func (this *QPictureIO) write(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setFileName(const QString & );
 func (this *QPictureIO) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,7 +297,7 @@ func (this *QPictureIO) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::~QPictureIO();
 func (this *QPictureIO) FreeQPictureIO(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -190,7 +311,7 @@ func (this *QPictureIO) FreeQPictureIO(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QPictureIO::parameters();
 func (this *QPictureIO) parameters(args ...interface{}) () {
   // parameters()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +329,7 @@ func (this *QPictureIO) parameters(args ...interface{}) () {
 
 }
 
-
+  // proto: static QByteArray QPictureIO::pictureFormat(QIODevice * );
 func (this *QPictureIO) pictureFormat_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,7 +343,7 @@ func (this *QPictureIO) pictureFormat_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPictureIO::read();
 func (this *QPictureIO) read(args ...interface{}) () {
   // read()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -240,7 +361,7 @@ func (this *QPictureIO) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QPictureIO::fileName();
 func (this *QPictureIO) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,7 +379,7 @@ func (this *QPictureIO) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QPictureIO::format();
 func (this *QPictureIO) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -276,7 +397,7 @@ func (this *QPictureIO) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setQuality(int );
 func (this *QPictureIO) setQuality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -295,7 +416,7 @@ func (this *QPictureIO) setQuality(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QPicture & QPictureIO::picture();
 func (this *QPictureIO) picture(args ...interface{}) () {
   // picture()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -313,7 +434,7 @@ func (this *QPictureIO) picture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setFormat(const char * );
 func (this *QPictureIO) setFormat(args ...interface{}) () {
   // setFormat(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -332,7 +453,7 @@ func (this *QPictureIO) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setDescription(const QString & );
 func (this *QPictureIO) setDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,7 +472,7 @@ func (this *QPictureIO) setDescription(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setIODevice(QIODevice * );
 func (this *QPictureIO) setIODevice(args ...interface{}) () {
   // setIODevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -370,7 +491,7 @@ func (this *QPictureIO) setIODevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setStatus(int );
 func (this *QPictureIO) setStatus(args ...interface{}) () {
   // setStatus(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,7 +510,7 @@ func (this *QPictureIO) setStatus(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QPictureIO::ioDevice();
 func (this *QPictureIO) ioDevice(args ...interface{}) () {
   // ioDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -407,7 +528,7 @@ func (this *QPictureIO) ioDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QPictureIO::gamma();
 func (this *QPictureIO) gamma(args ...interface{}) () {
   // gamma()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -425,7 +546,7 @@ func (this *QPictureIO) gamma(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QPictureIO::outputFormats();
 func (this *QPictureIO) outputFormats_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,7 +560,7 @@ func (this *QPictureIO) outputFormats_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setPicture(const QPicture & );
 func (this *QPictureIO) setPicture(args ...interface{}) () {
   // setPicture(const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -458,7 +579,7 @@ func (this *QPictureIO) setPicture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPictureIO::setParameters(const char * );
 func (this *QPictureIO) setParameters(args ...interface{}) () {
   // setParameters(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -477,7 +598,7 @@ func (this *QPictureIO) setParameters(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QPicture::data();
 func (this *QPicture) data(args ...interface{}) () {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -495,7 +616,7 @@ func (this *QPicture) data(args ...interface{}) () {
 
 }
 
-
+  // proto: static QStringList QPicture::inputFormatList();
 func (this *QPicture) inputFormatList_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -509,7 +630,7 @@ func (this *QPicture) inputFormatList_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::swap(QPicture & other);
 func (this *QPicture) swap(args ...interface{}) () {
   // swap(class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -528,7 +649,7 @@ func (this *QPicture) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  uint QPicture::size();
 func (this *QPicture) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -546,7 +667,7 @@ func (this *QPicture) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPicture::isNull();
 func (this *QPicture) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -564,7 +685,7 @@ func (this *QPicture) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPicture::save(QIODevice * dev, const char * format);
 func (this *QPicture) save(args ...interface{}) () {
   // save(class QIODevice *, const char *)
   // save(const class QString &, const char *)
@@ -590,7 +711,7 @@ func (this *QPicture) save(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::detach();
 func (this *QPicture) detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -608,7 +729,7 @@ func (this *QPicture) detach(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QPicture::inputFormats();
 func (this *QPicture) inputFormats_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -622,12 +743,12 @@ func (this *QPicture) inputFormats_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::QPicture(int formatVersion);
 func NewQPicture(args ...interface{}) QPicture {
   return QPicture{}
 }
 
-
+  // proto:  bool QPicture::isDetached();
 func (this *QPicture) isDetached(args ...interface{}) () {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -645,7 +766,7 @@ func (this *QPicture) isDetached(args ...interface{}) () {
 
 }
 
-
+  // proto: static QStringList QPicture::outputFormatList();
 func (this *QPicture) outputFormatList_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -659,7 +780,7 @@ func (this *QPicture) outputFormatList_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::setData(const char * data, uint size);
 func (this *QPicture) setData(args ...interface{}) () {
   // setData(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -679,7 +800,7 @@ func (this *QPicture) setData(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QPicture::outputFormats();
 func (this *QPicture) outputFormats_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -693,7 +814,7 @@ func (this *QPicture) outputFormats_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPicture::devType();
 func (this *QPicture) devType(args ...interface{}) () {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -711,7 +832,7 @@ func (this *QPicture) devType(args ...interface{}) () {
 
 }
 
-
+  // proto: static const char * QPicture::pictureFormat(const QString & fileName);
 func (this *QPicture) pictureFormat_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -725,7 +846,7 @@ func (this *QPicture) pictureFormat_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPicture::load(const QString & fileName, const char * format);
 func (this *QPicture) load(args ...interface{}) () {
   // load(const class QString &, const char *)
   // load(class QIODevice *, const char *)
@@ -751,7 +872,7 @@ func (this *QPicture) load(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::~QPicture();
 func (this *QPicture) FreeQPicture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -765,7 +886,7 @@ func (this *QPicture) FreeQPicture(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPicture::setBoundingRect(const QRect & r);
 func (this *QPicture) setBoundingRect(args ...interface{}) () {
   // setBoundingRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -784,7 +905,7 @@ func (this *QPicture) setBoundingRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QPicture::boundingRect();
 func (this *QPicture) boundingRect(args ...interface{}) () {
   // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -802,7 +923,7 @@ func (this *QPicture) boundingRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPicture::play(QPainter * p);
 func (this *QPicture) play(args ...interface{}) () {
   // play(class QPainter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -821,7 +942,7 @@ func (this *QPicture) play(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPaintEngine * QPicture::paintEngine();
 func (this *QPicture) paintEngine(args ...interface{}) () {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)

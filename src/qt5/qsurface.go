@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,41 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QSurface::supportsOpenGL();
+extern void _ZNK8QSurface14supportsOpenGLEv(void* qthis);
+  // proto:  QSurfaceFormat QSurface::format();
+extern void _ZNK8QSurface6formatEv(void* qthis);
+  // proto:  QPlatformSurface * QSurface::surfaceHandle();
+extern void _ZNK8QSurface13surfaceHandleEv(void* qthis);
+  // proto:  QSize QSurface::size();
+extern void _ZNK8QSurface4sizeEv(void* qthis);
+  // proto:  void QSurface::~QSurface();
+extern void _ZN8QSurfaceD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSurface)=24
 type QSurface struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QSurface::supportsOpenGL();
 func (this *QSurface) supportsOpenGL(args ...interface{}) () {
   // supportsOpenGL()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +78,7 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSurfaceFormat QSurface::format();
 func (this *QSurface) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +96,7 @@ func (this *QSurface) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformSurface * QSurface::surfaceHandle();
 func (this *QSurface) surfaceHandle(args ...interface{}) () {
   // surfaceHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,7 +114,7 @@ func (this *QSurface) surfaceHandle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QSurface::size();
 func (this *QSurface) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -113,7 +132,7 @@ func (this *QSurface) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSurface::~QSurface();
 func (this *QSurface) FreeQSurface(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

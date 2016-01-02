@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,115 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSignalBlocker::unblock();
+extern void demth_ZN14QSignalBlocker7unblockEv(void* qthis);
+  // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
+extern void* dector_ZN14QSignalBlockerC1ER7QObject(void* arg0);
+extern void demth_ZN14QSignalBlockerC1ER7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalBlocker::QSignalBlocker(QObject * o);
+extern void* dector_ZN14QSignalBlockerC1EP7QObject(void* arg0);
+extern void demth_ZN14QSignalBlockerC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QSignalBlocker::QSignalBlocker(const QSignalBlocker & );
+extern void* dector_ZN14QSignalBlockerC1ERKS_(void* arg0);
+extern void _ZN14QSignalBlockerC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QSignalBlocker::reblock();
+extern void demth_ZN14QSignalBlocker7reblockEv(void* qthis);
+  // proto:  void QSignalBlocker::~QSignalBlocker();
+extern void demth_ZN14QSignalBlockerD0Ev(void* qthis);
+  // proto:  QMetaObject * QObjectData::dynamicMetaObject();
+extern void _ZNK11QObjectData17dynamicMetaObjectEv(void* qthis);
+  // proto:  void QObjectData::~QObjectData();
+extern void _ZN11QObjectDataD0Ev(void* qthis);
+  // proto:  void QObjectUserData::~QObjectUserData();
+extern void _ZN15QObjectUserDataD0Ev(void* qthis);
+  // proto:  bool QObject::inherits(const char * classname);
+extern void demth_ZNK7QObject8inheritsEPKc(void* qthis, char* arg0);
+  // proto:  void QObject::moveToThread(QThread * thread);
+extern void _ZN7QObject12moveToThreadEP7QThread(void* qthis, void* arg0);
+  // proto:  void QObject::removeEventFilter(QObject * );
+extern void _ZN7QObject17removeEventFilterEPS_(void* qthis, void* arg0);
+  // proto:  void QObject::dumpObjectTree();
+extern void _ZN7QObject14dumpObjectTreeEv(void* qthis);
+  // proto:  bool QObject::eventFilter(QObject * , QEvent * );
+extern void _ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void* arg1);
+  // proto:  void QObject::setUserData(uint id, QObjectUserData * data);
+extern void _ZN7QObject11setUserDataEjP15QObjectUserData(void* qthis, unsigned int arg0, void* arg1);
+  // proto:  void QObject::QObject(const QObject & );
+extern void* dector_ZN7QObjectC1ERKS_(void* arg0);
+extern void _ZN7QObjectC1ERKS_(void* qthis, void* arg0);
+  // proto: static bool QObject::disconnect(const QObject * sender, const QMetaMethod & signal, const QObject * receiver, const QMetaMethod & member);
+extern void _ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  bool QObject::event(QEvent * );
+extern void _ZN7QObject5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
+extern void _ZNK7QObject20dynamicPropertyNamesEv(void* qthis);
+  // proto:  bool QObject::isWidgetType();
+extern void demth_ZNK7QObject12isWidgetTypeEv(void* qthis);
+  // proto:  QVariant QObject::property(const char * name);
+extern void _ZNK7QObject8propertyEPKc(void* qthis, char* arg0);
+  // proto:  QThread * QObject::thread();
+extern void _ZNK7QObject6threadEv(void* qthis);
+  // proto:  const QMetaObject * QObject::metaObject();
+extern void _ZNK7QObject10metaObjectEv(void* qthis);
+  // proto:  void QObject::setParent(QObject * );
+extern void _ZN7QObject9setParentEPS_(void* qthis, void* arg0);
+  // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
+extern void demth_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, char* arg1);
+  // proto:  const QObjectList & QObject::children();
+extern void demth_ZNK7QObject8childrenEv(void* qthis);
+  // proto:  bool QObject::isWindowType();
+extern void demth_ZNK7QObject12isWindowTypeEv(void* qthis);
+  // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
+extern void demth_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, char* arg0, void* arg1, char* arg2);
+  // proto:  void QObject::deleteLater();
+extern void _ZN7QObject11deleteLaterEv(void* qthis);
+  // proto:  void QObject::~QObject();
+extern void _ZN7QObjectD0Ev(void* qthis);
+  // proto:  void QObject::QObject(QObject * parent);
+extern void* dector_ZN7QObjectC1EPS_(void* arg0);
+extern void _ZN7QObjectC1EPS_(void* qthis, void* arg0);
+  // proto:  QString QObject::objectName();
+extern void _ZNK7QObject10objectNameEv(void* qthis);
+  // proto:  bool QObject::setProperty(const char * name, const QVariant & value);
+extern void _ZN7QObject11setPropertyEPKcRK8QVariant(void* qthis, char* arg0, void* arg1);
+  // proto: static bool QObject::disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member);
+extern void _ZN7QObject10disconnectEPKS_PKcS1_S3_(void* arg0, char* arg1, void* arg2, char* arg3);
+  // proto:  bool QObject::signalsBlocked();
+extern void demth_ZNK7QObject14signalsBlockedEv(void* qthis);
+  // proto: static uint QObject::registerUserData();
+extern void _ZN7QObject16registerUserDataEv();
+  // proto:  QObjectUserData * QObject::userData(uint id);
+extern void _ZNK7QObject8userDataEj(void* qthis, unsigned int arg0);
+  // proto:  QObject * QObject::parent();
+extern void demth_ZNK7QObject6parentEv(void* qthis);
+  // proto:  void QObject::installEventFilter(QObject * );
+extern void _ZN7QObject18installEventFilterEPS_(void* qthis, void* arg0);
+  // proto:  bool QObject::blockSignals(bool b);
+extern void _ZN7QObject12blockSignalsEb(void* qthis, bool arg0);
+  // proto:  void QObject::setObjectName(const QString & name);
+extern void _ZN7QObject13setObjectNameERK7QString(void* qthis, void* arg0);
+  // proto:  void QObject::dumpObjectInfo();
+extern void _ZN7QObject14dumpObjectInfoEv(void* qthis);
+  // proto:  void QObject::killTimer(int id);
+extern void _ZN7QObject9killTimerEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSignalBlocker)=16
 type QSignalBlocker struct {
   // qbase: None;
@@ -61,7 +161,7 @@ type QObject struct {
 //  _objectNameChanged QObject_objectNameChanged_signal;
 }
 
-
+  // proto:  void QSignalBlocker::unblock();
 func (this *QSignalBlocker) unblock(args ...interface{}) () {
   // unblock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,12 +179,12 @@ func (this *QSignalBlocker) unblock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
 func NewQSignalBlocker(args ...interface{}) QSignalBlocker {
   return QSignalBlocker{}
 }
 
-
+  // proto:  void QSignalBlocker::reblock();
 func (this *QSignalBlocker) reblock(args ...interface{}) () {
   // reblock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +202,7 @@ func (this *QSignalBlocker) reblock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSignalBlocker::~QSignalBlocker();
 func (this *QSignalBlocker) FreeQSignalBlocker(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,7 +216,7 @@ func (this *QSignalBlocker) FreeQSignalBlocker(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaObject * QObjectData::dynamicMetaObject();
 func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
   // dynamicMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +234,7 @@ func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObjectData::~QObjectData();
 func (this *QObjectData) FreeQObjectData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -148,7 +248,7 @@ func (this *QObjectData) FreeQObjectData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObjectUserData::~QObjectUserData();
 func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,7 +262,7 @@ func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::inherits(const char * classname);
 func (this *QObject) inherits(args ...interface{}) () {
   // inherits(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -181,7 +281,7 @@ func (this *QObject) inherits(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::moveToThread(QThread * thread);
 func (this *QObject) moveToThread(args ...interface{}) () {
   // moveToThread(class QThread *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,7 +300,7 @@ func (this *QObject) moveToThread(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::removeEventFilter(QObject * );
 func (this *QObject) removeEventFilter(args ...interface{}) () {
   // removeEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -219,7 +319,7 @@ func (this *QObject) removeEventFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::dumpObjectTree();
 func (this *QObject) dumpObjectTree(args ...interface{}) () {
   // dumpObjectTree()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -237,7 +337,7 @@ func (this *QObject) dumpObjectTree(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::eventFilter(QObject * , QEvent * );
 func (this *QObject) eventFilter(args ...interface{}) () {
   // eventFilter(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -257,7 +357,7 @@ func (this *QObject) eventFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::setUserData(uint id, QObjectUserData * data);
 func (this *QObject) setUserData(args ...interface{}) () {
   // setUserData(uint, class QObjectUserData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -277,12 +377,12 @@ func (this *QObject) setUserData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::QObject(const QObject & );
 func NewQObject(args ...interface{}) QObject {
   return QObject{}
 }
 
-
+  // proto: static bool QObject::disconnect(const QObject * sender, const QMetaMethod & signal, const QObject * receiver, const QMetaMethod & member);
 func (this *QObject) disconnect_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -296,7 +396,7 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::event(QEvent * );
 func (this *QObject) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -315,7 +415,7 @@ func (this *QObject) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QByteArray> QObject::dynamicPropertyNames();
 func (this *QObject) dynamicPropertyNames(args ...interface{}) () {
   // dynamicPropertyNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -333,7 +433,7 @@ func (this *QObject) dynamicPropertyNames(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::isWidgetType();
 func (this *QObject) isWidgetType(args ...interface{}) () {
   // isWidgetType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,7 +451,7 @@ func (this *QObject) isWidgetType(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QObject::property(const char * name);
 func (this *QObject) property(args ...interface{}) () {
   // property(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -370,7 +470,7 @@ func (this *QObject) property(args ...interface{}) () {
 
 }
 
-
+  // proto:  QThread * QObject::thread();
 func (this *QObject) thread(args ...interface{}) () {
   // thread()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -388,7 +488,7 @@ func (this *QObject) thread(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QObject::metaObject();
 func (this *QObject) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -406,7 +506,7 @@ func (this *QObject) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::setParent(QObject * );
 func (this *QObject) setParent(args ...interface{}) () {
   // setParent(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -425,7 +525,7 @@ func (this *QObject) setParent(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
 func (this *QObject) disconnect(args ...interface{}) () {
   // disconnect(const class QObject *, const class QMetaMethod &, const class QObject *, const class QMetaMethod &)
   // disconnect(const struct QMetaObject::Connection &)
@@ -473,7 +573,7 @@ func (this *QObject) disconnect(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QObjectList & QObject::children();
 func (this *QObject) children(args ...interface{}) () {
   // children()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -491,7 +591,7 @@ func (this *QObject) children(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::isWindowType();
 func (this *QObject) isWindowType(args ...interface{}) () {
   // isWindowType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -509,7 +609,7 @@ func (this *QObject) isWindowType(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::deleteLater();
 func (this *QObject) deleteLater(args ...interface{}) () {
   // deleteLater()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -527,7 +627,7 @@ func (this *QObject) deleteLater(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::~QObject();
 func (this *QObject) FreeQObject(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,7 +641,7 @@ func (this *QObject) FreeQObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QObject::objectName();
 func (this *QObject) objectName(args ...interface{}) () {
   // objectName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -559,7 +659,7 @@ func (this *QObject) objectName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::setProperty(const char * name, const QVariant & value);
 func (this *QObject) setProperty(args ...interface{}) () {
   // setProperty(const char *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -579,7 +679,7 @@ func (this *QObject) setProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::signalsBlocked();
 func (this *QObject) signalsBlocked(args ...interface{}) () {
   // signalsBlocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -597,7 +697,7 @@ func (this *QObject) signalsBlocked(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QObject::registerUserData();
 func (this *QObject) registerUserData_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -611,7 +711,7 @@ func (this *QObject) registerUserData_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObjectUserData * QObject::userData(uint id);
 func (this *QObject) userData(args ...interface{}) () {
   // userData(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -630,7 +730,7 @@ func (this *QObject) userData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QObject * QObject::parent();
 func (this *QObject) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -648,7 +748,7 @@ func (this *QObject) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::installEventFilter(QObject * );
 func (this *QObject) installEventFilter(args ...interface{}) () {
   // installEventFilter(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -667,7 +767,7 @@ func (this *QObject) installEventFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QObject::blockSignals(bool b);
 func (this *QObject) blockSignals(args ...interface{}) () {
   // blockSignals(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -686,7 +786,7 @@ func (this *QObject) blockSignals(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::setObjectName(const QString & name);
 func (this *QObject) setObjectName(args ...interface{}) () {
   // setObjectName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -705,7 +805,7 @@ func (this *QObject) setObjectName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::dumpObjectInfo();
 func (this *QObject) dumpObjectInfo(args ...interface{}) () {
   // dumpObjectInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -723,7 +823,7 @@ func (this *QObject) dumpObjectInfo(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QObject::killTimer(int id);
 func (this *QObject) killTimer(args ...interface{}) () {
   // killTimer(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

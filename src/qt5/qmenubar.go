@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,78 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QAction * QMenuBar::addAction(const QString & text);
+extern void _ZN8QMenuBar9addActionERK7QString(void* qthis, void* arg0);
+  // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
+extern void _ZN8QMenuBar15platformMenuBarEv(void* qthis);
+  // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
+extern void _ZN8QMenuBar16setNativeMenuBarEb(void* qthis, bool arg0);
+  // proto:  void QMenuBar::~QMenuBar();
+extern void _ZN8QMenuBarD0Ev(void* qthis);
+  // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
+extern void _ZN8QMenuBar7addMenuEP5QMenu(void* qthis, void* arg0);
+  // proto:  QSize QMenuBar::sizeHint();
+extern void _ZNK8QMenuBar8sizeHintEv(void* qthis);
+  // proto:  QAction * QMenuBar::actionAt(const QPoint & );
+extern void _ZNK8QMenuBar8actionAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QMenuBar::metaObject();
+extern void _ZNK8QMenuBar10metaObjectEv(void* qthis);
+  // proto:  bool QMenuBar::isNativeMenuBar();
+extern void _ZNK8QMenuBar15isNativeMenuBarEv(void* qthis);
+  // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
+extern void _ZN8QMenuBar15insertSeparatorEP7QAction(void* qthis, void* arg0);
+  // proto:  QAction * QMenuBar::addSeparator();
+extern void _ZN8QMenuBar12addSeparatorEv(void* qthis);
+  // proto:  QSize QMenuBar::minimumSizeHint();
+extern void _ZNK8QMenuBar15minimumSizeHintEv(void* qthis);
+  // proto:  bool QMenuBar::isDefaultUp();
+extern void _ZNK8QMenuBar11isDefaultUpEv(void* qthis);
+  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
+extern void* dector_ZN8QMenuBarC1ERKS_(void* arg0);
+extern void _ZN8QMenuBarC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QMenuBar::QMenuBar(QWidget * parent);
+extern void* dector_ZN8QMenuBarC1EP7QWidget(void* arg0);
+extern void _ZN8QMenuBarC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QMenuBar::setActiveAction(QAction * action);
+extern void _ZN8QMenuBar15setActiveActionEP7QAction(void* qthis, void* arg0);
+  // proto:  void QMenuBar::clear();
+extern void _ZN8QMenuBar5clearEv(void* qthis);
+  // proto:  QAction * QMenuBar::activeAction();
+extern void _ZNK8QMenuBar12activeActionEv(void* qthis);
+  // proto:  QMenu * QMenuBar::addMenu(const QIcon & icon, const QString & title);
+extern void _ZN8QMenuBar7addMenuERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  QMenu * QMenuBar::addMenu(const QString & title);
+extern void _ZN8QMenuBar7addMenuERK7QString(void* qthis, void* arg0);
+  // proto:  QRect QMenuBar::actionGeometry(QAction * );
+extern void _ZNK8QMenuBar14actionGeometryEP7QAction(void* qthis, void* arg0);
+  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
+extern void _ZN8QMenuBar10insertMenuEP7QActionP5QMenu(void* qthis, void* arg0, void* arg1);
+  // proto:  void QMenuBar::setDefaultUp(bool );
+extern void _ZN8QMenuBar12setDefaultUpEb(void* qthis, bool arg0);
+  // proto:  void QMenuBar::setVisible(bool visible);
+extern void _ZN8QMenuBar10setVisibleEb(void* qthis, bool arg0);
+  // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
+extern void _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, char* arg2);
+  // proto:  int QMenuBar::heightForWidth(int );
+extern void _ZNK8QMenuBar14heightForWidthEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMenuBar)=1
 type QMenuBar struct {
   /*qbase*/ QWidget;
@@ -43,7 +106,7 @@ type QMenuBar struct {
 //  _triggered QMenuBar_triggered_signal;
 }
 
-
+  // proto:  QAction * QMenuBar::addAction(const QString & text);
 func (this *QMenuBar) addAction(args ...interface{}) () {
   // addAction(const class QString &)
   // addAction(const class QString &, const class QObject *, const char *)
@@ -69,7 +132,7 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformMenuBar * QMenuBar::platformMenuBar();
 func (this *QMenuBar) platformMenuBar(args ...interface{}) () {
   // platformMenuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -87,7 +150,7 @@ func (this *QMenuBar) platformMenuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::setNativeMenuBar(bool nativeMenuBar);
 func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
   // setNativeMenuBar(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -106,7 +169,7 @@ func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::~QMenuBar();
 func (this *QMenuBar) FreeQMenuBar(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -120,7 +183,7 @@ func (this *QMenuBar) FreeQMenuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::addMenu(QMenu * menu);
 func (this *QMenuBar) addMenu(args ...interface{}) () {
   // addMenu(class QMenu *)
   // addMenu(const class QIcon &, const class QString &)
@@ -150,7 +213,7 @@ func (this *QMenuBar) addMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QMenuBar::sizeHint();
 func (this *QMenuBar) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,7 +231,7 @@ func (this *QMenuBar) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::actionAt(const QPoint & );
 func (this *QMenuBar) actionAt(args ...interface{}) () {
   // actionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +250,7 @@ func (this *QMenuBar) actionAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMenuBar::metaObject();
 func (this *QMenuBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +268,7 @@ func (this *QMenuBar) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenuBar::isNativeMenuBar();
 func (this *QMenuBar) isNativeMenuBar(args ...interface{}) () {
   // isNativeMenuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +286,7 @@ func (this *QMenuBar) isNativeMenuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::insertSeparator(QAction * before);
 func (this *QMenuBar) insertSeparator(args ...interface{}) () {
   // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +305,7 @@ func (this *QMenuBar) insertSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::addSeparator();
 func (this *QMenuBar) addSeparator(args ...interface{}) () {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +323,7 @@ func (this *QMenuBar) addSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QMenuBar::minimumSizeHint();
 func (this *QMenuBar) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -278,7 +341,7 @@ func (this *QMenuBar) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMenuBar::isDefaultUp();
 func (this *QMenuBar) isDefaultUp(args ...interface{}) () {
   // isDefaultUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,12 +359,12 @@ func (this *QMenuBar) isDefaultUp(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::QMenuBar(const QMenuBar & );
 func NewQMenuBar(args ...interface{}) QMenuBar {
   return QMenuBar{}
 }
 
-
+  // proto:  void QMenuBar::setActiveAction(QAction * action);
 func (this *QMenuBar) setActiveAction(args ...interface{}) () {
   // setActiveAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +383,7 @@ func (this *QMenuBar) setActiveAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::clear();
 func (this *QMenuBar) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -338,7 +401,7 @@ func (this *QMenuBar) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::activeAction();
 func (this *QMenuBar) activeAction(args ...interface{}) () {
   // activeAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -356,7 +419,7 @@ func (this *QMenuBar) activeAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QMenuBar::actionGeometry(QAction * );
 func (this *QMenuBar) actionGeometry(args ...interface{}) () {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -375,7 +438,7 @@ func (this *QMenuBar) actionGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QMenuBar::insertMenu(QAction * before, QMenu * menu);
 func (this *QMenuBar) insertMenu(args ...interface{}) () {
   // insertMenu(class QAction *, class QMenu *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +458,7 @@ func (this *QMenuBar) insertMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::setDefaultUp(bool );
 func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
   // setDefaultUp(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +477,7 @@ func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMenuBar::setVisible(bool visible);
 func (this *QMenuBar) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -433,7 +496,7 @@ func (this *QMenuBar) setVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMenuBar::heightForWidth(int );
 func (this *QMenuBar) heightForWidth(args ...interface{}) () {
   // heightForWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

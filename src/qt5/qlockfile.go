@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,55 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QLockFile::removeStaleLockFile();
+extern void _ZN9QLockFile19removeStaleLockFileEv(void* qthis);
+  // proto:  int QLockFile::staleLockTime();
+extern void _ZNK9QLockFile13staleLockTimeEv(void* qthis);
+  // proto:  bool QLockFile::isLocked();
+extern void _ZNK9QLockFile8isLockedEv(void* qthis);
+  // proto:  void QLockFile::QLockFile(const QLockFile & );
+extern void* dector_ZN9QLockFileC1ERKS_(void* arg0);
+extern void _ZN9QLockFileC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QLockFile::~QLockFile();
+extern void _ZN9QLockFileD0Ev(void* qthis);
+  // proto:  void QLockFile::unlock();
+extern void _ZN9QLockFile6unlockEv(void* qthis);
+  // proto:  bool QLockFile::tryLock(int timeout);
+extern void _ZN9QLockFile7tryLockEi(void* qthis, int arg0);
+  // proto:  bool QLockFile::lock();
+extern void _ZN9QLockFile4lockEv(void* qthis);
+  // proto:  void QLockFile::setStaleLockTime(int );
+extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int arg0);
+  // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
+extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, long long* arg0, void* arg1, void* arg2);
+  // proto:  void QLockFile::QLockFile(const QString & fileName);
+extern void* dector_ZN9QLockFileC1ERK7QString(void* arg0);
+extern void _ZN9QLockFileC1ERK7QString(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLockFile)=1
 type QLockFile struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QLockFile::removeStaleLockFile();
 func (this *QLockFile) removeStaleLockFile(args ...interface{}) () {
   // removeStaleLockFile()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +92,7 @@ func (this *QLockFile) removeStaleLockFile(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLockFile::staleLockTime();
 func (this *QLockFile) staleLockTime(args ...interface{}) () {
   // staleLockTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +110,7 @@ func (this *QLockFile) staleLockTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLockFile::isLocked();
 func (this *QLockFile) isLocked(args ...interface{}) () {
   // isLocked()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,12 +128,12 @@ func (this *QLockFile) isLocked(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLockFile::QLockFile(const QLockFile & );
 func NewQLockFile(args ...interface{}) QLockFile {
   return QLockFile{}
 }
 
-
+  // proto:  void QLockFile::~QLockFile();
 func (this *QLockFile) FreeQLockFile(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,7 +147,7 @@ func (this *QLockFile) FreeQLockFile(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLockFile::unlock();
 func (this *QLockFile) unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +165,7 @@ func (this *QLockFile) unlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLockFile::tryLock(int timeout);
 func (this *QLockFile) tryLock(args ...interface{}) () {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +184,7 @@ func (this *QLockFile) tryLock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLockFile::lock();
 func (this *QLockFile) lock(args ...interface{}) () {
   // lock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -169,7 +202,7 @@ func (this *QLockFile) lock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLockFile::setStaleLockTime(int );
 func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
   // setStaleLockTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -188,7 +221,7 @@ func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
 func (this *QLockFile) getLockInfo(args ...interface{}) () {
   // getLockInfo(qint64 *, class QString *, class QString *)
   var vtys = make(map[int32]map[int32]reflect.Type)

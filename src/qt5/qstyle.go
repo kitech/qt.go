@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,70 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QStyle::QStyle(const QStyle & );
+extern void* dector_ZN6QStyleC1ERKS_(void* arg0);
+extern void _ZN6QStyleC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QStyle::unpolish(QWidget * );
+extern void _ZN6QStyle8unpolishEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QStyle::~QStyle();
+extern void _ZN6QStyleD0Ev(void* qthis);
+  // proto:  void QStyle::polish(QPalette & );
+extern void _ZN6QStyle6polishER8QPalette(void* qthis, void* arg0);
+  // proto:  void QStyle::QStyle();
+extern void* dector_ZN6QStyleC1Ev();
+extern void _ZN6QStyleC1Ev(void* qthis);
+  // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
+extern void _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
+extern void _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int arg2, bool arg3, void* arg4);
+  // proto:  const QStyle * QStyle::proxy();
+extern void _ZNK6QStyle5proxyEv(void* qthis);
+  // proto:  QPalette QStyle::standardPalette();
+extern void _ZNK6QStyle15standardPaletteEv(void* qthis);
+  // proto:  const QMetaObject * QStyle::metaObject();
+extern void _ZNK6QStyle10metaObjectEv(void* qthis);
+  // proto:  void QStyle::polish(QApplication * );
+extern void _ZN6QStyle6polishEP12QApplication(void* qthis, void* arg0);
+  // proto:  void QStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
+extern void _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int arg2, void* arg3);
+  // proto:  void QStyle::polish(QWidget * );
+extern void _ZN6QStyle6polishEP7QWidget(void* qthis, void* arg0);
+  // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
+extern void _ZN6QStyle23sliderPositionFromValueEiiiib(int arg0, int arg1, int arg2, int arg3, bool arg4);
+  // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
+extern void _ZN6QStyle23sliderValueFromPositionEiiiib(int arg0, int arg1, int arg2, int arg3, bool arg4);
+  // proto:  void QStyle::unpolish(QApplication * );
+extern void _ZN6QStyle8unpolishEP12QApplication(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStyle)=1
 type QStyle struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QStyle::QStyle(const QStyle & );
 func NewQStyle(args ...interface{}) QStyle {
   return QStyle{}
 }
 
-
+  // proto:  void QStyle::unpolish(QWidget * );
 func (this *QStyle) unpolish(args ...interface{}) () {
   // unpolish(class QWidget *)
   // unpolish(class QApplication *)
@@ -70,7 +113,7 @@ func (this *QStyle) unpolish(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyle::~QStyle();
 func (this *QStyle) FreeQStyle(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -84,7 +127,7 @@ func (this *QStyle) FreeQStyle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyle::polish(QPalette & );
 func (this *QStyle) polish(args ...interface{}) () {
   // polish(class QPalette &)
   // polish(class QApplication *)
@@ -113,7 +156,7 @@ func (this *QStyle) polish(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
 func (this *QStyle) itemPixmapRect(args ...interface{}) () {
   // itemPixmapRect(const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +177,7 @@ func (this *QStyle) itemPixmapRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
 func (this *QStyle) itemTextRect(args ...interface{}) () {
   // itemTextRect(const class QFontMetrics &, const class QRect &, int, _Bool, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -157,7 +200,7 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QStyle * QStyle::proxy();
 func (this *QStyle) proxy(args ...interface{}) () {
   // proxy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,7 +218,7 @@ func (this *QStyle) proxy(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPalette QStyle::standardPalette();
 func (this *QStyle) standardPalette(args ...interface{}) () {
   // standardPalette()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +236,7 @@ func (this *QStyle) standardPalette(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QStyle::metaObject();
 func (this *QStyle) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +254,7 @@ func (this *QStyle) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
 func (this *QStyle) drawItemPixmap(args ...interface{}) () {
   // drawItemPixmap(class QPainter *, const class QRect &, int, const class QPixmap &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +276,7 @@ func (this *QStyle) drawItemPixmap(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
 func (this *QStyle) sliderPositionFromValue_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -247,7 +290,7 @@ func (this *QStyle) sliderPositionFromValue_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
 func (this *QStyle) sliderValueFromPosition_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

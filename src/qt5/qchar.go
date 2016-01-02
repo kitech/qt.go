@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,181 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  ushort QLatin1Char::unicode();
+extern void _ZNK11QLatin1Char7unicodeEv(void* qthis);
+  // proto:  void QLatin1Char::QLatin1Char(char c);
+extern void* dector_ZN11QLatin1CharC1Ec(char arg0);
+extern void _ZN11QLatin1CharC1Ec(void* qthis, char arg0);
+  // proto:  char QLatin1Char::toLatin1();
+extern void _ZNK11QLatin1Char8toLatin1Ev(void* qthis);
+  // proto: static uint QChar::toUpper(uint ucs4);
+extern void _ZN5QChar7toUpperEj(unsigned int arg0);
+  // proto:  bool QChar::hasMirrored();
+extern void demth_ZNK5QChar11hasMirroredEv(void* qthis);
+  // proto: static ushort QChar::lowSurrogate(uint ucs4);
+extern void demth_ZN5QChar12lowSurrogateEj(unsigned int arg0);
+  // proto: static bool QChar::isSymbol(uint ucs4);
+extern void _ZN5QChar8isSymbolEj(unsigned int arg0);
+  // proto:  uchar QChar::cell();
+extern void _ZNK5QChar4cellEv(void* qthis);
+  // proto: static uint QChar::surrogateToUcs4(QChar high, QChar low);
+extern void demth_ZN5QChar15surrogateToUcs4ES_S_(void* arg0, void* arg1);
+  // proto: static bool QChar::isTitleCase(uint ucs4);
+extern void demth_ZN5QChar11isTitleCaseEj(unsigned int arg0);
+  // proto:  bool QChar::isNull();
+extern void _ZNK5QChar6isNullEv(void* qthis);
+  // proto:  int QChar::digitValue();
+extern void demth_ZNK5QChar10digitValueEv(void* qthis);
+  // proto:  QChar QChar::toTitleCase();
+extern void demth_ZNK5QChar11toTitleCaseEv(void* qthis);
+  // proto: static bool QChar::isLower(uint ucs4);
+extern void demth_ZN5QChar7isLowerEj(unsigned int arg0);
+  // proto:  bool QChar::isLowSurrogate();
+extern void _ZNK5QChar14isLowSurrogateEv(void* qthis);
+  // proto: static bool QChar::isPrint(uint ucs4);
+extern void _ZN5QChar7isPrintEj(unsigned int arg0);
+  // proto:  bool QChar::isSymbol();
+extern void demth_ZNK5QChar8isSymbolEv(void* qthis);
+  // proto:  bool QChar::isLower();
+extern void _ZNK5QChar7isLowerEv(void* qthis);
+  // proto:  QChar QChar::mirroredChar();
+extern void demth_ZNK5QChar12mirroredCharEv(void* qthis);
+  // proto:  uchar QChar::row();
+extern void _ZNK5QChar3rowEv(void* qthis);
+  // proto:  bool QChar::isDigit();
+extern void _ZNK5QChar7isDigitEv(void* qthis);
+  // proto: static uint QChar::toTitleCase(uint ucs4);
+extern void _ZN5QChar11toTitleCaseEj(unsigned int arg0);
+  // proto:  bool QChar::isSurrogate();
+extern void _ZNK5QChar11isSurrogateEv(void* qthis);
+  // proto: static bool QChar::hasMirrored(uint ucs4);
+extern void _ZN5QChar11hasMirroredEj(unsigned int arg0);
+  // proto:  bool QChar::isNumber();
+extern void _ZNK5QChar8isNumberEv(void* qthis);
+  // proto: static bool QChar::isHighSurrogate(uint ucs4);
+extern void demth_ZN5QChar15isHighSurrogateEj(unsigned int arg0);
+  // proto: static uint QChar::toCaseFolded(uint ucs4);
+extern void _ZN5QChar12toCaseFoldedEj(unsigned int arg0);
+  // proto:  bool QChar::isMark();
+extern void demth_ZNK5QChar6isMarkEv(void* qthis);
+  // proto: static uint QChar::surrogateToUcs4(ushort high, ushort low);
+extern void demth_ZN5QChar15surrogateToUcs4Ett(unsigned short arg0, unsigned short arg1);
+  // proto: static uint QChar::toLower(uint ucs4);
+extern void _ZN5QChar7toLowerEj(unsigned int arg0);
+  // proto: static uint QChar::mirroredChar(uint ucs4);
+extern void _ZN5QChar12mirroredCharEj(unsigned int arg0);
+  // proto:  void QChar::setRow(uchar row);
+extern void demth_ZN5QChar6setRowEh(void* qthis, unsigned char arg0);
+  // proto: static QString QChar::decomposition(uint ucs4);
+extern void _ZN5QChar13decompositionEj(unsigned int arg0);
+  // proto: static int QChar::digitValue(uint ucs4);
+extern void _ZN5QChar10digitValueEj(unsigned int arg0);
+  // proto:  void QChar::setCell(uchar cell);
+extern void demth_ZN5QChar7setCellEh(void* qthis, unsigned char arg0);
+  // proto: static bool QChar::isUpper(uint ucs4);
+extern void demth_ZN5QChar7isUpperEj(unsigned int arg0);
+  // proto:  void QChar::QChar(uchar c, uchar r);
+extern void* dector_ZN5QCharC1Ehh(unsigned char arg0, unsigned char arg1);
+extern void _ZN5QCharC1Ehh(void* qthis, unsigned char arg0, unsigned char arg1);
+  // proto:  QChar QChar::toCaseFolded();
+extern void demth_ZNK5QChar12toCaseFoldedEv(void* qthis);
+  // proto:  bool QChar::isPrint();
+extern void demth_ZNK5QChar7isPrintEv(void* qthis);
+  // proto:  void QChar::QChar(char c);
+extern void* dector_ZN5QCharC1Ec(char arg0);
+extern void _ZN5QCharC1Ec(void* qthis, char arg0);
+  // proto:  bool QChar::isPunct();
+extern void demth_ZNK5QChar7isPunctEv(void* qthis);
+  // proto:  QString QChar::decomposition();
+extern void _ZNK5QChar13decompositionEv(void* qthis);
+  // proto:  void QChar::QChar(uint rc);
+extern void* dector_ZN5QCharC1Ej(unsigned int arg0);
+extern void _ZN5QCharC1Ej(void* qthis, unsigned int arg0);
+  // proto:  void QChar::QChar(int rc);
+extern void* dector_ZN5QCharC1Ei(int arg0);
+extern void _ZN5QCharC1Ei(void* qthis, int arg0);
+  // proto:  bool QChar::isSpace();
+extern void _ZNK5QChar7isSpaceEv(void* qthis);
+  // proto:  void QChar::QChar(short rc);
+extern void* dector_ZN5QCharC1Es(short arg0);
+extern void _ZN5QCharC1Es(void* qthis, short arg0);
+  // proto:  void QChar::QChar();
+extern void* dector_ZN5QCharC1Ev();
+extern void _ZN5QCharC1Ev(void* qthis);
+  // proto:  void QChar::QChar(ushort rc);
+extern void* dector_ZN5QCharC1Et(unsigned short arg0);
+extern void _ZN5QCharC1Et(void* qthis, unsigned short arg0);
+  // proto:  bool QChar::isUpper();
+extern void _ZNK5QChar7isUpperEv(void* qthis);
+  // proto: static unsigned char QChar::combiningClass(uint ucs4);
+extern void _ZN5QChar14combiningClassEj(unsigned int arg0);
+  // proto:  bool QChar::isNonCharacter();
+extern void _ZNK5QChar14isNonCharacterEv(void* qthis);
+  // proto: static bool QChar::isLetterOrNumber(uint ucs4);
+extern void demth_ZN5QChar16isLetterOrNumberEj(unsigned int arg0);
+  // proto: static bool QChar::isDigit(uint ucs4);
+extern void demth_ZN5QChar7isDigitEj(unsigned int arg0);
+  // proto: static bool QChar::isPunct(uint ucs4);
+extern void _ZN5QChar7isPunctEj(unsigned int arg0);
+  // proto:  bool QChar::isTitleCase();
+extern void _ZNK5QChar11isTitleCaseEv(void* qthis);
+  // proto:  bool QChar::isLetter();
+extern void _ZNK5QChar8isLetterEv(void* qthis);
+  // proto:  unsigned char QChar::combiningClass();
+extern void demth_ZNK5QChar14combiningClassEv(void* qthis);
+  // proto:  bool QChar::isHighSurrogate();
+extern void _ZNK5QChar15isHighSurrogateEv(void* qthis);
+  // proto: static ushort QChar::highSurrogate(uint ucs4);
+extern void demth_ZN5QChar13highSurrogateEj(unsigned int arg0);
+  // proto: static bool QChar::requiresSurrogates(uint ucs4);
+extern void demth_ZN5QChar18requiresSurrogatesEj(unsigned int arg0);
+  // proto:  bool QChar::isLetterOrNumber();
+extern void _ZNK5QChar16isLetterOrNumberEv(void* qthis);
+  // proto:  ushort & QChar::unicode();
+extern void demth_ZN5QChar7unicodeEv(void* qthis);
+  // proto: static bool QChar::isLowSurrogate(uint ucs4);
+extern void demth_ZN5QChar14isLowSurrogateEj(unsigned int arg0);
+  // proto: static bool QChar::isNumber(uint ucs4);
+extern void demth_ZN5QChar8isNumberEj(unsigned int arg0);
+  // proto:  QChar QChar::toLower();
+extern void demth_ZNK5QChar7toLowerEv(void* qthis);
+  // proto:  void QChar::QChar(uchar c);
+extern void* dector_ZN5QCharC1Eh(unsigned char arg0);
+extern void _ZN5QCharC1Eh(void* qthis, unsigned char arg0);
+  // proto: static bool QChar::isLetter(uint ucs4);
+extern void demth_ZN5QChar8isLetterEj(unsigned int arg0);
+  // proto:  QChar QChar::toUpper();
+extern void demth_ZNK5QChar7toUpperEv(void* qthis);
+  // proto: static bool QChar::isSpace(uint ucs4);
+extern void demth_ZN5QChar7isSpaceEj(unsigned int arg0);
+  // proto: static QChar QChar::fromLatin1(char c);
+extern void _ZN5QChar10fromLatin1Ec(char arg0);
+  // proto: static bool QChar::isSurrogate(uint ucs4);
+extern void demth_ZN5QChar11isSurrogateEj(unsigned int arg0);
+  // proto: static bool QChar::isMark(uint ucs4);
+extern void _ZN5QChar6isMarkEj(unsigned int arg0);
+  // proto: static bool QChar::isNonCharacter(uint ucs4);
+extern void demth_ZN5QChar14isNonCharacterEj(unsigned int arg0);
+  // proto:  char QChar::toLatin1();
+extern void _ZNK5QChar8toLatin1Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLatin1Char)=1
 type QLatin1Char struct {
   // qbase: None;
@@ -47,7 +213,7 @@ type QChar struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  ushort QLatin1Char::unicode();
 func (this *QLatin1Char) unicode(args ...interface{}) () {
   // unicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,12 +231,12 @@ func (this *QLatin1Char) unicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLatin1Char::QLatin1Char(char c);
 func NewQLatin1Char(args ...interface{}) QLatin1Char {
   return QLatin1Char{}
 }
 
-
+  // proto:  char QLatin1Char::toLatin1();
 func (this *QLatin1Char) toLatin1(args ...interface{}) () {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -88,7 +254,7 @@ func (this *QLatin1Char) toLatin1(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::toUpper(uint ucs4);
 func (this *QChar) toUpper_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -102,7 +268,7 @@ func (this *QChar) toUpper_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::hasMirrored();
 func (this *QChar) hasMirrored(args ...interface{}) () {
   // hasMirrored()
   // hasMirrored(uint)
@@ -125,7 +291,7 @@ func (this *QChar) hasMirrored(args ...interface{}) () {
 
 }
 
-
+  // proto: static ushort QChar::lowSurrogate(uint ucs4);
 func (this *QChar) lowSurrogate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -139,7 +305,7 @@ func (this *QChar) lowSurrogate_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isSymbol(uint ucs4);
 func (this *QChar) isSymbol_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -153,7 +319,7 @@ func (this *QChar) isSymbol_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  uchar QChar::cell();
 func (this *QChar) cell(args ...interface{}) () {
   // cell()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -171,7 +337,7 @@ func (this *QChar) cell(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::surrogateToUcs4(QChar high, QChar low);
 func (this *QChar) surrogateToUcs4_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -185,7 +351,7 @@ func (this *QChar) surrogateToUcs4_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isTitleCase(uint ucs4);
 func (this *QChar) isTitleCase_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -199,7 +365,7 @@ func (this *QChar) isTitleCase_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isNull();
 func (this *QChar) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -217,7 +383,7 @@ func (this *QChar) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QChar::digitValue();
 func (this *QChar) digitValue(args ...interface{}) () {
   // digitValue()
   // digitValue(uint)
@@ -240,7 +406,7 @@ func (this *QChar) digitValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QChar::toTitleCase();
 func (this *QChar) toTitleCase(args ...interface{}) () {
   // toTitleCase()
   // toTitleCase(uint)
@@ -263,7 +429,7 @@ func (this *QChar) toTitleCase(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isLower(uint ucs4);
 func (this *QChar) isLower_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -277,7 +443,7 @@ func (this *QChar) isLower_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isLowSurrogate();
 func (this *QChar) isLowSurrogate(args ...interface{}) () {
   // isLowSurrogate()
   // isLowSurrogate(uint)
@@ -300,7 +466,7 @@ func (this *QChar) isLowSurrogate(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isPrint(uint ucs4);
 func (this *QChar) isPrint_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -314,7 +480,7 @@ func (this *QChar) isPrint_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isSymbol();
 func (this *QChar) isSymbol(args ...interface{}) () {
   // isSymbol(uint)
   // isSymbol()
@@ -337,7 +503,7 @@ func (this *QChar) isSymbol(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isLower();
 func (this *QChar) isLower(args ...interface{}) () {
   // isLower(uint)
   // isLower()
@@ -360,7 +526,7 @@ func (this *QChar) isLower(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QChar::mirroredChar();
 func (this *QChar) mirroredChar(args ...interface{}) () {
   // mirroredChar()
   // mirroredChar(uint)
@@ -383,7 +549,7 @@ func (this *QChar) mirroredChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  uchar QChar::row();
 func (this *QChar) row(args ...interface{}) () {
   // row()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -401,7 +567,7 @@ func (this *QChar) row(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isDigit();
 func (this *QChar) isDigit(args ...interface{}) () {
   // isDigit()
   // isDigit(uint)
@@ -424,7 +590,7 @@ func (this *QChar) isDigit(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::toTitleCase(uint ucs4);
 func (this *QChar) toTitleCase_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -438,7 +604,7 @@ func (this *QChar) toTitleCase_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isSurrogate();
 func (this *QChar) isSurrogate(args ...interface{}) () {
   // isSurrogate()
   // isSurrogate(uint)
@@ -461,7 +627,7 @@ func (this *QChar) isSurrogate(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::hasMirrored(uint ucs4);
 func (this *QChar) hasMirrored_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -475,7 +641,7 @@ func (this *QChar) hasMirrored_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isNumber();
 func (this *QChar) isNumber(args ...interface{}) () {
   // isNumber()
   // isNumber(uint)
@@ -498,7 +664,7 @@ func (this *QChar) isNumber(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isHighSurrogate(uint ucs4);
 func (this *QChar) isHighSurrogate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -512,7 +678,7 @@ func (this *QChar) isHighSurrogate_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::toCaseFolded(uint ucs4);
 func (this *QChar) toCaseFolded_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -526,7 +692,7 @@ func (this *QChar) toCaseFolded_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isMark();
 func (this *QChar) isMark(args ...interface{}) () {
   // isMark()
   // isMark(uint)
@@ -549,7 +715,7 @@ func (this *QChar) isMark(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::toLower(uint ucs4);
 func (this *QChar) toLower_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -563,7 +729,7 @@ func (this *QChar) toLower_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static uint QChar::mirroredChar(uint ucs4);
 func (this *QChar) mirroredChar_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -577,7 +743,7 @@ func (this *QChar) mirroredChar_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QChar::setRow(uchar row);
 func (this *QChar) setRow(args ...interface{}) () {
   // setRow(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -596,7 +762,7 @@ func (this *QChar) setRow(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QChar::decomposition(uint ucs4);
 func (this *QChar) decomposition_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -610,7 +776,7 @@ func (this *QChar) decomposition_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QChar::digitValue(uint ucs4);
 func (this *QChar) digitValue_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -624,7 +790,7 @@ func (this *QChar) digitValue_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QChar::setCell(uchar cell);
 func (this *QChar) setCell(args ...interface{}) () {
   // setCell(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -643,7 +809,7 @@ func (this *QChar) setCell(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isUpper(uint ucs4);
 func (this *QChar) isUpper_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -657,12 +823,12 @@ func (this *QChar) isUpper_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QChar::QChar(uchar c, uchar r);
 func NewQChar(args ...interface{}) QChar {
   return QChar{}
 }
 
-
+  // proto:  QChar QChar::toCaseFolded();
 func (this *QChar) toCaseFolded(args ...interface{}) () {
   // toCaseFolded(uint)
   // toCaseFolded()
@@ -685,7 +851,7 @@ func (this *QChar) toCaseFolded(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isPrint();
 func (this *QChar) isPrint(args ...interface{}) () {
   // isPrint(uint)
   // isPrint()
@@ -708,7 +874,7 @@ func (this *QChar) isPrint(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isPunct();
 func (this *QChar) isPunct(args ...interface{}) () {
   // isPunct()
   // isPunct(uint)
@@ -731,7 +897,7 @@ func (this *QChar) isPunct(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QChar::decomposition();
 func (this *QChar) decomposition(args ...interface{}) () {
   // decomposition(uint)
   // decomposition()
@@ -754,7 +920,7 @@ func (this *QChar) decomposition(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isSpace();
 func (this *QChar) isSpace(args ...interface{}) () {
   // isSpace()
   // isSpace(uint)
@@ -777,7 +943,7 @@ func (this *QChar) isSpace(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isUpper();
 func (this *QChar) isUpper(args ...interface{}) () {
   // isUpper(uint)
   // isUpper()
@@ -800,7 +966,7 @@ func (this *QChar) isUpper(args ...interface{}) () {
 
 }
 
-
+  // proto: static unsigned char QChar::combiningClass(uint ucs4);
 func (this *QChar) combiningClass_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -814,7 +980,7 @@ func (this *QChar) combiningClass_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isNonCharacter();
 func (this *QChar) isNonCharacter(args ...interface{}) () {
   // isNonCharacter()
   // isNonCharacter(uint)
@@ -837,7 +1003,7 @@ func (this *QChar) isNonCharacter(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isLetterOrNumber(uint ucs4);
 func (this *QChar) isLetterOrNumber_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -851,7 +1017,7 @@ func (this *QChar) isLetterOrNumber_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isDigit(uint ucs4);
 func (this *QChar) isDigit_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -865,7 +1031,7 @@ func (this *QChar) isDigit_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isPunct(uint ucs4);
 func (this *QChar) isPunct_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -879,7 +1045,7 @@ func (this *QChar) isPunct_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isTitleCase();
 func (this *QChar) isTitleCase(args ...interface{}) () {
   // isTitleCase(uint)
   // isTitleCase()
@@ -902,7 +1068,7 @@ func (this *QChar) isTitleCase(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isLetter();
 func (this *QChar) isLetter(args ...interface{}) () {
   // isLetter()
   // isLetter(uint)
@@ -925,7 +1091,7 @@ func (this *QChar) isLetter(args ...interface{}) () {
 
 }
 
-
+  // proto:  unsigned char QChar::combiningClass();
 func (this *QChar) combiningClass(args ...interface{}) () {
   // combiningClass(uint)
   // combiningClass()
@@ -948,7 +1114,7 @@ func (this *QChar) combiningClass(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isHighSurrogate();
 func (this *QChar) isHighSurrogate(args ...interface{}) () {
   // isHighSurrogate(uint)
   // isHighSurrogate()
@@ -971,7 +1137,7 @@ func (this *QChar) isHighSurrogate(args ...interface{}) () {
 
 }
 
-
+  // proto: static ushort QChar::highSurrogate(uint ucs4);
 func (this *QChar) highSurrogate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -985,7 +1151,7 @@ func (this *QChar) highSurrogate_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::requiresSurrogates(uint ucs4);
 func (this *QChar) requiresSurrogates_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -999,7 +1165,7 @@ func (this *QChar) requiresSurrogates_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QChar::isLetterOrNumber();
 func (this *QChar) isLetterOrNumber(args ...interface{}) () {
   // isLetterOrNumber(uint)
   // isLetterOrNumber()
@@ -1022,7 +1188,7 @@ func (this *QChar) isLetterOrNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  ushort & QChar::unicode();
 func (this *QChar) unicode(args ...interface{}) () {
   // unicode()
   // unicode()
@@ -1044,7 +1210,7 @@ func (this *QChar) unicode(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isLowSurrogate(uint ucs4);
 func (this *QChar) isLowSurrogate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1058,7 +1224,7 @@ func (this *QChar) isLowSurrogate_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isNumber(uint ucs4);
 func (this *QChar) isNumber_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1072,7 +1238,7 @@ func (this *QChar) isNumber_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QChar::toLower();
 func (this *QChar) toLower(args ...interface{}) () {
   // toLower(uint)
   // toLower()
@@ -1095,7 +1261,7 @@ func (this *QChar) toLower(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isLetter(uint ucs4);
 func (this *QChar) isLetter_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1109,7 +1275,7 @@ func (this *QChar) isLetter_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QChar::toUpper();
 func (this *QChar) toUpper(args ...interface{}) () {
   // toUpper(uint)
   // toUpper()
@@ -1132,7 +1298,7 @@ func (this *QChar) toUpper(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isSpace(uint ucs4);
 func (this *QChar) isSpace_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1146,7 +1312,7 @@ func (this *QChar) isSpace_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QChar QChar::fromLatin1(char c);
 func (this *QChar) fromLatin1_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1160,7 +1326,7 @@ func (this *QChar) fromLatin1_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isSurrogate(uint ucs4);
 func (this *QChar) isSurrogate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1174,7 +1340,7 @@ func (this *QChar) isSurrogate_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isMark(uint ucs4);
 func (this *QChar) isMark_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1188,7 +1354,7 @@ func (this *QChar) isMark_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QChar::isNonCharacter(uint ucs4);
 func (this *QChar) isNonCharacter_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1202,7 +1368,7 @@ func (this *QChar) isNonCharacter_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  char QChar::toLatin1();
 func (this *QChar) toLatin1(args ...interface{}) () {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,66 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QJsonValue QJsonArray::first();
+extern void _ZNK10QJsonArray5firstEv(void* qthis);
+  // proto:  bool QJsonArray::empty();
+extern void demth_ZNK10QJsonArray5emptyEv(void* qthis);
+  // proto:  QJsonValue QJsonArray::takeAt(int i);
+extern void _ZN10QJsonArray6takeAtEi(void* qthis, int arg0);
+  // proto:  void QJsonArray::removeLast();
+extern void demth_ZN10QJsonArray10removeLastEv(void* qthis);
+  // proto:  void QJsonArray::pop_front();
+extern void demth_ZN10QJsonArray9pop_frontEv(void* qthis);
+  // proto:  QVariantList QJsonArray::toVariantList();
+extern void _ZNK10QJsonArray13toVariantListEv(void* qthis);
+  // proto:  void QJsonArray::~QJsonArray();
+extern void _ZN10QJsonArrayD0Ev(void* qthis);
+  // proto:  int QJsonArray::size();
+extern void _ZNK10QJsonArray4sizeEv(void* qthis);
+  // proto:  int QJsonArray::count();
+extern void demth_ZNK10QJsonArray5countEv(void* qthis);
+  // proto:  void QJsonArray::QJsonArray();
+extern void* dector_ZN10QJsonArrayC1Ev();
+extern void _ZN10QJsonArrayC1Ev(void* qthis);
+  // proto:  QJsonValue QJsonArray::at(int i);
+extern void _ZNK10QJsonArray2atEi(void* qthis, int arg0);
+  // proto:  void QJsonArray::pop_back();
+extern void demth_ZN10QJsonArray8pop_backEv(void* qthis);
+  // proto:  bool QJsonArray::isEmpty();
+extern void _ZNK10QJsonArray7isEmptyEv(void* qthis);
+  // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
+extern void _ZN10QJsonArray14fromStringListERK11QStringList(void* arg0);
+  // proto:  QJsonValue QJsonArray::last();
+extern void _ZNK10QJsonArray4lastEv(void* qthis);
+  // proto:  void QJsonArray::removeFirst();
+extern void demth_ZN10QJsonArray11removeFirstEv(void* qthis);
+  // proto:  void QJsonArray::removeAt(int i);
+extern void _ZN10QJsonArray8removeAtEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QJsonArray)=16
 type QJsonArray struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QJsonValue QJsonArray::first();
 func (this *QJsonArray) first(args ...interface{}) () {
   // first()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +103,7 @@ func (this *QJsonArray) first(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonArray::empty();
 func (this *QJsonArray) empty(args ...interface{}) () {
   // empty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +121,7 @@ func (this *QJsonArray) empty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonValue QJsonArray::takeAt(int i);
 func (this *QJsonArray) takeAt(args ...interface{}) () {
   // takeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +140,7 @@ func (this *QJsonArray) takeAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::removeLast();
 func (this *QJsonArray) removeLast(args ...interface{}) () {
   // removeLast()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +158,7 @@ func (this *QJsonArray) removeLast(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::pop_front();
 func (this *QJsonArray) pop_front(args ...interface{}) () {
   // pop_front()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +176,7 @@ func (this *QJsonArray) pop_front(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariantList QJsonArray::toVariantList();
 func (this *QJsonArray) toVariantList(args ...interface{}) () {
   // toVariantList()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +194,7 @@ func (this *QJsonArray) toVariantList(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::~QJsonArray();
 func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -164,7 +208,7 @@ func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QJsonArray::size();
 func (this *QJsonArray) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -182,7 +226,7 @@ func (this *QJsonArray) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QJsonArray::count();
 func (this *QJsonArray) count(args ...interface{}) () {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,12 +244,12 @@ func (this *QJsonArray) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::QJsonArray();
 func NewQJsonArray(args ...interface{}) QJsonArray {
   return QJsonArray{}
 }
 
-
+  // proto:  QJsonValue QJsonArray::at(int i);
 func (this *QJsonArray) at(args ...interface{}) () {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -224,7 +268,7 @@ func (this *QJsonArray) at(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::pop_back();
 func (this *QJsonArray) pop_back(args ...interface{}) () {
   // pop_back()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +286,7 @@ func (this *QJsonArray) pop_back(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QJsonArray::isEmpty();
 func (this *QJsonArray) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +304,7 @@ func (this *QJsonArray) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
 func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +318,7 @@ func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QJsonValue QJsonArray::last();
 func (this *QJsonArray) last(args ...interface{}) () {
   // last()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -292,7 +336,7 @@ func (this *QJsonArray) last(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::removeFirst();
 func (this *QJsonArray) removeFirst(args ...interface{}) () {
   // removeFirst()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +354,7 @@ func (this *QJsonArray) removeFirst(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QJsonArray::removeAt(int i);
 func (this *QJsonArray) removeAt(args ...interface{}) () {
   // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

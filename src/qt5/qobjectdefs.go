@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,114 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void Connection::Connection();
+extern void* dector_ZN11QMetaObject10ConnectionC1Ev();
+extern void _ZN11QMetaObject10ConnectionC1Ev(void* qthis);
+  // proto:  void Connection::~Connection();
+extern void _ZN11QMetaObject10ConnectionD0Ev(void* qthis);
+  // proto:  void Connection::Connection(void * data);
+extern void* dector_ZN11QMetaObject10ConnectionC1EPv(void* arg0);
+extern void _ZN11QMetaObject10ConnectionC1EPv(void* qthis, void* arg0);
+  // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
+extern void* dector_ZN22QGenericReturnArgumentC1EPKcPv(char* arg0, void* arg1);
+extern void demth_ZN22QGenericReturnArgumentC1EPKcPv(void* qthis, char* arg0, void* arg1);
+  // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
+extern void _ZN11QMetaObject19normalizedSignatureEPKc(char* arg0);
+  // proto: static bool QMetaObject::disconnectOne(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
+extern void _ZN11QMetaObject13disconnectOneEPK7QObjectiS2_i(void* arg0, int arg1, void* arg2, int arg3);
+  // proto:  int QMetaObject::indexOfSlot(const char * slot);
+extern void _ZNK11QMetaObject11indexOfSlotEPKc(void* qthis, char* arg0);
+  // proto:  int QMetaObject::indexOfConstructor(const char * constructor);
+extern void _ZNK11QMetaObject18indexOfConstructorEPKc(void* qthis, char* arg0);
+  // proto:  QMetaEnum QMetaObject::enumerator(int index);
+extern void _ZNK11QMetaObject10enumeratorEi(void* qthis, int arg0);
+  // proto:  int QMetaObject::indexOfMethod(const char * method);
+extern void _ZNK11QMetaObject13indexOfMethodEPKc(void* qthis, char* arg0);
+  // proto:  QMetaMethod QMetaObject::constructor(int index);
+extern void _ZNK11QMetaObject11constructorEi(void* qthis, int arg0);
+  // proto: static bool QMetaObject::checkConnectArgs(const char * signal, const char * method);
+extern void _ZN11QMetaObject16checkConnectArgsEPKcS1_(char* arg0, char* arg1);
+  // proto:  int QMetaObject::enumeratorOffset();
+extern void _ZNK11QMetaObject16enumeratorOffsetEv(void* qthis);
+  // proto:  QMetaProperty QMetaObject::property(int index);
+extern void _ZNK11QMetaObject8propertyEi(void* qthis, int arg0);
+  // proto: static void QMetaObject::connectSlotsByName(QObject * o);
+extern void _ZN11QMetaObject18connectSlotsByNameEP7QObject(void* arg0);
+  // proto:  QMetaProperty QMetaObject::userProperty();
+extern void _ZNK11QMetaObject12userPropertyEv(void* qthis);
+  // proto:  int QMetaObject::indexOfProperty(const char * name);
+extern void _ZNK11QMetaObject15indexOfPropertyEPKc(void* qthis, char* arg0);
+  // proto:  int QMetaObject::indexOfClassInfo(const char * name);
+extern void _ZNK11QMetaObject16indexOfClassInfoEPKc(void* qthis, char* arg0);
+  // proto: static void QMetaObject::activate(QObject * sender, const QMetaObject * , int local_signal_index, void ** argv);
+extern void _ZN11QMetaObject8activateEP7QObjectPKS_iPPv(void* arg0, void* arg1, int arg2, void* arg3);
+  // proto:  const QObject * QMetaObject::cast(const QObject * obj);
+extern void _ZNK11QMetaObject4castEPK7QObject(void* qthis, void* arg0);
+  // proto:  QMetaMethod QMetaObject::method(int index);
+extern void _ZNK11QMetaObject6methodEi(void* qthis, int arg0);
+  // proto:  const QMetaObject * QMetaObject::superClass();
+extern void _ZNK11QMetaObject10superClassEv(void* qthis);
+  // proto:  QObject * QMetaObject::cast(QObject * obj);
+extern void _ZNK11QMetaObject4castEP7QObject(void* qthis, void* arg0);
+  // proto: static void QMetaObject::activate(QObject * sender, int signal_offset, int local_signal_index, void ** argv);
+extern void _ZN11QMetaObject8activateEP7QObjectiiPPv(void* arg0, int arg1, int arg2, void* arg3);
+  // proto:  int QMetaObject::propertyCount();
+extern void _ZNK11QMetaObject13propertyCountEv(void* qthis);
+  // proto:  QMetaClassInfo QMetaObject::classInfo(int index);
+extern void _ZNK11QMetaObject9classInfoEi(void* qthis, int arg0);
+  // proto: static bool QMetaObject::checkConnectArgs(const QMetaMethod & signal, const QMetaMethod & method);
+extern void _ZN11QMetaObject16checkConnectArgsERK11QMetaMethodS2_(void* arg0, void* arg1);
+  // proto:  const char * QMetaObject::className();
+extern void _ZNK11QMetaObject9classNameEv(void* qthis);
+  // proto:  int QMetaObject::indexOfSignal(const char * signal);
+extern void _ZNK11QMetaObject13indexOfSignalEPKc(void* qthis, char* arg0);
+  // proto: static QByteArray QMetaObject::normalizedType(const char * type);
+extern void _ZN11QMetaObject14normalizedTypeEPKc(char* arg0);
+  // proto:  int QMetaObject::constructorCount();
+extern void _ZNK11QMetaObject16constructorCountEv(void* qthis);
+  // proto:  int QMetaObject::propertyOffset();
+extern void _ZNK11QMetaObject14propertyOffsetEv(void* qthis);
+  // proto: static bool QMetaObject::disconnect(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
+extern void _ZN11QMetaObject10disconnectEPK7QObjectiS2_i(void* arg0, int arg1, void* arg2, int arg3);
+  // proto: static void QMetaObject::activate(QObject * sender, int signal_index, void ** argv);
+extern void _ZN11QMetaObject8activateEP7QObjectiPPv(void* arg0, int arg1, void* arg2);
+  // proto:  int QMetaObject::enumeratorCount();
+extern void _ZNK11QMetaObject15enumeratorCountEv(void* qthis);
+  // proto:  int QMetaObject::classInfoOffset();
+extern void _ZNK11QMetaObject15classInfoOffsetEv(void* qthis);
+  // proto:  int QMetaObject::methodOffset();
+extern void _ZNK11QMetaObject12methodOffsetEv(void* qthis);
+  // proto:  int QMetaObject::indexOfEnumerator(const char * name);
+extern void _ZNK11QMetaObject17indexOfEnumeratorEPKc(void* qthis, char* arg0);
+  // proto:  int QMetaObject::methodCount();
+extern void _ZNK11QMetaObject11methodCountEv(void* qthis);
+  // proto:  int QMetaObject::classInfoCount();
+extern void _ZNK11QMetaObject14classInfoCountEv(void* qthis);
+  // proto:  const char * QGenericArgument::name();
+extern void demth_ZNK16QGenericArgument4nameEv(void* qthis);
+  // proto:  void * QGenericArgument::data();
+extern void demth_ZNK16QGenericArgument4dataEv(void* qthis);
+  // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
+extern void* dector_ZN16QGenericArgumentC1EPKcPKv(char* arg0, void* arg1);
+extern void demth_ZN16QGenericArgumentC1EPKcPKv(void* qthis, char* arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(Connection)=8
 type Connection struct {
   // qbase: None;
@@ -59,12 +158,12 @@ type QGenericArgument struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void Connection::Connection();
 func NewConnection(args ...interface{}) Connection {
   return Connection{}
 }
 
-
+  // proto:  void Connection::~Connection();
 func (this *Connection) FreeConnection(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,12 +177,12 @@ func (this *Connection) FreeConnection(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGenericReturnArgument::QGenericReturnArgument(const char * aName, void * aData);
 func NewQGenericReturnArgument(args ...interface{}) QGenericReturnArgument {
   return QGenericReturnArgument{}
 }
 
-
+  // proto: static QByteArray QMetaObject::normalizedSignature(const char * method);
 func (this *QMetaObject) normalizedSignature_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +196,7 @@ func (this *QMetaObject) normalizedSignature_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaObject::disconnectOne(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
 func (this *QMetaObject) disconnectOne_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,7 +210,7 @@ func (this *QMetaObject) disconnectOne_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfSlot(const char * slot);
 func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
   // indexOfSlot(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -130,7 +229,7 @@ func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfConstructor(const char * constructor);
 func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
   // indexOfConstructor(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -149,7 +248,7 @@ func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaEnum QMetaObject::enumerator(int index);
 func (this *QMetaObject) enumerator(args ...interface{}) () {
   // enumerator(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,7 +267,7 @@ func (this *QMetaObject) enumerator(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfMethod(const char * method);
 func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
   // indexOfMethod(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +286,7 @@ func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaMethod QMetaObject::constructor(int index);
 func (this *QMetaObject) constructor(args ...interface{}) () {
   // constructor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -206,7 +305,7 @@ func (this *QMetaObject) constructor(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaObject::checkConnectArgs(const char * signal, const char * method);
 func (this *QMetaObject) checkConnectArgs_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -220,7 +319,7 @@ func (this *QMetaObject) checkConnectArgs_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::enumeratorOffset();
 func (this *QMetaObject) enumeratorOffset(args ...interface{}) () {
   // enumeratorOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -238,7 +337,7 @@ func (this *QMetaObject) enumeratorOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaProperty QMetaObject::property(int index);
 func (this *QMetaObject) property(args ...interface{}) () {
   // property(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -257,7 +356,7 @@ func (this *QMetaObject) property(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QMetaObject::connectSlotsByName(QObject * o);
 func (this *QMetaObject) connectSlotsByName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -271,7 +370,7 @@ func (this *QMetaObject) connectSlotsByName_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaProperty QMetaObject::userProperty();
 func (this *QMetaObject) userProperty(args ...interface{}) () {
   // userProperty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -289,7 +388,7 @@ func (this *QMetaObject) userProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfProperty(const char * name);
 func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
   // indexOfProperty(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -308,7 +407,7 @@ func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfClassInfo(const char * name);
 func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
   // indexOfClassInfo(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -327,7 +426,7 @@ func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QMetaObject::activate(QObject * sender, const QMetaObject * , int local_signal_index, void ** argv);
 func (this *QMetaObject) activate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -341,7 +440,7 @@ func (this *QMetaObject) activate_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QObject * QMetaObject::cast(const QObject * obj);
 func (this *QMetaObject) cast(args ...interface{}) () {
   // cast(const class QObject *)
   // cast(class QObject *)
@@ -365,7 +464,7 @@ func (this *QMetaObject) cast(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaMethod QMetaObject::method(int index);
 func (this *QMetaObject) method(args ...interface{}) () {
   // method(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -384,7 +483,7 @@ func (this *QMetaObject) method(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMetaObject::superClass();
 func (this *QMetaObject) superClass(args ...interface{}) () {
   // superClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -402,7 +501,7 @@ func (this *QMetaObject) superClass(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::propertyCount();
 func (this *QMetaObject) propertyCount(args ...interface{}) () {
   // propertyCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -420,7 +519,7 @@ func (this *QMetaObject) propertyCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaClassInfo QMetaObject::classInfo(int index);
 func (this *QMetaObject) classInfo(args ...interface{}) () {
   // classInfo(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -439,7 +538,7 @@ func (this *QMetaObject) classInfo(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaObject::className();
 func (this *QMetaObject) className(args ...interface{}) () {
   // className()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -457,7 +556,7 @@ func (this *QMetaObject) className(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfSignal(const char * signal);
 func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
   // indexOfSignal(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -476,7 +575,7 @@ func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
 
 }
 
-
+  // proto: static QByteArray QMetaObject::normalizedType(const char * type);
 func (this *QMetaObject) normalizedType_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -490,7 +589,7 @@ func (this *QMetaObject) normalizedType_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::constructorCount();
 func (this *QMetaObject) constructorCount(args ...interface{}) () {
   // constructorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -508,7 +607,7 @@ func (this *QMetaObject) constructorCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::propertyOffset();
 func (this *QMetaObject) propertyOffset(args ...interface{}) () {
   // propertyOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -526,7 +625,7 @@ func (this *QMetaObject) propertyOffset(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QMetaObject::disconnect(const QObject * sender, int signal_index, const QObject * receiver, int method_index);
 func (this *QMetaObject) disconnect_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -540,7 +639,7 @@ func (this *QMetaObject) disconnect_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::enumeratorCount();
 func (this *QMetaObject) enumeratorCount(args ...interface{}) () {
   // enumeratorCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +657,7 @@ func (this *QMetaObject) enumeratorCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::classInfoOffset();
 func (this *QMetaObject) classInfoOffset(args ...interface{}) () {
   // classInfoOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -576,7 +675,7 @@ func (this *QMetaObject) classInfoOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::methodOffset();
 func (this *QMetaObject) methodOffset(args ...interface{}) () {
   // methodOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -594,7 +693,7 @@ func (this *QMetaObject) methodOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::indexOfEnumerator(const char * name);
 func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
   // indexOfEnumerator(const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -613,7 +712,7 @@ func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::methodCount();
 func (this *QMetaObject) methodCount(args ...interface{}) () {
   // methodCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -631,7 +730,7 @@ func (this *QMetaObject) methodCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaObject::classInfoCount();
 func (this *QMetaObject) classInfoCount(args ...interface{}) () {
   // classInfoCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -649,7 +748,7 @@ func (this *QMetaObject) classInfoCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QGenericArgument::name();
 func (this *QGenericArgument) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -667,7 +766,7 @@ func (this *QGenericArgument) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  void * QGenericArgument::data();
 func (this *QGenericArgument) data(args ...interface{}) () {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -685,7 +784,7 @@ func (this *QGenericArgument) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGenericArgument::QGenericArgument(const char * aName, const void * aData);
 func NewQGenericArgument(args ...interface{}) QGenericArgument {
   return QGenericArgument{}
 }

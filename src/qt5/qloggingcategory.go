@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,65 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
+extern void* dector_ZN16QLoggingCategoryC1EPKc9QtMsgType(char* arg0, int arg1);
+extern void _ZN16QLoggingCategoryC1EPKc9QtMsgType(void* qthis, char* arg0, int arg1);
+  // proto:  void QLoggingCategory::QLoggingCategory(const QLoggingCategory & );
+extern void* dector_ZN16QLoggingCategoryC1ERKS_(void* arg0);
+extern void _ZN16QLoggingCategoryC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QLoggingCategory::isDebugEnabled();
+extern void _ZNK16QLoggingCategory14isDebugEnabledEv(void* qthis);
+  // proto:  void QLoggingCategory::~QLoggingCategory();
+extern void _ZN16QLoggingCategoryD0Ev(void* qthis);
+  // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
+extern void* dector_ZN16QLoggingCategoryC1EPKc(char* arg0);
+extern void _ZN16QLoggingCategoryC1EPKc(void* qthis, char* arg0);
+  // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
+extern void _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(void* qthis, int arg0, bool arg1);
+  // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
+extern void _ZNK16QLoggingCategory9isEnabledE9QtMsgType(void* qthis, int arg0);
+  // proto:  bool QLoggingCategory::isWarningEnabled();
+extern void _ZNK16QLoggingCategory16isWarningEnabledEv(void* qthis);
+  // proto:  bool QLoggingCategory::isInfoEnabled();
+extern void _ZNK16QLoggingCategory13isInfoEnabledEv(void* qthis);
+  // proto:  const char * QLoggingCategory::categoryName();
+extern void _ZNK16QLoggingCategory12categoryNameEv(void* qthis);
+  // proto:  bool QLoggingCategory::isCriticalEnabled();
+extern void _ZNK16QLoggingCategory17isCriticalEnabledEv(void* qthis);
+  // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
+extern void _ZN16QLoggingCategory15defaultCategoryEv();
+  // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
+extern void _ZN16QLoggingCategory14setFilterRulesERK7QString(void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLoggingCategory)=24
 type QLoggingCategory struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
 func NewQLoggingCategory(args ...interface{}) QLoggingCategory {
   return QLoggingCategory{}
 }
 
-
+  // proto:  bool QLoggingCategory::isDebugEnabled();
 func (this *QLoggingCategory) isDebugEnabled(args ...interface{}) () {
   // isDebugEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +102,7 @@ func (this *QLoggingCategory) isDebugEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLoggingCategory::~QLoggingCategory();
 func (this *QLoggingCategory) FreeQLoggingCategory(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,7 +116,7 @@ func (this *QLoggingCategory) FreeQLoggingCategory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
 func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
   // setEnabled(enum QtMsgType, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +136,7 @@ func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
 func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
   // isEnabled(enum QtMsgType)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +155,7 @@ func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLoggingCategory::isWarningEnabled();
 func (this *QLoggingCategory) isWarningEnabled(args ...interface{}) () {
   // isWarningEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +173,7 @@ func (this *QLoggingCategory) isWarningEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLoggingCategory::isInfoEnabled();
 func (this *QLoggingCategory) isInfoEnabled(args ...interface{}) () {
   // isInfoEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,7 +191,7 @@ func (this *QLoggingCategory) isInfoEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QLoggingCategory::categoryName();
 func (this *QLoggingCategory) categoryName(args ...interface{}) () {
   // categoryName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -171,7 +209,7 @@ func (this *QLoggingCategory) categoryName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLoggingCategory::isCriticalEnabled();
 func (this *QLoggingCategory) isCriticalEnabled(args ...interface{}) () {
   // isCriticalEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +227,7 @@ func (this *QLoggingCategory) isCriticalEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
 func (this *QLoggingCategory) defaultCategory_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -203,7 +241,7 @@ func (this *QLoggingCategory) defaultCategory_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
 func (this *QLoggingCategory) setFilterRules_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

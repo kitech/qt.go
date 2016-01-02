@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,60 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
+extern void _ZNK14QDesktopWidget14screenGeometryERK6QPoint(void* qthis, void* arg0);
+  // proto:  QWidget * QDesktopWidget::screen(int screen);
+extern void _ZN14QDesktopWidget6screenEi(void* qthis, int arg0);
+  // proto:  const QRect QDesktopWidget::screenGeometry(const QWidget * widget);
+extern void _ZNK14QDesktopWidget14screenGeometryEPK7QWidget(void* qthis, void* arg0);
+  // proto:  int QDesktopWidget::numScreens();
+extern void _ZNK14QDesktopWidget10numScreensEv(void* qthis);
+  // proto:  void QDesktopWidget::~QDesktopWidget();
+extern void _ZN14QDesktopWidgetD0Ev(void* qthis);
+  // proto:  const QRect QDesktopWidget::screenGeometry(int screen);
+extern void _ZNK14QDesktopWidget14screenGeometryEi(void* qthis, int arg0);
+  // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
+extern void _ZNK14QDesktopWidget17availableGeometryEPK7QWidget(void* qthis, void* arg0);
+  // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
+extern void* dector_ZN14QDesktopWidgetC1ERKS_(void* arg0);
+extern void _ZN14QDesktopWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QDesktopWidget::screenNumber(const QPoint & );
+extern void _ZNK14QDesktopWidget12screenNumberERK6QPoint(void* qthis, void* arg0);
+  // proto:  int QDesktopWidget::screenCount();
+extern void _ZNK14QDesktopWidget11screenCountEv(void* qthis);
+  // proto:  bool QDesktopWidget::isVirtualDesktop();
+extern void _ZNK14QDesktopWidget16isVirtualDesktopEv(void* qthis);
+  // proto:  int QDesktopWidget::screenNumber(const QWidget * widget);
+extern void _ZNK14QDesktopWidget12screenNumberEPK7QWidget(void* qthis, void* arg0);
+  // proto:  int QDesktopWidget::primaryScreen();
+extern void _ZNK14QDesktopWidget13primaryScreenEv(void* qthis);
+  // proto:  void QDesktopWidget::QDesktopWidget();
+extern void* dector_ZN14QDesktopWidgetC1Ev();
+extern void _ZN14QDesktopWidgetC1Ev(void* qthis);
+  // proto:  const QRect QDesktopWidget::availableGeometry(const QPoint & point);
+extern void _ZNK14QDesktopWidget17availableGeometryERK6QPoint(void* qthis, void* arg0);
+  // proto:  const QRect QDesktopWidget::availableGeometry(int screen);
+extern void _ZNK14QDesktopWidget17availableGeometryEi(void* qthis, int arg0);
+  // proto:  const QMetaObject * QDesktopWidget::metaObject();
+extern void _ZNK14QDesktopWidget10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDesktopWidget)=1
 type QDesktopWidget struct {
   /*qbase*/ QWidget;
@@ -44,7 +89,7 @@ type QDesktopWidget struct {
 //  _workAreaResized QDesktopWidget_workAreaResized_signal;
 }
 
-
+  // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
 func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
   // screenGeometry(const class QPoint &)
   // screenGeometry(const class QWidget *)
@@ -73,7 +118,7 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QDesktopWidget::screen(int screen);
 func (this *QDesktopWidget) screen(args ...interface{}) () {
   // screen(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,7 +137,7 @@ func (this *QDesktopWidget) screen(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDesktopWidget::numScreens();
 func (this *QDesktopWidget) numScreens(args ...interface{}) () {
   // numScreens()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -110,7 +155,7 @@ func (this *QDesktopWidget) numScreens(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDesktopWidget::~QDesktopWidget();
 func (this *QDesktopWidget) FreeQDesktopWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,7 +169,7 @@ func (this *QDesktopWidget) FreeQDesktopWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
 func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
   // availableGeometry(const class QWidget *)
   // availableGeometry(const class QPoint &)
@@ -153,12 +198,12 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
 func NewQDesktopWidget(args ...interface{}) QDesktopWidget {
   return QDesktopWidget{}
 }
 
-
+  // proto:  int QDesktopWidget::screenNumber(const QPoint & );
 func (this *QDesktopWidget) screenNumber(args ...interface{}) () {
   // screenNumber(const class QPoint &)
   // screenNumber(const class QWidget *)
@@ -182,7 +227,7 @@ func (this *QDesktopWidget) screenNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDesktopWidget::screenCount();
 func (this *QDesktopWidget) screenCount(args ...interface{}) () {
   // screenCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,7 +245,7 @@ func (this *QDesktopWidget) screenCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDesktopWidget::isVirtualDesktop();
 func (this *QDesktopWidget) isVirtualDesktop(args ...interface{}) () {
   // isVirtualDesktop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -218,7 +263,7 @@ func (this *QDesktopWidget) isVirtualDesktop(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDesktopWidget::primaryScreen();
 func (this *QDesktopWidget) primaryScreen(args ...interface{}) () {
   // primaryScreen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +281,7 @@ func (this *QDesktopWidget) primaryScreen(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDesktopWidget::metaObject();
 func (this *QDesktopWidget) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

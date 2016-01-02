@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtablewidget.h
 // dst-file: /src/widgets/qtablewidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,240 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
+extern void* dector_ZN26QTableWidgetSelectionRangeC1Eiiii(int arg0, int arg1, int arg2, int arg3);
+extern void _ZN26QTableWidgetSelectionRangeC1Eiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  int QTableWidgetSelectionRange::columnCount();
+extern void demth_ZNK26QTableWidgetSelectionRange11columnCountEv(void* qthis);
+  // proto:  int QTableWidgetSelectionRange::rowCount();
+extern void demth_ZNK26QTableWidgetSelectionRange8rowCountEv(void* qthis);
+  // proto:  int QTableWidgetSelectionRange::leftColumn();
+extern void demth_ZNK26QTableWidgetSelectionRange10leftColumnEv(void* qthis);
+  // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
+extern void _ZN26QTableWidgetSelectionRangeD0Ev(void* qthis);
+  // proto:  int QTableWidgetSelectionRange::topRow();
+extern void demth_ZNK26QTableWidgetSelectionRange6topRowEv(void* qthis);
+  // proto:  int QTableWidgetSelectionRange::rightColumn();
+extern void demth_ZNK26QTableWidgetSelectionRange11rightColumnEv(void* qthis);
+  // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange();
+extern void* dector_ZN26QTableWidgetSelectionRangeC1Ev();
+extern void _ZN26QTableWidgetSelectionRangeC1Ev(void* qthis);
+  // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(const QTableWidgetSelectionRange & other);
+extern void* dector_ZN26QTableWidgetSelectionRangeC1ERKS_(void* arg0);
+extern void _ZN26QTableWidgetSelectionRangeC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QTableWidgetSelectionRange::bottomRow();
+extern void demth_ZNK26QTableWidgetSelectionRange9bottomRowEv(void* qthis);
+  // proto:  void QTableWidget::setColumnCount(int columns);
+extern void _ZN12QTableWidget14setColumnCountEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::~QTableWidget();
+extern void _ZN12QTableWidgetD0Ev(void* qthis);
+  // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
+extern void _ZNK12QTableWidget13selectedItemsEv(void* qthis);
+  // proto:  bool QTableWidget::isSortingEnabled();
+extern void _ZNK12QTableWidget16isSortingEnabledEv(void* qthis);
+  // proto:  const QMetaObject * QTableWidget::metaObject();
+extern void _ZNK12QTableWidget10metaObjectEv(void* qthis);
+  // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
+extern void* dector_ZN12QTableWidgetC1ERKS_(void* arg0);
+extern void _ZN12QTableWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
+extern void _ZN12QTableWidget21closePersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
+extern void _ZN12QTableWidget25setHorizontalHeaderLabelsERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
+extern void _ZN12QTableWidget15setItemSelectedEPK16QTableWidgetItemb(void* qthis, void* arg0, bool arg1);
+  // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
+extern void _ZN12QTableWidget8takeItemEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::removeCellWidget(int row, int column);
+extern void demth_ZN12QTableWidget16removeCellWidgetEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
+extern void _ZN12QTableWidget21setVerticalHeaderItemEiP16QTableWidgetItem(void* qthis, int arg0, void* arg1);
+  // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
+extern void _ZNK12QTableWidget14visualItemRectEPK16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  QTableWidgetItem * QTableWidget::currentItem();
+extern void _ZNK12QTableWidget11currentItemEv(void* qthis);
+  // proto:  int QTableWidget::row(const QTableWidgetItem * item);
+extern void _ZNK12QTableWidget3rowEPK16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  void QTableWidget::removeRow(int row);
+extern void _ZN12QTableWidget9removeRowEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
+extern void _ZN12QTableWidget16setItemPrototypeEPK16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  void QTableWidget::QTableWidget(int rows, int columns, QWidget * parent);
+extern void* dector_ZN12QTableWidgetC1EiiP7QWidget(int arg0, int arg1, void* arg2);
+extern void _ZN12QTableWidgetC1EiiP7QWidget(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  int QTableWidget::visualRow(int logicalRow);
+extern void _ZNK12QTableWidget9visualRowEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
+extern void _ZN12QTableWidget13setCellWidgetEiiP7QWidget(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
+extern void _ZN12QTableWidget20openPersistentEditorEP16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  int QTableWidget::columnCount();
+extern void _ZNK12QTableWidget11columnCountEv(void* qthis);
+  // proto:  int QTableWidget::currentRow();
+extern void _ZNK12QTableWidget10currentRowEv(void* qthis);
+  // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
+extern void _ZN12QTableWidget14setCurrentItemEP16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
+extern void _ZNK12QTableWidget10cellWidgetEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::setSortingEnabled(bool enable);
+extern void _ZN12QTableWidget17setSortingEnabledEb(void* qthis, bool arg0);
+  // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
+extern void _ZN12QTableWidget7setItemEiiP16QTableWidgetItem(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
+extern void _ZNK12QTableWidget20horizontalHeaderItemEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
+extern void _ZN12QTableWidget8editItemEP16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
+extern void _ZNK12QTableWidget14selectedRangesEv(void* qthis);
+  // proto:  int QTableWidget::currentColumn();
+extern void _ZNK12QTableWidget13currentColumnEv(void* qthis);
+  // proto:  void QTableWidget::removeColumn(int column);
+extern void _ZN12QTableWidget12removeColumnEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
+extern void _ZN12QTableWidget16setRangeSelectedERK26QTableWidgetSelectionRangeb(void* qthis, void* arg0, bool arg1);
+  // proto:  int QTableWidget::column(const QTableWidgetItem * item);
+extern void _ZNK12QTableWidget6columnEPK16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
+extern void _ZNK12QTableWidget14isItemSelectedEPK16QTableWidgetItem(void* qthis, void* arg0);
+  // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
+extern void _ZN12QTableWidget22takeVerticalHeaderItemEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::insertRow(int row);
+extern void _ZN12QTableWidget9insertRowEi(void* qthis, int arg0);
+  // proto:  int QTableWidget::rowCount();
+extern void _ZNK12QTableWidget8rowCountEv(void* qthis);
+  // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
+extern void _ZNK12QTableWidget4itemEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::QTableWidget(QWidget * parent);
+extern void* dector_ZN12QTableWidgetC1EP7QWidget(void* arg0);
+extern void _ZN12QTableWidgetC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
+extern void _ZN12QTableWidget23setVerticalHeaderLabelsERK11QStringList(void* qthis, void* arg0);
+  // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
+extern void _ZNK12QTableWidget13itemPrototypeEv(void* qthis);
+  // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
+extern void _ZNK12QTableWidget6itemAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QTableWidget::clearContents();
+extern void _ZN12QTableWidget13clearContentsEv(void* qthis);
+  // proto:  QTableWidgetItem * QTableWidget::itemAt(int x, int y);
+extern void demth_ZNK12QTableWidget6itemAtEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::setCurrentCell(int row, int column);
+extern void _ZN12QTableWidget14setCurrentCellEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableWidget::setRowCount(int rows);
+extern void _ZN12QTableWidget11setRowCountEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
+extern void _ZN12QTableWidget23setHorizontalHeaderItemEiP16QTableWidgetItem(void* qthis, int arg0, void* arg1);
+  // proto:  int QTableWidget::visualColumn(int logicalColumn);
+extern void _ZNK12QTableWidget12visualColumnEi(void* qthis, int arg0);
+  // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
+extern void _ZN12QTableWidget24takeHorizontalHeaderItemEi(void* qthis, int arg0);
+  // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
+extern void _ZNK12QTableWidget18verticalHeaderItemEi(void* qthis, int arg0);
+  // proto:  void QTableWidget::clear();
+extern void _ZN12QTableWidget5clearEv(void* qthis);
+  // proto:  void QTableWidget::insertColumn(int column);
+extern void _ZN12QTableWidget12insertColumnEi(void* qthis, int arg0);
+  // proto:  QColor QTableWidgetItem::backgroundColor();
+extern void demth_ZNK16QTableWidgetItem15backgroundColorEv(void* qthis);
+  // proto:  QVariant QTableWidgetItem::data(int role);
+extern void _ZNK16QTableWidgetItem4dataEi(void* qthis, int arg0);
+  // proto:  void QTableWidgetItem::setSelected(bool select);
+extern void demth_ZN16QTableWidgetItem11setSelectedEb(void* qthis, bool arg0);
+  // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
+extern void demth_ZN16QTableWidgetItem12setStatusTipERK7QString(void* qthis, void* arg0);
+  // proto:  QColor QTableWidgetItem::textColor();
+extern void demth_ZNK16QTableWidgetItem9textColorEv(void* qthis);
+  // proto:  void QTableWidgetItem::~QTableWidgetItem();
+extern void _ZN16QTableWidgetItemD0Ev(void* qthis);
+  // proto:  QString QTableWidgetItem::text();
+extern void demth_ZNK16QTableWidgetItem4textEv(void* qthis);
+  // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
+extern void demth_ZN16QTableWidgetItem11setSizeHintERK5QSize(void* qthis, void* arg0);
+  // proto:  QBrush QTableWidgetItem::foreground();
+extern void demth_ZNK16QTableWidgetItem10foregroundEv(void* qthis);
+  // proto:  int QTableWidgetItem::type();
+extern void demth_ZNK16QTableWidgetItem4typeEv(void* qthis);
+  // proto:  int QTableWidgetItem::column();
+extern void demth_ZNK16QTableWidgetItem6columnEv(void* qthis);
+  // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
+extern void demth_ZN16QTableWidgetItem16setTextAlignmentEi(void* qthis, int arg0);
+  // proto:  QFont QTableWidgetItem::font();
+extern void demth_ZNK16QTableWidgetItem4fontEv(void* qthis);
+  // proto:  QIcon QTableWidgetItem::icon();
+extern void demth_ZNK16QTableWidgetItem4iconEv(void* qthis);
+  // proto:  void QTableWidgetItem::write(QDataStream & out);
+extern void _ZNK16QTableWidgetItem5writeER11QDataStream(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
+extern void* dector_ZN16QTableWidgetItemC1ERKS_(void* arg0);
+extern void _ZN16QTableWidgetItemC1ERKS_(void* qthis, void* arg0);
+  // proto:  QBrush QTableWidgetItem::background();
+extern void demth_ZNK16QTableWidgetItem10backgroundEv(void* qthis);
+  // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
+extern void demth_ZN16QTableWidgetItem7setIconERK5QIcon(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QString & text, int type);
+extern void* dector_ZN16QTableWidgetItemC1ERK7QStringi(void* arg0, int arg1);
+extern void _ZN16QTableWidgetItemC1ERK7QStringi(void* qthis, void* arg0, int arg1);
+  // proto:  QString QTableWidgetItem::statusTip();
+extern void demth_ZNK16QTableWidgetItem9statusTipEv(void* qthis);
+  // proto:  QTableWidgetItem * QTableWidgetItem::clone();
+extern void _ZNK16QTableWidgetItem5cloneEv(void* qthis);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(int type);
+extern void* dector_ZN16QTableWidgetItemC1Ei(int arg0);
+extern void _ZN16QTableWidgetItemC1Ei(void* qthis, int arg0);
+  // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
+extern void demth_ZN16QTableWidgetItem12setWhatsThisERK7QString(void* qthis, void* arg0);
+  // proto:  QSize QTableWidgetItem::sizeHint();
+extern void demth_ZNK16QTableWidgetItem8sizeHintEv(void* qthis);
+  // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
+extern void demth_ZN16QTableWidgetItem13setForegroundERK6QBrush(void* qthis, void* arg0);
+  // proto:  int QTableWidgetItem::row();
+extern void demth_ZNK16QTableWidgetItem3rowEv(void* qthis);
+  // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
+extern void _ZN16QTableWidgetItem7setDataEiRK8QVariant(void* qthis, int arg0, void* arg1);
+  // proto:  QTableWidget * QTableWidgetItem::tableWidget();
+extern void demth_ZNK16QTableWidgetItem11tableWidgetEv(void* qthis);
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QIcon & icon, const QString & text, int type);
+extern void* dector_ZN16QTableWidgetItemC1ERK5QIconRK7QStringi(void* arg0, void* arg1, int arg2);
+extern void _ZN16QTableWidgetItemC1ERK5QIconRK7QStringi(void* qthis, void* arg0, void* arg1, int arg2);
+  // proto:  int QTableWidgetItem::textAlignment();
+extern void demth_ZNK16QTableWidgetItem13textAlignmentEv(void* qthis);
+  // proto:  void QTableWidgetItem::read(QDataStream & in);
+extern void _ZN16QTableWidgetItem4readER11QDataStream(void* qthis, void* arg0);
+  // proto:  QString QTableWidgetItem::toolTip();
+extern void demth_ZNK16QTableWidgetItem7toolTipEv(void* qthis);
+  // proto:  bool QTableWidgetItem::isSelected();
+extern void demth_ZNK16QTableWidgetItem10isSelectedEv(void* qthis);
+  // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
+extern void demth_ZN16QTableWidgetItem18setBackgroundColorERK6QColor(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
+extern void demth_ZN16QTableWidgetItem13setBackgroundERK6QBrush(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::setFont(const QFont & font);
+extern void demth_ZN16QTableWidgetItem7setFontERK5QFont(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
+extern void demth_ZN16QTableWidgetItem12setTextColorERK6QColor(void* qthis, void* arg0);
+  // proto:  void QTableWidgetItem::setText(const QString & text);
+extern void demth_ZN16QTableWidgetItem7setTextERK7QString(void* qthis, void* arg0);
+  // proto:  QString QTableWidgetItem::whatsThis();
+extern void demth_ZNK16QTableWidgetItem9whatsThisEv(void* qthis);
+  // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
+extern void demth_ZN16QTableWidgetItem10setToolTipERK7QString(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTableWidgetSelectionRange)=16
 type QTableWidgetSelectionRange struct {
   // qbase: None;
@@ -68,12 +293,12 @@ type QTableWidgetItem struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTableWidgetSelectionRange::QTableWidgetSelectionRange(int top, int left, int bottom, int right);
 func NewQTableWidgetSelectionRange(args ...interface{}) QTableWidgetSelectionRange {
   return QTableWidgetSelectionRange{}
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::columnCount();
 func (this *QTableWidgetSelectionRange) columnCount(args ...interface{}) () {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -91,7 +316,7 @@ func (this *QTableWidgetSelectionRange) columnCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::rowCount();
 func (this *QTableWidgetSelectionRange) rowCount(args ...interface{}) () {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +334,7 @@ func (this *QTableWidgetSelectionRange) rowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::leftColumn();
 func (this *QTableWidgetSelectionRange) leftColumn(args ...interface{}) () {
   // leftColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -127,7 +352,7 @@ func (this *QTableWidgetSelectionRange) leftColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetSelectionRange::~QTableWidgetSelectionRange();
 func (this *QTableWidgetSelectionRange) FreeQTableWidgetSelectionRange(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -141,7 +366,7 @@ func (this *QTableWidgetSelectionRange) FreeQTableWidgetSelectionRange(args ...i
 
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::topRow();
 func (this *QTableWidgetSelectionRange) topRow(args ...interface{}) () {
   // topRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +384,7 @@ func (this *QTableWidgetSelectionRange) topRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::rightColumn();
 func (this *QTableWidgetSelectionRange) rightColumn(args ...interface{}) () {
   // rightColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +402,7 @@ func (this *QTableWidgetSelectionRange) rightColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetSelectionRange::bottomRow();
 func (this *QTableWidgetSelectionRange) bottomRow(args ...interface{}) () {
   // bottomRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,7 +420,7 @@ func (this *QTableWidgetSelectionRange) bottomRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setColumnCount(int columns);
 func (this *QTableWidget) setColumnCount(args ...interface{}) () {
   // setColumnCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +439,7 @@ func (this *QTableWidget) setColumnCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::~QTableWidget();
 func (this *QTableWidget) FreeQTableWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -228,7 +453,7 @@ func (this *QTableWidget) FreeQTableWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QTableWidgetItem *> QTableWidget::selectedItems();
 func (this *QTableWidget) selectedItems(args ...interface{}) () {
   // selectedItems()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +471,7 @@ func (this *QTableWidget) selectedItems(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableWidget::isSortingEnabled();
 func (this *QTableWidget) isSortingEnabled(args ...interface{}) () {
   // isSortingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -264,7 +489,7 @@ func (this *QTableWidget) isSortingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTableWidget::metaObject();
 func (this *QTableWidget) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,12 +507,12 @@ func (this *QTableWidget) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::QTableWidget(const QTableWidget & );
 func NewQTableWidget(args ...interface{}) QTableWidget {
   return QTableWidget{}
 }
 
-
+  // proto:  void QTableWidget::closePersistentEditor(QTableWidgetItem * item);
 func (this *QTableWidget) closePersistentEditor(args ...interface{}) () {
   // closePersistentEditor(class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -306,7 +531,7 @@ func (this *QTableWidget) closePersistentEditor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setHorizontalHeaderLabels(const QStringList & labels);
 func (this *QTableWidget) setHorizontalHeaderLabels(args ...interface{}) () {
   // setHorizontalHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -325,7 +550,7 @@ func (this *QTableWidget) setHorizontalHeaderLabels(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setItemSelected(const QTableWidgetItem * item, bool select);
 func (this *QTableWidget) setItemSelected(args ...interface{}) () {
   // setItemSelected(const class QTableWidgetItem *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -345,7 +570,7 @@ func (this *QTableWidget) setItemSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::takeItem(int row, int column);
 func (this *QTableWidget) takeItem(args ...interface{}) () {
   // takeItem(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -365,7 +590,7 @@ func (this *QTableWidget) takeItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::removeCellWidget(int row, int column);
 func (this *QTableWidget) removeCellWidget(args ...interface{}) () {
   // removeCellWidget(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -385,7 +610,7 @@ func (this *QTableWidget) removeCellWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setVerticalHeaderItem(int row, QTableWidgetItem * item);
 func (this *QTableWidget) setVerticalHeaderItem(args ...interface{}) () {
   // setVerticalHeaderItem(int, class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -405,7 +630,7 @@ func (this *QTableWidget) setVerticalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QTableWidget::visualItemRect(const QTableWidgetItem * item);
 func (this *QTableWidget) visualItemRect(args ...interface{}) () {
   // visualItemRect(const class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -424,7 +649,7 @@ func (this *QTableWidget) visualItemRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::currentItem();
 func (this *QTableWidget) currentItem(args ...interface{}) () {
   // currentItem()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -442,7 +667,7 @@ func (this *QTableWidget) currentItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::row(const QTableWidgetItem * item);
 func (this *QTableWidget) row(args ...interface{}) () {
   // row(const class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -461,7 +686,7 @@ func (this *QTableWidget) row(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::removeRow(int row);
 func (this *QTableWidget) removeRow(args ...interface{}) () {
   // removeRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -480,7 +705,7 @@ func (this *QTableWidget) removeRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setItemPrototype(const QTableWidgetItem * item);
 func (this *QTableWidget) setItemPrototype(args ...interface{}) () {
   // setItemPrototype(const class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -499,7 +724,7 @@ func (this *QTableWidget) setItemPrototype(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::visualRow(int logicalRow);
 func (this *QTableWidget) visualRow(args ...interface{}) () {
   // visualRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -518,7 +743,7 @@ func (this *QTableWidget) visualRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setCellWidget(int row, int column, QWidget * widget);
 func (this *QTableWidget) setCellWidget(args ...interface{}) () {
   // setCellWidget(int, int, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +764,7 @@ func (this *QTableWidget) setCellWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::openPersistentEditor(QTableWidgetItem * item);
 func (this *QTableWidget) openPersistentEditor(args ...interface{}) () {
   // openPersistentEditor(class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +783,7 @@ func (this *QTableWidget) openPersistentEditor(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::columnCount();
 func (this *QTableWidget) columnCount(args ...interface{}) () {
   // columnCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -576,7 +801,7 @@ func (this *QTableWidget) columnCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::currentRow();
 func (this *QTableWidget) currentRow(args ...interface{}) () {
   // currentRow()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -594,7 +819,7 @@ func (this *QTableWidget) currentRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setCurrentItem(QTableWidgetItem * item);
 func (this *QTableWidget) setCurrentItem(args ...interface{}) () {
   // setCurrentItem(class QTableWidgetItem *, class QItemSelectionModel::SelectionFlags)
   // setCurrentItem(class QTableWidgetItem *)
@@ -619,7 +844,7 @@ func (this *QTableWidget) setCurrentItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QTableWidget::cellWidget(int row, int column);
 func (this *QTableWidget) cellWidget(args ...interface{}) () {
   // cellWidget(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -639,7 +864,7 @@ func (this *QTableWidget) cellWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setSortingEnabled(bool enable);
 func (this *QTableWidget) setSortingEnabled(args ...interface{}) () {
   // setSortingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -658,7 +883,7 @@ func (this *QTableWidget) setSortingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setItem(int row, int column, QTableWidgetItem * item);
 func (this *QTableWidget) setItem(args ...interface{}) () {
   // setItem(int, int, class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -679,7 +904,7 @@ func (this *QTableWidget) setItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::horizontalHeaderItem(int column);
 func (this *QTableWidget) horizontalHeaderItem(args ...interface{}) () {
   // horizontalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -698,7 +923,7 @@ func (this *QTableWidget) horizontalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::editItem(QTableWidgetItem * item);
 func (this *QTableWidget) editItem(args ...interface{}) () {
   // editItem(class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -717,7 +942,7 @@ func (this *QTableWidget) editItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QTableWidgetSelectionRange> QTableWidget::selectedRanges();
 func (this *QTableWidget) selectedRanges(args ...interface{}) () {
   // selectedRanges()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -735,7 +960,7 @@ func (this *QTableWidget) selectedRanges(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::currentColumn();
 func (this *QTableWidget) currentColumn(args ...interface{}) () {
   // currentColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +978,7 @@ func (this *QTableWidget) currentColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::removeColumn(int column);
 func (this *QTableWidget) removeColumn(args ...interface{}) () {
   // removeColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -772,7 +997,7 @@ func (this *QTableWidget) removeColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setRangeSelected(const QTableWidgetSelectionRange & range, bool select);
 func (this *QTableWidget) setRangeSelected(args ...interface{}) () {
   // setRangeSelected(const class QTableWidgetSelectionRange &, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -792,7 +1017,7 @@ func (this *QTableWidget) setRangeSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::column(const QTableWidgetItem * item);
 func (this *QTableWidget) column(args ...interface{}) () {
   // column(const class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -811,7 +1036,7 @@ func (this *QTableWidget) column(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableWidget::isItemSelected(const QTableWidgetItem * item);
 func (this *QTableWidget) isItemSelected(args ...interface{}) () {
   // isItemSelected(const class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -830,7 +1055,7 @@ func (this *QTableWidget) isItemSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::takeVerticalHeaderItem(int row);
 func (this *QTableWidget) takeVerticalHeaderItem(args ...interface{}) () {
   // takeVerticalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -849,7 +1074,7 @@ func (this *QTableWidget) takeVerticalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::insertRow(int row);
 func (this *QTableWidget) insertRow(args ...interface{}) () {
   // insertRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -868,7 +1093,7 @@ func (this *QTableWidget) insertRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::rowCount();
 func (this *QTableWidget) rowCount(args ...interface{}) () {
   // rowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -886,7 +1111,7 @@ func (this *QTableWidget) rowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::item(int row, int column);
 func (this *QTableWidget) item(args ...interface{}) () {
   // item(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -906,7 +1131,7 @@ func (this *QTableWidget) item(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setVerticalHeaderLabels(const QStringList & labels);
 func (this *QTableWidget) setVerticalHeaderLabels(args ...interface{}) () {
   // setVerticalHeaderLabels(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -925,7 +1150,7 @@ func (this *QTableWidget) setVerticalHeaderLabels(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QTableWidgetItem * QTableWidget::itemPrototype();
 func (this *QTableWidget) itemPrototype(args ...interface{}) () {
   // itemPrototype()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -943,7 +1168,7 @@ func (this *QTableWidget) itemPrototype(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::itemAt(const QPoint & p);
 func (this *QTableWidget) itemAt(args ...interface{}) () {
   // itemAt(const class QPoint &)
   // itemAt(int, int)
@@ -968,7 +1193,7 @@ func (this *QTableWidget) itemAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::clearContents();
 func (this *QTableWidget) clearContents(args ...interface{}) () {
   // clearContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -986,7 +1211,7 @@ func (this *QTableWidget) clearContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setCurrentCell(int row, int column);
 func (this *QTableWidget) setCurrentCell(args ...interface{}) () {
   // setCurrentCell(int, int, class QItemSelectionModel::SelectionFlags)
   // setCurrentCell(int, int)
@@ -1013,7 +1238,7 @@ func (this *QTableWidget) setCurrentCell(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setRowCount(int rows);
 func (this *QTableWidget) setRowCount(args ...interface{}) () {
   // setRowCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1032,7 +1257,7 @@ func (this *QTableWidget) setRowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::setHorizontalHeaderItem(int column, QTableWidgetItem * item);
 func (this *QTableWidget) setHorizontalHeaderItem(args ...interface{}) () {
   // setHorizontalHeaderItem(int, class QTableWidgetItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1052,7 +1277,7 @@ func (this *QTableWidget) setHorizontalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidget::visualColumn(int logicalColumn);
 func (this *QTableWidget) visualColumn(args ...interface{}) () {
   // visualColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1071,7 +1296,7 @@ func (this *QTableWidget) visualColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::takeHorizontalHeaderItem(int column);
 func (this *QTableWidget) takeHorizontalHeaderItem(args ...interface{}) () {
   // takeHorizontalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1090,7 +1315,7 @@ func (this *QTableWidget) takeHorizontalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidget::verticalHeaderItem(int row);
 func (this *QTableWidget) verticalHeaderItem(args ...interface{}) () {
   // verticalHeaderItem(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1109,7 +1334,7 @@ func (this *QTableWidget) verticalHeaderItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::clear();
 func (this *QTableWidget) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1127,7 +1352,7 @@ func (this *QTableWidget) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidget::insertColumn(int column);
 func (this *QTableWidget) insertColumn(args ...interface{}) () {
   // insertColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1146,7 +1371,7 @@ func (this *QTableWidget) insertColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QTableWidgetItem::backgroundColor();
 func (this *QTableWidgetItem) backgroundColor(args ...interface{}) () {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1164,7 +1389,7 @@ func (this *QTableWidgetItem) backgroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QTableWidgetItem::data(int role);
 func (this *QTableWidgetItem) data(args ...interface{}) () {
   // data(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1183,7 +1408,7 @@ func (this *QTableWidgetItem) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setSelected(bool select);
 func (this *QTableWidgetItem) setSelected(args ...interface{}) () {
   // setSelected(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1202,7 +1427,7 @@ func (this *QTableWidgetItem) setSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setStatusTip(const QString & statusTip);
 func (this *QTableWidgetItem) setStatusTip(args ...interface{}) () {
   // setStatusTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1221,7 +1446,7 @@ func (this *QTableWidgetItem) setStatusTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QTableWidgetItem::textColor();
 func (this *QTableWidgetItem) textColor(args ...interface{}) () {
   // textColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1239,7 +1464,7 @@ func (this *QTableWidgetItem) textColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::~QTableWidgetItem();
 func (this *QTableWidgetItem) FreeQTableWidgetItem(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1253,7 +1478,7 @@ func (this *QTableWidgetItem) FreeQTableWidgetItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTableWidgetItem::text();
 func (this *QTableWidgetItem) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1271,7 +1496,7 @@ func (this *QTableWidgetItem) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setSizeHint(const QSize & size);
 func (this *QTableWidgetItem) setSizeHint(args ...interface{}) () {
   // setSizeHint(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1290,7 +1515,7 @@ func (this *QTableWidgetItem) setSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QTableWidgetItem::foreground();
 func (this *QTableWidgetItem) foreground(args ...interface{}) () {
   // foreground()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1308,7 +1533,7 @@ func (this *QTableWidgetItem) foreground(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetItem::type();
 func (this *QTableWidgetItem) type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1322,7 +1547,7 @@ func (this *QTableWidgetItem) type_(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetItem::column();
 func (this *QTableWidgetItem) column(args ...interface{}) () {
   // column()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1340,7 +1565,7 @@ func (this *QTableWidgetItem) column(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setTextAlignment(int alignment);
 func (this *QTableWidgetItem) setTextAlignment(args ...interface{}) () {
   // setTextAlignment(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1359,7 +1584,7 @@ func (this *QTableWidgetItem) setTextAlignment(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFont QTableWidgetItem::font();
 func (this *QTableWidgetItem) font(args ...interface{}) () {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1377,7 +1602,7 @@ func (this *QTableWidgetItem) font(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QTableWidgetItem::icon();
 func (this *QTableWidgetItem) icon(args ...interface{}) () {
   // icon()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1395,7 +1620,7 @@ func (this *QTableWidgetItem) icon(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::write(QDataStream & out);
 func (this *QTableWidgetItem) write(args ...interface{}) () {
   // write(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1414,12 +1639,12 @@ func (this *QTableWidgetItem) write(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::QTableWidgetItem(const QTableWidgetItem & other);
 func NewQTableWidgetItem(args ...interface{}) QTableWidgetItem {
   return QTableWidgetItem{}
 }
 
-
+  // proto:  QBrush QTableWidgetItem::background();
 func (this *QTableWidgetItem) background(args ...interface{}) () {
   // background()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1437,7 +1662,7 @@ func (this *QTableWidgetItem) background(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setIcon(const QIcon & icon);
 func (this *QTableWidgetItem) setIcon(args ...interface{}) () {
   // setIcon(const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1456,7 +1681,7 @@ func (this *QTableWidgetItem) setIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTableWidgetItem::statusTip();
 func (this *QTableWidgetItem) statusTip(args ...interface{}) () {
   // statusTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1474,7 +1699,7 @@ func (this *QTableWidgetItem) statusTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidgetItem * QTableWidgetItem::clone();
 func (this *QTableWidgetItem) clone(args ...interface{}) () {
   // clone()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1492,7 +1717,7 @@ func (this *QTableWidgetItem) clone(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setWhatsThis(const QString & whatsThis);
 func (this *QTableWidgetItem) setWhatsThis(args ...interface{}) () {
   // setWhatsThis(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1511,7 +1736,7 @@ func (this *QTableWidgetItem) setWhatsThis(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QTableWidgetItem::sizeHint();
 func (this *QTableWidgetItem) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1529,7 +1754,7 @@ func (this *QTableWidgetItem) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setForeground(const QBrush & brush);
 func (this *QTableWidgetItem) setForeground(args ...interface{}) () {
   // setForeground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1548,7 +1773,7 @@ func (this *QTableWidgetItem) setForeground(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetItem::row();
 func (this *QTableWidgetItem) row(args ...interface{}) () {
   // row()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1566,7 +1791,7 @@ func (this *QTableWidgetItem) row(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setData(int role, const QVariant & value);
 func (this *QTableWidgetItem) setData(args ...interface{}) () {
   // setData(int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1586,7 +1811,7 @@ func (this *QTableWidgetItem) setData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTableWidget * QTableWidgetItem::tableWidget();
 func (this *QTableWidgetItem) tableWidget(args ...interface{}) () {
   // tableWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1604,7 +1829,7 @@ func (this *QTableWidgetItem) tableWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableWidgetItem::textAlignment();
 func (this *QTableWidgetItem) textAlignment(args ...interface{}) () {
   // textAlignment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1622,7 +1847,7 @@ func (this *QTableWidgetItem) textAlignment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::read(QDataStream & in);
 func (this *QTableWidgetItem) read(args ...interface{}) () {
   // read(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1641,7 +1866,7 @@ func (this *QTableWidgetItem) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTableWidgetItem::toolTip();
 func (this *QTableWidgetItem) toolTip(args ...interface{}) () {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1659,7 +1884,7 @@ func (this *QTableWidgetItem) toolTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableWidgetItem::isSelected();
 func (this *QTableWidgetItem) isSelected(args ...interface{}) () {
   // isSelected()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1677,7 +1902,7 @@ func (this *QTableWidgetItem) isSelected(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setBackgroundColor(const QColor & color);
 func (this *QTableWidgetItem) setBackgroundColor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1696,7 +1921,7 @@ func (this *QTableWidgetItem) setBackgroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setBackground(const QBrush & brush);
 func (this *QTableWidgetItem) setBackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1715,7 +1940,7 @@ func (this *QTableWidgetItem) setBackground(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setFont(const QFont & font);
 func (this *QTableWidgetItem) setFont(args ...interface{}) () {
   // setFont(const class QFont &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1734,7 +1959,7 @@ func (this *QTableWidgetItem) setFont(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setTextColor(const QColor & color);
 func (this *QTableWidgetItem) setTextColor(args ...interface{}) () {
   // setTextColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1753,7 +1978,7 @@ func (this *QTableWidgetItem) setTextColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setText(const QString & text);
 func (this *QTableWidgetItem) setText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1772,7 +1997,7 @@ func (this *QTableWidgetItem) setText(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTableWidgetItem::whatsThis();
 func (this *QTableWidgetItem) whatsThis(args ...interface{}) () {
   // whatsThis()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1790,7 +2015,7 @@ func (this *QTableWidgetItem) whatsThis(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableWidgetItem::setToolTip(const QString & toolTip);
 func (this *QTableWidgetItem) setToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,40 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGestureRecognizer::~QGestureRecognizer();
+extern void _ZN18QGestureRecognizerD0Ev(void* qthis);
+  // proto:  void QGestureRecognizer::QGestureRecognizer();
+extern void* dector_ZN18QGestureRecognizerC1Ev();
+extern void _ZN18QGestureRecognizerC1Ev(void* qthis);
+  // proto:  void QGestureRecognizer::reset(QGesture * state);
+extern void _ZN18QGestureRecognizer5resetEP8QGesture(void* qthis, void* arg0);
+  // proto:  QGesture * QGestureRecognizer::create(QObject * target);
+extern void _ZN18QGestureRecognizer6createEP7QObject(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGestureRecognizer)=8
 type QGestureRecognizer struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QGestureRecognizer::~QGestureRecognizer();
 func (this *QGestureRecognizer) FreeQGestureRecognizer(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,12 +73,12 @@ func (this *QGestureRecognizer) FreeQGestureRecognizer(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGestureRecognizer::QGestureRecognizer();
 func NewQGestureRecognizer(args ...interface{}) QGestureRecognizer {
   return QGestureRecognizer{}
 }
 
-
+  // proto:  void QGestureRecognizer::reset(QGesture * state);
 func (this *QGestureRecognizer) reset(args ...interface{}) () {
   // reset(class QGesture *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +97,7 @@ func (this *QGestureRecognizer) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QGesture * QGestureRecognizer::create(QObject * target);
 func (this *QGestureRecognizer) create(args ...interface{}) () {
   // create(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)

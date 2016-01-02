@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,141 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QPoint QTransform::map(const QPoint & p);
+extern void _ZNK10QTransform3mapERK6QPoint(void* qthis, void* arg0);
+  // proto:  QPainterPath QTransform::map(const QPainterPath & p);
+extern void _ZNK10QTransform3mapERK12QPainterPath(void* qthis, void* arg0);
+  // proto:  qreal QTransform::det();
+extern void _ZNK10QTransform3detEv(void* qthis);
+  // proto:  void QTransform::map(qreal x, qreal y, qreal * tx, qreal * ty);
+extern void _ZNK10QTransform3mapEddPdS0_(void* qthis, double arg0, double arg1, double* arg2, double* arg3);
+  // proto:  void QTransform::setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33);
+extern void _ZN10QTransform9setMatrixEddddddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8);
+  // proto:  const QMatrix & QTransform::toAffine();
+extern void _ZNK10QTransform8toAffineEv(void* qthis);
+  // proto:  void QTransform::reset();
+extern void _ZN10QTransform5resetEv(void* qthis);
+  // proto:  qreal QTransform::determinant();
+extern void demth_ZNK10QTransform11determinantEv(void* qthis);
+  // proto: static QTransform QTransform::fromScale(qreal dx, qreal dy);
+extern void _ZN10QTransform9fromScaleEdd(double arg0, double arg1);
+  // proto:  bool QTransform::isTranslating();
+extern void _ZNK10QTransform13isTranslatingEv(void* qthis);
+  // proto:  QPolygon QTransform::mapToPolygon(const QRect & r);
+extern void _ZNK10QTransform12mapToPolygonERK5QRect(void* qthis, void* arg0);
+  // proto:  qreal QTransform::m22();
+extern void _ZNK10QTransform3m22Ev(void* qthis);
+  // proto:  QRect QTransform::mapRect(const QRect & );
+extern void _ZNK10QTransform7mapRectERK5QRect(void* qthis, void* arg0);
+  // proto:  void QTransform::QTransform();
+extern void* dector_ZN10QTransformC1Ev();
+extern void _ZN10QTransformC1Ev(void* qthis);
+  // proto:  qreal QTransform::m32();
+extern void _ZNK10QTransform3m32Ev(void* qthis);
+  // proto:  void QTransform::map(int x, int y, int * tx, int * ty);
+extern void _ZNK10QTransform3mapEiiPiS0_(void* qthis, int arg0, int arg1, int* arg2, int* arg3);
+  // proto:  QTransform & QTransform::shear(qreal sh, qreal sv);
+extern void _ZN10QTransform5shearEdd(void* qthis, double arg0, double arg1);
+  // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy);
+extern void* dector_ZN10QTransformC1Edddddd(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5);
+extern void _ZN10QTransformC1Edddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5);
+  // proto:  QTransform & QTransform::scale(qreal sx, qreal sy);
+extern void _ZN10QTransform5scaleEdd(void* qthis, double arg0, double arg1);
+  // proto:  QPolygon QTransform::map(const QPolygon & a);
+extern void _ZNK10QTransform3mapERK8QPolygon(void* qthis, void* arg0);
+  // proto:  QTransform QTransform::transposed();
+extern void _ZNK10QTransform10transposedEv(void* qthis);
+  // proto:  QLineF QTransform::map(const QLineF & l);
+extern void _ZNK10QTransform3mapERK6QLineF(void* qthis, void* arg0);
+  // proto:  void QTransform::QTransform(bool );
+extern void* dector_ZN10QTransformC1Eb(bool arg0);
+extern void demth_ZN10QTransformC1Eb(void* qthis, bool arg0);
+  // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
+extern void _ZN10QTransform9translateEdd(void* qthis, double arg0, double arg1);
+  // proto:  QRectF QTransform::mapRect(const QRectF & );
+extern void _ZNK10QTransform7mapRectERK6QRectF(void* qthis, void* arg0);
+  // proto: static QTransform QTransform::fromTranslate(qreal dx, qreal dy);
+extern void _ZN10QTransform13fromTranslateEdd(double arg0, double arg1);
+  // proto:  QLine QTransform::map(const QLine & l);
+extern void _ZNK10QTransform3mapERK5QLine(void* qthis, void* arg0);
+  // proto:  bool QTransform::isInvertible();
+extern void _ZNK10QTransform12isInvertibleEv(void* qthis);
+  // proto: static bool QTransform::quadToQuad(const QPolygonF & one, const QPolygonF & two, QTransform & result);
+extern void _ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(void* arg0, void* arg1, void* arg2);
+  // proto: static bool QTransform::squareToQuad(const QPolygonF & square, QTransform & result);
+extern void _ZN10QTransform12squareToQuadERK9QPolygonFRS_(void* arg0, void* arg1);
+  // proto:  QPointF QTransform::map(const QPointF & p);
+extern void _ZNK10QTransform3mapERK7QPointF(void* qthis, void* arg0);
+  // proto:  QPolygonF QTransform::map(const QPolygonF & a);
+extern void _ZNK10QTransform3mapERK9QPolygonF(void* qthis, void* arg0);
+  // proto:  qreal QTransform::m31();
+extern void _ZNK10QTransform3m31Ev(void* qthis);
+  // proto:  void QTransform::QTransform(const QMatrix & mtx);
+extern void* dector_ZN10QTransformC1ERK7QMatrix(void* arg0);
+extern void _ZN10QTransformC1ERK7QMatrix(void* qthis, void* arg0);
+  // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33);
+extern void* dector_ZN10QTransformC1Eddddddddd(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8);
+extern void _ZN10QTransformC1Eddddddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8);
+  // proto:  QRegion QTransform::map(const QRegion & r);
+extern void _ZNK10QTransform3mapERK7QRegion(void* qthis, void* arg0);
+  // proto:  bool QTransform::isRotating();
+extern void _ZNK10QTransform10isRotatingEv(void* qthis);
+  // proto:  qreal QTransform::m33();
+extern void _ZNK10QTransform3m33Ev(void* qthis);
+  // proto:  qreal QTransform::m13();
+extern void _ZNK10QTransform3m13Ev(void* qthis);
+  // proto:  qreal QTransform::m21();
+extern void _ZNK10QTransform3m21Ev(void* qthis);
+  // proto:  bool QTransform::isScaling();
+extern void _ZNK10QTransform9isScalingEv(void* qthis);
+  // proto:  QTransform QTransform::inverted(bool * invertible);
+extern void _ZNK10QTransform8invertedEPb(void* qthis, bool* arg0);
+  // proto:  bool QTransform::isAffine();
+extern void _ZNK10QTransform8isAffineEv(void* qthis);
+  // proto:  qreal QTransform::m11();
+extern void _ZNK10QTransform3m11Ev(void* qthis);
+  // proto:  bool QTransform::isIdentity();
+extern void _ZNK10QTransform10isIdentityEv(void* qthis);
+  // proto: static bool QTransform::quadToSquare(const QPolygonF & quad, QTransform & result);
+extern void _ZN10QTransform12quadToSquareERK9QPolygonFRS_(void* arg0, void* arg1);
+  // proto:  QTransform QTransform::adjoint();
+extern void _ZNK10QTransform7adjointEv(void* qthis);
+  // proto:  qreal QTransform::dx();
+extern void _ZNK10QTransform2dxEv(void* qthis);
+  // proto:  qreal QTransform::m23();
+extern void _ZNK10QTransform3m23Ev(void* qthis);
+  // proto:  qreal QTransform::dy();
+extern void _ZNK10QTransform2dyEv(void* qthis);
+  // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33, bool );
+extern void* dector_ZN10QTransformC1Edddddddddb(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, bool arg9);
+extern void demth_ZN10QTransformC1Edddddddddb(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8, bool arg9);
+  // proto:  qreal QTransform::m12();
+extern void _ZNK10QTransform3m12Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTransform)=88
 type QTransform struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QPoint QTransform::map(const QPoint & p);
 func (this *QTransform) map_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +174,7 @@ func (this *QTransform) map_(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::det();
 func (this *QTransform) det(args ...interface{}) () {
   // det()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -73,7 +192,7 @@ func (this *QTransform) det(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTransform::setMatrix(qreal m11, qreal m12, qreal m13, qreal m21, qreal m22, qreal m23, qreal m31, qreal m32, qreal m33);
 func (this *QTransform) setMatrix(args ...interface{}) () {
   // setMatrix(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +219,7 @@ func (this *QTransform) setMatrix(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMatrix & QTransform::toAffine();
 func (this *QTransform) toAffine(args ...interface{}) () {
   // toAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +237,7 @@ func (this *QTransform) toAffine(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTransform::reset();
 func (this *QTransform) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +255,7 @@ func (this *QTransform) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::determinant();
 func (this *QTransform) determinant(args ...interface{}) () {
   // determinant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +273,7 @@ func (this *QTransform) determinant(args ...interface{}) () {
 
 }
 
-
+  // proto: static QTransform QTransform::fromScale(qreal dx, qreal dy);
 func (this *QTransform) fromScale_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -168,7 +287,7 @@ func (this *QTransform) fromScale_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isTranslating();
 func (this *QTransform) isTranslating(args ...interface{}) () {
   // isTranslating()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +305,7 @@ func (this *QTransform) isTranslating(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPolygon QTransform::mapToPolygon(const QRect & r);
 func (this *QTransform) mapToPolygon(args ...interface{}) () {
   // mapToPolygon(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +324,7 @@ func (this *QTransform) mapToPolygon(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m22();
 func (this *QTransform) m22(args ...interface{}) () {
   // m22()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +342,7 @@ func (this *QTransform) m22(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QTransform::mapRect(const QRect & );
 func (this *QTransform) mapRect(args ...interface{}) () {
   // mapRect(const class QRect &)
   // mapRect(const class QRectF &)
@@ -247,12 +366,12 @@ func (this *QTransform) mapRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTransform::QTransform();
 func NewQTransform(args ...interface{}) QTransform {
   return QTransform{}
 }
 
-
+  // proto:  qreal QTransform::m32();
 func (this *QTransform) m32(args ...interface{}) () {
   // m32()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +389,7 @@ func (this *QTransform) m32(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform & QTransform::shear(qreal sh, qreal sv);
 func (this *QTransform) shear(args ...interface{}) () {
   // shear(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -290,7 +409,7 @@ func (this *QTransform) shear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform & QTransform::scale(qreal sx, qreal sy);
 func (this *QTransform) scale(args ...interface{}) () {
   // scale(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +429,7 @@ func (this *QTransform) scale(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QTransform::transposed();
 func (this *QTransform) transposed(args ...interface{}) () {
   // transposed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -328,7 +447,7 @@ func (this *QTransform) transposed(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform & QTransform::translate(qreal dx, qreal dy);
 func (this *QTransform) translate(args ...interface{}) () {
   // translate(qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -348,7 +467,7 @@ func (this *QTransform) translate(args ...interface{}) () {
 
 }
 
-
+  // proto: static QTransform QTransform::fromTranslate(qreal dx, qreal dy);
 func (this *QTransform) fromTranslate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -362,7 +481,7 @@ func (this *QTransform) fromTranslate_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isInvertible();
 func (this *QTransform) isInvertible(args ...interface{}) () {
   // isInvertible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -380,7 +499,7 @@ func (this *QTransform) isInvertible(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QTransform::quadToQuad(const QPolygonF & one, const QPolygonF & two, QTransform & result);
 func (this *QTransform) quadToQuad_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -394,7 +513,7 @@ func (this *QTransform) quadToQuad_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QTransform::squareToQuad(const QPolygonF & square, QTransform & result);
 func (this *QTransform) squareToQuad_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -408,7 +527,7 @@ func (this *QTransform) squareToQuad_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m31();
 func (this *QTransform) m31(args ...interface{}) () {
   // m31()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -426,7 +545,7 @@ func (this *QTransform) m31(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isRotating();
 func (this *QTransform) isRotating(args ...interface{}) () {
   // isRotating()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -444,7 +563,7 @@ func (this *QTransform) isRotating(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m33();
 func (this *QTransform) m33(args ...interface{}) () {
   // m33()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -462,7 +581,7 @@ func (this *QTransform) m33(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m13();
 func (this *QTransform) m13(args ...interface{}) () {
   // m13()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -480,7 +599,7 @@ func (this *QTransform) m13(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m21();
 func (this *QTransform) m21(args ...interface{}) () {
   // m21()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -498,7 +617,7 @@ func (this *QTransform) m21(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isScaling();
 func (this *QTransform) isScaling(args ...interface{}) () {
   // isScaling()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -516,7 +635,7 @@ func (this *QTransform) isScaling(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QTransform::inverted(bool * invertible);
 func (this *QTransform) inverted(args ...interface{}) () {
   // inverted(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -535,7 +654,7 @@ func (this *QTransform) inverted(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isAffine();
 func (this *QTransform) isAffine(args ...interface{}) () {
   // isAffine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -553,7 +672,7 @@ func (this *QTransform) isAffine(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m11();
 func (this *QTransform) m11(args ...interface{}) () {
   // m11()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -571,7 +690,7 @@ func (this *QTransform) m11(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTransform::isIdentity();
 func (this *QTransform) isIdentity(args ...interface{}) () {
   // isIdentity()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -589,7 +708,7 @@ func (this *QTransform) isIdentity(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QTransform::quadToSquare(const QPolygonF & quad, QTransform & result);
 func (this *QTransform) quadToSquare_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -603,7 +722,7 @@ func (this *QTransform) quadToSquare_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QTransform::adjoint();
 func (this *QTransform) adjoint(args ...interface{}) () {
   // adjoint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -621,7 +740,7 @@ func (this *QTransform) adjoint(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::dx();
 func (this *QTransform) dx(args ...interface{}) () {
   // dx()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -639,7 +758,7 @@ func (this *QTransform) dx(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m23();
 func (this *QTransform) m23(args ...interface{}) () {
   // m23()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -657,7 +776,7 @@ func (this *QTransform) m23(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::dy();
 func (this *QTransform) dy(args ...interface{}) () {
   // dy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -675,7 +794,7 @@ func (this *QTransform) dy(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTransform::m12();
 func (this *QTransform) m12(args ...interface{}) () {
   // m12()
   var vtys = make(map[int32]map[int32]reflect.Type)

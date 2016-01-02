@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,57 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QTextBoundaryFinder::isAtBoundary();
+extern void _ZNK19QTextBoundaryFinder12isAtBoundaryEv(void* qthis);
+  // proto:  int QTextBoundaryFinder::toNextBoundary();
+extern void _ZN19QTextBoundaryFinder14toNextBoundaryEv(void* qthis);
+  // proto:  void QTextBoundaryFinder::toEnd();
+extern void _ZN19QTextBoundaryFinder5toEndEv(void* qthis);
+  // proto:  void QTextBoundaryFinder::QTextBoundaryFinder(const QTextBoundaryFinder & other);
+extern void* dector_ZN19QTextBoundaryFinderC1ERKS_(void* arg0);
+extern void _ZN19QTextBoundaryFinderC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextBoundaryFinder::setPosition(int position);
+extern void _ZN19QTextBoundaryFinder11setPositionEi(void* qthis, int arg0);
+  // proto:  void QTextBoundaryFinder::QTextBoundaryFinder();
+extern void* dector_ZN19QTextBoundaryFinderC1Ev();
+extern void _ZN19QTextBoundaryFinderC1Ev(void* qthis);
+  // proto:  int QTextBoundaryFinder::toPreviousBoundary();
+extern void _ZN19QTextBoundaryFinder18toPreviousBoundaryEv(void* qthis);
+  // proto:  bool QTextBoundaryFinder::isValid();
+extern void demth_ZNK19QTextBoundaryFinder7isValidEv(void* qthis);
+  // proto:  void QTextBoundaryFinder::~QTextBoundaryFinder();
+extern void _ZN19QTextBoundaryFinderD0Ev(void* qthis);
+  // proto:  QString QTextBoundaryFinder::string();
+extern void _ZNK19QTextBoundaryFinder6stringEv(void* qthis);
+  // proto:  void QTextBoundaryFinder::toStart();
+extern void _ZN19QTextBoundaryFinder7toStartEv(void* qthis);
+  // proto:  int QTextBoundaryFinder::position();
+extern void _ZNK19QTextBoundaryFinder8positionEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextBoundaryFinder)=48
 type QTextBoundaryFinder struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QTextBoundaryFinder::isAtBoundary();
 func (this *QTextBoundaryFinder) isAtBoundary(args ...interface{}) () {
   // isAtBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +94,7 @@ func (this *QTextBoundaryFinder) isAtBoundary(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBoundaryFinder::toNextBoundary();
 func (this *QTextBoundaryFinder) toNextBoundary(args ...interface{}) () {
   // toNextBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +112,7 @@ func (this *QTextBoundaryFinder) toNextBoundary(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBoundaryFinder::toEnd();
 func (this *QTextBoundaryFinder) toEnd(args ...interface{}) () {
   // toEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,12 +130,12 @@ func (this *QTextBoundaryFinder) toEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBoundaryFinder::QTextBoundaryFinder(const QTextBoundaryFinder & other);
 func NewQTextBoundaryFinder(args ...interface{}) QTextBoundaryFinder {
   return QTextBoundaryFinder{}
 }
 
-
+  // proto:  void QTextBoundaryFinder::setPosition(int position);
 func (this *QTextBoundaryFinder) setPosition(args ...interface{}) () {
   // setPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +154,7 @@ func (this *QTextBoundaryFinder) setPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBoundaryFinder::toPreviousBoundary();
 func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
   // toPreviousBoundary()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +172,7 @@ func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBoundaryFinder::isValid();
 func (this *QTextBoundaryFinder) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +190,7 @@ func (this *QTextBoundaryFinder) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBoundaryFinder::~QTextBoundaryFinder();
 func (this *QTextBoundaryFinder) FreeQTextBoundaryFinder(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,7 +204,7 @@ func (this *QTextBoundaryFinder) FreeQTextBoundaryFinder(args ...interface{}) ()
 
 }
 
-
+  // proto:  QString QTextBoundaryFinder::string();
 func (this *QTextBoundaryFinder) string(args ...interface{}) () {
   // string()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +222,7 @@ func (this *QTextBoundaryFinder) string(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBoundaryFinder::toStart();
 func (this *QTextBoundaryFinder) toStart(args ...interface{}) () {
   // toStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +240,7 @@ func (this *QTextBoundaryFinder) toStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBoundaryFinder::position();
 func (this *QTextBoundaryFinder) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)

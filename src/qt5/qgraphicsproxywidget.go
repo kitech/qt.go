@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,52 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
+extern void _ZN20QGraphicsProxyWidgetD0Ev(void* qthis);
+  // proto:  QGraphicsProxyWidget * QGraphicsProxyWidget::createProxyForChildWidget(QWidget * child);
+extern void _ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QGraphicsProxyWidget::setWidget(QWidget * widget);
+extern void _ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  QRectF QGraphicsProxyWidget::subWidgetRect(const QWidget * widget);
+extern void _ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(void* qthis, void* arg0);
+  // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
+extern void* dector_ZN20QGraphicsProxyWidgetC1ERKS_(void* arg0);
+extern void _ZN20QGraphicsProxyWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QGraphicsProxyWidget::metaObject();
+extern void _ZNK20QGraphicsProxyWidget10metaObjectEv(void* qthis);
+  // proto:  void QGraphicsProxyWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
+extern void _ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QGraphicsProxyWidget::setGeometry(const QRectF & rect);
+extern void _ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(void* qthis, void* arg0);
+  // proto:  QWidget * QGraphicsProxyWidget::widget();
+extern void _ZNK20QGraphicsProxyWidget6widgetEv(void* qthis);
+  // proto:  int QGraphicsProxyWidget::type();
+extern void _ZNK20QGraphicsProxyWidget4typeEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGraphicsProxyWidget)=1
 type QGraphicsProxyWidget struct {
   /*qbase*/ QGraphicsWidget;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QGraphicsProxyWidget::~QGraphicsProxyWidget();
 func (this *QGraphicsProxyWidget) FreeQGraphicsProxyWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +85,7 @@ func (this *QGraphicsProxyWidget) FreeQGraphicsProxyWidget(args ...interface{}) 
 
 }
 
-
+  // proto:  QGraphicsProxyWidget * QGraphicsProxyWidget::createProxyForChildWidget(QWidget * child);
 func (this *QGraphicsProxyWidget) createProxyForChildWidget(args ...interface{}) () {
   // createProxyForChildWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -74,7 +104,7 @@ func (this *QGraphicsProxyWidget) createProxyForChildWidget(args ...interface{})
 
 }
 
-
+  // proto:  void QGraphicsProxyWidget::setWidget(QWidget * widget);
 func (this *QGraphicsProxyWidget) setWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -93,7 +123,7 @@ func (this *QGraphicsProxyWidget) setWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRectF QGraphicsProxyWidget::subWidgetRect(const QWidget * widget);
 func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
   // subWidgetRect(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,12 +142,12 @@ func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsProxyWidget::QGraphicsProxyWidget(const QGraphicsProxyWidget & );
 func NewQGraphicsProxyWidget(args ...interface{}) QGraphicsProxyWidget {
   return QGraphicsProxyWidget{}
 }
 
-
+  // proto:  const QMetaObject * QGraphicsProxyWidget::metaObject();
 func (this *QGraphicsProxyWidget) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +165,7 @@ func (this *QGraphicsProxyWidget) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsProxyWidget::paint(QPainter * painter, const QStyleOptionGraphicsItem * option, QWidget * widget);
 func (this *QGraphicsProxyWidget) paint(args ...interface{}) () {
   // paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +186,7 @@ func (this *QGraphicsProxyWidget) paint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGraphicsProxyWidget::setGeometry(const QRectF & rect);
 func (this *QGraphicsProxyWidget) setGeometry(args ...interface{}) () {
   // setGeometry(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,7 +205,7 @@ func (this *QGraphicsProxyWidget) setGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QGraphicsProxyWidget::widget();
 func (this *QGraphicsProxyWidget) widget(args ...interface{}) () {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +223,7 @@ func (this *QGraphicsProxyWidget) widget(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QGraphicsProxyWidget::type();
 func (this *QGraphicsProxyWidget) type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

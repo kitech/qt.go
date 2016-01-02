@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QStatusBar::~QStatusBar();
+extern void _ZN10QStatusBarD0Ev(void* qthis);
+  // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
+extern void _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(void* qthis, int arg0, void* arg1, int arg2);
+  // proto:  void QStatusBar::removeWidget(QWidget * widget);
+extern void _ZN10QStatusBar12removeWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
+extern void* dector_ZN10QStatusBarC1ERKS_(void* arg0);
+extern void _ZN10QStatusBarC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QStatusBar::setSizeGripEnabled(bool );
+extern void _ZN10QStatusBar18setSizeGripEnabledEb(void* qthis, bool arg0);
+  // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
+extern void _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(void* qthis, void* arg0, int arg1);
+  // proto:  bool QStatusBar::isSizeGripEnabled();
+extern void _ZNK10QStatusBar17isSizeGripEnabledEv(void* qthis);
+  // proto:  void QStatusBar::clearMessage();
+extern void _ZN10QStatusBar12clearMessageEv(void* qthis);
+  // proto:  QString QStatusBar::currentMessage();
+extern void _ZNK10QStatusBar14currentMessageEv(void* qthis);
+  // proto:  const QMetaObject * QStatusBar::metaObject();
+extern void _ZNK10QStatusBar10metaObjectEv(void* qthis);
+  // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
+extern void _ZN10QStatusBar11showMessageERK7QStringi(void* qthis, void* arg0, int arg1);
+  // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
+extern void _ZN10QStatusBar12insertWidgetEiP7QWidgeti(void* qthis, int arg0, void* arg1, int arg2);
+  // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
+extern void _ZN10QStatusBar9addWidgetEP7QWidgeti(void* qthis, void* arg0, int arg1);
+  // proto:  void QStatusBar::QStatusBar(QWidget * parent);
+extern void* dector_ZN10QStatusBarC1EP7QWidget(void* arg0);
+extern void _ZN10QStatusBarC1EP7QWidget(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStatusBar)=1
 type QStatusBar struct {
   /*qbase*/ QWidget;
@@ -42,7 +81,7 @@ type QStatusBar struct {
 //  _messageChanged QStatusBar_messageChanged_signal;
 }
 
-
+  // proto:  void QStatusBar::~QStatusBar();
 func (this *QStatusBar) FreeQStatusBar(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -56,7 +95,7 @@ func (this *QStatusBar) FreeQStatusBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
 func (this *QStatusBar) insertPermanentWidget(args ...interface{}) () {
   // insertPermanentWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +116,7 @@ func (this *QStatusBar) insertPermanentWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::removeWidget(QWidget * widget);
 func (this *QStatusBar) removeWidget(args ...interface{}) () {
   // removeWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,12 +135,12 @@ func (this *QStatusBar) removeWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
 func NewQStatusBar(args ...interface{}) QStatusBar {
   return QStatusBar{}
 }
 
-
+  // proto:  void QStatusBar::setSizeGripEnabled(bool );
 func (this *QStatusBar) setSizeGripEnabled(args ...interface{}) () {
   // setSizeGripEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -120,7 +159,7 @@ func (this *QStatusBar) setSizeGripEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
 func (this *QStatusBar) addPermanentWidget(args ...interface{}) () {
   // addPermanentWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +179,7 @@ func (this *QStatusBar) addPermanentWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QStatusBar::isSizeGripEnabled();
 func (this *QStatusBar) isSizeGripEnabled(args ...interface{}) () {
   // isSizeGripEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +197,7 @@ func (this *QStatusBar) isSizeGripEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::clearMessage();
 func (this *QStatusBar) clearMessage(args ...interface{}) () {
   // clearMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,7 +215,7 @@ func (this *QStatusBar) clearMessage(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QStatusBar::currentMessage();
 func (this *QStatusBar) currentMessage(args ...interface{}) () {
   // currentMessage()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -194,7 +233,7 @@ func (this *QStatusBar) currentMessage(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QStatusBar::metaObject();
 func (this *QStatusBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -212,7 +251,7 @@ func (this *QStatusBar) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
 func (this *QStatusBar) showMessage(args ...interface{}) () {
   // showMessage(const class QString &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,7 +271,7 @@ func (this *QStatusBar) showMessage(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
 func (this *QStatusBar) insertWidget(args ...interface{}) () {
   // insertWidget(int, class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +292,7 @@ func (this *QStatusBar) insertWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
 func (this *QStatusBar) addWidget(args ...interface{}) () {
   // addWidget(class QWidget *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)

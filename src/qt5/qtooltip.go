@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static void QToolTip::setFont(const QFont & );
+extern void _ZN8QToolTip7setFontERK5QFont(void* arg0);
+  // proto: static QPalette QToolTip::palette();
+extern void _ZN8QToolTip7paletteEv();
+  // proto: static void QToolTip::hideText();
+extern void demth_ZN8QToolTip8hideTextEv();
+  // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
+extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  void QToolTip::QToolTip();
+extern void* dector_ZN8QToolTipC1Ev();
+extern void _ZN8QToolTipC1Ev(void* qthis);
+  // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
+extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* arg0, void* arg1, void* arg2, void* arg3, int arg4);
+  // proto: static QString QToolTip::text();
+extern void _ZN8QToolTip4textEv();
+  // proto: static QFont QToolTip::font();
+extern void _ZN8QToolTip4fontEv();
+  // proto: static void QToolTip::setPalette(const QPalette & );
+extern void _ZN8QToolTip10setPaletteERK8QPalette(void* arg0);
+  // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w);
+extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidget(void* arg0, void* arg1, void* arg2);
+  // proto: static bool QToolTip::isVisible();
+extern void _ZN8QToolTip9isVisibleEv();
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QToolTip)=1
 type QToolTip struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto: static void QToolTip::setFont(const QFont & );
 func (this *QToolTip) setFont_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +87,7 @@ func (this *QToolTip) setFont_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QPalette QToolTip::palette();
 func (this *QToolTip) palette_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -69,7 +101,7 @@ func (this *QToolTip) palette_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QToolTip::hideText();
 func (this *QToolTip) hideText_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -83,7 +115,7 @@ func (this *QToolTip) hideText_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect);
 func (this *QToolTip) showText_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,12 +129,12 @@ func (this *QToolTip) showText_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QToolTip::QToolTip();
 func NewQToolTip(args ...interface{}) QToolTip {
   return QToolTip{}
 }
 
-
+  // proto: static QString QToolTip::text();
 func (this *QToolTip) text_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -116,7 +148,7 @@ func (this *QToolTip) text_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QFont QToolTip::font();
 func (this *QToolTip) font_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,7 +162,7 @@ func (this *QToolTip) font_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QToolTip::setPalette(const QPalette & );
 func (this *QToolTip) setPalette_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -144,7 +176,7 @@ func (this *QToolTip) setPalette_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QToolTip::isVisible();
 func (this *QToolTip) isVisible_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

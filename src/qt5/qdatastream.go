@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,69 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
+extern void _ZN11QDataStream9readBytesERPcRj(void* qthis, char* arg0, unsigned int* arg1);
+  // proto:  void QDataStream::unsetDevice();
+extern void _ZN11QDataStream11unsetDeviceEv(void* qthis);
+  // proto:  void QDataStream::QDataStream(const QDataStream & );
+extern void* dector_ZN11QDataStreamC1ERKS_(void* arg0);
+extern void _ZN11QDataStreamC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QDataStream::QDataStream(QIODevice * );
+extern void* dector_ZN11QDataStreamC1EP9QIODevice(void* arg0);
+extern void _ZN11QDataStreamC1EP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QDataStream::~QDataStream();
+extern void _ZN11QDataStreamD0Ev(void* qthis);
+  // proto:  int QDataStream::skipRawData(int len);
+extern void _ZN11QDataStream11skipRawDataEi(void* qthis, int arg0);
+  // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
+extern void _ZN11QDataStream10writeBytesEPKcj(void* qthis, char* arg0, unsigned int arg1);
+  // proto:  void QDataStream::QDataStream();
+extern void* dector_ZN11QDataStreamC1Ev();
+extern void _ZN11QDataStreamC1Ev(void* qthis);
+  // proto:  void QDataStream::resetStatus();
+extern void _ZN11QDataStream11resetStatusEv(void* qthis);
+  // proto:  void QDataStream::QDataStream(const QByteArray & );
+extern void* dector_ZN11QDataStreamC1ERK10QByteArray(void* arg0);
+extern void _ZN11QDataStreamC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  int QDataStream::version();
+extern void _ZNK11QDataStream7versionEv(void* qthis);
+  // proto:  bool QDataStream::atEnd();
+extern void _ZNK11QDataStream5atEndEv(void* qthis);
+  // proto:  void QDataStream::setVersion(int );
+extern void _ZN11QDataStream10setVersionEi(void* qthis, int arg0);
+  // proto:  void QDataStream::setDevice(QIODevice * );
+extern void _ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  int QDataStream::writeRawData(const char * , int len);
+extern void _ZN11QDataStream12writeRawDataEPKci(void* qthis, char* arg0, int arg1);
+  // proto:  int QDataStream::readRawData(char * , int len);
+extern void _ZN11QDataStream11readRawDataEPci(void* qthis, char* arg0, int arg1);
+  // proto:  QIODevice * QDataStream::device();
+extern void _ZNK11QDataStream6deviceEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDataStream)=1
 type QDataStream struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
 func (this *QDataStream) readBytes(args ...interface{}) () {
   // readBytes(char *&, uint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +108,7 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDataStream::unsetDevice();
 func (this *QDataStream) unsetDevice(args ...interface{}) () {
   // unsetDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,12 +126,12 @@ func (this *QDataStream) unsetDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDataStream::QDataStream(const QDataStream & );
 func NewQDataStream(args ...interface{}) QDataStream {
   return QDataStream{}
 }
 
-
+  // proto:  void QDataStream::~QDataStream();
 func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -98,7 +145,7 @@ func (this *QDataStream) FreeQDataStream(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDataStream::skipRawData(int len);
 func (this *QDataStream) skipRawData(args ...interface{}) () {
   // skipRawData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +164,7 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
 func (this *QDataStream) writeBytes(args ...interface{}) () {
   // writeBytes(const char *, uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +184,7 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDataStream::resetStatus();
 func (this *QDataStream) resetStatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +202,7 @@ func (this *QDataStream) resetStatus(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDataStream::version();
 func (this *QDataStream) version(args ...interface{}) () {
   // version()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +220,7 @@ func (this *QDataStream) version(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDataStream::atEnd();
 func (this *QDataStream) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +238,7 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDataStream::setVersion(int );
 func (this *QDataStream) setVersion(args ...interface{}) () {
   // setVersion(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,7 +257,7 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDataStream::setDevice(QIODevice * );
 func (this *QDataStream) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +276,7 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDataStream::writeRawData(const char * , int len);
 func (this *QDataStream) writeRawData(args ...interface{}) () {
   // writeRawData(const char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -249,7 +296,7 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDataStream::readRawData(char * , int len);
 func (this *QDataStream) readRawData(args ...interface{}) () {
   // readRawData(char *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -269,7 +316,7 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QDataStream::device();
 func (this *QDataStream) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)

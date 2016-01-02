@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,60 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QActionGroup::QActionGroup(QObject * parent);
+extern void* dector_ZN12QActionGroupC1EP7QObject(void* arg0);
+extern void _ZN12QActionGroupC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QList<QAction *> QActionGroup::actions();
+extern void _ZNK12QActionGroup7actionsEv(void* qthis);
+  // proto:  void QActionGroup::setDisabled(bool b);
+extern void demth_ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0);
+  // proto:  void QActionGroup::setEnabled(bool );
+extern void _ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0);
+  // proto:  const QMetaObject * QActionGroup::metaObject();
+extern void _ZNK12QActionGroup10metaObjectEv(void* qthis);
+  // proto:  QAction * QActionGroup::addAction(QAction * a);
+extern void _ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0);
+  // proto:  void QActionGroup::~QActionGroup();
+extern void _ZN12QActionGroupD0Ev(void* qthis);
+  // proto:  QAction * QActionGroup::checkedAction();
+extern void _ZNK12QActionGroup13checkedActionEv(void* qthis);
+  // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
+extern void _ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  void QActionGroup::setVisible(bool );
+extern void _ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0);
+  // proto:  bool QActionGroup::isVisible();
+extern void _ZNK12QActionGroup9isVisibleEv(void* qthis);
+  // proto:  void QActionGroup::setExclusive(bool );
+extern void _ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0);
+  // proto:  QAction * QActionGroup::addAction(const QString & text);
+extern void _ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0);
+  // proto:  bool QActionGroup::isEnabled();
+extern void _ZNK12QActionGroup9isEnabledEv(void* qthis);
+  // proto:  bool QActionGroup::isExclusive();
+extern void _ZNK12QActionGroup11isExclusiveEv(void* qthis);
+  // proto:  void QActionGroup::removeAction(QAction * a);
+extern void _ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0);
+  // proto:  void QActionGroup::QActionGroup(const QActionGroup & );
+extern void* dector_ZN12QActionGroupC1ERKS_(void* arg0);
+extern void _ZN12QActionGroupC1ERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QActionGroup)=1
 type QActionGroup struct {
   /*qbase*/ QObject;
@@ -43,12 +88,12 @@ type QActionGroup struct {
 //  _hovered QActionGroup_hovered_signal;
 }
 
-
+  // proto:  void QActionGroup::QActionGroup(QObject * parent);
 func NewQActionGroup(args ...interface{}) QActionGroup {
   return QActionGroup{}
 }
 
-
+  // proto:  QList<QAction *> QActionGroup::actions();
 func (this *QActionGroup) actions(args ...interface{}) () {
   // actions()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +111,7 @@ func (this *QActionGroup) actions(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::setDisabled(bool b);
 func (this *QActionGroup) setDisabled(args ...interface{}) () {
   // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +130,7 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::setEnabled(bool );
 func (this *QActionGroup) setEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -104,7 +149,7 @@ func (this *QActionGroup) setEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QActionGroup::metaObject();
 func (this *QActionGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +167,7 @@ func (this *QActionGroup) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QActionGroup::addAction(QAction * a);
 func (this *QActionGroup) addAction(args ...interface{}) () {
   // addAction(class QAction *)
   // addAction(const class QIcon &, const class QString &)
@@ -152,7 +197,7 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::~QActionGroup();
 func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,7 +211,7 @@ func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QActionGroup::checkedAction();
 func (this *QActionGroup) checkedAction(args ...interface{}) () {
   // checkedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +229,7 @@ func (this *QActionGroup) checkedAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::setVisible(bool );
 func (this *QActionGroup) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +248,7 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QActionGroup::isVisible();
 func (this *QActionGroup) isVisible(args ...interface{}) () {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +266,7 @@ func (this *QActionGroup) isVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::setExclusive(bool );
 func (this *QActionGroup) setExclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -240,7 +285,7 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QActionGroup::isEnabled();
 func (this *QActionGroup) isEnabled(args ...interface{}) () {
   // isEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,7 +303,7 @@ func (this *QActionGroup) isEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QActionGroup::isExclusive();
 func (this *QActionGroup) isExclusive(args ...interface{}) () {
   // isExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -276,7 +321,7 @@ func (this *QActionGroup) isExclusive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QActionGroup::removeAction(QAction * a);
 func (this *QActionGroup) removeAction(args ...interface{}) () {
   // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)

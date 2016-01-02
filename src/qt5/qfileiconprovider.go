@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,43 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QFileIconProvider::type(const QFileInfo & info);
+extern void _ZNK17QFileIconProvider4typeERK9QFileInfo(void* qthis, void* arg0);
+  // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
+extern void _ZNK17QFileIconProvider4iconERK9QFileInfo(void* qthis, void* arg0);
+  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
+extern void* dector_ZN17QFileIconProviderC1ERKS_(void* arg0);
+extern void _ZN17QFileIconProviderC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QFileIconProvider::QFileIconProvider();
+extern void* dector_ZN17QFileIconProviderC1Ev();
+extern void _ZN17QFileIconProviderC1Ev(void* qthis);
+  // proto:  void QFileIconProvider::~QFileIconProvider();
+extern void _ZN17QFileIconProviderD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFileIconProvider)=1
 type QFileIconProvider struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QFileIconProvider::type(const QFileInfo & info);
 func (this *QFileIconProvider) type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +76,7 @@ func (this *QFileIconProvider) type_(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QFileIconProvider::icon(const QFileInfo & info);
 func (this *QFileIconProvider) icon(args ...interface{}) () {
   // icon(const class QFileInfo &)
   // icon(enum QFileIconProvider::IconType)
@@ -79,12 +100,12 @@ func (this *QFileIconProvider) icon(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileIconProvider::QFileIconProvider(const QFileIconProvider & );
 func NewQFileIconProvider(args ...interface{}) QFileIconProvider {
   return QFileIconProvider{}
 }
 
-
+  // proto:  void QFileIconProvider::~QFileIconProvider();
 func (this *QFileIconProvider) FreeQFileIconProvider(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

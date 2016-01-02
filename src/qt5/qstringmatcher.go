@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,52 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QStringMatcher::QStringMatcher();
+extern void* dector_ZN14QStringMatcherC1Ev();
+extern void _ZN14QStringMatcherC1Ev(void* qthis);
+  // proto:  void QStringMatcher::QStringMatcher(const QStringMatcher & other);
+extern void* dector_ZN14QStringMatcherC1ERKS_(void* arg0);
+extern void _ZN14QStringMatcherC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
+extern void _ZNK14QStringMatcher7indexInEPK5QCharii(void* qthis, void* arg0, int arg1, int arg2);
+  // proto:  void QStringMatcher::setPattern(const QString & pattern);
+extern void _ZN14QStringMatcher10setPatternERK7QString(void* qthis, void* arg0);
+  // proto:  QString QStringMatcher::pattern();
+extern void _ZNK14QStringMatcher7patternEv(void* qthis);
+  // proto:  void QStringMatcher::~QStringMatcher();
+extern void _ZN14QStringMatcherD0Ev(void* qthis);
+  // proto:  int QStringMatcher::indexIn(const QString & str, int from);
+extern void _ZNK14QStringMatcher7indexInERK7QStringi(void* qthis, void* arg0, int arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStringMatcher)=1048
 type QStringMatcher struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QStringMatcher::QStringMatcher();
 func NewQStringMatcher(args ...interface{}) QStringMatcher {
   return QStringMatcher{}
 }
 
-
+  // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
 func (this *QStringMatcher) indexIn(args ...interface{}) () {
   // indexIn(const class QChar *, int, int)
   // indexIn(const class QString &, int)
@@ -73,7 +98,7 @@ func (this *QStringMatcher) indexIn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringMatcher::setPattern(const QString & pattern);
 func (this *QStringMatcher) setPattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,7 +117,7 @@ func (this *QStringMatcher) setPattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QStringMatcher::pattern();
 func (this *QStringMatcher) pattern(args ...interface{}) () {
   // pattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -110,7 +135,7 @@ func (this *QStringMatcher) pattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringMatcher::~QStringMatcher();
 func (this *QStringMatcher) FreeQStringMatcher(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

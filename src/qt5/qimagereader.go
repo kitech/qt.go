@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,131 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QString QImageReader::errorString();
+extern void _ZNK12QImageReader11errorStringEv(void* qthis);
+  // proto:  bool QImageReader::canRead();
+extern void _ZNK12QImageReader7canReadEv(void* qthis);
+  // proto:  void QImageReader::~QImageReader();
+extern void _ZN12QImageReaderD0Ev(void* qthis);
+  // proto:  void QImageReader::setScaledSize(const QSize & size);
+extern void _ZN12QImageReader13setScaledSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  bool QImageReader::read(QImage * image);
+extern void _ZN12QImageReader4readEP6QImage(void* qthis, void* arg0);
+  // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
+extern void _ZN12QImageReader17setScaledClipRectERK5QRect(void* qthis, void* arg0);
+  // proto:  int QImageReader::imageCount();
+extern void _ZNK12QImageReader10imageCountEv(void* qthis);
+  // proto:  QStringList QImageReader::textKeys();
+extern void _ZNK12QImageReader8textKeysEv(void* qthis);
+  // proto:  bool QImageReader::decideFormatFromContent();
+extern void _ZNK12QImageReader23decideFormatFromContentEv(void* qthis);
+  // proto:  QIODevice * QImageReader::device();
+extern void _ZNK12QImageReader6deviceEv(void* qthis);
+  // proto:  bool QImageReader::autoTransform();
+extern void _ZNK12QImageReader13autoTransformEv(void* qthis);
+  // proto:  bool QImageReader::jumpToNextImage();
+extern void _ZN12QImageReader15jumpToNextImageEv(void* qthis);
+  // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
+extern void _ZN12QImageReader11imageFormatERK7QString(void* arg0);
+  // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
+extern void _ZNK12QImageReader17supportedSubTypesEv(void* qthis);
+  // proto:  QSize QImageReader::size();
+extern void _ZNK12QImageReader4sizeEv(void* qthis);
+  // proto:  QColor QImageReader::backgroundColor();
+extern void _ZNK12QImageReader15backgroundColorEv(void* qthis);
+  // proto:  QByteArray QImageReader::subType();
+extern void _ZNK12QImageReader7subTypeEv(void* qthis);
+  // proto:  int QImageReader::currentImageNumber();
+extern void _ZNK12QImageReader18currentImageNumberEv(void* qthis);
+  // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
+extern void _ZN12QImageReader21supportedImageFormatsEv();
+  // proto:  int QImageReader::loopCount();
+extern void _ZNK12QImageReader9loopCountEv(void* qthis);
+  // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
+extern void _ZN12QImageReader26setDecideFormatFromContentEb(void* qthis, bool arg0);
+  // proto:  QRect QImageReader::scaledClipRect();
+extern void _ZNK12QImageReader14scaledClipRectEv(void* qthis);
+  // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
+extern void _ZN12QImageReader18supportedMimeTypesEv();
+  // proto:  QString QImageReader::text(const QString & key);
+extern void _ZNK12QImageReader4textERK7QString(void* qthis, void* arg0);
+  // proto:  int QImageReader::nextImageDelay();
+extern void _ZNK12QImageReader14nextImageDelayEv(void* qthis);
+  // proto:  QImage QImageReader::read();
+extern void _ZN12QImageReader4readEv(void* qthis);
+  // proto:  bool QImageReader::supportsAnimation();
+extern void _ZNK12QImageReader17supportsAnimationEv(void* qthis);
+  // proto:  bool QImageReader::jumpToImage(int imageNumber);
+extern void _ZN12QImageReader11jumpToImageEi(void* qthis, int arg0);
+  // proto:  void QImageReader::setFileName(const QString & fileName);
+extern void _ZN12QImageReader11setFileNameERK7QString(void* qthis, void* arg0);
+  // proto:  void QImageReader::QImageReader(const QImageReader & );
+extern void* dector_ZN12QImageReaderC1ERKS_(void* arg0);
+extern void _ZN12QImageReaderC1ERKS_(void* qthis, void* arg0);
+  // proto:  QSize QImageReader::scaledSize();
+extern void _ZNK12QImageReader10scaledSizeEv(void* qthis);
+  // proto:  void QImageReader::setAutoTransform(bool enabled);
+extern void _ZN12QImageReader16setAutoTransformEb(void* qthis, bool arg0);
+  // proto:  void QImageReader::setClipRect(const QRect & rect);
+extern void _ZN12QImageReader11setClipRectERK5QRect(void* qthis, void* arg0);
+  // proto:  bool QImageReader::autoDetectImageFormat();
+extern void _ZNK12QImageReader21autoDetectImageFormatEv(void* qthis);
+  // proto:  QRect QImageReader::currentImageRect();
+extern void _ZNK12QImageReader16currentImageRectEv(void* qthis);
+  // proto:  void QImageReader::QImageReader(const QString & fileName, const QByteArray & format);
+extern void* dector_ZN12QImageReaderC1ERK7QStringRK10QByteArray(void* arg0, void* arg1);
+extern void _ZN12QImageReaderC1ERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1);
+  // proto: static QByteArray QImageReader::imageFormat(QIODevice * device);
+extern void _ZN12QImageReader11imageFormatEP9QIODevice(void* arg0);
+  // proto:  int QImageReader::quality();
+extern void _ZNK12QImageReader7qualityEv(void* qthis);
+  // proto:  void QImageReader::setDevice(QIODevice * device);
+extern void _ZN12QImageReader9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QImageReader::setBackgroundColor(const QColor & color);
+extern void _ZN12QImageReader18setBackgroundColorERK6QColor(void* qthis, void* arg0);
+  // proto:  void QImageReader::setQuality(int quality);
+extern void _ZN12QImageReader10setQualityEi(void* qthis, int arg0);
+  // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
+extern void* dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(void* arg0, void* arg1);
+extern void _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1);
+  // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
+extern void _ZN12QImageReader24setAutoDetectImageFormatEb(void* qthis, bool arg0);
+  // proto:  void QImageReader::QImageReader();
+extern void* dector_ZN12QImageReaderC1Ev();
+extern void _ZN12QImageReaderC1Ev(void* qthis);
+  // proto:  void QImageReader::setFormat(const QByteArray & format);
+extern void _ZN12QImageReader9setFormatERK10QByteArray(void* qthis, void* arg0);
+  // proto:  QString QImageReader::fileName();
+extern void _ZNK12QImageReader8fileNameEv(void* qthis);
+  // proto:  QRect QImageReader::clipRect();
+extern void _ZNK12QImageReader8clipRectEv(void* qthis);
+  // proto:  QByteArray QImageReader::format();
+extern void _ZNK12QImageReader6formatEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QImageReader)=8
 type QImageReader struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QString QImageReader::errorString();
 func (this *QImageReader) errorString(args ...interface{}) () {
   // errorString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +168,7 @@ func (this *QImageReader) errorString(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::canRead();
 func (this *QImageReader) canRead(args ...interface{}) () {
   // canRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +186,7 @@ func (this *QImageReader) canRead(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::~QImageReader();
 func (this *QImageReader) FreeQImageReader(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,7 +200,7 @@ func (this *QImageReader) FreeQImageReader(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setScaledSize(const QSize & size);
 func (this *QImageReader) setScaledSize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -110,7 +219,7 @@ func (this *QImageReader) setScaledSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::read(QImage * image);
 func (this *QImageReader) read(args ...interface{}) () {
   // read(class QImage *)
   // read()
@@ -133,7 +242,7 @@ func (this *QImageReader) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setScaledClipRect(const QRect & rect);
 func (this *QImageReader) setScaledClipRect(args ...interface{}) () {
   // setScaledClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +261,7 @@ func (this *QImageReader) setScaledClipRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageReader::imageCount();
 func (this *QImageReader) imageCount(args ...interface{}) () {
   // imageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +279,7 @@ func (this *QImageReader) imageCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QImageReader::textKeys();
 func (this *QImageReader) textKeys(args ...interface{}) () {
   // textKeys()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -188,7 +297,7 @@ func (this *QImageReader) textKeys(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::decideFormatFromContent();
 func (this *QImageReader) decideFormatFromContent(args ...interface{}) () {
   // decideFormatFromContent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -206,7 +315,7 @@ func (this *QImageReader) decideFormatFromContent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QImageReader::device();
 func (this *QImageReader) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -224,7 +333,7 @@ func (this *QImageReader) device(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::autoTransform();
 func (this *QImageReader) autoTransform(args ...interface{}) () {
   // autoTransform()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +351,7 @@ func (this *QImageReader) autoTransform(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::jumpToNextImage();
 func (this *QImageReader) jumpToNextImage(args ...interface{}) () {
   // jumpToNextImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +369,7 @@ func (this *QImageReader) jumpToNextImage(args ...interface{}) () {
 
 }
 
-
+  // proto: static QByteArray QImageReader::imageFormat(const QString & fileName);
 func (this *QImageReader) imageFormat_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +383,7 @@ func (this *QImageReader) imageFormat_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QByteArray> QImageReader::supportedSubTypes();
 func (this *QImageReader) supportedSubTypes(args ...interface{}) () {
   // supportedSubTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -292,7 +401,7 @@ func (this *QImageReader) supportedSubTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QImageReader::size();
 func (this *QImageReader) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +419,7 @@ func (this *QImageReader) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QImageReader::backgroundColor();
 func (this *QImageReader) backgroundColor(args ...interface{}) () {
   // backgroundColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -328,7 +437,7 @@ func (this *QImageReader) backgroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QImageReader::subType();
 func (this *QImageReader) subType(args ...interface{}) () {
   // subType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -346,7 +455,7 @@ func (this *QImageReader) subType(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageReader::currentImageNumber();
 func (this *QImageReader) currentImageNumber(args ...interface{}) () {
   // currentImageNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +473,7 @@ func (this *QImageReader) currentImageNumber(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QImageReader::supportedImageFormats();
 func (this *QImageReader) supportedImageFormats_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +487,7 @@ func (this *QImageReader) supportedImageFormats_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageReader::loopCount();
 func (this *QImageReader) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -396,7 +505,7 @@ func (this *QImageReader) loopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setDecideFormatFromContent(bool ignored);
 func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
   // setDecideFormatFromContent(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -415,7 +524,7 @@ func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QImageReader::scaledClipRect();
 func (this *QImageReader) scaledClipRect(args ...interface{}) () {
   // scaledClipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -433,7 +542,7 @@ func (this *QImageReader) scaledClipRect(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QByteArray> QImageReader::supportedMimeTypes();
 func (this *QImageReader) supportedMimeTypes_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -447,7 +556,7 @@ func (this *QImageReader) supportedMimeTypes_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QImageReader::text(const QString & key);
 func (this *QImageReader) text(args ...interface{}) () {
   // text(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -466,7 +575,7 @@ func (this *QImageReader) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageReader::nextImageDelay();
 func (this *QImageReader) nextImageDelay(args ...interface{}) () {
   // nextImageDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -484,7 +593,7 @@ func (this *QImageReader) nextImageDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::supportsAnimation();
 func (this *QImageReader) supportsAnimation(args ...interface{}) () {
   // supportsAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -502,7 +611,7 @@ func (this *QImageReader) supportsAnimation(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::jumpToImage(int imageNumber);
 func (this *QImageReader) jumpToImage(args ...interface{}) () {
   // jumpToImage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +630,7 @@ func (this *QImageReader) jumpToImage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setFileName(const QString & fileName);
 func (this *QImageReader) setFileName(args ...interface{}) () {
   // setFileName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -540,12 +649,12 @@ func (this *QImageReader) setFileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::QImageReader(const QImageReader & );
 func NewQImageReader(args ...interface{}) QImageReader {
   return QImageReader{}
 }
 
-
+  // proto:  QSize QImageReader::scaledSize();
 func (this *QImageReader) scaledSize(args ...interface{}) () {
   // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -563,7 +672,7 @@ func (this *QImageReader) scaledSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setAutoTransform(bool enabled);
 func (this *QImageReader) setAutoTransform(args ...interface{}) () {
   // setAutoTransform(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -582,7 +691,7 @@ func (this *QImageReader) setAutoTransform(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setClipRect(const QRect & rect);
 func (this *QImageReader) setClipRect(args ...interface{}) () {
   // setClipRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -601,7 +710,7 @@ func (this *QImageReader) setClipRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageReader::autoDetectImageFormat();
 func (this *QImageReader) autoDetectImageFormat(args ...interface{}) () {
   // autoDetectImageFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -619,7 +728,7 @@ func (this *QImageReader) autoDetectImageFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QImageReader::currentImageRect();
 func (this *QImageReader) currentImageRect(args ...interface{}) () {
   // currentImageRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -637,7 +746,7 @@ func (this *QImageReader) currentImageRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageReader::quality();
 func (this *QImageReader) quality(args ...interface{}) () {
   // quality()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -655,7 +764,7 @@ func (this *QImageReader) quality(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setDevice(QIODevice * device);
 func (this *QImageReader) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -674,7 +783,7 @@ func (this *QImageReader) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setBackgroundColor(const QColor & color);
 func (this *QImageReader) setBackgroundColor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -693,7 +802,7 @@ func (this *QImageReader) setBackgroundColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setQuality(int quality);
 func (this *QImageReader) setQuality(args ...interface{}) () {
   // setQuality(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -712,7 +821,7 @@ func (this *QImageReader) setQuality(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setAutoDetectImageFormat(bool enabled);
 func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
   // setAutoDetectImageFormat(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -731,7 +840,7 @@ func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageReader::setFormat(const QByteArray & format);
 func (this *QImageReader) setFormat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -750,7 +859,7 @@ func (this *QImageReader) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QImageReader::fileName();
 func (this *QImageReader) fileName(args ...interface{}) () {
   // fileName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,7 +877,7 @@ func (this *QImageReader) fileName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QImageReader::clipRect();
 func (this *QImageReader) clipRect(args ...interface{}) () {
   // clipRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -786,7 +895,7 @@ func (this *QImageReader) clipRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QImageReader::format();
 func (this *QImageReader) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)

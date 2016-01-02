@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,46 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTouchDevice::setName(const QString & name);
+extern void _ZN12QTouchDevice7setNameERK7QString(void* qthis, void* arg0);
+  // proto:  QString QTouchDevice::name();
+extern void _ZNK12QTouchDevice4nameEv(void* qthis);
+  // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
+extern void _ZN12QTouchDevice21setMaximumTouchPointsEi(void* qthis, int arg0);
+  // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
+extern void _ZN12QTouchDevice7devicesEv();
+  // proto:  void QTouchDevice::QTouchDevice();
+extern void* dector_ZN12QTouchDeviceC1Ev();
+extern void _ZN12QTouchDeviceC1Ev(void* qthis);
+  // proto:  void QTouchDevice::~QTouchDevice();
+extern void _ZN12QTouchDeviceD0Ev(void* qthis);
+  // proto:  int QTouchDevice::maximumTouchPoints();
+extern void _ZNK12QTouchDevice18maximumTouchPointsEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTouchDevice)=8
 type QTouchDevice struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTouchDevice::setName(const QString & name);
 func (this *QTouchDevice) setName(args ...interface{}) () {
   // setName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +84,7 @@ func (this *QTouchDevice) setName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTouchDevice::name();
 func (this *QTouchDevice) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +102,7 @@ func (this *QTouchDevice) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
 func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
   // setMaximumTouchPoints(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +121,7 @@ func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
 func (this *QTouchDevice) devices_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -111,12 +135,12 @@ func (this *QTouchDevice) devices_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTouchDevice::QTouchDevice();
 func NewQTouchDevice(args ...interface{}) QTouchDevice {
   return QTouchDevice{}
 }
 
-
+  // proto:  void QTouchDevice::~QTouchDevice();
 func (this *QTouchDevice) FreeQTouchDevice(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -130,7 +154,7 @@ func (this *QTouchDevice) FreeQTouchDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTouchDevice::maximumTouchPoints();
 func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
   // maximumTouchPoints()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,123 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  qreal QTextItem::descent();
+extern void _ZNK9QTextItem7descentEv(void* qthis);
+  // proto:  qreal QTextItem::width();
+extern void _ZNK9QTextItem5widthEv(void* qthis);
+  // proto:  QFont QTextItem::font();
+extern void _ZNK9QTextItem4fontEv(void* qthis);
+  // proto:  qreal QTextItem::ascent();
+extern void _ZNK9QTextItem6ascentEv(void* qthis);
+  // proto:  QString QTextItem::text();
+extern void _ZNK9QTextItem4textEv(void* qthis);
+  // proto:  qreal QPaintEngineState::opacity();
+extern void _ZNK17QPaintEngineState7opacityEv(void* qthis);
+  // proto:  QMatrix QPaintEngineState::matrix();
+extern void _ZNK17QPaintEngineState6matrixEv(void* qthis);
+  // proto:  QPainter * QPaintEngineState::painter();
+extern void _ZNK17QPaintEngineState7painterEv(void* qthis);
+  // proto:  QTransform QPaintEngineState::transform();
+extern void _ZNK17QPaintEngineState9transformEv(void* qthis);
+  // proto:  QPointF QPaintEngineState::brushOrigin();
+extern void _ZNK17QPaintEngineState11brushOriginEv(void* qthis);
+  // proto:  bool QPaintEngineState::penNeedsResolving();
+extern void _ZNK17QPaintEngineState17penNeedsResolvingEv(void* qthis);
+  // proto:  bool QPaintEngineState::isClipEnabled();
+extern void _ZNK17QPaintEngineState13isClipEnabledEv(void* qthis);
+  // proto:  QFont QPaintEngineState::font();
+extern void _ZNK17QPaintEngineState4fontEv(void* qthis);
+  // proto:  bool QPaintEngineState::brushNeedsResolving();
+extern void _ZNK17QPaintEngineState19brushNeedsResolvingEv(void* qthis);
+  // proto:  QRegion QPaintEngineState::clipRegion();
+extern void _ZNK17QPaintEngineState10clipRegionEv(void* qthis);
+  // proto:  QPainterPath QPaintEngineState::clipPath();
+extern void _ZNK17QPaintEngineState8clipPathEv(void* qthis);
+  // proto:  QBrush QPaintEngineState::brush();
+extern void _ZNK17QPaintEngineState5brushEv(void* qthis);
+  // proto:  QPen QPaintEngineState::pen();
+extern void _ZNK17QPaintEngineState3penEv(void* qthis);
+  // proto:  QBrush QPaintEngineState::backgroundBrush();
+extern void _ZNK17QPaintEngineState15backgroundBrushEv(void* qthis);
+  // proto:  void QPaintEngine::drawEllipse(const QRect & r);
+extern void _ZN12QPaintEngine11drawEllipseERK5QRect(void* qthis, void* arg0);
+  // proto:  void QPaintEngine::QPaintEngine(const QPaintEngine & );
+extern void* dector_ZN12QPaintEngineC1ERKS_(void* arg0);
+extern void _ZN12QPaintEngineC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QPaintEngine::isActive();
+extern void _ZNK12QPaintEngine8isActiveEv(void* qthis);
+  // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
+extern void _ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, int arg1);
+  // proto:  QPoint QPaintEngine::coordinateOffset();
+extern void _ZNK12QPaintEngine16coordinateOffsetEv(void* qthis);
+  // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
+extern void _ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(void* qthis, void* arg0);
+  // proto:  void QPaintEngine::setSystemRect(const QRect & rect);
+extern void _ZN12QPaintEngine13setSystemRectERK5QRect(void* qthis, void* arg0);
+  // proto:  void QPaintEngine::~QPaintEngine();
+extern void _ZN12QPaintEngineD0Ev(void* qthis);
+  // proto:  bool QPaintEngine::end();
+extern void _ZN12QPaintEngine3endEv(void* qthis);
+  // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
+extern void _ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QPaintEngine::setActive(bool newState);
+extern void _ZN12QPaintEngine9setActiveEb(void* qthis, bool arg0);
+  // proto:  void QPaintEngine::drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr);
+extern void _ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
+extern void _ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int arg1);
+  // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
+extern void _ZN12QPaintEngine8drawPathERK12QPainterPath(void* qthis, void* arg0);
+  // proto:  void QPaintEngine::drawLines(const QLineF * lines, int lineCount);
+extern void _ZN12QPaintEngine9drawLinesEPK6QLineFi(void* qthis, void* arg0, int arg1);
+  // proto:  void QPaintEngine::updateState(const QPaintEngineState & state);
+extern void _ZN12QPaintEngine11updateStateERK17QPaintEngineState(void* qthis, void* arg0);
+  // proto:  bool QPaintEngine::begin(QPaintDevice * pdev);
+extern void _ZN12QPaintEngine5beginEP12QPaintDevice(void* qthis, void* arg0);
+  // proto:  QRect QPaintEngine::systemRect();
+extern void _ZNK12QPaintEngine10systemRectEv(void* qthis);
+  // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
+extern void _ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int arg1);
+  // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
+extern void _ZN12QPaintEngine13setSystemClipERK7QRegion(void* qthis, void* arg0);
+  // proto:  QRegion QPaintEngine::systemClip();
+extern void _ZNK12QPaintEngine10systemClipEv(void* qthis);
+  // proto:  QPaintDevice * QPaintEngine::paintDevice();
+extern void _ZNK12QPaintEngine11paintDeviceEv(void* qthis);
+  // proto:  void QPaintEngine::syncState();
+extern void _ZN12QPaintEngine9syncStateEv(void* qthis);
+  // proto:  QPainter * QPaintEngine::painter();
+extern void _ZNK12QPaintEngine7painterEv(void* qthis);
+  // proto:  void QPaintEngine::drawEllipse(const QRectF & r);
+extern void _ZN12QPaintEngine11drawEllipseERK6QRectF(void* qthis, void* arg0);
+  // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
+extern void _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(void* qthis, void* arg0, void* arg1);
+  // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
+extern void demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+  // proto:  bool QPaintEngine::isExtended();
+extern void demth_ZNK12QPaintEngine10isExtendedEv(void* qthis);
+  // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
+extern void _ZN12QPaintEngine9drawRectsEPK5QRecti(void* qthis, void* arg0, int arg1);
+  // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
+extern void _ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextItem)=1
 type QTextItem struct {
   // qbase: None;
@@ -53,7 +161,7 @@ type QPaintEngine struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  qreal QTextItem::descent();
 func (this *QTextItem) descent(args ...interface{}) () {
   // descent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +179,7 @@ func (this *QTextItem) descent(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextItem::width();
 func (this *QTextItem) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +197,7 @@ func (this *QTextItem) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFont QTextItem::font();
 func (this *QTextItem) font(args ...interface{}) () {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +215,7 @@ func (this *QTextItem) font(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextItem::ascent();
 func (this *QTextItem) ascent(args ...interface{}) () {
   // ascent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +233,7 @@ func (this *QTextItem) ascent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextItem::text();
 func (this *QTextItem) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,7 +251,7 @@ func (this *QTextItem) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPaintEngineState::opacity();
 func (this *QPaintEngineState) opacity(args ...interface{}) () {
   // opacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -161,7 +269,7 @@ func (this *QPaintEngineState) opacity(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMatrix QPaintEngineState::matrix();
 func (this *QPaintEngineState) matrix(args ...interface{}) () {
   // matrix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -179,7 +287,7 @@ func (this *QPaintEngineState) matrix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPainter * QPaintEngineState::painter();
 func (this *QPaintEngineState) painter(args ...interface{}) () {
   // painter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +305,7 @@ func (this *QPaintEngineState) painter(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTransform QPaintEngineState::transform();
 func (this *QPaintEngineState) transform(args ...interface{}) () {
   // transform()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +323,7 @@ func (this *QPaintEngineState) transform(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPointF QPaintEngineState::brushOrigin();
 func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
   // brushOrigin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +341,7 @@ func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngineState::penNeedsResolving();
 func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
   // penNeedsResolving()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -251,7 +359,7 @@ func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngineState::isClipEnabled();
 func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
   // isClipEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -269,7 +377,7 @@ func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFont QPaintEngineState::font();
 func (this *QPaintEngineState) font(args ...interface{}) () {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -287,7 +395,7 @@ func (this *QPaintEngineState) font(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngineState::brushNeedsResolving();
 func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
   // brushNeedsResolving()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -305,7 +413,7 @@ func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRegion QPaintEngineState::clipRegion();
 func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
   // clipRegion()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -323,7 +431,7 @@ func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPainterPath QPaintEngineState::clipPath();
 func (this *QPaintEngineState) clipPath(args ...interface{}) () {
   // clipPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -341,7 +449,7 @@ func (this *QPaintEngineState) clipPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QPaintEngineState::brush();
 func (this *QPaintEngineState) brush(args ...interface{}) () {
   // brush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -359,7 +467,7 @@ func (this *QPaintEngineState) brush(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPen QPaintEngineState::pen();
 func (this *QPaintEngineState) pen(args ...interface{}) () {
   // pen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -377,7 +485,7 @@ func (this *QPaintEngineState) pen(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QPaintEngineState::backgroundBrush();
 func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
   // backgroundBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +503,7 @@ func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawEllipse(const QRect & r);
 func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
   // drawEllipse(const class QRect &)
   // drawEllipse(const class QRectF &)
@@ -419,12 +527,12 @@ func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::QPaintEngine(const QPaintEngine & );
 func NewQPaintEngine(args ...interface{}) QPaintEngine {
   return QPaintEngine{}
 }
 
-
+  // proto:  bool QPaintEngine::isActive();
 func (this *QPaintEngine) isActive(args ...interface{}) () {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -442,7 +550,7 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
 func (this *QPaintEngine) drawPoints(args ...interface{}) () {
   // drawPoints(const class QPointF *, int)
   // drawPoints(const class QPoint *, int)
@@ -468,7 +576,7 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPoint QPaintEngine::coordinateOffset();
 func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
   // coordinateOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -486,7 +594,7 @@ func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
 func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
   // setPaintDevice(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -505,7 +613,7 @@ func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::setSystemRect(const QRect & rect);
 func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
   // setSystemRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -524,7 +632,7 @@ func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::~QPaintEngine();
 func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -538,7 +646,7 @@ func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngine::end();
 func (this *QPaintEngine) end(args ...interface{}) () {
   // end()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -556,7 +664,7 @@ func (this *QPaintEngine) end(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
 func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
   // drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -577,7 +685,7 @@ func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::setActive(bool newState);
 func (this *QPaintEngine) setActive(args ...interface{}) () {
   // setActive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -596,7 +704,7 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr);
 func (this *QPaintEngine) drawPixmap(args ...interface{}) () {
   // drawPixmap(const class QRectF &, const class QPixmap &, const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -617,7 +725,7 @@ func (this *QPaintEngine) drawPixmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
 func (this *QPaintEngine) drawLines(args ...interface{}) () {
   // drawLines(const class QLine *, int)
   // drawLines(const class QLineF *, int)
@@ -643,7 +751,7 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
 func (this *QPaintEngine) drawPath(args ...interface{}) () {
   // drawPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -662,7 +770,7 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::updateState(const QPaintEngineState & state);
 func (this *QPaintEngine) updateState(args ...interface{}) () {
   // updateState(const class QPaintEngineState &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -681,7 +789,7 @@ func (this *QPaintEngine) updateState(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngine::begin(QPaintDevice * pdev);
 func (this *QPaintEngine) begin(args ...interface{}) () {
   // begin(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -700,7 +808,7 @@ func (this *QPaintEngine) begin(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QPaintEngine::systemRect();
 func (this *QPaintEngine) systemRect(args ...interface{}) () {
   // systemRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -718,7 +826,7 @@ func (this *QPaintEngine) systemRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
 func (this *QPaintEngine) drawRects(args ...interface{}) () {
   // drawRects(const class QRectF *, int)
   // drawRects(const class QRect *, int)
@@ -744,7 +852,7 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
 func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
   // setSystemClip(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -763,7 +871,7 @@ func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRegion QPaintEngine::systemClip();
 func (this *QPaintEngine) systemClip(args ...interface{}) () {
   // systemClip()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -781,7 +889,7 @@ func (this *QPaintEngine) systemClip(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPaintDevice * QPaintEngine::paintDevice();
 func (this *QPaintEngine) paintDevice(args ...interface{}) () {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -799,7 +907,7 @@ func (this *QPaintEngine) paintDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::syncState();
 func (this *QPaintEngine) syncState(args ...interface{}) () {
   // syncState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -817,7 +925,7 @@ func (this *QPaintEngine) syncState(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPainter * QPaintEngine::painter();
 func (this *QPaintEngine) painter(args ...interface{}) () {
   // painter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -835,7 +943,7 @@ func (this *QPaintEngine) painter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
 func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
   // drawTextItem(const class QPointF &, const class QTextItem &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -855,7 +963,7 @@ func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
 func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
   // fix_neg_rect(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -877,7 +985,7 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPaintEngine::isExtended();
 func (this *QPaintEngine) isExtended(args ...interface{}) () {
   // isExtended()
   var vtys = make(map[int32]map[int32]reflect.Type)

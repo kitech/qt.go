@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,81 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
+extern void _ZN9QMimeData7setDataERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1);
+  // proto:  QVariant QMimeData::colorData();
+extern void _ZNK9QMimeData9colorDataEv(void* qthis);
+  // proto:  void QMimeData::~QMimeData();
+extern void _ZN9QMimeDataD0Ev(void* qthis);
+  // proto:  bool QMimeData::hasHtml();
+extern void _ZNK9QMimeData7hasHtmlEv(void* qthis);
+  // proto:  void QMimeData::QMimeData(const QMimeData & );
+extern void* dector_ZN9QMimeDataC1ERKS_(void* arg0);
+extern void _ZN9QMimeDataC1ERKS_(void* qthis, void* arg0);
+  // proto:  QVariant QMimeData::imageData();
+extern void _ZNK9QMimeData9imageDataEv(void* qthis);
+  // proto:  bool QMimeData::hasFormat(const QString & mimetype);
+extern void _ZNK9QMimeData9hasFormatERK7QString(void* qthis, void* arg0);
+  // proto:  void QMimeData::setText(const QString & text);
+extern void _ZN9QMimeData7setTextERK7QString(void* qthis, void* arg0);
+  // proto:  void QMimeData::clear();
+extern void _ZN9QMimeData5clearEv(void* qthis);
+  // proto:  QString QMimeData::text();
+extern void _ZNK9QMimeData4textEv(void* qthis);
+  // proto:  void QMimeData::setHtml(const QString & html);
+extern void _ZN9QMimeData7setHtmlERK7QString(void* qthis, void* arg0);
+  // proto:  void QMimeData::setImageData(const QVariant & image);
+extern void _ZN9QMimeData12setImageDataERK8QVariant(void* qthis, void* arg0);
+  // proto:  bool QMimeData::hasUrls();
+extern void _ZNK9QMimeData7hasUrlsEv(void* qthis);
+  // proto:  bool QMimeData::hasColor();
+extern void _ZNK9QMimeData8hasColorEv(void* qthis);
+  // proto:  void QMimeData::removeFormat(const QString & mimetype);
+extern void _ZN9QMimeData12removeFormatERK7QString(void* qthis, void* arg0);
+  // proto:  QString QMimeData::html();
+extern void _ZNK9QMimeData4htmlEv(void* qthis);
+  // proto:  void QMimeData::QMimeData();
+extern void* dector_ZN9QMimeDataC1Ev();
+extern void _ZN9QMimeDataC1Ev(void* qthis);
+  // proto:  QList<QUrl> QMimeData::urls();
+extern void _ZNK9QMimeData4urlsEv(void* qthis);
+  // proto:  void QMimeData::setColorData(const QVariant & color);
+extern void _ZN9QMimeData12setColorDataERK8QVariant(void* qthis, void* arg0);
+  // proto:  bool QMimeData::hasText();
+extern void _ZNK9QMimeData7hasTextEv(void* qthis);
+  // proto:  const QMetaObject * QMimeData::metaObject();
+extern void _ZNK9QMimeData10metaObjectEv(void* qthis);
+  // proto:  QByteArray QMimeData::data(const QString & mimetype);
+extern void _ZNK9QMimeData4dataERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QMimeData::formats();
+extern void _ZNK9QMimeData7formatsEv(void* qthis);
+  // proto:  bool QMimeData::hasImage();
+extern void _ZNK9QMimeData8hasImageEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMimeData)=1
 type QMimeData struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QMimeData::setData(const QString & mimetype, const QByteArray & data);
 func (this *QMimeData) setData(args ...interface{}) () {
   // setData(const class QString &, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +120,7 @@ func (this *QMimeData) setData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QMimeData::colorData();
 func (this *QMimeData) colorData(args ...interface{}) () {
   // colorData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +138,7 @@ func (this *QMimeData) colorData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::~QMimeData();
 func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -93,7 +152,7 @@ func (this *QMimeData) FreeQMimeData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasHtml();
 func (this *QMimeData) hasHtml(args ...interface{}) () {
   // hasHtml()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -111,12 +170,12 @@ func (this *QMimeData) hasHtml(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::QMimeData(const QMimeData & );
 func NewQMimeData(args ...interface{}) QMimeData {
   return QMimeData{}
 }
 
-
+  // proto:  QVariant QMimeData::imageData();
 func (this *QMimeData) imageData(args ...interface{}) () {
   // imageData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +193,7 @@ func (this *QMimeData) imageData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasFormat(const QString & mimetype);
 func (this *QMimeData) hasFormat(args ...interface{}) () {
   // hasFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,7 +212,7 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::setText(const QString & text);
 func (this *QMimeData) setText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +231,7 @@ func (this *QMimeData) setText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::clear();
 func (this *QMimeData) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +249,7 @@ func (this *QMimeData) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeData::text();
 func (this *QMimeData) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +267,7 @@ func (this *QMimeData) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::setHtml(const QString & html);
 func (this *QMimeData) setHtml(args ...interface{}) () {
   // setHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +286,7 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::setImageData(const QVariant & image);
 func (this *QMimeData) setImageData(args ...interface{}) () {
   // setImageData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +305,7 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasUrls();
 func (this *QMimeData) hasUrls(args ...interface{}) () {
   // hasUrls()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -264,7 +323,7 @@ func (this *QMimeData) hasUrls(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasColor();
 func (this *QMimeData) hasColor(args ...interface{}) () {
   // hasColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,7 +341,7 @@ func (this *QMimeData) hasColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::removeFormat(const QString & mimetype);
 func (this *QMimeData) removeFormat(args ...interface{}) () {
   // removeFormat(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -301,7 +360,7 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeData::html();
 func (this *QMimeData) html(args ...interface{}) () {
   // html()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +378,7 @@ func (this *QMimeData) html(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QUrl> QMimeData::urls();
 func (this *QMimeData) urls(args ...interface{}) () {
   // urls()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -337,7 +396,7 @@ func (this *QMimeData) urls(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeData::setColorData(const QVariant & color);
 func (this *QMimeData) setColorData(args ...interface{}) () {
   // setColorData(const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -356,7 +415,7 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasText();
 func (this *QMimeData) hasText(args ...interface{}) () {
   // hasText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -374,7 +433,7 @@ func (this *QMimeData) hasText(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMimeData::metaObject();
 func (this *QMimeData) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,7 +451,7 @@ func (this *QMimeData) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QMimeData::data(const QString & mimetype);
 func (this *QMimeData) data(args ...interface{}) () {
   // data(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -411,7 +470,7 @@ func (this *QMimeData) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeData::formats();
 func (this *QMimeData) formats(args ...interface{}) () {
   // formats()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -429,7 +488,7 @@ func (this *QMimeData) formats(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeData::hasImage();
 func (this *QMimeData) hasImage(args ...interface{}) () {
   // hasImage()
   var vtys = make(map[int32]map[int32]reflect.Type)

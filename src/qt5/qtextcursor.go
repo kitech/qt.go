@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,170 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QTextCursor::columnNumber();
+extern void _ZNK11QTextCursor12columnNumberEv(void* qthis);
+  // proto:  void QTextCursor::swap(QTextCursor & other);
+extern void _ZN11QTextCursor4swapERS_(void* qthis, void* arg0);
+  // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
+extern void _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  QTextDocumentFragment QTextCursor::selection();
+extern void _ZNK11QTextCursor9selectionEv(void* qthis);
+  // proto:  bool QTextCursor::hasComplexSelection();
+extern void _ZNK11QTextCursor19hasComplexSelectionEv(void* qthis);
+  // proto:  QTextBlock QTextCursor::block();
+extern void _ZNK11QTextCursor5blockEv(void* qthis);
+  // proto:  void QTextCursor::insertFragment(const QTextDocumentFragment & fragment);
+extern void _ZN11QTextCursor14insertFragmentERK21QTextDocumentFragment(void* qthis, void* arg0);
+  // proto:  QTextList * QTextCursor::insertList(const QTextListFormat & format);
+extern void _ZN11QTextCursor10insertListERK15QTextListFormat(void* qthis, void* arg0);
+  // proto:  void QTextCursor::insertImage(const QTextImageFormat & format);
+extern void _ZN11QTextCursor11insertImageERK16QTextImageFormat(void* qthis, void* arg0);
+  // proto:  bool QTextCursor::keepPositionOnInsert();
+extern void _ZNK11QTextCursor20keepPositionOnInsertEv(void* qthis);
+  // proto:  int QTextCursor::position();
+extern void _ZNK11QTextCursor8positionEv(void* qthis);
+  // proto:  bool QTextCursor::isNull();
+extern void _ZNK11QTextCursor6isNullEv(void* qthis);
+  // proto:  void QTextCursor::removeSelectedText();
+extern void _ZN11QTextCursor18removeSelectedTextEv(void* qthis);
+  // proto:  void QTextCursor::insertHtml(const QString & html);
+extern void _ZN11QTextCursor10insertHtmlERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextCursor::isCopyOf(const QTextCursor & other);
+extern void _ZNK11QTextCursor8isCopyOfERKS_(void* qthis, void* arg0);
+  // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
+extern void _ZN11QTextCursor11insertFrameERK16QTextFrameFormat(void* qthis, void* arg0);
+  // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
+extern void* dector_ZN11QTextCursorC1ERKS_(void* arg0);
+extern void _ZN11QTextCursorC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextCursor::deleteChar();
+extern void _ZN11QTextCursor10deleteCharEv(void* qthis);
+  // proto:  QTextFrame * QTextCursor::currentFrame();
+extern void _ZNK11QTextCursor12currentFrameEv(void* qthis);
+  // proto:  void QTextCursor::insertBlock();
+extern void _ZN11QTextCursor11insertBlockEv(void* qthis);
+  // proto:  void QTextCursor::QTextCursor(const QTextBlock & block);
+extern void* dector_ZN11QTextCursorC1ERK10QTextBlock(void* arg0);
+extern void _ZN11QTextCursorC1ERK10QTextBlock(void* qthis, void* arg0);
+  // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
+extern void _ZN11QTextCursor11insertTableEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTextCursor::QTextCursor();
+extern void* dector_ZN11QTextCursorC1Ev();
+extern void _ZN11QTextCursorC1Ev(void* qthis);
+  // proto:  bool QTextCursor::atStart();
+extern void _ZNK11QTextCursor7atStartEv(void* qthis);
+  // proto:  int QTextCursor::selectionStart();
+extern void _ZNK11QTextCursor14selectionStartEv(void* qthis);
+  // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
+extern void _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+  // proto:  void QTextCursor::endEditBlock();
+extern void _ZN11QTextCursor12endEditBlockEv(void* qthis);
+  // proto:  QString QTextCursor::selectedText();
+extern void _ZNK11QTextCursor12selectedTextEv(void* qthis);
+  // proto:  int QTextCursor::positionInBlock();
+extern void _ZNK11QTextCursor15positionInBlockEv(void* qthis);
+  // proto:  bool QTextCursor::hasSelection();
+extern void _ZNK11QTextCursor12hasSelectionEv(void* qthis);
+  // proto:  bool QTextCursor::atEnd();
+extern void _ZNK11QTextCursor5atEndEv(void* qthis);
+  // proto:  void QTextCursor::insertImage(const QString & name);
+extern void _ZN11QTextCursor11insertImageERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextCursor::atBlockStart();
+extern void _ZNK11QTextCursor12atBlockStartEv(void* qthis);
+  // proto:  void QTextCursor::insertText(const QString & text);
+extern void _ZN11QTextCursor10insertTextERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextCursor::visualNavigation();
+extern void _ZNK11QTextCursor16visualNavigationEv(void* qthis);
+  // proto:  bool QTextCursor::atBlockEnd();
+extern void _ZNK11QTextCursor10atBlockEndEv(void* qthis);
+  // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format);
+extern void _ZN11QTextCursor11insertBlockERK16QTextBlockFormat(void* qthis, void* arg0);
+  // proto:  QTextList * QTextCursor::currentList();
+extern void _ZNK11QTextCursor11currentListEv(void* qthis);
+  // proto:  void QTextCursor::insertBlock(const QTextBlockFormat & format, const QTextCharFormat & charFormat);
+extern void _ZN11QTextCursor11insertBlockERK16QTextBlockFormatRK15QTextCharFormat(void* qthis, void* arg0, void* arg1);
+  // proto:  void QTextCursor::mergeBlockCharFormat(const QTextCharFormat & modifier);
+extern void _ZN11QTextCursor20mergeBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  void QTextCursor::setCharFormat(const QTextCharFormat & format);
+extern void _ZN11QTextCursor13setCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  int QTextCursor::verticalMovementX();
+extern void _ZNK11QTextCursor17verticalMovementXEv(void* qthis);
+  // proto:  int QTextCursor::blockNumber();
+extern void _ZNK11QTextCursor11blockNumberEv(void* qthis);
+  // proto:  void QTextCursor::joinPreviousEditBlock();
+extern void _ZN11QTextCursor21joinPreviousEditBlockEv(void* qthis);
+  // proto:  void QTextCursor::QTextCursor(QTextDocument * document);
+extern void* dector_ZN11QTextCursorC1EP13QTextDocument(void* arg0);
+extern void _ZN11QTextCursorC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  void QTextCursor::insertText(const QString & text, const QTextCharFormat & format);
+extern void _ZN11QTextCursor10insertTextERK7QStringRK15QTextCharFormat(void* qthis, void* arg0, void* arg1);
+  // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
+extern void _ZN11QTextCursor16mergeBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0);
+  // proto:  QTextBlockFormat QTextCursor::blockFormat();
+extern void _ZNK11QTextCursor11blockFormatEv(void* qthis);
+  // proto:  void QTextCursor::insertImage(const QImage & image, const QString & name);
+extern void _ZN11QTextCursor11insertImageERK6QImageRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  void QTextCursor::beginEditBlock();
+extern void _ZN11QTextCursor14beginEditBlockEv(void* qthis);
+  // proto:  int QTextCursor::anchor();
+extern void _ZNK11QTextCursor6anchorEv(void* qthis);
+  // proto:  QTextCharFormat QTextCursor::charFormat();
+extern void _ZNK11QTextCursor10charFormatEv(void* qthis);
+  // proto:  void QTextCursor::deletePreviousChar();
+extern void _ZN11QTextCursor18deletePreviousCharEv(void* qthis);
+  // proto:  void QTextCursor::~QTextCursor();
+extern void _ZN11QTextCursorD0Ev(void* qthis);
+  // proto:  void QTextCursor::clearSelection();
+extern void _ZN11QTextCursor14clearSelectionEv(void* qthis);
+  // proto:  void QTextCursor::setVisualNavigation(bool b);
+extern void _ZN11QTextCursor19setVisualNavigationEb(void* qthis, bool arg0);
+  // proto:  void QTextCursor::setBlockCharFormat(const QTextCharFormat & format);
+extern void _ZN11QTextCursor18setBlockCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  QTextTable * QTextCursor::currentTable();
+extern void _ZNK11QTextCursor12currentTableEv(void* qthis);
+  // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
+extern void _ZN11QTextCursor23setKeepPositionOnInsertEb(void* qthis, bool arg0);
+  // proto:  void QTextCursor::setVerticalMovementX(int x);
+extern void _ZN11QTextCursor20setVerticalMovementXEi(void* qthis, int arg0);
+  // proto:  QTextDocument * QTextCursor::document();
+extern void _ZNK11QTextCursor8documentEv(void* qthis);
+  // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
+extern void _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
+extern void* dector_ZN11QTextCursorC1EP10QTextFrame(void* arg0);
+extern void _ZN11QTextCursorC1EP10QTextFrame(void* qthis, void* arg0);
+  // proto:  int QTextCursor::selectionEnd();
+extern void _ZNK11QTextCursor12selectionEndEv(void* qthis);
+  // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
+extern void _ZN11QTextCursor14setBlockFormatERK16QTextBlockFormat(void* qthis, void* arg0);
+  // proto:  QTextList * QTextCursor::createList(const QTextListFormat & format);
+extern void _ZN11QTextCursor10createListERK15QTextListFormat(void* qthis, void* arg0);
+  // proto:  QTextCharFormat QTextCursor::blockCharFormat();
+extern void _ZNK11QTextCursor15blockCharFormatEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextCursor)=1
 type QTextCursor struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QTextCursor::columnNumber();
 func (this *QTextCursor) columnNumber(args ...interface{}) () {
   // columnNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +207,7 @@ func (this *QTextCursor) columnNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::swap(QTextCursor & other);
 func (this *QTextCursor) swap(args ...interface{}) () {
   // swap(class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +226,7 @@ func (this *QTextCursor) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
 func (this *QTextCursor) mergeCharFormat(args ...interface{}) () {
   // mergeCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +245,7 @@ func (this *QTextCursor) mergeCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocumentFragment QTextCursor::selection();
 func (this *QTextCursor) selection(args ...interface{}) () {
   // selection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +263,7 @@ func (this *QTextCursor) selection(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::hasComplexSelection();
 func (this *QTextCursor) hasComplexSelection(args ...interface{}) () {
   // hasComplexSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -133,7 +281,7 @@ func (this *QTextCursor) hasComplexSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextCursor::block();
 func (this *QTextCursor) block(args ...interface{}) () {
   // block()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +299,7 @@ func (this *QTextCursor) block(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::insertFragment(const QTextDocumentFragment & fragment);
 func (this *QTextCursor) insertFragment(args ...interface{}) () {
   // insertFragment(const class QTextDocumentFragment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +318,7 @@ func (this *QTextCursor) insertFragment(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextList * QTextCursor::insertList(const QTextListFormat & format);
 func (this *QTextCursor) insertList(args ...interface{}) () {
   // insertList(const class QTextListFormat &)
   // insertList(class QTextListFormat::Style)
@@ -194,7 +342,7 @@ func (this *QTextCursor) insertList(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::insertImage(const QTextImageFormat & format);
 func (this *QTextCursor) insertImage(args ...interface{}) () {
   // insertImage(const class QTextImageFormat &)
   // insertImage(const class QString &)
@@ -230,7 +378,7 @@ func (this *QTextCursor) insertImage(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::keepPositionOnInsert();
 func (this *QTextCursor) keepPositionOnInsert(args ...interface{}) () {
   // keepPositionOnInsert()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +396,7 @@ func (this *QTextCursor) keepPositionOnInsert(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::position();
 func (this *QTextCursor) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +414,7 @@ func (this *QTextCursor) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::isNull();
 func (this *QTextCursor) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +432,7 @@ func (this *QTextCursor) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::removeSelectedText();
 func (this *QTextCursor) removeSelectedText(args ...interface{}) () {
   // removeSelectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +450,7 @@ func (this *QTextCursor) removeSelectedText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::insertHtml(const QString & html);
 func (this *QTextCursor) insertHtml(args ...interface{}) () {
   // insertHtml(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -321,7 +469,7 @@ func (this *QTextCursor) insertHtml(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::isCopyOf(const QTextCursor & other);
 func (this *QTextCursor) isCopyOf(args ...interface{}) () {
   // isCopyOf(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -340,7 +488,7 @@ func (this *QTextCursor) isCopyOf(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrame * QTextCursor::insertFrame(const QTextFrameFormat & format);
 func (this *QTextCursor) insertFrame(args ...interface{}) () {
   // insertFrame(const class QTextFrameFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -359,12 +507,12 @@ func (this *QTextCursor) insertFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::QTextCursor(const QTextCursor & cursor);
 func NewQTextCursor(args ...interface{}) QTextCursor {
   return QTextCursor{}
 }
 
-
+  // proto:  void QTextCursor::deleteChar();
 func (this *QTextCursor) deleteChar(args ...interface{}) () {
   // deleteChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -382,7 +530,7 @@ func (this *QTextCursor) deleteChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrame * QTextCursor::currentFrame();
 func (this *QTextCursor) currentFrame(args ...interface{}) () {
   // currentFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -400,7 +548,7 @@ func (this *QTextCursor) currentFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::insertBlock();
 func (this *QTextCursor) insertBlock(args ...interface{}) () {
   // insertBlock()
   // insertBlock(const class QTextBlockFormat &)
@@ -429,7 +577,7 @@ func (this *QTextCursor) insertBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
 func (this *QTextCursor) insertTable(args ...interface{}) () {
   // insertTable(int, int)
   // insertTable(int, int, const class QTextTableFormat &)
@@ -456,7 +604,7 @@ func (this *QTextCursor) insertTable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::atStart();
 func (this *QTextCursor) atStart(args ...interface{}) () {
   // atStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -474,7 +622,7 @@ func (this *QTextCursor) atStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::selectionStart();
 func (this *QTextCursor) selectionStart(args ...interface{}) () {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -492,7 +640,7 @@ func (this *QTextCursor) selectionStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
 func (this *QTextCursor) selectedTableCells(args ...interface{}) () {
   // selectedTableCells(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -514,7 +662,7 @@ func (this *QTextCursor) selectedTableCells(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::endEditBlock();
 func (this *QTextCursor) endEditBlock(args ...interface{}) () {
   // endEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -532,7 +680,7 @@ func (this *QTextCursor) endEditBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextCursor::selectedText();
 func (this *QTextCursor) selectedText(args ...interface{}) () {
   // selectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -550,7 +698,7 @@ func (this *QTextCursor) selectedText(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::positionInBlock();
 func (this *QTextCursor) positionInBlock(args ...interface{}) () {
   // positionInBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -568,7 +716,7 @@ func (this *QTextCursor) positionInBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::hasSelection();
 func (this *QTextCursor) hasSelection(args ...interface{}) () {
   // hasSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -586,7 +734,7 @@ func (this *QTextCursor) hasSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::atEnd();
 func (this *QTextCursor) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -604,7 +752,7 @@ func (this *QTextCursor) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::atBlockStart();
 func (this *QTextCursor) atBlockStart(args ...interface{}) () {
   // atBlockStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -622,7 +770,7 @@ func (this *QTextCursor) atBlockStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::insertText(const QString & text);
 func (this *QTextCursor) insertText(args ...interface{}) () {
   // insertText(const class QString &)
   // insertText(const class QString &, const class QTextCharFormat &)
@@ -647,7 +795,7 @@ func (this *QTextCursor) insertText(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::visualNavigation();
 func (this *QTextCursor) visualNavigation(args ...interface{}) () {
   // visualNavigation()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -665,7 +813,7 @@ func (this *QTextCursor) visualNavigation(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCursor::atBlockEnd();
 func (this *QTextCursor) atBlockEnd(args ...interface{}) () {
   // atBlockEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -683,7 +831,7 @@ func (this *QTextCursor) atBlockEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextList * QTextCursor::currentList();
 func (this *QTextCursor) currentList(args ...interface{}) () {
   // currentList()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -701,7 +849,7 @@ func (this *QTextCursor) currentList(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::mergeBlockCharFormat(const QTextCharFormat & modifier);
 func (this *QTextCursor) mergeBlockCharFormat(args ...interface{}) () {
   // mergeBlockCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -720,7 +868,7 @@ func (this *QTextCursor) mergeBlockCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setCharFormat(const QTextCharFormat & format);
 func (this *QTextCursor) setCharFormat(args ...interface{}) () {
   // setCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -739,7 +887,7 @@ func (this *QTextCursor) setCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::verticalMovementX();
 func (this *QTextCursor) verticalMovementX(args ...interface{}) () {
   // verticalMovementX()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -757,7 +905,7 @@ func (this *QTextCursor) verticalMovementX(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::blockNumber();
 func (this *QTextCursor) blockNumber(args ...interface{}) () {
   // blockNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -775,7 +923,7 @@ func (this *QTextCursor) blockNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::joinPreviousEditBlock();
 func (this *QTextCursor) joinPreviousEditBlock(args ...interface{}) () {
   // joinPreviousEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -793,7 +941,7 @@ func (this *QTextCursor) joinPreviousEditBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::mergeBlockFormat(const QTextBlockFormat & modifier);
 func (this *QTextCursor) mergeBlockFormat(args ...interface{}) () {
   // mergeBlockFormat(const class QTextBlockFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -812,7 +960,7 @@ func (this *QTextCursor) mergeBlockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlockFormat QTextCursor::blockFormat();
 func (this *QTextCursor) blockFormat(args ...interface{}) () {
   // blockFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -830,7 +978,7 @@ func (this *QTextCursor) blockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::beginEditBlock();
 func (this *QTextCursor) beginEditBlock(args ...interface{}) () {
   // beginEditBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -848,7 +996,7 @@ func (this *QTextCursor) beginEditBlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::anchor();
 func (this *QTextCursor) anchor(args ...interface{}) () {
   // anchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -866,7 +1014,7 @@ func (this *QTextCursor) anchor(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextCursor::charFormat();
 func (this *QTextCursor) charFormat(args ...interface{}) () {
   // charFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -884,7 +1032,7 @@ func (this *QTextCursor) charFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::deletePreviousChar();
 func (this *QTextCursor) deletePreviousChar(args ...interface{}) () {
   // deletePreviousChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -902,7 +1050,7 @@ func (this *QTextCursor) deletePreviousChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::~QTextCursor();
 func (this *QTextCursor) FreeQTextCursor(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -916,7 +1064,7 @@ func (this *QTextCursor) FreeQTextCursor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::clearSelection();
 func (this *QTextCursor) clearSelection(args ...interface{}) () {
   // clearSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -934,7 +1082,7 @@ func (this *QTextCursor) clearSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setVisualNavigation(bool b);
 func (this *QTextCursor) setVisualNavigation(args ...interface{}) () {
   // setVisualNavigation(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -953,7 +1101,7 @@ func (this *QTextCursor) setVisualNavigation(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setBlockCharFormat(const QTextCharFormat & format);
 func (this *QTextCursor) setBlockCharFormat(args ...interface{}) () {
   // setBlockCharFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -972,7 +1120,7 @@ func (this *QTextCursor) setBlockCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTable * QTextCursor::currentTable();
 func (this *QTextCursor) currentTable(args ...interface{}) () {
   // currentTable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -990,7 +1138,7 @@ func (this *QTextCursor) currentTable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
 func (this *QTextCursor) setKeepPositionOnInsert(args ...interface{}) () {
   // setKeepPositionOnInsert(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1009,7 +1157,7 @@ func (this *QTextCursor) setKeepPositionOnInsert(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setVerticalMovementX(int x);
 func (this *QTextCursor) setVerticalMovementX(args ...interface{}) () {
   // setVerticalMovementX(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1028,7 +1176,7 @@ func (this *QTextCursor) setVerticalMovementX(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocument * QTextCursor::document();
 func (this *QTextCursor) document(args ...interface{}) () {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1046,7 +1194,7 @@ func (this *QTextCursor) document(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCursor::selectionEnd();
 func (this *QTextCursor) selectionEnd(args ...interface{}) () {
   // selectionEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1064,7 +1212,7 @@ func (this *QTextCursor) selectionEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCursor::setBlockFormat(const QTextBlockFormat & format);
 func (this *QTextCursor) setBlockFormat(args ...interface{}) () {
   // setBlockFormat(const class QTextBlockFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1083,7 +1231,7 @@ func (this *QTextCursor) setBlockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextList * QTextCursor::createList(const QTextListFormat & format);
 func (this *QTextCursor) createList(args ...interface{}) () {
   // createList(class QTextListFormat::Style)
   // createList(const class QTextListFormat &)
@@ -1107,7 +1255,7 @@ func (this *QTextCursor) createList(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextCursor::blockCharFormat();
 func (this *QTextCursor) blockCharFormat(args ...interface{}) () {
   // blockCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,41 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto: static QArrayData * QArrayData::sharedNull();
+extern void _ZN10QArrayData10sharedNullEv();
+  // proto:  void * QArrayData::data();
+extern void _ZN10QArrayData4dataEv(void* qthis);
+  // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
+extern void _ZN10QArrayData10deallocateEPS_ii(void* arg0, int arg1, int arg2);
+  // proto:  bool QArrayData::isMutable();
+extern void _ZNK10QArrayData9isMutableEv(void* qthis);
+  // proto:  int QArrayData::detachCapacity(int newSize);
+extern void _ZNK10QArrayData14detachCapacityEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QArrayData)=1
 type QArrayData struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto: static QArrayData * QArrayData::sharedNull();
 func (this *QArrayData) sharedNull_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +74,7 @@ func (this *QArrayData) sharedNull_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void * QArrayData::data();
 func (this *QArrayData) data(args ...interface{}) () {
   // data()
   // data()
@@ -77,7 +96,7 @@ func (this *QArrayData) data(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
 func (this *QArrayData) deallocate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,7 +110,7 @@ func (this *QArrayData) deallocate_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QArrayData::isMutable();
 func (this *QArrayData) isMutable(args ...interface{}) () {
   // isMutable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +128,7 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QArrayData::detachCapacity(int newSize);
 func (this *QArrayData) detachCapacity(args ...interface{}) () {
   // detachCapacity(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

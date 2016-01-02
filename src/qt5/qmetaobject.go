@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,156 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  int QMetaEnum::value(int index);
+extern void _ZNK9QMetaEnum5valueEi(void* qthis, int arg0);
+  // proto:  const char * QMetaEnum::name();
+extern void _ZNK9QMetaEnum4nameEv(void* qthis);
+  // proto:  bool QMetaEnum::isFlag();
+extern void _ZNK9QMetaEnum6isFlagEv(void* qthis);
+  // proto:  const char * QMetaEnum::scope();
+extern void _ZNK9QMetaEnum5scopeEv(void* qthis);
+  // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
+extern void _ZNK9QMetaEnum10keyToValueEPKcPb(void* qthis, char* arg0, bool* arg1);
+  // proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
+extern void demth_ZNK9QMetaEnum19enclosingMetaObjectEv(void* qthis);
+  // proto:  QByteArray QMetaEnum::valueToKeys(int value);
+extern void _ZNK9QMetaEnum11valueToKeysEi(void* qthis, int arg0);
+  // proto:  void QMetaEnum::QMetaEnum();
+extern void* dector_ZN9QMetaEnumC1Ev();
+extern void _ZN9QMetaEnumC1Ev(void* qthis);
+  // proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
+extern void _ZNK9QMetaEnum11keysToValueEPKcPb(void* qthis, char* arg0, bool* arg1);
+  // proto:  const char * QMetaEnum::key(int index);
+extern void _ZNK9QMetaEnum3keyEi(void* qthis, int arg0);
+  // proto:  const char * QMetaEnum::valueToKey(int value);
+extern void _ZNK9QMetaEnum10valueToKeyEi(void* qthis, int arg0);
+  // proto:  int QMetaEnum::keyCount();
+extern void _ZNK9QMetaEnum8keyCountEv(void* qthis);
+  // proto:  bool QMetaEnum::isValid();
+extern void demth_ZNK9QMetaEnum7isValidEv(void* qthis);
+  // proto:  void QMetaClassInfo::QMetaClassInfo();
+extern void* dector_ZN14QMetaClassInfoC1Ev();
+extern void _ZN14QMetaClassInfoC1Ev(void* qthis);
+  // proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
+extern void demth_ZNK14QMetaClassInfo19enclosingMetaObjectEv(void* qthis);
+  // proto:  const char * QMetaClassInfo::name();
+extern void _ZNK14QMetaClassInfo4nameEv(void* qthis);
+  // proto:  const char * QMetaClassInfo::value();
+extern void _ZNK14QMetaClassInfo5valueEv(void* qthis);
+  // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
+extern void _ZNK11QMetaMethod14parameterTypesEv(void* qthis);
+  // proto:  QList<QByteArray> QMetaMethod::parameterNames();
+extern void _ZNK11QMetaMethod14parameterNamesEv(void* qthis);
+  // proto:  QByteArray QMetaMethod::methodSignature();
+extern void _ZNK11QMetaMethod15methodSignatureEv(void* qthis);
+  // proto:  const char * QMetaMethod::typeName();
+extern void _ZNK11QMetaMethod8typeNameEv(void* qthis);
+  // proto:  int QMetaMethod::attributes();
+extern void _ZNK11QMetaMethod10attributesEv(void* qthis);
+  // proto:  void QMetaMethod::getParameterTypes(int * types);
+extern void _ZNK11QMetaMethod17getParameterTypesEPi(void* qthis, int* arg0);
+  // proto:  void QMetaMethod::QMetaMethod();
+extern void* dector_ZN11QMetaMethodC1Ev();
+extern void _ZN11QMetaMethodC1Ev(void* qthis);
+  // proto:  int QMetaMethod::parameterType(int index);
+extern void _ZNK11QMetaMethod13parameterTypeEi(void* qthis, int arg0);
+  // proto:  QByteArray QMetaMethod::name();
+extern void _ZNK11QMetaMethod4nameEv(void* qthis);
+  // proto:  int QMetaMethod::returnType();
+extern void _ZNK11QMetaMethod10returnTypeEv(void* qthis);
+  // proto:  int QMetaMethod::methodIndex();
+extern void _ZNK11QMetaMethod11methodIndexEv(void* qthis);
+  // proto:  int QMetaMethod::parameterCount();
+extern void _ZNK11QMetaMethod14parameterCountEv(void* qthis);
+  // proto:  const QMetaObject * QMetaMethod::enclosingMetaObject();
+extern void demth_ZNK11QMetaMethod19enclosingMetaObjectEv(void* qthis);
+  // proto:  int QMetaMethod::revision();
+extern void _ZNK11QMetaMethod8revisionEv(void* qthis);
+  // proto:  const char * QMetaMethod::tag();
+extern void _ZNK11QMetaMethod3tagEv(void* qthis);
+  // proto:  bool QMetaMethod::isValid();
+extern void demth_ZNK11QMetaMethod7isValidEv(void* qthis);
+  // proto:  bool QMetaProperty::isEnumType();
+extern void _ZNK13QMetaProperty10isEnumTypeEv(void* qthis);
+  // proto:  void QMetaProperty::QMetaProperty();
+extern void* dector_ZN13QMetaPropertyC1Ev();
+extern void _ZN13QMetaPropertyC1Ev(void* qthis);
+  // proto:  bool QMetaProperty::isValid();
+extern void demth_ZNK13QMetaProperty7isValidEv(void* qthis);
+  // proto:  QVariant QMetaProperty::readOnGadget(const void * gadget);
+extern void _ZNK13QMetaProperty12readOnGadgetEPKv(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QMetaProperty::enclosingMetaObject();
+extern void demth_ZNK13QMetaProperty19enclosingMetaObjectEv(void* qthis);
+  // proto:  bool QMetaProperty::resetOnGadget(void * gadget);
+extern void _ZNK13QMetaProperty13resetOnGadgetEPv(void* qthis, void* arg0);
+  // proto:  int QMetaProperty::propertyIndex();
+extern void _ZNK13QMetaProperty13propertyIndexEv(void* qthis);
+  // proto:  bool QMetaProperty::isStored(const QObject * obj);
+extern void _ZNK13QMetaProperty8isStoredEPK7QObject(void* qthis, void* arg0);
+  // proto:  QMetaEnum QMetaProperty::enumerator();
+extern void _ZNK13QMetaProperty10enumeratorEv(void* qthis);
+  // proto:  bool QMetaProperty::write(QObject * obj, const QVariant & value);
+extern void _ZNK13QMetaProperty5writeEP7QObjectRK8QVariant(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QMetaProperty::isResettable();
+extern void _ZNK13QMetaProperty12isResettableEv(void* qthis);
+  // proto:  bool QMetaProperty::isEditable(const QObject * obj);
+extern void _ZNK13QMetaProperty10isEditableEPK7QObject(void* qthis, void* arg0);
+  // proto:  bool QMetaProperty::hasStdCppSet();
+extern void _ZNK13QMetaProperty12hasStdCppSetEv(void* qthis);
+  // proto:  bool QMetaProperty::hasNotifySignal();
+extern void _ZNK13QMetaProperty15hasNotifySignalEv(void* qthis);
+  // proto:  bool QMetaProperty::isConstant();
+extern void _ZNK13QMetaProperty10isConstantEv(void* qthis);
+  // proto:  const char * QMetaProperty::typeName();
+extern void _ZNK13QMetaProperty8typeNameEv(void* qthis);
+  // proto:  bool QMetaProperty::isReadable();
+extern void _ZNK13QMetaProperty10isReadableEv(void* qthis);
+  // proto:  int QMetaProperty::userType();
+extern void _ZNK13QMetaProperty8userTypeEv(void* qthis);
+  // proto:  bool QMetaProperty::isWritable();
+extern void _ZNK13QMetaProperty10isWritableEv(void* qthis);
+  // proto:  bool QMetaProperty::writeOnGadget(void * gadget, const QVariant & value);
+extern void _ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant(void* qthis, void* arg0, void* arg1);
+  // proto:  int QMetaProperty::notifySignalIndex();
+extern void _ZNK13QMetaProperty17notifySignalIndexEv(void* qthis);
+  // proto:  bool QMetaProperty::isUser(const QObject * obj);
+extern void _ZNK13QMetaProperty6isUserEPK7QObject(void* qthis, void* arg0);
+  // proto:  bool QMetaProperty::isFlagType();
+extern void _ZNK13QMetaProperty10isFlagTypeEv(void* qthis);
+  // proto:  bool QMetaProperty::isFinal();
+extern void _ZNK13QMetaProperty7isFinalEv(void* qthis);
+  // proto:  const char * QMetaProperty::name();
+extern void _ZNK13QMetaProperty4nameEv(void* qthis);
+  // proto:  bool QMetaProperty::reset(QObject * obj);
+extern void _ZNK13QMetaProperty5resetEP7QObject(void* qthis, void* arg0);
+  // proto:  int QMetaProperty::revision();
+extern void _ZNK13QMetaProperty8revisionEv(void* qthis);
+  // proto:  bool QMetaProperty::isScriptable(const QObject * obj);
+extern void _ZNK13QMetaProperty12isScriptableEPK7QObject(void* qthis, void* arg0);
+  // proto:  QVariant QMetaProperty::read(const QObject * obj);
+extern void _ZNK13QMetaProperty4readEPK7QObject(void* qthis, void* arg0);
+  // proto:  QMetaMethod QMetaProperty::notifySignal();
+extern void _ZNK13QMetaProperty12notifySignalEv(void* qthis);
+  // proto:  bool QMetaProperty::isDesignable(const QObject * obj);
+extern void _ZNK13QMetaProperty12isDesignableEPK7QObject(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMetaEnum)=16
 type QMetaEnum struct {
   // qbase: None;
@@ -59,7 +200,7 @@ type QMetaProperty struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  int QMetaEnum::value(int index);
 func (this *QMetaEnum) value(args ...interface{}) () {
   // value(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +219,7 @@ func (this *QMetaEnum) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaEnum::name();
 func (this *QMetaEnum) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +237,7 @@ func (this *QMetaEnum) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaEnum::isFlag();
 func (this *QMetaEnum) isFlag(args ...interface{}) () {
   // isFlag()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -114,7 +255,7 @@ func (this *QMetaEnum) isFlag(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaEnum::scope();
 func (this *QMetaEnum) scope(args ...interface{}) () {
   // scope()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +273,7 @@ func (this *QMetaEnum) scope(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
 func (this *QMetaEnum) keyToValue(args ...interface{}) () {
   // keyToValue(const char *, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +293,7 @@ func (this *QMetaEnum) keyToValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
 func (this *QMetaEnum) enclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +311,7 @@ func (this *QMetaEnum) enclosingMetaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QMetaEnum::valueToKeys(int value);
 func (this *QMetaEnum) valueToKeys(args ...interface{}) () {
   // valueToKeys(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,12 +330,12 @@ func (this *QMetaEnum) valueToKeys(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaEnum::QMetaEnum();
 func NewQMetaEnum(args ...interface{}) QMetaEnum {
   return QMetaEnum{}
 }
 
-
+  // proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
 func (this *QMetaEnum) keysToValue(args ...interface{}) () {
   // keysToValue(const char *, _Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +355,7 @@ func (this *QMetaEnum) keysToValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaEnum::key(int index);
 func (this *QMetaEnum) key(args ...interface{}) () {
   // key(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +374,7 @@ func (this *QMetaEnum) key(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaEnum::valueToKey(int value);
 func (this *QMetaEnum) valueToKey(args ...interface{}) () {
   // valueToKey(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +393,7 @@ func (this *QMetaEnum) valueToKey(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaEnum::keyCount();
 func (this *QMetaEnum) keyCount(args ...interface{}) () {
   // keyCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +411,7 @@ func (this *QMetaEnum) keyCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaEnum::isValid();
 func (this *QMetaEnum) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -288,12 +429,12 @@ func (this *QMetaEnum) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaClassInfo::QMetaClassInfo();
 func NewQMetaClassInfo(args ...interface{}) QMetaClassInfo {
   return QMetaClassInfo{}
 }
 
-
+  // proto:  const QMetaObject * QMetaClassInfo::enclosingMetaObject();
 func (this *QMetaClassInfo) enclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -311,7 +452,7 @@ func (this *QMetaClassInfo) enclosingMetaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaClassInfo::name();
 func (this *QMetaClassInfo) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -329,7 +470,7 @@ func (this *QMetaClassInfo) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaClassInfo::value();
 func (this *QMetaClassInfo) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -347,7 +488,7 @@ func (this *QMetaClassInfo) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QByteArray> QMetaMethod::parameterTypes();
 func (this *QMetaMethod) parameterTypes(args ...interface{}) () {
   // parameterTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -365,7 +506,7 @@ func (this *QMetaMethod) parameterTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QByteArray> QMetaMethod::parameterNames();
 func (this *QMetaMethod) parameterNames(args ...interface{}) () {
   // parameterNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -383,7 +524,7 @@ func (this *QMetaMethod) parameterNames(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QMetaMethod::methodSignature();
 func (this *QMetaMethod) methodSignature(args ...interface{}) () {
   // methodSignature()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -401,7 +542,7 @@ func (this *QMetaMethod) methodSignature(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaMethod::typeName();
 func (this *QMetaMethod) typeName(args ...interface{}) () {
   // typeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -419,7 +560,7 @@ func (this *QMetaMethod) typeName(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaMethod::attributes();
 func (this *QMetaMethod) attributes(args ...interface{}) () {
   // attributes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -437,7 +578,7 @@ func (this *QMetaMethod) attributes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaMethod::getParameterTypes(int * types);
 func (this *QMetaMethod) getParameterTypes(args ...interface{}) () {
   // getParameterTypes(int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -456,12 +597,12 @@ func (this *QMetaMethod) getParameterTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaMethod::QMetaMethod();
 func NewQMetaMethod(args ...interface{}) QMetaMethod {
   return QMetaMethod{}
 }
 
-
+  // proto:  int QMetaMethod::parameterType(int index);
 func (this *QMetaMethod) parameterType(args ...interface{}) () {
   // parameterType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -480,7 +621,7 @@ func (this *QMetaMethod) parameterType(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QMetaMethod::name();
 func (this *QMetaMethod) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -498,7 +639,7 @@ func (this *QMetaMethod) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaMethod::returnType();
 func (this *QMetaMethod) returnType(args ...interface{}) () {
   // returnType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -516,7 +657,7 @@ func (this *QMetaMethod) returnType(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaMethod::methodIndex();
 func (this *QMetaMethod) methodIndex(args ...interface{}) () {
   // methodIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -534,7 +675,7 @@ func (this *QMetaMethod) methodIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaMethod::parameterCount();
 func (this *QMetaMethod) parameterCount(args ...interface{}) () {
   // parameterCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -552,7 +693,7 @@ func (this *QMetaMethod) parameterCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMetaMethod::enclosingMetaObject();
 func (this *QMetaMethod) enclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -570,7 +711,7 @@ func (this *QMetaMethod) enclosingMetaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaMethod::revision();
 func (this *QMetaMethod) revision(args ...interface{}) () {
   // revision()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -588,7 +729,7 @@ func (this *QMetaMethod) revision(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaMethod::tag();
 func (this *QMetaMethod) tag(args ...interface{}) () {
   // tag()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -606,7 +747,7 @@ func (this *QMetaMethod) tag(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaMethod::isValid();
 func (this *QMetaMethod) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -624,7 +765,7 @@ func (this *QMetaMethod) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isEnumType();
 func (this *QMetaProperty) isEnumType(args ...interface{}) () {
   // isEnumType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -642,12 +783,12 @@ func (this *QMetaProperty) isEnumType(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMetaProperty::QMetaProperty();
 func NewQMetaProperty(args ...interface{}) QMetaProperty {
   return QMetaProperty{}
 }
 
-
+  // proto:  bool QMetaProperty::isValid();
 func (this *QMetaProperty) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -665,7 +806,7 @@ func (this *QMetaProperty) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QMetaProperty::readOnGadget(const void * gadget);
 func (this *QMetaProperty) readOnGadget(args ...interface{}) () {
   // readOnGadget(const void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -684,7 +825,7 @@ func (this *QMetaProperty) readOnGadget(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMetaProperty::enclosingMetaObject();
 func (this *QMetaProperty) enclosingMetaObject(args ...interface{}) () {
   // enclosingMetaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -702,7 +843,7 @@ func (this *QMetaProperty) enclosingMetaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::resetOnGadget(void * gadget);
 func (this *QMetaProperty) resetOnGadget(args ...interface{}) () {
   // resetOnGadget(void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -721,7 +862,7 @@ func (this *QMetaProperty) resetOnGadget(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaProperty::propertyIndex();
 func (this *QMetaProperty) propertyIndex(args ...interface{}) () {
   // propertyIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -739,7 +880,7 @@ func (this *QMetaProperty) propertyIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isStored(const QObject * obj);
 func (this *QMetaProperty) isStored(args ...interface{}) () {
   // isStored(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -758,7 +899,7 @@ func (this *QMetaProperty) isStored(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaEnum QMetaProperty::enumerator();
 func (this *QMetaProperty) enumerator(args ...interface{}) () {
   // enumerator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -776,7 +917,7 @@ func (this *QMetaProperty) enumerator(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::write(QObject * obj, const QVariant & value);
 func (this *QMetaProperty) write(args ...interface{}) () {
   // write(class QObject *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -796,7 +937,7 @@ func (this *QMetaProperty) write(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isResettable();
 func (this *QMetaProperty) isResettable(args ...interface{}) () {
   // isResettable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -814,7 +955,7 @@ func (this *QMetaProperty) isResettable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isEditable(const QObject * obj);
 func (this *QMetaProperty) isEditable(args ...interface{}) () {
   // isEditable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -833,7 +974,7 @@ func (this *QMetaProperty) isEditable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::hasStdCppSet();
 func (this *QMetaProperty) hasStdCppSet(args ...interface{}) () {
   // hasStdCppSet()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -851,7 +992,7 @@ func (this *QMetaProperty) hasStdCppSet(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::hasNotifySignal();
 func (this *QMetaProperty) hasNotifySignal(args ...interface{}) () {
   // hasNotifySignal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -869,7 +1010,7 @@ func (this *QMetaProperty) hasNotifySignal(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isConstant();
 func (this *QMetaProperty) isConstant(args ...interface{}) () {
   // isConstant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -887,7 +1028,7 @@ func (this *QMetaProperty) isConstant(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaProperty::typeName();
 func (this *QMetaProperty) typeName(args ...interface{}) () {
   // typeName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -905,7 +1046,7 @@ func (this *QMetaProperty) typeName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isReadable();
 func (this *QMetaProperty) isReadable(args ...interface{}) () {
   // isReadable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -923,7 +1064,7 @@ func (this *QMetaProperty) isReadable(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaProperty::userType();
 func (this *QMetaProperty) userType(args ...interface{}) () {
   // userType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -941,7 +1082,7 @@ func (this *QMetaProperty) userType(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isWritable();
 func (this *QMetaProperty) isWritable(args ...interface{}) () {
   // isWritable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -959,7 +1100,7 @@ func (this *QMetaProperty) isWritable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::writeOnGadget(void * gadget, const QVariant & value);
 func (this *QMetaProperty) writeOnGadget(args ...interface{}) () {
   // writeOnGadget(void *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -979,7 +1120,7 @@ func (this *QMetaProperty) writeOnGadget(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaProperty::notifySignalIndex();
 func (this *QMetaProperty) notifySignalIndex(args ...interface{}) () {
   // notifySignalIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -997,7 +1138,7 @@ func (this *QMetaProperty) notifySignalIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isUser(const QObject * obj);
 func (this *QMetaProperty) isUser(args ...interface{}) () {
   // isUser(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1016,7 +1157,7 @@ func (this *QMetaProperty) isUser(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isFlagType();
 func (this *QMetaProperty) isFlagType(args ...interface{}) () {
   // isFlagType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1034,7 +1175,7 @@ func (this *QMetaProperty) isFlagType(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isFinal();
 func (this *QMetaProperty) isFinal(args ...interface{}) () {
   // isFinal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1052,7 +1193,7 @@ func (this *QMetaProperty) isFinal(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QMetaProperty::name();
 func (this *QMetaProperty) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1070,7 +1211,7 @@ func (this *QMetaProperty) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::reset(QObject * obj);
 func (this *QMetaProperty) reset(args ...interface{}) () {
   // reset(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1089,7 +1230,7 @@ func (this *QMetaProperty) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QMetaProperty::revision();
 func (this *QMetaProperty) revision(args ...interface{}) () {
   // revision()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1107,7 +1248,7 @@ func (this *QMetaProperty) revision(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isScriptable(const QObject * obj);
 func (this *QMetaProperty) isScriptable(args ...interface{}) () {
   // isScriptable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1126,7 +1267,7 @@ func (this *QMetaProperty) isScriptable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QMetaProperty::read(const QObject * obj);
 func (this *QMetaProperty) read(args ...interface{}) () {
   // read(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1145,7 +1286,7 @@ func (this *QMetaProperty) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMetaMethod QMetaProperty::notifySignal();
 func (this *QMetaProperty) notifySignal(args ...interface{}) () {
   // notifySignal()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1163,7 +1304,7 @@ func (this *QMetaProperty) notifySignal(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMetaProperty::isDesignable(const QObject * obj);
 func (this *QMetaProperty) isDesignable(args ...interface{}) () {
   // isDesignable(const class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)

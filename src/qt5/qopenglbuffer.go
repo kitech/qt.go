@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,63 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
+extern void _ZN13QOpenGLBuffer4readEiPvi(void* qthis, int arg0, void* arg1, int arg2);
+  // proto:  bool QOpenGLBuffer::bind();
+extern void _ZN13QOpenGLBuffer4bindEv(void* qthis);
+  // proto:  void QOpenGLBuffer::destroy();
+extern void _ZN13QOpenGLBuffer7destroyEv(void* qthis);
+  // proto:  void QOpenGLBuffer::allocate(int count);
+extern void demth_ZN13QOpenGLBuffer8allocateEi(void* qthis, int arg0);
+  // proto:  bool QOpenGLBuffer::unmap();
+extern void _ZN13QOpenGLBuffer5unmapEv(void* qthis);
+  // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
+extern void* dector_ZN13QOpenGLBufferC1ERKS_(void* arg0);
+extern void _ZN13QOpenGLBufferC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QOpenGLBuffer::size();
+extern void _ZNK13QOpenGLBuffer4sizeEv(void* qthis);
+  // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
+extern void _ZN13QOpenGLBuffer8allocateEPKvi(void* qthis, void* arg0, int arg1);
+  // proto:  GLuint QOpenGLBuffer::bufferId();
+extern void _ZNK13QOpenGLBuffer8bufferIdEv(void* qthis);
+  // proto:  void QOpenGLBuffer::QOpenGLBuffer();
+extern void* dector_ZN13QOpenGLBufferC1Ev();
+extern void _ZN13QOpenGLBufferC1Ev(void* qthis);
+  // proto:  bool QOpenGLBuffer::create();
+extern void _ZN13QOpenGLBuffer6createEv(void* qthis);
+  // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
+extern void _ZN13QOpenGLBufferD0Ev(void* qthis);
+  // proto:  void QOpenGLBuffer::release();
+extern void _ZN13QOpenGLBuffer7releaseEv(void* qthis);
+  // proto:  bool QOpenGLBuffer::isCreated();
+extern void _ZNK13QOpenGLBuffer9isCreatedEv(void* qthis);
+  // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
+extern void _ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int arg0, void* arg1, int arg2);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLBuffer)=8
 type QOpenGLBuffer struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
 func (this *QOpenGLBuffer) read(args ...interface{}) () {
   // read(int, void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -62,7 +103,7 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLBuffer::bind();
 func (this *QOpenGLBuffer) bind(args ...interface{}) () {
   // bind()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +121,7 @@ func (this *QOpenGLBuffer) bind(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::destroy();
 func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +139,7 @@ func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::allocate(int count);
 func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
   // allocate(int)
   // allocate(const void *, int)
@@ -123,7 +164,7 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLBuffer::unmap();
 func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
   // unmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -141,12 +182,12 @@ func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
 func NewQOpenGLBuffer(args ...interface{}) QOpenGLBuffer {
   return QOpenGLBuffer{}
 }
 
-
+  // proto:  int QOpenGLBuffer::size();
 func (this *QOpenGLBuffer) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -164,7 +205,7 @@ func (this *QOpenGLBuffer) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  GLuint QOpenGLBuffer::bufferId();
 func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
   // bufferId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -182,7 +223,7 @@ func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLBuffer::create();
 func (this *QOpenGLBuffer) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -200,7 +241,7 @@ func (this *QOpenGLBuffer) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::~QOpenGLBuffer();
 func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -214,7 +255,7 @@ func (this *QOpenGLBuffer) FreeQOpenGLBuffer(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::release();
 func (this *QOpenGLBuffer) release(args ...interface{}) () {
   // release(class QOpenGLBuffer::Type)
   // release()
@@ -237,7 +278,7 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLBuffer::isCreated();
 func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -255,7 +296,7 @@ func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
 func (this *QOpenGLBuffer) write(args ...interface{}) () {
   // write(int, const void *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)

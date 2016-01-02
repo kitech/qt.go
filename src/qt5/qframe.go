@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,58 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QFrame::setFrameRect(const QRect & );
+extern void _ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0);
+  // proto:  int QFrame::lineWidth();
+extern void _ZNK6QFrame9lineWidthEv(void* qthis);
+  // proto:  void QFrame::setFrameStyle(int );
+extern void _ZN6QFrame13setFrameStyleEi(void* qthis, int arg0);
+  // proto:  QRect QFrame::frameRect();
+extern void _ZNK6QFrame9frameRectEv(void* qthis);
+  // proto:  QSize QFrame::sizeHint();
+extern void _ZNK6QFrame8sizeHintEv(void* qthis);
+  // proto:  void QFrame::QFrame(const QFrame & );
+extern void* dector_ZN6QFrameC1ERKS_(void* arg0);
+extern void _ZN6QFrameC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QFrame::frameStyle();
+extern void _ZNK6QFrame10frameStyleEv(void* qthis);
+  // proto:  int QFrame::midLineWidth();
+extern void _ZNK6QFrame12midLineWidthEv(void* qthis);
+  // proto:  void QFrame::setLineWidth(int );
+extern void _ZN6QFrame12setLineWidthEi(void* qthis, int arg0);
+  // proto:  void QFrame::setMidLineWidth(int );
+extern void _ZN6QFrame15setMidLineWidthEi(void* qthis, int arg0);
+  // proto:  const QMetaObject * QFrame::metaObject();
+extern void _ZNK6QFrame10metaObjectEv(void* qthis);
+  // proto:  int QFrame::frameWidth();
+extern void _ZNK6QFrame10frameWidthEv(void* qthis);
+  // proto:  void QFrame::~QFrame();
+extern void _ZN6QFrameD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFrame)=1
 type QFrame struct {
   /*qbase*/ QWidget;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QFrame::setFrameRect(const QRect & );
 func (this *QFrame) setFrameRect(args ...interface{}) () {
   // setFrameRect(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +96,7 @@ func (this *QFrame) setFrameRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFrame::lineWidth();
 func (this *QFrame) lineWidth(args ...interface{}) () {
   // lineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +114,7 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFrame::setFrameStyle(int );
 func (this *QFrame) setFrameStyle(args ...interface{}) () {
   // setFrameStyle(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +133,7 @@ func (this *QFrame) setFrameStyle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QFrame::frameRect();
 func (this *QFrame) frameRect(args ...interface{}) () {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +151,7 @@ func (this *QFrame) frameRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QFrame::sizeHint();
 func (this *QFrame) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -133,12 +169,12 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFrame::QFrame(const QFrame & );
 func NewQFrame(args ...interface{}) QFrame {
   return QFrame{}
 }
 
-
+  // proto:  int QFrame::frameStyle();
 func (this *QFrame) frameStyle(args ...interface{}) () {
   // frameStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +192,7 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFrame::midLineWidth();
 func (this *QFrame) midLineWidth(args ...interface{}) () {
   // midLineWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +210,7 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFrame::setLineWidth(int );
 func (this *QFrame) setLineWidth(args ...interface{}) () {
   // setLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +229,7 @@ func (this *QFrame) setLineWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFrame::setMidLineWidth(int );
 func (this *QFrame) setMidLineWidth(args ...interface{}) () {
   // setMidLineWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -212,7 +248,7 @@ func (this *QFrame) setMidLineWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QFrame::metaObject();
 func (this *QFrame) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -230,7 +266,7 @@ func (this *QFrame) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QFrame::frameWidth();
 func (this *QFrame) frameWidth(args ...interface{}) () {
   // frameWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,7 +284,7 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFrame::~QFrame();
 func (this *QFrame) FreeQFrame(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,153 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
+extern void _ZN9QLineEdit14cursorBackwardEbi(void* qthis, bool arg0, int arg1);
+  // proto:  void QLineEdit::home(bool mark);
+extern void _ZN9QLineEdit4homeEb(void* qthis, bool arg0);
+  // proto:  int QLineEdit::selectionStart();
+extern void _ZNK9QLineEdit14selectionStartEv(void* qthis);
+  // proto:  void QLineEdit::setCursorPosition(int );
+extern void _ZN9QLineEdit17setCursorPositionEi(void* qthis, int arg0);
+  // proto:  bool QLineEdit::isRedoAvailable();
+extern void _ZNK9QLineEdit15isRedoAvailableEv(void* qthis);
+  // proto:  void QLineEdit::setModified(bool );
+extern void _ZN9QLineEdit11setModifiedEb(void* qthis, bool arg0);
+  // proto:  void QLineEdit::QLineEdit(const QString & , QWidget * parent);
+extern void* dector_ZN9QLineEditC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN9QLineEditC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QLineEdit::event(QEvent * );
+extern void _ZN9QLineEdit5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  int QLineEdit::maxLength();
+extern void _ZNK9QLineEdit9maxLengthEv(void* qthis);
+  // proto:  QMenu * QLineEdit::createStandardContextMenu();
+extern void _ZN9QLineEdit25createStandardContextMenuEv(void* qthis);
+  // proto:  void QLineEdit::setTextMargins(const QMargins & margins);
+extern void _ZN9QLineEdit14setTextMarginsERK8QMargins(void* qthis, void* arg0);
+  // proto:  int QLineEdit::cursorPositionAt(const QPoint & pos);
+extern void _ZN9QLineEdit16cursorPositionAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  bool QLineEdit::hasSelectedText();
+extern void _ZNK9QLineEdit15hasSelectedTextEv(void* qthis);
+  // proto:  void QLineEdit::setPlaceholderText(const QString & );
+extern void _ZN9QLineEdit18setPlaceholderTextERK7QString(void* qthis, void* arg0);
+  // proto:  QSize QLineEdit::minimumSizeHint();
+extern void _ZNK9QLineEdit15minimumSizeHintEv(void* qthis);
+  // proto:  void QLineEdit::cursorForward(bool mark, int steps);
+extern void _ZN9QLineEdit13cursorForwardEbi(void* qthis, bool arg0, int arg1);
+  // proto:  void QLineEdit::insert(const QString & );
+extern void _ZN9QLineEdit6insertERK7QString(void* qthis, void* arg0);
+  // proto:  void QLineEdit::setText(const QString & );
+extern void _ZN9QLineEdit7setTextERK7QString(void* qthis, void* arg0);
+  // proto:  const QValidator * QLineEdit::validator();
+extern void _ZNK9QLineEdit9validatorEv(void* qthis);
+  // proto:  void QLineEdit::deselect();
+extern void _ZN9QLineEdit8deselectEv(void* qthis);
+  // proto:  QString QLineEdit::inputMask();
+extern void _ZNK9QLineEdit9inputMaskEv(void* qthis);
+  // proto:  QString QLineEdit::placeholderText();
+extern void _ZNK9QLineEdit15placeholderTextEv(void* qthis);
+  // proto:  void QLineEdit::cut();
+extern void _ZN9QLineEdit3cutEv(void* qthis);
+  // proto:  QString QLineEdit::text();
+extern void _ZNK9QLineEdit4textEv(void* qthis);
+  // proto:  const QMetaObject * QLineEdit::metaObject();
+extern void _ZNK9QLineEdit10metaObjectEv(void* qthis);
+  // proto:  void QLineEdit::del();
+extern void _ZN9QLineEdit3delEv(void* qthis);
+  // proto:  bool QLineEdit::isModified();
+extern void _ZNK9QLineEdit10isModifiedEv(void* qthis);
+  // proto:  void QLineEdit::cursorWordForward(bool mark);
+extern void _ZN9QLineEdit17cursorWordForwardEb(void* qthis, bool arg0);
+  // proto:  void QLineEdit::selectAll();
+extern void _ZN9QLineEdit9selectAllEv(void* qthis);
+  // proto:  void QLineEdit::setSelection(int , int );
+extern void _ZN9QLineEdit12setSelectionEii(void* qthis, int arg0, int arg1);
+  // proto:  void QLineEdit::setCompleter(QCompleter * completer);
+extern void _ZN9QLineEdit12setCompleterEP10QCompleter(void* qthis, void* arg0);
+  // proto:  void QLineEdit::setMaxLength(int );
+extern void _ZN9QLineEdit12setMaxLengthEi(void* qthis, int arg0);
+  // proto:  void QLineEdit::~QLineEdit();
+extern void _ZN9QLineEditD0Ev(void* qthis);
+  // proto:  void QLineEdit::setReadOnly(bool );
+extern void _ZN9QLineEdit11setReadOnlyEb(void* qthis, bool arg0);
+  // proto:  QString QLineEdit::displayText();
+extern void _ZNK9QLineEdit11displayTextEv(void* qthis);
+  // proto:  void QLineEdit::setFrame(bool );
+extern void _ZN9QLineEdit8setFrameEb(void* qthis, bool arg0);
+  // proto:  bool QLineEdit::hasAcceptableInput();
+extern void _ZNK9QLineEdit18hasAcceptableInputEv(void* qthis);
+  // proto:  bool QLineEdit::hasFrame();
+extern void _ZNK9QLineEdit8hasFrameEv(void* qthis);
+  // proto:  int QLineEdit::cursorPosition();
+extern void _ZNK9QLineEdit14cursorPositionEv(void* qthis);
+  // proto:  void QLineEdit::cursorWordBackward(bool mark);
+extern void _ZN9QLineEdit18cursorWordBackwardEb(void* qthis, bool arg0);
+  // proto:  bool QLineEdit::dragEnabled();
+extern void _ZNK9QLineEdit11dragEnabledEv(void* qthis);
+  // proto:  QSize QLineEdit::sizeHint();
+extern void _ZNK9QLineEdit8sizeHintEv(void* qthis);
+  // proto:  void QLineEdit::paste();
+extern void _ZN9QLineEdit5pasteEv(void* qthis);
+  // proto:  void QLineEdit::setValidator(const QValidator * );
+extern void _ZN9QLineEdit12setValidatorEPK10QValidator(void* qthis, void* arg0);
+  // proto:  void QLineEdit::QLineEdit(QWidget * parent);
+extern void* dector_ZN9QLineEditC1EP7QWidget(void* arg0);
+extern void _ZN9QLineEditC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  QCompleter * QLineEdit::completer();
+extern void _ZNK9QLineEdit9completerEv(void* qthis);
+  // proto:  QMargins QLineEdit::textMargins();
+extern void _ZNK9QLineEdit11textMarginsEv(void* qthis);
+  // proto:  void QLineEdit::setClearButtonEnabled(bool enable);
+extern void _ZN9QLineEdit21setClearButtonEnabledEb(void* qthis, bool arg0);
+  // proto:  QString QLineEdit::selectedText();
+extern void _ZNK9QLineEdit12selectedTextEv(void* qthis);
+  // proto:  void QLineEdit::clear();
+extern void _ZN9QLineEdit5clearEv(void* qthis);
+  // proto:  void QLineEdit::copy();
+extern void _ZNK9QLineEdit4copyEv(void* qthis);
+  // proto:  bool QLineEdit::isUndoAvailable();
+extern void _ZNK9QLineEdit15isUndoAvailableEv(void* qthis);
+  // proto:  void QLineEdit::undo();
+extern void _ZN9QLineEdit4undoEv(void* qthis);
+  // proto:  bool QLineEdit::isClearButtonEnabled();
+extern void _ZNK9QLineEdit20isClearButtonEnabledEv(void* qthis);
+  // proto:  void QLineEdit::QLineEdit(const QLineEdit & );
+extern void* dector_ZN9QLineEditC1ERKS_(void* arg0);
+extern void _ZN9QLineEditC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QLineEdit::end(bool mark);
+extern void _ZN9QLineEdit3endEb(void* qthis, bool arg0);
+  // proto:  void QLineEdit::setDragEnabled(bool b);
+extern void _ZN9QLineEdit14setDragEnabledEb(void* qthis, bool arg0);
+  // proto:  void QLineEdit::backspace();
+extern void _ZN9QLineEdit9backspaceEv(void* qthis);
+  // proto:  void QLineEdit::redo();
+extern void _ZN9QLineEdit4redoEv(void* qthis);
+  // proto:  void QLineEdit::setTextMargins(int left, int top, int right, int bottom);
+extern void _ZN9QLineEdit14setTextMarginsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QLineEdit::setInputMask(const QString & inputMask);
+extern void _ZN9QLineEdit12setInputMaskERK7QString(void* qthis, void* arg0);
+  // proto:  void QLineEdit::getTextMargins(int * left, int * top, int * right, int * bottom);
+extern void _ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+  // proto:  bool QLineEdit::isReadOnly();
+extern void _ZNK9QLineEdit10isReadOnlyEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QLineEdit)=1
 type QLineEdit struct {
   /*qbase*/ QWidget;
@@ -47,7 +185,7 @@ type QLineEdit struct {
 //  _textChanged QLineEdit_textChanged_signal;
 }
 
-
+  // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
 func (this *QLineEdit) cursorBackward(args ...interface{}) () {
   // cursorBackward(_Bool, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -67,7 +205,7 @@ func (this *QLineEdit) cursorBackward(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::home(bool mark);
 func (this *QLineEdit) home(args ...interface{}) () {
   // home(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +224,7 @@ func (this *QLineEdit) home(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLineEdit::selectionStart();
 func (this *QLineEdit) selectionStart(args ...interface{}) () {
   // selectionStart()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -104,7 +242,7 @@ func (this *QLineEdit) selectionStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setCursorPosition(int );
 func (this *QLineEdit) setCursorPosition(args ...interface{}) () {
   // setCursorPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -123,7 +261,7 @@ func (this *QLineEdit) setCursorPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::isRedoAvailable();
 func (this *QLineEdit) isRedoAvailable(args ...interface{}) () {
   // isRedoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -141,7 +279,7 @@ func (this *QLineEdit) isRedoAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setModified(bool );
 func (this *QLineEdit) setModified(args ...interface{}) () {
   // setModified(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -160,12 +298,12 @@ func (this *QLineEdit) setModified(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::QLineEdit(const QString & , QWidget * parent);
 func NewQLineEdit(args ...interface{}) QLineEdit {
   return QLineEdit{}
 }
 
-
+  // proto:  bool QLineEdit::event(QEvent * );
 func (this *QLineEdit) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +322,7 @@ func (this *QLineEdit) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLineEdit::maxLength();
 func (this *QLineEdit) maxLength(args ...interface{}) () {
   // maxLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -202,7 +340,7 @@ func (this *QLineEdit) maxLength(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMenu * QLineEdit::createStandardContextMenu();
 func (this *QLineEdit) createStandardContextMenu(args ...interface{}) () {
   // createStandardContextMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -220,7 +358,7 @@ func (this *QLineEdit) createStandardContextMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setTextMargins(const QMargins & margins);
 func (this *QLineEdit) setTextMargins(args ...interface{}) () {
   // setTextMargins(const class QMargins &)
   // setTextMargins(int, int, int, int)
@@ -247,7 +385,7 @@ func (this *QLineEdit) setTextMargins(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLineEdit::cursorPositionAt(const QPoint & pos);
 func (this *QLineEdit) cursorPositionAt(args ...interface{}) () {
   // cursorPositionAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -266,7 +404,7 @@ func (this *QLineEdit) cursorPositionAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::hasSelectedText();
 func (this *QLineEdit) hasSelectedText(args ...interface{}) () {
   // hasSelectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -284,7 +422,7 @@ func (this *QLineEdit) hasSelectedText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setPlaceholderText(const QString & );
 func (this *QLineEdit) setPlaceholderText(args ...interface{}) () {
   // setPlaceholderText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +441,7 @@ func (this *QLineEdit) setPlaceholderText(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QLineEdit::minimumSizeHint();
 func (this *QLineEdit) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -321,7 +459,7 @@ func (this *QLineEdit) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::cursorForward(bool mark, int steps);
 func (this *QLineEdit) cursorForward(args ...interface{}) () {
   // cursorForward(_Bool, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -341,7 +479,7 @@ func (this *QLineEdit) cursorForward(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::insert(const QString & );
 func (this *QLineEdit) insert(args ...interface{}) () {
   // insert(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -360,7 +498,7 @@ func (this *QLineEdit) insert(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setText(const QString & );
 func (this *QLineEdit) setText(args ...interface{}) () {
   // setText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -379,7 +517,7 @@ func (this *QLineEdit) setText(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QValidator * QLineEdit::validator();
 func (this *QLineEdit) validator(args ...interface{}) () {
   // validator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -397,7 +535,7 @@ func (this *QLineEdit) validator(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::deselect();
 func (this *QLineEdit) deselect(args ...interface{}) () {
   // deselect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -415,7 +553,7 @@ func (this *QLineEdit) deselect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLineEdit::inputMask();
 func (this *QLineEdit) inputMask(args ...interface{}) () {
   // inputMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -433,7 +571,7 @@ func (this *QLineEdit) inputMask(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLineEdit::placeholderText();
 func (this *QLineEdit) placeholderText(args ...interface{}) () {
   // placeholderText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -451,7 +589,7 @@ func (this *QLineEdit) placeholderText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::cut();
 func (this *QLineEdit) cut(args ...interface{}) () {
   // cut()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -469,7 +607,7 @@ func (this *QLineEdit) cut(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLineEdit::text();
 func (this *QLineEdit) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -487,7 +625,7 @@ func (this *QLineEdit) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QLineEdit::metaObject();
 func (this *QLineEdit) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -505,7 +643,7 @@ func (this *QLineEdit) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::del();
 func (this *QLineEdit) del(args ...interface{}) () {
   // del()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -523,7 +661,7 @@ func (this *QLineEdit) del(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::isModified();
 func (this *QLineEdit) isModified(args ...interface{}) () {
   // isModified()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -541,7 +679,7 @@ func (this *QLineEdit) isModified(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::cursorWordForward(bool mark);
 func (this *QLineEdit) cursorWordForward(args ...interface{}) () {
   // cursorWordForward(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -560,7 +698,7 @@ func (this *QLineEdit) cursorWordForward(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::selectAll();
 func (this *QLineEdit) selectAll(args ...interface{}) () {
   // selectAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -578,7 +716,7 @@ func (this *QLineEdit) selectAll(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setSelection(int , int );
 func (this *QLineEdit) setSelection(args ...interface{}) () {
   // setSelection(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -598,7 +736,7 @@ func (this *QLineEdit) setSelection(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setCompleter(QCompleter * completer);
 func (this *QLineEdit) setCompleter(args ...interface{}) () {
   // setCompleter(class QCompleter *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -617,7 +755,7 @@ func (this *QLineEdit) setCompleter(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setMaxLength(int );
 func (this *QLineEdit) setMaxLength(args ...interface{}) () {
   // setMaxLength(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -636,7 +774,7 @@ func (this *QLineEdit) setMaxLength(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::~QLineEdit();
 func (this *QLineEdit) FreeQLineEdit(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -650,7 +788,7 @@ func (this *QLineEdit) FreeQLineEdit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setReadOnly(bool );
 func (this *QLineEdit) setReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -669,7 +807,7 @@ func (this *QLineEdit) setReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLineEdit::displayText();
 func (this *QLineEdit) displayText(args ...interface{}) () {
   // displayText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -687,7 +825,7 @@ func (this *QLineEdit) displayText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setFrame(bool );
 func (this *QLineEdit) setFrame(args ...interface{}) () {
   // setFrame(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -706,7 +844,7 @@ func (this *QLineEdit) setFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::hasAcceptableInput();
 func (this *QLineEdit) hasAcceptableInput(args ...interface{}) () {
   // hasAcceptableInput()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -724,7 +862,7 @@ func (this *QLineEdit) hasAcceptableInput(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::hasFrame();
 func (this *QLineEdit) hasFrame(args ...interface{}) () {
   // hasFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -742,7 +880,7 @@ func (this *QLineEdit) hasFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QLineEdit::cursorPosition();
 func (this *QLineEdit) cursorPosition(args ...interface{}) () {
   // cursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -760,7 +898,7 @@ func (this *QLineEdit) cursorPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::cursorWordBackward(bool mark);
 func (this *QLineEdit) cursorWordBackward(args ...interface{}) () {
   // cursorWordBackward(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -779,7 +917,7 @@ func (this *QLineEdit) cursorWordBackward(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::dragEnabled();
 func (this *QLineEdit) dragEnabled(args ...interface{}) () {
   // dragEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -797,7 +935,7 @@ func (this *QLineEdit) dragEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QLineEdit::sizeHint();
 func (this *QLineEdit) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -815,7 +953,7 @@ func (this *QLineEdit) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::paste();
 func (this *QLineEdit) paste(args ...interface{}) () {
   // paste()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -833,7 +971,7 @@ func (this *QLineEdit) paste(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setValidator(const QValidator * );
 func (this *QLineEdit) setValidator(args ...interface{}) () {
   // setValidator(const class QValidator *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -852,7 +990,7 @@ func (this *QLineEdit) setValidator(args ...interface{}) () {
 
 }
 
-
+  // proto:  QCompleter * QLineEdit::completer();
 func (this *QLineEdit) completer(args ...interface{}) () {
   // completer()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -870,7 +1008,7 @@ func (this *QLineEdit) completer(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMargins QLineEdit::textMargins();
 func (this *QLineEdit) textMargins(args ...interface{}) () {
   // textMargins()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -888,7 +1026,7 @@ func (this *QLineEdit) textMargins(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setClearButtonEnabled(bool enable);
 func (this *QLineEdit) setClearButtonEnabled(args ...interface{}) () {
   // setClearButtonEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -907,7 +1045,7 @@ func (this *QLineEdit) setClearButtonEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QLineEdit::selectedText();
 func (this *QLineEdit) selectedText(args ...interface{}) () {
   // selectedText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -925,7 +1063,7 @@ func (this *QLineEdit) selectedText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::clear();
 func (this *QLineEdit) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -943,7 +1081,7 @@ func (this *QLineEdit) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::copy();
 func (this *QLineEdit) copy(args ...interface{}) () {
   // copy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -961,7 +1099,7 @@ func (this *QLineEdit) copy(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::isUndoAvailable();
 func (this *QLineEdit) isUndoAvailable(args ...interface{}) () {
   // isUndoAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -979,7 +1117,7 @@ func (this *QLineEdit) isUndoAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::undo();
 func (this *QLineEdit) undo(args ...interface{}) () {
   // undo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -997,7 +1135,7 @@ func (this *QLineEdit) undo(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::isClearButtonEnabled();
 func (this *QLineEdit) isClearButtonEnabled(args ...interface{}) () {
   // isClearButtonEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1015,7 +1153,7 @@ func (this *QLineEdit) isClearButtonEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::end(bool mark);
 func (this *QLineEdit) end(args ...interface{}) () {
   // end(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1034,7 +1172,7 @@ func (this *QLineEdit) end(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setDragEnabled(bool b);
 func (this *QLineEdit) setDragEnabled(args ...interface{}) () {
   // setDragEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1053,7 +1191,7 @@ func (this *QLineEdit) setDragEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::backspace();
 func (this *QLineEdit) backspace(args ...interface{}) () {
   // backspace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1071,7 +1209,7 @@ func (this *QLineEdit) backspace(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::redo();
 func (this *QLineEdit) redo(args ...interface{}) () {
   // redo()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1089,7 +1227,7 @@ func (this *QLineEdit) redo(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::setInputMask(const QString & inputMask);
 func (this *QLineEdit) setInputMask(args ...interface{}) () {
   // setInputMask(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1108,7 +1246,7 @@ func (this *QLineEdit) setInputMask(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLineEdit::getTextMargins(int * left, int * top, int * right, int * bottom);
 func (this *QLineEdit) getTextMargins(args ...interface{}) () {
   // getTextMargins(int *, int *, int *, int *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1130,7 +1268,7 @@ func (this *QLineEdit) getTextMargins(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QLineEdit::isReadOnly();
 func (this *QLineEdit) isReadOnly(args ...interface{}) () {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)

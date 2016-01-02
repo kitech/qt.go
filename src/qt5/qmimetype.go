@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,69 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QMimeType::~QMimeType();
+extern void _ZN9QMimeTypeD0Ev(void* qthis);
+  // proto:  QString QMimeType::comment();
+extern void _ZNK9QMimeType7commentEv(void* qthis);
+  // proto:  QStringList QMimeType::aliases();
+extern void _ZNK9QMimeType7aliasesEv(void* qthis);
+  // proto:  QString QMimeType::filterString();
+extern void _ZNK9QMimeType12filterStringEv(void* qthis);
+  // proto:  QStringList QMimeType::parentMimeTypes();
+extern void _ZNK9QMimeType15parentMimeTypesEv(void* qthis);
+  // proto:  void QMimeType::QMimeType(const QMimeType & other);
+extern void* dector_ZN9QMimeTypeC1ERKS_(void* arg0);
+extern void _ZN9QMimeTypeC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
+extern void _ZNK9QMimeType8inheritsERK7QString(void* qthis, void* arg0);
+  // proto:  bool QMimeType::isDefault();
+extern void _ZNK9QMimeType9isDefaultEv(void* qthis);
+  // proto:  bool QMimeType::isValid();
+extern void _ZNK9QMimeType7isValidEv(void* qthis);
+  // proto:  void QMimeType::QMimeType();
+extern void* dector_ZN9QMimeTypeC1Ev();
+extern void _ZN9QMimeTypeC1Ev(void* qthis);
+  // proto:  void QMimeType::swap(QMimeType & other);
+extern void _ZN9QMimeType4swapERS_(void* qthis, void* arg0);
+  // proto:  QStringList QMimeType::suffixes();
+extern void _ZNK9QMimeType8suffixesEv(void* qthis);
+  // proto:  QString QMimeType::genericIconName();
+extern void _ZNK9QMimeType15genericIconNameEv(void* qthis);
+  // proto:  QString QMimeType::iconName();
+extern void _ZNK9QMimeType8iconNameEv(void* qthis);
+  // proto:  QStringList QMimeType::allAncestors();
+extern void _ZNK9QMimeType12allAncestorsEv(void* qthis);
+  // proto:  QStringList QMimeType::globPatterns();
+extern void _ZNK9QMimeType12globPatternsEv(void* qthis);
+  // proto:  QString QMimeType::name();
+extern void _ZNK9QMimeType4nameEv(void* qthis);
+  // proto:  QString QMimeType::preferredSuffix();
+extern void _ZNK9QMimeType15preferredSuffixEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMimeType)=1
 type QMimeType struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QMimeType::~QMimeType();
 func (this *QMimeType) FreeQMimeType(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +102,7 @@ func (this *QMimeType) FreeQMimeType(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::comment();
 func (this *QMimeType) comment(args ...interface{}) () {
   // comment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -73,7 +120,7 @@ func (this *QMimeType) comment(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeType::aliases();
 func (this *QMimeType) aliases(args ...interface{}) () {
   // aliases()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -91,7 +138,7 @@ func (this *QMimeType) aliases(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::filterString();
 func (this *QMimeType) filterString(args ...interface{}) () {
   // filterString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +156,7 @@ func (this *QMimeType) filterString(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeType::parentMimeTypes();
 func (this *QMimeType) parentMimeTypes(args ...interface{}) () {
   // parentMimeTypes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -127,12 +174,12 @@ func (this *QMimeType) parentMimeTypes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeType::QMimeType(const QMimeType & other);
 func NewQMimeType(args ...interface{}) QMimeType {
   return QMimeType{}
 }
 
-
+  // proto:  bool QMimeType::inherits(const QString & mimeTypeName);
 func (this *QMimeType) inherits(args ...interface{}) () {
   // inherits(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +198,7 @@ func (this *QMimeType) inherits(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeType::isDefault();
 func (this *QMimeType) isDefault(args ...interface{}) () {
   // isDefault()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -169,7 +216,7 @@ func (this *QMimeType) isDefault(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMimeType::isValid();
 func (this *QMimeType) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +234,7 @@ func (this *QMimeType) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMimeType::swap(QMimeType & other);
 func (this *QMimeType) swap(args ...interface{}) () {
   // swap(class QMimeType &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -206,7 +253,7 @@ func (this *QMimeType) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeType::suffixes();
 func (this *QMimeType) suffixes(args ...interface{}) () {
   // suffixes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -224,7 +271,7 @@ func (this *QMimeType) suffixes(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::genericIconName();
 func (this *QMimeType) genericIconName(args ...interface{}) () {
   // genericIconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +289,7 @@ func (this *QMimeType) genericIconName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::iconName();
 func (this *QMimeType) iconName(args ...interface{}) () {
   // iconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +307,7 @@ func (this *QMimeType) iconName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeType::allAncestors();
 func (this *QMimeType) allAncestors(args ...interface{}) () {
   // allAncestors()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -278,7 +325,7 @@ func (this *QMimeType) allAncestors(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QMimeType::globPatterns();
 func (this *QMimeType) globPatterns(args ...interface{}) () {
   // globPatterns()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,7 +343,7 @@ func (this *QMimeType) globPatterns(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::name();
 func (this *QMimeType) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -314,7 +361,7 @@ func (this *QMimeType) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QMimeType::preferredSuffix();
 func (this *QMimeType) preferredSuffix(args ...interface{}) () {
   // preferredSuffix()
   var vtys = make(map[int32]map[int32]reflect.Type)

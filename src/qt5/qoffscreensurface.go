@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QOffscreenSurface::~QOffscreenSurface();
+extern void _ZN17QOffscreenSurfaceD0Ev(void* qthis);
+  // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
+extern void* dector_ZN17QOffscreenSurfaceC1ERKS_(void* arg0);
+extern void _ZN17QOffscreenSurfaceC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QOffscreenSurface::QOffscreenSurface(QScreen * screen);
+extern void* dector_ZN17QOffscreenSurfaceC1EP7QScreen(void* arg0);
+extern void _ZN17QOffscreenSurfaceC1EP7QScreen(void* qthis, void* arg0);
+  // proto:  QScreen * QOffscreenSurface::screen();
+extern void _ZNK17QOffscreenSurface6screenEv(void* qthis);
+  // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
+extern void _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(void* qthis, void* arg0);
+  // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
+extern void _ZN17QOffscreenSurface9setScreenEP7QScreen(void* qthis, void* arg0);
+  // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
+extern void _ZNK17QOffscreenSurface15requestedFormatEv(void* qthis);
+  // proto:  QSurfaceFormat QOffscreenSurface::format();
+extern void _ZNK17QOffscreenSurface6formatEv(void* qthis);
+  // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
+extern void _ZNK17QOffscreenSurface6handleEv(void* qthis);
+  // proto:  const QMetaObject * QOffscreenSurface::metaObject();
+extern void _ZNK17QOffscreenSurface10metaObjectEv(void* qthis);
+  // proto:  void QOffscreenSurface::destroy();
+extern void _ZN17QOffscreenSurface7destroyEv(void* qthis);
+  // proto:  bool QOffscreenSurface::isValid();
+extern void _ZNK17QOffscreenSurface7isValidEv(void* qthis);
+  // proto:  QSize QOffscreenSurface::size();
+extern void _ZNK17QOffscreenSurface4sizeEv(void* qthis);
+  // proto:  void QOffscreenSurface::create();
+extern void _ZN17QOffscreenSurface6createEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOffscreenSurface)=1
 type QOffscreenSurface struct {
   /*qbase*/ QObject;
@@ -42,7 +81,7 @@ type QOffscreenSurface struct {
 //  _screenChanged QOffscreenSurface_screenChanged_signal;
 }
 
-
+  // proto:  void QOffscreenSurface::~QOffscreenSurface();
 func (this *QOffscreenSurface) FreeQOffscreenSurface(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -56,12 +95,12 @@ func (this *QOffscreenSurface) FreeQOffscreenSurface(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOffscreenSurface::QOffscreenSurface(const QOffscreenSurface & );
 func NewQOffscreenSurface(args ...interface{}) QOffscreenSurface {
   return QOffscreenSurface{}
 }
 
-
+  // proto:  QScreen * QOffscreenSurface::screen();
 func (this *QOffscreenSurface) screen(args ...interface{}) () {
   // screen()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +118,7 @@ func (this *QOffscreenSurface) screen(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOffscreenSurface::setFormat(const QSurfaceFormat & format);
 func (this *QOffscreenSurface) setFormat(args ...interface{}) () {
   // setFormat(const class QSurfaceFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -98,7 +137,7 @@ func (this *QOffscreenSurface) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOffscreenSurface::setScreen(QScreen * screen);
 func (this *QOffscreenSurface) setScreen(args ...interface{}) () {
   // setScreen(class QScreen *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +156,7 @@ func (this *QOffscreenSurface) setScreen(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSurfaceFormat QOffscreenSurface::requestedFormat();
 func (this *QOffscreenSurface) requestedFormat(args ...interface{}) () {
   // requestedFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +174,7 @@ func (this *QOffscreenSurface) requestedFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSurfaceFormat QOffscreenSurface::format();
 func (this *QOffscreenSurface) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,7 +192,7 @@ func (this *QOffscreenSurface) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformOffscreenSurface * QOffscreenSurface::handle();
 func (this *QOffscreenSurface) handle(args ...interface{}) () {
   // handle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -171,7 +210,7 @@ func (this *QOffscreenSurface) handle(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QOffscreenSurface::metaObject();
 func (this *QOffscreenSurface) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +228,7 @@ func (this *QOffscreenSurface) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOffscreenSurface::destroy();
 func (this *QOffscreenSurface) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -207,7 +246,7 @@ func (this *QOffscreenSurface) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOffscreenSurface::isValid();
 func (this *QOffscreenSurface) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,7 +264,7 @@ func (this *QOffscreenSurface) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QOffscreenSurface::size();
 func (this *QOffscreenSurface) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -243,7 +282,7 @@ func (this *QOffscreenSurface) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOffscreenSurface::create();
 func (this *QOffscreenSurface) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)

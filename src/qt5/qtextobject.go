@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,174 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QTextDocumentPrivate * QTextObject::docHandle();
+extern void _ZNK11QTextObject9docHandleEv(void* qthis);
+  // proto:  void QTextObject::~QTextObject();
+extern void _ZN11QTextObjectD0Ev(void* qthis);
+  // proto:  void QTextObject::QTextObject(const QTextObject & );
+extern void* dector_ZN11QTextObjectC1ERKS_(void* arg0);
+extern void _ZN11QTextObjectC1ERKS_(void* qthis, void* arg0);
+  // proto:  QTextFormat QTextObject::format();
+extern void _ZNK11QTextObject6formatEv(void* qthis);
+  // proto:  int QTextObject::formatIndex();
+extern void _ZNK11QTextObject11formatIndexEv(void* qthis);
+  // proto:  QTextDocument * QTextObject::document();
+extern void _ZNK11QTextObject8documentEv(void* qthis);
+  // proto:  int QTextObject::objectIndex();
+extern void _ZNK11QTextObject11objectIndexEv(void* qthis);
+  // proto:  void QTextObject::QTextObject(QTextDocument * doc);
+extern void* dector_ZN11QTextObjectC1EP13QTextDocument(void* arg0);
+extern void _ZN11QTextObjectC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTextObject::metaObject();
+extern void _ZNK11QTextObject10metaObjectEv(void* qthis);
+  // proto:  void QTextBlockUserData::~QTextBlockUserData();
+extern void _ZN18QTextBlockUserDataD0Ev(void* qthis);
+  // proto:  int QTextFragment::charFormatIndex();
+extern void _ZNK13QTextFragment15charFormatIndexEv(void* qthis);
+  // proto:  int QTextFragment::position();
+extern void _ZNK13QTextFragment8positionEv(void* qthis);
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
+extern void* dector_ZN13QTextFragmentC1ERKS_(void* arg0);
+extern void demth_ZN13QTextFragmentC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QTextFragment::contains(int position);
+extern void _ZNK13QTextFragment8containsEi(void* qthis, int arg0);
+  // proto:  void QTextFragment::QTextFragment();
+extern void* dector_ZN13QTextFragmentC1Ev();
+extern void demth_ZN13QTextFragmentC1Ev(void* qthis);
+  // proto:  QString QTextFragment::text();
+extern void _ZNK13QTextFragment4textEv(void* qthis);
+  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
+extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int arg0, int arg1);
+  // proto:  bool QTextFragment::isValid();
+extern void demth_ZNK13QTextFragment7isValidEv(void* qthis);
+  // proto:  QTextCharFormat QTextFragment::charFormat();
+extern void _ZNK13QTextFragment10charFormatEv(void* qthis);
+  // proto:  int QTextFragment::length();
+extern void _ZNK13QTextFragment6lengthEv(void* qthis);
+  // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
+extern void _ZN20QTextFrameLayoutDataD0Ev(void* qthis);
+  // proto:  const QTextDocument * QTextBlock::document();
+extern void _ZNK10QTextBlock8documentEv(void* qthis);
+  // proto:  QTextBlock QTextBlock::previous();
+extern void _ZNK10QTextBlock8previousEv(void* qthis);
+  // proto:  int QTextBlock::length();
+extern void _ZNK10QTextBlock6lengthEv(void* qthis);
+  // proto:  QTextBlockUserData * QTextBlock::userData();
+extern void _ZNK10QTextBlock8userDataEv(void* qthis);
+  // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
+extern void* dector_ZN10QTextBlockC1ERKS_(void* arg0);
+extern void demth_ZN10QTextBlockC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QTextBlock::text();
+extern void _ZNK10QTextBlock4textEv(void* qthis);
+  // proto:  int QTextBlock::lineCount();
+extern void _ZNK10QTextBlock9lineCountEv(void* qthis);
+  // proto:  bool QTextBlock::contains(int position);
+extern void _ZNK10QTextBlock8containsEi(void* qthis, int arg0);
+  // proto:  int QTextBlock::blockNumber();
+extern void _ZNK10QTextBlock11blockNumberEv(void* qthis);
+  // proto:  void QTextBlock::setRevision(int rev);
+extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int arg0);
+  // proto:  void QTextBlock::setVisible(bool visible);
+extern void _ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0);
+  // proto:  void QTextBlock::clearLayout();
+extern void _ZN10QTextBlock11clearLayoutEv(void* qthis);
+  // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
+extern void demth_ZNK10QTextBlock9docHandleEv(void* qthis);
+  // proto:  int QTextBlock::userState();
+extern void _ZNK10QTextBlock9userStateEv(void* qthis);
+  // proto:  int QTextBlock::charFormatIndex();
+extern void _ZNK10QTextBlock15charFormatIndexEv(void* qthis);
+  // proto:  int QTextBlock::revision();
+extern void _ZNK10QTextBlock8revisionEv(void* qthis);
+  // proto:  int QTextBlock::position();
+extern void _ZNK10QTextBlock8positionEv(void* qthis);
+  // proto:  bool QTextBlock::isValid();
+extern void _ZNK10QTextBlock7isValidEv(void* qthis);
+  // proto:  QTextList * QTextBlock::textList();
+extern void _ZNK10QTextBlock8textListEv(void* qthis);
+  // proto:  QTextLayout * QTextBlock::layout();
+extern void _ZNK10QTextBlock6layoutEv(void* qthis);
+  // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
+extern void _ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void* arg0);
+  // proto:  int QTextBlock::blockFormatIndex();
+extern void _ZNK10QTextBlock16blockFormatIndexEv(void* qthis);
+  // proto:  void QTextBlock::setUserState(int state);
+extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int arg0);
+  // proto:  int QTextBlock::fragmentIndex();
+extern void demth_ZNK10QTextBlock13fragmentIndexEv(void* qthis);
+  // proto:  bool QTextBlock::isVisible();
+extern void _ZNK10QTextBlock9isVisibleEv(void* qthis);
+  // proto:  void QTextBlock::setLineCount(int count);
+extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int arg0);
+  // proto:  QTextBlock QTextBlock::next();
+extern void _ZNK10QTextBlock4nextEv(void* qthis);
+  // proto:  QTextBlockFormat QTextBlock::blockFormat();
+extern void _ZNK10QTextBlock11blockFormatEv(void* qthis);
+  // proto:  void QTextBlock::QTextBlock();
+extern void* dector_ZN10QTextBlockC1Ev();
+extern void demth_ZN10QTextBlockC1Ev(void* qthis);
+  // proto:  int QTextBlock::firstLineNumber();
+extern void _ZNK10QTextBlock15firstLineNumberEv(void* qthis);
+  // proto:  QTextCharFormat QTextBlock::charFormat();
+extern void _ZNK10QTextBlock10charFormatEv(void* qthis);
+  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
+extern void* dector_ZN15QTextBlockGroupC1ERKS_(void* arg0);
+extern void _ZN15QTextBlockGroupC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTextBlockGroup::metaObject();
+extern void _ZNK15QTextBlockGroup10metaObjectEv(void* qthis);
+  // proto:  void QTextBlockGroup::~QTextBlockGroup();
+extern void _ZN15QTextBlockGroupD0Ev(void* qthis);
+  // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
+extern void* dector_ZN15QTextBlockGroupC1EP13QTextDocument(void* arg0);
+extern void _ZN15QTextBlockGroupC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  QTextFrameFormat QTextFrame::frameFormat();
+extern void _ZNK10QTextFrame11frameFormatEv(void* qthis);
+  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
+extern void _ZNK10QTextFrame10layoutDataEv(void* qthis);
+  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
+extern void _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(void* qthis, void* arg0);
+  // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
+extern void demth_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(void* qthis, void* arg0);
+  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
+extern void* dector_ZN10QTextFrameC1ERKS_(void* arg0);
+extern void _ZN10QTextFrameC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTextFrame::metaObject();
+extern void _ZNK10QTextFrame10metaObjectEv(void* qthis);
+  // proto:  QTextFrame * QTextFrame::parentFrame();
+extern void _ZNK10QTextFrame11parentFrameEv(void* qthis);
+  // proto:  int QTextFrame::firstPosition();
+extern void _ZNK10QTextFrame13firstPositionEv(void* qthis);
+  // proto:  QList<QTextFrame *> QTextFrame::childFrames();
+extern void _ZNK10QTextFrame11childFramesEv(void* qthis);
+  // proto:  void QTextFrame::~QTextFrame();
+extern void _ZN10QTextFrameD0Ev(void* qthis);
+  // proto:  QTextCursor QTextFrame::lastCursorPosition();
+extern void _ZNK10QTextFrame18lastCursorPositionEv(void* qthis);
+  // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
+extern void* dector_ZN10QTextFrameC1EP13QTextDocument(void* arg0);
+extern void _ZN10QTextFrameC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  int QTextFrame::lastPosition();
+extern void _ZNK10QTextFrame12lastPositionEv(void* qthis);
+  // proto:  QTextCursor QTextFrame::firstCursorPosition();
+extern void _ZNK10QTextFrame19firstCursorPositionEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextObject)=1
 type QTextObject struct {
   /*qbase*/ QObject;
@@ -77,7 +236,7 @@ type QTextFrame struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QTextDocumentPrivate * QTextObject::docHandle();
 func (this *QTextObject) docHandle(args ...interface{}) () {
   // docHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,7 +254,7 @@ func (this *QTextObject) docHandle(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextObject::~QTextObject();
 func (this *QTextObject) FreeQTextObject(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -109,12 +268,12 @@ func (this *QTextObject) FreeQTextObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextObject::QTextObject(const QTextObject & );
 func NewQTextObject(args ...interface{}) QTextObject {
   return QTextObject{}
 }
 
-
+  // proto:  QTextFormat QTextObject::format();
 func (this *QTextObject) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,7 +291,7 @@ func (this *QTextObject) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextObject::formatIndex();
 func (this *QTextObject) formatIndex(args ...interface{}) () {
   // formatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -150,7 +309,7 @@ func (this *QTextObject) formatIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocument * QTextObject::document();
 func (this *QTextObject) document(args ...interface{}) () {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,7 +327,7 @@ func (this *QTextObject) document(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextObject::objectIndex();
 func (this *QTextObject) objectIndex(args ...interface{}) () {
   // objectIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +345,7 @@ func (this *QTextObject) objectIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTextObject::metaObject();
 func (this *QTextObject) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -204,7 +363,7 @@ func (this *QTextObject) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockUserData::~QTextBlockUserData();
 func (this *QTextBlockUserData) FreeQTextBlockUserData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -218,7 +377,7 @@ func (this *QTextBlockUserData) FreeQTextBlockUserData(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFragment::charFormatIndex();
 func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
   // charFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +395,7 @@ func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFragment::position();
 func (this *QTextFragment) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -254,12 +413,12 @@ func (this *QTextFragment) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
 func NewQTextFragment(args ...interface{}) QTextFragment {
   return QTextFragment{}
 }
 
-
+  // proto:  bool QTextFragment::contains(int position);
 func (this *QTextFragment) contains(args ...interface{}) () {
   // contains(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -278,7 +437,7 @@ func (this *QTextFragment) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextFragment::text();
 func (this *QTextFragment) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -296,7 +455,7 @@ func (this *QTextFragment) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
 func (this *QTextFragment) glyphRuns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -316,7 +475,7 @@ func (this *QTextFragment) glyphRuns(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFragment::isValid();
 func (this *QTextFragment) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -334,7 +493,7 @@ func (this *QTextFragment) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextFragment::charFormat();
 func (this *QTextFragment) charFormat(args ...interface{}) () {
   // charFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -352,7 +511,7 @@ func (this *QTextFragment) charFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFragment::length();
 func (this *QTextFragment) length(args ...interface{}) () {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -370,7 +529,7 @@ func (this *QTextFragment) length(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
 func (this *QTextFrameLayoutData) FreeQTextFrameLayoutData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,7 +543,7 @@ func (this *QTextFrameLayoutData) FreeQTextFrameLayoutData(args ...interface{}) 
 
 }
 
-
+  // proto:  const QTextDocument * QTextBlock::document();
 func (this *QTextBlock) document(args ...interface{}) () {
   // document()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -402,7 +561,7 @@ func (this *QTextBlock) document(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextBlock::previous();
 func (this *QTextBlock) previous(args ...interface{}) () {
   // previous()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -420,7 +579,7 @@ func (this *QTextBlock) previous(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::length();
 func (this *QTextBlock) length(args ...interface{}) () {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -438,7 +597,7 @@ func (this *QTextBlock) length(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlockUserData * QTextBlock::userData();
 func (this *QTextBlock) userData(args ...interface{}) () {
   // userData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -456,12 +615,12 @@ func (this *QTextBlock) userData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
 func NewQTextBlock(args ...interface{}) QTextBlock {
   return QTextBlock{}
 }
 
-
+  // proto:  QString QTextBlock::text();
 func (this *QTextBlock) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -479,7 +638,7 @@ func (this *QTextBlock) text(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::lineCount();
 func (this *QTextBlock) lineCount(args ...interface{}) () {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -497,7 +656,7 @@ func (this *QTextBlock) lineCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBlock::contains(int position);
 func (this *QTextBlock) contains(args ...interface{}) () {
   // contains(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -516,7 +675,7 @@ func (this *QTextBlock) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::blockNumber();
 func (this *QTextBlock) blockNumber(args ...interface{}) () {
   // blockNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -534,7 +693,7 @@ func (this *QTextBlock) blockNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::setRevision(int rev);
 func (this *QTextBlock) setRevision(args ...interface{}) () {
   // setRevision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -553,7 +712,7 @@ func (this *QTextBlock) setRevision(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::setVisible(bool visible);
 func (this *QTextBlock) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -572,7 +731,7 @@ func (this *QTextBlock) setVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::clearLayout();
 func (this *QTextBlock) clearLayout(args ...interface{}) () {
   // clearLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -590,7 +749,7 @@ func (this *QTextBlock) clearLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
 func (this *QTextBlock) docHandle(args ...interface{}) () {
   // docHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -608,7 +767,7 @@ func (this *QTextBlock) docHandle(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::userState();
 func (this *QTextBlock) userState(args ...interface{}) () {
   // userState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -626,7 +785,7 @@ func (this *QTextBlock) userState(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::charFormatIndex();
 func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
   // charFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -644,7 +803,7 @@ func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::revision();
 func (this *QTextBlock) revision(args ...interface{}) () {
   // revision()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -662,7 +821,7 @@ func (this *QTextBlock) revision(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::position();
 func (this *QTextBlock) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -680,7 +839,7 @@ func (this *QTextBlock) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBlock::isValid();
 func (this *QTextBlock) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -698,7 +857,7 @@ func (this *QTextBlock) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextList * QTextBlock::textList();
 func (this *QTextBlock) textList(args ...interface{}) () {
   // textList()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -716,7 +875,7 @@ func (this *QTextBlock) textList(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextLayout * QTextBlock::layout();
 func (this *QTextBlock) layout(args ...interface{}) () {
   // layout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -734,7 +893,7 @@ func (this *QTextBlock) layout(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
 func (this *QTextBlock) setUserData(args ...interface{}) () {
   // setUserData(class QTextBlockUserData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +912,7 @@ func (this *QTextBlock) setUserData(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::blockFormatIndex();
 func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
   // blockFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -771,7 +930,7 @@ func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::setUserState(int state);
 func (this *QTextBlock) setUserState(args ...interface{}) () {
   // setUserState(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -790,7 +949,7 @@ func (this *QTextBlock) setUserState(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::fragmentIndex();
 func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
   // fragmentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -808,7 +967,7 @@ func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBlock::isVisible();
 func (this *QTextBlock) isVisible(args ...interface{}) () {
   // isVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -826,7 +985,7 @@ func (this *QTextBlock) isVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlock::setLineCount(int count);
 func (this *QTextBlock) setLineCount(args ...interface{}) () {
   // setLineCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -845,7 +1004,7 @@ func (this *QTextBlock) setLineCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlock QTextBlock::next();
 func (this *QTextBlock) next(args ...interface{}) () {
   // next()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -863,7 +1022,7 @@ func (this *QTextBlock) next(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlockFormat QTextBlock::blockFormat();
 func (this *QTextBlock) blockFormat(args ...interface{}) () {
   // blockFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -881,7 +1040,7 @@ func (this *QTextBlock) blockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlock::firstLineNumber();
 func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
   // firstLineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -899,7 +1058,7 @@ func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextBlock::charFormat();
 func (this *QTextBlock) charFormat(args ...interface{}) () {
   // charFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -917,12 +1076,12 @@ func (this *QTextBlock) charFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
 func NewQTextBlockGroup(args ...interface{}) QTextBlockGroup {
   return QTextBlockGroup{}
 }
 
-
+  // proto:  const QMetaObject * QTextBlockGroup::metaObject();
 func (this *QTextBlockGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -940,7 +1099,7 @@ func (this *QTextBlockGroup) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockGroup::~QTextBlockGroup();
 func (this *QTextBlockGroup) FreeQTextBlockGroup(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -954,7 +1113,7 @@ func (this *QTextBlockGroup) FreeQTextBlockGroup(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrameFormat QTextFrame::frameFormat();
 func (this *QTextFrame) frameFormat(args ...interface{}) () {
   // frameFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -972,7 +1131,7 @@ func (this *QTextFrame) frameFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 func (this *QTextFrame) layoutData(args ...interface{}) () {
   // layoutData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -990,7 +1149,7 @@ func (this *QTextFrame) layoutData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
 func (this *QTextFrame) setLayoutData(args ...interface{}) () {
   // setLayoutData(class QTextFrameLayoutData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1009,7 +1168,7 @@ func (this *QTextFrame) setLayoutData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
 func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
   // setFrameFormat(const class QTextFrameFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1028,12 +1187,12 @@ func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
 func NewQTextFrame(args ...interface{}) QTextFrame {
   return QTextFrame{}
 }
 
-
+  // proto:  const QMetaObject * QTextFrame::metaObject();
 func (this *QTextFrame) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1051,7 +1210,7 @@ func (this *QTextFrame) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrame * QTextFrame::parentFrame();
 func (this *QTextFrame) parentFrame(args ...interface{}) () {
   // parentFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1069,7 +1228,7 @@ func (this *QTextFrame) parentFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFrame::firstPosition();
 func (this *QTextFrame) firstPosition(args ...interface{}) () {
   // firstPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1087,7 +1246,7 @@ func (this *QTextFrame) firstPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QTextFrame *> QTextFrame::childFrames();
 func (this *QTextFrame) childFrames(args ...interface{}) () {
   // childFrames()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1105,7 +1264,7 @@ func (this *QTextFrame) childFrames(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrame::~QTextFrame();
 func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1119,7 +1278,7 @@ func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextFrame::lastCursorPosition();
 func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
   // lastCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1137,7 +1296,7 @@ func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFrame::lastPosition();
 func (this *QTextFrame) lastPosition(args ...interface{}) () {
   // lastPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1155,7 +1314,7 @@ func (this *QTextFrame) lastPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextFrame::firstCursorPosition();
 func (this *QTextFrame) firstCursorPosition(args ...interface{}) () {
   // firstCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)

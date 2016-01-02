@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,114 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QGuiApplication::~QGuiApplication();
+extern void _ZN15QGuiApplicationD0Ev(void* qthis);
+  // proto: static void QGuiApplication::setFont(const QFont & );
+extern void _ZN15QGuiApplication7setFontERK5QFont(void* arg0);
+  // proto: static QString QGuiApplication::platformName();
+extern void _ZN15QGuiApplication12platformNameEv();
+  // proto: static QList<QScreen *> QGuiApplication::screens();
+extern void _ZN15QGuiApplication7screensEv();
+  // proto: static void QGuiApplication::setPalette(const QPalette & pal);
+extern void _ZN15QGuiApplication10setPaletteERK8QPalette(void* arg0);
+  // proto: static QInputMethod * QGuiApplication::inputMethod();
+extern void _ZN15QGuiApplication11inputMethodEv();
+  // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
+extern void* dector_ZN15QGuiApplicationC1ERKS_(void* arg0);
+extern void _ZN15QGuiApplicationC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QGuiApplication::isSavingSession();
+extern void _ZNK15QGuiApplication15isSavingSessionEv(void* qthis);
+  // proto: static QFont QGuiApplication::font();
+extern void _ZN15QGuiApplication4fontEv();
+  // proto:  bool QGuiApplication::isSessionRestored();
+extern void _ZNK15QGuiApplication17isSessionRestoredEv(void* qthis);
+  // proto:  QString QGuiApplication::sessionKey();
+extern void _ZNK15QGuiApplication10sessionKeyEv(void* qthis);
+  // proto: static bool QGuiApplication::desktopSettingsAware();
+extern void _ZN15QGuiApplication20desktopSettingsAwareEv();
+  // proto: static void QGuiApplication::sync();
+extern void _ZN15QGuiApplication4syncEv();
+  // proto: static void QGuiApplication::setQuitOnLastWindowClosed(bool quit);
+extern void _ZN15QGuiApplication25setQuitOnLastWindowClosedEb(bool arg0);
+  // proto: static QScreen * QGuiApplication::primaryScreen();
+extern void _ZN15QGuiApplication13primaryScreenEv();
+  // proto: static QCursor * QGuiApplication::overrideCursor();
+extern void _ZN15QGuiApplication14overrideCursorEv();
+  // proto: static QIcon QGuiApplication::windowIcon();
+extern void _ZN15QGuiApplication10windowIconEv();
+  // proto: static QStyleHints * QGuiApplication::styleHints();
+extern void _ZN15QGuiApplication10styleHintsEv();
+  // proto: static QClipboard * QGuiApplication::clipboard();
+extern void _ZN15QGuiApplication9clipboardEv();
+  // proto: static QPalette QGuiApplication::palette();
+extern void _ZN15QGuiApplication7paletteEv();
+  // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
+extern void _ZN15QGuiApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1);
+  // proto: static QWindowList QGuiApplication::topLevelWindows();
+extern void _ZN15QGuiApplication15topLevelWindowsEv();
+  // proto: static bool QGuiApplication::isRightToLeft();
+extern void demth_ZN15QGuiApplication13isRightToLeftEv();
+  // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
+extern void _ZN15QGuiApplication20changeOverrideCursorERK7QCursor(void* arg0);
+  // proto: static QWindowList QGuiApplication::allWindows();
+extern void _ZN15QGuiApplication10allWindowsEv();
+  // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
+extern void _ZN15QGuiApplication17setOverrideCursorERK7QCursor(void* arg0);
+  // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
+extern void _ZN15QGuiApplication13setWindowIconERK5QIcon(void* arg0);
+  // proto:  QString QGuiApplication::sessionId();
+extern void _ZNK15QGuiApplication9sessionIdEv(void* qthis);
+  // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
+extern void _ZN15QGuiApplication25setApplicationDisplayNameERK7QString(void* arg0);
+  // proto: static bool QGuiApplication::isLeftToRight();
+extern void demth_ZN15QGuiApplication13isLeftToRightEv();
+  // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
+extern void _ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0);
+  // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
+extern void* dector_ZN15QGuiApplicationC1ERiPPci(int* arg0, char* arg1, int arg2);
+extern void _ZN15QGuiApplicationC1ERiPPci(void* qthis, int* arg0, char* arg1, int arg2);
+  // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
+extern void _ZN15QGuiApplication23setDesktopSettingsAwareEb(bool arg0);
+  // proto: static QWindow * QGuiApplication::modalWindow();
+extern void _ZN15QGuiApplication11modalWindowEv();
+  // proto: static QString QGuiApplication::applicationDisplayName();
+extern void _ZN15QGuiApplication22applicationDisplayNameEv();
+  // proto: static int QGuiApplication::exec();
+extern void _ZN15QGuiApplication4execEv();
+  // proto: static bool QGuiApplication::quitOnLastWindowClosed();
+extern void _ZN15QGuiApplication22quitOnLastWindowClosedEv();
+  // proto: static void QGuiApplication::restoreOverrideCursor();
+extern void _ZN15QGuiApplication21restoreOverrideCursorEv();
+  // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
+extern void _ZN15QGuiApplication23platformNativeInterfaceEv();
+  // proto:  const QMetaObject * QGuiApplication::metaObject();
+extern void _ZNK15QGuiApplication10metaObjectEv(void* qthis);
+  // proto: static QObject * QGuiApplication::focusObject();
+extern void _ZN15QGuiApplication11focusObjectEv();
+  // proto: static QWindow * QGuiApplication::focusWindow();
+extern void _ZN15QGuiApplication11focusWindowEv();
+  // proto:  qreal QGuiApplication::devicePixelRatio();
+extern void _ZNK15QGuiApplication16devicePixelRatioEv(void* qthis);
+  // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
+extern void _ZN15QGuiApplication16platformFunctionERK10QByteArray(void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QGuiApplication)=1
 type QGuiApplication struct {
   /*qbase*/ QCoreApplication;
@@ -52,7 +151,7 @@ type QGuiApplication struct {
 //  _commitDataRequest QGuiApplication_commitDataRequest_signal;
 }
 
-
+  // proto:  void QGuiApplication::~QGuiApplication();
 func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -66,7 +165,7 @@ func (this *QGuiApplication) FreeQGuiApplication(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setFont(const QFont & );
 func (this *QGuiApplication) setFont_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -80,7 +179,7 @@ func (this *QGuiApplication) setFont_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QGuiApplication::platformName();
 func (this *QGuiApplication) platformName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -94,7 +193,7 @@ func (this *QGuiApplication) platformName_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QList<QScreen *> QGuiApplication::screens();
 func (this *QGuiApplication) screens_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -108,7 +207,7 @@ func (this *QGuiApplication) screens_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setPalette(const QPalette & pal);
 func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -122,7 +221,7 @@ func (this *QGuiApplication) setPalette_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QInputMethod * QGuiApplication::inputMethod();
 func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,12 +235,12 @@ func (this *QGuiApplication) inputMethod_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QGuiApplication::QGuiApplication(const QGuiApplication & );
 func NewQGuiApplication(args ...interface{}) QGuiApplication {
   return QGuiApplication{}
 }
 
-
+  // proto:  bool QGuiApplication::isSavingSession();
 func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
   // isSavingSession()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +258,7 @@ func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
 
 }
 
-
+  // proto: static QFont QGuiApplication::font();
 func (this *QGuiApplication) font_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -173,7 +272,7 @@ func (this *QGuiApplication) font_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGuiApplication::isSessionRestored();
 func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
   // isSessionRestored()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +290,7 @@ func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QGuiApplication::sessionKey();
 func (this *QGuiApplication) sessionKey(args ...interface{}) () {
   // sessionKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +308,7 @@ func (this *QGuiApplication) sessionKey(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QGuiApplication::desktopSettingsAware();
 func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -223,7 +322,7 @@ func (this *QGuiApplication) desktopSettingsAware_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::sync();
 func (this *QGuiApplication) sync_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -237,7 +336,7 @@ func (this *QGuiApplication) sync_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setQuitOnLastWindowClosed(bool quit);
 func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -251,7 +350,7 @@ func (this *QGuiApplication) setQuitOnLastWindowClosed_s(args ...interface{}) ()
 
 }
 
-
+  // proto: static QScreen * QGuiApplication::primaryScreen();
 func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -265,7 +364,7 @@ func (this *QGuiApplication) primaryScreen_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QCursor * QGuiApplication::overrideCursor();
 func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -279,7 +378,7 @@ func (this *QGuiApplication) overrideCursor_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QIcon QGuiApplication::windowIcon();
 func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,7 +392,7 @@ func (this *QGuiApplication) windowIcon_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QStyleHints * QGuiApplication::styleHints();
 func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -307,7 +406,7 @@ func (this *QGuiApplication) styleHints_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QClipboard * QGuiApplication::clipboard();
 func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,7 +420,7 @@ func (this *QGuiApplication) clipboard_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QPalette QGuiApplication::palette();
 func (this *QGuiApplication) palette_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +434,7 @@ func (this *QGuiApplication) palette_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QGuiApplication::notify(QObject * , QEvent * );
 func (this *QGuiApplication) notify(args ...interface{}) () {
   // notify(class QObject *, class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -355,7 +454,7 @@ func (this *QGuiApplication) notify(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindowList QGuiApplication::topLevelWindows();
 func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -369,7 +468,7 @@ func (this *QGuiApplication) topLevelWindows_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QGuiApplication::isRightToLeft();
 func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -383,7 +482,7 @@ func (this *QGuiApplication) isRightToLeft_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::changeOverrideCursor(const QCursor & );
 func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -397,7 +496,7 @@ func (this *QGuiApplication) changeOverrideCursor_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindowList QGuiApplication::allWindows();
 func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -411,7 +510,7 @@ func (this *QGuiApplication) allWindows_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setOverrideCursor(const QCursor & );
 func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -425,7 +524,7 @@ func (this *QGuiApplication) setOverrideCursor_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setWindowIcon(const QIcon & icon);
 func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -439,7 +538,7 @@ func (this *QGuiApplication) setWindowIcon_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QGuiApplication::sessionId();
 func (this *QGuiApplication) sessionId(args ...interface{}) () {
   // sessionId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -457,7 +556,7 @@ func (this *QGuiApplication) sessionId(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setApplicationDisplayName(const QString & name);
 func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -471,7 +570,7 @@ func (this *QGuiApplication) setApplicationDisplayName_s(args ...interface{}) ()
 
 }
 
-
+  // proto: static bool QGuiApplication::isLeftToRight();
 func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -485,7 +584,7 @@ func (this *QGuiApplication) isLeftToRight_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
 func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -499,7 +598,7 @@ func (this *QGuiApplication) topLevelAt_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
 func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -513,7 +612,7 @@ func (this *QGuiApplication) setDesktopSettingsAware_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindow * QGuiApplication::modalWindow();
 func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -527,7 +626,7 @@ func (this *QGuiApplication) modalWindow_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QGuiApplication::applicationDisplayName();
 func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -541,7 +640,7 @@ func (this *QGuiApplication) applicationDisplayName_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QGuiApplication::exec();
 func (this *QGuiApplication) exec_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -555,7 +654,7 @@ func (this *QGuiApplication) exec_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QGuiApplication::quitOnLastWindowClosed();
 func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -569,7 +668,7 @@ func (this *QGuiApplication) quitOnLastWindowClosed_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QGuiApplication::restoreOverrideCursor();
 func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -583,7 +682,7 @@ func (this *QGuiApplication) restoreOverrideCursor_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QPlatformNativeInterface * QGuiApplication::platformNativeInterface();
 func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -597,7 +696,7 @@ func (this *QGuiApplication) platformNativeInterface_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QGuiApplication::metaObject();
 func (this *QGuiApplication) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -615,7 +714,7 @@ func (this *QGuiApplication) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto: static QObject * QGuiApplication::focusObject();
 func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -629,7 +728,7 @@ func (this *QGuiApplication) focusObject_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QWindow * QGuiApplication::focusWindow();
 func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -643,7 +742,7 @@ func (this *QGuiApplication) focusWindow_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QGuiApplication::devicePixelRatio();
 func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -661,7 +760,7 @@ func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
 
 }
 
-
+  // proto: static QFunctionPointer QGuiApplication::platformFunction(const QByteArray & function);
 func (this *QGuiApplication) platformFunction_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

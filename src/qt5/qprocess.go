@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,138 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QProcess::close();
+extern void _ZN8QProcess5closeEv(void* qthis);
+  // proto:  void QProcess::setEnvironment(const QStringList & environment);
+extern void _ZN8QProcess14setEnvironmentERK11QStringList(void* qthis, void* arg0);
+  // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments);
+extern void _ZN8QProcess13startDetachedERK7QStringRK11QStringList(void* arg0, void* arg1);
+  // proto: static bool QProcess::startDetached(const QString & command);
+extern void _ZN8QProcess13startDetachedERK7QString(void* arg0);
+  // proto:  bool QProcess::atEnd();
+extern void _ZNK8QProcess5atEndEv(void* qthis);
+  // proto: static QStringList QProcess::systemEnvironment();
+extern void _ZN8QProcess17systemEnvironmentEv();
+  // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
+extern void _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment(void* qthis, void* arg0);
+  // proto:  void QProcess::QProcess(const QProcess & );
+extern void* dector_ZN8QProcessC1ERKS_(void* arg0);
+extern void _ZN8QProcessC1ERKS_(void* qthis, void* arg0);
+  // proto:  Q_PID QProcess::pid();
+extern void _ZNK8QProcess3pidEv(void* qthis);
+  // proto:  void QProcess::setArguments(const QStringList & arguments);
+extern void _ZN8QProcess12setArgumentsERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QProcess::~QProcess();
+extern void _ZN8QProcessD0Ev(void* qthis);
+  // proto: static int QProcess::execute(const QString & command);
+extern void _ZN8QProcess7executeERK7QString(void* arg0);
+  // proto:  void QProcess::closeWriteChannel();
+extern void _ZN8QProcess17closeWriteChannelEv(void* qthis);
+  // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid);
+extern void _ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(void* arg0, void* arg1, void* arg2, long long* arg3);
+  // proto:  QProcessEnvironment QProcess::processEnvironment();
+extern void _ZNK8QProcess18processEnvironmentEv(void* qthis);
+  // proto:  QByteArray QProcess::readAllStandardOutput();
+extern void _ZN8QProcess21readAllStandardOutputEv(void* qthis);
+  // proto: static QString QProcess::nullDevice();
+extern void _ZN8QProcess10nullDeviceEv();
+  // proto: static int QProcess::execute(const QString & program, const QStringList & arguments);
+extern void _ZN8QProcess7executeERK7QStringRK11QStringList(void* arg0, void* arg1);
+  // proto:  bool QProcess::waitForBytesWritten(int msecs);
+extern void _ZN8QProcess19waitForBytesWrittenEi(void* qthis, int arg0);
+  // proto:  void QProcess::QProcess(QObject * parent);
+extern void* dector_ZN8QProcessC1EP7QObject(void* arg0);
+extern void _ZN8QProcessC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QString QProcess::program();
+extern void _ZNK8QProcess7programEv(void* qthis);
+  // proto:  qint64 QProcess::processId();
+extern void _ZNK8QProcess9processIdEv(void* qthis);
+  // proto:  QStringList QProcess::arguments();
+extern void _ZNK8QProcess9argumentsEv(void* qthis);
+  // proto:  bool QProcess::isSequential();
+extern void _ZNK8QProcess12isSequentialEv(void* qthis);
+  // proto:  bool QProcess::waitForReadyRead(int msecs);
+extern void _ZN8QProcess16waitForReadyReadEi(void* qthis, int arg0);
+  // proto:  void QProcess::setWorkingDirectory(const QString & dir);
+extern void _ZN8QProcess19setWorkingDirectoryERK7QString(void* qthis, void* arg0);
+  // proto:  void QProcess::terminate();
+extern void _ZN8QProcess9terminateEv(void* qthis);
+  // proto:  void QProcess::kill();
+extern void _ZN8QProcess4killEv(void* qthis);
+  // proto:  qint64 QProcess::bytesAvailable();
+extern void _ZNK8QProcess14bytesAvailableEv(void* qthis);
+  // proto:  const QMetaObject * QProcess::metaObject();
+extern void _ZNK8QProcess10metaObjectEv(void* qthis);
+  // proto:  bool QProcess::waitForStarted(int msecs);
+extern void _ZN8QProcess14waitForStartedEi(void* qthis, int arg0);
+  // proto:  QByteArray QProcess::readAllStandardError();
+extern void _ZN8QProcess20readAllStandardErrorEv(void* qthis);
+  // proto:  int QProcess::exitCode();
+extern void _ZNK8QProcess8exitCodeEv(void* qthis);
+  // proto:  QStringList QProcess::environment();
+extern void _ZNK8QProcess11environmentEv(void* qthis);
+  // proto:  bool QProcess::canReadLine();
+extern void _ZNK8QProcess11canReadLineEv(void* qthis);
+  // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
+extern void _ZN8QProcess24setStandardOutputProcessEPS_(void* qthis, void* arg0);
+  // proto:  bool QProcess::waitForFinished(int msecs);
+extern void _ZN8QProcess15waitForFinishedEi(void* qthis, int arg0);
+  // proto:  qint64 QProcess::bytesToWrite();
+extern void _ZNK8QProcess12bytesToWriteEv(void* qthis);
+  // proto:  QString QProcess::workingDirectory();
+extern void _ZNK8QProcess16workingDirectoryEv(void* qthis);
+  // proto:  void QProcess::setProgram(const QString & program);
+extern void _ZN8QProcess10setProgramERK7QString(void* qthis, void* arg0);
+  // proto:  void QProcess::setStandardInputFile(const QString & fileName);
+extern void _ZN8QProcess20setStandardInputFileERK7QString(void* qthis, void* arg0);
+  // proto:  bool QProcessEnvironment::contains(const QString & name);
+extern void _ZNK19QProcessEnvironment8containsERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QProcessEnvironment::keys();
+extern void _ZNK19QProcessEnvironment4keysEv(void* qthis);
+  // proto:  void QProcessEnvironment::remove(const QString & name);
+extern void _ZN19QProcessEnvironment6removeERK7QString(void* qthis, void* arg0);
+  // proto:  void QProcessEnvironment::clear();
+extern void _ZN19QProcessEnvironment5clearEv(void* qthis);
+  // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
+extern void _ZNK19QProcessEnvironment5valueERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QProcessEnvironment::isEmpty();
+extern void _ZNK19QProcessEnvironment7isEmptyEv(void* qthis);
+  // proto:  void QProcessEnvironment::~QProcessEnvironment();
+extern void _ZN19QProcessEnvironmentD0Ev(void* qthis);
+  // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
+extern void demth_ZN19QProcessEnvironment4swapERS_(void* qthis, void* arg0);
+  // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
+extern void* dector_ZN19QProcessEnvironmentC1ERKS_(void* arg0);
+extern void _ZN19QProcessEnvironmentC1ERKS_(void* qthis, void* arg0);
+  // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
+extern void _ZN19QProcessEnvironment17systemEnvironmentEv();
+  // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
+extern void _ZN19QProcessEnvironment6insertERK7QStringS2_(void* qthis, void* arg0, void* arg1);
+  // proto:  QStringList QProcessEnvironment::toStringList();
+extern void _ZNK19QProcessEnvironment12toStringListEv(void* qthis);
+  // proto:  void QProcessEnvironment::QProcessEnvironment();
+extern void* dector_ZN19QProcessEnvironmentC1Ev();
+extern void _ZN19QProcessEnvironmentC1Ev(void* qthis);
+  // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
+extern void _ZN19QProcessEnvironment6insertERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QProcess)=1
 type QProcess struct {
   /*qbase*/ QIODevice;
@@ -53,7 +176,7 @@ type QProcessEnvironment struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QProcess::close();
 func (this *QProcess) close(args ...interface{}) () {
   // close()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +194,7 @@ func (this *QProcess) close(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setEnvironment(const QStringList & environment);
 func (this *QProcess) setEnvironment(args ...interface{}) () {
   // setEnvironment(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -90,7 +213,7 @@ func (this *QProcess) setEnvironment(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments);
 func (this *QProcess) startDetached_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -104,7 +227,7 @@ func (this *QProcess) startDetached_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::atEnd();
 func (this *QProcess) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +245,7 @@ func (this *QProcess) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto: static QStringList QProcess::systemEnvironment();
 func (this *QProcess) systemEnvironment_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -136,7 +259,7 @@ func (this *QProcess) systemEnvironment_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setProcessEnvironment(const QProcessEnvironment & environment);
 func (this *QProcess) setProcessEnvironment(args ...interface{}) () {
   // setProcessEnvironment(const class QProcessEnvironment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,12 +278,12 @@ func (this *QProcess) setProcessEnvironment(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::QProcess(const QProcess & );
 func NewQProcess(args ...interface{}) QProcess {
   return QProcess{}
 }
 
-
+  // proto:  Q_PID QProcess::pid();
 func (this *QProcess) pid(args ...interface{}) () {
   // pid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -178,7 +301,7 @@ func (this *QProcess) pid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setArguments(const QStringList & arguments);
 func (this *QProcess) setArguments(args ...interface{}) () {
   // setArguments(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +320,7 @@ func (this *QProcess) setArguments(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::~QProcess();
 func (this *QProcess) FreeQProcess(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -211,7 +334,7 @@ func (this *QProcess) FreeQProcess(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QProcess::execute(const QString & command);
 func (this *QProcess) execute_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,7 +348,7 @@ func (this *QProcess) execute_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::closeWriteChannel();
 func (this *QProcess) closeWriteChannel(args ...interface{}) () {
   // closeWriteChannel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -243,7 +366,7 @@ func (this *QProcess) closeWriteChannel(args ...interface{}) () {
 
 }
 
-
+  // proto:  QProcessEnvironment QProcess::processEnvironment();
 func (this *QProcess) processEnvironment(args ...interface{}) () {
   // processEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,7 +384,7 @@ func (this *QProcess) processEnvironment(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QProcess::readAllStandardOutput();
 func (this *QProcess) readAllStandardOutput(args ...interface{}) () {
   // readAllStandardOutput()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -279,7 +402,7 @@ func (this *QProcess) readAllStandardOutput(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QProcess::nullDevice();
 func (this *QProcess) nullDevice_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,7 +416,7 @@ func (this *QProcess) nullDevice_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::waitForBytesWritten(int msecs);
 func (this *QProcess) waitForBytesWritten(args ...interface{}) () {
   // waitForBytesWritten(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -312,7 +435,7 @@ func (this *QProcess) waitForBytesWritten(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QProcess::program();
 func (this *QProcess) program(args ...interface{}) () {
   // program()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -330,7 +453,7 @@ func (this *QProcess) program(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QProcess::processId();
 func (this *QProcess) processId(args ...interface{}) () {
   // processId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -348,7 +471,7 @@ func (this *QProcess) processId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QProcess::arguments();
 func (this *QProcess) arguments(args ...interface{}) () {
   // arguments()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -366,7 +489,7 @@ func (this *QProcess) arguments(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::isSequential();
 func (this *QProcess) isSequential(args ...interface{}) () {
   // isSequential()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -384,7 +507,7 @@ func (this *QProcess) isSequential(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::waitForReadyRead(int msecs);
 func (this *QProcess) waitForReadyRead(args ...interface{}) () {
   // waitForReadyRead(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -403,7 +526,7 @@ func (this *QProcess) waitForReadyRead(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setWorkingDirectory(const QString & dir);
 func (this *QProcess) setWorkingDirectory(args ...interface{}) () {
   // setWorkingDirectory(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -422,7 +545,7 @@ func (this *QProcess) setWorkingDirectory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::terminate();
 func (this *QProcess) terminate(args ...interface{}) () {
   // terminate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -440,7 +563,7 @@ func (this *QProcess) terminate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::kill();
 func (this *QProcess) kill(args ...interface{}) () {
   // kill()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -458,7 +581,7 @@ func (this *QProcess) kill(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QProcess::bytesAvailable();
 func (this *QProcess) bytesAvailable(args ...interface{}) () {
   // bytesAvailable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -476,7 +599,7 @@ func (this *QProcess) bytesAvailable(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QProcess::metaObject();
 func (this *QProcess) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -494,7 +617,7 @@ func (this *QProcess) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::waitForStarted(int msecs);
 func (this *QProcess) waitForStarted(args ...interface{}) () {
   // waitForStarted(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -513,7 +636,7 @@ func (this *QProcess) waitForStarted(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QProcess::readAllStandardError();
 func (this *QProcess) readAllStandardError(args ...interface{}) () {
   // readAllStandardError()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -531,7 +654,7 @@ func (this *QProcess) readAllStandardError(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QProcess::exitCode();
 func (this *QProcess) exitCode(args ...interface{}) () {
   // exitCode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -549,7 +672,7 @@ func (this *QProcess) exitCode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QProcess::environment();
 func (this *QProcess) environment(args ...interface{}) () {
   // environment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -567,7 +690,7 @@ func (this *QProcess) environment(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::canReadLine();
 func (this *QProcess) canReadLine(args ...interface{}) () {
   // canReadLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -585,7 +708,7 @@ func (this *QProcess) canReadLine(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
 func (this *QProcess) setStandardOutputProcess(args ...interface{}) () {
   // setStandardOutputProcess(class QProcess *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -604,7 +727,7 @@ func (this *QProcess) setStandardOutputProcess(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcess::waitForFinished(int msecs);
 func (this *QProcess) waitForFinished(args ...interface{}) () {
   // waitForFinished(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -623,7 +746,7 @@ func (this *QProcess) waitForFinished(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QProcess::bytesToWrite();
 func (this *QProcess) bytesToWrite(args ...interface{}) () {
   // bytesToWrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -641,7 +764,7 @@ func (this *QProcess) bytesToWrite(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QProcess::workingDirectory();
 func (this *QProcess) workingDirectory(args ...interface{}) () {
   // workingDirectory()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -659,7 +782,7 @@ func (this *QProcess) workingDirectory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setProgram(const QString & program);
 func (this *QProcess) setProgram(args ...interface{}) () {
   // setProgram(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -678,7 +801,7 @@ func (this *QProcess) setProgram(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcess::setStandardInputFile(const QString & fileName);
 func (this *QProcess) setStandardInputFile(args ...interface{}) () {
   // setStandardInputFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -697,7 +820,7 @@ func (this *QProcess) setStandardInputFile(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcessEnvironment::contains(const QString & name);
 func (this *QProcessEnvironment) contains(args ...interface{}) () {
   // contains(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -716,7 +839,7 @@ func (this *QProcessEnvironment) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QProcessEnvironment::keys();
 func (this *QProcessEnvironment) keys(args ...interface{}) () {
   // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -734,7 +857,7 @@ func (this *QProcessEnvironment) keys(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcessEnvironment::remove(const QString & name);
 func (this *QProcessEnvironment) remove(args ...interface{}) () {
   // remove(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +876,7 @@ func (this *QProcessEnvironment) remove(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcessEnvironment::clear();
 func (this *QProcessEnvironment) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -771,7 +894,7 @@ func (this *QProcessEnvironment) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QProcessEnvironment::value(const QString & name, const QString & defaultValue);
 func (this *QProcessEnvironment) value(args ...interface{}) () {
   // value(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -791,7 +914,7 @@ func (this *QProcessEnvironment) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QProcessEnvironment::isEmpty();
 func (this *QProcessEnvironment) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -809,7 +932,7 @@ func (this *QProcessEnvironment) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcessEnvironment::~QProcessEnvironment();
 func (this *QProcessEnvironment) FreeQProcessEnvironment(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -823,7 +946,7 @@ func (this *QProcessEnvironment) FreeQProcessEnvironment(args ...interface{}) ()
 
 }
 
-
+  // proto:  void QProcessEnvironment::swap(QProcessEnvironment & other);
 func (this *QProcessEnvironment) swap(args ...interface{}) () {
   // swap(class QProcessEnvironment &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -842,12 +965,12 @@ func (this *QProcessEnvironment) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
 func NewQProcessEnvironment(args ...interface{}) QProcessEnvironment {
   return QProcessEnvironment{}
 }
 
-
+  // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
 func (this *QProcessEnvironment) systemEnvironment_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -861,7 +984,7 @@ func (this *QProcessEnvironment) systemEnvironment_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QProcessEnvironment::insert(const QString & name, const QString & value);
 func (this *QProcessEnvironment) insert(args ...interface{}) () {
   // insert(const class QString &, const class QString &)
   // insert(const class QProcessEnvironment &)
@@ -886,7 +1009,7 @@ func (this *QProcessEnvironment) insert(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QProcessEnvironment::toStringList();
 func (this *QProcessEnvironment) toStringList(args ...interface{}) () {
   // toStringList()
   var vtys = make(map[int32]map[int32]reflect.Type)

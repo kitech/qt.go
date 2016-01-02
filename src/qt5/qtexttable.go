@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,107 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
+extern void* dector_ZN14QTextTableCellC1ERKS_(void* arg0);
+extern void _ZN14QTextTableCellC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
+extern void _ZN14QTextTableCell9setFormatERK15QTextCharFormat(void* qthis, void* arg0);
+  // proto:  int QTextTableCell::lastPosition();
+extern void _ZNK14QTextTableCell12lastPositionEv(void* qthis);
+  // proto:  void QTextTableCell::~QTextTableCell();
+extern void _ZN14QTextTableCellD0Ev(void* qthis);
+  // proto:  int QTextTableCell::rowSpan();
+extern void _ZNK14QTextTableCell7rowSpanEv(void* qthis);
+  // proto:  int QTextTableCell::firstPosition();
+extern void _ZNK14QTextTableCell13firstPositionEv(void* qthis);
+  // proto:  void QTextTableCell::QTextTableCell(const QTextTable * t, int f);
+extern void* dector_ZN14QTextTableCellC1EPK10QTextTablei(void* arg0, int arg1);
+extern void _ZN14QTextTableCellC1EPK10QTextTablei(void* qthis, void* arg0, int arg1);
+  // proto:  int QTextTableCell::tableCellFormatIndex();
+extern void _ZNK14QTextTableCell20tableCellFormatIndexEv(void* qthis);
+  // proto:  int QTextTableCell::columnSpan();
+extern void _ZNK14QTextTableCell10columnSpanEv(void* qthis);
+  // proto:  QTextCharFormat QTextTableCell::format();
+extern void _ZNK14QTextTableCell6formatEv(void* qthis);
+  // proto:  int QTextTableCell::row();
+extern void _ZNK14QTextTableCell3rowEv(void* qthis);
+  // proto:  bool QTextTableCell::isValid();
+extern void demth_ZNK14QTextTableCell7isValidEv(void* qthis);
+  // proto:  QTextCursor QTextTableCell::lastCursorPosition();
+extern void _ZNK14QTextTableCell18lastCursorPositionEv(void* qthis);
+  // proto:  int QTextTableCell::column();
+extern void _ZNK14QTextTableCell6columnEv(void* qthis);
+  // proto:  QTextCursor QTextTableCell::firstCursorPosition();
+extern void _ZNK14QTextTableCell19firstCursorPositionEv(void* qthis);
+  // proto:  void QTextTableCell::QTextTableCell();
+extern void* dector_ZN14QTextTableCellC1Ev();
+extern void _ZN14QTextTableCellC1Ev(void* qthis);
+  // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
+extern void _ZNK10QTextTable6cellAtEii(void* qthis, int arg0, int arg1);
+  // proto:  int QTextTable::rows();
+extern void _ZNK10QTextTable4rowsEv(void* qthis);
+  // proto:  void QTextTable::removeRows(int pos, int num);
+extern void _ZN10QTextTable10removeRowsEii(void* qthis, int arg0, int arg1);
+  // proto:  int QTextTable::columns();
+extern void _ZNK10QTextTable7columnsEv(void* qthis);
+  // proto:  void QTextTable::appendRows(int count);
+extern void _ZN10QTextTable10appendRowsEi(void* qthis, int arg0);
+  // proto:  void QTextTable::resize(int rows, int cols);
+extern void _ZN10QTextTable6resizeEii(void* qthis, int arg0, int arg1);
+  // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
+extern void _ZNK10QTextTable6cellAtERK11QTextCursor(void* qthis, void* arg0);
+  // proto:  void QTextTable::QTextTable(const QTextTable & );
+extern void* dector_ZN10QTextTableC1ERKS_(void* arg0);
+extern void _ZN10QTextTableC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
+extern void _ZN10QTextTable9setFormatERK16QTextTableFormat(void* qthis, void* arg0);
+  // proto:  void QTextTable::insertColumns(int pos, int num);
+extern void _ZN10QTextTable13insertColumnsEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
+extern void _ZN10QTextTable9splitCellEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
+extern void _ZN10QTextTable10mergeCellsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QTextTable::insertRows(int pos, int num);
+extern void _ZN10QTextTable10insertRowsEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTextTable::~QTextTable();
+extern void _ZN10QTextTableD0Ev(void* qthis);
+  // proto:  void QTextTable::QTextTable(QTextDocument * doc);
+extern void* dector_ZN10QTextTableC1EP13QTextDocument(void* arg0);
+extern void _ZN10QTextTableC1EP13QTextDocument(void* qthis, void* arg0);
+  // proto:  QTextTableCell QTextTable::cellAt(int position);
+extern void _ZNK10QTextTable6cellAtEi(void* qthis, int arg0);
+  // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
+extern void _ZNK10QTextTable8rowStartERK11QTextCursor(void* qthis, void* arg0);
+  // proto:  QTextTableFormat QTextTable::format();
+extern void _ZNK10QTextTable6formatEv(void* qthis);
+  // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
+extern void _ZNK10QTextTable6rowEndERK11QTextCursor(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QTextTable::metaObject();
+extern void _ZNK10QTextTable10metaObjectEv(void* qthis);
+  // proto:  void QTextTable::removeColumns(int pos, int num);
+extern void _ZN10QTextTable13removeColumnsEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTextTable::appendColumns(int count);
+extern void _ZN10QTextTable13appendColumnsEi(void* qthis, int arg0);
+  // proto:  void QTextTable::mergeCells(const QTextCursor & cursor);
+extern void _ZN10QTextTable10mergeCellsERK11QTextCursor(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextTableCell)=16
 type QTextTableCell struct {
   // qbase: None;
@@ -47,12 +139,12 @@ type QTextTable struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
 func NewQTextTableCell(args ...interface{}) QTextTableCell {
   return QTextTableCell{}
 }
 
-
+  // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
 func (this *QTextTableCell) setFormat(args ...interface{}) () {
   // setFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,7 +163,7 @@ func (this *QTextTableCell) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::lastPosition();
 func (this *QTextTableCell) lastPosition(args ...interface{}) () {
   // lastPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +181,7 @@ func (this *QTextTableCell) lastPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCell::~QTextTableCell();
 func (this *QTextTableCell) FreeQTextTableCell(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,7 +195,7 @@ func (this *QTextTableCell) FreeQTextTableCell(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::rowSpan();
 func (this *QTextTableCell) rowSpan(args ...interface{}) () {
   // rowSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +213,7 @@ func (this *QTextTableCell) rowSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::firstPosition();
 func (this *QTextTableCell) firstPosition(args ...interface{}) () {
   // firstPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,7 +231,7 @@ func (this *QTextTableCell) firstPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::tableCellFormatIndex();
 func (this *QTextTableCell) tableCellFormatIndex(args ...interface{}) () {
   // tableCellFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -157,7 +249,7 @@ func (this *QTextTableCell) tableCellFormatIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::columnSpan();
 func (this *QTextTableCell) columnSpan(args ...interface{}) () {
   // columnSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,7 +267,7 @@ func (this *QTextTableCell) columnSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextTableCell::format();
 func (this *QTextTableCell) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +285,7 @@ func (this *QTextTableCell) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::row();
 func (this *QTextTableCell) row(args ...interface{}) () {
   // row()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +303,7 @@ func (this *QTextTableCell) row(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextTableCell::isValid();
 func (this *QTextTableCell) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +321,7 @@ func (this *QTextTableCell) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextTableCell::lastCursorPosition();
 func (this *QTextTableCell) lastCursorPosition(args ...interface{}) () {
   // lastCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +339,7 @@ func (this *QTextTableCell) lastCursorPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableCell::column();
 func (this *QTextTableCell) column(args ...interface{}) () {
   // column()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +357,7 @@ func (this *QTextTableCell) column(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextTableCell::firstCursorPosition();
 func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
   // firstCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +375,7 @@ func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
 func (this *QTextTable) cellAt(args ...interface{}) () {
   // cellAt(int, int)
   // cellAt(const class QTextCursor &)
@@ -313,7 +405,7 @@ func (this *QTextTable) cellAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTable::rows();
 func (this *QTextTable) rows(args ...interface{}) () {
   // rows()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -331,7 +423,7 @@ func (this *QTextTable) rows(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::removeRows(int pos, int num);
 func (this *QTextTable) removeRows(args ...interface{}) () {
   // removeRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,7 +443,7 @@ func (this *QTextTable) removeRows(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTable::columns();
 func (this *QTextTable) columns(args ...interface{}) () {
   // columns()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -369,7 +461,7 @@ func (this *QTextTable) columns(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::appendRows(int count);
 func (this *QTextTable) appendRows(args ...interface{}) () {
   // appendRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -388,7 +480,7 @@ func (this *QTextTable) appendRows(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::resize(int rows, int cols);
 func (this *QTextTable) resize(args ...interface{}) () {
   // resize(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -408,12 +500,12 @@ func (this *QTextTable) resize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::QTextTable(const QTextTable & );
 func NewQTextTable(args ...interface{}) QTextTable {
   return QTextTable{}
 }
 
-
+  // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
 func (this *QTextTable) setFormat(args ...interface{}) () {
   // setFormat(const class QTextTableFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +524,7 @@ func (this *QTextTable) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::insertColumns(int pos, int num);
 func (this *QTextTable) insertColumns(args ...interface{}) () {
   // insertColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -452,7 +544,7 @@ func (this *QTextTable) insertColumns(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
 func (this *QTextTable) splitCell(args ...interface{}) () {
   // splitCell(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -474,7 +566,7 @@ func (this *QTextTable) splitCell(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
 func (this *QTextTable) mergeCells(args ...interface{}) () {
   // mergeCells(int, int, int, int)
   // mergeCells(const class QTextCursor &)
@@ -501,7 +593,7 @@ func (this *QTextTable) mergeCells(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::insertRows(int pos, int num);
 func (this *QTextTable) insertRows(args ...interface{}) () {
   // insertRows(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +613,7 @@ func (this *QTextTable) insertRows(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::~QTextTable();
 func (this *QTextTable) FreeQTextTable(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -535,7 +627,7 @@ func (this *QTextTable) FreeQTextTable(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
 func (this *QTextTable) rowStart(args ...interface{}) () {
   // rowStart(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -554,7 +646,7 @@ func (this *QTextTable) rowStart(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTableFormat QTextTable::format();
 func (this *QTextTable) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -572,7 +664,7 @@ func (this *QTextTable) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
 func (this *QTextTable) rowEnd(args ...interface{}) () {
   // rowEnd(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -591,7 +683,7 @@ func (this *QTextTable) rowEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTextTable::metaObject();
 func (this *QTextTable) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -609,7 +701,7 @@ func (this *QTextTable) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::removeColumns(int pos, int num);
 func (this *QTextTable) removeColumns(args ...interface{}) () {
   // removeColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -629,7 +721,7 @@ func (this *QTextTable) removeColumns(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTable::appendColumns(int count);
 func (this *QTextTable) appendColumns(args ...interface{}) () {
   // appendColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

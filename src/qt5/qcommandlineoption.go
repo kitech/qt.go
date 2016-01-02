@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,66 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QCommandLineOption::setValueName(const QString & name);
+extern void _ZN18QCommandLineOption12setValueNameERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QCommandLineOption::names();
+extern void _ZNK18QCommandLineOption5namesEv(void* qthis);
+  // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
+extern void* dector_ZN18QCommandLineOptionC1ERKS_(void* arg0);
+extern void _ZN18QCommandLineOptionC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QCommandLineOption::setDescription(const QString & description);
+extern void _ZN18QCommandLineOption14setDescriptionERK7QString(void* qthis, void* arg0);
+  // proto:  void QCommandLineOption::QCommandLineOption(const QString & name, const QString & description, const QString & valueName, const QString & defaultValue);
+extern void* dector_ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(void* arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN18QCommandLineOptionC1ERK7QStringS2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  QString QCommandLineOption::valueName();
+extern void _ZNK18QCommandLineOption9valueNameEv(void* qthis);
+  // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names, const QString & description, const QString & valueName, const QString & defaultValue);
+extern void* dector_ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(void* arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN18QCommandLineOptionC1ERK11QStringListRK7QStringS5_S5_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
+extern void demth_ZN18QCommandLineOption4swapERS_(void* qthis, void* arg0);
+  // proto:  QString QCommandLineOption::description();
+extern void _ZNK18QCommandLineOption11descriptionEv(void* qthis);
+  // proto:  void QCommandLineOption::~QCommandLineOption();
+extern void _ZN18QCommandLineOptionD0Ev(void* qthis);
+  // proto:  void QCommandLineOption::QCommandLineOption(const QStringList & names);
+extern void* dector_ZN18QCommandLineOptionC1ERK11QStringList(void* arg0);
+extern void _ZN18QCommandLineOptionC1ERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QCommandLineOption::setDefaultValue(const QString & defaultValue);
+extern void _ZN18QCommandLineOption15setDefaultValueERK7QString(void* qthis, void* arg0);
+  // proto:  void QCommandLineOption::setDefaultValues(const QStringList & defaultValues);
+extern void _ZN18QCommandLineOption16setDefaultValuesERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QCommandLineOption::QCommandLineOption(const QString & name);
+extern void* dector_ZN18QCommandLineOptionC1ERK7QString(void* arg0);
+extern void _ZN18QCommandLineOptionC1ERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QCommandLineOption::defaultValues();
+extern void _ZNK18QCommandLineOption13defaultValuesEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QCommandLineOption)=1
 type QCommandLineOption struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QCommandLineOption::setValueName(const QString & name);
 func (this *QCommandLineOption) setValueName(args ...interface{}) () {
   // setValueName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -60,7 +104,7 @@ func (this *QCommandLineOption) setValueName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QCommandLineOption::names();
 func (this *QCommandLineOption) names(args ...interface{}) () {
   // names()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,12 +122,12 @@ func (this *QCommandLineOption) names(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLineOption::QCommandLineOption(const QCommandLineOption & other);
 func NewQCommandLineOption(args ...interface{}) QCommandLineOption {
   return QCommandLineOption{}
 }
 
-
+  // proto:  void QCommandLineOption::setDescription(const QString & description);
 func (this *QCommandLineOption) setDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +146,7 @@ func (this *QCommandLineOption) setDescription(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCommandLineOption::valueName();
 func (this *QCommandLineOption) valueName(args ...interface{}) () {
   // valueName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -120,7 +164,7 @@ func (this *QCommandLineOption) valueName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLineOption::swap(QCommandLineOption & other);
 func (this *QCommandLineOption) swap(args ...interface{}) () {
   // swap(class QCommandLineOption &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,7 +183,7 @@ func (this *QCommandLineOption) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCommandLineOption::description();
 func (this *QCommandLineOption) description(args ...interface{}) () {
   // description()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -157,7 +201,7 @@ func (this *QCommandLineOption) description(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLineOption::~QCommandLineOption();
 func (this *QCommandLineOption) FreeQCommandLineOption(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -171,7 +215,7 @@ func (this *QCommandLineOption) FreeQCommandLineOption(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLineOption::setDefaultValue(const QString & defaultValue);
 func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
   // setDefaultValue(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -190,7 +234,7 @@ func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLineOption::setDefaultValues(const QStringList & defaultValues);
 func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
   // setDefaultValues(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +253,7 @@ func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QCommandLineOption::defaultValues();
 func (this *QCommandLineOption) defaultValues(args ...interface{}) () {
   // defaultValues()
   var vtys = make(map[int32]map[int32]reflect.Type)

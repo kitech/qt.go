@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,71 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QThread::QThread(QObject * parent);
+extern void* dector_ZN7QThreadC1EP7QObject(void* arg0);
+extern void _ZN7QThreadC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+extern void _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QThread::metaObject();
+extern void _ZNK7QThread10metaObjectEv(void* qthis);
+  // proto: static void QThread::yieldCurrentThread();
+extern void _ZN7QThread18yieldCurrentThreadEv();
+  // proto:  bool QThread::isInterruptionRequested();
+extern void _ZNK7QThread23isInterruptionRequestedEv(void* qthis);
+  // proto: static void QThread::msleep(unsigned long );
+extern void _ZN7QThread6msleepEm(unsigned long arg0);
+  // proto:  void QThread::requestInterruption();
+extern void _ZN7QThread19requestInterruptionEv(void* qthis);
+  // proto:  void QThread::exit(int retcode);
+extern void _ZN7QThread4exitEi(void* qthis, int arg0);
+  // proto:  bool QThread::event(QEvent * event);
+extern void _ZN7QThread5eventEP6QEvent(void* qthis, void* arg0);
+  // proto:  uint QThread::stackSize();
+extern void _ZNK7QThread9stackSizeEv(void* qthis);
+  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
+extern void _ZNK7QThread15eventDispatcherEv(void* qthis);
+  // proto:  void QThread::setStackSize(uint stackSize);
+extern void _ZN7QThread12setStackSizeEj(void* qthis, unsigned int arg0);
+  // proto:  bool QThread::isFinished();
+extern void _ZNK7QThread10isFinishedEv(void* qthis);
+  // proto: static void QThread::sleep(unsigned long );
+extern void _ZN7QThread5sleepEm(unsigned long arg0);
+  // proto: static void QThread::usleep(unsigned long );
+extern void _ZN7QThread6usleepEm(unsigned long arg0);
+  // proto: static int QThread::idealThreadCount();
+extern void _ZN7QThread16idealThreadCountEv();
+  // proto:  bool QThread::wait(unsigned long time);
+extern void _ZN7QThread4waitEm(void* qthis, unsigned long arg0);
+  // proto: static QThread * QThread::currentThread();
+extern void _ZN7QThread13currentThreadEv();
+  // proto:  bool QThread::isRunning();
+extern void _ZNK7QThread9isRunningEv(void* qthis);
+  // proto:  void QThread::terminate();
+extern void _ZN7QThread9terminateEv(void* qthis);
+  // proto:  void QThread::~QThread();
+extern void _ZN7QThreadD0Ev(void* qthis);
+  // proto:  void QThread::quit();
+extern void _ZN7QThread4quitEv(void* qthis);
+  // proto:  int QThread::loopLevel();
+extern void _ZNK7QThread9loopLevelEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QThread)=1
 type QThread struct {
   /*qbase*/ QObject;
@@ -43,12 +99,12 @@ type QThread struct {
 //  _finished QThread_finished_signal;
 }
 
-
+  // proto:  void QThread::QThread(QObject * parent);
 func NewQThread(args ...interface{}) QThread {
   return QThread{}
 }
 
-
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
 func (this *QThread) setEventDispatcher(args ...interface{}) () {
   // setEventDispatcher(class QAbstractEventDispatcher *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -67,7 +123,7 @@ func (this *QThread) setEventDispatcher(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QThread::metaObject();
 func (this *QThread) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +141,7 @@ func (this *QThread) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QThread::yieldCurrentThread();
 func (this *QThread) yieldCurrentThread_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -99,7 +155,7 @@ func (this *QThread) yieldCurrentThread_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QThread::isInterruptionRequested();
 func (this *QThread) isInterruptionRequested(args ...interface{}) () {
   // isInterruptionRequested()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +173,7 @@ func (this *QThread) isInterruptionRequested(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QThread::msleep(unsigned long );
 func (this *QThread) msleep_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -131,7 +187,7 @@ func (this *QThread) msleep_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::requestInterruption();
 func (this *QThread) requestInterruption(args ...interface{}) () {
   // requestInterruption()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -149,7 +205,7 @@ func (this *QThread) requestInterruption(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::exit(int retcode);
 func (this *QThread) exit(args ...interface{}) () {
   // exit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -168,7 +224,7 @@ func (this *QThread) exit(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QThread::event(QEvent * event);
 func (this *QThread) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -187,7 +243,7 @@ func (this *QThread) event(args ...interface{}) () {
 
 }
 
-
+  // proto:  uint QThread::stackSize();
 func (this *QThread) stackSize(args ...interface{}) () {
   // stackSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +261,7 @@ func (this *QThread) stackSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
 func (this *QThread) eventDispatcher(args ...interface{}) () {
   // eventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +279,7 @@ func (this *QThread) eventDispatcher(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::setStackSize(uint stackSize);
 func (this *QThread) setStackSize(args ...interface{}) () {
   // setStackSize(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -242,7 +298,7 @@ func (this *QThread) setStackSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QThread::isFinished();
 func (this *QThread) isFinished(args ...interface{}) () {
   // isFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +316,7 @@ func (this *QThread) isFinished(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QThread::sleep(unsigned long );
 func (this *QThread) sleep_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -274,7 +330,7 @@ func (this *QThread) sleep_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QThread::usleep(unsigned long );
 func (this *QThread) usleep_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -288,7 +344,7 @@ func (this *QThread) usleep_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QThread::idealThreadCount();
 func (this *QThread) idealThreadCount_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -302,7 +358,7 @@ func (this *QThread) idealThreadCount_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QThread::wait(unsigned long time);
 func (this *QThread) wait(args ...interface{}) () {
   // wait(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -321,7 +377,7 @@ func (this *QThread) wait(args ...interface{}) () {
 
 }
 
-
+  // proto: static QThread * QThread::currentThread();
 func (this *QThread) currentThread_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -335,7 +391,7 @@ func (this *QThread) currentThread_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QThread::isRunning();
 func (this *QThread) isRunning(args ...interface{}) () {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -353,7 +409,7 @@ func (this *QThread) isRunning(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::terminate();
 func (this *QThread) terminate(args ...interface{}) () {
   // terminate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,7 +427,7 @@ func (this *QThread) terminate(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::~QThread();
 func (this *QThread) FreeQThread(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -385,7 +441,7 @@ func (this *QThread) FreeQThread(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QThread::quit();
 func (this *QThread) quit(args ...interface{}) () {
   // quit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -403,7 +459,7 @@ func (this *QThread) quit(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QThread::loopLevel();
 func (this *QThread) loopLevel(args ...interface{}) () {
   // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)

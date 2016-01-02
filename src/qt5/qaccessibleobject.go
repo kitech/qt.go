@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,55 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QAccessibleApplication::QAccessibleApplication();
+extern void* dector_ZN22QAccessibleApplicationC1Ev();
+extern void _ZN22QAccessibleApplicationC1Ev(void* qthis);
+  // proto:  QWindow * QAccessibleApplication::window();
+extern void _ZNK22QAccessibleApplication6windowEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
+extern void _ZNK22QAccessibleApplication5childEi(void* qthis, int arg0);
+  // proto:  int QAccessibleApplication::childCount();
+extern void _ZNK22QAccessibleApplication10childCountEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleApplication::parent();
+extern void _ZNK22QAccessibleApplication6parentEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
+extern void _ZNK22QAccessibleApplication10focusChildEv(void* qthis);
+  // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
+extern void _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(void* qthis, void* arg0);
+  // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
+extern void* dector_ZN17QAccessibleObjectC1EP7QObject(void* arg0);
+extern void _ZN17QAccessibleObjectC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QObject * QAccessibleObject::object();
+extern void _ZNK17QAccessibleObject6objectEv(void* qthis);
+  // proto:  QRect QAccessibleObject::rect();
+extern void _ZNK17QAccessibleObject4rectEv(void* qthis);
+  // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
+extern void _ZNK17QAccessibleObject7childAtEii(void* qthis, int arg0, int arg1);
+  // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
+extern void* dector_ZN17QAccessibleObjectC1ERKS_(void* arg0);
+extern void _ZN17QAccessibleObjectC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QAccessibleObject::isValid();
+extern void _ZNK17QAccessibleObject7isValidEv(void* qthis);
+  // proto:  void QAccessibleObject::~QAccessibleObject();
+extern void _ZN17QAccessibleObjectD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAccessibleApplication)=16
 type QAccessibleApplication struct {
   /*qbase*/ QAccessibleObject;
@@ -47,12 +87,12 @@ type QAccessibleObject struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QAccessibleApplication::QAccessibleApplication();
 func NewQAccessibleApplication(args ...interface{}) QAccessibleApplication {
   return QAccessibleApplication{}
 }
 
-
+  // proto:  QWindow * QAccessibleApplication::window();
 func (this *QAccessibleApplication) window(args ...interface{}) () {
   // window()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -70,7 +110,7 @@ func (this *QAccessibleApplication) window(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
 func (this *QAccessibleApplication) child(args ...interface{}) () {
   // child(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,7 +129,7 @@ func (this *QAccessibleApplication) child(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAccessibleApplication::childCount();
 func (this *QAccessibleApplication) childCount(args ...interface{}) () {
   // childCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +147,7 @@ func (this *QAccessibleApplication) childCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleApplication::parent();
 func (this *QAccessibleApplication) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +165,7 @@ func (this *QAccessibleApplication) parent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
 func (this *QAccessibleApplication) focusChild(args ...interface{}) () {
   // focusChild()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,7 +183,7 @@ func (this *QAccessibleApplication) focusChild(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
 func (this *QAccessibleApplication) indexOfChild(args ...interface{}) () {
   // indexOfChild(const class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,12 +202,12 @@ func (this *QAccessibleApplication) indexOfChild(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
 func NewQAccessibleObject(args ...interface{}) QAccessibleObject {
   return QAccessibleObject{}
 }
 
-
+  // proto:  QObject * QAccessibleObject::object();
 func (this *QAccessibleObject) object(args ...interface{}) () {
   // object()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -185,7 +225,7 @@ func (this *QAccessibleObject) object(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QAccessibleObject::rect();
 func (this *QAccessibleObject) rect(args ...interface{}) () {
   // rect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +243,7 @@ func (this *QAccessibleObject) rect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
 func (this *QAccessibleObject) childAt(args ...interface{}) () {
   // childAt(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -223,7 +263,7 @@ func (this *QAccessibleObject) childAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAccessibleObject::isValid();
 func (this *QAccessibleObject) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -241,7 +281,7 @@ func (this *QAccessibleObject) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAccessibleObject::~QAccessibleObject();
 func (this *QAccessibleObject) FreeQAccessibleObject(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

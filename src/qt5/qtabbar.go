@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,124 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  bool QTabBar::usesScrollButtons();
+extern void _ZNK7QTabBar17usesScrollButtonsEv(void* qthis);
+  // proto:  bool QTabBar::autoHide();
+extern void _ZNK7QTabBar8autoHideEv(void* qthis);
+  // proto:  QString QTabBar::tabToolTip(int index);
+extern void _ZNK7QTabBar10tabToolTipEi(void* qthis, int arg0);
+  // proto:  bool QTabBar::expanding();
+extern void _ZNK7QTabBar9expandingEv(void* qthis);
+  // proto:  void QTabBar::setDocumentMode(bool set);
+extern void _ZN7QTabBar15setDocumentModeEb(void* qthis, bool arg0);
+  // proto:  int QTabBar::count();
+extern void _ZNK7QTabBar5countEv(void* qthis);
+  // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
+extern void _ZN7QTabBar22setChangeCurrentOnDragEb(void* qthis, bool arg0);
+  // proto:  QIcon QTabBar::tabIcon(int index);
+extern void _ZNK7QTabBar7tabIconEi(void* qthis, int arg0);
+  // proto:  QSize QTabBar::minimumSizeHint();
+extern void _ZNK7QTabBar15minimumSizeHintEv(void* qthis);
+  // proto:  void QTabBar::setTabsClosable(bool closable);
+extern void _ZN7QTabBar15setTabsClosableEb(void* qthis, bool arg0);
+  // proto:  bool QTabBar::changeCurrentOnDrag();
+extern void _ZNK7QTabBar19changeCurrentOnDragEv(void* qthis);
+  // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
+extern void _ZN7QTabBar15setTabWhatsThisEiRK7QString(void* qthis, int arg0, void* arg1);
+  // proto:  const QMetaObject * QTabBar::metaObject();
+extern void _ZNK7QTabBar10metaObjectEv(void* qthis);
+  // proto:  void QTabBar::QTabBar(const QTabBar & );
+extern void* dector_ZN7QTabBarC1ERKS_(void* arg0);
+extern void _ZN7QTabBarC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
+extern void _ZN7QTabBar9insertTabEiRK5QIconRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+  // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
+extern void _ZN7QTabBar10setTabIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+  // proto:  bool QTabBar::isMovable();
+extern void _ZNK7QTabBar9isMovableEv(void* qthis);
+  // proto:  void QTabBar::setExpanding(bool enabled);
+extern void _ZN7QTabBar12setExpandingEb(void* qthis, bool arg0);
+  // proto:  void QTabBar::removeTab(int index);
+extern void _ZN7QTabBar9removeTabEi(void* qthis, int arg0);
+  // proto:  void QTabBar::setTabEnabled(int index, bool );
+extern void _ZN7QTabBar13setTabEnabledEib(void* qthis, int arg0, bool arg1);
+  // proto:  bool QTabBar::isTabEnabled(int index);
+extern void _ZNK7QTabBar12isTabEnabledEi(void* qthis, int arg0);
+  // proto:  void QTabBar::setCurrentIndex(int index);
+extern void _ZN7QTabBar15setCurrentIndexEi(void* qthis, int arg0);
+  // proto:  QRect QTabBar::tabRect(int index);
+extern void _ZNK7QTabBar7tabRectEi(void* qthis, int arg0);
+  // proto:  bool QTabBar::tabsClosable();
+extern void _ZNK7QTabBar12tabsClosableEv(void* qthis);
+  // proto:  void QTabBar::setMovable(bool movable);
+extern void _ZN7QTabBar10setMovableEb(void* qthis, bool arg0);
+  // proto:  void QTabBar::setAutoHide(bool hide);
+extern void _ZN7QTabBar11setAutoHideEb(void* qthis, bool arg0);
+  // proto:  QSize QTabBar::iconSize();
+extern void _ZNK7QTabBar8iconSizeEv(void* qthis);
+  // proto:  QString QTabBar::tabText(int index);
+extern void _ZNK7QTabBar7tabTextEi(void* qthis, int arg0);
+  // proto:  QString QTabBar::tabWhatsThis(int index);
+extern void _ZNK7QTabBar12tabWhatsThisEi(void* qthis, int arg0);
+  // proto:  bool QTabBar::documentMode();
+extern void _ZNK7QTabBar12documentModeEv(void* qthis);
+  // proto:  int QTabBar::tabAt(const QPoint & pos);
+extern void _ZNK7QTabBar5tabAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QTabBar::setTabData(int index, const QVariant & data);
+extern void _ZN7QTabBar10setTabDataEiRK8QVariant(void* qthis, int arg0, void* arg1);
+  // proto:  void QTabBar::QTabBar(QWidget * parent);
+extern void* dector_ZN7QTabBarC1EP7QWidget(void* arg0);
+extern void _ZN7QTabBarC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  QColor QTabBar::tabTextColor(int index);
+extern void _ZNK7QTabBar12tabTextColorEi(void* qthis, int arg0);
+  // proto:  void QTabBar::~QTabBar();
+extern void _ZN7QTabBarD0Ev(void* qthis);
+  // proto:  int QTabBar::insertTab(int index, const QString & text);
+extern void _ZN7QTabBar9insertTabEiRK7QString(void* qthis, int arg0, void* arg1);
+  // proto:  int QTabBar::addTab(const QString & text);
+extern void _ZN7QTabBar6addTabERK7QString(void* qthis, void* arg0);
+  // proto:  int QTabBar::addTab(const QIcon & icon, const QString & text);
+extern void _ZN7QTabBar6addTabERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
+  // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
+extern void _ZN7QTabBar13setTabToolTipEiRK7QString(void* qthis, int arg0, void* arg1);
+  // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
+extern void _ZN7QTabBar15setTabTextColorEiRK6QColor(void* qthis, int arg0, void* arg1);
+  // proto:  void QTabBar::moveTab(int from, int to);
+extern void _ZN7QTabBar7moveTabEii(void* qthis, int arg0, int arg1);
+  // proto:  QVariant QTabBar::tabData(int index);
+extern void _ZNK7QTabBar7tabDataEi(void* qthis, int arg0);
+  // proto:  bool QTabBar::drawBase();
+extern void _ZNK7QTabBar8drawBaseEv(void* qthis);
+  // proto:  int QTabBar::currentIndex();
+extern void _ZNK7QTabBar12currentIndexEv(void* qthis);
+  // proto:  void QTabBar::setDrawBase(bool drawTheBase);
+extern void _ZN7QTabBar11setDrawBaseEb(void* qthis, bool arg0);
+  // proto:  void QTabBar::setUsesScrollButtons(bool useButtons);
+extern void _ZN7QTabBar20setUsesScrollButtonsEb(void* qthis, bool arg0);
+  // proto:  QSize QTabBar::sizeHint();
+extern void _ZNK7QTabBar8sizeHintEv(void* qthis);
+  // proto:  void QTabBar::setIconSize(const QSize & size);
+extern void _ZN7QTabBar11setIconSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  void QTabBar::setTabText(int index, const QString & text);
+extern void _ZN7QTabBar10setTabTextEiRK7QString(void* qthis, int arg0, void* arg1);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTabBar)=1
 type QTabBar struct {
   /*qbase*/ QWidget;
@@ -46,7 +155,7 @@ type QTabBar struct {
 //  _currentChanged QTabBar_currentChanged_signal;
 }
 
-
+  // proto:  bool QTabBar::usesScrollButtons();
 func (this *QTabBar) usesScrollButtons(args ...interface{}) () {
   // usesScrollButtons()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +173,7 @@ func (this *QTabBar) usesScrollButtons(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::autoHide();
 func (this *QTabBar) autoHide(args ...interface{}) () {
   // autoHide()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +191,7 @@ func (this *QTabBar) autoHide(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTabBar::tabToolTip(int index);
 func (this *QTabBar) tabToolTip(args ...interface{}) () {
   // tabToolTip(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -101,7 +210,7 @@ func (this *QTabBar) tabToolTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::expanding();
 func (this *QTabBar) expanding(args ...interface{}) () {
   // expanding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +228,7 @@ func (this *QTabBar) expanding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setDocumentMode(bool set);
 func (this *QTabBar) setDocumentMode(args ...interface{}) () {
   // setDocumentMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,7 +247,7 @@ func (this *QTabBar) setDocumentMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTabBar::count();
 func (this *QTabBar) count(args ...interface{}) () {
   // count()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +265,7 @@ func (this *QTabBar) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
 func (this *QTabBar) setChangeCurrentOnDrag(args ...interface{}) () {
   // setChangeCurrentOnDrag(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,7 +284,7 @@ func (this *QTabBar) setChangeCurrentOnDrag(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIcon QTabBar::tabIcon(int index);
 func (this *QTabBar) tabIcon(args ...interface{}) () {
   // tabIcon(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -194,7 +303,7 @@ func (this *QTabBar) tabIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QTabBar::minimumSizeHint();
 func (this *QTabBar) minimumSizeHint(args ...interface{}) () {
   // minimumSizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -212,7 +321,7 @@ func (this *QTabBar) minimumSizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabsClosable(bool closable);
 func (this *QTabBar) setTabsClosable(args ...interface{}) () {
   // setTabsClosable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -231,7 +340,7 @@ func (this *QTabBar) setTabsClosable(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::changeCurrentOnDrag();
 func (this *QTabBar) changeCurrentOnDrag(args ...interface{}) () {
   // changeCurrentOnDrag()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -249,7 +358,7 @@ func (this *QTabBar) changeCurrentOnDrag(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
 func (this *QTabBar) setTabWhatsThis(args ...interface{}) () {
   // setTabWhatsThis(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -269,7 +378,7 @@ func (this *QTabBar) setTabWhatsThis(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTabBar::metaObject();
 func (this *QTabBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -287,12 +396,12 @@ func (this *QTabBar) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::QTabBar(const QTabBar & );
 func NewQTabBar(args ...interface{}) QTabBar {
   return QTabBar{}
 }
 
-
+  // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
 func (this *QTabBar) insertTab(args ...interface{}) () {
   // insertTab(int, const class QIcon &, const class QString &)
   // insertTab(int, const class QString &)
@@ -319,7 +428,7 @@ func (this *QTabBar) insertTab(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
 func (this *QTabBar) setTabIcon(args ...interface{}) () {
   // setTabIcon(int, const class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -339,7 +448,7 @@ func (this *QTabBar) setTabIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::isMovable();
 func (this *QTabBar) isMovable(args ...interface{}) () {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,7 +466,7 @@ func (this *QTabBar) isMovable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setExpanding(bool enabled);
 func (this *QTabBar) setExpanding(args ...interface{}) () {
   // setExpanding(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +485,7 @@ func (this *QTabBar) setExpanding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::removeTab(int index);
 func (this *QTabBar) removeTab(args ...interface{}) () {
   // removeTab(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +504,7 @@ func (this *QTabBar) removeTab(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabEnabled(int index, bool );
 func (this *QTabBar) setTabEnabled(args ...interface{}) () {
   // setTabEnabled(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -415,7 +524,7 @@ func (this *QTabBar) setTabEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::isTabEnabled(int index);
 func (this *QTabBar) isTabEnabled(args ...interface{}) () {
   // isTabEnabled(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -434,7 +543,7 @@ func (this *QTabBar) isTabEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setCurrentIndex(int index);
 func (this *QTabBar) setCurrentIndex(args ...interface{}) () {
   // setCurrentIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -453,7 +562,7 @@ func (this *QTabBar) setCurrentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QTabBar::tabRect(int index);
 func (this *QTabBar) tabRect(args ...interface{}) () {
   // tabRect(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -472,7 +581,7 @@ func (this *QTabBar) tabRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::tabsClosable();
 func (this *QTabBar) tabsClosable(args ...interface{}) () {
   // tabsClosable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -490,7 +599,7 @@ func (this *QTabBar) tabsClosable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setMovable(bool movable);
 func (this *QTabBar) setMovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -509,7 +618,7 @@ func (this *QTabBar) setMovable(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setAutoHide(bool hide);
 func (this *QTabBar) setAutoHide(args ...interface{}) () {
   // setAutoHide(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -528,7 +637,7 @@ func (this *QTabBar) setAutoHide(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QTabBar::iconSize();
 func (this *QTabBar) iconSize(args ...interface{}) () {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -546,7 +655,7 @@ func (this *QTabBar) iconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTabBar::tabText(int index);
 func (this *QTabBar) tabText(args ...interface{}) () {
   // tabText(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -565,7 +674,7 @@ func (this *QTabBar) tabText(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTabBar::tabWhatsThis(int index);
 func (this *QTabBar) tabWhatsThis(args ...interface{}) () {
   // tabWhatsThis(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -584,7 +693,7 @@ func (this *QTabBar) tabWhatsThis(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::documentMode();
 func (this *QTabBar) documentMode(args ...interface{}) () {
   // documentMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -602,7 +711,7 @@ func (this *QTabBar) documentMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTabBar::tabAt(const QPoint & pos);
 func (this *QTabBar) tabAt(args ...interface{}) () {
   // tabAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -621,7 +730,7 @@ func (this *QTabBar) tabAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabData(int index, const QVariant & data);
 func (this *QTabBar) setTabData(args ...interface{}) () {
   // setTabData(int, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -641,7 +750,7 @@ func (this *QTabBar) setTabData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QTabBar::tabTextColor(int index);
 func (this *QTabBar) tabTextColor(args ...interface{}) () {
   // tabTextColor(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -660,7 +769,7 @@ func (this *QTabBar) tabTextColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::~QTabBar();
 func (this *QTabBar) FreeQTabBar(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -674,7 +783,7 @@ func (this *QTabBar) FreeQTabBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTabBar::addTab(const QString & text);
 func (this *QTabBar) addTab(args ...interface{}) () {
   // addTab(const class QString &)
   // addTab(const class QIcon &, const class QString &)
@@ -699,7 +808,7 @@ func (this *QTabBar) addTab(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
 func (this *QTabBar) setTabToolTip(args ...interface{}) () {
   // setTabToolTip(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -719,7 +828,7 @@ func (this *QTabBar) setTabToolTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
 func (this *QTabBar) setTabTextColor(args ...interface{}) () {
   // setTabTextColor(int, const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -739,7 +848,7 @@ func (this *QTabBar) setTabTextColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::moveTab(int from, int to);
 func (this *QTabBar) moveTab(args ...interface{}) () {
   // moveTab(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -759,7 +868,7 @@ func (this *QTabBar) moveTab(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QTabBar::tabData(int index);
 func (this *QTabBar) tabData(args ...interface{}) () {
   // tabData(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -778,7 +887,7 @@ func (this *QTabBar) tabData(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTabBar::drawBase();
 func (this *QTabBar) drawBase(args ...interface{}) () {
   // drawBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -796,7 +905,7 @@ func (this *QTabBar) drawBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTabBar::currentIndex();
 func (this *QTabBar) currentIndex(args ...interface{}) () {
   // currentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -814,7 +923,7 @@ func (this *QTabBar) currentIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setDrawBase(bool drawTheBase);
 func (this *QTabBar) setDrawBase(args ...interface{}) () {
   // setDrawBase(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -833,7 +942,7 @@ func (this *QTabBar) setDrawBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setUsesScrollButtons(bool useButtons);
 func (this *QTabBar) setUsesScrollButtons(args ...interface{}) () {
   // setUsesScrollButtons(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -852,7 +961,7 @@ func (this *QTabBar) setUsesScrollButtons(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QTabBar::sizeHint();
 func (this *QTabBar) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -870,7 +979,7 @@ func (this *QTabBar) sizeHint(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setIconSize(const QSize & size);
 func (this *QTabBar) setIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -889,7 +998,7 @@ func (this *QTabBar) setIconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTabBar::setTabText(int index, const QString & text);
 func (this *QTabBar) setTabText(args ...interface{}) () {
   // setTabText(int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

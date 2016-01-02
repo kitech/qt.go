@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,99 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QStatusBar * QMainWindow::statusBar();
+extern void _ZNK11QMainWindow9statusBarEv(void* qthis);
+  // proto:  void QMainWindow::setAnimated(bool enabled);
+extern void _ZN11QMainWindow11setAnimatedEb(void* qthis, bool arg0);
+  // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
+extern void _ZN11QMainWindow21setDockNestingEnabledEb(void* qthis, bool arg0);
+  // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
+extern void _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(void* qthis);
+  // proto:  QWidget * QMainWindow::menuWidget();
+extern void _ZNK11QMainWindow10menuWidgetEv(void* qthis);
+  // proto:  void QMainWindow::tabifyDockWidget(QDockWidget * first, QDockWidget * second);
+extern void _ZN11QMainWindow16tabifyDockWidgetEP11QDockWidgetS1_(void* qthis, void* arg0, void* arg1);
+  // proto:  void QMainWindow::setDocumentMode(bool enabled);
+extern void _ZN11QMainWindow15setDocumentModeEb(void* qthis, bool arg0);
+  // proto:  QWidget * QMainWindow::centralWidget();
+extern void _ZNK11QMainWindow13centralWidgetEv(void* qthis);
+  // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
+extern void _ZN11QMainWindow16removeDockWidgetEP11QDockWidget(void* qthis, void* arg0);
+  // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
+extern void* dector_ZN11QMainWindowC1ERKS_(void* arg0);
+extern void _ZN11QMainWindowC1ERKS_(void* qthis, void* arg0);
+  // proto:  bool QMainWindow::isAnimated();
+extern void _ZNK11QMainWindow10isAnimatedEv(void* qthis);
+  // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
+extern void _ZN11QMainWindow10addToolBarERK7QString(void* qthis, void* arg0);
+  // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
+extern void _ZN11QMainWindow11setIconSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  QByteArray QMainWindow::saveState(int version);
+extern void _ZNK11QMainWindow9saveStateEi(void* qthis, int arg0);
+  // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
+extern void _ZN11QMainWindow12restoreStateERK10QByteArrayi(void* qthis, void* arg0, int arg1);
+  // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
+extern void _ZN11QMainWindow13insertToolBarEP8QToolBarS1_(void* qthis, void* arg0, void* arg1);
+  // proto:  QMenu * QMainWindow::createPopupMenu();
+extern void _ZN11QMainWindow15createPopupMenuEv(void* qthis);
+  // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
+extern void _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(void* qthis, bool arg0);
+  // proto:  void QMainWindow::addToolBar(QToolBar * toolbar);
+extern void _ZN11QMainWindow10addToolBarEP8QToolBar(void* qthis, void* arg0);
+  // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
+extern void _ZN11QMainWindow18removeToolBarBreakEP8QToolBar(void* qthis, void* arg0);
+  // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
+extern void _ZNK11QMainWindow12toolBarBreakEP8QToolBar(void* qthis, void* arg0);
+  // proto:  bool QMainWindow::restoreDockWidget(QDockWidget * dockwidget);
+extern void _ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(void* qthis, void* arg0);
+  // proto:  QMenuBar * QMainWindow::menuBar();
+extern void _ZNK11QMainWindow7menuBarEv(void* qthis);
+  // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
+extern void _ZN11QMainWindow12setStatusBarEP10QStatusBar(void* qthis, void* arg0);
+  // proto:  void QMainWindow::~QMainWindow();
+extern void _ZN11QMainWindowD0Ev(void* qthis);
+  // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
+extern void _ZNK11QMainWindow11isSeparatorERK6QPoint(void* qthis, void* arg0);
+  // proto:  QSize QMainWindow::iconSize();
+extern void _ZNK11QMainWindow8iconSizeEv(void* qthis);
+  // proto:  const QMetaObject * QMainWindow::metaObject();
+extern void _ZNK11QMainWindow10metaObjectEv(void* qthis);
+  // proto:  void QMainWindow::insertToolBarBreak(QToolBar * before);
+extern void _ZN11QMainWindow18insertToolBarBreakEP8QToolBar(void* qthis, void* arg0);
+  // proto:  QWidget * QMainWindow::takeCentralWidget();
+extern void _ZN11QMainWindow17takeCentralWidgetEv(void* qthis);
+  // proto:  bool QMainWindow::isDockNestingEnabled();
+extern void _ZNK11QMainWindow20isDockNestingEnabledEv(void* qthis);
+  // proto:  bool QMainWindow::documentMode();
+extern void _ZNK11QMainWindow12documentModeEv(void* qthis);
+  // proto:  void QMainWindow::setMenuWidget(QWidget * menubar);
+extern void _ZN11QMainWindow13setMenuWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QMainWindow::removeToolBar(QToolBar * toolbar);
+extern void _ZN11QMainWindow13removeToolBarEP8QToolBar(void* qthis, void* arg0);
+  // proto:  void QMainWindow::setCentralWidget(QWidget * widget);
+extern void _ZN11QMainWindow16setCentralWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
+extern void _ZN11QMainWindow10setMenuBarEP8QMenuBar(void* qthis, void* arg0);
+  // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
+extern void _ZNK11QMainWindow19tabifiedDockWidgetsEP11QDockWidget(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMainWindow)=1
 type QMainWindow struct {
   /*qbase*/ QWidget;
@@ -43,7 +127,7 @@ type QMainWindow struct {
 //  _iconSizeChanged QMainWindow_iconSizeChanged_signal;
 }
 
-
+  // proto:  QStatusBar * QMainWindow::statusBar();
 func (this *QMainWindow) statusBar(args ...interface{}) () {
   // statusBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -61,7 +145,7 @@ func (this *QMainWindow) statusBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setAnimated(bool enabled);
 func (this *QMainWindow) setAnimated(args ...interface{}) () {
   // setAnimated(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -80,7 +164,7 @@ func (this *QMainWindow) setAnimated(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setDockNestingEnabled(bool enabled);
 func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
   // setDockNestingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +183,7 @@ func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::unifiedTitleAndToolBarOnMac();
 func (this *QMainWindow) unifiedTitleAndToolBarOnMac(args ...interface{}) () {
   // unifiedTitleAndToolBarOnMac()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -117,7 +201,7 @@ func (this *QMainWindow) unifiedTitleAndToolBarOnMac(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QMainWindow::menuWidget();
 func (this *QMainWindow) menuWidget(args ...interface{}) () {
   // menuWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,7 +219,7 @@ func (this *QMainWindow) menuWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::tabifyDockWidget(QDockWidget * first, QDockWidget * second);
 func (this *QMainWindow) tabifyDockWidget(args ...interface{}) () {
   // tabifyDockWidget(class QDockWidget *, class QDockWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -155,7 +239,7 @@ func (this *QMainWindow) tabifyDockWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setDocumentMode(bool enabled);
 func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
   // setDocumentMode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,7 +258,7 @@ func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QMainWindow::centralWidget();
 func (this *QMainWindow) centralWidget(args ...interface{}) () {
   // centralWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,7 +276,7 @@ func (this *QMainWindow) centralWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::removeDockWidget(QDockWidget * dockwidget);
 func (this *QMainWindow) removeDockWidget(args ...interface{}) () {
   // removeDockWidget(class QDockWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,12 +295,12 @@ func (this *QMainWindow) removeDockWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::QMainWindow(const QMainWindow & );
 func NewQMainWindow(args ...interface{}) QMainWindow {
   return QMainWindow{}
 }
 
-
+  // proto:  bool QMainWindow::isAnimated();
 func (this *QMainWindow) isAnimated(args ...interface{}) () {
   // isAnimated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +318,7 @@ func (this *QMainWindow) isAnimated(args ...interface{}) () {
 
 }
 
-
+  // proto:  QToolBar * QMainWindow::addToolBar(const QString & title);
 func (this *QMainWindow) addToolBar(args ...interface{}) () {
   // addToolBar(const class QString &)
   // addToolBar(class QToolBar *)
@@ -264,7 +348,7 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
 func (this *QMainWindow) setIconSize(args ...interface{}) () {
   // setIconSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +367,7 @@ func (this *QMainWindow) setIconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QMainWindow::saveState(int version);
 func (this *QMainWindow) saveState(args ...interface{}) () {
   // saveState(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +386,7 @@ func (this *QMainWindow) saveState(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
 func (this *QMainWindow) restoreState(args ...interface{}) () {
   // restoreState(const class QByteArray &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -322,7 +406,7 @@ func (this *QMainWindow) restoreState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
 func (this *QMainWindow) insertToolBar(args ...interface{}) () {
   // insertToolBar(class QToolBar *, class QToolBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -342,7 +426,7 @@ func (this *QMainWindow) insertToolBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMenu * QMainWindow::createPopupMenu();
 func (this *QMainWindow) createPopupMenu(args ...interface{}) () {
   // createPopupMenu()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -360,7 +444,7 @@ func (this *QMainWindow) createPopupMenu(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setUnifiedTitleAndToolBarOnMac(bool set);
 func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () {
   // setUnifiedTitleAndToolBarOnMac(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -379,7 +463,7 @@ func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () 
 
 }
 
-
+  // proto:  void QMainWindow::removeToolBarBreak(QToolBar * before);
 func (this *QMainWindow) removeToolBarBreak(args ...interface{}) () {
   // removeToolBarBreak(class QToolBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +482,7 @@ func (this *QMainWindow) removeToolBarBreak(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::toolBarBreak(QToolBar * toolbar);
 func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
   // toolBarBreak(class QToolBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -417,7 +501,7 @@ func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::restoreDockWidget(QDockWidget * dockwidget);
 func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
   // restoreDockWidget(class QDockWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -436,7 +520,7 @@ func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMenuBar * QMainWindow::menuBar();
 func (this *QMainWindow) menuBar(args ...interface{}) () {
   // menuBar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -454,7 +538,7 @@ func (this *QMainWindow) menuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setStatusBar(QStatusBar * statusbar);
 func (this *QMainWindow) setStatusBar(args ...interface{}) () {
   // setStatusBar(class QStatusBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -473,7 +557,7 @@ func (this *QMainWindow) setStatusBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::~QMainWindow();
 func (this *QMainWindow) FreeQMainWindow(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -487,7 +571,7 @@ func (this *QMainWindow) FreeQMainWindow(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::isSeparator(const QPoint & pos);
 func (this *QMainWindow) isSeparator(args ...interface{}) () {
   // isSeparator(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -506,7 +590,7 @@ func (this *QMainWindow) isSeparator(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QMainWindow::iconSize();
 func (this *QMainWindow) iconSize(args ...interface{}) () {
   // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -524,7 +608,7 @@ func (this *QMainWindow) iconSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QMainWindow::metaObject();
 func (this *QMainWindow) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -542,7 +626,7 @@ func (this *QMainWindow) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::insertToolBarBreak(QToolBar * before);
 func (this *QMainWindow) insertToolBarBreak(args ...interface{}) () {
   // insertToolBarBreak(class QToolBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -561,7 +645,7 @@ func (this *QMainWindow) insertToolBarBreak(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QMainWindow::takeCentralWidget();
 func (this *QMainWindow) takeCentralWidget(args ...interface{}) () {
   // takeCentralWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -579,7 +663,7 @@ func (this *QMainWindow) takeCentralWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::isDockNestingEnabled();
 func (this *QMainWindow) isDockNestingEnabled(args ...interface{}) () {
   // isDockNestingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -597,7 +681,7 @@ func (this *QMainWindow) isDockNestingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMainWindow::documentMode();
 func (this *QMainWindow) documentMode(args ...interface{}) () {
   // documentMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -615,7 +699,7 @@ func (this *QMainWindow) documentMode(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setMenuWidget(QWidget * menubar);
 func (this *QMainWindow) setMenuWidget(args ...interface{}) () {
   // setMenuWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -634,7 +718,7 @@ func (this *QMainWindow) setMenuWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::removeToolBar(QToolBar * toolbar);
 func (this *QMainWindow) removeToolBar(args ...interface{}) () {
   // removeToolBar(class QToolBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -653,7 +737,7 @@ func (this *QMainWindow) removeToolBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setCentralWidget(QWidget * widget);
 func (this *QMainWindow) setCentralWidget(args ...interface{}) () {
   // setCentralWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -672,7 +756,7 @@ func (this *QMainWindow) setCentralWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMainWindow::setMenuBar(QMenuBar * menubar);
 func (this *QMainWindow) setMenuBar(args ...interface{}) () {
   // setMenuBar(class QMenuBar *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -691,7 +775,7 @@ func (this *QMainWindow) setMenuBar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QDockWidget *> QMainWindow::tabifiedDockWidgets(QDockWidget * dockwidget);
 func (this *QMainWindow) tabifiedDockWidgets(args ...interface{}) () {
   // tabifiedDockWidgets(class QDockWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)

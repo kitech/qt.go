@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,75 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  qreal QScreen::logicalDotsPerInchY();
+extern void _ZNK7QScreen19logicalDotsPerInchYEv(void* qthis);
+  // proto:  QRect QScreen::geometry();
+extern void _ZNK7QScreen8geometryEv(void* qthis);
+  // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
+extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, uint32_t* arg0, int arg1, int arg2, int arg3, int arg4);
+  // proto:  QSize QScreen::size();
+extern void _ZNK7QScreen4sizeEv(void* qthis);
+  // proto:  QSizeF QScreen::physicalSize();
+extern void _ZNK7QScreen12physicalSizeEv(void* qthis);
+  // proto:  QPlatformScreen * QScreen::handle();
+extern void _ZNK7QScreen6handleEv(void* qthis);
+  // proto:  QRect QScreen::availableVirtualGeometry();
+extern void _ZNK7QScreen24availableVirtualGeometryEv(void* qthis);
+  // proto:  void QScreen::~QScreen();
+extern void _ZN7QScreenD0Ev(void* qthis);
+  // proto:  QSize QScreen::virtualSize();
+extern void _ZNK7QScreen11virtualSizeEv(void* qthis);
+  // proto:  qreal QScreen::devicePixelRatio();
+extern void _ZNK7QScreen16devicePixelRatioEv(void* qthis);
+  // proto:  QList<QScreen *> QScreen::virtualSiblings();
+extern void _ZNK7QScreen15virtualSiblingsEv(void* qthis);
+  // proto:  void QScreen::QScreen(const QScreen & );
+extern void* dector_ZN7QScreenC1ERKS_(void* arg0);
+extern void _ZN7QScreenC1ERKS_(void* qthis, void* arg0);
+  // proto:  QRect QScreen::virtualGeometry();
+extern void _ZNK7QScreen15virtualGeometryEv(void* qthis);
+  // proto:  qreal QScreen::logicalDotsPerInch();
+extern void _ZNK7QScreen18logicalDotsPerInchEv(void* qthis);
+  // proto:  qreal QScreen::physicalDotsPerInch();
+extern void _ZNK7QScreen19physicalDotsPerInchEv(void* qthis);
+  // proto:  qreal QScreen::refreshRate();
+extern void _ZNK7QScreen11refreshRateEv(void* qthis);
+  // proto:  const QMetaObject * QScreen::metaObject();
+extern void _ZNK7QScreen10metaObjectEv(void* qthis);
+  // proto:  QSize QScreen::availableSize();
+extern void _ZNK7QScreen13availableSizeEv(void* qthis);
+  // proto:  QString QScreen::name();
+extern void _ZNK7QScreen4nameEv(void* qthis);
+  // proto:  QSize QScreen::availableVirtualSize();
+extern void _ZNK7QScreen20availableVirtualSizeEv(void* qthis);
+  // proto:  qreal QScreen::logicalDotsPerInchX();
+extern void _ZNK7QScreen19logicalDotsPerInchXEv(void* qthis);
+  // proto:  QRect QScreen::availableGeometry();
+extern void _ZNK7QScreen17availableGeometryEv(void* qthis);
+  // proto:  qreal QScreen::physicalDotsPerInchX();
+extern void _ZNK7QScreen20physicalDotsPerInchXEv(void* qthis);
+  // proto:  qreal QScreen::physicalDotsPerInchY();
+extern void _ZNK7QScreen20physicalDotsPerInchYEv(void* qthis);
+  // proto:  int QScreen::depth();
+extern void _ZNK7QScreen5depthEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QScreen)=1
 type QScreen struct {
   /*qbase*/ QObject;
@@ -50,7 +110,7 @@ type QScreen struct {
 //  _orientationChanged QScreen_orientationChanged_signal;
 }
 
-
+  // proto:  qreal QScreen::logicalDotsPerInchY();
 func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
   // logicalDotsPerInchY()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -68,7 +128,7 @@ func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QScreen::geometry();
 func (this *QScreen) geometry(args ...interface{}) () {
   // geometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +146,7 @@ func (this *QScreen) geometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
 func (this *QScreen) grabWindow(args ...interface{}) () {
   // grabWindow(WId, int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -109,7 +169,7 @@ func (this *QScreen) grabWindow(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QScreen::size();
 func (this *QScreen) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -127,7 +187,7 @@ func (this *QScreen) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSizeF QScreen::physicalSize();
 func (this *QScreen) physicalSize(args ...interface{}) () {
   // physicalSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -145,7 +205,7 @@ func (this *QScreen) physicalSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPlatformScreen * QScreen::handle();
 func (this *QScreen) handle(args ...interface{}) () {
   // handle()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -163,7 +223,7 @@ func (this *QScreen) handle(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QScreen::availableVirtualGeometry();
 func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
   // availableVirtualGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -181,7 +241,7 @@ func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QScreen::~QScreen();
 func (this *QScreen) FreeQScreen(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -195,7 +255,7 @@ func (this *QScreen) FreeQScreen(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QScreen::virtualSize();
 func (this *QScreen) virtualSize(args ...interface{}) () {
   // virtualSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -213,7 +273,7 @@ func (this *QScreen) virtualSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::devicePixelRatio();
 func (this *QScreen) devicePixelRatio(args ...interface{}) () {
   // devicePixelRatio()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -231,7 +291,7 @@ func (this *QScreen) devicePixelRatio(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QScreen *> QScreen::virtualSiblings();
 func (this *QScreen) virtualSiblings(args ...interface{}) () {
   // virtualSiblings()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -249,12 +309,12 @@ func (this *QScreen) virtualSiblings(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QScreen::QScreen(const QScreen & );
 func NewQScreen(args ...interface{}) QScreen {
   return QScreen{}
 }
 
-
+  // proto:  QRect QScreen::virtualGeometry();
 func (this *QScreen) virtualGeometry(args ...interface{}) () {
   // virtualGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +332,7 @@ func (this *QScreen) virtualGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::logicalDotsPerInch();
 func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
   // logicalDotsPerInch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -290,7 +350,7 @@ func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::physicalDotsPerInch();
 func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
   // physicalDotsPerInch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -308,7 +368,7 @@ func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::refreshRate();
 func (this *QScreen) refreshRate(args ...interface{}) () {
   // refreshRate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -326,7 +386,7 @@ func (this *QScreen) refreshRate(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QScreen::metaObject();
 func (this *QScreen) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -344,7 +404,7 @@ func (this *QScreen) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QScreen::availableSize();
 func (this *QScreen) availableSize(args ...interface{}) () {
   // availableSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,7 +422,7 @@ func (this *QScreen) availableSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QScreen::name();
 func (this *QScreen) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -380,7 +440,7 @@ func (this *QScreen) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QScreen::availableVirtualSize();
 func (this *QScreen) availableVirtualSize(args ...interface{}) () {
   // availableVirtualSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +458,7 @@ func (this *QScreen) availableVirtualSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::logicalDotsPerInchX();
 func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
   // logicalDotsPerInchX()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -416,7 +476,7 @@ func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QScreen::availableGeometry();
 func (this *QScreen) availableGeometry(args ...interface{}) () {
   // availableGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -434,7 +494,7 @@ func (this *QScreen) availableGeometry(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::physicalDotsPerInchX();
 func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
   // physicalDotsPerInchX()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -452,7 +512,7 @@ func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QScreen::physicalDotsPerInchY();
 func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
   // physicalDotsPerInchY()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -470,7 +530,7 @@ func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QScreen::depth();
 func (this *QScreen) depth(args ...interface{}) () {
   // depth()
   var vtys = make(map[int32]map[int32]reflect.Type)

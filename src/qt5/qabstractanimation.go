@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,81 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QAbstractAnimation::resume();
+extern void _ZN18QAbstractAnimation6resumeEv(void* qthis);
+  // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
+extern void* dector_ZN18QAbstractAnimationC1EP7QObject(void* arg0);
+extern void _ZN18QAbstractAnimationC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QAbstractAnimation::stop();
+extern void _ZN18QAbstractAnimation4stopEv(void* qthis);
+  // proto:  void QAbstractAnimation::pause();
+extern void _ZN18QAbstractAnimation5pauseEv(void* qthis);
+  // proto:  void QAbstractAnimation::QAbstractAnimation(const QAbstractAnimation & );
+extern void* dector_ZN18QAbstractAnimationC1ERKS_(void* arg0);
+extern void _ZN18QAbstractAnimationC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
+extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int arg0);
+  // proto:  int QAbstractAnimation::currentLoop();
+extern void _ZNK18QAbstractAnimation11currentLoopEv(void* qthis);
+  // proto:  QAnimationGroup * QAbstractAnimation::group();
+extern void _ZNK18QAbstractAnimation5groupEv(void* qthis);
+  // proto:  void QAbstractAnimation::setPaused(bool );
+extern void _ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0);
+  // proto:  int QAbstractAnimation::totalDuration();
+extern void _ZNK18QAbstractAnimation13totalDurationEv(void* qthis);
+  // proto:  int QAbstractAnimation::duration();
+extern void _ZNK18QAbstractAnimation8durationEv(void* qthis);
+  // proto:  const QMetaObject * QAbstractAnimation::metaObject();
+extern void _ZNK18QAbstractAnimation10metaObjectEv(void* qthis);
+  // proto:  int QAbstractAnimation::currentLoopTime();
+extern void _ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis);
+  // proto:  int QAbstractAnimation::currentTime();
+extern void _ZNK18QAbstractAnimation11currentTimeEv(void* qthis);
+  // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
+extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int arg0);
+  // proto:  void QAbstractAnimation::~QAbstractAnimation();
+extern void _ZN18QAbstractAnimationD0Ev(void* qthis);
+  // proto:  int QAbstractAnimation::loopCount();
+extern void _ZNK18QAbstractAnimation9loopCountEv(void* qthis);
+  // proto:  void QAnimationDriver::advance();
+extern void _ZN16QAnimationDriver7advanceEv(void* qthis);
+  // proto:  void QAnimationDriver::~QAnimationDriver();
+extern void _ZN16QAnimationDriverD0Ev(void* qthis);
+  // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
+extern void* dector_ZN16QAnimationDriverC1EP7QObject(void* arg0);
+extern void _ZN16QAnimationDriverC1EP7QObject(void* qthis, void* arg0);
+  // proto:  qint64 QAnimationDriver::elapsed();
+extern void _ZNK16QAnimationDriver7elapsedEv(void* qthis);
+  // proto:  void QAnimationDriver::install();
+extern void _ZN16QAnimationDriver7installEv(void* qthis);
+  // proto:  const QMetaObject * QAnimationDriver::metaObject();
+extern void _ZNK16QAnimationDriver10metaObjectEv(void* qthis);
+  // proto:  void QAnimationDriver::uninstall();
+extern void _ZN16QAnimationDriver9uninstallEv(void* qthis);
+  // proto:  bool QAnimationDriver::isRunning();
+extern void _ZNK16QAnimationDriver9isRunningEv(void* qthis);
+  // proto:  qint64 QAnimationDriver::startTime();
+extern void _ZNK16QAnimationDriver9startTimeEv(void* qthis);
+  // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
+extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, long long arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QAbstractAnimation)=1
 type QAbstractAnimation struct {
   /*qbase*/ QObject;
@@ -53,7 +119,7 @@ type QAnimationDriver struct {
 //  _stopped QAnimationDriver_stopped_signal;
 }
 
-
+  // proto:  void QAbstractAnimation::resume();
 func (this *QAbstractAnimation) resume(args ...interface{}) () {
   // resume()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -71,12 +137,12 @@ func (this *QAbstractAnimation) resume(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
 func NewQAbstractAnimation(args ...interface{}) QAbstractAnimation {
   return QAbstractAnimation{}
 }
 
-
+  // proto:  void QAbstractAnimation::stop();
 func (this *QAbstractAnimation) stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -94,7 +160,7 @@ func (this *QAbstractAnimation) stop(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::pause();
 func (this *QAbstractAnimation) pause(args ...interface{}) () {
   // pause()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,7 +178,7 @@ func (this *QAbstractAnimation) pause(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
 func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
   // setLoopCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,7 +197,7 @@ func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::currentLoop();
 func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
   // currentLoop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -149,7 +215,7 @@ func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAnimationGroup * QAbstractAnimation::group();
 func (this *QAbstractAnimation) group(args ...interface{}) () {
   // group()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -167,7 +233,7 @@ func (this *QAbstractAnimation) group(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::setPaused(bool );
 func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -186,7 +252,7 @@ func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::totalDuration();
 func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
   // totalDuration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -204,7 +270,7 @@ func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::duration();
 func (this *QAbstractAnimation) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -222,7 +288,7 @@ func (this *QAbstractAnimation) duration(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAbstractAnimation::metaObject();
 func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -240,7 +306,7 @@ func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::currentLoopTime();
 func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
   // currentLoopTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,7 +324,7 @@ func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::currentTime();
 func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -276,7 +342,7 @@ func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
 func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
   // setCurrentTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -295,7 +361,7 @@ func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAbstractAnimation::~QAbstractAnimation();
 func (this *QAbstractAnimation) FreeQAbstractAnimation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -309,7 +375,7 @@ func (this *QAbstractAnimation) FreeQAbstractAnimation(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QAbstractAnimation::loopCount();
 func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -327,7 +393,7 @@ func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::advance();
 func (this *QAnimationDriver) advance(args ...interface{}) () {
   // advance()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -345,7 +411,7 @@ func (this *QAnimationDriver) advance(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::~QAnimationDriver();
 func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -359,12 +425,12 @@ func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
 func NewQAnimationDriver(args ...interface{}) QAnimationDriver {
   return QAnimationDriver{}
 }
 
-
+  // proto:  qint64 QAnimationDriver::elapsed();
 func (this *QAnimationDriver) elapsed(args ...interface{}) () {
   // elapsed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -382,7 +448,7 @@ func (this *QAnimationDriver) elapsed(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::install();
 func (this *QAnimationDriver) install(args ...interface{}) () {
   // install()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -400,7 +466,7 @@ func (this *QAnimationDriver) install(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QAnimationDriver::metaObject();
 func (this *QAnimationDriver) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -418,7 +484,7 @@ func (this *QAnimationDriver) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::uninstall();
 func (this *QAnimationDriver) uninstall(args ...interface{}) () {
   // uninstall()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -436,7 +502,7 @@ func (this *QAnimationDriver) uninstall(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QAnimationDriver::isRunning();
 func (this *QAnimationDriver) isRunning(args ...interface{}) () {
   // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -454,7 +520,7 @@ func (this *QAnimationDriver) isRunning(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QAnimationDriver::startTime();
 func (this *QAnimationDriver) startTime(args ...interface{}) () {
   // startTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -472,7 +538,7 @@ func (this *QAnimationDriver) startTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
 func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
   // setStartTime(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)

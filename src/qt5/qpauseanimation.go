@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,53 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );
+extern void* dector_ZN15QPauseAnimationC1ERKS_(void* arg0);
+extern void _ZN15QPauseAnimationC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QPauseAnimation::setDuration(int msecs);
+extern void _ZN15QPauseAnimation11setDurationEi(void* qthis, int arg0);
+  // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
+extern void* dector_ZN15QPauseAnimationC1EP7QObject(void* arg0);
+extern void _ZN15QPauseAnimationC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
+extern void* dector_ZN15QPauseAnimationC1EiP7QObject(int arg0, void* arg1);
+extern void _ZN15QPauseAnimationC1EiP7QObject(void* qthis, int arg0, void* arg1);
+  // proto:  int QPauseAnimation::duration();
+extern void _ZNK15QPauseAnimation8durationEv(void* qthis);
+  // proto:  const QMetaObject * QPauseAnimation::metaObject();
+extern void _ZNK15QPauseAnimation10metaObjectEv(void* qthis);
+  // proto:  void QPauseAnimation::~QPauseAnimation();
+extern void _ZN15QPauseAnimationD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPauseAnimation)=1
 type QPauseAnimation struct {
   /*qbase*/ QAbstractAnimation;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );
 func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
   return QPauseAnimation{}
 }
 
-
+  // proto:  void QPauseAnimation::setDuration(int msecs);
 func (this *QPauseAnimation) setDuration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +91,7 @@ func (this *QPauseAnimation) setDuration(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPauseAnimation::duration();
 func (this *QPauseAnimation) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +109,7 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QPauseAnimation::metaObject();
 func (this *QPauseAnimation) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -101,7 +127,7 @@ func (this *QPauseAnimation) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPauseAnimation::~QPauseAnimation();
 func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

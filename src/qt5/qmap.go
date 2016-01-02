@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,50 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QMapDataBase::rebalance(QMapNodeBase * x);
+extern void _ZN12QMapDataBase9rebalanceEP12QMapNodeBase(void* qthis, void* arg0);
+  // proto: static QMapDataBase * QMapDataBase::createData();
+extern void _ZN12QMapDataBase10createDataEv();
+  // proto:  void QMapDataBase::rotateRight(QMapNodeBase * x);
+extern void _ZN12QMapDataBase11rotateRightEP12QMapNodeBase(void* qthis, void* arg0);
+  // proto:  void QMapDataBase::freeTree(QMapNodeBase * root, int alignment);
+extern void _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(void* qthis, void* arg0, int arg1);
+  // proto: static void QMapDataBase::freeData(QMapDataBase * d);
+extern void _ZN12QMapDataBase8freeDataEPS_(void* arg0);
+  // proto:  void QMapDataBase::rotateLeft(QMapNodeBase * x);
+extern void _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(void* qthis, void* arg0);
+  // proto:  void QMapDataBase::recalcMostLeftNode();
+extern void _ZN12QMapDataBase18recalcMostLeftNodeEv(void* qthis);
+  // proto:  QMapNodeBase * QMapDataBase::createNode(int size, int alignment, QMapNodeBase * parent, bool left);
+extern void _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(void* qthis, int arg0, int arg1, void* arg2, bool arg3);
+  // proto:  void QMapDataBase::freeNodeAndRebalance(QMapNodeBase * z);
+extern void _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(void* qthis, void* arg0);
+  // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
+extern void _ZN12QMapNodeBase9setParentEPS_(void* qthis, void* arg0);
+  // proto:  QMapNodeBase * QMapNodeBase::previousNode();
+extern void _ZN12QMapNodeBase12previousNodeEv(void* qthis);
+  // proto:  QMapNodeBase * QMapNodeBase::nextNode();
+extern void _ZN12QMapNodeBase8nextNodeEv(void* qthis);
+  // proto:  QMapNodeBase * QMapNodeBase::parent();
+extern void _ZNK12QMapNodeBase6parentEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMapDataBase)=1
 type QMapDataBase struct {
   // qbase: None;
@@ -47,7 +82,7 @@ type QMapNodeBase struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QMapDataBase::rebalance(QMapNodeBase * x);
 func (this *QMapDataBase) rebalance(args ...interface{}) () {
   // rebalance(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +101,7 @@ func (this *QMapDataBase) rebalance(args ...interface{}) () {
 
 }
 
-
+  // proto: static QMapDataBase * QMapDataBase::createData();
 func (this *QMapDataBase) createData_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -80,7 +115,7 @@ func (this *QMapDataBase) createData_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapDataBase::rotateRight(QMapNodeBase * x);
 func (this *QMapDataBase) rotateRight(args ...interface{}) () {
   // rotateRight(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,7 +134,7 @@ func (this *QMapDataBase) rotateRight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapDataBase::freeTree(QMapNodeBase * root, int alignment);
 func (this *QMapDataBase) freeTree(args ...interface{}) () {
   // freeTree(struct QMapNodeBase *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +154,7 @@ func (this *QMapDataBase) freeTree(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QMapDataBase::freeData(QMapDataBase * d);
 func (this *QMapDataBase) freeData_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -133,7 +168,7 @@ func (this *QMapDataBase) freeData_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapDataBase::rotateLeft(QMapNodeBase * x);
 func (this *QMapDataBase) rotateLeft(args ...interface{}) () {
   // rotateLeft(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +187,7 @@ func (this *QMapDataBase) rotateLeft(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapDataBase::recalcMostLeftNode();
 func (this *QMapDataBase) recalcMostLeftNode(args ...interface{}) () {
   // recalcMostLeftNode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +205,7 @@ func (this *QMapDataBase) recalcMostLeftNode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMapNodeBase * QMapDataBase::createNode(int size, int alignment, QMapNodeBase * parent, bool left);
 func (this *QMapDataBase) createNode(args ...interface{}) () {
   // createNode(int, int, struct QMapNodeBase *, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -192,7 +227,7 @@ func (this *QMapDataBase) createNode(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapDataBase::freeNodeAndRebalance(QMapNodeBase * z);
 func (this *QMapDataBase) freeNodeAndRebalance(args ...interface{}) () {
   // freeNodeAndRebalance(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -211,7 +246,7 @@ func (this *QMapDataBase) freeNodeAndRebalance(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
 func (this *QMapNodeBase) setParent(args ...interface{}) () {
   // setParent(struct QMapNodeBase *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -230,7 +265,7 @@ func (this *QMapNodeBase) setParent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMapNodeBase * QMapNodeBase::previousNode();
 func (this *QMapNodeBase) previousNode(args ...interface{}) () {
   // previousNode()
   // previousNode()
@@ -252,7 +287,7 @@ func (this *QMapNodeBase) previousNode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMapNodeBase * QMapNodeBase::nextNode();
 func (this *QMapNodeBase) nextNode(args ...interface{}) () {
   // nextNode()
   // nextNode()
@@ -274,7 +309,7 @@ func (this *QMapNodeBase) nextNode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMapNodeBase * QMapNodeBase::parent();
 func (this *QMapNodeBase) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)

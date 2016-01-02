@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,58 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
+extern void* dector_ZN24QOpenGLVertexArrayObjectC1ERKS_(void* arg0);
+extern void _ZN24QOpenGLVertexArrayObjectC1ERKS_(void* qthis, void* arg0);
+  // proto:  GLuint QOpenGLVertexArrayObject::objectId();
+extern void _ZNK24QOpenGLVertexArrayObject8objectIdEv(void* qthis);
+  // proto:  void QOpenGLVertexArrayObject::release();
+extern void _ZN24QOpenGLVertexArrayObject7releaseEv(void* qthis);
+  // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
+extern void _ZNK24QOpenGLVertexArrayObject10metaObjectEv(void* qthis);
+  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(QObject * parent);
+extern void* dector_ZN24QOpenGLVertexArrayObjectC1EP7QObject(void* arg0);
+extern void _ZN24QOpenGLVertexArrayObjectC1EP7QObject(void* qthis, void* arg0);
+  // proto:  void QOpenGLVertexArrayObject::bind();
+extern void _ZN24QOpenGLVertexArrayObject4bindEv(void* qthis);
+  // proto:  bool QOpenGLVertexArrayObject::isCreated();
+extern void _ZNK24QOpenGLVertexArrayObject9isCreatedEv(void* qthis);
+  // proto:  void QOpenGLVertexArrayObject::destroy();
+extern void _ZN24QOpenGLVertexArrayObject7destroyEv(void* qthis);
+  // proto:  bool QOpenGLVertexArrayObject::create();
+extern void _ZN24QOpenGLVertexArrayObject6createEv(void* qthis);
+  // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
+extern void _ZN24QOpenGLVertexArrayObjectD0Ev(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLVertexArrayObject)=1
 type QOpenGLVertexArrayObject struct {
   /*qbase*/ QObject;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
 func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
   return QOpenGLVertexArrayObject{}
 }
 
-
+  // proto:  GLuint QOpenGLVertexArrayObject::objectId();
 func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
   // objectId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +95,7 @@ func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLVertexArrayObject::release();
 func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
   // release()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -82,7 +113,7 @@ func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
 func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -100,7 +131,7 @@ func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLVertexArrayObject::bind();
 func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
   // bind()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,7 +149,7 @@ func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLVertexArrayObject::isCreated();
 func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,7 +167,7 @@ func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLVertexArrayObject::destroy();
 func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +185,7 @@ func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLVertexArrayObject::create();
 func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +203,7 @@ func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
 func (this *QOpenGLVertexArrayObject) FreeQOpenGLVertexArrayObject(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

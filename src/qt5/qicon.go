@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,77 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QIcon::QIcon(const QIcon & other);
+extern void* dector_ZN5QIconC1ERKS_(void* arg0);
+extern void _ZN5QIconC1ERKS_(void* qthis, void* arg0);
+  // proto: static QStringList QIcon::themeSearchPaths();
+extern void _ZN5QIcon16themeSearchPathsEv();
+  // proto:  void QIcon::detach();
+extern void _ZN5QIcon6detachEv(void* qthis);
+  // proto:  bool QIcon::isNull();
+extern void _ZNK5QIcon6isNullEv(void* qthis);
+  // proto: static void QIcon::setThemeSearchPaths(const QStringList & searchpath);
+extern void _ZN5QIcon19setThemeSearchPathsERK11QStringList(void* arg0);
+  // proto: static bool QIcon::hasThemeIcon(const QString & name);
+extern void _ZN5QIcon12hasThemeIconERK7QString(void* arg0);
+  // proto:  void QIcon::QIcon(const QPixmap & pixmap);
+extern void* dector_ZN5QIconC1ERK7QPixmap(void* arg0);
+extern void _ZN5QIconC1ERK7QPixmap(void* qthis, void* arg0);
+  // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
+extern void _ZN5QIcon9fromThemeERK7QStringRKS_(void* arg0, void* arg1);
+  // proto: static QString QIcon::themeName();
+extern void _ZN5QIcon9themeNameEv();
+  // proto:  QString QIcon::name();
+extern void _ZNK5QIcon4nameEv(void* qthis);
+  // proto:  void QIcon::QIcon();
+extern void* dector_ZN5QIconC1Ev();
+extern void _ZN5QIconC1Ev(void* qthis);
+  // proto:  void QIcon::QIcon(QIconEngine * engine);
+extern void* dector_ZN5QIconC1EP11QIconEngine(void* arg0);
+extern void _ZN5QIconC1EP11QIconEngine(void* qthis, void* arg0);
+  // proto:  void QIcon::~QIcon();
+extern void _ZN5QIconD0Ev(void* qthis);
+  // proto:  bool QIcon::isDetached();
+extern void _ZNK5QIcon10isDetachedEv(void* qthis);
+  // proto:  void QIcon::QIcon(const QString & fileName);
+extern void* dector_ZN5QIconC1ERK7QString(void* arg0);
+extern void _ZN5QIconC1ERK7QString(void* qthis, void* arg0);
+  // proto:  qint64 QIcon::cacheKey();
+extern void _ZNK5QIcon8cacheKeyEv(void* qthis);
+  // proto:  void QIcon::swap(QIcon & other);
+extern void demth_ZN5QIcon4swapERS_(void* qthis, void* arg0);
+  // proto: static void QIcon::setThemeName(const QString & path);
+extern void _ZN5QIcon12setThemeNameERK7QString(void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QIcon)=8
 type QIcon struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QIcon::QIcon(const QIcon & other);
 func NewQIcon(args ...interface{}) QIcon {
   return QIcon{}
 }
 
-
+  // proto: static QStringList QIcon::themeSearchPaths();
 func (this *QIcon) themeSearchPaths_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -60,7 +110,7 @@ func (this *QIcon) themeSearchPaths_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIcon::detach();
 func (this *QIcon) detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -78,7 +128,7 @@ func (this *QIcon) detach(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIcon::isNull();
 func (this *QIcon) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +146,7 @@ func (this *QIcon) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QIcon::setThemeSearchPaths(const QStringList & searchpath);
 func (this *QIcon) setThemeSearchPaths_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,7 +160,7 @@ func (this *QIcon) setThemeSearchPaths_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static bool QIcon::hasThemeIcon(const QString & name);
 func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,7 +174,7 @@ func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QIcon QIcon::fromTheme(const QString & name, const QIcon & fallback);
 func (this *QIcon) fromTheme_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,7 +188,7 @@ func (this *QIcon) fromTheme_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QIcon::themeName();
 func (this *QIcon) themeName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,7 +202,7 @@ func (this *QIcon) themeName_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QIcon::name();
 func (this *QIcon) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +220,7 @@ func (this *QIcon) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIcon::~QIcon();
 func (this *QIcon) FreeQIcon(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -184,7 +234,7 @@ func (this *QIcon) FreeQIcon(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QIcon::isDetached();
 func (this *QIcon) isDetached(args ...interface{}) () {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -202,7 +252,7 @@ func (this *QIcon) isDetached(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QIcon::cacheKey();
 func (this *QIcon) cacheKey(args ...interface{}) () {
   // cacheKey()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -220,7 +270,7 @@ func (this *QIcon) cacheKey(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QIcon::swap(QIcon & other);
 func (this *QIcon) swap(args ...interface{}) () {
   // swap(class QIcon &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -239,7 +289,7 @@ func (this *QIcon) swap(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QIcon::setThemeName(const QString & path);
 func (this *QIcon) setThemeName_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}

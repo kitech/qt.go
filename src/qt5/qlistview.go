@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,82 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QListView::QListView(QWidget * parent);
+extern void* dector_ZN9QListViewC1EP7QWidget(void* arg0);
+extern void _ZN9QListViewC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QListView::setWordWrap(bool on);
+extern void _ZN9QListView11setWordWrapEb(void* qthis, bool arg0);
+  // proto:  void QListView::doItemsLayout();
+extern void _ZN9QListView13doItemsLayoutEv(void* qthis);
+  // proto:  int QListView::spacing();
+extern void _ZNK9QListView7spacingEv(void* qthis);
+  // proto:  void QListView::setGridSize(const QSize & size);
+extern void _ZN9QListView11setGridSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  QModelIndex QListView::indexAt(const QPoint & p);
+extern void _ZNK9QListView7indexAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  void QListView::setWrapping(bool enable);
+extern void _ZN9QListView11setWrappingEb(void* qthis, bool arg0);
+  // proto:  void QListView::setSelectionRectVisible(bool show);
+extern void _ZN9QListView23setSelectionRectVisibleEb(void* qthis, bool arg0);
+  // proto:  void QListView::setBatchSize(int batchSize);
+extern void _ZN9QListView12setBatchSizeEi(void* qthis, int arg0);
+  // proto:  bool QListView::uniformItemSizes();
+extern void _ZNK9QListView16uniformItemSizesEv(void* qthis);
+  // proto:  void QListView::setRootIndex(const QModelIndex & index);
+extern void _ZN9QListView12setRootIndexERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QListView::isWrapping();
+extern void _ZNK9QListView10isWrappingEv(void* qthis);
+  // proto:  void QListView::reset();
+extern void _ZN9QListView5resetEv(void* qthis);
+  // proto:  QSize QListView::gridSize();
+extern void _ZNK9QListView8gridSizeEv(void* qthis);
+  // proto:  void QListView::setModelColumn(int column);
+extern void _ZN9QListView14setModelColumnEi(void* qthis, int arg0);
+  // proto:  void QListView::QListView(const QListView & );
+extern void* dector_ZN9QListViewC1ERKS_(void* arg0);
+extern void _ZN9QListViewC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QListView::setSpacing(int space);
+extern void _ZN9QListView10setSpacingEi(void* qthis, int arg0);
+  // proto:  QRect QListView::visualRect(const QModelIndex & index);
+extern void _ZNK9QListView10visualRectERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  bool QListView::isRowHidden(int row);
+extern void _ZNK9QListView11isRowHiddenEi(void* qthis, int arg0);
+  // proto:  void QListView::~QListView();
+extern void _ZN9QListViewD0Ev(void* qthis);
+  // proto:  const QMetaObject * QListView::metaObject();
+extern void _ZNK9QListView10metaObjectEv(void* qthis);
+  // proto:  int QListView::batchSize();
+extern void _ZNK9QListView9batchSizeEv(void* qthis);
+  // proto:  bool QListView::isSelectionRectVisible();
+extern void _ZNK9QListView22isSelectionRectVisibleEv(void* qthis);
+  // proto:  bool QListView::wordWrap();
+extern void _ZNK9QListView8wordWrapEv(void* qthis);
+  // proto:  void QListView::setRowHidden(int row, bool hide);
+extern void _ZN9QListView12setRowHiddenEib(void* qthis, int arg0, bool arg1);
+  // proto:  void QListView::clearPropertyFlags();
+extern void _ZN9QListView18clearPropertyFlagsEv(void* qthis);
+  // proto:  int QListView::modelColumn();
+extern void _ZNK9QListView11modelColumnEv(void* qthis);
+  // proto:  void QListView::setUniformItemSizes(bool enable);
+extern void _ZN9QListView19setUniformItemSizesEb(void* qthis, bool arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QListView)=1
 type QListView struct {
   /*qbase*/ QAbstractItemView;
@@ -42,12 +109,12 @@ type QListView struct {
 //  _indexesMoved QListView_indexesMoved_signal;
 }
 
-
+  // proto:  void QListView::QListView(QWidget * parent);
 func NewQListView(args ...interface{}) QListView {
   return QListView{}
 }
 
-
+  // proto:  void QListView::setWordWrap(bool on);
 func (this *QListView) setWordWrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,7 +133,7 @@ func (this *QListView) setWordWrap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::doItemsLayout();
 func (this *QListView) doItemsLayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +151,7 @@ func (this *QListView) doItemsLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QListView::spacing();
 func (this *QListView) spacing(args ...interface{}) () {
   // spacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +169,7 @@ func (this *QListView) spacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setGridSize(const QSize & size);
 func (this *QListView) setGridSize(args ...interface{}) () {
   // setGridSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -121,7 +188,7 @@ func (this *QListView) setGridSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QListView::indexAt(const QPoint & p);
 func (this *QListView) indexAt(args ...interface{}) () {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +207,7 @@ func (this *QListView) indexAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setWrapping(bool enable);
 func (this *QListView) setWrapping(args ...interface{}) () {
   // setWrapping(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,7 +226,7 @@ func (this *QListView) setWrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setSelectionRectVisible(bool show);
 func (this *QListView) setSelectionRectVisible(args ...interface{}) () {
   // setSelectionRectVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -178,7 +245,7 @@ func (this *QListView) setSelectionRectVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setBatchSize(int batchSize);
 func (this *QListView) setBatchSize(args ...interface{}) () {
   // setBatchSize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +264,7 @@ func (this *QListView) setBatchSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QListView::uniformItemSizes();
 func (this *QListView) uniformItemSizes(args ...interface{}) () {
   // uniformItemSizes()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -215,7 +282,7 @@ func (this *QListView) uniformItemSizes(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setRootIndex(const QModelIndex & index);
 func (this *QListView) setRootIndex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -234,7 +301,7 @@ func (this *QListView) setRootIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QListView::isWrapping();
 func (this *QListView) isWrapping(args ...interface{}) () {
   // isWrapping()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +319,7 @@ func (this *QListView) isWrapping(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::reset();
 func (this *QListView) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -270,7 +337,7 @@ func (this *QListView) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QListView::gridSize();
 func (this *QListView) gridSize(args ...interface{}) () {
   // gridSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -288,7 +355,7 @@ func (this *QListView) gridSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setModelColumn(int column);
 func (this *QListView) setModelColumn(args ...interface{}) () {
   // setModelColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -307,7 +374,7 @@ func (this *QListView) setModelColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setSpacing(int space);
 func (this *QListView) setSpacing(args ...interface{}) () {
   // setSpacing(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -326,7 +393,7 @@ func (this *QListView) setSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QListView::visualRect(const QModelIndex & index);
 func (this *QListView) visualRect(args ...interface{}) () {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -345,7 +412,7 @@ func (this *QListView) visualRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QListView::isRowHidden(int row);
 func (this *QListView) isRowHidden(args ...interface{}) () {
   // isRowHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +431,7 @@ func (this *QListView) isRowHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::~QListView();
 func (this *QListView) FreeQListView(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +445,7 @@ func (this *QListView) FreeQListView(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QListView::metaObject();
 func (this *QListView) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -396,7 +463,7 @@ func (this *QListView) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QListView::batchSize();
 func (this *QListView) batchSize(args ...interface{}) () {
   // batchSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +481,7 @@ func (this *QListView) batchSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QListView::isSelectionRectVisible();
 func (this *QListView) isSelectionRectVisible(args ...interface{}) () {
   // isSelectionRectVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +499,7 @@ func (this *QListView) isSelectionRectVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QListView::wordWrap();
 func (this *QListView) wordWrap(args ...interface{}) () {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -450,7 +517,7 @@ func (this *QListView) wordWrap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setRowHidden(int row, bool hide);
 func (this *QListView) setRowHidden(args ...interface{}) () {
   // setRowHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -470,7 +537,7 @@ func (this *QListView) setRowHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::clearPropertyFlags();
 func (this *QListView) clearPropertyFlags(args ...interface{}) () {
   // clearPropertyFlags()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,7 +555,7 @@ func (this *QListView) clearPropertyFlags(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QListView::modelColumn();
 func (this *QListView) modelColumn(args ...interface{}) () {
   // modelColumn()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -506,7 +573,7 @@ func (this *QListView) modelColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QListView::setUniformItemSizes(bool enable);
 func (this *QListView) setUniformItemSizes(args ...interface{}) () {
   // setUniformItemSizes(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)

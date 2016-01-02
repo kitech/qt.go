@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,71 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
+extern void _ZNK18QOpenGLPaintDevice11paintEngineEv(void* qthis);
+  // proto:  QSize QOpenGLPaintDevice::size();
+extern void _ZNK18QOpenGLPaintDevice4sizeEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
+extern void _ZN18QOpenGLPaintDevice15setPaintFlippedEb(void* qthis, bool arg0);
+  // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
+extern void _ZN18QOpenGLPaintDeviceD0Ev(void* qthis);
+  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
+extern void* dector_ZN18QOpenGLPaintDeviceC1Eii(int arg0, int arg1);
+extern void _ZN18QOpenGLPaintDeviceC1Eii(void* qthis, int arg0, int arg1);
+  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
+extern void* dector_ZN18QOpenGLPaintDeviceC1ERKS_(void* arg0);
+extern void _ZN18QOpenGLPaintDeviceC1ERKS_(void* qthis, void* arg0);
+  // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
+extern void _ZNK18QOpenGLPaintDevice7contextEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
+extern void _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(void* qthis, double arg0);
+  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice();
+extern void* dector_ZN18QOpenGLPaintDeviceC1Ev();
+extern void _ZN18QOpenGLPaintDeviceC1Ev(void* qthis);
+  // proto:  int QOpenGLPaintDevice::devType();
+extern void _ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis);
+  // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
+extern void _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
+extern void _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(void* qthis, double arg0);
+  // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
+extern void _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
+extern void _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(void* qthis, double arg0);
+  // proto:  bool QOpenGLPaintDevice::paintFlipped();
+extern void _ZNK18QOpenGLPaintDevice12paintFlippedEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
+extern void _ZN18QOpenGLPaintDevice7setSizeERK5QSize(void* qthis, void* arg0);
+  // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
+extern void _ZN18QOpenGLPaintDevice18ensureActiveTargetEv(void* qthis);
+  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QSize & size);
+extern void* dector_ZN18QOpenGLPaintDeviceC1ERK5QSize(void* arg0);
+extern void _ZN18QOpenGLPaintDeviceC1ERK5QSize(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLPaintDevice)=1
 type QOpenGLPaintDevice struct {
   /*qbase*/ QPaintDevice;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
 func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
   // paintEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +108,7 @@ func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
 
 }
 
-
+  // proto:  QSize QOpenGLPaintDevice::size();
 func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -77,7 +126,7 @@ func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::setPaintFlipped(bool flipped);
 func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
   // setPaintFlipped(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +145,7 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,12 +159,12 @@ func (this *QOpenGLPaintDevice) FreeQOpenGLPaintDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
 func NewQOpenGLPaintDevice(args ...interface{}) QOpenGLPaintDevice {
   return QOpenGLPaintDevice{}
 }
 
-
+  // proto:  QOpenGLContext * QOpenGLPaintDevice::context();
 func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
   // context()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -133,7 +182,7 @@ func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::setDevicePixelRatio(qreal devicePixelRatio);
 func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
   // setDevicePixelRatio(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +201,7 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLPaintDevice::devType();
 func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
   // devType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +219,7 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
 func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
   // dotsPerMeterX()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -188,7 +237,7 @@ func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
 func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
   // setDotsPerMeterX(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -207,7 +256,7 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QOpenGLPaintDevice::dotsPerMeterY();
 func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
   // dotsPerMeterY()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,7 +274,7 @@ func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::setDotsPerMeterY(qreal );
 func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
   // setDotsPerMeterY(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,7 +293,7 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLPaintDevice::paintFlipped();
 func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
   // paintFlipped()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -262,7 +311,7 @@ func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::setSize(const QSize & size);
 func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
   // setSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -281,7 +330,7 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLPaintDevice::ensureActiveTarget();
 func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
   // ensureActiveTarget()
   var vtys = make(map[int32]map[int32]reflect.Type)

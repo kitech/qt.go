@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,45 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QWidget * QDockWidget::widget();
+extern void _ZNK11QDockWidget6widgetEv(void* qthis);
+  // proto:  void QDockWidget::setFloating(bool floating);
+extern void _ZN11QDockWidget11setFloatingEb(void* qthis, bool arg0);
+  // proto:  QWidget * QDockWidget::titleBarWidget();
+extern void _ZNK11QDockWidget14titleBarWidgetEv(void* qthis);
+  // proto:  void QDockWidget::~QDockWidget();
+extern void _ZN11QDockWidgetD0Ev(void* qthis);
+  // proto:  void QDockWidget::setWidget(QWidget * widget);
+extern void _ZN11QDockWidget9setWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  bool QDockWidget::isFloating();
+extern void demth_ZNK11QDockWidget10isFloatingEv(void* qthis);
+  // proto:  QAction * QDockWidget::toggleViewAction();
+extern void _ZNK11QDockWidget16toggleViewActionEv(void* qthis);
+  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
+extern void* dector_ZN11QDockWidgetC1ERKS_(void* arg0);
+extern void _ZN11QDockWidgetC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
+extern void _ZN11QDockWidget17setTitleBarWidgetEP7QWidget(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QDockWidget::metaObject();
+extern void _ZNK11QDockWidget10metaObjectEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QDockWidget)=1
 type QDockWidget struct {
   /*qbase*/ QWidget;
@@ -46,7 +76,7 @@ type QDockWidget struct {
 //  _dockLocationChanged QDockWidget_dockLocationChanged_signal;
 }
 
-
+  // proto:  QWidget * QDockWidget::widget();
 func (this *QDockWidget) widget(args ...interface{}) () {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +94,7 @@ func (this *QDockWidget) widget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDockWidget::setFloating(bool floating);
 func (this *QDockWidget) setFloating(args ...interface{}) () {
   // setFloating(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +113,7 @@ func (this *QDockWidget) setFloating(args ...interface{}) () {
 
 }
 
-
+  // proto:  QWidget * QDockWidget::titleBarWidget();
 func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
   // titleBarWidget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -101,7 +131,7 @@ func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDockWidget::~QDockWidget();
 func (this *QDockWidget) FreeQDockWidget(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,7 +145,7 @@ func (this *QDockWidget) FreeQDockWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDockWidget::setWidget(QWidget * widget);
 func (this *QDockWidget) setWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +164,7 @@ func (this *QDockWidget) setWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QDockWidget::isFloating();
 func (this *QDockWidget) isFloating(args ...interface{}) () {
   // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +182,7 @@ func (this *QDockWidget) isFloating(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAction * QDockWidget::toggleViewAction();
 func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
   // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,12 +200,12 @@ func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDockWidget::QDockWidget(const QDockWidget & );
 func NewQDockWidget(args ...interface{}) QDockWidget {
   return QDockWidget{}
 }
 
-
+  // proto:  void QDockWidget::setTitleBarWidget(QWidget * widget);
 func (this *QDockWidget) setTitleBarWidget(args ...interface{}) () {
   // setTitleBarWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -194,7 +224,7 @@ func (this *QDockWidget) setTitleBarWidget(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDockWidget::metaObject();
 func (this *QDockWidget) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

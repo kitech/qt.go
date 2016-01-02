@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,82 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTimeLine::start();
+extern void _ZN9QTimeLine5startEv(void* qthis);
+  // proto:  void QTimeLine::QTimeLine(const QTimeLine & );
+extern void* dector_ZN9QTimeLineC1ERKS_(void* arg0);
+extern void _ZN9QTimeLineC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QTimeLine::duration();
+extern void _ZNK9QTimeLine8durationEv(void* qthis);
+  // proto:  int QTimeLine::currentFrame();
+extern void _ZNK9QTimeLine12currentFrameEv(void* qthis);
+  // proto:  const QMetaObject * QTimeLine::metaObject();
+extern void _ZNK9QTimeLine10metaObjectEv(void* qthis);
+  // proto:  void QTimeLine::stop();
+extern void _ZN9QTimeLine4stopEv(void* qthis);
+  // proto:  void QTimeLine::~QTimeLine();
+extern void _ZN9QTimeLineD0Ev(void* qthis);
+  // proto:  void QTimeLine::setUpdateInterval(int interval);
+extern void _ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int arg0);
+  // proto:  QEasingCurve QTimeLine::easingCurve();
+extern void _ZNK9QTimeLine11easingCurveEv(void* qthis);
+  // proto:  int QTimeLine::loopCount();
+extern void _ZNK9QTimeLine9loopCountEv(void* qthis);
+  // proto:  void QTimeLine::setStartFrame(int frame);
+extern void _ZN9QTimeLine13setStartFrameEi(void* qthis, int arg0);
+  // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
+extern void* dector_ZN9QTimeLineC1EiP7QObject(int arg0, void* arg1);
+extern void _ZN9QTimeLineC1EiP7QObject(void* qthis, int arg0, void* arg1);
+  // proto:  void QTimeLine::resume();
+extern void _ZN9QTimeLine6resumeEv(void* qthis);
+  // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
+extern void _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* arg0);
+  // proto:  int QTimeLine::startFrame();
+extern void _ZNK9QTimeLine10startFrameEv(void* qthis);
+  // proto:  void QTimeLine::setEndFrame(int frame);
+extern void _ZN9QTimeLine11setEndFrameEi(void* qthis, int arg0);
+  // proto:  int QTimeLine::updateInterval();
+extern void _ZNK9QTimeLine14updateIntervalEv(void* qthis);
+  // proto:  void QTimeLine::setLoopCount(int count);
+extern void _ZN9QTimeLine12setLoopCountEi(void* qthis, int arg0);
+  // proto:  void QTimeLine::setCurrentTime(int msec);
+extern void _ZN9QTimeLine14setCurrentTimeEi(void* qthis, int arg0);
+  // proto:  int QTimeLine::currentTime();
+extern void _ZNK9QTimeLine11currentTimeEv(void* qthis);
+  // proto:  void QTimeLine::setDuration(int duration);
+extern void _ZN9QTimeLine11setDurationEi(void* qthis, int arg0);
+  // proto:  void QTimeLine::toggleDirection();
+extern void _ZN9QTimeLine15toggleDirectionEv(void* qthis);
+  // proto:  int QTimeLine::endFrame();
+extern void _ZNK9QTimeLine8endFrameEv(void* qthis);
+  // proto:  void QTimeLine::setPaused(bool paused);
+extern void _ZN9QTimeLine9setPausedEb(void* qthis, bool arg0);
+  // proto:  int QTimeLine::frameForTime(int msec);
+extern void _ZNK9QTimeLine12frameForTimeEi(void* qthis, int arg0);
+  // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
+extern void _ZN9QTimeLine13setFrameRangeEii(void* qthis, int arg0, int arg1);
+  // proto:  qreal QTimeLine::valueForTime(int msec);
+extern void _ZNK9QTimeLine12valueForTimeEi(void* qthis, int arg0);
+  // proto:  qreal QTimeLine::currentValue();
+extern void _ZNK9QTimeLine12currentValueEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTimeLine)=1
 type QTimeLine struct {
   /*qbase*/ QObject;
@@ -45,7 +112,7 @@ type QTimeLine struct {
 //  _stateChanged QTimeLine_stateChanged_signal;
 }
 
-
+  // proto:  void QTimeLine::start();
 func (this *QTimeLine) start(args ...interface{}) () {
   // start()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -63,12 +130,12 @@ func (this *QTimeLine) start(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::QTimeLine(const QTimeLine & );
 func NewQTimeLine(args ...interface{}) QTimeLine {
   return QTimeLine{}
 }
 
-
+  // proto:  int QTimeLine::duration();
 func (this *QTimeLine) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +153,7 @@ func (this *QTimeLine) duration(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::currentFrame();
 func (this *QTimeLine) currentFrame(args ...interface{}) () {
   // currentFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -104,7 +171,7 @@ func (this *QTimeLine) currentFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTimeLine::metaObject();
 func (this *QTimeLine) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,7 +189,7 @@ func (this *QTimeLine) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::stop();
 func (this *QTimeLine) stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -140,7 +207,7 @@ func (this *QTimeLine) stop(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::~QTimeLine();
 func (this *QTimeLine) FreeQTimeLine(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -154,7 +221,7 @@ func (this *QTimeLine) FreeQTimeLine(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setUpdateInterval(int interval);
 func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
   // setUpdateInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +240,7 @@ func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
 
 }
 
-
+  // proto:  QEasingCurve QTimeLine::easingCurve();
 func (this *QTimeLine) easingCurve(args ...interface{}) () {
   // easingCurve()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +258,7 @@ func (this *QTimeLine) easingCurve(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::loopCount();
 func (this *QTimeLine) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,7 +276,7 @@ func (this *QTimeLine) loopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setStartFrame(int frame);
 func (this *QTimeLine) setStartFrame(args ...interface{}) () {
   // setStartFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -228,7 +295,7 @@ func (this *QTimeLine) setStartFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::resume();
 func (this *QTimeLine) resume(args ...interface{}) () {
   // resume()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -246,7 +313,7 @@ func (this *QTimeLine) resume(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
 func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
   // setEasingCurve(const class QEasingCurve &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +332,7 @@ func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::startFrame();
 func (this *QTimeLine) startFrame(args ...interface{}) () {
   // startFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +350,7 @@ func (this *QTimeLine) startFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setEndFrame(int frame);
 func (this *QTimeLine) setEndFrame(args ...interface{}) () {
   // setEndFrame(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +369,7 @@ func (this *QTimeLine) setEndFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::updateInterval();
 func (this *QTimeLine) updateInterval(args ...interface{}) () {
   // updateInterval()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -320,7 +387,7 @@ func (this *QTimeLine) updateInterval(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setLoopCount(int count);
 func (this *QTimeLine) setLoopCount(args ...interface{}) () {
   // setLoopCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -339,7 +406,7 @@ func (this *QTimeLine) setLoopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setCurrentTime(int msec);
 func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
   // setCurrentTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -358,7 +425,7 @@ func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::currentTime();
 func (this *QTimeLine) currentTime(args ...interface{}) () {
   // currentTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +443,7 @@ func (this *QTimeLine) currentTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setDuration(int duration);
 func (this *QTimeLine) setDuration(args ...interface{}) () {
   // setDuration(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -395,7 +462,7 @@ func (this *QTimeLine) setDuration(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::toggleDirection();
 func (this *QTimeLine) toggleDirection(args ...interface{}) () {
   // toggleDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -413,7 +480,7 @@ func (this *QTimeLine) toggleDirection(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::endFrame();
 func (this *QTimeLine) endFrame(args ...interface{}) () {
   // endFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -431,7 +498,7 @@ func (this *QTimeLine) endFrame(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setPaused(bool paused);
 func (this *QTimeLine) setPaused(args ...interface{}) () {
   // setPaused(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -450,7 +517,7 @@ func (this *QTimeLine) setPaused(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimeLine::frameForTime(int msec);
 func (this *QTimeLine) frameForTime(args ...interface{}) () {
   // frameForTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -469,7 +536,7 @@ func (this *QTimeLine) frameForTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
 func (this *QTimeLine) setFrameRange(args ...interface{}) () {
   // setFrameRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -489,7 +556,7 @@ func (this *QTimeLine) setFrameRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTimeLine::valueForTime(int msec);
 func (this *QTimeLine) valueForTime(args ...interface{}) () {
   // valueForTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -508,7 +575,7 @@ func (this *QTimeLine) valueForTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTimeLine::currentValue();
 func (this *QTimeLine) currentValue(args ...interface{}) () {
   // currentValue()
   var vtys = make(map[int32]map[int32]reflect.Type)

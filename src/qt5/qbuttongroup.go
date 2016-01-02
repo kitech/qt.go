@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,54 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
+extern void _ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int arg1);
+  // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
+extern void _ZNK12QButtonGroup7buttonsEv(void* qthis);
+  // proto:  void QButtonGroup::~QButtonGroup();
+extern void _ZN12QButtonGroupD0Ev(void* qthis);
+  // proto:  int QButtonGroup::id(QAbstractButton * button);
+extern void _ZNK12QButtonGroup2idEP15QAbstractButton(void* qthis, void* arg0);
+  // proto:  void QButtonGroup::removeButton(QAbstractButton * );
+extern void _ZN12QButtonGroup12removeButtonEP15QAbstractButton(void* qthis, void* arg0);
+  // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
+extern void* dector_ZN12QButtonGroupC1ERKS_(void* arg0);
+extern void _ZN12QButtonGroupC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QButtonGroup::metaObject();
+extern void _ZNK12QButtonGroup10metaObjectEv(void* qthis);
+  // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
+extern void* dector_ZN12QButtonGroupC1EP7QObject(void* arg0);
+extern void _ZN12QButtonGroupC1EP7QObject(void* qthis, void* arg0);
+  // proto:  QAbstractButton * QButtonGroup::button(int id);
+extern void _ZNK12QButtonGroup6buttonEi(void* qthis, int arg0);
+  // proto:  int QButtonGroup::checkedId();
+extern void _ZNK12QButtonGroup9checkedIdEv(void* qthis);
+  // proto:  QAbstractButton * QButtonGroup::checkedButton();
+extern void _ZNK12QButtonGroup13checkedButtonEv(void* qthis);
+  // proto:  void QButtonGroup::setExclusive(bool );
+extern void _ZN12QButtonGroup12setExclusiveEb(void* qthis, bool arg0);
+  // proto:  void QButtonGroup::setId(QAbstractButton * button, int id);
+extern void _ZN12QButtonGroup5setIdEP15QAbstractButtoni(void* qthis, void* arg0, int arg1);
+  // proto:  bool QButtonGroup::exclusive();
+extern void _ZNK12QButtonGroup9exclusiveEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QButtonGroup)=1
 type QButtonGroup struct {
   /*qbase*/ QObject;
@@ -45,7 +84,7 @@ type QButtonGroup struct {
 //  _buttonPressed QButtonGroup_buttonPressed_signal;
 }
 
-
+  // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
 func (this *QButtonGroup) addButton(args ...interface{}) () {
   // addButton(class QAbstractButton *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -65,7 +104,7 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
 func (this *QButtonGroup) buttons(args ...interface{}) () {
   // buttons()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -83,7 +122,7 @@ func (this *QButtonGroup) buttons(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QButtonGroup::~QButtonGroup();
 func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,7 +136,7 @@ func (this *QButtonGroup) FreeQButtonGroup(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QButtonGroup::id(QAbstractButton * button);
 func (this *QButtonGroup) id(args ...interface{}) () {
   // id(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +155,7 @@ func (this *QButtonGroup) id(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QButtonGroup::removeButton(QAbstractButton * );
 func (this *QButtonGroup) removeButton(args ...interface{}) () {
   // removeButton(class QAbstractButton *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,12 +174,12 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QButtonGroup::QButtonGroup(const QButtonGroup & );
 func NewQButtonGroup(args ...interface{}) QButtonGroup {
   return QButtonGroup{}
 }
 
-
+  // proto:  const QMetaObject * QButtonGroup::metaObject();
 func (this *QButtonGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +197,7 @@ func (this *QButtonGroup) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractButton * QButtonGroup::button(int id);
 func (this *QButtonGroup) button(args ...interface{}) () {
   // button(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +216,7 @@ func (this *QButtonGroup) button(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QButtonGroup::checkedId();
 func (this *QButtonGroup) checkedId(args ...interface{}) () {
   // checkedId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,7 +234,7 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractButton * QButtonGroup::checkedButton();
 func (this *QButtonGroup) checkedButton(args ...interface{}) () {
   // checkedButton()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -213,7 +252,7 @@ func (this *QButtonGroup) checkedButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QButtonGroup::setExclusive(bool );
 func (this *QButtonGroup) setExclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,7 +271,7 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QButtonGroup::setId(QAbstractButton * button, int id);
 func (this *QButtonGroup) setId(args ...interface{}) () {
   // setId(class QAbstractButton *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +291,7 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QButtonGroup::exclusive();
 func (this *QButtonGroup) exclusive(args ...interface{}) () {
   // exclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)

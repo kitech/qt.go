@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,114 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QSpinBox::setMinimum(int min);
+extern void _ZN8QSpinBox10setMinimumEi(void* qthis, int arg0);
+  // proto:  QString QSpinBox::cleanText();
+extern void _ZNK8QSpinBox9cleanTextEv(void* qthis);
+  // proto:  int QSpinBox::value();
+extern void _ZNK8QSpinBox5valueEv(void* qthis);
+  // proto:  void QSpinBox::~QSpinBox();
+extern void _ZN8QSpinBoxD0Ev(void* qthis);
+  // proto:  void QSpinBox::setMaximum(int max);
+extern void _ZN8QSpinBox10setMaximumEi(void* qthis, int arg0);
+  // proto:  void QSpinBox::setValue(int val);
+extern void _ZN8QSpinBox8setValueEi(void* qthis, int arg0);
+  // proto:  void QSpinBox::setDisplayIntegerBase(int base);
+extern void _ZN8QSpinBox21setDisplayIntegerBaseEi(void* qthis, int arg0);
+  // proto:  void QSpinBox::QSpinBox(QWidget * parent);
+extern void* dector_ZN8QSpinBoxC1EP7QWidget(void* arg0);
+extern void _ZN8QSpinBoxC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  int QSpinBox::singleStep();
+extern void _ZNK8QSpinBox10singleStepEv(void* qthis);
+  // proto:  void QSpinBox::QSpinBox(const QSpinBox & );
+extern void* dector_ZN8QSpinBoxC1ERKS_(void* arg0);
+extern void _ZN8QSpinBoxC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QSpinBox::displayIntegerBase();
+extern void _ZNK8QSpinBox18displayIntegerBaseEv(void* qthis);
+  // proto:  void QSpinBox::setSuffix(const QString & suffix);
+extern void _ZN8QSpinBox9setSuffixERK7QString(void* qthis, void* arg0);
+  // proto:  int QSpinBox::maximum();
+extern void _ZNK8QSpinBox7maximumEv(void* qthis);
+  // proto:  void QSpinBox::setPrefix(const QString & prefix);
+extern void _ZN8QSpinBox9setPrefixERK7QString(void* qthis, void* arg0);
+  // proto:  QString QSpinBox::prefix();
+extern void _ZNK8QSpinBox6prefixEv(void* qthis);
+  // proto:  const QMetaObject * QSpinBox::metaObject();
+extern void _ZNK8QSpinBox10metaObjectEv(void* qthis);
+  // proto:  QString QSpinBox::suffix();
+extern void _ZNK8QSpinBox6suffixEv(void* qthis);
+  // proto:  int QSpinBox::minimum();
+extern void _ZNK8QSpinBox7minimumEv(void* qthis);
+  // proto:  void QSpinBox::setSingleStep(int val);
+extern void _ZN8QSpinBox13setSingleStepEi(void* qthis, int arg0);
+  // proto:  void QSpinBox::setRange(int min, int max);
+extern void _ZN8QSpinBox8setRangeEii(void* qthis, int arg0, int arg1);
+  // proto:  QString QDoubleSpinBox::textFromValue(double val);
+extern void _ZNK14QDoubleSpinBox13textFromValueEd(void* qthis, double arg0);
+  // proto:  void QDoubleSpinBox::setSingleStep(double val);
+extern void _ZN14QDoubleSpinBox13setSingleStepEd(void* qthis, double arg0);
+  // proto:  double QDoubleSpinBox::minimum();
+extern void _ZNK14QDoubleSpinBox7minimumEv(void* qthis);
+  // proto:  double QDoubleSpinBox::valueFromText(const QString & text);
+extern void _ZNK14QDoubleSpinBox13valueFromTextERK7QString(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QDoubleSpinBox::metaObject();
+extern void _ZNK14QDoubleSpinBox10metaObjectEv(void* qthis);
+  // proto:  void QDoubleSpinBox::setValue(double val);
+extern void _ZN14QDoubleSpinBox8setValueEd(void* qthis, double arg0);
+  // proto:  void QDoubleSpinBox::setSuffix(const QString & suffix);
+extern void _ZN14QDoubleSpinBox9setSuffixERK7QString(void* qthis, void* arg0);
+  // proto:  int QDoubleSpinBox::decimals();
+extern void _ZNK14QDoubleSpinBox8decimalsEv(void* qthis);
+  // proto:  QString QDoubleSpinBox::prefix();
+extern void _ZNK14QDoubleSpinBox6prefixEv(void* qthis);
+  // proto:  double QDoubleSpinBox::singleStep();
+extern void _ZNK14QDoubleSpinBox10singleStepEv(void* qthis);
+  // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
+extern void _ZN14QDoubleSpinBoxD0Ev(void* qthis);
+  // proto:  void QDoubleSpinBox::fixup(QString & str);
+extern void _ZNK14QDoubleSpinBox5fixupER7QString(void* qthis, void* arg0);
+  // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
+extern void* dector_ZN14QDoubleSpinBoxC1ERKS_(void* arg0);
+extern void _ZN14QDoubleSpinBoxC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QDoubleSpinBox::setPrefix(const QString & prefix);
+extern void _ZN14QDoubleSpinBox9setPrefixERK7QString(void* qthis, void* arg0);
+  // proto:  QString QDoubleSpinBox::cleanText();
+extern void _ZNK14QDoubleSpinBox9cleanTextEv(void* qthis);
+  // proto:  void QDoubleSpinBox::setMinimum(double min);
+extern void _ZN14QDoubleSpinBox10setMinimumEd(void* qthis, double arg0);
+  // proto:  void QDoubleSpinBox::setMaximum(double max);
+extern void _ZN14QDoubleSpinBox10setMaximumEd(void* qthis, double arg0);
+  // proto:  void QDoubleSpinBox::setDecimals(int prec);
+extern void _ZN14QDoubleSpinBox11setDecimalsEi(void* qthis, int arg0);
+  // proto:  double QDoubleSpinBox::value();
+extern void _ZNK14QDoubleSpinBox5valueEv(void* qthis);
+  // proto:  void QDoubleSpinBox::setRange(double min, double max);
+extern void _ZN14QDoubleSpinBox8setRangeEdd(void* qthis, double arg0, double arg1);
+  // proto:  void QDoubleSpinBox::QDoubleSpinBox(QWidget * parent);
+extern void* dector_ZN14QDoubleSpinBoxC1EP7QWidget(void* arg0);
+extern void _ZN14QDoubleSpinBoxC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  double QDoubleSpinBox::maximum();
+extern void _ZNK14QDoubleSpinBox7maximumEv(void* qthis);
+  // proto:  QString QDoubleSpinBox::suffix();
+extern void _ZNK14QDoubleSpinBox6suffixEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QSpinBox)=1
 type QSpinBox struct {
   /*qbase*/ QAbstractSpinBox;
@@ -49,7 +148,7 @@ type QDoubleSpinBox struct {
 //  _valueChanged QDoubleSpinBox_valueChanged_signal;
 }
 
-
+  // proto:  void QSpinBox::setMinimum(int min);
 func (this *QSpinBox) setMinimum(args ...interface{}) () {
   // setMinimum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -68,7 +167,7 @@ func (this *QSpinBox) setMinimum(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QSpinBox::cleanText();
 func (this *QSpinBox) cleanText(args ...interface{}) () {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -86,7 +185,7 @@ func (this *QSpinBox) cleanText(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QSpinBox::value();
 func (this *QSpinBox) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -104,7 +203,7 @@ func (this *QSpinBox) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::~QSpinBox();
 func (this *QSpinBox) FreeQSpinBox(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,7 +217,7 @@ func (this *QSpinBox) FreeQSpinBox(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setMaximum(int max);
 func (this *QSpinBox) setMaximum(args ...interface{}) () {
   // setMaximum(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -137,7 +236,7 @@ func (this *QSpinBox) setMaximum(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setValue(int val);
 func (this *QSpinBox) setValue(args ...interface{}) () {
   // setValue(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +255,7 @@ func (this *QSpinBox) setValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setDisplayIntegerBase(int base);
 func (this *QSpinBox) setDisplayIntegerBase(args ...interface{}) () {
   // setDisplayIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,12 +274,12 @@ func (this *QSpinBox) setDisplayIntegerBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::QSpinBox(QWidget * parent);
 func NewQSpinBox(args ...interface{}) QSpinBox {
   return QSpinBox{}
 }
 
-
+  // proto:  int QSpinBox::singleStep();
 func (this *QSpinBox) singleStep(args ...interface{}) () {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +297,7 @@ func (this *QSpinBox) singleStep(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QSpinBox::displayIntegerBase();
 func (this *QSpinBox) displayIntegerBase(args ...interface{}) () {
   // displayIntegerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -216,7 +315,7 @@ func (this *QSpinBox) displayIntegerBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setSuffix(const QString & suffix);
 func (this *QSpinBox) setSuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -235,7 +334,7 @@ func (this *QSpinBox) setSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QSpinBox::maximum();
 func (this *QSpinBox) maximum(args ...interface{}) () {
   // maximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +352,7 @@ func (this *QSpinBox) maximum(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setPrefix(const QString & prefix);
 func (this *QSpinBox) setPrefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +371,7 @@ func (this *QSpinBox) setPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QSpinBox::prefix();
 func (this *QSpinBox) prefix(args ...interface{}) () {
   // prefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -290,7 +389,7 @@ func (this *QSpinBox) prefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QSpinBox::metaObject();
 func (this *QSpinBox) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -308,7 +407,7 @@ func (this *QSpinBox) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QSpinBox::suffix();
 func (this *QSpinBox) suffix(args ...interface{}) () {
   // suffix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -326,7 +425,7 @@ func (this *QSpinBox) suffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QSpinBox::minimum();
 func (this *QSpinBox) minimum(args ...interface{}) () {
   // minimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -344,7 +443,7 @@ func (this *QSpinBox) minimum(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setSingleStep(int val);
 func (this *QSpinBox) setSingleStep(args ...interface{}) () {
   // setSingleStep(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -363,7 +462,7 @@ func (this *QSpinBox) setSingleStep(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QSpinBox::setRange(int min, int max);
 func (this *QSpinBox) setRange(args ...interface{}) () {
   // setRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -383,7 +482,7 @@ func (this *QSpinBox) setRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDoubleSpinBox::textFromValue(double val);
 func (this *QDoubleSpinBox) textFromValue(args ...interface{}) () {
   // textFromValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -402,7 +501,7 @@ func (this *QDoubleSpinBox) textFromValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setSingleStep(double val);
 func (this *QDoubleSpinBox) setSingleStep(args ...interface{}) () {
   // setSingleStep(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -421,7 +520,7 @@ func (this *QDoubleSpinBox) setSingleStep(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QDoubleSpinBox::minimum();
 func (this *QDoubleSpinBox) minimum(args ...interface{}) () {
   // minimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -439,7 +538,7 @@ func (this *QDoubleSpinBox) minimum(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QDoubleSpinBox::valueFromText(const QString & text);
 func (this *QDoubleSpinBox) valueFromText(args ...interface{}) () {
   // valueFromText(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -458,7 +557,7 @@ func (this *QDoubleSpinBox) valueFromText(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QDoubleSpinBox::metaObject();
 func (this *QDoubleSpinBox) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -476,7 +575,7 @@ func (this *QDoubleSpinBox) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setValue(double val);
 func (this *QDoubleSpinBox) setValue(args ...interface{}) () {
   // setValue(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -495,7 +594,7 @@ func (this *QDoubleSpinBox) setValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setSuffix(const QString & suffix);
 func (this *QDoubleSpinBox) setSuffix(args ...interface{}) () {
   // setSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -514,7 +613,7 @@ func (this *QDoubleSpinBox) setSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QDoubleSpinBox::decimals();
 func (this *QDoubleSpinBox) decimals(args ...interface{}) () {
   // decimals()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -532,7 +631,7 @@ func (this *QDoubleSpinBox) decimals(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDoubleSpinBox::prefix();
 func (this *QDoubleSpinBox) prefix(args ...interface{}) () {
   // prefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -550,7 +649,7 @@ func (this *QDoubleSpinBox) prefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QDoubleSpinBox::singleStep();
 func (this *QDoubleSpinBox) singleStep(args ...interface{}) () {
   // singleStep()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -568,7 +667,7 @@ func (this *QDoubleSpinBox) singleStep(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::~QDoubleSpinBox();
 func (this *QDoubleSpinBox) FreeQDoubleSpinBox(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -582,7 +681,7 @@ func (this *QDoubleSpinBox) FreeQDoubleSpinBox(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::fixup(QString & str);
 func (this *QDoubleSpinBox) fixup(args ...interface{}) () {
   // fixup(class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -601,12 +700,12 @@ func (this *QDoubleSpinBox) fixup(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::QDoubleSpinBox(const QDoubleSpinBox & );
 func NewQDoubleSpinBox(args ...interface{}) QDoubleSpinBox {
   return QDoubleSpinBox{}
 }
 
-
+  // proto:  void QDoubleSpinBox::setPrefix(const QString & prefix);
 func (this *QDoubleSpinBox) setPrefix(args ...interface{}) () {
   // setPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -625,7 +724,7 @@ func (this *QDoubleSpinBox) setPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDoubleSpinBox::cleanText();
 func (this *QDoubleSpinBox) cleanText(args ...interface{}) () {
   // cleanText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -643,7 +742,7 @@ func (this *QDoubleSpinBox) cleanText(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setMinimum(double min);
 func (this *QDoubleSpinBox) setMinimum(args ...interface{}) () {
   // setMinimum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -662,7 +761,7 @@ func (this *QDoubleSpinBox) setMinimum(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setMaximum(double max);
 func (this *QDoubleSpinBox) setMaximum(args ...interface{}) () {
   // setMaximum(double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -681,7 +780,7 @@ func (this *QDoubleSpinBox) setMaximum(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setDecimals(int prec);
 func (this *QDoubleSpinBox) setDecimals(args ...interface{}) () {
   // setDecimals(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -700,7 +799,7 @@ func (this *QDoubleSpinBox) setDecimals(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QDoubleSpinBox::value();
 func (this *QDoubleSpinBox) value(args ...interface{}) () {
   // value()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -718,7 +817,7 @@ func (this *QDoubleSpinBox) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QDoubleSpinBox::setRange(double min, double max);
 func (this *QDoubleSpinBox) setRange(args ...interface{}) () {
   // setRange(double, double)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -738,7 +837,7 @@ func (this *QDoubleSpinBox) setRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QDoubleSpinBox::maximum();
 func (this *QDoubleSpinBox) maximum(args ...interface{}) () {
   // maximum()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -756,7 +855,7 @@ func (this *QDoubleSpinBox) maximum(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QDoubleSpinBox::suffix();
 func (this *QDoubleSpinBox) suffix(args ...interface{}) () {
   // suffix()
   var vtys = make(map[int32]map[int32]reflect.Type)

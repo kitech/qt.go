@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,57 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
+extern void* dector_ZN12QMutexLockerC1EP11QBasicMutex(void* arg0);
+extern void demth_ZN12QMutexLockerC1EP11QBasicMutex(void* qthis, void* arg0);
+  // proto:  QMutex * QMutexLocker::mutex();
+extern void demth_ZNK12QMutexLocker5mutexEv(void* qthis);
+  // proto:  void QMutexLocker::QMutexLocker(const QMutexLocker & );
+extern void* dector_ZN12QMutexLockerC1ERKS_(void* arg0);
+extern void _ZN12QMutexLockerC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QMutexLocker::relock();
+extern void demth_ZN12QMutexLocker6relockEv(void* qthis);
+  // proto:  void QMutexLocker::unlock();
+extern void demth_ZN12QMutexLocker6unlockEv(void* qthis);
+  // proto:  void QMutexLocker::~QMutexLocker();
+extern void demth_ZN12QMutexLockerD0Ev(void* qthis);
+  // proto:  void QBasicMutex::lock();
+extern void demth_ZN11QBasicMutex4lockEv(void* qthis);
+  // proto:  bool QBasicMutex::tryLock();
+extern void _ZN11QBasicMutex7tryLockEv(void* qthis);
+  // proto:  bool QBasicMutex::isRecursive();
+extern void _ZN11QBasicMutex11isRecursiveEv(void* qthis);
+  // proto:  void QBasicMutex::unlock();
+extern void demth_ZN11QBasicMutex6unlockEv(void* qthis);
+  // proto:  void QMutex::~QMutex();
+extern void _ZN6QMutexD0Ev(void* qthis);
+  // proto:  bool QMutex::tryLock(int timeout);
+extern void _ZN6QMutex7tryLockEi(void* qthis, int arg0);
+  // proto:  void QMutex::QMutex(const QMutex & );
+extern void* dector_ZN6QMutexC1ERKS_(void* arg0);
+extern void _ZN6QMutexC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QMutex::lock();
+extern void _ZN6QMutex4lockEv(void* qthis);
+  // proto:  void QMutex::unlock();
+extern void _ZN6QMutex6unlockEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QMutexLocker)=4
 type QMutexLocker struct {
   // qbase: None;
@@ -53,12 +95,12 @@ type QMutex struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
 func NewQMutexLocker(args ...interface{}) QMutexLocker {
   return QMutexLocker{}
 }
 
-
+  // proto:  QMutex * QMutexLocker::mutex();
 func (this *QMutexLocker) mutex(args ...interface{}) () {
   // mutex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -76,7 +118,7 @@ func (this *QMutexLocker) mutex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutexLocker::relock();
 func (this *QMutexLocker) relock(args ...interface{}) () {
   // relock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -94,7 +136,7 @@ func (this *QMutexLocker) relock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutexLocker::unlock();
 func (this *QMutexLocker) unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,7 +154,7 @@ func (this *QMutexLocker) unlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutexLocker::~QMutexLocker();
 func (this *QMutexLocker) FreeQMutexLocker(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -126,7 +168,7 @@ func (this *QMutexLocker) FreeQMutexLocker(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBasicMutex::lock();
 func (this *QBasicMutex) lock(args ...interface{}) () {
   // lock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -144,7 +186,7 @@ func (this *QBasicMutex) lock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBasicMutex::tryLock();
 func (this *QBasicMutex) tryLock(args ...interface{}) () {
   // tryLock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,7 +204,7 @@ func (this *QBasicMutex) tryLock(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QBasicMutex::isRecursive();
 func (this *QBasicMutex) isRecursive(args ...interface{}) () {
   // isRecursive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +222,7 @@ func (this *QBasicMutex) isRecursive(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QBasicMutex::unlock();
 func (this *QBasicMutex) unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +240,7 @@ func (this *QBasicMutex) unlock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutex::~QMutex();
 func (this *QMutex) FreeQMutex(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -212,7 +254,7 @@ func (this *QMutex) FreeQMutex(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QMutex::tryLock(int timeout);
 func (this *QMutex) tryLock(args ...interface{}) () {
   // tryLock(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -231,12 +273,12 @@ func (this *QMutex) tryLock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutex::QMutex(const QMutex & );
 func NewQMutex(args ...interface{}) QMutex {
   return QMutex{}
 }
 
-
+  // proto:  void QMutex::lock();
 func (this *QMutex) lock(args ...interface{}) () {
   // lock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -254,7 +296,7 @@ func (this *QMutex) lock(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QMutex::unlock();
 func (this *QMutex) unlock(args ...interface{}) () {
   // unlock()
   var vtys = make(map[int32]map[int32]reflect.Type)

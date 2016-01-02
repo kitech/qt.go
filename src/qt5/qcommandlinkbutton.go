@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,31 +26,56 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
+extern void* dector_ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(void* arg0, void* arg1, void* arg2);
+extern void _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  const QMetaObject * QCommandLinkButton::metaObject();
+extern void _ZNK18QCommandLinkButton10metaObjectEv(void* qthis);
+  // proto:  void QCommandLinkButton::~QCommandLinkButton();
+extern void _ZN18QCommandLinkButtonD0Ev(void* qthis);
+  // proto:  void QCommandLinkButton::QCommandLinkButton(const QCommandLinkButton & );
+extern void* dector_ZN18QCommandLinkButtonC1ERKS_(void* arg0);
+extern void _ZN18QCommandLinkButtonC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
+extern void* dector_ZN18QCommandLinkButtonC1EP7QWidget(void* arg0);
+extern void _ZN18QCommandLinkButtonC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  QString QCommandLinkButton::description();
+extern void _ZNK18QCommandLinkButton11descriptionEv(void* qthis);
+  // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, QWidget * parent);
+extern void* dector_ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(void* arg0, void* arg1);
+extern void _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
+  // proto:  void QCommandLinkButton::setDescription(const QString & description);
+extern void _ZN18QCommandLinkButton14setDescriptionERK7QString(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QCommandLinkButton)=1
 type QCommandLinkButton struct {
   /*qbase*/ QPushButton;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
 func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
   return QCommandLinkButton{}
 }
 
-
+  // proto:  const QMetaObject * QCommandLinkButton::metaObject();
 func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -64,7 +93,7 @@ func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLinkButton::~QCommandLinkButton();
 func (this *QCommandLinkButton) FreeQCommandLinkButton(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -78,7 +107,7 @@ func (this *QCommandLinkButton) FreeQCommandLinkButton(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCommandLinkButton::description();
 func (this *QCommandLinkButton) description(args ...interface{}) () {
   // description()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +125,7 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCommandLinkButton::setDescription(const QString & description);
 func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
   // setDescription(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)

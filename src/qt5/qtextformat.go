@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,416 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  qreal QTextLength::value(qreal maximumLength);
+extern void demth_ZNK11QTextLength5valueEd(void* qthis, double arg0);
+  // proto:  void QTextLength::QTextLength();
+extern void* dector_ZN11QTextLengthC1Ev();
+extern void demth_ZN11QTextLengthC1Ev(void* qthis);
+  // proto:  qreal QTextLength::rawValue();
+extern void demth_ZNK11QTextLength8rawValueEv(void* qthis);
+  // proto:  void QTextImageFormat::QTextImageFormat();
+extern void* dector_ZN16QTextImageFormatC1Ev();
+extern void _ZN16QTextImageFormatC1Ev(void* qthis);
+  // proto:  bool QTextImageFormat::isValid();
+extern void demth_ZNK16QTextImageFormat7isValidEv(void* qthis);
+  // proto:  qreal QTextImageFormat::width();
+extern void demth_ZNK16QTextImageFormat5widthEv(void* qthis);
+  // proto:  void QTextImageFormat::QTextImageFormat(const QTextFormat & format);
+extern void* dector_ZN16QTextImageFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN16QTextImageFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  void QTextImageFormat::setHeight(qreal height);
+extern void demth_ZN16QTextImageFormat9setHeightEd(void* qthis, double arg0);
+  // proto:  void QTextImageFormat::setWidth(qreal width);
+extern void demth_ZN16QTextImageFormat8setWidthEd(void* qthis, double arg0);
+  // proto:  void QTextImageFormat::setName(const QString & name);
+extern void demth_ZN16QTextImageFormat7setNameERK7QString(void* qthis, void* arg0);
+  // proto:  QString QTextImageFormat::name();
+extern void demth_ZNK16QTextImageFormat4nameEv(void* qthis);
+  // proto:  qreal QTextImageFormat::height();
+extern void demth_ZNK16QTextImageFormat6heightEv(void* qthis);
+  // proto:  QTextBlockFormat QTextFormat::toBlockFormat();
+extern void _ZNK11QTextFormat13toBlockFormatEv(void* qthis);
+  // proto:  QString QTextFormat::stringProperty(int propertyId);
+extern void _ZNK11QTextFormat14stringPropertyEi(void* qthis, int arg0);
+  // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
+extern void _ZNK11QTextFormat20lengthVectorPropertyEi(void* qthis, int arg0);
+  // proto:  int QTextFormat::objectIndex();
+extern void _ZNK11QTextFormat11objectIndexEv(void* qthis);
+  // proto:  void QTextFormat::setObjectIndex(int object);
+extern void _ZN11QTextFormat14setObjectIndexEi(void* qthis, int arg0);
+  // proto:  void QTextFormat::clearForeground();
+extern void demth_ZN11QTextFormat15clearForegroundEv(void* qthis);
+  // proto:  bool QTextFormat::isTableCellFormat();
+extern void demth_ZNK11QTextFormat17isTableCellFormatEv(void* qthis);
+  // proto:  void QTextFormat::~QTextFormat();
+extern void _ZN11QTextFormatD0Ev(void* qthis);
+  // proto:  bool QTextFormat::isValid();
+extern void demth_ZNK11QTextFormat7isValidEv(void* qthis);
+  // proto:  void QTextFormat::QTextFormat(const QTextFormat & rhs);
+extern void* dector_ZN11QTextFormatC1ERKS_(void* arg0);
+extern void _ZN11QTextFormatC1ERKS_(void* qthis, void* arg0);
+  // proto:  QTextLength QTextFormat::lengthProperty(int propertyId);
+extern void _ZNK11QTextFormat14lengthPropertyEi(void* qthis, int arg0);
+  // proto:  void QTextFormat::merge(const QTextFormat & other);
+extern void _ZN11QTextFormat5mergeERKS_(void* qthis, void* arg0);
+  // proto:  QColor QTextFormat::colorProperty(int propertyId);
+extern void _ZNK11QTextFormat13colorPropertyEi(void* qthis, int arg0);
+  // proto:  void QTextFormat::QTextFormat();
+extern void* dector_ZN11QTextFormatC1Ev();
+extern void _ZN11QTextFormatC1Ev(void* qthis);
+  // proto:  void QTextFormat::setForeground(const QBrush & brush);
+extern void demth_ZN11QTextFormat13setForegroundERK6QBrush(void* qthis, void* arg0);
+  // proto:  bool QTextFormat::boolProperty(int propertyId);
+extern void _ZNK11QTextFormat12boolPropertyEi(void* qthis, int arg0);
+  // proto:  bool QTextFormat::isListFormat();
+extern void demth_ZNK11QTextFormat12isListFormatEv(void* qthis);
+  // proto:  void QTextFormat::QTextFormat(int type);
+extern void* dector_ZN11QTextFormatC1Ei(int arg0);
+extern void _ZN11QTextFormatC1Ei(void* qthis, int arg0);
+  // proto:  bool QTextFormat::isImageFormat();
+extern void demth_ZNK11QTextFormat13isImageFormatEv(void* qthis);
+  // proto:  void QTextFormat::clearProperty(int propertyId);
+extern void _ZN11QTextFormat13clearPropertyEi(void* qthis, int arg0);
+  // proto:  QTextFrameFormat QTextFormat::toFrameFormat();
+extern void _ZNK11QTextFormat13toFrameFormatEv(void* qthis);
+  // proto:  QBrush QTextFormat::brushProperty(int propertyId);
+extern void _ZNK11QTextFormat13brushPropertyEi(void* qthis, int arg0);
+  // proto:  int QTextFormat::propertyCount();
+extern void _ZNK11QTextFormat13propertyCountEv(void* qthis);
+  // proto:  QPen QTextFormat::penProperty(int propertyId);
+extern void _ZNK11QTextFormat11penPropertyEi(void* qthis, int arg0);
+  // proto:  QVariant QTextFormat::property(int propertyId);
+extern void _ZNK11QTextFormat8propertyEi(void* qthis, int arg0);
+  // proto:  bool QTextFormat::isTableFormat();
+extern void demth_ZNK11QTextFormat13isTableFormatEv(void* qthis);
+  // proto:  void QTextFormat::setProperty(int propertyId, const QVariant & value);
+extern void _ZN11QTextFormat11setPropertyEiRK8QVariant(void* qthis, int arg0, void* arg1);
+  // proto:  int QTextFormat::type();
+extern void _ZNK11QTextFormat4typeEv(void* qthis);
+  // proto:  bool QTextFormat::isCharFormat();
+extern void demth_ZNK11QTextFormat12isCharFormatEv(void* qthis);
+  // proto:  void QTextFormat::clearBackground();
+extern void demth_ZN11QTextFormat15clearBackgroundEv(void* qthis);
+  // proto:  bool QTextFormat::isBlockFormat();
+extern void demth_ZNK11QTextFormat13isBlockFormatEv(void* qthis);
+  // proto:  QBrush QTextFormat::background();
+extern void demth_ZNK11QTextFormat10backgroundEv(void* qthis);
+  // proto:  qreal QTextFormat::doubleProperty(int propertyId);
+extern void _ZNK11QTextFormat14doublePropertyEi(void* qthis, int arg0);
+  // proto:  void QTextFormat::swap(QTextFormat & other);
+extern void _ZN11QTextFormat4swapERS_(void* qthis, void* arg0);
+  // proto:  QTextImageFormat QTextFormat::toImageFormat();
+extern void _ZNK11QTextFormat13toImageFormatEv(void* qthis);
+  // proto:  bool QTextFormat::hasProperty(int propertyId);
+extern void _ZNK11QTextFormat11hasPropertyEi(void* qthis, int arg0);
+  // proto:  QBrush QTextFormat::foreground();
+extern void demth_ZNK11QTextFormat10foregroundEv(void* qthis);
+  // proto:  void QTextFormat::setObjectType(int type);
+extern void demth_ZN11QTextFormat13setObjectTypeEi(void* qthis, int arg0);
+  // proto:  void QTextFormat::setBackground(const QBrush & brush);
+extern void demth_ZN11QTextFormat13setBackgroundERK6QBrush(void* qthis, void* arg0);
+  // proto:  QTextTableFormat QTextFormat::toTableFormat();
+extern void _ZNK11QTextFormat13toTableFormatEv(void* qthis);
+  // proto:  bool QTextFormat::isFrameFormat();
+extern void demth_ZNK11QTextFormat13isFrameFormatEv(void* qthis);
+  // proto:  int QTextFormat::intProperty(int propertyId);
+extern void _ZNK11QTextFormat11intPropertyEi(void* qthis, int arg0);
+  // proto:  QTextCharFormat QTextFormat::toCharFormat();
+extern void _ZNK11QTextFormat12toCharFormatEv(void* qthis);
+  // proto:  bool QTextFormat::isEmpty();
+extern void demth_ZNK11QTextFormat7isEmptyEv(void* qthis);
+  // proto:  QTextTableCellFormat QTextFormat::toTableCellFormat();
+extern void _ZNK11QTextFormat17toTableCellFormatEv(void* qthis);
+  // proto:  int QTextFormat::objectType();
+extern void demth_ZNK11QTextFormat10objectTypeEv(void* qthis);
+  // proto:  QTextListFormat QTextFormat::toListFormat();
+extern void _ZNK11QTextFormat12toListFormatEv(void* qthis);
+  // proto:  QMap<int, QVariant> QTextFormat::properties();
+extern void _ZNK11QTextFormat10propertiesEv(void* qthis);
+  // proto:  int QTextBlockFormat::indent();
+extern void demth_ZNK16QTextBlockFormat6indentEv(void* qthis);
+  // proto:  void QTextBlockFormat::setTextIndent(qreal aindent);
+extern void demth_ZN16QTextBlockFormat13setTextIndentEd(void* qthis, double arg0);
+  // proto:  void QTextBlockFormat::setNonBreakableLines(bool b);
+extern void demth_ZN16QTextBlockFormat20setNonBreakableLinesEb(void* qthis, bool arg0);
+  // proto:  void QTextBlockFormat::setIndent(int indent);
+extern void demth_ZN16QTextBlockFormat9setIndentEi(void* qthis, int arg0);
+  // proto:  qreal QTextBlockFormat::textIndent();
+extern void demth_ZNK16QTextBlockFormat10textIndentEv(void* qthis);
+  // proto:  qreal QTextBlockFormat::lineHeight();
+extern void demth_ZNK16QTextBlockFormat10lineHeightEv(void* qthis);
+  // proto:  void QTextBlockFormat::QTextBlockFormat(const QTextFormat & fmt);
+extern void* dector_ZN16QTextBlockFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN16QTextBlockFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  qreal QTextBlockFormat::lineHeight(qreal scriptLineHeight, qreal scaling);
+extern void demth_ZNK16QTextBlockFormat10lineHeightEdd(void* qthis, double arg0, double arg1);
+  // proto:  void QTextBlockFormat::setRightMargin(qreal margin);
+extern void demth_ZN16QTextBlockFormat14setRightMarginEd(void* qthis, double arg0);
+  // proto:  qreal QTextBlockFormat::topMargin();
+extern void demth_ZNK16QTextBlockFormat9topMarginEv(void* qthis);
+  // proto:  void QTextBlockFormat::QTextBlockFormat();
+extern void* dector_ZN16QTextBlockFormatC1Ev();
+extern void _ZN16QTextBlockFormatC1Ev(void* qthis);
+  // proto:  qreal QTextBlockFormat::rightMargin();
+extern void demth_ZNK16QTextBlockFormat11rightMarginEv(void* qthis);
+  // proto:  qreal QTextBlockFormat::bottomMargin();
+extern void demth_ZNK16QTextBlockFormat12bottomMarginEv(void* qthis);
+  // proto:  void QTextBlockFormat::setTopMargin(qreal margin);
+extern void demth_ZN16QTextBlockFormat12setTopMarginEd(void* qthis, double arg0);
+  // proto:  qreal QTextBlockFormat::leftMargin();
+extern void demth_ZNK16QTextBlockFormat10leftMarginEv(void* qthis);
+  // proto:  void QTextBlockFormat::setLineHeight(qreal height, int heightType);
+extern void demth_ZN16QTextBlockFormat13setLineHeightEdi(void* qthis, double arg0, int arg1);
+  // proto:  void QTextBlockFormat::setBottomMargin(qreal margin);
+extern void demth_ZN16QTextBlockFormat15setBottomMarginEd(void* qthis, double arg0);
+  // proto:  int QTextBlockFormat::lineHeightType();
+extern void demth_ZNK16QTextBlockFormat14lineHeightTypeEv(void* qthis);
+  // proto:  void QTextBlockFormat::setLeftMargin(qreal margin);
+extern void demth_ZN16QTextBlockFormat13setLeftMarginEd(void* qthis, double arg0);
+  // proto:  bool QTextBlockFormat::isValid();
+extern void demth_ZNK16QTextBlockFormat7isValidEv(void* qthis);
+  // proto:  bool QTextBlockFormat::nonBreakableLines();
+extern void demth_ZNK16QTextBlockFormat17nonBreakableLinesEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontLetterSpacing(qreal spacing);
+extern void demth_ZN15QTextCharFormat20setFontLetterSpacingEd(void* qthis, double arg0);
+  // proto:  bool QTextCharFormat::isAnchor();
+extern void demth_ZNK15QTextCharFormat8isAnchorEv(void* qthis);
+  // proto:  void QTextCharFormat::setFont(const QFont & font);
+extern void _ZN15QTextCharFormat7setFontERK5QFont(void* qthis, void* arg0);
+  // proto:  bool QTextCharFormat::fontOverline();
+extern void demth_ZNK15QTextCharFormat12fontOverlineEv(void* qthis);
+  // proto:  QFont QTextCharFormat::font();
+extern void _ZNK15QTextCharFormat4fontEv(void* qthis);
+  // proto:  QString QTextCharFormat::fontFamily();
+extern void demth_ZNK15QTextCharFormat10fontFamilyEv(void* qthis);
+  // proto:  bool QTextCharFormat::fontStrikeOut();
+extern void demth_ZNK15QTextCharFormat13fontStrikeOutEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontPointSize(qreal size);
+extern void demth_ZN15QTextCharFormat16setFontPointSizeEd(void* qthis, double arg0);
+  // proto:  void QTextCharFormat::setUnderlineColor(const QColor & color);
+extern void demth_ZN15QTextCharFormat17setUnderlineColorERK6QColor(void* qthis, void* arg0);
+  // proto:  int QTextCharFormat::tableCellRowSpan();
+extern void demth_ZNK15QTextCharFormat16tableCellRowSpanEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontUnderline(bool underline);
+extern void demth_ZN15QTextCharFormat16setFontUnderlineEb(void* qthis, bool arg0);
+  // proto:  bool QTextCharFormat::isValid();
+extern void _ZNK15QTextCharFormat7isValidEv(void* qthis);
+  // proto:  bool QTextCharFormat::fontItalic();
+extern void demth_ZNK15QTextCharFormat10fontItalicEv(void* qthis);
+  // proto:  void QTextCharFormat::setToolTip(const QString & tip);
+extern void demth_ZN15QTextCharFormat10setToolTipERK7QString(void* qthis, void* arg0);
+  // proto:  void QTextCharFormat::setTextOutline(const QPen & pen);
+extern void demth_ZN15QTextCharFormat14setTextOutlineERK4QPen(void* qthis, void* arg0);
+  // proto:  void QTextCharFormat::setTableCellRowSpan(int tableCellRowSpan);
+extern void demth_ZN15QTextCharFormat19setTableCellRowSpanEi(void* qthis, int arg0);
+  // proto:  void QTextCharFormat::setAnchor(bool anchor);
+extern void demth_ZN15QTextCharFormat9setAnchorEb(void* qthis, bool arg0);
+  // proto:  qreal QTextCharFormat::fontPointSize();
+extern void demth_ZNK15QTextCharFormat13fontPointSizeEv(void* qthis);
+  // proto:  void QTextCharFormat::QTextCharFormat(const QTextFormat & fmt);
+extern void* dector_ZN15QTextCharFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN15QTextCharFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  void QTextCharFormat::setFontStrikeOut(bool strikeOut);
+extern void demth_ZN15QTextCharFormat16setFontStrikeOutEb(void* qthis, bool arg0);
+  // proto:  qreal QTextCharFormat::fontWordSpacing();
+extern void demth_ZNK15QTextCharFormat15fontWordSpacingEv(void* qthis);
+  // proto:  QString QTextCharFormat::toolTip();
+extern void demth_ZNK15QTextCharFormat7toolTipEv(void* qthis);
+  // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
+extern void demth_ZN15QTextCharFormat14setAnchorNamesERK11QStringList(void* qthis, void* arg0);
+  // proto:  QStringList QTextCharFormat::anchorNames();
+extern void _ZNK15QTextCharFormat11anchorNamesEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
+extern void demth_ZN15QTextCharFormat17setFontFixedPitchEb(void* qthis, bool arg0);
+  // proto:  void QTextCharFormat::setFontItalic(bool italic);
+extern void demth_ZN15QTextCharFormat13setFontItalicEb(void* qthis, bool arg0);
+  // proto:  void QTextCharFormat::setFontFamily(const QString & family);
+extern void demth_ZN15QTextCharFormat13setFontFamilyERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextCharFormat::fontFixedPitch();
+extern void demth_ZNK15QTextCharFormat14fontFixedPitchEv(void* qthis);
+  // proto:  void QTextCharFormat::setAnchorHref(const QString & value);
+extern void demth_ZN15QTextCharFormat13setAnchorHrefERK7QString(void* qthis, void* arg0);
+  // proto:  int QTextCharFormat::fontStretch();
+extern void demth_ZNK15QTextCharFormat11fontStretchEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontKerning(bool enable);
+extern void demth_ZN15QTextCharFormat14setFontKerningEb(void* qthis, bool arg0);
+  // proto:  int QTextCharFormat::tableCellColumnSpan();
+extern void demth_ZNK15QTextCharFormat19tableCellColumnSpanEv(void* qthis);
+  // proto:  void QTextCharFormat::QTextCharFormat();
+extern void* dector_ZN15QTextCharFormatC1Ev();
+extern void _ZN15QTextCharFormatC1Ev(void* qthis);
+  // proto:  qreal QTextCharFormat::fontLetterSpacing();
+extern void demth_ZNK15QTextCharFormat17fontLetterSpacingEv(void* qthis);
+  // proto:  QString QTextCharFormat::anchorHref();
+extern void demth_ZNK15QTextCharFormat10anchorHrefEv(void* qthis);
+  // proto:  QString QTextCharFormat::anchorName();
+extern void _ZNK15QTextCharFormat10anchorNameEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontStretch(int factor);
+extern void demth_ZN15QTextCharFormat14setFontStretchEi(void* qthis, int arg0);
+  // proto:  void QTextCharFormat::setAnchorName(const QString & name);
+extern void demth_ZN15QTextCharFormat13setAnchorNameERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextCharFormat::fontKerning();
+extern void demth_ZNK15QTextCharFormat11fontKerningEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontWeight(int weight);
+extern void demth_ZN15QTextCharFormat13setFontWeightEi(void* qthis, int arg0);
+  // proto:  bool QTextCharFormat::fontUnderline();
+extern void _ZNK15QTextCharFormat13fontUnderlineEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontWordSpacing(qreal spacing);
+extern void demth_ZN15QTextCharFormat18setFontWordSpacingEd(void* qthis, double arg0);
+  // proto:  QColor QTextCharFormat::underlineColor();
+extern void demth_ZNK15QTextCharFormat14underlineColorEv(void* qthis);
+  // proto:  int QTextCharFormat::fontWeight();
+extern void demth_ZNK15QTextCharFormat10fontWeightEv(void* qthis);
+  // proto:  void QTextCharFormat::setFontOverline(bool overline);
+extern void demth_ZN15QTextCharFormat15setFontOverlineEb(void* qthis, bool arg0);
+  // proto:  void QTextCharFormat::setTableCellColumnSpan(int tableCellColumnSpan);
+extern void demth_ZN15QTextCharFormat22setTableCellColumnSpanEi(void* qthis, int arg0);
+  // proto:  QPen QTextCharFormat::textOutline();
+extern void demth_ZNK15QTextCharFormat11textOutlineEv(void* qthis);
+  // proto:  void QTextTableFormat::QTextTableFormat();
+extern void* dector_ZN16QTextTableFormatC1Ev();
+extern void _ZN16QTextTableFormatC1Ev(void* qthis);
+  // proto:  bool QTextTableFormat::isValid();
+extern void demth_ZNK16QTextTableFormat7isValidEv(void* qthis);
+  // proto:  int QTextTableFormat::headerRowCount();
+extern void demth_ZNK16QTextTableFormat14headerRowCountEv(void* qthis);
+  // proto:  int QTextTableFormat::columns();
+extern void demth_ZNK16QTextTableFormat7columnsEv(void* qthis);
+  // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
+extern void demth_ZNK16QTextTableFormat22columnWidthConstraintsEv(void* qthis);
+  // proto:  void QTextTableFormat::setCellPadding(qreal padding);
+extern void demth_ZN16QTextTableFormat14setCellPaddingEd(void* qthis, double arg0);
+  // proto:  qreal QTextTableFormat::cellPadding();
+extern void demth_ZNK16QTextTableFormat11cellPaddingEv(void* qthis);
+  // proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
+extern void demth_ZN16QTextTableFormat14setCellSpacingEd(void* qthis, double arg0);
+  // proto:  void QTextTableFormat::setColumns(int columns);
+extern void demth_ZN16QTextTableFormat10setColumnsEi(void* qthis, int arg0);
+  // proto:  void QTextTableFormat::QTextTableFormat(const QTextFormat & fmt);
+extern void* dector_ZN16QTextTableFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN16QTextTableFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  void QTextTableFormat::clearColumnWidthConstraints();
+extern void demth_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(void* qthis);
+  // proto:  void QTextTableFormat::setHeaderRowCount(int count);
+extern void demth_ZN16QTextTableFormat17setHeaderRowCountEi(void* qthis, int arg0);
+  // proto:  qreal QTextTableFormat::cellSpacing();
+extern void demth_ZNK16QTextTableFormat11cellSpacingEv(void* qthis);
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat();
+extern void* dector_ZN20QTextTableCellFormatC1Ev();
+extern void _ZN20QTextTableCellFormatC1Ev(void* qthis);
+  // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
+extern void demth_ZN20QTextTableCellFormat14setLeftPaddingEd(void* qthis, double arg0);
+  // proto:  bool QTextTableCellFormat::isValid();
+extern void demth_ZNK20QTextTableCellFormat7isValidEv(void* qthis);
+  // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
+extern void demth_ZN20QTextTableCellFormat13setTopPaddingEd(void* qthis, double arg0);
+  // proto:  qreal QTextTableCellFormat::leftPadding();
+extern void demth_ZNK20QTextTableCellFormat11leftPaddingEv(void* qthis);
+  // proto:  void QTextTableCellFormat::setPadding(qreal padding);
+extern void demth_ZN20QTextTableCellFormat10setPaddingEd(void* qthis, double arg0);
+  // proto:  qreal QTextTableCellFormat::topPadding();
+extern void demth_ZNK20QTextTableCellFormat10topPaddingEv(void* qthis);
+  // proto:  qreal QTextTableCellFormat::rightPadding();
+extern void demth_ZNK20QTextTableCellFormat12rightPaddingEv(void* qthis);
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat(const QTextFormat & fmt);
+extern void* dector_ZN20QTextTableCellFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN20QTextTableCellFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  qreal QTextTableCellFormat::bottomPadding();
+extern void demth_ZNK20QTextTableCellFormat13bottomPaddingEv(void* qthis);
+  // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
+extern void demth_ZN20QTextTableCellFormat15setRightPaddingEd(void* qthis, double arg0);
+  // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
+extern void demth_ZN20QTextTableCellFormat16setBottomPaddingEd(void* qthis, double arg0);
+  // proto:  int QTextListFormat::indent();
+extern void demth_ZNK15QTextListFormat6indentEv(void* qthis);
+  // proto:  void QTextListFormat::QTextListFormat(const QTextFormat & fmt);
+extern void* dector_ZN15QTextListFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN15QTextListFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  void QTextListFormat::setIndent(int indent);
+extern void demth_ZN15QTextListFormat9setIndentEi(void* qthis, int arg0);
+  // proto:  QString QTextListFormat::numberSuffix();
+extern void demth_ZNK15QTextListFormat12numberSuffixEv(void* qthis);
+  // proto:  void QTextListFormat::QTextListFormat();
+extern void* dector_ZN15QTextListFormatC1Ev();
+extern void _ZN15QTextListFormatC1Ev(void* qthis);
+  // proto:  QString QTextListFormat::numberPrefix();
+extern void demth_ZNK15QTextListFormat12numberPrefixEv(void* qthis);
+  // proto:  bool QTextListFormat::isValid();
+extern void _ZNK15QTextListFormat7isValidEv(void* qthis);
+  // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
+extern void demth_ZN15QTextListFormat15setNumberSuffixERK7QString(void* qthis, void* arg0);
+  // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
+extern void demth_ZN15QTextListFormat15setNumberPrefixERK7QString(void* qthis, void* arg0);
+  // proto:  bool QTextFrameFormat::isValid();
+extern void _ZNK16QTextFrameFormat7isValidEv(void* qthis);
+  // proto:  void QTextFrameFormat::setHeight(qreal height);
+extern void demth_ZN16QTextFrameFormat9setHeightEd(void* qthis, double arg0);
+  // proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
+extern void demth_ZN16QTextFrameFormat14setBorderBrushERK6QBrush(void* qthis, void* arg0);
+  // proto:  qreal QTextFrameFormat::margin();
+extern void demth_ZNK16QTextFrameFormat6marginEv(void* qthis);
+  // proto:  QBrush QTextFrameFormat::borderBrush();
+extern void demth_ZNK16QTextFrameFormat11borderBrushEv(void* qthis);
+  // proto:  void QTextFrameFormat::setRightMargin(qreal margin);
+extern void demth_ZN16QTextFrameFormat14setRightMarginEd(void* qthis, double arg0);
+  // proto:  void QTextFrameFormat::setMargin(qreal margin);
+extern void _ZN16QTextFrameFormat9setMarginEd(void* qthis, double arg0);
+  // proto:  void QTextFrameFormat::setBorder(qreal border);
+extern void demth_ZN16QTextFrameFormat9setBorderEd(void* qthis, double arg0);
+  // proto:  void QTextFrameFormat::setHeight(const QTextLength & height);
+extern void demth_ZN16QTextFrameFormat9setHeightERK11QTextLength(void* qthis, void* arg0);
+  // proto:  void QTextFrameFormat::setWidth(const QTextLength & length);
+extern void demth_ZN16QTextFrameFormat8setWidthERK11QTextLength(void* qthis, void* arg0);
+  // proto:  qreal QTextFrameFormat::bottomMargin();
+extern void _ZNK16QTextFrameFormat12bottomMarginEv(void* qthis);
+  // proto:  void QTextFrameFormat::setBottomMargin(qreal margin);
+extern void demth_ZN16QTextFrameFormat15setBottomMarginEd(void* qthis, double arg0);
+  // proto:  QTextLength QTextFrameFormat::height();
+extern void demth_ZNK16QTextFrameFormat6heightEv(void* qthis);
+  // proto:  void QTextFrameFormat::setWidth(qreal width);
+extern void demth_ZN16QTextFrameFormat8setWidthEd(void* qthis, double arg0);
+  // proto:  qreal QTextFrameFormat::rightMargin();
+extern void _ZNK16QTextFrameFormat11rightMarginEv(void* qthis);
+  // proto:  void QTextFrameFormat::setPadding(qreal padding);
+extern void demth_ZN16QTextFrameFormat10setPaddingEd(void* qthis, double arg0);
+  // proto:  void QTextFrameFormat::setTopMargin(qreal margin);
+extern void demth_ZN16QTextFrameFormat12setTopMarginEd(void* qthis, double arg0);
+  // proto:  qreal QTextFrameFormat::topMargin();
+extern void _ZNK16QTextFrameFormat9topMarginEv(void* qthis);
+  // proto:  QTextLength QTextFrameFormat::width();
+extern void demth_ZNK16QTextFrameFormat5widthEv(void* qthis);
+  // proto:  void QTextFrameFormat::QTextFrameFormat(const QTextFormat & fmt);
+extern void* dector_ZN16QTextFrameFormatC1ERK11QTextFormat(void* arg0);
+extern void _ZN16QTextFrameFormatC1ERK11QTextFormat(void* qthis, void* arg0);
+  // proto:  qreal QTextFrameFormat::padding();
+extern void demth_ZNK16QTextFrameFormat7paddingEv(void* qthis);
+  // proto:  void QTextFrameFormat::setLeftMargin(qreal margin);
+extern void demth_ZN16QTextFrameFormat13setLeftMarginEd(void* qthis, double arg0);
+  // proto:  qreal QTextFrameFormat::border();
+extern void demth_ZNK16QTextFrameFormat6borderEv(void* qthis);
+  // proto:  void QTextFrameFormat::QTextFrameFormat();
+extern void* dector_ZN16QTextFrameFormatC1Ev();
+extern void _ZN16QTextFrameFormatC1Ev(void* qthis);
+  // proto:  qreal QTextFrameFormat::leftMargin();
+extern void _ZNK16QTextFrameFormat10leftMarginEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextLength)=16
 type QTextLength struct {
   // qbase: None;
@@ -89,7 +490,7 @@ type QTextFrameFormat struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  qreal QTextLength::value(qreal maximumLength);
 func (this *QTextLength) value(args ...interface{}) () {
   // value(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -108,12 +509,12 @@ func (this *QTextLength) value(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextLength::QTextLength();
 func NewQTextLength(args ...interface{}) QTextLength {
   return QTextLength{}
 }
 
-
+  // proto:  qreal QTextLength::rawValue();
 func (this *QTextLength) rawValue(args ...interface{}) () {
   // rawValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,12 +532,12 @@ func (this *QTextLength) rawValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextImageFormat::QTextImageFormat();
 func NewQTextImageFormat(args ...interface{}) QTextImageFormat {
   return QTextImageFormat{}
 }
 
-
+  // proto:  bool QTextImageFormat::isValid();
 func (this *QTextImageFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +555,7 @@ func (this *QTextImageFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextImageFormat::width();
 func (this *QTextImageFormat) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -172,7 +573,7 @@ func (this *QTextImageFormat) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextImageFormat::setHeight(qreal height);
 func (this *QTextImageFormat) setHeight(args ...interface{}) () {
   // setHeight(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -191,7 +592,7 @@ func (this *QTextImageFormat) setHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextImageFormat::setWidth(qreal width);
 func (this *QTextImageFormat) setWidth(args ...interface{}) () {
   // setWidth(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -210,7 +611,7 @@ func (this *QTextImageFormat) setWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextImageFormat::setName(const QString & name);
 func (this *QTextImageFormat) setName(args ...interface{}) () {
   // setName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -229,7 +630,7 @@ func (this *QTextImageFormat) setName(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextImageFormat::name();
 func (this *QTextImageFormat) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -247,7 +648,7 @@ func (this *QTextImageFormat) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextImageFormat::height();
 func (this *QTextImageFormat) height(args ...interface{}) () {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,7 +666,7 @@ func (this *QTextImageFormat) height(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextBlockFormat QTextFormat::toBlockFormat();
 func (this *QTextFormat) toBlockFormat(args ...interface{}) () {
   // toBlockFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +684,7 @@ func (this *QTextFormat) toBlockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextFormat::stringProperty(int propertyId);
 func (this *QTextFormat) stringProperty(args ...interface{}) () {
   // stringProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -302,7 +703,7 @@ func (this *QTextFormat) stringProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
 func (this *QTextFormat) lengthVectorProperty(args ...interface{}) () {
   // lengthVectorProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -321,7 +722,7 @@ func (this *QTextFormat) lengthVectorProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFormat::objectIndex();
 func (this *QTextFormat) objectIndex(args ...interface{}) () {
   // objectIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -339,7 +740,7 @@ func (this *QTextFormat) objectIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::setObjectIndex(int object);
 func (this *QTextFormat) setObjectIndex(args ...interface{}) () {
   // setObjectIndex(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -358,7 +759,7 @@ func (this *QTextFormat) setObjectIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::clearForeground();
 func (this *QTextFormat) clearForeground(args ...interface{}) () {
   // clearForeground()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,7 +777,7 @@ func (this *QTextFormat) clearForeground(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isTableCellFormat();
 func (this *QTextFormat) isTableCellFormat(args ...interface{}) () {
   // isTableCellFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -394,7 +795,7 @@ func (this *QTextFormat) isTableCellFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::~QTextFormat();
 func (this *QTextFormat) FreeQTextFormat(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -408,7 +809,7 @@ func (this *QTextFormat) FreeQTextFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isValid();
 func (this *QTextFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -426,12 +827,12 @@ func (this *QTextFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::QTextFormat(const QTextFormat & rhs);
 func NewQTextFormat(args ...interface{}) QTextFormat {
   return QTextFormat{}
 }
 
-
+  // proto:  QTextLength QTextFormat::lengthProperty(int propertyId);
 func (this *QTextFormat) lengthProperty(args ...interface{}) () {
   // lengthProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -450,7 +851,7 @@ func (this *QTextFormat) lengthProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::merge(const QTextFormat & other);
 func (this *QTextFormat) merge(args ...interface{}) () {
   // merge(const class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -469,7 +870,7 @@ func (this *QTextFormat) merge(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QTextFormat::colorProperty(int propertyId);
 func (this *QTextFormat) colorProperty(args ...interface{}) () {
   // colorProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,7 +889,7 @@ func (this *QTextFormat) colorProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::setForeground(const QBrush & brush);
 func (this *QTextFormat) setForeground(args ...interface{}) () {
   // setForeground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -507,7 +908,7 @@ func (this *QTextFormat) setForeground(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::boolProperty(int propertyId);
 func (this *QTextFormat) boolProperty(args ...interface{}) () {
   // boolProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -526,7 +927,7 @@ func (this *QTextFormat) boolProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isListFormat();
 func (this *QTextFormat) isListFormat(args ...interface{}) () {
   // isListFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -544,7 +945,7 @@ func (this *QTextFormat) isListFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isImageFormat();
 func (this *QTextFormat) isImageFormat(args ...interface{}) () {
   // isImageFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -562,7 +963,7 @@ func (this *QTextFormat) isImageFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::clearProperty(int propertyId);
 func (this *QTextFormat) clearProperty(args ...interface{}) () {
   // clearProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -581,7 +982,7 @@ func (this *QTextFormat) clearProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextFrameFormat QTextFormat::toFrameFormat();
 func (this *QTextFormat) toFrameFormat(args ...interface{}) () {
   // toFrameFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -599,7 +1000,7 @@ func (this *QTextFormat) toFrameFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QTextFormat::brushProperty(int propertyId);
 func (this *QTextFormat) brushProperty(args ...interface{}) () {
   // brushProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -618,7 +1019,7 @@ func (this *QTextFormat) brushProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFormat::propertyCount();
 func (this *QTextFormat) propertyCount(args ...interface{}) () {
   // propertyCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -636,7 +1037,7 @@ func (this *QTextFormat) propertyCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPen QTextFormat::penProperty(int propertyId);
 func (this *QTextFormat) penProperty(args ...interface{}) () {
   // penProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -655,7 +1056,7 @@ func (this *QTextFormat) penProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVariant QTextFormat::property(int propertyId);
 func (this *QTextFormat) property(args ...interface{}) () {
   // property(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -674,7 +1075,7 @@ func (this *QTextFormat) property(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isTableFormat();
 func (this *QTextFormat) isTableFormat(args ...interface{}) () {
   // isTableFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -692,7 +1093,7 @@ func (this *QTextFormat) isTableFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::setProperty(int propertyId, const QVariant & value);
 func (this *QTextFormat) setProperty(args ...interface{}) () {
   // setProperty(int, const QVector<class QTextLength> &)
   // setProperty(int, const class QVariant &)
@@ -718,7 +1119,7 @@ func (this *QTextFormat) setProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFormat::type();
 func (this *QTextFormat) type_(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -732,7 +1133,7 @@ func (this *QTextFormat) type_(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isCharFormat();
 func (this *QTextFormat) isCharFormat(args ...interface{}) () {
   // isCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -750,7 +1151,7 @@ func (this *QTextFormat) isCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::clearBackground();
 func (this *QTextFormat) clearBackground(args ...interface{}) () {
   // clearBackground()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,7 +1169,7 @@ func (this *QTextFormat) clearBackground(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isBlockFormat();
 func (this *QTextFormat) isBlockFormat(args ...interface{}) () {
   // isBlockFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -786,7 +1187,7 @@ func (this *QTextFormat) isBlockFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QTextFormat::background();
 func (this *QTextFormat) background(args ...interface{}) () {
   // background()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -804,7 +1205,7 @@ func (this *QTextFormat) background(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFormat::doubleProperty(int propertyId);
 func (this *QTextFormat) doubleProperty(args ...interface{}) () {
   // doubleProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -823,7 +1224,7 @@ func (this *QTextFormat) doubleProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::swap(QTextFormat & other);
 func (this *QTextFormat) swap(args ...interface{}) () {
   // swap(class QTextFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -842,7 +1243,7 @@ func (this *QTextFormat) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextImageFormat QTextFormat::toImageFormat();
 func (this *QTextFormat) toImageFormat(args ...interface{}) () {
   // toImageFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -860,7 +1261,7 @@ func (this *QTextFormat) toImageFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::hasProperty(int propertyId);
 func (this *QTextFormat) hasProperty(args ...interface{}) () {
   // hasProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -879,7 +1280,7 @@ func (this *QTextFormat) hasProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QTextFormat::foreground();
 func (this *QTextFormat) foreground(args ...interface{}) () {
   // foreground()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -897,7 +1298,7 @@ func (this *QTextFormat) foreground(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::setObjectType(int type);
 func (this *QTextFormat) setObjectType(args ...interface{}) () {
   // setObjectType(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -916,7 +1317,7 @@ func (this *QTextFormat) setObjectType(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFormat::setBackground(const QBrush & brush);
 func (this *QTextFormat) setBackground(args ...interface{}) () {
   // setBackground(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -935,7 +1336,7 @@ func (this *QTextFormat) setBackground(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTableFormat QTextFormat::toTableFormat();
 func (this *QTextFormat) toTableFormat(args ...interface{}) () {
   // toTableFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -953,7 +1354,7 @@ func (this *QTextFormat) toTableFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isFrameFormat();
 func (this *QTextFormat) isFrameFormat(args ...interface{}) () {
   // isFrameFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -971,7 +1372,7 @@ func (this *QTextFormat) isFrameFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFormat::intProperty(int propertyId);
 func (this *QTextFormat) intProperty(args ...interface{}) () {
   // intProperty(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -990,7 +1391,7 @@ func (this *QTextFormat) intProperty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextCharFormat QTextFormat::toCharFormat();
 func (this *QTextFormat) toCharFormat(args ...interface{}) () {
   // toCharFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1008,7 +1409,7 @@ func (this *QTextFormat) toCharFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFormat::isEmpty();
 func (this *QTextFormat) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1026,7 +1427,7 @@ func (this *QTextFormat) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextTableCellFormat QTextFormat::toTableCellFormat();
 func (this *QTextFormat) toTableCellFormat(args ...interface{}) () {
   // toTableCellFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1044,7 +1445,7 @@ func (this *QTextFormat) toTableCellFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextFormat::objectType();
 func (this *QTextFormat) objectType(args ...interface{}) () {
   // objectType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1062,7 +1463,7 @@ func (this *QTextFormat) objectType(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextListFormat QTextFormat::toListFormat();
 func (this *QTextFormat) toListFormat(args ...interface{}) () {
   // toListFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1080,7 +1481,7 @@ func (this *QTextFormat) toListFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  QMap<int, QVariant> QTextFormat::properties();
 func (this *QTextFormat) properties(args ...interface{}) () {
   // properties()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1098,7 +1499,7 @@ func (this *QTextFormat) properties(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlockFormat::indent();
 func (this *QTextBlockFormat) indent(args ...interface{}) () {
   // indent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1116,7 +1517,7 @@ func (this *QTextBlockFormat) indent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setTextIndent(qreal aindent);
 func (this *QTextBlockFormat) setTextIndent(args ...interface{}) () {
   // setTextIndent(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1135,7 +1536,7 @@ func (this *QTextBlockFormat) setTextIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setNonBreakableLines(bool b);
 func (this *QTextBlockFormat) setNonBreakableLines(args ...interface{}) () {
   // setNonBreakableLines(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1154,7 +1555,7 @@ func (this *QTextBlockFormat) setNonBreakableLines(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setIndent(int indent);
 func (this *QTextBlockFormat) setIndent(args ...interface{}) () {
   // setIndent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1173,7 +1574,7 @@ func (this *QTextBlockFormat) setIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::textIndent();
 func (this *QTextBlockFormat) textIndent(args ...interface{}) () {
   // textIndent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1191,7 +1592,7 @@ func (this *QTextBlockFormat) textIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::lineHeight();
 func (this *QTextBlockFormat) lineHeight(args ...interface{}) () {
   // lineHeight()
   // lineHeight(qreal, qreal)
@@ -1215,12 +1616,12 @@ func (this *QTextBlockFormat) lineHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::QTextBlockFormat(const QTextFormat & fmt);
 func NewQTextBlockFormat(args ...interface{}) QTextBlockFormat {
   return QTextBlockFormat{}
 }
 
-
+  // proto:  void QTextBlockFormat::setRightMargin(qreal margin);
 func (this *QTextBlockFormat) setRightMargin(args ...interface{}) () {
   // setRightMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1239,7 +1640,7 @@ func (this *QTextBlockFormat) setRightMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::topMargin();
 func (this *QTextBlockFormat) topMargin(args ...interface{}) () {
   // topMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1257,7 +1658,7 @@ func (this *QTextBlockFormat) topMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::rightMargin();
 func (this *QTextBlockFormat) rightMargin(args ...interface{}) () {
   // rightMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1275,7 +1676,7 @@ func (this *QTextBlockFormat) rightMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::bottomMargin();
 func (this *QTextBlockFormat) bottomMargin(args ...interface{}) () {
   // bottomMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1293,7 +1694,7 @@ func (this *QTextBlockFormat) bottomMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setTopMargin(qreal margin);
 func (this *QTextBlockFormat) setTopMargin(args ...interface{}) () {
   // setTopMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1312,7 +1713,7 @@ func (this *QTextBlockFormat) setTopMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextBlockFormat::leftMargin();
 func (this *QTextBlockFormat) leftMargin(args ...interface{}) () {
   // leftMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1330,7 +1731,7 @@ func (this *QTextBlockFormat) leftMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setLineHeight(qreal height, int heightType);
 func (this *QTextBlockFormat) setLineHeight(args ...interface{}) () {
   // setLineHeight(qreal, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1350,7 +1751,7 @@ func (this *QTextBlockFormat) setLineHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setBottomMargin(qreal margin);
 func (this *QTextBlockFormat) setBottomMargin(args ...interface{}) () {
   // setBottomMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1369,7 +1770,7 @@ func (this *QTextBlockFormat) setBottomMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextBlockFormat::lineHeightType();
 func (this *QTextBlockFormat) lineHeightType(args ...interface{}) () {
   // lineHeightType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1387,7 +1788,7 @@ func (this *QTextBlockFormat) lineHeightType(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextBlockFormat::setLeftMargin(qreal margin);
 func (this *QTextBlockFormat) setLeftMargin(args ...interface{}) () {
   // setLeftMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1406,7 +1807,7 @@ func (this *QTextBlockFormat) setLeftMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBlockFormat::isValid();
 func (this *QTextBlockFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1424,7 +1825,7 @@ func (this *QTextBlockFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextBlockFormat::nonBreakableLines();
 func (this *QTextBlockFormat) nonBreakableLines(args ...interface{}) () {
   // nonBreakableLines()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1442,7 +1843,7 @@ func (this *QTextBlockFormat) nonBreakableLines(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontLetterSpacing(qreal spacing);
 func (this *QTextCharFormat) setFontLetterSpacing(args ...interface{}) () {
   // setFontLetterSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1461,7 +1862,7 @@ func (this *QTextCharFormat) setFontLetterSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::isAnchor();
 func (this *QTextCharFormat) isAnchor(args ...interface{}) () {
   // isAnchor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1479,7 +1880,7 @@ func (this *QTextCharFormat) isAnchor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFont(const QFont & font);
 func (this *QTextCharFormat) setFont(args ...interface{}) () {
   // setFont(const class QFont &)
   // setFont(const class QFont &, enum QTextCharFormat::FontPropertiesInheritanceBehavior)
@@ -1504,7 +1905,7 @@ func (this *QTextCharFormat) setFont(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontOverline();
 func (this *QTextCharFormat) fontOverline(args ...interface{}) () {
   // fontOverline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1522,7 +1923,7 @@ func (this *QTextCharFormat) fontOverline(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFont QTextCharFormat::font();
 func (this *QTextCharFormat) font(args ...interface{}) () {
   // font()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1540,7 +1941,7 @@ func (this *QTextCharFormat) font(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextCharFormat::fontFamily();
 func (this *QTextCharFormat) fontFamily(args ...interface{}) () {
   // fontFamily()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1558,7 +1959,7 @@ func (this *QTextCharFormat) fontFamily(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontStrikeOut();
 func (this *QTextCharFormat) fontStrikeOut(args ...interface{}) () {
   // fontStrikeOut()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1576,7 +1977,7 @@ func (this *QTextCharFormat) fontStrikeOut(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontPointSize(qreal size);
 func (this *QTextCharFormat) setFontPointSize(args ...interface{}) () {
   // setFontPointSize(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1595,7 +1996,7 @@ func (this *QTextCharFormat) setFontPointSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setUnderlineColor(const QColor & color);
 func (this *QTextCharFormat) setUnderlineColor(args ...interface{}) () {
   // setUnderlineColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1614,7 +2015,7 @@ func (this *QTextCharFormat) setUnderlineColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCharFormat::tableCellRowSpan();
 func (this *QTextCharFormat) tableCellRowSpan(args ...interface{}) () {
   // tableCellRowSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1632,7 +2033,7 @@ func (this *QTextCharFormat) tableCellRowSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontUnderline(bool underline);
 func (this *QTextCharFormat) setFontUnderline(args ...interface{}) () {
   // setFontUnderline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1651,7 +2052,7 @@ func (this *QTextCharFormat) setFontUnderline(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::isValid();
 func (this *QTextCharFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1669,7 +2070,7 @@ func (this *QTextCharFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontItalic();
 func (this *QTextCharFormat) fontItalic(args ...interface{}) () {
   // fontItalic()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1687,7 +2088,7 @@ func (this *QTextCharFormat) fontItalic(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setToolTip(const QString & tip);
 func (this *QTextCharFormat) setToolTip(args ...interface{}) () {
   // setToolTip(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1706,7 +2107,7 @@ func (this *QTextCharFormat) setToolTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setTextOutline(const QPen & pen);
 func (this *QTextCharFormat) setTextOutline(args ...interface{}) () {
   // setTextOutline(const class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1725,7 +2126,7 @@ func (this *QTextCharFormat) setTextOutline(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setTableCellRowSpan(int tableCellRowSpan);
 func (this *QTextCharFormat) setTableCellRowSpan(args ...interface{}) () {
   // setTableCellRowSpan(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1744,7 +2145,7 @@ func (this *QTextCharFormat) setTableCellRowSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setAnchor(bool anchor);
 func (this *QTextCharFormat) setAnchor(args ...interface{}) () {
   // setAnchor(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1763,7 +2164,7 @@ func (this *QTextCharFormat) setAnchor(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextCharFormat::fontPointSize();
 func (this *QTextCharFormat) fontPointSize(args ...interface{}) () {
   // fontPointSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1781,12 +2182,12 @@ func (this *QTextCharFormat) fontPointSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::QTextCharFormat(const QTextFormat & fmt);
 func NewQTextCharFormat(args ...interface{}) QTextCharFormat {
   return QTextCharFormat{}
 }
 
-
+  // proto:  void QTextCharFormat::setFontStrikeOut(bool strikeOut);
 func (this *QTextCharFormat) setFontStrikeOut(args ...interface{}) () {
   // setFontStrikeOut(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1805,7 +2206,7 @@ func (this *QTextCharFormat) setFontStrikeOut(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextCharFormat::fontWordSpacing();
 func (this *QTextCharFormat) fontWordSpacing(args ...interface{}) () {
   // fontWordSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1823,7 +2224,7 @@ func (this *QTextCharFormat) fontWordSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextCharFormat::toolTip();
 func (this *QTextCharFormat) toolTip(args ...interface{}) () {
   // toolTip()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1841,7 +2242,7 @@ func (this *QTextCharFormat) toolTip(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setAnchorNames(const QStringList & names);
 func (this *QTextCharFormat) setAnchorNames(args ...interface{}) () {
   // setAnchorNames(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1860,7 +2261,7 @@ func (this *QTextCharFormat) setAnchorNames(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QTextCharFormat::anchorNames();
 func (this *QTextCharFormat) anchorNames(args ...interface{}) () {
   // anchorNames()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1878,7 +2279,7 @@ func (this *QTextCharFormat) anchorNames(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontFixedPitch(bool fixedPitch);
 func (this *QTextCharFormat) setFontFixedPitch(args ...interface{}) () {
   // setFontFixedPitch(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1897,7 +2298,7 @@ func (this *QTextCharFormat) setFontFixedPitch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontItalic(bool italic);
 func (this *QTextCharFormat) setFontItalic(args ...interface{}) () {
   // setFontItalic(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1916,7 +2317,7 @@ func (this *QTextCharFormat) setFontItalic(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontFamily(const QString & family);
 func (this *QTextCharFormat) setFontFamily(args ...interface{}) () {
   // setFontFamily(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1935,7 +2336,7 @@ func (this *QTextCharFormat) setFontFamily(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontFixedPitch();
 func (this *QTextCharFormat) fontFixedPitch(args ...interface{}) () {
   // fontFixedPitch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1953,7 +2354,7 @@ func (this *QTextCharFormat) fontFixedPitch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setAnchorHref(const QString & value);
 func (this *QTextCharFormat) setAnchorHref(args ...interface{}) () {
   // setAnchorHref(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1972,7 +2373,7 @@ func (this *QTextCharFormat) setAnchorHref(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCharFormat::fontStretch();
 func (this *QTextCharFormat) fontStretch(args ...interface{}) () {
   // fontStretch()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1990,7 +2391,7 @@ func (this *QTextCharFormat) fontStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontKerning(bool enable);
 func (this *QTextCharFormat) setFontKerning(args ...interface{}) () {
   // setFontKerning(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2009,7 +2410,7 @@ func (this *QTextCharFormat) setFontKerning(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCharFormat::tableCellColumnSpan();
 func (this *QTextCharFormat) tableCellColumnSpan(args ...interface{}) () {
   // tableCellColumnSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2027,7 +2428,7 @@ func (this *QTextCharFormat) tableCellColumnSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextCharFormat::fontLetterSpacing();
 func (this *QTextCharFormat) fontLetterSpacing(args ...interface{}) () {
   // fontLetterSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2045,7 +2446,7 @@ func (this *QTextCharFormat) fontLetterSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextCharFormat::anchorHref();
 func (this *QTextCharFormat) anchorHref(args ...interface{}) () {
   // anchorHref()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2063,7 +2464,7 @@ func (this *QTextCharFormat) anchorHref(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextCharFormat::anchorName();
 func (this *QTextCharFormat) anchorName(args ...interface{}) () {
   // anchorName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2081,7 +2482,7 @@ func (this *QTextCharFormat) anchorName(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontStretch(int factor);
 func (this *QTextCharFormat) setFontStretch(args ...interface{}) () {
   // setFontStretch(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2100,7 +2501,7 @@ func (this *QTextCharFormat) setFontStretch(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setAnchorName(const QString & name);
 func (this *QTextCharFormat) setAnchorName(args ...interface{}) () {
   // setAnchorName(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2119,7 +2520,7 @@ func (this *QTextCharFormat) setAnchorName(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontKerning();
 func (this *QTextCharFormat) fontKerning(args ...interface{}) () {
   // fontKerning()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2137,7 +2538,7 @@ func (this *QTextCharFormat) fontKerning(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontWeight(int weight);
 func (this *QTextCharFormat) setFontWeight(args ...interface{}) () {
   // setFontWeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2156,7 +2557,7 @@ func (this *QTextCharFormat) setFontWeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextCharFormat::fontUnderline();
 func (this *QTextCharFormat) fontUnderline(args ...interface{}) () {
   // fontUnderline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2174,7 +2575,7 @@ func (this *QTextCharFormat) fontUnderline(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontWordSpacing(qreal spacing);
 func (this *QTextCharFormat) setFontWordSpacing(args ...interface{}) () {
   // setFontWordSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2193,7 +2594,7 @@ func (this *QTextCharFormat) setFontWordSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QTextCharFormat::underlineColor();
 func (this *QTextCharFormat) underlineColor(args ...interface{}) () {
   // underlineColor()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2211,7 +2612,7 @@ func (this *QTextCharFormat) underlineColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextCharFormat::fontWeight();
 func (this *QTextCharFormat) fontWeight(args ...interface{}) () {
   // fontWeight()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2229,7 +2630,7 @@ func (this *QTextCharFormat) fontWeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setFontOverline(bool overline);
 func (this *QTextCharFormat) setFontOverline(args ...interface{}) () {
   // setFontOverline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2248,7 +2649,7 @@ func (this *QTextCharFormat) setFontOverline(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextCharFormat::setTableCellColumnSpan(int tableCellColumnSpan);
 func (this *QTextCharFormat) setTableCellColumnSpan(args ...interface{}) () {
   // setTableCellColumnSpan(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2267,7 +2668,7 @@ func (this *QTextCharFormat) setTableCellColumnSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPen QTextCharFormat::textOutline();
 func (this *QTextCharFormat) textOutline(args ...interface{}) () {
   // textOutline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2285,12 +2686,12 @@ func (this *QTextCharFormat) textOutline(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableFormat::QTextTableFormat();
 func NewQTextTableFormat(args ...interface{}) QTextTableFormat {
   return QTextTableFormat{}
 }
 
-
+  // proto:  bool QTextTableFormat::isValid();
 func (this *QTextTableFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2308,7 +2709,7 @@ func (this *QTextTableFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableFormat::headerRowCount();
 func (this *QTextTableFormat) headerRowCount(args ...interface{}) () {
   // headerRowCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2326,7 +2727,7 @@ func (this *QTextTableFormat) headerRowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextTableFormat::columns();
 func (this *QTextTableFormat) columns(args ...interface{}) () {
   // columns()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2344,7 +2745,7 @@ func (this *QTextTableFormat) columns(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<QTextLength> QTextTableFormat::columnWidthConstraints();
 func (this *QTextTableFormat) columnWidthConstraints(args ...interface{}) () {
   // columnWidthConstraints()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2362,7 +2763,7 @@ func (this *QTextTableFormat) columnWidthConstraints(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableFormat::setCellPadding(qreal padding);
 func (this *QTextTableFormat) setCellPadding(args ...interface{}) () {
   // setCellPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2381,7 +2782,7 @@ func (this *QTextTableFormat) setCellPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableFormat::cellPadding();
 func (this *QTextTableFormat) cellPadding(args ...interface{}) () {
   // cellPadding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2399,7 +2800,7 @@ func (this *QTextTableFormat) cellPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
 func (this *QTextTableFormat) setCellSpacing(args ...interface{}) () {
   // setCellSpacing(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2418,7 +2819,7 @@ func (this *QTextTableFormat) setCellSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableFormat::setColumns(int columns);
 func (this *QTextTableFormat) setColumns(args ...interface{}) () {
   // setColumns(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2437,7 +2838,7 @@ func (this *QTextTableFormat) setColumns(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableFormat::clearColumnWidthConstraints();
 func (this *QTextTableFormat) clearColumnWidthConstraints(args ...interface{}) () {
   // clearColumnWidthConstraints()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2455,7 +2856,7 @@ func (this *QTextTableFormat) clearColumnWidthConstraints(args ...interface{}) (
 
 }
 
-
+  // proto:  void QTextTableFormat::setHeaderRowCount(int count);
 func (this *QTextTableFormat) setHeaderRowCount(args ...interface{}) () {
   // setHeaderRowCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2474,7 +2875,7 @@ func (this *QTextTableFormat) setHeaderRowCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableFormat::cellSpacing();
 func (this *QTextTableFormat) cellSpacing(args ...interface{}) () {
   // cellSpacing()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2492,12 +2893,12 @@ func (this *QTextTableFormat) cellSpacing(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCellFormat::QTextTableCellFormat();
 func NewQTextTableCellFormat(args ...interface{}) QTextTableCellFormat {
   return QTextTableCellFormat{}
 }
 
-
+  // proto:  void QTextTableCellFormat::setLeftPadding(qreal padding);
 func (this *QTextTableCellFormat) setLeftPadding(args ...interface{}) () {
   // setLeftPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2516,7 +2917,7 @@ func (this *QTextTableCellFormat) setLeftPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextTableCellFormat::isValid();
 func (this *QTextTableCellFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2534,7 +2935,7 @@ func (this *QTextTableCellFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCellFormat::setTopPadding(qreal padding);
 func (this *QTextTableCellFormat) setTopPadding(args ...interface{}) () {
   // setTopPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2553,7 +2954,7 @@ func (this *QTextTableCellFormat) setTopPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableCellFormat::leftPadding();
 func (this *QTextTableCellFormat) leftPadding(args ...interface{}) () {
   // leftPadding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2571,7 +2972,7 @@ func (this *QTextTableCellFormat) leftPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCellFormat::setPadding(qreal padding);
 func (this *QTextTableCellFormat) setPadding(args ...interface{}) () {
   // setPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2590,7 +2991,7 @@ func (this *QTextTableCellFormat) setPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableCellFormat::topPadding();
 func (this *QTextTableCellFormat) topPadding(args ...interface{}) () {
   // topPadding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2608,7 +3009,7 @@ func (this *QTextTableCellFormat) topPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableCellFormat::rightPadding();
 func (this *QTextTableCellFormat) rightPadding(args ...interface{}) () {
   // rightPadding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2626,7 +3027,7 @@ func (this *QTextTableCellFormat) rightPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextTableCellFormat::bottomPadding();
 func (this *QTextTableCellFormat) bottomPadding(args ...interface{}) () {
   // bottomPadding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2644,7 +3045,7 @@ func (this *QTextTableCellFormat) bottomPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCellFormat::setRightPadding(qreal padding);
 func (this *QTextTableCellFormat) setRightPadding(args ...interface{}) () {
   // setRightPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2663,7 +3064,7 @@ func (this *QTextTableCellFormat) setRightPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextTableCellFormat::setBottomPadding(qreal padding);
 func (this *QTextTableCellFormat) setBottomPadding(args ...interface{}) () {
   // setBottomPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2682,7 +3083,7 @@ func (this *QTextTableCellFormat) setBottomPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextListFormat::indent();
 func (this *QTextListFormat) indent(args ...interface{}) () {
   // indent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2700,12 +3101,12 @@ func (this *QTextListFormat) indent(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextListFormat::QTextListFormat(const QTextFormat & fmt);
 func NewQTextListFormat(args ...interface{}) QTextListFormat {
   return QTextListFormat{}
 }
 
-
+  // proto:  void QTextListFormat::setIndent(int indent);
 func (this *QTextListFormat) setIndent(args ...interface{}) () {
   // setIndent(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2724,7 +3125,7 @@ func (this *QTextListFormat) setIndent(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextListFormat::numberSuffix();
 func (this *QTextListFormat) numberSuffix(args ...interface{}) () {
   // numberSuffix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2742,7 +3143,7 @@ func (this *QTextListFormat) numberSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextListFormat::numberPrefix();
 func (this *QTextListFormat) numberPrefix(args ...interface{}) () {
   // numberPrefix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2760,7 +3161,7 @@ func (this *QTextListFormat) numberPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextListFormat::isValid();
 func (this *QTextListFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2778,7 +3179,7 @@ func (this *QTextListFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
 func (this *QTextListFormat) setNumberSuffix(args ...interface{}) () {
   // setNumberSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2797,7 +3198,7 @@ func (this *QTextListFormat) setNumberSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
 func (this *QTextListFormat) setNumberPrefix(args ...interface{}) () {
   // setNumberPrefix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2816,7 +3217,7 @@ func (this *QTextListFormat) setNumberPrefix(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextFrameFormat::isValid();
 func (this *QTextFrameFormat) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2834,7 +3235,7 @@ func (this *QTextFrameFormat) isValid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setHeight(qreal height);
 func (this *QTextFrameFormat) setHeight(args ...interface{}) () {
   // setHeight(qreal)
   // setHeight(const class QTextLength &)
@@ -2858,7 +3259,7 @@ func (this *QTextFrameFormat) setHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
 func (this *QTextFrameFormat) setBorderBrush(args ...interface{}) () {
   // setBorderBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2877,7 +3278,7 @@ func (this *QTextFrameFormat) setBorderBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::margin();
 func (this *QTextFrameFormat) margin(args ...interface{}) () {
   // margin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2895,7 +3296,7 @@ func (this *QTextFrameFormat) margin(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QTextFrameFormat::borderBrush();
 func (this *QTextFrameFormat) borderBrush(args ...interface{}) () {
   // borderBrush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2913,7 +3314,7 @@ func (this *QTextFrameFormat) borderBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setRightMargin(qreal margin);
 func (this *QTextFrameFormat) setRightMargin(args ...interface{}) () {
   // setRightMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2932,7 +3333,7 @@ func (this *QTextFrameFormat) setRightMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setMargin(qreal margin);
 func (this *QTextFrameFormat) setMargin(args ...interface{}) () {
   // setMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2951,7 +3352,7 @@ func (this *QTextFrameFormat) setMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setBorder(qreal border);
 func (this *QTextFrameFormat) setBorder(args ...interface{}) () {
   // setBorder(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2970,7 +3371,7 @@ func (this *QTextFrameFormat) setBorder(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setWidth(const QTextLength & length);
 func (this *QTextFrameFormat) setWidth(args ...interface{}) () {
   // setWidth(const class QTextLength &)
   // setWidth(qreal)
@@ -2994,7 +3395,7 @@ func (this *QTextFrameFormat) setWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::bottomMargin();
 func (this *QTextFrameFormat) bottomMargin(args ...interface{}) () {
   // bottomMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3012,7 +3413,7 @@ func (this *QTextFrameFormat) bottomMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setBottomMargin(qreal margin);
 func (this *QTextFrameFormat) setBottomMargin(args ...interface{}) () {
   // setBottomMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3031,7 +3432,7 @@ func (this *QTextFrameFormat) setBottomMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextLength QTextFrameFormat::height();
 func (this *QTextFrameFormat) height(args ...interface{}) () {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3049,7 +3450,7 @@ func (this *QTextFrameFormat) height(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::rightMargin();
 func (this *QTextFrameFormat) rightMargin(args ...interface{}) () {
   // rightMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3067,7 +3468,7 @@ func (this *QTextFrameFormat) rightMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setPadding(qreal padding);
 func (this *QTextFrameFormat) setPadding(args ...interface{}) () {
   // setPadding(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3086,7 +3487,7 @@ func (this *QTextFrameFormat) setPadding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setTopMargin(qreal margin);
 func (this *QTextFrameFormat) setTopMargin(args ...interface{}) () {
   // setTopMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3105,7 +3506,7 @@ func (this *QTextFrameFormat) setTopMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::topMargin();
 func (this *QTextFrameFormat) topMargin(args ...interface{}) () {
   // topMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3123,7 +3524,7 @@ func (this *QTextFrameFormat) topMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  QTextLength QTextFrameFormat::width();
 func (this *QTextFrameFormat) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3141,12 +3542,12 @@ func (this *QTextFrameFormat) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::QTextFrameFormat(const QTextFormat & fmt);
 func NewQTextFrameFormat(args ...interface{}) QTextFrameFormat {
   return QTextFrameFormat{}
 }
 
-
+  // proto:  qreal QTextFrameFormat::padding();
 func (this *QTextFrameFormat) padding(args ...interface{}) () {
   // padding()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3164,7 +3565,7 @@ func (this *QTextFrameFormat) padding(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextFrameFormat::setLeftMargin(qreal margin);
 func (this *QTextFrameFormat) setLeftMargin(args ...interface{}) () {
   // setLeftMargin(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3183,7 +3584,7 @@ func (this *QTextFrameFormat) setLeftMargin(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::border();
 func (this *QTextFrameFormat) border(args ...interface{}) () {
   // border()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3201,7 +3602,7 @@ func (this *QTextFrameFormat) border(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QTextFrameFormat::leftMargin();
 func (this *QTextFrameFormat) leftMargin(args ...interface{}) () {
   // leftMargin()
   var vtys = make(map[int32]map[int32]reflect.Type)

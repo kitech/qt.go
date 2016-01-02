@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,131 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTableView::resizeRowsToContents();
+extern void _ZN10QTableView20resizeRowsToContentsEv(void* qthis);
+  // proto:  void QTableView::setRowHeight(int row, int height);
+extern void _ZN10QTableView12setRowHeightEii(void* qthis, int arg0, int arg1);
+  // proto:  QHeaderView * QTableView::verticalHeader();
+extern void _ZNK10QTableView14verticalHeaderEv(void* qthis);
+  // proto:  void QTableView::setSpan(int row, int column, int rowSpan, int columnSpan);
+extern void _ZN10QTableView7setSpanEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QTableView::setSortingEnabled(bool enable);
+extern void _ZN10QTableView17setSortingEnabledEb(void* qthis, bool arg0);
+  // proto:  void QTableView::setColumnWidth(int column, int width);
+extern void _ZN10QTableView14setColumnWidthEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableView::setWordWrap(bool on);
+extern void _ZN10QTableView11setWordWrapEb(void* qthis, bool arg0);
+  // proto:  void QTableView::doItemsLayout();
+extern void _ZN10QTableView13doItemsLayoutEv(void* qthis);
+  // proto:  void QTableView::setSelectionModel(QItemSelectionModel * selectionModel);
+extern void _ZN10QTableView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0);
+  // proto:  void QTableView::setHorizontalHeader(QHeaderView * header);
+extern void _ZN10QTableView19setHorizontalHeaderEP11QHeaderView(void* qthis, void* arg0);
+  // proto:  void QTableView::setRowHidden(int row, bool hide);
+extern void _ZN10QTableView12setRowHiddenEib(void* qthis, int arg0, bool arg1);
+  // proto:  int QTableView::rowViewportPosition(int row);
+extern void _ZNK10QTableView19rowViewportPositionEi(void* qthis, int arg0);
+  // proto:  int QTableView::columnAt(int x);
+extern void _ZNK10QTableView8columnAtEi(void* qthis, int arg0);
+  // proto:  bool QTableView::isRowHidden(int row);
+extern void _ZNK10QTableView11isRowHiddenEi(void* qthis, int arg0);
+  // proto:  void QTableView::showColumn(int column);
+extern void _ZN10QTableView10showColumnEi(void* qthis, int arg0);
+  // proto:  void QTableView::resizeRowToContents(int row);
+extern void _ZN10QTableView19resizeRowToContentsEi(void* qthis, int arg0);
+  // proto:  void QTableView::setRootIndex(const QModelIndex & index);
+extern void _ZN10QTableView12setRootIndexERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  void QTableView::setColumnHidden(int column, bool hide);
+extern void _ZN10QTableView15setColumnHiddenEib(void* qthis, int arg0, bool arg1);
+  // proto:  void QTableView::hideRow(int row);
+extern void _ZN10QTableView7hideRowEi(void* qthis, int arg0);
+  // proto:  void QTableView::resizeColumnsToContents();
+extern void _ZN10QTableView23resizeColumnsToContentsEv(void* qthis);
+  // proto:  bool QTableView::wordWrap();
+extern void _ZNK10QTableView8wordWrapEv(void* qthis);
+  // proto:  void QTableView::setShowGrid(bool show);
+extern void _ZN10QTableView11setShowGridEb(void* qthis, bool arg0);
+  // proto:  bool QTableView::isColumnHidden(int column);
+extern void _ZNK10QTableView14isColumnHiddenEi(void* qthis, int arg0);
+  // proto:  void QTableView::selectRow(int row);
+extern void _ZN10QTableView9selectRowEi(void* qthis, int arg0);
+  // proto:  const QMetaObject * QTableView::metaObject();
+extern void _ZNK10QTableView10metaObjectEv(void* qthis);
+  // proto:  bool QTableView::isCornerButtonEnabled();
+extern void _ZNK10QTableView21isCornerButtonEnabledEv(void* qthis);
+  // proto:  void QTableView::selectColumn(int column);
+extern void _ZN10QTableView12selectColumnEi(void* qthis, int arg0);
+  // proto:  void QTableView::~QTableView();
+extern void _ZN10QTableViewD0Ev(void* qthis);
+  // proto:  void QTableView::resizeColumnToContents(int column);
+extern void _ZN10QTableView22resizeColumnToContentsEi(void* qthis, int arg0);
+  // proto:  void QTableView::QTableView(QWidget * parent);
+extern void* dector_ZN10QTableViewC1EP7QWidget(void* arg0);
+extern void _ZN10QTableViewC1EP7QWidget(void* qthis, void* arg0);
+  // proto:  void QTableView::sortByColumn(int column);
+extern void _ZN10QTableView12sortByColumnEi(void* qthis, int arg0);
+  // proto:  int QTableView::columnSpan(int row, int column);
+extern void _ZNK10QTableView10columnSpanEii(void* qthis, int arg0, int arg1);
+  // proto:  int QTableView::columnWidth(int column);
+extern void _ZNK10QTableView11columnWidthEi(void* qthis, int arg0);
+  // proto:  int QTableView::columnViewportPosition(int column);
+extern void _ZNK10QTableView22columnViewportPositionEi(void* qthis, int arg0);
+  // proto:  int QTableView::rowHeight(int row);
+extern void _ZNK10QTableView9rowHeightEi(void* qthis, int arg0);
+  // proto:  void QTableView::QTableView(const QTableView & );
+extern void* dector_ZN10QTableViewC1ERKS_(void* arg0);
+extern void _ZN10QTableViewC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QTableView::rowAt(int y);
+extern void _ZNK10QTableView5rowAtEi(void* qthis, int arg0);
+  // proto:  int QTableView::rowSpan(int row, int column);
+extern void _ZNK10QTableView7rowSpanEii(void* qthis, int arg0, int arg1);
+  // proto:  void QTableView::setCornerButtonEnabled(bool enable);
+extern void _ZN10QTableView22setCornerButtonEnabledEb(void* qthis, bool arg0);
+  // proto:  QRect QTableView::visualRect(const QModelIndex & index);
+extern void _ZNK10QTableView10visualRectERK11QModelIndex(void* qthis, void* arg0);
+  // proto:  QModelIndex QTableView::indexAt(const QPoint & p);
+extern void _ZNK10QTableView7indexAtERK6QPoint(void* qthis, void* arg0);
+  // proto:  QHeaderView * QTableView::horizontalHeader();
+extern void _ZNK10QTableView16horizontalHeaderEv(void* qthis);
+  // proto:  void QTableView::setModel(QAbstractItemModel * model);
+extern void _ZN10QTableView8setModelEP18QAbstractItemModel(void* qthis, void* arg0);
+  // proto:  bool QTableView::isSortingEnabled();
+extern void _ZNK10QTableView16isSortingEnabledEv(void* qthis);
+  // proto:  void QTableView::clearSpans();
+extern void _ZN10QTableView10clearSpansEv(void* qthis);
+  // proto:  void QTableView::setVerticalHeader(QHeaderView * header);
+extern void _ZN10QTableView17setVerticalHeaderEP11QHeaderView(void* qthis, void* arg0);
+  // proto:  bool QTableView::showGrid();
+extern void _ZNK10QTableView8showGridEv(void* qthis);
+  // proto:  void QTableView::showRow(int row);
+extern void _ZN10QTableView7showRowEi(void* qthis, int arg0);
+  // proto:  void QTableView::hideColumn(int column);
+extern void _ZN10QTableView10hideColumnEi(void* qthis, int arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTableView)=1
 type QTableView struct {
   /*qbase*/ QAbstractItemView;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTableView::resizeRowsToContents();
 func (this *QTableView) resizeRowsToContents(args ...interface{}) () {
   // resizeRowsToContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +168,7 @@ func (this *QTableView) resizeRowsToContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setRowHeight(int row, int height);
 func (this *QTableView) setRowHeight(args ...interface{}) () {
   // setRowHeight(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -79,7 +188,7 @@ func (this *QTableView) setRowHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  QHeaderView * QTableView::verticalHeader();
 func (this *QTableView) verticalHeader(args ...interface{}) () {
   // verticalHeader()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +206,7 @@ func (this *QTableView) verticalHeader(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setSpan(int row, int column, int rowSpan, int columnSpan);
 func (this *QTableView) setSpan(args ...interface{}) () {
   // setSpan(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -119,7 +228,7 @@ func (this *QTableView) setSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setSortingEnabled(bool enable);
 func (this *QTableView) setSortingEnabled(args ...interface{}) () {
   // setSortingEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,7 +247,7 @@ func (this *QTableView) setSortingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setColumnWidth(int column, int width);
 func (this *QTableView) setColumnWidth(args ...interface{}) () {
   // setColumnWidth(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +267,7 @@ func (this *QTableView) setColumnWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setWordWrap(bool on);
 func (this *QTableView) setWordWrap(args ...interface{}) () {
   // setWordWrap(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +286,7 @@ func (this *QTableView) setWordWrap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::doItemsLayout();
 func (this *QTableView) doItemsLayout(args ...interface{}) () {
   // doItemsLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,7 +304,7 @@ func (this *QTableView) doItemsLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setSelectionModel(QItemSelectionModel * selectionModel);
 func (this *QTableView) setSelectionModel(args ...interface{}) () {
   // setSelectionModel(class QItemSelectionModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -214,7 +323,7 @@ func (this *QTableView) setSelectionModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setHorizontalHeader(QHeaderView * header);
 func (this *QTableView) setHorizontalHeader(args ...interface{}) () {
   // setHorizontalHeader(class QHeaderView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -233,7 +342,7 @@ func (this *QTableView) setHorizontalHeader(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setRowHidden(int row, bool hide);
 func (this *QTableView) setRowHidden(args ...interface{}) () {
   // setRowHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +362,7 @@ func (this *QTableView) setRowHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::rowViewportPosition(int row);
 func (this *QTableView) rowViewportPosition(args ...interface{}) () {
   // rowViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +381,7 @@ func (this *QTableView) rowViewportPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::columnAt(int x);
 func (this *QTableView) columnAt(args ...interface{}) () {
   // columnAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -291,7 +400,7 @@ func (this *QTableView) columnAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::isRowHidden(int row);
 func (this *QTableView) isRowHidden(args ...interface{}) () {
   // isRowHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,7 +419,7 @@ func (this *QTableView) isRowHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::showColumn(int column);
 func (this *QTableView) showColumn(args ...interface{}) () {
   // showColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -329,7 +438,7 @@ func (this *QTableView) showColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::resizeRowToContents(int row);
 func (this *QTableView) resizeRowToContents(args ...interface{}) () {
   // resizeRowToContents(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -348,7 +457,7 @@ func (this *QTableView) resizeRowToContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setRootIndex(const QModelIndex & index);
 func (this *QTableView) setRootIndex(args ...interface{}) () {
   // setRootIndex(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -367,7 +476,7 @@ func (this *QTableView) setRootIndex(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setColumnHidden(int column, bool hide);
 func (this *QTableView) setColumnHidden(args ...interface{}) () {
   // setColumnHidden(int, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -387,7 +496,7 @@ func (this *QTableView) setColumnHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::hideRow(int row);
 func (this *QTableView) hideRow(args ...interface{}) () {
   // hideRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -406,7 +515,7 @@ func (this *QTableView) hideRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::resizeColumnsToContents();
 func (this *QTableView) resizeColumnsToContents(args ...interface{}) () {
   // resizeColumnsToContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -424,7 +533,7 @@ func (this *QTableView) resizeColumnsToContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::wordWrap();
 func (this *QTableView) wordWrap(args ...interface{}) () {
   // wordWrap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -442,7 +551,7 @@ func (this *QTableView) wordWrap(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setShowGrid(bool show);
 func (this *QTableView) setShowGrid(args ...interface{}) () {
   // setShowGrid(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -461,7 +570,7 @@ func (this *QTableView) setShowGrid(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::isColumnHidden(int column);
 func (this *QTableView) isColumnHidden(args ...interface{}) () {
   // isColumnHidden(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -480,7 +589,7 @@ func (this *QTableView) isColumnHidden(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::selectRow(int row);
 func (this *QTableView) selectRow(args ...interface{}) () {
   // selectRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -499,7 +608,7 @@ func (this *QTableView) selectRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTableView::metaObject();
 func (this *QTableView) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -517,7 +626,7 @@ func (this *QTableView) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::isCornerButtonEnabled();
 func (this *QTableView) isCornerButtonEnabled(args ...interface{}) () {
   // isCornerButtonEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -535,7 +644,7 @@ func (this *QTableView) isCornerButtonEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::selectColumn(int column);
 func (this *QTableView) selectColumn(args ...interface{}) () {
   // selectColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -554,7 +663,7 @@ func (this *QTableView) selectColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::~QTableView();
 func (this *QTableView) FreeQTableView(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -568,7 +677,7 @@ func (this *QTableView) FreeQTableView(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::resizeColumnToContents(int column);
 func (this *QTableView) resizeColumnToContents(args ...interface{}) () {
   // resizeColumnToContents(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -587,12 +696,12 @@ func (this *QTableView) resizeColumnToContents(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::QTableView(QWidget * parent);
 func NewQTableView(args ...interface{}) QTableView {
   return QTableView{}
 }
 
-
+  // proto:  void QTableView::sortByColumn(int column);
 func (this *QTableView) sortByColumn(args ...interface{}) () {
   // sortByColumn(int, Qt::SortOrder)
   // sortByColumn(int)
@@ -617,7 +726,7 @@ func (this *QTableView) sortByColumn(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::columnSpan(int row, int column);
 func (this *QTableView) columnSpan(args ...interface{}) () {
   // columnSpan(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -637,7 +746,7 @@ func (this *QTableView) columnSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::columnWidth(int column);
 func (this *QTableView) columnWidth(args ...interface{}) () {
   // columnWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -656,7 +765,7 @@ func (this *QTableView) columnWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::columnViewportPosition(int column);
 func (this *QTableView) columnViewportPosition(args ...interface{}) () {
   // columnViewportPosition(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -675,7 +784,7 @@ func (this *QTableView) columnViewportPosition(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::rowHeight(int row);
 func (this *QTableView) rowHeight(args ...interface{}) () {
   // rowHeight(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -694,7 +803,7 @@ func (this *QTableView) rowHeight(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::rowAt(int y);
 func (this *QTableView) rowAt(args ...interface{}) () {
   // rowAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -713,7 +822,7 @@ func (this *QTableView) rowAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTableView::rowSpan(int row, int column);
 func (this *QTableView) rowSpan(args ...interface{}) () {
   // rowSpan(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -733,7 +842,7 @@ func (this *QTableView) rowSpan(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setCornerButtonEnabled(bool enable);
 func (this *QTableView) setCornerButtonEnabled(args ...interface{}) () {
   // setCornerButtonEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -752,7 +861,7 @@ func (this *QTableView) setCornerButtonEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QTableView::visualRect(const QModelIndex & index);
 func (this *QTableView) visualRect(args ...interface{}) () {
   // visualRect(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -771,7 +880,7 @@ func (this *QTableView) visualRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  QModelIndex QTableView::indexAt(const QPoint & p);
 func (this *QTableView) indexAt(args ...interface{}) () {
   // indexAt(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -790,7 +899,7 @@ func (this *QTableView) indexAt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QHeaderView * QTableView::horizontalHeader();
 func (this *QTableView) horizontalHeader(args ...interface{}) () {
   // horizontalHeader()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -808,7 +917,7 @@ func (this *QTableView) horizontalHeader(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setModel(QAbstractItemModel * model);
 func (this *QTableView) setModel(args ...interface{}) () {
   // setModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -827,7 +936,7 @@ func (this *QTableView) setModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::isSortingEnabled();
 func (this *QTableView) isSortingEnabled(args ...interface{}) () {
   // isSortingEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -845,7 +954,7 @@ func (this *QTableView) isSortingEnabled(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::clearSpans();
 func (this *QTableView) clearSpans(args ...interface{}) () {
   // clearSpans()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -863,7 +972,7 @@ func (this *QTableView) clearSpans(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::setVerticalHeader(QHeaderView * header);
 func (this *QTableView) setVerticalHeader(args ...interface{}) () {
   // setVerticalHeader(class QHeaderView *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -882,7 +991,7 @@ func (this *QTableView) setVerticalHeader(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTableView::showGrid();
 func (this *QTableView) showGrid(args ...interface{}) () {
   // showGrid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -900,7 +1009,7 @@ func (this *QTableView) showGrid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::showRow(int row);
 func (this *QTableView) showRow(args ...interface{}) () {
   // showRow(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -919,7 +1028,7 @@ func (this *QTableView) showRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTableView::hideColumn(int column);
 func (this *QTableView) hideColumn(args ...interface{}) () {
   // hideColumn(int)
   var vtys = make(map[int32]map[int32]reflect.Type)

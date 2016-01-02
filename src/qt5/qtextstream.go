@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,105 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTextStreamManipulator::exec(QTextStream & s);
+extern void _ZN22QTextStreamManipulator4execER11QTextStream(void* qthis, void* arg0);
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
+extern void* dector_ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* arg0, int arg1);
+extern void _ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* qthis, void* arg0, int arg1);
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFC m, QChar c);
+extern void* dector_ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(void* arg0, void* arg1);
+extern void _ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(void* qthis, void* arg0, void* arg1);
+  // proto:  QTextCodec * QTextStream::codec();
+extern void _ZNK11QTextStream5codecEv(void* qthis);
+  // proto:  void QTextStream::QTextStream(QIODevice * device);
+extern void* dector_ZN11QTextStreamC1EP9QIODevice(void* arg0);
+extern void _ZN11QTextStreamC1EP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QTextStream::setLocale(const QLocale & locale);
+extern void _ZN11QTextStream9setLocaleERK7QLocale(void* qthis, void* arg0);
+  // proto:  void QTextStream::QTextStream();
+extern void* dector_ZN11QTextStreamC1Ev();
+extern void _ZN11QTextStreamC1Ev(void* qthis);
+  // proto:  bool QTextStream::atEnd();
+extern void _ZNK11QTextStream5atEndEv(void* qthis);
+  // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
+extern void _ZN11QTextStream12readLineIntoEP7QStringx(void* qthis, void* arg0, long long arg1);
+  // proto:  void QTextStream::setRealNumberPrecision(int precision);
+extern void _ZN11QTextStream22setRealNumberPrecisionEi(void* qthis, int arg0);
+  // proto:  void QTextStream::setDevice(QIODevice * device);
+extern void _ZN11QTextStream9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  void QTextStream::reset();
+extern void _ZN11QTextStream5resetEv(void* qthis);
+  // proto:  bool QTextStream::seek(qint64 pos);
+extern void _ZN11QTextStream4seekEx(void* qthis, long long arg0);
+  // proto:  QString * QTextStream::string();
+extern void _ZNK11QTextStream6stringEv(void* qthis);
+  // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
+extern void _ZN11QTextStream20setAutoDetectUnicodeEb(void* qthis, bool arg0);
+  // proto:  QChar QTextStream::padChar();
+extern void _ZNK11QTextStream7padCharEv(void* qthis);
+  // proto:  QIODevice * QTextStream::device();
+extern void _ZNK11QTextStream6deviceEv(void* qthis);
+  // proto:  void QTextStream::resetStatus();
+extern void _ZN11QTextStream11resetStatusEv(void* qthis);
+  // proto:  bool QTextStream::autoDetectUnicode();
+extern void _ZNK11QTextStream17autoDetectUnicodeEv(void* qthis);
+  // proto:  int QTextStream::fieldWidth();
+extern void _ZNK11QTextStream10fieldWidthEv(void* qthis);
+  // proto:  bool QTextStream::generateByteOrderMark();
+extern void _ZNK11QTextStream21generateByteOrderMarkEv(void* qthis);
+  // proto:  void QTextStream::setGenerateByteOrderMark(bool generate);
+extern void _ZN11QTextStream24setGenerateByteOrderMarkEb(void* qthis, bool arg0);
+  // proto:  void QTextStream::setCodec(QTextCodec * codec);
+extern void _ZN11QTextStream8setCodecEP10QTextCodec(void* qthis, void* arg0);
+  // proto:  void QTextStream::flush();
+extern void _ZN11QTextStream5flushEv(void* qthis);
+  // proto:  void QTextStream::setIntegerBase(int base);
+extern void _ZN11QTextStream14setIntegerBaseEi(void* qthis, int arg0);
+  // proto:  void QTextStream::~QTextStream();
+extern void _ZN11QTextStreamD0Ev(void* qthis);
+  // proto:  QLocale QTextStream::locale();
+extern void _ZNK11QTextStream6localeEv(void* qthis);
+  // proto:  QString QTextStream::read(qint64 maxlen);
+extern void _ZN11QTextStream4readEx(void* qthis, long long arg0);
+  // proto:  void QTextStream::setPadChar(QChar ch);
+extern void _ZN11QTextStream10setPadCharE5QChar(void* qthis, void* arg0);
+  // proto:  int QTextStream::realNumberPrecision();
+extern void _ZNK11QTextStream19realNumberPrecisionEv(void* qthis);
+  // proto:  qint64 QTextStream::pos();
+extern void _ZNK11QTextStream3posEv(void* qthis);
+  // proto:  QString QTextStream::readAll();
+extern void _ZN11QTextStream7readAllEv(void* qthis);
+  // proto:  void QTextStream::skipWhiteSpace();
+extern void _ZN11QTextStream14skipWhiteSpaceEv(void* qthis);
+  // proto:  void QTextStream::setFieldWidth(int width);
+extern void _ZN11QTextStream13setFieldWidthEi(void* qthis, int arg0);
+  // proto:  void QTextStream::setCodec(const char * codecName);
+extern void _ZN11QTextStream8setCodecEPKc(void* qthis, char* arg0);
+  // proto:  int QTextStream::integerBase();
+extern void _ZNK11QTextStream11integerBaseEv(void* qthis);
+  // proto:  QString QTextStream::readLine(qint64 maxlen);
+extern void _ZN11QTextStream8readLineEx(void* qthis, long long arg0);
+  // proto:  void QTextStream::QTextStream(const QTextStream & );
+extern void* dector_ZN11QTextStreamC1ERKS_(void* arg0);
+extern void _ZN11QTextStreamC1ERKS_(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTextStreamManipulator)=40
 type QTextStreamManipulator struct {
   // qbase: None;
@@ -47,7 +137,7 @@ type QTextStream struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QTextStreamManipulator::exec(QTextStream & s);
 func (this *QTextStreamManipulator) exec(args ...interface{}) () {
   // exec(class QTextStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -66,12 +156,12 @@ func (this *QTextStreamManipulator) exec(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
 func NewQTextStreamManipulator(args ...interface{}) QTextStreamManipulator {
   return QTextStreamManipulator{}
 }
 
-
+  // proto:  QTextCodec * QTextStream::codec();
 func (this *QTextStream) codec(args ...interface{}) () {
   // codec()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -89,12 +179,12 @@ func (this *QTextStream) codec(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::QTextStream(QIODevice * device);
 func NewQTextStream(args ...interface{}) QTextStream {
   return QTextStream{}
 }
 
-
+  // proto:  void QTextStream::setLocale(const QLocale & locale);
 func (this *QTextStream) setLocale(args ...interface{}) () {
   // setLocale(const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -113,7 +203,7 @@ func (this *QTextStream) setLocale(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextStream::atEnd();
 func (this *QTextStream) atEnd(args ...interface{}) () {
   // atEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,7 +221,7 @@ func (this *QTextStream) atEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
 func (this *QTextStream) readLineInto(args ...interface{}) () {
   // readLineInto(class QString *, qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -151,7 +241,7 @@ func (this *QTextStream) readLineInto(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setRealNumberPrecision(int precision);
 func (this *QTextStream) setRealNumberPrecision(args ...interface{}) () {
   // setRealNumberPrecision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +260,7 @@ func (this *QTextStream) setRealNumberPrecision(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setDevice(QIODevice * device);
 func (this *QTextStream) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +279,7 @@ func (this *QTextStream) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::reset();
 func (this *QTextStream) reset(args ...interface{}) () {
   // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -207,7 +297,7 @@ func (this *QTextStream) reset(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextStream::seek(qint64 pos);
 func (this *QTextStream) seek(args ...interface{}) () {
   // seek(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +316,7 @@ func (this *QTextStream) seek(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString * QTextStream::string();
 func (this *QTextStream) string(args ...interface{}) () {
   // string()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,7 +334,7 @@ func (this *QTextStream) string(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
 func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
   // setAutoDetectUnicode(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -263,7 +353,7 @@ func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QTextStream::padChar();
 func (this *QTextStream) padChar(args ...interface{}) () {
   // padChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -281,7 +371,7 @@ func (this *QTextStream) padChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QTextStream::device();
 func (this *QTextStream) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -299,7 +389,7 @@ func (this *QTextStream) device(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::resetStatus();
 func (this *QTextStream) resetStatus(args ...interface{}) () {
   // resetStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -317,7 +407,7 @@ func (this *QTextStream) resetStatus(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextStream::autoDetectUnicode();
 func (this *QTextStream) autoDetectUnicode(args ...interface{}) () {
   // autoDetectUnicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -335,7 +425,7 @@ func (this *QTextStream) autoDetectUnicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextStream::fieldWidth();
 func (this *QTextStream) fieldWidth(args ...interface{}) () {
   // fieldWidth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -353,7 +443,7 @@ func (this *QTextStream) fieldWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTextStream::generateByteOrderMark();
 func (this *QTextStream) generateByteOrderMark(args ...interface{}) () {
   // generateByteOrderMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,7 +461,7 @@ func (this *QTextStream) generateByteOrderMark(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setGenerateByteOrderMark(bool generate);
 func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
   // setGenerateByteOrderMark(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -390,7 +480,7 @@ func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setCodec(QTextCodec * codec);
 func (this *QTextStream) setCodec(args ...interface{}) () {
   // setCodec(class QTextCodec *)
   // setCodec(const char *)
@@ -414,7 +504,7 @@ func (this *QTextStream) setCodec(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::flush();
 func (this *QTextStream) flush(args ...interface{}) () {
   // flush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -432,7 +522,7 @@ func (this *QTextStream) flush(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setIntegerBase(int base);
 func (this *QTextStream) setIntegerBase(args ...interface{}) () {
   // setIntegerBase(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -451,7 +541,7 @@ func (this *QTextStream) setIntegerBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::~QTextStream();
 func (this *QTextStream) FreeQTextStream(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -465,7 +555,7 @@ func (this *QTextStream) FreeQTextStream(args ...interface{}) () {
 
 }
 
-
+  // proto:  QLocale QTextStream::locale();
 func (this *QTextStream) locale(args ...interface{}) () {
   // locale()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -483,7 +573,7 @@ func (this *QTextStream) locale(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextStream::read(qint64 maxlen);
 func (this *QTextStream) read(args ...interface{}) () {
   // read(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -502,7 +592,7 @@ func (this *QTextStream) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setPadChar(QChar ch);
 func (this *QTextStream) setPadChar(args ...interface{}) () {
   // setPadChar(class QChar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -521,7 +611,7 @@ func (this *QTextStream) setPadChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextStream::realNumberPrecision();
 func (this *QTextStream) realNumberPrecision(args ...interface{}) () {
   // realNumberPrecision()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +629,7 @@ func (this *QTextStream) realNumberPrecision(args ...interface{}) () {
 
 }
 
-
+  // proto:  qint64 QTextStream::pos();
 func (this *QTextStream) pos(args ...interface{}) () {
   // pos()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -557,7 +647,7 @@ func (this *QTextStream) pos(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextStream::readAll();
 func (this *QTextStream) readAll(args ...interface{}) () {
   // readAll()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -575,7 +665,7 @@ func (this *QTextStream) readAll(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::skipWhiteSpace();
 func (this *QTextStream) skipWhiteSpace(args ...interface{}) () {
   // skipWhiteSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -593,7 +683,7 @@ func (this *QTextStream) skipWhiteSpace(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTextStream::setFieldWidth(int width);
 func (this *QTextStream) setFieldWidth(args ...interface{}) () {
   // setFieldWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -612,7 +702,7 @@ func (this *QTextStream) setFieldWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTextStream::integerBase();
 func (this *QTextStream) integerBase(args ...interface{}) () {
   // integerBase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -630,7 +720,7 @@ func (this *QTextStream) integerBase(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QTextStream::readLine(qint64 maxlen);
 func (this *QTextStream) readLine(args ...interface{}) () {
   // readLine(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)

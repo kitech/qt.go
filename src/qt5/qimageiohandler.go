@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,71 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
+extern void* dector_ZN15QImageIOHandlerC1ERKS_(void* arg0);
+extern void _ZN15QImageIOHandlerC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QImageIOHandler::imageCount();
+extern void _ZNK15QImageIOHandler10imageCountEv(void* qthis);
+  // proto:  QRect QImageIOHandler::currentImageRect();
+extern void _ZNK15QImageIOHandler16currentImageRectEv(void* qthis);
+  // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
+extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int arg0);
+  // proto:  int QImageIOHandler::currentImageNumber();
+extern void _ZNK15QImageIOHandler18currentImageNumberEv(void* qthis);
+  // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
+extern void _ZN15QImageIOHandler9setFormatERK10QByteArray(void* qthis, void* arg0);
+  // proto:  bool QImageIOHandler::jumpToNextImage();
+extern void _ZN15QImageIOHandler15jumpToNextImageEv(void* qthis);
+  // proto:  void QImageIOHandler::~QImageIOHandler();
+extern void _ZN15QImageIOHandlerD0Ev(void* qthis);
+  // proto:  int QImageIOHandler::loopCount();
+extern void _ZNK15QImageIOHandler9loopCountEv(void* qthis);
+  // proto:  void QImageIOHandler::QImageIOHandler();
+extern void* dector_ZN15QImageIOHandlerC1Ev();
+extern void _ZN15QImageIOHandlerC1Ev(void* qthis);
+  // proto:  bool QImageIOHandler::read(QImage * image);
+extern void _ZN15QImageIOHandler4readEP6QImage(void* qthis, void* arg0);
+  // proto:  QByteArray QImageIOHandler::name();
+extern void _ZNK15QImageIOHandler4nameEv(void* qthis);
+  // proto:  QByteArray QImageIOHandler::format();
+extern void _ZNK15QImageIOHandler6formatEv(void* qthis);
+  // proto:  int QImageIOHandler::nextImageDelay();
+extern void _ZNK15QImageIOHandler14nextImageDelayEv(void* qthis);
+  // proto:  void QImageIOHandler::setDevice(QIODevice * device);
+extern void _ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0);
+  // proto:  bool QImageIOHandler::canRead();
+extern void _ZNK15QImageIOHandler7canReadEv(void* qthis);
+  // proto:  QIODevice * QImageIOHandler::device();
+extern void _ZNK15QImageIOHandler6deviceEv(void* qthis);
+  // proto:  bool QImageIOHandler::write(const QImage & image);
+extern void _ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
+extern void _ZNK14QImageIOPlugin10metaObjectEv(void* qthis);
+  // proto:  void QImageIOPlugin::~QImageIOPlugin();
+extern void _ZN14QImageIOPluginD0Ev(void* qthis);
+  // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
+extern void _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1);
+  // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
+extern void* dector_ZN14QImageIOPluginC1EP7QObject(void* arg0);
+extern void _ZN14QImageIOPluginC1EP7QObject(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QImageIOHandler)=1
 type QImageIOHandler struct {
   // qbase: None;
@@ -47,12 +103,12 @@ type QImageIOPlugin struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
 func NewQImageIOHandler(args ...interface{}) QImageIOHandler {
   return QImageIOHandler{}
 }
 
-
+  // proto:  int QImageIOHandler::imageCount();
 func (this *QImageIOHandler) imageCount(args ...interface{}) () {
   // imageCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -70,7 +126,7 @@ func (this *QImageIOHandler) imageCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  QRect QImageIOHandler::currentImageRect();
 func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
   // currentImageRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -88,7 +144,7 @@ func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
 func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
   // jumpToImage(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,7 +163,7 @@ func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageIOHandler::currentImageNumber();
 func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
   // currentImageNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +181,7 @@ func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
 func (this *QImageIOHandler) setFormat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   // setFormat(const class QByteArray &)
@@ -149,7 +205,7 @@ func (this *QImageIOHandler) setFormat(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageIOHandler::jumpToNextImage();
 func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
   // jumpToNextImage()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -167,7 +223,7 @@ func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageIOHandler::~QImageIOHandler();
 func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -181,7 +237,7 @@ func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageIOHandler::loopCount();
 func (this *QImageIOHandler) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -199,7 +255,7 @@ func (this *QImageIOHandler) loopCount(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageIOHandler::read(QImage * image);
 func (this *QImageIOHandler) read(args ...interface{}) () {
   // read(class QImage *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -218,7 +274,7 @@ func (this *QImageIOHandler) read(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QImageIOHandler::name();
 func (this *QImageIOHandler) name(args ...interface{}) () {
   // name()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +292,7 @@ func (this *QImageIOHandler) name(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QImageIOHandler::format();
 func (this *QImageIOHandler) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -254,7 +310,7 @@ func (this *QImageIOHandler) format(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QImageIOHandler::nextImageDelay();
 func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
   // nextImageDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,7 +328,7 @@ func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageIOHandler::setDevice(QIODevice * device);
 func (this *QImageIOHandler) setDevice(args ...interface{}) () {
   // setDevice(class QIODevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -291,7 +347,7 @@ func (this *QImageIOHandler) setDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageIOHandler::canRead();
 func (this *QImageIOHandler) canRead(args ...interface{}) () {
   // canRead()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -309,7 +365,7 @@ func (this *QImageIOHandler) canRead(args ...interface{}) () {
 
 }
 
-
+  // proto:  QIODevice * QImageIOHandler::device();
 func (this *QImageIOHandler) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -327,7 +383,7 @@ func (this *QImageIOHandler) device(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QImageIOHandler::write(const QImage & image);
 func (this *QImageIOHandler) write(args ...interface{}) () {
   // write(const class QImage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -346,7 +402,7 @@ func (this *QImageIOHandler) write(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
 func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,7 +420,7 @@ func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageIOPlugin::~QImageIOPlugin();
 func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -378,7 +434,7 @@ func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
 
 }
 
-
+  // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
 func (this *QImageIOPlugin) create(args ...interface{}) () {
   // create(class QIODevice *, const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +454,7 @@ func (this *QImageIOPlugin) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
 func NewQImageIOPlugin(args ...interface{}) QImageIOPlugin {
   return QImageIOPlugin{}
 }

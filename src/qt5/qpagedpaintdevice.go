@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,50 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
+extern void _ZNK17QPagedPaintDevice10pageSizeMMEv(void* qthis);
+  // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
+extern void _ZN17QPagedPaintDeviceD0Ev(void* qthis);
+  // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
+extern void _ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(void* qthis, void* arg0);
+  // proto:  QPageLayout QPagedPaintDevice::pageLayout();
+extern void _ZNK17QPagedPaintDevice10pageLayoutEv(void* qthis);
+  // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
+extern void _ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(void* qthis, void* arg0);
+  // proto:  void QPagedPaintDevice::QPagedPaintDevice();
+extern void* dector_ZN17QPagedPaintDeviceC1Ev();
+extern void _ZN17QPagedPaintDeviceC1Ev(void* qthis);
+  // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
+extern void _ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(void* qthis, void* arg0);
+  // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
+extern void _ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(void* qthis, void* arg0);
+  // proto:  bool QPagedPaintDevice::newPage();
+extern void _ZN17QPagedPaintDevice7newPageEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPagedPaintDevice)=32
 type QPagedPaintDevice struct {
   /*qbase*/ QPaintDevice;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
 func (this *QPagedPaintDevice) pageSizeMM(args ...interface{}) () {
   // pageSizeMM()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -59,7 +87,7 @@ func (this *QPagedPaintDevice) pageSizeMM(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
 func (this *QPagedPaintDevice) FreeQPagedPaintDevice(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,7 +101,7 @@ func (this *QPagedPaintDevice) FreeQPagedPaintDevice(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPagedPaintDevice::setPageMargins(const QMarginsF & margins);
 func (this *QPagedPaintDevice) setPageMargins(args ...interface{}) () {
   // setPageMargins(const class QMarginsF &)
   // setPageMargins(const class QMarginsF &, class QPageLayout::Unit)
@@ -98,7 +126,7 @@ func (this *QPagedPaintDevice) setPageMargins(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPageLayout QPagedPaintDevice::pageLayout();
 func (this *QPagedPaintDevice) pageLayout(args ...interface{}) () {
   // pageLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +144,7 @@ func (this *QPagedPaintDevice) pageLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPagedPaintDevice::setPageSize(const QPageSize & pageSize);
 func (this *QPagedPaintDevice) setPageSize(args ...interface{}) () {
   // setPageSize(enum QPagedPaintDevice::PageSize)
   // setPageSize(const class QPageSize &)
@@ -140,12 +168,12 @@ func (this *QPagedPaintDevice) setPageSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPagedPaintDevice::QPagedPaintDevice();
 func NewQPagedPaintDevice(args ...interface{}) QPagedPaintDevice {
   return QPagedPaintDevice{}
 }
 
-
+  // proto:  void QPagedPaintDevice::setPageSizeMM(const QSizeF & size);
 func (this *QPagedPaintDevice) setPageSizeMM(args ...interface{}) () {
   // setPageSizeMM(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -164,7 +192,7 @@ func (this *QPagedPaintDevice) setPageSizeMM(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
 func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
   // setPageLayout(const class QPageLayout &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -183,7 +211,7 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPagedPaintDevice::newPage();
 func (this *QPagedPaintDevice) newPage(args ...interface{}) () {
   // newPage()
   var vtys = make(map[int32]map[int32]reflect.Type)

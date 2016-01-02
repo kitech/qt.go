@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,56 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QTimer::~QTimer();
+extern void _ZN6QTimerD0Ev(void* qthis);
+  // proto:  void QTimer::stop();
+extern void _ZN6QTimer4stopEv(void* qthis);
+  // proto:  int QTimer::timerId();
+extern void _ZNK6QTimer7timerIdEv(void* qthis);
+  // proto:  void QTimer::setSingleShot(bool singleShot);
+extern void demth_ZN6QTimer13setSingleShotEb(void* qthis, bool arg0);
+  // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
+extern void _ZN6QTimer10singleShotEiPK7QObjectPKc(int arg0, void* arg1, char* arg2);
+  // proto:  void QTimer::start();
+extern void _ZN6QTimer5startEv(void* qthis);
+  // proto:  int QTimer::interval();
+extern void _ZNK6QTimer8intervalEv(void* qthis);
+  // proto:  void QTimer::setInterval(int msec);
+extern void _ZN6QTimer11setIntervalEi(void* qthis, int arg0);
+  // proto:  void QTimer::start(int msec);
+extern void _ZN6QTimer5startEi(void* qthis, int arg0);
+  // proto:  void QTimer::QTimer(const QTimer & );
+extern void* dector_ZN6QTimerC1ERKS_(void* arg0);
+extern void demth_ZN6QTimerC1ERKS_(void* qthis, void* arg0);
+  // proto:  int QTimer::remainingTime();
+extern void _ZNK6QTimer13remainingTimeEv(void* qthis);
+  // proto:  bool QTimer::isSingleShot();
+extern void demth_ZNK6QTimer12isSingleShotEv(void* qthis);
+  // proto:  bool QTimer::isActive();
+extern void demth_ZNK6QTimer8isActiveEv(void* qthis);
+  // proto:  const QMetaObject * QTimer::metaObject();
+extern void _ZNK6QTimer10metaObjectEv(void* qthis);
+  // proto:  void QTimer::QTimer(QObject * parent);
+extern void* dector_ZN6QTimerC1EP7QObject(void* arg0);
+extern void _ZN6QTimerC1EP7QObject(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QTimer)=1
 type QTimer struct {
   /*qbase*/ QObject;
@@ -42,7 +83,7 @@ type QTimer struct {
 //  _timeout QTimer_timeout_signal;
 }
 
-
+  // proto:  void QTimer::~QTimer();
 func (this *QTimer) FreeQTimer(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -56,7 +97,7 @@ func (this *QTimer) FreeQTimer(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimer::stop();
 func (this *QTimer) stop(args ...interface{}) () {
   // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -74,7 +115,7 @@ func (this *QTimer) stop(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimer::timerId();
 func (this *QTimer) timerId(args ...interface{}) () {
   // timerId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,7 +133,7 @@ func (this *QTimer) timerId(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimer::setSingleShot(bool singleShot);
 func (this *QTimer) setSingleShot(args ...interface{}) () {
   // setSingleShot(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -111,7 +152,7 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
 
 }
 
-
+  // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
 func (this *QTimer) singleShot_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -125,7 +166,7 @@ func (this *QTimer) singleShot_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimer::start();
 func (this *QTimer) start(args ...interface{}) () {
   // start()
   // start(int)
@@ -148,7 +189,7 @@ func (this *QTimer) start(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QTimer::interval();
 func (this *QTimer) interval(args ...interface{}) () {
   // interval()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -166,7 +207,7 @@ func (this *QTimer) interval(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimer::setInterval(int msec);
 func (this *QTimer) setInterval(args ...interface{}) () {
   // setInterval(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -185,12 +226,12 @@ func (this *QTimer) setInterval(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QTimer::QTimer(const QTimer & );
 func NewQTimer(args ...interface{}) QTimer {
   return QTimer{}
 }
 
-
+  // proto:  int QTimer::remainingTime();
 func (this *QTimer) remainingTime(args ...interface{}) () {
   // remainingTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +249,7 @@ func (this *QTimer) remainingTime(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTimer::isSingleShot();
 func (this *QTimer) isSingleShot(args ...interface{}) () {
   // isSingleShot()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +267,7 @@ func (this *QTimer) isSingleShot(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QTimer::isActive();
 func (this *QTimer) isActive(args ...interface{}) () {
   // isActive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,7 +285,7 @@ func (this *QTimer) isActive(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QMetaObject * QTimer::metaObject();
 func (this *QTimer) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

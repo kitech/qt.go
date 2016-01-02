@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,498 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  qlonglong QString::toLongLong(bool * ok, int base);
+extern void _ZNK7QString10toLongLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  bool QString::isNull();
+extern void demth_ZNK7QString6isNullEv(void* qthis);
+  // proto:  QString & QString::append(const QChar * uc, int len);
+extern void _ZN7QString6appendEPK5QChari(void* qthis, void* arg0, int arg1);
+  // proto:  QString & QString::prepend(QChar c);
+extern void demth_ZN7QString7prependE5QChar(void* qthis, void* arg0);
+  // proto:  QString & QString::insert(int i, QChar c);
+extern void _ZN7QString6insertEi5QChar(void* qthis, int arg0, void* arg1);
+  // proto:  QString QString::left(int n);
+extern void _ZNK7QString4leftEi(void* qthis, int arg0);
+  // proto:  void QString::QString(QChar c);
+extern void* dector_ZN7QStringC1E5QChar(void* arg0);
+extern void _ZN7QStringC1E5QChar(void* qthis, void* arg0);
+  // proto:  QString & QString::prepend(const char * s);
+extern void demth_ZN7QString7prependEPKc(void* qthis, char* arg0);
+  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from);
+extern void _ZNK7QString11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+  // proto: static QString QString::number(int , int base);
+extern void _ZN7QString6numberEii(int arg0, int arg1);
+  // proto:  void QString::resize(int size);
+extern void _ZN7QString6resizeEi(void* qthis, int arg0);
+  // proto:  void QString::push_front(QChar c);
+extern void demth_ZN7QString10push_frontE5QChar(void* qthis, void* arg0);
+  // proto:  void QString::QString();
+extern void* dector_ZN7QStringC1Ev();
+extern void demth_ZN7QStringC1Ev(void* qthis);
+  // proto:  double QString::toDouble(bool * ok);
+extern void _ZNK7QString8toDoubleEPb(void* qthis, bool* arg0);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8);
+extern void _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6, void* arg7);
+  // proto:  QStringRef QString::rightRef(int n);
+extern void _ZNK7QString8rightRefEi(void* qthis, int arg0);
+  // proto:  QString & QString::setNum(short , int base);
+extern void _ZN7QString6setNumEsi(void* qthis, short arg0, int arg1);
+  // proto:  void QString::QString(const QChar * unicode, int size);
+extern void* dector_ZN7QStringC1EPK5QChari(void* arg0, int arg1);
+extern void _ZN7QStringC1EPK5QChari(void* qthis, void* arg0, int arg1);
+  // proto:  float QString::toFloat(bool * ok);
+extern void _ZNK7QString7toFloatEPb(void* qthis, bool* arg0);
+  // proto:  int QString::count(const QRegularExpression & re);
+extern void _ZNK7QString5countERK18QRegularExpression(void* qthis, void* arg0);
+  // proto:  QStringRef QString::midRef(int position, int n);
+extern void _ZNK7QString6midRefEii(void* qthis, int arg0, int arg1);
+  // proto:  void QString::detach();
+extern void demth_ZN7QString6detachEv(void* qthis);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4);
+extern void _ZNK7QString3argERKS_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
+  // proto:  QString QString::arg(long a, int fieldwidth, int base, QChar fillChar);
+extern void _ZNK7QString3argElii5QChar(void* qthis, long arg0, int arg1, int arg2, void* arg3);
+  // proto:  int QString::count();
+extern void demth_ZNK7QString5countEv(void* qthis);
+  // proto:  QString & QString::setNum(qulonglong , int base);
+extern void _ZN7QString6setNumEyi(void* qthis, unsigned long long arg0, int arg1);
+  // proto: static QString QString::fromStdWString(const std::wstring & s);
+extern void demth_ZN7QString14fromStdWStringERKi(int* arg0);
+  // proto:  void QString::push_back(QChar c);
+extern void demth_ZN7QString9push_backE5QChar(void* qthis, void* arg0);
+  // proto:  QString & QString::setNum(float , char f, int prec);
+extern void _ZN7QString6setNumEfci(void* qthis, float arg0, char arg1, int arg2);
+  // proto:  int QString::count(const QRegExp & );
+extern void _ZNK7QString5countERK7QRegExp(void* qthis, void* arg0);
+  // proto:  int QString::size();
+extern void demth_ZNK7QString4sizeEv(void* qthis);
+  // proto:  QString & QString::insert(int i, const QChar * uc, int len);
+extern void _ZN7QString6insertEiPK5QChari(void* qthis, int arg0, void* arg1, int arg2);
+  // proto:  QString & QString::replace(int i, int len, const QChar * s, int slen);
+extern void _ZN7QString7replaceEiiPK5QChari(void* qthis, int arg0, int arg1, void* arg2, int arg3);
+  // proto: static QString QString::fromRawData(const QChar * , int size);
+extern void _ZN7QString11fromRawDataEPK5QChari(void* arg0, int arg1);
+  // proto:  QString & QString::insert(int i, const QString & s);
+extern void demth_ZN7QString6insertEiRKS_(void* qthis, int arg0, void* arg1);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5);
+extern void _ZNK7QString3argERKS_S1_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4);
+  // proto:  QString & QString::setRawData(const QChar * unicode, int size);
+extern void _ZN7QString10setRawDataEPK5QChari(void* qthis, void* arg0, int arg1);
+  // proto:  QString & QString::prepend(const QString & s);
+extern void demth_ZN7QString7prependERKS_(void* qthis, void* arg0);
+  // proto:  ulong QString::toULong(bool * ok, int base);
+extern void _ZNK7QString7toULongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  void QString::chop(int n);
+extern void _ZN7QString4chopEi(void* qthis, int arg0);
+  // proto: static QString QString::fromUtf16(const ushort * , int size);
+extern void _ZN7QString9fromUtf16EPKti(unsigned short* arg0, int arg1);
+  // proto:  bool QString::isDetached();
+extern void demth_ZNK7QString10isDetachedEv(void* qthis);
+  // proto:  QString & QString::setNum(qlonglong , int base);
+extern void _ZN7QString6setNumExi(void* qthis, long long arg0, int arg1);
+  // proto:  QString QString::mid(int position, int n);
+extern void _ZNK7QString3midEii(void* qthis, int arg0, int arg1);
+  // proto: static QString QString::fromLocal8Bit(const char * str, int size);
+extern void demth_ZN7QString13fromLocal8BitEPKci(char* arg0, int arg1);
+  // proto:  void QString::swap(QString & other);
+extern void demth_ZN7QString4swapERS_(void* qthis, void* arg0);
+  // proto: static QString QString::fromUtf8(const QByteArray & str);
+extern void demth_ZN7QString8fromUtf8ERK10QByteArray(void* arg0);
+  // proto: static QString QString::fromUcs4(const char32_t * str, int size);
+extern void _ZN7QString8fromUcs4EPKDii(char32_t* arg0, int arg1);
+  // proto:  QString QString::leftJustified(int width, QChar fill, bool trunc);
+extern void _ZNK7QString13leftJustifiedEi5QCharb(void* qthis, int arg0, void* arg1, bool arg2);
+  // proto:  int QString::indexOf(const QRegExp & , int from);
+extern void _ZNK7QString7indexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  void QString::push_back(const QString & s);
+extern void demth_ZN7QString9push_backERKS_(void* qthis, void* arg0);
+  // proto:  int QString::lastIndexOf(QRegExp & , int from);
+extern void _ZNK7QString11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3);
+extern void _ZNK7QString3argERKS_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2);
+  // proto:  const ushort * QString::utf16();
+extern void _ZNK7QString5utf16Ev(void* qthis);
+  // proto:  int QString::toInt(bool * ok, int base);
+extern void _ZNK7QString5toIntEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QString QString::arg(double a, int fieldWidth, char fmt, int prec, QChar fillChar);
+extern void _ZNK7QString3argEdici5QChar(void* qthis, double arg0, int arg1, char arg2, int arg3, void* arg4);
+  // proto:  QChar * QString::data();
+extern void demth_ZN7QString4dataEv(void* qthis);
+  // proto:  QString & QString::setNum(uint , int base);
+extern void _ZN7QString6setNumEji(void* qthis, unsigned int arg0, int arg1);
+  // proto: static int QString::localeAwareCompare(const QString & s1, const QString & s2);
+extern void _ZN7QString18localeAwareCompareERKS_S1_(void* arg0, void* arg1);
+  // proto:  void QString::QString(const char * ch);
+extern void* dector_ZN7QStringC1EPKc(char* arg0);
+extern void demth_ZN7QStringC1EPKc(void* qthis, char* arg0);
+  // proto: static QString QString::fromUtf16(const char16_t * str, int size);
+extern void _ZN7QString9fromUtf16EPKDsi(char16_t* arg0, int arg1);
+  // proto:  QString & QString::replace(const QRegExp & rx, const QString & after);
+extern void _ZN7QString7replaceERK7QRegExpRKS_(void* qthis, void* arg0, void* arg1);
+  // proto:  QString QString::repeated(int times);
+extern void _ZNK7QString8repeatedEi(void* qthis, int arg0);
+  // proto:  QString & QString::setUtf16(const ushort * utf16, int size);
+extern void demth_ZN7QString8setUtf16EPKti(void* qthis, unsigned short* arg0, int arg1);
+  // proto: static QString QString::fromStdU32String(const std::u32string & s);
+extern void demth_ZN7QString16fromStdU32StringERKi(int* arg0);
+  // proto:  void QString::clear();
+extern void _ZN7QString5clearEv(void* qthis);
+  // proto:  bool QString::contains(const QRegExp & rx);
+extern void demth_ZNK7QString8containsERK7QRegExp(void* qthis, void* arg0);
+  // proto:  bool QString::isSharedWith(const QString & other);
+extern void demth_ZNK7QString12isSharedWithERKS_(void* qthis, void* arg0);
+  // proto: static QString QString::fromLatin1(const QByteArray & str);
+extern void demth_ZN7QString10fromLatin1ERK10QByteArray(void* arg0);
+  // proto:  void QString::~QString();
+extern void demth_ZN7QStringD0Ev(void* qthis);
+  // proto:  QString & QString::remove(const QRegularExpression & re);
+extern void demth_ZN7QString6removeERK18QRegularExpression(void* qthis, void* arg0);
+  // proto:  QString & QString::setNum(int , int base);
+extern void _ZN7QString6setNumEii(void* qthis, int arg0, int arg1);
+  // proto:  const_iterator QString::cend();
+extern void _ZNK7QString4cendEv(void* qthis);
+  // proto:  QString QString::toHtmlEscaped();
+extern void _ZNK7QString13toHtmlEscapedEv(void* qthis);
+  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
+extern void _ZNK7QString11lastIndexOfERK18QRegularExpressioniP23QRegularExpressionMatch(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  QString & QString::append(const QByteArray & s);
+extern void demth_ZN7QString6appendERK10QByteArray(void* qthis, void* arg0);
+  // proto: static QString QString::fromLatin1(const char * str, int size);
+extern void demth_ZN7QString10fromLatin1EPKci(char* arg0, int arg1);
+  // proto:  bool QString::contains(const QRegularExpression & re, QRegularExpressionMatch * match);
+extern void _ZNK7QString8containsERK18QRegularExpressionP23QRegularExpressionMatch(void* qthis, void* arg0, void* arg1);
+  // proto:  int QString::indexOf(const QRegularExpression & re, int from, QRegularExpressionMatch * rmatch);
+extern void _ZNK7QString7indexOfERK18QRegularExpressioniP23QRegularExpressionMatch(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  int QString::lastIndexOf(const QRegExp & , int from);
+extern void _ZNK7QString11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  int QString::toWCharArray(wchar_t * array);
+extern void demth_ZNK7QString12toWCharArrayEPw(void* qthis, wchar_t* arg0);
+  // proto:  const_iterator QString::cbegin();
+extern void _ZNK7QString6cbeginEv(void* qthis);
+  // proto:  QString & QString::prepend(const QByteArray & s);
+extern void demth_ZN7QString7prependERK10QByteArray(void* qthis, void* arg0);
+  // proto:  QString & QString::replace(int i, int len, const QString & after);
+extern void _ZN7QString7replaceEiiRKS_(void* qthis, int arg0, int arg1, void* arg2);
+  // proto: static QString QString::fromStdString(const std::string & s);
+extern void demth_ZN7QString13fromStdStringERKi(int* arg0);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7);
+extern void _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6);
+  // proto: static QString QString::fromWCharArray(const wchar_t * string, int size);
+extern void demth_ZN7QString14fromWCharArrayEPKwi(wchar_t* arg0, int arg1);
+  // proto:  QString & QString::fill(QChar c, int size);
+extern void _ZN7QString4fillE5QChari(void* qthis, void* arg0, int arg1);
+  // proto:  const QChar * QString::constData();
+extern void demth_ZNK7QString9constDataEv(void* qthis);
+  // proto: static QString QString::number(ulong , int base);
+extern void _ZN7QString6numberEmi(unsigned long arg0, int arg1);
+  // proto:  long QString::toLong(bool * ok, int base);
+extern void _ZNK7QString6toLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  const_iterator QString::constEnd();
+extern void _ZNK7QString8constEndEv(void* qthis);
+  // proto:  int QString::length();
+extern void demth_ZNK7QString6lengthEv(void* qthis);
+  // proto: static QString QString::fromUtf8(const char * str, int size);
+extern void demth_ZN7QString8fromUtf8EPKci(char* arg0, int arg1);
+  // proto: static QString QString::number(qlonglong , int base);
+extern void _ZN7QString6numberExi(long long arg0, int arg1);
+  // proto:  QStringRef QString::leftRef(int n);
+extern void _ZNK7QString7leftRefEi(void* qthis, int arg0);
+  // proto:  QString & QString::setNum(long , int base);
+extern void _ZN7QString6setNumEli(void* qthis, long arg0, int arg1);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2);
+extern void _ZNK7QString3argERKS_S1_(void* qthis, void* arg0, void* arg1);
+  // proto:  bool QString::isSimpleText();
+extern void _ZNK7QString12isSimpleTextEv(void* qthis);
+  // proto: static QString QString::fromUcs4(const uint * , int size);
+extern void _ZN7QString8fromUcs4EPKji(unsigned int* arg0, int arg1);
+  // proto:  QString & QString::setUnicode(const QChar * unicode, int size);
+extern void _ZN7QString10setUnicodeEPK5QChari(void* qthis, void* arg0, int arg1);
+  // proto:  bool QString::contains(QRegExp & rx);
+extern void demth_ZNK7QString8containsER7QRegExp(void* qthis, void* arg0);
+  // proto:  const_iterator QString::constBegin();
+extern void _ZNK7QString10constBeginEv(void* qthis);
+  // proto:  const QChar * QString::unicode();
+extern void demth_ZNK7QString7unicodeEv(void* qthis);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8, const QString & a9);
+extern void _ZNK7QString3argERKS_S1_S1_S1_S1_S1_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6, void* arg7, void* arg8);
+  // proto:  int QString::indexOf(const QRegularExpression & re, int from);
+extern void _ZNK7QString7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+  // proto: static QString QString::number(long , int base);
+extern void _ZN7QString6numberEli(long arg0, int arg1);
+  // proto: static QString QString::number(uint , int base);
+extern void _ZN7QString6numberEji(unsigned int arg0, int arg1);
+  // proto: static QString QString::fromLocal8Bit(const QByteArray & str);
+extern void demth_ZN7QString13fromLocal8BitERK10QByteArray(void* arg0);
+  // proto:  const QChar QString::at(int i);
+extern void demth_ZNK7QString2atEi(void* qthis, int arg0);
+  // proto:  void QString::QString(int size, QChar c);
+extern void* dector_ZN7QStringC1Ei5QChar(int arg0, void* arg1);
+extern void _ZN7QStringC1Ei5QChar(void* qthis, int arg0, void* arg1);
+  // proto:  QString & QString::setNum(ulong , int base);
+extern void _ZN7QString6setNumEmi(void* qthis, unsigned long arg0, int arg1);
+  // proto:  void QString::push_front(const QString & s);
+extern void demth_ZN7QString10push_frontERKS_(void* qthis, void* arg0);
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6);
+extern void _ZNK7QString3argERKS_S1_S1_S1_S1_S1_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5);
+  // proto:  iterator QString::begin();
+extern void _ZN7QString5beginEv(void* qthis);
+  // proto: static QString QString::number(double , char f, int prec);
+extern void _ZN7QString6numberEdci(double arg0, char arg1, int arg2);
+  // proto:  iterator QString::end();
+extern void _ZN7QString3endEv(void* qthis);
+  // proto:  QString & QString::append(QChar c);
+extern void _ZN7QString6appendE5QChar(void* qthis, void* arg0);
+  // proto:  uint QString::toUInt(bool * ok, int base);
+extern void _ZNK7QString6toUIntEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QString & QString::append(const QString & s);
+extern void _ZN7QString6appendERKS_(void* qthis, void* arg0);
+  // proto: static QString QString::fromStdU16String(const std::u16string & s);
+extern void demth_ZN7QString16fromStdU16StringERKi(int* arg0);
+  // proto:  QString QString::arg(qlonglong a, int fieldwidth, int base, QChar fillChar);
+extern void _ZNK7QString3argExii5QChar(void* qthis, long long arg0, int arg1, int arg2, void* arg3);
+  // proto:  ushort QString::toUShort(bool * ok, int base);
+extern void _ZNK7QString8toUShortEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QString QString::arg(uint a, int fieldWidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEjii5QChar(void* qthis, unsigned int arg0, int arg1, int arg2, void* arg3);
+  // proto:  QString & QString::setNum(ushort , int base);
+extern void _ZN7QString6setNumEti(void* qthis, unsigned short arg0, int arg1);
+  // proto:  QString & QString::replace(const QRegularExpression & re, const QString & after);
+extern void _ZN7QString7replaceERK18QRegularExpressionRKS_(void* qthis, void* arg0, void* arg1);
+  // proto:  QString & QString::setNum(double , char f, int prec);
+extern void _ZN7QString6setNumEdci(void* qthis, double arg0, char arg1, int arg2);
+  // proto: static QString QString::number(qulonglong , int base);
+extern void _ZN7QString6numberEyi(unsigned long long arg0, int arg1);
+  // proto:  QString QString::arg(ushort a, int fieldWidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEtii5QChar(void* qthis, unsigned short arg0, int arg1, int arg2, void* arg3);
+  // proto:  void QString::QString(const QString & );
+extern void* dector_ZN7QStringC1ERKS_(void* arg0);
+extern void demth_ZN7QStringC1ERKS_(void* qthis, void* arg0);
+  // proto:  QString QString::arg(short a, int fieldWidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEsii5QChar(void* qthis, short arg0, int arg1, int arg2, void* arg3);
+  // proto:  void QString::QString(const QByteArray & a);
+extern void* dector_ZN7QStringC1ERK10QByteArray(void* arg0);
+extern void demth_ZN7QStringC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  qulonglong QString::toULongLong(bool * ok, int base);
+extern void _ZNK7QString11toULongLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QString & QString::append(const char * s);
+extern void demth_ZN7QString6appendEPKc(void* qthis, char* arg0);
+  // proto:  int QString::capacity();
+extern void _ZNK7QString8capacityEv(void* qthis);
+  // proto:  void QString::squeeze();
+extern void demth_ZN7QString7squeezeEv(void* qthis);
+  // proto:  void QString::truncate(int pos);
+extern void _ZN7QString8truncateEi(void* qthis, int arg0);
+  // proto:  QString QString::arg(int a, int fieldWidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEiii5QChar(void* qthis, int arg0, int arg1, int arg2, void* arg3);
+  // proto:  QString QString::arg(QChar a, int fieldWidth, QChar fillChar);
+extern void _ZNK7QString3argE5QChariS0_(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  int QString::localeAwareCompare(const QString & s);
+extern void _ZNK7QString18localeAwareCompareERKS_(void* qthis, void* arg0);
+  // proto:  QString & QString::remove(const QRegExp & rx);
+extern void demth_ZN7QString6removeERK7QRegExp(void* qthis, void* arg0);
+  // proto:  bool QString::contains(const QRegularExpression & re);
+extern void _ZNK7QString8containsERK18QRegularExpression(void* qthis, void* arg0);
+  // proto:  int QString::indexOf(QRegExp & , int from);
+extern void _ZNK7QString7indexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+  // proto:  QString & QString::replace(int i, int len, QChar after);
+extern void _ZN7QString7replaceEii5QChar(void* qthis, int arg0, int arg1, void* arg2);
+  // proto:  bool QString::isRightToLeft();
+extern void _ZNK7QString13isRightToLeftEv(void* qthis);
+  // proto:  QString QString::arg(char a, int fieldWidth, QChar fillChar);
+extern void _ZNK7QString3argEci5QChar(void* qthis, char arg0, int arg1, void* arg2);
+  // proto:  QVector<uint> QString::toUcs4();
+extern void _ZNK7QString6toUcs4Ev(void* qthis);
+  // proto:  QString & QString::remove(int i, int len);
+extern void _ZN7QString6removeEii(void* qthis, int arg0, int arg1);
+  // proto:  bool QString::isEmpty();
+extern void demth_ZNK7QString7isEmptyEv(void* qthis);
+  // proto:  QString QString::right(int n);
+extern void _ZNK7QString5rightEi(void* qthis, int arg0);
+  // proto:  QString QString::rightJustified(int width, QChar fill, bool trunc);
+extern void _ZNK7QString14rightJustifiedEi5QCharb(void* qthis, int arg0, void* arg1, bool arg2);
+  // proto:  QString QString::arg(const QString & a, int fieldWidth, QChar fillChar);
+extern void _ZNK7QString3argERKS_i5QChar(void* qthis, void* arg0, int arg1, void* arg2);
+  // proto:  QString QString::arg(qulonglong a, int fieldwidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEyii5QChar(void* qthis, unsigned long long arg0, int arg1, int arg2, void* arg3);
+  // proto:  void QString::reserve(int size);
+extern void demth_ZN7QString7reserveEi(void* qthis, int arg0);
+  // proto:  short QString::toShort(bool * ok, int base);
+extern void _ZNK7QString7toShortEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QString QString::arg(ulong a, int fieldwidth, int base, QChar fillChar);
+extern void _ZNK7QString3argEmii5QChar(void* qthis, unsigned long arg0, int arg1, int arg2, void* arg3);
+  // proto:  const char * QLatin1String::data();
+extern void demth_ZNK13QLatin1String4dataEv(void* qthis);
+  // proto:  void QLatin1String::QLatin1String(const char * s);
+extern void* dector_ZN13QLatin1StringC1EPKc(char* arg0);
+extern void _ZN13QLatin1StringC1EPKc(void* qthis, char* arg0);
+  // proto:  int QLatin1String::size();
+extern void demth_ZNK13QLatin1String4sizeEv(void* qthis);
+  // proto:  void QLatin1String::QLatin1String(const QByteArray & s);
+extern void* dector_ZN13QLatin1StringC1ERK10QByteArray(void* arg0);
+extern void demth_ZN13QLatin1StringC1ERK10QByteArray(void* qthis, void* arg0);
+  // proto:  const char * QLatin1String::latin1();
+extern void demth_ZNK13QLatin1String6latin1Ev(void* qthis);
+  // proto:  void QLatin1String::QLatin1String(const char * s, int sz);
+extern void* dector_ZN13QLatin1StringC1EPKci(char* arg0, int arg1);
+extern void _ZN13QLatin1StringC1EPKci(void* qthis, char* arg0, int arg1);
+  // proto:  bool QCharRef::isLetterOrNumber();
+extern void demth_ZN8QCharRef16isLetterOrNumberEv(void* qthis);
+  // proto:  bool QCharRef::isDigit();
+extern void demth_ZNK8QCharRef7isDigitEv(void* qthis);
+  // proto:  char QCharRef::toLatin1();
+extern void _ZNK8QCharRef8toLatin1Ev(void* qthis);
+  // proto:  void QCharRef::setCell(uchar cell);
+extern void demth_ZN8QCharRef7setCellEh(void* qthis, unsigned char arg0);
+  // proto:  bool QCharRef::isMark();
+extern void demth_ZNK8QCharRef6isMarkEv(void* qthis);
+  // proto:  void QCharRef::QCharRef(QString & str, int idx);
+extern void* dector_ZN8QCharRefC1ER7QStringi(void* arg0, int arg1);
+extern void demth_ZN8QCharRefC1ER7QStringi(void* qthis, void* arg0, int arg1);
+  // proto:  int QCharRef::digitValue();
+extern void demth_ZNK8QCharRef10digitValueEv(void* qthis);
+  // proto:  bool QCharRef::isLetter();
+extern void demth_ZNK8QCharRef8isLetterEv(void* qthis);
+  // proto:  bool QCharRef::isNumber();
+extern void demth_ZNK8QCharRef8isNumberEv(void* qthis);
+  // proto:  bool QCharRef::isPrint();
+extern void demth_ZNK8QCharRef7isPrintEv(void* qthis);
+  // proto:  QChar QCharRef::toLower();
+extern void _ZNK8QCharRef7toLowerEv(void* qthis);
+  // proto:  void QCharRef::setRow(uchar row);
+extern void demth_ZN8QCharRef6setRowEh(void* qthis, unsigned char arg0);
+  // proto:  bool QCharRef::isNull();
+extern void demth_ZNK8QCharRef6isNullEv(void* qthis);
+  // proto:  QChar QCharRef::toTitleCase();
+extern void _ZNK8QCharRef11toTitleCaseEv(void* qthis);
+  // proto:  bool QCharRef::hasMirrored();
+extern void _ZNK8QCharRef11hasMirroredEv(void* qthis);
+  // proto:  uchar QCharRef::row();
+extern void demth_ZNK8QCharRef3rowEv(void* qthis);
+  // proto:  ushort & QCharRef::unicode();
+extern void _ZN8QCharRef7unicodeEv(void* qthis);
+  // proto:  bool QCharRef::isTitleCase();
+extern void demth_ZNK8QCharRef11isTitleCaseEv(void* qthis);
+  // proto:  bool QCharRef::isUpper();
+extern void demth_ZNK8QCharRef7isUpperEv(void* qthis);
+  // proto:  uchar QCharRef::cell();
+extern void demth_ZNK8QCharRef4cellEv(void* qthis);
+  // proto:  QString QCharRef::decomposition();
+extern void _ZNK8QCharRef13decompositionEv(void* qthis);
+  // proto:  uchar QCharRef::combiningClass();
+extern void demth_ZNK8QCharRef14combiningClassEv(void* qthis);
+  // proto:  QChar QCharRef::mirroredChar();
+extern void _ZNK8QCharRef12mirroredCharEv(void* qthis);
+  // proto:  bool QCharRef::isSpace();
+extern void demth_ZNK8QCharRef7isSpaceEv(void* qthis);
+  // proto:  bool QCharRef::isPunct();
+extern void demth_ZNK8QCharRef7isPunctEv(void* qthis);
+  // proto:  QChar QCharRef::toUpper();
+extern void _ZNK8QCharRef7toUpperEv(void* qthis);
+  // proto:  bool QCharRef::isLower();
+extern void demth_ZNK8QCharRef7isLowerEv(void* qthis);
+  // proto:  short QStringRef::toShort(bool * ok, int base);
+extern void _ZNK10QStringRef7toShortEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  void QStringRef::QStringRef(const QString * string);
+extern void* dector_ZN10QStringRefC1EPK7QString(void* arg0);
+extern void demth_ZN10QStringRefC1EPK7QString(void* qthis, void* arg0);
+  // proto:  qulonglong QStringRef::toULongLong(bool * ok, int base);
+extern void _ZNK10QStringRef11toULongLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  void QStringRef::clear();
+extern void demth_ZN10QStringRef5clearEv(void* qthis);
+  // proto:  int QStringRef::position();
+extern void demth_ZNK10QStringRef8positionEv(void* qthis);
+  // proto:  long QStringRef::toLong(bool * ok, int base);
+extern void _ZNK10QStringRef6toLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  const QChar * QStringRef::cbegin();
+extern void demth_ZNK10QStringRef6cbeginEv(void* qthis);
+  // proto:  ushort QStringRef::toUShort(bool * ok, int base);
+extern void _ZNK10QStringRef8toUShortEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  uint QStringRef::toUInt(bool * ok, int base);
+extern void _ZNK10QStringRef6toUIntEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  bool QStringRef::isEmpty();
+extern void demth_ZNK10QStringRef7isEmptyEv(void* qthis);
+  // proto:  int QStringRef::localeAwareCompare(const QString & s);
+extern void _ZNK10QStringRef18localeAwareCompareERK7QString(void* qthis, void* arg0);
+  // proto:  QByteArray QStringRef::toUtf8();
+extern void _ZNK10QStringRef6toUtf8Ev(void* qthis);
+  // proto:  int QStringRef::size();
+extern void demth_ZNK10QStringRef4sizeEv(void* qthis);
+  // proto:  const QChar * QStringRef::constData();
+extern void demth_ZNK10QStringRef9constDataEv(void* qthis);
+  // proto:  QStringRef QStringRef::left(int n);
+extern void _ZNK10QStringRef4leftEi(void* qthis, int arg0);
+  // proto:  QVector<uint> QStringRef::toUcs4();
+extern void _ZNK10QStringRef6toUcs4Ev(void* qthis);
+  // proto:  int QStringRef::count();
+extern void demth_ZNK10QStringRef5countEv(void* qthis);
+  // proto:  void QStringRef::QStringRef(const QString * string, int position, int size);
+extern void* dector_ZN10QStringRefC1EPK7QStringii(void* arg0, int arg1, int arg2);
+extern void demth_ZN10QStringRefC1EPK7QStringii(void* qthis, void* arg0, int arg1, int arg2);
+  // proto:  void QStringRef::QStringRef();
+extern void* dector_ZN10QStringRefC1Ev();
+extern void demth_ZN10QStringRefC1Ev(void* qthis);
+  // proto:  QStringRef QStringRef::right(int n);
+extern void _ZNK10QStringRef5rightEi(void* qthis, int arg0);
+  // proto:  const QChar QStringRef::at(int i);
+extern void demth_ZNK10QStringRef2atEi(void* qthis, int arg0);
+  // proto:  double QStringRef::toDouble(bool * ok);
+extern void _ZNK10QStringRef8toDoubleEPb(void* qthis, bool* arg0);
+  // proto:  bool QStringRef::isNull();
+extern void demth_ZNK10QStringRef6isNullEv(void* qthis);
+  // proto:  const QChar * QStringRef::data();
+extern void demth_ZNK10QStringRef4dataEv(void* qthis);
+  // proto:  qlonglong QStringRef::toLongLong(bool * ok, int base);
+extern void _ZNK10QStringRef10toLongLongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  QByteArray QStringRef::toLatin1();
+extern void _ZNK10QStringRef8toLatin1Ev(void* qthis);
+  // proto:  const QChar * QStringRef::begin();
+extern void demth_ZNK10QStringRef5beginEv(void* qthis);
+  // proto:  const QChar * QStringRef::unicode();
+extern void demth_ZNK10QStringRef7unicodeEv(void* qthis);
+  // proto:  QStringRef QStringRef::mid(int pos, int n);
+extern void _ZNK10QStringRef3midEii(void* qthis, int arg0, int arg1);
+  // proto:  float QStringRef::toFloat(bool * ok);
+extern void _ZNK10QStringRef7toFloatEPb(void* qthis, bool* arg0);
+  // proto:  const QString * QStringRef::string();
+extern void demth_ZNK10QStringRef6stringEv(void* qthis);
+  // proto:  QString QStringRef::toString();
+extern void _ZNK10QStringRef8toStringEv(void* qthis);
+  // proto:  QStringRef QStringRef::trimmed();
+extern void _ZNK10QStringRef7trimmedEv(void* qthis);
+  // proto:  int QStringRef::toInt(bool * ok, int base);
+extern void _ZNK10QStringRef5toIntEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  const QChar * QStringRef::cend();
+extern void demth_ZNK10QStringRef4cendEv(void* qthis);
+  // proto:  QStringRef QStringRef::appendTo(QString * string);
+extern void _ZNK10QStringRef8appendToEP7QString(void* qthis, void* arg0);
+  // proto:  int QStringRef::length();
+extern void demth_ZNK10QStringRef6lengthEv(void* qthis);
+  // proto:  void QStringRef::~QStringRef();
+extern void demth_ZN10QStringRefD0Ev(void* qthis);
+  // proto:  QByteArray QStringRef::toLocal8Bit();
+extern void _ZNK10QStringRef11toLocal8BitEv(void* qthis);
+  // proto:  ulong QStringRef::toULong(bool * ok, int base);
+extern void _ZNK10QStringRef7toULongEPbi(void* qthis, bool* arg0, int arg1);
+  // proto:  const QChar * QStringRef::end();
+extern void demth_ZNK10QStringRef3endEv(void* qthis);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QStringDataPtr)=8
 type QStringDataPtr struct {
   // qbase: None;
@@ -65,7 +548,7 @@ type QStringRef struct {
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  qlonglong QString::toLongLong(bool * ok, int base);
 func (this *QString) toLongLong(args ...interface{}) () {
   // toLongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -85,7 +568,7 @@ func (this *QString) toLongLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isNull();
 func (this *QString) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -103,7 +586,7 @@ func (this *QString) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::append(const QChar * uc, int len);
 func (this *QString) append(args ...interface{}) () {
   // append(const class QChar *, int)
   // append(const class QByteArray &)
@@ -153,7 +636,7 @@ func (this *QString) append(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::prepend(QChar c);
 func (this *QString) prepend(args ...interface{}) () {
   // prepend(class QLatin1String)
   // prepend(class QChar)
@@ -192,7 +675,7 @@ func (this *QString) prepend(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::insert(int i, QChar c);
 func (this *QString) insert(args ...interface{}) () {
   // insert(int, class QChar)
   // insert(int, const class QChar *, int)
@@ -231,7 +714,7 @@ func (this *QString) insert(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::left(int n);
 func (this *QString) left(args ...interface{}) () {
   // left(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -250,12 +733,12 @@ func (this *QString) left(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::QString(QChar c);
 func NewQString(args ...interface{}) QString {
   return QString{}
 }
 
-
+  // proto:  int QString::lastIndexOf(const QRegularExpression & re, int from);
 func (this *QString) lastIndexOf(args ...interface{}) () {
   // lastIndexOf(const class QRegularExpression &, int)
   // lastIndexOf(class QLatin1String, int, Qt::CaseSensitivity)
@@ -322,7 +805,7 @@ func (this *QString) lastIndexOf(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::number(int , int base);
 func (this *QString) number_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -336,7 +819,7 @@ func (this *QString) number_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::resize(int size);
 func (this *QString) resize(args ...interface{}) () {
   // resize(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -355,7 +838,7 @@ func (this *QString) resize(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::push_front(QChar c);
 func (this *QString) push_front(args ...interface{}) () {
   // push_front(class QChar)
   // push_front(const class QString &)
@@ -379,7 +862,7 @@ func (this *QString) push_front(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QString::toDouble(bool * ok);
 func (this *QString) toDouble(args ...interface{}) () {
   // toDouble(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -398,7 +881,7 @@ func (this *QString) toDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::arg(const QString & a1, const QString & a2, const QString & a3, const QString & a4, const QString & a5, const QString & a6, const QString & a7, const QString & a8);
 func (this *QString) arg(args ...interface{}) () {
   // arg(const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &)
   // arg(const class QString &, const class QString &, const class QString &, const class QString &)
@@ -582,7 +1065,7 @@ func (this *QString) arg(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QString::rightRef(int n);
 func (this *QString) rightRef(args ...interface{}) () {
   // rightRef(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -601,7 +1084,7 @@ func (this *QString) rightRef(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::setNum(short , int base);
 func (this *QString) setNum(args ...interface{}) () {
   // setNum(short, int)
   // setNum(qulonglong, int)
@@ -677,7 +1160,7 @@ func (this *QString) setNum(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QString::toFloat(bool * ok);
 func (this *QString) toFloat(args ...interface{}) () {
   // toFloat(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -696,7 +1179,7 @@ func (this *QString) toFloat(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::count(const QRegularExpression & re);
 func (this *QString) count(args ...interface{}) () {
   // count(const class QStringRef &, Qt::CaseSensitivity)
   // count(const class QRegularExpression &)
@@ -742,7 +1225,7 @@ func (this *QString) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QString::midRef(int position, int n);
 func (this *QString) midRef(args ...interface{}) () {
   // midRef(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -762,7 +1245,7 @@ func (this *QString) midRef(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::detach();
 func (this *QString) detach(args ...interface{}) () {
   // detach()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -780,7 +1263,7 @@ func (this *QString) detach(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromStdWString(const std::wstring & s);
 func (this *QString) fromStdWString_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -794,7 +1277,7 @@ func (this *QString) fromStdWString_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::push_back(QChar c);
 func (this *QString) push_back(args ...interface{}) () {
   // push_back(class QChar)
   // push_back(const class QString &)
@@ -818,7 +1301,7 @@ func (this *QString) push_back(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::size();
 func (this *QString) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -836,7 +1319,7 @@ func (this *QString) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::replace(int i, int len, const QChar * s, int slen);
 func (this *QString) replace(args ...interface{}) () {
   // replace(const class QString &, const class QString &, Qt::CaseSensitivity)
   // replace(int, int, const class QChar *, int)
@@ -942,7 +1425,7 @@ func (this *QString) replace(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromRawData(const QChar * , int size);
 func (this *QString) fromRawData_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -956,7 +1439,7 @@ func (this *QString) fromRawData_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::setRawData(const QChar * unicode, int size);
 func (this *QString) setRawData(args ...interface{}) () {
   // setRawData(const class QChar *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -976,7 +1459,7 @@ func (this *QString) setRawData(args ...interface{}) () {
 
 }
 
-
+  // proto:  ulong QString::toULong(bool * ok, int base);
 func (this *QString) toULong(args ...interface{}) () {
   // toULong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -996,7 +1479,7 @@ func (this *QString) toULong(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::chop(int n);
 func (this *QString) chop(args ...interface{}) () {
   // chop(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1015,7 +1498,7 @@ func (this *QString) chop(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromUtf16(const ushort * , int size);
 func (this *QString) fromUtf16_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1029,7 +1512,7 @@ func (this *QString) fromUtf16_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isDetached();
 func (this *QString) isDetached(args ...interface{}) () {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1047,7 +1530,7 @@ func (this *QString) isDetached(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::mid(int position, int n);
 func (this *QString) mid(args ...interface{}) () {
   // mid(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1067,7 +1550,7 @@ func (this *QString) mid(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromLocal8Bit(const char * str, int size);
 func (this *QString) fromLocal8Bit_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1081,7 +1564,7 @@ func (this *QString) fromLocal8Bit_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::swap(QString & other);
 func (this *QString) swap(args ...interface{}) () {
   // swap(class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1100,7 +1583,7 @@ func (this *QString) swap(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromUtf8(const QByteArray & str);
 func (this *QString) fromUtf8_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1114,7 +1597,7 @@ func (this *QString) fromUtf8_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromUcs4(const char32_t * str, int size);
 func (this *QString) fromUcs4_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1128,7 +1611,7 @@ func (this *QString) fromUcs4_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::leftJustified(int width, QChar fill, bool trunc);
 func (this *QString) leftJustified(args ...interface{}) () {
   // leftJustified(int, class QChar, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1149,7 +1632,7 @@ func (this *QString) leftJustified(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::indexOf(const QRegExp & , int from);
 func (this *QString) indexOf(args ...interface{}) () {
   // indexOf(const class QString &, int, Qt::CaseSensitivity)
   // indexOf(const class QRegExp &, int)
@@ -1216,7 +1699,7 @@ func (this *QString) indexOf(args ...interface{}) () {
 
 }
 
-
+  // proto:  const ushort * QString::utf16();
 func (this *QString) utf16(args ...interface{}) () {
   // utf16()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1234,7 +1717,7 @@ func (this *QString) utf16(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::toInt(bool * ok, int base);
 func (this *QString) toInt(args ...interface{}) () {
   // toInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1254,7 +1737,7 @@ func (this *QString) toInt(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar * QString::data();
 func (this *QString) data(args ...interface{}) () {
   // data()
   // data()
@@ -1276,7 +1759,7 @@ func (this *QString) data(args ...interface{}) () {
 
 }
 
-
+  // proto: static int QString::localeAwareCompare(const QString & s1, const QString & s2);
 func (this *QString) localeAwareCompare_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1290,7 +1773,7 @@ func (this *QString) localeAwareCompare_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::repeated(int times);
 func (this *QString) repeated(args ...interface{}) () {
   // repeated(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1309,7 +1792,7 @@ func (this *QString) repeated(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::setUtf16(const ushort * utf16, int size);
 func (this *QString) setUtf16(args ...interface{}) () {
   // setUtf16(const ushort *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1329,7 +1812,7 @@ func (this *QString) setUtf16(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromStdU32String(const std::u32string & s);
 func (this *QString) fromStdU32String_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1343,7 +1826,7 @@ func (this *QString) fromStdU32String_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::clear();
 func (this *QString) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1361,7 +1844,7 @@ func (this *QString) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::contains(const QRegExp & rx);
 func (this *QString) contains(args ...interface{}) () {
   // contains(class QLatin1String, Qt::CaseSensitivity)
   // contains(const class QRegExp &)
@@ -1420,7 +1903,7 @@ func (this *QString) contains(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isSharedWith(const QString & other);
 func (this *QString) isSharedWith(args ...interface{}) () {
   // isSharedWith(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1439,7 +1922,7 @@ func (this *QString) isSharedWith(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromLatin1(const QByteArray & str);
 func (this *QString) fromLatin1_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1453,7 +1936,7 @@ func (this *QString) fromLatin1_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::~QString();
 func (this *QString) FreeQString(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1467,7 +1950,7 @@ func (this *QString) FreeQString(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::remove(const QRegularExpression & re);
 func (this *QString) remove(args ...interface{}) () {
   // remove(class QChar, Qt::CaseSensitivity)
   // remove(const class QRegularExpression &)
@@ -1509,7 +1992,7 @@ func (this *QString) remove(args ...interface{}) () {
 
 }
 
-
+  // proto:  const_iterator QString::cend();
 func (this *QString) cend(args ...interface{}) () {
   // cend()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1527,7 +2010,7 @@ func (this *QString) cend(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::toHtmlEscaped();
 func (this *QString) toHtmlEscaped(args ...interface{}) () {
   // toHtmlEscaped()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1545,7 +2028,7 @@ func (this *QString) toHtmlEscaped(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::toWCharArray(wchar_t * array);
 func (this *QString) toWCharArray(args ...interface{}) () {
   // toWCharArray(wchar_t *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1564,7 +2047,7 @@ func (this *QString) toWCharArray(args ...interface{}) () {
 
 }
 
-
+  // proto:  const_iterator QString::cbegin();
 func (this *QString) cbegin(args ...interface{}) () {
   // cbegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1582,7 +2065,7 @@ func (this *QString) cbegin(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromStdString(const std::string & s);
 func (this *QString) fromStdString_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1596,7 +2079,7 @@ func (this *QString) fromStdString_s(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromWCharArray(const wchar_t * string, int size);
 func (this *QString) fromWCharArray_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1610,7 +2093,7 @@ func (this *QString) fromWCharArray_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::fill(QChar c, int size);
 func (this *QString) fill(args ...interface{}) () {
   // fill(class QChar, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1630,7 +2113,7 @@ func (this *QString) fill(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QString::constData();
 func (this *QString) constData(args ...interface{}) () {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1648,7 +2131,7 @@ func (this *QString) constData(args ...interface{}) () {
 
 }
 
-
+  // proto:  long QString::toLong(bool * ok, int base);
 func (this *QString) toLong(args ...interface{}) () {
   // toLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1668,7 +2151,7 @@ func (this *QString) toLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  const_iterator QString::constEnd();
 func (this *QString) constEnd(args ...interface{}) () {
   // constEnd()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1686,7 +2169,7 @@ func (this *QString) constEnd(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::length();
 func (this *QString) length(args ...interface{}) () {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1704,7 +2187,7 @@ func (this *QString) length(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QString::leftRef(int n);
 func (this *QString) leftRef(args ...interface{}) () {
   // leftRef(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1723,7 +2206,7 @@ func (this *QString) leftRef(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isSimpleText();
 func (this *QString) isSimpleText(args ...interface{}) () {
   // isSimpleText()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1741,7 +2224,7 @@ func (this *QString) isSimpleText(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString & QString::setUnicode(const QChar * unicode, int size);
 func (this *QString) setUnicode(args ...interface{}) () {
   // setUnicode(const class QChar *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1761,7 +2244,7 @@ func (this *QString) setUnicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  const_iterator QString::constBegin();
 func (this *QString) constBegin(args ...interface{}) () {
   // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1779,7 +2262,7 @@ func (this *QString) constBegin(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QString::unicode();
 func (this *QString) unicode(args ...interface{}) () {
   // unicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1797,7 +2280,7 @@ func (this *QString) unicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar QString::at(int i);
 func (this *QString) at(args ...interface{}) () {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1816,7 +2299,7 @@ func (this *QString) at(args ...interface{}) () {
 
 }
 
-
+  // proto:  iterator QString::begin();
 func (this *QString) begin(args ...interface{}) () {
   // begin()
   // begin()
@@ -1838,7 +2321,7 @@ func (this *QString) begin(args ...interface{}) () {
 
 }
 
-
+  // proto:  iterator QString::end();
 func (this *QString) end(args ...interface{}) () {
   // end()
   // end()
@@ -1860,7 +2343,7 @@ func (this *QString) end(args ...interface{}) () {
 
 }
 
-
+  // proto:  uint QString::toUInt(bool * ok, int base);
 func (this *QString) toUInt(args ...interface{}) () {
   // toUInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1880,7 +2363,7 @@ func (this *QString) toUInt(args ...interface{}) () {
 
 }
 
-
+  // proto: static QString QString::fromStdU16String(const std::u16string & s);
 func (this *QString) fromStdU16String_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1894,7 +2377,7 @@ func (this *QString) fromStdU16String_s(args ...interface{}) () {
 
 }
 
-
+  // proto:  ushort QString::toUShort(bool * ok, int base);
 func (this *QString) toUShort(args ...interface{}) () {
   // toUShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1914,7 +2397,7 @@ func (this *QString) toUShort(args ...interface{}) () {
 
 }
 
-
+  // proto:  qulonglong QString::toULongLong(bool * ok, int base);
 func (this *QString) toULongLong(args ...interface{}) () {
   // toULongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1934,7 +2417,7 @@ func (this *QString) toULongLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::capacity();
 func (this *QString) capacity(args ...interface{}) () {
   // capacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1952,7 +2435,7 @@ func (this *QString) capacity(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::squeeze();
 func (this *QString) squeeze(args ...interface{}) () {
   // squeeze()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1970,7 +2453,7 @@ func (this *QString) squeeze(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::truncate(int pos);
 func (this *QString) truncate(args ...interface{}) () {
   // truncate(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1989,7 +2472,7 @@ func (this *QString) truncate(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QString::localeAwareCompare(const QString & s);
 func (this *QString) localeAwareCompare(args ...interface{}) () {
   // localeAwareCompare(const class QString &, const class QString &)
   // localeAwareCompare(const class QString &, const class QStringRef &)
@@ -2025,7 +2508,7 @@ func (this *QString) localeAwareCompare(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isRightToLeft();
 func (this *QString) isRightToLeft(args ...interface{}) () {
   // isRightToLeft()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2043,7 +2526,7 @@ func (this *QString) isRightToLeft(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<uint> QString::toUcs4();
 func (this *QString) toUcs4(args ...interface{}) () {
   // toUcs4()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2061,7 +2544,7 @@ func (this *QString) toUcs4(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QString::isEmpty();
 func (this *QString) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2079,7 +2562,7 @@ func (this *QString) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::right(int n);
 func (this *QString) right(args ...interface{}) () {
   // right(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2098,7 +2581,7 @@ func (this *QString) right(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QString::rightJustified(int width, QChar fill, bool trunc);
 func (this *QString) rightJustified(args ...interface{}) () {
   // rightJustified(int, class QChar, _Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2119,7 +2602,7 @@ func (this *QString) rightJustified(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QString::reserve(int size);
 func (this *QString) reserve(args ...interface{}) () {
   // reserve(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2138,7 +2621,7 @@ func (this *QString) reserve(args ...interface{}) () {
 
 }
 
-
+  // proto:  short QString::toShort(bool * ok, int base);
 func (this *QString) toShort(args ...interface{}) () {
   // toShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2158,7 +2641,7 @@ func (this *QString) toShort(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QLatin1String::data();
 func (this *QLatin1String) data(args ...interface{}) () {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2176,12 +2659,12 @@ func (this *QLatin1String) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QLatin1String::QLatin1String(const char * s);
 func NewQLatin1String(args ...interface{}) QLatin1String {
   return QLatin1String{}
 }
 
-
+  // proto:  int QLatin1String::size();
 func (this *QLatin1String) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2199,7 +2682,7 @@ func (this *QLatin1String) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  const char * QLatin1String::latin1();
 func (this *QLatin1String) latin1(args ...interface{}) () {
   // latin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2217,7 +2700,7 @@ func (this *QLatin1String) latin1(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isLetterOrNumber();
 func (this *QCharRef) isLetterOrNumber(args ...interface{}) () {
   // isLetterOrNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2235,7 +2718,7 @@ func (this *QCharRef) isLetterOrNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isDigit();
 func (this *QCharRef) isDigit(args ...interface{}) () {
   // isDigit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2253,7 +2736,7 @@ func (this *QCharRef) isDigit(args ...interface{}) () {
 
 }
 
-
+  // proto:  char QCharRef::toLatin1();
 func (this *QCharRef) toLatin1(args ...interface{}) () {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2271,7 +2754,7 @@ func (this *QCharRef) toLatin1(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCharRef::setCell(uchar cell);
 func (this *QCharRef) setCell(args ...interface{}) () {
   // setCell(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2290,7 +2773,7 @@ func (this *QCharRef) setCell(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isMark();
 func (this *QCharRef) isMark(args ...interface{}) () {
   // isMark()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2308,12 +2791,12 @@ func (this *QCharRef) isMark(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCharRef::QCharRef(QString & str, int idx);
 func NewQCharRef(args ...interface{}) QCharRef {
   return QCharRef{}
 }
 
-
+  // proto:  int QCharRef::digitValue();
 func (this *QCharRef) digitValue(args ...interface{}) () {
   // digitValue()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2331,7 +2814,7 @@ func (this *QCharRef) digitValue(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isLetter();
 func (this *QCharRef) isLetter(args ...interface{}) () {
   // isLetter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2349,7 +2832,7 @@ func (this *QCharRef) isLetter(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isNumber();
 func (this *QCharRef) isNumber(args ...interface{}) () {
   // isNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2367,7 +2850,7 @@ func (this *QCharRef) isNumber(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isPrint();
 func (this *QCharRef) isPrint(args ...interface{}) () {
   // isPrint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2385,7 +2868,7 @@ func (this *QCharRef) isPrint(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QCharRef::toLower();
 func (this *QCharRef) toLower(args ...interface{}) () {
   // toLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2403,7 +2886,7 @@ func (this *QCharRef) toLower(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QCharRef::setRow(uchar row);
 func (this *QCharRef) setRow(args ...interface{}) () {
   // setRow(uchar)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2422,7 +2905,7 @@ func (this *QCharRef) setRow(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isNull();
 func (this *QCharRef) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2440,7 +2923,7 @@ func (this *QCharRef) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QCharRef::toTitleCase();
 func (this *QCharRef) toTitleCase(args ...interface{}) () {
   // toTitleCase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2458,7 +2941,7 @@ func (this *QCharRef) toTitleCase(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::hasMirrored();
 func (this *QCharRef) hasMirrored(args ...interface{}) () {
   // hasMirrored()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2476,7 +2959,7 @@ func (this *QCharRef) hasMirrored(args ...interface{}) () {
 
 }
 
-
+  // proto:  uchar QCharRef::row();
 func (this *QCharRef) row(args ...interface{}) () {
   // row()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2494,7 +2977,7 @@ func (this *QCharRef) row(args ...interface{}) () {
 
 }
 
-
+  // proto:  ushort & QCharRef::unicode();
 func (this *QCharRef) unicode(args ...interface{}) () {
   // unicode()
   // unicode()
@@ -2516,7 +2999,7 @@ func (this *QCharRef) unicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isTitleCase();
 func (this *QCharRef) isTitleCase(args ...interface{}) () {
   // isTitleCase()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2534,7 +3017,7 @@ func (this *QCharRef) isTitleCase(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isUpper();
 func (this *QCharRef) isUpper(args ...interface{}) () {
   // isUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2552,7 +3035,7 @@ func (this *QCharRef) isUpper(args ...interface{}) () {
 
 }
 
-
+  // proto:  uchar QCharRef::cell();
 func (this *QCharRef) cell(args ...interface{}) () {
   // cell()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2570,7 +3053,7 @@ func (this *QCharRef) cell(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QCharRef::decomposition();
 func (this *QCharRef) decomposition(args ...interface{}) () {
   // decomposition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2588,7 +3071,7 @@ func (this *QCharRef) decomposition(args ...interface{}) () {
 
 }
 
-
+  // proto:  uchar QCharRef::combiningClass();
 func (this *QCharRef) combiningClass(args ...interface{}) () {
   // combiningClass()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2606,7 +3089,7 @@ func (this *QCharRef) combiningClass(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QCharRef::mirroredChar();
 func (this *QCharRef) mirroredChar(args ...interface{}) () {
   // mirroredChar()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2624,7 +3107,7 @@ func (this *QCharRef) mirroredChar(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isSpace();
 func (this *QCharRef) isSpace(args ...interface{}) () {
   // isSpace()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2642,7 +3125,7 @@ func (this *QCharRef) isSpace(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isPunct();
 func (this *QCharRef) isPunct(args ...interface{}) () {
   // isPunct()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2660,7 +3143,7 @@ func (this *QCharRef) isPunct(args ...interface{}) () {
 
 }
 
-
+  // proto:  QChar QCharRef::toUpper();
 func (this *QCharRef) toUpper(args ...interface{}) () {
   // toUpper()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2678,7 +3161,7 @@ func (this *QCharRef) toUpper(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QCharRef::isLower();
 func (this *QCharRef) isLower(args ...interface{}) () {
   // isLower()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2696,7 +3179,7 @@ func (this *QCharRef) isLower(args ...interface{}) () {
 
 }
 
-
+  // proto:  short QStringRef::toShort(bool * ok, int base);
 func (this *QStringRef) toShort(args ...interface{}) () {
   // toShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2716,12 +3199,12 @@ func (this *QStringRef) toShort(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringRef::QStringRef(const QString * string);
 func NewQStringRef(args ...interface{}) QStringRef {
   return QStringRef{}
 }
 
-
+  // proto:  qulonglong QStringRef::toULongLong(bool * ok, int base);
 func (this *QStringRef) toULongLong(args ...interface{}) () {
   // toULongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2741,7 +3224,7 @@ func (this *QStringRef) toULongLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringRef::clear();
 func (this *QStringRef) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2759,7 +3242,7 @@ func (this *QStringRef) clear(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::position();
 func (this *QStringRef) position(args ...interface{}) () {
   // position()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2777,7 +3260,7 @@ func (this *QStringRef) position(args ...interface{}) () {
 
 }
 
-
+  // proto:  long QStringRef::toLong(bool * ok, int base);
 func (this *QStringRef) toLong(args ...interface{}) () {
   // toLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2797,7 +3280,7 @@ func (this *QStringRef) toLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::cbegin();
 func (this *QStringRef) cbegin(args ...interface{}) () {
   // cbegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2815,7 +3298,7 @@ func (this *QStringRef) cbegin(args ...interface{}) () {
 
 }
 
-
+  // proto:  ushort QStringRef::toUShort(bool * ok, int base);
 func (this *QStringRef) toUShort(args ...interface{}) () {
   // toUShort(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2835,7 +3318,7 @@ func (this *QStringRef) toUShort(args ...interface{}) () {
 
 }
 
-
+  // proto:  uint QStringRef::toUInt(bool * ok, int base);
 func (this *QStringRef) toUInt(args ...interface{}) () {
   // toUInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2855,7 +3338,7 @@ func (this *QStringRef) toUInt(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QStringRef::isEmpty();
 func (this *QStringRef) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2873,7 +3356,7 @@ func (this *QStringRef) isEmpty(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::localeAwareCompare(const QString & s);
 func (this *QStringRef) localeAwareCompare(args ...interface{}) () {
   // localeAwareCompare(const class QString &)
   // localeAwareCompare(const class QStringRef &)
@@ -2909,7 +3392,7 @@ func (this *QStringRef) localeAwareCompare(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QStringRef::toUtf8();
 func (this *QStringRef) toUtf8(args ...interface{}) () {
   // toUtf8()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2927,7 +3410,7 @@ func (this *QStringRef) toUtf8(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::size();
 func (this *QStringRef) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2945,7 +3428,7 @@ func (this *QStringRef) size(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::constData();
 func (this *QStringRef) constData(args ...interface{}) () {
   // constData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2963,7 +3446,7 @@ func (this *QStringRef) constData(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QStringRef::left(int n);
 func (this *QStringRef) left(args ...interface{}) () {
   // left(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -2982,7 +3465,7 @@ func (this *QStringRef) left(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<uint> QStringRef::toUcs4();
 func (this *QStringRef) toUcs4(args ...interface{}) () {
   // toUcs4()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3000,7 +3483,7 @@ func (this *QStringRef) toUcs4(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::count();
 func (this *QStringRef) count(args ...interface{}) () {
   // count(const class QStringRef &, Qt::CaseSensitivity)
   // count(const class QString &, Qt::CaseSensitivity)
@@ -3036,7 +3519,7 @@ func (this *QStringRef) count(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QStringRef::right(int n);
 func (this *QStringRef) right(args ...interface{}) () {
   // right(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3055,7 +3538,7 @@ func (this *QStringRef) right(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar QStringRef::at(int i);
 func (this *QStringRef) at(args ...interface{}) () {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3074,7 +3557,7 @@ func (this *QStringRef) at(args ...interface{}) () {
 
 }
 
-
+  // proto:  double QStringRef::toDouble(bool * ok);
 func (this *QStringRef) toDouble(args ...interface{}) () {
   // toDouble(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3093,7 +3576,7 @@ func (this *QStringRef) toDouble(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QStringRef::isNull();
 func (this *QStringRef) isNull(args ...interface{}) () {
   // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3111,7 +3594,7 @@ func (this *QStringRef) isNull(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::data();
 func (this *QStringRef) data(args ...interface{}) () {
   // data()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3129,7 +3612,7 @@ func (this *QStringRef) data(args ...interface{}) () {
 
 }
 
-
+  // proto:  qlonglong QStringRef::toLongLong(bool * ok, int base);
 func (this *QStringRef) toLongLong(args ...interface{}) () {
   // toLongLong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3149,7 +3632,7 @@ func (this *QStringRef) toLongLong(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QStringRef::toLatin1();
 func (this *QStringRef) toLatin1(args ...interface{}) () {
   // toLatin1()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3167,7 +3650,7 @@ func (this *QStringRef) toLatin1(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::begin();
 func (this *QStringRef) begin(args ...interface{}) () {
   // begin()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3185,7 +3668,7 @@ func (this *QStringRef) begin(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::unicode();
 func (this *QStringRef) unicode(args ...interface{}) () {
   // unicode()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3203,7 +3686,7 @@ func (this *QStringRef) unicode(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QStringRef::mid(int pos, int n);
 func (this *QStringRef) mid(args ...interface{}) () {
   // mid(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3223,7 +3706,7 @@ func (this *QStringRef) mid(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QStringRef::toFloat(bool * ok);
 func (this *QStringRef) toFloat(args ...interface{}) () {
   // toFloat(_Bool *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3242,7 +3725,7 @@ func (this *QStringRef) toFloat(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QString * QStringRef::string();
 func (this *QStringRef) string(args ...interface{}) () {
   // string()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3260,7 +3743,7 @@ func (this *QStringRef) string(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QStringRef::toString();
 func (this *QStringRef) toString(args ...interface{}) () {
   // toString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3278,7 +3761,7 @@ func (this *QStringRef) toString(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QStringRef::trimmed();
 func (this *QStringRef) trimmed(args ...interface{}) () {
   // trimmed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3296,7 +3779,7 @@ func (this *QStringRef) trimmed(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::toInt(bool * ok, int base);
 func (this *QStringRef) toInt(args ...interface{}) () {
   // toInt(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3316,7 +3799,7 @@ func (this *QStringRef) toInt(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::cend();
 func (this *QStringRef) cend(args ...interface{}) () {
   // cend()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3334,7 +3817,7 @@ func (this *QStringRef) cend(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringRef QStringRef::appendTo(QString * string);
 func (this *QStringRef) appendTo(args ...interface{}) () {
   // appendTo(class QString *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3353,7 +3836,7 @@ func (this *QStringRef) appendTo(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QStringRef::length();
 func (this *QStringRef) length(args ...interface{}) () {
   // length()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3371,7 +3854,7 @@ func (this *QStringRef) length(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QStringRef::~QStringRef();
 func (this *QStringRef) FreeQStringRef(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -3385,7 +3868,7 @@ func (this *QStringRef) FreeQStringRef(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QStringRef::toLocal8Bit();
 func (this *QStringRef) toLocal8Bit(args ...interface{}) () {
   // toLocal8Bit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3403,7 +3886,7 @@ func (this *QStringRef) toLocal8Bit(args ...interface{}) () {
 
 }
 
-
+  // proto:  ulong QStringRef::toULong(bool * ok, int base);
 func (this *QStringRef) toULong(args ...interface{}) () {
   // toULong(_Bool *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3423,7 +3906,7 @@ func (this *QStringRef) toULong(args ...interface{}) () {
 
 }
 
-
+  // proto:  const QChar * QStringRef::end();
 func (this *QStringRef) end(args ...interface{}) () {
   // end()
   var vtys = make(map[int32]map[int32]reflect.Type)

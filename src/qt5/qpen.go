@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,78 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPen::~QPen();
+extern void _ZN4QPenD0Ev(void* qthis);
+  // proto:  qreal QPen::dashOffset();
+extern void _ZNK4QPen10dashOffsetEv(void* qthis);
+  // proto:  void QPen::QPen(const QColor & color);
+extern void* dector_ZN4QPenC1ERK6QColor(void* arg0);
+extern void _ZN4QPenC1ERK6QColor(void* qthis, void* arg0);
+  // proto:  qreal QPen::miterLimit();
+extern void _ZNK4QPen10miterLimitEv(void* qthis);
+  // proto:  void QPen::setWidthF(qreal width);
+extern void _ZN4QPen9setWidthFEd(void* qthis, double arg0);
+  // proto:  void QPen::setBrush(const QBrush & brush);
+extern void _ZN4QPen8setBrushERK6QBrush(void* qthis, void* arg0);
+  // proto:  QColor QPen::color();
+extern void _ZNK4QPen5colorEv(void* qthis);
+  // proto:  void QPen::setWidth(int width);
+extern void _ZN4QPen8setWidthEi(void* qthis, int arg0);
+  // proto:  qreal QPen::widthF();
+extern void _ZNK4QPen6widthFEv(void* qthis);
+  // proto:  void QPen::setCosmetic(bool cosmetic);
+extern void _ZN4QPen11setCosmeticEb(void* qthis, bool arg0);
+  // proto:  bool QPen::isSolid();
+extern void _ZNK4QPen7isSolidEv(void* qthis);
+  // proto:  void QPen::setColor(const QColor & color);
+extern void _ZN4QPen8setColorERK6QColor(void* qthis, void* arg0);
+  // proto:  QVector<qreal> QPen::dashPattern();
+extern void _ZNK4QPen11dashPatternEv(void* qthis);
+  // proto:  bool QPen::isDetached();
+extern void _ZN4QPen10isDetachedEv(void* qthis);
+  // proto:  void QPen::QPen(const QPen & pen);
+extern void* dector_ZN4QPenC1ERKS_(void* arg0);
+extern void _ZN4QPenC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QPen::setMiterLimit(qreal limit);
+extern void _ZN4QPen13setMiterLimitEd(void* qthis, double arg0);
+  // proto:  void QPen::QPen();
+extern void* dector_ZN4QPenC1Ev();
+extern void _ZN4QPenC1Ev(void* qthis);
+  // proto:  int QPen::width();
+extern void _ZNK4QPen5widthEv(void* qthis);
+  // proto:  void QPen::swap(QPen & other);
+extern void _ZN4QPen4swapERS_(void* qthis, void* arg0);
+  // proto:  QBrush QPen::brush();
+extern void _ZNK4QPen5brushEv(void* qthis);
+  // proto:  bool QPen::isCosmetic();
+extern void _ZNK4QPen10isCosmeticEv(void* qthis);
+  // proto:  void QPen::setDashOffset(qreal doffset);
+extern void _ZN4QPen13setDashOffsetEd(void* qthis, double arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPen)=8
 type QPen struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPen::~QPen();
 func (this *QPen) FreeQPen(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -55,7 +111,7 @@ func (this *QPen) FreeQPen(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPen::dashOffset();
 func (this *QPen) dashOffset(args ...interface{}) () {
   // dashOffset()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -73,12 +129,12 @@ func (this *QPen) dashOffset(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::QPen(const QColor & color);
 func NewQPen(args ...interface{}) QPen {
   return QPen{}
 }
 
-
+  // proto:  qreal QPen::miterLimit();
 func (this *QPen) miterLimit(args ...interface{}) () {
   // miterLimit()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +152,7 @@ func (this *QPen) miterLimit(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setWidthF(qreal width);
 func (this *QPen) setWidthF(args ...interface{}) () {
   // setWidthF(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -115,7 +171,7 @@ func (this *QPen) setWidthF(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setBrush(const QBrush & brush);
 func (this *QPen) setBrush(args ...interface{}) () {
   // setBrush(const class QBrush &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,7 +190,7 @@ func (this *QPen) setBrush(args ...interface{}) () {
 
 }
 
-
+  // proto:  QColor QPen::color();
 func (this *QPen) color(args ...interface{}) () {
   // color()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +208,7 @@ func (this *QPen) color(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setWidth(int width);
 func (this *QPen) setWidth(args ...interface{}) () {
   // setWidth(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -171,7 +227,7 @@ func (this *QPen) setWidth(args ...interface{}) () {
 
 }
 
-
+  // proto:  qreal QPen::widthF();
 func (this *QPen) widthF(args ...interface{}) () {
   // widthF()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,7 +245,7 @@ func (this *QPen) widthF(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setCosmetic(bool cosmetic);
 func (this *QPen) setCosmetic(args ...interface{}) () {
   // setCosmetic(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -208,7 +264,7 @@ func (this *QPen) setCosmetic(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPen::isSolid();
 func (this *QPen) isSolid(args ...interface{}) () {
   // isSolid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -226,7 +282,7 @@ func (this *QPen) isSolid(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setColor(const QColor & color);
 func (this *QPen) setColor(args ...interface{}) () {
   // setColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +301,7 @@ func (this *QPen) setColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  QVector<qreal> QPen::dashPattern();
 func (this *QPen) dashPattern(args ...interface{}) () {
   // dashPattern()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -263,7 +319,7 @@ func (this *QPen) dashPattern(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPen::isDetached();
 func (this *QPen) isDetached(args ...interface{}) () {
   // isDetached()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -281,7 +337,7 @@ func (this *QPen) isDetached(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setMiterLimit(qreal limit);
 func (this *QPen) setMiterLimit(args ...interface{}) () {
   // setMiterLimit(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -300,7 +356,7 @@ func (this *QPen) setMiterLimit(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QPen::width();
 func (this *QPen) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -318,7 +374,7 @@ func (this *QPen) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::swap(QPen & other);
 func (this *QPen) swap(args ...interface{}) () {
   // swap(class QPen &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -337,7 +393,7 @@ func (this *QPen) swap(args ...interface{}) () {
 
 }
 
-
+  // proto:  QBrush QPen::brush();
 func (this *QPen) brush(args ...interface{}) () {
   // brush()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -355,7 +411,7 @@ func (this *QPen) brush(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QPen::isCosmetic();
 func (this *QPen) isCosmetic(args ...interface{}) () {
   // isCosmetic()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -373,7 +429,7 @@ func (this *QPen) isCosmetic(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPen::setDashOffset(qreal doffset);
 func (this *QPen) setDashOffset(args ...interface{}) () {
   // setDashOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)

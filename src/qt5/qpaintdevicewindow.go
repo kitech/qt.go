@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,42 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
+extern void _ZN18QPaintDeviceWindow6updateERK7QRegion(void* qthis, void* arg0);
+  // proto:  void QPaintDeviceWindow::update();
+extern void _ZN18QPaintDeviceWindow6updateEv(void* qthis);
+  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
+extern void* dector_ZN18QPaintDeviceWindowC1ERKS_(void* arg0);
+extern void _ZN18QPaintDeviceWindowC1ERKS_(void* qthis, void* arg0);
+  // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
+extern void _ZNK18QPaintDeviceWindow10metaObjectEv(void* qthis);
+  // proto:  void QPaintDeviceWindow::update(const QRect & rect);
+extern void _ZN18QPaintDeviceWindow6updateERK5QRect(void* qthis, void* arg0);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QPaintDeviceWindow)=1
 type QPaintDeviceWindow struct {
   /*qbase*/ QWindow;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
 func (this *QPaintDeviceWindow) update(args ...interface{}) () {
   // update(const class QRegion &)
   // update()
@@ -69,12 +89,12 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
 func NewQPaintDeviceWindow(args ...interface{}) QPaintDeviceWindow {
   return QPaintDeviceWindow{}
 }
 
-
+  // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
 func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

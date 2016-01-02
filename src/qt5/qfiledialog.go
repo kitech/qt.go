@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,19 +26,114 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  const QMetaObject * QFileDialog::metaObject();
+extern void _ZNK11QFileDialog10metaObjectEv(void* qthis);
+  // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
+extern void _ZN11QFileDialog15setDirectoryUrlERK4QUrl(void* qthis, void* arg0);
+  // proto:  QStringList QFileDialog::nameFilters();
+extern void _ZNK11QFileDialog11nameFiltersEv(void* qthis);
+  // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
+extern void _ZN11QFileDialog19setConfirmOverwriteEb(void* qthis, bool arg0);
+  // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
+extern void _ZN11QFileDialog16setDefaultSuffixERK7QString(void* qthis, void* arg0);
+  // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
+extern void _ZN11QFileDialog15setItemDelegateEP21QAbstractItemDelegate(void* qthis, void* arg0);
+  // proto:  QList<QUrl> QFileDialog::sidebarUrls();
+extern void _ZNK11QFileDialog11sidebarUrlsEv(void* qthis);
+  // proto:  QString QFileDialog::defaultSuffix();
+extern void _ZNK11QFileDialog13defaultSuffixEv(void* qthis);
+  // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
+extern void _ZN11QFileDialog13setProxyModelEP19QAbstractProxyModel(void* qthis, void* arg0);
+  // proto:  void QFileDialog::selectFile(const QString & filename);
+extern void _ZN11QFileDialog10selectFileERK7QString(void* qthis, void* arg0);
+  // proto:  bool QFileDialog::resolveSymlinks();
+extern void _ZNK11QFileDialog15resolveSymlinksEv(void* qthis);
+  // proto:  void QFileDialog::setDirectory(const QString & directory);
+extern void _ZN11QFileDialog12setDirectoryERK7QString(void* qthis, void* arg0);
+  // proto:  void QFileDialog::selectUrl(const QUrl & url);
+extern void _ZN11QFileDialog9selectUrlERK4QUrl(void* qthis, void* arg0);
+  // proto:  QString QFileDialog::selectedNameFilter();
+extern void _ZNK11QFileDialog18selectedNameFilterEv(void* qthis);
+  // proto:  QUrl QFileDialog::directoryUrl();
+extern void _ZNK11QFileDialog12directoryUrlEv(void* qthis);
+  // proto:  bool QFileDialog::isReadOnly();
+extern void _ZNK11QFileDialog10isReadOnlyEv(void* qthis);
+  // proto:  QByteArray QFileDialog::saveState();
+extern void _ZNK11QFileDialog9saveStateEv(void* qthis);
+  // proto:  void QFileDialog::open(QObject * receiver, const char * member);
+extern void _ZN11QFileDialog4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+  // proto:  QDir QFileDialog::directory();
+extern void _ZNK11QFileDialog9directoryEv(void* qthis);
+  // proto:  void QFileDialog::setDirectory(const QDir & directory);
+extern void demth_ZN11QFileDialog12setDirectoryERK4QDir(void* qthis, void* arg0);
+  // proto:  void QFileDialog::setVisible(bool visible);
+extern void _ZN11QFileDialog10setVisibleEb(void* qthis, bool arg0);
+  // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
+extern void _ZN11QFileDialog15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0);
+  // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
+extern void _ZN11QFileDialog20selectMimeTypeFilterERK7QString(void* qthis, void* arg0);
+  // proto:  QStringList QFileDialog::mimeTypeFilters();
+extern void _ZNK11QFileDialog15mimeTypeFiltersEv(void* qthis);
+  // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
+extern void _ZN11QFileDialog18setMimeTypeFiltersERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
+extern void _ZN11QFileDialog18setResolveSymlinksEb(void* qthis, bool arg0);
+  // proto:  void QFileDialog::setReadOnly(bool enabled);
+extern void _ZN11QFileDialog11setReadOnlyEb(void* qthis, bool arg0);
+  // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
+extern void _ZN11QFileDialog27setNameFilterDetailsVisibleEb(void* qthis, bool arg0);
+  // proto:  void QFileDialog::selectNameFilter(const QString & filter);
+extern void _ZN11QFileDialog16selectNameFilterERK7QString(void* qthis, void* arg0);
+  // proto:  bool QFileDialog::restoreState(const QByteArray & state);
+extern void _ZN11QFileDialog12restoreStateERK10QByteArray(void* qthis, void* arg0);
+  // proto:  QFileIconProvider * QFileDialog::iconProvider();
+extern void _ZNK11QFileDialog12iconProviderEv(void* qthis);
+  // proto:  QStringList QFileDialog::selectedFiles();
+extern void _ZNK11QFileDialog13selectedFilesEv(void* qthis);
+  // proto:  void QFileDialog::~QFileDialog();
+extern void _ZN11QFileDialogD0Ev(void* qthis);
+  // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
+extern void _ZNK11QFileDialog12itemDelegateEv(void* qthis);
+  // proto:  bool QFileDialog::confirmOverwrite();
+extern void _ZNK11QFileDialog16confirmOverwriteEv(void* qthis);
+  // proto:  void QFileDialog::setHistory(const QStringList & paths);
+extern void _ZN11QFileDialog10setHistoryERK11QStringList(void* qthis, void* arg0);
+  // proto:  void QFileDialog::setNameFilter(const QString & filter);
+extern void _ZN11QFileDialog13setNameFilterERK7QString(void* qthis, void* arg0);
+  // proto:  QAbstractProxyModel * QFileDialog::proxyModel();
+extern void _ZNK11QFileDialog10proxyModelEv(void* qthis);
+  // proto:  void QFileDialog::setNameFilters(const QStringList & filters);
+extern void _ZN11QFileDialog14setNameFiltersERK11QStringList(void* qthis, void* arg0);
+  // proto:  QList<QUrl> QFileDialog::selectedUrls();
+extern void _ZNK11QFileDialog12selectedUrlsEv(void* qthis);
+  // proto:  QStringList QFileDialog::history();
+extern void _ZNK11QFileDialog7historyEv(void* qthis);
+  // proto:  bool QFileDialog::isNameFilterDetailsVisible();
+extern void _ZNK11QFileDialog26isNameFilterDetailsVisibleEv(void* qthis);
+  // proto:  void QFileDialog::QFileDialog(const QFileDialog & );
+extern void* dector_ZN11QFileDialogC1ERKS_(void* arg0);
+extern void _ZN11QFileDialogC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QFileDialog::QFileDialog(QWidget * parent, const QString & caption, const QString & directory, const QString & filter);
+extern void* dector_ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(void* arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN11QFileDialogC1EP7QWidgetRK7QStringS4_S4_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QFileDialog)=1
 type QFileDialog struct {
   /*qbase*/ QDialog;
@@ -50,7 +149,7 @@ type QFileDialog struct {
 //  _urlSelected QFileDialog_urlSelected_signal;
 }
 
-
+  // proto:  const QMetaObject * QFileDialog::metaObject();
 func (this *QFileDialog) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -68,7 +167,7 @@ func (this *QFileDialog) metaObject(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setDirectoryUrl(const QUrl & directory);
 func (this *QFileDialog) setDirectoryUrl(args ...interface{}) () {
   // setDirectoryUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -87,7 +186,7 @@ func (this *QFileDialog) setDirectoryUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileDialog::nameFilters();
 func (this *QFileDialog) nameFilters(args ...interface{}) () {
   // nameFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -105,7 +204,7 @@ func (this *QFileDialog) nameFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setConfirmOverwrite(bool enabled);
 func (this *QFileDialog) setConfirmOverwrite(args ...interface{}) () {
   // setConfirmOverwrite(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -124,7 +223,7 @@ func (this *QFileDialog) setConfirmOverwrite(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setDefaultSuffix(const QString & suffix);
 func (this *QFileDialog) setDefaultSuffix(args ...interface{}) () {
   // setDefaultSuffix(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -143,7 +242,7 @@ func (this *QFileDialog) setDefaultSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setItemDelegate(QAbstractItemDelegate * delegate);
 func (this *QFileDialog) setItemDelegate(args ...interface{}) () {
   // setItemDelegate(class QAbstractItemDelegate *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,7 +261,7 @@ func (this *QFileDialog) setItemDelegate(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QUrl> QFileDialog::sidebarUrls();
 func (this *QFileDialog) sidebarUrls(args ...interface{}) () {
   // sidebarUrls()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +279,7 @@ func (this *QFileDialog) sidebarUrls(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFileDialog::defaultSuffix();
 func (this *QFileDialog) defaultSuffix(args ...interface{}) () {
   // defaultSuffix()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -198,7 +297,7 @@ func (this *QFileDialog) defaultSuffix(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setProxyModel(QAbstractProxyModel * model);
 func (this *QFileDialog) setProxyModel(args ...interface{}) () {
   // setProxyModel(class QAbstractProxyModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -217,7 +316,7 @@ func (this *QFileDialog) setProxyModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::selectFile(const QString & filename);
 func (this *QFileDialog) selectFile(args ...interface{}) () {
   // selectFile(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -236,7 +335,7 @@ func (this *QFileDialog) selectFile(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileDialog::resolveSymlinks();
 func (this *QFileDialog) resolveSymlinks(args ...interface{}) () {
   // resolveSymlinks()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -254,7 +353,7 @@ func (this *QFileDialog) resolveSymlinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setDirectory(const QString & directory);
 func (this *QFileDialog) setDirectory(args ...interface{}) () {
   // setDirectory(const class QString &)
   // setDirectory(const class QDir &)
@@ -278,7 +377,7 @@ func (this *QFileDialog) setDirectory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::selectUrl(const QUrl & url);
 func (this *QFileDialog) selectUrl(args ...interface{}) () {
   // selectUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -297,7 +396,7 @@ func (this *QFileDialog) selectUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  QString QFileDialog::selectedNameFilter();
 func (this *QFileDialog) selectedNameFilter(args ...interface{}) () {
   // selectedNameFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -315,7 +414,7 @@ func (this *QFileDialog) selectedNameFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  QUrl QFileDialog::directoryUrl();
 func (this *QFileDialog) directoryUrl(args ...interface{}) () {
   // directoryUrl()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -333,7 +432,7 @@ func (this *QFileDialog) directoryUrl(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileDialog::isReadOnly();
 func (this *QFileDialog) isReadOnly(args ...interface{}) () {
   // isReadOnly()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -351,7 +450,7 @@ func (this *QFileDialog) isReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  QByteArray QFileDialog::saveState();
 func (this *QFileDialog) saveState(args ...interface{}) () {
   // saveState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -369,7 +468,7 @@ func (this *QFileDialog) saveState(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::open(QObject * receiver, const char * member);
 func (this *QFileDialog) open(args ...interface{}) () {
   // open(class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -389,7 +488,7 @@ func (this *QFileDialog) open(args ...interface{}) () {
 
 }
 
-
+  // proto:  QDir QFileDialog::directory();
 func (this *QFileDialog) directory(args ...interface{}) () {
   // directory()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -407,7 +506,7 @@ func (this *QFileDialog) directory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setVisible(bool visible);
 func (this *QFileDialog) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -426,7 +525,7 @@ func (this *QFileDialog) setVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setIconProvider(QFileIconProvider * provider);
 func (this *QFileDialog) setIconProvider(args ...interface{}) () {
   // setIconProvider(class QFileIconProvider *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -445,7 +544,7 @@ func (this *QFileDialog) setIconProvider(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::selectMimeTypeFilter(const QString & filter);
 func (this *QFileDialog) selectMimeTypeFilter(args ...interface{}) () {
   // selectMimeTypeFilter(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -464,7 +563,7 @@ func (this *QFileDialog) selectMimeTypeFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileDialog::mimeTypeFilters();
 func (this *QFileDialog) mimeTypeFilters(args ...interface{}) () {
   // mimeTypeFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -482,7 +581,7 @@ func (this *QFileDialog) mimeTypeFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setMimeTypeFilters(const QStringList & filters);
 func (this *QFileDialog) setMimeTypeFilters(args ...interface{}) () {
   // setMimeTypeFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -501,7 +600,7 @@ func (this *QFileDialog) setMimeTypeFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setResolveSymlinks(bool enabled);
 func (this *QFileDialog) setResolveSymlinks(args ...interface{}) () {
   // setResolveSymlinks(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -520,7 +619,7 @@ func (this *QFileDialog) setResolveSymlinks(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setReadOnly(bool enabled);
 func (this *QFileDialog) setReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +638,7 @@ func (this *QFileDialog) setReadOnly(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setNameFilterDetailsVisible(bool enabled);
 func (this *QFileDialog) setNameFilterDetailsVisible(args ...interface{}) () {
   // setNameFilterDetailsVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -558,7 +657,7 @@ func (this *QFileDialog) setNameFilterDetailsVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::selectNameFilter(const QString & filter);
 func (this *QFileDialog) selectNameFilter(args ...interface{}) () {
   // selectNameFilter(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -577,7 +676,7 @@ func (this *QFileDialog) selectNameFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileDialog::restoreState(const QByteArray & state);
 func (this *QFileDialog) restoreState(args ...interface{}) () {
   // restoreState(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -596,7 +695,7 @@ func (this *QFileDialog) restoreState(args ...interface{}) () {
 
 }
 
-
+  // proto:  QFileIconProvider * QFileDialog::iconProvider();
 func (this *QFileDialog) iconProvider(args ...interface{}) () {
   // iconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -614,7 +713,7 @@ func (this *QFileDialog) iconProvider(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileDialog::selectedFiles();
 func (this *QFileDialog) selectedFiles(args ...interface{}) () {
   // selectedFiles()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -632,7 +731,7 @@ func (this *QFileDialog) selectedFiles(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::~QFileDialog();
 func (this *QFileDialog) FreeQFileDialog(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -646,7 +745,7 @@ func (this *QFileDialog) FreeQFileDialog(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractItemDelegate * QFileDialog::itemDelegate();
 func (this *QFileDialog) itemDelegate(args ...interface{}) () {
   // itemDelegate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -664,7 +763,7 @@ func (this *QFileDialog) itemDelegate(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileDialog::confirmOverwrite();
 func (this *QFileDialog) confirmOverwrite(args ...interface{}) () {
   // confirmOverwrite()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -682,7 +781,7 @@ func (this *QFileDialog) confirmOverwrite(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setHistory(const QStringList & paths);
 func (this *QFileDialog) setHistory(args ...interface{}) () {
   // setHistory(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -701,7 +800,7 @@ func (this *QFileDialog) setHistory(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setNameFilter(const QString & filter);
 func (this *QFileDialog) setNameFilter(args ...interface{}) () {
   // setNameFilter(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -720,7 +819,7 @@ func (this *QFileDialog) setNameFilter(args ...interface{}) () {
 
 }
 
-
+  // proto:  QAbstractProxyModel * QFileDialog::proxyModel();
 func (this *QFileDialog) proxyModel(args ...interface{}) () {
   // proxyModel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -738,7 +837,7 @@ func (this *QFileDialog) proxyModel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::setNameFilters(const QStringList & filters);
 func (this *QFileDialog) setNameFilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -757,7 +856,7 @@ func (this *QFileDialog) setNameFilters(args ...interface{}) () {
 
 }
 
-
+  // proto:  QList<QUrl> QFileDialog::selectedUrls();
 func (this *QFileDialog) selectedUrls(args ...interface{}) () {
   // selectedUrls()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -775,7 +874,7 @@ func (this *QFileDialog) selectedUrls(args ...interface{}) () {
 
 }
 
-
+  // proto:  QStringList QFileDialog::history();
 func (this *QFileDialog) history(args ...interface{}) () {
   // history()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -793,7 +892,7 @@ func (this *QFileDialog) history(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QFileDialog::isNameFilterDetailsVisible();
 func (this *QFileDialog) isNameFilterDetailsVisible(args ...interface{}) () {
   // isNameFilterDetailsVisible()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -811,7 +910,7 @@ func (this *QFileDialog) isNameFilterDetailsVisible(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QFileDialog::QFileDialog(const QFileDialog & );
 func NewQFileDialog(args ...interface{}) QFileDialog {
   return QFileDialog{}
 }

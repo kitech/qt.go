@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 01:07:50 2016
+// created: Sat Jan  2 12:23:25 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.go
 //
@@ -14,6 +14,10 @@ package qt5
 // <= main block end
 
 // use block begin =>
+import "fmt"
+import "reflect"
+import "unsafe"
+import "qtrt"
 // <= use block end
 
 // ext block begin =>
@@ -22,26 +26,154 @@ package qt5
 // #[link(name = "Qt5Widgets")]
 // #[link(name = "QtInline")]
 
-// extern {
-import "fmt"
-import "reflect"
-import "qtrt"
+/*
+#include <stdlib.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <wchar.h>
+#include <uchar.h>
+  // proto:  void QOpenGLTexture::bind();
+extern void _ZN14QOpenGLTexture4bindEv(void* qthis);
+  // proto:  void QOpenGLTexture::setFixedSamplePositions(bool fixed);
+extern void _ZN14QOpenGLTexture23setFixedSamplePositionsEb(void* qthis, bool arg0);
+  // proto:  int QOpenGLTexture::height();
+extern void _ZNK14QOpenGLTexture6heightEv(void* qthis);
+  // proto:  bool QOpenGLTexture::isAutoMipMapGenerationEnabled();
+extern void _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(void* qthis);
+  // proto:  void QOpenGLTexture::setCompressedData(int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, void* arg1, void* arg2);
+  // proto:  void QOpenGLTexture::setMaximumLevelOfDetail(float value);
+extern void _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(void* qthis, float arg0);
+  // proto:  void QOpenGLTexture::setAutoMipMapGenerationEnabled(bool enabled);
+extern void _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(void* qthis, bool arg0);
+  // proto:  int QOpenGLTexture::depth();
+extern void _ZNK14QOpenGLTexture5depthEv(void* qthis);
+  // proto:  void QOpenGLTexture::generateMipMaps(int baseLevel, bool resetBaseLevel);
+extern void _ZN14QOpenGLTexture15generateMipMapsEib(void* qthis, int arg0, bool arg1);
+  // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, void* arg2, void* arg3);
+  // proto:  void QOpenGLTexture::setMipBaseLevel(int baseLevel);
+extern void _ZN14QOpenGLTexture15setMipBaseLevelEi(void* qthis, int arg0);
+  // proto:  QPair<float, float> QOpenGLTexture::levelOfDetailRange();
+extern void _ZNK14QOpenGLTexture18levelOfDetailRangeEv(void* qthis);
+  // proto:  bool QOpenGLTexture::create();
+extern void _ZN14QOpenGLTexture6createEv(void* qthis);
+  // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, int arg2, void* arg3, void* arg4);
+  // proto:  void QOpenGLTexture::setLevelOfDetailRange(float min, float max);
+extern void _ZN14QOpenGLTexture21setLevelOfDetailRangeEff(void* qthis, float arg0, float arg1);
+  // proto:  void QOpenGLTexture::borderColor(unsigned int * border);
+extern void _ZNK14QOpenGLTexture11borderColorEPj(void* qthis, unsigned int* arg0);
+  // proto:  bool QOpenGLTexture::isStorageAllocated();
+extern void _ZNK14QOpenGLTexture18isStorageAllocatedEv(void* qthis);
+  // proto:  void QOpenGLTexture::borderColor(int * border);
+extern void _ZNK14QOpenGLTexture11borderColorEPi(void* qthis, int* arg0);
+  // proto:  bool QOpenGLTexture::isTextureView();
+extern void _ZNK14QOpenGLTexture13isTextureViewEv(void* qthis);
+  // proto:  bool QOpenGLTexture::isFixedSamplePositions();
+extern void _ZNK14QOpenGLTexture22isFixedSamplePositionsEv(void* qthis);
+  // proto:  int QOpenGLTexture::faces();
+extern void _ZNK14QOpenGLTexture5facesEv(void* qthis);
+  // proto:  void QOpenGLTexture::setLayers(int layers);
+extern void _ZN14QOpenGLTexture9setLayersEi(void* qthis, int arg0);
+  // proto:  void QOpenGLTexture::setCompressedData(int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, void* arg1, void* arg2);
+  // proto:  int QOpenGLTexture::width();
+extern void _ZNK14QOpenGLTexture5widthEv(void* qthis);
+  // proto:  int QOpenGLTexture::layers();
+extern void _ZNK14QOpenGLTexture6layersEv(void* qthis);
+  // proto:  void QOpenGLTexture::borderColor(float * border);
+extern void _ZNK14QOpenGLTexture11borderColorEPf(void* qthis, float* arg0);
+  // proto:  float QOpenGLTexture::minimumLevelOfDetail();
+extern void _ZNK14QOpenGLTexture20minimumLevelOfDetailEv(void* qthis);
+  // proto:  void QOpenGLTexture::setBorderColor(int r, int g, int b, int a);
+extern void _ZN14QOpenGLTexture14setBorderColorEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+  // proto:  void QOpenGLTexture::setMinimumLevelOfDetail(float value);
+extern void _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(void* qthis, float arg0);
+  // proto:  void QOpenGLTexture::setMipLevels(int levels);
+extern void _ZN14QOpenGLTexture12setMipLevelsEi(void* qthis, int arg0);
+  // proto:  QPair<int, int> QOpenGLTexture::mipLevelRange();
+extern void _ZNK14QOpenGLTexture13mipLevelRangeEv(void* qthis);
+  // proto:  void QOpenGLTexture::setMipMaxLevel(int maxLevel);
+extern void _ZN14QOpenGLTexture14setMipMaxLevelEi(void* qthis, int arg0);
+  // proto:  float QOpenGLTexture::levelofDetailBias();
+extern void _ZNK14QOpenGLTexture17levelofDetailBiasEv(void* qthis);
+  // proto:  int QOpenGLTexture::maximumMipLevels();
+extern void _ZNK14QOpenGLTexture16maximumMipLevelsEv(void* qthis);
+  // proto:  bool QOpenGLTexture::isBound(uint unit);
+extern void _ZN14QOpenGLTexture7isBoundEj(void* qthis, unsigned int arg0);
+  // proto:  void QOpenGLTexture::setBorderColor(uint r, uint g, uint b, uint a);
+extern void _ZN14QOpenGLTexture14setBorderColorEjjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3);
+  // proto:  void QOpenGLTexture::setMaximumAnisotropy(float anisotropy);
+extern void _ZN14QOpenGLTexture20setMaximumAnisotropyEf(void* qthis, float arg0);
+  // proto:  void QOpenGLTexture::setSamples(int samples);
+extern void _ZN14QOpenGLTexture10setSamplesEi(void* qthis, int arg0);
+  // proto:  int QOpenGLTexture::mipLevels();
+extern void _ZNK14QOpenGLTexture9mipLevelsEv(void* qthis);
+  // proto:  void QOpenGLTexture::setLevelofDetailBias(float bias);
+extern void _ZN14QOpenGLTexture20setLevelofDetailBiasEf(void* qthis, float arg0);
+  // proto:  GLuint QOpenGLTexture::textureId();
+extern void _ZNK14QOpenGLTexture9textureIdEv(void* qthis);
+  // proto:  void QOpenGLTexture::setMipLevelRange(int baseLevel, int maxLevel);
+extern void _ZN14QOpenGLTexture16setMipLevelRangeEii(void* qthis, int arg0, int arg1);
+  // proto:  void QOpenGLTexture::allocateStorage();
+extern void _ZN14QOpenGLTexture15allocateStorageEv(void* qthis);
+  // proto:  void QOpenGLTexture::~QOpenGLTexture();
+extern void _ZN14QOpenGLTextureD0Ev(void* qthis);
+  // proto:  int QOpenGLTexture::mipMaxLevel();
+extern void _ZNK14QOpenGLTexture11mipMaxLevelEv(void* qthis);
+  // proto:  void QOpenGLTexture::setBorderColor(QColor color);
+extern void _ZN14QOpenGLTexture14setBorderColorE6QColor(void* qthis, void* arg0);
+  // proto:  void QOpenGLTexture::destroy();
+extern void _ZN14QOpenGLTexture7destroyEv(void* qthis);
+  // proto:  void QOpenGLTexture::generateMipMaps();
+extern void _ZN14QOpenGLTexture15generateMipMapsEv(void* qthis);
+  // proto:  void QOpenGLTexture::release();
+extern void _ZN14QOpenGLTexture7releaseEv(void* qthis);
+  // proto:  float QOpenGLTexture::maximumAnisotropy();
+extern void _ZNK14QOpenGLTexture17maximumAnisotropyEv(void* qthis);
+  // proto:  float QOpenGLTexture::maximumLevelOfDetail();
+extern void _ZNK14QOpenGLTexture20maximumLevelOfDetailEv(void* qthis);
+  // proto:  void QOpenGLTexture::setSize(int width, int height, int depth);
+extern void _ZN14QOpenGLTexture7setSizeEiii(void* qthis, int arg0, int arg1, int arg2);
+  // proto:  bool QOpenGLTexture::isCreated();
+extern void _ZNK14QOpenGLTexture9isCreatedEv(void* qthis);
+  // proto:  bool QOpenGLTexture::isBound();
+extern void _ZNK14QOpenGLTexture7isBoundEv(void* qthis);
+  // proto:  void QOpenGLTexture::setBorderColor(float r, float g, float b, float a);
+extern void _ZN14QOpenGLTexture14setBorderColorEffff(void* qthis, float arg0, float arg1, float arg2, float arg3);
+  // proto:  int QOpenGLTexture::samples();
+extern void _ZNK14QOpenGLTexture7samplesEv(void* qthis);
+  // proto:  int QOpenGLTexture::mipBaseLevel();
+extern void _ZNK14QOpenGLTexture12mipBaseLevelEv(void* qthis);
+  // proto:  QColor QOpenGLTexture::borderColor();
+extern void _ZNK14QOpenGLTexture11borderColorEv(void* qthis);
+  // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
+extern void* dector_ZN14QOpenGLTextureC1ERKS_(void* arg0);
+extern void _ZN14QOpenGLTextureC1ERKS_(void* qthis, void* arg0);
+  // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, int arg2, void* arg3, void* arg4);
+  // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, void* arg2, void* arg3);
+*/
+import "C"
+// } // <= ext block end
+
+// body block begin =>
 func init() {
   if false {qtrt.KeepMe()}
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
+  if false {reflect.TypeOf(unsafe.Sizeof(0))}
 }
 
-// } // <= ext block end
-
-// body block begin =>
 // class sizeof(QOpenGLTexture)=1
 type QOpenGLTexture struct {
   // qbase: None;
   qclsinst uint64 /* *mut c_void*/;
 }
 
-
+  // proto:  void QOpenGLTexture::bind();
 func (this *QOpenGLTexture) bind(args ...interface{}) () {
   // bind()
   // bind(uint, enum QOpenGLTexture::TextureUnitReset)
@@ -65,7 +197,7 @@ func (this *QOpenGLTexture) bind(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setFixedSamplePositions(bool fixed);
 func (this *QOpenGLTexture) setFixedSamplePositions(args ...interface{}) () {
   // setFixedSamplePositions(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,7 +216,7 @@ func (this *QOpenGLTexture) setFixedSamplePositions(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::height();
 func (this *QOpenGLTexture) height(args ...interface{}) () {
   // height()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +234,7 @@ func (this *QOpenGLTexture) height(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isAutoMipMapGenerationEnabled();
 func (this *QOpenGLTexture) isAutoMipMapGenerationEnabled(args ...interface{}) () {
   // isAutoMipMapGenerationEnabled()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -120,7 +252,7 @@ func (this *QOpenGLTexture) isAutoMipMapGenerationEnabled(args ...interface{}) (
 
 }
 
-
+  // proto:  void QOpenGLTexture::setCompressedData(int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
 func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
   // setCompressedData(int, const void *, const class QOpenGLPixelTransferOptions *const)
   // setCompressedData(int, int, enum QOpenGLTexture::CubeMapFace, int, void *, const class QOpenGLPixelTransferOptions *const)
@@ -202,7 +334,7 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMaximumLevelOfDetail(float value);
 func (this *QOpenGLTexture) setMaximumLevelOfDetail(args ...interface{}) () {
   // setMaximumLevelOfDetail(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +353,7 @@ func (this *QOpenGLTexture) setMaximumLevelOfDetail(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setAutoMipMapGenerationEnabled(bool enabled);
 func (this *QOpenGLTexture) setAutoMipMapGenerationEnabled(args ...interface{}) () {
   // setAutoMipMapGenerationEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -240,7 +372,7 @@ func (this *QOpenGLTexture) setAutoMipMapGenerationEnabled(args ...interface{}) 
 
 }
 
-
+  // proto:  int QOpenGLTexture::depth();
 func (this *QOpenGLTexture) depth(args ...interface{}) () {
   // depth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,7 +390,7 @@ func (this *QOpenGLTexture) depth(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::generateMipMaps(int baseLevel, bool resetBaseLevel);
 func (this *QOpenGLTexture) generateMipMaps(args ...interface{}) () {
   // generateMipMaps(int, _Bool)
   // generateMipMaps()
@@ -282,7 +414,7 @@ func (this *QOpenGLTexture) generateMipMaps(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMipBaseLevel(int baseLevel);
 func (this *QOpenGLTexture) setMipBaseLevel(args ...interface{}) () {
   // setMipBaseLevel(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -301,7 +433,7 @@ func (this *QOpenGLTexture) setMipBaseLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPair<float, float> QOpenGLTexture::levelOfDetailRange();
 func (this *QOpenGLTexture) levelOfDetailRange(args ...interface{}) () {
   // levelOfDetailRange()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +451,7 @@ func (this *QOpenGLTexture) levelOfDetailRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::create();
 func (this *QOpenGLTexture) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -337,7 +469,7 @@ func (this *QOpenGLTexture) create(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setLevelOfDetailRange(float min, float max);
 func (this *QOpenGLTexture) setLevelOfDetailRange(args ...interface{}) () {
   // setLevelOfDetailRange(float, float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,7 +489,7 @@ func (this *QOpenGLTexture) setLevelOfDetailRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::borderColor(unsigned int * border);
 func (this *QOpenGLTexture) borderColor(args ...interface{}) () {
   // borderColor(unsigned int *)
   // borderColor(int *)
@@ -390,7 +522,7 @@ func (this *QOpenGLTexture) borderColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isStorageAllocated();
 func (this *QOpenGLTexture) isStorageAllocated(args ...interface{}) () {
   // isStorageAllocated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -408,7 +540,7 @@ func (this *QOpenGLTexture) isStorageAllocated(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isTextureView();
 func (this *QOpenGLTexture) isTextureView(args ...interface{}) () {
   // isTextureView()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -426,7 +558,7 @@ func (this *QOpenGLTexture) isTextureView(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isFixedSamplePositions();
 func (this *QOpenGLTexture) isFixedSamplePositions(args ...interface{}) () {
   // isFixedSamplePositions()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -444,7 +576,7 @@ func (this *QOpenGLTexture) isFixedSamplePositions(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::faces();
 func (this *QOpenGLTexture) faces(args ...interface{}) () {
   // faces()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -462,7 +594,7 @@ func (this *QOpenGLTexture) faces(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setLayers(int layers);
 func (this *QOpenGLTexture) setLayers(args ...interface{}) () {
   // setLayers(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -481,7 +613,7 @@ func (this *QOpenGLTexture) setLayers(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::width();
 func (this *QOpenGLTexture) width(args ...interface{}) () {
   // width()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -499,7 +631,7 @@ func (this *QOpenGLTexture) width(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::layers();
 func (this *QOpenGLTexture) layers(args ...interface{}) () {
   // layers()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -517,7 +649,7 @@ func (this *QOpenGLTexture) layers(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QOpenGLTexture::minimumLevelOfDetail();
 func (this *QOpenGLTexture) minimumLevelOfDetail(args ...interface{}) () {
   // minimumLevelOfDetail()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -535,7 +667,7 @@ func (this *QOpenGLTexture) minimumLevelOfDetail(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setBorderColor(int r, int g, int b, int a);
 func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
   // setBorderColor(int, int, int, int)
   // setBorderColor(uint, uint, uint, uint)
@@ -578,7 +710,7 @@ func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMinimumLevelOfDetail(float value);
 func (this *QOpenGLTexture) setMinimumLevelOfDetail(args ...interface{}) () {
   // setMinimumLevelOfDetail(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -597,7 +729,7 @@ func (this *QOpenGLTexture) setMinimumLevelOfDetail(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMipLevels(int levels);
 func (this *QOpenGLTexture) setMipLevels(args ...interface{}) () {
   // setMipLevels(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -616,7 +748,7 @@ func (this *QOpenGLTexture) setMipLevels(args ...interface{}) () {
 
 }
 
-
+  // proto:  QPair<int, int> QOpenGLTexture::mipLevelRange();
 func (this *QOpenGLTexture) mipLevelRange(args ...interface{}) () {
   // mipLevelRange()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -634,7 +766,7 @@ func (this *QOpenGLTexture) mipLevelRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMipMaxLevel(int maxLevel);
 func (this *QOpenGLTexture) setMipMaxLevel(args ...interface{}) () {
   // setMipMaxLevel(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -653,7 +785,7 @@ func (this *QOpenGLTexture) setMipMaxLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QOpenGLTexture::levelofDetailBias();
 func (this *QOpenGLTexture) levelofDetailBias(args ...interface{}) () {
   // levelofDetailBias()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -671,7 +803,7 @@ func (this *QOpenGLTexture) levelofDetailBias(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::maximumMipLevels();
 func (this *QOpenGLTexture) maximumMipLevels(args ...interface{}) () {
   // maximumMipLevels()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -689,7 +821,7 @@ func (this *QOpenGLTexture) maximumMipLevels(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isBound(uint unit);
 func (this *QOpenGLTexture) isBound(args ...interface{}) () {
   // isBound(uint)
   // isBound()
@@ -712,7 +844,7 @@ func (this *QOpenGLTexture) isBound(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMaximumAnisotropy(float anisotropy);
 func (this *QOpenGLTexture) setMaximumAnisotropy(args ...interface{}) () {
   // setMaximumAnisotropy(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -731,7 +863,7 @@ func (this *QOpenGLTexture) setMaximumAnisotropy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setSamples(int samples);
 func (this *QOpenGLTexture) setSamples(args ...interface{}) () {
   // setSamples(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -750,7 +882,7 @@ func (this *QOpenGLTexture) setSamples(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::mipLevels();
 func (this *QOpenGLTexture) mipLevels(args ...interface{}) () {
   // mipLevels()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,7 +900,7 @@ func (this *QOpenGLTexture) mipLevels(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setLevelofDetailBias(float bias);
 func (this *QOpenGLTexture) setLevelofDetailBias(args ...interface{}) () {
   // setLevelofDetailBias(float)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -787,7 +919,7 @@ func (this *QOpenGLTexture) setLevelofDetailBias(args ...interface{}) () {
 
 }
 
-
+  // proto:  GLuint QOpenGLTexture::textureId();
 func (this *QOpenGLTexture) textureId(args ...interface{}) () {
   // textureId()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -805,7 +937,7 @@ func (this *QOpenGLTexture) textureId(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setMipLevelRange(int baseLevel, int maxLevel);
 func (this *QOpenGLTexture) setMipLevelRange(args ...interface{}) () {
   // setMipLevelRange(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -825,7 +957,7 @@ func (this *QOpenGLTexture) setMipLevelRange(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::allocateStorage();
 func (this *QOpenGLTexture) allocateStorage(args ...interface{}) () {
   // allocateStorage(enum QOpenGLTexture::PixelFormat, enum QOpenGLTexture::PixelType)
   // allocateStorage()
@@ -849,7 +981,7 @@ func (this *QOpenGLTexture) allocateStorage(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::~QOpenGLTexture();
 func (this *QOpenGLTexture) FreeQOpenGLTexture(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -863,7 +995,7 @@ func (this *QOpenGLTexture) FreeQOpenGLTexture(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::mipMaxLevel();
 func (this *QOpenGLTexture) mipMaxLevel(args ...interface{}) () {
   // mipMaxLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -881,7 +1013,7 @@ func (this *QOpenGLTexture) mipMaxLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::destroy();
 func (this *QOpenGLTexture) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -899,7 +1031,7 @@ func (this *QOpenGLTexture) destroy(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::release();
 func (this *QOpenGLTexture) release(args ...interface{}) () {
   // release(uint, enum QOpenGLTexture::TextureUnitReset)
   // release()
@@ -923,7 +1055,7 @@ func (this *QOpenGLTexture) release(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QOpenGLTexture::maximumAnisotropy();
 func (this *QOpenGLTexture) maximumAnisotropy(args ...interface{}) () {
   // maximumAnisotropy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -941,7 +1073,7 @@ func (this *QOpenGLTexture) maximumAnisotropy(args ...interface{}) () {
 
 }
 
-
+  // proto:  float QOpenGLTexture::maximumLevelOfDetail();
 func (this *QOpenGLTexture) maximumLevelOfDetail(args ...interface{}) () {
   // maximumLevelOfDetail()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -959,7 +1091,7 @@ func (this *QOpenGLTexture) maximumLevelOfDetail(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::setSize(int width, int height, int depth);
 func (this *QOpenGLTexture) setSize(args ...interface{}) () {
   // setSize(int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -980,7 +1112,7 @@ func (this *QOpenGLTexture) setSize(args ...interface{}) () {
 
 }
 
-
+  // proto:  bool QOpenGLTexture::isCreated();
 func (this *QOpenGLTexture) isCreated(args ...interface{}) () {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -998,7 +1130,7 @@ func (this *QOpenGLTexture) isCreated(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::samples();
 func (this *QOpenGLTexture) samples(args ...interface{}) () {
   // samples()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1016,7 +1148,7 @@ func (this *QOpenGLTexture) samples(args ...interface{}) () {
 
 }
 
-
+  // proto:  int QOpenGLTexture::mipBaseLevel();
 func (this *QOpenGLTexture) mipBaseLevel(args ...interface{}) () {
   // mipBaseLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1034,7 +1166,7 @@ func (this *QOpenGLTexture) mipBaseLevel(args ...interface{}) () {
 
 }
 
-
+  // proto:  void QOpenGLTexture::QOpenGLTexture(const QOpenGLTexture & );
 func NewQOpenGLTexture(args ...interface{}) QOpenGLTexture {
   return QOpenGLTexture{}
 }
