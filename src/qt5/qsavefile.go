@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -90,6 +90,8 @@ func (this *QSaveFile) cancelWriting(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile13cancelWritingEv
+    // invoke: void cancelWriting()
+    C._ZN9QSaveFile13cancelWritingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "cancelWriting", args)
   }
@@ -113,6 +115,8 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK9QSaveFile8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
   }
@@ -131,6 +135,8 @@ func (this *QSaveFile) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QSaveFile10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "metaObject", args)
   }
@@ -149,6 +155,8 @@ func (this *QSaveFile) commit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
+    // invoke: bool commit()
+    C._ZN9QSaveFile6commitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
   }
@@ -182,8 +190,10 @@ func (this *QSaveFile) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSaveFile11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setFileName", args)
   }
@@ -202,6 +212,8 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
+    // invoke: bool directWriteFallback()
+    C._ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
   }
@@ -221,8 +233,10 @@ func (this *QSaveFile) setDirectWriteFallback(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSaveFile22setDirectWriteFallbackEb
+    // invoke: void setDirectWriteFallback(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QSaveFile22setDirectWriteFallbackEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSaveFile", "setDirectWriteFallback", args)
   }

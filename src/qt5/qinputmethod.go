@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -103,6 +103,8 @@ func (this *QInputMethod) inputItemRectangle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemRectangleEv
+    // invoke: QRectF inputItemRectangle()
+    C._ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemRectangle", args)
   }
@@ -121,6 +123,8 @@ func (this *QInputMethod) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QInputMethod10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "metaObject", args)
   }
@@ -139,6 +143,8 @@ func (this *QInputMethod) inputItemTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemTransformEv
+    // invoke: QTransform inputItemTransform()
+    C._ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemTransform", args)
   }
@@ -157,6 +163,8 @@ func (this *QInputMethod) hide(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod4hideEv
+    // invoke: void hide()
+    C._ZN12QInputMethod4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "hide", args)
   }
@@ -175,6 +183,8 @@ func (this *QInputMethod) keyboardRectangle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod17keyboardRectangleEv
+    // invoke: QRectF keyboardRectangle()
+    C._ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "keyboardRectangle", args)
   }
@@ -193,6 +203,8 @@ func (this *QInputMethod) show(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod4showEv
+    // invoke: void show()
+    C._ZN12QInputMethod4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "show", args)
   }
@@ -216,6 +228,8 @@ func (this *QInputMethod) isAnimating(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod11isAnimatingEv
+    // invoke: bool isAnimating()
+    C._ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "isAnimating", args)
   }
@@ -235,8 +249,10 @@ func (this *QInputMethod) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputMethod10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setVisible", args)
   }
@@ -256,8 +272,10 @@ func (this *QInputMethod) setInputItemRectangle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemRectangleERK6QRectF
+    // invoke: void setInputItemRectangle(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputMethod21setInputItemRectangleERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemRectangle", args)
   }
@@ -276,6 +294,8 @@ func (this *QInputMethod) commit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod6commitEv
+    // invoke: void commit()
+    C._ZN12QInputMethod6commitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "commit", args)
   }
@@ -295,8 +315,10 @@ func (this *QInputMethod) setInputItemTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod21setInputItemTransformERK10QTransform
+    // invoke: void setInputItemTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputMethod21setInputItemTransformERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputMethod", "setInputItemTransform", args)
   }
@@ -315,6 +337,8 @@ func (this *QInputMethod) cursorRectangle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod15cursorRectangleEv
+    // invoke: QRectF cursorRectangle()
+    C._ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "cursorRectangle", args)
   }
@@ -333,6 +357,8 @@ func (this *QInputMethod) isVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK12QInputMethod9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "isVisible", args)
   }
@@ -365,6 +391,8 @@ func (this *QInputMethod) locale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputMethod6localeEv
+    // invoke: QLocale locale()
+    C._ZNK12QInputMethod6localeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "locale", args)
   }
@@ -383,6 +411,8 @@ func (this *QInputMethod) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputMethod5resetEv
+    // invoke: void reset()
+    C._ZN12QInputMethod5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethod", "reset", args)
   }

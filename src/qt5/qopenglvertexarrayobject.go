@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.go
 //
@@ -89,6 +89,8 @@ func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject8objectIdEv
+    // invoke: GLuint objectId()
+    C._ZNK24QOpenGLVertexArrayObject8objectIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "objectId", args)
   }
@@ -107,6 +109,8 @@ func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject7releaseEv
+    // invoke: void release()
+    C._ZN24QOpenGLVertexArrayObject7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "release", args)
   }
@@ -125,6 +129,8 @@ func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK24QOpenGLVertexArrayObject10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "metaObject", args)
   }
@@ -143,6 +149,8 @@ func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject4bindEv
+    // invoke: void bind()
+    C._ZN24QOpenGLVertexArrayObject4bindEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "bind", args)
   }
@@ -161,6 +169,8 @@ func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject9isCreatedEv
+    // invoke: bool isCreated()
+    C._ZNK24QOpenGLVertexArrayObject9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "isCreated", args)
   }
@@ -179,6 +189,8 @@ func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject7destroyEv
+    // invoke: void destroy()
+    C._ZN24QOpenGLVertexArrayObject7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "destroy", args)
   }
@@ -197,6 +209,8 @@ func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject6createEv
+    // invoke: bool create()
+    C._ZN24QOpenGLVertexArrayObject6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "create", args)
   }

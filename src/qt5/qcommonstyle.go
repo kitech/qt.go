@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -89,16 +89,22 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle6polishEP7QWidget
+    // invoke: void polish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QCommonStyle6polishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QCommonStyle6polishER8QPalette
+    // invoke: void polish(class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QCommonStyle6polishER8QPalette(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN12QCommonStyle6polishEP12QApplication
+    // invoke: void polish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QCommonStyle6polishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommonStyle", "polish", args)
   }
@@ -126,12 +132,16 @@ func (this *QCommonStyle) unpolish(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QCommonStyle8unpolishEP7QWidget
+    // invoke: void unpolish(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QCommonStyle8unpolishEP7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QCommonStyle8unpolishEP12QApplication
+    // invoke: void unpolish(class QApplication *)
     var arg0 = args[0].(QApplication).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QCommonStyle8unpolishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
   }
@@ -150,6 +160,8 @@ func (this *QCommonStyle) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QCommonStyle10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QCommonStyle10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qobjectdefs.h
 // dst-file: /src/core/qobjectdefs.go
 //
@@ -78,7 +78,7 @@ extern void _ZNK11QMetaObject4castEPK7QObject(void* qthis, void* arg0);
   // proto:  QMetaMethod QMetaObject::method(int index);
 extern void _ZNK11QMetaObject6methodEi(void* qthis, int arg0);
   // proto:  const QMetaObject * QMetaObject::superClass();
-extern void _ZNK11QMetaObject10superClassEv(void* qthis);
+extern void demth_ZNK11QMetaObject10superClassEv(void* qthis);
   // proto:  QObject * QMetaObject::cast(QObject * obj);
 extern void _ZNK11QMetaObject4castEP7QObject(void* qthis, void* arg0);
   // proto: static void QMetaObject::activate(QObject * sender, int signal_offset, int local_signal_index, void ** argv);
@@ -223,8 +223,10 @@ func (this *QMetaObject) indexOfSlot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11indexOfSlotEPKc
+    // invoke: int indexOfSlot(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject11indexOfSlotEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSlot", args)
   }
@@ -244,8 +246,10 @@ func (this *QMetaObject) indexOfConstructor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject18indexOfConstructorEPKc
+    // invoke: int indexOfConstructor(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject18indexOfConstructorEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfConstructor", args)
   }
@@ -265,8 +269,10 @@ func (this *QMetaObject) enumerator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject10enumeratorEi
+    // invoke: QMetaEnum enumerator(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject10enumeratorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumerator", args)
   }
@@ -286,8 +292,10 @@ func (this *QMetaObject) indexOfMethod(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfMethodEPKc
+    // invoke: int indexOfMethod(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject13indexOfMethodEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfMethod", args)
   }
@@ -307,8 +315,10 @@ func (this *QMetaObject) constructor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11constructorEi
+    // invoke: QMetaMethod constructor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject11constructorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "constructor", args)
   }
@@ -341,6 +351,8 @@ func (this *QMetaObject) enumeratorOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16enumeratorOffsetEv
+    // invoke: int enumeratorOffset()
+    C._ZNK11QMetaObject16enumeratorOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorOffset", args)
   }
@@ -360,8 +372,10 @@ func (this *QMetaObject) property(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject8propertyEi
+    // invoke: QMetaProperty property(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject8propertyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "property", args)
   }
@@ -394,6 +408,8 @@ func (this *QMetaObject) userProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject12userPropertyEv
+    // invoke: QMetaProperty userProperty()
+    C._ZNK11QMetaObject12userPropertyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "userProperty", args)
   }
@@ -413,8 +429,10 @@ func (this *QMetaObject) indexOfProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15indexOfPropertyEPKc
+    // invoke: int indexOfProperty(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject15indexOfPropertyEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfProperty", args)
   }
@@ -434,8 +452,10 @@ func (this *QMetaObject) indexOfClassInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16indexOfClassInfoEPKc
+    // invoke: int indexOfClassInfo(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject16indexOfClassInfoEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfClassInfo", args)
   }
@@ -472,12 +492,16 @@ func (this *QMetaObject) cast(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject4castEPK7QObject
+    // invoke: const QObject * cast(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject4castEPK7QObject(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK11QMetaObject4castEP7QObject
+    // invoke: QObject * cast(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject4castEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "cast", args)
   }
@@ -497,8 +521,10 @@ func (this *QMetaObject) method(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject6methodEi
+    // invoke: QMetaMethod method(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject6methodEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "method", args)
   }
@@ -517,6 +543,8 @@ func (this *QMetaObject) superClass(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject10superClassEv
+    // invoke: const QMetaObject * superClass()
+    C.demth_ZNK11QMetaObject10superClassEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "superClass", args)
   }
@@ -535,6 +563,8 @@ func (this *QMetaObject) propertyCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13propertyCountEv
+    // invoke: int propertyCount()
+    C._ZNK11QMetaObject13propertyCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyCount", args)
   }
@@ -554,8 +584,10 @@ func (this *QMetaObject) classInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject9classInfoEi
+    // invoke: QMetaClassInfo classInfo(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject9classInfoEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfo", args)
   }
@@ -574,6 +606,8 @@ func (this *QMetaObject) className(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject9classNameEv
+    // invoke: const char * className()
+    C._ZNK11QMetaObject9classNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "className", args)
   }
@@ -593,8 +627,10 @@ func (this *QMetaObject) indexOfSignal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject13indexOfSignalEPKc
+    // invoke: int indexOfSignal(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject13indexOfSignalEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfSignal", args)
   }
@@ -627,6 +663,8 @@ func (this *QMetaObject) constructorCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject16constructorCountEv
+    // invoke: int constructorCount()
+    C._ZNK11QMetaObject16constructorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "constructorCount", args)
   }
@@ -645,6 +683,8 @@ func (this *QMetaObject) propertyOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject14propertyOffsetEv
+    // invoke: int propertyOffset()
+    C._ZNK11QMetaObject14propertyOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "propertyOffset", args)
   }
@@ -677,6 +717,8 @@ func (this *QMetaObject) enumeratorCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15enumeratorCountEv
+    // invoke: int enumeratorCount()
+    C._ZNK11QMetaObject15enumeratorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "enumeratorCount", args)
   }
@@ -695,6 +737,8 @@ func (this *QMetaObject) classInfoOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject15classInfoOffsetEv
+    // invoke: int classInfoOffset()
+    C._ZNK11QMetaObject15classInfoOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoOffset", args)
   }
@@ -713,6 +757,8 @@ func (this *QMetaObject) methodOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject12methodOffsetEv
+    // invoke: int methodOffset()
+    C._ZNK11QMetaObject12methodOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "methodOffset", args)
   }
@@ -732,8 +778,10 @@ func (this *QMetaObject) indexOfEnumerator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject17indexOfEnumeratorEPKc
+    // invoke: int indexOfEnumerator(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK11QMetaObject17indexOfEnumeratorEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaObject", "indexOfEnumerator", args)
   }
@@ -752,6 +800,8 @@ func (this *QMetaObject) methodCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject11methodCountEv
+    // invoke: int methodCount()
+    C._ZNK11QMetaObject11methodCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "methodCount", args)
   }
@@ -770,6 +820,8 @@ func (this *QMetaObject) classInfoCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMetaObject14classInfoCountEv
+    // invoke: int classInfoCount()
+    C._ZNK11QMetaObject14classInfoCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaObject", "classInfoCount", args)
   }
@@ -788,6 +840,8 @@ func (this *QGenericArgument) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QGenericArgument4nameEv
+    // invoke: const char * name()
+    C.demth_ZNK16QGenericArgument4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericArgument", "name", args)
   }
@@ -806,6 +860,8 @@ func (this *QGenericArgument) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QGenericArgument4dataEv
+    // invoke: void * data()
+    C.demth_ZNK16QGenericArgument4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericArgument", "data", args)
   }

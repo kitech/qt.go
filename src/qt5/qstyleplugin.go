@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -72,8 +72,10 @@ func (this *QStylePlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStylePlugin6createERK7QString
+    // invoke: QStyle * create(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QStylePlugin6createERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStylePlugin", "create", args)
   }
@@ -92,6 +94,8 @@ func (this *QStylePlugin) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStylePlugin10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QStylePlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStylePlugin", "metaObject", args)
   }

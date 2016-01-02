@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -33,11 +33,11 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QHashData::hasShrunk();
-extern void _ZN9QHashData9hasShrunkEv(void* qthis);
+extern void demth_ZN9QHashData9hasShrunkEv(void* qthis);
   // proto:  void * QHashData::allocateNode(int nodeAlign);
 extern void _ZN9QHashData12allocateNodeEi(void* qthis, int arg0);
   // proto:  bool QHashData::willGrow();
-extern void _ZN9QHashData8willGrowEv(void* qthis);
+extern void demth_ZN9QHashData8willGrowEv(void* qthis);
   // proto:  void QHashData::rehash(int hint);
 extern void _ZN9QHashData6rehashEi(void* qthis, int arg0);
   // proto:  void QHashData::freeNode(void * node);
@@ -78,6 +78,8 @@ func (this *QHashData) hasShrunk(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QHashData9hasShrunkEv
+    // invoke: void hasShrunk()
+    C.demth_ZN9QHashData9hasShrunkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "hasShrunk", args)
   }
@@ -97,8 +99,10 @@ func (this *QHashData) allocateNode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QHashData12allocateNodeEi
+    // invoke: void * allocateNode(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "allocateNode", args)
   }
@@ -117,6 +121,8 @@ func (this *QHashData) willGrow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QHashData8willGrowEv
+    // invoke: bool willGrow()
+    C.demth_ZN9QHashData8willGrowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHashData", "willGrow", args)
   }
@@ -136,8 +142,10 @@ func (this *QHashData) rehash(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QHashData6rehashEi
+    // invoke: void rehash(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QHashData6rehashEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "rehash", args)
   }
@@ -157,8 +165,10 @@ func (this *QHashData) freeNode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QHashData8freeNodeEPv
+    // invoke: void freeNode(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
+    C._ZN9QHashData8freeNodeEPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHashData", "freeNode", args)
   }

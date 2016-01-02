@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsharedmemory.h
 // dst-file: /src/core/qsharedmemory.go
 //
@@ -99,6 +99,8 @@ func (this *QSharedMemory) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory4sizeEv
+    // invoke: int size()
+    C._ZNK13QSharedMemory4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "size", args)
   }
@@ -118,8 +120,10 @@ func (this *QSharedMemory) setNativeKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory12setNativeKeyERK7QString
+    // invoke: void setNativeKey(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QSharedMemory12setNativeKeyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSharedMemory", "setNativeKey", args)
   }
@@ -143,6 +147,8 @@ func (this *QSharedMemory) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK13QSharedMemory11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "errorString", args)
   }
@@ -162,8 +168,10 @@ func (this *QSharedMemory) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6setKeyERK7QString
+    // invoke: void setKey(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QSharedMemory6setKeyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSharedMemory", "setKey", args)
   }
@@ -182,6 +190,8 @@ func (this *QSharedMemory) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory3keyEv
+    // invoke: QString key()
+    C._ZNK13QSharedMemory3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "key", args)
   }
@@ -200,6 +210,8 @@ func (this *QSharedMemory) constData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory9constDataEv
+    // invoke: const void * constData()
+    C._ZNK13QSharedMemory9constDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "constData", args)
   }
@@ -219,9 +231,9 @@ func (this *QSharedMemory) data(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QSharedMemory4dataEv
-  case 1:
     // invoke: _ZN13QSharedMemory4dataEv
+    // invoke: void * data()
+    C._ZN13QSharedMemory4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "data", args)
   }
@@ -240,6 +252,8 @@ func (this *QSharedMemory) isAttached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory10isAttachedEv
+    // invoke: bool isAttached()
+    C._ZNK13QSharedMemory10isAttachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "isAttached", args)
   }
@@ -258,6 +272,8 @@ func (this *QSharedMemory) lock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory4lockEv
+    // invoke: bool lock()
+    C._ZN13QSharedMemory4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "lock", args)
   }
@@ -290,6 +306,8 @@ func (this *QSharedMemory) unlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6unlockEv
+    // invoke: bool unlock()
+    C._ZN13QSharedMemory6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "unlock", args)
   }
@@ -308,6 +326,8 @@ func (this *QSharedMemory) detach(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSharedMemory6detachEv
+    // invoke: bool detach()
+    C._ZN13QSharedMemory6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "detach", args)
   }
@@ -326,6 +346,8 @@ func (this *QSharedMemory) nativeKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory9nativeKeyEv
+    // invoke: QString nativeKey()
+    C._ZNK13QSharedMemory9nativeKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "nativeKey", args)
   }
@@ -344,6 +366,8 @@ func (this *QSharedMemory) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSharedMemory10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QSharedMemory10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSharedMemory", "metaObject", args)
   }

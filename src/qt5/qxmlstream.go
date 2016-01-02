@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -423,6 +423,8 @@ func (this *QXmlStreamStringRef) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef4sizeEv
+    // invoke: int size()
+    C.demth_ZNK19QXmlStreamStringRef4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "size", args)
   }
@@ -441,6 +443,8 @@ func (this *QXmlStreamStringRef) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QXmlStreamStringRef5clearEv
+    // invoke: void clear()
+    C.demth_ZN19QXmlStreamStringRef5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "clear", args)
   }
@@ -459,6 +463,8 @@ func (this *QXmlStreamStringRef) string(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef6stringEv
+    // invoke: const QString * string()
+    C.demth_ZNK19QXmlStreamStringRef6stringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "string", args)
   }
@@ -496,6 +502,8 @@ func (this *QXmlStreamStringRef) position(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamStringRef8positionEv
+    // invoke: int position()
+    C.demth_ZNK19QXmlStreamStringRef8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamStringRef", "position", args)
   }
@@ -514,6 +522,8 @@ func (this *QXmlStreamReader) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4nameEv
+    // invoke: QStringRef name()
+    C._ZNK16QXmlStreamReader4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "name", args)
   }
@@ -532,6 +542,8 @@ func (this *QXmlStreamReader) entityResolver(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14entityResolverEv
+    // invoke: QXmlStreamEntityResolver * entityResolver()
+    C._ZNK16QXmlStreamReader14entityResolverEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityResolver", args)
   }
@@ -550,6 +562,8 @@ func (this *QXmlStreamReader) namespaceProcessing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader19namespaceProcessingEv
+    // invoke: bool namespaceProcessing()
+    C._ZNK16QXmlStreamReader19namespaceProcessingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceProcessing", args)
   }
@@ -568,6 +582,8 @@ func (this *QXmlStreamReader) isStartElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader14isStartElementEv
+    // invoke: bool isStartElement()
+    C.demth_ZNK16QXmlStreamReader14isStartElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartElement", args)
   }
@@ -586,6 +602,8 @@ func (this *QXmlStreamReader) isStandaloneDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20isStandaloneDocumentEv
+    // invoke: bool isStandaloneDocument()
+    C._ZNK16QXmlStreamReader20isStandaloneDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStandaloneDocument", args)
   }
@@ -604,6 +622,8 @@ func (this *QXmlStreamReader) lineNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10lineNumberEv
+    // invoke: qint64 lineNumber()
+    C._ZNK16QXmlStreamReader10lineNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "lineNumber", args)
   }
@@ -622,6 +642,8 @@ func (this *QXmlStreamReader) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader5clearEv
+    // invoke: void clear()
+    C._ZN16QXmlStreamReader5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "clear", args)
   }
@@ -640,6 +662,8 @@ func (this *QXmlStreamReader) processingInstructionData(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader25processingInstructionDataEv
+    // invoke: QStringRef processingInstructionData()
+    C._ZNK16QXmlStreamReader25processingInstructionDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionData", args)
   }
@@ -665,16 +689,22 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader7addDataERK7QString
+    // invoke: void addData(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader7addDataERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamReader7addDataEPKc
+    // invoke: void addData(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader7addDataEPKc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamReader7addDataERK10QByteArray
+    // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader7addDataERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addData", args)
   }
@@ -693,6 +723,8 @@ func (this *QXmlStreamReader) dtdPublicId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdPublicIdEv
+    // invoke: QStringRef dtdPublicId()
+    C._ZNK16QXmlStreamReader11dtdPublicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdPublicId", args)
   }
@@ -711,6 +743,8 @@ func (this *QXmlStreamReader) documentEncoding(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader16documentEncodingEv
+    // invoke: QStringRef documentEncoding()
+    C._ZNK16QXmlStreamReader16documentEncodingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentEncoding", args)
   }
@@ -729,6 +763,8 @@ func (this *QXmlStreamReader) characterOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15characterOffsetEv
+    // invoke: qint64 characterOffset()
+    C._ZNK16QXmlStreamReader15characterOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "characterOffset", args)
   }
@@ -747,6 +783,8 @@ func (this *QXmlStreamReader) attributes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader10attributesEv
+    // invoke: QXmlStreamAttributes attributes()
+    C._ZNK16QXmlStreamReader10attributesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "attributes", args)
   }
@@ -765,6 +803,8 @@ func (this *QXmlStreamReader) tokenString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11tokenStringEv
+    // invoke: QString tokenString()
+    C._ZNK16QXmlStreamReader11tokenStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "tokenString", args)
   }
@@ -784,8 +824,10 @@ func (this *QXmlStreamReader) addExtraNamespaceDeclaration(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration
+    // invoke: void addExtraNamespaceDeclaration(const class QXmlStreamNamespaceDeclaration &)
     var arg0 = args[0].(QXmlStreamNamespaceDeclaration).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader28addExtraNamespaceDeclarationERK30QXmlStreamNamespaceDeclaration(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "addExtraNamespaceDeclaration", args)
   }
@@ -809,6 +851,8 @@ func (this *QXmlStreamReader) qualifiedName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13qualifiedNameEv
+    // invoke: QStringRef qualifiedName()
+    C._ZNK16QXmlStreamReader13qualifiedNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "qualifiedName", args)
   }
@@ -827,6 +871,8 @@ func (this *QXmlStreamReader) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK16QXmlStreamReader6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "device", args)
   }
@@ -845,6 +891,8 @@ func (this *QXmlStreamReader) namespaceUri(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12namespaceUriEv
+    // invoke: QStringRef namespaceUri()
+    C._ZNK16QXmlStreamReader12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceUri", args)
   }
@@ -863,6 +911,8 @@ func (this *QXmlStreamReader) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader4textEv
+    // invoke: QStringRef text()
+    C._ZNK16QXmlStreamReader4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "text", args)
   }
@@ -882,8 +932,10 @@ func (this *QXmlStreamReader) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setDevice", args)
   }
@@ -902,6 +954,8 @@ func (this *QXmlStreamReader) documentVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15documentVersionEv
+    // invoke: QStringRef documentVersion()
+    C._ZNK16QXmlStreamReader15documentVersionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "documentVersion", args)
   }
@@ -920,6 +974,8 @@ func (this *QXmlStreamReader) isDTD(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5isDTDEv
+    // invoke: bool isDTD()
+    C.demth_ZNK16QXmlStreamReader5isDTDEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isDTD", args)
   }
@@ -938,6 +994,8 @@ func (this *QXmlStreamReader) isStartDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader15isStartDocumentEv
+    // invoke: bool isStartDocument()
+    C.demth_ZNK16QXmlStreamReader15isStartDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isStartDocument", args)
   }
@@ -956,6 +1014,8 @@ func (this *QXmlStreamReader) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK16QXmlStreamReader11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "errorString", args)
   }
@@ -974,6 +1034,8 @@ func (this *QXmlStreamReader) isProcessingInstruction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader23isProcessingInstructionEv
+    // invoke: bool isProcessingInstruction()
+    C.demth_ZNK16QXmlStreamReader23isProcessingInstructionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isProcessingInstruction", args)
   }
@@ -993,8 +1055,10 @@ func (this *QXmlStreamReader) setEntityResolver(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver
+    // invoke: void setEntityResolver(class QXmlStreamEntityResolver *)
     var arg0 = args[0].(QXmlStreamEntityResolver).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader17setEntityResolverEP24QXmlStreamEntityResolver(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setEntityResolver", args)
   }
@@ -1013,6 +1077,8 @@ func (this *QXmlStreamReader) isCharacters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isCharactersEv
+    // invoke: bool isCharacters()
+    C.demth_ZNK16QXmlStreamReader12isCharactersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCharacters", args)
   }
@@ -1031,6 +1097,8 @@ func (this *QXmlStreamReader) entityDeclarations(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader18entityDeclarationsEv
+    // invoke: QXmlStreamEntityDeclarations entityDeclarations()
+    C._ZNK16QXmlStreamReader18entityDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "entityDeclarations", args)
   }
@@ -1049,6 +1117,8 @@ func (this *QXmlStreamReader) isWhitespace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isWhitespaceEv
+    // invoke: bool isWhitespace()
+    C._ZNK16QXmlStreamReader12isWhitespaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isWhitespace", args)
   }
@@ -1067,6 +1137,8 @@ func (this *QXmlStreamReader) columnNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12columnNumberEv
+    // invoke: qint64 columnNumber()
+    C._ZNK16QXmlStreamReader12columnNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "columnNumber", args)
   }
@@ -1085,6 +1157,8 @@ func (this *QXmlStreamReader) hasError(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader8hasErrorEv
+    // invoke: bool hasError()
+    C.demth_ZNK16QXmlStreamReader8hasErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "hasError", args)
   }
@@ -1103,6 +1177,8 @@ func (this *QXmlStreamReader) isCDATA(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7isCDATAEv
+    // invoke: bool isCDATA()
+    C._ZNK16QXmlStreamReader7isCDATAEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isCDATA", args)
   }
@@ -1135,6 +1211,8 @@ func (this *QXmlStreamReader) processingInstructionTarget(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader27processingInstructionTargetEv
+    // invoke: QStringRef processingInstructionTarget()
+    C._ZNK16QXmlStreamReader27processingInstructionTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "processingInstructionTarget", args)
   }
@@ -1153,6 +1231,8 @@ func (this *QXmlStreamReader) dtdSystemId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader11dtdSystemIdEv
+    // invoke: QStringRef dtdSystemId()
+    C._ZNK16QXmlStreamReader11dtdSystemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdSystemId", args)
   }
@@ -1171,6 +1251,8 @@ func (this *QXmlStreamReader) prefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader6prefixEv
+    // invoke: QStringRef prefix()
+    C._ZNK16QXmlStreamReader6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "prefix", args)
   }
@@ -1189,6 +1271,8 @@ func (this *QXmlStreamReader) isEndElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader12isEndElementEv
+    // invoke: bool isEndElement()
+    C.demth_ZNK16QXmlStreamReader12isEndElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndElement", args)
   }
@@ -1207,6 +1291,8 @@ func (this *QXmlStreamReader) notationDeclarations(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader20notationDeclarationsEv
+    // invoke: QXmlStreamNotationDeclarations notationDeclarations()
+    C._ZNK16QXmlStreamReader20notationDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "notationDeclarations", args)
   }
@@ -1225,6 +1311,8 @@ func (this *QXmlStreamReader) namespaceDeclarations(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader21namespaceDeclarationsEv
+    // invoke: QXmlStreamNamespaceDeclarations namespaceDeclarations()
+    C._ZNK16QXmlStreamReader21namespaceDeclarationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "namespaceDeclarations", args)
   }
@@ -1244,8 +1332,10 @@ func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader22setNamespaceProcessingEb
+    // invoke: void setNamespaceProcessing(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader22setNamespaceProcessingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "setNamespaceProcessing", args)
   }
@@ -1265,8 +1355,10 @@ func (this *QXmlStreamReader) raiseError(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader10raiseErrorERK7QString
+    // invoke: void raiseError(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamReader10raiseErrorERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "raiseError", args)
   }
@@ -1285,6 +1377,8 @@ func (this *QXmlStreamReader) dtdName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader7dtdNameEv
+    // invoke: QStringRef dtdName()
+    C._ZNK16QXmlStreamReader7dtdNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "dtdName", args)
   }
@@ -1303,6 +1397,8 @@ func (this *QXmlStreamReader) isEndDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader13isEndDocumentEv
+    // invoke: bool isEndDocument()
+    C.demth_ZNK16QXmlStreamReader13isEndDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEndDocument", args)
   }
@@ -1321,6 +1417,8 @@ func (this *QXmlStreamReader) readNextStartElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader20readNextStartElementEv
+    // invoke: bool readNextStartElement()
+    C._ZN16QXmlStreamReader20readNextStartElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "readNextStartElement", args)
   }
@@ -1339,6 +1437,8 @@ func (this *QXmlStreamReader) isComment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader9isCommentEv
+    // invoke: bool isComment()
+    C.demth_ZNK16QXmlStreamReader9isCommentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isComment", args)
   }
@@ -1357,6 +1457,8 @@ func (this *QXmlStreamReader) skipCurrentElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamReader18skipCurrentElementEv
+    // invoke: void skipCurrentElement()
+    C._ZN16QXmlStreamReader18skipCurrentElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "skipCurrentElement", args)
   }
@@ -1375,6 +1477,8 @@ func (this *QXmlStreamReader) isEntityReference(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader17isEntityReferenceEv
+    // invoke: bool isEntityReference()
+    C.demth_ZNK16QXmlStreamReader17isEntityReferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "isEntityReference", args)
   }
@@ -1393,6 +1497,8 @@ func (this *QXmlStreamReader) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamReader5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK16QXmlStreamReader5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamReader", "atEnd", args)
   }
@@ -1413,10 +1519,12 @@ func (this *QXmlStreamEntityResolver) resolveEntity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_
+    // invoke: QString resolveEntity(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN24QXmlStreamEntityResolver13resolveEntityERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveEntity", args)
   }
@@ -1436,8 +1544,10 @@ func (this *QXmlStreamEntityResolver) resolveUndeclaredEntity(args ...interface{
   switch matched_index {
   case 0:
     // invoke: _ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString
+    // invoke: QString resolveUndeclaredEntity(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QXmlStreamEntityResolver23resolveUndeclaredEntityERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityResolver", "resolveUndeclaredEntity", args)
   }
@@ -1470,6 +1580,8 @@ func (this *QXmlStreamNamespaceDeclaration) namespaceUri(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv
+    // invoke: QStringRef namespaceUri()
+    C.demth_ZNK30QXmlStreamNamespaceDeclaration12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "namespaceUri", args)
   }
@@ -1493,6 +1605,8 @@ func (this *QXmlStreamNamespaceDeclaration) prefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QXmlStreamNamespaceDeclaration6prefixEv
+    // invoke: QStringRef prefix()
+    C.demth_ZNK30QXmlStreamNamespaceDeclaration6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNamespaceDeclaration", "prefix", args)
   }
@@ -1539,6 +1653,8 @@ func (this *QXmlStreamEntityDeclaration) publicId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8publicIdEv
+    // invoke: QStringRef publicId()
+    C.demth_ZNK27QXmlStreamEntityDeclaration8publicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "publicId", args)
   }
@@ -1557,6 +1673,8 @@ func (this *QXmlStreamEntityDeclaration) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration4nameEv
+    // invoke: QStringRef name()
+    C.demth_ZNK27QXmlStreamEntityDeclaration4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "name", args)
   }
@@ -1580,6 +1698,8 @@ func (this *QXmlStreamEntityDeclaration) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration5valueEv
+    // invoke: QStringRef value()
+    C.demth_ZNK27QXmlStreamEntityDeclaration5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "value", args)
   }
@@ -1598,6 +1718,8 @@ func (this *QXmlStreamEntityDeclaration) notationName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration12notationNameEv
+    // invoke: QStringRef notationName()
+    C.demth_ZNK27QXmlStreamEntityDeclaration12notationNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "notationName", args)
   }
@@ -1616,6 +1738,8 @@ func (this *QXmlStreamEntityDeclaration) systemId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QXmlStreamEntityDeclaration8systemIdEv
+    // invoke: QStringRef systemId()
+    C.demth_ZNK27QXmlStreamEntityDeclaration8systemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamEntityDeclaration", "systemId", args)
   }
@@ -1650,30 +1774,18 @@ func (this *QXmlStreamAttributes) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QXmlStreamAttributes5valueERK7QString
+    // invoke: QStringRef value(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QXmlStreamAttributes5valueERK7QString(this.qclsinst, arg0)
   case 1:
-    // invoke: _ZNK20QXmlStreamAttributes5valueE13QLatin1StringS0_
-    var arg0 = args[0].(QLatin1String).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QLatin1String).qclsinst
-    if false {fmt.Println(arg1)}
-  case 2:
-    // invoke: _ZNK20QXmlStreamAttributes5valueERK7QString13QLatin1String
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QLatin1String).qclsinst
-    if false {fmt.Println(arg1)}
-  case 3:
     // invoke: _ZNK20QXmlStreamAttributes5valueERK7QStringS2_
+    // invoke: QStringRef value(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-  case 4:
-    // invoke: _ZNK20QXmlStreamAttributes5valueE13QLatin1String
-    var arg0 = args[0].(QLatin1String).qclsinst
-    if false {fmt.Println(arg0)}
+    C._ZNK20QXmlStreamAttributes5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "value", args)
   }
@@ -1705,18 +1817,18 @@ func (this *QXmlStreamAttributes) hasAttribute(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QXmlStreamAttributes12hasAttributeERK7QString
+    // invoke: bool hasAttribute(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_
+    // invoke: bool hasAttribute(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-  case 2:
-    // invoke: _ZNK20QXmlStreamAttributes12hasAttributeE13QLatin1String
-    var arg0 = args[0].(QLatin1String).qclsinst
-    if false {fmt.Println(arg0)}
+    C.demth_ZNK20QXmlStreamAttributes12hasAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "hasAttribute", args)
   }
@@ -1742,18 +1854,22 @@ func (this *QXmlStreamAttributes) append(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_
+    // invoke: void append(const class QString &, const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QXmlStreamAttributes6appendERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN20QXmlStreamAttributes6appendERK7QStringS2_
+    // invoke: void append(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN20QXmlStreamAttributes6appendERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamAttributes", "append", args)
   }
@@ -1772,6 +1888,8 @@ func (this *QXmlStreamWriter) writeEndElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeEndElementEv
+    // invoke: void writeEndElement()
+    C._ZN16QXmlStreamWriter15writeEndElementEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndElement", args)
   }
@@ -1795,6 +1913,8 @@ func (this *QXmlStreamWriter) writeEndDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter16writeEndDocumentEv
+    // invoke: void writeEndDocument()
+    C._ZN16QXmlStreamWriter16writeEndDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEndDocument", args)
   }
@@ -1813,6 +1933,8 @@ func (this *QXmlStreamWriter) autoFormatting(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter14autoFormattingEv
+    // invoke: bool autoFormatting()
+    C._ZNK16QXmlStreamWriter14autoFormattingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormatting", args)
   }
@@ -1838,16 +1960,22 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb
+    // invoke: void writeStartDocument(const class QString &, _Bool)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentERK7QString
+    // invoke: void writeStartDocument(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter18writeStartDocumentERK7QString(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamWriter18writeStartDocumentEv
+    // invoke: void writeStartDocument()
+    C._ZN16QXmlStreamWriter18writeStartDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartDocument", args)
   }
@@ -1870,12 +1998,16 @@ func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter8setCodecEP10QTextCodec
+    // invoke: void setCodec(class QTextCodec *)
     var arg0 = args[0].(QTextCodec).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter8setCodecEP10QTextCodec(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamWriter8setCodecEPKc
+    // invoke: void setCodec(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter8setCodecEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setCodec", args)
   }
@@ -1896,10 +2028,12 @@ func (this *QXmlStreamWriter) writeProcessingInstruction(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_
+    // invoke: void writeProcessingInstruction(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter26writeProcessingInstructionERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeProcessingInstruction", args)
   }
@@ -1919,8 +2053,10 @@ func (this *QXmlStreamWriter) writeCharacters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeCharactersERK7QString
+    // invoke: void writeCharacters(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter15writeCharactersERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCharacters", args)
   }
@@ -1940,8 +2076,10 @@ func (this *QXmlStreamWriter) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setDevice", args)
   }
@@ -1967,18 +2105,22 @@ func (this *QXmlStreamWriter) writeTextElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_
+    // invoke: void writeTextElement(const class QString &, const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_
+    // invoke: void writeTextElement(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter16writeTextElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeTextElement", args)
   }
@@ -2007,22 +2149,28 @@ func (this *QXmlStreamWriter) writeAttribute(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_
+    // invoke: void writeAttribute(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute
+    // invoke: void writeAttribute(const class QXmlStreamAttribute &)
     var arg0 = args[0].(QXmlStreamAttribute).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_
+    // invoke: void writeAttribute(const class QString &, const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN16QXmlStreamWriter14writeAttributeERK7QStringS2_S2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttribute", args)
   }
@@ -2046,14 +2194,18 @@ func (this *QXmlStreamWriter) writeEmptyElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeEmptyElementERK7QString
+    // invoke: void writeEmptyElement(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter17writeEmptyElementERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_
+    // invoke: void writeEmptyElement(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter17writeEmptyElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEmptyElement", args)
   }
@@ -2073,8 +2225,10 @@ func (this *QXmlStreamWriter) writeDTD(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter8writeDTDERK7QString
+    // invoke: void writeDTD(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter8writeDTDERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDTD", args)
   }
@@ -2094,8 +2248,10 @@ func (this *QXmlStreamWriter) setAutoFormattingIndent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter23setAutoFormattingIndentEi
+    // invoke: void setAutoFormattingIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter23setAutoFormattingIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormattingIndent", args)
   }
@@ -2119,14 +2275,18 @@ func (this *QXmlStreamWriter) writeStartElement(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_
+    // invoke: void writeStartElement(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter17writeStartElementERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QXmlStreamWriter17writeStartElementERK7QString
+    // invoke: void writeStartElement(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter17writeStartElementERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeStartElement", args)
   }
@@ -2146,8 +2306,10 @@ func (this *QXmlStreamWriter) writeComment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter12writeCommentERK7QString
+    // invoke: void writeComment(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter12writeCommentERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeComment", args)
   }
@@ -2166,6 +2328,8 @@ func (this *QXmlStreamWriter) codec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter5codecEv
+    // invoke: QTextCodec * codec()
+    C._ZNK16QXmlStreamWriter5codecEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "codec", args)
   }
@@ -2186,10 +2350,12 @@ func (this *QXmlStreamWriter) writeNamespace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_
+    // invoke: void writeNamespace(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QXmlStreamWriter14writeNamespaceERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeNamespace", args)
   }
@@ -2208,6 +2374,8 @@ func (this *QXmlStreamWriter) hasError(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter8hasErrorEv
+    // invoke: bool hasError()
+    C._ZNK16QXmlStreamWriter8hasErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "hasError", args)
   }
@@ -2227,8 +2395,10 @@ func (this *QXmlStreamWriter) writeCDATA(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter10writeCDATAERK7QString
+    // invoke: void writeCDATA(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter10writeCDATAERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCDATA", args)
   }
@@ -2248,8 +2418,10 @@ func (this *QXmlStreamWriter) writeEntityReference(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString
+    // invoke: void writeEntityReference(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeEntityReference", args)
   }
@@ -2269,8 +2441,10 @@ func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17setAutoFormattingEb
+    // invoke: void setAutoFormatting(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter17setAutoFormattingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "setAutoFormatting", args)
   }
@@ -2289,6 +2463,8 @@ func (this *QXmlStreamWriter) autoFormattingIndent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter20autoFormattingIndentEv
+    // invoke: int autoFormattingIndent()
+    C._ZNK16QXmlStreamWriter20autoFormattingIndentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "autoFormattingIndent", args)
   }
@@ -2322,8 +2498,10 @@ func (this *QXmlStreamWriter) writeAttributes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes
+    // invoke: void writeAttributes(const class QXmlStreamAttributes &)
     var arg0 = args[0].(QXmlStreamAttributes).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter15writeAttributesERK20QXmlStreamAttributes(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeAttributes", args)
   }
@@ -2343,8 +2521,10 @@ func (this *QXmlStreamWriter) writeDefaultNamespace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString
+    // invoke: void writeDefaultNamespace(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter21writeDefaultNamespaceERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeDefaultNamespace", args)
   }
@@ -2363,6 +2543,8 @@ func (this *QXmlStreamWriter) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QXmlStreamWriter6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK16QXmlStreamWriter6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "device", args)
   }
@@ -2382,8 +2564,10 @@ func (this *QXmlStreamWriter) writeCurrentToken(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader
+    // invoke: void writeCurrentToken(const class QXmlStreamReader &)
     var arg0 = args[0].(QXmlStreamReader).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QXmlStreamWriter17writeCurrentTokenERK16QXmlStreamReader(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QXmlStreamWriter", "writeCurrentToken", args)
   }
@@ -2407,6 +2591,8 @@ func (this *QXmlStreamNotationDeclaration) publicId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8publicIdEv
+    // invoke: QStringRef publicId()
+    C.demth_ZNK29QXmlStreamNotationDeclaration8publicIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "publicId", args)
   }
@@ -2425,6 +2611,8 @@ func (this *QXmlStreamNotationDeclaration) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration4nameEv
+    // invoke: QStringRef name()
+    C.demth_ZNK29QXmlStreamNotationDeclaration4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "name", args)
   }
@@ -2457,6 +2645,8 @@ func (this *QXmlStreamNotationDeclaration) systemId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QXmlStreamNotationDeclaration8systemIdEv
+    // invoke: QStringRef systemId()
+    C.demth_ZNK29QXmlStreamNotationDeclaration8systemIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamNotationDeclaration", "systemId", args)
   }
@@ -2480,6 +2670,8 @@ func (this *QXmlStreamAttribute) qualifiedName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute13qualifiedNameEv
+    // invoke: QStringRef qualifiedName()
+    C.demth_ZNK19QXmlStreamAttribute13qualifiedNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "qualifiedName", args)
   }
@@ -2512,6 +2704,8 @@ func (this *QXmlStreamAttribute) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute5valueEv
+    // invoke: QStringRef value()
+    C.demth_ZNK19QXmlStreamAttribute5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "value", args)
   }
@@ -2530,6 +2724,8 @@ func (this *QXmlStreamAttribute) namespaceUri(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute12namespaceUriEv
+    // invoke: QStringRef namespaceUri()
+    C.demth_ZNK19QXmlStreamAttribute12namespaceUriEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "namespaceUri", args)
   }
@@ -2548,6 +2744,8 @@ func (this *QXmlStreamAttribute) isDefault(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute9isDefaultEv
+    // invoke: bool isDefault()
+    C.demth_ZNK19QXmlStreamAttribute9isDefaultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "isDefault", args)
   }
@@ -2566,6 +2764,8 @@ func (this *QXmlStreamAttribute) prefix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute6prefixEv
+    // invoke: QStringRef prefix()
+    C.demth_ZNK19QXmlStreamAttribute6prefixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "prefix", args)
   }
@@ -2584,6 +2784,8 @@ func (this *QXmlStreamAttribute) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QXmlStreamAttribute4nameEv
+    // invoke: QStringRef name()
+    C.demth_ZNK19QXmlStreamAttribute4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QXmlStreamAttribute", "name", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -118,8 +118,10 @@ func (this *QSystemTrayIcon) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QSystemTrayIcon10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setVisible", args)
   }
@@ -138,6 +140,8 @@ func (this *QSystemTrayIcon) toolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon7toolTipEv
+    // invoke: QString toolTip()
+    C._ZNK15QSystemTrayIcon7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "toolTip", args)
   }
@@ -161,6 +165,8 @@ func (this *QSystemTrayIcon) hide(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4hideEv
+    // invoke: void hide()
+    C.demth_ZN15QSystemTrayIcon4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "hide", args)
   }
@@ -179,6 +185,8 @@ func (this *QSystemTrayIcon) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QSystemTrayIcon10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "metaObject", args)
   }
@@ -198,8 +206,10 @@ func (this *QSystemTrayIcon) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon7setIconERK5QIcon
+    // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QSystemTrayIcon7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setIcon", args)
   }
@@ -218,6 +228,8 @@ func (this *QSystemTrayIcon) isVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK15QSystemTrayIcon9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "isVisible", args)
   }
@@ -236,6 +248,8 @@ func (this *QSystemTrayIcon) show(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon4showEv
+    // invoke: void show()
+    C.demth_ZN15QSystemTrayIcon4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "show", args)
   }
@@ -269,8 +283,10 @@ func (this *QSystemTrayIcon) setContextMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon14setContextMenuEP5QMenu
+    // invoke: void setContextMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QSystemTrayIcon14setContextMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setContextMenu", args)
   }
@@ -289,6 +305,8 @@ func (this *QSystemTrayIcon) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK15QSystemTrayIcon8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "geometry", args)
   }
@@ -308,8 +326,10 @@ func (this *QSystemTrayIcon) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setToolTipERK7QString
+    // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QSystemTrayIcon10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "setToolTip", args)
   }
@@ -328,6 +348,8 @@ func (this *QSystemTrayIcon) icon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon4iconEv
+    // invoke: QIcon icon()
+    C._ZNK15QSystemTrayIcon4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "icon", args)
   }
@@ -346,6 +368,8 @@ func (this *QSystemTrayIcon) contextMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSystemTrayIcon11contextMenuEv
+    // invoke: QMenu * contextMenu()
+    C._ZNK15QSystemTrayIcon11contextMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemTrayIcon", "contextMenu", args)
   }

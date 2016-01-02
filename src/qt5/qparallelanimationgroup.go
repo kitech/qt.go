@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.go
 //
@@ -93,6 +93,8 @@ func (this *QParallelAnimationGroup) duration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup8durationEv
+    // invoke: int duration()
+    C._ZNK23QParallelAnimationGroup8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "duration", args)
   }
@@ -111,6 +113,8 @@ func (this *QParallelAnimationGroup) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK23QParallelAnimationGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "metaObject", args)
   }

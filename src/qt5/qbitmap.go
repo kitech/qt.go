@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -107,8 +107,10 @@ func (this *QBitmap) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBitmap4swapERS_
+    // invoke: void swap(class QBitmap &)
     var arg0 = args[0].(QBitmap).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QBitmap4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitmap", "swap", args)
   }
@@ -131,12 +133,16 @@ func (this *QBitmap) transformed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBitmap11transformedERK7QMatrix
+    // invoke: QBitmap transformed(const class QMatrix &)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QBitmap11transformedERK7QMatrix(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QBitmap11transformedERK10QTransform
+    // invoke: QBitmap transformed(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QBitmap11transformedERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitmap", "transformed", args)
   }
@@ -155,6 +161,8 @@ func (this *QBitmap) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBitmap5clearEv
+    // invoke: void clear()
+    C.demth_ZN7QBitmap5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitmap", "clear", args)
   }

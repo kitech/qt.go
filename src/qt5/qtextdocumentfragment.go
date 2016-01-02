@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -122,8 +122,10 @@ func (this *QTextDocumentFragment) toHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment6toHtmlERK10QByteArray
+    // invoke: QString toHtml(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK21QTextDocumentFragment6toHtmlERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toHtml", args)
   }
@@ -156,6 +158,8 @@ func (this *QTextDocumentFragment) toPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment11toPlainTextEv
+    // invoke: QString toPlainText()
+    C._ZNK21QTextDocumentFragment11toPlainTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "toPlainText", args)
   }
@@ -174,6 +178,8 @@ func (this *QTextDocumentFragment) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QTextDocumentFragment7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK21QTextDocumentFragment7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextDocumentFragment", "isEmpty", args)
   }

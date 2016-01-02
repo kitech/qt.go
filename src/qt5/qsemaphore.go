@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -81,8 +81,10 @@ func (this *QSemaphore) acquire(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore7acquireEi
+    // invoke: void acquire(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QSemaphore7acquireEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "acquire", args)
   }
@@ -102,8 +104,10 @@ func (this *QSemaphore) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore7releaseEi
+    // invoke: void release(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QSemaphore7releaseEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "release", args)
   }
@@ -122,6 +126,8 @@ func (this *QSemaphore) available(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QSemaphore9availableEv
+    // invoke: int available()
+    C._ZNK10QSemaphore9availableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSemaphore", "available", args)
   }
@@ -145,14 +151,18 @@ func (this *QSemaphore) tryAcquire(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QSemaphore10tryAcquireEii
+    // invoke: bool tryAcquire(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN10QSemaphore10tryAcquireEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN10QSemaphore10tryAcquireEi
+    // invoke: bool tryAcquire(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QSemaphore10tryAcquireEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSemaphore", "tryAcquire", args)
   }

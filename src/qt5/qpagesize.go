@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -120,10 +120,8 @@ func (this *QPageSize) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize3keyEv
-  case 1:
-    // invoke: _ZN9QPageSize3keyENS_10PageSizeIdE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    // invoke: QString key()
+    C._ZNK9QPageSize3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "key", args)
   }
@@ -145,10 +143,8 @@ func (this *QPageSize) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize4nameEv
-  case 1:
-    // invoke: _ZN9QPageSize4nameENS_10PageSizeIdE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    // invoke: QString name()
+    C._ZNK9QPageSize4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "name", args)
   }
@@ -170,10 +166,8 @@ func (this *QPageSize) definitionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize14definitionSizeEv
-  case 1:
-    // invoke: _ZN9QPageSize14definitionSizeENS_10PageSizeIdE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    // invoke: QSizeF definitionSize()
+    C._ZNK9QPageSize14definitionSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "definitionSize", args)
   }
@@ -193,8 +187,10 @@ func (this *QPageSize) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QPageSize4swapERS_
+    // invoke: void swap(class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QPageSize4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "swap", args)
   }
@@ -215,11 +211,9 @@ func (this *QPageSize) windowsId(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN9QPageSize9windowsIdENS_10PageSizeIdE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
-  case 1:
     // invoke: _ZNK9QPageSize9windowsIdEv
+    // invoke: int windowsId()
+    C._ZNK9QPageSize9windowsIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "windowsId", args)
   }
@@ -243,14 +237,10 @@ func (this *QPageSize) sizePixels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10sizePixelsEi
+    // invoke: QSize sizePixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN9QPageSize10sizePixelsENS_10PageSizeIdEi
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
+    C._ZNK9QPageSize10sizePixelsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "sizePixels", args)
   }
@@ -269,6 +259,8 @@ func (this *QPageSize) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize7isValidEv
+    // invoke: bool isValid()
+    C._ZNK9QPageSize7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "isValid", args)
   }
@@ -288,8 +280,10 @@ func (this *QPageSize) rectPixels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10rectPixelsEi
+    // invoke: QRect rectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QPageSize10rectPixelsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "rectPixels", args)
   }
@@ -308,6 +302,8 @@ func (this *QPageSize) rectPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize10rectPointsEv
+    // invoke: QRect rectPoints()
+    C._ZNK9QPageSize10rectPointsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "rectPoints", args)
   }
@@ -327,8 +323,10 @@ func (this *QPageSize) isEquivalentTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QPageSize14isEquivalentToERKS_
+    // invoke: bool isEquivalentTo(const class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QPageSize14isEquivalentToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "isEquivalentTo", args)
   }
@@ -349,11 +347,9 @@ func (this *QPageSize) sizePoints(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN9QPageSize10sizePointsENS_10PageSizeIdE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
-  case 1:
     // invoke: _ZNK9QPageSize10sizePointsEv
+    // invoke: QSize sizePoints()
+    C._ZNK9QPageSize10sizePointsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPageSize", "sizePoints", args)
   }

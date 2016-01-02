@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -109,6 +109,8 @@ func (this *QTimer) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer4stopEv
+    // invoke: void stop()
+    C._ZN6QTimer4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "stop", args)
   }
@@ -127,6 +129,8 @@ func (this *QTimer) timerId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer7timerIdEv
+    // invoke: int timerId()
+    C._ZNK6QTimer7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "timerId", args)
   }
@@ -146,8 +150,10 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer13setSingleShotEb
+    // invoke: void setSingleShot(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QTimer13setSingleShotEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimer", "setSingleShot", args)
   }
@@ -183,10 +189,14 @@ func (this *QTimer) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer5startEv
+    // invoke: void start()
+    C._ZN6QTimer5startEv(this.qclsinst)
   case 1:
     // invoke: _ZN6QTimer5startEi
+    // invoke: void start(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QTimer5startEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimer", "start", args)
   }
@@ -205,6 +215,8 @@ func (this *QTimer) interval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer8intervalEv
+    // invoke: int interval()
+    C._ZNK6QTimer8intervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "interval", args)
   }
@@ -224,8 +236,10 @@ func (this *QTimer) setInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QTimer11setIntervalEi
+    // invoke: void setInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QTimer11setIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimer", "setInterval", args)
   }
@@ -249,6 +263,8 @@ func (this *QTimer) remainingTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer13remainingTimeEv
+    // invoke: int remainingTime()
+    C._ZNK6QTimer13remainingTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "remainingTime", args)
   }
@@ -267,6 +283,8 @@ func (this *QTimer) isSingleShot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer12isSingleShotEv
+    // invoke: bool isSingleShot()
+    C.demth_ZNK6QTimer12isSingleShotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "isSingleShot", args)
   }
@@ -285,6 +303,8 @@ func (this *QTimer) isActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer8isActiveEv
+    // invoke: bool isActive()
+    C.demth_ZNK6QTimer8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "isActive", args)
   }
@@ -303,6 +323,8 @@ func (this *QTimer) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QTimer10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK6QTimer10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "metaObject", args)
   }

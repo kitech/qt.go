@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -91,6 +91,8 @@ func (this *QBackingStore) paintDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore11paintDeviceEv
+    // invoke: QPaintDevice * paintDevice()
+    C._ZN13QBackingStore11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "paintDevice", args)
   }
@@ -109,6 +111,8 @@ func (this *QBackingStore) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore6windowEv
+    // invoke: QWindow * window()
+    C._ZNK13QBackingStore6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "window", args)
   }
@@ -127,6 +131,8 @@ func (this *QBackingStore) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore4sizeEv
+    // invoke: QSize size()
+    C._ZNK13QBackingStore4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "size", args)
   }
@@ -145,6 +151,8 @@ func (this *QBackingStore) staticContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore14staticContentsEv
+    // invoke: QRegion staticContents()
+    C._ZNK13QBackingStore14staticContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "staticContents", args)
   }
@@ -178,8 +186,10 @@ func (this *QBackingStore) setStaticContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore17setStaticContentsERK7QRegion
+    // invoke: void setStaticContents(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QBackingStore17setStaticContentsERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "setStaticContents", args)
   }
@@ -199,8 +209,10 @@ func (this *QBackingStore) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6resizeERK5QSize
+    // invoke: void resize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "resize", args)
   }
@@ -222,12 +234,14 @@ func (this *QBackingStore) flush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint
+    // invoke: void flush(const class QRegion &, class QWindow *, const class QPoint &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWindow).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPoint).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBackingStore", "flush", args)
   }
@@ -247,8 +261,10 @@ func (this *QBackingStore) beginPaint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
+    // invoke: void beginPaint(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
   }
@@ -267,6 +283,8 @@ func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore17hasStaticContentsEv
+    // invoke: bool hasStaticContents()
+    C._ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
   }
@@ -285,6 +303,8 @@ func (this *QBackingStore) endPaint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore8endPaintEv
+    // invoke: void endPaint()
+    C._ZN13QBackingStore8endPaintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "endPaint", args)
   }
@@ -306,12 +326,14 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QBackingStore6scrollERK7QRegionii
+    // invoke: bool scroll(const class QRegion &, int, int)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
   }
@@ -330,6 +352,8 @@ func (this *QBackingStore) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QBackingStore6handleEv
+    // invoke: QPlatformBackingStore * handle()
+    C._ZNK13QBackingStore6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBackingStore", "handle", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qshortcut.h
 // dst-file: /src/widgets/qshortcut.go
 //
@@ -92,8 +92,10 @@ func (this *QShortcut) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut6setKeyERK12QKeySequence
+    // invoke: void setKey(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QShortcut6setKeyERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setKey", args)
   }
@@ -112,6 +114,8 @@ func (this *QShortcut) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QShortcut10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "metaObject", args)
   }
@@ -130,6 +134,8 @@ func (this *QShortcut) parentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut12parentWidgetEv
+    // invoke: QWidget * parentWidget()
+    C.demth_ZNK9QShortcut12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "parentWidget", args)
   }
@@ -149,8 +155,10 @@ func (this *QShortcut) setAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut13setAutoRepeatEb
+    // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QShortcut13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setAutoRepeat", args)
   }
@@ -169,6 +177,8 @@ func (this *QShortcut) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK9QShortcut9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "isEnabled", args)
   }
@@ -187,6 +197,8 @@ func (this *QShortcut) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut3keyEv
+    // invoke: QKeySequence key()
+    C._ZNK9QShortcut3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "key", args)
   }
@@ -220,8 +232,10 @@ func (this *QShortcut) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut12setWhatsThisERK7QString
+    // invoke: void setWhatsThis(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QShortcut12setWhatsThisERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setWhatsThis", args)
   }
@@ -241,8 +255,10 @@ func (this *QShortcut) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QShortcut10setEnabledEb
+    // invoke: void setEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QShortcut10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QShortcut", "setEnabled", args)
   }
@@ -261,6 +277,8 @@ func (this *QShortcut) id(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut2idEv
+    // invoke: int id()
+    C._ZNK9QShortcut2idEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "id", args)
   }
@@ -279,6 +297,8 @@ func (this *QShortcut) whatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut9whatsThisEv
+    // invoke: QString whatsThis()
+    C._ZNK9QShortcut9whatsThisEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "whatsThis", args)
   }
@@ -302,6 +322,8 @@ func (this *QShortcut) autoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QShortcut10autoRepeatEv
+    // invoke: bool autoRepeat()
+    C._ZNK9QShortcut10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcut", "autoRepeat", args)
   }

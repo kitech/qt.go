@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -76,6 +76,8 @@ func (this *QAccessiblePlugin) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessiblePlugin10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QAccessiblePlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "metaObject", args)
   }
@@ -110,10 +112,12 @@ func (this *QAccessiblePlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAccessiblePlugin6createERK7QStringP7QObject
+    // invoke: QAccessibleInterface * create(const class QString &, class QObject *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN17QAccessiblePlugin6createERK7QStringP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "create", args)
   }

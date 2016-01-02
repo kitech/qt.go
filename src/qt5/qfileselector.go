@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -79,6 +79,8 @@ func (this *QFileSelector) allSelectors(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector12allSelectorsEv
+    // invoke: QStringList allSelectors()
+    C._ZNK13QFileSelector12allSelectorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
   }
@@ -97,6 +99,8 @@ func (this *QFileSelector) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QFileSelector10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "metaObject", args)
   }
@@ -135,8 +139,10 @@ func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QFileSelector17setExtraSelectorsERK11QStringList
+    // invoke: void setExtraSelectors(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QFileSelector17setExtraSelectorsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSelector", "setExtraSelectors", args)
   }
@@ -169,6 +175,8 @@ func (this *QFileSelector) extraSelectors(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFileSelector14extraSelectorsEv
+    // invoke: QStringList extraSelectors()
+    C._ZNK13QFileSelector14extraSelectorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
   }

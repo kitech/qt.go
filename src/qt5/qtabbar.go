@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.go
 //
@@ -167,6 +167,8 @@ func (this *QTabBar) usesScrollButtons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar17usesScrollButtonsEv
+    // invoke: bool usesScrollButtons()
+    C._ZNK7QTabBar17usesScrollButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "usesScrollButtons", args)
   }
@@ -185,6 +187,8 @@ func (this *QTabBar) autoHide(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar8autoHideEv
+    // invoke: bool autoHide()
+    C._ZNK7QTabBar8autoHideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "autoHide", args)
   }
@@ -204,8 +208,10 @@ func (this *QTabBar) tabToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar10tabToolTipEi
+    // invoke: QString tabToolTip(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar10tabToolTipEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabToolTip", args)
   }
@@ -224,6 +230,8 @@ func (this *QTabBar) expanding(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar9expandingEv
+    // invoke: bool expanding()
+    C._ZNK7QTabBar9expandingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "expanding", args)
   }
@@ -243,8 +251,10 @@ func (this *QTabBar) setDocumentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar15setDocumentModeEb
+    // invoke: void setDocumentMode(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar15setDocumentModeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setDocumentMode", args)
   }
@@ -263,6 +273,8 @@ func (this *QTabBar) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar5countEv
+    // invoke: int count()
+    C._ZNK7QTabBar5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "count", args)
   }
@@ -282,8 +294,10 @@ func (this *QTabBar) setChangeCurrentOnDrag(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar22setChangeCurrentOnDragEb
+    // invoke: void setChangeCurrentOnDrag(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar22setChangeCurrentOnDragEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setChangeCurrentOnDrag", args)
   }
@@ -303,8 +317,10 @@ func (this *QTabBar) tabIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar7tabIconEi
+    // invoke: QIcon tabIcon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar7tabIconEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabIcon", args)
   }
@@ -323,6 +339,8 @@ func (this *QTabBar) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK7QTabBar15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "minimumSizeHint", args)
   }
@@ -342,8 +360,10 @@ func (this *QTabBar) setTabsClosable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar15setTabsClosableEb
+    // invoke: void setTabsClosable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar15setTabsClosableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabsClosable", args)
   }
@@ -362,6 +382,8 @@ func (this *QTabBar) changeCurrentOnDrag(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar19changeCurrentOnDragEv
+    // invoke: bool changeCurrentOnDrag()
+    C._ZNK7QTabBar19changeCurrentOnDragEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "changeCurrentOnDrag", args)
   }
@@ -382,10 +404,12 @@ func (this *QTabBar) setTabWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar15setTabWhatsThisEiRK7QString
+    // invoke: void setTabWhatsThis(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar15setTabWhatsThisEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabWhatsThis", args)
   }
@@ -404,6 +428,8 @@ func (this *QTabBar) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QTabBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "metaObject", args)
   }
@@ -434,18 +460,22 @@ func (this *QTabBar) insertTab(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar9insertTabEiRK5QIconRK7QString
+    // invoke: int insertTab(int, const class QIcon &, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN7QTabBar9insertTabEiRK5QIconRK7QString(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN7QTabBar9insertTabEiRK7QString
+    // invoke: int insertTab(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar9insertTabEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "insertTab", args)
   }
@@ -466,10 +496,12 @@ func (this *QTabBar) setTabIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar10setTabIconEiRK5QIcon
+    // invoke: void setTabIcon(int, const class QIcon &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar10setTabIconEiRK5QIcon(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabIcon", args)
   }
@@ -488,6 +520,8 @@ func (this *QTabBar) isMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar9isMovableEv
+    // invoke: bool isMovable()
+    C._ZNK7QTabBar9isMovableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "isMovable", args)
   }
@@ -507,8 +541,10 @@ func (this *QTabBar) setExpanding(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar12setExpandingEb
+    // invoke: void setExpanding(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar12setExpandingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setExpanding", args)
   }
@@ -528,8 +564,10 @@ func (this *QTabBar) removeTab(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar9removeTabEi
+    // invoke: void removeTab(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar9removeTabEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "removeTab", args)
   }
@@ -550,10 +588,12 @@ func (this *QTabBar) setTabEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar13setTabEnabledEib
+    // invoke: void setTabEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar13setTabEnabledEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabEnabled", args)
   }
@@ -573,8 +613,10 @@ func (this *QTabBar) isTabEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12isTabEnabledEi
+    // invoke: bool isTabEnabled(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar12isTabEnabledEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "isTabEnabled", args)
   }
@@ -594,8 +636,10 @@ func (this *QTabBar) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar15setCurrentIndexEi
+    // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setCurrentIndex", args)
   }
@@ -615,8 +659,10 @@ func (this *QTabBar) tabRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar7tabRectEi
+    // invoke: QRect tabRect(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar7tabRectEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabRect", args)
   }
@@ -635,6 +681,8 @@ func (this *QTabBar) tabsClosable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12tabsClosableEv
+    // invoke: bool tabsClosable()
+    C._ZNK7QTabBar12tabsClosableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "tabsClosable", args)
   }
@@ -654,8 +702,10 @@ func (this *QTabBar) setMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar10setMovableEb
+    // invoke: void setMovable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar10setMovableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setMovable", args)
   }
@@ -675,8 +725,10 @@ func (this *QTabBar) setAutoHide(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar11setAutoHideEb
+    // invoke: void setAutoHide(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar11setAutoHideEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setAutoHide", args)
   }
@@ -695,6 +747,8 @@ func (this *QTabBar) iconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar8iconSizeEv
+    // invoke: QSize iconSize()
+    C._ZNK7QTabBar8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "iconSize", args)
   }
@@ -714,8 +768,10 @@ func (this *QTabBar) tabText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar7tabTextEi
+    // invoke: QString tabText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar7tabTextEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabText", args)
   }
@@ -735,8 +791,10 @@ func (this *QTabBar) tabWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12tabWhatsThisEi
+    // invoke: QString tabWhatsThis(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar12tabWhatsThisEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabWhatsThis", args)
   }
@@ -755,6 +813,8 @@ func (this *QTabBar) documentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12documentModeEv
+    // invoke: bool documentMode()
+    C._ZNK7QTabBar12documentModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "documentMode", args)
   }
@@ -774,8 +834,10 @@ func (this *QTabBar) tabAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar5tabAtERK6QPoint
+    // invoke: int tabAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar5tabAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabAt", args)
   }
@@ -796,10 +858,12 @@ func (this *QTabBar) setTabData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar10setTabDataEiRK8QVariant
+    // invoke: void setTabData(int, const class QVariant &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar10setTabDataEiRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabData", args)
   }
@@ -819,8 +883,10 @@ func (this *QTabBar) tabTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12tabTextColorEi
+    // invoke: QColor tabTextColor(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar12tabTextColorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabTextColor", args)
   }
@@ -858,14 +924,18 @@ func (this *QTabBar) addTab(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar6addTabERK7QString
+    // invoke: int addTab(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar6addTabERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN7QTabBar6addTabERK5QIconRK7QString
+    // invoke: int addTab(const class QIcon &, const class QString &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar6addTabERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "addTab", args)
   }
@@ -886,10 +956,12 @@ func (this *QTabBar) setTabToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar13setTabToolTipEiRK7QString
+    // invoke: void setTabToolTip(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar13setTabToolTipEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabToolTip", args)
   }
@@ -910,10 +982,12 @@ func (this *QTabBar) setTabTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar15setTabTextColorEiRK6QColor
+    // invoke: void setTabTextColor(int, const class QColor &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar15setTabTextColorEiRK6QColor(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabTextColor", args)
   }
@@ -934,10 +1008,12 @@ func (this *QTabBar) moveTab(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar7moveTabEii
+    // invoke: void moveTab(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar7moveTabEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "moveTab", args)
   }
@@ -957,8 +1033,10 @@ func (this *QTabBar) tabData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar7tabDataEi
+    // invoke: QVariant tabData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QTabBar7tabDataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "tabData", args)
   }
@@ -977,6 +1055,8 @@ func (this *QTabBar) drawBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar8drawBaseEv
+    // invoke: bool drawBase()
+    C._ZNK7QTabBar8drawBaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "drawBase", args)
   }
@@ -995,6 +1075,8 @@ func (this *QTabBar) currentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar12currentIndexEv
+    // invoke: int currentIndex()
+    C._ZNK7QTabBar12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "currentIndex", args)
   }
@@ -1014,8 +1096,10 @@ func (this *QTabBar) setDrawBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar11setDrawBaseEb
+    // invoke: void setDrawBase(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar11setDrawBaseEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setDrawBase", args)
   }
@@ -1035,8 +1119,10 @@ func (this *QTabBar) setUsesScrollButtons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar20setUsesScrollButtonsEb
+    // invoke: void setUsesScrollButtons(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar20setUsesScrollButtonsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setUsesScrollButtons", args)
   }
@@ -1055,6 +1141,8 @@ func (this *QTabBar) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QTabBar8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK7QTabBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabBar", "sizeHint", args)
   }
@@ -1074,8 +1162,10 @@ func (this *QTabBar) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar11setIconSizeERK5QSize
+    // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QTabBar11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTabBar", "setIconSize", args)
   }
@@ -1096,10 +1186,12 @@ func (this *QTabBar) setTabText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QTabBar10setTabTextEiRK7QString
+    // invoke: void setTabText(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN7QTabBar10setTabTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTabBar", "setTabText", args)
   }

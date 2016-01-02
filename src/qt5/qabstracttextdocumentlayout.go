@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -124,12 +124,14 @@ func (this *QTextObjectInterface) intrinsicSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat
+    // invoke: QSizeF intrinsicSize(class QTextDocument *, int, const class QTextFormat &)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextFormat).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QTextObjectInterface13intrinsicSizeEP13QTextDocumentiRK11QTextFormat(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "intrinsicSize", args)
   }
@@ -153,6 +155,7 @@ func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat
+    // invoke: void drawObject(class QPainter *, const class QRectF &, class QTextDocument *, int, const class QTextFormat &)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
@@ -163,6 +166,7 @@ func (this *QTextObjectInterface) drawObject(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QTextFormat).qclsinst
     if false {fmt.Println(arg4)}
+    C._ZN20QTextObjectInterface10drawObjectEP8QPainterRK6QRectFP13QTextDocumentiRK11QTextFormat(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QTextObjectInterface", "drawObject", args)
   }
@@ -181,6 +185,8 @@ func (this *QAbstractTextDocumentLayout) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK27QAbstractTextDocumentLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "metaObject", args)
   }
@@ -201,10 +207,12 @@ func (this *QAbstractTextDocumentLayout) registerHandler(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject
+    // invoke: void registerHandler(int, class QObject *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN27QAbstractTextDocumentLayout15registerHandlerEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "registerHandler", args)
   }
@@ -223,6 +231,8 @@ func (this *QAbstractTextDocumentLayout) pageCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout9pageCountEv
+    // invoke: int pageCount()
+    C._ZNK27QAbstractTextDocumentLayout9pageCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "pageCount", args)
   }
@@ -256,8 +266,10 @@ func (this *QAbstractTextDocumentLayout) setPaintDevice(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice
+    // invoke: void setPaintDevice(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "setPaintDevice", args)
   }
@@ -276,6 +288,8 @@ func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8documentEv
+    // invoke: QTextDocument * document()
+    C._ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "document", args)
   }
@@ -296,10 +310,12 @@ func (this *QAbstractTextDocumentLayout) unregisterHandler(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject
+    // invoke: void unregisterHandler(int, class QObject *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN27QAbstractTextDocumentLayout17unregisterHandlerEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "unregisterHandler", args)
   }
@@ -323,6 +339,8 @@ func (this *QAbstractTextDocumentLayout) documentSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout12documentSizeEv
+    // invoke: QSizeF documentSize()
+    C._ZNK27QAbstractTextDocumentLayout12documentSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "documentSize", args)
   }
@@ -341,6 +359,8 @@ func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout11paintDeviceEv
+    // invoke: QPaintDevice * paintDevice()
+    C._ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "paintDevice", args)
   }
@@ -360,8 +380,10 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF
+    // invoke: QString anchorAt(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
   }
@@ -381,8 +403,10 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout16handlerForObjectEi
+    // invoke: QTextObjectInterface * handlerForObject(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
   }
@@ -402,8 +426,10 @@ func (this *QAbstractTextDocumentLayout) frameBoundingRect(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame
+    // invoke: QRectF frameBoundingRect(class QTextFrame *)
     var arg0 = args[0].(QTextFrame).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK27QAbstractTextDocumentLayout17frameBoundingRectEP10QTextFrame(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "frameBoundingRect", args)
   }
@@ -423,8 +449,10 @@ func (this *QAbstractTextDocumentLayout) blockBoundingRect(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock
+    // invoke: QRectF blockBoundingRect(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK27QAbstractTextDocumentLayout17blockBoundingRectERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "blockBoundingRect", args)
   }

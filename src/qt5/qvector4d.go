@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  QVector4D QVector4D::normalized();
 extern void _ZNK9QVector4D10normalizedEv(void* qthis);
   // proto:  void QVector4D::setW(float w);
-extern void _ZN9QVector4D4setWEf(void* qthis, float arg0);
+extern void demth_ZN9QVector4D4setWEf(void* qthis, float arg0);
   // proto:  void QVector4D::QVector4D(const QVector2D & vector, float zpos, float wpos);
 extern void* dector_ZN9QVector4DC1ERK9QVector2Dff(void* arg0, float arg1, float arg2);
 extern void _ZN9QVector4DC1ERK9QVector2Dff(void* qthis, void* arg0, float arg1, float arg2);
@@ -46,7 +46,7 @@ extern void _ZNK9QVector4D1yEv(void* qthis);
   // proto:  QVector2D QVector4D::toVector2D();
 extern void _ZNK9QVector4D10toVector2DEv(void* qthis);
   // proto:  void QVector4D::setZ(float z);
-extern void _ZN9QVector4D4setZEf(void* qthis, float arg0);
+extern void demth_ZN9QVector4D4setZEf(void* qthis, float arg0);
   // proto:  void QVector4D::QVector4D(const QVector2D & vector);
 extern void* dector_ZN9QVector4DC1ERK9QVector2D(void* arg0);
 extern void _ZN9QVector4DC1ERK9QVector2D(void* qthis, void* arg0);
@@ -67,9 +67,9 @@ extern void _ZNK9QVector4D1zEv(void* qthis);
 extern void* dector_ZN9QVector4DC1Ev();
 extern void _ZN9QVector4DC1Ev(void* qthis);
   // proto:  void QVector4D::setX(float x);
-extern void _ZN9QVector4D4setXEf(void* qthis, float arg0);
+extern void demth_ZN9QVector4D4setXEf(void* qthis, float arg0);
   // proto:  void QVector4D::setY(float y);
-extern void _ZN9QVector4D4setYEf(void* qthis, float arg0);
+extern void demth_ZN9QVector4D4setYEf(void* qthis, float arg0);
   // proto:  void QVector4D::QVector4D(const QPoint & point);
 extern void* dector_ZN9QVector4DC1ERK6QPoint(void* arg0);
 extern void _ZN9QVector4DC1ERK6QPoint(void* qthis, void* arg0);
@@ -87,7 +87,7 @@ extern void _ZN9QVector4DC1ERK9QVector3D(void* qthis, void* arg0);
   // proto: static float QVector4D::dotProduct(const QVector4D & v1, const QVector4D & v2);
 extern void _ZN9QVector4D10dotProductERKS_S1_(void* arg0, void* arg1);
   // proto:  bool QVector4D::isNull();
-extern void _ZNK9QVector4D6isNullEv(void* qthis);
+extern void demth_ZNK9QVector4D6isNullEv(void* qthis);
   // proto:  float QVector4D::lengthSquared();
 extern void _ZNK9QVector4D13lengthSquaredEv(void* qthis);
   // proto:  QVector3D QVector4D::toVector3DAffine();
@@ -126,6 +126,8 @@ func (this *QVector4D) normalized(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10normalizedEv
+    // invoke: QVector4D normalized()
+    C._ZNK9QVector4D10normalizedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "normalized", args)
   }
@@ -145,8 +147,10 @@ func (this *QVector4D) setW(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setWEf
+    // invoke: void setW(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QVector4D4setWEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector4D", "setW", args)
   }
@@ -170,6 +174,8 @@ func (this *QVector4D) toPointF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D8toPointFEv
+    // invoke: QPointF toPointF()
+    C._ZNK9QVector4D8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toPointF", args)
   }
@@ -188,6 +194,8 @@ func (this *QVector4D) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1yEv
+    // invoke: float y()
+    C._ZNK9QVector4D1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "y", args)
   }
@@ -206,6 +214,8 @@ func (this *QVector4D) toVector2D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10toVector2DEv
+    // invoke: QVector2D toVector2D()
+    C._ZNK9QVector4D10toVector2DEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2D", args)
   }
@@ -225,8 +235,10 @@ func (this *QVector4D) setZ(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setZEf
+    // invoke: void setZ(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QVector4D4setZEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector4D", "setZ", args)
   }
@@ -245,6 +257,8 @@ func (this *QVector4D) normalize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D9normalizeEv
+    // invoke: void normalize()
+    C._ZN9QVector4D9normalizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "normalize", args)
   }
@@ -263,6 +277,8 @@ func (this *QVector4D) z(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1zEv
+    // invoke: float z()
+    C._ZNK9QVector4D1zEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "z", args)
   }
@@ -282,8 +298,10 @@ func (this *QVector4D) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setXEf
+    // invoke: void setX(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QVector4D4setXEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector4D", "setX", args)
   }
@@ -303,8 +321,10 @@ func (this *QVector4D) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QVector4D4setYEf
+    // invoke: void setY(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QVector4D4setYEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVector4D", "setY", args)
   }
@@ -323,6 +343,8 @@ func (this *QVector4D) toVector3D(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D10toVector3DEv
+    // invoke: QVector3D toVector3D()
+    C._ZNK9QVector4D10toVector3DEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3D", args)
   }
@@ -341,6 +363,8 @@ func (this *QVector4D) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1xEv
+    // invoke: float x()
+    C._ZNK9QVector4D1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "x", args)
   }
@@ -359,6 +383,8 @@ func (this *QVector4D) toVector2DAffine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D16toVector2DAffineEv
+    // invoke: QVector2D toVector2DAffine()
+    C._ZNK9QVector4D16toVector2DAffineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toVector2DAffine", args)
   }
@@ -377,6 +403,8 @@ func (this *QVector4D) length(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D6lengthEv
+    // invoke: float length()
+    C._ZNK9QVector4D6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "length", args)
   }
@@ -409,6 +437,8 @@ func (this *QVector4D) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK9QVector4D6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "isNull", args)
   }
@@ -427,6 +457,8 @@ func (this *QVector4D) lengthSquared(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D13lengthSquaredEv
+    // invoke: float lengthSquared()
+    C._ZNK9QVector4D13lengthSquaredEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "lengthSquared", args)
   }
@@ -445,6 +477,8 @@ func (this *QVector4D) toVector3DAffine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D16toVector3DAffineEv
+    // invoke: QVector3D toVector3DAffine()
+    C._ZNK9QVector4D16toVector3DAffineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toVector3DAffine", args)
   }
@@ -463,6 +497,8 @@ func (this *QVector4D) toPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D7toPointEv
+    // invoke: QPoint toPoint()
+    C._ZNK9QVector4D7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toPoint", args)
   }
@@ -481,6 +517,8 @@ func (this *QVector4D) w(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QVector4D1wEv
+    // invoke: float w()
+    C._ZNK9QVector4D1wEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "w", args)
   }

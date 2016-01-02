@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.go
 //
@@ -225,6 +225,8 @@ func (this *QLatin1Char) unicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLatin1Char7unicodeEv
+    // invoke: ushort unicode()
+    C._ZNK11QLatin1Char7unicodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLatin1Char", "unicode", args)
   }
@@ -248,6 +250,8 @@ func (this *QLatin1Char) toLatin1(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLatin1Char8toLatin1Ev
+    // invoke: char toLatin1()
+    C._ZNK11QLatin1Char8toLatin1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLatin1Char", "toLatin1", args)
   }
@@ -283,10 +287,14 @@ func (this *QChar) hasMirrored(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar11hasMirroredEv
+    // invoke: bool hasMirrored()
+    C.demth_ZNK5QChar11hasMirroredEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar11hasMirroredEj
+    // invoke: bool hasMirrored(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar11hasMirroredEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "hasMirrored", args)
   }
@@ -333,6 +341,8 @@ func (this *QChar) cell(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar4cellEv
+    // invoke: uchar cell()
+    C._ZNK5QChar4cellEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "cell", args)
   }
@@ -379,6 +389,8 @@ func (this *QChar) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar6isNullEv
+    // invoke: bool isNull()
+    C._ZNK5QChar6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isNull", args)
   }
@@ -400,10 +412,14 @@ func (this *QChar) digitValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar10digitValueEv
+    // invoke: int digitValue()
+    C.demth_ZNK5QChar10digitValueEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar10digitValueEj
+    // invoke: int digitValue(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar10digitValueEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "digitValue", args)
   }
@@ -425,10 +441,14 @@ func (this *QChar) toTitleCase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar11toTitleCaseEv
+    // invoke: QChar toTitleCase()
+    C.demth_ZNK5QChar11toTitleCaseEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar11toTitleCaseEj
+    // invoke: uint toTitleCase(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar11toTitleCaseEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "toTitleCase", args)
   }
@@ -464,10 +484,14 @@ func (this *QChar) isLowSurrogate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar14isLowSurrogateEv
+    // invoke: bool isLowSurrogate()
+    C._ZNK5QChar14isLowSurrogateEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar14isLowSurrogateEj
+    // invoke: bool isLowSurrogate(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar14isLowSurrogateEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isLowSurrogate", args)
   }
@@ -503,10 +527,14 @@ func (this *QChar) isSymbol(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar8isSymbolEj
+    // invoke: bool isSymbol(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar8isSymbolEj(arg0)
   case 1:
     // invoke: _ZNK5QChar8isSymbolEv
+    // invoke: bool isSymbol()
+    C.demth_ZNK5QChar8isSymbolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isSymbol", args)
   }
@@ -528,10 +556,14 @@ func (this *QChar) isLower(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7isLowerEj
+    // invoke: bool isLower(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar7isLowerEj(arg0)
   case 1:
     // invoke: _ZNK5QChar7isLowerEv
+    // invoke: bool isLower()
+    C._ZNK5QChar7isLowerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isLower", args)
   }
@@ -553,10 +585,14 @@ func (this *QChar) mirroredChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar12mirroredCharEv
+    // invoke: QChar mirroredChar()
+    C.demth_ZNK5QChar12mirroredCharEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar12mirroredCharEj
+    // invoke: uint mirroredChar(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar12mirroredCharEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "mirroredChar", args)
   }
@@ -575,6 +611,8 @@ func (this *QChar) row(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar3rowEv
+    // invoke: uchar row()
+    C._ZNK5QChar3rowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "row", args)
   }
@@ -596,10 +634,14 @@ func (this *QChar) isDigit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar7isDigitEv
+    // invoke: bool isDigit()
+    C._ZNK5QChar7isDigitEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar7isDigitEj
+    // invoke: bool isDigit(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar7isDigitEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isDigit", args)
   }
@@ -635,10 +677,14 @@ func (this *QChar) isSurrogate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar11isSurrogateEv
+    // invoke: bool isSurrogate()
+    C._ZNK5QChar11isSurrogateEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar11isSurrogateEj
+    // invoke: bool isSurrogate(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar11isSurrogateEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isSurrogate", args)
   }
@@ -674,10 +720,14 @@ func (this *QChar) isNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar8isNumberEv
+    // invoke: bool isNumber()
+    C._ZNK5QChar8isNumberEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar8isNumberEj
+    // invoke: bool isNumber(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar8isNumberEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isNumber", args)
   }
@@ -727,10 +777,14 @@ func (this *QChar) isMark(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar6isMarkEv
+    // invoke: bool isMark()
+    C.demth_ZNK5QChar6isMarkEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar6isMarkEj
+    // invoke: bool isMark(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar6isMarkEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isMark", args)
   }
@@ -778,8 +832,10 @@ func (this *QChar) setRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar6setRowEh
+    // invoke: void setRow(uchar)
     var arg0 = C.char(args[0].(byte))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar6setRowEh(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QChar", "setRow", args)
   }
@@ -827,8 +883,10 @@ func (this *QChar) setCell(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7setCellEh
+    // invoke: void setCell(uchar)
     var arg0 = C.char(args[0].(byte))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar7setCellEh(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QChar", "setCell", args)
   }
@@ -869,10 +927,14 @@ func (this *QChar) toCaseFolded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar12toCaseFoldedEj
+    // invoke: uint toCaseFolded(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar12toCaseFoldedEj(arg0)
   case 1:
     // invoke: _ZNK5QChar12toCaseFoldedEv
+    // invoke: QChar toCaseFolded()
+    C.demth_ZNK5QChar12toCaseFoldedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "toCaseFolded", args)
   }
@@ -894,10 +956,14 @@ func (this *QChar) isPrint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7isPrintEj
+    // invoke: bool isPrint(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar7isPrintEj(arg0)
   case 1:
     // invoke: _ZNK5QChar7isPrintEv
+    // invoke: bool isPrint()
+    C.demth_ZNK5QChar7isPrintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isPrint", args)
   }
@@ -919,10 +985,14 @@ func (this *QChar) isPunct(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar7isPunctEv
+    // invoke: bool isPunct()
+    C.demth_ZNK5QChar7isPunctEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar7isPunctEj
+    // invoke: bool isPunct(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar7isPunctEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isPunct", args)
   }
@@ -944,10 +1014,14 @@ func (this *QChar) decomposition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar13decompositionEj
+    // invoke: QString decomposition(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar13decompositionEj(arg0)
   case 1:
     // invoke: _ZNK5QChar13decompositionEv
+    // invoke: QString decomposition()
+    C._ZNK5QChar13decompositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "decomposition", args)
   }
@@ -969,10 +1043,14 @@ func (this *QChar) isSpace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar7isSpaceEv
+    // invoke: bool isSpace()
+    C._ZNK5QChar7isSpaceEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar7isSpaceEj
+    // invoke: bool isSpace(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar7isSpaceEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isSpace", args)
   }
@@ -994,10 +1072,14 @@ func (this *QChar) isUpper(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7isUpperEj
+    // invoke: bool isUpper(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar7isUpperEj(arg0)
   case 1:
     // invoke: _ZNK5QChar7isUpperEv
+    // invoke: bool isUpper()
+    C._ZNK5QChar7isUpperEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isUpper", args)
   }
@@ -1033,10 +1115,14 @@ func (this *QChar) isNonCharacter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar14isNonCharacterEv
+    // invoke: bool isNonCharacter()
+    C._ZNK5QChar14isNonCharacterEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar14isNonCharacterEj
+    // invoke: bool isNonCharacter(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar14isNonCharacterEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isNonCharacter", args)
   }
@@ -1100,10 +1186,14 @@ func (this *QChar) isTitleCase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar11isTitleCaseEj
+    // invoke: bool isTitleCase(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar11isTitleCaseEj(arg0)
   case 1:
     // invoke: _ZNK5QChar11isTitleCaseEv
+    // invoke: bool isTitleCase()
+    C._ZNK5QChar11isTitleCaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isTitleCase", args)
   }
@@ -1125,10 +1215,14 @@ func (this *QChar) isLetter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar8isLetterEv
+    // invoke: bool isLetter()
+    C._ZNK5QChar8isLetterEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar8isLetterEj
+    // invoke: bool isLetter(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar8isLetterEj(arg0)
   default:
     qtrt.ErrorResolve("QChar", "isLetter", args)
   }
@@ -1150,10 +1244,14 @@ func (this *QChar) combiningClass(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar14combiningClassEj
+    // invoke: unsigned char combiningClass(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar14combiningClassEj(arg0)
   case 1:
     // invoke: _ZNK5QChar14combiningClassEv
+    // invoke: unsigned char combiningClass()
+    C.demth_ZNK5QChar14combiningClassEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "combiningClass", args)
   }
@@ -1175,10 +1273,14 @@ func (this *QChar) isHighSurrogate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar15isHighSurrogateEj
+    // invoke: bool isHighSurrogate(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar15isHighSurrogateEj(arg0)
   case 1:
     // invoke: _ZNK5QChar15isHighSurrogateEv
+    // invoke: bool isHighSurrogate()
+    C._ZNK5QChar15isHighSurrogateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isHighSurrogate", args)
   }
@@ -1228,10 +1330,14 @@ func (this *QChar) isLetterOrNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar16isLetterOrNumberEj
+    // invoke: bool isLetterOrNumber(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QChar16isLetterOrNumberEj(arg0)
   case 1:
     // invoke: _ZNK5QChar16isLetterOrNumberEv
+    // invoke: bool isLetterOrNumber()
+    C._ZNK5QChar16isLetterOrNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isLetterOrNumber", args)
   }
@@ -1251,9 +1357,9 @@ func (this *QChar) unicode(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK5QChar7unicodeEv
-  case 1:
     // invoke: _ZN5QChar7unicodeEv
+    // invoke: ushort & unicode()
+    C.demth_ZN5QChar7unicodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "unicode", args)
   }
@@ -1303,10 +1409,14 @@ func (this *QChar) toLower(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7toLowerEj
+    // invoke: uint toLower(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar7toLowerEj(arg0)
   case 1:
     // invoke: _ZNK5QChar7toLowerEv
+    // invoke: QChar toLower()
+    C.demth_ZNK5QChar7toLowerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "toLower", args)
   }
@@ -1342,10 +1452,14 @@ func (this *QChar) toUpper(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QChar7toUpperEj
+    // invoke: uint toUpper(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN5QChar7toUpperEj(arg0)
   case 1:
     // invoke: _ZNK5QChar7toUpperEv
+    // invoke: QChar toUpper()
+    C.demth_ZNK5QChar7toUpperEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "toUpper", args)
   }
@@ -1434,6 +1548,8 @@ func (this *QChar) toLatin1(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QChar8toLatin1Ev
+    // invoke: char toLatin1()
+    C._ZNK5QChar8toLatin1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "toLatin1", args)
   }

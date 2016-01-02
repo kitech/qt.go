@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -91,6 +91,8 @@ func (this *QJsonObject) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK11QJsonObject7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
   }
@@ -109,6 +111,8 @@ func (this *QJsonObject) length(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject6lengthEv
+    // invoke: int length()
+    C.demth_ZNK11QJsonObject6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "length", args)
   }
@@ -128,8 +132,10 @@ func (this *QJsonObject) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject6removeERK7QString
+    // invoke: void remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QJsonObject6removeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "remove", args)
   }
@@ -163,8 +169,10 @@ func (this *QJsonObject) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5valueERK7QString
+    // invoke: QJsonValue value(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK11QJsonObject5valueERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "value", args)
   }
@@ -183,6 +191,8 @@ func (this *QJsonObject) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject4sizeEv
+    // invoke: int size()
+    C._ZNK11QJsonObject4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "size", args)
   }
@@ -201,6 +211,8 @@ func (this *QJsonObject) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5countEv
+    // invoke: int count()
+    C.demth_ZNK11QJsonObject5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "count", args)
   }
@@ -219,6 +231,8 @@ func (this *QJsonObject) empty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject5emptyEv
+    // invoke: bool empty()
+    C.demth_ZNK11QJsonObject5emptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "empty", args)
   }
@@ -238,8 +252,10 @@ func (this *QJsonObject) take(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QJsonObject4takeERK7QString
+    // invoke: QJsonValue take(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QJsonObject4takeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "take", args)
   }
@@ -258,6 +274,8 @@ func (this *QJsonObject) toVariantHash(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject13toVariantHashEv
+    // invoke: QVariantHash toVariantHash()
+    C._ZNK11QJsonObject13toVariantHashEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantHash", args)
   }
@@ -276,6 +294,8 @@ func (this *QJsonObject) keys(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject4keysEv
+    // invoke: QStringList keys()
+    C._ZNK11QJsonObject4keysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "keys", args)
   }
@@ -295,8 +315,10 @@ func (this *QJsonObject) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject8containsERK7QString
+    // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
   }
@@ -320,6 +342,8 @@ func (this *QJsonObject) toVariantMap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QJsonObject12toVariantMapEv
+    // invoke: QVariantMap toVariantMap()
+    C._ZNK11QJsonObject12toVariantMapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonObject", "toVariantMap", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -85,8 +85,10 @@ func (this *QPauseAnimation) setDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QPauseAnimation11setDurationEi
+    // invoke: void setDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QPauseAnimation11setDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "setDuration", args)
   }
@@ -105,6 +107,8 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QPauseAnimation8durationEv
+    // invoke: int duration()
+    C._ZNK15QPauseAnimation8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "duration", args)
   }
@@ -123,6 +127,8 @@ func (this *QPauseAnimation) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QPauseAnimation10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QPauseAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPauseAnimation", "metaObject", args)
   }

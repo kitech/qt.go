@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgraphicslayoutitem.h
 // dst-file: /src/widgets/qgraphicslayoutitem.go
 //
@@ -139,16 +139,10 @@ func (this *QGraphicsLayoutItem) setSizePolicy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy
+    // invoke: void setSizePolicy(const class QSizePolicy &)
     var arg0 = args[0].(QSizePolicy).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN19QGraphicsLayoutItem13setSizePolicyEN11QSizePolicy6PolicyES1_NS0_11ControlTypeE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
-    if false {fmt.Println(arg2)}
+    C._ZN19QGraphicsLayoutItem13setSizePolicyERK11QSizePolicy(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setSizePolicy", args)
   }
@@ -167,6 +161,8 @@ func (this *QGraphicsLayoutItem) parentLayoutItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem16parentLayoutItemEv
+    // invoke: QGraphicsLayoutItem * parentLayoutItem()
+    C._ZNK19QGraphicsLayoutItem16parentLayoutItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "parentLayoutItem", args)
   }
@@ -185,6 +181,8 @@ func (this *QGraphicsLayoutItem) minimumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12minimumWidthEv
+    // invoke: qreal minimumWidth()
+    C.demth_ZNK19QGraphicsLayoutItem12minimumWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumWidth", args)
   }
@@ -203,6 +201,8 @@ func (this *QGraphicsLayoutItem) graphicsItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12graphicsItemEv
+    // invoke: QGraphicsItem * graphicsItem()
+    C._ZNK19QGraphicsLayoutItem12graphicsItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "graphicsItem", args)
   }
@@ -221,6 +221,8 @@ func (this *QGraphicsLayoutItem) preferredWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem14preferredWidthEv
+    // invoke: qreal preferredWidth()
+    C.demth_ZNK19QGraphicsLayoutItem14preferredWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredWidth", args)
   }
@@ -239,6 +241,8 @@ func (this *QGraphicsLayoutItem) ownedByLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13ownedByLayoutEv
+    // invoke: bool ownedByLayout()
+    C._ZNK19QGraphicsLayoutItem13ownedByLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "ownedByLayout", args)
   }
@@ -257,6 +261,8 @@ func (this *QGraphicsLayoutItem) preferredSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13preferredSizeEv
+    // invoke: QSizeF preferredSize()
+    C._ZNK19QGraphicsLayoutItem13preferredSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredSize", args)
   }
@@ -275,6 +281,8 @@ func (this *QGraphicsLayoutItem) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8geometryEv
+    // invoke: QRectF geometry()
+    C._ZNK19QGraphicsLayoutItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "geometry", args)
   }
@@ -298,6 +306,8 @@ func (this *QGraphicsLayoutItem) minimumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13minimumHeightEv
+    // invoke: qreal minimumHeight()
+    C.demth_ZNK19QGraphicsLayoutItem13minimumHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumHeight", args)
   }
@@ -316,6 +326,8 @@ func (this *QGraphicsLayoutItem) preferredHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem15preferredHeightEv
+    // invoke: qreal preferredHeight()
+    C.demth_ZNK19QGraphicsLayoutItem15preferredHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "preferredHeight", args)
   }
@@ -334,6 +346,8 @@ func (this *QGraphicsLayoutItem) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11maximumSizeEv
+    // invoke: QSizeF maximumSize()
+    C._ZNK19QGraphicsLayoutItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumSize", args)
   }
@@ -352,6 +366,8 @@ func (this *QGraphicsLayoutItem) sizePolicy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem10sizePolicyEv
+    // invoke: QSizePolicy sizePolicy()
+    C._ZNK19QGraphicsLayoutItem10sizePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "sizePolicy", args)
   }
@@ -370,6 +386,8 @@ func (this *QGraphicsLayoutItem) maximumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem13maximumHeightEv
+    // invoke: qreal maximumHeight()
+    C.demth_ZNK19QGraphicsLayoutItem13maximumHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumHeight", args)
   }
@@ -389,8 +407,10 @@ func (this *QGraphicsLayoutItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem11setGeometryERK6QRectF
+    // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem11setGeometryERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setGeometry", args)
   }
@@ -410,8 +430,10 @@ func (this *QGraphicsLayoutItem) setPreferredWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem17setPreferredWidthEd
+    // invoke: void setPreferredWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem17setPreferredWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredWidth", args)
   }
@@ -435,14 +457,18 @@ func (this *QGraphicsLayoutItem) setMaximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF
+    // invoke: void setMaximumSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem14setMaximumSizeERK6QSizeF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMaximumSizeEdd
+    // invoke: void setMaximumSize(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN19QGraphicsLayoutItem14setMaximumSizeEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumSize", args)
   }
@@ -461,6 +487,8 @@ func (this *QGraphicsLayoutItem) maximumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12maximumWidthEv
+    // invoke: qreal maximumWidth()
+    C.demth_ZNK19QGraphicsLayoutItem12maximumWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "maximumWidth", args)
   }
@@ -484,14 +512,18 @@ func (this *QGraphicsLayoutItem) setMinimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14setMinimumSizeEdd
+    // invoke: void setMinimumSize(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN19QGraphicsLayoutItem14setMinimumSizeEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF
+    // invoke: void setMinimumSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem14setMinimumSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumSize", args)
   }
@@ -511,8 +543,10 @@ func (this *QGraphicsLayoutItem) setMaximumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setMaximumHeightEd
+    // invoke: void setMaximumHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem16setMaximumHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumHeight", args)
   }
@@ -536,14 +570,18 @@ func (this *QGraphicsLayoutItem) setPreferredSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF
+    // invoke: void setPreferredSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem16setPreferredSizeERK6QSizeF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN19QGraphicsLayoutItem16setPreferredSizeEdd
+    // invoke: void setPreferredSize(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN19QGraphicsLayoutItem16setPreferredSizeEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredSize", args)
   }
@@ -566,6 +604,7 @@ func (this *QGraphicsLayoutItem) getContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_
+    // invoke: void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
     var arg0 = (*C.double)(args[0].(*float64))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.double)(args[1].(*float64))
@@ -574,6 +613,7 @@ func (this *QGraphicsLayoutItem) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
+    C._ZNK19QGraphicsLayoutItem18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "getContentsMargins", args)
   }
@@ -593,8 +633,10 @@ func (this *QGraphicsLayoutItem) setParentLayoutItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_
+    // invoke: void setParentLayoutItem(class QGraphicsLayoutItem *)
     var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem19setParentLayoutItemEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setParentLayoutItem", args)
   }
@@ -614,8 +656,10 @@ func (this *QGraphicsLayoutItem) setMinimumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem15setMinimumWidthEd
+    // invoke: void setMinimumWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem15setMinimumWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumWidth", args)
   }
@@ -635,8 +679,10 @@ func (this *QGraphicsLayoutItem) setMaximumWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem15setMaximumWidthEd
+    // invoke: void setMaximumWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem15setMaximumWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMaximumWidth", args)
   }
@@ -655,6 +701,8 @@ func (this *QGraphicsLayoutItem) updateGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem14updateGeometryEv
+    // invoke: void updateGeometry()
+    C._ZN19QGraphicsLayoutItem14updateGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "updateGeometry", args)
   }
@@ -674,8 +722,10 @@ func (this *QGraphicsLayoutItem) setPreferredHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem18setPreferredHeightEd
+    // invoke: void setPreferredHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem18setPreferredHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setPreferredHeight", args)
   }
@@ -694,6 +744,8 @@ func (this *QGraphicsLayoutItem) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem11minimumSizeEv
+    // invoke: QSizeF minimumSize()
+    C._ZNK19QGraphicsLayoutItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "minimumSize", args)
   }
@@ -712,6 +764,8 @@ func (this *QGraphicsLayoutItem) contentsRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem12contentsRectEv
+    // invoke: QRectF contentsRect()
+    C._ZNK19QGraphicsLayoutItem12contentsRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "contentsRect", args)
   }
@@ -730,6 +784,8 @@ func (this *QGraphicsLayoutItem) isLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsLayoutItem8isLayoutEv
+    // invoke: bool isLayout()
+    C._ZNK19QGraphicsLayoutItem8isLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "isLayout", args)
   }
@@ -763,8 +819,10 @@ func (this *QGraphicsLayoutItem) setMinimumHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsLayoutItem16setMinimumHeightEd
+    // invoke: void setMinimumHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsLayoutItem16setMinimumHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLayoutItem", "setMinimumHeight", args)
   }

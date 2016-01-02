@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.go
 //
@@ -75,6 +75,8 @@ func (this *QRasterWindow) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QRasterWindow10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QRasterWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRasterWindow", "metaObject", args)
   }

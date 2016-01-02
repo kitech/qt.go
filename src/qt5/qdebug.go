@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -129,8 +129,10 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug10maybeQuoteEc
+    // invoke: QNoDebug & maybeQuote(const char)
     var arg0 = C.char(args[0].(byte))
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
   }
@@ -149,6 +151,8 @@ func (this *QNoDebug) quote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug5quoteEv
+    // invoke: QNoDebug & quote()
+    C.demth_ZN8QNoDebug5quoteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNoDebug", "quote", args)
   }
@@ -167,6 +171,8 @@ func (this *QNoDebug) space(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug5spaceEv
+    // invoke: QNoDebug & space()
+    C.demth_ZN8QNoDebug5spaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNoDebug", "space", args)
   }
@@ -185,6 +191,8 @@ func (this *QNoDebug) nospace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug7nospaceEv
+    // invoke: QNoDebug & nospace()
+    C.demth_ZN8QNoDebug7nospaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNoDebug", "nospace", args)
   }
@@ -203,6 +211,8 @@ func (this *QNoDebug) noquote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug7noquoteEv
+    // invoke: QNoDebug & noquote()
+    C.demth_ZN8QNoDebug7noquoteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNoDebug", "noquote", args)
   }
@@ -221,6 +231,8 @@ func (this *QNoDebug) maybeSpace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QNoDebug10maybeSpaceEv
+    // invoke: QNoDebug & maybeSpace()
+    C.demth_ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
   }
@@ -258,6 +270,8 @@ func (this *QDebug) noquote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug7noquoteEv
+    // invoke: QDebug & noquote()
+    C.demth_ZN6QDebug7noquoteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "noquote", args)
   }
@@ -295,6 +309,8 @@ func (this *QDebug) space(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug5spaceEv
+    // invoke: QDebug & space()
+    C.demth_ZN6QDebug5spaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "space", args)
   }
@@ -313,6 +329,8 @@ func (this *QDebug) maybeSpace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug10maybeSpaceEv
+    // invoke: QDebug & maybeSpace()
+    C.demth_ZN6QDebug10maybeSpaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "maybeSpace", args)
   }
@@ -331,6 +349,8 @@ func (this *QDebug) resetFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug11resetFormatEv
+    // invoke: QDebug & resetFormat()
+    C._ZN6QDebug11resetFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "resetFormat", args)
   }
@@ -350,8 +370,10 @@ func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug19setAutoInsertSpacesEb
+    // invoke: void setAutoInsertSpaces(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QDebug19setAutoInsertSpacesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
   }
@@ -371,8 +393,10 @@ func (this *QDebug) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug4swapERS_
+    // invoke: void swap(class QDebug &)
     var arg0 = args[0].(QDebug).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QDebug4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "swap", args)
   }
@@ -391,6 +415,8 @@ func (this *QDebug) nospace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug7nospaceEv
+    // invoke: QDebug & nospace()
+    C.demth_ZN6QDebug7nospaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "nospace", args)
   }
@@ -409,6 +435,8 @@ func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QDebug16autoInsertSpacesEv
+    // invoke: bool autoInsertSpaces()
+    C._ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
   }
@@ -427,6 +455,8 @@ func (this *QDebug) quote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug5quoteEv
+    // invoke: QDebug & quote()
+    C.demth_ZN6QDebug5quoteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "quote", args)
   }
@@ -446,8 +476,10 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QDebug10maybeQuoteEc
+    // invoke: QDebug & maybeQuote(char)
     var arg0 = C.char(args[0].(byte))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
   }

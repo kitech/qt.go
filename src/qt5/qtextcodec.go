@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtextcodec.h
 // dst-file: /src/core/qtextcodec.go
 //
@@ -169,14 +169,18 @@ func (this *QTextEncoder) fromUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextEncoder11fromUnicodeERK7QString
+    // invoke: QByteArray fromUnicode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QTextEncoder11fromUnicodeERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QTextEncoder11fromUnicodeEPK5QChari
+    // invoke: QByteArray fromUnicode(const class QChar *, int)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QTextEncoder11fromUnicodeEPK5QChari(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextEncoder", "fromUnicode", args)
   }
@@ -195,6 +199,8 @@ func (this *QTextEncoder) hasFailure(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextEncoder10hasFailureEv
+    // invoke: bool hasFailure()
+    C._ZNK12QTextEncoder10hasFailureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextEncoder", "hasFailure", args)
   }
@@ -218,6 +224,8 @@ func (this *QTextCodec) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec4nameEv
+    // invoke: QByteArray name()
+    C._ZNK10QTextCodec4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCodec", "name", args)
   }
@@ -244,20 +252,17 @@ func (this *QTextCodec) toUnicode(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextCodec9toUnicodeEPKciPNS_14ConverterStateE
-    var arg0 = C.CString(args[0].(string))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    // var arg2 = args[2].(QTextCodec::ConverterState).qclsinst
-  case 1:
     // invoke: _ZNK10QTextCodec9toUnicodeERK10QByteArray
+    // invoke: QString toUnicode(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-  case 2:
+    C._ZNK10QTextCodec9toUnicodeERK10QByteArray(this.qclsinst, arg0)
+  case 1:
     // invoke: _ZNK10QTextCodec9toUnicodeEPKc
+    // invoke: QString toUnicode(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZNK10QTextCodec9toUnicodeEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCodec", "toUnicode", args)
   }
@@ -282,15 +287,10 @@ func (this *QTextCodec) fromUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec11fromUnicodeERK7QString
+    // invoke: QByteArray fromUnicode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZNK10QTextCodec11fromUnicodeEPK5QChariPNS_14ConverterStateE
-    var arg0 = args[0].(QChar).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    // var arg2 = args[2].(QTextCodec::ConverterState).qclsinst
+    C._ZNK10QTextCodec11fromUnicodeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCodec", "fromUnicode", args)
   }
@@ -384,6 +384,8 @@ func (this *QTextCodec) mibEnum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec7mibEnumEv
+    // invoke: int mibEnum()
+    C._ZNK10QTextCodec7mibEnumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCodec", "mibEnum", args)
   }
@@ -420,12 +422,16 @@ func (this *QTextCodec) canEncode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec9canEncodeERK7QString
+    // invoke: bool canEncode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK10QTextCodec9canEncodeERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK10QTextCodec9canEncodeE5QChar
+    // invoke: bool canEncode(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK10QTextCodec9canEncodeE5QChar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCodec", "canEncode", args)
   }
@@ -444,6 +450,8 @@ func (this *QTextCodec) aliases(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QTextCodec7aliasesEv
+    // invoke: QList<QByteArray> aliases()
+    C._ZNK10QTextCodec7aliasesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCodec", "aliases", args)
   }
@@ -514,22 +522,28 @@ func (this *QTextDecoder) toUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextDecoder9toUnicodeEPKci
+    // invoke: QString toUnicode(const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QTextDecoder9toUnicodeEPKci(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QTextDecoder9toUnicodeERK10QByteArray
+    // invoke: QString toUnicode(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QTextDecoder9toUnicodeERK10QByteArray(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN12QTextDecoder9toUnicodeEP7QStringPKci
+    // invoke: void toUnicode(class QString *, const char *, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN12QTextDecoder9toUnicodeEP7QStringPKci(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTextDecoder", "toUnicode", args)
   }
@@ -553,6 +567,8 @@ func (this *QTextDecoder) hasFailure(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextDecoder10hasFailureEv
+    // invoke: bool hasFailure()
+    C._ZNK12QTextDecoder10hasFailureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextDecoder", "hasFailure", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -90,8 +90,10 @@ func (this *QFrame) setFrameRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QFrame12setFrameRectERK5QRect
+    // invoke: void setFrameRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QFrame12setFrameRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setFrameRect", args)
   }
@@ -110,6 +112,8 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame9lineWidthEv
+    // invoke: int lineWidth()
+    C._ZNK6QFrame9lineWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "lineWidth", args)
   }
@@ -129,8 +133,10 @@ func (this *QFrame) setFrameStyle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QFrame13setFrameStyleEi
+    // invoke: void setFrameStyle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QFrame13setFrameStyleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setFrameStyle", args)
   }
@@ -149,6 +155,8 @@ func (this *QFrame) frameRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame9frameRectEv
+    // invoke: QRect frameRect()
+    C._ZNK6QFrame9frameRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameRect", args)
   }
@@ -167,6 +175,8 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK6QFrame8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "sizeHint", args)
   }
@@ -190,6 +200,8 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10frameStyleEv
+    // invoke: int frameStyle()
+    C._ZNK6QFrame10frameStyleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameStyle", args)
   }
@@ -208,6 +220,8 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame12midLineWidthEv
+    // invoke: int midLineWidth()
+    C._ZNK6QFrame12midLineWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "midLineWidth", args)
   }
@@ -227,8 +241,10 @@ func (this *QFrame) setLineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QFrame12setLineWidthEi
+    // invoke: void setLineWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QFrame12setLineWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setLineWidth", args)
   }
@@ -248,8 +264,10 @@ func (this *QFrame) setMidLineWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QFrame15setMidLineWidthEi
+    // invoke: void setMidLineWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QFrame15setMidLineWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFrame", "setMidLineWidth", args)
   }
@@ -268,6 +286,8 @@ func (this *QFrame) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK6QFrame10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "metaObject", args)
   }
@@ -286,6 +306,8 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QFrame10frameWidthEv
+    // invoke: int frameWidth()
+    C._ZNK6QFrame10frameWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFrame", "frameWidth", args)
   }

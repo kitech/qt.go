@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -113,6 +113,8 @@ func (this *QMdiArea) activateNextSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea21activateNextSubWindowEv
+    // invoke: void activateNextSubWindow()
+    C._ZN8QMdiArea21activateNextSubWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activateNextSubWindow", args)
   }
@@ -132,8 +134,10 @@ func (this *QMdiArea) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea13setBackgroundERK6QBrush
+    // invoke: void setBackground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea13setBackgroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setBackground", args)
   }
@@ -167,8 +171,10 @@ func (this *QMdiArea) removeSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15removeSubWindowEP7QWidget
+    // invoke: void removeSubWindow(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea15removeSubWindowEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "removeSubWindow", args)
   }
@@ -188,8 +194,10 @@ func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setTabsClosableEb
+    // invoke: void setTabsClosable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea15setTabsClosableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsClosable", args)
   }
@@ -208,6 +216,8 @@ func (this *QMdiArea) currentSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea16currentSubWindowEv
+    // invoke: QMdiSubWindow * currentSubWindow()
+    C._ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "currentSubWindow", args)
   }
@@ -226,6 +236,8 @@ func (this *QMdiArea) tabsMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea11tabsMovableEv
+    // invoke: bool tabsMovable()
+    C._ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsMovable", args)
   }
@@ -244,6 +256,8 @@ func (this *QMdiArea) activatePreviousSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea25activatePreviousSubWindowEv
+    // invoke: void activatePreviousSubWindow()
+    C._ZN8QMdiArea25activatePreviousSubWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activatePreviousSubWindow", args)
   }
@@ -263,8 +277,10 @@ func (this *QMdiArea) setDocumentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea15setDocumentModeEb
+    // invoke: void setDocumentMode(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea15setDocumentModeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setDocumentMode", args)
   }
@@ -283,6 +299,8 @@ func (this *QMdiArea) documentMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea12documentModeEv
+    // invoke: bool documentMode()
+    C._ZNK8QMdiArea12documentModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "documentMode", args)
   }
@@ -302,8 +320,10 @@ func (this *QMdiArea) setActiveSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow
+    // invoke: void setActiveSubWindow(class QMdiSubWindow *)
     var arg0 = args[0].(QMdiSubWindow).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea18setActiveSubWindowEP13QMdiSubWindow(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setActiveSubWindow", args)
   }
@@ -322,6 +342,8 @@ func (this *QMdiArea) activeSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea15activeSubWindowEv
+    // invoke: QMdiSubWindow * activeSubWindow()
+    C._ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "activeSubWindow", args)
   }
@@ -341,8 +363,10 @@ func (this *QMdiArea) setTabsMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea14setTabsMovableEb
+    // invoke: void setTabsMovable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMdiArea14setTabsMovableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMdiArea", "setTabsMovable", args)
   }
@@ -361,6 +385,8 @@ func (this *QMdiArea) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK8QMdiArea10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "metaObject", args)
   }
@@ -384,6 +410,8 @@ func (this *QMdiArea) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK8QMdiArea8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "sizeHint", args)
   }
@@ -402,6 +430,8 @@ func (this *QMdiArea) closeAllSubWindows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea18closeAllSubWindowsEv
+    // invoke: void closeAllSubWindows()
+    C._ZN8QMdiArea18closeAllSubWindowsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "closeAllSubWindows", args)
   }
@@ -420,6 +450,8 @@ func (this *QMdiArea) cascadeSubWindows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea17cascadeSubWindowsEv
+    // invoke: void cascadeSubWindows()
+    C._ZN8QMdiArea17cascadeSubWindowsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "cascadeSubWindows", args)
   }
@@ -438,6 +470,8 @@ func (this *QMdiArea) closeActiveSubWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea20closeActiveSubWindowEv
+    // invoke: void closeActiveSubWindow()
+    C._ZN8QMdiArea20closeActiveSubWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "closeActiveSubWindow", args)
   }
@@ -456,6 +490,8 @@ func (this *QMdiArea) background(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea10backgroundEv
+    // invoke: QBrush background()
+    C._ZNK8QMdiArea10backgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "background", args)
   }
@@ -474,6 +510,8 @@ func (this *QMdiArea) tileSubWindows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMdiArea14tileSubWindowsEv
+    // invoke: void tileSubWindows()
+    C._ZN8QMdiArea14tileSubWindowsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tileSubWindows", args)
   }
@@ -492,6 +530,8 @@ func (this *QMdiArea) tabsClosable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea12tabsClosableEv
+    // invoke: bool tabsClosable()
+    C._ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsClosable", args)
   }
@@ -510,6 +550,8 @@ func (this *QMdiArea) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMdiArea15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMdiArea", "minimumSizeHint", args)
   }

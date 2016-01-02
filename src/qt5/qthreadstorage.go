@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qthreadstorage.h
 // dst-file: /src/core/qthreadstorage.go
 //
@@ -71,8 +71,10 @@ func (this *QThreadStorageData) set(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QThreadStorageData3setEPv
+    // invoke: void ** set(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
+    C._ZN18QThreadStorageData3setEPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QThreadStorageData", "set", args)
   }
@@ -91,6 +93,8 @@ func (this *QThreadStorageData) get(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QThreadStorageData3getEv
+    // invoke: void ** get()
+    C._ZNK18QThreadStorageData3getEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QThreadStorageData", "get", args)
   }

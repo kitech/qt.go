@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -77,8 +77,10 @@ func (this *QKeyEventTransition) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QKeyEventTransition6setKeyEi
+    // invoke: void setKey(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN19QKeyEventTransition6setKeyEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "setKey", args)
   }
@@ -97,6 +99,8 @@ func (this *QKeyEventTransition) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QKeyEventTransition10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK19QKeyEventTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "metaObject", args)
   }
@@ -129,6 +133,8 @@ func (this *QKeyEventTransition) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QKeyEventTransition3keyEv
+    // invoke: int key()
+    C._ZNK19QKeyEventTransition3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "key", args)
   }

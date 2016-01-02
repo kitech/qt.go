@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qaccessible.h
 // dst-file: /src/gui/qaccessible.go
 //
@@ -620,8 +620,10 @@ func (this *QAccessibleTableModelChangeEvent) setFirstColumn(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent14setFirstColumnEi
+    // invoke: void setFirstColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN32QAccessibleTableModelChangeEvent14setFirstColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setFirstColumn", args)
   }
@@ -641,8 +643,10 @@ func (this *QAccessibleTableModelChangeEvent) setFirstRow(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent11setFirstRowEi
+    // invoke: void setFirstRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN32QAccessibleTableModelChangeEvent11setFirstRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setFirstRow", args)
   }
@@ -661,6 +665,8 @@ func (this *QAccessibleTableModelChangeEvent) firstRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent8firstRowEv
+    // invoke: int firstRow()
+    C._ZNK32QAccessibleTableModelChangeEvent8firstRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstRow", args)
   }
@@ -680,8 +686,10 @@ func (this *QAccessibleTableModelChangeEvent) setLastColumn(args ...interface{})
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent13setLastColumnEi
+    // invoke: void setLastColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN32QAccessibleTableModelChangeEvent13setLastColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setLastColumn", args)
   }
@@ -700,6 +708,8 @@ func (this *QAccessibleTableModelChangeEvent) firstColumn(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent11firstColumnEv
+    // invoke: int firstColumn()
+    C._ZNK32QAccessibleTableModelChangeEvent11firstColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstColumn", args)
   }
@@ -718,6 +728,8 @@ func (this *QAccessibleTableModelChangeEvent) lastColumn(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent10lastColumnEv
+    // invoke: int lastColumn()
+    C._ZNK32QAccessibleTableModelChangeEvent10lastColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastColumn", args)
   }
@@ -737,8 +749,10 @@ func (this *QAccessibleTableModelChangeEvent) setLastRow(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleTableModelChangeEvent10setLastRowEi
+    // invoke: void setLastRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN32QAccessibleTableModelChangeEvent10setLastRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "setLastRow", args)
   }
@@ -757,6 +771,8 @@ func (this *QAccessibleTableModelChangeEvent) lastRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent7lastRowEv
+    // invoke: int lastRow()
+    C._ZNK32QAccessibleTableModelChangeEvent7lastRowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastRow", args)
   }
@@ -778,12 +794,14 @@ func (this *QAccessibleTextInterface) selection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface9selectionEiPiS0_
+    // invoke: void selection(int, int *, int *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
+    C._ZNK24QAccessibleTextInterface9selectionEiPiS0_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "selection", args)
   }
@@ -803,8 +821,10 @@ func (this *QAccessibleTextInterface) setCursorPosition(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface17setCursorPositionEi
+    // invoke: void setCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN24QAccessibleTextInterface17setCursorPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "setCursorPosition", args)
   }
@@ -824,8 +844,10 @@ func (this *QAccessibleTextInterface) offsetAtPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint
+    // invoke: int offsetAtPoint(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK24QAccessibleTextInterface13offsetAtPointERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "offsetAtPoint", args)
   }
@@ -847,12 +869,14 @@ func (this *QAccessibleTextInterface) attributes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface10attributesEiPiS0_
+    // invoke: QString attributes(int, int *, int *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
+    C._ZNK24QAccessibleTextInterface10attributesEiPiS0_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "attributes", args)
   }
@@ -871,6 +895,8 @@ func (this *QAccessibleTextInterface) selectionCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14selectionCountEv
+    // invoke: int selectionCount()
+    C._ZNK24QAccessibleTextInterface14selectionCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "selectionCount", args)
   }
@@ -889,6 +915,8 @@ func (this *QAccessibleTextInterface) characterCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14characterCountEv
+    // invoke: int characterCount()
+    C._ZNK24QAccessibleTextInterface14characterCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "characterCount", args)
   }
@@ -923,10 +951,12 @@ func (this *QAccessibleTextInterface) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface4textEii
+    // invoke: QString text(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK24QAccessibleTextInterface4textEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "text", args)
   }
@@ -946,8 +976,10 @@ func (this *QAccessibleTextInterface) characterRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface13characterRectEi
+    // invoke: QRect characterRect(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK24QAccessibleTextInterface13characterRectEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "characterRect", args)
   }
@@ -967,8 +999,10 @@ func (this *QAccessibleTextInterface) removeSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface15removeSelectionEi
+    // invoke: void removeSelection(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN24QAccessibleTextInterface15removeSelectionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "removeSelection", args)
   }
@@ -989,10 +1023,12 @@ func (this *QAccessibleTextInterface) addSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface12addSelectionEii
+    // invoke: void addSelection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN24QAccessibleTextInterface12addSelectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "addSelection", args)
   }
@@ -1013,10 +1049,12 @@ func (this *QAccessibleTextInterface) scrollToSubstring(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface17scrollToSubstringEii
+    // invoke: void scrollToSubstring(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN24QAccessibleTextInterface17scrollToSubstringEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "scrollToSubstring", args)
   }
@@ -1035,6 +1073,8 @@ func (this *QAccessibleTextInterface) cursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAccessibleTextInterface14cursorPositionEv
+    // invoke: int cursorPosition()
+    C._ZNK24QAccessibleTextInterface14cursorPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "cursorPosition", args)
   }
@@ -1056,12 +1096,14 @@ func (this *QAccessibleTextInterface) setSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAccessibleTextInterface12setSelectionEiii
+    // invoke: void setSelection(int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN24QAccessibleTextInterface12setSelectionEiii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAccessibleTextInterface", "setSelection", args)
   }
@@ -1080,6 +1122,8 @@ func (this *QAccessibleEvent) object(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent6objectEv
+    // invoke: QObject * object()
+    C._ZNK16QAccessibleEvent6objectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "object", args)
   }
@@ -1099,8 +1143,10 @@ func (this *QAccessibleEvent) setChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAccessibleEvent8setChildEi
+    // invoke: void setChild(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN16QAccessibleEvent8setChildEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "setChild", args)
   }
@@ -1119,6 +1165,8 @@ func (this *QAccessibleEvent) accessibleInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent19accessibleInterfaceEv
+    // invoke: QAccessibleInterface * accessibleInterface()
+    C._ZNK16QAccessibleEvent19accessibleInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "accessibleInterface", args)
   }
@@ -1142,6 +1190,8 @@ func (this *QAccessibleEvent) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAccessibleEvent5childEv
+    // invoke: int child()
+    C._ZNK16QAccessibleEvent5childEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "child", args)
   }
@@ -1188,6 +1238,8 @@ func (this *QAccessibleActionInterface) actionNames(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface11actionNamesEv
+    // invoke: QStringList actionNames()
+    C._ZNK26QAccessibleActionInterface11actionNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "actionNames", args)
   }
@@ -1235,8 +1287,10 @@ func (this *QAccessibleActionInterface) localizedActionName(args ...interface{})
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface19localizedActionNameERK7QString
+    // invoke: QString localizedActionName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK26QAccessibleActionInterface19localizedActionNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionName", args)
   }
@@ -1256,8 +1310,10 @@ func (this *QAccessibleActionInterface) localizedActionDescription(args ...inter
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString
+    // invoke: QString localizedActionDescription(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionDescription", args)
   }
@@ -1389,8 +1445,10 @@ func (this *QAccessibleActionInterface) doAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QAccessibleActionInterface8doActionERK7QString
+    // invoke: void doAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QAccessibleActionInterface8doActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "doAction", args)
   }
@@ -1424,8 +1482,10 @@ func (this *QAccessibleActionInterface) keyBindingsForAction(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleActionInterface20keyBindingsForActionERK7QString
+    // invoke: QStringList keyBindingsForAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK26QAccessibleActionInterface20keyBindingsForActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "keyBindingsForAction", args)
   }
@@ -1458,6 +1518,8 @@ func (this *QAccessibleInterface) imageInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14imageInterfaceEv
+    // invoke: QAccessibleImageInterface * imageInterface()
+    C.demth_ZN20QAccessibleInterface14imageInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "imageInterface", args)
   }
@@ -1476,6 +1538,8 @@ func (this *QAccessibleInterface) tableInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14tableInterfaceEv
+    // invoke: QAccessibleTableInterface * tableInterface()
+    C.demth_ZN20QAccessibleInterface14tableInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableInterface", args)
   }
@@ -1494,6 +1558,8 @@ func (this *QAccessibleInterface) editableTextInterface(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface21editableTextInterfaceEv
+    // invoke: QAccessibleEditableTextInterface * editableTextInterface()
+    C.demth_ZN20QAccessibleInterface21editableTextInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "editableTextInterface", args)
   }
@@ -1512,6 +1578,8 @@ func (this *QAccessibleInterface) valueInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface14valueInterfaceEv
+    // invoke: QAccessibleValueInterface * valueInterface()
+    C.demth_ZN20QAccessibleInterface14valueInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "valueInterface", args)
   }
@@ -1530,6 +1598,8 @@ func (this *QAccessibleInterface) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface4rectEv
+    // invoke: QRect rect()
+    C._ZNK20QAccessibleInterface4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "rect", args)
   }
@@ -1548,6 +1618,8 @@ func (this *QAccessibleInterface) object(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6objectEv
+    // invoke: QObject * object()
+    C._ZNK20QAccessibleInterface6objectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "object", args)
   }
@@ -1566,6 +1638,8 @@ func (this *QAccessibleInterface) actionInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface15actionInterfaceEv
+    // invoke: QAccessibleActionInterface * actionInterface()
+    C.demth_ZN20QAccessibleInterface15actionInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "actionInterface", args)
   }
@@ -1584,6 +1658,8 @@ func (this *QAccessibleInterface) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6parentEv
+    // invoke: QAccessibleInterface * parent()
+    C._ZNK20QAccessibleInterface6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "parent", args)
   }
@@ -1604,10 +1680,12 @@ func (this *QAccessibleInterface) childAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface7childAtEii
+    // invoke: QAccessibleInterface * childAt(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK20QAccessibleInterface7childAtEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "childAt", args)
   }
@@ -1626,6 +1704,8 @@ func (this *QAccessibleInterface) childCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface10childCountEv
+    // invoke: int childCount()
+    C._ZNK20QAccessibleInterface10childCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "childCount", args)
   }
@@ -1644,6 +1724,8 @@ func (this *QAccessibleInterface) tableCellInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface18tableCellInterfaceEv
+    // invoke: QAccessibleTableCellInterface * tableCellInterface()
+    C.demth_ZN20QAccessibleInterface18tableCellInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableCellInterface", args)
   }
@@ -1663,8 +1745,10 @@ func (this *QAccessibleInterface) indexOfChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface12indexOfChildEPKS_
+    // invoke: int indexOfChild(const class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QAccessibleInterface12indexOfChildEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "indexOfChild", args)
   }
@@ -1683,6 +1767,8 @@ func (this *QAccessibleInterface) foregroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15foregroundColorEv
+    // invoke: QColor foregroundColor()
+    C._ZNK20QAccessibleInterface15foregroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "foregroundColor", args)
   }
@@ -1701,6 +1787,8 @@ func (this *QAccessibleInterface) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface7isValidEv
+    // invoke: bool isValid()
+    C._ZNK20QAccessibleInterface7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "isValid", args)
   }
@@ -1719,6 +1807,8 @@ func (this *QAccessibleInterface) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6windowEv
+    // invoke: QWindow * window()
+    C._ZNK20QAccessibleInterface6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "window", args)
   }
@@ -1739,10 +1829,12 @@ func (this *QAccessibleInterface) virtual_hook(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface12virtual_hookEiPv
+    // invoke: void virtual_hook(int, void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C._ZN20QAccessibleInterface12virtual_hookEiPv(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "virtual_hook", args)
   }
@@ -1761,6 +1853,8 @@ func (this *QAccessibleInterface) focusChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface10focusChildEv
+    // invoke: QAccessibleInterface * focusChild()
+    C._ZNK20QAccessibleInterface10focusChildEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "focusChild", args)
   }
@@ -1780,8 +1874,10 @@ func (this *QAccessibleInterface) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface5childEi
+    // invoke: QAccessibleInterface * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK20QAccessibleInterface5childEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "child", args)
   }
@@ -1800,6 +1896,8 @@ func (this *QAccessibleInterface) textInterface(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QAccessibleInterface13textInterfaceEv
+    // invoke: QAccessibleTextInterface * textInterface()
+    C.demth_ZN20QAccessibleInterface13textInterfaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "textInterface", args)
   }
@@ -1818,6 +1916,8 @@ func (this *QAccessibleInterface) backgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15backgroundColorEv
+    // invoke: QColor backgroundColor()
+    C._ZNK20QAccessibleInterface15backgroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "backgroundColor", args)
   }
@@ -1852,10 +1952,12 @@ func (this *QAccessibleEditableTextInterface) insertText(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString
+    // invoke: void insertText(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN32QAccessibleEditableTextInterface10insertTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "insertText", args)
   }
@@ -1877,12 +1979,14 @@ func (this *QAccessibleEditableTextInterface) replaceText(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString
+    // invoke: void replaceText(int, int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN32QAccessibleEditableTextInterface11replaceTextEiiRK7QString(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "replaceText", args)
   }
@@ -1903,10 +2007,12 @@ func (this *QAccessibleEditableTextInterface) deleteText(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN32QAccessibleEditableTextInterface10deleteTextEii
+    // invoke: void deleteText(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN32QAccessibleEditableTextInterface10deleteTextEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleEditableTextInterface", "deleteText", args)
   }
@@ -1939,6 +2045,8 @@ func (this *QAccessibleTableCellInterface) columnIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface11columnIndexEv
+    // invoke: int columnIndex()
+    C._ZNK29QAccessibleTableCellInterface11columnIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnIndex", args)
   }
@@ -1971,6 +2079,8 @@ func (this *QAccessibleTableCellInterface) columnExtent(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface12columnExtentEv
+    // invoke: int columnExtent()
+    C._ZNK29QAccessibleTableCellInterface12columnExtentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnExtent", args)
   }
@@ -1989,6 +2099,8 @@ func (this *QAccessibleTableCellInterface) rowIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface8rowIndexEv
+    // invoke: int rowIndex()
+    C._ZNK29QAccessibleTableCellInterface8rowIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowIndex", args)
   }
@@ -2007,6 +2119,8 @@ func (this *QAccessibleTableCellInterface) table(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface5tableEv
+    // invoke: QAccessibleInterface * table()
+    C._ZNK29QAccessibleTableCellInterface5tableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "table", args)
   }
@@ -2025,6 +2139,8 @@ func (this *QAccessibleTableCellInterface) rowExtent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface9rowExtentEv
+    // invoke: int rowExtent()
+    C._ZNK29QAccessibleTableCellInterface9rowExtentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowExtent", args)
   }
@@ -2043,6 +2159,8 @@ func (this *QAccessibleTableCellInterface) rowHeaderCells(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv
+    // invoke: QList<QAccessibleInterface *> rowHeaderCells()
+    C._ZNK29QAccessibleTableCellInterface14rowHeaderCellsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "rowHeaderCells", args)
   }
@@ -2061,6 +2179,8 @@ func (this *QAccessibleTableCellInterface) columnHeaderCells(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv
+    // invoke: QList<QAccessibleInterface *> columnHeaderCells()
+    C._ZNK29QAccessibleTableCellInterface17columnHeaderCellsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "columnHeaderCells", args)
   }
@@ -2079,6 +2199,8 @@ func (this *QAccessibleTableCellInterface) isSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTableCellInterface10isSelectedEv
+    // invoke: bool isSelected()
+    C._ZNK29QAccessibleTableCellInterface10isSelectedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableCellInterface", "isSelected", args)
   }
@@ -2098,8 +2220,10 @@ func (this *QAccessibleTableInterface) unselectColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface14unselectColumnEi
+    // invoke: bool unselectColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleTableInterface14unselectColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "unselectColumn", args)
   }
@@ -2119,8 +2243,10 @@ func (this *QAccessibleTableInterface) columnDescription(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface17columnDescriptionEi
+    // invoke: QString columnDescription(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK25QAccessibleTableInterface17columnDescriptionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "columnDescription", args)
   }
@@ -2139,6 +2265,8 @@ func (this *QAccessibleTableInterface) selectedCellCount(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface17selectedCellCountEv
+    // invoke: int selectedCellCount()
+    C._ZNK25QAccessibleTableInterface17selectedCellCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedCellCount", args)
   }
@@ -2157,6 +2285,8 @@ func (this *QAccessibleTableInterface) selectedCells(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface13selectedCellsEv
+    // invoke: QList<QAccessibleInterface *> selectedCells()
+    C._ZNK25QAccessibleTableInterface13selectedCellsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedCells", args)
   }
@@ -2176,8 +2306,10 @@ func (this *QAccessibleTableInterface) selectRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface9selectRowEi
+    // invoke: bool selectRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleTableInterface9selectRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectRow", args)
   }
@@ -2196,6 +2328,8 @@ func (this *QAccessibleTableInterface) selectedRowCount(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface16selectedRowCountEv
+    // invoke: int selectedRowCount()
+    C._ZNK25QAccessibleTableInterface16selectedRowCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedRowCount", args)
   }
@@ -2228,6 +2362,8 @@ func (this *QAccessibleTableInterface) selectedColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface15selectedColumnsEv
+    // invoke: QList<int> selectedColumns()
+    C._ZNK25QAccessibleTableInterface15selectedColumnsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedColumns", args)
   }
@@ -2248,10 +2384,12 @@ func (this *QAccessibleTableInterface) cellAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface6cellAtEii
+    // invoke: QAccessibleInterface * cellAt(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK25QAccessibleTableInterface6cellAtEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "cellAt", args)
   }
@@ -2270,6 +2408,8 @@ func (this *QAccessibleTableInterface) selectedRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface12selectedRowsEv
+    // invoke: QList<int> selectedRows()
+    C._ZNK25QAccessibleTableInterface12selectedRowsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedRows", args)
   }
@@ -2289,8 +2429,10 @@ func (this *QAccessibleTableInterface) modelChange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent
+    // invoke: void modelChange(class QAccessibleTableModelChangeEvent *)
     var arg0 = args[0].(QAccessibleTableModelChangeEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleTableInterface11modelChangeEP32QAccessibleTableModelChangeEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "modelChange", args)
   }
@@ -2309,6 +2451,8 @@ func (this *QAccessibleTableInterface) columnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface11columnCountEv
+    // invoke: int columnCount()
+    C._ZNK25QAccessibleTableInterface11columnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "columnCount", args)
   }
@@ -2328,8 +2472,10 @@ func (this *QAccessibleTableInterface) selectColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface12selectColumnEi
+    // invoke: bool selectColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleTableInterface12selectColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectColumn", args)
   }
@@ -2349,8 +2495,10 @@ func (this *QAccessibleTableInterface) unselectRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleTableInterface11unselectRowEi
+    // invoke: bool unselectRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleTableInterface11unselectRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "unselectRow", args)
   }
@@ -2369,6 +2517,8 @@ func (this *QAccessibleTableInterface) rowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface8rowCountEv
+    // invoke: int rowCount()
+    C._ZNK25QAccessibleTableInterface8rowCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "rowCount", args)
   }
@@ -2388,8 +2538,10 @@ func (this *QAccessibleTableInterface) rowDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface14rowDescriptionEi
+    // invoke: QString rowDescription(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK25QAccessibleTableInterface14rowDescriptionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "rowDescription", args)
   }
@@ -2408,6 +2560,8 @@ func (this *QAccessibleTableInterface) summary(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface7summaryEv
+    // invoke: QAccessibleInterface * summary()
+    C._ZNK25QAccessibleTableInterface7summaryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "summary", args)
   }
@@ -2427,8 +2581,10 @@ func (this *QAccessibleTableInterface) isColumnSelected(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface16isColumnSelectedEi
+    // invoke: bool isColumnSelected(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK25QAccessibleTableInterface16isColumnSelectedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "isColumnSelected", args)
   }
@@ -2447,6 +2603,8 @@ func (this *QAccessibleTableInterface) caption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface7captionEv
+    // invoke: QAccessibleInterface * caption()
+    C._ZNK25QAccessibleTableInterface7captionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "caption", args)
   }
@@ -2466,8 +2624,10 @@ func (this *QAccessibleTableInterface) isRowSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface13isRowSelectedEi
+    // invoke: bool isRowSelected(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK25QAccessibleTableInterface13isRowSelectedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "isRowSelected", args)
   }
@@ -2486,6 +2646,8 @@ func (this *QAccessibleTableInterface) selectedColumnCount(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleTableInterface19selectedColumnCountEv
+    // invoke: int selectedColumnCount()
+    C._ZNK25QAccessibleTableInterface19selectedColumnCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTableInterface", "selectedColumnCount", args)
   }
@@ -2504,6 +2666,8 @@ func (this *QAccessibleTextUpdateEvent) textInserted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent12textInsertedEv
+    // invoke: QString textInserted()
+    C._ZNK26QAccessibleTextUpdateEvent12textInsertedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textInserted", args)
   }
@@ -2527,6 +2691,8 @@ func (this *QAccessibleTextUpdateEvent) textRemoved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent11textRemovedEv
+    // invoke: QString textRemoved()
+    C._ZNK26QAccessibleTextUpdateEvent11textRemovedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textRemoved", args)
   }
@@ -2545,6 +2711,8 @@ func (this *QAccessibleTextUpdateEvent) changePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent14changePositionEv
+    // invoke: int changePosition()
+    C._ZNK26QAccessibleTextUpdateEvent14changePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "changePosition", args)
   }
@@ -2563,6 +2731,8 @@ func (this *QAccessibleImageInterface) imageDescription(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface16imageDescriptionEv
+    // invoke: QString imageDescription()
+    C._ZNK25QAccessibleImageInterface16imageDescriptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imageDescription", args)
   }
@@ -2581,6 +2751,8 @@ func (this *QAccessibleImageInterface) imagePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface13imagePositionEv
+    // invoke: QPoint imagePosition()
+    C._ZNK25QAccessibleImageInterface13imagePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imagePosition", args)
   }
@@ -2613,6 +2785,8 @@ func (this *QAccessibleImageInterface) imageSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleImageInterface9imageSizeEv
+    // invoke: QSize imageSize()
+    C._ZNK25QAccessibleImageInterface9imageSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleImageInterface", "imageSize", args)
   }
@@ -2631,6 +2805,8 @@ func (this *QAccessibleTextInsertEvent) textInserted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent12textInsertedEv
+    // invoke: QString textInserted()
+    C._ZNK26QAccessibleTextInsertEvent12textInsertedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "textInserted", args)
   }
@@ -2649,6 +2825,8 @@ func (this *QAccessibleTextInsertEvent) changePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent14changePositionEv
+    // invoke: int changePosition()
+    C._ZNK26QAccessibleTextInsertEvent14changePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "changePosition", args)
   }
@@ -2672,6 +2850,8 @@ func (this *QAccessibleValueInterface) maximumValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12maximumValueEv
+    // invoke: QVariant maximumValue()
+    C._ZNK25QAccessibleValueInterface12maximumValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "maximumValue", args)
   }
@@ -2690,6 +2870,8 @@ func (this *QAccessibleValueInterface) minimumStepSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface15minimumStepSizeEv
+    // invoke: QVariant minimumStepSize()
+    C._ZNK25QAccessibleValueInterface15minimumStepSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "minimumStepSize", args)
   }
@@ -2708,6 +2890,8 @@ func (this *QAccessibleValueInterface) currentValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12currentValueEv
+    // invoke: QVariant currentValue()
+    C._ZNK25QAccessibleValueInterface12currentValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "currentValue", args)
   }
@@ -2726,6 +2910,8 @@ func (this *QAccessibleValueInterface) minimumValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QAccessibleValueInterface12minimumValueEv
+    // invoke: QVariant minimumValue()
+    C._ZNK25QAccessibleValueInterface12minimumValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "minimumValue", args)
   }
@@ -2759,8 +2945,10 @@ func (this *QAccessibleValueInterface) setCurrentValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant
+    // invoke: void setCurrentValue(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN25QAccessibleValueInterface15setCurrentValueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleValueInterface", "setCurrentValue", args)
   }
@@ -2784,6 +2972,8 @@ func (this *QAccessibleTextRemoveEvent) textRemoved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent11textRemovedEv
+    // invoke: QString textRemoved()
+    C._ZNK26QAccessibleTextRemoveEvent11textRemovedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "textRemoved", args)
   }
@@ -2802,6 +2992,8 @@ func (this *QAccessibleTextRemoveEvent) changePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent14changePositionEv
+    // invoke: int changePosition()
+    C._ZNK26QAccessibleTextRemoveEvent14changePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "changePosition", args)
   }
@@ -2820,6 +3012,8 @@ func (this *QAccessibleTextSelectionEvent) selectionEnd(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent12selectionEndEv
+    // invoke: int selectionEnd()
+    C._ZNK29QAccessibleTextSelectionEvent12selectionEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionEnd", args)
   }
@@ -2843,6 +3037,8 @@ func (this *QAccessibleTextSelectionEvent) selectionStart(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent14selectionStartEv
+    // invoke: int selectionStart()
+    C._ZNK29QAccessibleTextSelectionEvent14selectionStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionStart", args)
   }
@@ -2863,10 +3059,12 @@ func (this *QAccessibleTextSelectionEvent) setSelection(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN29QAccessibleTextSelectionEvent12setSelectionEii
+    // invoke: void setSelection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN29QAccessibleTextSelectionEvent12setSelectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "setSelection", args)
   }
@@ -2891,8 +3089,10 @@ func (this *QAccessibleTextCursorEvent) setCursorPosition(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN26QAccessibleTextCursorEvent17setCursorPositionEi
+    // invoke: void setCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN26QAccessibleTextCursorEvent17setCursorPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "setCursorPosition", args)
   }
@@ -2911,6 +3111,8 @@ func (this *QAccessibleTextCursorEvent) cursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAccessibleTextCursorEvent14cursorPositionEv
+    // invoke: int cursorPosition()
+    C._ZNK26QAccessibleTextCursorEvent14cursorPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "cursorPosition", args)
   }
@@ -2935,8 +3137,10 @@ func (this *QAccessibleValueChangeEvent) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QAccessibleValueChangeEvent8setValueERK8QVariant
+    // invoke: void setValue(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QAccessibleValueChangeEvent8setValueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "setValue", args)
   }
@@ -2955,6 +3159,8 @@ func (this *QAccessibleValueChangeEvent) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QAccessibleValueChangeEvent5valueEv
+    // invoke: QVariant value()
+    C._ZNK27QAccessibleValueChangeEvent5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "value", args)
   }

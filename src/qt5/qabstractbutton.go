@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -128,6 +128,8 @@ func (this *QAbstractButton) iconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton8iconSizeEv
+    // invoke: QSize iconSize()
+    C._ZNK15QAbstractButton8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "iconSize", args)
   }
@@ -146,6 +148,8 @@ func (this *QAbstractButton) click(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton5clickEv
+    // invoke: void click()
+    C._ZN15QAbstractButton5clickEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "click", args)
   }
@@ -179,8 +183,10 @@ func (this *QAbstractButton) setChecked(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton10setCheckedEb
+    // invoke: void setChecked(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton10setCheckedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setChecked", args)
   }
@@ -199,6 +205,8 @@ func (this *QAbstractButton) shortcut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton8shortcutEv
+    // invoke: QKeySequence shortcut()
+    C._ZNK15QAbstractButton8shortcutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "shortcut", args)
   }
@@ -217,6 +225,8 @@ func (this *QAbstractButton) group(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton5groupEv
+    // invoke: QButtonGroup * group()
+    C._ZNK15QAbstractButton5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "group", args)
   }
@@ -235,6 +245,8 @@ func (this *QAbstractButton) isCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton11isCheckableEv
+    // invoke: bool isCheckable()
+    C._ZNK15QAbstractButton11isCheckableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isCheckable", args)
   }
@@ -258,6 +270,8 @@ func (this *QAbstractButton) isDown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton6isDownEv
+    // invoke: bool isDown()
+    C._ZNK15QAbstractButton6isDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isDown", args)
   }
@@ -277,8 +291,10 @@ func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton16setAutoExclusiveEb
+    // invoke: void setAutoExclusive(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton16setAutoExclusiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoExclusive", args)
   }
@@ -297,6 +313,8 @@ func (this *QAbstractButton) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QAbstractButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "metaObject", args)
   }
@@ -315,6 +333,8 @@ func (this *QAbstractButton) isChecked(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton9isCheckedEv
+    // invoke: bool isChecked()
+    C._ZNK15QAbstractButton9isCheckedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "isChecked", args)
   }
@@ -334,8 +354,10 @@ func (this *QAbstractButton) setAutoRepeatDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton18setAutoRepeatDelayEi
+    // invoke: void setAutoRepeatDelay(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton18setAutoRepeatDelayEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatDelay", args)
   }
@@ -354,6 +376,8 @@ func (this *QAbstractButton) autoRepeatDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton15autoRepeatDelayEv
+    // invoke: int autoRepeatDelay()
+    C._ZNK15QAbstractButton15autoRepeatDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatDelay", args)
   }
@@ -372,6 +396,8 @@ func (this *QAbstractButton) autoExclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton13autoExclusiveEv
+    // invoke: bool autoExclusive()
+    C._ZNK15QAbstractButton13autoExclusiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoExclusive", args)
   }
@@ -390,6 +416,8 @@ func (this *QAbstractButton) toggle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton6toggleEv
+    // invoke: void toggle()
+    C._ZN15QAbstractButton6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "toggle", args)
   }
@@ -409,8 +437,10 @@ func (this *QAbstractButton) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setIconERK5QIcon
+    // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIcon", args)
   }
@@ -430,8 +460,10 @@ func (this *QAbstractButton) setAutoRepeatInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton21setAutoRepeatIntervalEi
+    // invoke: void setAutoRepeatInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton21setAutoRepeatIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeatInterval", args)
   }
@@ -451,8 +483,10 @@ func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton13setAutoRepeatEb
+    // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setAutoRepeat", args)
   }
@@ -472,8 +506,10 @@ func (this *QAbstractButton) animateClick(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton12animateClickEi
+    // invoke: void animateClick(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton12animateClickEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "animateClick", args)
   }
@@ -493,8 +529,10 @@ func (this *QAbstractButton) setDown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setDownEb
+    // invoke: void setDown(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton7setDownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setDown", args)
   }
@@ -513,6 +551,8 @@ func (this *QAbstractButton) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton4textEv
+    // invoke: QString text()
+    C._ZNK15QAbstractButton4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "text", args)
   }
@@ -532,8 +572,10 @@ func (this *QAbstractButton) setShortcut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton11setShortcutERK12QKeySequence
+    // invoke: void setShortcut(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton11setShortcutERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setShortcut", args)
   }
@@ -553,8 +595,10 @@ func (this *QAbstractButton) setCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton12setCheckableEb
+    // invoke: void setCheckable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton12setCheckableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setCheckable", args)
   }
@@ -573,6 +617,8 @@ func (this *QAbstractButton) icon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton4iconEv
+    // invoke: QIcon icon()
+    C._ZNK15QAbstractButton4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "icon", args)
   }
@@ -592,8 +638,10 @@ func (this *QAbstractButton) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setText", args)
   }
@@ -612,6 +660,8 @@ func (this *QAbstractButton) autoRepeatInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton18autoRepeatIntervalEv
+    // invoke: int autoRepeatInterval()
+    C._ZNK15QAbstractButton18autoRepeatIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeatInterval", args)
   }
@@ -630,6 +680,8 @@ func (this *QAbstractButton) autoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractButton10autoRepeatEv
+    // invoke: bool autoRepeat()
+    C._ZNK15QAbstractButton10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractButton", "autoRepeat", args)
   }
@@ -649,8 +701,10 @@ func (this *QAbstractButton) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractButton11setIconSizeERK5QSize
+    // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractButton11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractButton", "setIconSize", args)
   }

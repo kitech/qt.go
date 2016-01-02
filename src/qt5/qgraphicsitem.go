@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgraphicsitem.h
 // dst-file: /src/widgets/qgraphicsitem.go
 //
@@ -836,6 +836,8 @@ func (this *QGraphicsTextItem) openExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem17openExternalLinksEv
+    // invoke: bool openExternalLinks()
+    C._ZNK17QGraphicsTextItem17openExternalLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "openExternalLinks", args)
   }
@@ -854,6 +856,8 @@ func (this *QGraphicsTextItem) textWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem9textWidthEv
+    // invoke: qreal textWidth()
+    C._ZNK17QGraphicsTextItem9textWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textWidth", args)
   }
@@ -873,8 +877,10 @@ func (this *QGraphicsTextItem) setTextWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setTextWidthEd
+    // invoke: void setTextWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem12setTextWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextWidth", args)
   }
@@ -894,8 +900,10 @@ func (this *QGraphicsTextItem) setTextCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor
+    // invoke: void setTextCursor(const class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem13setTextCursorERK11QTextCursor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTextCursor", args)
   }
@@ -928,6 +936,8 @@ func (this *QGraphicsTextItem) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem4fontEv
+    // invoke: QFont font()
+    C._ZNK17QGraphicsTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "font", args)
   }
@@ -951,6 +961,8 @@ func (this *QGraphicsTextItem) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QGraphicsTextItem10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "metaObject", args)
   }
@@ -970,8 +982,10 @@ func (this *QGraphicsTextItem) setOpenExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem20setOpenExternalLinksEb
+    // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setOpenExternalLinks", args)
   }
@@ -991,8 +1005,10 @@ func (this *QGraphicsTextItem) setTabChangesFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem18setTabChangesFocusEb
+    // invoke: void setTabChangesFocus(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem18setTabChangesFocusEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setTabChangesFocus", args)
   }
@@ -1011,6 +1027,8 @@ func (this *QGraphicsTextItem) toHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem6toHtmlEv
+    // invoke: QString toHtml()
+    C._ZNK17QGraphicsTextItem6toHtmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toHtml", args)
   }
@@ -1030,8 +1048,10 @@ func (this *QGraphicsTextItem) setDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem11setDocumentEP13QTextDocument
+    // invoke: void setDocument(class QTextDocument *)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem11setDocumentEP13QTextDocument(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDocument", args)
   }
@@ -1051,8 +1071,10 @@ func (this *QGraphicsTextItem) setPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem12setPlainTextERK7QString
+    // invoke: void setPlainText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem12setPlainTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setPlainText", args)
   }
@@ -1074,12 +1096,14 @@ func (this *QGraphicsTextItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN17QGraphicsTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "paint", args)
   }
@@ -1099,8 +1123,10 @@ func (this *QGraphicsTextItem) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setFontERK5QFont
+    // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setFont", args)
   }
@@ -1120,8 +1146,10 @@ func (this *QGraphicsTextItem) setDefaultTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor
+    // invoke: void setDefaultTextColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem19setDefaultTextColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setDefaultTextColor", args)
   }
@@ -1140,6 +1168,8 @@ func (this *QGraphicsTextItem) defaultTextColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem16defaultTextColorEv
+    // invoke: QColor defaultTextColor()
+    C._ZNK17QGraphicsTextItem16defaultTextColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "defaultTextColor", args)
   }
@@ -1172,6 +1202,8 @@ func (this *QGraphicsTextItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK17QGraphicsTextItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "shape", args)
   }
@@ -1190,6 +1222,8 @@ func (this *QGraphicsTextItem) textCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10textCursorEv
+    // invoke: QTextCursor textCursor()
+    C._ZNK17QGraphicsTextItem10textCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "textCursor", args)
   }
@@ -1208,6 +1242,8 @@ func (this *QGraphicsTextItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK17QGraphicsTextItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "boundingRect", args)
   }
@@ -1226,6 +1262,8 @@ func (this *QGraphicsTextItem) toPlainText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem11toPlainTextEv
+    // invoke: QString toPlainText()
+    C._ZNK17QGraphicsTextItem11toPlainTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "toPlainText", args)
   }
@@ -1245,8 +1283,10 @@ func (this *QGraphicsTextItem) setHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem7setHtmlERK7QString
+    // invoke: void setHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsTextItem7setHtmlERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "setHtml", args)
   }
@@ -1265,6 +1305,8 @@ func (this *QGraphicsTextItem) tabChangesFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem15tabChangesFocusEv
+    // invoke: bool tabChangesFocus()
+    C._ZNK17QGraphicsTextItem15tabChangesFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "tabChangesFocus", args)
   }
@@ -1283,6 +1325,8 @@ func (this *QGraphicsTextItem) document(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8documentEv
+    // invoke: QTextDocument * document()
+    C._ZNK17QGraphicsTextItem8documentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "document", args)
   }
@@ -1302,8 +1346,10 @@ func (this *QGraphicsTextItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "isObscuredBy", args)
   }
@@ -1322,6 +1368,8 @@ func (this *QGraphicsTextItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK17QGraphicsTextItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "opaqueArea", args)
   }
@@ -1341,8 +1389,10 @@ func (this *QGraphicsTextItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsTextItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsTextItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "contains", args)
   }
@@ -1361,6 +1411,8 @@ func (this *QGraphicsTextItem) adjustSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsTextItem10adjustSizeEv
+    // invoke: void adjustSize()
+    C._ZN17QGraphicsTextItem10adjustSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsTextItem", "adjustSize", args)
   }
@@ -1398,6 +1450,8 @@ func (this *QGraphicsPixmapItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK19QGraphicsPixmapItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "opaqueArea", args)
   }
@@ -1417,8 +1471,10 @@ func (this *QGraphicsPixmapItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK19QGraphicsPixmapItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "isObscuredBy", args)
   }
@@ -1451,6 +1507,8 @@ func (this *QGraphicsPixmapItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK19QGraphicsPixmapItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "shape", args)
   }
@@ -1469,6 +1527,8 @@ func (this *QGraphicsPixmapItem) pixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6pixmapEv
+    // invoke: QPixmap pixmap()
+    C._ZNK19QGraphicsPixmapItem6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "pixmap", args)
   }
@@ -1492,14 +1552,18 @@ func (this *QGraphicsPixmapItem) setOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetEdd
+    // invoke: void setOffset(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN19QGraphicsPixmapItem9setOffsetEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QGraphicsPixmapItem9setOffsetERK7QPointF
+    // invoke: void setOffset(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsPixmapItem9setOffsetERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setOffset", args)
   }
@@ -1521,12 +1585,14 @@ func (this *QGraphicsPixmapItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN19QGraphicsPixmapItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "paint", args)
   }
@@ -1545,6 +1611,8 @@ func (this *QGraphicsPixmapItem) offset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem6offsetEv
+    // invoke: QPointF offset()
+    C._ZNK19QGraphicsPixmapItem6offsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "offset", args)
   }
@@ -1563,6 +1631,8 @@ func (this *QGraphicsPixmapItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK19QGraphicsPixmapItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "boundingRect", args)
   }
@@ -1582,8 +1652,10 @@ func (this *QGraphicsPixmapItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsPixmapItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK19QGraphicsPixmapItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "contains", args)
   }
@@ -1603,8 +1675,10 @@ func (this *QGraphicsPixmapItem) setPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap
+    // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsPixmapItem9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPixmapItem", "setPixmap", args)
   }
@@ -1624,8 +1698,10 @@ func (this *QGraphicsRectItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsRectItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "isObscuredBy", args)
   }
@@ -1644,6 +1720,8 @@ func (this *QGraphicsRectItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK17QGraphicsRectItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "boundingRect", args)
   }
@@ -1681,6 +1759,8 @@ func (this *QGraphicsRectItem) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem4rectEv
+    // invoke: QRectF rect()
+    C._ZNK17QGraphicsRectItem4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "rect", args)
   }
@@ -1699,6 +1779,8 @@ func (this *QGraphicsRectItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK17QGraphicsRectItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "shape", args)
   }
@@ -1731,6 +1813,8 @@ func (this *QGraphicsRectItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK17QGraphicsRectItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "opaqueArea", args)
   }
@@ -1756,10 +1840,13 @@ func (this *QGraphicsRectItem) setRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRectItem7setRectERK6QRectF
+    // invoke: void setRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsRectItem7setRectERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN17QGraphicsRectItem7setRectEdddd
+    // invoke: void setRect(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -1768,6 +1855,7 @@ func (this *QGraphicsRectItem) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZN17QGraphicsRectItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "setRect", args)
   }
@@ -1787,8 +1875,10 @@ func (this *QGraphicsRectItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsRectItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsRectItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "contains", args)
   }
@@ -1810,12 +1900,14 @@ func (this *QGraphicsRectItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN17QGraphicsRectItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsRectItem", "paint", args)
   }
@@ -1835,8 +1927,10 @@ func (this *QGraphicsEllipseItem) setStartAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem13setStartAngleEi
+    // invoke: void setStartAngle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsEllipseItem13setStartAngleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setStartAngle", args)
   }
@@ -1861,8 +1955,10 @@ func (this *QGraphicsEllipseItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QGraphicsEllipseItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "contains", args)
   }
@@ -1888,10 +1984,13 @@ func (this *QGraphicsEllipseItem) setRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem7setRectERK6QRectF
+    // invoke: void setRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsEllipseItem7setRectERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN20QGraphicsEllipseItem7setRectEdddd
+    // invoke: void setRect(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -1900,6 +1999,7 @@ func (this *QGraphicsEllipseItem) setRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZN20QGraphicsEllipseItem7setRectEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setRect", args)
   }
@@ -1921,12 +2021,14 @@ func (this *QGraphicsEllipseItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QGraphicsEllipseItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "paint", args)
   }
@@ -1946,8 +2048,10 @@ func (this *QGraphicsEllipseItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QGraphicsEllipseItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "isObscuredBy", args)
   }
@@ -1966,6 +2070,8 @@ func (this *QGraphicsEllipseItem) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem4rectEv
+    // invoke: QRectF rect()
+    C._ZNK20QGraphicsEllipseItem4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "rect", args)
   }
@@ -1984,6 +2090,8 @@ func (this *QGraphicsEllipseItem) spanAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem9spanAngleEv
+    // invoke: int spanAngle()
+    C._ZNK20QGraphicsEllipseItem9spanAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "spanAngle", args)
   }
@@ -2002,6 +2110,8 @@ func (this *QGraphicsEllipseItem) startAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10startAngleEv
+    // invoke: int startAngle()
+    C._ZNK20QGraphicsEllipseItem10startAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "startAngle", args)
   }
@@ -2021,8 +2131,10 @@ func (this *QGraphicsEllipseItem) setSpanAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsEllipseItem12setSpanAngleEi
+    // invoke: void setSpanAngle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsEllipseItem12setSpanAngleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "setSpanAngle", args)
   }
@@ -2055,6 +2167,8 @@ func (this *QGraphicsEllipseItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK20QGraphicsEllipseItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "boundingRect", args)
   }
@@ -2073,6 +2187,8 @@ func (this *QGraphicsEllipseItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK20QGraphicsEllipseItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "shape", args)
   }
@@ -2105,6 +2221,8 @@ func (this *QGraphicsEllipseItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsEllipseItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK20QGraphicsEllipseItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsEllipseItem", "opaqueArea", args)
   }
@@ -2123,6 +2241,8 @@ func (this *QGraphicsPolygonItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK20QGraphicsPolygonItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "shape", args)
   }
@@ -2142,8 +2262,10 @@ func (this *QGraphicsPolygonItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QGraphicsPolygonItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "isObscuredBy", args)
   }
@@ -2165,12 +2287,14 @@ func (this *QGraphicsPolygonItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QGraphicsPolygonItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "paint", args)
   }
@@ -2194,6 +2318,8 @@ func (this *QGraphicsPolygonItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK20QGraphicsPolygonItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "boundingRect", args)
   }
@@ -2240,6 +2366,8 @@ func (this *QGraphicsPolygonItem) polygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem7polygonEv
+    // invoke: QPolygonF polygon()
+    C._ZNK20QGraphicsPolygonItem7polygonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "polygon", args)
   }
@@ -2258,6 +2386,8 @@ func (this *QGraphicsPolygonItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK20QGraphicsPolygonItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "opaqueArea", args)
   }
@@ -2277,8 +2407,10 @@ func (this *QGraphicsPolygonItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsPolygonItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QGraphicsPolygonItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "contains", args)
   }
@@ -2298,8 +2430,10 @@ func (this *QGraphicsPolygonItem) setPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF
+    // invoke: void setPolygon(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsPolygonItem10setPolygonERK9QPolygonF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPolygonItem", "setPolygon", args)
   }
@@ -2319,8 +2453,10 @@ func (this *QGraphicsPathItem) setPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsPathItem7setPathERK12QPainterPath
+    // invoke: void setPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsPathItem7setPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "setPath", args)
   }
@@ -2345,8 +2481,10 @@ func (this *QGraphicsPathItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsPathItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "contains", args)
   }
@@ -2365,6 +2503,8 @@ func (this *QGraphicsPathItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK17QGraphicsPathItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "boundingRect", args)
   }
@@ -2397,6 +2537,8 @@ func (this *QGraphicsPathItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK17QGraphicsPathItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "opaqueArea", args)
   }
@@ -2415,6 +2557,8 @@ func (this *QGraphicsPathItem) path(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem4pathEv
+    // invoke: QPainterPath path()
+    C._ZNK17QGraphicsPathItem4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "path", args)
   }
@@ -2447,6 +2591,8 @@ func (this *QGraphicsPathItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK17QGraphicsPathItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "shape", args)
   }
@@ -2466,8 +2612,10 @@ func (this *QGraphicsPathItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsPathItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "isObscuredBy", args)
   }
@@ -2489,12 +2637,14 @@ func (this *QGraphicsPathItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN17QGraphicsPathItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsPathItem", "paint", args)
   }
@@ -2514,8 +2664,10 @@ func (this *QGraphicsLineItem) setPen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem6setPenERK4QPen
+    // invoke: void setPen(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsLineItem6setPenERK4QPen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setPen", args)
   }
@@ -2540,8 +2692,10 @@ func (this *QGraphicsLineItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsLineItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "isObscuredBy", args)
   }
@@ -2560,6 +2714,8 @@ func (this *QGraphicsLineItem) line(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem4lineEv
+    // invoke: QLineF line()
+    C._ZNK17QGraphicsLineItem4lineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "line", args)
   }
@@ -2578,6 +2734,8 @@ func (this *QGraphicsLineItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK17QGraphicsLineItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "opaqueArea", args)
   }
@@ -2603,6 +2761,7 @@ func (this *QGraphicsLineItem) setLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem7setLineEdddd
+    // invoke: void setLine(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -2611,10 +2770,13 @@ func (this *QGraphicsLineItem) setLine(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZN17QGraphicsLineItem7setLineEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN17QGraphicsLineItem7setLineERK6QLineF
+    // invoke: void setLine(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QGraphicsLineItem7setLineERK6QLineF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "setLine", args)
   }
@@ -2633,6 +2795,8 @@ func (this *QGraphicsLineItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK17QGraphicsLineItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "boundingRect", args)
   }
@@ -2651,6 +2815,8 @@ func (this *QGraphicsLineItem) pen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem3penEv
+    // invoke: QPen pen()
+    C._ZNK17QGraphicsLineItem3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "pen", args)
   }
@@ -2669,6 +2835,8 @@ func (this *QGraphicsLineItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK17QGraphicsLineItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "shape", args)
   }
@@ -2690,12 +2858,14 @@ func (this *QGraphicsLineItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN17QGraphicsLineItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "paint", args)
   }
@@ -2729,8 +2899,10 @@ func (this *QGraphicsLineItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QGraphicsLineItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QGraphicsLineItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsLineItem", "contains", args)
   }
@@ -2764,8 +2936,10 @@ func (this *QGraphicsItemGroup) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QGraphicsItemGroup12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "isObscuredBy", args)
   }
@@ -2817,6 +2991,8 @@ func (this *QGraphicsItemGroup) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK18QGraphicsItemGroup12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "boundingRect", args)
   }
@@ -2838,12 +3014,14 @@ func (this *QGraphicsItemGroup) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN18QGraphicsItemGroup5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "paint", args)
   }
@@ -2863,8 +3041,10 @@ func (this *QGraphicsItemGroup) removeFromGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem
+    // invoke: void removeFromGroup(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QGraphicsItemGroup15removeFromGroupEP13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "removeFromGroup", args)
   }
@@ -2884,8 +3064,10 @@ func (this *QGraphicsItemGroup) addToGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem
+    // invoke: void addToGroup(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QGraphicsItemGroup10addToGroupEP13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "addToGroup", args)
   }
@@ -2904,6 +3086,8 @@ func (this *QGraphicsItemGroup) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QGraphicsItemGroup10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK18QGraphicsItemGroup10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItemGroup", "opaqueArea", args)
   }
@@ -2923,8 +3107,10 @@ func (this *QAbstractGraphicsShapeItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK26QAbstractGraphicsShapeItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "isObscuredBy", args)
   }
@@ -2943,6 +3129,8 @@ func (this *QAbstractGraphicsShapeItem) brush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem5brushEv
+    // invoke: QBrush brush()
+    C._ZNK26QAbstractGraphicsShapeItem5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "brush", args)
   }
@@ -2966,6 +3154,8 @@ func (this *QAbstractGraphicsShapeItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK26QAbstractGraphicsShapeItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "opaqueArea", args)
   }
@@ -2985,8 +3175,10 @@ func (this *QAbstractGraphicsShapeItem) setBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush
+    // invoke: void setBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QAbstractGraphicsShapeItem8setBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setBrush", args)
   }
@@ -3006,8 +3198,10 @@ func (this *QAbstractGraphicsShapeItem) setPen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QAbstractGraphicsShapeItem6setPenERK4QPen
+    // invoke: void setPen(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QAbstractGraphicsShapeItem6setPenERK4QPen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "setPen", args)
   }
@@ -3026,6 +3220,8 @@ func (this *QAbstractGraphicsShapeItem) pen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QAbstractGraphicsShapeItem3penEv
+    // invoke: QPen pen()
+    C._ZNK26QAbstractGraphicsShapeItem3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractGraphicsShapeItem", "pen", args)
   }
@@ -3083,14 +3279,19 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK12QPainterPath
+    // invoke: QPainterPath mapFromParent(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem13mapFromParentERK12QPainterPath(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK6QRectF
+    // invoke: QPolygonF mapFromParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem13mapFromParentERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdddd
+    // invoke: QPolygonF mapFromParent(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3099,20 +3300,27 @@ func (this *QGraphicsItem) mapFromParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem13mapFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 3:
     // invoke: _ZNK13QGraphicsItem13mapFromParentEdd
+    // invoke: QPointF mapFromParent(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK13QGraphicsItem13mapFromParentEdd(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK7QPointF
+    // invoke: QPointF mapFromParent(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem13mapFromParentERK7QPointF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem13mapFromParentERK9QPolygonF
+    // invoke: QPolygonF mapFromParent(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem13mapFromParentERK9QPolygonF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromParent", args)
   }
@@ -3157,12 +3365,15 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF
+    // invoke: QPointF mapFromItem(const class QGraphicsItem *, const class QPointF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_dddd
+    // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3173,32 +3384,41 @@ func (this *QGraphicsItem) mapFromItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
+    C.demth_ZNK13QGraphicsItem11mapFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF
+    // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QRectF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_dd
+    // invoke: QPointF mapFromItem(const class QGraphicsItem *, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
+    C.demth_ZNK13QGraphicsItem11mapFromItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath
+    // invoke: QPainterPath mapFromItem(const class QGraphicsItem *, const class QPainterPath &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPainterPath).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF
+    // invoke: QPolygonF mapFromItem(const class QGraphicsItem *, const class QPolygonF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPolygonF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem11mapFromItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromItem", args)
   }
@@ -3217,6 +3437,8 @@ func (this *QGraphicsItem) focusItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9focusItemEv
+    // invoke: QGraphicsItem * focusItem()
+    C._ZNK13QGraphicsItem9focusItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusItem", args)
   }
@@ -3235,6 +3457,8 @@ func (this *QGraphicsItem) parentObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentObjectEv
+    // invoke: QGraphicsObject * parentObject()
+    C._ZNK13QGraphicsItem12parentObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentObject", args)
   }
@@ -3258,14 +3482,18 @@ func (this *QGraphicsItem) setTransformOriginPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointERK7QPointF
+    // invoke: void setTransformOriginPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem23setTransformOriginPointERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QGraphicsItem23setTransformOriginPointEdd
+    // invoke: void setTransformOriginPoint(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN13QGraphicsItem23setTransformOriginPointEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransformOriginPoint", args)
   }
@@ -3284,6 +3512,8 @@ func (this *QGraphicsItem) ungrabMouse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11ungrabMouseEv
+    // invoke: void ungrabMouse()
+    C._ZN13QGraphicsItem11ungrabMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabMouse", args)
   }
@@ -3316,6 +3546,8 @@ func (this *QGraphicsItem) isSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isSelectedEv
+    // invoke: bool isSelected()
+    C._ZNK13QGraphicsItem10isSelectedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isSelected", args)
   }
@@ -3334,6 +3566,8 @@ func (this *QGraphicsItem) parentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12parentWidgetEv
+    // invoke: QGraphicsWidget * parentWidget()
+    C._ZNK13QGraphicsItem12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentWidget", args)
   }
@@ -3352,6 +3586,8 @@ func (this *QGraphicsItem) resetTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14resetTransformEv
+    // invoke: void resetTransform()
+    C._ZN13QGraphicsItem14resetTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetTransform", args)
   }
@@ -3371,8 +3607,10 @@ func (this *QGraphicsItem) boundingRegion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14boundingRegionERK10QTransform
+    // invoke: QRegion boundingRegion(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem14boundingRegionERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegion", args)
   }
@@ -3394,12 +3632,14 @@ func (this *QGraphicsItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN13QGraphicsItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "paint", args)
   }
@@ -3418,6 +3658,8 @@ func (this *QGraphicsItem) isActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isActiveEv
+    // invoke: bool isActive()
+    C._ZNK13QGraphicsItem8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isActive", args)
   }
@@ -3456,18 +3698,25 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK9QPolygonF
+    // invoke: QPolygonF mapToParent(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem11mapToParentERK9QPolygonF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK12QPainterPath
+    // invoke: QPainterPath mapToParent(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem11mapToParentERK12QPainterPath(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK7QPointF
+    // invoke: QPointF mapToParent(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem11mapToParentERK7QPointF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QGraphicsItem11mapToParentEdddd
+    // invoke: QPolygonF mapToParent(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3476,16 +3725,21 @@ func (this *QGraphicsItem) mapToParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem11mapToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZNK13QGraphicsItem11mapToParentEdd
+    // invoke: QPointF mapToParent(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK13QGraphicsItem11mapToParentEdd(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZNK13QGraphicsItem11mapToParentERK6QRectF
+    // invoke: QPolygonF mapToParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem11mapToParentERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToParent", args)
   }
@@ -3504,6 +3758,8 @@ func (this *QGraphicsItem) isWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWidgetEv
+    // invoke: bool isWidget()
+    C._ZNK13QGraphicsItem8isWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWidget", args)
   }
@@ -3523,8 +3779,10 @@ func (this *QGraphicsItem) setParentItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13setParentItemEPS_
+    // invoke: void setParentItem(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem13setParentItemEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setParentItem", args)
   }
@@ -3569,12 +3827,15 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF
+    // invoke: QPolygonF mapToItem(const class QGraphicsItem *, const class QRectF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem9mapToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dddd
+    // invoke: QPolygonF mapToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3585,32 +3846,41 @@ func (this *QGraphicsItem) mapToItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
+    C.demth_ZNK13QGraphicsItem9mapToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 2:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_dd
+    // invoke: QPointF mapToItem(const class QGraphicsItem *, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
+    C.demth_ZNK13QGraphicsItem9mapToItemEPKS_dd(this.qclsinst, arg0, arg1, arg2)
   case 3:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath
+    // invoke: QPainterPath mapToItem(const class QGraphicsItem *, const class QPainterPath &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPainterPath).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem9mapToItemEPKS_RK12QPainterPath(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF
+    // invoke: QPointF mapToItem(const class QGraphicsItem *, const class QPointF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem9mapToItemEPKS_RK7QPointF(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF
+    // invoke: QPolygonF mapToItem(const class QGraphicsItem *, const class QPolygonF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPolygonF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem9mapToItemEPKS_RK9QPolygonF(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToItem", args)
   }
@@ -3629,6 +3899,8 @@ func (this *QGraphicsItem) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6windowEv
+    // invoke: QGraphicsWidget * window()
+    C._ZNK13QGraphicsItem6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "window", args)
   }
@@ -3647,6 +3919,8 @@ func (this *QGraphicsItem) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK13QGraphicsItem8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scenePos", args)
   }
@@ -3665,6 +3939,8 @@ func (this *QGraphicsItem) handlesChildEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18handlesChildEventsEv
+    // invoke: bool handlesChildEvents()
+    C._ZNK13QGraphicsItem18handlesChildEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "handlesChildEvents", args)
   }
@@ -3684,8 +3960,10 @@ func (this *QGraphicsItem) setOpacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setOpacityEd
+    // invoke: void setOpacity(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem10setOpacityEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setOpacity", args)
   }
@@ -3704,6 +3982,8 @@ func (this *QGraphicsItem) sceneTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14sceneTransformEv
+    // invoke: QTransform sceneTransform()
+    C._ZNK13QGraphicsItem14sceneTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneTransform", args)
   }
@@ -3723,8 +4003,10 @@ func (this *QGraphicsItem) setZValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setZValueEd
+    // invoke: void setZValue(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem9setZValueEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setZValue", args)
   }
@@ -3750,6 +4032,7 @@ func (this *QGraphicsItem) isObscured(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10isObscuredEdddd
+    // invoke: bool isObscured(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3758,10 +4041,13 @@ func (this *QGraphicsItem) isObscured(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem10isObscuredEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZNK13QGraphicsItem10isObscuredERK6QRectF
+    // invoke: bool isObscured(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem10isObscuredERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscured", args)
   }
@@ -3781,8 +4067,10 @@ func (this *QGraphicsItem) installSceneEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem23installSceneEventFilterEPS_
+    // invoke: void installSceneEventFilter(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem23installSceneEventFilterEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "installSceneEventFilter", args)
   }
@@ -3802,8 +4090,10 @@ func (this *QGraphicsItem) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4setYEd
+    // invoke: void setY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem4setYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setY", args)
   }
@@ -3831,6 +4121,7 @@ func (this *QGraphicsItem) mapRectToItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_dddd
+    // invoke: QRectF mapRectToItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -3841,12 +4132,15 @@ func (this *QGraphicsItem) mapRectToItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
+    C.demth_ZNK13QGraphicsItem13mapRectToItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 1:
     // invoke: _ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF
+    // invoke: QRectF mapRectToItem(const class QGraphicsItem *, const class QRectF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem13mapRectToItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToItem", args)
   }
@@ -3865,6 +4159,8 @@ func (this *QGraphicsItem) parentItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10parentItemEv
+    // invoke: QGraphicsItem * parentItem()
+    C._ZNK13QGraphicsItem10parentItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "parentItem", args)
   }
@@ -3883,6 +4179,8 @@ func (this *QGraphicsItem) clearFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10clearFocusEv
+    // invoke: void clearFocus()
+    C._ZN13QGraphicsItem10clearFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clearFocus", args)
   }
@@ -3901,6 +4199,8 @@ func (this *QGraphicsItem) isWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8isWindowEv
+    // invoke: bool isWindow()
+    C._ZNK13QGraphicsItem8isWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isWindow", args)
   }
@@ -3919,6 +4219,8 @@ func (this *QGraphicsItem) transformOriginPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem20transformOriginPointEv
+    // invoke: QPointF transformOriginPoint()
+    C._ZNK13QGraphicsItem20transformOriginPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformOriginPoint", args)
   }
@@ -3937,6 +4239,8 @@ func (this *QGraphicsItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK13QGraphicsItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRect", args)
   }
@@ -3955,6 +4259,8 @@ func (this *QGraphicsItem) childrenBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem20childrenBoundingRectEv
+    // invoke: QRectF childrenBoundingRect()
+    C._ZNK13QGraphicsItem20childrenBoundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childrenBoundingRect", args)
   }
@@ -3993,10 +4299,13 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK6QRectF
+    // invoke: QPolygonF mapFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12mapFromSceneERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdddd
+    // invoke: QPolygonF mapFromScene(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4005,24 +4314,33 @@ func (this *QGraphicsItem) mapFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem12mapFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF
+    // invoke: QPolygonF mapFromScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12mapFromSceneERK9QPolygonF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneEdd
+    // invoke: QPointF mapFromScene(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK13QGraphicsItem12mapFromSceneEdd(this.qclsinst, arg0, arg1)
   case 4:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath
+    // invoke: QPainterPath mapFromScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12mapFromSceneERK12QPainterPath(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem12mapFromSceneERK7QPointF
+    // invoke: QPointF mapFromScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12mapFromSceneERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapFromScene", args)
   }
@@ -4041,6 +4359,8 @@ func (this *QGraphicsItem) hasCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9hasCursorEv
+    // invoke: bool hasCursor()
+    C._ZNK13QGraphicsItem9hasCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasCursor", args)
   }
@@ -4060,8 +4380,10 @@ func (this *QGraphicsItem) setGraphicsEffect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect
+    // invoke: void setGraphicsEffect(class QGraphicsEffect *)
     var arg0 = args[0].(QGraphicsEffect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem17setGraphicsEffectEP15QGraphicsEffect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGraphicsEffect", args)
   }
@@ -4091,6 +4413,7 @@ func (this *QGraphicsItem) ensureVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13ensureVisibleEddddii
+    // invoke: void ensureVisible(qreal, qreal, qreal, qreal, int, int)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4103,14 +4426,17 @@ func (this *QGraphicsItem) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
+    C.demth_ZN13QGraphicsItem13ensureVisibleEddddii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN13QGraphicsItem13ensureVisibleERK6QRectFii
+    // invoke: void ensureVisible(const class QRectF &, int, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN13QGraphicsItem13ensureVisibleERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ensureVisible", args)
   }
@@ -4136,10 +4462,13 @@ func (this *QGraphicsItem) mapRectToParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentERK6QRectF
+    // invoke: QRectF mapRectToParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem15mapRectToParentERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectToParentEdddd
+    // invoke: QRectF mapRectToParent(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4148,6 +4477,7 @@ func (this *QGraphicsItem) mapRectToParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem15mapRectToParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToParent", args)
   }
@@ -4167,8 +4497,10 @@ func (this *QGraphicsItem) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setToolTipERK7QString
+    // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setToolTip", args)
   }
@@ -4187,6 +4519,8 @@ func (this *QGraphicsItem) rotation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8rotationEv
+    // invoke: qreal rotation()
+    C._ZNK13QGraphicsItem8rotationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "rotation", args)
   }
@@ -4205,6 +4539,8 @@ func (this *QGraphicsItem) scene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5sceneEv
+    // invoke: QGraphicsScene * scene()
+    C._ZNK13QGraphicsItem5sceneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scene", args)
   }
@@ -4230,10 +4566,13 @@ func (this *QGraphicsItem) mapRectFromParent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentERK6QRectF
+    // invoke: QRectF mapRectFromParent(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem17mapRectFromParentERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem17mapRectFromParentEdddd
+    // invoke: QRectF mapRectFromParent(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4242,6 +4581,7 @@ func (this *QGraphicsItem) mapRectFromParent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem17mapRectFromParentEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromParent", args)
   }
@@ -4261,8 +4601,10 @@ func (this *QGraphicsItem) setFocusProxy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem13setFocusProxyEPS_
+    // invoke: void setFocusProxy(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem13setFocusProxyEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFocusProxy", args)
   }
@@ -4281,6 +4623,8 @@ func (this *QGraphicsItem) acceptDrops(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11acceptDropsEv
+    // invoke: bool acceptDrops()
+    C._ZNK13QGraphicsItem11acceptDropsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptDrops", args)
   }
@@ -4306,10 +4650,13 @@ func (this *QGraphicsItem) mapRectFromScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF
+    // invoke: QRectF mapRectFromScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem16mapRectFromSceneERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem16mapRectFromSceneEdddd
+    // invoke: QRectF mapRectFromScene(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4318,6 +4665,7 @@ func (this *QGraphicsItem) mapRectFromScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem16mapRectFromSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromScene", args)
   }
@@ -4336,6 +4684,8 @@ func (this *QGraphicsItem) focusScopeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14focusScopeItemEv
+    // invoke: QGraphicsItem * focusScopeItem()
+    C._ZNK13QGraphicsItem14focusScopeItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusScopeItem", args)
   }
@@ -4355,8 +4705,10 @@ func (this *QGraphicsItem) removeSceneEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem22removeSceneEventFilterEPS_
+    // invoke: void removeSceneEventFilter(class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem22removeSceneEventFilterEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "removeSceneEventFilter", args)
   }
@@ -4375,6 +4727,8 @@ func (this *QGraphicsItem) focusProxy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10focusProxyEv
+    // invoke: QGraphicsItem * focusProxy()
+    C._ZNK13QGraphicsItem10focusProxyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "focusProxy", args)
   }
@@ -4393,6 +4747,8 @@ func (this *QGraphicsItem) sceneBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17sceneBoundingRectEv
+    // invoke: QRectF sceneBoundingRect()
+    C._ZNK13QGraphicsItem17sceneBoundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneBoundingRect", args)
   }
@@ -4426,8 +4782,10 @@ func (this *QGraphicsItem) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4setXEd
+    // invoke: void setX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem4setXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setX", args)
   }
@@ -4453,6 +4811,7 @@ func (this *QGraphicsItem) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6updateEdddd
+    // invoke: void update(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4461,10 +4820,13 @@ func (this *QGraphicsItem) update(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZN13QGraphicsItem6updateEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN13QGraphicsItem6updateERK6QRectF
+    // invoke: void update(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem6updateERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "update", args)
   }
@@ -4484,8 +4846,10 @@ func (this *QGraphicsItem) setSelected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11setSelectedEb
+    // invoke: void setSelected(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem11setSelectedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setSelected", args)
   }
@@ -4505,8 +4869,10 @@ func (this *QGraphicsItem) stackBefore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11stackBeforeEPKS_
+    // invoke: void stackBefore(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem11stackBeforeEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "stackBefore", args)
   }
@@ -4525,6 +4891,8 @@ func (this *QGraphicsItem) resetMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11resetMatrixEv
+    // invoke: void resetMatrix()
+    C._ZN13QGraphicsItem11resetMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "resetMatrix", args)
   }
@@ -4543,6 +4911,8 @@ func (this *QGraphicsItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK13QGraphicsItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opaqueArea", args)
   }
@@ -4561,6 +4931,8 @@ func (this *QGraphicsItem) unsetCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11unsetCursorEv
+    // invoke: void unsetCursor()
+    C._ZN13QGraphicsItem11unsetCursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "unsetCursor", args)
   }
@@ -4586,10 +4958,13 @@ func (this *QGraphicsItem) mapRectToScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneERK6QRectF
+    // invoke: QRectF mapRectToScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem14mapRectToSceneERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QGraphicsItem14mapRectToSceneEdddd
+    // invoke: QRectF mapRectToScene(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4598,6 +4973,7 @@ func (this *QGraphicsItem) mapRectToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem14mapRectToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectToScene", args)
   }
@@ -4625,6 +5001,7 @@ func (this *QGraphicsItem) mapRectFromItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd
+    // invoke: QRectF mapRectFromItem(const class QGraphicsItem *, qreal, qreal, qreal, qreal)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4635,12 +5012,15 @@ func (this *QGraphicsItem) mapRectFromItem(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.double(args[4].(float64))
     if false {fmt.Println(arg4)}
+    C.demth_ZNK13QGraphicsItem15mapRectFromItemEPKS_dddd(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 1:
     // invoke: _ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF
+    // invoke: QRectF mapRectFromItem(const class QGraphicsItem *, const class QRectF &)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRectF).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem15mapRectFromItemEPKS_RK6QRectF(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapRectFromItem", args)
   }
@@ -4659,6 +5039,8 @@ func (this *QGraphicsItem) scale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5scaleEv
+    // invoke: qreal scale()
+    C._ZNK13QGraphicsItem5scaleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scale", args)
   }
@@ -4678,8 +5060,10 @@ func (this *QGraphicsItem) setBoundingRegionGranularity(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem28setBoundingRegionGranularityEd
+    // invoke: void setBoundingRegionGranularity(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem28setBoundingRegionGranularityEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setBoundingRegionGranularity", args)
   }
@@ -4699,8 +5083,10 @@ func (this *QGraphicsItem) setAcceptDrops(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14setAcceptDropsEb
+    // invoke: void setAcceptDrops(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem14setAcceptDropsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptDrops", args)
   }
@@ -4719,6 +5105,8 @@ func (this *QGraphicsItem) ungrabKeyboard(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem14ungrabKeyboardEv
+    // invoke: void ungrabKeyboard()
+    C._ZN13QGraphicsItem14ungrabKeyboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "ungrabKeyboard", args)
   }
@@ -4738,8 +5126,10 @@ func (this *QGraphicsItem) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setEnabledEb
+    // invoke: void setEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setEnabled", args)
   }
@@ -4758,6 +5148,8 @@ func (this *QGraphicsItem) graphicsEffect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14graphicsEffectEv
+    // invoke: QGraphicsEffect * graphicsEffect()
+    C._ZNK13QGraphicsItem14graphicsEffectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "graphicsEffect", args)
   }
@@ -4776,6 +5168,8 @@ func (this *QGraphicsItem) acceptHoverEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptHoverEventsEv
+    // invoke: bool acceptHoverEvents()
+    C._ZNK13QGraphicsItem17acceptHoverEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptHoverEvents", args)
   }
@@ -4794,6 +5188,8 @@ func (this *QGraphicsItem) topLevelWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem14topLevelWidgetEv
+    // invoke: QGraphicsWidget * topLevelWidget()
+    C._ZNK13QGraphicsItem14topLevelWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelWidget", args)
   }
@@ -4812,6 +5208,8 @@ func (this *QGraphicsItem) transformations(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15transformationsEv
+    // invoke: QList<QGraphicsTransform *> transformations()
+    C._ZNK13QGraphicsItem15transformationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transformations", args)
   }
@@ -4850,6 +5248,7 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdddd
+    // invoke: QPolygonF mapToScene(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -4858,28 +5257,39 @@ func (this *QGraphicsItem) mapToScene(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZNK13QGraphicsItem10mapToSceneEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZNK13QGraphicsItem10mapToSceneEdd
+    // invoke: QPointF mapToScene(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK13QGraphicsItem10mapToSceneEdd(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK9QPolygonF
+    // invoke: QPolygonF mapToScene(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem10mapToSceneERK9QPolygonF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK12QPainterPath
+    // invoke: QPainterPath mapToScene(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem10mapToSceneERK12QPainterPath(this.qclsinst, arg0)
   case 4:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK7QPointF
+    // invoke: QPointF mapToScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem10mapToSceneERK7QPointF(this.qclsinst, arg0)
   case 5:
     // invoke: _ZNK13QGraphicsItem10mapToSceneERK6QRectF
+    // invoke: QPolygonF mapToScene(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem10mapToSceneERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "mapToScene", args)
   }
@@ -4899,8 +5309,10 @@ func (this *QGraphicsItem) advance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem7advanceEi
+    // invoke: void advance(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem7advanceEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "advance", args)
   }
@@ -4919,6 +5331,8 @@ func (this *QGraphicsItem) sceneMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11sceneMatrixEv
+    // invoke: QMatrix sceneMatrix()
+    C._ZNK13QGraphicsItem11sceneMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "sceneMatrix", args)
   }
@@ -4938,8 +5352,10 @@ func (this *QGraphicsItem) setFiltersChildEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem21setFiltersChildEventsEb
+    // invoke: void setFiltersChildEvents(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem21setFiltersChildEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setFiltersChildEvents", args)
   }
@@ -4960,10 +5376,12 @@ func (this *QGraphicsItem) itemTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem13itemTransformEPKS_Pb
+    // invoke: QTransform itemTransform(const class QGraphicsItem *, _Bool *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
+    C._ZNK13QGraphicsItem13itemTransformEPKS_Pb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "itemTransform", args)
   }
@@ -4984,10 +5402,12 @@ func (this *QGraphicsItem) moveBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6moveByEdd
+    // invoke: void moveBy(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN13QGraphicsItem6moveByEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "moveBy", args)
   }
@@ -5006,6 +5426,8 @@ func (this *QGraphicsItem) group(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5groupEv
+    // invoke: QGraphicsItemGroup * group()
+    C._ZNK13QGraphicsItem5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "group", args)
   }
@@ -5024,6 +5446,8 @@ func (this *QGraphicsItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK13QGraphicsItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "shape", args)
   }
@@ -5045,12 +5469,14 @@ func (this *QGraphicsItem) scroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6scrollEddRK6QRectF
+    // invoke: void scroll(qreal, qreal, const class QRectF &)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRectF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN13QGraphicsItem6scrollEddRK6QRectF(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "scroll", args)
   }
@@ -5070,8 +5496,10 @@ func (this *QGraphicsItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isObscuredByEPKS_
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12isObscuredByEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isObscuredBy", args)
   }
@@ -5092,10 +5520,12 @@ func (this *QGraphicsItem) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem7setDataEiRK8QVariant
+    // invoke: void setData(int, const class QVariant &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN13QGraphicsItem7setDataEiRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setData", args)
   }
@@ -5115,8 +5545,10 @@ func (this *QGraphicsItem) commonAncestorItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18commonAncestorItemEPKS_
+    // invoke: QGraphicsItem * commonAncestorItem(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem18commonAncestorItemEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "commonAncestorItem", args)
   }
@@ -5136,8 +5568,10 @@ func (this *QGraphicsItem) setGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup
+    // invoke: void setGroup(class QGraphicsItemGroup *)
     var arg0 = args[0].(QGraphicsItemGroup).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem8setGroupEP18QGraphicsItemGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setGroup", args)
   }
@@ -5156,6 +5590,8 @@ func (this *QGraphicsItem) show(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4showEv
+    // invoke: void show()
+    C.demth_ZN13QGraphicsItem4showEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "show", args)
   }
@@ -5174,6 +5610,8 @@ func (this *QGraphicsItem) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem1yEv
+    // invoke: qreal y()
+    C.demth_ZNK13QGraphicsItem1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "y", args)
   }
@@ -5192,6 +5630,8 @@ func (this *QGraphicsItem) hasFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8hasFocusEv
+    // invoke: bool hasFocus()
+    C._ZNK13QGraphicsItem8hasFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hasFocus", args)
   }
@@ -5210,6 +5650,8 @@ func (this *QGraphicsItem) clipPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8clipPathEv
+    // invoke: QPainterPath clipPath()
+    C._ZNK13QGraphicsItem8clipPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "clipPath", args)
   }
@@ -5233,14 +5675,18 @@ func (this *QGraphicsItem) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem6setPosEdd
+    // invoke: void setPos(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN13QGraphicsItem6setPosEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QGraphicsItem6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setPos", args)
   }
@@ -5259,6 +5705,8 @@ func (this *QGraphicsItem) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK13QGraphicsItem9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isEnabled", args)
   }
@@ -5278,8 +5726,10 @@ func (this *QGraphicsItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "contains", args)
   }
@@ -5298,6 +5748,8 @@ func (this *QGraphicsItem) isPanel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7isPanelEv
+    // invoke: bool isPanel()
+    C._ZNK13QGraphicsItem7isPanelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isPanel", args)
   }
@@ -5316,6 +5768,8 @@ func (this *QGraphicsItem) filtersChildEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem18filtersChildEventsEv
+    // invoke: bool filtersChildEvents()
+    C._ZNK13QGraphicsItem18filtersChildEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "filtersChildEvents", args)
   }
@@ -5334,6 +5788,8 @@ func (this *QGraphicsItem) grabKeyboard(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem12grabKeyboardEv
+    // invoke: void grabKeyboard()
+    C._ZN13QGraphicsItem12grabKeyboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabKeyboard", args)
   }
@@ -5353,8 +5809,10 @@ func (this *QGraphicsItem) setActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setActiveEb
+    // invoke: void setActive(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem9setActiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setActive", args)
   }
@@ -5375,8 +5833,8 @@ func (this *QGraphicsItem) toGraphicsObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem16toGraphicsObjectEv
-  case 1:
-    // invoke: _ZNK13QGraphicsItem16toGraphicsObjectEv
+    // invoke: QGraphicsObject * toGraphicsObject()
+    C._ZN13QGraphicsItem16toGraphicsObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toGraphicsObject", args)
   }
@@ -5396,8 +5854,10 @@ func (this *QGraphicsItem) setHandlesChildEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem21setHandlesChildEventsEb
+    // invoke: void setHandlesChildEvents(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem21setHandlesChildEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setHandlesChildEvents", args)
   }
@@ -5418,10 +5878,12 @@ func (this *QGraphicsItem) setMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setMatrixERK7QMatrixb
+    // invoke: void setMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN13QGraphicsItem9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setMatrix", args)
   }
@@ -5440,6 +5902,8 @@ func (this *QGraphicsItem) transform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9transformEv
+    // invoke: QTransform transform()
+    C._ZNK13QGraphicsItem9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "transform", args)
   }
@@ -5459,8 +5923,10 @@ func (this *QGraphicsItem) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem4dataEi
+    // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "data", args)
   }
@@ -5479,6 +5945,8 @@ func (this *QGraphicsItem) hide(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem4hideEv
+    // invoke: void hide()
+    C.demth_ZN13QGraphicsItem4hideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "hide", args)
   }
@@ -5497,6 +5965,8 @@ func (this *QGraphicsItem) isUnderMouse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isUnderMouseEv
+    // invoke: bool isUnderMouse()
+    C._ZNK13QGraphicsItem12isUnderMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isUnderMouse", args)
   }
@@ -5516,8 +5986,10 @@ func (this *QGraphicsItem) setAcceptTouchEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem20setAcceptTouchEventsEb
+    // invoke: void setAcceptTouchEvents(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem20setAcceptTouchEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptTouchEvents", args)
   }
@@ -5537,8 +6009,10 @@ func (this *QGraphicsItem) setAcceptHoverEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem20setAcceptHoverEventsEb
+    // invoke: void setAcceptHoverEvents(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem20setAcceptHoverEventsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setAcceptHoverEvents", args)
   }
@@ -5557,6 +6031,8 @@ func (this *QGraphicsItem) childItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem10childItemsEv
+    // invoke: QList<QGraphicsItem *> childItems()
+    C._ZNK13QGraphicsItem10childItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "childItems", args)
   }
@@ -5576,8 +6052,10 @@ func (this *QGraphicsItem) isAncestorOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12isAncestorOfEPKS_
+    // invoke: bool isAncestorOf(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem12isAncestorOfEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isAncestorOf", args)
   }
@@ -5596,6 +6074,8 @@ func (this *QGraphicsItem) opacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7opacityEv
+    // invoke: qreal opacity()
+    C._ZNK13QGraphicsItem7opacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "opacity", args)
   }
@@ -5615,8 +6095,10 @@ func (this *QGraphicsItem) isVisibleTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem11isVisibleToEPKS_
+    // invoke: bool isVisibleTo(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem11isVisibleToEPKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisibleTo", args)
   }
@@ -5635,6 +6117,8 @@ func (this *QGraphicsItem) toolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem7toolTipEv
+    // invoke: QString toolTip()
+    C._ZNK13QGraphicsItem7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "toolTip", args)
   }
@@ -5653,6 +6137,8 @@ func (this *QGraphicsItem) cursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6cursorEv
+    // invoke: QCursor cursor()
+    C._ZNK13QGraphicsItem6cursorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "cursor", args)
   }
@@ -5671,6 +6157,8 @@ func (this *QGraphicsItem) zValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6zValueEv
+    // invoke: qreal zValue()
+    C._ZNK13QGraphicsItem6zValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "zValue", args)
   }
@@ -5689,6 +6177,8 @@ func (this *QGraphicsItem) matrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem6matrixEv
+    // invoke: QMatrix matrix()
+    C._ZNK13QGraphicsItem6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "matrix", args)
   }
@@ -5707,6 +6197,8 @@ func (this *QGraphicsItem) panel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem5panelEv
+    // invoke: QGraphicsItem * panel()
+    C._ZNK13QGraphicsItem5panelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "panel", args)
   }
@@ -5725,6 +6217,8 @@ func (this *QGraphicsItem) isClipped(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isClippedEv
+    // invoke: bool isClipped()
+    C._ZNK13QGraphicsItem9isClippedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isClipped", args)
   }
@@ -5743,6 +6237,8 @@ func (this *QGraphicsItem) topLevelItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem12topLevelItemEv
+    // invoke: QGraphicsItem * topLevelItem()
+    C._ZNK13QGraphicsItem12topLevelItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "topLevelItem", args)
   }
@@ -5762,8 +6258,10 @@ func (this *QGraphicsItem) setScale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem8setScaleEd
+    // invoke: void setScale(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem8setScaleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setScale", args)
   }
@@ -5783,8 +6281,10 @@ func (this *QGraphicsItem) setCursor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9setCursorERK7QCursor
+    // invoke: void setCursor(const class QCursor &)
     var arg0 = args[0].(QCursor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem9setCursorERK7QCursor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setCursor", args)
   }
@@ -5803,6 +6303,8 @@ func (this *QGraphicsItem) isVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK13QGraphicsItem9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isVisible", args)
   }
@@ -5821,6 +6323,8 @@ func (this *QGraphicsItem) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem3posEv
+    // invoke: QPointF pos()
+    C._ZNK13QGraphicsItem3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "pos", args)
   }
@@ -5840,8 +6344,10 @@ func (this *QGraphicsItem) isBlockedByModalPanel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_
+    // invoke: bool isBlockedByModalPanel(class QGraphicsItem **)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem21isBlockedByModalPanelEPPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "isBlockedByModalPanel", args)
   }
@@ -5860,6 +6366,8 @@ func (this *QGraphicsItem) effectiveOpacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem16effectiveOpacityEv
+    // invoke: qreal effectiveOpacity()
+    C._ZNK13QGraphicsItem16effectiveOpacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "effectiveOpacity", args)
   }
@@ -5878,6 +6386,8 @@ func (this *QGraphicsItem) boundingRegionGranularity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem25boundingRegionGranularityEv
+    // invoke: qreal boundingRegionGranularity()
+    C._ZNK13QGraphicsItem25boundingRegionGranularityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "boundingRegionGranularity", args)
   }
@@ -5896,6 +6406,8 @@ func (this *QGraphicsItem) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem1xEv
+    // invoke: qreal x()
+    C.demth_ZNK13QGraphicsItem1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "x", args)
   }
@@ -5914,6 +6426,8 @@ func (this *QGraphicsItem) grabMouse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem9grabMouseEv
+    // invoke: void grabMouse()
+    C._ZN13QGraphicsItem9grabMouseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "grabMouse", args)
   }
@@ -5933,8 +6447,10 @@ func (this *QGraphicsItem) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setVisible", args)
   }
@@ -5954,8 +6470,10 @@ func (this *QGraphicsItem) setRotation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem11setRotationEd
+    // invoke: void setRotation(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QGraphicsItem11setRotationEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setRotation", args)
   }
@@ -5975,8 +6493,10 @@ func (this *QGraphicsItem) deviceTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem15deviceTransformERK10QTransform
+    // invoke: QTransform deviceTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGraphicsItem15deviceTransformERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "deviceTransform", args)
   }
@@ -5995,6 +6515,8 @@ func (this *QGraphicsItem) acceptTouchEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGraphicsItem17acceptTouchEventsEv
+    // invoke: bool acceptTouchEvents()
+    C._ZNK13QGraphicsItem17acceptTouchEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "acceptTouchEvents", args)
   }
@@ -6015,10 +6537,12 @@ func (this *QGraphicsItem) setTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGraphicsItem12setTransformERK10QTransformb
+    // invoke: void setTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN13QGraphicsItem12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsItem", "setTransform", args)
   }
@@ -6056,6 +6580,8 @@ func (this *QGraphicsObject) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsObject10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QGraphicsObject10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsObject", "metaObject", args)
   }
@@ -6088,6 +6614,8 @@ func (this *QGraphicsSimpleTextItem) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4fontEv
+    // invoke: QFont font()
+    C._ZNK23QGraphicsSimpleTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "font", args)
   }
@@ -6109,12 +6637,14 @@ func (this *QGraphicsSimpleTextItem) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN23QGraphicsSimpleTextItem5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "paint", args)
   }
@@ -6148,8 +6678,10 @@ func (this *QGraphicsSimpleTextItem) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSimpleTextItem7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setText", args)
   }
@@ -6168,6 +6700,8 @@ func (this *QGraphicsSimpleTextItem) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem4textEv
+    // invoke: QString text()
+    C._ZNK23QGraphicsSimpleTextItem4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "text", args)
   }
@@ -6192,8 +6726,10 @@ func (this *QGraphicsSimpleTextItem) isObscuredBy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem
+    // invoke: bool isObscuredBy(const class QGraphicsItem *)
     var arg0 = args[0].(QGraphicsItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK23QGraphicsSimpleTextItem12isObscuredByEPK13QGraphicsItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "isObscuredBy", args)
   }
@@ -6212,6 +6748,8 @@ func (this *QGraphicsSimpleTextItem) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK23QGraphicsSimpleTextItem5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "shape", args)
   }
@@ -6231,8 +6769,10 @@ func (this *QGraphicsSimpleTextItem) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSimpleTextItem7setFontERK5QFont
+    // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSimpleTextItem7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "setFont", args)
   }
@@ -6251,6 +6791,8 @@ func (this *QGraphicsSimpleTextItem) opaqueArea(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem10opaqueAreaEv
+    // invoke: QPainterPath opaqueArea()
+    C._ZNK23QGraphicsSimpleTextItem10opaqueAreaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "opaqueArea", args)
   }
@@ -6269,6 +6811,8 @@ func (this *QGraphicsSimpleTextItem) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK23QGraphicsSimpleTextItem12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "boundingRect", args)
   }
@@ -6288,8 +6832,10 @@ func (this *QGraphicsSimpleTextItem) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSimpleTextItem8containsERK7QPointF
+    // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK23QGraphicsSimpleTextItem8containsERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSimpleTextItem", "contains", args)
   }

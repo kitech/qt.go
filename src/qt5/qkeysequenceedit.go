@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -88,6 +88,8 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QKeySequenceEdit5clearEv
+    // invoke: void clear()
+    C._ZN16QKeySequenceEdit5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "clear", args)
   }
@@ -107,8 +109,10 @@ func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence
+    // invoke: void setKeySequence(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
   }
@@ -127,6 +131,8 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit11keySequenceEv
+    // invoke: QKeySequence keySequence()
+    C._ZNK16QKeySequenceEdit11keySequenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "keySequence", args)
   }
@@ -159,6 +165,8 @@ func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
   }

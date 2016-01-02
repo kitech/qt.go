@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.go
 //
@@ -424,22 +424,27 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption
+    // invoke: QRectF boundingRect(const class QRectF &, const class QString &, const class QTextOption &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextOption).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter12boundingRectERK5QRectiRK7QString
+    // invoke: QRect boundingRect(const class QRect &, int, const class QString &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter12boundingRectERK5QRectiRK7QString(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter12boundingRectEiiiiiRK7QString
+    // invoke: QRect boundingRect(int, int, int, int, int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -452,14 +457,17 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = args[5].(QString).qclsinst
     if false {fmt.Println(arg5)}
+    C.demth_ZN8QPainter12boundingRectEiiiiiRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 3:
     // invoke: _ZN8QPainter12boundingRectERK6QRectFiRK7QString
+    // invoke: QRectF boundingRect(const class QRectF &, int, const class QString &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter12boundingRectERK6QRectFiRK7QString(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPainter", "boundingRect", args)
   }
@@ -489,24 +497,30 @@ func (this *QPainter) drawPicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11drawPictureERK7QPointFRK8QPicture
+    // invoke: void drawPicture(const class QPointF &, const class QPicture &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPicture).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter11drawPictureERK7QPointFRK8QPicture(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPainter11drawPictureERK6QPointRK8QPicture
+    // invoke: void drawPicture(const class QPoint &, const class QPicture &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPicture).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter11drawPictureERK6QPointRK8QPicture(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter11drawPictureEiiRK8QPicture
+    // invoke: void drawPicture(int, int, const class QPicture &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter11drawPictureEiiRK8QPicture(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPainter", "drawPicture", args)
   }
@@ -525,6 +539,8 @@ func (this *QPainter) worldMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11worldMatrixEv
+    // invoke: const QMatrix & worldMatrix()
+    C._ZNK8QPainter11worldMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrix", args)
   }
@@ -586,6 +602,7 @@ func (this *QPainter) drawText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawTextERK7QPointFRK7QStringii
+    // invoke: void drawText(const class QPointF &, const class QString &, int, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
@@ -594,16 +611,20 @@ func (this *QPainter) drawText(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN8QPainter8drawTextERK7QPointFRK7QStringii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN8QPainter8drawTextEiiRK7QString
+    // invoke: void drawText(int, int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter8drawTextEiiRK7QString(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_
+    // invoke: void drawText(const class QRectF &, int, const class QString &, class QRectF *)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -612,8 +633,10 @@ func (this *QPainter) drawText(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QRectF).qclsinst
     if false {fmt.Println(arg3)}
+    C._ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 3:
     // invoke: _ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_
+    // invoke: void drawText(const class QRect &, int, const class QString &, class QRect *)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -622,16 +645,20 @@ func (this *QPainter) drawText(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QRect).qclsinst
     if false {fmt.Println(arg3)}
+    C._ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption
+    // invoke: void drawText(const class QRectF &, const class QString &, const class QTextOption &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextOption).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter8drawTextERK6QRectFRK7QStringRK11QTextOption(this.qclsinst, arg0, arg1, arg2)
   case 5:
     // invoke: _ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect
+    // invoke: void drawText(int, int, int, int, int, const class QString &, class QRect *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -646,18 +673,23 @@ func (this *QPainter) drawText(args ...interface{}) () {
     if false {fmt.Println(arg5)}
     var arg6 = args[6].(QRect).qclsinst
     if false {fmt.Println(arg6)}
+    C.demth_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   case 6:
     // invoke: _ZN8QPainter8drawTextERK7QPointFRK7QString
+    // invoke: void drawText(const class QPointF &, const class QString &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter8drawTextERK7QPointFRK7QString(this.qclsinst, arg0, arg1)
   case 7:
     // invoke: _ZN8QPainter8drawTextERK6QPointRK7QString
+    // invoke: void drawText(const class QPoint &, const class QString &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter8drawTextERK6QPointRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawText", args)
   }
@@ -733,13 +765,8 @@ func (this *QPainter) fillRect(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QPainter8fillRectERK5QRectN2Qt11GlobalColorE
-    var arg0 = args[0].(QRect).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 1:
     // invoke: _ZN8QPainter8fillRectEiiiiRK6QColor
+    // invoke: void fillRect(int, int, int, int, const class QColor &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -750,50 +777,18 @@ func (this *QPainter) fillRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QColor).qclsinst
     if false {fmt.Println(arg4)}
-  case 2:
-    // invoke: _ZN8QPainter8fillRectEiiiiN2Qt10BrushStyleE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
-    if false {fmt.Println(arg4)}
-  case 3:
-    // invoke: _ZN8QPainter8fillRectERK6QRectFN2Qt10BrushStyleE
-    var arg0 = args[0].(QRectF).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 4:
-    // invoke: _ZN8QPainter8fillRectERK6QRectFN2Qt11GlobalColorE
-    var arg0 = args[0].(QRectF).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 5:
-    // invoke: _ZN8QPainter8fillRectEiiiiN2Qt11GlobalColorE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
-    if false {fmt.Println(arg4)}
-  case 6:
+    C.demth_ZN8QPainter8fillRectEiiiiRK6QColor(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+  case 1:
     // invoke: _ZN8QPainter8fillRectERK5QRectRK6QColor
+    // invoke: void fillRect(const class QRect &, const class QColor &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
-  case 7:
+    C._ZN8QPainter8fillRectERK5QRectRK6QColor(this.qclsinst, arg0, arg1)
+  case 2:
     // invoke: _ZN8QPainter8fillRectEiiiiRK6QBrush
+    // invoke: void fillRect(int, int, int, int, const class QBrush &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -804,30 +799,31 @@ func (this *QPainter) fillRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QBrush).qclsinst
     if false {fmt.Println(arg4)}
-  case 8:
+    C.demth_ZN8QPainter8fillRectEiiiiRK6QBrush(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+  case 3:
     // invoke: _ZN8QPainter8fillRectERK6QRectFRK6QBrush
+    // invoke: void fillRect(const class QRectF &, const class QBrush &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QBrush).qclsinst
     if false {fmt.Println(arg1)}
-  case 9:
+    C._ZN8QPainter8fillRectERK6QRectFRK6QBrush(this.qclsinst, arg0, arg1)
+  case 4:
     // invoke: _ZN8QPainter8fillRectERK5QRectRK6QBrush
+    // invoke: void fillRect(const class QRect &, const class QBrush &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QBrush).qclsinst
     if false {fmt.Println(arg1)}
-  case 10:
-    // invoke: _ZN8QPainter8fillRectERK5QRectN2Qt10BrushStyleE
-    var arg0 = args[0].(QRect).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 11:
+    C._ZN8QPainter8fillRectERK5QRectRK6QBrush(this.qclsinst, arg0, arg1)
+  case 5:
     // invoke: _ZN8QPainter8fillRectERK6QRectFRK6QColor
+    // invoke: void fillRect(const class QRectF &, const class QColor &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter8fillRectERK6QRectFRK6QColor(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "fillRect", args)
   }
@@ -846,6 +842,8 @@ func (this *QPainter) matrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6matrixEv
+    // invoke: const QMatrix & matrix()
+    C._ZNK8QPainter6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "matrix", args)
   }
@@ -864,6 +862,8 @@ func (this *QPainter) opacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter7opacityEv
+    // invoke: qreal opacity()
+    C._ZNK8QPainter7opacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "opacity", args)
   }
@@ -899,22 +899,27 @@ func (this *QPainter) drawTiledPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF
+    // invoke: void drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPointF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint
+    // invoke: void drawTiledPixmap(const class QRect &, const class QPixmap &, const class QPoint &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPoint).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii
+    // invoke: void drawTiledPixmap(int, int, int, int, const class QPixmap &, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -929,6 +934,7 @@ func (this *QPainter) drawTiledPixmap(args ...interface{}) () {
     if false {fmt.Println(arg5)}
     var arg6 = C.int32_t(args[6].(int32))
     if false {fmt.Println(arg6)}
+    C.demth_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   default:
     qtrt.ErrorResolve("QPainter", "drawTiledPixmap", args)
   }
@@ -948,8 +954,10 @@ func (this *QPainter) setBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter13setBackgroundERK6QBrush
+    // invoke: void setBackground(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter13setBackgroundERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setBackground", args)
   }
@@ -984,22 +992,27 @@ func (this *QPainter) drawChord(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawChordERK6QRectFii
+    // invoke: void drawChord(const class QRectF &, int, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter9drawChordERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter9drawChordERK5QRectii
+    // invoke: void drawChord(const class QRect &, int, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter9drawChordERK5QRectii(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter9drawChordEiiiiii
+    // invoke: void drawChord(int, int, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1012,6 +1025,7 @@ func (this *QPainter) drawChord(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
+    C.demth_ZN8QPainter9drawChordEiiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QPainter", "drawChord", args)
   }
@@ -1078,86 +1092,36 @@ func (this *QPainter) drawImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawImageERK6QRectFRK6QImage
+    // invoke: void drawImage(const class QRectF &, const class QImage &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QImage).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter9drawImageERK6QRectFRK6QImage(this.qclsinst, arg0, arg1)
   case 1:
-    // invoke: _ZN8QPainter9drawImageERK7QPointFRK6QImageRK6QRectF6QFlagsIN2Qt19ImageConversionFlagEE
-    var arg0 = args[0].(QPointF).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QImage).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRectF).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(unsafe.Pointer)
-    if false {fmt.Println(arg3)}
-  case 2:
-    // invoke: _ZN8QPainter9drawImageERK5QRectRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE
-    var arg0 = args[0].(QRect).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QImage).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRect).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(unsafe.Pointer)
-    if false {fmt.Println(arg3)}
-  case 3:
-    // invoke: _ZN8QPainter9drawImageEiiRK6QImageiiii6QFlagsIN2Qt19ImageConversionFlagEE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QImage).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = C.int32_t(args[4].(int32))
-    if false {fmt.Println(arg4)}
-    var arg5 = C.int32_t(args[5].(int32))
-    if false {fmt.Println(arg5)}
-    var arg6 = C.int32_t(args[6].(int32))
-    if false {fmt.Println(arg6)}
-    var arg7 = args[7].(unsafe.Pointer)
-    if false {fmt.Println(arg7)}
-  case 4:
-    // invoke: _ZN8QPainter9drawImageERK6QPointRK6QImageRK5QRect6QFlagsIN2Qt19ImageConversionFlagEE
-    var arg0 = args[0].(QPoint).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QImage).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRect).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(unsafe.Pointer)
-    if false {fmt.Println(arg3)}
-  case 5:
     // invoke: _ZN8QPainter9drawImageERK6QPointRK6QImage
+    // invoke: void drawImage(const class QPoint &, const class QImage &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QImage).qclsinst
     if false {fmt.Println(arg1)}
-  case 6:
+    C.demth_ZN8QPainter9drawImageERK6QPointRK6QImage(this.qclsinst, arg0, arg1)
+  case 2:
     // invoke: _ZN8QPainter9drawImageERK5QRectRK6QImage
+    // invoke: void drawImage(const class QRect &, const class QImage &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QImage).qclsinst
     if false {fmt.Println(arg1)}
-  case 7:
+    C.demth_ZN8QPainter9drawImageERK5QRectRK6QImage(this.qclsinst, arg0, arg1)
+  case 3:
     // invoke: _ZN8QPainter9drawImageERK7QPointFRK6QImage
+    // invoke: void drawImage(const class QPointF &, const class QImage &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QImage).qclsinst
     if false {fmt.Println(arg1)}
-  case 8:
-    // invoke: _ZN8QPainter9drawImageERK6QRectFRK6QImageS2_6QFlagsIN2Qt19ImageConversionFlagEE
-    var arg0 = args[0].(QRectF).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QImage).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRectF).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = args[3].(unsafe.Pointer)
-    if false {fmt.Println(arg3)}
+    C._ZN8QPainter9drawImageERK7QPointFRK6QImage(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawImage", args)
   }
@@ -1177,8 +1141,10 @@ func (this *QPainter) setClipping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11setClippingEb
+    // invoke: void setClipping(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter11setClippingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setClipping", args)
   }
@@ -1201,12 +1167,10 @@ func (this *QPainter) setBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8setBrushERK6QBrush
+    // invoke: void setBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN8QPainter8setBrushEN2Qt10BrushStyleE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZN8QPainter8setBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setBrush", args)
   }
@@ -1227,10 +1191,12 @@ func (this *QPainter) setMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9setMatrixERK7QMatrixb
+    // invoke: void setMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "setMatrix", args)
   }
@@ -1259,10 +1225,13 @@ func (this *QPainter) eraseRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9eraseRectERK6QRectF
+    // invoke: void eraseRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter9eraseRectERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter9eraseRectEiiii
+    // invoke: void eraseRect(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1271,10 +1240,13 @@ func (this *QPainter) eraseRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter9eraseRectEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN8QPainter9eraseRectERK5QRect
+    // invoke: void eraseRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter9eraseRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "eraseRect", args)
   }
@@ -1301,18 +1273,24 @@ func (this *QPainter) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9translateERK6QPoint
+    // invoke: void translate(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter9translateERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter9translateEdd
+    // invoke: void translate(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter9translateEdd(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter9translateERK7QPointF
+    // invoke: void translate(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter9translateERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "translate", args)
   }
@@ -1331,6 +1309,8 @@ func (this *QPainter) viewTransformEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter20viewTransformEnabledEv
+    // invoke: bool viewTransformEnabled()
+    C._ZNK8QPainter20viewTransformEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "viewTransformEnabled", args)
   }
@@ -1356,16 +1336,16 @@ func (this *QPainter) setPen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter6setPenERK4QPen
+    // invoke: void setPen(const class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter6setPenERK4QPen(this.qclsinst, arg0)
   case 1:
-    // invoke: _ZN8QPainter6setPenEN2Qt8PenStyleE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-  case 2:
     // invoke: _ZN8QPainter6setPenERK6QColor
+    // invoke: void setPen(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter6setPenERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setPen", args)
   }
@@ -1410,40 +1390,36 @@ func (this *QPainter) drawLines(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawLinesEPK6QLineFi
+    // invoke: void drawLines(const class QLineF *, int)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter9drawLinesEPK6QLineFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPainter9drawLinesEPK7QPointFi
+    // invoke: void drawLines(const class QPointF *, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter9drawLinesEPK7QPointFi(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter9drawLinesEPK5QLinei
+    // invoke: void drawLines(const class QLine *, int)
     var arg0 = args[0].(QLine).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter9drawLinesEPK5QLinei(this.qclsinst, arg0, arg1)
   case 3:
-    // invoke: _ZN8QPainter9drawLinesERK7QVectorI5QLineE
-    // var arg0 = args[0].(QVector<QLine>).qclsinst
-  case 4:
     // invoke: _ZN8QPainter9drawLinesEPK6QPointi
+    // invoke: void drawLines(const class QPoint *, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-  case 5:
-    // invoke: _ZN8QPainter9drawLinesERK7QVectorI6QLineFE
-    // var arg0 = args[0].(QVector<QLineF>).qclsinst
-  case 6:
-    // invoke: _ZN8QPainter9drawLinesERK7QVectorI6QPointE
-    // var arg0 = args[0].(QVector<QPoint>).qclsinst
-  case 7:
-    // invoke: _ZN8QPainter9drawLinesERK7QVectorI7QPointFE
-    // var arg0 = args[0].(QVector<QPointF>).qclsinst
+    C._ZN8QPainter9drawLinesEPK6QPointi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawLines", args)
   }
@@ -1470,18 +1446,24 @@ func (this *QPainter) setBrushOrigin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14setBrushOriginEii
+    // invoke: void setBrushOrigin(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter14setBrushOriginEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPainter14setBrushOriginERK7QPointF
+    // invoke: void setBrushOrigin(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter14setBrushOriginERK7QPointF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN8QPainter14setBrushOriginERK6QPoint
+    // invoke: void setBrushOrigin(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter14setBrushOriginERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setBrushOrigin", args)
   }
@@ -1500,6 +1482,8 @@ func (this *QPainter) worldTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter14worldTransformEv
+    // invoke: const QTransform & worldTransform()
+    C._ZNK8QPainter14worldTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "worldTransform", args)
   }
@@ -1529,23 +1513,21 @@ func (this *QPainter) drawRects(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QPainter9drawRectsERK7QVectorI5QRectE
-    // var arg0 = args[0].(QVector<QRect>).qclsinst
-  case 1:
     // invoke: _ZN8QPainter9drawRectsEPK5QRecti
+    // invoke: void drawRects(const class QRect *, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-  case 2:
+    C._ZN8QPainter9drawRectsEPK5QRecti(this.qclsinst, arg0, arg1)
+  case 1:
     // invoke: _ZN8QPainter9drawRectsEPK6QRectFi
+    // invoke: void drawRects(const class QRectF *, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-  case 3:
-    // invoke: _ZN8QPainter9drawRectsERK7QVectorI6QRectFE
-    // var arg0 = args[0].(QVector<QRectF>).qclsinst
+    C._ZN8QPainter9drawRectsEPK6QRectFi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawRects", args)
   }
@@ -1584,30 +1566,39 @@ func (this *QPainter) drawEllipse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11drawEllipseERK6QPointii
+    // invoke: void drawEllipse(const class QPoint &, int, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter11drawEllipseERK6QPointii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter11drawEllipseERK6QRectF
+    // invoke: void drawEllipse(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter11drawEllipseERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN8QPainter11drawEllipseERK5QRect
+    // invoke: void drawEllipse(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter11drawEllipseERK5QRect(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN8QPainter11drawEllipseERK7QPointFdd
+    // invoke: void drawEllipse(const class QPointF &, qreal, qreal)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter11drawEllipseERK7QPointFdd(this.qclsinst, arg0, arg1, arg2)
   case 4:
     // invoke: _ZN8QPainter11drawEllipseEiiii
+    // invoke: void drawEllipse(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1616,6 +1607,7 @@ func (this *QPainter) drawEllipse(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter11drawEllipseEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPainter", "drawEllipse", args)
   }
@@ -1650,6 +1642,7 @@ func (this *QPainter) drawArc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7drawArcEiiiiii
+    // invoke: void drawArc(int, int, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1662,22 +1655,27 @@ func (this *QPainter) drawArc(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
+    C.demth_ZN8QPainter7drawArcEiiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN8QPainter7drawArcERK6QRectFii
+    // invoke: void drawArc(const class QRectF &, int, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter7drawArcERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter7drawArcERK5QRectii
+    // invoke: void drawArc(const class QRect &, int, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter7drawArcERK5QRectii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPainter", "drawArc", args)
   }
@@ -1708,24 +1706,32 @@ func (this *QPainter) drawPolyline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawPolylineERK9QPolygonF
+    // invoke: void drawPolyline(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter12drawPolylineERK9QPolygonF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter12drawPolylineERK8QPolygon
+    // invoke: void drawPolyline(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter12drawPolylineERK8QPolygon(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN8QPainter12drawPolylineEPK6QPointi
+    // invoke: void drawPolyline(const class QPoint *, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter12drawPolylineEPK6QPointi(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN8QPainter12drawPolylineEPK7QPointFi
+    // invoke: void drawPolyline(const class QPointF *, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter12drawPolylineEPK7QPointFi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawPolyline", args)
   }
@@ -1744,6 +1750,8 @@ func (this *QPainter) hasClipping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11hasClippingEv
+    // invoke: bool hasClipping()
+    C._ZNK8QPainter11hasClippingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "hasClipping", args)
   }
@@ -1824,14 +1832,17 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_
+    // invoke: void drawPixmap(const class QRectF &, const class QPixmap &, const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRectF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter10drawPixmapEiiRK7QPixmapiiii
+    // invoke: void drawPixmap(int, int, const class QPixmap &, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1846,16 +1857,20 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
     if false {fmt.Println(arg5)}
     var arg6 = C.int32_t(args[6].(int32))
     if false {fmt.Println(arg6)}
+    C.demth_ZN8QPainter10drawPixmapEiiRK7QPixmapiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   case 2:
     // invoke: _ZN8QPainter10drawPixmapEiiRK7QPixmap
+    // invoke: void drawPixmap(int, int, const class QPixmap &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter10drawPixmapEiiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
   case 3:
     // invoke: _ZN8QPainter10drawPixmapEiiiiRK7QPixmap
+    // invoke: void drawPixmap(int, int, int, int, const class QPixmap &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1866,28 +1881,36 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QPixmap).qclsinst
     if false {fmt.Println(arg4)}
+    C.demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmap(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   case 4:
     // invoke: _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap
+    // invoke: void drawPixmap(const class QPointF &, const class QPixmap &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap(this.qclsinst, arg0, arg1)
   case 5:
     // invoke: _ZN8QPainter10drawPixmapERK6QPointRK7QPixmapRK5QRect
+    // invoke: void drawPixmap(const class QPoint &, const class QPixmap &, const class QRect &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRect).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmapRK5QRect(this.qclsinst, arg0, arg1, arg2)
   case 6:
     // invoke: _ZN8QPainter10drawPixmapERK5QRectRK7QPixmap
+    // invoke: void drawPixmap(const class QRect &, const class QPixmap &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmap(this.qclsinst, arg0, arg1)
   case 7:
     // invoke: _ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii
+    // invoke: void drawPixmap(int, int, int, int, const class QPixmap &, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1906,28 +1929,35 @@ func (this *QPainter) drawPixmap(args ...interface{}) () {
     if false {fmt.Println(arg7)}
     var arg8 = C.int32_t(args[8].(int32))
     if false {fmt.Println(arg8)}
+    C.demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
   case 8:
     // invoke: _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmapRK6QRectF
+    // invoke: void drawPixmap(const class QPointF &, const class QPixmap &, const class QRectF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRectF).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmapRK6QRectF(this.qclsinst, arg0, arg1, arg2)
   case 9:
     // invoke: _ZN8QPainter10drawPixmapERK6QPointRK7QPixmap
+    // invoke: void drawPixmap(const class QPoint &, const class QPixmap &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmap(this.qclsinst, arg0, arg1)
   case 10:
     // invoke: _ZN8QPainter10drawPixmapERK5QRectRK7QPixmapS2_
+    // invoke: void drawPixmap(const class QRect &, const class QPixmap &, const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRect).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmapS2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPainter", "drawPixmap", args)
   }
@@ -1957,24 +1987,30 @@ func (this *QPainter) drawStaticText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14drawStaticTextEiiRK11QStaticText
+    // invoke: void drawStaticText(int, int, const class QStaticText &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QStaticText).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter14drawStaticTextEiiRK11QStaticText(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter14drawStaticTextERK7QPointFRK11QStaticText
+    // invoke: void drawStaticText(const class QPointF &, const class QStaticText &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStaticText).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter14drawStaticTextERK7QPointFRK11QStaticText(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText
+    // invoke: void drawStaticText(const class QPoint &, const class QStaticText &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStaticText).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawStaticText", args)
   }
@@ -1995,10 +2031,12 @@ func (this *QPainter) strokePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10strokePathERK12QPainterPathRK4QPen
+    // invoke: void strokePath(const class QPainterPath &, const class QPen &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPen).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter10strokePathERK12QPainterPathRK4QPen(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "strokePath", args)
   }
@@ -2029,24 +2067,32 @@ func (this *QPainter) drawConvexPolygon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17drawConvexPolygonEPK6QPointi
+    // invoke: void drawConvexPolygon(const class QPoint *, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter17drawConvexPolygonEPK6QPointi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QPainter17drawConvexPolygonEPK7QPointFi
+    // invoke: void drawConvexPolygon(const class QPointF *, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter17drawConvexPolygonEPK7QPointFi(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter17drawConvexPolygonERK9QPolygonF
+    // invoke: void drawConvexPolygon(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter17drawConvexPolygonERK9QPolygonF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN8QPainter17drawConvexPolygonERK8QPolygon
+    // invoke: void drawConvexPolygon(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter17drawConvexPolygonERK8QPolygon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "drawConvexPolygon", args)
   }
@@ -2066,8 +2112,10 @@ func (this *QPainter) drawPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawPathERK12QPainterPath
+    // invoke: void drawPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter8drawPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "drawPath", args)
   }
@@ -2086,6 +2134,8 @@ func (this *QPainter) combinedMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter14combinedMatrixEv
+    // invoke: QMatrix combinedMatrix()
+    C._ZNK8QPainter14combinedMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "combinedMatrix", args)
   }
@@ -2105,8 +2155,10 @@ func (this *QPainter) setMatrixEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter16setMatrixEnabledEb
+    // invoke: void setMatrixEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter16setMatrixEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setMatrixEnabled", args)
   }
@@ -2126,8 +2178,10 @@ func (this *QPainter) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7setFontERK5QFont
+    // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setFont", args)
   }
@@ -2153,10 +2207,13 @@ func (this *QPainter) setWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9setWindowERK5QRect
+    // invoke: void setWindow(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter9setWindowERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter9setWindowEiiii
+    // invoke: void setWindow(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2165,6 +2222,7 @@ func (this *QPainter) setWindow(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter9setWindowEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPainter", "setWindow", args)
   }
@@ -2183,6 +2241,8 @@ func (this *QPainter) deviceMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter12deviceMatrixEv
+    // invoke: const QMatrix & deviceMatrix()
+    C._ZNK8QPainter12deviceMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "deviceMatrix", args)
   }
@@ -2217,6 +2277,7 @@ func (this *QPainter) drawPie(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7drawPieEiiiiii
+    // invoke: void drawPie(int, int, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2229,22 +2290,27 @@ func (this *QPainter) drawPie(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
+    C.demth_ZN8QPainter7drawPieEiiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   case 1:
     // invoke: _ZN8QPainter7drawPieERK5QRectii
+    // invoke: void drawPie(const class QRect &, int, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter7drawPieERK5QRectii(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter7drawPieERK6QRectFii
+    // invoke: void drawPie(const class QRectF &, int, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter7drawPieERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPainter", "drawPie", args)
   }
@@ -2264,8 +2330,10 @@ func (this *QPainter) setWorldMatrixEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter21setWorldMatrixEnabledEb
+    // invoke: void setWorldMatrixEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter21setWorldMatrixEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setWorldMatrixEnabled", args)
   }
@@ -2301,24 +2369,32 @@ func (this *QPainter) drawPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10drawPointsERK8QPolygon
+    // invoke: void drawPoints(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter10drawPointsERK8QPolygon(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter10drawPointsEPK7QPointFi
+    // invoke: void drawPoints(const class QPointF *, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter10drawPointsEPK7QPointFi(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter10drawPointsERK9QPolygonF
+    // invoke: void drawPoints(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter10drawPointsERK9QPolygonF(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN8QPainter10drawPointsEPK6QPointi
+    // invoke: void drawPoints(const class QPoint *, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter10drawPointsEPK6QPointi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawPoints", args)
   }
@@ -2347,6 +2423,7 @@ func (this *QPainter) drawRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawRectEiiii
+    // invoke: void drawRect(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2355,14 +2432,19 @@ func (this *QPainter) drawRect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter8drawRectEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN8QPainter8drawRectERK6QRectF
+    // invoke: void drawRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter8drawRectERK6QRectF(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN8QPainter8drawRectERK5QRect
+    // invoke: void drawRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter8drawRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "drawRect", args)
   }
@@ -2381,6 +2463,8 @@ func (this *QPainter) clipRegion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter10clipRegionEv
+    // invoke: QRegion clipRegion()
+    C._ZNK8QPainter10clipRegionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "clipRegion", args)
   }
@@ -2417,20 +2501,27 @@ func (this *QPainter) drawLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8drawLineERK6QLineF
+    // invoke: void drawLine(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter8drawLineERK6QLineF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter8drawLineERK7QPointFS2_
+    // invoke: void drawLine(const class QPointF &, const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter8drawLineERK7QPointFS2_(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter8drawLineERK5QLine
+    // invoke: void drawLine(const class QLine &)
     var arg0 = args[0].(QLine).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter8drawLineERK5QLine(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN8QPainter8drawLineEiiii
+    // invoke: void drawLine(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2439,12 +2530,15 @@ func (this *QPainter) drawLine(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter8drawLineEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 4:
     // invoke: _ZN8QPainter8drawLineERK6QPointS2_
+    // invoke: void drawLine(const class QPoint &, const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPoint).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter8drawLineERK6QPointS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawLine", args)
   }
@@ -2463,6 +2557,8 @@ func (this *QPainter) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6deviceEv
+    // invoke: QPaintDevice * device()
+    C._ZNK8QPainter6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "device", args)
   }
@@ -2488,10 +2584,13 @@ func (this *QPainter) setViewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11setViewportERK5QRect
+    // invoke: void setViewport(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter11setViewportERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter11setViewportEiiii
+    // invoke: void setViewport(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2500,6 +2599,7 @@ func (this *QPainter) setViewport(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN8QPainter11setViewportEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPainter", "setViewport", args)
   }
@@ -2529,24 +2629,30 @@ func (this *QPainter) drawTextItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawTextItemEiiRK9QTextItem
+    // invoke: void drawTextItem(int, int, const class QTextItem &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextItem).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter12drawTextItemEiiRK9QTextItem(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter12drawTextItemERK6QPointRK9QTextItem
+    // invoke: void drawTextItem(const class QPoint &, const class QTextItem &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextItem).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter12drawTextItemERK6QPointRK9QTextItem(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem
+    // invoke: void drawTextItem(const class QPointF &, const class QTextItem &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextItem).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter12drawTextItemERK7QPointFRK9QTextItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawTextItem", args)
   }
@@ -2565,6 +2671,8 @@ func (this *QPainter) save(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter4saveEv
+    // invoke: void save()
+    C._ZN8QPainter4saveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "save", args)
   }
@@ -2583,6 +2691,8 @@ func (this *QPainter) combinedTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter17combinedTransformEv
+    // invoke: QTransform combinedTransform()
+    C._ZNK8QPainter17combinedTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "combinedTransform", args)
   }
@@ -2601,6 +2711,8 @@ func (this *QPainter) end(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter3endEv
+    // invoke: bool end()
+    C._ZN8QPainter3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "end", args)
   }
@@ -2635,22 +2747,27 @@ func (this *QPainter) drawRoundRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter13drawRoundRectERK5QRectii
+    // invoke: void drawRoundRect(const class QRect &, int, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C.demth_ZN8QPainter13drawRoundRectERK5QRectii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QPainter13drawRoundRectERK6QRectFii
+    // invoke: void drawRoundRect(const class QRectF &, int, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN8QPainter13drawRoundRectERK6QRectFii(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QPainter13drawRoundRectEiiiiii
+    // invoke: void drawRoundRect(int, int, int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -2663,6 +2780,7 @@ func (this *QPainter) drawRoundRect(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
+    C.demth_ZN8QPainter13drawRoundRectEiiiiii(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
   default:
     qtrt.ErrorResolve("QPainter", "drawRoundRect", args)
   }
@@ -2683,10 +2801,12 @@ func (this *QPainter) setWorldTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17setWorldTransformERK10QTransformb
+    // invoke: void setWorldTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter17setWorldTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "setWorldTransform", args)
   }
@@ -2705,6 +2825,8 @@ func (this *QPainter) restore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter7restoreEv
+    // invoke: void restore()
+    C._ZN8QPainter7restoreEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "restore", args)
   }
@@ -2731,18 +2853,24 @@ func (this *QPainter) drawPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter9drawPointERK6QPoint
+    // invoke: void drawPoint(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter9drawPointERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QPainter9drawPointEii
+    // invoke: void drawPoint(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZN8QPainter9drawPointEii(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QPainter9drawPointERK7QPointF
+    // invoke: void drawPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPainter9drawPointERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "drawPoint", args)
   }
@@ -2777,10 +2905,12 @@ func (this *QPainter) shear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5shearEdd
+    // invoke: void shear(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter5shearEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "shear", args)
   }
@@ -2799,6 +2929,8 @@ func (this *QPainter) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter4fontEv
+    // invoke: const QFont & font()
+    C._ZNK8QPainter4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "font", args)
   }
@@ -2817,6 +2949,8 @@ func (this *QPainter) deviceTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter15deviceTransformEv
+    // invoke: const QTransform & deviceTransform()
+    C._ZNK8QPainter15deviceTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "deviceTransform", args)
   }
@@ -2835,6 +2969,8 @@ func (this *QPainter) resetMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter11resetMatrixEv
+    // invoke: void resetMatrix()
+    C._ZN8QPainter11resetMatrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "resetMatrix", args)
   }
@@ -2853,6 +2989,8 @@ func (this *QPainter) paintEngine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11paintEngineEv
+    // invoke: QPaintEngine * paintEngine()
+    C._ZNK8QPainter11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "paintEngine", args)
   }
@@ -2871,6 +3009,8 @@ func (this *QPainter) isActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8isActiveEv
+    // invoke: bool isActive()
+    C._ZNK8QPainter8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "isActive", args)
   }
@@ -2903,6 +3043,8 @@ func (this *QPainter) worldMatrixEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter18worldMatrixEnabledEv
+    // invoke: bool worldMatrixEnabled()
+    C._ZNK8QPainter18worldMatrixEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrixEnabled", args)
   }
@@ -2921,6 +3063,8 @@ func (this *QPainter) transform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter9transformEv
+    // invoke: const QTransform & transform()
+    C._ZNK8QPainter9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "transform", args)
   }
@@ -2953,6 +3097,8 @@ func (this *QPainter) fontMetrics(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11fontMetricsEv
+    // invoke: QFontMetrics fontMetrics()
+    C._ZNK8QPainter11fontMetricsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "fontMetrics", args)
   }
@@ -2973,10 +3119,12 @@ func (this *QPainter) drawGlyphRun(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12drawGlyphRunERK7QPointFRK9QGlyphRun
+    // invoke: void drawGlyphRun(const class QPointF &, const class QGlyphRun &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QGlyphRun).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter12drawGlyphRunERK7QPointFRK9QGlyphRun(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "drawGlyphRun", args)
   }
@@ -2995,6 +3143,8 @@ func (this *QPainter) resetTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14resetTransformEv
+    // invoke: void resetTransform()
+    C._ZN8QPainter14resetTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "resetTransform", args)
   }
@@ -3013,6 +3163,8 @@ func (this *QPainter) brush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter5brushEv
+    // invoke: const QBrush & brush()
+    C._ZNK8QPainter5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "brush", args)
   }
@@ -3046,8 +3198,10 @@ func (this *QPainter) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5beginEP12QPaintDevice
+    // invoke: bool begin(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter5beginEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "begin", args)
   }
@@ -3068,10 +3222,12 @@ func (this *QPainter) scale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter5scaleEdd
+    // invoke: void scale(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter5scaleEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "scale", args)
   }
@@ -3092,10 +3248,12 @@ func (this *QPainter) setWorldMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter14setWorldMatrixERK7QMatrixb
+    // invoke: void setWorldMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter14setWorldMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "setWorldMatrix", args)
   }
@@ -3114,6 +3272,8 @@ func (this *QPainter) clipPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8clipPathEv
+    // invoke: QPainterPath clipPath()
+    C._ZNK8QPainter8clipPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "clipPath", args)
   }
@@ -3132,6 +3292,8 @@ func (this *QPainter) brushOrigin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter11brushOriginEv
+    // invoke: QPoint brushOrigin()
+    C._ZNK8QPainter11brushOriginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "brushOrigin", args)
   }
@@ -3150,6 +3312,8 @@ func (this *QPainter) background(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter10backgroundEv
+    // invoke: const QBrush & background()
+    C._ZNK8QPainter10backgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "background", args)
   }
@@ -3168,6 +3332,8 @@ func (this *QPainter) viewport(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8viewportEv
+    // invoke: QRect viewport()
+    C._ZNK8QPainter8viewportEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "viewport", args)
   }
@@ -3188,10 +3354,12 @@ func (this *QPainter) fillPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8fillPathERK12QPainterPathRK6QBrush
+    // invoke: void fillPath(const class QPainterPath &, const class QBrush &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QBrush).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter8fillPathERK12QPainterPathRK6QBrush(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "fillPath", args)
   }
@@ -3210,6 +3378,8 @@ func (this *QPainter) matrixEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter13matrixEnabledEv
+    // invoke: bool matrixEnabled()
+    C._ZNK8QPainter13matrixEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "matrixEnabled", args)
   }
@@ -3230,10 +3400,12 @@ func (this *QPainter) setTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter12setTransformERK10QTransformb
+    // invoke: void setTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN8QPainter12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPainter", "setTransform", args)
   }
@@ -3252,6 +3424,8 @@ func (this *QPainter) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter6windowEv
+    // invoke: QRect window()
+    C._ZNK8QPainter6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "window", args)
   }
@@ -3271,8 +3445,10 @@ func (this *QPainter) initFrom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter8initFromEPK12QPaintDevice
+    // invoke: void initFrom(const class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter8initFromEPK12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "initFrom", args)
   }
@@ -3291,6 +3467,8 @@ func (this *QPainter) fontInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter8fontInfoEv
+    // invoke: QFontInfo fontInfo()
+    C._ZNK8QPainter8fontInfoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "fontInfo", args)
   }
@@ -3309,6 +3487,8 @@ func (this *QPainter) endNativePainting(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter17endNativePaintingEv
+    // invoke: void endNativePainting()
+    C._ZN8QPainter17endNativePaintingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "endNativePainting", args)
   }
@@ -3328,8 +3508,10 @@ func (this *QPainter) setViewTransformEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter23setViewTransformEnabledEb
+    // invoke: void setViewTransformEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter23setViewTransformEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setViewTransformEnabled", args)
   }
@@ -3349,8 +3531,10 @@ func (this *QPainter) setOpacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter10setOpacityEd
+    // invoke: void setOpacity(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter10setOpacityEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "setOpacity", args)
   }
@@ -3369,6 +3553,8 @@ func (this *QPainter) pen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter3penEv
+    // invoke: const QPen & pen()
+    C._ZNK8QPainter3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "pen", args)
   }
@@ -3388,8 +3574,10 @@ func (this *QPainter) rotate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter6rotateEd
+    // invoke: void rotate(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN8QPainter6rotateEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPainter", "rotate", args)
   }
@@ -3408,6 +3596,8 @@ func (this *QPainter) clipBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPainter16clipBoundingRectEv
+    // invoke: QRectF clipBoundingRect()
+    C._ZNK8QPainter16clipBoundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "clipBoundingRect", args)
   }
@@ -3426,6 +3616,8 @@ func (this *QPainter) beginNativePainting(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPainter19beginNativePaintingEv
+    // invoke: void beginNativePainting()
+    C._ZN8QPainter19beginNativePaintingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPainter", "beginNativePainting", args)
   }

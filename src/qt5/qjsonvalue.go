@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -172,10 +172,8 @@ func (this *QJsonValue) toObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8toObjectEv
-  case 1:
-    // invoke: _ZNK10QJsonValue8toObjectERK11QJsonObject
-    var arg0 = args[0].(QJsonObject).qclsinst
-    if false {fmt.Println(arg0)}
+    // invoke: QJsonObject toObject()
+    C._ZNK10QJsonValue8toObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "toObject", args)
   }
@@ -194,6 +192,8 @@ func (this *QJsonValue) isDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8isDoubleEv
+    // invoke: bool isDouble()
+    C.demth_ZNK10QJsonValue8isDoubleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isDouble", args)
   }
@@ -218,8 +218,10 @@ func (this *QJsonValue) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue5toIntEi
+    // invoke: int toInt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValue", "toInt", args)
   }
@@ -240,11 +242,9 @@ func (this *QJsonValue) toArray(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QJsonValue7toArrayERK10QJsonArray
-    var arg0 = args[0].(QJsonArray).qclsinst
-    if false {fmt.Println(arg0)}
-  case 1:
     // invoke: _ZNK10QJsonValue7toArrayEv
+    // invoke: QJsonArray toArray()
+    C._ZNK10QJsonValue7toArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "toArray", args)
   }
@@ -263,6 +263,8 @@ func (this *QJsonValue) isArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue7isArrayEv
+    // invoke: bool isArray()
+    C.demth_ZNK10QJsonValue7isArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isArray", args)
   }
@@ -282,8 +284,10 @@ func (this *QJsonValue) toString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8toStringERK7QString
+    // invoke: QString toString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValue", "toString", args)
   }
@@ -303,8 +307,10 @@ func (this *QJsonValue) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8toDoubleEd
+    // invoke: double toDouble(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValue", "toDouble", args)
   }
@@ -337,6 +343,8 @@ func (this *QJsonValue) toVariant(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue9toVariantEv
+    // invoke: QVariant toVariant()
+    C._ZNK10QJsonValue9toVariantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "toVariant", args)
   }
@@ -355,6 +363,8 @@ func (this *QJsonValue) isObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8isObjectEv
+    // invoke: bool isObject()
+    C.demth_ZNK10QJsonValue8isObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isObject", args)
   }
@@ -388,8 +398,10 @@ func (this *QJsonValue) toBool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue6toBoolEb
+    // invoke: bool toBool(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue6toBoolEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValue", "toBool", args)
   }
@@ -408,6 +420,8 @@ func (this *QJsonValue) isBool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue6isBoolEv
+    // invoke: bool isBool()
+    C.demth_ZNK10QJsonValue6isBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isBool", args)
   }
@@ -426,6 +440,8 @@ func (this *QJsonValue) isUndefined(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue11isUndefinedEv
+    // invoke: bool isUndefined()
+    C.demth_ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isUndefined", args)
   }
@@ -444,6 +460,8 @@ func (this *QJsonValue) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK10QJsonValue6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isNull", args)
   }
@@ -462,6 +480,8 @@ func (this *QJsonValue) isString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QJsonValue8isStringEv
+    // invoke: bool isString()
+    C.demth_ZNK10QJsonValue8isStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isString", args)
   }
@@ -480,6 +500,8 @@ func (this *QJsonValueRef) toArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef7toArrayEv
+    // invoke: QJsonArray toArray()
+    C._ZNK13QJsonValueRef7toArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toArray", args)
   }
@@ -498,6 +520,8 @@ func (this *QJsonValueRef) toObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toObjectEv
+    // invoke: QJsonObject toObject()
+    C._ZNK13QJsonValueRef8toObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toObject", args)
   }
@@ -516,6 +540,8 @@ func (this *QJsonValueRef) isBool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isBoolEv
+    // invoke: bool isBool()
+    C.demth_ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isBool", args)
   }
@@ -534,6 +560,8 @@ func (this *QJsonValueRef) isDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isDoubleEv
+    // invoke: bool isDouble()
+    C.demth_ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isDouble", args)
   }
@@ -555,10 +583,14 @@ func (this *QJsonValueRef) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toDoubleEv
+    // invoke: double toDouble()
+    C.demth_ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
   case 1:
     // invoke: _ZNK13QJsonValueRef8toDoubleEd
+    // invoke: double toDouble(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toDouble", args)
   }
@@ -580,10 +612,14 @@ func (this *QJsonValueRef) toBool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef6toBoolEb
+    // invoke: bool toBool(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QJsonValueRef6toBoolEv
+    // invoke: bool toBool()
+    C.demth_ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toBool", args)
   }
@@ -602,6 +638,8 @@ func (this *QJsonValueRef) toVariant(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef9toVariantEv
+    // invoke: QVariant toVariant()
+    C._ZNK13QJsonValueRef9toVariantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toVariant", args)
   }
@@ -623,10 +661,14 @@ func (this *QJsonValueRef) toString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toStringERK7QString
+    // invoke: QString toString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QJsonValueRef8toStringEv
+    // invoke: QString toString()
+    C.demth_ZNK13QJsonValueRef8toStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toString", args)
   }
@@ -645,6 +687,8 @@ func (this *QJsonValueRef) isObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isObjectEv
+    // invoke: bool isObject()
+    C.demth_ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isObject", args)
   }
@@ -663,6 +707,8 @@ func (this *QJsonValueRef) isString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isStringEv
+    // invoke: bool isString()
+    C.demth_ZNK13QJsonValueRef8isStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isString", args)
   }
@@ -684,10 +730,14 @@ func (this *QJsonValueRef) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef5toIntEi
+    // invoke: int toInt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QJsonValueRef5toIntEv
+    // invoke: int toInt()
+    C.demth_ZNK13QJsonValueRef5toIntEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toInt", args)
   }
@@ -706,6 +756,8 @@ func (this *QJsonValueRef) isArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef7isArrayEv
+    // invoke: bool isArray()
+    C.demth_ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isArray", args)
   }
@@ -724,6 +776,8 @@ func (this *QJsonValueRef) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK13QJsonValueRef6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isNull", args)
   }
@@ -742,6 +796,8 @@ func (this *QJsonValueRef) isUndefined(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QJsonValueRef11isUndefinedEv
+    // invoke: bool isUndefined()
+    C.demth_ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isUndefined", args)
   }

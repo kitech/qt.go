@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -96,8 +96,10 @@ func (this *QEventTransition) setEventSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QEventTransition14setEventSourceEP7QObject
+    // invoke: void setEventSource(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QEventTransition14setEventSourceEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventTransition", "setEventSource", args)
   }
@@ -116,6 +118,8 @@ func (this *QEventTransition) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QEventTransition10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QEventTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "metaObject", args)
   }
@@ -134,6 +138,8 @@ func (this *QEventTransition) eventSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QEventTransition11eventSourceEv
+    // invoke: QObject * eventSource()
+    C._ZNK16QEventTransition11eventSourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventTransition", "eventSource", args)
   }

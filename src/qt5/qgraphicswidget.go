@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -158,8 +158,10 @@ func (this *QGraphicsWidget) setAutoFillBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setAutoFillBackgroundEb
+    // invoke: void setAutoFillBackground(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setAutoFillBackground", args)
   }
@@ -179,8 +181,10 @@ func (this *QGraphicsWidget) setWindowTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget14setWindowTitleERK7QString
+    // invoke: void setWindowTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget14setWindowTitleERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowTitle", args)
   }
@@ -200,8 +204,10 @@ func (this *QGraphicsWidget) setLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout
+    // invoke: void setLayout(class QGraphicsLayout *)
     var arg0 = args[0].(QGraphicsLayout).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget9setLayoutEP15QGraphicsLayout(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setLayout", args)
   }
@@ -227,10 +233,13 @@ func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget11setGeometryERK6QRectF
+    // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN15QGraphicsWidget11setGeometryEdddd
+    // invoke: void setGeometry(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -239,6 +248,7 @@ func (this *QGraphicsWidget) setGeometry(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C.demth_ZN15QGraphicsWidget11setGeometryEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setGeometry", args)
   }
@@ -257,6 +267,8 @@ func (this *QGraphicsWidget) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4rectEv
+    // invoke: QRectF rect()
+    C.demth_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "rect", args)
   }
@@ -275,6 +287,8 @@ func (this *QGraphicsWidget) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4sizeEv
+    // invoke: QSizeF size()
+    C._ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "size", args)
   }
@@ -294,8 +308,10 @@ func (this *QGraphicsWidget) releaseShortcut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget15releaseShortcutEi
+    // invoke: void releaseShortcut(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget15releaseShortcutEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "releaseShortcut", args)
   }
@@ -318,6 +334,7 @@ func (this *QGraphicsWidget) setWindowFrameMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setWindowFrameMarginsEdddd
+    // invoke: void setWindowFrameMargins(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -326,6 +343,7 @@ func (this *QGraphicsWidget) setWindowFrameMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C._ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setWindowFrameMargins", args)
   }
@@ -358,6 +376,8 @@ func (this *QGraphicsWidget) unsetLayoutDirection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget20unsetLayoutDirectionEv
+    // invoke: void unsetLayoutDirection()
+    C._ZN15QGraphicsWidget20unsetLayoutDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetLayoutDirection", args)
   }
@@ -381,6 +401,8 @@ func (this *QGraphicsWidget) windowFrameGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget19windowFrameGeometryEv
+    // invoke: QRectF windowFrameGeometry()
+    C._ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameGeometry", args)
   }
@@ -404,14 +426,18 @@ func (this *QGraphicsWidget) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget6resizeEdd
+    // invoke: void resize(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN15QGraphicsWidget6resizeEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QGraphicsWidget6resizeERK6QSizeF
+    // invoke: void resize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget6resizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "resize", args)
   }
@@ -430,6 +456,8 @@ func (this *QGraphicsWidget) windowFrameRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15windowFrameRectEv
+    // invoke: QRectF windowFrameRect()
+    C._ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameRect", args)
   }
@@ -451,12 +479,14 @@ func (this *QGraphicsWidget) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN15QGraphicsWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paint", args)
   }
@@ -475,6 +505,8 @@ func (this *QGraphicsWidget) adjustSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget10adjustSizeEv
+    // invoke: void adjustSize()
+    C._ZN15QGraphicsWidget10adjustSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "adjustSize", args)
   }
@@ -496,12 +528,14 @@ func (this *QGraphicsWidget) paintWindowFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paintWindowFrame(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN15QGraphicsWidget16paintWindowFrameEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "paintWindowFrame", args)
   }
@@ -520,6 +554,8 @@ func (this *QGraphicsWidget) palette(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7paletteEv
+    // invoke: QPalette palette()
+    C._ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "palette", args)
   }
@@ -538,6 +574,8 @@ func (this *QGraphicsWidget) unsetWindowFrameMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget23unsetWindowFrameMarginsEv
+    // invoke: void unsetWindowFrameMargins()
+    C._ZN15QGraphicsWidget23unsetWindowFrameMarginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "unsetWindowFrameMargins", args)
   }
@@ -557,8 +595,10 @@ func (this *QGraphicsWidget) setPalette(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget10setPaletteERK8QPalette
+    // invoke: void setPalette(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget10setPaletteERK8QPalette(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setPalette", args)
   }
@@ -577,6 +617,8 @@ func (this *QGraphicsWidget) autoFillBackground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18autoFillBackgroundEv
+    // invoke: bool autoFillBackground()
+    C._ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "autoFillBackground", args)
   }
@@ -595,6 +637,8 @@ func (this *QGraphicsWidget) style(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5styleEv
+    // invoke: QStyle * style()
+    C._ZNK15QGraphicsWidget5styleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "style", args)
   }
@@ -613,6 +657,8 @@ func (this *QGraphicsWidget) shape(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5shapeEv
+    // invoke: QPainterPath shape()
+    C._ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "shape", args)
   }
@@ -633,10 +679,12 @@ func (this *QGraphicsWidget) setShortcutEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget18setShortcutEnabledEib
+    // invoke: void setShortcutEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN15QGraphicsWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutEnabled", args)
   }
@@ -656,8 +704,10 @@ func (this *QGraphicsWidget) removeAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget12removeActionEP7QAction
+    // invoke: void removeAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget12removeActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "removeAction", args)
   }
@@ -678,10 +728,12 @@ func (this *QGraphicsWidget) insertAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget12insertActionEP7QActionS1_
+    // invoke: void insertAction(class QAction *, class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAction).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN15QGraphicsWidget12insertActionEP7QActionS1_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "insertAction", args)
   }
@@ -700,6 +752,8 @@ func (this *QGraphicsWidget) close(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget5closeEv
+    // invoke: bool close()
+    C._ZN15QGraphicsWidget5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "close", args)
   }
@@ -718,6 +772,8 @@ func (this *QGraphicsWidget) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QGraphicsWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "metaObject", args)
   }
@@ -736,6 +792,8 @@ func (this *QGraphicsWidget) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "boundingRect", args)
   }
@@ -758,6 +816,7 @@ func (this *QGraphicsWidget) setContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget18setContentsMarginsEdddd
+    // invoke: void setContentsMargins(qreal, qreal, qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -766,6 +825,7 @@ func (this *QGraphicsWidget) setContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C._ZN15QGraphicsWidget18setContentsMarginsEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setContentsMargins", args)
   }
@@ -785,8 +845,10 @@ func (this *QGraphicsWidget) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget7setFontERK5QFont
+    // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setFont", args)
   }
@@ -805,6 +867,8 @@ func (this *QGraphicsWidget) windowTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowTitleEv
+    // invoke: QString windowTitle()
+    C._ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowTitle", args)
   }
@@ -823,6 +887,8 @@ func (this *QGraphicsWidget) layout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget6layoutEv
+    // invoke: QGraphicsLayout * layout()
+    C._ZNK15QGraphicsWidget6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "layout", args)
   }
@@ -855,6 +921,8 @@ func (this *QGraphicsWidget) focusWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11focusWidgetEv
+    // invoke: QGraphicsWidget * focusWidget()
+    C._ZNK15QGraphicsWidget11focusWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "focusWidget", args)
   }
@@ -874,8 +942,10 @@ func (this *QGraphicsWidget) addAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget9addActionEP7QAction
+    // invoke: void addAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget9addActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "addAction", args)
   }
@@ -894,6 +964,8 @@ func (this *QGraphicsWidget) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4fontEv
+    // invoke: QFont font()
+    C._ZNK15QGraphicsWidget4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "font", args)
   }
@@ -912,6 +984,8 @@ func (this *QGraphicsWidget) actions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7actionsEv
+    // invoke: QList<QAction *> actions()
+    C._ZNK15QGraphicsWidget7actionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "actions", args)
   }
@@ -932,10 +1006,12 @@ func (this *QGraphicsWidget) setShortcutAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setShortcutAutoRepeatEib
+    // invoke: void setShortcutAutoRepeat(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setShortcutAutoRepeat", args)
   }
@@ -972,6 +1048,7 @@ func (this *QGraphicsWidget) getWindowFrameMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_
+    // invoke: void getWindowFrameMargins(qreal *, qreal *, qreal *, qreal *)
     var arg0 = (*C.double)(args[0].(*float64))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.double)(args[1].(*float64))
@@ -980,6 +1057,7 @@ func (this *QGraphicsWidget) getWindowFrameMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
+    C._ZNK15QGraphicsWidget21getWindowFrameMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getWindowFrameMargins", args)
   }
@@ -999,8 +1077,10 @@ func (this *QGraphicsWidget) setStyle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGraphicsWidget8setStyleEP6QStyle
+    // invoke: void setStyle(class QStyle *)
     var arg0 = args[0].(QStyle).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsWidget8setStyleEP6QStyle(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "setStyle", args)
   }
@@ -1023,6 +1103,7 @@ func (this *QGraphicsWidget) getContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_
+    // invoke: void getContentsMargins(qreal *, qreal *, qreal *, qreal *)
     var arg0 = (*C.double)(args[0].(*float64))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.double)(args[1].(*float64))
@@ -1031,6 +1112,7 @@ func (this *QGraphicsWidget) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.double)(args[3].(*float64))
     if false {fmt.Println(arg3)}
+    C._ZNK15QGraphicsWidget18getContentsMarginsEPdS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "getContentsMargins", args)
   }
@@ -1049,6 +1131,8 @@ func (this *QGraphicsWidget) isActiveWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGraphicsWidget14isActiveWindowEv
+    // invoke: bool isActiveWindow()
+    C._ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "isActiveWindow", args)
   }

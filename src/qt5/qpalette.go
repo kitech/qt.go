@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -155,6 +155,8 @@ func (this *QPalette) button(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6buttonEv
+    // invoke: const QBrush & button()
+    C.demth_ZNK8QPalette6buttonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "button", args)
   }
@@ -173,6 +175,8 @@ func (this *QPalette) foreground(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10foregroundEv
+    // invoke: const QBrush & foreground()
+    C.demth_ZNK8QPalette10foregroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "foreground", args)
   }
@@ -191,6 +195,8 @@ func (this *QPalette) background(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10backgroundEv
+    // invoke: const QBrush & background()
+    C.demth_ZNK8QPalette10backgroundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "background", args)
   }
@@ -215,14 +221,20 @@ func (this *QPalette) resolve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPalette7resolveEj
+    // invoke: void resolve(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QPalette7resolveEj(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK8QPalette7resolveEv
+    // invoke: uint resolve()
+    C.demth_ZNK8QPalette7resolveEv(this.qclsinst)
   case 2:
     // invoke: _ZNK8QPalette7resolveERKS_
+    // invoke: QPalette resolve(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK8QPalette7resolveERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPalette", "resolve", args)
   }
@@ -242,8 +254,10 @@ func (this *QPalette) isCopyOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8isCopyOfERKS_
+    // invoke: bool isCopyOf(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK8QPalette8isCopyOfERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPalette", "isCopyOf", args)
   }
@@ -263,8 +277,10 @@ func (this *QPalette) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QPalette4swapERS_
+    // invoke: void swap(class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QPalette4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPalette", "swap", args)
   }
@@ -283,6 +299,8 @@ func (this *QPalette) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6windowEv
+    // invoke: const QBrush & window()
+    C.demth_ZNK8QPalette6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "window", args)
   }
@@ -301,6 +319,8 @@ func (this *QPalette) highlightedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette15highlightedTextEv
+    // invoke: const QBrush & highlightedText()
+    C.demth_ZNK8QPalette15highlightedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "highlightedText", args)
   }
@@ -319,6 +339,8 @@ func (this *QPalette) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4textEv
+    // invoke: const QBrush & text()
+    C.demth_ZNK8QPalette4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "text", args)
   }
@@ -337,6 +359,8 @@ func (this *QPalette) light(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette5lightEv
+    // invoke: const QBrush & light()
+    C.demth_ZNK8QPalette5lightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "light", args)
   }
@@ -355,6 +379,8 @@ func (this *QPalette) link(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4linkEv
+    // invoke: const QBrush & link()
+    C.demth_ZNK8QPalette4linkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "link", args)
   }
@@ -373,6 +399,8 @@ func (this *QPalette) cacheKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8cacheKeyEv
+    // invoke: qint64 cacheKey()
+    C._ZNK8QPalette8cacheKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "cacheKey", args)
   }
@@ -391,6 +419,8 @@ func (this *QPalette) base(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4baseEv
+    // invoke: const QBrush & base()
+    C.demth_ZNK8QPalette4baseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "base", args)
   }
@@ -409,6 +439,8 @@ func (this *QPalette) dark(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette4darkEv
+    // invoke: const QBrush & dark()
+    C.demth_ZNK8QPalette4darkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "dark", args)
   }
@@ -427,6 +459,8 @@ func (this *QPalette) highlight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette9highlightEv
+    // invoke: const QBrush & highlight()
+    C.demth_ZNK8QPalette9highlightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "highlight", args)
   }
@@ -445,6 +479,8 @@ func (this *QPalette) mid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette3midEv
+    // invoke: const QBrush & mid()
+    C.demth_ZNK8QPalette3midEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "mid", args)
   }
@@ -463,6 +499,8 @@ func (this *QPalette) shadow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette6shadowEv
+    // invoke: const QBrush & shadow()
+    C.demth_ZNK8QPalette6shadowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "shadow", args)
   }
@@ -481,6 +519,8 @@ func (this *QPalette) buttonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10buttonTextEv
+    // invoke: const QBrush & buttonText()
+    C.demth_ZNK8QPalette10buttonTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "buttonText", args)
   }
@@ -499,6 +539,8 @@ func (this *QPalette) toolTipBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11toolTipBaseEv
+    // invoke: const QBrush & toolTipBase()
+    C.demth_ZNK8QPalette11toolTipBaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "toolTipBase", args)
   }
@@ -517,6 +559,8 @@ func (this *QPalette) midlight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette8midlightEv
+    // invoke: const QBrush & midlight()
+    C.demth_ZNK8QPalette8midlightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "midlight", args)
   }
@@ -535,6 +579,8 @@ func (this *QPalette) brightText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10brightTextEv
+    // invoke: const QBrush & brightText()
+    C.demth_ZNK8QPalette10brightTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "brightText", args)
   }
@@ -553,6 +599,8 @@ func (this *QPalette) linkVisited(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11linkVisitedEv
+    // invoke: const QBrush & linkVisited()
+    C.demth_ZNK8QPalette11linkVisitedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "linkVisited", args)
   }
@@ -571,6 +619,8 @@ func (this *QPalette) alternateBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette13alternateBaseEv
+    // invoke: const QBrush & alternateBase()
+    C.demth_ZNK8QPalette13alternateBaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "alternateBase", args)
   }
@@ -589,6 +639,8 @@ func (this *QPalette) windowText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette10windowTextEv
+    // invoke: const QBrush & windowText()
+    C.demth_ZNK8QPalette10windowTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "windowText", args)
   }
@@ -607,6 +659,8 @@ func (this *QPalette) toolTipText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QPalette11toolTipTextEv
+    // invoke: const QBrush & toolTipText()
+    C.demth_ZNK8QPalette11toolTipTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPalette", "toolTipText", args)
   }

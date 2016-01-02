@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qwidgetaction.h
 // dst-file: /src/widgets/qwidgetaction.go
 //
@@ -80,6 +80,8 @@ func (this *QWidgetAction) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetAction10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QWidgetAction10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetAction", "metaObject", args)
   }
@@ -113,8 +115,10 @@ func (this *QWidgetAction) setDefaultWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction16setDefaultWidgetEP7QWidget
+    // invoke: void setDefaultWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QWidgetAction16setDefaultWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetAction", "setDefaultWidget", args)
   }
@@ -134,8 +138,10 @@ func (this *QWidgetAction) releaseWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13releaseWidgetEP7QWidget
+    // invoke: void releaseWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QWidgetAction13releaseWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetAction", "releaseWidget", args)
   }
@@ -160,8 +166,10 @@ func (this *QWidgetAction) requestWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QWidgetAction13requestWidgetEP7QWidget
+    // invoke: QWidget * requestWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QWidgetAction13requestWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetAction", "requestWidget", args)
   }
@@ -180,6 +188,8 @@ func (this *QWidgetAction) defaultWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetAction13defaultWidgetEv
+    // invoke: QWidget * defaultWidget()
+    C._ZNK13QWidgetAction13defaultWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetAction", "defaultWidget", args)
   }

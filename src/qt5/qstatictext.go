@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -96,6 +96,8 @@ func (this *QStaticText) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStaticText4sizeEv
+    // invoke: QSizeF size()
+    C._ZNK11QStaticText4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "size", args)
   }
@@ -114,6 +116,8 @@ func (this *QStaticText) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStaticText4textEv
+    // invoke: QString text()
+    C._ZNK11QStaticText4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "text", args)
   }
@@ -147,8 +151,10 @@ func (this *QStaticText) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStaticText7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QStaticText7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setText", args)
   }
@@ -169,10 +175,12 @@ func (this *QStaticText) prepare(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStaticText7prepareERK10QTransformRK5QFont
+    // invoke: void prepare(const class QTransform &, const class QFont &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QFont).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN11QStaticText7prepareERK10QTransformRK5QFont(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStaticText", "prepare", args)
   }
@@ -192,8 +200,10 @@ func (this *QStaticText) setTextOption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStaticText13setTextOptionERK11QTextOption
+    // invoke: void setTextOption(const class QTextOption &)
     var arg0 = args[0].(QTextOption).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QStaticText13setTextOptionERK11QTextOption(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextOption", args)
   }
@@ -213,8 +223,10 @@ func (this *QStaticText) setTextWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStaticText12setTextWidthEd
+    // invoke: void setTextWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN11QStaticText12setTextWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "setTextWidth", args)
   }
@@ -233,6 +245,8 @@ func (this *QStaticText) textWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStaticText9textWidthEv
+    // invoke: qreal textWidth()
+    C._ZNK11QStaticText9textWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textWidth", args)
   }
@@ -252,8 +266,10 @@ func (this *QStaticText) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QStaticText4swapERS_
+    // invoke: void swap(class QStaticText &)
     var arg0 = args[0].(QStaticText).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QStaticText4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "swap", args)
   }
@@ -272,6 +288,8 @@ func (this *QStaticText) textOption(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QStaticText10textOptionEv
+    // invoke: QTextOption textOption()
+    C._ZNK11QStaticText10textOptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticText", "textOption", args)
   }

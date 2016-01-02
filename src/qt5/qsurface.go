@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -72,6 +72,8 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface14supportsOpenGLEv
+    // invoke: bool supportsOpenGL()
+    C._ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
   }
@@ -90,6 +92,8 @@ func (this *QSurface) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface6formatEv
+    // invoke: QSurfaceFormat format()
+    C._ZNK8QSurface6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "format", args)
   }
@@ -108,6 +112,8 @@ func (this *QSurface) surfaceHandle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface13surfaceHandleEv
+    // invoke: QPlatformSurface * surfaceHandle()
+    C._ZNK8QSurface13surfaceHandleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "surfaceHandle", args)
   }
@@ -126,6 +132,8 @@ func (this *QSurface) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QSurface4sizeEv
+    // invoke: QSize size()
+    C._ZNK8QSurface4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "size", args)
   }

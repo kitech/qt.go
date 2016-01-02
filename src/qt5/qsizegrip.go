@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -96,8 +96,10 @@ func (this *QSizeGrip) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSizeGrip10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QSizeGrip10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeGrip", "setVisible", args)
   }
@@ -116,6 +118,8 @@ func (this *QSizeGrip) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSizeGrip10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QSizeGrip10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeGrip", "metaObject", args)
   }
@@ -134,6 +138,8 @@ func (this *QSizeGrip) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSizeGrip8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
   }

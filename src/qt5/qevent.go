@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qevent.h
 // dst-file: /src/gui/qevent.go
 //
@@ -673,6 +673,8 @@ func (this *QWhatsThisClickedEvent) href(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QWhatsThisClickedEvent4hrefEv
+    // invoke: QString href()
+    C.demth_ZNK22QWhatsThisClickedEvent4hrefEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWhatsThisClickedEvent", "href", args)
   }
@@ -715,6 +717,8 @@ func (this *QExposeEvent) region(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QExposeEvent6regionEv
+    // invoke: const QRegion & region()
+    C.demth_ZNK12QExposeEvent6regionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QExposeEvent", "region", args)
   }
@@ -747,6 +751,8 @@ func (this *QInputMethodEvent) preeditString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QInputMethodEvent13preeditStringEv
+    // invoke: const QString & preeditString()
+    C.demth_ZNK17QInputMethodEvent13preeditStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "preeditString", args)
   }
@@ -770,6 +776,8 @@ func (this *QInputMethodEvent) replacementStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QInputMethodEvent16replacementStartEv
+    // invoke: int replacementStart()
+    C.demth_ZNK17QInputMethodEvent16replacementStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "replacementStart", args)
   }
@@ -788,6 +796,8 @@ func (this *QInputMethodEvent) commitString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QInputMethodEvent12commitStringEv
+    // invoke: const QString & commitString()
+    C.demth_ZNK17QInputMethodEvent12commitStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "commitString", args)
   }
@@ -809,12 +819,14 @@ func (this *QInputMethodEvent) setCommitString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QInputMethodEvent15setCommitStringERK7QStringii
+    // invoke: void setCommitString(const class QString &, int, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN17QInputMethodEvent15setCommitStringERK7QStringii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "setCommitString", args)
   }
@@ -833,6 +845,8 @@ func (this *QInputMethodEvent) replacementLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QInputMethodEvent17replacementLengthEv
+    // invoke: int replacementLength()
+    C.demth_ZNK17QInputMethodEvent17replacementLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputMethodEvent", "replacementLength", args)
   }
@@ -851,6 +865,8 @@ func (this *QHelpEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent9globalPosEv
+    // invoke: const QPoint & globalPos()
+    C.demth_ZNK10QHelpEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalPos", args)
   }
@@ -869,6 +885,8 @@ func (this *QHelpEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK10QHelpEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalX", args)
   }
@@ -887,6 +905,8 @@ func (this *QHelpEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent3posEv
+    // invoke: const QPoint & pos()
+    C.demth_ZNK10QHelpEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "pos", args)
   }
@@ -905,6 +925,8 @@ func (this *QHelpEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK10QHelpEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "y", args)
   }
@@ -923,6 +945,8 @@ func (this *QHelpEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK10QHelpEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "globalY", args)
   }
@@ -941,6 +965,8 @@ func (this *QHelpEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QHelpEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK10QHelpEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHelpEvent", "x", args)
   }
@@ -978,6 +1004,8 @@ func (this *QActionEvent) before(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QActionEvent6beforeEv
+    // invoke: QAction * before()
+    C.demth_ZNK12QActionEvent6beforeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionEvent", "before", args)
   }
@@ -996,6 +1024,8 @@ func (this *QActionEvent) action(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QActionEvent6actionEv
+    // invoke: QAction * action()
+    C.demth_ZNK12QActionEvent6actionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QActionEvent", "action", args)
   }
@@ -1028,6 +1058,8 @@ func (this *QMouseEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent9globalPosEv
+    // invoke: QPoint globalPos()
+    C.demth_ZNK11QMouseEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalPos", args)
   }
@@ -1046,6 +1078,8 @@ func (this *QMouseEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK11QMouseEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "y", args)
   }
@@ -1064,6 +1098,8 @@ func (this *QMouseEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent9screenPosEv
+    // invoke: const QPointF & screenPos()
+    C.demth_ZNK11QMouseEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "screenPos", args)
   }
@@ -1082,6 +1118,8 @@ func (this *QMouseEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK11QMouseEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "x", args)
   }
@@ -1100,6 +1138,8 @@ func (this *QMouseEvent) localPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent8localPosEv
+    // invoke: const QPointF & localPos()
+    C._ZNK11QMouseEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "localPos", args)
   }
@@ -1118,6 +1158,8 @@ func (this *QMouseEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK11QMouseEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalX", args)
   }
@@ -1136,6 +1178,8 @@ func (this *QMouseEvent) windowPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent9windowPosEv
+    // invoke: const QPointF & windowPos()
+    C._ZNK11QMouseEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "windowPos", args)
   }
@@ -1168,6 +1212,8 @@ func (this *QMouseEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK11QMouseEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "globalY", args)
   }
@@ -1186,6 +1232,8 @@ func (this *QMouseEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QMouseEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK11QMouseEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEvent", "pos", args)
   }
@@ -1223,6 +1271,8 @@ func (this *QFileOpenEvent) file(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QFileOpenEvent4fileEv
+    // invoke: QString file()
+    C.demth_ZNK14QFileOpenEvent4fileEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "file", args)
   }
@@ -1241,6 +1291,8 @@ func (this *QFileOpenEvent) url(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QFileOpenEvent3urlEv
+    // invoke: QUrl url()
+    C._ZNK14QFileOpenEvent3urlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileOpenEvent", "url", args)
   }
@@ -1278,6 +1330,8 @@ func (this *QToolBarChangeEvent) toggle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QToolBarChangeEvent6toggleEv
+    // invoke: bool toggle()
+    C.demth_ZNK19QToolBarChangeEvent6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolBarChangeEvent", "toggle", args)
   }
@@ -1296,6 +1350,8 @@ func (this *QTabletEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK12QTabletEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "x", args)
   }
@@ -1314,6 +1370,8 @@ func (this *QTabletEvent) xTilt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent5xTiltEv
+    // invoke: int xTilt()
+    C.demth_ZNK12QTabletEvent5xTiltEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "xTilt", args)
   }
@@ -1332,6 +1390,8 @@ func (this *QTabletEvent) uniqueId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent8uniqueIdEv
+    // invoke: qint64 uniqueId()
+    C.demth_ZNK12QTabletEvent8uniqueIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "uniqueId", args)
   }
@@ -1350,6 +1410,8 @@ func (this *QTabletEvent) globalPosF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent10globalPosFEv
+    // invoke: const QPointF & globalPosF()
+    C.demth_ZNK12QTabletEvent10globalPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalPosF", args)
   }
@@ -1368,6 +1430,8 @@ func (this *QTabletEvent) z(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent1zEv
+    // invoke: int z()
+    C.demth_ZNK12QTabletEvent1zEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "z", args)
   }
@@ -1386,6 +1450,8 @@ func (this *QTabletEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK12QTabletEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "y", args)
   }
@@ -1404,6 +1470,8 @@ func (this *QTabletEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK12QTabletEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "pos", args)
   }
@@ -1422,6 +1490,8 @@ func (this *QTabletEvent) rotation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent8rotationEv
+    // invoke: qreal rotation()
+    C.demth_ZNK12QTabletEvent8rotationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "rotation", args)
   }
@@ -1440,6 +1510,8 @@ func (this *QTabletEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent9globalPosEv
+    // invoke: QPoint globalPos()
+    C.demth_ZNK12QTabletEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalPos", args)
   }
@@ -1472,6 +1544,8 @@ func (this *QTabletEvent) tangentialPressure(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent18tangentialPressureEv
+    // invoke: qreal tangentialPressure()
+    C.demth_ZNK12QTabletEvent18tangentialPressureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "tangentialPressure", args)
   }
@@ -1490,6 +1564,8 @@ func (this *QTabletEvent) hiResGlobalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent12hiResGlobalXEv
+    // invoke: qreal hiResGlobalX()
+    C.demth_ZNK12QTabletEvent12hiResGlobalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "hiResGlobalX", args)
   }
@@ -1508,6 +1584,8 @@ func (this *QTabletEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK12QTabletEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalY", args)
   }
@@ -1526,6 +1604,8 @@ func (this *QTabletEvent) hiResGlobalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent12hiResGlobalYEv
+    // invoke: qreal hiResGlobalY()
+    C.demth_ZNK12QTabletEvent12hiResGlobalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "hiResGlobalY", args)
   }
@@ -1544,6 +1624,8 @@ func (this *QTabletEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK12QTabletEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "globalX", args)
   }
@@ -1562,6 +1644,8 @@ func (this *QTabletEvent) posF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent4posFEv
+    // invoke: const QPointF & posF()
+    C.demth_ZNK12QTabletEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "posF", args)
   }
@@ -1580,6 +1664,8 @@ func (this *QTabletEvent) pressure(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent8pressureEv
+    // invoke: qreal pressure()
+    C.demth_ZNK12QTabletEvent8pressureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "pressure", args)
   }
@@ -1598,6 +1684,8 @@ func (this *QTabletEvent) yTilt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTabletEvent5yTiltEv
+    // invoke: int yTilt()
+    C.demth_ZNK12QTabletEvent5yTiltEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTabletEvent", "yTilt", args)
   }
@@ -1617,8 +1705,10 @@ func (this *QTouchEvent) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setDeviceEP12QTouchDevice
+    // invoke: void setDevice(class QTouchDevice *)
     var arg0 = args[0].(QTouchDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QTouchEvent9setDeviceEP12QTouchDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setDevice", args)
   }
@@ -1637,6 +1727,8 @@ func (this *QTouchEvent) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTouchEvent6windowEv
+    // invoke: QWindow * window()
+    C.demth_ZNK11QTouchEvent6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "window", args)
   }
@@ -1655,6 +1747,8 @@ func (this *QTouchEvent) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTouchEvent6deviceEv
+    // invoke: QTouchDevice * device()
+    C.demth_ZNK11QTouchEvent6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "device", args)
   }
@@ -1673,6 +1767,8 @@ func (this *QTouchEvent) target(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTouchEvent6targetEv
+    // invoke: QObject * target()
+    C.demth_ZNK11QTouchEvent6targetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchEvent", "target", args)
   }
@@ -1706,8 +1802,10 @@ func (this *QTouchEvent) setWindow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setWindowEP7QWindow
+    // invoke: void setWindow(class QWindow *)
     var arg0 = args[0].(QWindow).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QTouchEvent9setWindowEP7QWindow(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setWindow", args)
   }
@@ -1727,8 +1825,10 @@ func (this *QTouchEvent) setTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTouchEvent9setTargetEP7QObject
+    // invoke: void setTarget(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QTouchEvent9setTargetEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchEvent", "setTarget", args)
   }
@@ -1747,6 +1847,8 @@ func (this *QScreenOrientationChangeEvent) screen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK29QScreenOrientationChangeEvent6screenEv
+    // invoke: QScreen * screen()
+    C._ZNK29QScreenOrientationChangeEvent6screenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreenOrientationChangeEvent", "screen", args)
   }
@@ -1831,6 +1933,8 @@ func (this *QWheelEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK11QWheelEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "x", args)
   }
@@ -1849,6 +1953,8 @@ func (this *QWheelEvent) angleDelta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent10angleDeltaEv
+    // invoke: QPoint angleDelta()
+    C.demth_ZNK11QWheelEvent10angleDeltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "angleDelta", args)
   }
@@ -1867,6 +1973,8 @@ func (this *QWheelEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK11QWheelEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "pos", args)
   }
@@ -1885,6 +1993,8 @@ func (this *QWheelEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK11QWheelEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalY", args)
   }
@@ -1903,6 +2013,8 @@ func (this *QWheelEvent) posF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent4posFEv
+    // invoke: const QPointF & posF()
+    C.demth_ZNK11QWheelEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "posF", args)
   }
@@ -1921,6 +2033,8 @@ func (this *QWheelEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK11QWheelEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalX", args)
   }
@@ -1939,6 +2053,8 @@ func (this *QWheelEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK11QWheelEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "y", args)
   }
@@ -1971,6 +2087,8 @@ func (this *QWheelEvent) pixelDelta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent10pixelDeltaEv
+    // invoke: QPoint pixelDelta()
+    C.demth_ZNK11QWheelEvent10pixelDeltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "pixelDelta", args)
   }
@@ -1989,6 +2107,8 @@ func (this *QWheelEvent) delta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent5deltaEv
+    // invoke: int delta()
+    C.demth_ZNK11QWheelEvent5deltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "delta", args)
   }
@@ -2007,6 +2127,8 @@ func (this *QWheelEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent9globalPosEv
+    // invoke: QPoint globalPos()
+    C.demth_ZNK11QWheelEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalPos", args)
   }
@@ -2025,6 +2147,8 @@ func (this *QWheelEvent) globalPosF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWheelEvent10globalPosFEv
+    // invoke: const QPointF & globalPosF()
+    C.demth_ZNK11QWheelEvent10globalPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWheelEvent", "globalPosF", args)
   }
@@ -2043,6 +2167,8 @@ func (this *QScrollEvent) contentPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QScrollEvent10contentPosEv
+    // invoke: QPointF contentPos()
+    C._ZNK12QScrollEvent10contentPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "contentPos", args)
   }
@@ -2061,6 +2187,8 @@ func (this *QScrollEvent) overshootDistance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QScrollEvent17overshootDistanceEv
+    // invoke: QPointF overshootDistance()
+    C._ZNK12QScrollEvent17overshootDistanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollEvent", "overshootDistance", args)
   }
@@ -2107,6 +2235,8 @@ func (this *QHoverEvent) posF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHoverEvent4posFEv
+    // invoke: const QPointF & posF()
+    C.demth_ZNK11QHoverEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "posF", args)
   }
@@ -2125,6 +2255,8 @@ func (this *QHoverEvent) oldPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHoverEvent6oldPosEv
+    // invoke: QPoint oldPos()
+    C.demth_ZNK11QHoverEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "oldPos", args)
   }
@@ -2143,6 +2275,8 @@ func (this *QHoverEvent) oldPosF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHoverEvent7oldPosFEv
+    // invoke: const QPointF & oldPosF()
+    C.demth_ZNK11QHoverEvent7oldPosFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "oldPosF", args)
   }
@@ -2161,6 +2295,8 @@ func (this *QHoverEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHoverEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK11QHoverEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHoverEvent", "pos", args)
   }
@@ -2182,10 +2318,14 @@ func (this *QDragMoveEvent) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDragMoveEvent6acceptERK5QRect
+    // invoke: void accept(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN14QDragMoveEvent6acceptERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN14QDragMoveEvent6acceptEv
+    // invoke: void accept()
+    C.demth_ZN14QDragMoveEvent6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "accept", args)
   }
@@ -2204,6 +2344,8 @@ func (this *QDragMoveEvent) answerRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDragMoveEvent10answerRectEv
+    // invoke: QRect answerRect()
+    C.demth_ZNK14QDragMoveEvent10answerRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "answerRect", args)
   }
@@ -2225,10 +2367,14 @@ func (this *QDragMoveEvent) ignore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDragMoveEvent6ignoreERK5QRect
+    // invoke: void ignore(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN14QDragMoveEvent6ignoreERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN14QDragMoveEvent6ignoreEv
+    // invoke: void ignore()
+    C.demth_ZN14QDragMoveEvent6ignoreEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDragMoveEvent", "ignore", args)
   }
@@ -2308,6 +2454,8 @@ func (this *QPaintEvent) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPaintEvent4rectEv
+    // invoke: const QRect & rect()
+    C.demth_ZNK11QPaintEvent4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEvent", "rect", args)
   }
@@ -2331,6 +2479,8 @@ func (this *QPaintEvent) region(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPaintEvent6regionEv
+    // invoke: const QRegion & region()
+    C.demth_ZNK11QPaintEvent6regionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEvent", "region", args)
   }
@@ -2349,6 +2499,8 @@ func (this *QFocusEvent) lostFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusEvent9lostFocusEv
+    // invoke: bool lostFocus()
+    C.demth_ZNK11QFocusEvent9lostFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "lostFocus", args)
   }
@@ -2367,6 +2519,8 @@ func (this *QFocusEvent) gotFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusEvent8gotFocusEv
+    // invoke: bool gotFocus()
+    C.demth_ZNK11QFocusEvent8gotFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusEvent", "gotFocus", args)
   }
@@ -2399,6 +2553,8 @@ func (this *QNativeGestureEvent) localPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent8localPosEv
+    // invoke: const QPointF & localPos()
+    C._ZNK19QNativeGestureEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "localPos", args)
   }
@@ -2417,6 +2573,8 @@ func (this *QNativeGestureEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9screenPosEv
+    // invoke: const QPointF & screenPos()
+    C._ZNK19QNativeGestureEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "screenPos", args)
   }
@@ -2435,6 +2593,8 @@ func (this *QNativeGestureEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent3posEv
+    // invoke: const QPoint pos()
+    C.demth_ZNK19QNativeGestureEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "pos", args)
   }
@@ -2453,6 +2613,8 @@ func (this *QNativeGestureEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9globalPosEv
+    // invoke: const QPoint globalPos()
+    C.demth_ZNK19QNativeGestureEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "globalPos", args)
   }
@@ -2471,6 +2633,8 @@ func (this *QNativeGestureEvent) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent5valueEv
+    // invoke: qreal value()
+    C._ZNK19QNativeGestureEvent5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "value", args)
   }
@@ -2489,6 +2653,8 @@ func (this *QNativeGestureEvent) windowPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QNativeGestureEvent9windowPosEv
+    // invoke: const QPointF & windowPos()
+    C._ZNK19QNativeGestureEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QNativeGestureEvent", "windowPos", args)
   }
@@ -2507,6 +2673,8 @@ func (this *QResizeEvent) oldSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QResizeEvent7oldSizeEv
+    // invoke: const QSize & oldSize()
+    C.demth_ZNK12QResizeEvent7oldSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResizeEvent", "oldSize", args)
   }
@@ -2525,6 +2693,8 @@ func (this *QResizeEvent) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QResizeEvent4sizeEv
+    // invoke: const QSize & size()
+    C.demth_ZNK12QResizeEvent4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResizeEvent", "size", args)
   }
@@ -2576,6 +2746,8 @@ func (this *QStatusTipEvent) tip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QStatusTipEvent3tipEv
+    // invoke: QString tip()
+    C.demth_ZNK15QStatusTipEvent3tipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusTipEvent", "tip", args)
   }
@@ -2599,6 +2771,8 @@ func (this *QEnterEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK11QEnterEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "y", args)
   }
@@ -2617,6 +2791,8 @@ func (this *QEnterEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK11QEnterEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "pos", args)
   }
@@ -2649,6 +2825,8 @@ func (this *QEnterEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent9screenPosEv
+    // invoke: const QPointF & screenPos()
+    C._ZNK11QEnterEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "screenPos", args)
   }
@@ -2667,6 +2845,8 @@ func (this *QEnterEvent) localPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent8localPosEv
+    // invoke: const QPointF & localPos()
+    C._ZNK11QEnterEvent8localPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "localPos", args)
   }
@@ -2685,6 +2865,8 @@ func (this *QEnterEvent) windowPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent9windowPosEv
+    // invoke: const QPointF & windowPos()
+    C._ZNK11QEnterEvent9windowPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "windowPos", args)
   }
@@ -2703,6 +2885,8 @@ func (this *QEnterEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK11QEnterEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalX", args)
   }
@@ -2721,6 +2905,8 @@ func (this *QEnterEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK11QEnterEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "x", args)
   }
@@ -2739,6 +2925,8 @@ func (this *QEnterEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent9globalPosEv
+    // invoke: QPoint globalPos()
+    C.demth_ZNK11QEnterEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalPos", args)
   }
@@ -2757,6 +2945,8 @@ func (this *QEnterEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QEnterEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK11QEnterEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEnterEvent", "globalY", args)
   }
@@ -2794,6 +2984,8 @@ func (this *QMoveEvent) oldPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMoveEvent6oldPosEv
+    // invoke: const QPoint & oldPos()
+    C.demth_ZNK10QMoveEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMoveEvent", "oldPos", args)
   }
@@ -2817,6 +3009,8 @@ func (this *QMoveEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QMoveEvent3posEv
+    // invoke: const QPoint & pos()
+    C.demth_ZNK10QMoveEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMoveEvent", "pos", args)
   }
@@ -2887,6 +3081,8 @@ func (this *QDropEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QDropEvent3posEv
+    // invoke: QPoint pos()
+    C.demth_ZNK10QDropEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "pos", args)
   }
@@ -2905,6 +3101,8 @@ func (this *QDropEvent) source(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QDropEvent6sourceEv
+    // invoke: QObject * source()
+    C._ZNK10QDropEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "source", args)
   }
@@ -2923,6 +3121,8 @@ func (this *QDropEvent) mimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QDropEvent8mimeDataEv
+    // invoke: const QMimeData * mimeData()
+    C.demth_ZNK10QDropEvent8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "mimeData", args)
   }
@@ -2941,6 +3141,8 @@ func (this *QDropEvent) acceptProposedAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QDropEvent20acceptProposedActionEv
+    // invoke: void acceptProposedAction()
+    C.demth_ZN10QDropEvent20acceptProposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "acceptProposedAction", args)
   }
@@ -2959,6 +3161,8 @@ func (this *QDropEvent) posF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QDropEvent4posFEv
+    // invoke: const QPointF & posF()
+    C.demth_ZNK10QDropEvent4posFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDropEvent", "posF", args)
   }
@@ -2978,8 +3182,10 @@ func (this *QInputEvent) setTimestamp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QInputEvent12setTimestampEm
+    // invoke: void setTimestamp(ulong)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QInputEvent12setTimestampEm(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputEvent", "setTimestamp", args)
   }
@@ -2998,6 +3204,8 @@ func (this *QInputEvent) timestamp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QInputEvent9timestampEv
+    // invoke: ulong timestamp()
+    C.demth_ZNK11QInputEvent9timestampEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputEvent", "timestamp", args)
   }
@@ -3030,6 +3238,8 @@ func (this *QKeyEvent) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent5countEv
+    // invoke: int count()
+    C.demth_ZNK9QKeyEvent5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "count", args)
   }
@@ -3062,6 +3272,8 @@ func (this *QKeyEvent) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent4textEv
+    // invoke: QString text()
+    C.demth_ZNK9QKeyEvent4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "text", args)
   }
@@ -3080,6 +3292,8 @@ func (this *QKeyEvent) nativeVirtualKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent16nativeVirtualKeyEv
+    // invoke: quint32 nativeVirtualKey()
+    C.demth_ZNK9QKeyEvent16nativeVirtualKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeVirtualKey", args)
   }
@@ -3098,6 +3312,8 @@ func (this *QKeyEvent) isAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent12isAutoRepeatEv
+    // invoke: bool isAutoRepeat()
+    C.demth_ZNK9QKeyEvent12isAutoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "isAutoRepeat", args)
   }
@@ -3116,6 +3332,8 @@ func (this *QKeyEvent) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent3keyEv
+    // invoke: int key()
+    C._ZNK9QKeyEvent3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "key", args)
   }
@@ -3134,6 +3352,8 @@ func (this *QKeyEvent) nativeModifiers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent15nativeModifiersEv
+    // invoke: quint32 nativeModifiers()
+    C.demth_ZNK9QKeyEvent15nativeModifiersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeModifiers", args)
   }
@@ -3152,6 +3372,8 @@ func (this *QKeyEvent) nativeScanCode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QKeyEvent14nativeScanCodeEv
+    // invoke: quint32 nativeScanCode()
+    C.demth_ZNK9QKeyEvent14nativeScanCodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeyEvent", "nativeScanCode", args)
   }
@@ -3170,6 +3392,8 @@ func (this *QContextMenuEvent) globalPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent9globalPosEv
+    // invoke: const QPoint & globalPos()
+    C.demth_ZNK17QContextMenuEvent9globalPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalPos", args)
   }
@@ -3188,6 +3412,8 @@ func (this *QContextMenuEvent) globalY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent7globalYEv
+    // invoke: int globalY()
+    C.demth_ZNK17QContextMenuEvent7globalYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalY", args)
   }
@@ -3206,6 +3432,8 @@ func (this *QContextMenuEvent) globalX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent7globalXEv
+    // invoke: int globalX()
+    C.demth_ZNK17QContextMenuEvent7globalXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "globalX", args)
   }
@@ -3224,6 +3452,8 @@ func (this *QContextMenuEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent3posEv
+    // invoke: const QPoint & pos()
+    C.demth_ZNK17QContextMenuEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "pos", args)
   }
@@ -3242,6 +3472,8 @@ func (this *QContextMenuEvent) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent1yEv
+    // invoke: int y()
+    C.demth_ZNK17QContextMenuEvent1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "y", args)
   }
@@ -3260,6 +3492,8 @@ func (this *QContextMenuEvent) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QContextMenuEvent1xEv
+    // invoke: int x()
+    C.demth_ZNK17QContextMenuEvent1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QContextMenuEvent", "x", args)
   }
@@ -3293,8 +3527,10 @@ func (this *QScrollPrepareEvent) setContentPosRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF
+    // invoke: void setContentPosRange(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QScrollPrepareEvent18setContentPosRangeERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPosRange", args)
   }
@@ -3314,8 +3550,10 @@ func (this *QScrollPrepareEvent) setContentPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent13setContentPosERK7QPointF
+    // invoke: void setContentPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QScrollPrepareEvent13setContentPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setContentPos", args)
   }
@@ -3334,6 +3572,8 @@ func (this *QScrollPrepareEvent) contentPosRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent15contentPosRangeEv
+    // invoke: QRectF contentPosRange()
+    C._ZNK19QScrollPrepareEvent15contentPosRangeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "contentPosRange", args)
   }
@@ -3352,6 +3592,8 @@ func (this *QScrollPrepareEvent) contentPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent10contentPosEv
+    // invoke: QPointF contentPos()
+    C._ZNK19QScrollPrepareEvent10contentPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "contentPos", args)
   }
@@ -3371,8 +3613,10 @@ func (this *QScrollPrepareEvent) setViewportSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF
+    // invoke: void setViewportSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QScrollPrepareEvent15setViewportSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "setViewportSize", args)
   }
@@ -3396,6 +3640,8 @@ func (this *QScrollPrepareEvent) startPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent8startPosEv
+    // invoke: QPointF startPos()
+    C._ZNK19QScrollPrepareEvent8startPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "startPos", args)
   }
@@ -3414,6 +3660,8 @@ func (this *QScrollPrepareEvent) viewportSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QScrollPrepareEvent12viewportSizeEv
+    // invoke: QSizeF viewportSize()
+    C._ZNK19QScrollPrepareEvent12viewportSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollPrepareEvent", "viewportSize", args)
   }
@@ -3446,6 +3694,8 @@ func (this *QShortcutEvent) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QShortcutEvent3keyEv
+    // invoke: const QKeySequence & key()
+    C.demth_ZNK14QShortcutEvent3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "key", args)
   }
@@ -3478,6 +3728,8 @@ func (this *QShortcutEvent) isAmbiguous(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QShortcutEvent11isAmbiguousEv
+    // invoke: bool isAmbiguous()
+    C.demth_ZNK14QShortcutEvent11isAmbiguousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "isAmbiguous", args)
   }
@@ -3501,6 +3753,8 @@ func (this *QShortcutEvent) shortcutId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QShortcutEvent10shortcutIdEv
+    // invoke: int shortcutId()
+    C.demth_ZNK14QShortcutEvent10shortcutIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QShortcutEvent", "shortcutId", args)
   }
@@ -3519,6 +3773,8 @@ func (this *QWindowStateChangeEvent) isOverride(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QWindowStateChangeEvent10isOverrideEv
+    // invoke: bool isOverride()
+    C._ZNK23QWindowStateChangeEvent10isOverrideEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWindowStateChangeEvent", "isOverride", args)
   }

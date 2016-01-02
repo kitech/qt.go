@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -112,6 +112,8 @@ func (this *QMutexLocker) mutex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QMutexLocker5mutexEv
+    // invoke: QMutex * mutex()
+    C.demth_ZNK12QMutexLocker5mutexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "mutex", args)
   }
@@ -130,6 +132,8 @@ func (this *QMutexLocker) relock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMutexLocker6relockEv
+    // invoke: void relock()
+    C.demth_ZN12QMutexLocker6relockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "relock", args)
   }
@@ -148,6 +152,8 @@ func (this *QMutexLocker) unlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QMutexLocker6unlockEv
+    // invoke: void unlock()
+    C.demth_ZN12QMutexLocker6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutexLocker", "unlock", args)
   }
@@ -180,6 +186,8 @@ func (this *QBasicMutex) lock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicMutex4lockEv
+    // invoke: void lock()
+    C.demth_ZN11QBasicMutex4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "lock", args)
   }
@@ -198,6 +206,8 @@ func (this *QBasicMutex) tryLock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicMutex7tryLockEv
+    // invoke: bool tryLock()
+    C._ZN11QBasicMutex7tryLockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "tryLock", args)
   }
@@ -216,6 +226,8 @@ func (this *QBasicMutex) isRecursive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicMutex11isRecursiveEv
+    // invoke: bool isRecursive()
+    C._ZN11QBasicMutex11isRecursiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "isRecursive", args)
   }
@@ -234,6 +246,8 @@ func (this *QBasicMutex) unlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicMutex6unlockEv
+    // invoke: void unlock()
+    C.demth_ZN11QBasicMutex6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "unlock", args)
   }
@@ -267,8 +281,10 @@ func (this *QMutex) tryLock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMutex7tryLockEi
+    // invoke: bool tryLock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QMutex7tryLockEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMutex", "tryLock", args)
   }
@@ -292,6 +308,8 @@ func (this *QMutex) lock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMutex4lockEv
+    // invoke: void lock()
+    C._ZN6QMutex4lockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "lock", args)
   }
@@ -310,6 +328,8 @@ func (this *QMutex) unlock(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMutex6unlockEv
+    // invoke: void unlock()
+    C._ZN6QMutex6unlockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMutex", "unlock", args)
   }

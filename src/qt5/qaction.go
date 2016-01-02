@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.go
 //
@@ -172,6 +172,8 @@ func (this *QAction) associatedWidgets(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction17associatedWidgetsEv
+    // invoke: QList<QWidget *> associatedWidgets()
+    C._ZNK7QAction17associatedWidgetsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "associatedWidgets", args)
   }
@@ -191,8 +193,10 @@ func (this *QAction) setAutoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction13setAutoRepeatEb
+    // invoke: void setAutoRepeat(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction13setAutoRepeatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setAutoRepeat", args)
   }
@@ -211,6 +215,8 @@ func (this *QAction) whatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9whatsThisEv
+    // invoke: QString whatsThis()
+    C._ZNK7QAction9whatsThisEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "whatsThis", args)
   }
@@ -248,6 +254,8 @@ func (this *QAction) isVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK7QAction9isVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isVisible", args)
   }
@@ -267,8 +275,10 @@ func (this *QAction) setFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setFontERK5QFont
+    // invoke: void setFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction7setFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setFont", args)
   }
@@ -288,8 +298,10 @@ func (this *QAction) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setDataERK8QVariant
+    // invoke: void setData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction7setDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setData", args)
   }
@@ -309,8 +321,10 @@ func (this *QAction) setIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setIconERK5QIcon
+    // invoke: void setIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction7setIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIcon", args)
   }
@@ -329,6 +343,8 @@ func (this *QAction) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QAction10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "metaObject", args)
   }
@@ -348,8 +364,10 @@ func (this *QAction) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setText", args)
   }
@@ -369,8 +387,10 @@ func (this *QAction) showStatusText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction14showStatusTextEP7QWidget
+    // invoke: bool showStatusText(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction14showStatusTextEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "showStatusText", args)
   }
@@ -389,6 +409,8 @@ func (this *QAction) iconText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction8iconTextEv
+    // invoke: QString iconText()
+    C._ZNK7QAction8iconTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "iconText", args)
   }
@@ -408,8 +430,10 @@ func (this *QAction) setIconVisibleInMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction20setIconVisibleInMenuEb
+    // invoke: void setIconVisibleInMenu(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction20setIconVisibleInMenuEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIconVisibleInMenu", args)
   }
@@ -428,6 +452,8 @@ func (this *QAction) statusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9statusTipEv
+    // invoke: QString statusTip()
+    C._ZNK7QAction9statusTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "statusTip", args)
   }
@@ -446,6 +472,8 @@ func (this *QAction) isCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11isCheckableEv
+    // invoke: bool isCheckable()
+    C._ZNK7QAction11isCheckableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isCheckable", args)
   }
@@ -465,8 +493,10 @@ func (this *QAction) setWhatsThis(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setWhatsThisERK7QString
+    // invoke: void setWhatsThis(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction12setWhatsThisERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setWhatsThis", args)
   }
@@ -485,6 +515,8 @@ func (this *QAction) menu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4menuEv
+    // invoke: QMenu * menu()
+    C._ZNK7QAction4menuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "menu", args)
   }
@@ -503,6 +535,8 @@ func (this *QAction) trigger(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7triggerEv
+    // invoke: void trigger()
+    C._ZN7QAction7triggerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "trigger", args)
   }
@@ -521,6 +555,8 @@ func (this *QAction) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4fontEv
+    // invoke: QFont font()
+    C._ZNK7QAction4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "font", args)
   }
@@ -540,8 +576,10 @@ func (this *QAction) setChecked(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setCheckedEb
+    // invoke: void setChecked(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction10setCheckedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setChecked", args)
   }
@@ -561,8 +599,10 @@ func (this *QAction) setDisabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setDisabledEb
+    // invoke: void setDisabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QAction11setDisabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setDisabled", args)
   }
@@ -582,8 +622,10 @@ func (this *QAction) setShortcut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setShortcutERK12QKeySequence
+    // invoke: void setShortcut(const class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction11setShortcutERK12QKeySequence(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setShortcut", args)
   }
@@ -602,6 +644,8 @@ func (this *QAction) toggle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction6toggleEv
+    // invoke: void toggle()
+    C._ZN7QAction6toggleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "toggle", args)
   }
@@ -620,6 +664,8 @@ func (this *QAction) shortcut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction8shortcutEv
+    // invoke: QKeySequence shortcut()
+    C._ZNK7QAction8shortcutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "shortcut", args)
   }
@@ -638,6 +684,8 @@ func (this *QAction) icon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4iconEv
+    // invoke: QIcon icon()
+    C._ZNK7QAction4iconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "icon", args)
   }
@@ -657,8 +705,10 @@ func (this *QAction) setActionGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction14setActionGroupEP12QActionGroup
+    // invoke: void setActionGroup(class QActionGroup *)
     var arg0 = args[0].(QActionGroup).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction14setActionGroupEP12QActionGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setActionGroup", args)
   }
@@ -678,8 +728,10 @@ func (this *QAction) setMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction7setMenuEP5QMenu
+    // invoke: void setMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction7setMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setMenu", args)
   }
@@ -698,6 +750,8 @@ func (this *QAction) shortcuts(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9shortcutsEv
+    // invoke: QList<QKeySequence> shortcuts()
+    C._ZNK7QAction9shortcutsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "shortcuts", args)
   }
@@ -717,8 +771,10 @@ func (this *QAction) setCheckable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setCheckableEb
+    // invoke: void setCheckable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction12setCheckableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setCheckable", args)
   }
@@ -737,6 +793,8 @@ func (this *QAction) toolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction7toolTipEv
+    // invoke: QString toolTip()
+    C._ZNK7QAction7toolTipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "toolTip", args)
   }
@@ -755,6 +813,8 @@ func (this *QAction) parentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction12parentWidgetEv
+    // invoke: QWidget * parentWidget()
+    C._ZNK7QAction12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "parentWidget", args)
   }
@@ -774,8 +834,10 @@ func (this *QAction) setSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setSeparatorEb
+    // invoke: void setSeparator(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction12setSeparatorEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setSeparator", args)
   }
@@ -794,6 +856,8 @@ func (this *QAction) associatedGraphicsWidgets(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction25associatedGraphicsWidgetsEv
+    // invoke: QList<QGraphicsWidget *> associatedGraphicsWidgets()
+    C._ZNK7QAction25associatedGraphicsWidgetsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "associatedGraphicsWidgets", args)
   }
@@ -813,8 +877,10 @@ func (this *QAction) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setVisible", args)
   }
@@ -833,6 +899,8 @@ func (this *QAction) isSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11isSeparatorEv
+    // invoke: bool isSeparator()
+    C._ZNK7QAction11isSeparatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isSeparator", args)
   }
@@ -852,8 +920,10 @@ func (this *QAction) setIconText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction11setIconTextERK7QString
+    // invoke: void setIconText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction11setIconTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setIconText", args)
   }
@@ -872,6 +942,8 @@ func (this *QAction) actionGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction11actionGroupEv
+    // invoke: QActionGroup * actionGroup()
+    C._ZNK7QAction11actionGroupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "actionGroup", args)
   }
@@ -891,8 +963,10 @@ func (this *QAction) setStatusTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction12setStatusTipERK7QString
+    // invoke: void setStatusTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction12setStatusTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setStatusTip", args)
   }
@@ -911,6 +985,8 @@ func (this *QAction) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4dataEv
+    // invoke: QVariant data()
+    C._ZNK7QAction4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "data", args)
   }
@@ -929,6 +1005,8 @@ func (this *QAction) isChecked(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isCheckedEv
+    // invoke: bool isChecked()
+    C._ZNK7QAction9isCheckedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isChecked", args)
   }
@@ -947,6 +1025,8 @@ func (this *QAction) autoRepeat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction10autoRepeatEv
+    // invoke: bool autoRepeat()
+    C._ZNK7QAction10autoRepeatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "autoRepeat", args)
   }
@@ -965,6 +1045,8 @@ func (this *QAction) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK7QAction9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isEnabled", args)
   }
@@ -983,6 +1065,8 @@ func (this *QAction) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction4textEv
+    // invoke: QString text()
+    C._ZNK7QAction4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "text", args)
   }
@@ -1001,6 +1085,8 @@ func (this *QAction) hover(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction5hoverEv
+    // invoke: void hover()
+    C._ZN7QAction5hoverEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "hover", args)
   }
@@ -1019,6 +1105,8 @@ func (this *QAction) isIconVisibleInMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QAction19isIconVisibleInMenuEv
+    // invoke: bool isIconVisibleInMenu()
+    C._ZNK7QAction19isIconVisibleInMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "isIconVisibleInMenu", args)
   }
@@ -1038,8 +1126,10 @@ func (this *QAction) setToolTip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setToolTipERK7QString
+    // invoke: void setToolTip(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QAction10setToolTipERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setToolTip", args)
   }
@@ -1059,8 +1149,10 @@ func (this *QAction) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QAction10setEnabledEb
+    // invoke: void setEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QAction10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAction", "setEnabled", args)
   }

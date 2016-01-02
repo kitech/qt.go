@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.go
 //
@@ -95,8 +95,10 @@ func (this *QStackedWidget) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget15setCurrentIndexEi
+    // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QStackedWidget15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "setCurrentIndex", args)
   }
@@ -120,6 +122,8 @@ func (this *QStackedWidget) currentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget13currentWidgetEv
+    // invoke: QWidget * currentWidget()
+    C._ZNK14QStackedWidget13currentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentWidget", args)
   }
@@ -140,10 +144,12 @@ func (this *QStackedWidget) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget12insertWidgetEiP7QWidget
+    // invoke: int insertWidget(int, class QWidget *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN14QStackedWidget12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStackedWidget", "insertWidget", args)
   }
@@ -163,8 +169,10 @@ func (this *QStackedWidget) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget7indexOfEP7QWidget
+    // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QStackedWidget7indexOfEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "indexOf", args)
   }
@@ -184,8 +192,10 @@ func (this *QStackedWidget) removeWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget12removeWidgetEP7QWidget
+    // invoke: void removeWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QStackedWidget12removeWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "removeWidget", args)
   }
@@ -205,8 +215,10 @@ func (this *QStackedWidget) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget6widgetEi
+    // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QStackedWidget6widgetEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "widget", args)
   }
@@ -226,8 +238,10 @@ func (this *QStackedWidget) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget9addWidgetEP7QWidget
+    // invoke: int addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QStackedWidget9addWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "addWidget", args)
   }
@@ -246,6 +260,8 @@ func (this *QStackedWidget) currentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget12currentIndexEv
+    // invoke: int currentIndex()
+    C._ZNK14QStackedWidget12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentIndex", args)
   }
@@ -264,6 +280,8 @@ func (this *QStackedWidget) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget5countEv
+    // invoke: int count()
+    C._ZNK14QStackedWidget5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStackedWidget", "count", args)
   }
@@ -283,8 +301,10 @@ func (this *QStackedWidget) setCurrentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStackedWidget16setCurrentWidgetEP7QWidget
+    // invoke: void setCurrentWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QStackedWidget16setCurrentWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStackedWidget", "setCurrentWidget", args)
   }
@@ -317,6 +337,8 @@ func (this *QStackedWidget) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStackedWidget10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QStackedWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStackedWidget", "metaObject", args)
   }

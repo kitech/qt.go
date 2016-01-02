@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.go
 //
@@ -168,6 +168,8 @@ func (this *QLayoutItem) spacerItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem10spacerItemEv
+    // invoke: QSpacerItem * spacerItem()
+    C._ZN11QLayoutItem10spacerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "spacerItem", args)
   }
@@ -186,6 +188,8 @@ func (this *QLayoutItem) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem11minimumSizeEv
+    // invoke: QSize minimumSize()
+    C._ZNK11QLayoutItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "minimumSize", args)
   }
@@ -204,6 +208,8 @@ func (this *QLayoutItem) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem6widgetEv
+    // invoke: QWidget * widget()
+    C._ZN11QLayoutItem6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "widget", args)
   }
@@ -222,6 +228,8 @@ func (this *QLayoutItem) invalidate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem10invalidateEv
+    // invoke: void invalidate()
+    C._ZN11QLayoutItem10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "invalidate", args)
   }
@@ -241,8 +249,10 @@ func (this *QLayoutItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem11setGeometryERK5QRect
+    // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QLayoutItem11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayoutItem", "setGeometry", args)
   }
@@ -261,6 +271,8 @@ func (this *QLayoutItem) layout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QLayoutItem6layoutEv
+    // invoke: QLayout * layout()
+    C._ZN11QLayoutItem6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "layout", args)
   }
@@ -279,6 +291,8 @@ func (this *QLayoutItem) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK11QLayoutItem7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "isEmpty", args)
   }
@@ -297,6 +311,8 @@ func (this *QLayoutItem) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QLayoutItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "sizeHint", args)
   }
@@ -329,6 +345,8 @@ func (this *QLayoutItem) hasHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem17hasHeightForWidthEv
+    // invoke: bool hasHeightForWidth()
+    C._ZNK11QLayoutItem17hasHeightForWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "hasHeightForWidth", args)
   }
@@ -348,8 +366,10 @@ func (this *QLayoutItem) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem14heightForWidthEi
+    // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QLayoutItem14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayoutItem", "heightForWidth", args)
   }
@@ -368,6 +388,8 @@ func (this *QLayoutItem) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK11QLayoutItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "geometry", args)
   }
@@ -386,6 +408,8 @@ func (this *QLayoutItem) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem11maximumSizeEv
+    // invoke: QSize maximumSize()
+    C._ZNK11QLayoutItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "maximumSize", args)
   }
@@ -405,8 +429,10 @@ func (this *QLayoutItem) minimumHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QLayoutItem21minimumHeightForWidthEi
+    // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QLayoutItem21minimumHeightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayoutItem", "minimumHeightForWidth", args)
   }
@@ -425,6 +451,8 @@ func (this *QSpacerItem) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem11minimumSizeEv
+    // invoke: QSize minimumSize()
+    C._ZNK11QSpacerItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "minimumSize", args)
   }
@@ -443,6 +471,8 @@ func (this *QSpacerItem) sizePolicy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem10sizePolicyEv
+    // invoke: QSizePolicy sizePolicy()
+    C._ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizePolicy", args)
   }
@@ -475,6 +505,8 @@ func (this *QSpacerItem) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QSpacerItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizeHint", args)
   }
@@ -493,6 +525,8 @@ func (this *QSpacerItem) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem11maximumSizeEv
+    // invoke: QSize maximumSize()
+    C._ZNK11QSpacerItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "maximumSize", args)
   }
@@ -511,6 +545,8 @@ func (this *QSpacerItem) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK11QSpacerItem7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "isEmpty", args)
   }
@@ -529,6 +565,8 @@ func (this *QSpacerItem) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QSpacerItem8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK11QSpacerItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "geometry", args)
   }
@@ -548,8 +586,10 @@ func (this *QSpacerItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSpacerItem11setGeometryERK5QRect
+    // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QSpacerItem11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSpacerItem", "setGeometry", args)
   }
@@ -568,6 +608,8 @@ func (this *QSpacerItem) spacerItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QSpacerItem10spacerItemEv
+    // invoke: QSpacerItem * spacerItem()
+    C._ZN11QSpacerItem10spacerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "spacerItem", args)
   }
@@ -586,6 +628,8 @@ func (this *QWidgetItem) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QWidgetItem8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "sizeHint", args)
   }
@@ -604,6 +648,8 @@ func (this *QWidgetItem) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem11minimumSizeEv
+    // invoke: QSize minimumSize()
+    C._ZNK11QWidgetItem11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "minimumSize", args)
   }
@@ -622,6 +668,8 @@ func (this *QWidgetItem) hasHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem17hasHeightForWidthEv
+    // invoke: bool hasHeightForWidth()
+    C._ZNK11QWidgetItem17hasHeightForWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "hasHeightForWidth", args)
   }
@@ -659,6 +707,8 @@ func (this *QWidgetItem) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWidgetItem6widgetEv
+    // invoke: QWidget * widget()
+    C._ZN11QWidgetItem6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "widget", args)
   }
@@ -678,8 +728,10 @@ func (this *QWidgetItem) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QWidgetItem11setGeometryERK5QRect
+    // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QWidgetItem11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "setGeometry", args)
   }
@@ -699,8 +751,10 @@ func (this *QWidgetItem) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem14heightForWidthEi
+    // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QWidgetItem14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItem", "heightForWidth", args)
   }
@@ -719,6 +773,8 @@ func (this *QWidgetItem) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem11maximumSizeEv
+    // invoke: QSize maximumSize()
+    C._ZNK11QWidgetItem11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "maximumSize", args)
   }
@@ -737,6 +793,8 @@ func (this *QWidgetItem) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK11QWidgetItem7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "isEmpty", args)
   }
@@ -755,6 +813,8 @@ func (this *QWidgetItem) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QWidgetItem8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK11QWidgetItem8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItem", "geometry", args)
   }
@@ -773,6 +833,8 @@ func (this *QWidgetItemV2) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetItemV28sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK13QWidgetItemV28sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "sizeHint", args)
   }
@@ -791,6 +853,8 @@ func (this *QWidgetItemV2) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetItemV211minimumSizeEv
+    // invoke: QSize minimumSize()
+    C._ZNK13QWidgetItemV211minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "minimumSize", args)
   }
@@ -810,8 +874,10 @@ func (this *QWidgetItemV2) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetItemV214heightForWidthEi
+    // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK13QWidgetItemV214heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "heightForWidth", args)
   }
@@ -849,6 +915,8 @@ func (this *QWidgetItemV2) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QWidgetItemV211maximumSizeEv
+    // invoke: QSize maximumSize()
+    C._ZNK13QWidgetItemV211maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QWidgetItemV2", "maximumSize", args)
   }

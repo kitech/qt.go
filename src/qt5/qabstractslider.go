@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -121,8 +121,10 @@ func (this *QAbstractSlider) setSliderPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider17setSliderPositionEi
+    // invoke: void setSliderPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider17setSliderPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderPosition", args)
   }
@@ -141,6 +143,8 @@ func (this *QAbstractSlider) isSliderDown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider12isSliderDownEv
+    // invoke: bool isSliderDown()
+    C._ZNK15QAbstractSlider12isSliderDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "isSliderDown", args)
   }
@@ -159,6 +163,8 @@ func (this *QAbstractSlider) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider5valueEv
+    // invoke: int value()
+    C._ZNK15QAbstractSlider5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "value", args)
   }
@@ -178,8 +184,10 @@ func (this *QAbstractSlider) setInvertedControls(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider19setInvertedControlsEb
+    // invoke: void setInvertedControls(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider19setInvertedControlsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedControls", args)
   }
@@ -203,6 +211,8 @@ func (this *QAbstractSlider) minimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider7minimumEv
+    // invoke: int minimum()
+    C._ZNK15QAbstractSlider7minimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "minimum", args)
   }
@@ -221,6 +231,8 @@ func (this *QAbstractSlider) singleStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider10singleStepEv
+    // invoke: int singleStep()
+    C._ZNK15QAbstractSlider10singleStepEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "singleStep", args)
   }
@@ -239,6 +251,8 @@ func (this *QAbstractSlider) pageStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider8pageStepEv
+    // invoke: int pageStep()
+    C._ZNK15QAbstractSlider8pageStepEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "pageStep", args)
   }
@@ -258,8 +272,10 @@ func (this *QAbstractSlider) setMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMaximumEi
+    // invoke: void setMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider10setMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMaximum", args)
   }
@@ -278,6 +294,8 @@ func (this *QAbstractSlider) invertedControls(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider16invertedControlsEv
+    // invoke: bool invertedControls()
+    C._ZNK15QAbstractSlider16invertedControlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedControls", args)
   }
@@ -297,8 +315,10 @@ func (this *QAbstractSlider) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider8setValueEi
+    // invoke: void setValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider8setValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setValue", args)
   }
@@ -332,8 +352,10 @@ func (this *QAbstractSlider) setPageStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider11setPageStepEi
+    // invoke: void setPageStep(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider11setPageStepEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setPageStep", args)
   }
@@ -353,8 +375,10 @@ func (this *QAbstractSlider) setSliderDown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSliderDownEb
+    // invoke: void setSliderDown(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider13setSliderDownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSliderDown", args)
   }
@@ -373,6 +397,8 @@ func (this *QAbstractSlider) maximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider7maximumEv
+    // invoke: int maximum()
+    C._ZNK15QAbstractSlider7maximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "maximum", args)
   }
@@ -391,6 +417,8 @@ func (this *QAbstractSlider) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QAbstractSlider10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "metaObject", args)
   }
@@ -410,8 +438,10 @@ func (this *QAbstractSlider) setSingleStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSingleStepEi
+    // invoke: void setSingleStep(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider13setSingleStepEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setSingleStep", args)
   }
@@ -431,8 +461,10 @@ func (this *QAbstractSlider) setInvertedAppearance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider21setInvertedAppearanceEb
+    // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setInvertedAppearance", args)
   }
@@ -451,6 +483,8 @@ func (this *QAbstractSlider) hasTracking(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider11hasTrackingEv
+    // invoke: bool hasTracking()
+    C._ZNK15QAbstractSlider11hasTrackingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "hasTracking", args)
   }
@@ -469,6 +503,8 @@ func (this *QAbstractSlider) invertedAppearance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider18invertedAppearanceEv
+    // invoke: bool invertedAppearance()
+    C._ZNK15QAbstractSlider18invertedAppearanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "invertedAppearance", args)
   }
@@ -487,6 +523,8 @@ func (this *QAbstractSlider) sliderPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QAbstractSlider14sliderPositionEv
+    // invoke: int sliderPosition()
+    C._ZNK15QAbstractSlider14sliderPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "sliderPosition", args)
   }
@@ -506,8 +544,10 @@ func (this *QAbstractSlider) setTracking(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider11setTrackingEb
+    // invoke: void setTracking(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider11setTrackingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setTracking", args)
   }
@@ -528,10 +568,12 @@ func (this *QAbstractSlider) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider8setRangeEii
+    // invoke: void setRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN15QAbstractSlider8setRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setRange", args)
   }
@@ -551,8 +593,10 @@ func (this *QAbstractSlider) setMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QAbstractSlider10setMinimumEi
+    // invoke: void setMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QAbstractSlider10setMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractSlider", "setMinimum", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -41,7 +41,7 @@ extern void _ZN9QBitArrayC1Eib(void* qthis, int arg0, bool arg1);
   // proto:  bool QBitArray::isEmpty();
 extern void demth_ZNK9QBitArray7isEmptyEv(void* qthis);
   // proto:  void QBitArray::setBit(int i);
-extern void _ZN9QBitArray6setBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray6setBitEi(void* qthis, int arg0);
   // proto:  int QBitArray::size();
 extern void demth_ZNK9QBitArray4sizeEv(void* qthis);
   // proto:  void QBitArray::swap(QBitArray & other);
@@ -56,17 +56,17 @@ extern void demth_ZN9QBitArray6detachEv(void* qthis);
 extern void* dector_ZN9QBitArrayC1Ev();
 extern void demth_ZN9QBitArrayC1Ev(void* qthis);
   // proto:  bool QBitArray::at(int i);
-extern void _ZNK9QBitArray2atEi(void* qthis, int arg0);
+extern void demth_ZNK9QBitArray2atEi(void* qthis, int arg0);
   // proto:  void QBitArray::clear();
 extern void demth_ZN9QBitArray5clearEv(void* qthis);
   // proto:  void QBitArray::clearBit(int i);
-extern void _ZN9QBitArray8clearBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray8clearBitEi(void* qthis, int arg0);
   // proto:  bool QBitArray::testBit(int i);
-extern void _ZNK9QBitArray7testBitEi(void* qthis, int arg0);
+extern void demth_ZNK9QBitArray7testBitEi(void* qthis, int arg0);
   // proto:  void QBitArray::truncate(int pos);
 extern void demth_ZN9QBitArray8truncateEi(void* qthis, int arg0);
   // proto:  bool QBitArray::toggleBit(int i);
-extern void _ZN9QBitArray9toggleBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray9toggleBitEi(void* qthis, int arg0);
   // proto:  void QBitArray::QBitArray(const QBitArray & other);
 extern void* dector_ZN9QBitArrayC1ERKS_(void* arg0);
 extern void demth_ZN9QBitArrayC1ERKS_(void* qthis, void* arg0);
@@ -75,7 +75,7 @@ extern void _ZN9QBitArray4fillEbii(void* qthis, bool arg0, int arg1, int arg2);
   // proto:  bool QBitArray::isNull();
 extern void demth_ZNK9QBitArray6isNullEv(void* qthis);
   // proto:  void QBitArray::setBit(int i, bool val);
-extern void _ZN9QBitArray6setBitEib(void* qthis, int arg0, bool arg1);
+extern void demth_ZN9QBitArray6setBitEib(void* qthis, int arg0, bool arg1);
   // proto:  void QBitArray::resize(int size);
 extern void _ZN9QBitArray6resizeEi(void* qthis, int arg0);
   // proto:  bool QBitArray::isDetached();
@@ -128,6 +128,8 @@ func (this *QBitArray) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray7isEmptyEv
+    // invoke: bool isEmpty()
+    C.demth_ZNK9QBitArray7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "isEmpty", args)
   }
@@ -151,14 +153,18 @@ func (this *QBitArray) setBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray6setBitEi
+    // invoke: void setBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QBitArray6setBitEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN9QBitArray6setBitEib
+    // invoke: void setBit(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C.demth_ZN9QBitArray6setBitEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBitArray", "setBit", args)
   }
@@ -177,6 +183,8 @@ func (this *QBitArray) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray4sizeEv
+    // invoke: int size()
+    C.demth_ZNK9QBitArray4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "size", args)
   }
@@ -196,8 +204,10 @@ func (this *QBitArray) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray4swapERS_
+    // invoke: void swap(class QBitArray &)
     var arg0 = args[0].(QBitArray).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QBitArray4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "swap", args)
   }
@@ -219,10 +229,14 @@ func (this *QBitArray) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray5countEv
+    // invoke: int count()
+    C.demth_ZNK9QBitArray5countEv(this.qclsinst)
   case 1:
     // invoke: _ZNK9QBitArray5countEb
+    // invoke: int count(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZNK9QBitArray5countEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "count", args)
   }
@@ -241,6 +255,8 @@ func (this *QBitArray) detach(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray6detachEv
+    // invoke: void detach()
+    C.demth_ZN9QBitArray6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "detach", args)
   }
@@ -260,8 +276,10 @@ func (this *QBitArray) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray2atEi
+    // invoke: bool at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK9QBitArray2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "at", args)
   }
@@ -280,6 +298,8 @@ func (this *QBitArray) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray5clearEv
+    // invoke: void clear()
+    C.demth_ZN9QBitArray5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "clear", args)
   }
@@ -299,8 +319,10 @@ func (this *QBitArray) clearBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray8clearBitEi
+    // invoke: void clearBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QBitArray8clearBitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "clearBit", args)
   }
@@ -320,8 +342,10 @@ func (this *QBitArray) testBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray7testBitEi
+    // invoke: bool testBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK9QBitArray7testBitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "testBit", args)
   }
@@ -341,8 +365,10 @@ func (this *QBitArray) truncate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray8truncateEi
+    // invoke: void truncate(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QBitArray8truncateEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "truncate", args)
   }
@@ -362,8 +388,10 @@ func (this *QBitArray) toggleBit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray9toggleBitEi
+    // invoke: bool toggleBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QBitArray9toggleBitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "toggleBit", args)
   }
@@ -389,18 +417,22 @@ func (this *QBitArray) fill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray4fillEbii
+    // invoke: void fill(_Bool, int, int)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN9QBitArray4fillEbii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN9QBitArray4fillEbi
+    // invoke: bool fill(_Bool, int)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZN9QBitArray4fillEbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBitArray", "fill", args)
   }
@@ -419,6 +451,8 @@ func (this *QBitArray) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK9QBitArray6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "isNull", args)
   }
@@ -438,8 +472,10 @@ func (this *QBitArray) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QBitArray6resizeEi
+    // invoke: void resize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QBitArray6resizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBitArray", "resize", args)
   }
@@ -458,6 +494,8 @@ func (this *QBitArray) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QBitArray10isDetachedEv
+    // invoke: bool isDetached()
+    C.demth_ZNK9QBitArray10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBitArray", "isDetached", args)
   }

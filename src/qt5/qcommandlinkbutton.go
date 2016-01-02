@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -87,6 +87,8 @@ func (this *QCommandLinkButton) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLinkButton10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QCommandLinkButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "metaObject", args)
   }
@@ -119,6 +121,8 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLinkButton11descriptionEv
+    // invoke: QString description()
+    C._ZNK18QCommandLinkButton11descriptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "description", args)
   }
@@ -138,8 +142,10 @@ func (this *QCommandLinkButton) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLinkButton14setDescriptionERK7QString
+    // invoke: void setDescription(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCommandLinkButton14setDescriptionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "setDescription", args)
   }

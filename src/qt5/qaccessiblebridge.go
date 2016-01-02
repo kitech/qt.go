@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -89,8 +89,10 @@ func (this *QAccessibleBridgePlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QAccessibleBridgePlugin6createERK7QString
+    // invoke: QAccessibleBridge * create(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QAccessibleBridgePlugin6createERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "create", args)
   }
@@ -123,6 +125,8 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QAccessibleBridgePlugin10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK23QAccessibleBridgePlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "metaObject", args)
   }
@@ -156,8 +160,10 @@ func (this *QAccessibleBridge) notifyAccessibilityUpdate(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent
+    // invoke: void notifyAccessibilityUpdate(class QAccessibleEvent *)
     var arg0 = args[0].(QAccessibleEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAccessibleBridge25notifyAccessibilityUpdateEP16QAccessibleEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleBridge", "notifyAccessibilityUpdate", args)
   }
@@ -177,8 +183,10 @@ func (this *QAccessibleBridge) setRootObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface
+    // invoke: void setRootObject(class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAccessibleBridge13setRootObjectEP20QAccessibleInterface(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleBridge", "setRootObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.go
 //
@@ -127,8 +127,10 @@ func (this *QListView) setWordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView11setWordWrapEb
+    // invoke: void setWordWrap(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView11setWordWrapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setWordWrap", args)
   }
@@ -147,6 +149,8 @@ func (this *QListView) doItemsLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView13doItemsLayoutEv
+    // invoke: void doItemsLayout()
+    C._ZN9QListView13doItemsLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "doItemsLayout", args)
   }
@@ -165,6 +169,8 @@ func (this *QListView) spacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView7spacingEv
+    // invoke: int spacing()
+    C._ZNK9QListView7spacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "spacing", args)
   }
@@ -184,8 +190,10 @@ func (this *QListView) setGridSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView11setGridSizeERK5QSize
+    // invoke: void setGridSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QListView11setGridSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setGridSize", args)
   }
@@ -205,8 +213,10 @@ func (this *QListView) indexAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView7indexAtERK6QPoint
+    // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QListView7indexAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "indexAt", args)
   }
@@ -226,8 +236,10 @@ func (this *QListView) setWrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView11setWrappingEb
+    // invoke: void setWrapping(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView11setWrappingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setWrapping", args)
   }
@@ -247,8 +259,10 @@ func (this *QListView) setSelectionRectVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView23setSelectionRectVisibleEb
+    // invoke: void setSelectionRectVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView23setSelectionRectVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setSelectionRectVisible", args)
   }
@@ -268,8 +282,10 @@ func (this *QListView) setBatchSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView12setBatchSizeEi
+    // invoke: void setBatchSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView12setBatchSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setBatchSize", args)
   }
@@ -288,6 +304,8 @@ func (this *QListView) uniformItemSizes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView16uniformItemSizesEv
+    // invoke: bool uniformItemSizes()
+    C._ZNK9QListView16uniformItemSizesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "uniformItemSizes", args)
   }
@@ -307,8 +325,10 @@ func (this *QListView) setRootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView12setRootIndexERK11QModelIndex
+    // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QListView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setRootIndex", args)
   }
@@ -327,6 +347,8 @@ func (this *QListView) isWrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView10isWrappingEv
+    // invoke: bool isWrapping()
+    C._ZNK9QListView10isWrappingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "isWrapping", args)
   }
@@ -345,6 +367,8 @@ func (this *QListView) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView5resetEv
+    // invoke: void reset()
+    C._ZN9QListView5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "reset", args)
   }
@@ -363,6 +387,8 @@ func (this *QListView) gridSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView8gridSizeEv
+    // invoke: QSize gridSize()
+    C._ZNK9QListView8gridSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "gridSize", args)
   }
@@ -382,8 +408,10 @@ func (this *QListView) setModelColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView14setModelColumnEi
+    // invoke: void setModelColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView14setModelColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setModelColumn", args)
   }
@@ -403,8 +431,10 @@ func (this *QListView) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView10setSpacingEi
+    // invoke: void setSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView10setSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setSpacing", args)
   }
@@ -424,8 +454,10 @@ func (this *QListView) visualRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView10visualRectERK11QModelIndex
+    // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QListView10visualRectERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "visualRect", args)
   }
@@ -445,8 +477,10 @@ func (this *QListView) isRowHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView11isRowHiddenEi
+    // invoke: bool isRowHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QListView11isRowHiddenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "isRowHidden", args)
   }
@@ -479,6 +513,8 @@ func (this *QListView) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QListView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "metaObject", args)
   }
@@ -497,6 +533,8 @@ func (this *QListView) batchSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView9batchSizeEv
+    // invoke: int batchSize()
+    C._ZNK9QListView9batchSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "batchSize", args)
   }
@@ -515,6 +553,8 @@ func (this *QListView) isSelectionRectVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView22isSelectionRectVisibleEv
+    // invoke: bool isSelectionRectVisible()
+    C._ZNK9QListView22isSelectionRectVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "isSelectionRectVisible", args)
   }
@@ -533,6 +573,8 @@ func (this *QListView) wordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView8wordWrapEv
+    // invoke: bool wordWrap()
+    C._ZNK9QListView8wordWrapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "wordWrap", args)
   }
@@ -553,10 +595,12 @@ func (this *QListView) setRowHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView12setRowHiddenEib
+    // invoke: void setRowHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN9QListView12setRowHiddenEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QListView", "setRowHidden", args)
   }
@@ -575,6 +619,8 @@ func (this *QListView) clearPropertyFlags(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView18clearPropertyFlagsEv
+    // invoke: void clearPropertyFlags()
+    C._ZN9QListView18clearPropertyFlagsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "clearPropertyFlags", args)
   }
@@ -593,6 +639,8 @@ func (this *QListView) modelColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QListView11modelColumnEv
+    // invoke: int modelColumn()
+    C._ZNK9QListView11modelColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QListView", "modelColumn", args)
   }
@@ -612,8 +660,10 @@ func (this *QListView) setUniformItemSizes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QListView19setUniformItemSizesEb
+    // invoke: void setUniformItemSizes(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QListView19setUniformItemSizesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QListView", "setUniformItemSizes", args)
   }

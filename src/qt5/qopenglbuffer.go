@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -97,12 +97,14 @@ func (this *QOpenGLBuffer) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4readEiPvi
+    // invoke: bool read(int, void *, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN13QOpenGLBuffer4readEiPvi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "read", args)
   }
@@ -121,6 +123,8 @@ func (this *QOpenGLBuffer) bind(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer4bindEv
+    // invoke: bool bind()
+    C._ZN13QOpenGLBuffer4bindEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bind", args)
   }
@@ -139,6 +143,8 @@ func (this *QOpenGLBuffer) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer7destroyEv
+    // invoke: void destroy()
+    C._ZN13QOpenGLBuffer7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "destroy", args)
   }
@@ -162,14 +168,18 @@ func (this *QOpenGLBuffer) allocate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer8allocateEi
+    // invoke: void allocate(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN13QOpenGLBuffer8allocateEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN13QOpenGLBuffer8allocateEPKvi
+    // invoke: void allocate(const void *, int)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN13QOpenGLBuffer8allocateEPKvi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "allocate", args)
   }
@@ -188,6 +198,8 @@ func (this *QOpenGLBuffer) unmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5unmapEv
+    // invoke: bool unmap()
+    C._ZN13QOpenGLBuffer5unmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "unmap", args)
   }
@@ -211,6 +223,8 @@ func (this *QOpenGLBuffer) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer4sizeEv
+    // invoke: int size()
+    C._ZNK13QOpenGLBuffer4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "size", args)
   }
@@ -229,6 +243,8 @@ func (this *QOpenGLBuffer) bufferId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer8bufferIdEv
+    // invoke: GLuint bufferId()
+    C._ZNK13QOpenGLBuffer8bufferIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "bufferId", args)
   }
@@ -247,6 +263,8 @@ func (this *QOpenGLBuffer) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer6createEv
+    // invoke: bool create()
+    C._ZN13QOpenGLBuffer6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "create", args)
   }
@@ -281,11 +299,9 @@ func (this *QOpenGLBuffer) release(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN13QOpenGLBuffer7releaseENS_4TypeE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-  case 1:
     // invoke: _ZN13QOpenGLBuffer7releaseEv
+    // invoke: void release()
+    C._ZN13QOpenGLBuffer7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "release", args)
   }
@@ -304,6 +320,8 @@ func (this *QOpenGLBuffer) isCreated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLBuffer9isCreatedEv
+    // invoke: bool isCreated()
+    C._ZNK13QOpenGLBuffer9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "isCreated", args)
   }
@@ -325,12 +343,14 @@ func (this *QOpenGLBuffer) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLBuffer5writeEiPKvi
+    // invoke: void write(int, const void *, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN13QOpenGLBuffer5writeEiPKvi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QOpenGLBuffer", "write", args)
   }

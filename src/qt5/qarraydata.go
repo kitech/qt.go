@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -34,8 +34,6 @@ import "qtrt"
 #include <uchar.h>
   // proto: static QArrayData * QArrayData::sharedNull();
 extern void _ZN10QArrayData10sharedNullEv();
-  // proto:  void * QArrayData::data();
-extern void _ZN10QArrayData4dataEv(void* qthis);
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
 extern void _ZN10QArrayData10deallocateEPS_ii(void* arg0, int arg1, int arg2);
   // proto:  bool QArrayData::isMutable();
@@ -74,28 +72,6 @@ func (this *QArrayData) sharedNull_s(args ...interface{}) () {
 
 }
 
-  // proto:  void * QArrayData::data();
-func (this *QArrayData) data(args ...interface{}) () {
-  // data()
-  // data()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QArrayData4dataEv
-  case 1:
-    // invoke: _ZN10QArrayData4dataEv
-  default:
-    qtrt.ErrorResolve("QArrayData", "data", args)
-  }
-
-}
-
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
 func (this *QArrayData) deallocate_s(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -122,6 +98,8 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
+    // invoke: bool isMutable()
+    C._ZNK10QArrayData9isMutableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
   }
@@ -141,8 +119,10 @@ func (this *QArrayData) detachCapacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QArrayData14detachCapacityEi
+    // invoke: int detachCapacity(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK10QArrayData14detachCapacityEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QArrayData", "detachCapacity", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -131,13 +131,12 @@ func (this *QScroller) setSnapPositionsY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller17setSnapPositionsYEdd
+    // invoke: void setSnapPositionsY(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-  case 1:
-    // invoke: _ZN9QScroller17setSnapPositionsYERK5QListIdE
-    // var arg0 = args[0].(QList<double>).qclsinst
+    C._ZN9QScroller17setSnapPositionsYEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QScroller", "setSnapPositionsY", args)
   }
@@ -156,6 +155,8 @@ func (this *QScroller) finalPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller13finalPositionEv
+    // invoke: QPointF finalPosition()
+    C._ZNK9QScroller13finalPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "finalPosition", args)
   }
@@ -189,8 +190,10 @@ func (this *QScroller) setScrollerProperties(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties
+    // invoke: void setScrollerProperties(const class QScrollerProperties &)
     var arg0 = args[0].(QScrollerProperties).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QScroller21setScrollerPropertiesERK19QScrollerProperties(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScroller", "setScrollerProperties", args)
   }
@@ -209,6 +212,8 @@ func (this *QScroller) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QScroller10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "metaObject", args)
   }
@@ -227,6 +232,8 @@ func (this *QScroller) velocity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller8velocityEv
+    // invoke: QPointF velocity()
+    C._ZNK9QScroller8velocityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "velocity", args)
   }
@@ -245,6 +252,8 @@ func (this *QScroller) resendPrepareEvent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller18resendPrepareEventEv
+    // invoke: void resendPrepareEvent()
+    C._ZN9QScroller18resendPrepareEventEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "resendPrepareEvent", args)
   }
@@ -272,14 +281,17 @@ func (this *QScroller) ensureVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller13ensureVisibleERK6QRectFdd
+    // invoke: void ensureVisible(const class QRectF &, qreal, qreal)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
     var arg2 = C.double(args[2].(float64))
     if false {fmt.Println(arg2)}
+    C._ZN9QScroller13ensureVisibleERK6QRectFdd(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN9QScroller13ensureVisibleERK6QRectFddi
+    // invoke: void ensureVisible(const class QRectF &, qreal, qreal, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -288,6 +300,7 @@ func (this *QScroller) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN9QScroller13ensureVisibleERK6QRectFddi(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QScroller", "ensureVisible", args)
   }
@@ -311,13 +324,12 @@ func (this *QScroller) setSnapPositionsX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller17setSnapPositionsXEdd
+    // invoke: void setSnapPositionsX(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-  case 1:
-    // invoke: _ZN9QScroller17setSnapPositionsXERK5QListIdE
-    // var arg0 = args[0].(QList<double>).qclsinst
+    C._ZN9QScroller17setSnapPositionsXEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QScroller", "setSnapPositionsX", args)
   }
@@ -360,14 +372,18 @@ func (this *QScroller) scrollTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller8scrollToERK7QPointFi
+    // invoke: void scrollTo(const class QPointF &, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QScroller8scrollToERK7QPointFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN9QScroller8scrollToERK7QPointF
+    // invoke: void scrollTo(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QScroller8scrollToERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScroller", "scrollTo", args)
   }
@@ -386,6 +402,8 @@ func (this *QScroller) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QScroller4stopEv
+    // invoke: void stop()
+    C._ZN9QScroller4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "stop", args)
   }
@@ -418,6 +436,8 @@ func (this *QScroller) scrollerProperties(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller18scrollerPropertiesEv
+    // invoke: QScrollerProperties scrollerProperties()
+    C._ZNK9QScroller18scrollerPropertiesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "scrollerProperties", args)
   }
@@ -450,6 +470,8 @@ func (this *QScroller) target(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller6targetEv
+    // invoke: QObject * target()
+    C._ZNK9QScroller6targetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "target", args)
   }
@@ -468,6 +490,8 @@ func (this *QScroller) pixelPerMeter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QScroller13pixelPerMeterEv
+    // invoke: QPointF pixelPerMeter()
+    C._ZNK9QScroller13pixelPerMeterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScroller", "pixelPerMeter", args)
   }

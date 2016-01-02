@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.go
 //
@@ -91,8 +91,10 @@ func (this *QGestureRecognizer) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QGestureRecognizer5resetEP8QGesture
+    // invoke: void reset(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QGestureRecognizer5resetEP8QGesture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "reset", args)
   }
@@ -112,8 +114,10 @@ func (this *QGestureRecognizer) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QGestureRecognizer6createEP7QObject
+    // invoke: QGesture * create(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QGestureRecognizer6createEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "create", args)
   }

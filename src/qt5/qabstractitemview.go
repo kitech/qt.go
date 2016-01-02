@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.go
 //
@@ -178,8 +178,10 @@ func (this *QAbstractItemView) indexWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView11indexWidgetERK11QModelIndex
+    // invoke: QWidget * indexWidget(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView11indexWidgetERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "indexWidget", args)
   }
@@ -198,6 +200,8 @@ func (this *QAbstractItemView) scrollToBottom(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView14scrollToBottomEv
+    // invoke: void scrollToBottom()
+    C._ZN17QAbstractItemView14scrollToBottomEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "scrollToBottom", args)
   }
@@ -217,8 +221,10 @@ func (this *QAbstractItemView) setDropIndicatorShown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView21setDropIndicatorShownEb
+    // invoke: void setDropIndicatorShown(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView21setDropIndicatorShownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setDropIndicatorShown", args)
   }
@@ -238,8 +244,10 @@ func (this *QAbstractItemView) sizeHintForIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex
+    // invoke: QSize sizeHintForIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "sizeHintForIndex", args)
   }
@@ -260,10 +268,12 @@ func (this *QAbstractItemView) setItemDelegateForColumn(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate
+    // invoke: void setItemDelegateForColumn(int, class QAbstractItemDelegate *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setItemDelegateForColumn", args)
   }
@@ -282,6 +292,8 @@ func (this *QAbstractItemView) dragEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView11dragEnabledEv
+    // invoke: bool dragEnabled()
+    C._ZNK17QAbstractItemView11dragEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "dragEnabled", args)
   }
@@ -303,10 +315,14 @@ func (this *QAbstractItemView) itemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView12itemDelegateERK11QModelIndex
+    // invoke: QAbstractItemDelegate * itemDelegate(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView12itemDelegateERK11QModelIndex(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK17QAbstractItemView12itemDelegateEv
+    // invoke: QAbstractItemDelegate * itemDelegate()
+    C._ZNK17QAbstractItemView12itemDelegateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "itemDelegate", args)
   }
@@ -326,8 +342,10 @@ func (this *QAbstractItemView) keyboardSearch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView14keyboardSearchERK7QString
+    // invoke: void keyboardSearch(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView14keyboardSearchERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "keyboardSearch", args)
   }
@@ -346,6 +364,8 @@ func (this *QAbstractItemView) rootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView9rootIndexEv
+    // invoke: QModelIndex rootIndex()
+    C._ZNK17QAbstractItemView9rootIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "rootIndex", args)
   }
@@ -365,8 +385,10 @@ func (this *QAbstractItemView) itemDelegateForColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView21itemDelegateForColumnEi
+    // invoke: QAbstractItemDelegate * itemDelegateForColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView21itemDelegateForColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "itemDelegateForColumn", args)
   }
@@ -385,6 +407,8 @@ func (this *QAbstractItemView) selectionModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView14selectionModelEv
+    // invoke: QItemSelectionModel * selectionModel()
+    C._ZNK17QAbstractItemView14selectionModelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "selectionModel", args)
   }
@@ -403,6 +427,8 @@ func (this *QAbstractItemView) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView5resetEv
+    // invoke: void reset()
+    C._ZN17QAbstractItemView5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "reset", args)
   }
@@ -423,10 +449,12 @@ func (this *QAbstractItemView) setItemDelegateForRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate
+    // invoke: void setItemDelegateForRow(int, class QAbstractItemDelegate *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setItemDelegateForRow", args)
   }
@@ -446,8 +474,10 @@ func (this *QAbstractItemView) setRootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView12setRootIndexERK11QModelIndex
+    // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setRootIndex", args)
   }
@@ -467,8 +497,10 @@ func (this *QAbstractItemView) setAutoScrollMargin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView19setAutoScrollMarginEi
+    // invoke: void setAutoScrollMargin(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView19setAutoScrollMarginEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setAutoScrollMargin", args)
   }
@@ -488,8 +520,10 @@ func (this *QAbstractItemView) visualRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView10visualRectERK11QModelIndex
+    // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView10visualRectERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "visualRect", args)
   }
@@ -508,6 +542,8 @@ func (this *QAbstractItemView) doItemsLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView13doItemsLayoutEv
+    // invoke: void doItemsLayout()
+    C._ZN17QAbstractItemView13doItemsLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "doItemsLayout", args)
   }
@@ -540,6 +576,8 @@ func (this *QAbstractItemView) model(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView5modelEv
+    // invoke: QAbstractItemModel * model()
+    C._ZNK17QAbstractItemView5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "model", args)
   }
@@ -558,6 +596,8 @@ func (this *QAbstractItemView) iconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView8iconSizeEv
+    // invoke: QSize iconSize()
+    C._ZNK17QAbstractItemView8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "iconSize", args)
   }
@@ -577,8 +617,10 @@ func (this *QAbstractItemView) setItemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate
+    // invoke: void setItemDelegate(class QAbstractItemDelegate *)
     var arg0 = args[0].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setItemDelegate", args)
   }
@@ -598,8 +640,10 @@ func (this *QAbstractItemView) setDragEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView14setDragEnabledEb
+    // invoke: void setDragEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView14setDragEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setDragEnabled", args)
   }
@@ -618,6 +662,8 @@ func (this *QAbstractItemView) currentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView12currentIndexEv
+    // invoke: QModelIndex currentIndex()
+    C._ZNK17QAbstractItemView12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "currentIndex", args)
   }
@@ -637,8 +683,10 @@ func (this *QAbstractItemView) sizeHintForRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView14sizeHintForRowEi
+    // invoke: int sizeHintForRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView14sizeHintForRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "sizeHintForRow", args)
   }
@@ -662,6 +710,8 @@ func (this *QAbstractItemView) showDropIndicator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView17showDropIndicatorEv
+    // invoke: bool showDropIndicator()
+    C._ZNK17QAbstractItemView17showDropIndicatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "showDropIndicator", args)
   }
@@ -680,6 +730,8 @@ func (this *QAbstractItemView) hasAutoScroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView13hasAutoScrollEv
+    // invoke: bool hasAutoScroll()
+    C._ZNK17QAbstractItemView13hasAutoScrollEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "hasAutoScroll", args)
   }
@@ -698,6 +750,8 @@ func (this *QAbstractItemView) selectAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView9selectAllEv
+    // invoke: void selectAll()
+    C._ZN17QAbstractItemView9selectAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "selectAll", args)
   }
@@ -721,17 +775,11 @@ func (this *QAbstractItemView) edit(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN17QAbstractItemView4editERK11QModelIndexNS_11EditTriggerEP6QEvent
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QEvent).qclsinst
-    if false {fmt.Println(arg2)}
-  case 1:
     // invoke: _ZN17QAbstractItemView4editERK11QModelIndex
+    // invoke: void edit(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView4editERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "edit", args)
   }
@@ -751,8 +799,10 @@ func (this *QAbstractItemView) setAlternatingRowColors(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView23setAlternatingRowColorsEb
+    // invoke: void setAlternatingRowColors(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView23setAlternatingRowColorsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setAlternatingRowColors", args)
   }
@@ -772,8 +822,10 @@ func (this *QAbstractItemView) sizeHintForColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView17sizeHintForColumnEi
+    // invoke: int sizeHintForColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView17sizeHintForColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "sizeHintForColumn", args)
   }
@@ -793,8 +845,10 @@ func (this *QAbstractItemView) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView11setIconSizeERK5QSize
+    // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setIconSize", args)
   }
@@ -814,8 +868,10 @@ func (this *QAbstractItemView) closePersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex
+    // invoke: void closePersistentEditor(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView21closePersistentEditorERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "closePersistentEditor", args)
   }
@@ -835,8 +891,10 @@ func (this *QAbstractItemView) setDragDropOverwriteMode(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView24setDragDropOverwriteModeEb
+    // invoke: void setDragDropOverwriteMode(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView24setDragDropOverwriteModeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setDragDropOverwriteMode", args)
   }
@@ -855,6 +913,8 @@ func (this *QAbstractItemView) clearSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView14clearSelectionEv
+    // invoke: void clearSelection()
+    C._ZN17QAbstractItemView14clearSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "clearSelection", args)
   }
@@ -873,6 +933,8 @@ func (this *QAbstractItemView) scrollToTop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView11scrollToTopEv
+    // invoke: void scrollToTop()
+    C._ZN17QAbstractItemView11scrollToTopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "scrollToTop", args)
   }
@@ -892,8 +954,10 @@ func (this *QAbstractItemView) setSelectionModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel
+    // invoke: void setSelectionModel(class QItemSelectionModel *)
     var arg0 = args[0].(QItemSelectionModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setSelectionModel", args)
   }
@@ -913,8 +977,10 @@ func (this *QAbstractItemView) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex
+    // invoke: void setCurrentIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setCurrentIndex", args)
   }
@@ -934,8 +1000,10 @@ func (this *QAbstractItemView) indexAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView7indexAtERK6QPoint
+    // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView7indexAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "indexAt", args)
   }
@@ -955,8 +1023,10 @@ func (this *QAbstractItemView) setTabKeyNavigation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView19setTabKeyNavigationEb
+    // invoke: void setTabKeyNavigation(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView19setTabKeyNavigationEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setTabKeyNavigation", args)
   }
@@ -977,10 +1047,12 @@ func (this *QAbstractItemView) setIndexWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget
+    // invoke: void setIndexWidget(const class QModelIndex &, class QWidget *)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN17QAbstractItemView14setIndexWidgetERK11QModelIndexP7QWidget(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setIndexWidget", args)
   }
@@ -1000,8 +1072,10 @@ func (this *QAbstractItemView) setAutoScroll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView13setAutoScrollEb
+    // invoke: void setAutoScroll(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView13setAutoScrollEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setAutoScroll", args)
   }
@@ -1021,8 +1095,10 @@ func (this *QAbstractItemView) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView8setModelEP18QAbstractItemModel
+    // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "setModel", args)
   }
@@ -1042,8 +1118,10 @@ func (this *QAbstractItemView) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView6updateERK11QModelIndex
+    // invoke: void update(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView6updateERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "update", args)
   }
@@ -1062,6 +1140,8 @@ func (this *QAbstractItemView) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QAbstractItemView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "metaObject", args)
   }
@@ -1081,8 +1161,10 @@ func (this *QAbstractItemView) openPersistentEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex
+    // invoke: void openPersistentEditor(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "openPersistentEditor", args)
   }
@@ -1102,8 +1184,10 @@ func (this *QAbstractItemView) itemDelegateForRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView18itemDelegateForRowEi
+    // invoke: QAbstractItemDelegate * itemDelegateForRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QAbstractItemView18itemDelegateForRowEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "itemDelegateForRow", args)
   }
@@ -1122,6 +1206,8 @@ func (this *QAbstractItemView) dragDropOverwriteMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView21dragDropOverwriteModeEv
+    // invoke: bool dragDropOverwriteMode()
+    C._ZNK17QAbstractItemView21dragDropOverwriteModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "dragDropOverwriteMode", args)
   }
@@ -1140,6 +1226,8 @@ func (this *QAbstractItemView) tabKeyNavigation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView16tabKeyNavigationEv
+    // invoke: bool tabKeyNavigation()
+    C._ZNK17QAbstractItemView16tabKeyNavigationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "tabKeyNavigation", args)
   }
@@ -1158,6 +1246,8 @@ func (this *QAbstractItemView) autoScrollMargin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView16autoScrollMarginEv
+    // invoke: int autoScrollMargin()
+    C._ZNK17QAbstractItemView16autoScrollMarginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "autoScrollMargin", args)
   }
@@ -1176,6 +1266,8 @@ func (this *QAbstractItemView) alternatingRowColors(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAbstractItemView20alternatingRowColorsEv
+    // invoke: bool alternatingRowColors()
+    C._ZNK17QAbstractItemView20alternatingRowColorsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemView", "alternatingRowColors", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -101,8 +101,10 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher10removePathERK7QString
+    // invoke: bool removePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
   }
@@ -121,6 +123,8 @@ func (this *QFileSystemWatcher) directories(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher11directoriesEv
+    // invoke: QStringList directories()
+    C._ZNK18QFileSystemWatcher11directoriesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "directories", args)
   }
@@ -139,6 +143,8 @@ func (this *QFileSystemWatcher) files(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher5filesEv
+    // invoke: QStringList files()
+    C._ZNK18QFileSystemWatcher5filesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "files", args)
   }
@@ -158,8 +164,10 @@ func (this *QFileSystemWatcher) addPaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher8addPathsERK11QStringList
+    // invoke: QStringList addPaths(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QFileSystemWatcher8addPathsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPaths", args)
   }
@@ -179,8 +187,10 @@ func (this *QFileSystemWatcher) removePaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher11removePathsERK11QStringList
+    // invoke: QStringList removePaths(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QFileSystemWatcher11removePathsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePaths", args)
   }
@@ -205,8 +215,10 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFileSystemWatcher7addPathERK7QString
+    // invoke: bool addPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
   }
@@ -225,6 +237,8 @@ func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFileSystemWatcher10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QFileSystemWatcher10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "metaObject", args)
   }

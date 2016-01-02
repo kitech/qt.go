@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.go
 //
@@ -198,8 +198,10 @@ func (this *QComboBox) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox8setModelEP18QAbstractItemModel
+    // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setModel", args)
   }
@@ -218,6 +220,8 @@ func (this *QComboBox) clearEditText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox13clearEditTextEv
+    // invoke: void clearEditText()
+    C._ZN9QComboBox13clearEditTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "clearEditText", args)
   }
@@ -237,8 +241,10 @@ func (this *QComboBox) setAutoCompletion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox17setAutoCompletionEb
+    // invoke: void setAutoCompletion(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox17setAutoCompletionEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setAutoCompletion", args)
   }
@@ -258,8 +264,10 @@ func (this *QComboBox) setFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox8setFrameEb
+    // invoke: void setFrame(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox8setFrameEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setFrame", args)
   }
@@ -279,8 +287,10 @@ func (this *QComboBox) setIconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setIconSizeERK5QSize
+    // invoke: void setIconSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox11setIconSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setIconSize", args)
   }
@@ -300,8 +310,10 @@ func (this *QComboBox) setView(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox7setViewEP17QAbstractItemView
+    // invoke: void setView(class QAbstractItemView *)
     var arg0 = args[0].(QAbstractItemView).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox7setViewEP17QAbstractItemView(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setView", args)
   }
@@ -320,6 +332,8 @@ func (this *QComboBox) view(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox4viewEv
+    // invoke: QAbstractItemView * view()
+    C._ZNK9QComboBox4viewEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "view", args)
   }
@@ -338,6 +352,8 @@ func (this *QComboBox) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK9QComboBox15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "minimumSizeHint", args)
   }
@@ -356,6 +372,8 @@ func (this *QComboBox) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox5clearEv
+    // invoke: void clear()
+    C._ZN9QComboBox5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "clear", args)
   }
@@ -374,6 +392,8 @@ func (this *QComboBox) maxCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8maxCountEv
+    // invoke: int maxCount()
+    C._ZNK9QComboBox8maxCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "maxCount", args)
   }
@@ -399,18 +419,22 @@ func (this *QComboBox) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant
+    // invoke: void addItem(const class QIcon &, const class QString &, const class QVariant &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVariant).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN9QComboBox7addItemERK7QStringRK8QVariant
+    // invoke: void addItem(const class QString &, const class QVariant &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QComboBox", "addItem", args)
   }
@@ -431,10 +455,12 @@ func (this *QComboBox) insertItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11insertItemsEiRK11QStringList
+    // invoke: void insertItems(int, const class QStringList &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QComboBox11insertItemsEiRK11QStringList(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QComboBox", "insertItems", args)
   }
@@ -453,6 +479,8 @@ func (this *QComboBox) iconSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8iconSizeEv
+    // invoke: QSize iconSize()
+    C._ZNK9QComboBox8iconSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "iconSize", args)
   }
@@ -471,6 +499,8 @@ func (this *QComboBox) rootModelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox14rootModelIndexEv
+    // invoke: QModelIndex rootModelIndex()
+    C._ZNK9QComboBox14rootModelIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "rootModelIndex", args)
   }
@@ -490,8 +520,10 @@ func (this *QComboBox) setEditable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setEditableEb
+    // invoke: void setEditable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox11setEditableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setEditable", args)
   }
@@ -512,10 +544,12 @@ func (this *QComboBox) setItemIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setItemIconEiRK5QIcon
+    // invoke: void setItemIcon(int, const class QIcon &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QComboBox11setItemIconEiRK5QIcon(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QComboBox", "setItemIcon", args)
   }
@@ -534,6 +568,8 @@ func (this *QComboBox) autoCompletion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox14autoCompletionEv
+    // invoke: bool autoCompletion()
+    C._ZNK9QComboBox14autoCompletionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "autoCompletion", args)
   }
@@ -553,8 +589,10 @@ func (this *QComboBox) currentData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox11currentDataEi
+    // invoke: QVariant currentData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QComboBox11currentDataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "currentData", args)
   }
@@ -573,6 +611,8 @@ func (this *QComboBox) hasFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8hasFrameEv
+    // invoke: bool hasFrame()
+    C._ZNK9QComboBox8hasFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "hasFrame", args)
   }
@@ -591,6 +631,8 @@ func (this *QComboBox) validator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox9validatorEv
+    // invoke: const QValidator * validator()
+    C._ZNK9QComboBox9validatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "validator", args)
   }
@@ -610,8 +652,10 @@ func (this *QComboBox) itemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8itemTextEi
+    // invoke: QString itemText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QComboBox8itemTextEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "itemText", args)
   }
@@ -633,12 +677,14 @@ func (this *QComboBox) setItemData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setItemDataEiRK8QVarianti
+    // invoke: void setItemData(int, const class QVariant &, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN9QComboBox11setItemDataEiRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QComboBox", "setItemData", args)
   }
@@ -657,6 +703,8 @@ func (this *QComboBox) hidePopup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox9hidePopupEv
+    // invoke: void hidePopup()
+    C._ZN9QComboBox9hidePopupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "hidePopup", args)
   }
@@ -684,6 +732,7 @@ func (this *QComboBox) insertItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant
+    // invoke: void insertItem(int, const class QIcon &, const class QString &, const class QVariant &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
@@ -692,14 +741,17 @@ func (this *QComboBox) insertItem(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QVariant).qclsinst
     if false {fmt.Println(arg3)}
+    C._ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN9QComboBox10insertItemEiRK7QStringRK8QVariant
+    // invoke: void insertItem(int, const class QString &, const class QVariant &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVariant).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QComboBox", "insertItem", args)
   }
@@ -719,8 +771,10 @@ func (this *QComboBox) setCurrentText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox14setCurrentTextERK7QString
+    // invoke: void setCurrentText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox14setCurrentTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setCurrentText", args)
   }
@@ -739,6 +793,8 @@ func (this *QComboBox) modelColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox11modelColumnEv
+    // invoke: int modelColumn()
+    C._ZNK9QComboBox11modelColumnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "modelColumn", args)
   }
@@ -757,6 +813,8 @@ func (this *QComboBox) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QComboBox8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "sizeHint", args)
   }
@@ -777,10 +835,12 @@ func (this *QComboBox) itemData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8itemDataEii
+    // invoke: QVariant itemData(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK9QComboBox8itemDataEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QComboBox", "itemData", args)
   }
@@ -800,8 +860,10 @@ func (this *QComboBox) setCompleter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox12setCompleterEP10QCompleter
+    // invoke: void setCompleter(class QCompleter *)
     var arg0 = args[0].(QCompleter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox12setCompleterEP10QCompleter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setCompleter", args)
   }
@@ -820,6 +882,8 @@ func (this *QComboBox) maxVisibleItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox15maxVisibleItemsEv
+    // invoke: int maxVisibleItems()
+    C._ZNK9QComboBox15maxVisibleItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "maxVisibleItems", args)
   }
@@ -844,8 +908,10 @@ func (this *QComboBox) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox15setCurrentIndexEi
+    // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setCurrentIndex", args)
   }
@@ -865,8 +931,10 @@ func (this *QComboBox) setRootModelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox17setRootModelIndexERK11QModelIndex
+    // invoke: void setRootModelIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox17setRootModelIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setRootModelIndex", args)
   }
@@ -886,8 +954,10 @@ func (this *QComboBox) setEditText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setEditTextERK7QString
+    // invoke: void setEditText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox11setEditTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setEditText", args)
   }
@@ -906,6 +976,8 @@ func (this *QComboBox) completer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox9completerEv
+    // invoke: QCompleter * completer()
+    C._ZNK9QComboBox9completerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "completer", args)
   }
@@ -925,8 +997,10 @@ func (this *QComboBox) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox10removeItemEi
+    // invoke: void removeItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox10removeItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "removeItem", args)
   }
@@ -945,6 +1019,8 @@ func (this *QComboBox) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox5countEv
+    // invoke: int count()
+    C._ZNK9QComboBox5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "count", args)
   }
@@ -964,8 +1040,10 @@ func (this *QComboBox) setItemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate
+    // invoke: void setItemDelegate(class QAbstractItemDelegate *)
     var arg0 = args[0].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setItemDelegate", args)
   }
@@ -985,8 +1063,10 @@ func (this *QComboBox) addItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox8addItemsERK11QStringList
+    // invoke: void addItems(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QComboBox8addItemsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "addItems", args)
   }
@@ -1006,8 +1086,10 @@ func (this *QComboBox) setMinimumContentsLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox24setMinimumContentsLengthEi
+    // invoke: void setMinimumContentsLength(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox24setMinimumContentsLengthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setMinimumContentsLength", args)
   }
@@ -1026,6 +1108,8 @@ func (this *QComboBox) duplicatesEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox17duplicatesEnabledEv
+    // invoke: bool duplicatesEnabled()
+    C._ZNK9QComboBox17duplicatesEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "duplicatesEnabled", args)
   }
@@ -1058,6 +1142,8 @@ func (this *QComboBox) model(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox5modelEv
+    // invoke: QAbstractItemModel * model()
+    C._ZNK9QComboBox5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "model", args)
   }
@@ -1076,6 +1162,8 @@ func (this *QComboBox) minimumContentsLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox21minimumContentsLengthEv
+    // invoke: int minimumContentsLength()
+    C._ZNK9QComboBox21minimumContentsLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "minimumContentsLength", args)
   }
@@ -1094,6 +1182,8 @@ func (this *QComboBox) isEditable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox10isEditableEv
+    // invoke: bool isEditable()
+    C._ZNK9QComboBox10isEditableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "isEditable", args)
   }
@@ -1113,8 +1203,10 @@ func (this *QComboBox) setMaxCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setMaxCountEi
+    // invoke: void setMaxCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox11setMaxCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setMaxCount", args)
   }
@@ -1133,6 +1225,8 @@ func (this *QComboBox) currentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox12currentIndexEv
+    // invoke: int currentIndex()
+    C._ZNK9QComboBox12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "currentIndex", args)
   }
@@ -1152,8 +1246,10 @@ func (this *QComboBox) setDuplicatesEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox20setDuplicatesEnabledEb
+    // invoke: void setDuplicatesEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox20setDuplicatesEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setDuplicatesEnabled", args)
   }
@@ -1172,6 +1268,8 @@ func (this *QComboBox) currentText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox11currentTextEv
+    // invoke: QString currentText()
+    C._ZNK9QComboBox11currentTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "currentText", args)
   }
@@ -1190,6 +1288,8 @@ func (this *QComboBox) showPopup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox9showPopupEv
+    // invoke: void showPopup()
+    C._ZN9QComboBox9showPopupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "showPopup", args)
   }
@@ -1208,6 +1308,8 @@ func (this *QComboBox) lineEdit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8lineEditEv
+    // invoke: QLineEdit * lineEdit()
+    C._ZNK9QComboBox8lineEditEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "lineEdit", args)
   }
@@ -1226,6 +1328,8 @@ func (this *QComboBox) itemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox12itemDelegateEv
+    // invoke: QAbstractItemDelegate * itemDelegate()
+    C._ZNK9QComboBox12itemDelegateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "itemDelegate", args)
   }
@@ -1245,8 +1349,10 @@ func (this *QComboBox) setMaxVisibleItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox18setMaxVisibleItemsEi
+    // invoke: void setMaxVisibleItems(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox18setMaxVisibleItemsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setMaxVisibleItems", args)
   }
@@ -1266,8 +1372,10 @@ func (this *QComboBox) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "event", args)
   }
@@ -1287,8 +1395,10 @@ func (this *QComboBox) setModelColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox14setModelColumnEi
+    // invoke: void setModelColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox14setModelColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setModelColumn", args)
   }
@@ -1309,10 +1419,12 @@ func (this *QComboBox) setItemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setItemTextEiRK7QString
+    // invoke: void setItemText(int, const class QString &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QComboBox11setItemTextEiRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QComboBox", "setItemText", args)
   }
@@ -1332,8 +1444,10 @@ func (this *QComboBox) setLineEdit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox11setLineEditEP9QLineEdit
+    // invoke: void setLineEdit(class QLineEdit *)
     var arg0 = args[0].(QLineEdit).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox11setLineEditEP9QLineEdit(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setLineEdit", args)
   }
@@ -1353,8 +1467,10 @@ func (this *QComboBox) itemIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox8itemIconEi
+    // invoke: QIcon itemIcon(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QComboBox8itemIconEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "itemIcon", args)
   }
@@ -1374,8 +1490,10 @@ func (this *QComboBox) setValidator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox12setValidatorEPK10QValidator
+    // invoke: void setValidator(const class QValidator *)
     var arg0 = args[0].(QValidator).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox12setValidatorEPK10QValidator(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "setValidator", args)
   }
@@ -1395,8 +1513,10 @@ func (this *QComboBox) insertSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QComboBox15insertSeparatorEi
+    // invoke: void insertSeparator(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QComboBox15insertSeparatorEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QComboBox", "insertSeparator", args)
   }
@@ -1415,6 +1535,8 @@ func (this *QComboBox) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QComboBox10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QComboBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QComboBox", "metaObject", args)
   }

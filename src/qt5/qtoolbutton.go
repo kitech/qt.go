@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qtoolbutton.h
 // dst-file: /src/widgets/qtoolbutton.go
 //
@@ -92,8 +92,10 @@ func (this *QToolButton) setAutoRaise(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton12setAutoRaiseEb
+    // invoke: void setAutoRaise(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QToolButton12setAutoRaiseEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setAutoRaise", args)
   }
@@ -112,6 +114,8 @@ func (this *QToolButton) defaultAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton13defaultActionEv
+    // invoke: QAction * defaultAction()
+    C._ZNK11QToolButton13defaultActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "defaultAction", args)
   }
@@ -130,6 +134,8 @@ func (this *QToolButton) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QToolButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "metaObject", args)
   }
@@ -148,6 +154,8 @@ func (this *QToolButton) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK11QToolButton15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "minimumSizeHint", args)
   }
@@ -180,6 +188,8 @@ func (this *QToolButton) showMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton8showMenuEv
+    // invoke: void showMenu()
+    C._ZN11QToolButton8showMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "showMenu", args)
   }
@@ -198,6 +208,8 @@ func (this *QToolButton) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QToolButton8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "sizeHint", args)
   }
@@ -221,6 +233,8 @@ func (this *QToolButton) autoRaise(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton9autoRaiseEv
+    // invoke: bool autoRaise()
+    C._ZNK11QToolButton9autoRaiseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "autoRaise", args)
   }
@@ -239,6 +253,8 @@ func (this *QToolButton) menu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QToolButton4menuEv
+    // invoke: QMenu * menu()
+    C._ZNK11QToolButton4menuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QToolButton", "menu", args)
   }
@@ -258,8 +274,10 @@ func (this *QToolButton) setMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton7setMenuEP5QMenu
+    // invoke: void setMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QToolButton7setMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setMenu", args)
   }
@@ -279,8 +297,10 @@ func (this *QToolButton) setDefaultAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QToolButton16setDefaultActionEP7QAction
+    // invoke: void setDefaultAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QToolButton16setDefaultActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolButton", "setDefaultAction", args)
   }

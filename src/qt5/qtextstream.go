@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.go
 //
@@ -150,8 +150,10 @@ func (this *QTextStreamManipulator) exec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN22QTextStreamManipulator4execER11QTextStream
+    // invoke: void exec(class QTextStream &)
     var arg0 = args[0].(QTextStream).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN22QTextStreamManipulator4execER11QTextStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStreamManipulator", "exec", args)
   }
@@ -175,6 +177,8 @@ func (this *QTextStream) codec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream5codecEv
+    // invoke: QTextCodec * codec()
+    C._ZNK11QTextStream5codecEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "codec", args)
   }
@@ -199,8 +203,10 @@ func (this *QTextStream) setLocale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream9setLocaleERK7QLocale
+    // invoke: void setLocale(const class QLocale &)
     var arg0 = args[0].(QLocale).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream9setLocaleERK7QLocale(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setLocale", args)
   }
@@ -219,6 +225,8 @@ func (this *QTextStream) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK11QTextStream5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "atEnd", args)
   }
@@ -239,10 +247,12 @@ func (this *QTextStream) readLineInto(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream12readLineIntoEP7QStringx
+    // invoke: bool readLineInto(class QString *, qint64)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
+    C._ZN11QTextStream12readLineIntoEP7QStringx(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextStream", "readLineInto", args)
   }
@@ -262,8 +272,10 @@ func (this *QTextStream) setRealNumberPrecision(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream22setRealNumberPrecisionEi
+    // invoke: void setRealNumberPrecision(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream22setRealNumberPrecisionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setRealNumberPrecision", args)
   }
@@ -283,8 +295,10 @@ func (this *QTextStream) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setDevice", args)
   }
@@ -303,6 +317,8 @@ func (this *QTextStream) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream5resetEv
+    // invoke: void reset()
+    C._ZN11QTextStream5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "reset", args)
   }
@@ -322,8 +338,10 @@ func (this *QTextStream) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream4seekEx
+    // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream4seekEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "seek", args)
   }
@@ -342,6 +360,8 @@ func (this *QTextStream) string(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream6stringEv
+    // invoke: QString * string()
+    C._ZNK11QTextStream6stringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "string", args)
   }
@@ -361,8 +381,10 @@ func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream20setAutoDetectUnicodeEb
+    // invoke: void setAutoDetectUnicode(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream20setAutoDetectUnicodeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setAutoDetectUnicode", args)
   }
@@ -381,6 +403,8 @@ func (this *QTextStream) padChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream7padCharEv
+    // invoke: QChar padChar()
+    C._ZNK11QTextStream7padCharEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "padChar", args)
   }
@@ -399,6 +423,8 @@ func (this *QTextStream) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK11QTextStream6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "device", args)
   }
@@ -417,6 +443,8 @@ func (this *QTextStream) resetStatus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream11resetStatusEv
+    // invoke: void resetStatus()
+    C._ZN11QTextStream11resetStatusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "resetStatus", args)
   }
@@ -435,6 +463,8 @@ func (this *QTextStream) autoDetectUnicode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream17autoDetectUnicodeEv
+    // invoke: bool autoDetectUnicode()
+    C._ZNK11QTextStream17autoDetectUnicodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "autoDetectUnicode", args)
   }
@@ -453,6 +483,8 @@ func (this *QTextStream) fieldWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream10fieldWidthEv
+    // invoke: int fieldWidth()
+    C._ZNK11QTextStream10fieldWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "fieldWidth", args)
   }
@@ -471,6 +503,8 @@ func (this *QTextStream) generateByteOrderMark(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream21generateByteOrderMarkEv
+    // invoke: bool generateByteOrderMark()
+    C._ZNK11QTextStream21generateByteOrderMarkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "generateByteOrderMark", args)
   }
@@ -490,8 +524,10 @@ func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream24setGenerateByteOrderMarkEb
+    // invoke: void setGenerateByteOrderMark(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream24setGenerateByteOrderMarkEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setGenerateByteOrderMark", args)
   }
@@ -514,12 +550,16 @@ func (this *QTextStream) setCodec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream8setCodecEP10QTextCodec
+    // invoke: void setCodec(class QTextCodec *)
     var arg0 = args[0].(QTextCodec).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream8setCodecEP10QTextCodec(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN11QTextStream8setCodecEPKc
+    // invoke: void setCodec(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream8setCodecEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setCodec", args)
   }
@@ -538,6 +578,8 @@ func (this *QTextStream) flush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream5flushEv
+    // invoke: void flush()
+    C._ZN11QTextStream5flushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "flush", args)
   }
@@ -557,8 +599,10 @@ func (this *QTextStream) setIntegerBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream14setIntegerBaseEi
+    // invoke: void setIntegerBase(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream14setIntegerBaseEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setIntegerBase", args)
   }
@@ -591,6 +635,8 @@ func (this *QTextStream) locale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream6localeEv
+    // invoke: QLocale locale()
+    C._ZNK11QTextStream6localeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "locale", args)
   }
@@ -610,8 +656,10 @@ func (this *QTextStream) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream4readEx
+    // invoke: QString read(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream4readEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "read", args)
   }
@@ -631,8 +679,10 @@ func (this *QTextStream) setPadChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream10setPadCharE5QChar
+    // invoke: void setPadChar(class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream10setPadCharE5QChar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setPadChar", args)
   }
@@ -651,6 +701,8 @@ func (this *QTextStream) realNumberPrecision(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream19realNumberPrecisionEv
+    // invoke: int realNumberPrecision()
+    C._ZNK11QTextStream19realNumberPrecisionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "realNumberPrecision", args)
   }
@@ -669,6 +721,8 @@ func (this *QTextStream) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream3posEv
+    // invoke: qint64 pos()
+    C._ZNK11QTextStream3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "pos", args)
   }
@@ -687,6 +741,8 @@ func (this *QTextStream) readAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream7readAllEv
+    // invoke: QString readAll()
+    C._ZN11QTextStream7readAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "readAll", args)
   }
@@ -705,6 +761,8 @@ func (this *QTextStream) skipWhiteSpace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream14skipWhiteSpaceEv
+    // invoke: void skipWhiteSpace()
+    C._ZN11QTextStream14skipWhiteSpaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "skipWhiteSpace", args)
   }
@@ -724,8 +782,10 @@ func (this *QTextStream) setFieldWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream13setFieldWidthEi
+    // invoke: void setFieldWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream13setFieldWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "setFieldWidth", args)
   }
@@ -744,6 +804,8 @@ func (this *QTextStream) integerBase(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextStream11integerBaseEv
+    // invoke: int integerBase()
+    C._ZNK11QTextStream11integerBaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextStream", "integerBase", args)
   }
@@ -763,8 +825,10 @@ func (this *QTextStream) readLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextStream8readLineEx
+    // invoke: QString readLine(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextStream8readLineEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStream", "readLine", args)
   }

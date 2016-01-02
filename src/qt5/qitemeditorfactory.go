@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -89,6 +89,8 @@ func (this *QItemEditorCreatorBase) valuePropertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QItemEditorCreatorBase17valuePropertyNameEv
+    // invoke: QByteArray valuePropertyName()
+    C._ZNK22QItemEditorCreatorBase17valuePropertyNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "valuePropertyName", args)
   }
@@ -108,8 +110,10 @@ func (this *QItemEditorCreatorBase) createWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget
+    // invoke: QWidget * createWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemEditorCreatorBase", "createWidget", args)
   }
@@ -148,8 +152,10 @@ func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QItemEditorFactory17valuePropertyNameEi
+    // invoke: QByteArray valuePropertyName(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK18QItemEditorFactory17valuePropertyNameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "valuePropertyName", args)
   }
@@ -198,10 +204,12 @@ func (this *QItemEditorFactory) registerEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase
+    // invoke: void registerEditor(int, class QItemEditorCreatorBase *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QItemEditorCreatorBase).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "registerEditor", args)
   }
@@ -236,10 +244,12 @@ func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QItemEditorFactory12createEditorEiP7QWidget
+    // invoke: QWidget * createEditor(int, class QWidget *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK18QItemEditorFactory12createEditorEiP7QWidget(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "createEditor", args)
   }

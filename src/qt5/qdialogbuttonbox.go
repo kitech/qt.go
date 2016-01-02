@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -86,6 +86,8 @@ func (this *QDialogButtonBox) buttons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox7buttonsEv
+    // invoke: QList<QAbstractButton *> buttons()
+    C._ZNK16QDialogButtonBox7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "buttons", args)
   }
@@ -105,8 +107,10 @@ func (this *QDialogButtonBox) setCenterButtons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox16setCenterButtonsEb
+    // invoke: void setCenterButtons(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QDialogButtonBox16setCenterButtonsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "setCenterButtons", args)
   }
@@ -125,6 +129,8 @@ func (this *QDialogButtonBox) centerButtons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox13centerButtonsEv
+    // invoke: bool centerButtons()
+    C._ZNK16QDialogButtonBox13centerButtonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "centerButtons", args)
   }
@@ -143,6 +149,8 @@ func (this *QDialogButtonBox) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QDialogButtonBox10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QDialogButtonBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "metaObject", args)
   }
@@ -162,8 +170,10 @@ func (this *QDialogButtonBox) removeButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox12removeButtonEP15QAbstractButton
+    // invoke: void removeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "removeButton", args)
   }
@@ -201,6 +211,8 @@ func (this *QDialogButtonBox) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QDialogButtonBox5clearEv
+    // invoke: void clear()
+    C._ZN16QDialogButtonBox5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "clear", args)
   }

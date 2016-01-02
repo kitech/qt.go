@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpixelformat.h
 // dst-file: /src/gui/qpixelformat.go
 //
@@ -95,6 +95,8 @@ func (this *QPixelFormat) blackSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat9blackSizeEv
+    // invoke: uchar blackSize()
+    C._ZNK12QPixelFormat9blackSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "blackSize", args)
   }
@@ -118,6 +120,8 @@ func (this *QPixelFormat) subEnum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat7subEnumEv
+    // invoke: uchar subEnum()
+    C._ZNK12QPixelFormat7subEnumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "subEnum", args)
   }
@@ -136,6 +140,8 @@ func (this *QPixelFormat) greenSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat9greenSizeEv
+    // invoke: uchar greenSize()
+    C._ZNK12QPixelFormat9greenSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "greenSize", args)
   }
@@ -154,6 +160,8 @@ func (this *QPixelFormat) lightnessSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat13lightnessSizeEv
+    // invoke: uchar lightnessSize()
+    C._ZNK12QPixelFormat13lightnessSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "lightnessSize", args)
   }
@@ -172,6 +180,8 @@ func (this *QPixelFormat) bitsPerPixel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat12bitsPerPixelEv
+    // invoke: uchar bitsPerPixel()
+    C._ZNK12QPixelFormat12bitsPerPixelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "bitsPerPixel", args)
   }
@@ -190,6 +200,8 @@ func (this *QPixelFormat) alphaSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat9alphaSizeEv
+    // invoke: uchar alphaSize()
+    C._ZNK12QPixelFormat9alphaSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "alphaSize", args)
   }
@@ -208,6 +220,8 @@ func (this *QPixelFormat) magentaSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat11magentaSizeEv
+    // invoke: uchar magentaSize()
+    C._ZNK12QPixelFormat11magentaSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "magentaSize", args)
   }
@@ -226,6 +240,8 @@ func (this *QPixelFormat) hueSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat7hueSizeEv
+    // invoke: uchar hueSize()
+    C._ZNK12QPixelFormat7hueSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "hueSize", args)
   }
@@ -244,6 +260,8 @@ func (this *QPixelFormat) saturationSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat14saturationSizeEv
+    // invoke: uchar saturationSize()
+    C._ZNK12QPixelFormat14saturationSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "saturationSize", args)
   }
@@ -262,6 +280,8 @@ func (this *QPixelFormat) brightnessSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat14brightnessSizeEv
+    // invoke: uchar brightnessSize()
+    C._ZNK12QPixelFormat14brightnessSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "brightnessSize", args)
   }
@@ -280,6 +300,8 @@ func (this *QPixelFormat) yellowSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat10yellowSizeEv
+    // invoke: uchar yellowSize()
+    C._ZNK12QPixelFormat10yellowSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "yellowSize", args)
   }
@@ -298,6 +320,8 @@ func (this *QPixelFormat) redSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat7redSizeEv
+    // invoke: uchar redSize()
+    C._ZNK12QPixelFormat7redSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "redSize", args)
   }
@@ -316,6 +340,8 @@ func (this *QPixelFormat) blueSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat8blueSizeEv
+    // invoke: uchar blueSize()
+    C._ZNK12QPixelFormat8blueSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "blueSize", args)
   }
@@ -334,6 +360,8 @@ func (this *QPixelFormat) cyanSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat8cyanSizeEv
+    // invoke: uchar cyanSize()
+    C._ZNK12QPixelFormat8cyanSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "cyanSize", args)
   }
@@ -352,6 +380,8 @@ func (this *QPixelFormat) channelCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPixelFormat12channelCountEv
+    // invoke: uchar channelCount()
+    C._ZNK12QPixelFormat12channelCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPixelFormat", "channelCount", args)
   }

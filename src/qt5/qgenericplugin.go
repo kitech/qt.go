@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -78,10 +78,12 @@ func (this *QGenericPlugin) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QGenericPlugin6createERK7QStringS2_
+    // invoke: QObject * create(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN14QGenericPlugin6createERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "create", args)
   }
@@ -114,6 +116,8 @@ func (this *QGenericPlugin) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QGenericPlugin10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QGenericPlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "metaObject", args)
   }

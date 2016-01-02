@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.go
 //
@@ -145,6 +145,8 @@ func (this *QInputDialog) doubleMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog13doubleMaximumEv
+    // invoke: double doubleMaximum()
+    C._ZNK12QInputDialog13doubleMaximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleMaximum", args)
   }
@@ -164,8 +166,10 @@ func (this *QInputDialog) setIntMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog13setIntMaximumEi
+    // invoke: void setIntMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog13setIntMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setIntMaximum", args)
   }
@@ -184,6 +188,8 @@ func (this *QInputDialog) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QInputDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "metaObject", args)
   }
@@ -203,8 +209,10 @@ func (this *QInputDialog) setIntStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog10setIntStepEi
+    // invoke: void setIntStep(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog10setIntStepEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setIntStep", args)
   }
@@ -223,6 +231,8 @@ func (this *QInputDialog) intMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog10intMaximumEv
+    // invoke: int intMaximum()
+    C._ZNK12QInputDialog10intMaximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "intMaximum", args)
   }
@@ -241,6 +251,8 @@ func (this *QInputDialog) intStep(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog7intStepEv
+    // invoke: int intStep()
+    C._ZNK12QInputDialog7intStepEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "intStep", args)
   }
@@ -259,6 +271,8 @@ func (this *QInputDialog) doubleDecimals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog14doubleDecimalsEv
+    // invoke: int doubleDecimals()
+    C._ZNK12QInputDialog14doubleDecimalsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleDecimals", args)
   }
@@ -278,8 +292,10 @@ func (this *QInputDialog) setDoubleDecimals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog17setDoubleDecimalsEi
+    // invoke: void setDoubleDecimals(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog17setDoubleDecimalsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setDoubleDecimals", args)
   }
@@ -299,8 +315,10 @@ func (this *QInputDialog) setIntMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog13setIntMinimumEi
+    // invoke: void setIntMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog13setIntMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setIntMinimum", args)
   }
@@ -320,8 +338,10 @@ func (this *QInputDialog) setTextValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog12setTextValueERK7QString
+    // invoke: void setTextValue(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog12setTextValueERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setTextValue", args)
   }
@@ -341,8 +361,10 @@ func (this *QInputDialog) done(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog4doneEi
+    // invoke: void done(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog4doneEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "done", args)
   }
@@ -381,8 +403,10 @@ func (this *QInputDialog) setLabelText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog12setLabelTextERK7QString
+    // invoke: void setLabelText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog12setLabelTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setLabelText", args)
   }
@@ -401,6 +425,8 @@ func (this *QInputDialog) labelText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog9labelTextEv
+    // invoke: QString labelText()
+    C._ZNK12QInputDialog9labelTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "labelText", args)
   }
@@ -420,8 +446,10 @@ func (this *QInputDialog) setOkButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog15setOkButtonTextERK7QString
+    // invoke: void setOkButtonText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog15setOkButtonTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setOkButtonText", args)
   }
@@ -440,6 +468,8 @@ func (this *QInputDialog) comboBoxItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog13comboBoxItemsEv
+    // invoke: QStringList comboBoxItems()
+    C._ZNK12QInputDialog13comboBoxItemsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "comboBoxItems", args)
   }
@@ -458,6 +488,8 @@ func (this *QInputDialog) intMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog10intMinimumEv
+    // invoke: int intMinimum()
+    C._ZNK12QInputDialog10intMinimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "intMinimum", args)
   }
@@ -477,8 +509,10 @@ func (this *QInputDialog) setComboBoxEditable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog19setComboBoxEditableEb
+    // invoke: void setComboBoxEditable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog19setComboBoxEditableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setComboBoxEditable", args)
   }
@@ -498,8 +532,10 @@ func (this *QInputDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setVisible", args)
   }
@@ -519,8 +555,10 @@ func (this *QInputDialog) setDoubleMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog16setDoubleMinimumEd
+    // invoke: void setDoubleMinimum(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog16setDoubleMinimumEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setDoubleMinimum", args)
   }
@@ -539,6 +577,8 @@ func (this *QInputDialog) doubleMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog13doubleMinimumEv
+    // invoke: double doubleMinimum()
+    C._ZNK12QInputDialog13doubleMinimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleMinimum", args)
   }
@@ -557,6 +597,8 @@ func (this *QInputDialog) cancelButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog16cancelButtonTextEv
+    // invoke: QString cancelButtonText()
+    C._ZNK12QInputDialog16cancelButtonTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "cancelButtonText", args)
   }
@@ -576,8 +618,10 @@ func (this *QInputDialog) setComboBoxItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog16setComboBoxItemsERK11QStringList
+    // invoke: void setComboBoxItems(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog16setComboBoxItemsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setComboBoxItems", args)
   }
@@ -596,6 +640,8 @@ func (this *QInputDialog) isComboBoxEditable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog18isComboBoxEditableEv
+    // invoke: bool isComboBoxEditable()
+    C._ZNK12QInputDialog18isComboBoxEditableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "isComboBoxEditable", args)
   }
@@ -616,10 +662,12 @@ func (this *QInputDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog4openEP7QObjectPKc
+    // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
+    C._ZN12QInputDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QInputDialog", "open", args)
   }
@@ -638,6 +686,8 @@ func (this *QInputDialog) okButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog12okButtonTextEv
+    // invoke: QString okButtonText()
+    C._ZNK12QInputDialog12okButtonTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "okButtonText", args)
   }
@@ -656,6 +706,8 @@ func (this *QInputDialog) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK12QInputDialog8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "sizeHint", args)
   }
@@ -676,10 +728,12 @@ func (this *QInputDialog) setIntRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog11setIntRangeEii
+    // invoke: void setIntRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QInputDialog11setIntRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QInputDialog", "setIntRange", args)
   }
@@ -698,6 +752,8 @@ func (this *QInputDialog) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK12QInputDialog15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "minimumSizeHint", args)
   }
@@ -717,8 +773,10 @@ func (this *QInputDialog) setDoubleValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog14setDoubleValueEd
+    // invoke: void setDoubleValue(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog14setDoubleValueEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setDoubleValue", args)
   }
@@ -738,8 +796,10 @@ func (this *QInputDialog) setIntValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog11setIntValueEi
+    // invoke: void setIntValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog11setIntValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setIntValue", args)
   }
@@ -758,6 +818,8 @@ func (this *QInputDialog) doubleValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog11doubleValueEv
+    // invoke: double doubleValue()
+    C._ZNK12QInputDialog11doubleValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleValue", args)
   }
@@ -777,8 +839,10 @@ func (this *QInputDialog) setCancelButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog19setCancelButtonTextERK7QString
+    // invoke: void setCancelButtonText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog19setCancelButtonTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setCancelButtonText", args)
   }
@@ -797,6 +861,8 @@ func (this *QInputDialog) textValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog9textValueEv
+    // invoke: QString textValue()
+    C._ZNK12QInputDialog9textValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "textValue", args)
   }
@@ -816,8 +882,10 @@ func (this *QInputDialog) setDoubleMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog16setDoubleMaximumEd
+    // invoke: void setDoubleMaximum(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QInputDialog16setDoubleMaximumEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QInputDialog", "setDoubleMaximum", args)
   }
@@ -836,6 +904,8 @@ func (this *QInputDialog) intValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QInputDialog8intValueEv
+    // invoke: int intValue()
+    C._ZNK12QInputDialog8intValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QInputDialog", "intValue", args)
   }
@@ -856,10 +926,12 @@ func (this *QInputDialog) setDoubleRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QInputDialog14setDoubleRangeEdd
+    // invoke: void setDoubleRange(double, double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C._ZN12QInputDialog14setDoubleRangeEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QInputDialog", "setDoubleRange", args)
   }

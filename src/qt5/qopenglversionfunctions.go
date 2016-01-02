@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -37,7 +37,7 @@ extern void _ZN31QAbstractOpenGLFunctionsPrivate22insertFunctionsBackendEP14QOpe
   // proto: static void QAbstractOpenGLFunctionsPrivate::insertExternalFunctions(QOpenGLContext * context, QAbstractOpenGLFunctions * f);
 extern void _ZN31QAbstractOpenGLFunctionsPrivate23insertExternalFunctionsEP14QOpenGLContextP24QAbstractOpenGLFunctions(void* arg0, void* arg1);
   // proto: static QAbstractOpenGLFunctionsPrivate * QAbstractOpenGLFunctionsPrivate::get(QAbstractOpenGLFunctions * q);
-extern void _ZN31QAbstractOpenGLFunctionsPrivate3getEP24QAbstractOpenGLFunctions(void* arg0);
+extern void demth_ZN31QAbstractOpenGLFunctionsPrivate3getEP24QAbstractOpenGLFunctions(void* arg0);
   // proto: static QOpenGLVersionFunctionsBackend * QAbstractOpenGLFunctionsPrivate::functionsBackend(QOpenGLContext * context, const QOpenGLVersionStatus & v);
 extern void _ZN31QAbstractOpenGLFunctionsPrivate16functionsBackendEP14QOpenGLContextRK20QOpenGLVersionStatus(void* arg0, void* arg1);
   // proto: static void QAbstractOpenGLFunctionsPrivate::removeFunctionsBackend(QOpenGLContext * context, const QOpenGLVersionStatus & v);
@@ -824,6 +824,8 @@ func (this *QAbstractOpenGLFunctions) initializeOpenGLFunctions(args ...interfac
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv
+    // invoke: bool initializeOpenGLFunctions()
+    C._ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "initializeOpenGLFunctions", args)
   }
@@ -849,8 +851,8 @@ func (this *QAbstractOpenGLFunctions) d_func(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions6d_funcEv
-  case 1:
-    // invoke: _ZNK24QAbstractOpenGLFunctions6d_funcEv
+    // invoke: QAbstractOpenGLFunctionsPrivate * d_func()
+    C._ZN24QAbstractOpenGLFunctions6d_funcEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "d_func", args)
   }

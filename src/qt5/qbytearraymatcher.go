@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qbytearraymatcher.h
 // dst-file: /src/core/qbytearraymatcher.go
 //
@@ -84,6 +84,8 @@ func (this *QByteArrayMatcher) pattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QByteArrayMatcher7patternEv
+    // invoke: QByteArray pattern()
+    C.demth_ZNK17QByteArrayMatcher7patternEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "pattern", args)
   }
@@ -109,18 +111,22 @@ func (this *QByteArrayMatcher) indexIn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QByteArrayMatcher7indexInEPKcii
+    // invoke: int indexIn(const char *, int, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZNK17QByteArrayMatcher7indexInEPKcii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK17QByteArrayMatcher7indexInERK10QByteArrayi
+    // invoke: int indexIn(const class QByteArray &, int)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK17QByteArrayMatcher7indexInERK10QByteArrayi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "indexIn", args)
   }
@@ -140,8 +146,10 @@ func (this *QByteArrayMatcher) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QByteArrayMatcher10setPatternERK10QByteArray
+    // invoke: void setPattern(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QByteArrayMatcher10setPatternERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QByteArrayMatcher", "setPattern", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -88,6 +88,8 @@ func (this *QTextBoundaryFinder) isAtBoundary(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder12isAtBoundaryEv
+    // invoke: bool isAtBoundary()
+    C._ZNK19QTextBoundaryFinder12isAtBoundaryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isAtBoundary", args)
   }
@@ -106,6 +108,8 @@ func (this *QTextBoundaryFinder) toNextBoundary(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder14toNextBoundaryEv
+    // invoke: int toNextBoundary()
+    C._ZN19QTextBoundaryFinder14toNextBoundaryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toNextBoundary", args)
   }
@@ -124,6 +128,8 @@ func (this *QTextBoundaryFinder) toEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder5toEndEv
+    // invoke: void toEnd()
+    C._ZN19QTextBoundaryFinder5toEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toEnd", args)
   }
@@ -148,8 +154,10 @@ func (this *QTextBoundaryFinder) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder11setPositionEi
+    // invoke: void setPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN19QTextBoundaryFinder11setPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "setPosition", args)
   }
@@ -168,6 +176,8 @@ func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder18toPreviousBoundaryEv
+    // invoke: int toPreviousBoundary()
+    C._ZN19QTextBoundaryFinder18toPreviousBoundaryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toPreviousBoundary", args)
   }
@@ -186,6 +196,8 @@ func (this *QTextBoundaryFinder) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder7isValidEv
+    // invoke: bool isValid()
+    C.demth_ZNK19QTextBoundaryFinder7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isValid", args)
   }
@@ -218,6 +230,8 @@ func (this *QTextBoundaryFinder) string(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder6stringEv
+    // invoke: QString string()
+    C._ZNK19QTextBoundaryFinder6stringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "string", args)
   }
@@ -236,6 +250,8 @@ func (this *QTextBoundaryFinder) toStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder7toStartEv
+    // invoke: void toStart()
+    C._ZN19QTextBoundaryFinder7toStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toStart", args)
   }
@@ -254,6 +270,8 @@ func (this *QTextBoundaryFinder) position(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder8positionEv
+    // invoke: int position()
+    C._ZNK19QTextBoundaryFinder8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "position", args)
   }

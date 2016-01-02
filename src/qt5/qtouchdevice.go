@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -78,8 +78,10 @@ func (this *QTouchDevice) setName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice7setNameERK7QString
+    // invoke: void setName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QTouchDevice7setNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchDevice", "setName", args)
   }
@@ -98,6 +100,8 @@ func (this *QTouchDevice) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTouchDevice4nameEv
+    // invoke: QString name()
+    C._ZNK12QTouchDevice4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchDevice", "name", args)
   }
@@ -117,8 +121,10 @@ func (this *QTouchDevice) setMaximumTouchPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTouchDevice21setMaximumTouchPointsEi
+    // invoke: void setMaximumTouchPoints(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QTouchDevice21setMaximumTouchPointsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTouchDevice", "setMaximumTouchPoints", args)
   }
@@ -170,6 +176,8 @@ func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTouchDevice18maximumTouchPointsEv
+    // invoke: int maximumTouchPoints()
+    C._ZNK12QTouchDevice18maximumTouchPointsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTouchDevice", "maximumTouchPoints", args)
   }

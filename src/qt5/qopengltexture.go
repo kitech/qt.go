@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.go
 //
@@ -189,12 +189,8 @@ func (this *QOpenGLTexture) bind(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture4bindEv
-  case 1:
-    // invoke: _ZN14QOpenGLTexture4bindEjNS_16TextureUnitResetE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int(args[1].(int32))
-    if false {fmt.Println(arg1)}
+    // invoke: void bind()
+    C._ZN14QOpenGLTexture4bindEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "bind", args)
   }
@@ -214,8 +210,10 @@ func (this *QOpenGLTexture) setFixedSamplePositions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture23setFixedSamplePositionsEb
+    // invoke: void setFixedSamplePositions(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture23setFixedSamplePositionsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setFixedSamplePositions", args)
   }
@@ -234,6 +232,8 @@ func (this *QOpenGLTexture) height(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture6heightEv
+    // invoke: int height()
+    C._ZNK14QOpenGLTexture6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "height", args)
   }
@@ -252,6 +252,8 @@ func (this *QOpenGLTexture) isAutoMipMapGenerationEnabled(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv
+    // invoke: bool isAutoMipMapGenerationEnabled()
+    C._ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isAutoMipMapGenerationEnabled", args)
   }
@@ -320,28 +322,17 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, const void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2)
   case 1:
-    // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiNS_11CubeMapFaceEiPvPK27QOpenGLPixelTransferOptions
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int(args[2].(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(unsafe.Pointer)
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QOpenGLPixelTransferOptions).qclsinst
-    if false {fmt.Println(arg5)}
-  case 2:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, int, const void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -350,8 +341,10 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg3)}
-  case 3:
+    C._ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2, arg3)
+  case 2:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, int, int, const void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -362,30 +355,20 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg4)}
-  case 4:
+    C._ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+  case 3:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg2)}
-  case 5:
-    // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiNS_11CubeMapFaceEiPKvPK27QOpenGLPixelTransferOptions
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int(args[2].(int32))
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    var arg4 = args[4].(unsafe.Pointer)
-    if false {fmt.Println(arg4)}
-    var arg5 = args[5].(QOpenGLPixelTransferOptions).qclsinst
-    if false {fmt.Println(arg5)}
-  case 6:
+    C._ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2)
+  case 4:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, int, int, void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -396,8 +379,10 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg4)}
-  case 7:
+    C._ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+  case 5:
     // invoke: _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions
+    // invoke: void setCompressedData(int, int, void *, const class QOpenGLPixelTransferOptions *const)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -406,6 +391,7 @@ func (this *QOpenGLTexture) setCompressedData(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg3)}
+    C._ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setCompressedData", args)
   }
@@ -425,8 +411,10 @@ func (this *QOpenGLTexture) setMaximumLevelOfDetail(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf
+    // invoke: void setMaximumLevelOfDetail(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMaximumLevelOfDetail", args)
   }
@@ -446,8 +434,10 @@ func (this *QOpenGLTexture) setAutoMipMapGenerationEnabled(args ...interface{}) 
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb
+    // invoke: void setAutoMipMapGenerationEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setAutoMipMapGenerationEnabled", args)
   }
@@ -466,6 +456,8 @@ func (this *QOpenGLTexture) depth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5depthEv
+    // invoke: int depth()
+    C._ZNK14QOpenGLTexture5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "depth", args)
   }
@@ -488,12 +480,16 @@ func (this *QOpenGLTexture) generateMipMaps(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture15generateMipMapsEib
+    // invoke: void generateMipMaps(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN14QOpenGLTexture15generateMipMapsEib(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN14QOpenGLTexture15generateMipMapsEv
+    // invoke: void generateMipMaps()
+    C._ZN14QOpenGLTexture15generateMipMapsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "generateMipMaps", args)
   }
@@ -513,8 +509,10 @@ func (this *QOpenGLTexture) setMipBaseLevel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture15setMipBaseLevelEi
+    // invoke: void setMipBaseLevel(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture15setMipBaseLevelEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMipBaseLevel", args)
   }
@@ -533,6 +531,8 @@ func (this *QOpenGLTexture) levelOfDetailRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture18levelOfDetailRangeEv
+    // invoke: QPair<float, float> levelOfDetailRange()
+    C._ZNK14QOpenGLTexture18levelOfDetailRangeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "levelOfDetailRange", args)
   }
@@ -551,6 +551,8 @@ func (this *QOpenGLTexture) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture6createEv
+    // invoke: bool create()
+    C._ZN14QOpenGLTexture6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "create", args)
   }
@@ -571,10 +573,12 @@ func (this *QOpenGLTexture) setLevelOfDetailRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture21setLevelOfDetailRangeEff
+    // invoke: void setLevelOfDetailRange(float, float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
+    C._ZN14QOpenGLTexture21setLevelOfDetailRangeEff(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setLevelOfDetailRange", args)
   }
@@ -602,18 +606,26 @@ func (this *QOpenGLTexture) borderColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture11borderColorEPj
+    // invoke: void borderColor(unsigned int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QOpenGLTexture11borderColorEPj(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QOpenGLTexture11borderColorEPi
+    // invoke: void borderColor(int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QOpenGLTexture11borderColorEPi(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QOpenGLTexture11borderColorEPf
+    // invoke: void borderColor(float *)
     var arg0 = (*C.float)(args[0].(*float32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QOpenGLTexture11borderColorEPf(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK14QOpenGLTexture11borderColorEv
+    // invoke: QColor borderColor()
+    C._ZNK14QOpenGLTexture11borderColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "borderColor", args)
   }
@@ -632,6 +644,8 @@ func (this *QOpenGLTexture) isStorageAllocated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture18isStorageAllocatedEv
+    // invoke: bool isStorageAllocated()
+    C._ZNK14QOpenGLTexture18isStorageAllocatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isStorageAllocated", args)
   }
@@ -650,6 +664,8 @@ func (this *QOpenGLTexture) isTextureView(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture13isTextureViewEv
+    // invoke: bool isTextureView()
+    C._ZNK14QOpenGLTexture13isTextureViewEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isTextureView", args)
   }
@@ -668,6 +684,8 @@ func (this *QOpenGLTexture) isFixedSamplePositions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture22isFixedSamplePositionsEv
+    // invoke: bool isFixedSamplePositions()
+    C._ZNK14QOpenGLTexture22isFixedSamplePositionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isFixedSamplePositions", args)
   }
@@ -686,6 +704,8 @@ func (this *QOpenGLTexture) faces(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5facesEv
+    // invoke: int faces()
+    C._ZNK14QOpenGLTexture5facesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "faces", args)
   }
@@ -705,8 +725,10 @@ func (this *QOpenGLTexture) setLayers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture9setLayersEi
+    // invoke: void setLayers(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture9setLayersEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setLayers", args)
   }
@@ -725,6 +747,8 @@ func (this *QOpenGLTexture) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5widthEv
+    // invoke: int width()
+    C._ZNK14QOpenGLTexture5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "width", args)
   }
@@ -743,6 +767,8 @@ func (this *QOpenGLTexture) layers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture6layersEv
+    // invoke: int layers()
+    C._ZNK14QOpenGLTexture6layersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "layers", args)
   }
@@ -761,6 +787,8 @@ func (this *QOpenGLTexture) minimumLevelOfDetail(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture20minimumLevelOfDetailEv
+    // invoke: float minimumLevelOfDetail()
+    C._ZNK14QOpenGLTexture20minimumLevelOfDetailEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "minimumLevelOfDetail", args)
   }
@@ -798,6 +826,7 @@ func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture14setBorderColorEiiii
+    // invoke: void setBorderColor(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -806,8 +835,10 @@ func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN14QOpenGLTexture14setBorderColorEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN14QOpenGLTexture14setBorderColorEjjjj
+    // invoke: void setBorderColor(uint, uint, uint, uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -816,12 +847,16 @@ func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN14QOpenGLTexture14setBorderColorEjjjj(this.qclsinst, arg0, arg1, arg2, arg3)
   case 2:
     // invoke: _ZN14QOpenGLTexture14setBorderColorE6QColor
+    // invoke: void setBorderColor(class QColor)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture14setBorderColorE6QColor(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN14QOpenGLTexture14setBorderColorEffff
+    // invoke: void setBorderColor(float, float, float, float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
@@ -830,6 +865,7 @@ func (this *QOpenGLTexture) setBorderColor(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.float(args[3].(float32))
     if false {fmt.Println(arg3)}
+    C._ZN14QOpenGLTexture14setBorderColorEffff(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setBorderColor", args)
   }
@@ -849,8 +885,10 @@ func (this *QOpenGLTexture) setMinimumLevelOfDetail(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf
+    // invoke: void setMinimumLevelOfDetail(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMinimumLevelOfDetail", args)
   }
@@ -870,8 +908,10 @@ func (this *QOpenGLTexture) setMipLevels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture12setMipLevelsEi
+    // invoke: void setMipLevels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture12setMipLevelsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMipLevels", args)
   }
@@ -890,6 +930,8 @@ func (this *QOpenGLTexture) mipLevelRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture13mipLevelRangeEv
+    // invoke: QPair<int, int> mipLevelRange()
+    C._ZNK14QOpenGLTexture13mipLevelRangeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipLevelRange", args)
   }
@@ -909,8 +951,10 @@ func (this *QOpenGLTexture) setMipMaxLevel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture14setMipMaxLevelEi
+    // invoke: void setMipMaxLevel(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture14setMipMaxLevelEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMipMaxLevel", args)
   }
@@ -929,6 +973,8 @@ func (this *QOpenGLTexture) levelofDetailBias(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture17levelofDetailBiasEv
+    // invoke: float levelofDetailBias()
+    C._ZNK14QOpenGLTexture17levelofDetailBiasEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "levelofDetailBias", args)
   }
@@ -947,6 +993,8 @@ func (this *QOpenGLTexture) maximumMipLevels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture16maximumMipLevelsEv
+    // invoke: int maximumMipLevels()
+    C._ZNK14QOpenGLTexture16maximumMipLevelsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumMipLevels", args)
   }
@@ -968,10 +1016,14 @@ func (this *QOpenGLTexture) isBound(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture7isBoundEj
+    // invoke: bool isBound(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture7isBoundEj(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QOpenGLTexture7isBoundEv
+    // invoke: bool isBound()
+    C._ZNK14QOpenGLTexture7isBoundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isBound", args)
   }
@@ -991,8 +1043,10 @@ func (this *QOpenGLTexture) setMaximumAnisotropy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture20setMaximumAnisotropyEf
+    // invoke: void setMaximumAnisotropy(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture20setMaximumAnisotropyEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMaximumAnisotropy", args)
   }
@@ -1012,8 +1066,10 @@ func (this *QOpenGLTexture) setSamples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture10setSamplesEi
+    // invoke: void setSamples(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture10setSamplesEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setSamples", args)
   }
@@ -1032,6 +1088,8 @@ func (this *QOpenGLTexture) mipLevels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9mipLevelsEv
+    // invoke: int mipLevels()
+    C._ZNK14QOpenGLTexture9mipLevelsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipLevels", args)
   }
@@ -1051,8 +1109,10 @@ func (this *QOpenGLTexture) setLevelofDetailBias(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture20setLevelofDetailBiasEf
+    // invoke: void setLevelofDetailBias(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
+    C._ZN14QOpenGLTexture20setLevelofDetailBiasEf(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setLevelofDetailBias", args)
   }
@@ -1071,6 +1131,8 @@ func (this *QOpenGLTexture) textureId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9textureIdEv
+    // invoke: GLuint textureId()
+    C._ZNK14QOpenGLTexture9textureIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "textureId", args)
   }
@@ -1091,10 +1153,12 @@ func (this *QOpenGLTexture) setMipLevelRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture16setMipLevelRangeEii
+    // invoke: void setMipLevelRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN14QOpenGLTexture16setMipLevelRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setMipLevelRange", args)
   }
@@ -1116,13 +1180,9 @@ func (this *QOpenGLTexture) allocateStorage(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN14QOpenGLTexture15allocateStorageENS_11PixelFormatENS_9PixelTypeE
-    var arg0 = C.int(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 1:
     // invoke: _ZN14QOpenGLTexture15allocateStorageEv
+    // invoke: void allocateStorage()
+    C._ZN14QOpenGLTexture15allocateStorageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "allocateStorage", args)
   }
@@ -1155,6 +1215,8 @@ func (this *QOpenGLTexture) mipMaxLevel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture11mipMaxLevelEv
+    // invoke: int mipMaxLevel()
+    C._ZNK14QOpenGLTexture11mipMaxLevelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipMaxLevel", args)
   }
@@ -1173,6 +1235,8 @@ func (this *QOpenGLTexture) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture7destroyEv
+    // invoke: void destroy()
+    C._ZN14QOpenGLTexture7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "destroy", args)
   }
@@ -1194,13 +1258,9 @@ func (this *QOpenGLTexture) release(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN14QOpenGLTexture7releaseEjNS_16TextureUnitResetE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int(args[1].(int32))
-    if false {fmt.Println(arg1)}
-  case 1:
     // invoke: _ZN14QOpenGLTexture7releaseEv
+    // invoke: void release()
+    C._ZN14QOpenGLTexture7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "release", args)
   }
@@ -1219,6 +1279,8 @@ func (this *QOpenGLTexture) maximumAnisotropy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture17maximumAnisotropyEv
+    // invoke: float maximumAnisotropy()
+    C._ZNK14QOpenGLTexture17maximumAnisotropyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumAnisotropy", args)
   }
@@ -1237,6 +1299,8 @@ func (this *QOpenGLTexture) maximumLevelOfDetail(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture20maximumLevelOfDetailEv
+    // invoke: float maximumLevelOfDetail()
+    C._ZNK14QOpenGLTexture20maximumLevelOfDetailEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumLevelOfDetail", args)
   }
@@ -1258,12 +1322,14 @@ func (this *QOpenGLTexture) setSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QOpenGLTexture7setSizeEiii
+    // invoke: void setSize(int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN14QOpenGLTexture7setSizeEiii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "setSize", args)
   }
@@ -1282,6 +1348,8 @@ func (this *QOpenGLTexture) isCreated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9isCreatedEv
+    // invoke: bool isCreated()
+    C._ZNK14QOpenGLTexture9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isCreated", args)
   }
@@ -1300,6 +1368,8 @@ func (this *QOpenGLTexture) samples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture7samplesEv
+    // invoke: int samples()
+    C._ZNK14QOpenGLTexture7samplesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "samples", args)
   }
@@ -1318,6 +1388,8 @@ func (this *QOpenGLTexture) mipBaseLevel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QOpenGLTexture12mipBaseLevelEv
+    // invoke: int mipBaseLevel()
+    C._ZNK14QOpenGLTexture12mipBaseLevelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipBaseLevel", args)
   }

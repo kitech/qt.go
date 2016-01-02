@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -250,6 +250,8 @@ func (this *QSwipeGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSwipeGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QSwipeGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSwipeGesture", "metaObject", args)
   }
@@ -269,8 +271,10 @@ func (this *QSwipeGesture) setSwipeAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSwipeGesture13setSwipeAngleEd
+    // invoke: void setSwipeAngle(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QSwipeGesture13setSwipeAngleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSwipeGesture", "setSwipeAngle", args)
   }
@@ -294,6 +298,8 @@ func (this *QSwipeGesture) swipeAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSwipeGesture10swipeAngleEv
+    // invoke: qreal swipeAngle()
+    C._ZNK13QSwipeGesture10swipeAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSwipeGesture", "swipeAngle", args)
   }
@@ -312,6 +318,8 @@ func (this *QGesture) hotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QGesture7hotSpotEv
+    // invoke: QPointF hotSpot()
+    C._ZNK8QGesture7hotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGesture", "hotSpot", args)
   }
@@ -330,6 +338,8 @@ func (this *QGesture) hasHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QGesture10hasHotSpotEv
+    // invoke: bool hasHotSpot()
+    C._ZNK8QGesture10hasHotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGesture", "hasHotSpot", args)
   }
@@ -348,6 +358,8 @@ func (this *QGesture) unsetHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QGesture12unsetHotSpotEv
+    // invoke: void unsetHotSpot()
+    C._ZN8QGesture12unsetHotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGesture", "unsetHotSpot", args)
   }
@@ -366,6 +378,8 @@ func (this *QGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK8QGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGesture", "metaObject", args)
   }
@@ -390,8 +404,10 @@ func (this *QGesture) setHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QGesture10setHotSpotERK7QPointF
+    // invoke: void setHotSpot(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QGesture10setHotSpotERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGesture", "setHotSpot", args)
   }
@@ -428,12 +444,10 @@ func (this *QGestureEvent) isAccepted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent10isAcceptedEP8QGesture
+    // invoke: bool isAccepted(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZNK13QGestureEvent10isAcceptedEN2Qt11GestureTypeE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZNK13QGestureEvent10isAcceptedEP8QGesture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureEvent", "isAccepted", args)
   }
@@ -452,6 +466,8 @@ func (this *QGestureEvent) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent6widgetEv
+    // invoke: QWidget * widget()
+    C._ZNK13QGestureEvent6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGestureEvent", "widget", args)
   }
@@ -474,12 +490,10 @@ func (this *QGestureEvent) ignore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent6ignoreEP8QGesture
+    // invoke: void ignore(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN13QGestureEvent6ignoreEN2Qt11GestureTypeE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZN13QGestureEvent6ignoreEP8QGesture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureEvent", "ignore", args)
   }
@@ -502,12 +516,10 @@ func (this *QGestureEvent) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent6acceptEP8QGesture
+    // invoke: void accept(class QGesture *)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN13QGestureEvent6acceptEN2Qt11GestureTypeE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZN13QGestureEvent6acceptEP8QGesture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureEvent", "accept", args)
   }
@@ -526,6 +538,8 @@ func (this *QGestureEvent) activeGestures(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent14activeGesturesEv
+    // invoke: QList<QGesture *> activeGestures()
+    C._ZNK13QGestureEvent14activeGesturesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGestureEvent", "activeGestures", args)
   }
@@ -544,6 +558,8 @@ func (this *QGestureEvent) gestures(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent8gesturesEv
+    // invoke: QList<QGesture *> gestures()
+    C._ZNK13QGestureEvent8gesturesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGestureEvent", "gestures", args)
   }
@@ -567,17 +583,13 @@ func (this *QGestureEvent) setAccepted(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN13QGestureEvent11setAcceptedEN2Qt11GestureTypeEb
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
-    if false {fmt.Println(arg1)}
-  case 1:
     // invoke: _ZN13QGestureEvent11setAcceptedEP8QGestureb
+    // invoke: void setAccepted(class QGesture *, _Bool)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN13QGestureEvent11setAcceptedEP8QGestureb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGestureEvent", "setAccepted", args)
   }
@@ -597,8 +609,10 @@ func (this *QGestureEvent) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QGestureEvent9setWidgetEP7QWidget
+    // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QGestureEvent9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureEvent", "setWidget", args)
   }
@@ -631,6 +645,8 @@ func (this *QGestureEvent) canceledGestures(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent16canceledGesturesEv
+    // invoke: QList<QGesture *> canceledGestures()
+    C._ZNK13QGestureEvent16canceledGesturesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGestureEvent", "canceledGestures", args)
   }
@@ -650,8 +666,10 @@ func (this *QGestureEvent) mapToGraphicsScene(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF
+    // invoke: QPointF mapToGraphicsScene(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QGestureEvent18mapToGraphicsSceneERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGestureEvent", "mapToGraphicsScene", args)
   }
@@ -670,6 +688,8 @@ func (this *QPanGesture) offset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPanGesture6offsetEv
+    // invoke: QPointF offset()
+    C._ZNK11QPanGesture6offsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "offset", args)
   }
@@ -688,6 +708,8 @@ func (this *QPanGesture) delta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPanGesture5deltaEv
+    // invoke: QPointF delta()
+    C._ZNK11QPanGesture5deltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "delta", args)
   }
@@ -707,8 +729,10 @@ func (this *QPanGesture) setOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture9setOffsetERK7QPointF
+    // invoke: void setOffset(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QPanGesture9setOffsetERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPanGesture", "setOffset", args)
   }
@@ -727,6 +751,8 @@ func (this *QPanGesture) acceleration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPanGesture12accelerationEv
+    // invoke: qreal acceleration()
+    C._ZNK11QPanGesture12accelerationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "acceleration", args)
   }
@@ -764,6 +790,8 @@ func (this *QPanGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPanGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QPanGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "metaObject", args)
   }
@@ -783,8 +811,10 @@ func (this *QPanGesture) setAcceleration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture15setAccelerationEd
+    // invoke: void setAcceleration(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN11QPanGesture15setAccelerationEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPanGesture", "setAcceleration", args)
   }
@@ -803,6 +833,8 @@ func (this *QPanGesture) lastOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPanGesture10lastOffsetEv
+    // invoke: QPointF lastOffset()
+    C._ZNK11QPanGesture10lastOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPanGesture", "lastOffset", args)
   }
@@ -822,8 +854,10 @@ func (this *QPanGesture) setLastOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPanGesture13setLastOffsetERK7QPointF
+    // invoke: void setLastOffset(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QPanGesture13setLastOffsetERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPanGesture", "setLastOffset", args)
   }
@@ -861,6 +895,8 @@ func (this *QTapAndHoldGesture) position(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QTapAndHoldGesture8positionEv
+    // invoke: QPointF position()
+    C._ZNK18QTapAndHoldGesture8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "position", args)
   }
@@ -907,6 +943,8 @@ func (this *QTapAndHoldGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QTapAndHoldGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QTapAndHoldGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "metaObject", args)
   }
@@ -926,8 +964,10 @@ func (this *QTapAndHoldGesture) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QTapAndHoldGesture11setPositionERK7QPointF
+    // invoke: void setPosition(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QTapAndHoldGesture11setPositionERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTapAndHoldGesture", "setPosition", args)
   }
@@ -946,6 +986,8 @@ func (this *QTapGesture) position(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTapGesture8positionEv
+    // invoke: QPointF position()
+    C._ZNK11QTapGesture8positionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTapGesture", "position", args)
   }
@@ -965,8 +1007,10 @@ func (this *QTapGesture) setPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTapGesture11setPositionERK7QPointF
+    // invoke: void setPosition(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QTapGesture11setPositionERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTapGesture", "setPosition", args)
   }
@@ -990,6 +1034,8 @@ func (this *QTapGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTapGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QTapGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTapGesture", "metaObject", args)
   }
@@ -1023,8 +1069,10 @@ func (this *QPinchGesture) setRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture16setRotationAngleEd
+    // invoke: void setRotationAngle(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture16setRotationAngleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setRotationAngle", args)
   }
@@ -1043,6 +1091,8 @@ func (this *QPinchGesture) lastScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture15lastScaleFactorEv
+    // invoke: qreal lastScaleFactor()
+    C._ZNK13QPinchGesture15lastScaleFactorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastScaleFactor", args)
   }
@@ -1061,6 +1111,8 @@ func (this *QPinchGesture) lastRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture17lastRotationAngleEv
+    // invoke: qreal lastRotationAngle()
+    C._ZNK13QPinchGesture17lastRotationAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastRotationAngle", args)
   }
@@ -1079,6 +1131,8 @@ func (this *QPinchGesture) startCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture16startCenterPointEv
+    // invoke: QPointF startCenterPoint()
+    C._ZNK13QPinchGesture16startCenterPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "startCenterPoint", args)
   }
@@ -1097,6 +1151,8 @@ func (this *QPinchGesture) rotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture13rotationAngleEv
+    // invoke: qreal rotationAngle()
+    C._ZNK13QPinchGesture13rotationAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "rotationAngle", args)
   }
@@ -1115,6 +1171,8 @@ func (this *QPinchGesture) lastCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture15lastCenterPointEv
+    // invoke: QPointF lastCenterPoint()
+    C._ZNK13QPinchGesture15lastCenterPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "lastCenterPoint", args)
   }
@@ -1138,6 +1196,8 @@ func (this *QPinchGesture) totalScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture16totalScaleFactorEv
+    // invoke: qreal totalScaleFactor()
+    C._ZNK13QPinchGesture16totalScaleFactorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "totalScaleFactor", args)
   }
@@ -1157,8 +1217,10 @@ func (this *QPinchGesture) setTotalScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture19setTotalScaleFactorEd
+    // invoke: void setTotalScaleFactor(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture19setTotalScaleFactorEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setTotalScaleFactor", args)
   }
@@ -1177,6 +1239,8 @@ func (this *QPinchGesture) totalRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture18totalRotationAngleEv
+    // invoke: qreal totalRotationAngle()
+    C._ZNK13QPinchGesture18totalRotationAngleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "totalRotationAngle", args)
   }
@@ -1196,8 +1260,10 @@ func (this *QPinchGesture) setLastScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture18setLastScaleFactorEd
+    // invoke: void setLastScaleFactor(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture18setLastScaleFactorEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastScaleFactor", args)
   }
@@ -1217,8 +1283,10 @@ func (this *QPinchGesture) setLastCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture18setLastCenterPointERK7QPointF
+    // invoke: void setLastCenterPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture18setLastCenterPointERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastCenterPoint", args)
   }
@@ -1237,6 +1305,8 @@ func (this *QPinchGesture) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QPinchGesture10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "metaObject", args)
   }
@@ -1256,8 +1326,10 @@ func (this *QPinchGesture) setLastRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture20setLastRotationAngleEd
+    // invoke: void setLastRotationAngle(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture20setLastRotationAngleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setLastRotationAngle", args)
   }
@@ -1276,6 +1348,8 @@ func (this *QPinchGesture) centerPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture11centerPointEv
+    // invoke: QPointF centerPoint()
+    C._ZNK13QPinchGesture11centerPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "centerPoint", args)
   }
@@ -1295,8 +1369,10 @@ func (this *QPinchGesture) setCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture14setCenterPointERK7QPointF
+    // invoke: void setCenterPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture14setCenterPointERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setCenterPoint", args)
   }
@@ -1316,8 +1392,10 @@ func (this *QPinchGesture) setTotalRotationAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture21setTotalRotationAngleEd
+    // invoke: void setTotalRotationAngle(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture21setTotalRotationAngleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setTotalRotationAngle", args)
   }
@@ -1337,8 +1415,10 @@ func (this *QPinchGesture) setScaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture14setScaleFactorEd
+    // invoke: void setScaleFactor(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture14setScaleFactorEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setScaleFactor", args)
   }
@@ -1372,8 +1452,10 @@ func (this *QPinchGesture) setStartCenterPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPinchGesture19setStartCenterPointERK7QPointF
+    // invoke: void setStartCenterPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QPinchGesture19setStartCenterPointERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPinchGesture", "setStartCenterPoint", args)
   }
@@ -1392,6 +1474,8 @@ func (this *QPinchGesture) scaleFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPinchGesture11scaleFactorEv
+    // invoke: qreal scaleFactor()
+    C._ZNK13QPinchGesture11scaleFactorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPinchGesture", "scaleFactor", args)
   }

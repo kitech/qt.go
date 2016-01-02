@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -124,16 +124,20 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar9addActionERK7QString
+    // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar9addActionERK7QString(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc
+    // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.CString(args[2].(string))
     if false {fmt.Println(arg2)}
+    C._ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QMenuBar", "addAction", args)
   }
@@ -152,6 +156,8 @@ func (this *QMenuBar) platformMenuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15platformMenuBarEv
+    // invoke: QPlatformMenuBar * platformMenuBar()
+    C._ZN8QMenuBar15platformMenuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "platformMenuBar", args)
   }
@@ -171,8 +177,10 @@ func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar16setNativeMenuBarEb
+    // invoke: void setNativeMenuBar(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar16setNativeMenuBarEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setNativeMenuBar", args)
   }
@@ -213,18 +221,24 @@ func (this *QMenuBar) addMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar7addMenuEP5QMenu
+    // invoke: QAction * addMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar7addMenuEP5QMenu(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN8QMenuBar7addMenuERK5QIconRK7QString
+    // invoke: QMenu * addMenu(const class QIcon &, const class QString &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QMenuBar7addMenuERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN8QMenuBar7addMenuERK7QString
+    // invoke: QMenu * addMenu(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar7addMenuERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "addMenu", args)
   }
@@ -243,6 +257,8 @@ func (this *QMenuBar) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK8QMenuBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "sizeHint", args)
   }
@@ -262,8 +278,10 @@ func (this *QMenuBar) actionAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar8actionAtERK6QPoint
+    // invoke: QAction * actionAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK8QMenuBar8actionAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "actionAt", args)
   }
@@ -282,6 +300,8 @@ func (this *QMenuBar) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK8QMenuBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "metaObject", args)
   }
@@ -300,6 +320,8 @@ func (this *QMenuBar) isNativeMenuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar15isNativeMenuBarEv
+    // invoke: bool isNativeMenuBar()
+    C._ZNK8QMenuBar15isNativeMenuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "isNativeMenuBar", args)
   }
@@ -319,8 +341,10 @@ func (this *QMenuBar) insertSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15insertSeparatorEP7QAction
+    // invoke: QAction * insertSeparator(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "insertSeparator", args)
   }
@@ -339,6 +363,8 @@ func (this *QMenuBar) addSeparator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar12addSeparatorEv
+    // invoke: QAction * addSeparator()
+    C._ZN8QMenuBar12addSeparatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "addSeparator", args)
   }
@@ -357,6 +383,8 @@ func (this *QMenuBar) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK8QMenuBar15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "minimumSizeHint", args)
   }
@@ -375,6 +403,8 @@ func (this *QMenuBar) isDefaultUp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar11isDefaultUpEv
+    // invoke: bool isDefaultUp()
+    C._ZNK8QMenuBar11isDefaultUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "isDefaultUp", args)
   }
@@ -399,8 +429,10 @@ func (this *QMenuBar) setActiveAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar15setActiveActionEP7QAction
+    // invoke: void setActiveAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar15setActiveActionEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setActiveAction", args)
   }
@@ -419,6 +451,8 @@ func (this *QMenuBar) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar5clearEv
+    // invoke: void clear()
+    C._ZN8QMenuBar5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "clear", args)
   }
@@ -437,6 +471,8 @@ func (this *QMenuBar) activeAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar12activeActionEv
+    // invoke: QAction * activeAction()
+    C._ZNK8QMenuBar12activeActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMenuBar", "activeAction", args)
   }
@@ -456,8 +492,10 @@ func (this *QMenuBar) actionGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar14actionGeometryEP7QAction
+    // invoke: QRect actionGeometry(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK8QMenuBar14actionGeometryEP7QAction(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "actionGeometry", args)
   }
@@ -478,10 +516,12 @@ func (this *QMenuBar) insertMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar10insertMenuEP7QActionP5QMenu
+    // invoke: QAction * insertMenu(class QAction *, class QMenu *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMenu).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QMenuBar10insertMenuEP7QActionP5QMenu(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMenuBar", "insertMenu", args)
   }
@@ -501,8 +541,10 @@ func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar12setDefaultUpEb
+    // invoke: void setDefaultUp(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar12setDefaultUpEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setDefaultUp", args)
   }
@@ -522,8 +564,10 @@ func (this *QMenuBar) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QMenuBar10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN8QMenuBar10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "setVisible", args)
   }
@@ -543,8 +587,10 @@ func (this *QMenuBar) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QMenuBar14heightForWidthEi
+    // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK8QMenuBar14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMenuBar", "heightForWidth", args)
   }

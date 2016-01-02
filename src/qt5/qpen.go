@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -123,6 +123,8 @@ func (this *QPen) dashOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen10dashOffsetEv
+    // invoke: qreal dashOffset()
+    C._ZNK4QPen10dashOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "dashOffset", args)
   }
@@ -146,6 +148,8 @@ func (this *QPen) miterLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen10miterLimitEv
+    // invoke: qreal miterLimit()
+    C._ZNK4QPen10miterLimitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "miterLimit", args)
   }
@@ -165,8 +169,10 @@ func (this *QPen) setWidthF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen9setWidthFEd
+    // invoke: void setWidthF(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN4QPen9setWidthFEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setWidthF", args)
   }
@@ -186,8 +192,10 @@ func (this *QPen) setBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setBrushERK6QBrush
+    // invoke: void setBrush(const class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN4QPen8setBrushERK6QBrush(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setBrush", args)
   }
@@ -206,6 +214,8 @@ func (this *QPen) color(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen5colorEv
+    // invoke: QColor color()
+    C._ZNK4QPen5colorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "color", args)
   }
@@ -225,8 +235,10 @@ func (this *QPen) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setWidthEi
+    // invoke: void setWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN4QPen8setWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setWidth", args)
   }
@@ -245,6 +257,8 @@ func (this *QPen) widthF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen6widthFEv
+    // invoke: qreal widthF()
+    C._ZNK4QPen6widthFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "widthF", args)
   }
@@ -264,8 +278,10 @@ func (this *QPen) setCosmetic(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen11setCosmeticEb
+    // invoke: void setCosmetic(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN4QPen11setCosmeticEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setCosmetic", args)
   }
@@ -284,6 +300,8 @@ func (this *QPen) isSolid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen7isSolidEv
+    // invoke: bool isSolid()
+    C._ZNK4QPen7isSolidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "isSolid", args)
   }
@@ -303,8 +321,10 @@ func (this *QPen) setColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen8setColorERK6QColor
+    // invoke: void setColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN4QPen8setColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setColor", args)
   }
@@ -323,6 +343,8 @@ func (this *QPen) dashPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen11dashPatternEv
+    // invoke: QVector<qreal> dashPattern()
+    C._ZNK4QPen11dashPatternEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "dashPattern", args)
   }
@@ -341,6 +363,8 @@ func (this *QPen) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen10isDetachedEv
+    // invoke: bool isDetached()
+    C._ZN4QPen10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "isDetached", args)
   }
@@ -360,8 +384,10 @@ func (this *QPen) setMiterLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen13setMiterLimitEd
+    // invoke: void setMiterLimit(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN4QPen13setMiterLimitEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setMiterLimit", args)
   }
@@ -380,6 +406,8 @@ func (this *QPen) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen5widthEv
+    // invoke: int width()
+    C._ZNK4QPen5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "width", args)
   }
@@ -399,8 +427,10 @@ func (this *QPen) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen4swapERS_
+    // invoke: void swap(class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN4QPen4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "swap", args)
   }
@@ -419,6 +449,8 @@ func (this *QPen) brush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen5brushEv
+    // invoke: QBrush brush()
+    C._ZNK4QPen5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "brush", args)
   }
@@ -437,6 +469,8 @@ func (this *QPen) isCosmetic(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK4QPen10isCosmeticEv
+    // invoke: bool isCosmetic()
+    C._ZNK4QPen10isCosmeticEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPen", "isCosmetic", args)
   }
@@ -456,8 +490,10 @@ func (this *QPen) setDashOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN4QPen13setDashOffsetEd
+    // invoke: void setDashOffset(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN4QPen13setDashOffsetEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "setDashOffset", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -79,6 +79,8 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK26QMessageAuthenticationCode6resultEv
+    // invoke: QByteArray result()
+    C._ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
   }
@@ -105,18 +107,24 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode7addDataERK10QByteArray
+    // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QMessageAuthenticationCode7addDataERK10QByteArray(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEPKci
+    // invoke: void addData(const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN26QMessageAuthenticationCode7addDataEPKci(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEP9QIODevice
+    // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "addData", args)
   }
@@ -154,6 +162,8 @@ func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode5resetEv
+    // invoke: void reset()
+    C._ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
   }
@@ -173,8 +183,10 @@ func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray
+    // invoke: void setKey(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "setKey", args)
   }

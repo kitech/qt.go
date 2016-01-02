@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -188,6 +188,8 @@ func (this *QProcess) close(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess5closeEv
+    // invoke: void close()
+    C._ZN8QProcess5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "close", args)
   }
@@ -207,8 +209,10 @@ func (this *QProcess) setEnvironment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess14setEnvironmentERK11QStringList
+    // invoke: void setEnvironment(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess14setEnvironmentERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setEnvironment", args)
   }
@@ -241,6 +245,8 @@ func (this *QProcess) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK8QProcess5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "atEnd", args)
   }
@@ -274,8 +280,10 @@ func (this *QProcess) setProcessEnvironment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment
+    // invoke: void setProcessEnvironment(const class QProcessEnvironment &)
     var arg0 = args[0].(QProcessEnvironment).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess21setProcessEnvironmentERK19QProcessEnvironment(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setProcessEnvironment", args)
   }
@@ -299,6 +307,8 @@ func (this *QProcess) pid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess3pidEv
+    // invoke: Q_PID pid()
+    C._ZNK8QProcess3pidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "pid", args)
   }
@@ -318,8 +328,10 @@ func (this *QProcess) setArguments(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess12setArgumentsERK11QStringList
+    // invoke: void setArguments(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess12setArgumentsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setArguments", args)
   }
@@ -366,6 +378,8 @@ func (this *QProcess) closeWriteChannel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess17closeWriteChannelEv
+    // invoke: void closeWriteChannel()
+    C._ZN8QProcess17closeWriteChannelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "closeWriteChannel", args)
   }
@@ -384,6 +398,8 @@ func (this *QProcess) processEnvironment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess18processEnvironmentEv
+    // invoke: QProcessEnvironment processEnvironment()
+    C._ZNK8QProcess18processEnvironmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "processEnvironment", args)
   }
@@ -402,6 +418,8 @@ func (this *QProcess) readAllStandardOutput(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess21readAllStandardOutputEv
+    // invoke: QByteArray readAllStandardOutput()
+    C._ZN8QProcess21readAllStandardOutputEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardOutput", args)
   }
@@ -435,8 +453,10 @@ func (this *QProcess) waitForBytesWritten(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess19waitForBytesWrittenEi
+    // invoke: bool waitForBytesWritten(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess19waitForBytesWrittenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "waitForBytesWritten", args)
   }
@@ -455,6 +475,8 @@ func (this *QProcess) program(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess7programEv
+    // invoke: QString program()
+    C._ZNK8QProcess7programEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "program", args)
   }
@@ -473,6 +495,8 @@ func (this *QProcess) processId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess9processIdEv
+    // invoke: qint64 processId()
+    C._ZNK8QProcess9processIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "processId", args)
   }
@@ -491,6 +515,8 @@ func (this *QProcess) arguments(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess9argumentsEv
+    // invoke: QStringList arguments()
+    C._ZNK8QProcess9argumentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "arguments", args)
   }
@@ -509,6 +535,8 @@ func (this *QProcess) isSequential(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess12isSequentialEv
+    // invoke: bool isSequential()
+    C._ZNK8QProcess12isSequentialEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "isSequential", args)
   }
@@ -528,8 +556,10 @@ func (this *QProcess) waitForReadyRead(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess16waitForReadyReadEi
+    // invoke: bool waitForReadyRead(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess16waitForReadyReadEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "waitForReadyRead", args)
   }
@@ -549,8 +579,10 @@ func (this *QProcess) setWorkingDirectory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess19setWorkingDirectoryERK7QString
+    // invoke: void setWorkingDirectory(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess19setWorkingDirectoryERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setWorkingDirectory", args)
   }
@@ -569,6 +601,8 @@ func (this *QProcess) terminate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess9terminateEv
+    // invoke: void terminate()
+    C._ZN8QProcess9terminateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "terminate", args)
   }
@@ -587,6 +621,8 @@ func (this *QProcess) kill(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess4killEv
+    // invoke: void kill()
+    C._ZN8QProcess4killEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "kill", args)
   }
@@ -605,6 +641,8 @@ func (this *QProcess) bytesAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess14bytesAvailableEv
+    // invoke: qint64 bytesAvailable()
+    C._ZNK8QProcess14bytesAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "bytesAvailable", args)
   }
@@ -623,6 +661,8 @@ func (this *QProcess) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK8QProcess10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "metaObject", args)
   }
@@ -642,8 +682,10 @@ func (this *QProcess) waitForStarted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess14waitForStartedEi
+    // invoke: bool waitForStarted(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess14waitForStartedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "waitForStarted", args)
   }
@@ -662,6 +704,8 @@ func (this *QProcess) readAllStandardError(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess20readAllStandardErrorEv
+    // invoke: QByteArray readAllStandardError()
+    C._ZN8QProcess20readAllStandardErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardError", args)
   }
@@ -680,6 +724,8 @@ func (this *QProcess) exitCode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess8exitCodeEv
+    // invoke: int exitCode()
+    C._ZNK8QProcess8exitCodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "exitCode", args)
   }
@@ -698,6 +744,8 @@ func (this *QProcess) environment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess11environmentEv
+    // invoke: QStringList environment()
+    C._ZNK8QProcess11environmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "environment", args)
   }
@@ -716,6 +764,8 @@ func (this *QProcess) canReadLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess11canReadLineEv
+    // invoke: bool canReadLine()
+    C._ZNK8QProcess11canReadLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "canReadLine", args)
   }
@@ -735,8 +785,10 @@ func (this *QProcess) setStandardOutputProcess(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess24setStandardOutputProcessEPS_
+    // invoke: void setStandardOutputProcess(class QProcess *)
     var arg0 = args[0].(QProcess).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess24setStandardOutputProcessEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setStandardOutputProcess", args)
   }
@@ -756,8 +808,10 @@ func (this *QProcess) waitForFinished(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess15waitForFinishedEi
+    // invoke: bool waitForFinished(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess15waitForFinishedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "waitForFinished", args)
   }
@@ -776,6 +830,8 @@ func (this *QProcess) bytesToWrite(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess12bytesToWriteEv
+    // invoke: qint64 bytesToWrite()
+    C._ZNK8QProcess12bytesToWriteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "bytesToWrite", args)
   }
@@ -794,6 +850,8 @@ func (this *QProcess) workingDirectory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QProcess16workingDirectoryEv
+    // invoke: QString workingDirectory()
+    C._ZNK8QProcess16workingDirectoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcess", "workingDirectory", args)
   }
@@ -813,8 +871,10 @@ func (this *QProcess) setProgram(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess10setProgramERK7QString
+    // invoke: void setProgram(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess10setProgramERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setProgram", args)
   }
@@ -834,8 +894,10 @@ func (this *QProcess) setStandardInputFile(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QProcess20setStandardInputFileERK7QString
+    // invoke: void setStandardInputFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QProcess20setStandardInputFileERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcess", "setStandardInputFile", args)
   }
@@ -855,8 +917,10 @@ func (this *QProcessEnvironment) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment8containsERK7QString
+    // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK19QProcessEnvironment8containsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "contains", args)
   }
@@ -875,6 +939,8 @@ func (this *QProcessEnvironment) keys(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment4keysEv
+    // invoke: QStringList keys()
+    C._ZNK19QProcessEnvironment4keysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "keys", args)
   }
@@ -894,8 +960,10 @@ func (this *QProcessEnvironment) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment6removeERK7QString
+    // invoke: void remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QProcessEnvironment6removeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "remove", args)
   }
@@ -914,6 +982,8 @@ func (this *QProcessEnvironment) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment5clearEv
+    // invoke: void clear()
+    C._ZN19QProcessEnvironment5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "clear", args)
   }
@@ -934,10 +1004,12 @@ func (this *QProcessEnvironment) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment5valueERK7QStringS2_
+    // invoke: QString value(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK19QProcessEnvironment5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "value", args)
   }
@@ -956,6 +1028,8 @@ func (this *QProcessEnvironment) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK19QProcessEnvironment7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "isEmpty", args)
   }
@@ -989,8 +1063,10 @@ func (this *QProcessEnvironment) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment4swapERS_
+    // invoke: void swap(class QProcessEnvironment &)
     var arg0 = args[0].(QProcessEnvironment).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN19QProcessEnvironment4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "swap", args)
   }
@@ -1033,14 +1109,18 @@ func (this *QProcessEnvironment) insert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QProcessEnvironment6insertERK7QStringS2_
+    // invoke: void insert(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN19QProcessEnvironment6insertERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN19QProcessEnvironment6insertERKS_
+    // invoke: void insert(const class QProcessEnvironment &)
     var arg0 = args[0].(QProcessEnvironment).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QProcessEnvironment6insertERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "insert", args)
   }
@@ -1059,6 +1139,8 @@ func (this *QProcessEnvironment) toStringList(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QProcessEnvironment12toStringListEv
+    // invoke: QStringList toStringList()
+    C._ZNK19QProcessEnvironment12toStringListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "toStringList", args)
   }

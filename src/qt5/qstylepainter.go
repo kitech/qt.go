@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -92,14 +92,18 @@ func (this *QStylePainter) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget
+    // invoke: bool begin(class QPaintDevice *, class QWidget *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN13QStylePainter5beginEP12QPaintDeviceP7QWidget(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QStylePainter5beginEP7QWidget
+    // invoke: bool begin(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN13QStylePainter5beginEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStylePainter", "begin", args)
   }
@@ -121,12 +125,14 @@ func (this *QStylePainter) drawItemPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap
+    // invoke: void drawItemPixmap(const class QRect &, int, const class QPixmap &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
+    C.demth_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QStylePainter", "drawItemPixmap", args)
   }
@@ -145,6 +151,8 @@ func (this *QStylePainter) style(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QStylePainter5styleEv
+    // invoke: QStyle * style()
+    C.demth_ZNK13QStylePainter5styleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStylePainter", "style", args)
   }

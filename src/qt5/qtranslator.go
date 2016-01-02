@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -82,6 +82,8 @@ func (this *QTranslator) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QTranslator10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "metaObject", args)
   }
@@ -105,6 +107,8 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK11QTranslator7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTranslator", "isEmpty", args)
   }
@@ -153,6 +157,7 @@ func (this *QTranslator) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTranslator4loadERK7QStringS2_S2_S2_
+    // invoke: bool load(const class QString &, const class QString &, const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
@@ -161,16 +166,20 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QString).qclsinst
     if false {fmt.Println(arg3)}
+    C._ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
+    // invoke: bool load(const uchar *, int, const class QString &)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
+    // invoke: bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
     var arg0 = args[0].(QLocale).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
@@ -181,6 +190,7 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
+    C._ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
   }
@@ -203,6 +213,7 @@ func (this *QTranslator) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTranslator9translateEPKcS1_S1_i
+    // invoke: QString translate(const char *, const char *, const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
@@ -211,6 +222,7 @@ func (this *QTranslator) translate(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
   }

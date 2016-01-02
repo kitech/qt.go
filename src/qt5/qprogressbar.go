@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.go
 //
@@ -109,6 +109,8 @@ func (this *QProgressBar) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar6formatEv
+    // invoke: QString format()
+    C._ZNK12QProgressBar6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "format", args)
   }
@@ -127,6 +129,8 @@ func (this *QProgressBar) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar5resetEv
+    // invoke: void reset()
+    C._ZN12QProgressBar5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "reset", args)
   }
@@ -145,6 +149,8 @@ func (this *QProgressBar) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QProgressBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "metaObject", args)
   }
@@ -163,6 +169,8 @@ func (this *QProgressBar) maximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar7maximumEv
+    // invoke: int maximum()
+    C._ZNK12QProgressBar7maximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "maximum", args)
   }
@@ -182,8 +190,10 @@ func (this *QProgressBar) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar9setFormatERK7QString
+    // invoke: void setFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar9setFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setFormat", args)
   }
@@ -202,6 +212,8 @@ func (this *QProgressBar) invertedAppearance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar18invertedAppearanceEv
+    // invoke: bool invertedAppearance()
+    C._ZNK12QProgressBar18invertedAppearanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "invertedAppearance", args)
   }
@@ -220,6 +232,8 @@ func (this *QProgressBar) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar4textEv
+    // invoke: QString text()
+    C._ZNK12QProgressBar4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "text", args)
   }
@@ -239,8 +253,10 @@ func (this *QProgressBar) setMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar10setMinimumEi
+    // invoke: void setMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar10setMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMinimum", args)
   }
@@ -265,8 +281,10 @@ func (this *QProgressBar) setTextVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar14setTextVisibleEb
+    // invoke: void setTextVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar14setTextVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setTextVisible", args)
   }
@@ -285,6 +303,8 @@ func (this *QProgressBar) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar5valueEv
+    // invoke: int value()
+    C._ZNK12QProgressBar5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "value", args)
   }
@@ -304,8 +324,10 @@ func (this *QProgressBar) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar8setValueEi
+    // invoke: void setValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar8setValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setValue", args)
   }
@@ -324,6 +346,8 @@ func (this *QProgressBar) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK12QProgressBar15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "minimumSizeHint", args)
   }
@@ -342,6 +366,8 @@ func (this *QProgressBar) minimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar7minimumEv
+    // invoke: int minimum()
+    C._ZNK12QProgressBar7minimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "minimum", args)
   }
@@ -362,10 +388,12 @@ func (this *QProgressBar) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar8setRangeEii
+    // invoke: void setRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QProgressBar8setRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressBar", "setRange", args)
   }
@@ -384,6 +412,8 @@ func (this *QProgressBar) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK12QProgressBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "sizeHint", args)
   }
@@ -402,6 +432,8 @@ func (this *QProgressBar) resetFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar11resetFormatEv
+    // invoke: void resetFormat()
+    C._ZN12QProgressBar11resetFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "resetFormat", args)
   }
@@ -420,6 +452,8 @@ func (this *QProgressBar) isTextVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QProgressBar13isTextVisibleEv
+    // invoke: bool isTextVisible()
+    C._ZNK12QProgressBar13isTextVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressBar", "isTextVisible", args)
   }
@@ -439,8 +473,10 @@ func (this *QProgressBar) setInvertedAppearance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar21setInvertedAppearanceEb
+    // invoke: void setInvertedAppearance(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setInvertedAppearance", args)
   }
@@ -474,8 +510,10 @@ func (this *QProgressBar) setMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QProgressBar10setMaximumEi
+    // invoke: void setMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QProgressBar10setMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressBar", "setMaximum", args)
   }

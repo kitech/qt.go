@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.go
 //
@@ -193,8 +193,10 @@ func (this *QTreeView) setHeader(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView9setHeaderEP11QHeaderView
+    // invoke: void setHeader(class QHeaderView *)
     var arg0 = args[0].(QHeaderView).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView9setHeaderEP11QHeaderView(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setHeader", args)
   }
@@ -213,6 +215,8 @@ func (this *QTreeView) isAnimated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10isAnimatedEv
+    // invoke: bool isAnimated()
+    C._ZNK9QTreeView10isAnimatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "isAnimated", args)
   }
@@ -232,8 +236,10 @@ func (this *QTreeView) isExpanded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10isExpandedERK11QModelIndex
+    // invoke: bool isExpanded(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView10isExpandedERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "isExpanded", args)
   }
@@ -254,10 +260,12 @@ func (this *QTreeView) setColumnHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView15setColumnHiddenEib
+    // invoke: void setColumnHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN9QTreeView15setColumnHiddenEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeView", "setColumnHidden", args)
   }
@@ -277,8 +285,10 @@ func (this *QTreeView) setIndentation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView14setIndentationEi
+    // invoke: void setIndentation(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView14setIndentationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setIndentation", args)
   }
@@ -297,6 +307,8 @@ func (this *QTreeView) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QTreeView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "metaObject", args)
   }
@@ -315,6 +327,8 @@ func (this *QTreeView) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView5resetEv
+    // invoke: void reset()
+    C._ZN9QTreeView5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "reset", args)
   }
@@ -334,8 +348,10 @@ func (this *QTreeView) setExpandsOnDoubleClick(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView23setExpandsOnDoubleClickEb
+    // invoke: void setExpandsOnDoubleClick(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView23setExpandsOnDoubleClickEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setExpandsOnDoubleClick", args)
   }
@@ -357,12 +373,14 @@ func (this *QTreeView) setFirstColumnSpanned(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb
+    // invoke: void setFirstColumnSpanned(int, const class QModelIndex &, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int8_t(args[2].(int8))
     if false {fmt.Println(arg2)}
+    C._ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTreeView", "setFirstColumnSpanned", args)
   }
@@ -386,14 +404,10 @@ func (this *QTreeView) sortByColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView12sortByColumnEi
+    // invoke: void sortByColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN9QTreeView12sortByColumnEiN2Qt9SortOrderE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
+    C._ZN9QTreeView12sortByColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "sortByColumn", args)
   }
@@ -415,12 +429,14 @@ func (this *QTreeView) setRowHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView12setRowHiddenEiRK11QModelIndexb
+    // invoke: void setRowHidden(int, const class QModelIndex &, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int8_t(args[2].(int8))
     if false {fmt.Println(arg2)}
+    C._ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QTreeView", "setRowHidden", args)
   }
@@ -440,8 +456,10 @@ func (this *QTreeView) expand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView6expandERK11QModelIndex
+    // invoke: void expand(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView6expandERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "expand", args)
   }
@@ -460,6 +478,8 @@ func (this *QTreeView) autoExpandDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView15autoExpandDelayEv
+    // invoke: int autoExpandDelay()
+    C._ZNK9QTreeView15autoExpandDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "autoExpandDelay", args)
   }
@@ -497,6 +517,8 @@ func (this *QTreeView) indentation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView11indentationEv
+    // invoke: int indentation()
+    C._ZNK9QTreeView11indentationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "indentation", args)
   }
@@ -516,8 +538,10 @@ func (this *QTreeView) columnViewportPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView22columnViewportPositionEi
+    // invoke: int columnViewportPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView22columnViewportPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "columnViewportPosition", args)
   }
@@ -536,6 +560,8 @@ func (this *QTreeView) expandsOnDoubleClick(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView20expandsOnDoubleClickEv
+    // invoke: bool expandsOnDoubleClick()
+    C._ZNK9QTreeView20expandsOnDoubleClickEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "expandsOnDoubleClick", args)
   }
@@ -554,6 +580,8 @@ func (this *QTreeView) isSortingEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView16isSortingEnabledEv
+    // invoke: bool isSortingEnabled()
+    C._ZNK9QTreeView16isSortingEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "isSortingEnabled", args)
   }
@@ -573,8 +601,10 @@ func (this *QTreeView) showColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView10showColumnEi
+    // invoke: void showColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView10showColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "showColumn", args)
   }
@@ -594,8 +624,10 @@ func (this *QTreeView) visualRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10visualRectERK11QModelIndex
+    // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView10visualRectERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "visualRect", args)
   }
@@ -615,8 +647,10 @@ func (this *QTreeView) collapse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView8collapseERK11QModelIndex
+    // invoke: void collapse(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView8collapseERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "collapse", args)
   }
@@ -636,8 +670,10 @@ func (this *QTreeView) setWordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView11setWordWrapEb
+    // invoke: void setWordWrap(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView11setWordWrapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setWordWrap", args)
   }
@@ -657,8 +693,10 @@ func (this *QTreeView) indexAbove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10indexAboveERK11QModelIndex
+    // invoke: QModelIndex indexAbove(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView10indexAboveERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "indexAbove", args)
   }
@@ -677,6 +715,8 @@ func (this *QTreeView) rootIsDecorated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView15rootIsDecoratedEv
+    // invoke: bool rootIsDecorated()
+    C._ZNK9QTreeView15rootIsDecoratedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "rootIsDecorated", args)
   }
@@ -695,6 +735,8 @@ func (this *QTreeView) collapseAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView11collapseAllEv
+    // invoke: void collapseAll()
+    C._ZN9QTreeView11collapseAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "collapseAll", args)
   }
@@ -714,8 +756,10 @@ func (this *QTreeView) setHeaderHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView15setHeaderHiddenEb
+    // invoke: void setHeaderHidden(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView15setHeaderHiddenEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setHeaderHidden", args)
   }
@@ -734,6 +778,8 @@ func (this *QTreeView) allColumnsShowFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView19allColumnsShowFocusEv
+    // invoke: bool allColumnsShowFocus()
+    C._ZNK9QTreeView19allColumnsShowFocusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "allColumnsShowFocus", args)
   }
@@ -753,8 +799,10 @@ func (this *QTreeView) columnWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView11columnWidthEi
+    // invoke: int columnWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView11columnWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "columnWidth", args)
   }
@@ -774,8 +822,10 @@ func (this *QTreeView) resizeColumnToContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView22resizeColumnToContentsEi
+    // invoke: void resizeColumnToContents(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView22resizeColumnToContentsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "resizeColumnToContents", args)
   }
@@ -795,8 +845,10 @@ func (this *QTreeView) setAutoExpandDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView18setAutoExpandDelayEi
+    // invoke: void setAutoExpandDelay(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView18setAutoExpandDelayEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setAutoExpandDelay", args)
   }
@@ -816,8 +868,10 @@ func (this *QTreeView) setAllColumnsShowFocus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView22setAllColumnsShowFocusEb
+    // invoke: void setAllColumnsShowFocus(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView22setAllColumnsShowFocusEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setAllColumnsShowFocus", args)
   }
@@ -838,10 +892,12 @@ func (this *QTreeView) isFirstColumnSpanned(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex
+    // invoke: bool isFirstColumnSpanned(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeView", "isFirstColumnSpanned", args)
   }
@@ -861,8 +917,10 @@ func (this *QTreeView) hideColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView10hideColumnEi
+    // invoke: void hideColumn(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView10hideColumnEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "hideColumn", args)
   }
@@ -881,6 +939,8 @@ func (this *QTreeView) treePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView12treePositionEv
+    // invoke: int treePosition()
+    C._ZNK9QTreeView12treePositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "treePosition", args)
   }
@@ -901,10 +961,12 @@ func (this *QTreeView) setExpanded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView11setExpandedERK11QModelIndexb
+    // invoke: void setExpanded(const class QModelIndex &, _Bool)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN9QTreeView11setExpandedERK11QModelIndexb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeView", "setExpanded", args)
   }
@@ -923,6 +985,8 @@ func (this *QTreeView) resetIndentation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView16resetIndentationEv
+    // invoke: void resetIndentation()
+    C._ZN9QTreeView16resetIndentationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "resetIndentation", args)
   }
@@ -943,10 +1007,12 @@ func (this *QTreeView) isRowHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex
+    // invoke: bool isRowHidden(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeView", "isRowHidden", args)
   }
@@ -965,6 +1031,8 @@ func (this *QTreeView) selectAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView9selectAllEv
+    // invoke: void selectAll()
+    C._ZN9QTreeView9selectAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "selectAll", args)
   }
@@ -983,6 +1051,8 @@ func (this *QTreeView) wordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView8wordWrapEv
+    // invoke: bool wordWrap()
+    C._ZNK9QTreeView8wordWrapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "wordWrap", args)
   }
@@ -1001,6 +1071,8 @@ func (this *QTreeView) doItemsLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView13doItemsLayoutEv
+    // invoke: void doItemsLayout()
+    C._ZN9QTreeView13doItemsLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "doItemsLayout", args)
   }
@@ -1020,8 +1092,10 @@ func (this *QTreeView) setTreePosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView15setTreePositionEi
+    // invoke: void setTreePosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView15setTreePositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setTreePosition", args)
   }
@@ -1041,8 +1115,10 @@ func (this *QTreeView) keyboardSearch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView14keyboardSearchERK7QString
+    // invoke: void keyboardSearch(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView14keyboardSearchERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "keyboardSearch", args)
   }
@@ -1062,8 +1138,10 @@ func (this *QTreeView) setRootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView12setRootIndexERK11QModelIndex
+    // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setRootIndex", args)
   }
@@ -1083,8 +1161,10 @@ func (this *QTreeView) setItemsExpandable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView18setItemsExpandableEb
+    // invoke: void setItemsExpandable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView18setItemsExpandableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setItemsExpandable", args)
   }
@@ -1104,8 +1184,10 @@ func (this *QTreeView) setSelectionModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView17setSelectionModelEP19QItemSelectionModel
+    // invoke: void setSelectionModel(class QItemSelectionModel *)
     var arg0 = args[0].(QItemSelectionModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView17setSelectionModelEP19QItemSelectionModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setSelectionModel", args)
   }
@@ -1124,6 +1206,8 @@ func (this *QTreeView) header(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView6headerEv
+    // invoke: QHeaderView * header()
+    C._ZNK9QTreeView6headerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "header", args)
   }
@@ -1143,8 +1227,10 @@ func (this *QTreeView) setAnimated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView11setAnimatedEb
+    // invoke: void setAnimated(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView11setAnimatedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setAnimated", args)
   }
@@ -1164,8 +1250,10 @@ func (this *QTreeView) setSortingEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView17setSortingEnabledEb
+    // invoke: void setSortingEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView17setSortingEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setSortingEnabled", args)
   }
@@ -1184,6 +1272,8 @@ func (this *QTreeView) itemsExpandable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView15itemsExpandableEv
+    // invoke: bool itemsExpandable()
+    C._ZNK9QTreeView15itemsExpandableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "itemsExpandable", args)
   }
@@ -1203,8 +1293,10 @@ func (this *QTreeView) setRootIsDecorated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView18setRootIsDecoratedEb
+    // invoke: void setRootIsDecorated(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView18setRootIsDecoratedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setRootIsDecorated", args)
   }
@@ -1223,6 +1315,8 @@ func (this *QTreeView) isHeaderHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView14isHeaderHiddenEv
+    // invoke: bool isHeaderHidden()
+    C._ZNK9QTreeView14isHeaderHiddenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "isHeaderHidden", args)
   }
@@ -1242,8 +1336,10 @@ func (this *QTreeView) columnAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView8columnAtEi
+    // invoke: int columnAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView8columnAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "columnAt", args)
   }
@@ -1263,8 +1359,10 @@ func (this *QTreeView) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView8setModelEP18QAbstractItemModel
+    // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setModel", args)
   }
@@ -1284,8 +1382,10 @@ func (this *QTreeView) isColumnHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView14isColumnHiddenEi
+    // invoke: bool isColumnHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView14isColumnHiddenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "isColumnHidden", args)
   }
@@ -1304,6 +1404,8 @@ func (this *QTreeView) uniformRowHeights(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView17uniformRowHeightsEv
+    // invoke: bool uniformRowHeights()
+    C._ZNK9QTreeView17uniformRowHeightsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "uniformRowHeights", args)
   }
@@ -1323,8 +1425,10 @@ func (this *QTreeView) setUniformRowHeights(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView20setUniformRowHeightsEb
+    // invoke: void setUniformRowHeights(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView20setUniformRowHeightsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "setUniformRowHeights", args)
   }
@@ -1344,8 +1448,10 @@ func (this *QTreeView) expandToDepth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView13expandToDepthEi
+    // invoke: void expandToDepth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTreeView13expandToDepthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "expandToDepth", args)
   }
@@ -1365,8 +1471,10 @@ func (this *QTreeView) indexBelow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView10indexBelowERK11QModelIndex
+    // invoke: QModelIndex indexBelow(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView10indexBelowERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "indexBelow", args)
   }
@@ -1385,6 +1493,8 @@ func (this *QTreeView) expandAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView9expandAllEv
+    // invoke: void expandAll()
+    C._ZN9QTreeView9expandAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeView", "expandAll", args)
   }
@@ -1404,8 +1514,10 @@ func (this *QTreeView) indexAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTreeView7indexAtERK6QPoint
+    // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTreeView7indexAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTreeView", "indexAt", args)
   }
@@ -1426,10 +1538,12 @@ func (this *QTreeView) setColumnWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTreeView14setColumnWidthEii
+    // invoke: void setColumnWidth(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QTreeView14setColumnWidthEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTreeView", "setColumnWidth", args)
   }

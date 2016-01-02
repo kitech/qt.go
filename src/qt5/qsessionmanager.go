@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -97,6 +97,8 @@ func (this *QSessionManager) sessionId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager9sessionIdEv
+    // invoke: QString sessionId()
+    C._ZNK15QSessionManager9sessionIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionId", args)
   }
@@ -115,6 +117,8 @@ func (this *QSessionManager) sessionKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager10sessionKeyEv
+    // invoke: QString sessionKey()
+    C._ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionKey", args)
   }
@@ -134,8 +138,10 @@ func (this *QSessionManager) setRestartCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setRestartCommandERK11QStringList
+    // invoke: void setRestartCommand(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QSessionManager17setRestartCommandERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setRestartCommand", args)
   }
@@ -154,6 +160,8 @@ func (this *QSessionManager) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QSessionManager10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "metaObject", args)
   }
@@ -172,6 +180,8 @@ func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager22allowsErrorInteractionEv
+    // invoke: bool allowsErrorInteraction()
+    C._ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsErrorInteraction", args)
   }
@@ -204,6 +214,8 @@ func (this *QSessionManager) restartCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager14restartCommandEv
+    // invoke: QStringList restartCommand()
+    C._ZNK15QSessionManager14restartCommandEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "restartCommand", args)
   }
@@ -222,6 +234,8 @@ func (this *QSessionManager) requestPhase2(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager13requestPhase2Ev
+    // invoke: void requestPhase2()
+    C._ZN15QSessionManager13requestPhase2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "requestPhase2", args)
   }
@@ -240,6 +254,8 @@ func (this *QSessionManager) isPhase2(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager8isPhase2Ev
+    // invoke: bool isPhase2()
+    C._ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "isPhase2", args)
   }
@@ -258,6 +274,8 @@ func (this *QSessionManager) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager7releaseEv
+    // invoke: void release()
+    C._ZN15QSessionManager7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "release", args)
   }
@@ -282,16 +300,20 @@ func (this *QSessionManager) setManagerProperty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringS2_
+    // invoke: void setManagerProperty(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN15QSessionManager18setManagerPropertyERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList
+    // invoke: void setManagerProperty(const class QString &, const class QStringList &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN15QSessionManager18setManagerPropertyERK7QStringRK11QStringList(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSessionManager", "setManagerProperty", args)
   }
@@ -310,6 +332,8 @@ func (this *QSessionManager) discardCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSessionManager14discardCommandEv
+    // invoke: QStringList discardCommand()
+    C._ZNK15QSessionManager14discardCommandEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "discardCommand", args)
   }
@@ -333,6 +357,8 @@ func (this *QSessionManager) cancel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager6cancelEv
+    // invoke: void cancel()
+    C._ZN15QSessionManager6cancelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "cancel", args)
   }
@@ -352,8 +378,10 @@ func (this *QSessionManager) setDiscardCommand(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17setDiscardCommandERK11QStringList
+    // invoke: void setDiscardCommand(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QSessionManager17setDiscardCommandERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSessionManager", "setDiscardCommand", args)
   }
@@ -372,6 +400,8 @@ func (this *QSessionManager) allowsInteraction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSessionManager17allowsInteractionEv
+    // invoke: bool allowsInteraction()
+    C._ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsInteraction", args)
   }

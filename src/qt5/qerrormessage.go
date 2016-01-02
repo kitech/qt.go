@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -78,6 +78,8 @@ func (this *QErrorMessage) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QErrorMessage10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QErrorMessage10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QErrorMessage", "metaObject", args)
   }
@@ -120,14 +122,18 @@ func (this *QErrorMessage) showMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QErrorMessage11showMessageERK7QStringS2_
+    // invoke: void showMessage(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN13QErrorMessage11showMessageERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QErrorMessage11showMessageERK7QString
+    // invoke: void showMessage(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QErrorMessage11showMessageERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QErrorMessage", "showMessage", args)
   }

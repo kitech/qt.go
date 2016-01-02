@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -79,6 +79,8 @@ func (this *QDirIterator) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK12QDirIterator8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "fileName", args)
   }
@@ -97,6 +99,8 @@ func (this *QDirIterator) path(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator4pathEv
+    // invoke: QString path()
+    C._ZNK12QDirIterator4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "path", args)
   }
@@ -120,6 +124,8 @@ func (this *QDirIterator) next(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QDirIterator4nextEv
+    // invoke: QString next()
+    C._ZN12QDirIterator4nextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "next", args)
   }
@@ -138,6 +144,8 @@ func (this *QDirIterator) filePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8filePathEv
+    // invoke: QString filePath()
+    C._ZNK12QDirIterator8filePathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "filePath", args)
   }
@@ -170,6 +178,8 @@ func (this *QDirIterator) fileInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator8fileInfoEv
+    // invoke: QFileInfo fileInfo()
+    C._ZNK12QDirIterator8fileInfoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "fileInfo", args)
   }
@@ -188,6 +198,8 @@ func (this *QDirIterator) hasNext(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QDirIterator7hasNextEv
+    // invoke: bool hasNext()
+    C._ZNK12QDirIterator7hasNextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDirIterator", "hasNext", args)
   }

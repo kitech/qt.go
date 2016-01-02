@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -102,6 +102,8 @@ func (this *QOpenGLPaintDevice) paintEngine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice11paintEngineEv
+    // invoke: QPaintEngine * paintEngine()
+    C._ZNK18QOpenGLPaintDevice11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintEngine", args)
   }
@@ -120,6 +122,8 @@ func (this *QOpenGLPaintDevice) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice4sizeEv
+    // invoke: QSize size()
+    C._ZNK18QOpenGLPaintDevice4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "size", args)
   }
@@ -139,8 +143,10 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice15setPaintFlippedEb
+    // invoke: void setPaintFlipped(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLPaintDevice15setPaintFlippedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setPaintFlipped", args)
   }
@@ -178,6 +184,8 @@ func (this *QOpenGLPaintDevice) context(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7contextEv
+    // invoke: QOpenGLContext * context()
+    C._ZNK18QOpenGLPaintDevice7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "context", args)
   }
@@ -197,8 +205,10 @@ func (this *QOpenGLPaintDevice) setDevicePixelRatio(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd
+    // invoke: void setDevicePixelRatio(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDevicePixelRatio", args)
   }
@@ -217,6 +227,8 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7devTypeEv
+    // invoke: int devType()
+    C._ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "devType", args)
   }
@@ -235,6 +247,8 @@ func (this *QOpenGLPaintDevice) dotsPerMeterX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv
+    // invoke: qreal dotsPerMeterX()
+    C._ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterX", args)
   }
@@ -254,8 +268,10 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterXEd
+    // invoke: void setDotsPerMeterX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLPaintDevice16setDotsPerMeterXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterX", args)
   }
@@ -274,6 +290,8 @@ func (this *QOpenGLPaintDevice) dotsPerMeterY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice13dotsPerMeterYEv
+    // invoke: qreal dotsPerMeterY()
+    C._ZNK18QOpenGLPaintDevice13dotsPerMeterYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "dotsPerMeterY", args)
   }
@@ -293,8 +311,10 @@ func (this *QOpenGLPaintDevice) setDotsPerMeterY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice16setDotsPerMeterYEd
+    // invoke: void setDotsPerMeterY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLPaintDevice16setDotsPerMeterYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setDotsPerMeterY", args)
   }
@@ -313,6 +333,8 @@ func (this *QOpenGLPaintDevice) paintFlipped(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice12paintFlippedEv
+    // invoke: bool paintFlipped()
+    C._ZNK18QOpenGLPaintDevice12paintFlippedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "paintFlipped", args)
   }
@@ -332,8 +354,10 @@ func (this *QOpenGLPaintDevice) setSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice7setSizeERK5QSize
+    // invoke: void setSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLPaintDevice7setSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "setSize", args)
   }
@@ -352,6 +376,8 @@ func (this *QOpenGLPaintDevice) ensureActiveTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice18ensureActiveTargetEv
+    // invoke: void ensureActiveTarget()
+    C._ZN18QOpenGLPaintDevice18ensureActiveTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "ensureActiveTarget", args)
   }

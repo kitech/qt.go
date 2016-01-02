@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -110,6 +110,8 @@ func (this *QEasingCurve) customType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve10customTypeEv
+    // invoke: EasingFunction customType()
+    C._ZNK12QEasingCurve10customTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "customType", args)
   }
@@ -128,6 +130,8 @@ func (this *QEasingCurve) overshoot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve9overshootEv
+    // invoke: qreal overshoot()
+    C._ZNK12QEasingCurve9overshootEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "overshoot", args)
   }
@@ -147,8 +151,10 @@ func (this *QEasingCurve) setPeriod(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve9setPeriodEd
+    // invoke: void setPeriod(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QEasingCurve9setPeriodEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setPeriod", args)
   }
@@ -171,6 +177,7 @@ func (this *QEasingCurve) addTCBSegment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve13addTCBSegmentERK7QPointFddd
+    // invoke: void addTCBSegment(const class QPointF &, qreal, qreal, qreal)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
@@ -179,6 +186,7 @@ func (this *QEasingCurve) addTCBSegment(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
+    C._ZN12QEasingCurve13addTCBSegmentERK7QPointFddd(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QEasingCurve", "addTCBSegment", args)
   }
@@ -200,12 +208,14 @@ func (this *QEasingCurve) addCubicBezierSegment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_
+    // invoke: void addCubicBezierSegment(const class QPointF &, const class QPointF &, const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPointF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN12QEasingCurve21addCubicBezierSegmentERK7QPointFS2_S2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QEasingCurve", "addCubicBezierSegment", args)
   }
@@ -224,6 +234,8 @@ func (this *QEasingCurve) period(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve6periodEv
+    // invoke: qreal period()
+    C._ZNK12QEasingCurve6periodEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "period", args)
   }
@@ -243,8 +255,10 @@ func (this *QEasingCurve) valueForProgress(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve16valueForProgressEd
+    // invoke: qreal valueForProgress(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZNK12QEasingCurve16valueForProgressEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "valueForProgress", args)
   }
@@ -264,8 +278,10 @@ func (this *QEasingCurve) setAmplitude(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve12setAmplitudeEd
+    // invoke: void setAmplitude(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QEasingCurve12setAmplitudeEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setAmplitude", args)
   }
@@ -285,8 +301,10 @@ func (this *QEasingCurve) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve4swapERS_
+    // invoke: void swap(class QEasingCurve &)
     var arg0 = args[0].(QEasingCurve).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN12QEasingCurve4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "swap", args)
   }
@@ -306,8 +324,10 @@ func (this *QEasingCurve) setOvershoot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QEasingCurve12setOvershootEd
+    // invoke: void setOvershoot(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN12QEasingCurve12setOvershootEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEasingCurve", "setOvershoot", args)
   }
@@ -326,6 +346,8 @@ func (this *QEasingCurve) toCubicSpline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve13toCubicSplineEv
+    // invoke: QVector<QPointF> toCubicSpline()
+    C._ZNK12QEasingCurve13toCubicSplineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "toCubicSpline", args)
   }
@@ -344,6 +366,8 @@ func (this *QEasingCurve) amplitude(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QEasingCurve9amplitudeEv
+    // invoke: qreal amplitude()
+    C._ZNK12QEasingCurve9amplitudeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEasingCurve", "amplitude", args)
   }

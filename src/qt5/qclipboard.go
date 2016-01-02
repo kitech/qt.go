@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -105,6 +105,8 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
+    // invoke: bool supportsFindBuffer()
+    C._ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
@@ -123,6 +125,8 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
+    // invoke: bool ownsFindBuffer()
+    C._ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
   }
@@ -141,6 +145,8 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
+    // invoke: bool ownsClipboard()
+    C._ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
   }
@@ -159,6 +165,8 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QClipboard10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "metaObject", args)
   }
@@ -177,6 +185,8 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
+    // invoke: bool supportsSelection()
+    C._ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
   }
@@ -195,6 +205,8 @@ func (this *QClipboard) ownsSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
+    // invoke: bool ownsSelection()
+    C._ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
   }

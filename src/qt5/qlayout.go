@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.go
 //
@@ -154,6 +154,7 @@ func (this *QLayout) setContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout18setContentsMarginsEiiii
+    // invoke: void setContentsMargins(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -162,10 +163,13 @@ func (this *QLayout) setContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN7QLayout18setContentsMarginsEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
     // invoke: _ZN7QLayout18setContentsMarginsERK8QMargins
+    // invoke: void setContentsMargins(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout18setContentsMarginsERK8QMargins(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setContentsMargins", args)
   }
@@ -184,6 +188,8 @@ func (this *QLayout) spacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7spacingEv
+    // invoke: int spacing()
+    C._ZNK7QLayout7spacingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "spacing", args)
   }
@@ -207,6 +213,8 @@ func (this *QLayout) geometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK7QLayout8geometryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "geometry", args)
   }
@@ -225,6 +233,8 @@ func (this *QLayout) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout5countEv
+    // invoke: int count()
+    C._ZNK7QLayout5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "count", args)
   }
@@ -243,6 +253,8 @@ func (this *QLayout) maximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout11maximumSizeEv
+    // invoke: QSize maximumSize()
+    C._ZNK7QLayout11maximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "maximumSize", args)
   }
@@ -262,8 +274,10 @@ func (this *QLayout) setMenuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setMenuBarEP7QWidget
+    // invoke: void setMenuBar(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout10setMenuBarEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setMenuBar", args)
   }
@@ -283,8 +297,10 @@ func (this *QLayout) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7indexOfEP7QWidget
+    // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QLayout7indexOfEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "indexOf", args)
   }
@@ -304,8 +320,10 @@ func (this *QLayout) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setEnabledEb
+    // invoke: void setEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setEnabled", args)
   }
@@ -324,6 +342,8 @@ func (this *QLayout) minimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout11minimumSizeEv
+    // invoke: QSize minimumSize()
+    C._ZNK7QLayout11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "minimumSize", args)
   }
@@ -343,8 +363,10 @@ func (this *QLayout) takeAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6takeAtEi
+    // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout6takeAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "takeAt", args)
   }
@@ -363,6 +385,8 @@ func (this *QLayout) totalMaximumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout16totalMaximumSizeEv
+    // invoke: QSize totalMaximumSize()
+    C._ZNK7QLayout16totalMaximumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "totalMaximumSize", args)
   }
@@ -381,6 +405,8 @@ func (this *QLayout) invalidate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10invalidateEv
+    // invoke: void invalidate()
+    C._ZN7QLayout10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "invalidate", args)
   }
@@ -399,6 +425,8 @@ func (this *QLayout) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6updateEv
+    // invoke: void update()
+    C._ZN7QLayout6updateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "update", args)
   }
@@ -417,6 +445,8 @@ func (this *QLayout) contentsRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout12contentsRectEv
+    // invoke: QRect contentsRect()
+    C._ZNK7QLayout12contentsRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "contentsRect", args)
   }
@@ -435,6 +465,8 @@ func (this *QLayout) totalSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout13totalSizeHintEv
+    // invoke: QSize totalSizeHint()
+    C._ZNK7QLayout13totalSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "totalSizeHint", args)
   }
@@ -454,8 +486,10 @@ func (this *QLayout) addItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout7addItemEP11QLayoutItem
+    // invoke: void addItem(class QLayoutItem *)
     var arg0 = args[0].(QLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "addItem", args)
   }
@@ -475,8 +509,10 @@ func (this *QLayout) totalHeightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout19totalHeightForWidthEi
+    // invoke: int totalHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QLayout19totalHeightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "totalHeightForWidth", args)
   }
@@ -496,8 +532,10 @@ func (this *QLayout) setMargin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout9setMarginEi
+    // invoke: void setMargin(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout9setMarginEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setMargin", args)
   }
@@ -516,6 +554,8 @@ func (this *QLayout) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK7QLayout7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "isEmpty", args)
   }
@@ -535,8 +575,10 @@ func (this *QLayout) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout9addWidgetEP7QWidget
+    // invoke: void addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "addWidget", args)
   }
@@ -559,6 +601,7 @@ func (this *QLayout) getContentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_
+    // invoke: void getContentsMargins(int *, int *, int *, int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
@@ -567,6 +610,7 @@ func (this *QLayout) getContentsMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
+    C._ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QLayout", "getContentsMargins", args)
   }
@@ -585,6 +629,8 @@ func (this *QLayout) layout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout6layoutEv
+    // invoke: QLayout * layout()
+    C._ZN7QLayout6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "layout", args)
   }
@@ -603,6 +649,8 @@ func (this *QLayout) activate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout8activateEv
+    // invoke: bool activate()
+    C._ZN7QLayout8activateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "activate", args)
   }
@@ -621,6 +669,8 @@ func (this *QLayout) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK7QLayout9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "isEnabled", args)
   }
@@ -653,6 +703,8 @@ func (this *QLayout) margin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout6marginEv
+    // invoke: int margin()
+    C._ZNK7QLayout6marginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "margin", args)
   }
@@ -672,8 +724,10 @@ func (this *QLayout) setSpacing(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10setSpacingEi
+    // invoke: void setSpacing(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout10setSpacingEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setSpacing", args)
   }
@@ -692,6 +746,8 @@ func (this *QLayout) menuBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout7menuBarEv
+    // invoke: QWidget * menuBar()
+    C._ZNK7QLayout7menuBarEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "menuBar", args)
   }
@@ -710,6 +766,8 @@ func (this *QLayout) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "metaObject", args)
   }
@@ -729,8 +787,10 @@ func (this *QLayout) itemAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout6itemAtEi
+    // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK7QLayout6itemAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "itemAt", args)
   }
@@ -749,6 +809,8 @@ func (this *QLayout) parentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout12parentWidgetEv
+    // invoke: QWidget * parentWidget()
+    C._ZNK7QLayout12parentWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "parentWidget", args)
   }
@@ -768,8 +830,10 @@ func (this *QLayout) removeWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout12removeWidgetEP7QWidget
+    // invoke: void removeWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout12removeWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "removeWidget", args)
   }
@@ -789,8 +853,10 @@ func (this *QLayout) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout10removeItemEP11QLayoutItem
+    // invoke: void removeItem(class QLayoutItem *)
     var arg0 = args[0].(QLayoutItem).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout10removeItemEP11QLayoutItem(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "removeItem", args)
   }
@@ -809,6 +875,8 @@ func (this *QLayout) contentsMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout15contentsMarginsEv
+    // invoke: QMargins contentsMargins()
+    C._ZNK7QLayout15contentsMarginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "contentsMargins", args)
   }
@@ -827,6 +895,8 @@ func (this *QLayout) totalMinimumSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QLayout16totalMinimumSizeEv
+    // invoke: QSize totalMinimumSize()
+    C._ZNK7QLayout16totalMinimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "totalMinimumSize", args)
   }
@@ -846,8 +916,10 @@ func (this *QLayout) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QLayout11setGeometryERK5QRect
+    // invoke: void setGeometry(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QLayout11setGeometryERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLayout", "setGeometry", args)
   }

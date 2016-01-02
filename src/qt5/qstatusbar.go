@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -110,12 +110,14 @@ func (this *QStatusBar) insertPermanentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti
+    // invoke: int insertPermanentWidget(int, class QWidget *, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QStatusBar", "insertPermanentWidget", args)
   }
@@ -135,8 +137,10 @@ func (this *QStatusBar) removeWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12removeWidgetEP7QWidget
+    // invoke: void removeWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN10QStatusBar12removeWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStatusBar", "removeWidget", args)
   }
@@ -161,8 +165,10 @@ func (this *QStatusBar) setSizeGripEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar18setSizeGripEnabledEb
+    // invoke: void setSizeGripEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN10QStatusBar18setSizeGripEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStatusBar", "setSizeGripEnabled", args)
   }
@@ -183,10 +189,12 @@ func (this *QStatusBar) addPermanentWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti
+    // invoke: void addPermanentWidget(class QWidget *, int)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "addPermanentWidget", args)
   }
@@ -205,6 +213,8 @@ func (this *QStatusBar) isSizeGripEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar17isSizeGripEnabledEv
+    // invoke: bool isSizeGripEnabled()
+    C._ZNK10QStatusBar17isSizeGripEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "isSizeGripEnabled", args)
   }
@@ -223,6 +233,8 @@ func (this *QStatusBar) clearMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12clearMessageEv
+    // invoke: void clearMessage()
+    C._ZN10QStatusBar12clearMessageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "clearMessage", args)
   }
@@ -241,6 +253,8 @@ func (this *QStatusBar) currentMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar14currentMessageEv
+    // invoke: QString currentMessage()
+    C._ZNK10QStatusBar14currentMessageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "currentMessage", args)
   }
@@ -259,6 +273,8 @@ func (this *QStatusBar) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QStatusBar10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QStatusBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStatusBar", "metaObject", args)
   }
@@ -279,10 +295,12 @@ func (this *QStatusBar) showMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar11showMessageERK7QStringi
+    // invoke: void showMessage(const class QString &, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN10QStatusBar11showMessageERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "showMessage", args)
   }
@@ -304,12 +322,14 @@ func (this *QStatusBar) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar12insertWidgetEiP7QWidgeti
+    // invoke: int insertWidget(int, class QWidget *, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN10QStatusBar12insertWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QStatusBar", "insertWidget", args)
   }
@@ -330,10 +350,12 @@ func (this *QStatusBar) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QStatusBar9addWidgetEP7QWidgeti
+    // invoke: void addWidget(class QWidget *, int)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN10QStatusBar9addWidgetEP7QWidgeti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStatusBar", "addWidget", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -98,6 +98,8 @@ func (this *QFontComboBox) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QFontComboBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "metaObject", args)
   }
@@ -116,6 +118,8 @@ func (this *QFontComboBox) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK13QFontComboBox8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "sizeHint", args)
   }
@@ -134,6 +138,8 @@ func (this *QFontComboBox) currentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QFontComboBox11currentFontEv
+    // invoke: QFont currentFont()
+    C._ZNK13QFontComboBox11currentFontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontComboBox", "currentFont", args)
   }
@@ -153,8 +159,10 @@ func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QFontComboBox14setCurrentFontERK5QFont
+    // invoke: void setCurrentFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QFontComboBox14setCurrentFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
   }

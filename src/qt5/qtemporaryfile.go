@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -101,6 +101,8 @@ func (this *QTemporaryFile) autoRemove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile10autoRemoveEv
+    // invoke: bool autoRemove()
+    C._ZNK14QTemporaryFile10autoRemoveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "autoRemove", args)
   }
@@ -152,6 +154,8 @@ func (this *QTemporaryFile) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QTemporaryFile10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "metaObject", args)
   }
@@ -171,8 +175,10 @@ func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile13setAutoRemoveEb
+    // invoke: void setAutoRemove(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN14QTemporaryFile13setAutoRemoveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setAutoRemove", args)
   }
@@ -191,6 +197,8 @@ func (this *QTemporaryFile) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK14QTemporaryFile8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileName", args)
   }
@@ -209,6 +217,8 @@ func (this *QTemporaryFile) fileTemplate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QTemporaryFile12fileTemplateEv
+    // invoke: QString fileTemplate()
+    C._ZNK14QTemporaryFile12fileTemplateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "fileTemplate", args)
   }
@@ -244,10 +254,8 @@ func (this *QTemporaryFile) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile4openEv
-  case 1:
-    // invoke: _ZN14QTemporaryFile4openE6QFlagsIN9QIODevice12OpenModeFlagEE
-    var arg0 = args[0].(unsafe.Pointer)
-    if false {fmt.Println(arg0)}
+    // invoke: bool open()
+    C._ZN14QTemporaryFile4openEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "open", args)
   }
@@ -267,8 +275,10 @@ func (this *QTemporaryFile) setFileTemplate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QTemporaryFile15setFileTemplateERK7QString
+    // invoke: void setFileTemplate(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QTemporaryFile15setFileTemplateERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "setFileTemplate", args)
   }

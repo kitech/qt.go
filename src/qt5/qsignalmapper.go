@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -96,8 +96,10 @@ func (this *QSignalMapper) removeMappings(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper14removeMappingsEP7QObject
+    // invoke: void removeMappings(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QSignalMapper14removeMappingsEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalMapper", "removeMappings", args)
   }
@@ -135,6 +137,8 @@ func (this *QSignalMapper) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSignalMapper10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QSignalMapper10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSignalMapper", "metaObject", args)
   }
@@ -167,28 +171,36 @@ func (this *QSignalMapper) setMapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectS1_
+    // invoke: void setMapping(class QObject *, class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN13QSignalMapper10setMappingEP7QObjectS1_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjecti
+    // invoke: void setMapping(class QObject *, int)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN13QSignalMapper10setMappingEP7QObjecti(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectRK7QString
+    // invoke: void setMapping(class QObject *, const class QString &)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN13QSignalMapper10setMappingEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
   case 3:
     // invoke: _ZN13QSignalMapper10setMappingEP7QObjectP7QWidget
+    // invoke: void setMapping(class QObject *, class QWidget *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN13QSignalMapper10setMappingEP7QObjectP7QWidget(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSignalMapper", "setMapping", args)
   }
@@ -217,20 +229,28 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QSignalMapper7mappingEi
+    // invoke: QObject * mapping(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK13QSignalMapper7mappingEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK13QSignalMapper7mappingERK7QString
+    // invoke: QObject * mapping(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QSignalMapper7mappingERK7QString(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK13QSignalMapper7mappingEP7QObject
+    // invoke: QObject * mapping(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QSignalMapper7mappingEP7QObject(this.qclsinst, arg0)
   case 3:
     // invoke: _ZNK13QSignalMapper7mappingEP7QWidget
+    // invoke: QObject * mapping(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QSignalMapper7mappingEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalMapper", "mapping", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -100,6 +100,8 @@ func (this *QFontInfo) rawMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo7rawModeEv
+    // invoke: bool rawMode()
+    C._ZNK9QFontInfo7rawModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "rawMode", args)
   }
@@ -118,6 +120,8 @@ func (this *QFontInfo) exactMatch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo10exactMatchEv
+    // invoke: bool exactMatch()
+    C._ZNK9QFontInfo10exactMatchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "exactMatch", args)
   }
@@ -136,6 +140,8 @@ func (this *QFontInfo) pointSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo9pointSizeEv
+    // invoke: int pointSize()
+    C._ZNK9QFontInfo9pointSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "pointSize", args)
   }
@@ -159,6 +165,8 @@ func (this *QFontInfo) family(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo6familyEv
+    // invoke: QString family()
+    C._ZNK9QFontInfo6familyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "family", args)
   }
@@ -177,6 +185,8 @@ func (this *QFontInfo) bold(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo4boldEv
+    // invoke: bool bold()
+    C.demth_ZNK9QFontInfo4boldEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "bold", args)
   }
@@ -195,6 +205,8 @@ func (this *QFontInfo) pointSizeF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo10pointSizeFEv
+    // invoke: qreal pointSizeF()
+    C._ZNK9QFontInfo10pointSizeFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "pointSizeF", args)
   }
@@ -213,6 +225,8 @@ func (this *QFontInfo) fixedPitch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo10fixedPitchEv
+    // invoke: bool fixedPitch()
+    C._ZNK9QFontInfo10fixedPitchEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "fixedPitch", args)
   }
@@ -231,6 +245,8 @@ func (this *QFontInfo) overline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo8overlineEv
+    // invoke: bool overline()
+    C._ZNK9QFontInfo8overlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "overline", args)
   }
@@ -250,8 +266,10 @@ func (this *QFontInfo) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QFontInfo4swapERS_
+    // invoke: void swap(class QFontInfo &)
     var arg0 = args[0].(QFontInfo).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontInfo", "swap", args)
   }
@@ -270,6 +288,8 @@ func (this *QFontInfo) pixelSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo9pixelSizeEv
+    // invoke: int pixelSize()
+    C._ZNK9QFontInfo9pixelSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "pixelSize", args)
   }
@@ -288,6 +308,8 @@ func (this *QFontInfo) strikeOut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo9strikeOutEv
+    // invoke: bool strikeOut()
+    C._ZNK9QFontInfo9strikeOutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "strikeOut", args)
   }
@@ -320,6 +342,8 @@ func (this *QFontInfo) italic(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo6italicEv
+    // invoke: bool italic()
+    C._ZNK9QFontInfo6italicEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "italic", args)
   }
@@ -338,6 +362,8 @@ func (this *QFontInfo) underline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo9underlineEv
+    // invoke: bool underline()
+    C._ZNK9QFontInfo9underlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "underline", args)
   }
@@ -356,6 +382,8 @@ func (this *QFontInfo) styleName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo9styleNameEv
+    // invoke: QString styleName()
+    C._ZNK9QFontInfo9styleNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "styleName", args)
   }
@@ -374,6 +402,8 @@ func (this *QFontInfo) weight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QFontInfo6weightEv
+    // invoke: int weight()
+    C._ZNK9QFontInfo6weightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontInfo", "weight", args)
   }

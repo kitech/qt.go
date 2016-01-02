@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.go
 //
@@ -92,6 +92,8 @@ func (this *QItemDelegate) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QItemDelegate10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QItemDelegate", "metaObject", args)
   }
@@ -112,10 +114,12 @@ func (this *QItemDelegate) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
+    // invoke: QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
     var arg0 = args[0].(QStyleOptionViewItem).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QItemDelegate", "sizeHint", args)
   }
@@ -137,12 +141,14 @@ func (this *QItemDelegate) setModelData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex
+    // invoke: void setModelData(class QWidget *, class QAbstractItemModel *, const class QModelIndex &)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK13QItemDelegate12setModelDataEP7QWidgetP18QAbstractItemModelRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QItemDelegate", "setModelData", args)
   }
@@ -162,8 +168,10 @@ func (this *QItemDelegate) setItemEditorFactory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory
+    // invoke: void setItemEditorFactory(class QItemEditorFactory *)
     var arg0 = args[0].(QItemEditorFactory).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemDelegate", "setItemEditorFactory", args)
   }
@@ -183,8 +191,10 @@ func (this *QItemDelegate) setClipping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QItemDelegate11setClippingEb
+    // invoke: void setClipping(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QItemDelegate11setClippingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QItemDelegate", "setClipping", args)
   }
@@ -206,12 +216,14 @@ func (this *QItemDelegate) updateEditorGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    // invoke: void updateEditorGeometry(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionViewItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK13QItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QItemDelegate", "updateEditorGeometry", args)
   }
@@ -230,6 +242,8 @@ func (this *QItemDelegate) itemEditorFactory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate17itemEditorFactoryEv
+    // invoke: QItemEditorFactory * itemEditorFactory()
+    C._ZNK13QItemDelegate17itemEditorFactoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QItemDelegate", "itemEditorFactory", args)
   }
@@ -251,12 +265,14 @@ func (this *QItemDelegate) createEditor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex
+    // invoke: QWidget * createEditor(class QWidget *, const class QStyleOptionViewItem &, const class QModelIndex &)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionViewItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QItemDelegate", "createEditor", args)
   }
@@ -280,6 +296,8 @@ func (this *QItemDelegate) hasClipping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate11hasClippingEv
+    // invoke: bool hasClipping()
+    C._ZNK13QItemDelegate11hasClippingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QItemDelegate", "hasClipping", args)
   }
@@ -315,12 +333,14 @@ func (this *QItemDelegate) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
+    // invoke: void paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionViewItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK13QItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QItemDelegate", "paint", args)
   }
@@ -341,10 +361,12 @@ func (this *QItemDelegate) setEditorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex
+    // invoke: void setEditorData(class QWidget *, const class QModelIndex &)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK13QItemDelegate13setEditorDataEP7QWidgetRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QItemDelegate", "setEditorData", args)
   }

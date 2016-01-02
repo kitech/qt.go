@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -101,8 +101,10 @@ func (this *QPushButton) setMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton7setMenuEP5QMenu
+    // invoke: void setMenu(class QMenu *)
     var arg0 = args[0].(QMenu).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QPushButton7setMenuEP5QMenu(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setMenu", args)
   }
@@ -122,8 +124,10 @@ func (this *QPushButton) setFlat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton7setFlatEb
+    // invoke: void setFlat(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QPushButton7setFlatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setFlat", args)
   }
@@ -143,8 +147,10 @@ func (this *QPushButton) setAutoDefault(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton14setAutoDefaultEb
+    // invoke: void setAutoDefault(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QPushButton14setAutoDefaultEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setAutoDefault", args)
   }
@@ -163,6 +169,8 @@ func (this *QPushButton) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK11QPushButton15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "minimumSizeHint", args)
   }
@@ -182,8 +190,10 @@ func (this *QPushButton) setDefault(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton10setDefaultEb
+    // invoke: void setDefault(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QPushButton10setDefaultEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPushButton", "setDefault", args)
   }
@@ -221,6 +231,8 @@ func (this *QPushButton) isDefault(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton9isDefaultEv
+    // invoke: bool isDefault()
+    C._ZNK11QPushButton9isDefaultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "isDefault", args)
   }
@@ -239,6 +251,8 @@ func (this *QPushButton) autoDefault(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton11autoDefaultEv
+    // invoke: bool autoDefault()
+    C._ZNK11QPushButton11autoDefaultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "autoDefault", args)
   }
@@ -257,6 +271,8 @@ func (this *QPushButton) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QPushButton8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "sizeHint", args)
   }
@@ -275,6 +291,8 @@ func (this *QPushButton) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QPushButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "metaObject", args)
   }
@@ -293,6 +311,8 @@ func (this *QPushButton) menu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton4menuEv
+    // invoke: QMenu * menu()
+    C._ZNK11QPushButton4menuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "menu", args)
   }
@@ -311,6 +331,8 @@ func (this *QPushButton) showMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QPushButton8showMenuEv
+    // invoke: void showMenu()
+    C._ZN11QPushButton8showMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "showMenu", args)
   }
@@ -329,6 +351,8 @@ func (this *QPushButton) isFlat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QPushButton6isFlatEv
+    // invoke: bool isFlat()
+    C._ZNK11QPushButton6isFlatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPushButton", "isFlat", args)
   }

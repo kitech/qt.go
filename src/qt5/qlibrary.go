@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -126,6 +126,8 @@ func (this *QLibrary) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK8QLibrary10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "metaObject", args)
   }
@@ -144,6 +146,8 @@ func (this *QLibrary) isLoaded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary8isLoadedEv
+    // invoke: bool isLoaded()
+    C._ZNK8QLibrary8isLoadedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "isLoaded", args)
   }
@@ -162,6 +166,8 @@ func (this *QLibrary) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary4loadEv
+    // invoke: bool load()
+    C._ZN8QLibrary4loadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "load", args)
   }
@@ -180,6 +186,8 @@ func (this *QLibrary) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK8QLibrary8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "fileName", args)
   }
@@ -199,8 +207,10 @@ func (this *QLibrary) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QLibrary11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLibrary", "setFileName", args)
   }
@@ -233,6 +243,8 @@ func (this *QLibrary) unload(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary6unloadEv
+    // invoke: bool unload()
+    C._ZN8QLibrary6unloadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "unload", args)
   }
@@ -266,30 +278,38 @@ func (this *QLibrary) resolve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary7resolveERK7QStringS2_PKc
+    // invoke: QFunctionPointer resolve(const class QString &, const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.CString(args[2].(string))
     if false {fmt.Println(arg2)}
+    C._ZN8QLibrary7resolveERK7QStringS2_PKc(arg0, arg1, arg2)
   case 1:
     // invoke: _ZN8QLibrary7resolveERK7QStringPKc
+    // invoke: QFunctionPointer resolve(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
+    C._ZN8QLibrary7resolveERK7QStringPKc(arg0, arg1)
   case 2:
     // invoke: _ZN8QLibrary7resolveEPKc
+    // invoke: QFunctionPointer resolve(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN8QLibrary7resolveEPKc(this.qclsinst, arg0)
   case 3:
     // invoke: _ZN8QLibrary7resolveERK7QStringiPKc
+    // invoke: QFunctionPointer resolve(const class QString &, int, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.CString(args[2].(string))
     if false {fmt.Println(arg2)}
+    C._ZN8QLibrary7resolveERK7QStringiPKc(arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QLibrary", "resolve", args)
   }
@@ -314,16 +334,20 @@ func (this *QLibrary) setFileNameAndVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_
+    // invoke: void setFileNameAndVersion(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN8QLibrary21setFileNameAndVersionERK7QStringi
+    // invoke: void setFileNameAndVersion(const class QString &, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN8QLibrary21setFileNameAndVersionERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLibrary", "setFileNameAndVersion", args)
   }
@@ -356,6 +380,8 @@ func (this *QLibrary) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QLibrary11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK8QLibrary11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLibrary", "errorString", args)
   }

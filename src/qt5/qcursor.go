@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -110,6 +110,8 @@ func (this *QCursor) pixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor6pixmapEv
+    // invoke: QPixmap pixmap()
+    C._ZNK7QCursor6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "pixmap", args)
   }
@@ -147,6 +149,8 @@ func (this *QCursor) mask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor4maskEv
+    // invoke: const QBitmap * mask()
+    C._ZNK7QCursor4maskEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "mask", args)
   }
@@ -165,6 +169,8 @@ func (this *QCursor) bitmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor6bitmapEv
+    // invoke: const QBitmap * bitmap()
+    C._ZNK7QCursor6bitmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "bitmap", args)
   }
@@ -197,6 +203,8 @@ func (this *QCursor) hotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QCursor7hotSpotEv
+    // invoke: QPoint hotSpot()
+    C._ZNK7QCursor7hotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCursor", "hotSpot", args)
   }

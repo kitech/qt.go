@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -98,10 +98,12 @@ func (this *QButtonGroup) addButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup9addButtonEP15QAbstractButtoni
+    // invoke: void addButton(class QAbstractButton *, int)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QButtonGroup9addButtonEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QButtonGroup", "addButton", args)
   }
@@ -120,6 +122,8 @@ func (this *QButtonGroup) buttons(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup7buttonsEv
+    // invoke: QList<QAbstractButton *> buttons()
+    C._ZNK12QButtonGroup7buttonsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "buttons", args)
   }
@@ -153,8 +157,10 @@ func (this *QButtonGroup) id(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup2idEP15QAbstractButton
+    // invoke: int id(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
   }
@@ -174,8 +180,10 @@ func (this *QButtonGroup) removeButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12removeButtonEP15QAbstractButton
+    // invoke: void removeButton(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QButtonGroup12removeButtonEP15QAbstractButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "removeButton", args)
   }
@@ -199,6 +207,8 @@ func (this *QButtonGroup) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QButtonGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "metaObject", args)
   }
@@ -218,8 +228,10 @@ func (this *QButtonGroup) button(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup6buttonEi
+    // invoke: QAbstractButton * button(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK12QButtonGroup6buttonEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "button", args)
   }
@@ -238,6 +250,8 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup9checkedIdEv
+    // invoke: int checkedId()
+    C._ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedId", args)
   }
@@ -256,6 +270,8 @@ func (this *QButtonGroup) checkedButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup13checkedButtonEv
+    // invoke: QAbstractButton * checkedButton()
+    C._ZNK12QButtonGroup13checkedButtonEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedButton", args)
   }
@@ -275,8 +291,10 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup12setExclusiveEb
+    // invoke: void setExclusive(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QButtonGroup12setExclusiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QButtonGroup", "setExclusive", args)
   }
@@ -297,10 +315,12 @@ func (this *QButtonGroup) setId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QButtonGroup5setIdEP15QAbstractButtoni
+    // invoke: void setId(class QAbstractButton *, int)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QButtonGroup5setIdEP15QAbstractButtoni(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QButtonGroup", "setId", args)
   }
@@ -319,6 +339,8 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QButtonGroup9exclusiveEv
+    // invoke: bool exclusive()
+    C._ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QButtonGroup", "exclusive", args)
   }

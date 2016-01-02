@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -79,14 +79,20 @@ func (this *QPaintDeviceWindow) update(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
+    // invoke: void update(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QPaintDeviceWindow6updateERK7QRegion(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN18QPaintDeviceWindow6updateEv
+    // invoke: void update()
+    C._ZN18QPaintDeviceWindow6updateEv(this.qclsinst)
   case 2:
     // invoke: _ZN18QPaintDeviceWindow6updateERK5QRect
+    // invoke: void update(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QPaintDeviceWindow6updateERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
   }
@@ -110,6 +116,8 @@ func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QPaintDeviceWindow10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QPaintDeviceWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "metaObject", args)
   }

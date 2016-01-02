@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.go
 //
@@ -134,6 +134,8 @@ func (this *QSettings) isWritable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings10isWritableEv
+    // invoke: bool isWritable()
+    C._ZNK9QSettings10isWritableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "isWritable", args)
   }
@@ -152,6 +154,8 @@ func (this *QSettings) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK9QSettings8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "fileName", args)
   }
@@ -170,6 +174,8 @@ func (this *QSettings) fallbacksEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings16fallbacksEnabledEv
+    // invoke: bool fallbacksEnabled()
+    C._ZNK9QSettings16fallbacksEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "fallbacksEnabled", args)
   }
@@ -188,6 +194,8 @@ func (this *QSettings) applicationName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings15applicationNameEv
+    // invoke: QString applicationName()
+    C._ZNK9QSettings15applicationNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "applicationName", args)
   }
@@ -206,6 +214,8 @@ func (this *QSettings) sync(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings4syncEv
+    // invoke: void sync()
+    C._ZN9QSettings4syncEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "sync", args)
   }
@@ -226,10 +236,12 @@ func (this *QSettings) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings8setValueERK7QStringRK8QVariant
+    // invoke: void setValue(const class QString &, const class QVariant &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QSettings8setValueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSettings", "setValue", args)
   }
@@ -249,8 +261,10 @@ func (this *QSettings) setArrayIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings13setArrayIndexEi
+    // invoke: void setArrayIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings13setArrayIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "setArrayIndex", args)
   }
@@ -273,12 +287,16 @@ func (this *QSettings) setIniCodec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings11setIniCodecEP10QTextCodec
+    // invoke: void setIniCodec(class QTextCodec *)
     var arg0 = args[0].(QTextCodec).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings11setIniCodecEP10QTextCodec(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN9QSettings11setIniCodecEPKc
+    // invoke: void setIniCodec(const char *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings11setIniCodecEPKc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "setIniCodec", args)
   }
@@ -298,8 +316,10 @@ func (this *QSettings) beginReadArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings14beginReadArrayERK7QString
+    // invoke: int beginReadArray(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings14beginReadArrayERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "beginReadArray", args)
   }
@@ -318,6 +338,8 @@ func (this *QSettings) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings5clearEv
+    // invoke: void clear()
+    C._ZN9QSettings5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "clear", args)
   }
@@ -350,6 +372,8 @@ func (this *QSettings) iniCodec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings8iniCodecEv
+    // invoke: QTextCodec * iniCodec()
+    C._ZNK9QSettings8iniCodecEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "iniCodec", args)
   }
@@ -382,6 +406,8 @@ func (this *QSettings) childGroups(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings11childGroupsEv
+    // invoke: QStringList childGroups()
+    C._ZNK9QSettings11childGroupsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "childGroups", args)
   }
@@ -402,10 +428,12 @@ func (this *QSettings) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings5valueERK7QStringRK8QVariant
+    // invoke: QVariant value(const class QString &, const class QVariant &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZNK9QSettings5valueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSettings", "value", args)
   }
@@ -424,6 +452,8 @@ func (this *QSettings) organizationName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings16organizationNameEv
+    // invoke: QString organizationName()
+    C._ZNK9QSettings16organizationNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "organizationName", args)
   }
@@ -442,6 +472,8 @@ func (this *QSettings) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QSettings10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "metaObject", args)
   }
@@ -461,8 +493,10 @@ func (this *QSettings) setFallbacksEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings19setFallbacksEnabledEb
+    // invoke: void setFallbacksEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings19setFallbacksEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "setFallbacksEnabled", args)
   }
@@ -482,8 +516,10 @@ func (this *QSettings) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings8containsERK7QString
+    // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QSettings8containsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "contains", args)
   }
@@ -503,8 +539,10 @@ func (this *QSettings) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings6removeERK7QString
+    // invoke: void remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings6removeERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "remove", args)
   }
@@ -523,6 +561,8 @@ func (this *QSettings) endGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings8endGroupEv
+    // invoke: void endGroup()
+    C._ZN9QSettings8endGroupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "endGroup", args)
   }
@@ -543,10 +583,12 @@ func (this *QSettings) beginWriteArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings15beginWriteArrayERK7QStringi
+    // invoke: void beginWriteArray(const class QString &, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QSettings15beginWriteArrayERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSettings", "beginWriteArray", args)
   }
@@ -566,8 +608,10 @@ func (this *QSettings) beginGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings10beginGroupERK7QString
+    // invoke: void beginGroup(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSettings10beginGroupERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSettings", "beginGroup", args)
   }
@@ -586,6 +630,8 @@ func (this *QSettings) childKeys(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings9childKeysEv
+    // invoke: QStringList childKeys()
+    C._ZNK9QSettings9childKeysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "childKeys", args)
   }
@@ -604,6 +650,8 @@ func (this *QSettings) endArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSettings8endArrayEv
+    // invoke: void endArray()
+    C._ZN9QSettings8endArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "endArray", args)
   }
@@ -636,6 +684,8 @@ func (this *QSettings) allKeys(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings7allKeysEv
+    // invoke: QStringList allKeys()
+    C._ZNK9QSettings7allKeysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "allKeys", args)
   }
@@ -654,6 +704,8 @@ func (this *QSettings) group(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSettings5groupEv
+    // invoke: QString group()
+    C._ZNK9QSettings5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSettings", "group", args)
   }

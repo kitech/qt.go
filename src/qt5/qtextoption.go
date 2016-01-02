@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -85,6 +85,8 @@ func (this *QTextOption) tabStop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption7tabStopEv
+    // invoke: qreal tabStop()
+    C.demth_ZNK11QTextOption7tabStopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "tabStop", args)
   }
@@ -104,8 +106,10 @@ func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextOption19setUseDesignMetricsEb
+    // invoke: void setUseDesignMetrics(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QTextOption19setUseDesignMetricsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
   }
@@ -125,8 +129,10 @@ func (this *QTextOption) setTabStop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QTextOption10setTabStopEd
+    // invoke: void setTabStop(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QTextOption10setTabStopEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextOption", "setTabStop", args)
   }
@@ -145,6 +151,8 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
+    // invoke: bool useDesignMetrics()
+    C._ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
   }
@@ -163,6 +171,8 @@ func (this *QTextOption) tabArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTextOption8tabArrayEv
+    // invoke: QList<qreal> tabArray()
+    C._ZNK11QTextOption8tabArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "tabArray", args)
   }

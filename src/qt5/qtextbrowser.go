@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -118,6 +118,8 @@ func (this *QTextBrowser) isBackwardAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser19isBackwardAvailableEv
+    // invoke: bool isBackwardAvailable()
+    C._ZNK12QTextBrowser19isBackwardAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "isBackwardAvailable", args)
   }
@@ -136,6 +138,8 @@ func (this *QTextBrowser) reload(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser6reloadEv
+    // invoke: void reload()
+    C._ZN12QTextBrowser6reloadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "reload", args)
   }
@@ -154,6 +158,8 @@ func (this *QTextBrowser) openLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser9openLinksEv
+    // invoke: bool openLinks()
+    C._ZNK12QTextBrowser9openLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "openLinks", args)
   }
@@ -172,6 +178,8 @@ func (this *QTextBrowser) clearHistory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser12clearHistoryEv
+    // invoke: void clearHistory()
+    C._ZN12QTextBrowser12clearHistoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "clearHistory", args)
   }
@@ -190,6 +198,8 @@ func (this *QTextBrowser) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QTextBrowser10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "metaObject", args)
   }
@@ -209,8 +219,10 @@ func (this *QTextBrowser) historyUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser10historyUrlEi
+    // invoke: QUrl historyUrl(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK12QTextBrowser10historyUrlEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyUrl", args)
   }
@@ -229,6 +241,8 @@ func (this *QTextBrowser) isForwardAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser18isForwardAvailableEv
+    // invoke: bool isForwardAvailable()
+    C._ZNK12QTextBrowser18isForwardAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "isForwardAvailable", args)
   }
@@ -247,6 +261,8 @@ func (this *QTextBrowser) openExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser17openExternalLinksEv
+    // invoke: bool openExternalLinks()
+    C._ZNK12QTextBrowser17openExternalLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "openExternalLinks", args)
   }
@@ -270,6 +286,8 @@ func (this *QTextBrowser) backwardHistoryCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser20backwardHistoryCountEv
+    // invoke: int backwardHistoryCount()
+    C._ZNK12QTextBrowser20backwardHistoryCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "backwardHistoryCount", args)
   }
@@ -288,6 +306,8 @@ func (this *QTextBrowser) home(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser4homeEv
+    // invoke: void home()
+    C._ZN12QTextBrowser4homeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "home", args)
   }
@@ -321,8 +341,10 @@ func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser12setOpenLinksEb
+    // invoke: void setOpenLinks(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QTextBrowser12setOpenLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "setOpenLinks", args)
   }
@@ -341,6 +363,8 @@ func (this *QTextBrowser) forward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser7forwardEv
+    // invoke: void forward()
+    C._ZN12QTextBrowser7forwardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "forward", args)
   }
@@ -360,8 +384,10 @@ func (this *QTextBrowser) historyTitle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser12historyTitleEi
+    // invoke: QString historyTitle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK12QTextBrowser12historyTitleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "historyTitle", args)
   }
@@ -381,8 +407,10 @@ func (this *QTextBrowser) setSearchPaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser14setSearchPathsERK11QStringList
+    // invoke: void setSearchPaths(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QTextBrowser14setSearchPathsERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "setSearchPaths", args)
   }
@@ -403,10 +431,12 @@ func (this *QTextBrowser) loadResource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser12loadResourceEiRK4QUrl
+    // invoke: QVariant loadResource(int, const class QUrl &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN12QTextBrowser12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextBrowser", "loadResource", args)
   }
@@ -425,6 +455,8 @@ func (this *QTextBrowser) source(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser6sourceEv
+    // invoke: QUrl source()
+    C._ZNK12QTextBrowser6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "source", args)
   }
@@ -444,8 +476,10 @@ func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser20setOpenExternalLinksEb
+    // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QTextBrowser20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "setOpenExternalLinks", args)
   }
@@ -465,8 +499,10 @@ func (this *QTextBrowser) setSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser9setSourceERK4QUrl
+    // invoke: void setSource(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QTextBrowser9setSourceERK4QUrl(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextBrowser", "setSource", args)
   }
@@ -485,6 +521,8 @@ func (this *QTextBrowser) searchPaths(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser11searchPathsEv
+    // invoke: QStringList searchPaths()
+    C._ZNK12QTextBrowser11searchPathsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "searchPaths", args)
   }
@@ -503,6 +541,8 @@ func (this *QTextBrowser) backward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QTextBrowser8backwardEv
+    // invoke: void backward()
+    C._ZN12QTextBrowser8backwardEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "backward", args)
   }
@@ -521,6 +561,8 @@ func (this *QTextBrowser) forwardHistoryCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QTextBrowser19forwardHistoryCountEv
+    // invoke: int forwardHistoryCount()
+    C._ZNK12QTextBrowser19forwardHistoryCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBrowser", "forwardHistoryCount", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -78,12 +78,14 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture
+    // invoke: bool loadPicture(const class QString &, const class QString &, class QPicture *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
   }
@@ -105,12 +107,14 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture
+    // invoke: bool savePicture(const class QString &, const class QString &, const class QPicture &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
   }
@@ -149,8 +153,10 @@ func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QPictureFormatPlugin16installIOHandlerERK7QString
+    // invoke: bool installIOHandler(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QPictureFormatPlugin16installIOHandlerERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "installIOHandler", args)
   }
@@ -169,6 +175,8 @@ func (this *QPictureFormatPlugin) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QPictureFormatPlugin10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK20QPictureFormatPlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "metaObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -95,6 +95,8 @@ func (this *QPluginLoader) isLoaded(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPluginLoader8isLoadedEv
+    // invoke: bool isLoaded()
+    C._ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "isLoaded", args)
   }
@@ -113,6 +115,8 @@ func (this *QPluginLoader) unload(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPluginLoader6unloadEv
+    // invoke: bool unload()
+    C._ZN13QPluginLoader6unloadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "unload", args)
   }
@@ -136,6 +140,8 @@ func (this *QPluginLoader) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPluginLoader4loadEv
+    // invoke: bool load()
+    C._ZN13QPluginLoader4loadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "load", args)
   }
@@ -154,6 +160,8 @@ func (this *QPluginLoader) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPluginLoader10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QPluginLoader10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "metaObject", args)
   }
@@ -172,6 +180,8 @@ func (this *QPluginLoader) instance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPluginLoader8instanceEv
+    // invoke: QObject * instance()
+    C._ZN13QPluginLoader8instanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "instance", args)
   }
@@ -218,6 +228,8 @@ func (this *QPluginLoader) metaData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPluginLoader8metaDataEv
+    // invoke: QJsonObject metaData()
+    C._ZNK13QPluginLoader8metaDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "metaData", args)
   }
@@ -236,6 +248,8 @@ func (this *QPluginLoader) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPluginLoader11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK13QPluginLoader11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "errorString", args)
   }
@@ -254,6 +268,8 @@ func (this *QPluginLoader) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QPluginLoader8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK13QPluginLoader8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPluginLoader", "fileName", args)
   }
@@ -273,8 +289,10 @@ func (this *QPluginLoader) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QPluginLoader11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QPluginLoader11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPluginLoader", "setFileName", args)
   }

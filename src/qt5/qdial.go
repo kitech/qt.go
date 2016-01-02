@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -90,6 +90,8 @@ func (this *QDial) wrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial8wrappingEv
+    // invoke: bool wrapping()
+    C._ZNK5QDial8wrappingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "wrapping", args)
   }
@@ -122,6 +124,8 @@ func (this *QDial) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK5QDial10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "metaObject", args)
   }
@@ -140,6 +144,8 @@ func (this *QDial) notchesVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial14notchesVisibleEv
+    // invoke: bool notchesVisible()
+    C._ZNK5QDial14notchesVisibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "notchesVisible", args)
   }
@@ -159,8 +165,10 @@ func (this *QDial) setNotchTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial14setNotchTargetEd
+    // invoke: void setNotchTarget(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN5QDial14setNotchTargetEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDial", "setNotchTarget", args)
   }
@@ -180,8 +188,10 @@ func (this *QDial) setWrapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial11setWrappingEb
+    // invoke: void setWrapping(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN5QDial11setWrappingEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDial", "setWrapping", args)
   }
@@ -200,6 +210,8 @@ func (this *QDial) notchSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial9notchSizeEv
+    // invoke: int notchSize()
+    C._ZNK5QDial9notchSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "notchSize", args)
   }
@@ -219,8 +231,10 @@ func (this *QDial) setNotchesVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDial17setNotchesVisibleEb
+    // invoke: void setNotchesVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN5QDial17setNotchesVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDial", "setNotchesVisible", args)
   }
@@ -239,6 +253,8 @@ func (this *QDial) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK5QDial15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "minimumSizeHint", args)
   }
@@ -262,6 +278,8 @@ func (this *QDial) notchTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial11notchTargetEv
+    // invoke: qreal notchTarget()
+    C._ZNK5QDial11notchTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "notchTarget", args)
   }
@@ -280,6 +298,8 @@ func (this *QDial) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDial8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK5QDial8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDial", "sizeHint", args)
   }

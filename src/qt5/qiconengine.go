@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -77,8 +77,10 @@ func (this *QIconEngine) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine4readER11QDataStream
+    // invoke: bool read(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
   }
@@ -97,6 +99,8 @@ func (this *QIconEngine) iconName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine8iconNameEv
+    // invoke: QString iconName()
+    C._ZNK11QIconEngine8iconNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEngine", "iconName", args)
   }
@@ -116,8 +120,10 @@ func (this *QIconEngine) write(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine5writeER11QDataStream
+    // invoke: bool write(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
   }
@@ -138,10 +144,12 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QIconEngine12virtual_hookEiPv
+    // invoke: void virtual_hook(int, void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C._ZN11QIconEngine12virtual_hookEiPv(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
   }
@@ -160,6 +168,8 @@ func (this *QIconEngine) clone(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine5cloneEv
+    // invoke: QIconEngine * clone()
+    C._ZNK11QIconEngine5cloneEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEngine", "clone", args)
   }
@@ -178,6 +188,8 @@ func (this *QIconEngine) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QIconEngine3keyEv
+    // invoke: QString key()
+    C._ZNK11QIconEngine3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEngine", "key", args)
   }

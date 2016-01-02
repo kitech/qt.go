@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -90,6 +90,8 @@ func (this *QDrag) target(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6targetEv
+    // invoke: QObject * target()
+    C._ZNK5QDrag6targetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "target", args)
   }
@@ -108,6 +110,8 @@ func (this *QDrag) mimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag8mimeDataEv
+    // invoke: QMimeData * mimeData()
+    C._ZNK5QDrag8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "mimeData", args)
   }
@@ -146,8 +150,10 @@ func (this *QDrag) setHotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag10setHotSpotERK6QPoint
+    // invoke: void setHotSpot(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QDrag10setHotSpotERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setHotSpot", args)
   }
@@ -166,6 +172,8 @@ func (this *QDrag) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK5QDrag10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "metaObject", args)
   }
@@ -185,8 +193,10 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag11setMimeDataEP9QMimeData
+    // invoke: void setMimeData(class QMimeData *)
     var arg0 = args[0].(QMimeData).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QDrag11setMimeDataEP9QMimeData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setMimeData", args)
   }
@@ -205,6 +215,8 @@ func (this *QDrag) pixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6pixmapEv
+    // invoke: QPixmap pixmap()
+    C._ZNK5QDrag6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "pixmap", args)
   }
@@ -223,6 +235,8 @@ func (this *QDrag) hotSpot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag7hotSpotEv
+    // invoke: QPoint hotSpot()
+    C._ZNK5QDrag7hotSpotEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "hotSpot", args)
   }
@@ -242,8 +256,10 @@ func (this *QDrag) setPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QDrag9setPixmapERK7QPixmap
+    // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QDrag9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDrag", "setPixmap", args)
   }
@@ -262,6 +278,8 @@ func (this *QDrag) source(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QDrag6sourceEv
+    // invoke: QObject * source()
+    C._ZNK5QDrag6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDrag", "source", args)
   }

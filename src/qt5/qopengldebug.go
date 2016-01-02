@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.go
 //
@@ -126,6 +126,8 @@ func (this *QOpenGLDebugMessage) id(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage2idEv
+    // invoke: GLuint id()
+    C._ZNK19QOpenGLDebugMessage2idEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "id", args)
   }
@@ -144,6 +146,8 @@ func (this *QOpenGLDebugMessage) message(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QOpenGLDebugMessage7messageEv
+    // invoke: QString message()
+    C._ZNK19QOpenGLDebugMessage7messageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "message", args)
   }
@@ -163,8 +167,10 @@ func (this *QOpenGLDebugMessage) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QOpenGLDebugMessage4swapERS_
+    // invoke: void swap(class QOpenGLDebugMessage &)
     var arg0 = args[0].(QOpenGLDebugMessage).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN19QOpenGLDebugMessage4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLDebugMessage", "swap", args)
   }
@@ -197,6 +203,8 @@ func (this *QOpenGLDebugLogger) maximumMessageLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger20maximumMessageLengthEv
+    // invoke: qint64 maximumMessageLength()
+    C._ZNK18QOpenGLDebugLogger20maximumMessageLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "maximumMessageLength", args)
   }
@@ -215,6 +223,8 @@ func (this *QOpenGLDebugLogger) isLogging(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger9isLoggingEv
+    // invoke: bool isLogging()
+    C._ZNK18QOpenGLDebugLogger9isLoggingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "isLogging", args)
   }
@@ -233,6 +243,8 @@ func (this *QOpenGLDebugLogger) stopLogging(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger11stopLoggingEv
+    // invoke: void stopLogging()
+    C._ZN18QOpenGLDebugLogger11stopLoggingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "stopLogging", args)
   }
@@ -252,8 +264,10 @@ func (this *QOpenGLDebugLogger) logMessage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage
+    // invoke: void logMessage(const class QOpenGLDebugMessage &)
     var arg0 = args[0].(QOpenGLDebugMessage).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLDebugLogger10logMessageERK19QOpenGLDebugMessage(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "logMessage", args)
   }
@@ -277,6 +291,8 @@ func (this *QOpenGLDebugLogger) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QOpenGLDebugLogger10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "metaObject", args)
   }
@@ -295,6 +311,8 @@ func (this *QOpenGLDebugLogger) loggedMessages(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLDebugLogger14loggedMessagesEv
+    // invoke: QList<QOpenGLDebugMessage> loggedMessages()
+    C._ZNK18QOpenGLDebugLogger14loggedMessagesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "loggedMessages", args)
   }
@@ -313,6 +331,8 @@ func (this *QOpenGLDebugLogger) popGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger8popGroupEv
+    // invoke: void popGroup()
+    C._ZN18QOpenGLDebugLogger8popGroupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "popGroup", args)
   }
@@ -331,6 +351,8 @@ func (this *QOpenGLDebugLogger) initialize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLDebugLogger10initializeEv
+    // invoke: bool initialize()
+    C._ZN18QOpenGLDebugLogger10initializeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLDebugLogger", "initialize", args)
   }

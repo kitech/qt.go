@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.go
 //
@@ -122,6 +122,8 @@ func (this *QDataWidgetMapper) currentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12currentIndexEv
+    // invoke: int currentIndex()
+    C._ZNK17QDataWidgetMapper12currentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "currentIndex", args)
   }
@@ -147,18 +149,22 @@ func (this *QDataWidgetMapper) addMapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray
+    // invoke: void addMapping(class QWidget *, int, const class QByteArray &)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QByteArray).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZN17QDataWidgetMapper10addMappingEP7QWidgeti
+    // invoke: void addMapping(class QWidget *, int)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN17QDataWidgetMapper10addMappingEP7QWidgeti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "addMapping", args)
   }
@@ -177,6 +183,8 @@ func (this *QDataWidgetMapper) rootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper9rootIndexEv
+    // invoke: QModelIndex rootIndex()
+    C._ZNK17QDataWidgetMapper9rootIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "rootIndex", args)
   }
@@ -196,8 +204,10 @@ func (this *QDataWidgetMapper) setCurrentIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper15setCurrentIndexEi
+    // invoke: void setCurrentIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper15setCurrentIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentIndex", args)
   }
@@ -217,8 +227,10 @@ func (this *QDataWidgetMapper) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel
+    // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setModel", args)
   }
@@ -238,8 +250,10 @@ func (this *QDataWidgetMapper) mappedWidgetAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper14mappedWidgetAtEi
+    // invoke: QWidget * mappedWidgetAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QDataWidgetMapper14mappedWidgetAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedWidgetAt", args)
   }
@@ -259,8 +273,10 @@ func (this *QDataWidgetMapper) removeMapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper13removeMappingEP7QWidget
+    // invoke: void removeMapping(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper13removeMappingEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "removeMapping", args)
   }
@@ -279,6 +295,8 @@ func (this *QDataWidgetMapper) toFirst(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper7toFirstEv
+    // invoke: void toFirst()
+    C._ZN17QDataWidgetMapper7toFirstEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toFirst", args)
   }
@@ -297,6 +315,8 @@ func (this *QDataWidgetMapper) toPrevious(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper10toPreviousEv
+    // invoke: void toPrevious()
+    C._ZN17QDataWidgetMapper10toPreviousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toPrevious", args)
   }
@@ -316,8 +336,10 @@ func (this *QDataWidgetMapper) setRootIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex
+    // invoke: void setRootIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper12setRootIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setRootIndex", args)
   }
@@ -336,6 +358,8 @@ func (this *QDataWidgetMapper) revert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6revertEv
+    // invoke: void revert()
+    C._ZN17QDataWidgetMapper6revertEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "revert", args)
   }
@@ -354,6 +378,8 @@ func (this *QDataWidgetMapper) clearMapping(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper12clearMappingEv
+    // invoke: void clearMapping()
+    C._ZN17QDataWidgetMapper12clearMappingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "clearMapping", args)
   }
@@ -373,8 +399,10 @@ func (this *QDataWidgetMapper) mappedSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper13mappedSectionEP7QWidget
+    // invoke: int mappedSection(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QDataWidgetMapper13mappedSectionEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedSection", args)
   }
@@ -394,8 +422,10 @@ func (this *QDataWidgetMapper) mappedPropertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget
+    // invoke: QByteArray mappedPropertyName(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QDataWidgetMapper18mappedPropertyNameEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "mappedPropertyName", args)
   }
@@ -415,8 +445,10 @@ func (this *QDataWidgetMapper) setItemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate
+    // invoke: void setItemDelegate(class QAbstractItemDelegate *)
     var arg0 = args[0].(QAbstractItemDelegate).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper15setItemDelegateEP21QAbstractItemDelegate(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setItemDelegate", args)
   }
@@ -436,8 +468,10 @@ func (this *QDataWidgetMapper) setCurrentModelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex
+    // invoke: void setCurrentModelIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "setCurrentModelIndex", args)
   }
@@ -470,6 +504,8 @@ func (this *QDataWidgetMapper) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QDataWidgetMapper10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "metaObject", args)
   }
@@ -488,6 +524,8 @@ func (this *QDataWidgetMapper) toLast(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6toLastEv
+    // invoke: void toLast()
+    C._ZN17QDataWidgetMapper6toLastEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toLast", args)
   }
@@ -506,6 +544,8 @@ func (this *QDataWidgetMapper) model(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper5modelEv
+    // invoke: QAbstractItemModel * model()
+    C._ZNK17QDataWidgetMapper5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "model", args)
   }
@@ -524,6 +564,8 @@ func (this *QDataWidgetMapper) itemDelegate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QDataWidgetMapper12itemDelegateEv
+    // invoke: QAbstractItemDelegate * itemDelegate()
+    C._ZNK17QDataWidgetMapper12itemDelegateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "itemDelegate", args)
   }
@@ -542,6 +584,8 @@ func (this *QDataWidgetMapper) submit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6submitEv
+    // invoke: bool submit()
+    C._ZN17QDataWidgetMapper6submitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "submit", args)
   }
@@ -560,6 +604,8 @@ func (this *QDataWidgetMapper) toNext(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QDataWidgetMapper6toNextEv
+    // invoke: void toNext()
+    C._ZN17QDataWidgetMapper6toNextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataWidgetMapper", "toNext", args)
   }

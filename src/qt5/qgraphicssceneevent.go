@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -287,6 +287,8 @@ func (this *QGraphicsSceneMoveEvent) newPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6newPosEv
+    // invoke: QPointF newPos()
+    C._ZNK23QGraphicsSceneMoveEvent6newPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "newPos", args)
   }
@@ -305,6 +307,8 @@ func (this *QGraphicsSceneMoveEvent) oldPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneMoveEvent6oldPosEv
+    // invoke: QPointF oldPos()
+    C._ZNK23QGraphicsSceneMoveEvent6oldPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "oldPos", args)
   }
@@ -343,8 +347,10 @@ func (this *QGraphicsSceneMoveEvent) setNewPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF
+    // invoke: void setNewPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSceneMoveEvent9setNewPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setNewPos", args)
   }
@@ -364,8 +370,10 @@ func (this *QGraphicsSceneMoveEvent) setOldPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF
+    // invoke: void setOldPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSceneMoveEvent9setOldPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMoveEvent", "setOldPos", args)
   }
@@ -389,6 +397,8 @@ func (this *QGraphicsSceneContextMenuEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK30QGraphicsSceneContextMenuEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "scenePos", args)
   }
@@ -421,6 +431,8 @@ func (this *QGraphicsSceneContextMenuEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent3posEv
+    // invoke: QPointF pos()
+    C._ZNK30QGraphicsSceneContextMenuEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "pos", args)
   }
@@ -440,8 +452,10 @@ func (this *QGraphicsSceneContextMenuEvent) setScreenPos(args ...interface{}) ()
   switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN30QGraphicsSceneContextMenuEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScreenPos", args)
   }
@@ -461,8 +475,10 @@ func (this *QGraphicsSceneContextMenuEvent) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN30QGraphicsSceneContextMenuEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setPos", args)
   }
@@ -481,6 +497,8 @@ func (this *QGraphicsSceneContextMenuEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QGraphicsSceneContextMenuEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK30QGraphicsSceneContextMenuEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "screenPos", args)
   }
@@ -500,8 +518,10 @@ func (this *QGraphicsSceneContextMenuEvent) setScenePos(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN30QGraphicsSceneContextMenuEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneContextMenuEvent", "setScenePos", args)
   }
@@ -520,6 +540,8 @@ func (this *QGraphicsSceneMouseEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK24QGraphicsSceneMouseEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "screenPos", args)
   }
@@ -543,6 +565,8 @@ func (this *QGraphicsSceneMouseEvent) lastScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent12lastScenePosEv
+    // invoke: QPointF lastScenePos()
+    C._ZNK24QGraphicsSceneMouseEvent12lastScenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScenePos", args)
   }
@@ -575,6 +599,8 @@ func (this *QGraphicsSceneMouseEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent3posEv
+    // invoke: QPointF pos()
+    C._ZNK24QGraphicsSceneMouseEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "pos", args)
   }
@@ -594,8 +620,10 @@ func (this *QGraphicsSceneMouseEvent) setLastPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF
+    // invoke: void setLastPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastPos", args)
   }
@@ -615,8 +643,10 @@ func (this *QGraphicsSceneMouseEvent) setLastScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF
+    // invoke: void setLastScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScenePos", args)
   }
@@ -635,6 +665,8 @@ func (this *QGraphicsSceneMouseEvent) lastScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv
+    // invoke: QPoint lastScreenPos()
+    C._ZNK24QGraphicsSceneMouseEvent13lastScreenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastScreenPos", args)
   }
@@ -654,8 +686,10 @@ func (this *QGraphicsSceneMouseEvent) setScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScreenPos", args)
   }
@@ -675,8 +709,10 @@ func (this *QGraphicsSceneMouseEvent) setLastScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint
+    // invoke: void setLastScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setLastScreenPos", args)
   }
@@ -696,8 +732,10 @@ func (this *QGraphicsSceneMouseEvent) setScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setScenePos", args)
   }
@@ -716,6 +754,8 @@ func (this *QGraphicsSceneMouseEvent) lastPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent7lastPosEv
+    // invoke: QPointF lastPos()
+    C._ZNK24QGraphicsSceneMouseEvent7lastPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "lastPos", args)
   }
@@ -734,6 +774,8 @@ func (this *QGraphicsSceneMouseEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneMouseEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK24QGraphicsSceneMouseEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "scenePos", args)
   }
@@ -753,8 +795,10 @@ func (this *QGraphicsSceneMouseEvent) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneMouseEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneMouseEvent", "setPos", args)
   }
@@ -774,8 +818,10 @@ func (this *QGraphicsSceneHelpEvent) setScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSceneHelpEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScenePos", args)
   }
@@ -794,6 +840,8 @@ func (this *QGraphicsSceneHelpEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK23QGraphicsSceneHelpEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "screenPos", args)
   }
@@ -832,8 +880,10 @@ func (this *QGraphicsSceneHelpEvent) setScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsSceneHelpEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "setScreenPos", args)
   }
@@ -852,6 +902,8 @@ func (this *QGraphicsSceneHelpEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK23QGraphicsSceneHelpEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK23QGraphicsSceneHelpEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHelpEvent", "scenePos", args)
   }
@@ -870,6 +922,8 @@ func (this *QGraphicsSceneHoverEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK24QGraphicsSceneHoverEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "scenePos", args)
   }
@@ -889,8 +943,10 @@ func (this *QGraphicsSceneHoverEvent) setLastPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF
+    // invoke: void setLastPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent10setLastPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastPos", args)
   }
@@ -909,6 +965,8 @@ func (this *QGraphicsSceneHoverEvent) lastPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent7lastPosEv
+    // invoke: QPointF lastPos()
+    C._ZNK24QGraphicsSceneHoverEvent7lastPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastPos", args)
   }
@@ -932,6 +990,8 @@ func (this *QGraphicsSceneHoverEvent) lastScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent12lastScenePosEv
+    // invoke: QPointF lastScenePos()
+    C._ZNK24QGraphicsSceneHoverEvent12lastScenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScenePos", args)
   }
@@ -951,8 +1011,10 @@ func (this *QGraphicsSceneHoverEvent) setLastScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint
+    // invoke: void setLastScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent16setLastScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScreenPos", args)
   }
@@ -972,8 +1034,10 @@ func (this *QGraphicsSceneHoverEvent) setScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScenePos", args)
   }
@@ -993,8 +1057,10 @@ func (this *QGraphicsSceneHoverEvent) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setPos", args)
   }
@@ -1013,6 +1079,8 @@ func (this *QGraphicsSceneHoverEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK24QGraphicsSceneHoverEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "screenPos", args)
   }
@@ -1031,6 +1099,8 @@ func (this *QGraphicsSceneHoverEvent) lastScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv
+    // invoke: QPoint lastScreenPos()
+    C._ZNK24QGraphicsSceneHoverEvent13lastScreenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "lastScreenPos", args)
   }
@@ -1050,8 +1120,10 @@ func (this *QGraphicsSceneHoverEvent) setLastScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF
+    // invoke: void setLastScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent15setLastScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setLastScenePos", args)
   }
@@ -1070,6 +1142,8 @@ func (this *QGraphicsSceneHoverEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneHoverEvent3posEv
+    // invoke: QPointF pos()
+    C._ZNK24QGraphicsSceneHoverEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "pos", args)
   }
@@ -1089,8 +1163,10 @@ func (this *QGraphicsSceneHoverEvent) setScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneHoverEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneHoverEvent", "setScreenPos", args)
   }
@@ -1123,6 +1199,8 @@ func (this *QGraphicsSceneWheelEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent3posEv
+    // invoke: QPointF pos()
+    C._ZNK24QGraphicsSceneWheelEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "pos", args)
   }
@@ -1156,8 +1234,10 @@ func (this *QGraphicsSceneWheelEvent) setDelta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent8setDeltaEi
+    // invoke: void setDelta(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneWheelEvent8setDeltaEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setDelta", args)
   }
@@ -1177,8 +1257,10 @@ func (this *QGraphicsSceneWheelEvent) setScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScenePos", args)
   }
@@ -1203,8 +1285,10 @@ func (this *QGraphicsSceneWheelEvent) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneWheelEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setPos", args)
   }
@@ -1224,8 +1308,10 @@ func (this *QGraphicsSceneWheelEvent) setScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QGraphicsSceneWheelEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "setScreenPos", args)
   }
@@ -1244,6 +1330,8 @@ func (this *QGraphicsSceneWheelEvent) delta(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent5deltaEv
+    // invoke: int delta()
+    C._ZNK24QGraphicsSceneWheelEvent5deltaEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "delta", args)
   }
@@ -1262,6 +1350,8 @@ func (this *QGraphicsSceneWheelEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK24QGraphicsSceneWheelEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "scenePos", args)
   }
@@ -1280,6 +1370,8 @@ func (this *QGraphicsSceneWheelEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QGraphicsSceneWheelEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK24QGraphicsSceneWheelEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneWheelEvent", "screenPos", args)
   }
@@ -1298,6 +1390,8 @@ func (this *QGraphicsSceneDragDropEvent) source(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent6sourceEv
+    // invoke: QWidget * source()
+    C._ZNK27QGraphicsSceneDragDropEvent6sourceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "source", args)
   }
@@ -1316,6 +1410,8 @@ func (this *QGraphicsSceneDragDropEvent) scenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8scenePosEv
+    // invoke: QPointF scenePos()
+    C._ZNK27QGraphicsSceneDragDropEvent8scenePosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "scenePos", args)
   }
@@ -1335,8 +1431,10 @@ func (this *QGraphicsSceneDragDropEvent) setPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF
+    // invoke: void setPos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QGraphicsSceneDragDropEvent6setPosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setPos", args)
   }
@@ -1361,8 +1459,10 @@ func (this *QGraphicsSceneDragDropEvent) setScreenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint
+    // invoke: void setScreenPos(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QGraphicsSceneDragDropEvent12setScreenPosERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScreenPos", args)
   }
@@ -1381,6 +1481,8 @@ func (this *QGraphicsSceneDragDropEvent) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent3posEv
+    // invoke: QPointF pos()
+    C._ZNK27QGraphicsSceneDragDropEvent3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "pos", args)
   }
@@ -1399,6 +1501,8 @@ func (this *QGraphicsSceneDragDropEvent) screenPos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent9screenPosEv
+    // invoke: QPoint screenPos()
+    C._ZNK27QGraphicsSceneDragDropEvent9screenPosEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "screenPos", args)
   }
@@ -1417,6 +1521,8 @@ func (this *QGraphicsSceneDragDropEvent) mimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QGraphicsSceneDragDropEvent8mimeDataEv
+    // invoke: const QMimeData * mimeData()
+    C._ZNK27QGraphicsSceneDragDropEvent8mimeDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "mimeData", args)
   }
@@ -1450,8 +1556,10 @@ func (this *QGraphicsSceneDragDropEvent) setMimeData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData
+    // invoke: void setMimeData(const class QMimeData *)
     var arg0 = args[0].(QMimeData).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QGraphicsSceneDragDropEvent11setMimeDataEPK9QMimeData(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setMimeData", args)
   }
@@ -1471,8 +1579,10 @@ func (this *QGraphicsSceneDragDropEvent) setSource(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget
+    // invoke: void setSource(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QGraphicsSceneDragDropEvent9setSourceEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setSource", args)
   }
@@ -1492,8 +1602,10 @@ func (this *QGraphicsSceneDragDropEvent) setScenePos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF
+    // invoke: void setScenePos(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QGraphicsSceneDragDropEvent11setScenePosERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "setScenePos", args)
   }
@@ -1512,6 +1624,8 @@ func (this *QGraphicsSceneDragDropEvent) acceptProposedAction(args ...interface{
   switch matched_index {
   case 0:
     // invoke: _ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv
+    // invoke: void acceptProposedAction()
+    C._ZN27QGraphicsSceneDragDropEvent20acceptProposedActionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneDragDropEvent", "acceptProposedAction", args)
   }
@@ -1535,6 +1649,8 @@ func (this *QGraphicsSceneEvent) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QGraphicsSceneEvent6widgetEv
+    // invoke: QWidget * widget()
+    C._ZNK19QGraphicsSceneEvent6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "widget", args)
   }
@@ -1554,8 +1670,10 @@ func (this *QGraphicsSceneEvent) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QGraphicsSceneEvent9setWidgetEP7QWidget
+    // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QGraphicsSceneEvent9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneEvent", "setWidget", args)
   }
@@ -1588,6 +1706,8 @@ func (this *QGraphicsSceneResizeEvent) newSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7newSizeEv
+    // invoke: QSizeF newSize()
+    C._ZNK25QGraphicsSceneResizeEvent7newSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "newSize", args)
   }
@@ -1606,6 +1726,8 @@ func (this *QGraphicsSceneResizeEvent) oldSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QGraphicsSceneResizeEvent7oldSizeEv
+    // invoke: QSizeF oldSize()
+    C._ZNK25QGraphicsSceneResizeEvent7oldSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "oldSize", args)
   }
@@ -1639,8 +1761,10 @@ func (this *QGraphicsSceneResizeEvent) setNewSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF
+    // invoke: void setNewSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsSceneResizeEvent10setNewSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setNewSize", args)
   }
@@ -1665,8 +1789,10 @@ func (this *QGraphicsSceneResizeEvent) setOldSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF
+    // invoke: void setOldSize(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsSceneResizeEvent10setOldSizeERK6QSizeF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsSceneResizeEvent", "setOldSize", args)
   }

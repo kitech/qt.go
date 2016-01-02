@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglpixeltransferoptions.h
 // dst-file: /src/gui/qopenglpixeltransferoptions.go
 //
@@ -123,6 +123,8 @@ func (this *QOpenGLPixelTransferOptions) isSwapBytesEnabled(args ...interface{})
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv
+    // invoke: bool isSwapBytesEnabled()
+    C._ZNK27QOpenGLPixelTransferOptions18isSwapBytesEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "isSwapBytesEnabled", args)
   }
@@ -142,8 +144,10 @@ func (this *QOpenGLPixelTransferOptions) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions4swapERS_
+    // invoke: void swap(class QOpenGLPixelTransferOptions &)
     var arg0 = args[0].(QOpenGLPixelTransferOptions).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "swap", args)
   }
@@ -162,6 +166,8 @@ func (this *QOpenGLPixelTransferOptions) skipImages(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions10skipImagesEv
+    // invoke: int skipImages()
+    C._ZNK27QOpenGLPixelTransferOptions10skipImagesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipImages", args)
   }
@@ -181,8 +187,10 @@ func (this *QOpenGLPixelTransferOptions) setSkipRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions11setSkipRowsEi
+    // invoke: void setSkipRows(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions11setSkipRowsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipRows", args)
   }
@@ -201,6 +209,8 @@ func (this *QOpenGLPixelTransferOptions) skipPixels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions10skipPixelsEv
+    // invoke: int skipPixels()
+    C._ZNK27QOpenGLPixelTransferOptions10skipPixelsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipPixels", args)
   }
@@ -220,8 +230,10 @@ func (this *QOpenGLPixelTransferOptions) setRowLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions12setRowLengthEi
+    // invoke: void setRowLength(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions12setRowLengthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setRowLength", args)
   }
@@ -240,6 +252,8 @@ func (this *QOpenGLPixelTransferOptions) imageHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions11imageHeightEv
+    // invoke: int imageHeight()
+    C._ZNK27QOpenGLPixelTransferOptions11imageHeightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "imageHeight", args)
   }
@@ -259,8 +273,10 @@ func (this *QOpenGLPixelTransferOptions) setImageHeight(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions14setImageHeightEi
+    // invoke: void setImageHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions14setImageHeightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setImageHeight", args)
   }
@@ -279,6 +295,8 @@ func (this *QOpenGLPixelTransferOptions) skipRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions8skipRowsEv
+    // invoke: int skipRows()
+    C._ZNK27QOpenGLPixelTransferOptions8skipRowsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "skipRows", args)
   }
@@ -298,8 +316,10 @@ func (this *QOpenGLPixelTransferOptions) setAlignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions12setAlignmentEi
+    // invoke: void setAlignment(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions12setAlignmentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setAlignment", args)
   }
@@ -319,8 +339,10 @@ func (this *QOpenGLPixelTransferOptions) setSkipImages(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions13setSkipImagesEi
+    // invoke: void setSkipImages(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions13setSkipImagesEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipImages", args)
   }
@@ -339,6 +361,8 @@ func (this *QOpenGLPixelTransferOptions) alignment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions9alignmentEv
+    // invoke: int alignment()
+    C._ZNK27QOpenGLPixelTransferOptions9alignmentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "alignment", args)
   }
@@ -358,8 +382,10 @@ func (this *QOpenGLPixelTransferOptions) setSkipPixels(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions13setSkipPixelsEi
+    // invoke: void setSkipPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions13setSkipPixelsEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSkipPixels", args)
   }
@@ -379,8 +405,10 @@ func (this *QOpenGLPixelTransferOptions) setSwapBytesEnabled(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions19setSwapBytesEnabledEb
+    // invoke: void setSwapBytesEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions19setSwapBytesEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setSwapBytesEnabled", args)
   }
@@ -400,8 +428,10 @@ func (this *QOpenGLPixelTransferOptions) setLeastSignificantByteFirst(args ...in
   switch matched_index {
   case 0:
     // invoke: _ZN27QOpenGLPixelTransferOptions28setLeastSignificantByteFirstEb
+    // invoke: void setLeastSignificantByteFirst(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN27QOpenGLPixelTransferOptions28setLeastSignificantByteFirstEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "setLeastSignificantByteFirst", args)
   }
@@ -420,6 +450,8 @@ func (this *QOpenGLPixelTransferOptions) isLeastSignificantBitFirst(args ...inte
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv
+    // invoke: bool isLeastSignificantBitFirst()
+    C._ZNK27QOpenGLPixelTransferOptions26isLeastSignificantBitFirstEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "isLeastSignificantBitFirst", args)
   }
@@ -438,6 +470,8 @@ func (this *QOpenGLPixelTransferOptions) rowLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QOpenGLPixelTransferOptions9rowLengthEv
+    // invoke: int rowLength()
+    C._ZNK27QOpenGLPixelTransferOptions9rowLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPixelTransferOptions", "rowLength", args)
   }

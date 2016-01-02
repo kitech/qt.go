@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -83,6 +83,8 @@ func (this *QTemporaryDir) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTemporaryDir6removeEv
+    // invoke: bool remove()
+    C._ZN13QTemporaryDir6removeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "remove", args)
   }
@@ -101,6 +103,8 @@ func (this *QTemporaryDir) autoRemove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir10autoRemoveEv
+    // invoke: bool autoRemove()
+    C._ZNK13QTemporaryDir10autoRemoveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "autoRemove", args)
   }
@@ -119,6 +123,8 @@ func (this *QTemporaryDir) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QTemporaryDir7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "isValid", args)
   }
@@ -138,8 +144,10 @@ func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QTemporaryDir13setAutoRemoveEb
+    // invoke: void setAutoRemove(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN13QTemporaryDir13setAutoRemoveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "setAutoRemove", args)
   }
@@ -177,6 +185,8 @@ func (this *QTemporaryDir) path(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QTemporaryDir4pathEv
+    // invoke: QString path()
+    C._ZNK13QTemporaryDir4pathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryDir", "path", args)
   }

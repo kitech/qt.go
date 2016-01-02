@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -124,6 +124,8 @@ func (this *QTimeLine) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine5startEv
+    // invoke: void start()
+    C._ZN9QTimeLine5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "start", args)
   }
@@ -147,6 +149,8 @@ func (this *QTimeLine) duration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine8durationEv
+    // invoke: int duration()
+    C._ZNK9QTimeLine8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "duration", args)
   }
@@ -165,6 +169,8 @@ func (this *QTimeLine) currentFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine12currentFrameEv
+    // invoke: int currentFrame()
+    C._ZNK9QTimeLine12currentFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentFrame", args)
   }
@@ -183,6 +189,8 @@ func (this *QTimeLine) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QTimeLine10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "metaObject", args)
   }
@@ -201,6 +209,8 @@ func (this *QTimeLine) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine4stopEv
+    // invoke: void stop()
+    C._ZN9QTimeLine4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "stop", args)
   }
@@ -234,8 +244,10 @@ func (this *QTimeLine) setUpdateInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine17setUpdateIntervalEi
+    // invoke: void setUpdateInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine17setUpdateIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setUpdateInterval", args)
   }
@@ -254,6 +266,8 @@ func (this *QTimeLine) easingCurve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine11easingCurveEv
+    // invoke: QEasingCurve easingCurve()
+    C._ZNK9QTimeLine11easingCurveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "easingCurve", args)
   }
@@ -272,6 +286,8 @@ func (this *QTimeLine) loopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine9loopCountEv
+    // invoke: int loopCount()
+    C._ZNK9QTimeLine9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "loopCount", args)
   }
@@ -291,8 +307,10 @@ func (this *QTimeLine) setStartFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine13setStartFrameEi
+    // invoke: void setStartFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine13setStartFrameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setStartFrame", args)
   }
@@ -311,6 +329,8 @@ func (this *QTimeLine) resume(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine6resumeEv
+    // invoke: void resume()
+    C._ZN9QTimeLine6resumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "resume", args)
   }
@@ -330,8 +350,10 @@ func (this *QTimeLine) setEasingCurve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine14setEasingCurveERK12QEasingCurve
+    // invoke: void setEasingCurve(const class QEasingCurve &)
     var arg0 = args[0].(QEasingCurve).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine14setEasingCurveERK12QEasingCurve(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setEasingCurve", args)
   }
@@ -350,6 +372,8 @@ func (this *QTimeLine) startFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine10startFrameEv
+    // invoke: int startFrame()
+    C._ZNK9QTimeLine10startFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "startFrame", args)
   }
@@ -369,8 +393,10 @@ func (this *QTimeLine) setEndFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine11setEndFrameEi
+    // invoke: void setEndFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine11setEndFrameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setEndFrame", args)
   }
@@ -389,6 +415,8 @@ func (this *QTimeLine) updateInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine14updateIntervalEv
+    // invoke: int updateInterval()
+    C._ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "updateInterval", args)
   }
@@ -408,8 +436,10 @@ func (this *QTimeLine) setLoopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine12setLoopCountEi
+    // invoke: void setLoopCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine12setLoopCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setLoopCount", args)
   }
@@ -429,8 +459,10 @@ func (this *QTimeLine) setCurrentTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine14setCurrentTimeEi
+    // invoke: void setCurrentTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine14setCurrentTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setCurrentTime", args)
   }
@@ -449,6 +481,8 @@ func (this *QTimeLine) currentTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine11currentTimeEv
+    // invoke: int currentTime()
+    C._ZNK9QTimeLine11currentTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentTime", args)
   }
@@ -468,8 +502,10 @@ func (this *QTimeLine) setDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine11setDurationEi
+    // invoke: void setDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine11setDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setDuration", args)
   }
@@ -488,6 +524,8 @@ func (this *QTimeLine) toggleDirection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine15toggleDirectionEv
+    // invoke: void toggleDirection()
+    C._ZN9QTimeLine15toggleDirectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "toggleDirection", args)
   }
@@ -506,6 +544,8 @@ func (this *QTimeLine) endFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine8endFrameEv
+    // invoke: int endFrame()
+    C._ZNK9QTimeLine8endFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "endFrame", args)
   }
@@ -525,8 +565,10 @@ func (this *QTimeLine) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine9setPausedEb
+    // invoke: void setPaused(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeLine9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "setPaused", args)
   }
@@ -546,8 +588,10 @@ func (this *QTimeLine) frameForTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine12frameForTimeEi
+    // invoke: int frameForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "frameForTime", args)
   }
@@ -568,10 +612,12 @@ func (this *QTimeLine) setFrameRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeLine13setFrameRangeEii
+    // invoke: void setFrameRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QTimeLine13setFrameRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTimeLine", "setFrameRange", args)
   }
@@ -591,8 +637,10 @@ func (this *QTimeLine) valueForTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine12valueForTimeEi
+    // invoke: qreal valueForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeLine", "valueForTime", args)
   }
@@ -611,6 +659,8 @@ func (this *QTimeLine) currentValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeLine12currentValueEv
+    // invoke: qreal currentValue()
+    C._ZNK9QTimeLine12currentValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeLine", "currentValue", args)
   }

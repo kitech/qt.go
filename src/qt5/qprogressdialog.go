@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.go
 //
@@ -119,8 +119,10 @@ func (this *QProgressDialog) setAutoClose(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog12setAutoCloseEb
+    // invoke: void setAutoClose(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog12setAutoCloseEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setAutoClose", args)
   }
@@ -141,10 +143,12 @@ func (this *QProgressDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog4openEP7QObjectPKc
+    // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
+    C._ZN15QProgressDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressDialog", "open", args)
   }
@@ -164,8 +168,10 @@ func (this *QProgressDialog) setMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog10setMaximumEi
+    // invoke: void setMaximum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog10setMaximumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setMaximum", args)
   }
@@ -185,8 +191,10 @@ func (this *QProgressDialog) setMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog10setMinimumEi
+    // invoke: void setMinimum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog10setMinimumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setMinimum", args)
   }
@@ -206,8 +214,10 @@ func (this *QProgressDialog) setLabelText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog12setLabelTextERK7QString
+    // invoke: void setLabelText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog12setLabelTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setLabelText", args)
   }
@@ -226,6 +236,8 @@ func (this *QProgressDialog) wasCanceled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog11wasCanceledEv
+    // invoke: bool wasCanceled()
+    C._ZNK15QProgressDialog11wasCanceledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "wasCanceled", args)
   }
@@ -258,6 +270,8 @@ func (this *QProgressDialog) minimumDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog15minimumDurationEv
+    // invoke: int minimumDuration()
+    C._ZNK15QProgressDialog15minimumDurationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimumDuration", args)
   }
@@ -277,8 +291,10 @@ func (this *QProgressDialog) setMinimumDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog18setMinimumDurationEi
+    // invoke: void setMinimumDuration(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog18setMinimumDurationEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setMinimumDuration", args)
   }
@@ -297,6 +313,8 @@ func (this *QProgressDialog) maximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog7maximumEv
+    // invoke: int maximum()
+    C._ZNK15QProgressDialog7maximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "maximum", args)
   }
@@ -316,8 +334,10 @@ func (this *QProgressDialog) setBar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog6setBarEP12QProgressBar
+    // invoke: void setBar(class QProgressBar *)
     var arg0 = args[0].(QProgressBar).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog6setBarEP12QProgressBar(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setBar", args)
   }
@@ -336,6 +356,8 @@ func (this *QProgressDialog) cancel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog6cancelEv
+    // invoke: void cancel()
+    C._ZN15QProgressDialog6cancelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "cancel", args)
   }
@@ -354,6 +376,8 @@ func (this *QProgressDialog) autoClose(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoCloseEv
+    // invoke: bool autoClose()
+    C._ZNK15QProgressDialog9autoCloseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoClose", args)
   }
@@ -372,6 +396,8 @@ func (this *QProgressDialog) minimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog7minimumEv
+    // invoke: int minimum()
+    C._ZNK15QProgressDialog7minimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimum", args)
   }
@@ -390,6 +416,8 @@ func (this *QProgressDialog) autoReset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoResetEv
+    // invoke: bool autoReset()
+    C._ZNK15QProgressDialog9autoResetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoReset", args)
   }
@@ -408,6 +436,8 @@ func (this *QProgressDialog) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog5resetEv
+    // invoke: void reset()
+    C._ZN15QProgressDialog5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "reset", args)
   }
@@ -433,10 +463,12 @@ func (this *QProgressDialog) setRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog8setRangeEii
+    // invoke: void setRange(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN15QProgressDialog8setRangeEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setRange", args)
   }
@@ -456,8 +488,10 @@ func (this *QProgressDialog) setCancelButtonText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog19setCancelButtonTextERK7QString
+    // invoke: void setCancelButtonText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog19setCancelButtonTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setCancelButtonText", args)
   }
@@ -476,6 +510,8 @@ func (this *QProgressDialog) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK15QProgressDialog8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "sizeHint", args)
   }
@@ -494,6 +530,8 @@ func (this *QProgressDialog) labelText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog9labelTextEv
+    // invoke: QString labelText()
+    C._ZNK15QProgressDialog9labelTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "labelText", args)
   }
@@ -513,8 +551,10 @@ func (this *QProgressDialog) setLabel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog8setLabelEP6QLabel
+    // invoke: void setLabel(class QLabel *)
     var arg0 = args[0].(QLabel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog8setLabelEP6QLabel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setLabel", args)
   }
@@ -533,6 +573,8 @@ func (this *QProgressDialog) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QProgressDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "metaObject", args)
   }
@@ -552,8 +594,10 @@ func (this *QProgressDialog) setAutoReset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog12setAutoResetEb
+    // invoke: void setAutoReset(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog12setAutoResetEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setAutoReset", args)
   }
@@ -572,6 +616,8 @@ func (this *QProgressDialog) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QProgressDialog5valueEv
+    // invoke: int value()
+    C._ZNK15QProgressDialog5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QProgressDialog", "value", args)
   }
@@ -591,8 +637,10 @@ func (this *QProgressDialog) setCancelButton(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog15setCancelButtonEP11QPushButton
+    // invoke: void setCancelButton(class QPushButton *)
     var arg0 = args[0].(QPushButton).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog15setCancelButtonEP11QPushButton(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setCancelButton", args)
   }
@@ -612,8 +660,10 @@ func (this *QProgressDialog) setValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QProgressDialog8setValueEi
+    // invoke: void setValue(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN15QProgressDialog8setValueEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QProgressDialog", "setValue", args)
   }

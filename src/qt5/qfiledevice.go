@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -99,6 +99,8 @@ func (this *QFileDevice) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice4sizeEv
+    // invoke: qint64 size()
+    C._ZNK11QFileDevice4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "size", args)
   }
@@ -118,8 +120,10 @@ func (this *QFileDevice) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice4seekEx
+    // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN11QFileDevice4seekEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
   }
@@ -139,8 +143,10 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5unmapEPh
+    // invoke: bool unmap(uchar *)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
+    C._ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
   }
@@ -159,6 +165,8 @@ func (this *QFileDevice) close(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5closeEv
+    // invoke: void close()
+    C._ZN11QFileDevice5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "close", args)
   }
@@ -177,6 +185,8 @@ func (this *QFileDevice) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice3posEv
+    // invoke: qint64 pos()
+    C._ZNK11QFileDevice3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "pos", args)
   }
@@ -195,6 +205,8 @@ func (this *QFileDevice) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice6handleEv
+    // invoke: int handle()
+    C._ZNK11QFileDevice6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "handle", args)
   }
@@ -213,6 +225,8 @@ func (this *QFileDevice) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK11QFileDevice8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "fileName", args)
   }
@@ -250,6 +264,8 @@ func (this *QFileDevice) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK11QFileDevice5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "atEnd", args)
   }
@@ -268,6 +284,8 @@ func (this *QFileDevice) isSequential(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice12isSequentialEv
+    // invoke: bool isSequential()
+    C._ZNK11QFileDevice12isSequentialEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "isSequential", args)
   }
@@ -286,6 +304,8 @@ func (this *QFileDevice) flush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice5flushEv
+    // invoke: bool flush()
+    C._ZN11QFileDevice5flushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "flush", args)
   }
@@ -304,6 +324,8 @@ func (this *QFileDevice) unsetError(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice10unsetErrorEv
+    // invoke: void unsetError()
+    C._ZN11QFileDevice10unsetErrorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "unsetError", args)
   }
@@ -322,6 +344,8 @@ func (this *QFileDevice) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFileDevice10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QFileDevice10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileDevice", "metaObject", args)
   }
@@ -341,8 +365,10 @@ func (this *QFileDevice) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFileDevice6resizeEx
+    // invoke: bool resize(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -87,6 +87,8 @@ func (this *QElapsedTimer) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer5startEv
+    // invoke: void start()
+    C._ZN13QElapsedTimer5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "start", args)
   }
@@ -105,6 +107,8 @@ func (this *QElapsedTimer) nsecsElapsed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer12nsecsElapsedEv
+    // invoke: qint64 nsecsElapsed()
+    C._ZNK13QElapsedTimer12nsecsElapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "nsecsElapsed", args)
   }
@@ -123,6 +127,8 @@ func (this *QElapsedTimer) invalidate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer10invalidateEv
+    // invoke: void invalidate()
+    C._ZN13QElapsedTimer10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "invalidate", args)
   }
@@ -161,8 +167,10 @@ func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7msecsToERKS_
+    // invoke: qint64 msecsTo(const class QElapsedTimer &)
     var arg0 = args[0].(QElapsedTimer).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QElapsedTimer7msecsToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
   }
@@ -181,6 +189,8 @@ func (this *QElapsedTimer) msecsSinceReference(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer19msecsSinceReferenceEv
+    // invoke: qint64 msecsSinceReference()
+    C._ZNK13QElapsedTimer19msecsSinceReferenceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "msecsSinceReference", args)
   }
@@ -200,8 +210,10 @@ func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer10hasExpiredEx
+    // invoke: bool hasExpired(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZNK13QElapsedTimer10hasExpiredEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
   }
@@ -220,6 +232,8 @@ func (this *QElapsedTimer) restart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QElapsedTimer7restartEv
+    // invoke: qint64 restart()
+    C._ZN13QElapsedTimer7restartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "restart", args)
   }
@@ -238,6 +252,8 @@ func (this *QElapsedTimer) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QElapsedTimer7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "isValid", args)
   }
@@ -257,8 +273,10 @@ func (this *QElapsedTimer) secsTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer6secsToERKS_
+    // invoke: qint64 secsTo(const class QElapsedTimer &)
     var arg0 = args[0].(QElapsedTimer).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK13QElapsedTimer6secsToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "secsTo", args)
   }
@@ -277,6 +295,8 @@ func (this *QElapsedTimer) elapsed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QElapsedTimer7elapsedEv
+    // invoke: qint64 elapsed()
+    C._ZNK13QElapsedTimer7elapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "elapsed", args)
   }

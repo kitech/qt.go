@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -98,8 +98,10 @@ func (this *QBuffer) seek(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer4seekEx
+    // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN7QBuffer4seekEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBuffer", "seek", args)
   }
@@ -118,6 +120,8 @@ func (this *QBuffer) canReadLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer11canReadLineEv
+    // invoke: bool canReadLine()
+    C._ZNK7QBuffer11canReadLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "canReadLine", args)
   }
@@ -155,14 +159,18 @@ func (this *QBuffer) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer7setDataERK10QByteArray
+    // invoke: void setData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QBuffer7setDataERK10QByteArray(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN7QBuffer7setDataEPKci
+    // invoke: void setData(const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZN7QBuffer7setDataEPKci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBuffer", "setData", args)
   }
@@ -181,6 +189,8 @@ func (this *QBuffer) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer4dataEv
+    // invoke: const QByteArray & data()
+    C._ZNK7QBuffer4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "data", args)
   }
@@ -205,8 +215,10 @@ func (this *QBuffer) setBuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer9setBufferEP10QByteArray
+    // invoke: void setBuffer(class QByteArray *)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QBuffer9setBufferEP10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBuffer", "setBuffer", args)
   }
@@ -226,9 +238,9 @@ func (this *QBuffer) buffer(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QBuffer6bufferEv
-  case 1:
     // invoke: _ZN7QBuffer6bufferEv
+    // invoke: QByteArray & buffer()
+    C._ZN7QBuffer6bufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "buffer", args)
   }
@@ -247,6 +259,8 @@ func (this *QBuffer) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer3posEv
+    // invoke: qint64 pos()
+    C._ZNK7QBuffer3posEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "pos", args)
   }
@@ -265,6 +279,8 @@ func (this *QBuffer) close(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QBuffer5closeEv
+    // invoke: void close()
+    C._ZN7QBuffer5closeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "close", args)
   }
@@ -283,6 +299,8 @@ func (this *QBuffer) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QBuffer10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "metaObject", args)
   }
@@ -301,6 +319,8 @@ func (this *QBuffer) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer4sizeEv
+    // invoke: qint64 size()
+    C._ZNK7QBuffer4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "size", args)
   }
@@ -319,6 +339,8 @@ func (this *QBuffer) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QBuffer5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK7QBuffer5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBuffer", "atEnd", args)
   }

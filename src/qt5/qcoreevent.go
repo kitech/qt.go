@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -134,6 +134,8 @@ func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QDeferredDeleteEvent9loopLevelEv
+    // invoke: int loopLevel()
+    C._ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "loopLevel", args)
   }
@@ -190,6 +192,8 @@ func (this *QDynamicPropertyChangeEvent) propertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK27QDynamicPropertyChangeEvent12propertyNameEv
+    // invoke: QByteArray propertyName()
+    C.demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDynamicPropertyChangeEvent", "propertyName", args)
   }
@@ -227,6 +231,8 @@ func (this *QTimerEvent) timerId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QTimerEvent7timerIdEv
+    // invoke: int timerId()
+    C._ZNK11QTimerEvent7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "timerId", args)
   }
@@ -245,6 +251,8 @@ func (this *QChildEvent) added(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QChildEvent5addedEv
+    // invoke: bool added()
+    C._ZNK11QChildEvent5addedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "added", args)
   }
@@ -263,6 +271,8 @@ func (this *QChildEvent) polished(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QChildEvent8polishedEv
+    // invoke: bool polished()
+    C._ZNK11QChildEvent8polishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "polished", args)
   }
@@ -295,6 +305,8 @@ func (this *QChildEvent) removed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QChildEvent7removedEv
+    // invoke: bool removed()
+    C._ZNK11QChildEvent7removedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "removed", args)
   }
@@ -313,6 +325,8 @@ func (this *QChildEvent) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QChildEvent5childEv
+    // invoke: QObject * child()
+    C._ZNK11QChildEvent5childEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "child", args)
   }
@@ -332,8 +346,10 @@ func (this *QEvent) setAccepted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QEvent11setAcceptedEb
+    // invoke: void setAccepted(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QEvent11setAcceptedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEvent", "setAccepted", args)
   }
@@ -352,6 +368,8 @@ func (this *QEvent) ignore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QEvent6ignoreEv
+    // invoke: void ignore()
+    C.demth_ZN6QEvent6ignoreEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "ignore", args)
   }
@@ -370,6 +388,8 @@ func (this *QEvent) isAccepted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QEvent10isAcceptedEv
+    // invoke: bool isAccepted()
+    C.demth_ZNK6QEvent10isAcceptedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "isAccepted", args)
   }
@@ -407,6 +427,8 @@ func (this *QEvent) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QEvent6acceptEv
+    // invoke: void accept()
+    C.demth_ZN6QEvent6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "accept", args)
   }
@@ -439,6 +461,8 @@ func (this *QEvent) spontaneous(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QEvent11spontaneousEv
+    // invoke: bool spontaneous()
+    C.demth_ZNK6QEvent11spontaneousEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEvent", "spontaneous", args)
   }

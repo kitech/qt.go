@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -106,7 +106,7 @@ extern void _ZN16QCoreApplication15eventDispatcherEv();
   // proto: static bool QCoreApplication::startingUp();
 extern void _ZN16QCoreApplication10startingUpEv();
   // proto: static bool QCoreApplication::sendEvent(QObject * receiver, QEvent * event);
-extern void _ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(void* arg0, void* arg1);
+extern void demth_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(void* arg0, void* arg1);
   // proto:  bool QCoreApplication::notify(QObject * , QEvent * );
 extern void _ZN16QCoreApplication6notifyEP7QObjectP6QEvent(void* qthis, void* arg0, void* arg1);
   // proto: static bool QCoreApplication::isQuitLockEnabled();
@@ -228,8 +228,10 @@ func (this *QCoreApplication) installNativeEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter
+    // invoke: void installNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCoreApplication", "installNativeEventFilter", args)
   }
@@ -520,8 +522,10 @@ func (this *QCoreApplication) removeNativeEventFilter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter
+    // invoke: void removeNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeNativeEventFilter", args)
   }
@@ -682,10 +686,12 @@ func (this *QCoreApplication) notify(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QCoreApplication6notifyEP7QObjectP6QEvent
+    // invoke: bool notify(class QObject *, class QEvent *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QCoreApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QCoreApplication", "notify", args)
   }
@@ -732,6 +738,8 @@ func (this *QCoreApplication) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QCoreApplication10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QCoreApplication10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCoreApplication", "metaObject", args)
   }

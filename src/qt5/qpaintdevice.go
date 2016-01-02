@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpaintdevice.h
 // dst-file: /src/gui/qpaintdevice.go
 //
@@ -43,9 +43,9 @@ extern void _ZNK12QPaintDevice12physicalDpiXEv(void* qthis);
   // proto:  int QPaintDevice::widthMM();
 extern void _ZNK12QPaintDevice7widthMMEv(void* qthis);
   // proto:  int QPaintDevice::devType();
-extern void _ZNK12QPaintDevice7devTypeEv(void* qthis);
+extern void demth_ZNK12QPaintDevice7devTypeEv(void* qthis);
   // proto:  bool QPaintDevice::paintingActive();
-extern void _ZNK12QPaintDevice14paintingActiveEv(void* qthis);
+extern void demth_ZNK12QPaintDevice14paintingActiveEv(void* qthis);
   // proto:  int QPaintDevice::width();
 extern void _ZNK12QPaintDevice5widthEv(void* qthis);
   // proto:  void QPaintDevice::QPaintDevice(const QPaintDevice & );
@@ -98,6 +98,8 @@ func (this *QPaintDevice) physicalDpiY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiYEv
+    // invoke: int physicalDpiY()
+    C._ZNK12QPaintDevice12physicalDpiYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiY", args)
   }
@@ -116,6 +118,8 @@ func (this *QPaintDevice) heightMM(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice8heightMMEv
+    // invoke: int heightMM()
+    C._ZNK12QPaintDevice8heightMMEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "heightMM", args)
   }
@@ -134,6 +138,8 @@ func (this *QPaintDevice) colorCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice10colorCountEv
+    // invoke: int colorCount()
+    C._ZNK12QPaintDevice10colorCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "colorCount", args)
   }
@@ -152,6 +158,8 @@ func (this *QPaintDevice) physicalDpiX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice12physicalDpiXEv
+    // invoke: int physicalDpiX()
+    C._ZNK12QPaintDevice12physicalDpiXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "physicalDpiX", args)
   }
@@ -170,6 +178,8 @@ func (this *QPaintDevice) widthMM(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice7widthMMEv
+    // invoke: int widthMM()
+    C._ZNK12QPaintDevice7widthMMEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "widthMM", args)
   }
@@ -188,6 +198,8 @@ func (this *QPaintDevice) devType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice7devTypeEv
+    // invoke: int devType()
+    C.demth_ZNK12QPaintDevice7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "devType", args)
   }
@@ -206,6 +218,8 @@ func (this *QPaintDevice) paintingActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice14paintingActiveEv
+    // invoke: bool paintingActive()
+    C.demth_ZNK12QPaintDevice14paintingActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintingActive", args)
   }
@@ -224,6 +238,8 @@ func (this *QPaintDevice) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice5widthEv
+    // invoke: int width()
+    C._ZNK12QPaintDevice5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "width", args)
   }
@@ -247,6 +263,8 @@ func (this *QPaintDevice) devicePixelRatio(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice16devicePixelRatioEv
+    // invoke: int devicePixelRatio()
+    C._ZNK12QPaintDevice16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "devicePixelRatio", args)
   }
@@ -265,6 +283,8 @@ func (this *QPaintDevice) height(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice6heightEv
+    // invoke: int height()
+    C._ZNK12QPaintDevice6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "height", args)
   }
@@ -283,6 +303,8 @@ func (this *QPaintDevice) depth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice5depthEv
+    // invoke: int depth()
+    C._ZNK12QPaintDevice5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "depth", args)
   }
@@ -301,6 +323,8 @@ func (this *QPaintDevice) paintEngine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11paintEngineEv
+    // invoke: QPaintEngine * paintEngine()
+    C._ZNK12QPaintDevice11paintEngineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "paintEngine", args)
   }
@@ -319,6 +343,8 @@ func (this *QPaintDevice) logicalDpiY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiYEv
+    // invoke: int logicalDpiY()
+    C._ZNK12QPaintDevice11logicalDpiYEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiY", args)
   }
@@ -351,6 +377,8 @@ func (this *QPaintDevice) logicalDpiX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintDevice11logicalDpiXEv
+    // invoke: int logicalDpiX()
+    C._ZNK12QPaintDevice11logicalDpiXEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDevice", "logicalDpiX", args)
   }

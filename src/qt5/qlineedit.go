@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.go
 //
@@ -199,10 +199,12 @@ func (this *QLineEdit) cursorBackward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14cursorBackwardEbi
+    // invoke: void cursorBackward(_Bool, int)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QLineEdit14cursorBackwardEbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorBackward", args)
   }
@@ -222,8 +224,10 @@ func (this *QLineEdit) home(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4homeEb
+    // invoke: void home(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit4homeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "home", args)
   }
@@ -242,6 +246,8 @@ func (this *QLineEdit) selectionStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14selectionStartEv
+    // invoke: int selectionStart()
+    C._ZNK9QLineEdit14selectionStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "selectionStart", args)
   }
@@ -261,8 +267,10 @@ func (this *QLineEdit) setCursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit17setCursorPositionEi
+    // invoke: void setCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit17setCursorPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setCursorPosition", args)
   }
@@ -281,6 +289,8 @@ func (this *QLineEdit) isRedoAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15isRedoAvailableEv
+    // invoke: bool isRedoAvailable()
+    C._ZNK9QLineEdit15isRedoAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "isRedoAvailable", args)
   }
@@ -300,8 +310,10 @@ func (this *QLineEdit) setModified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit11setModifiedEb
+    // invoke: void setModified(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit11setModifiedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setModified", args)
   }
@@ -326,8 +338,10 @@ func (this *QLineEdit) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "event", args)
   }
@@ -346,6 +360,8 @@ func (this *QLineEdit) maxLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9maxLengthEv
+    // invoke: int maxLength()
+    C._ZNK9QLineEdit9maxLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "maxLength", args)
   }
@@ -364,6 +380,8 @@ func (this *QLineEdit) createStandardContextMenu(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit25createStandardContextMenuEv
+    // invoke: QMenu * createStandardContextMenu()
+    C._ZN9QLineEdit25createStandardContextMenuEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "createStandardContextMenu", args)
   }
@@ -389,10 +407,13 @@ func (this *QLineEdit) setTextMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14setTextMarginsERK8QMargins
+    // invoke: void setTextMargins(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit14setTextMarginsERK8QMargins(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN9QLineEdit14setTextMarginsEiiii
+    // invoke: void setTextMargins(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -401,6 +422,7 @@ func (this *QLineEdit) setTextMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN9QLineEdit14setTextMarginsEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QLineEdit", "setTextMargins", args)
   }
@@ -420,8 +442,10 @@ func (this *QLineEdit) cursorPositionAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit16cursorPositionAtERK6QPoint
+    // invoke: int cursorPositionAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit16cursorPositionAtERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorPositionAt", args)
   }
@@ -440,6 +464,8 @@ func (this *QLineEdit) hasSelectedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15hasSelectedTextEv
+    // invoke: bool hasSelectedText()
+    C._ZNK9QLineEdit15hasSelectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "hasSelectedText", args)
   }
@@ -459,8 +485,10 @@ func (this *QLineEdit) setPlaceholderText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit18setPlaceholderTextERK7QString
+    // invoke: void setPlaceholderText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit18setPlaceholderTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setPlaceholderText", args)
   }
@@ -479,6 +507,8 @@ func (this *QLineEdit) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK9QLineEdit15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "minimumSizeHint", args)
   }
@@ -499,10 +529,12 @@ func (this *QLineEdit) cursorForward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit13cursorForwardEbi
+    // invoke: void cursorForward(_Bool, int)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QLineEdit13cursorForwardEbi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorForward", args)
   }
@@ -522,8 +554,10 @@ func (this *QLineEdit) insert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit6insertERK7QString
+    // invoke: void insert(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit6insertERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "insert", args)
   }
@@ -543,8 +577,10 @@ func (this *QLineEdit) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setText", args)
   }
@@ -563,6 +599,8 @@ func (this *QLineEdit) validator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9validatorEv
+    // invoke: const QValidator * validator()
+    C._ZNK9QLineEdit9validatorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "validator", args)
   }
@@ -581,6 +619,8 @@ func (this *QLineEdit) deselect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit8deselectEv
+    // invoke: void deselect()
+    C._ZN9QLineEdit8deselectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "deselect", args)
   }
@@ -599,6 +639,8 @@ func (this *QLineEdit) inputMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9inputMaskEv
+    // invoke: QString inputMask()
+    C._ZNK9QLineEdit9inputMaskEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "inputMask", args)
   }
@@ -617,6 +659,8 @@ func (this *QLineEdit) placeholderText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15placeholderTextEv
+    // invoke: QString placeholderText()
+    C._ZNK9QLineEdit15placeholderTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "placeholderText", args)
   }
@@ -635,6 +679,8 @@ func (this *QLineEdit) cut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3cutEv
+    // invoke: void cut()
+    C._ZN9QLineEdit3cutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "cut", args)
   }
@@ -653,6 +699,8 @@ func (this *QLineEdit) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit4textEv
+    // invoke: QString text()
+    C._ZNK9QLineEdit4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "text", args)
   }
@@ -671,6 +719,8 @@ func (this *QLineEdit) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QLineEdit10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "metaObject", args)
   }
@@ -689,6 +739,8 @@ func (this *QLineEdit) del(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3delEv
+    // invoke: void del()
+    C._ZN9QLineEdit3delEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "del", args)
   }
@@ -707,6 +759,8 @@ func (this *QLineEdit) isModified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10isModifiedEv
+    // invoke: bool isModified()
+    C._ZNK9QLineEdit10isModifiedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "isModified", args)
   }
@@ -726,8 +780,10 @@ func (this *QLineEdit) cursorWordForward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit17cursorWordForwardEb
+    // invoke: void cursorWordForward(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit17cursorWordForwardEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorWordForward", args)
   }
@@ -746,6 +802,8 @@ func (this *QLineEdit) selectAll(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit9selectAllEv
+    // invoke: void selectAll()
+    C._ZN9QLineEdit9selectAllEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "selectAll", args)
   }
@@ -766,10 +824,12 @@ func (this *QLineEdit) setSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setSelectionEii
+    // invoke: void setSelection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QLineEdit12setSelectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLineEdit", "setSelection", args)
   }
@@ -789,8 +849,10 @@ func (this *QLineEdit) setCompleter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setCompleterEP10QCompleter
+    // invoke: void setCompleter(class QCompleter *)
     var arg0 = args[0].(QCompleter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit12setCompleterEP10QCompleter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setCompleter", args)
   }
@@ -810,8 +872,10 @@ func (this *QLineEdit) setMaxLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setMaxLengthEi
+    // invoke: void setMaxLength(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit12setMaxLengthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setMaxLength", args)
   }
@@ -845,8 +909,10 @@ func (this *QLineEdit) setReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit11setReadOnlyEb
+    // invoke: void setReadOnly(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit11setReadOnlyEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setReadOnly", args)
   }
@@ -865,6 +931,8 @@ func (this *QLineEdit) displayText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11displayTextEv
+    // invoke: QString displayText()
+    C._ZNK9QLineEdit11displayTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "displayText", args)
   }
@@ -884,8 +952,10 @@ func (this *QLineEdit) setFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit8setFrameEb
+    // invoke: void setFrame(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit8setFrameEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setFrame", args)
   }
@@ -904,6 +974,8 @@ func (this *QLineEdit) hasAcceptableInput(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit18hasAcceptableInputEv
+    // invoke: bool hasAcceptableInput()
+    C._ZNK9QLineEdit18hasAcceptableInputEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "hasAcceptableInput", args)
   }
@@ -922,6 +994,8 @@ func (this *QLineEdit) hasFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit8hasFrameEv
+    // invoke: bool hasFrame()
+    C._ZNK9QLineEdit8hasFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "hasFrame", args)
   }
@@ -940,6 +1014,8 @@ func (this *QLineEdit) cursorPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14cursorPositionEv
+    // invoke: int cursorPosition()
+    C._ZNK9QLineEdit14cursorPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorPosition", args)
   }
@@ -959,8 +1035,10 @@ func (this *QLineEdit) cursorWordBackward(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit18cursorWordBackwardEb
+    // invoke: void cursorWordBackward(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit18cursorWordBackwardEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "cursorWordBackward", args)
   }
@@ -979,6 +1057,8 @@ func (this *QLineEdit) dragEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11dragEnabledEv
+    // invoke: bool dragEnabled()
+    C._ZNK9QLineEdit11dragEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "dragEnabled", args)
   }
@@ -997,6 +1077,8 @@ func (this *QLineEdit) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QLineEdit8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "sizeHint", args)
   }
@@ -1015,6 +1097,8 @@ func (this *QLineEdit) paste(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5pasteEv
+    // invoke: void paste()
+    C._ZN9QLineEdit5pasteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "paste", args)
   }
@@ -1034,8 +1118,10 @@ func (this *QLineEdit) setValidator(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setValidatorEPK10QValidator
+    // invoke: void setValidator(const class QValidator *)
     var arg0 = args[0].(QValidator).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit12setValidatorEPK10QValidator(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setValidator", args)
   }
@@ -1054,6 +1140,8 @@ func (this *QLineEdit) completer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit9completerEv
+    // invoke: QCompleter * completer()
+    C._ZNK9QLineEdit9completerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "completer", args)
   }
@@ -1072,6 +1160,8 @@ func (this *QLineEdit) textMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit11textMarginsEv
+    // invoke: QMargins textMargins()
+    C._ZNK9QLineEdit11textMarginsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "textMargins", args)
   }
@@ -1091,8 +1181,10 @@ func (this *QLineEdit) setClearButtonEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit21setClearButtonEnabledEb
+    // invoke: void setClearButtonEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit21setClearButtonEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setClearButtonEnabled", args)
   }
@@ -1111,6 +1203,8 @@ func (this *QLineEdit) selectedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit12selectedTextEv
+    // invoke: QString selectedText()
+    C._ZNK9QLineEdit12selectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "selectedText", args)
   }
@@ -1129,6 +1223,8 @@ func (this *QLineEdit) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit5clearEv
+    // invoke: void clear()
+    C._ZN9QLineEdit5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "clear", args)
   }
@@ -1147,6 +1243,8 @@ func (this *QLineEdit) copy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit4copyEv
+    // invoke: void copy()
+    C._ZNK9QLineEdit4copyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "copy", args)
   }
@@ -1165,6 +1263,8 @@ func (this *QLineEdit) isUndoAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit15isUndoAvailableEv
+    // invoke: bool isUndoAvailable()
+    C._ZNK9QLineEdit15isUndoAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "isUndoAvailable", args)
   }
@@ -1183,6 +1283,8 @@ func (this *QLineEdit) undo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4undoEv
+    // invoke: void undo()
+    C._ZN9QLineEdit4undoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "undo", args)
   }
@@ -1201,6 +1303,8 @@ func (this *QLineEdit) isClearButtonEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit20isClearButtonEnabledEv
+    // invoke: bool isClearButtonEnabled()
+    C._ZNK9QLineEdit20isClearButtonEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "isClearButtonEnabled", args)
   }
@@ -1220,8 +1324,10 @@ func (this *QLineEdit) end(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit3endEb
+    // invoke: void end(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit3endEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "end", args)
   }
@@ -1241,8 +1347,10 @@ func (this *QLineEdit) setDragEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit14setDragEnabledEb
+    // invoke: void setDragEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit14setDragEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setDragEnabled", args)
   }
@@ -1261,6 +1369,8 @@ func (this *QLineEdit) backspace(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit9backspaceEv
+    // invoke: void backspace()
+    C._ZN9QLineEdit9backspaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "backspace", args)
   }
@@ -1279,6 +1389,8 @@ func (this *QLineEdit) redo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit4redoEv
+    // invoke: void redo()
+    C._ZN9QLineEdit4redoEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "redo", args)
   }
@@ -1298,8 +1410,10 @@ func (this *QLineEdit) setInputMask(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QLineEdit12setInputMaskERK7QString
+    // invoke: void setInputMask(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QLineEdit12setInputMaskERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineEdit", "setInputMask", args)
   }
@@ -1322,6 +1436,7 @@ func (this *QLineEdit) getTextMargins(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_
+    // invoke: void getTextMargins(int *, int *, int *, int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
@@ -1330,6 +1445,7 @@ func (this *QLineEdit) getTextMargins(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
+    C._ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QLineEdit", "getTextMargins", args)
   }
@@ -1348,6 +1464,8 @@ func (this *QLineEdit) isReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QLineEdit10isReadOnlyEv
+    // invoke: bool isReadOnly()
+    C._ZNK9QLineEdit10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineEdit", "isReadOnly", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -98,8 +98,10 @@ func (this *QGraphicsProxyWidget) createProxyForChildWidget(args ...interface{})
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget
+    // invoke: QGraphicsProxyWidget * createProxyForChildWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsProxyWidget25createProxyForChildWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "createProxyForChildWidget", args)
   }
@@ -119,8 +121,10 @@ func (this *QGraphicsProxyWidget) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget9setWidgetEP7QWidget
+    // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsProxyWidget9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setWidget", args)
   }
@@ -140,8 +144,10 @@ func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget
+    // invoke: QRectF subWidgetRect(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "subWidgetRect", args)
   }
@@ -165,6 +171,8 @@ func (this *QGraphicsProxyWidget) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK20QGraphicsProxyWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "metaObject", args)
   }
@@ -186,12 +194,14 @@ func (this *QGraphicsProxyWidget) paint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget
+    // invoke: void paint(class QPainter *, const class QStyleOptionGraphicsItem *, class QWidget *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStyleOptionGraphicsItem).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QWidget).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN20QGraphicsProxyWidget5paintEP8QPainterPK24QStyleOptionGraphicsItemP7QWidget(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "paint", args)
   }
@@ -211,8 +221,10 @@ func (this *QGraphicsProxyWidget) setGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN20QGraphicsProxyWidget11setGeometryERK6QRectF
+    // invoke: void setGeometry(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN20QGraphicsProxyWidget11setGeometryERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "setGeometry", args)
   }
@@ -231,6 +243,8 @@ func (this *QGraphicsProxyWidget) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget6widgetEv
+    // invoke: QWidget * widget()
+    C._ZNK20QGraphicsProxyWidget6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "widget", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -77,8 +77,10 @@ func (this *QScrollBar) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QScrollBar5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollBar", "event", args)
   }
@@ -102,6 +104,8 @@ func (this *QScrollBar) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QScrollBar10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QScrollBar10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollBar", "metaObject", args)
   }
@@ -120,6 +124,8 @@ func (this *QScrollBar) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QScrollBar8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK10QScrollBar8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollBar", "sizeHint", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -96,8 +96,10 @@ func (this *QScrollArea) setWidgetResizable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea18setWidgetResizableEb
+    // invoke: void setWidgetResizable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QScrollArea18setWidgetResizableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidgetResizable", args)
   }
@@ -117,8 +119,10 @@ func (this *QScrollArea) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea9setWidgetEP7QWidget
+    // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QScrollArea9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "setWidget", args)
   }
@@ -137,6 +141,8 @@ func (this *QScrollArea) takeWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea10takeWidgetEv
+    // invoke: QWidget * takeWidget()
+    C._ZN11QScrollArea10takeWidgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "takeWidget", args)
   }
@@ -159,6 +165,7 @@ func (this *QScrollArea) ensureVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea13ensureVisibleEiiii
+    // invoke: void ensureVisible(int, int, int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -167,6 +174,7 @@ func (this *QScrollArea) ensureVisible(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C._ZN11QScrollArea13ensureVisibleEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureVisible", args)
   }
@@ -188,12 +196,14 @@ func (this *QScrollArea) ensureWidgetVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii
+    // invoke: void ensureWidgetVisible(class QWidget *, int, int)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QScrollArea", "ensureWidgetVisible", args)
   }
@@ -212,6 +222,8 @@ func (this *QScrollArea) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QScrollArea6widgetEv
+    // invoke: QWidget * widget()
+    C._ZNK11QScrollArea6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "widget", args)
   }
@@ -230,6 +242,8 @@ func (this *QScrollArea) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QScrollArea8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QScrollArea8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "sizeHint", args)
   }
@@ -248,6 +262,8 @@ func (this *QScrollArea) widgetResizable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QScrollArea15widgetResizableEv
+    // invoke: bool widgetResizable()
+    C._ZNK11QScrollArea15widgetResizableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "widgetResizable", args)
   }
@@ -281,8 +297,10 @@ func (this *QScrollArea) focusNextPrevChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QScrollArea18focusNextPrevChildEb
+    // invoke: bool focusNextPrevChild(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QScrollArea18focusNextPrevChildEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QScrollArea", "focusNextPrevChild", args)
   }
@@ -301,6 +319,8 @@ func (this *QScrollArea) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QScrollArea10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QScrollArea10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollArea", "metaObject", args)
   }

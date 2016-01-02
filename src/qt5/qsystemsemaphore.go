@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -75,6 +75,8 @@ func (this *QSystemSemaphore) key(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QSystemSemaphore3keyEv
+    // invoke: QString key()
+    C._ZNK16QSystemSemaphore3keyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "key", args)
   }
@@ -94,8 +96,10 @@ func (this *QSystemSemaphore) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QSystemSemaphore7releaseEi
+    // invoke: bool release(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "release", args)
   }
@@ -114,6 +118,8 @@ func (this *QSystemSemaphore) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QSystemSemaphore11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "errorString", args)
   }
@@ -137,6 +143,8 @@ func (this *QSystemSemaphore) acquire(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QSystemSemaphore7acquireEv
+    // invoke: bool acquire()
+    C._ZN16QSystemSemaphore7acquireEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "acquire", args)
   }

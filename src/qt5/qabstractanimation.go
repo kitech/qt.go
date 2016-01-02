@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -131,6 +131,8 @@ func (this *QAbstractAnimation) resume(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation6resumeEv
+    // invoke: void resume()
+    C._ZN18QAbstractAnimation6resumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "resume", args)
   }
@@ -154,6 +156,8 @@ func (this *QAbstractAnimation) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation4stopEv
+    // invoke: void stop()
+    C._ZN18QAbstractAnimation4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "stop", args)
   }
@@ -172,6 +176,8 @@ func (this *QAbstractAnimation) pause(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation5pauseEv
+    // invoke: void pause()
+    C._ZN18QAbstractAnimation5pauseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "pause", args)
   }
@@ -191,8 +197,10 @@ func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation12setLoopCountEi
+    // invoke: void setLoopCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN18QAbstractAnimation12setLoopCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setLoopCount", args)
   }
@@ -211,6 +219,8 @@ func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentLoopEv
+    // invoke: int currentLoop()
+    C._ZNK18QAbstractAnimation11currentLoopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoop", args)
   }
@@ -229,6 +239,8 @@ func (this *QAbstractAnimation) group(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation5groupEv
+    // invoke: QAnimationGroup * group()
+    C._ZNK18QAbstractAnimation5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "group", args)
   }
@@ -248,8 +260,10 @@ func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation9setPausedEb
+    // invoke: void setPaused(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setPaused", args)
   }
@@ -268,6 +282,8 @@ func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation13totalDurationEv
+    // invoke: int totalDuration()
+    C._ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
   }
@@ -286,6 +302,8 @@ func (this *QAbstractAnimation) duration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation8durationEv
+    // invoke: int duration()
+    C._ZNK18QAbstractAnimation8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "duration", args)
   }
@@ -304,6 +322,8 @@ func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "metaObject", args)
   }
@@ -322,6 +342,8 @@ func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation15currentLoopTimeEv
+    // invoke: int currentLoopTime()
+    C._ZNK18QAbstractAnimation15currentLoopTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentLoopTime", args)
   }
@@ -340,6 +362,8 @@ func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation11currentTimeEv
+    // invoke: int currentTime()
+    C._ZNK18QAbstractAnimation11currentTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "currentTime", args)
   }
@@ -359,8 +383,10 @@ func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractAnimation14setCurrentTimeEi
+    // invoke: void setCurrentTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN18QAbstractAnimation14setCurrentTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "setCurrentTime", args)
   }
@@ -393,6 +419,8 @@ func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractAnimation9loopCountEv
+    // invoke: int loopCount()
+    C._ZNK18QAbstractAnimation9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "loopCount", args)
   }
@@ -411,6 +439,8 @@ func (this *QAnimationDriver) advance(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver7advanceEv
+    // invoke: void advance()
+    C._ZN16QAnimationDriver7advanceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "advance", args)
   }
@@ -448,6 +478,8 @@ func (this *QAnimationDriver) elapsed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver7elapsedEv
+    // invoke: qint64 elapsed()
+    C._ZNK16QAnimationDriver7elapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "elapsed", args)
   }
@@ -466,6 +498,8 @@ func (this *QAnimationDriver) install(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver7installEv
+    // invoke: void install()
+    C._ZN16QAnimationDriver7installEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "install", args)
   }
@@ -484,6 +518,8 @@ func (this *QAnimationDriver) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QAnimationDriver10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "metaObject", args)
   }
@@ -502,6 +538,8 @@ func (this *QAnimationDriver) uninstall(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver9uninstallEv
+    // invoke: void uninstall()
+    C._ZN16QAnimationDriver9uninstallEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "uninstall", args)
   }
@@ -520,6 +558,8 @@ func (this *QAnimationDriver) isRunning(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK16QAnimationDriver9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "isRunning", args)
   }
@@ -538,6 +578,8 @@ func (this *QAnimationDriver) startTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QAnimationDriver9startTimeEv
+    // invoke: qint64 startTime()
+    C._ZNK16QAnimationDriver9startTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "startTime", args)
   }
@@ -557,8 +599,10 @@ func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QAnimationDriver12setStartTimeEx
+    // invoke: void setStartTime(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN16QAnimationDriver12setStartTimeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "setStartTime", args)
   }

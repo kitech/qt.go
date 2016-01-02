@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.go
 //
@@ -87,8 +87,10 @@ func (this *QColormap) pixel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap5pixelERK6QColor
+    // invoke: uint pixel(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QColormap5pixelERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColormap", "pixel", args)
   }
@@ -107,6 +109,8 @@ func (this *QColormap) colormap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap8colormapEv
+    // invoke: const QVector<QColor> colormap()
+    C._ZNK9QColormap8colormapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColormap", "colormap", args)
   }
@@ -126,8 +130,10 @@ func (this *QColormap) colorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap7colorAtEj
+    // invoke: const QColor colorAt(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QColormap7colorAtEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColormap", "colorAt", args)
   }
@@ -179,6 +185,8 @@ func (this *QColormap) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap4sizeEv
+    // invoke: int size()
+    C._ZNK9QColormap4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColormap", "size", args)
   }
@@ -211,6 +219,8 @@ func (this *QColormap) depth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QColormap5depthEv
+    // invoke: int depth()
+    C._ZNK9QColormap5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColormap", "depth", args)
   }

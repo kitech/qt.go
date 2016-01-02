@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcolordialog.h
 // dst-file: /src/widgets/qcolordialog.go
 //
@@ -104,6 +104,8 @@ func (this *QColorDialog) currentColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog12currentColorEv
+    // invoke: QColor currentColor()
+    C._ZNK12QColorDialog12currentColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "currentColor", args)
   }
@@ -136,6 +138,8 @@ func (this *QColorDialog) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QColorDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "metaObject", args)
   }
@@ -170,10 +174,12 @@ func (this *QColorDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog4openEP7QObjectPKc
+    // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
+    C._ZN12QColorDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QColorDialog", "open", args)
   }
@@ -192,6 +198,8 @@ func (this *QColorDialog) selectedColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QColorDialog13selectedColorEv
+    // invoke: QColor selectedColor()
+    C._ZNK12QColorDialog13selectedColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QColorDialog", "selectedColor", args)
   }
@@ -225,8 +233,10 @@ func (this *QColorDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QColorDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColorDialog", "setVisible", args)
   }
@@ -246,8 +256,10 @@ func (this *QColorDialog) setCurrentColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QColorDialog15setCurrentColorERK6QColor
+    // invoke: void setCurrentColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QColorDialog15setCurrentColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QColorDialog", "setCurrentColor", args)
   }

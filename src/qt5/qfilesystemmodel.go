@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qfilesystemmodel.h
 // dst-file: /src/widgets/qfilesystemmodel.go
 //
@@ -148,8 +148,10 @@ func (this *QFileSystemModel) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileNameERK11QModelIndex
+    // invoke: QString fileName(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK16QFileSystemModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileName", args)
   }
@@ -169,8 +171,10 @@ func (this *QFileSystemModel) hasChildren(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel11hasChildrenERK11QModelIndex
+    // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "hasChildren", args)
   }
@@ -189,6 +193,8 @@ func (this *QFileSystemModel) mimeTypes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel9mimeTypesEv
+    // invoke: QStringList mimeTypes()
+    C._ZNK16QFileSystemModel9mimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mimeTypes", args)
   }
@@ -228,18 +234,22 @@ func (this *QFileSystemModel) index(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel5indexERK7QStringi
+    // invoke: QModelIndex index(const class QString &, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK16QFileSystemModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK16QFileSystemModel5indexEiiRK11QModelIndex
+    // invoke: QModelIndex index(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK16QFileSystemModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "index", args)
   }
@@ -259,8 +269,10 @@ func (this *QFileSystemModel) setNameFilterDisables(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel21setNameFilterDisablesEb
+    // invoke: void setNameFilterDisables(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel21setNameFilterDisablesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilterDisables", args)
   }
@@ -280,8 +292,10 @@ func (this *QFileSystemModel) fileIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileIconERK11QModelIndex
+    // invoke: QIcon fileIcon(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK16QFileSystemModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileIcon", args)
   }
@@ -300,6 +314,8 @@ func (this *QFileSystemModel) resolveSymlinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel15resolveSymlinksEv
+    // invoke: bool resolveSymlinks()
+    C._ZNK16QFileSystemModel15resolveSymlinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "resolveSymlinks", args)
   }
@@ -319,8 +335,10 @@ func (this *QFileSystemModel) filePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8filePathERK11QModelIndex
+    // invoke: QString filePath(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel8filePathERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "filePath", args)
   }
@@ -340,8 +358,10 @@ func (this *QFileSystemModel) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel6parentERK11QModelIndex
+    // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "parent", args)
   }
@@ -360,6 +380,8 @@ func (this *QFileSystemModel) nameFilterDisables(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel18nameFilterDisablesEv
+    // invoke: bool nameFilterDisables()
+    C._ZNK16QFileSystemModel18nameFilterDisablesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilterDisables", args)
   }
@@ -378,6 +400,8 @@ func (this *QFileSystemModel) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QFileSystemModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "metaObject", args)
   }
@@ -397,8 +421,10 @@ func (this *QFileSystemModel) fetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel9fetchMoreERK11QModelIndex
+    // invoke: void fetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fetchMore", args)
   }
@@ -423,8 +449,10 @@ func (this *QFileSystemModel) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel4sizeERK11QModelIndex
+    // invoke: qint64 size(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel4sizeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "size", args)
   }
@@ -443,6 +471,8 @@ func (this *QFileSystemModel) iconProvider(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel12iconProviderEv
+    // invoke: QFileIconProvider * iconProvider()
+    C._ZNK16QFileSystemModel12iconProviderEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "iconProvider", args)
   }
@@ -462,8 +492,10 @@ func (this *QFileSystemModel) setNameFilters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel14setNameFiltersERK11QStringList
+    // invoke: void setNameFilters(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel14setNameFiltersERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setNameFilters", args)
   }
@@ -484,10 +516,12 @@ func (this *QFileSystemModel) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel4dataERK11QModelIndexi
+    // invoke: QVariant data(const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK16QFileSystemModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "data", args)
   }
@@ -506,6 +540,8 @@ func (this *QFileSystemModel) rootDirectory(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel13rootDirectoryEv
+    // invoke: QDir rootDirectory()
+    C._ZNK16QFileSystemModel13rootDirectoryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootDirectory", args)
   }
@@ -526,10 +562,12 @@ func (this *QFileSystemModel) mkdir(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString
+    // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN16QFileSystemModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "mkdir", args)
   }
@@ -549,8 +587,10 @@ func (this *QFileSystemModel) rowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8rowCountERK11QModelIndex
+    // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rowCount", args)
   }
@@ -572,12 +612,14 @@ func (this *QFileSystemModel) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti
+    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN16QFileSystemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setData", args)
   }
@@ -597,8 +639,10 @@ func (this *QFileSystemModel) columnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel11columnCountERK11QModelIndex
+    // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "columnCount", args)
   }
@@ -618,8 +662,10 @@ func (this *QFileSystemModel) canFetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex
+    // invoke: bool canFetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "canFetchMore", args)
   }
@@ -639,8 +685,10 @@ func (this *QFileSystemModel) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel6removeERK11QModelIndex
+    // invoke: bool remove(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel6removeERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "remove", args)
   }
@@ -660,8 +708,10 @@ func (this *QFileSystemModel) setRootPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel11setRootPathERK7QString
+    // invoke: QModelIndex setRootPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel11setRootPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setRootPath", args)
   }
@@ -681,8 +731,10 @@ func (this *QFileSystemModel) setResolveSymlinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel18setResolveSymlinksEb
+    // invoke: void setResolveSymlinks(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel18setResolveSymlinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setResolveSymlinks", args)
   }
@@ -702,8 +754,10 @@ func (this *QFileSystemModel) setReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel11setReadOnlyEb
+    // invoke: void setReadOnly(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel11setReadOnlyEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setReadOnly", args)
   }
@@ -722,6 +776,8 @@ func (this *QFileSystemModel) nameFilters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel11nameFiltersEv
+    // invoke: QStringList nameFilters()
+    C._ZNK16QFileSystemModel11nameFiltersEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "nameFilters", args)
   }
@@ -741,8 +797,10 @@ func (this *QFileSystemModel) fileInfo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8fileInfoERK11QModelIndex
+    // invoke: QFileInfo fileInfo(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK16QFileSystemModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "fileInfo", args)
   }
@@ -762,8 +820,10 @@ func (this *QFileSystemModel) myComputer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel10myComputerEi
+    // invoke: QVariant myComputer(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel10myComputerEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "myComputer", args)
   }
@@ -782,6 +842,8 @@ func (this *QFileSystemModel) isReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel10isReadOnlyEv
+    // invoke: bool isReadOnly()
+    C._ZNK16QFileSystemModel10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isReadOnly", args)
   }
@@ -814,6 +876,8 @@ func (this *QFileSystemModel) rootPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel8rootPathEv
+    // invoke: QString rootPath()
+    C._ZNK16QFileSystemModel8rootPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rootPath", args)
   }
@@ -833,8 +897,10 @@ func (this *QFileSystemModel) lastModified(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel12lastModifiedERK11QModelIndex
+    // invoke: QDateTime lastModified(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel12lastModifiedERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "lastModified", args)
   }
@@ -854,8 +920,10 @@ func (this *QFileSystemModel) isDir(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QFileSystemModel5isDirERK11QModelIndex
+    // invoke: bool isDir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK16QFileSystemModel5isDirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "isDir", args)
   }
@@ -875,8 +943,10 @@ func (this *QFileSystemModel) rmdir(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel5rmdirERK11QModelIndex
+    // invoke: bool rmdir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "rmdir", args)
   }
@@ -896,8 +966,10 @@ func (this *QFileSystemModel) setIconProvider(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider
+    // invoke: void setIconProvider(class QFileIconProvider *)
     var arg0 = args[0].(QFileIconProvider).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QFileSystemModel15setIconProviderEP17QFileIconProvider(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFileSystemModel", "setIconProvider", args)
   }

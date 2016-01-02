@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -84,6 +84,8 @@ func (this *QOpenGLWindow) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "isValid", args)
   }
@@ -102,6 +104,8 @@ func (this *QOpenGLWindow) grabFramebuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWindow15grabFramebufferEv
+    // invoke: QImage grabFramebuffer()
+    C._ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "grabFramebuffer", args)
   }
@@ -125,6 +129,8 @@ func (this *QOpenGLWindow) shareContext(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWindow12shareContextEv
+    // invoke: QOpenGLContext * shareContext()
+    C._ZNK13QOpenGLWindow12shareContextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "shareContext", args)
   }
@@ -143,6 +149,8 @@ func (this *QOpenGLWindow) makeCurrent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWindow11makeCurrentEv
+    // invoke: void makeCurrent()
+    C._ZN13QOpenGLWindow11makeCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "makeCurrent", args)
   }
@@ -161,6 +169,8 @@ func (this *QOpenGLWindow) context(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7contextEv
+    // invoke: QOpenGLContext * context()
+    C._ZNK13QOpenGLWindow7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "context", args)
   }
@@ -179,6 +189,8 @@ func (this *QOpenGLWindow) doneCurrent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWindow11doneCurrentEv
+    // invoke: void doneCurrent()
+    C._ZN13QOpenGLWindow11doneCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "doneCurrent", args)
   }
@@ -197,6 +209,8 @@ func (this *QOpenGLWindow) defaultFramebufferObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWindow24defaultFramebufferObjectEv
+    // invoke: GLuint defaultFramebufferObject()
+    C._ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "defaultFramebufferObject", args)
   }
@@ -229,6 +243,8 @@ func (this *QOpenGLWindow) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWindow10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QOpenGLWindow10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "metaObject", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.go
 //
@@ -96,10 +96,12 @@ func (this *QFontDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog4openEP7QObjectPKc
+    // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.CString(args[1].(string))
     if false {fmt.Println(arg1)}
+    C._ZN11QFontDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QFontDialog", "open", args)
   }
@@ -118,6 +120,8 @@ func (this *QFontDialog) currentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFontDialog11currentFontEv
+    // invoke: QFont currentFont()
+    C._ZNK11QFontDialog11currentFontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontDialog", "currentFont", args)
   }
@@ -137,8 +141,10 @@ func (this *QFontDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QFontDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDialog", "setVisible", args)
   }
@@ -185,6 +191,8 @@ func (this *QFontDialog) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFontDialog10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QFontDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontDialog", "metaObject", args)
   }
@@ -203,6 +211,8 @@ func (this *QFontDialog) selectedFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFontDialog12selectedFontEv
+    // invoke: QFont selectedFont()
+    C._ZNK11QFontDialog12selectedFontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFontDialog", "selectedFont", args)
   }
@@ -222,8 +232,10 @@ func (this *QFontDialog) setCurrentFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFontDialog14setCurrentFontERK5QFont
+    // invoke: void setCurrentFont(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QFontDialog14setCurrentFontERK5QFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontDialog", "setCurrentFont", args)
   }

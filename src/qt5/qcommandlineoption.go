@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qcommandlineoption.h
 // dst-file: /src/core/qcommandlineoption.go
 //
@@ -98,8 +98,10 @@ func (this *QCommandLineOption) setValueName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption12setValueNameERK7QString
+    // invoke: void setValueName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCommandLineOption12setValueNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setValueName", args)
   }
@@ -118,6 +120,8 @@ func (this *QCommandLineOption) names(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption5namesEv
+    // invoke: QStringList names()
+    C._ZNK18QCommandLineOption5namesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "names", args)
   }
@@ -142,8 +146,10 @@ func (this *QCommandLineOption) setDescription(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption14setDescriptionERK7QString
+    // invoke: void setDescription(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCommandLineOption14setDescriptionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDescription", args)
   }
@@ -162,6 +168,8 @@ func (this *QCommandLineOption) valueName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption9valueNameEv
+    // invoke: QString valueName()
+    C._ZNK18QCommandLineOption9valueNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "valueName", args)
   }
@@ -181,8 +189,10 @@ func (this *QCommandLineOption) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption4swapERS_
+    // invoke: void swap(class QCommandLineOption &)
     var arg0 = args[0].(QCommandLineOption).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN18QCommandLineOption4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "swap", args)
   }
@@ -201,6 +211,8 @@ func (this *QCommandLineOption) description(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption11descriptionEv
+    // invoke: QString description()
+    C._ZNK18QCommandLineOption11descriptionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "description", args)
   }
@@ -234,8 +246,10 @@ func (this *QCommandLineOption) setDefaultValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption15setDefaultValueERK7QString
+    // invoke: void setDefaultValue(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCommandLineOption15setDefaultValueERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValue", args)
   }
@@ -255,8 +269,10 @@ func (this *QCommandLineOption) setDefaultValues(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCommandLineOption16setDefaultValuesERK11QStringList
+    // invoke: void setDefaultValues(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCommandLineOption16setDefaultValuesERK11QStringList(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "setDefaultValues", args)
   }
@@ -275,6 +291,8 @@ func (this *QCommandLineOption) defaultValues(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCommandLineOption13defaultValuesEv
+    // invoke: QStringList defaultValues()
+    C._ZNK18QCommandLineOption13defaultValuesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCommandLineOption", "defaultValues", args)
   }

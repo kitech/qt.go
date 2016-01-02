@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -93,6 +93,8 @@ func (this *QAccessibleWidget) childCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget10childCountEv
+    // invoke: int childCount()
+    C._ZNK17QAccessibleWidget10childCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "childCount", args)
   }
@@ -112,8 +114,10 @@ func (this *QAccessibleWidget) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget5childEi
+    // invoke: QAccessibleInterface * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK17QAccessibleWidget5childEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "child", args)
   }
@@ -132,6 +136,8 @@ func (this *QAccessibleWidget) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget6windowEv
+    // invoke: QWindow * window()
+    C._ZNK17QAccessibleWidget6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "window", args)
   }
@@ -150,6 +156,8 @@ func (this *QAccessibleWidget) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget4rectEv
+    // invoke: QRect rect()
+    C._ZNK17QAccessibleWidget4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "rect", args)
   }
@@ -168,6 +176,8 @@ func (this *QAccessibleWidget) foregroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget15foregroundColorEv
+    // invoke: QColor foregroundColor()
+    C._ZNK17QAccessibleWidget15foregroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "foregroundColor", args)
   }
@@ -186,6 +196,8 @@ func (this *QAccessibleWidget) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget7isValidEv
+    // invoke: bool isValid()
+    C._ZNK17QAccessibleWidget7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "isValid", args)
   }
@@ -204,6 +216,8 @@ func (this *QAccessibleWidget) focusChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget10focusChildEv
+    // invoke: QAccessibleInterface * focusChild()
+    C._ZNK17QAccessibleWidget10focusChildEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "focusChild", args)
   }
@@ -227,6 +241,8 @@ func (this *QAccessibleWidget) backgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget15backgroundColorEv
+    // invoke: QColor backgroundColor()
+    C._ZNK17QAccessibleWidget15backgroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "backgroundColor", args)
   }
@@ -259,6 +275,8 @@ func (this *QAccessibleWidget) actionNames(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget11actionNamesEv
+    // invoke: QStringList actionNames()
+    C._ZNK17QAccessibleWidget11actionNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "actionNames", args)
   }
@@ -277,6 +295,8 @@ func (this *QAccessibleWidget) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget6parentEv
+    // invoke: QAccessibleInterface * parent()
+    C._ZNK17QAccessibleWidget6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "parent", args)
   }
@@ -296,8 +316,10 @@ func (this *QAccessibleWidget) doAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QAccessibleWidget8doActionERK7QString
+    // invoke: void doAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QAccessibleWidget8doActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "doAction", args)
   }
@@ -317,8 +339,10 @@ func (this *QAccessibleWidget) keyBindingsForAction(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget20keyBindingsForActionERK7QString
+    // invoke: QStringList keyBindingsForAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAccessibleWidget20keyBindingsForActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "keyBindingsForAction", args)
   }
@@ -338,8 +362,10 @@ func (this *QAccessibleWidget) indexOfChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface
+    // invoke: int indexOfChild(const class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK17QAccessibleWidget12indexOfChildEPK20QAccessibleInterface(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleWidget", "indexOfChild", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -83,10 +83,12 @@ func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QSequentialAnimationGroup11insertPauseEii
+    // invoke: QPauseAnimation * insertPause(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN25QSequentialAnimationGroup11insertPauseEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "insertPause", args)
   }
@@ -111,8 +113,10 @@ func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN25QSequentialAnimationGroup8addPauseEi
+    // invoke: QPauseAnimation * addPause(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN25QSequentialAnimationGroup8addPauseEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "addPause", args)
   }
@@ -145,6 +149,8 @@ func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK25QSequentialAnimationGroup10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "metaObject", args)
   }
@@ -163,6 +169,8 @@ func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup16currentAnimationEv
+    // invoke: QAbstractAnimation * currentAnimation()
+    C._ZNK25QSequentialAnimationGroup16currentAnimationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "currentAnimation", args)
   }
@@ -181,6 +189,8 @@ func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK25QSequentialAnimationGroup8durationEv
+    // invoke: int duration()
+    C._ZNK25QSequentialAnimationGroup8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "duration", args)
   }

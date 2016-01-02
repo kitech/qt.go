@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qobjectcleanuphandler.h
 // dst-file: /src/core/qobjectcleanuphandler.go
 //
@@ -77,6 +77,8 @@ func (this *QObjectCleanupHandler) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler5clearEv
+    // invoke: void clear()
+    C._ZN21QObjectCleanupHandler5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "clear", args)
   }
@@ -95,6 +97,8 @@ func (this *QObjectCleanupHandler) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK21QObjectCleanupHandler7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "isEmpty", args)
   }
@@ -127,6 +131,8 @@ func (this *QObjectCleanupHandler) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QObjectCleanupHandler10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK21QObjectCleanupHandler10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "metaObject", args)
   }
@@ -146,8 +152,10 @@ func (this *QObjectCleanupHandler) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler6removeEP7QObject
+    // invoke: void remove(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN21QObjectCleanupHandler6removeEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "remove", args)
   }
@@ -167,8 +175,10 @@ func (this *QObjectCleanupHandler) add(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QObjectCleanupHandler3addEP7QObject
+    // invoke: QObject * add(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN21QObjectCleanupHandler3addEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QObjectCleanupHandler", "add", args)
   }

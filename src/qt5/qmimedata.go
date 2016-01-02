@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qmimedata.h
 // dst-file: /src/core/qmimedata.go
 //
@@ -114,10 +114,12 @@ func (this *QMimeData) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setDataERK7QStringRK10QByteArray
+    // invoke: void setData(const class QString &, const class QByteArray &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QMimeData7setDataERK7QStringRK10QByteArray(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMimeData", "setData", args)
   }
@@ -136,6 +138,8 @@ func (this *QMimeData) colorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9colorDataEv
+    // invoke: QVariant colorData()
+    C._ZNK9QMimeData9colorDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "colorData", args)
   }
@@ -168,6 +172,8 @@ func (this *QMimeData) hasHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasHtmlEv
+    // invoke: bool hasHtml()
+    C._ZNK9QMimeData7hasHtmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasHtml", args)
   }
@@ -191,6 +197,8 @@ func (this *QMimeData) imageData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9imageDataEv
+    // invoke: QVariant imageData()
+    C._ZNK9QMimeData9imageDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "imageData", args)
   }
@@ -210,8 +218,10 @@ func (this *QMimeData) hasFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData9hasFormatERK7QString
+    // invoke: bool hasFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QMimeData9hasFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "hasFormat", args)
   }
@@ -231,8 +241,10 @@ func (this *QMimeData) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QMimeData7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setText", args)
   }
@@ -251,6 +263,8 @@ func (this *QMimeData) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData5clearEv
+    // invoke: void clear()
+    C._ZN9QMimeData5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "clear", args)
   }
@@ -269,6 +283,8 @@ func (this *QMimeData) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4textEv
+    // invoke: QString text()
+    C._ZNK9QMimeData4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "text", args)
   }
@@ -288,8 +304,10 @@ func (this *QMimeData) setHtml(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData7setHtmlERK7QString
+    // invoke: void setHtml(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QMimeData7setHtmlERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setHtml", args)
   }
@@ -309,8 +327,10 @@ func (this *QMimeData) setImageData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setImageDataERK8QVariant
+    // invoke: void setImageData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QMimeData12setImageDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setImageData", args)
   }
@@ -329,6 +349,8 @@ func (this *QMimeData) hasUrls(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasUrlsEv
+    // invoke: bool hasUrls()
+    C._ZNK9QMimeData7hasUrlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasUrls", args)
   }
@@ -347,6 +369,8 @@ func (this *QMimeData) hasColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData8hasColorEv
+    // invoke: bool hasColor()
+    C._ZNK9QMimeData8hasColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasColor", args)
   }
@@ -366,8 +390,10 @@ func (this *QMimeData) removeFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12removeFormatERK7QString
+    // invoke: void removeFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QMimeData12removeFormatERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "removeFormat", args)
   }
@@ -386,6 +412,8 @@ func (this *QMimeData) html(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4htmlEv
+    // invoke: QString html()
+    C._ZNK9QMimeData4htmlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "html", args)
   }
@@ -404,6 +432,8 @@ func (this *QMimeData) urls(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4urlsEv
+    // invoke: QList<QUrl> urls()
+    C._ZNK9QMimeData4urlsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "urls", args)
   }
@@ -423,8 +453,10 @@ func (this *QMimeData) setColorData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMimeData12setColorDataERK8QVariant
+    // invoke: void setColorData(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QMimeData12setColorDataERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "setColorData", args)
   }
@@ -443,6 +475,8 @@ func (this *QMimeData) hasText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7hasTextEv
+    // invoke: bool hasText()
+    C._ZNK9QMimeData7hasTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasText", args)
   }
@@ -461,6 +495,8 @@ func (this *QMimeData) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QMimeData10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "metaObject", args)
   }
@@ -480,8 +516,10 @@ func (this *QMimeData) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData4dataERK7QString
+    // invoke: QByteArray data(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QMimeData4dataERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeData", "data", args)
   }
@@ -500,6 +538,8 @@ func (this *QMimeData) formats(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData7formatsEv
+    // invoke: QStringList formats()
+    C._ZNK9QMimeData7formatsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "formats", args)
   }
@@ -518,6 +558,8 @@ func (this *QMimeData) hasImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMimeData8hasImageEv
+    // invoke: bool hasImage()
+    C._ZNK9QMimeData8hasImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMimeData", "hasImage", args)
   }

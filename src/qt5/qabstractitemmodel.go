@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.go
 //
@@ -269,6 +269,8 @@ func (this *QModelIndex) column(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex6columnEv
+    // invoke: int column()
+    C._ZNK11QModelIndex6columnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "column", args)
   }
@@ -287,6 +289,8 @@ func (this *QModelIndex) internalId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex10internalIdEv
+    // invoke: quintptr internalId()
+    C._ZNK11QModelIndex10internalIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "internalId", args)
   }
@@ -307,10 +311,12 @@ func (this *QModelIndex) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex5childEii
+    // invoke: QModelIndex child(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK11QModelIndex5childEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QModelIndex", "child", args)
   }
@@ -329,6 +335,8 @@ func (this *QModelIndex) internalPointer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex15internalPointerEv
+    // invoke: void * internalPointer()
+    C.demth_ZNK11QModelIndex15internalPointerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "internalPointer", args)
   }
@@ -347,6 +355,8 @@ func (this *QModelIndex) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex7isValidEv
+    // invoke: bool isValid()
+    C._ZNK11QModelIndex7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "isValid", args)
   }
@@ -365,6 +375,8 @@ func (this *QModelIndex) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex6parentEv
+    // invoke: QModelIndex parent()
+    C.demth_ZNK11QModelIndex6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "parent", args)
   }
@@ -385,10 +397,12 @@ func (this *QModelIndex) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex7siblingEii
+    // invoke: QModelIndex sibling(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK11QModelIndex7siblingEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QModelIndex", "sibling", args)
   }
@@ -407,6 +421,8 @@ func (this *QModelIndex) model(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex5modelEv
+    // invoke: const QAbstractItemModel * model()
+    C._ZNK11QModelIndex5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "model", args)
   }
@@ -426,8 +442,10 @@ func (this *QModelIndex) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex4dataEi
+    // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZNK11QModelIndex4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QModelIndex", "data", args)
   }
@@ -446,6 +464,8 @@ func (this *QModelIndex) row(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QModelIndex3rowEv
+    // invoke: int row()
+    C._ZNK11QModelIndex3rowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "row", args)
   }
@@ -466,10 +486,12 @@ func (this *QPersistentModelIndex) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex7siblingEii
+    // invoke: QModelIndex sibling(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK21QPersistentModelIndex7siblingEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "sibling", args)
   }
@@ -489,8 +511,10 @@ func (this *QPersistentModelIndex) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex4dataEi
+    // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK21QPersistentModelIndex4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "data", args)
   }
@@ -509,6 +533,8 @@ func (this *QPersistentModelIndex) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex6parentEv
+    // invoke: QModelIndex parent()
+    C._ZNK21QPersistentModelIndex6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "parent", args)
   }
@@ -532,6 +558,8 @@ func (this *QPersistentModelIndex) internalPointer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex15internalPointerEv
+    // invoke: void * internalPointer()
+    C._ZNK21QPersistentModelIndex15internalPointerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "internalPointer", args)
   }
@@ -550,6 +578,8 @@ func (this *QPersistentModelIndex) row(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex3rowEv
+    // invoke: int row()
+    C._ZNK21QPersistentModelIndex3rowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "row", args)
   }
@@ -568,6 +598,8 @@ func (this *QPersistentModelIndex) internalId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex10internalIdEv
+    // invoke: quintptr internalId()
+    C._ZNK21QPersistentModelIndex10internalIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "internalId", args)
   }
@@ -586,6 +618,8 @@ func (this *QPersistentModelIndex) model(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex5modelEv
+    // invoke: const QAbstractItemModel * model()
+    C._ZNK21QPersistentModelIndex5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "model", args)
   }
@@ -618,6 +652,8 @@ func (this *QPersistentModelIndex) column(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex6columnEv
+    // invoke: int column()
+    C._ZNK21QPersistentModelIndex6columnEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "column", args)
   }
@@ -637,8 +673,10 @@ func (this *QPersistentModelIndex) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QPersistentModelIndex4swapERS_
+    // invoke: void swap(class QPersistentModelIndex &)
     var arg0 = args[0].(QPersistentModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN21QPersistentModelIndex4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "swap", args)
   }
@@ -659,10 +697,12 @@ func (this *QPersistentModelIndex) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex5childEii
+    // invoke: QModelIndex child(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK21QPersistentModelIndex5childEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "child", args)
   }
@@ -681,6 +721,8 @@ func (this *QPersistentModelIndex) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QPersistentModelIndex7isValidEv
+    // invoke: bool isValid()
+    C._ZNK21QPersistentModelIndex7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "isValid", args)
   }
@@ -707,12 +749,14 @@ func (this *QAbstractTableModel) index(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel5indexEiiRK11QModelIndex
+    // invoke: QModelIndex index(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK19QAbstractTableModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "index", args)
   }
@@ -734,12 +778,14 @@ func (this *QAbstractTableModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex
+    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "sibling", args)
   }
@@ -772,6 +818,8 @@ func (this *QAbstractTableModel) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTableModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK19QAbstractTableModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "metaObject", args)
   }
@@ -793,12 +841,14 @@ func (this *QAbstractItemModel) removeColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex
+    // invoke: bool removeColumns(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeColumns", args)
   }
@@ -832,8 +882,10 @@ func (this *QAbstractItemModel) canFetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex
+    // invoke: bool canFetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "canFetchMore", args)
   }
@@ -852,6 +904,8 @@ func (this *QAbstractItemModel) submit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel6submitEv
+    // invoke: bool submit()
+    C._ZN18QAbstractItemModel6submitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "submit", args)
   }
@@ -873,12 +927,14 @@ func (this *QAbstractItemModel) hasIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex
+    // invoke: bool hasIndex(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "hasIndex", args)
   }
@@ -897,6 +953,8 @@ func (this *QAbstractItemModel) roleNames(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel9roleNamesEv
+    // invoke: QHash<int, QByteArray> roleNames()
+    C._ZNK18QAbstractItemModel9roleNamesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "roleNames", args)
   }
@@ -919,6 +977,7 @@ func (this *QAbstractItemModel) moveColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i
+    // invoke: bool moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -927,6 +986,7 @@ func (this *QAbstractItemModel) moveColumn(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveColumn", args)
   }
@@ -946,8 +1006,10 @@ func (this *QAbstractItemModel) fetchMore(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex
+    // invoke: void fetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QAbstractItemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "fetchMore", args)
   }
@@ -969,12 +1031,14 @@ func (this *QAbstractItemModel) insertRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex
+    // invoke: bool insertRows(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertRows", args)
   }
@@ -994,8 +1058,10 @@ func (this *QAbstractItemModel) span(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel4spanERK11QModelIndex
+    // invoke: QSize span(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel4spanERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "span", args)
   }
@@ -1022,12 +1088,14 @@ func (this *QAbstractItemModel) index(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel5indexEiiRK11QModelIndex
+    // invoke: QModelIndex index(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractItemModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "index", args)
   }
@@ -1048,10 +1116,12 @@ func (this *QAbstractItemModel) insertRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9insertRowEiRK11QModelIndex
+    // invoke: bool insertRow(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertRow", args)
   }
@@ -1070,6 +1140,8 @@ func (this *QAbstractItemModel) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractItemModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "metaObject", args)
   }
@@ -1090,10 +1162,12 @@ func (this *QAbstractItemModel) removeRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel9removeRowEiRK11QModelIndex
+    // invoke: bool removeRow(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeRow", args)
   }
@@ -1115,12 +1189,14 @@ func (this *QAbstractItemModel) setData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti
+    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "setData", args)
   }
@@ -1140,8 +1216,10 @@ func (this *QAbstractItemModel) rowCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8rowCountERK11QModelIndex
+    // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "rowCount", args)
   }
@@ -1163,12 +1241,14 @@ func (this *QAbstractItemModel) removeRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex
+    // invoke: bool removeRows(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeRows", args)
   }
@@ -1188,8 +1268,10 @@ func (this *QAbstractItemModel) hasChildren(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex
+    // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "hasChildren", args)
   }
@@ -1212,6 +1294,7 @@ func (this *QAbstractItemModel) moveRow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i
+    // invoke: bool moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1220,6 +1303,7 @@ func (this *QAbstractItemModel) moveRow(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveRow", args)
   }
@@ -1238,6 +1322,8 @@ func (this *QAbstractItemModel) revert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel6revertEv
+    // invoke: void revert()
+    C._ZN18QAbstractItemModel6revertEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "revert", args)
   }
@@ -1258,10 +1344,12 @@ func (this *QAbstractItemModel) removeColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex
+    // invoke: bool removeColumn(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeColumn", args)
   }
@@ -1283,12 +1371,14 @@ func (this *QAbstractItemModel) insertColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex
+    // invoke: bool insertColumns(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertColumns", args)
   }
@@ -1309,10 +1399,12 @@ func (this *QAbstractItemModel) insertColumn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex
+    // invoke: bool insertColumn(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
+    C.demth_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "insertColumn", args)
   }
@@ -1336,6 +1428,7 @@ func (this *QAbstractItemModel) moveColumns(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i
+    // invoke: bool moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1346,6 +1439,7 @@ func (this *QAbstractItemModel) moveColumns(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
+    C._ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveColumns", args)
   }
@@ -1365,8 +1459,10 @@ func (this *QAbstractItemModel) itemData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel8itemDataERK11QModelIndex
+    // invoke: QMap<int, QVariant> itemData(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel8itemDataERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "itemData", args)
   }
@@ -1385,6 +1481,8 @@ func (this *QAbstractItemModel) mimeTypes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel9mimeTypesEv
+    // invoke: QStringList mimeTypes()
+    C._ZNK18QAbstractItemModel9mimeTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "mimeTypes", args)
   }
@@ -1404,8 +1502,10 @@ func (this *QAbstractItemModel) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel6parentERK11QModelIndex
+    // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "parent", args)
   }
@@ -1425,8 +1525,10 @@ func (this *QAbstractItemModel) buddy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel5buddyERK11QModelIndex
+    // invoke: QModelIndex buddy(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel5buddyERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "buddy", args)
   }
@@ -1446,8 +1548,10 @@ func (this *QAbstractItemModel) columnCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel11columnCountERK11QModelIndex
+    // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "columnCount", args)
   }
@@ -1468,10 +1572,12 @@ func (this *QAbstractItemModel) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel4dataERK11QModelIndexi
+    // invoke: QVariant data(const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK18QAbstractItemModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "data", args)
   }
@@ -1493,12 +1599,14 @@ func (this *QAbstractItemModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex
+    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "sibling", args)
   }
@@ -1522,6 +1630,7 @@ func (this *QAbstractItemModel) moveRows(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i
+    // invoke: bool moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
@@ -1532,6 +1641,7 @@ func (this *QAbstractItemModel) moveRows(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
+    C._ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveRows", args)
   }
@@ -1553,12 +1663,14 @@ func (this *QAbstractListModel) sibling(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex
+    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractListModel", "sibling", args)
   }
@@ -1582,6 +1694,8 @@ func (this *QAbstractListModel) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractListModel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractListModel", "metaObject", args)
   }
@@ -1603,12 +1717,14 @@ func (this *QAbstractListModel) index(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QAbstractListModel5indexEiiRK11QModelIndex
+    // invoke: QModelIndex index(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractListModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractListModel", "index", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -100,8 +100,10 @@ func (this *QEventLoop) exit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop4exitEi
+    // invoke: void exit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QEventLoop4exitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "exit", args)
   }
@@ -120,6 +122,8 @@ func (this *QEventLoop) quit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop4quitEv
+    // invoke: void quit()
+    C._ZN10QEventLoop4quitEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "quit", args)
   }
@@ -143,6 +147,8 @@ func (this *QEventLoop) isRunning(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QEventLoop9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK10QEventLoop9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "isRunning", args)
   }
@@ -161,6 +167,8 @@ func (this *QEventLoop) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QEventLoop10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QEventLoop10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "metaObject", args)
   }
@@ -179,6 +187,8 @@ func (this *QEventLoop) wakeUp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop6wakeUpEv
+    // invoke: void wakeUp()
+    C._ZN10QEventLoop6wakeUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "wakeUp", args)
   }
@@ -212,8 +222,10 @@ func (this *QEventLoop) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QEventLoop5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN10QEventLoop5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QEventLoop", "event", args)
   }

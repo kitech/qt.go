@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qradiobutton.h
 // dst-file: /src/widgets/qradiobutton.go
 //
@@ -79,6 +79,8 @@ func (this *QRadioButton) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QRadioButton10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "metaObject", args)
   }
@@ -102,6 +104,8 @@ func (this *QRadioButton) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK12QRadioButton8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "sizeHint", args)
   }
@@ -120,6 +124,8 @@ func (this *QRadioButton) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QRadioButton15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK12QRadioButton15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadioButton", "minimumSizeHint", args)
   }

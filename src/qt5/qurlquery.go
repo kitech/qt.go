@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -109,6 +109,8 @@ func (this *QUrlQuery) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery5clearEv
+    // invoke: void clear()
+    C._ZN9QUrlQuery5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "clear", args)
   }
@@ -128,8 +130,10 @@ func (this *QUrlQuery) setQuery(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery8setQueryERK7QString
+    // invoke: void setQuery(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUrlQuery8setQueryERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQuery", args)
   }
@@ -148,6 +152,8 @@ func (this *QUrlQuery) queryValueDelimiter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery19queryValueDelimiterEv
+    // invoke: QChar queryValueDelimiter()
+    C._ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryValueDelimiter", args)
   }
@@ -166,6 +172,8 @@ func (this *QUrlQuery) queryPairDelimiter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery18queryPairDelimiterEv
+    // invoke: QChar queryPairDelimiter()
+    C._ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryPairDelimiter", args)
   }
@@ -199,8 +207,10 @@ func (this *QUrlQuery) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery4swapERS_
+    // invoke: void swap(class QUrlQuery &)
     var arg0 = args[0].(QUrlQuery).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
   }
@@ -219,6 +229,8 @@ func (this *QUrlQuery) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery10isDetachedEv
+    // invoke: bool isDetached()
+    C._ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "isDetached", args)
   }
@@ -239,10 +251,12 @@ func (this *QUrlQuery) setQueryDelimiters(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery18setQueryDelimitersE5QCharS0_
+    // invoke: void setQueryDelimiters(class QChar, class QChar)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QChar).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "setQueryDelimiters", args)
   }
@@ -276,8 +290,10 @@ func (this *QUrlQuery) removeAllQueryItems(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery19removeAllQueryItemsERK7QString
+    // invoke: void removeAllQueryItems(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUrlQuery19removeAllQueryItemsERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeAllQueryItems", args)
   }
@@ -296,6 +312,8 @@ func (this *QUrlQuery) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUrlQuery", "isEmpty", args)
   }
@@ -315,8 +333,10 @@ func (this *QUrlQuery) removeQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery15removeQueryItemERK7QString
+    // invoke: void removeQueryItem(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUrlQuery15removeQueryItemERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "removeQueryItem", args)
   }
@@ -351,10 +371,12 @@ func (this *QUrlQuery) addQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUrlQuery12addQueryItemERK7QStringS2_
+    // invoke: void addQueryItem(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QUrlQuery12addQueryItemERK7QStringS2_(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QUrlQuery", "addQueryItem", args)
   }
@@ -374,8 +396,10 @@ func (this *QUrlQuery) hasQueryItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUrlQuery12hasQueryItemERK7QString
+    // invoke: bool hasQueryItem(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
   }

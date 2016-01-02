@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.go
 //
@@ -121,8 +121,10 @@ func (this *QGlyphRun) setBoundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun15setBoundingRectERK6QRectF
+    // invoke: void setBoundingRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun15setBoundingRectERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setBoundingRect", args)
   }
@@ -141,6 +143,8 @@ func (this *QGlyphRun) overline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun8overlineEv
+    // invoke: bool overline()
+    C._ZNK9QGlyphRun8overlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "overline", args)
   }
@@ -162,12 +166,14 @@ func (this *QGlyphRun) setRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi
+    // invoke: void setRawData(const quint32 *, const class QPointF *, int)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRawData", args)
   }
@@ -187,8 +193,10 @@ func (this *QGlyphRun) setOverline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun11setOverlineEb
+    // invoke: void setOverline(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun11setOverlineEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setOverline", args)
   }
@@ -208,8 +216,10 @@ func (this *QGlyphRun) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun4swapERS_
+    // invoke: void swap(class QGlyphRun &)
     var arg0 = args[0].(QGlyphRun).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "swap", args)
   }
@@ -229,8 +239,10 @@ func (this *QGlyphRun) setUnderline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun12setUnderlineEb
+    // invoke: void setUnderline(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun12setUnderlineEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setUnderline", args)
   }
@@ -249,6 +261,8 @@ func (this *QGlyphRun) positions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun9positionsEv
+    // invoke: QVector<QPointF> positions()
+    C._ZNK9QGlyphRun9positionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "positions", args)
   }
@@ -267,6 +281,8 @@ func (this *QGlyphRun) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun5clearEv
+    // invoke: void clear()
+    C._ZN9QGlyphRun5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "clear", args)
   }
@@ -285,6 +301,8 @@ func (this *QGlyphRun) strikeOut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun9strikeOutEv
+    // invoke: bool strikeOut()
+    C._ZNK9QGlyphRun9strikeOutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "strikeOut", args)
   }
@@ -308,6 +326,8 @@ func (this *QGlyphRun) rawFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun7rawFontEv
+    // invoke: QRawFont rawFont()
+    C._ZNK9QGlyphRun7rawFontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "rawFont", args)
   }
@@ -327,8 +347,10 @@ func (this *QGlyphRun) setRawFont(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun10setRawFontERK8QRawFont
+    // invoke: void setRawFont(const class QRawFont &)
     var arg0 = args[0].(QRawFont).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun10setRawFontERK8QRawFont(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRawFont", args)
   }
@@ -347,6 +369,8 @@ func (this *QGlyphRun) isRightToLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun13isRightToLeftEv
+    // invoke: bool isRightToLeft()
+    C._ZNK9QGlyphRun13isRightToLeftEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "isRightToLeft", args)
   }
@@ -365,6 +389,8 @@ func (this *QGlyphRun) glyphIndexes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun12glyphIndexesEv
+    // invoke: QVector<quint32> glyphIndexes()
+    C._ZNK9QGlyphRun12glyphIndexesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "glyphIndexes", args)
   }
@@ -383,6 +409,8 @@ func (this *QGlyphRun) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK9QGlyphRun12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "boundingRect", args)
   }
@@ -402,8 +430,10 @@ func (this *QGlyphRun) setRightToLeft(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun14setRightToLeftEb
+    // invoke: void setRightToLeft(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun14setRightToLeftEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setRightToLeft", args)
   }
@@ -422,6 +452,8 @@ func (this *QGlyphRun) underline(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun9underlineEv
+    // invoke: bool underline()
+    C._ZNK9QGlyphRun9underlineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "underline", args)
   }
@@ -441,8 +473,10 @@ func (this *QGlyphRun) setStrikeOut(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGlyphRun12setStrikeOutEb
+    // invoke: void setStrikeOut(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun12setStrikeOutEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "setStrikeOut", args)
   }
@@ -461,6 +495,8 @@ func (this *QGlyphRun) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGlyphRun7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK9QGlyphRun7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGlyphRun", "isEmpty", args)
   }

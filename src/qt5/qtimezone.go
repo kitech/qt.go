@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -131,8 +131,10 @@ func (this *QTimeZone) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTimeZone4swapERS_
+    // invoke: void swap(class QTimeZone &)
     var arg0 = args[0].(QTimeZone).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTimeZone4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "swap", args)
   }
@@ -151,6 +153,8 @@ func (this *QTimeZone) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone7isValidEv
+    // invoke: bool isValid()
+    C._ZNK9QTimeZone7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "isValid", args)
   }
@@ -169,6 +173,8 @@ func (this *QTimeZone) hasDaylightTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone15hasDaylightTimeEv
+    // invoke: bool hasDaylightTime()
+    C._ZNK9QTimeZone15hasDaylightTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "hasDaylightTime", args)
   }
@@ -207,8 +213,10 @@ func (this *QTimeZone) abbreviation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone12abbreviationERK9QDateTime
+    // invoke: QString abbreviation(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeZone12abbreviationERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "abbreviation", args)
   }
@@ -256,8 +264,10 @@ func (this *QTimeZone) isDaylightTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone14isDaylightTimeERK9QDateTime
+    // invoke: bool isDaylightTime(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeZone14isDaylightTimeERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "isDaylightTime", args)
   }
@@ -290,6 +300,8 @@ func (this *QTimeZone) comment(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone7commentEv
+    // invoke: QString comment()
+    C._ZNK9QTimeZone7commentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "comment", args)
   }
@@ -322,6 +334,8 @@ func (this *QTimeZone) hasTransitions(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone14hasTransitionsEv
+    // invoke: bool hasTransitions()
+    C._ZNK9QTimeZone14hasTransitionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "hasTransitions", args)
   }
@@ -341,8 +355,10 @@ func (this *QTimeZone) daylightTimeOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime
+    // invoke: int daylightTimeOffset(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeZone18daylightTimeOffsetERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "daylightTimeOffset", args)
   }
@@ -390,8 +406,10 @@ func (this *QTimeZone) standardTimeOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone18standardTimeOffsetERK9QDateTime
+    // invoke: int standardTimeOffset(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeZone18standardTimeOffsetERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "standardTimeOffset", args)
   }
@@ -410,6 +428,8 @@ func (this *QTimeZone) id(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone2idEv
+    // invoke: QByteArray id()
+    C._ZNK9QTimeZone2idEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimeZone", "id", args)
   }
@@ -429,8 +449,10 @@ func (this *QTimeZone) offsetFromUtc(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTimeZone13offsetFromUtcERK9QDateTime
+    // invoke: int offsetFromUtc(const class QDateTime &)
     var arg0 = args[0].(QDateTime).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTimeZone13offsetFromUtcERK9QDateTime(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "offsetFromUtc", args)
   }

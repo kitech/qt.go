@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.go
 //
@@ -75,12 +75,14 @@ func (this *QAbstractNativeEventFilter) nativeEventFilter(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl
+    // invoke: bool nativeEventFilter(const class QByteArray &, void *, long *)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
+    C._ZN26QAbstractNativeEventFilter17nativeEventFilterERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "nativeEventFilter", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.go
 //
@@ -90,18 +90,22 @@ func (this *QStringMatcher) indexIn(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStringMatcher7indexInEPK5QCharii
+    // invoke: int indexIn(const class QChar *, int, int)
     var arg0 = args[0].(QChar).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
+    C._ZNK14QStringMatcher7indexInEPK5QCharii(this.qclsinst, arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK14QStringMatcher7indexInERK7QStringi
+    // invoke: int indexIn(const class QString &, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK14QStringMatcher7indexInERK7QStringi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QStringMatcher", "indexIn", args)
   }
@@ -121,8 +125,10 @@ func (this *QStringMatcher) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QStringMatcher10setPatternERK7QString
+    // invoke: void setPattern(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN14QStringMatcher10setPatternERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStringMatcher", "setPattern", args)
   }
@@ -141,6 +147,8 @@ func (this *QStringMatcher) pattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QStringMatcher7patternEv
+    // invoke: QString pattern()
+    C._ZNK14QStringMatcher7patternEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStringMatcher", "pattern", args)
   }

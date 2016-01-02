@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -57,11 +57,11 @@ extern void _ZN11QDataStream11resetStatusEv(void* qthis);
 extern void* dector_ZN11QDataStreamC1ERK10QByteArray(void* arg0);
 extern void _ZN11QDataStreamC1ERK10QByteArray(void* qthis, void* arg0);
   // proto:  int QDataStream::version();
-extern void _ZNK11QDataStream7versionEv(void* qthis);
+extern void demth_ZNK11QDataStream7versionEv(void* qthis);
   // proto:  bool QDataStream::atEnd();
 extern void _ZNK11QDataStream5atEndEv(void* qthis);
   // proto:  void QDataStream::setVersion(int );
-extern void _ZN11QDataStream10setVersionEi(void* qthis, int arg0);
+extern void demth_ZN11QDataStream10setVersionEi(void* qthis, int arg0);
   // proto:  void QDataStream::setDevice(QIODevice * );
 extern void _ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  int QDataStream::writeRawData(const char * , int len);
@@ -69,7 +69,7 @@ extern void _ZN11QDataStream12writeRawDataEPKci(void* qthis, char* arg0, int arg
   // proto:  int QDataStream::readRawData(char * , int len);
 extern void _ZN11QDataStream11readRawDataEPci(void* qthis, char* arg0, int arg1);
   // proto:  QIODevice * QDataStream::device();
-extern void _ZNK11QDataStream6deviceEv(void* qthis);
+extern void demth_ZNK11QDataStream6deviceEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -102,10 +102,12 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9readBytesERPcRj
+    // invoke: QDataStream & readBytes(char *&, uint &)
     var arg0 = C.char(args[0].(byte))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
@@ -124,6 +126,8 @@ func (this *QDataStream) unsetDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11unsetDeviceEv
+    // invoke: void unsetDevice()
+    C._ZN11QDataStream11unsetDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "unsetDevice", args)
   }
@@ -162,8 +166,10 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11skipRawDataEi
+    // invoke: int skipRawData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
@@ -184,10 +190,12 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10writeBytesEPKcj
+    // invoke: QDataStream & writeBytes(const char *, uint)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
@@ -206,6 +214,8 @@ func (this *QDataStream) resetStatus(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11resetStatusEv
+    // invoke: void resetStatus()
+    C._ZN11QDataStream11resetStatusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "resetStatus", args)
   }
@@ -224,6 +234,8 @@ func (this *QDataStream) version(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
+    // invoke: int version()
+    C.demth_ZNK11QDataStream7versionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
   }
@@ -242,6 +254,8 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
+    // invoke: bool atEnd()
+    C._ZNK11QDataStream5atEndEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
   }
@@ -261,8 +275,10 @@ func (this *QDataStream) setVersion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream10setVersionEi
+    // invoke: void setVersion(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QDataStream10setVersionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setVersion", args)
   }
@@ -282,8 +298,10 @@ func (this *QDataStream) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QDataStream9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDataStream", "setDevice", args)
   }
@@ -304,10 +322,12 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream12writeRawDataEPKci
+    // invoke: int writeRawData(const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
@@ -328,10 +348,12 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QDataStream11readRawDataEPci
+    // invoke: int readRawData(char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }
@@ -350,6 +372,8 @@ func (this *QDataStream) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
+    // invoke: QIODevice * device()
+    C.demth_ZNK11QDataStream6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
   }

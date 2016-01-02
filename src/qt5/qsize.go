@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.go
 //
@@ -138,8 +138,10 @@ func (this *QSize) boundedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize9boundedToERKS_
+    // invoke: QSize boundedTo(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK5QSize9boundedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "boundedTo", args)
   }
@@ -158,6 +160,8 @@ func (this *QSize) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize7isValidEv
+    // invoke: bool isValid()
+    C._ZNK5QSize7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isValid", args)
   }
@@ -176,6 +180,8 @@ func (this *QSize) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize6isNullEv
+    // invoke: bool isNull()
+    C._ZNK5QSize6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isNull", args)
   }
@@ -200,8 +206,10 @@ func (this *QSize) expandedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize10expandedToERKS_
+    // invoke: QSize expandedTo(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK5QSize10expandedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "expandedTo", args)
   }
@@ -220,6 +228,8 @@ func (this *QSize) height(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize6heightEv
+    // invoke: int height()
+    C._ZNK5QSize6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "height", args)
   }
@@ -238,6 +248,8 @@ func (this *QSize) rheight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize7rheightEv
+    // invoke: int & rheight()
+    C.demth_ZN5QSize7rheightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "rheight", args)
   }
@@ -256,6 +268,8 @@ func (this *QSize) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize5widthEv
+    // invoke: int width()
+    C._ZNK5QSize5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "width", args)
   }
@@ -274,6 +288,8 @@ func (this *QSize) transposed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize10transposedEv
+    // invoke: QSize transposed()
+    C._ZNK5QSize10transposedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "transposed", args)
   }
@@ -292,6 +308,8 @@ func (this *QSize) rwidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize6rwidthEv
+    // invoke: int & rwidth()
+    C.demth_ZN5QSize6rwidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "rwidth", args)
   }
@@ -311,8 +329,10 @@ func (this *QSize) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize9setHeightEi
+    // invoke: void setHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QSize9setHeightEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "setHeight", args)
   }
@@ -331,6 +351,8 @@ func (this *QSize) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QSize7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK5QSize7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isEmpty", args)
   }
@@ -350,8 +372,10 @@ func (this *QSize) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize8setWidthEi
+    // invoke: void setWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QSize8setWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "setWidth", args)
   }
@@ -370,6 +394,8 @@ func (this *QSize) transpose(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QSize9transposeEv
+    // invoke: void transpose()
+    C._ZN5QSize9transposeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "transpose", args)
   }
@@ -388,6 +414,8 @@ func (this *QSizeF) rheight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF7rheightEv
+    // invoke: qreal & rheight()
+    C.demth_ZN6QSizeF7rheightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "rheight", args)
   }
@@ -406,6 +434,8 @@ func (this *QSizeF) rwidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF6rwidthEv
+    // invoke: qreal & rwidth()
+    C.demth_ZN6QSizeF6rwidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "rwidth", args)
   }
@@ -424,6 +454,8 @@ func (this *QSizeF) transposed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF10transposedEv
+    // invoke: QSizeF transposed()
+    C._ZNK6QSizeF10transposedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "transposed", args)
   }
@@ -442,6 +474,8 @@ func (this *QSizeF) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF7isValidEv
+    // invoke: bool isValid()
+    C._ZNK6QSizeF7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "isValid", args)
   }
@@ -461,8 +495,10 @@ func (this *QSizeF) setHeight(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF9setHeightEd
+    // invoke: void setHeight(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QSizeF9setHeightEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "setHeight", args)
   }
@@ -486,6 +522,8 @@ func (this *QSizeF) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF5widthEv
+    // invoke: qreal width()
+    C._ZNK6QSizeF5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "width", args)
   }
@@ -504,6 +542,8 @@ func (this *QSizeF) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK6QSizeF6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "isNull", args)
   }
@@ -523,8 +563,10 @@ func (this *QSizeF) boundedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF9boundedToERKS_
+    // invoke: QSizeF boundedTo(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK6QSizeF9boundedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "boundedTo", args)
   }
@@ -543,6 +585,8 @@ func (this *QSizeF) height(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF6heightEv
+    // invoke: qreal height()
+    C._ZNK6QSizeF6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "height", args)
   }
@@ -561,6 +605,8 @@ func (this *QSizeF) transpose(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF9transposeEv
+    // invoke: void transpose()
+    C._ZN6QSizeF9transposeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "transpose", args)
   }
@@ -580,8 +626,10 @@ func (this *QSizeF) expandedTo(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF10expandedToERKS_
+    // invoke: QSizeF expandedTo(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK6QSizeF10expandedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "expandedTo", args)
   }
@@ -600,6 +648,8 @@ func (this *QSizeF) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK6QSizeF7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "isEmpty", args)
   }
@@ -619,8 +669,10 @@ func (this *QSizeF) setWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QSizeF8setWidthEd
+    // invoke: void setWidth(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QSizeF8setWidthEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "setWidth", args)
   }
@@ -639,6 +691,8 @@ func (this *QSizeF) toSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QSizeF6toSizeEv
+    // invoke: QSize toSize()
+    C._ZNK6QSizeF6toSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "toSize", args)
   }

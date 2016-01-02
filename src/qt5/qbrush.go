@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qbrush.h
 // dst-file: /src/gui/qbrush.go
 //
@@ -242,14 +242,18 @@ func (this *QRadialGradient) setFocalPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QRadialGradient13setFocalPointEdd
+    // invoke: void setFocalPoint(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN15QRadialGradient13setFocalPointEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QRadialGradient13setFocalPointERK7QPointF
+    // invoke: void setFocalPoint(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QRadialGradient13setFocalPointERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRadialGradient", "setFocalPoint", args)
   }
@@ -268,6 +272,8 @@ func (this *QRadialGradient) radius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QRadialGradient6radiusEv
+    // invoke: qreal radius()
+    C._ZNK15QRadialGradient6radiusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadialGradient", "radius", args)
   }
@@ -286,6 +292,8 @@ func (this *QRadialGradient) centerRadius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QRadialGradient12centerRadiusEv
+    // invoke: qreal centerRadius()
+    C._ZNK15QRadialGradient12centerRadiusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadialGradient", "centerRadius", args)
   }
@@ -304,6 +312,8 @@ func (this *QRadialGradient) focalPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QRadialGradient10focalPointEv
+    // invoke: QPointF focalPoint()
+    C._ZNK15QRadialGradient10focalPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadialGradient", "focalPoint", args)
   }
@@ -322,6 +332,8 @@ func (this *QRadialGradient) focalRadius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QRadialGradient11focalRadiusEv
+    // invoke: qreal focalRadius()
+    C._ZNK15QRadialGradient11focalRadiusEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadialGradient", "focalRadius", args)
   }
@@ -340,6 +352,8 @@ func (this *QRadialGradient) center(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QRadialGradient6centerEv
+    // invoke: QPointF center()
+    C._ZNK15QRadialGradient6centerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRadialGradient", "center", args)
   }
@@ -363,14 +377,18 @@ func (this *QRadialGradient) setCenter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QRadialGradient9setCenterERK7QPointF
+    // invoke: void setCenter(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QRadialGradient9setCenterERK7QPointF(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN15QRadialGradient9setCenterEdd
+    // invoke: void setCenter(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN15QRadialGradient9setCenterEdd(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRadialGradient", "setCenter", args)
   }
@@ -390,8 +408,10 @@ func (this *QRadialGradient) setCenterRadius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QRadialGradient15setCenterRadiusEd
+    // invoke: void setCenterRadius(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN15QRadialGradient15setCenterRadiusEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRadialGradient", "setCenterRadius", args)
   }
@@ -411,8 +431,10 @@ func (this *QRadialGradient) setFocalRadius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QRadialGradient14setFocalRadiusEd
+    // invoke: void setFocalRadius(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN15QRadialGradient14setFocalRadiusEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRadialGradient", "setFocalRadius", args)
   }
@@ -432,8 +454,10 @@ func (this *QRadialGradient) setRadius(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QRadialGradient9setRadiusEd
+    // invoke: void setRadius(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN15QRadialGradient9setRadiusEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRadialGradient", "setRadius", args)
   }
@@ -452,6 +476,8 @@ func (this *QConicalGradient) angle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QConicalGradient5angleEv
+    // invoke: qreal angle()
+    C._ZNK16QConicalGradient5angleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QConicalGradient", "angle", args)
   }
@@ -470,6 +496,8 @@ func (this *QConicalGradient) center(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QConicalGradient6centerEv
+    // invoke: QPointF center()
+    C._ZNK16QConicalGradient6centerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QConicalGradient", "center", args)
   }
@@ -494,8 +522,10 @@ func (this *QConicalGradient) setAngle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QConicalGradient8setAngleEd
+    // invoke: void setAngle(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN16QConicalGradient8setAngleEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QConicalGradient", "setAngle", args)
   }
@@ -519,14 +549,18 @@ func (this *QConicalGradient) setCenter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QConicalGradient9setCenterEdd
+    // invoke: void setCenter(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN16QConicalGradient9setCenterEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN16QConicalGradient9setCenterERK7QPointF
+    // invoke: void setCenter(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN16QConicalGradient9setCenterERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QConicalGradient", "setCenter", args)
   }
@@ -551,8 +585,10 @@ func (this *QBrush) setTexture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush10setTextureERK7QPixmap
+    // invoke: void setTexture(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QBrush10setTextureERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "setTexture", args)
   }
@@ -572,8 +608,10 @@ func (this *QBrush) setTextureImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush15setTextureImageERK6QImage
+    // invoke: void setTextureImage(const class QImage &)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QBrush15setTextureImageERK6QImage(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "setTextureImage", args)
   }
@@ -592,6 +630,8 @@ func (this *QBrush) texture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush7textureEv
+    // invoke: QPixmap texture()
+    C._ZNK6QBrush7textureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "texture", args)
   }
@@ -610,6 +650,8 @@ func (this *QBrush) transform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush9transformEv
+    // invoke: QTransform transform()
+    C.demth_ZNK6QBrush9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "transform", args)
   }
@@ -629,8 +671,10 @@ func (this *QBrush) setTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush12setTransformERK10QTransform
+    // invoke: void setTransform(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QBrush12setTransformERK10QTransform(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "setTransform", args)
   }
@@ -649,6 +693,8 @@ func (this *QBrush) isOpaque(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush8isOpaqueEv
+    // invoke: bool isOpaque()
+    C._ZNK6QBrush8isOpaqueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "isOpaque", args)
   }
@@ -667,6 +713,8 @@ func (this *QBrush) gradient(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush8gradientEv
+    // invoke: const QGradient * gradient()
+    C._ZNK6QBrush8gradientEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "gradient", args)
   }
@@ -700,8 +748,10 @@ func (this *QBrush) setMatrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush9setMatrixERK7QMatrix
+    // invoke: void setMatrix(const class QMatrix &)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QBrush9setMatrixERK7QMatrix(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "setMatrix", args)
   }
@@ -724,12 +774,10 @@ func (this *QBrush) setColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush8setColorERK6QColor
+    // invoke: void setColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZN6QBrush8setColorEN2Qt11GlobalColorE
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZN6QBrush8setColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "setColor", args)
   }
@@ -748,6 +796,8 @@ func (this *QBrush) matrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush6matrixEv
+    // invoke: const QMatrix & matrix()
+    C.demth_ZNK6QBrush6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "matrix", args)
   }
@@ -766,6 +816,8 @@ func (this *QBrush) textureImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush12textureImageEv
+    // invoke: QImage textureImage()
+    C._ZNK6QBrush12textureImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "textureImage", args)
   }
@@ -784,6 +836,8 @@ func (this *QBrush) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush10isDetachedEv
+    // invoke: bool isDetached()
+    C.demth_ZNK6QBrush10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "isDetached", args)
   }
@@ -803,8 +857,10 @@ func (this *QBrush) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QBrush4swapERS_
+    // invoke: void swap(class QBrush &)
     var arg0 = args[0].(QBrush).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QBrush4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QBrush", "swap", args)
   }
@@ -823,6 +879,8 @@ func (this *QBrush) color(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QBrush5colorEv
+    // invoke: const QColor & color()
+    C.demth_ZNK6QBrush5colorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBrush", "color", args)
   }
@@ -843,10 +901,12 @@ func (this *QGradient) setColorAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QGradient10setColorAtEdRK6QColor
+    // invoke: void setColorAt(qreal, const class QColor &)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QGradient10setColorAtEdRK6QColor(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGradient", "setColorAt", args)
   }
@@ -865,6 +925,8 @@ func (this *QGradient) stops(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QGradient5stopsEv
+    // invoke: QGradientStops stops()
+    C._ZNK9QGradient5stopsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGradient", "stops", args)
   }
@@ -893,14 +955,18 @@ func (this *QLinearGradient) setFinalStop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QLinearGradient12setFinalStopEdd
+    // invoke: void setFinalStop(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN15QLinearGradient12setFinalStopEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QLinearGradient12setFinalStopERK7QPointF
+    // invoke: void setFinalStop(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QLinearGradient12setFinalStopERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLinearGradient", "setFinalStop", args)
   }
@@ -919,6 +985,8 @@ func (this *QLinearGradient) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QLinearGradient5startEv
+    // invoke: QPointF start()
+    C._ZNK15QLinearGradient5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLinearGradient", "start", args)
   }
@@ -947,14 +1015,18 @@ func (this *QLinearGradient) setStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QLinearGradient8setStartEdd
+    // invoke: void setStart(qreal, qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
+    C.demth_ZN15QLinearGradient8setStartEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN15QLinearGradient8setStartERK7QPointF
+    // invoke: void setStart(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN15QLinearGradient8setStartERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLinearGradient", "setStart", args)
   }
@@ -973,6 +1045,8 @@ func (this *QLinearGradient) finalStop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QLinearGradient9finalStopEv
+    // invoke: QPointF finalStop()
+    C._ZNK15QLinearGradient9finalStopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLinearGradient", "finalStop", args)
   }

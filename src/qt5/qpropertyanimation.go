@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -83,6 +83,8 @@ func (this *QPropertyAnimation) propertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12propertyNameEv
+    // invoke: QByteArray propertyName()
+    C._ZNK18QPropertyAnimation12propertyNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "propertyName", args)
   }
@@ -102,8 +104,10 @@ func (this *QPropertyAnimation) setTargetObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setTargetObjectEP7QObject
+    // invoke: void setTargetObject(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QPropertyAnimation15setTargetObjectEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setTargetObject", args)
   }
@@ -141,6 +145,8 @@ func (this *QPropertyAnimation) targetObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12targetObjectEv
+    // invoke: QObject * targetObject()
+    C._ZNK18QPropertyAnimation12targetObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "targetObject", args)
   }
@@ -159,6 +165,8 @@ func (this *QPropertyAnimation) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QPropertyAnimation10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QPropertyAnimation10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "metaObject", args)
   }
@@ -178,8 +186,10 @@ func (this *QPropertyAnimation) setPropertyName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QPropertyAnimation15setPropertyNameERK10QByteArray
+    // invoke: void setPropertyName(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QPropertyAnimation15setPropertyNameERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "setPropertyName", args)
   }

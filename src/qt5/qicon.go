@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -122,6 +122,8 @@ func (this *QIcon) detach(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QIcon6detachEv
+    // invoke: void detach()
+    C._ZN5QIcon6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "detach", args)
   }
@@ -140,6 +142,8 @@ func (this *QIcon) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon6isNullEv
+    // invoke: bool isNull()
+    C._ZNK5QIcon6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "isNull", args)
   }
@@ -214,6 +218,8 @@ func (this *QIcon) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon4nameEv
+    // invoke: QString name()
+    C._ZNK5QIcon4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "name", args)
   }
@@ -246,6 +252,8 @@ func (this *QIcon) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon10isDetachedEv
+    // invoke: bool isDetached()
+    C._ZNK5QIcon10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "isDetached", args)
   }
@@ -264,6 +272,8 @@ func (this *QIcon) cacheKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QIcon8cacheKeyEv
+    // invoke: qint64 cacheKey()
+    C._ZNK5QIcon8cacheKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIcon", "cacheKey", args)
   }
@@ -283,8 +293,10 @@ func (this *QIcon) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QIcon4swapERS_
+    // invoke: void swap(class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QIcon4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QIcon", "swap", args)
   }

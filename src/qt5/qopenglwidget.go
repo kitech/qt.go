@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.go
 //
@@ -103,6 +103,8 @@ func (this *QOpenGLWidget) defaultFramebufferObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget24defaultFramebufferObjectEv
+    // invoke: GLuint defaultFramebufferObject()
+    C._ZNK13QOpenGLWidget24defaultFramebufferObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "defaultFramebufferObject", args)
   }
@@ -126,6 +128,8 @@ func (this *QOpenGLWidget) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QOpenGLWidget7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "isValid", args)
   }
@@ -144,6 +148,8 @@ func (this *QOpenGLWidget) context(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget7contextEv
+    // invoke: QOpenGLContext * context()
+    C._ZNK13QOpenGLWidget7contextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "context", args)
   }
@@ -162,6 +168,8 @@ func (this *QOpenGLWidget) doneCurrent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget11doneCurrentEv
+    // invoke: void doneCurrent()
+    C._ZN13QOpenGLWidget11doneCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "doneCurrent", args)
   }
@@ -180,6 +188,8 @@ func (this *QOpenGLWidget) makeCurrent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget11makeCurrentEv
+    // invoke: void makeCurrent()
+    C._ZN13QOpenGLWidget11makeCurrentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "makeCurrent", args)
   }
@@ -198,6 +208,8 @@ func (this *QOpenGLWidget) grabFramebuffer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget15grabFramebufferEv
+    // invoke: QImage grabFramebuffer()
+    C._ZN13QOpenGLWidget15grabFramebufferEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "grabFramebuffer", args)
   }
@@ -216,6 +228,8 @@ func (this *QOpenGLWidget) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QOpenGLWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "metaObject", args)
   }
@@ -235,8 +249,10 @@ func (this *QOpenGLWidget) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat
+    // invoke: void setFormat(const class QSurfaceFormat &)
     var arg0 = args[0].(QSurfaceFormat).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QOpenGLWidget9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "setFormat", args)
   }
@@ -255,6 +271,8 @@ func (this *QOpenGLWidget) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QOpenGLWidget6formatEv
+    // invoke: QSurfaceFormat format()
+    C._ZNK13QOpenGLWidget6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLWidget", "format", args)
   }

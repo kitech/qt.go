@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -101,6 +101,8 @@ func (this *QAbstractEventDispatcher) hasPendingEvents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher16hasPendingEventsEv
+    // invoke: bool hasPendingEvents()
+    C._ZN24QAbstractEventDispatcher16hasPendingEventsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "hasPendingEvents", args)
   }
@@ -141,12 +143,14 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl
+    // invoke: bool filterNativeEvent(const class QByteArray &, void *, long *)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
+    C._ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "filterNativeEvent", args)
   }
@@ -179,6 +183,8 @@ func (this *QAbstractEventDispatcher) interrupt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher9interruptEv
+    // invoke: void interrupt()
+    C._ZN24QAbstractEventDispatcher9interruptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "interrupt", args)
   }
@@ -198,8 +204,10 @@ func (this *QAbstractEventDispatcher) registerSocketNotifier(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier
+    // invoke: void registerSocketNotifier(class QSocketNotifier *)
     var arg0 = args[0].(QSocketNotifier).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher22registerSocketNotifierEP15QSocketNotifier(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "registerSocketNotifier", args)
   }
@@ -219,8 +227,10 @@ func (this *QAbstractEventDispatcher) installNativeEventFilter(args ...interface
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter
+    // invoke: void installNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher24installNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "installNativeEventFilter", args)
   }
@@ -240,8 +250,10 @@ func (this *QAbstractEventDispatcher) removeNativeEventFilter(args ...interface{
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter
+    // invoke: void removeNativeEventFilter(class QAbstractNativeEventFilter *)
     var arg0 = args[0].(QAbstractNativeEventFilter).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstractNativeEventFilter(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "removeNativeEventFilter", args)
   }
@@ -260,6 +272,8 @@ func (this *QAbstractEventDispatcher) flush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher5flushEv
+    // invoke: void flush()
+    C._ZN24QAbstractEventDispatcher5flushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "flush", args)
   }
@@ -279,8 +293,10 @@ func (this *QAbstractEventDispatcher) unregisterSocketNotifier(args ...interface
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier
+    // invoke: void unregisterSocketNotifier(class QSocketNotifier *)
     var arg0 = args[0].(QSocketNotifier).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher24unregisterSocketNotifierEP15QSocketNotifier(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterSocketNotifier", args)
   }
@@ -299,6 +315,8 @@ func (this *QAbstractEventDispatcher) wakeUp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher6wakeUpEv
+    // invoke: void wakeUp()
+    C._ZN24QAbstractEventDispatcher6wakeUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "wakeUp", args)
   }
@@ -317,6 +335,8 @@ func (this *QAbstractEventDispatcher) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QAbstractEventDispatcher10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK24QAbstractEventDispatcher10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "metaObject", args)
   }
@@ -336,8 +356,10 @@ func (this *QAbstractEventDispatcher) unregisterTimers(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject
+    // invoke: bool unregisterTimers(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher16unregisterTimersEP7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterTimers", args)
   }
@@ -357,8 +379,10 @@ func (this *QAbstractEventDispatcher) remainingTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher13remainingTimeEi
+    // invoke: int remainingTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher13remainingTimeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "remainingTime", args)
   }
@@ -377,6 +401,8 @@ func (this *QAbstractEventDispatcher) startingUp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher10startingUpEv
+    // invoke: void startingUp()
+    C._ZN24QAbstractEventDispatcher10startingUpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "startingUp", args)
   }
@@ -395,6 +421,8 @@ func (this *QAbstractEventDispatcher) closingDown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher11closingDownEv
+    // invoke: void closingDown()
+    C._ZN24QAbstractEventDispatcher11closingDownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "closingDown", args)
   }
@@ -414,8 +442,10 @@ func (this *QAbstractEventDispatcher) unregisterTimer(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QAbstractEventDispatcher15unregisterTimerEi
+    // invoke: bool unregisterTimer(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN24QAbstractEventDispatcher15unregisterTimerEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "unregisterTimer", args)
   }

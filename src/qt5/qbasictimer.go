@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -89,6 +89,8 @@ func (this *QBasicTimer) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QBasicTimer4stopEv
+    // invoke: void stop()
+    C._ZN11QBasicTimer4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "stop", args)
   }
@@ -107,6 +109,8 @@ func (this *QBasicTimer) timerId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QBasicTimer7timerIdEv
+    // invoke: int timerId()
+    C.demth_ZNK11QBasicTimer7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "timerId", args)
   }
@@ -125,6 +129,8 @@ func (this *QBasicTimer) isActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QBasicTimer8isActiveEv
+    // invoke: bool isActive()
+    C.demth_ZNK11QBasicTimer8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicTimer", "isActive", args)
   }
@@ -154,19 +160,13 @@ func (this *QBasicTimer) start(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN11QBasicTimer5startEiN2Qt9TimerTypeEP7QObject
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QObject).qclsinst
-    if false {fmt.Println(arg2)}
-  case 1:
     // invoke: _ZN11QBasicTimer5startEiP7QObject
+    // invoke: void start(int, class QObject *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN11QBasicTimer5startEiP7QObject(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QBasicTimer", "start", args)
   }

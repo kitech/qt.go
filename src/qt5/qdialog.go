@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -105,8 +105,10 @@ func (this *QDialog) setExtension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog12setExtensionEP7QWidget
+    // invoke: void setExtension(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog12setExtensionEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setExtension", args)
   }
@@ -125,6 +127,8 @@ func (this *QDialog) result(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog6resultEv
+    // invoke: int result()
+    C._ZNK7QDialog6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "result", args)
   }
@@ -144,8 +148,10 @@ func (this *QDialog) done(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog4doneEi
+    // invoke: void done(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog4doneEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "done", args)
   }
@@ -164,6 +170,8 @@ func (this *QDialog) open(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog4openEv
+    // invoke: void open()
+    C._ZN7QDialog4openEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "open", args)
   }
@@ -197,8 +205,10 @@ func (this *QDialog) setResult(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog9setResultEi
+    // invoke: void setResult(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog9setResultEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setResult", args)
   }
@@ -218,8 +228,10 @@ func (this *QDialog) setSizeGripEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog18setSizeGripEnabledEb
+    // invoke: void setSizeGripEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog18setSizeGripEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setSizeGripEnabled", args)
   }
@@ -239,8 +251,10 @@ func (this *QDialog) showExtension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog13showExtensionEb
+    // invoke: void showExtension(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog13showExtensionEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "showExtension", args)
   }
@@ -259,6 +273,8 @@ func (this *QDialog) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QDialog10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "metaObject", args)
   }
@@ -277,6 +293,8 @@ func (this *QDialog) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK7QDialog15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "minimumSizeHint", args)
   }
@@ -295,6 +313,8 @@ func (this *QDialog) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK7QDialog8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "sizeHint", args)
   }
@@ -313,6 +333,8 @@ func (this *QDialog) accept(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog6acceptEv
+    // invoke: void accept()
+    C._ZN7QDialog6acceptEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "accept", args)
   }
@@ -332,8 +354,10 @@ func (this *QDialog) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setVisible", args)
   }
@@ -352,6 +376,8 @@ func (this *QDialog) extension(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog9extensionEv
+    // invoke: QWidget * extension()
+    C._ZNK7QDialog9extensionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "extension", args)
   }
@@ -370,6 +396,8 @@ func (this *QDialog) exec(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog4execEv
+    // invoke: int exec()
+    C._ZN7QDialog4execEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "exec", args)
   }
@@ -388,6 +416,8 @@ func (this *QDialog) reject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog6rejectEv
+    // invoke: void reject()
+    C._ZN7QDialog6rejectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "reject", args)
   }
@@ -411,6 +441,8 @@ func (this *QDialog) isSizeGripEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QDialog17isSizeGripEnabledEv
+    // invoke: bool isSizeGripEnabled()
+    C._ZNK7QDialog17isSizeGripEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDialog", "isSizeGripEnabled", args)
   }
@@ -430,8 +462,10 @@ func (this *QDialog) setModal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QDialog8setModalEb
+    // invoke: void setModal(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QDialog8setModalEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDialog", "setModal", args)
   }

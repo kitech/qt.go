@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.go
 //
@@ -102,6 +102,8 @@ func (this *QUuid) toRfc4122(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid9toRfc4122Ev
+    // invoke: QByteArray toRfc4122()
+    C._ZNK5QUuid9toRfc4122Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toRfc4122", args)
   }
@@ -120,6 +122,8 @@ func (this *QUuid) toString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid8toStringEv
+    // invoke: QString toString()
+    C._ZNK5QUuid8toStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toString", args)
   }
@@ -138,6 +142,8 @@ func (this *QUuid) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid6isNullEv
+    // invoke: bool isNull()
+    C._ZNK5QUuid6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "isNull", args)
   }
@@ -198,6 +204,8 @@ func (this *QUuid) toByteArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QUuid11toByteArrayEv
+    // invoke: QByteArray toByteArray()
+    C._ZNK5QUuid11toByteArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUuid", "toByteArray", args)
   }

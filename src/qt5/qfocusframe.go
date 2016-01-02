@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -90,6 +90,8 @@ func (this *QFocusFrame) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusFrame10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QFocusFrame10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
   }
@@ -113,6 +115,8 @@ func (this *QFocusFrame) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QFocusFrame6widgetEv
+    // invoke: QWidget * widget()
+    C._ZNK11QFocusFrame6widgetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFocusFrame", "widget", args)
   }
@@ -132,8 +136,10 @@ func (this *QFocusFrame) setWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QFocusFrame9setWidgetEP7QWidget
+    // invoke: void setWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QFocusFrame9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFocusFrame", "setWidget", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -112,6 +112,8 @@ func (this *QOffscreenSurface) screen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6screenEv
+    // invoke: QScreen * screen()
+    C._ZNK17QOffscreenSurface6screenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "screen", args)
   }
@@ -131,8 +133,10 @@ func (this *QOffscreenSurface) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat
+    // invoke: void setFormat(const class QSurfaceFormat &)
     var arg0 = args[0].(QSurfaceFormat).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QOffscreenSurface9setFormatERK14QSurfaceFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setFormat", args)
   }
@@ -152,8 +156,10 @@ func (this *QOffscreenSurface) setScreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface9setScreenEP7QScreen
+    // invoke: void setScreen(class QScreen *)
     var arg0 = args[0].(QScreen).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QOffscreenSurface9setScreenEP7QScreen(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "setScreen", args)
   }
@@ -172,6 +178,8 @@ func (this *QOffscreenSurface) requestedFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface15requestedFormatEv
+    // invoke: QSurfaceFormat requestedFormat()
+    C._ZNK17QOffscreenSurface15requestedFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "requestedFormat", args)
   }
@@ -190,6 +198,8 @@ func (this *QOffscreenSurface) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6formatEv
+    // invoke: QSurfaceFormat format()
+    C._ZNK17QOffscreenSurface6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "format", args)
   }
@@ -208,6 +218,8 @@ func (this *QOffscreenSurface) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface6handleEv
+    // invoke: QPlatformOffscreenSurface * handle()
+    C._ZNK17QOffscreenSurface6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "handle", args)
   }
@@ -226,6 +238,8 @@ func (this *QOffscreenSurface) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QOffscreenSurface10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "metaObject", args)
   }
@@ -244,6 +258,8 @@ func (this *QOffscreenSurface) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface7destroyEv
+    // invoke: void destroy()
+    C._ZN17QOffscreenSurface7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "destroy", args)
   }
@@ -262,6 +278,8 @@ func (this *QOffscreenSurface) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface7isValidEv
+    // invoke: bool isValid()
+    C._ZNK17QOffscreenSurface7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "isValid", args)
   }
@@ -280,6 +298,8 @@ func (this *QOffscreenSurface) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOffscreenSurface4sizeEv
+    // invoke: QSize size()
+    C._ZNK17QOffscreenSurface4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "size", args)
   }
@@ -298,6 +318,8 @@ func (this *QOffscreenSurface) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOffscreenSurface6createEv
+    // invoke: void create()
+    C._ZN17QOffscreenSurface6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOffscreenSurface", "create", args)
   }

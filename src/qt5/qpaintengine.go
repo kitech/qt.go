@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -173,6 +173,8 @@ func (this *QTextItem) descent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextItem7descentEv
+    // invoke: qreal descent()
+    C._ZNK9QTextItem7descentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "descent", args)
   }
@@ -191,6 +193,8 @@ func (this *QTextItem) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextItem5widthEv
+    // invoke: qreal width()
+    C._ZNK9QTextItem5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "width", args)
   }
@@ -209,6 +213,8 @@ func (this *QTextItem) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextItem4fontEv
+    // invoke: QFont font()
+    C._ZNK9QTextItem4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "font", args)
   }
@@ -227,6 +233,8 @@ func (this *QTextItem) ascent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextItem6ascentEv
+    // invoke: qreal ascent()
+    C._ZNK9QTextItem6ascentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "ascent", args)
   }
@@ -245,6 +253,8 @@ func (this *QTextItem) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextItem4textEv
+    // invoke: QString text()
+    C._ZNK9QTextItem4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextItem", "text", args)
   }
@@ -263,6 +273,8 @@ func (this *QPaintEngineState) opacity(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState7opacityEv
+    // invoke: qreal opacity()
+    C._ZNK17QPaintEngineState7opacityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "opacity", args)
   }
@@ -281,6 +293,8 @@ func (this *QPaintEngineState) matrix(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState6matrixEv
+    // invoke: QMatrix matrix()
+    C._ZNK17QPaintEngineState6matrixEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "matrix", args)
   }
@@ -299,6 +313,8 @@ func (this *QPaintEngineState) painter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState7painterEv
+    // invoke: QPainter * painter()
+    C._ZNK17QPaintEngineState7painterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "painter", args)
   }
@@ -317,6 +333,8 @@ func (this *QPaintEngineState) transform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState9transformEv
+    // invoke: QTransform transform()
+    C._ZNK17QPaintEngineState9transformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "transform", args)
   }
@@ -335,6 +353,8 @@ func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState11brushOriginEv
+    // invoke: QPointF brushOrigin()
+    C._ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushOrigin", args)
   }
@@ -353,6 +373,8 @@ func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState17penNeedsResolvingEv
+    // invoke: bool penNeedsResolving()
+    C._ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "penNeedsResolving", args)
   }
@@ -371,6 +393,8 @@ func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState13isClipEnabledEv
+    // invoke: bool isClipEnabled()
+    C._ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "isClipEnabled", args)
   }
@@ -389,6 +413,8 @@ func (this *QPaintEngineState) font(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState4fontEv
+    // invoke: QFont font()
+    C._ZNK17QPaintEngineState4fontEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "font", args)
   }
@@ -407,6 +433,8 @@ func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState19brushNeedsResolvingEv
+    // invoke: bool brushNeedsResolving()
+    C._ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushNeedsResolving", args)
   }
@@ -425,6 +453,8 @@ func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState10clipRegionEv
+    // invoke: QRegion clipRegion()
+    C._ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipRegion", args)
   }
@@ -443,6 +473,8 @@ func (this *QPaintEngineState) clipPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState8clipPathEv
+    // invoke: QPainterPath clipPath()
+    C._ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipPath", args)
   }
@@ -461,6 +493,8 @@ func (this *QPaintEngineState) brush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState5brushEv
+    // invoke: QBrush brush()
+    C._ZNK17QPaintEngineState5brushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brush", args)
   }
@@ -479,6 +513,8 @@ func (this *QPaintEngineState) pen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState3penEv
+    // invoke: QPen pen()
+    C._ZNK17QPaintEngineState3penEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "pen", args)
   }
@@ -497,6 +533,8 @@ func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QPaintEngineState15backgroundBrushEv
+    // invoke: QBrush backgroundBrush()
+    C._ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngineState", "backgroundBrush", args)
   }
@@ -519,12 +557,16 @@ func (this *QPaintEngine) drawEllipse(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine11drawEllipseERK5QRect
+    // invoke: void drawEllipse(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine11drawEllipseERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QPaintEngine11drawEllipseERK6QRectF
+    // invoke: void drawEllipse(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine11drawEllipseERK6QRectF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawEllipse", args)
   }
@@ -548,6 +590,8 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine8isActiveEv
+    // invoke: bool isActive()
+    C._ZNK12QPaintEngine8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "isActive", args)
   }
@@ -572,16 +616,20 @@ func (this *QPaintEngine) drawPoints(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine10drawPointsEPK7QPointFi
+    // invoke: void drawPoints(const class QPointF *, int)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine10drawPointsEPK7QPointFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine10drawPointsEPK6QPointi
+    // invoke: void drawPoints(const class QPoint *, int)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine10drawPointsEPK6QPointi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPoints", args)
   }
@@ -600,6 +648,8 @@ func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine16coordinateOffsetEv
+    // invoke: QPoint coordinateOffset()
+    C._ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "coordinateOffset", args)
   }
@@ -619,8 +669,10 @@ func (this *QPaintEngine) setPaintDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice
+    // invoke: void setPaintDevice(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setPaintDevice", args)
   }
@@ -640,8 +692,10 @@ func (this *QPaintEngine) setSystemRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine13setSystemRectERK5QRect
+    // invoke: void setSystemRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine13setSystemRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemRect", args)
   }
@@ -674,6 +728,8 @@ func (this *QPaintEngine) end(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine3endEv
+    // invoke: bool end()
+    C._ZN12QPaintEngine3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "end", args)
   }
@@ -695,12 +751,14 @@ func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF
+    // invoke: void drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPointF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTiledPixmap", args)
   }
@@ -720,8 +778,10 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9setActiveEb
+    // invoke: void setActive(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine9setActiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setActive", args)
   }
@@ -743,12 +803,14 @@ func (this *QPaintEngine) drawPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_
+    // invoke: void drawPixmap(const class QRectF &, const class QPixmap &, const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QRectF).qclsinst
     if false {fmt.Println(arg2)}
+    C._ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPixmap", args)
   }
@@ -773,16 +835,20 @@ func (this *QPaintEngine) drawLines(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9drawLinesEPK5QLinei
+    // invoke: void drawLines(const class QLine *, int)
     var arg0 = args[0].(QLine).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine9drawLinesEPK5QLinei(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine9drawLinesEPK6QLineFi
+    // invoke: void drawLines(const class QLineF *, int)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine9drawLinesEPK6QLineFi(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawLines", args)
   }
@@ -802,8 +868,10 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine8drawPathERK12QPainterPath
+    // invoke: void drawPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine8drawPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPath", args)
   }
@@ -823,8 +891,10 @@ func (this *QPaintEngine) updateState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine11updateStateERK17QPaintEngineState
+    // invoke: void updateState(const class QPaintEngineState &)
     var arg0 = args[0].(QPaintEngineState).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine11updateStateERK17QPaintEngineState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "updateState", args)
   }
@@ -844,8 +914,10 @@ func (this *QPaintEngine) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine5beginEP12QPaintDevice
+    // invoke: bool begin(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine5beginEP12QPaintDevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "begin", args)
   }
@@ -864,6 +936,8 @@ func (this *QPaintEngine) systemRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemRectEv
+    // invoke: QRect systemRect()
+    C._ZNK12QPaintEngine10systemRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemRect", args)
   }
@@ -888,16 +962,20 @@ func (this *QPaintEngine) drawRects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9drawRectsEPK6QRectFi
+    // invoke: void drawRects(const class QRectF *, int)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine9drawRectsEPK6QRectFi(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN12QPaintEngine9drawRectsEPK5QRecti
+    // invoke: void drawRects(const class QRect *, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine9drawRectsEPK5QRecti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawRects", args)
   }
@@ -917,8 +995,10 @@ func (this *QPaintEngine) setSystemClip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine13setSystemClipERK7QRegion
+    // invoke: void setSystemClip(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QPaintEngine13setSystemClipERK7QRegion(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setSystemClip", args)
   }
@@ -937,6 +1017,8 @@ func (this *QPaintEngine) systemClip(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemClipEv
+    // invoke: QRegion systemClip()
+    C._ZNK12QPaintEngine10systemClipEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemClip", args)
   }
@@ -955,6 +1037,8 @@ func (this *QPaintEngine) paintDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine11paintDeviceEv
+    // invoke: QPaintDevice * paintDevice()
+    C._ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "paintDevice", args)
   }
@@ -973,6 +1057,8 @@ func (this *QPaintEngine) syncState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine9syncStateEv
+    // invoke: void syncState()
+    C._ZN12QPaintEngine9syncStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "syncState", args)
   }
@@ -991,6 +1077,8 @@ func (this *QPaintEngine) painter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine7painterEv
+    // invoke: QPainter * painter()
+    C._ZNK12QPaintEngine7painterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "painter", args)
   }
@@ -1011,10 +1099,12 @@ func (this *QPaintEngine) drawTextItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem
+    // invoke: void drawTextItem(const class QPointF &, const class QTextItem &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTextItem).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawTextItem", args)
   }
@@ -1037,6 +1127,7 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_
+    // invoke: void fix_neg_rect(int *, int *, int *, int *)
     var arg0 = (*C.int32_t)(args[0].(*int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
@@ -1045,6 +1136,7 @@ func (this *QPaintEngine) fix_neg_rect(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
+    C.demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QPaintEngine", "fix_neg_rect", args)
   }
@@ -1063,6 +1155,8 @@ func (this *QPaintEngine) isExtended(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QPaintEngine10isExtendedEv
+    // invoke: bool isExtended()
+    C.demth_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "isExtended", args)
   }

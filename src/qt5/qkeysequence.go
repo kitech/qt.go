@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.go
 //
@@ -83,6 +83,8 @@ func (this *QKeySequence) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence10isDetachedEv
+    // invoke: bool isDetached()
+    C._ZNK12QKeySequence10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequence", "isDetached", args)
   }
@@ -101,6 +103,8 @@ func (this *QKeySequence) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK12QKeySequence7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequence", "isEmpty", args)
   }
@@ -124,6 +128,8 @@ func (this *QKeySequence) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QKeySequence5countEv
+    // invoke: int count()
+    C._ZNK12QKeySequence5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QKeySequence", "count", args)
   }
@@ -171,8 +177,10 @@ func (this *QKeySequence) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QKeySequence4swapERS_
+    // invoke: void swap(class QKeySequence &)
     var arg0 = args[0].(QKeySequence).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN12QKeySequence4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QKeySequence", "swap", args)
   }

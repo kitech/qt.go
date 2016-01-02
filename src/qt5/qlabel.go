@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.go
 //
@@ -131,6 +131,8 @@ func (this *QLabel) picture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel7pictureEv
+    // invoke: const QPicture * picture()
+    C._ZNK6QLabel7pictureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "picture", args)
   }
@@ -153,12 +155,16 @@ func (this *QLabel) setNum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel6setNumEd
+    // invoke: void setNum(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel6setNumEd(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN6QLabel6setNumEi
+    // invoke: void setNum(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel6setNumEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setNum", args)
   }
@@ -178,8 +184,10 @@ func (this *QLabel) setPicture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel10setPictureERK8QPicture
+    // invoke: void setPicture(const class QPicture &)
     var arg0 = args[0].(QPicture).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel10setPictureERK8QPicture(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setPicture", args)
   }
@@ -199,8 +207,10 @@ func (this *QLabel) setText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel7setTextERK7QString
+    // invoke: void setText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel7setTextERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setText", args)
   }
@@ -219,6 +229,8 @@ func (this *QLabel) pixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel6pixmapEv
+    // invoke: const QPixmap * pixmap()
+    C._ZNK6QLabel6pixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "pixmap", args)
   }
@@ -238,8 +250,10 @@ func (this *QLabel) setIndent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel9setIndentEi
+    // invoke: void setIndent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel9setIndentEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setIndent", args)
   }
@@ -258,6 +272,8 @@ func (this *QLabel) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK6QLabel10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "metaObject", args)
   }
@@ -292,10 +308,12 @@ func (this *QLabel) setSelection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel12setSelectionEii
+    // invoke: void setSelection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN6QLabel12setSelectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLabel", "setSelection", args)
   }
@@ -314,6 +332,8 @@ func (this *QLabel) hasScaledContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel17hasScaledContentsEv
+    // invoke: bool hasScaledContents()
+    C._ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "hasScaledContents", args)
   }
@@ -332,6 +352,8 @@ func (this *QLabel) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel4textEv
+    // invoke: QString text()
+    C._ZNK6QLabel4textEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "text", args)
   }
@@ -351,8 +373,10 @@ func (this *QLabel) heightForWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel14heightForWidthEi
+    // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "heightForWidth", args)
   }
@@ -371,6 +395,8 @@ func (this *QLabel) openExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel17openExternalLinksEv
+    // invoke: bool openExternalLinks()
+    C._ZNK6QLabel17openExternalLinksEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "openExternalLinks", args)
   }
@@ -390,8 +416,10 @@ func (this *QLabel) setPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel9setPixmapERK7QPixmap
+    // invoke: void setPixmap(const class QPixmap &)
     var arg0 = args[0].(QPixmap).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel9setPixmapERK7QPixmap(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setPixmap", args)
   }
@@ -411,8 +439,10 @@ func (this *QLabel) setOpenExternalLinks(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel20setOpenExternalLinksEb
+    // invoke: void setOpenExternalLinks(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setOpenExternalLinks", args)
   }
@@ -431,6 +461,8 @@ func (this *QLabel) buddy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel5buddyEv
+    // invoke: QWidget * buddy()
+    C._ZNK6QLabel5buddyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "buddy", args)
   }
@@ -449,6 +481,8 @@ func (this *QLabel) wordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel8wordWrapEv
+    // invoke: bool wordWrap()
+    C._ZNK6QLabel8wordWrapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "wordWrap", args)
   }
@@ -468,8 +502,10 @@ func (this *QLabel) setWordWrap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel11setWordWrapEb
+    // invoke: void setWordWrap(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel11setWordWrapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setWordWrap", args)
   }
@@ -488,6 +524,8 @@ func (this *QLabel) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel5clearEv
+    // invoke: void clear()
+    C._ZN6QLabel5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "clear", args)
   }
@@ -507,8 +545,10 @@ func (this *QLabel) setMargin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel9setMarginEi
+    // invoke: void setMargin(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel9setMarginEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setMargin", args)
   }
@@ -527,6 +567,8 @@ func (this *QLabel) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "minimumSizeHint", args)
   }
@@ -545,6 +587,8 @@ func (this *QLabel) selectionStart(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel14selectionStartEv
+    // invoke: int selectionStart()
+    C._ZNK6QLabel14selectionStartEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "selectionStart", args)
   }
@@ -563,6 +607,8 @@ func (this *QLabel) hasSelectedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel15hasSelectedTextEv
+    // invoke: bool hasSelectedText()
+    C._ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "hasSelectedText", args)
   }
@@ -582,8 +628,10 @@ func (this *QLabel) setBuddy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel8setBuddyEP7QWidget
+    // invoke: void setBuddy(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel8setBuddyEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setBuddy", args)
   }
@@ -607,6 +655,8 @@ func (this *QLabel) indent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel6indentEv
+    // invoke: int indent()
+    C._ZNK6QLabel6indentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "indent", args)
   }
@@ -625,6 +675,8 @@ func (this *QLabel) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK6QLabel8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "sizeHint", args)
   }
@@ -643,6 +695,8 @@ func (this *QLabel) margin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel6marginEv
+    // invoke: int margin()
+    C._ZNK6QLabel6marginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "margin", args)
   }
@@ -661,6 +715,8 @@ func (this *QLabel) movie(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel5movieEv
+    // invoke: QMovie * movie()
+    C._ZNK6QLabel5movieEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "movie", args)
   }
@@ -680,8 +736,10 @@ func (this *QLabel) setScaledContents(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel17setScaledContentsEb
+    // invoke: void setScaledContents(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel17setScaledContentsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setScaledContents", args)
   }
@@ -701,8 +759,10 @@ func (this *QLabel) setMovie(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QLabel8setMovieEP6QMovie
+    // invoke: void setMovie(class QMovie *)
     var arg0 = args[0].(QMovie).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QLabel8setMovieEP6QMovie(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLabel", "setMovie", args)
   }
@@ -721,6 +781,8 @@ func (this *QLabel) selectedText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QLabel12selectedTextEv
+    // invoke: QString selectedText()
+    C._ZNK6QLabel12selectedTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLabel", "selectedText", args)
   }

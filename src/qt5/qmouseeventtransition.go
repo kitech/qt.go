@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -76,6 +76,8 @@ func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QMouseEventTransition10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK21QMouseEventTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "metaObject", args)
   }
@@ -100,8 +102,10 @@ func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath
+    // invoke: void setHitTestPath(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "setHitTestPath", args)
   }
@@ -134,6 +138,8 @@ func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK21QMouseEventTransition11hitTestPathEv
+    // invoke: QPainterPath hitTestPath()
+    C._ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
   }

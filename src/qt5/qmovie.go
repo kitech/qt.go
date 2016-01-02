@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -142,6 +142,8 @@ func (this *QMovie) speed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie5speedEv
+    // invoke: int speed()
+    C._ZNK6QMovie5speedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "speed", args)
   }
@@ -160,6 +162,8 @@ func (this *QMovie) jumpToNextFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie15jumpToNextFrameEv
+    // invoke: bool jumpToNextFrame()
+    C._ZN6QMovie15jumpToNextFrameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "jumpToNextFrame", args)
   }
@@ -178,6 +182,8 @@ func (this *QMovie) frameCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie10frameCountEv
+    // invoke: int frameCount()
+    C._ZNK6QMovie10frameCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "frameCount", args)
   }
@@ -197,8 +203,10 @@ func (this *QMovie) setScaledSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie13setScaledSizeERK5QSize
+    // invoke: void setScaledSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie13setScaledSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setScaledSize", args)
   }
@@ -218,8 +226,10 @@ func (this *QMovie) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setDevice", args)
   }
@@ -238,6 +248,8 @@ func (this *QMovie) currentImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie12currentImageEv
+    // invoke: QImage currentImage()
+    C._ZNK6QMovie12currentImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "currentImage", args)
   }
@@ -257,8 +269,10 @@ func (this *QMovie) jumpToFrame(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11jumpToFrameEi
+    // invoke: bool jumpToFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie11jumpToFrameEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
   }
@@ -277,6 +291,8 @@ func (this *QMovie) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK6QMovie10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "metaObject", args)
   }
@@ -309,6 +325,8 @@ func (this *QMovie) start(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie5startEv
+    // invoke: void start()
+    C._ZN6QMovie5startEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "start", args)
   }
@@ -327,6 +345,8 @@ func (this *QMovie) loopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie9loopCountEv
+    // invoke: int loopCount()
+    C._ZNK6QMovie9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "loopCount", args)
   }
@@ -346,8 +366,10 @@ func (this *QMovie) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setFormatERK10QByteArray
+    // invoke: void setFormat(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie9setFormatERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setFormat", args)
   }
@@ -380,6 +402,8 @@ func (this *QMovie) frameRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie9frameRectEv
+    // invoke: QRect frameRect()
+    C._ZNK6QMovie9frameRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "frameRect", args)
   }
@@ -399,8 +423,10 @@ func (this *QMovie) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie9setPausedEb
+    // invoke: void setPaused(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setPaused", args)
   }
@@ -419,6 +445,8 @@ func (this *QMovie) scaledSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie10scaledSizeEv
+    // invoke: QSize scaledSize()
+    C._ZN6QMovie10scaledSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "scaledSize", args)
   }
@@ -437,6 +465,8 @@ func (this *QMovie) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK6QMovie6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "device", args)
   }
@@ -456,8 +486,10 @@ func (this *QMovie) setBackgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie18setBackgroundColorERK6QColor
+    // invoke: void setBackgroundColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie18setBackgroundColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setBackgroundColor", args)
   }
@@ -476,6 +508,8 @@ func (this *QMovie) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie7isValidEv
+    // invoke: bool isValid()
+    C._ZNK6QMovie7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "isValid", args)
   }
@@ -495,8 +529,10 @@ func (this *QMovie) setSpeed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie8setSpeedEi
+    // invoke: void setSpeed(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie8setSpeedEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setSpeed", args)
   }
@@ -515,6 +551,8 @@ func (this *QMovie) stop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie4stopEv
+    // invoke: void stop()
+    C._ZN6QMovie4stopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "stop", args)
   }
@@ -533,6 +571,8 @@ func (this *QMovie) currentFrameNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie18currentFrameNumberEv
+    // invoke: int currentFrameNumber()
+    C._ZNK6QMovie18currentFrameNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "currentFrameNumber", args)
   }
@@ -551,6 +591,8 @@ func (this *QMovie) nextFrameDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie14nextFrameDelayEv
+    // invoke: int nextFrameDelay()
+    C._ZNK6QMovie14nextFrameDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "nextFrameDelay", args)
   }
@@ -569,6 +611,8 @@ func (this *QMovie) currentPixmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie13currentPixmapEv
+    // invoke: QPixmap currentPixmap()
+    C._ZNK6QMovie13currentPixmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "currentPixmap", args)
   }
@@ -587,6 +631,8 @@ func (this *QMovie) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie6formatEv
+    // invoke: QByteArray format()
+    C._ZNK6QMovie6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "format", args)
   }
@@ -605,6 +651,8 @@ func (this *QMovie) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK6QMovie8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "fileName", args)
   }
@@ -623,6 +671,8 @@ func (this *QMovie) backgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QMovie15backgroundColorEv
+    // invoke: QColor backgroundColor()
+    C._ZNK6QMovie15backgroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMovie", "backgroundColor", args)
   }
@@ -642,8 +692,10 @@ func (this *QMovie) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QMovie11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN6QMovie11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMovie", "setFileName", args)
   }

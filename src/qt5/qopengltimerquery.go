@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -135,6 +135,8 @@ func (this *QOpenGLTimerQuery) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery6createEv
+    // invoke: bool create()
+    C._ZN17QOpenGLTimerQuery6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "create", args)
   }
@@ -153,6 +155,8 @@ func (this *QOpenGLTimerQuery) isCreated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery9isCreatedEv
+    // invoke: bool isCreated()
+    C._ZNK17QOpenGLTimerQuery9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isCreated", args)
   }
@@ -171,6 +175,8 @@ func (this *QOpenGLTimerQuery) end(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery3endEv
+    // invoke: void end()
+    C._ZN17QOpenGLTimerQuery3endEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "end", args)
   }
@@ -203,6 +209,8 @@ func (this *QOpenGLTimerQuery) begin(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery5beginEv
+    // invoke: void begin()
+    C._ZN17QOpenGLTimerQuery5beginEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "begin", args)
   }
@@ -221,6 +229,8 @@ func (this *QOpenGLTimerQuery) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery7destroyEv
+    // invoke: void destroy()
+    C._ZN17QOpenGLTimerQuery7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "destroy", args)
   }
@@ -239,6 +249,8 @@ func (this *QOpenGLTimerQuery) waitForResult(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery13waitForResultEv
+    // invoke: GLuint64 waitForResult()
+    C._ZNK17QOpenGLTimerQuery13waitForResultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForResult", args)
   }
@@ -257,6 +269,8 @@ func (this *QOpenGLTimerQuery) objectId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery8objectIdEv
+    // invoke: GLuint objectId()
+    C._ZNK17QOpenGLTimerQuery8objectIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "objectId", args)
   }
@@ -275,6 +289,8 @@ func (this *QOpenGLTimerQuery) waitForTimestamp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery16waitForTimestampEv
+    // invoke: GLuint64 waitForTimestamp()
+    C._ZNK17QOpenGLTimerQuery16waitForTimestampEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForTimestamp", args)
   }
@@ -293,6 +309,8 @@ func (this *QOpenGLTimerQuery) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QOpenGLTimerQuery10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "metaObject", args)
   }
@@ -311,6 +329,8 @@ func (this *QOpenGLTimerQuery) recordTimestamp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery15recordTimestampEv
+    // invoke: void recordTimestamp()
+    C._ZN17QOpenGLTimerQuery15recordTimestampEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "recordTimestamp", args)
   }
@@ -329,6 +349,8 @@ func (this *QOpenGLTimerQuery) isResultAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery17isResultAvailableEv
+    // invoke: bool isResultAvailable()
+    C._ZNK17QOpenGLTimerQuery17isResultAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isResultAvailable", args)
   }
@@ -348,8 +370,10 @@ func (this *QOpenGLTimeMonitor) setSampleCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor14setSampleCountEi
+    // invoke: void setSampleCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN18QOpenGLTimeMonitor14setSampleCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "setSampleCount", args)
   }
@@ -368,6 +392,8 @@ func (this *QOpenGLTimeMonitor) sampleCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor11sampleCountEv
+    // invoke: int sampleCount()
+    C._ZNK18QOpenGLTimeMonitor11sampleCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "sampleCount", args)
   }
@@ -386,6 +412,8 @@ func (this *QOpenGLTimeMonitor) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor7destroyEv
+    // invoke: void destroy()
+    C._ZN18QOpenGLTimeMonitor7destroyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "destroy", args)
   }
@@ -409,6 +437,8 @@ func (this *QOpenGLTimeMonitor) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor6createEv
+    // invoke: bool create()
+    C._ZN18QOpenGLTimeMonitor6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "create", args)
   }
@@ -441,6 +471,8 @@ func (this *QOpenGLTimeMonitor) isResultAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor17isResultAvailableEv
+    // invoke: bool isResultAvailable()
+    C._ZNK18QOpenGLTimeMonitor17isResultAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isResultAvailable", args)
   }
@@ -459,6 +491,8 @@ func (this *QOpenGLTimeMonitor) waitForIntervals(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor16waitForIntervalsEv
+    // invoke: QVector<GLuint64> waitForIntervals()
+    C._ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "waitForIntervals", args)
   }
@@ -477,6 +511,8 @@ func (this *QOpenGLTimeMonitor) objectIds(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor9objectIdsEv
+    // invoke: QVector<GLuint> objectIds()
+    C._ZNK18QOpenGLTimeMonitor9objectIdsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "objectIds", args)
   }
@@ -495,6 +531,8 @@ func (this *QOpenGLTimeMonitor) recordSample(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor12recordSampleEv
+    // invoke: int recordSample()
+    C._ZN18QOpenGLTimeMonitor12recordSampleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "recordSample", args)
   }
@@ -513,6 +551,8 @@ func (this *QOpenGLTimeMonitor) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor5resetEv
+    // invoke: void reset()
+    C._ZN18QOpenGLTimeMonitor5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "reset", args)
   }
@@ -531,6 +571,8 @@ func (this *QOpenGLTimeMonitor) waitForSamples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor14waitForSamplesEv
+    // invoke: QVector<GLuint64> waitForSamples()
+    C._ZNK18QOpenGLTimeMonitor14waitForSamplesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "waitForSamples", args)
   }
@@ -549,6 +591,8 @@ func (this *QOpenGLTimeMonitor) isCreated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor9isCreatedEv
+    // invoke: bool isCreated()
+    C._ZNK18QOpenGLTimeMonitor9isCreatedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isCreated", args)
   }
@@ -567,6 +611,8 @@ func (this *QOpenGLTimeMonitor) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QOpenGLTimeMonitor10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "metaObject", args)
   }

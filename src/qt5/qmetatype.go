@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -158,6 +158,8 @@ func (this *QMetaType) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMetaType10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C.demth_ZNK9QMetaType10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaType", "metaObject", args)
   }
@@ -209,14 +211,18 @@ func (this *QMetaType) destroy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType7destroyEiPv
+    // invoke: void destroy(int, void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C._ZN9QMetaType7destroyEiPv(arg0, arg1)
   case 1:
     // invoke: _ZNK9QMetaType7destroyEPv
+    // invoke: void destroy(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
+    C.demth_ZNK9QMetaType7destroyEPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaType", "destroy", args)
   }
@@ -263,6 +269,8 @@ func (this *QMetaType) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QMetaType7isValidEv
+    // invoke: bool isValid()
+    C.demth_ZNK9QMetaType7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaType", "isValid", args)
   }
@@ -316,18 +324,22 @@ func (this *QMetaType) construct(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType9constructEiPvPKv
+    // invoke: void * construct(int, void *, const void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(unsafe.Pointer)
     if false {fmt.Println(arg2)}
+    C._ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)
   case 1:
     // invoke: _ZNK9QMetaType9constructEPvPKv
+    // invoke: void * construct(void *, const void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C.demth_ZNK9QMetaType9constructEPvPKv(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QMetaType", "construct", args)
   }
@@ -412,14 +424,18 @@ func (this *QMetaType) create(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType6createEiPKv
+    // invoke: void * create(int, const void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C._ZN9QMetaType6createEiPKv(arg0, arg1)
   case 1:
     // invoke: _ZNK9QMetaType6createEPKv
+    // invoke: void * create(const void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
+    C.demth_ZNK9QMetaType6createEPKv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaType", "create", args)
   }
@@ -485,14 +501,18 @@ func (this *QMetaType) destruct(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType8destructEiPv
+    // invoke: void destruct(int, void *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
+    C._ZN9QMetaType8destructEiPv(arg0, arg1)
   case 1:
     // invoke: _ZNK9QMetaType8destructEPv
+    // invoke: void destruct(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
+    C.demth_ZNK9QMetaType8destructEPv(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMetaType", "destruct", args)
   }
@@ -556,10 +576,14 @@ func (this *QMetaType) sizeOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType6sizeOfEi
+    // invoke: int sizeOf(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QMetaType6sizeOfEi(arg0)
   case 1:
     // invoke: _ZNK9QMetaType6sizeOfEv
+    // invoke: int sizeOf()
+    C.demth_ZNK9QMetaType6sizeOfEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaType", "sizeOf", args)
   }
@@ -637,10 +661,14 @@ func (this *QMetaType) isRegistered(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QMetaType12isRegisteredEi
+    // invoke: bool isRegistered(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QMetaType12isRegisteredEi(arg0)
   case 1:
     // invoke: _ZNK9QMetaType12isRegisteredEv
+    // invoke: bool isRegistered()
+    C.demth_ZNK9QMetaType12isRegisteredEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMetaType", "isRegistered", args)
   }

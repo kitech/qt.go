@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.go
 //
@@ -323,8 +323,10 @@ func (this *QVariant) toDouble(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toDoubleEPb
+    // invoke: double toDouble(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant8toDoubleEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toDouble", args)
   }
@@ -349,8 +351,10 @@ func (this *QVariant) toLongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10toLongLongEPb
+    // invoke: qlonglong toLongLong(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant10toLongLongEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toLongLong", args)
   }
@@ -369,6 +373,8 @@ func (this *QVariant) toSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toSizeEv
+    // invoke: QSize toSize()
+    C._ZNK8QVariant6toSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toSize", args)
   }
@@ -387,6 +393,8 @@ func (this *QVariant) toString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toStringEv
+    // invoke: QString toString()
+    C._ZNK8QVariant8toStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toString", args)
   }
@@ -406,8 +414,10 @@ func (this *QVariant) toReal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toRealEPb
+    // invoke: qreal toReal(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant6toRealEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toReal", args)
   }
@@ -427,8 +437,10 @@ func (this *QVariant) toFloat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toFloatEPb
+    // invoke: float toFloat(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant7toFloatEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toFloat", args)
   }
@@ -447,6 +459,8 @@ func (this *QVariant) toByteArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant11toByteArrayEv
+    // invoke: QByteArray toByteArray()
+    C._ZNK8QVariant11toByteArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toByteArray", args)
   }
@@ -465,6 +479,8 @@ func (this *QVariant) toLocale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toLocaleEv
+    // invoke: QLocale toLocale()
+    C._ZNK8QVariant8toLocaleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLocale", args)
   }
@@ -483,6 +499,8 @@ func (this *QVariant) toUrl(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant5toUrlEv
+    // invoke: QUrl toUrl()
+    C._ZNK8QVariant5toUrlEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toUrl", args)
   }
@@ -501,6 +519,8 @@ func (this *QVariant) toLine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toLineEv
+    // invoke: QLine toLine()
+    C._ZNK8QVariant6toLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLine", args)
   }
@@ -519,6 +539,8 @@ func (this *QVariant) typeName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8typeNameEv
+    // invoke: const char * typeName()
+    C._ZNK8QVariant8typeNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "typeName", args)
   }
@@ -537,6 +559,8 @@ func (this *QVariant) toJsonArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant11toJsonArrayEv
+    // invoke: QJsonArray toJsonArray()
+    C._ZNK8QVariant11toJsonArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonArray", args)
   }
@@ -555,6 +579,8 @@ func (this *QVariant) toStringList(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant12toStringListEv
+    // invoke: QStringList toStringList()
+    C._ZNK8QVariant12toStringListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toStringList", args)
   }
@@ -573,6 +599,8 @@ func (this *QVariant) toList(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toListEv
+    // invoke: QList<QVariant> toList()
+    C._ZNK8QVariant6toListEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toList", args)
   }
@@ -592,8 +620,10 @@ func (this *QVariant) toUInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toUIntEPb
+    // invoke: uint toUInt(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant6toUIntEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toUInt", args)
   }
@@ -612,6 +642,8 @@ func (this *QVariant) toUuid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toUuidEv
+    // invoke: QUuid toUuid()
+    C._ZNK8QVariant6toUuidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toUuid", args)
   }
@@ -630,6 +662,8 @@ func (this *QVariant) toJsonDocument(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant14toJsonDocumentEv
+    // invoke: QJsonDocument toJsonDocument()
+    C._ZNK8QVariant14toJsonDocumentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonDocument", args)
   }
@@ -648,6 +682,8 @@ func (this *QVariant) toPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toPointEv
+    // invoke: QPoint toPoint()
+    C._ZNK8QVariant7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPoint", args)
   }
@@ -667,8 +703,10 @@ func (this *QVariant) toInt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant5toIntEPb
+    // invoke: int toInt(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant5toIntEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toInt", args)
   }
@@ -687,6 +725,8 @@ func (this *QVariant) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7isValidEv
+    // invoke: bool isValid()
+    C.demth_ZNK8QVariant7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isValid", args)
   }
@@ -705,6 +745,8 @@ func (this *QVariant) detach(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant6detachEv
+    // invoke: void detach()
+    C._ZN8QVariant6detachEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "detach", args)
   }
@@ -723,6 +765,8 @@ func (this *QVariant) toModelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant12toModelIndexEv
+    // invoke: QModelIndex toModelIndex()
+    C._ZNK8QVariant12toModelIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toModelIndex", args)
   }
@@ -741,6 +785,8 @@ func (this *QVariant) toHash(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toHashEv
+    // invoke: QHash<QString, QVariant> toHash()
+    C._ZNK8QVariant6toHashEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toHash", args)
   }
@@ -759,6 +805,8 @@ func (this *QVariant) toMap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant5toMapEv
+    // invoke: QMap<QString, QVariant> toMap()
+    C._ZNK8QVariant5toMapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toMap", args)
   }
@@ -778,8 +826,10 @@ func (this *QVariant) canConvert(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10canConvertEi
+    // invoke: bool canConvert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant10canConvertEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "canConvert", args)
   }
@@ -798,6 +848,8 @@ func (this *QVariant) userType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8userTypeEv
+    // invoke: int userType()
+    C._ZNK8QVariant8userTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "userType", args)
   }
@@ -816,6 +868,8 @@ func (this *QVariant) constData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant9constDataEv
+    // invoke: const void * constData()
+    C._ZNK8QVariant9constDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "constData", args)
   }
@@ -834,6 +888,8 @@ func (this *QVariant) toPersistentModelIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant22toPersistentModelIndexEv
+    // invoke: QPersistentModelIndex toPersistentModelIndex()
+    C._ZNK8QVariant22toPersistentModelIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPersistentModelIndex", args)
   }
@@ -852,6 +908,8 @@ func (this *QVariant) toLineF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toLineFEv
+    // invoke: QLineF toLineF()
+    C._ZNK8QVariant7toLineFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toLineF", args)
   }
@@ -870,6 +928,8 @@ func (this *QVariant) toJsonObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant12toJsonObjectEv
+    // invoke: QJsonObject toJsonObject()
+    C._ZNK8QVariant12toJsonObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonObject", args)
   }
@@ -889,8 +949,10 @@ func (this *QVariant) load(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant4loadER11QDataStream
+    // invoke: void load(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN8QVariant4loadER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "load", args)
   }
@@ -909,6 +971,8 @@ func (this *QVariant) toChar(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toCharEv
+    // invoke: QChar toChar()
+    C._ZNK8QVariant6toCharEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toChar", args)
   }
@@ -927,6 +991,8 @@ func (this *QVariant) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6isNullEv
+    // invoke: bool isNull()
+    C._ZNK8QVariant6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isNull", args)
   }
@@ -945,6 +1011,8 @@ func (this *QVariant) toRectF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toRectFEv
+    // invoke: QRectF toRectF()
+    C._ZNK8QVariant7toRectFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRectF", args)
   }
@@ -963,6 +1031,8 @@ func (this *QVariant) toDate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toDateEv
+    // invoke: QDate toDate()
+    C._ZNK8QVariant6toDateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toDate", args)
   }
@@ -996,8 +1066,10 @@ func (this *QVariant) save(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant4saveER11QDataStream
+    // invoke: void save(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant4saveER11QDataStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "save", args)
   }
@@ -1016,6 +1088,8 @@ func (this *QVariant) toTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toTimeEv
+    // invoke: QTime toTime()
+    C._ZNK8QVariant6toTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toTime", args)
   }
@@ -1035,9 +1109,9 @@ func (this *QVariant) data(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QVariant4dataEv
-  case 1:
     // invoke: _ZN8QVariant4dataEv
+    // invoke: void * data()
+    C._ZN8QVariant4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "data", args)
   }
@@ -1060,15 +1134,11 @@ func (this *QVariant) convert(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QVariant7convertEiPv
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
-    if false {fmt.Println(arg1)}
-  case 1:
     // invoke: _ZN8QVariant7convertEi
+    // invoke: bool convert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN8QVariant7convertEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "convert", args)
   }
@@ -1087,6 +1157,8 @@ func (this *QVariant) toRegExp(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toRegExpEv
+    // invoke: QRegExp toRegExp()
+    C._ZNK8QVariant8toRegExpEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRegExp", args)
   }
@@ -1105,6 +1177,8 @@ func (this *QVariant) toPointF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant8toPointFEv
+    // invoke: QPointF toPointF()
+    C._ZNK8QVariant8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toPointF", args)
   }
@@ -1137,6 +1211,8 @@ func (this *QVariant) toSizeF(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant7toSizeFEv
+    // invoke: QSizeF toSizeF()
+    C._ZNK8QVariant7toSizeFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toSizeF", args)
   }
@@ -1156,8 +1232,10 @@ func (this *QVariant) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant4swapERS_
+    // invoke: void swap(class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN8QVariant4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "swap", args)
   }
@@ -1176,6 +1254,8 @@ func (this *QVariant) clear(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN8QVariant5clearEv
+    // invoke: void clear()
+    C._ZN8QVariant5clearEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "clear", args)
   }
@@ -1194,6 +1274,8 @@ func (this *QVariant) toRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toRectEv
+    // invoke: QRect toRect()
+    C._ZNK8QVariant6toRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRect", args)
   }
@@ -1212,6 +1294,8 @@ func (this *QVariant) toBool(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant6toBoolEv
+    // invoke: bool toBool()
+    C._ZNK8QVariant6toBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toBool", args)
   }
@@ -1231,8 +1315,10 @@ func (this *QVariant) toULongLong(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant11toULongLongEPb
+    // invoke: qulonglong toULongLong(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
+    C._ZNK8QVariant11toULongLongEPb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QVariant", "toULongLong", args)
   }
@@ -1251,6 +1337,8 @@ func (this *QVariant) toJsonValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant11toJsonValueEv
+    // invoke: QJsonValue toJsonValue()
+    C._ZNK8QVariant11toJsonValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toJsonValue", args)
   }
@@ -1269,6 +1357,8 @@ func (this *QVariant) toDateTime(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10toDateTimeEv
+    // invoke: QDateTime toDateTime()
+    C._ZNK8QVariant10toDateTimeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toDateTime", args)
   }
@@ -1287,6 +1377,8 @@ func (this *QVariant) isDetached(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10isDetachedEv
+    // invoke: bool isDetached()
+    C.demth_ZNK8QVariant10isDetachedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "isDetached", args)
   }
@@ -1305,6 +1397,8 @@ func (this *QVariant) toEasingCurve(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant13toEasingCurveEv
+    // invoke: QEasingCurve toEasingCurve()
+    C._ZNK8QVariant13toEasingCurveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toEasingCurve", args)
   }
@@ -1323,6 +1417,8 @@ func (this *QVariant) toBitArray(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant10toBitArrayEv
+    // invoke: QBitArray toBitArray()
+    C._ZNK8QVariant10toBitArrayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toBitArray", args)
   }
@@ -1341,6 +1437,8 @@ func (this *QVariant) toRegularExpression(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK8QVariant19toRegularExpressionEv
+    // invoke: QRegularExpression toRegularExpression()
+    C._ZNK8QVariant19toRegularExpressionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVariant", "toRegularExpression", args)
   }
@@ -1359,6 +1457,8 @@ func (this *QSequentialIterable) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QSequentialIterable4sizeEv
+    // invoke: int size()
+    C._ZNK19QSequentialIterable4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "size", args)
   }
@@ -1377,6 +1477,8 @@ func (this *QSequentialIterable) canReverseIterate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QSequentialIterable17canReverseIterateEv
+    // invoke: bool canReverseIterate()
+    C._ZNK19QSequentialIterable17canReverseIterateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "canReverseIterate", args)
   }
@@ -1396,8 +1498,10 @@ func (this *QSequentialIterable) at(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QSequentialIterable2atEi
+    // invoke: QVariant at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK19QSequentialIterable2atEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSequentialIterable", "at", args)
   }
@@ -1416,6 +1520,8 @@ func (this *QAssociativeIterable) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAssociativeIterable4sizeEv
+    // invoke: int size()
+    C._ZNK20QAssociativeIterable4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "size", args)
   }
@@ -1435,8 +1541,10 @@ func (this *QAssociativeIterable) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK20QAssociativeIterable5valueERK8QVariant
+    // invoke: QVariant value(const class QVariant &)
     var arg0 = args[0].(QVariant).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK20QAssociativeIterable5valueERK8QVariant(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAssociativeIterable", "value", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -100,6 +100,8 @@ func (this *QAbstractState) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QAbstractState10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "metaObject", args)
   }
@@ -118,6 +120,8 @@ func (this *QAbstractState) parentState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
+    // invoke: QState * parentState()
+    C._ZNK14QAbstractState11parentStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
   }
@@ -136,6 +140,8 @@ func (this *QAbstractState) machine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
+    // invoke: QStateMachine * machine()
+    C._ZNK14QAbstractState7machineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
   }
@@ -154,6 +160,8 @@ func (this *QAbstractState) active(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
+    // invoke: bool active()
+    C._ZNK14QAbstractState6activeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
   }

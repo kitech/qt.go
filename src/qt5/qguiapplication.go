@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -252,6 +252,8 @@ func (this *QGuiApplication) isSavingSession(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication15isSavingSessionEv
+    // invoke: bool isSavingSession()
+    C._ZNK15QGuiApplication15isSavingSessionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSavingSession", args)
   }
@@ -284,6 +286,8 @@ func (this *QGuiApplication) isSessionRestored(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication17isSessionRestoredEv
+    // invoke: bool isSessionRestored()
+    C._ZNK15QGuiApplication17isSessionRestoredEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "isSessionRestored", args)
   }
@@ -302,6 +306,8 @@ func (this *QGuiApplication) sessionKey(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication10sessionKeyEv
+    // invoke: QString sessionKey()
+    C._ZNK15QGuiApplication10sessionKeyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionKey", args)
   }
@@ -448,10 +454,12 @@ func (this *QGuiApplication) notify(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QGuiApplication6notifyEP7QObjectP6QEvent
+    // invoke: bool notify(class QObject *, class QEvent *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN15QGuiApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QGuiApplication", "notify", args)
   }
@@ -554,6 +562,8 @@ func (this *QGuiApplication) sessionId(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication9sessionIdEv
+    // invoke: QString sessionId()
+    C._ZNK15QGuiApplication9sessionIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "sessionId", args)
   }
@@ -712,6 +722,8 @@ func (this *QGuiApplication) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QGuiApplication10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "metaObject", args)
   }
@@ -758,6 +770,8 @@ func (this *QGuiApplication) devicePixelRatio(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QGuiApplication16devicePixelRatioEv
+    // invoke: qreal devicePixelRatio()
+    C._ZNK15QGuiApplication16devicePixelRatioEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGuiApplication", "devicePixelRatio", args)
   }

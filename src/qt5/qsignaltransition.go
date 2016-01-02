@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -86,8 +86,10 @@ func (this *QSignalTransition) setSenderObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QSignalTransition15setSenderObjectEPK7QObject
+    // invoke: void setSenderObject(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QSignalTransition15setSenderObjectEPK7QObject(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSenderObject", args)
   }
@@ -106,6 +108,8 @@ func (this *QSignalTransition) signal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition6signalEv
+    // invoke: QByteArray signal()
+    C._ZNK17QSignalTransition6signalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSignalTransition", "signal", args)
   }
@@ -143,6 +147,8 @@ func (this *QSignalTransition) senderObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition12senderObjectEv
+    // invoke: QObject * senderObject()
+    C._ZNK17QSignalTransition12senderObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSignalTransition", "senderObject", args)
   }
@@ -162,8 +168,10 @@ func (this *QSignalTransition) setSignal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN17QSignalTransition9setSignalERK10QByteArray
+    // invoke: void setSignal(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN17QSignalTransition9setSignalERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSignalTransition", "setSignal", args)
   }
@@ -182,6 +190,8 @@ func (this *QSignalTransition) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QSignalTransition10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK17QSignalTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSignalTransition", "metaObject", args)
   }

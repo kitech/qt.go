@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.go
 //
@@ -191,6 +191,8 @@ func (this *QHeaderView) maximumSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView18maximumSectionSizeEv
+    // invoke: int maximumSectionSize()
+    C._ZNK11QHeaderView18maximumSectionSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "maximumSectionSize", args)
   }
@@ -209,6 +211,8 @@ func (this *QHeaderView) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK11QHeaderView8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sizeHint", args)
   }
@@ -228,8 +232,10 @@ func (this *QHeaderView) sectionPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView15sectionPositionEi
+    // invoke: int sectionPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView15sectionPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionPosition", args)
   }
@@ -249,8 +255,10 @@ func (this *QHeaderView) sectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView11sectionSizeEi
+    // invoke: int sectionSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView11sectionSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionSize", args)
   }
@@ -275,8 +283,10 @@ func (this *QHeaderView) setStretchLastSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView21setStretchLastSectionEb
+    // invoke: void setStretchLastSection(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView21setStretchLastSectionEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setStretchLastSection", args)
   }
@@ -295,6 +305,8 @@ func (this *QHeaderView) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView5resetEv
+    // invoke: void reset()
+    C._ZN11QHeaderView5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "reset", args)
   }
@@ -313,6 +325,8 @@ func (this *QHeaderView) resetDefaultSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView23resetDefaultSectionSizeEv
+    // invoke: void resetDefaultSectionSize()
+    C._ZN11QHeaderView23resetDefaultSectionSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "resetDefaultSectionSize", args)
   }
@@ -331,6 +345,8 @@ func (this *QHeaderView) saveState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView9saveStateEv
+    // invoke: QByteArray saveState()
+    C._ZNK11QHeaderView9saveStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "saveState", args)
   }
@@ -349,6 +365,8 @@ func (this *QHeaderView) sectionsClickable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView17sectionsClickableEv
+    // invoke: bool sectionsClickable()
+    C._ZNK11QHeaderView17sectionsClickableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsClickable", args)
   }
@@ -367,6 +385,8 @@ func (this *QHeaderView) resizeContentsPrecision(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView23resizeContentsPrecisionEv
+    // invoke: int resizeContentsPrecision()
+    C._ZNK11QHeaderView23resizeContentsPrecisionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "resizeContentsPrecision", args)
   }
@@ -386,8 +406,10 @@ func (this *QHeaderView) setOffsetToSectionPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView26setOffsetToSectionPositionEi
+    // invoke: void setOffsetToSectionPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView26setOffsetToSectionPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setOffsetToSectionPosition", args)
   }
@@ -406,6 +428,8 @@ func (this *QHeaderView) length(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView6lengthEv
+    // invoke: int length()
+    C._ZNK11QHeaderView6lengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "length", args)
   }
@@ -425,8 +449,10 @@ func (this *QHeaderView) hideSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView11hideSectionEi
+    // invoke: void hideSection(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QHeaderView11hideSectionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "hideSection", args)
   }
@@ -445,6 +471,8 @@ func (this *QHeaderView) sortIndicatorSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView20sortIndicatorSectionEv
+    // invoke: int sortIndicatorSection()
+    C._ZNK11QHeaderView20sortIndicatorSectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sortIndicatorSection", args)
   }
@@ -463,6 +491,8 @@ func (this *QHeaderView) cascadingSectionResizes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView23cascadingSectionResizesEv
+    // invoke: bool cascadingSectionResizes()
+    C._ZNK11QHeaderView23cascadingSectionResizesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "cascadingSectionResizes", args)
   }
@@ -482,8 +512,10 @@ func (this *QHeaderView) setMinimumSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView21setMinimumSectionSizeEi
+    // invoke: void setMinimumSectionSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView21setMinimumSectionSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setMinimumSectionSize", args)
   }
@@ -503,8 +535,10 @@ func (this *QHeaderView) visualIndexAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView13visualIndexAtEi
+    // invoke: int visualIndexAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView13visualIndexAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "visualIndexAt", args)
   }
@@ -524,8 +558,10 @@ func (this *QHeaderView) setOffset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView9setOffsetEi
+    // invoke: void setOffset(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView9setOffsetEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setOffset", args)
   }
@@ -552,18 +588,24 @@ func (this *QHeaderView) logicalIndexAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView14logicalIndexAtERK6QPoint
+    // invoke: int logicalIndexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK11QHeaderView14logicalIndexAtEii
+    // invoke: int logicalIndexAt(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C.demth_ZNK11QHeaderView14logicalIndexAtEii(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK11QHeaderView14logicalIndexAtEi
+    // invoke: int logicalIndexAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView14logicalIndexAtEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "logicalIndexAt", args)
   }
@@ -597,8 +639,10 @@ func (this *QHeaderView) sectionViewportPosition(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView23sectionViewportPositionEi
+    // invoke: int sectionViewportPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView23sectionViewportPositionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionViewportPosition", args)
   }
@@ -617,6 +661,8 @@ func (this *QHeaderView) highlightSections(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView17highlightSectionsEv
+    // invoke: bool highlightSections()
+    C._ZNK11QHeaderView17highlightSectionsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "highlightSections", args)
   }
@@ -635,6 +681,8 @@ func (this *QHeaderView) offset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView6offsetEv
+    // invoke: int offset()
+    C._ZNK11QHeaderView6offsetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "offset", args)
   }
@@ -654,8 +702,10 @@ func (this *QHeaderView) setSortIndicatorShown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView21setSortIndicatorShownEb
+    // invoke: void setSortIndicatorShown(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView21setSortIndicatorShownEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setSortIndicatorShown", args)
   }
@@ -674,6 +724,8 @@ func (this *QHeaderView) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QHeaderView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "metaObject", args)
   }
@@ -693,8 +745,10 @@ func (this *QHeaderView) showSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView11showSectionEi
+    // invoke: void showSection(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN11QHeaderView11showSectionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "showSection", args)
   }
@@ -714,8 +768,10 @@ func (this *QHeaderView) setVisible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView10setVisibleEb
+    // invoke: void setVisible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView10setVisibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setVisible", args)
   }
@@ -734,6 +790,8 @@ func (this *QHeaderView) hiddenSectionCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView18hiddenSectionCountEv
+    // invoke: int hiddenSectionCount()
+    C._ZNK11QHeaderView18hiddenSectionCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "hiddenSectionCount", args)
   }
@@ -753,8 +811,10 @@ func (this *QHeaderView) setSectionsClickable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView20setSectionsClickableEb
+    // invoke: void setSectionsClickable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView20setSectionsClickableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setSectionsClickable", args)
   }
@@ -774,8 +834,10 @@ func (this *QHeaderView) setResizeContentsPrecision(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView26setResizeContentsPrecisionEi
+    // invoke: void setResizeContentsPrecision(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView26setResizeContentsPrecisionEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setResizeContentsPrecision", args)
   }
@@ -794,6 +856,8 @@ func (this *QHeaderView) defaultSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView18defaultSectionSizeEv
+    // invoke: int defaultSectionSize()
+    C._ZNK11QHeaderView18defaultSectionSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "defaultSectionSize", args)
   }
@@ -812,6 +876,8 @@ func (this *QHeaderView) setOffsetToLastSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView22setOffsetToLastSectionEv
+    // invoke: void setOffsetToLastSection()
+    C._ZN11QHeaderView22setOffsetToLastSectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "setOffsetToLastSection", args)
   }
@@ -832,10 +898,12 @@ func (this *QHeaderView) swapSections(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView12swapSectionsEii
+    // invoke: void swapSections(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QHeaderView12swapSectionsEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QHeaderView", "swapSections", args)
   }
@@ -854,6 +922,8 @@ func (this *QHeaderView) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView5countEv
+    // invoke: int count()
+    C._ZNK11QHeaderView5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "count", args)
   }
@@ -873,8 +943,10 @@ func (this *QHeaderView) visualIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView11visualIndexEi
+    // invoke: int visualIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView11visualIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "visualIndex", args)
   }
@@ -893,6 +965,8 @@ func (this *QHeaderView) sectionsMoved(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView13sectionsMovedEv
+    // invoke: bool sectionsMoved()
+    C._ZNK11QHeaderView13sectionsMovedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsMoved", args)
   }
@@ -911,6 +985,8 @@ func (this *QHeaderView) stretchSectionCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView19stretchSectionCountEv
+    // invoke: int stretchSectionCount()
+    C._ZNK11QHeaderView19stretchSectionCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "stretchSectionCount", args)
   }
@@ -929,6 +1005,8 @@ func (this *QHeaderView) doItemsLayout(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView13doItemsLayoutEv
+    // invoke: void doItemsLayout()
+    C._ZN11QHeaderView13doItemsLayoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "doItemsLayout", args)
   }
@@ -948,8 +1026,10 @@ func (this *QHeaderView) setSectionsMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView18setSectionsMovableEb
+    // invoke: void setSectionsMovable(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView18setSectionsMovableEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setSectionsMovable", args)
   }
@@ -968,6 +1048,8 @@ func (this *QHeaderView) sectionsHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView14sectionsHiddenEv
+    // invoke: bool sectionsHidden()
+    C._ZNK11QHeaderView14sectionsHiddenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsHidden", args)
   }
@@ -986,6 +1068,8 @@ func (this *QHeaderView) minimumSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView18minimumSectionSizeEv
+    // invoke: int minimumSectionSize()
+    C._ZNK11QHeaderView18minimumSectionSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "minimumSectionSize", args)
   }
@@ -1005,8 +1089,10 @@ func (this *QHeaderView) setCascadingSectionResizes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView26setCascadingSectionResizesEb
+    // invoke: void setCascadingSectionResizes(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView26setCascadingSectionResizesEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setCascadingSectionResizes", args)
   }
@@ -1026,8 +1112,10 @@ func (this *QHeaderView) setDefaultSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView21setDefaultSectionSizeEi
+    // invoke: void setDefaultSectionSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView21setDefaultSectionSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setDefaultSectionSize", args)
   }
@@ -1048,10 +1136,12 @@ func (this *QHeaderView) moveSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView11moveSectionEii
+    // invoke: void moveSection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QHeaderView11moveSectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QHeaderView", "moveSection", args)
   }
@@ -1070,6 +1160,8 @@ func (this *QHeaderView) stretchLastSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView18stretchLastSectionEv
+    // invoke: bool stretchLastSection()
+    C._ZNK11QHeaderView18stretchLastSectionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "stretchLastSection", args)
   }
@@ -1089,8 +1181,10 @@ func (this *QHeaderView) sectionSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView15sectionSizeHintEi
+    // invoke: int sectionSizeHint(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView15sectionSizeHintEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionSizeHint", args)
   }
@@ -1109,6 +1203,8 @@ func (this *QHeaderView) sectionsMovable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView15sectionsMovableEv
+    // invoke: bool sectionsMovable()
+    C._ZNK11QHeaderView15sectionsMovableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "sectionsMovable", args)
   }
@@ -1128,8 +1224,10 @@ func (this *QHeaderView) isSectionHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView15isSectionHiddenEi
+    // invoke: bool isSectionHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView15isSectionHiddenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "isSectionHidden", args)
   }
@@ -1149,8 +1247,10 @@ func (this *QHeaderView) logicalIndex(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView12logicalIndexEi
+    // invoke: int logicalIndex(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK11QHeaderView12logicalIndexEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "logicalIndex", args)
   }
@@ -1170,8 +1270,10 @@ func (this *QHeaderView) setMaximumSectionSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView21setMaximumSectionSizeEi
+    // invoke: void setMaximumSectionSize(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView21setMaximumSectionSizeEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setMaximumSectionSize", args)
   }
@@ -1191,8 +1293,10 @@ func (this *QHeaderView) setHighlightSections(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView20setHighlightSectionsEb
+    // invoke: void setHighlightSections(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView20setHighlightSectionsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setHighlightSections", args)
   }
@@ -1213,10 +1317,12 @@ func (this *QHeaderView) setSectionHidden(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView16setSectionHiddenEib
+    // invoke: void setSectionHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN11QHeaderView16setSectionHiddenEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QHeaderView", "setSectionHidden", args)
   }
@@ -1237,10 +1343,12 @@ func (this *QHeaderView) resizeSection(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView13resizeSectionEii
+    // invoke: void resizeSection(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN11QHeaderView13resizeSectionEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QHeaderView", "resizeSection", args)
   }
@@ -1260,8 +1368,10 @@ func (this *QHeaderView) restoreState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView12restoreStateERK10QByteArray
+    // invoke: bool restoreState(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView12restoreStateERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "restoreState", args)
   }
@@ -1281,8 +1391,10 @@ func (this *QHeaderView) setModel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN11QHeaderView8setModelEP18QAbstractItemModel
+    // invoke: void setModel(class QAbstractItemModel *)
     var arg0 = args[0].(QAbstractItemModel).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN11QHeaderView8setModelEP18QAbstractItemModel(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHeaderView", "setModel", args)
   }
@@ -1301,6 +1413,8 @@ func (this *QHeaderView) isSortIndicatorShown(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK11QHeaderView20isSortIndicatorShownEv
+    // invoke: bool isSortIndicatorShown()
+    C._ZNK11QHeaderView20isSortIndicatorShownEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHeaderView", "isSortIndicatorShown", args)
   }

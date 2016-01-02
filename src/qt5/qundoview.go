@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qundoview.h
 // dst-file: /src/widgets/qundoview.go
 //
@@ -100,8 +100,10 @@ func (this *QUndoView) setStack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView8setStackEP10QUndoStack
+    // invoke: void setStack(class QUndoStack *)
     var arg0 = args[0].(QUndoStack).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUndoView8setStackEP10QUndoStack(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setStack", args)
   }
@@ -121,8 +123,10 @@ func (this *QUndoView) setEmptyLabel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView13setEmptyLabelERK7QString
+    // invoke: void setEmptyLabel(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUndoView13setEmptyLabelERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setEmptyLabel", args)
   }
@@ -142,8 +146,10 @@ func (this *QUndoView) setCleanIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView12setCleanIconERK5QIcon
+    // invoke: void setCleanIcon(const class QIcon &)
     var arg0 = args[0].(QIcon).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUndoView12setCleanIconERK5QIcon(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setCleanIcon", args)
   }
@@ -163,8 +169,10 @@ func (this *QUndoView) setGroup(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QUndoView8setGroupEP10QUndoGroup
+    // invoke: void setGroup(class QUndoGroup *)
     var arg0 = args[0].(QUndoGroup).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QUndoView8setGroupEP10QUndoGroup(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUndoView", "setGroup", args)
   }
@@ -183,6 +191,8 @@ func (this *QUndoView) group(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUndoView5groupEv
+    // invoke: QUndoGroup * group()
+    C._ZNK9QUndoView5groupEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "group", args)
   }
@@ -201,6 +211,8 @@ func (this *QUndoView) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUndoView10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QUndoView10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "metaObject", args)
   }
@@ -219,6 +231,8 @@ func (this *QUndoView) stack(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUndoView5stackEv
+    // invoke: QUndoStack * stack()
+    C._ZNK9QUndoView5stackEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "stack", args)
   }
@@ -237,6 +251,8 @@ func (this *QUndoView) cleanIcon(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUndoView9cleanIconEv
+    // invoke: QIcon cleanIcon()
+    C._ZNK9QUndoView9cleanIconEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "cleanIcon", args)
   }
@@ -255,6 +271,8 @@ func (this *QUndoView) emptyLabel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QUndoView10emptyLabelEv
+    // invoke: QString emptyLabel()
+    C._ZNK9QUndoView10emptyLabelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QUndoView", "emptyLabel", args)
   }

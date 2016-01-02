@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.go
 //
@@ -160,8 +160,10 @@ func (this *QOpenGLFramebufferObjectFormat) setTextureTarget(args ...interface{}
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj
+    // invoke: void setTextureTarget(GLenum)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setTextureTarget", args)
   }
@@ -181,8 +183,10 @@ func (this *QOpenGLFramebufferObjectFormat) setInternalTextureFormat(args ...int
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj
+    // invoke: void setInternalTextureFormat(GLenum)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setInternalTextureFormat", args)
   }
@@ -206,6 +210,8 @@ func (this *QOpenGLFramebufferObjectFormat) mipmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv
+    // invoke: bool mipmap()
+    C._ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "mipmap", args)
   }
@@ -224,6 +230,8 @@ func (this *QOpenGLFramebufferObjectFormat) textureTarget(args ...interface{}) (
   switch matched_index {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv
+    // invoke: GLenum textureTarget()
+    C._ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "textureTarget", args)
   }
@@ -243,8 +251,10 @@ func (this *QOpenGLFramebufferObjectFormat) setSamples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi
+    // invoke: void setSamples(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setSamples", args)
   }
@@ -264,8 +274,10 @@ func (this *QOpenGLFramebufferObjectFormat) setMipmap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb
+    // invoke: void setMipmap(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "setMipmap", args)
   }
@@ -284,6 +296,8 @@ func (this *QOpenGLFramebufferObjectFormat) internalTextureFormat(args ...interf
   switch matched_index {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv
+    // invoke: GLenum internalTextureFormat()
+    C._ZNK30QOpenGLFramebufferObjectFormat21internalTextureFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "internalTextureFormat", args)
   }
@@ -302,6 +316,8 @@ func (this *QOpenGLFramebufferObjectFormat) samples(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK30QOpenGLFramebufferObjectFormat7samplesEv
+    // invoke: int samples()
+    C._ZNK30QOpenGLFramebufferObjectFormat7samplesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObjectFormat", "samples", args)
   }
@@ -320,6 +336,8 @@ func (this *QOpenGLFramebufferObject) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7isValidEv
+    // invoke: bool isValid()
+    C._ZNK24QOpenGLFramebufferObject7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "isValid", args)
   }
@@ -338,6 +356,8 @@ func (this *QOpenGLFramebufferObject) takeTexture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject11takeTextureEv
+    // invoke: GLuint takeTexture()
+    C._ZN24QOpenGLFramebufferObject11takeTextureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "takeTexture", args)
   }
@@ -389,6 +409,8 @@ func (this *QOpenGLFramebufferObject) texture(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7textureEv
+    // invoke: GLuint texture()
+    C._ZNK24QOpenGLFramebufferObject7textureEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "texture", args)
   }
@@ -407,6 +429,8 @@ func (this *QOpenGLFramebufferObject) release(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject7releaseEv
+    // invoke: bool release()
+    C._ZN24QOpenGLFramebufferObject7releaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "release", args)
   }
@@ -442,10 +466,14 @@ func (this *QOpenGLFramebufferObject) toImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEb
+    // invoke: QImage toImage(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZNK24QOpenGLFramebufferObject7toImageEb(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEv
+    // invoke: QImage toImage()
+    C._ZNK24QOpenGLFramebufferObject7toImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "toImage", args)
   }
@@ -464,6 +492,8 @@ func (this *QOpenGLFramebufferObject) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6handleEv
+    // invoke: GLuint handle()
+    C._ZNK24QOpenGLFramebufferObject6handleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "handle", args)
   }
@@ -482,6 +512,8 @@ func (this *QOpenGLFramebufferObject) height(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6heightEv
+    // invoke: int height()
+    C._ZNK24QOpenGLFramebufferObject6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "height", args)
   }
@@ -514,6 +546,8 @@ func (this *QOpenGLFramebufferObject) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject4sizeEv
+    // invoke: QSize size()
+    C._ZNK24QOpenGLFramebufferObject4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "size", args)
   }
@@ -546,6 +580,8 @@ func (this *QOpenGLFramebufferObject) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6formatEv
+    // invoke: QOpenGLFramebufferObjectFormat format()
+    C._ZNK24QOpenGLFramebufferObject6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "format", args)
   }
@@ -564,6 +600,8 @@ func (this *QOpenGLFramebufferObject) bind(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN24QOpenGLFramebufferObject4bindEv
+    // invoke: bool bind()
+    C._ZN24QOpenGLFramebufferObject4bindEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "bind", args)
   }
@@ -582,6 +620,8 @@ func (this *QOpenGLFramebufferObject) isBound(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7isBoundEv
+    // invoke: bool isBound()
+    C._ZNK24QOpenGLFramebufferObject7isBoundEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "isBound", args)
   }
@@ -600,6 +640,8 @@ func (this *QOpenGLFramebufferObject) width(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject5widthEv
+    // invoke: int width()
+    C._ZNK24QOpenGLFramebufferObject5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "width", args)
   }

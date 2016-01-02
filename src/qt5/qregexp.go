@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -107,8 +107,8 @@ func (this *QRegExp) capturedTexts(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp13capturedTextsEv
-  case 1:
-    // invoke: _ZNK7QRegExp13capturedTextsEv
+    // invoke: QStringList capturedTexts()
+    C._ZN7QRegExp13capturedTextsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "capturedTexts", args)
   }
@@ -127,6 +127,8 @@ func (this *QRegExp) captureCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp12captureCountEv
+    // invoke: int captureCount()
+    C._ZNK7QRegExp12captureCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "captureCount", args)
   }
@@ -159,6 +161,8 @@ func (this *QRegExp) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK7QRegExp7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "isEmpty", args)
   }
@@ -177,6 +181,8 @@ func (this *QRegExp) isMinimal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp9isMinimalEv
+    // invoke: bool isMinimal()
+    C._ZNK7QRegExp9isMinimalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "isMinimal", args)
   }
@@ -195,6 +201,8 @@ func (this *QRegExp) matchedLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp13matchedLengthEv
+    // invoke: int matchedLength()
+    C._ZNK7QRegExp13matchedLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "matchedLength", args)
   }
@@ -213,6 +221,8 @@ func (this *QRegExp) pattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7patternEv
+    // invoke: QString pattern()
+    C._ZNK7QRegExp7patternEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "pattern", args)
   }
@@ -232,8 +242,10 @@ func (this *QRegExp) setPattern(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setPatternERK7QString
+    // invoke: void setPattern(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QRegExp10setPatternERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "setPattern", args)
   }
@@ -252,6 +264,8 @@ func (this *QRegExp) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp7isValidEv
+    // invoke: bool isValid()
+    C._ZNK7QRegExp7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "isValid", args)
   }
@@ -285,8 +299,10 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegExp10exactMatchERK7QString
+    // invoke: bool exactMatch(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegExp10exactMatchERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "exactMatch", args)
   }
@@ -306,8 +322,10 @@ func (this *QRegExp) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp4swapERS_
+    // invoke: void swap(class QRegExp &)
     var arg0 = args[0].(QRegExp).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QRegExp4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "swap", args)
   }
@@ -330,12 +348,10 @@ func (this *QRegExp) pos(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp3posEi
+    // invoke: int pos(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-  case 1:
-    // invoke: _ZNK7QRegExp3posEi
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
+    C._ZN7QRegExp3posEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "pos", args)
   }
@@ -357,13 +373,11 @@ func (this *QRegExp) cap(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QRegExp3capEi
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-  case 1:
     // invoke: _ZN7QRegExp3capEi
+    // invoke: QString cap(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QRegExp3capEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "cap", args)
   }
@@ -383,9 +397,9 @@ func (this *QRegExp) errorString(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QRegExp11errorStringEv
-  case 1:
     // invoke: _ZN7QRegExp11errorStringEv
+    // invoke: QString errorString()
+    C._ZN7QRegExp11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegExp", "errorString", args)
   }
@@ -405,8 +419,10 @@ func (this *QRegExp) setMinimal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegExp10setMinimalEb
+    // invoke: void setMinimal(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN7QRegExp10setMinimalEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegExp", "setMinimal", args)
   }

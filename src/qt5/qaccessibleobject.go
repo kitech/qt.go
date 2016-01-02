@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.go
 //
@@ -104,6 +104,8 @@ func (this *QAccessibleApplication) window(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication6windowEv
+    // invoke: QWindow * window()
+    C._ZNK22QAccessibleApplication6windowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "window", args)
   }
@@ -123,8 +125,10 @@ func (this *QAccessibleApplication) child(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication5childEi
+    // invoke: QAccessibleInterface * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK22QAccessibleApplication5childEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "child", args)
   }
@@ -143,6 +147,8 @@ func (this *QAccessibleApplication) childCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication10childCountEv
+    // invoke: int childCount()
+    C._ZNK22QAccessibleApplication10childCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "childCount", args)
   }
@@ -161,6 +167,8 @@ func (this *QAccessibleApplication) parent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication6parentEv
+    // invoke: QAccessibleInterface * parent()
+    C._ZNK22QAccessibleApplication6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "parent", args)
   }
@@ -179,6 +187,8 @@ func (this *QAccessibleApplication) focusChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication10focusChildEv
+    // invoke: QAccessibleInterface * focusChild()
+    C._ZNK22QAccessibleApplication10focusChildEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "focusChild", args)
   }
@@ -198,8 +208,10 @@ func (this *QAccessibleApplication) indexOfChild(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface
+    // invoke: int indexOfChild(const class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAccessibleApplication", "indexOfChild", args)
   }
@@ -223,6 +235,8 @@ func (this *QAccessibleObject) object(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleObject6objectEv
+    // invoke: QObject * object()
+    C._ZNK17QAccessibleObject6objectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleObject", "object", args)
   }
@@ -241,6 +255,8 @@ func (this *QAccessibleObject) rect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleObject4rectEv
+    // invoke: QRect rect()
+    C._ZNK17QAccessibleObject4rectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleObject", "rect", args)
   }
@@ -261,10 +277,12 @@ func (this *QAccessibleObject) childAt(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleObject7childAtEii
+    // invoke: QAccessibleInterface * childAt(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK17QAccessibleObject7childAtEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAccessibleObject", "childAt", args)
   }
@@ -283,6 +301,8 @@ func (this *QAccessibleObject) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK17QAccessibleObject7isValidEv
+    // invoke: bool isValid()
+    C._ZNK17QAccessibleObject7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAccessibleObject", "isValid", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -52,7 +52,7 @@ extern void _ZN14QDesktopWidgetC1ERKS_(void* qthis, void* arg0);
   // proto:  int QDesktopWidget::screenNumber(const QPoint & );
 extern void _ZNK14QDesktopWidget12screenNumberERK6QPoint(void* qthis, void* arg0);
   // proto:  int QDesktopWidget::screenCount();
-extern void _ZNK14QDesktopWidget11screenCountEv(void* qthis);
+extern void demth_ZNK14QDesktopWidget11screenCountEv(void* qthis);
   // proto:  bool QDesktopWidget::isVirtualDesktop();
 extern void _ZNK14QDesktopWidget16isVirtualDesktopEv(void* qthis);
   // proto:  int QDesktopWidget::screenNumber(const QWidget * widget);
@@ -108,16 +108,22 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget14screenGeometryERK6QPoint
+    // invoke: const QRect screenGeometry(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget14screenGeometryERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QDesktopWidget14screenGeometryEPK7QWidget
+    // invoke: const QRect screenGeometry(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget14screenGeometryEPK7QWidget(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QDesktopWidget14screenGeometryEi
+    // invoke: const QRect screenGeometry(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget14screenGeometryEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenGeometry", args)
   }
@@ -137,8 +143,10 @@ func (this *QDesktopWidget) screen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN14QDesktopWidget6screenEi
+    // invoke: QWidget * screen(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN14QDesktopWidget6screenEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screen", args)
   }
@@ -157,6 +165,8 @@ func (this *QDesktopWidget) numScreens(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget10numScreensEv
+    // invoke: int numScreens()
+    C._ZNK14QDesktopWidget10numScreensEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "numScreens", args)
   }
@@ -196,16 +206,22 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEPK7QWidget
+    // invoke: const QRect availableGeometry(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget17availableGeometryEPK7QWidget(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QDesktopWidget17availableGeometryERK6QPoint
+    // invoke: const QRect availableGeometry(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget17availableGeometryERK6QPoint(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEi
+    // invoke: const QRect availableGeometry(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget17availableGeometryEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "availableGeometry", args)
   }
@@ -233,12 +249,16 @@ func (this *QDesktopWidget) screenNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget12screenNumberERK6QPoint
+    // invoke: int screenNumber(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget12screenNumberERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QDesktopWidget12screenNumberEPK7QWidget
+    // invoke: int screenNumber(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK14QDesktopWidget12screenNumberEPK7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenNumber", args)
   }
@@ -257,6 +277,8 @@ func (this *QDesktopWidget) screenCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget11screenCountEv
+    // invoke: int screenCount()
+    C.demth_ZNK14QDesktopWidget11screenCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "screenCount", args)
   }
@@ -275,6 +297,8 @@ func (this *QDesktopWidget) isVirtualDesktop(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget16isVirtualDesktopEv
+    // invoke: bool isVirtualDesktop()
+    C._ZNK14QDesktopWidget16isVirtualDesktopEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "isVirtualDesktop", args)
   }
@@ -293,6 +317,8 @@ func (this *QDesktopWidget) primaryScreen(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget13primaryScreenEv
+    // invoke: int primaryScreen()
+    C._ZNK14QDesktopWidget13primaryScreenEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "primaryScreen", args)
   }
@@ -311,6 +337,8 @@ func (this *QDesktopWidget) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK14QDesktopWidget10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QDesktopWidget10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDesktopWidget", "metaObject", args)
   }

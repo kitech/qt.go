@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -78,6 +78,8 @@ func (this *QHistoryState) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QHistoryState10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QHistoryState10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHistoryState", "metaObject", args)
   }
@@ -102,8 +104,10 @@ func (this *QHistoryState) setDefaultState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN13QHistoryState15setDefaultStateEP14QAbstractState
+    // invoke: void setDefaultState(class QAbstractState *)
     var arg0 = args[0].(QAbstractState).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN13QHistoryState15setDefaultStateEP14QAbstractState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
   }
@@ -122,6 +126,8 @@ func (this *QHistoryState) defaultState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QHistoryState12defaultStateEv
+    // invoke: QAbstractState * defaultState()
+    C._ZNK13QHistoryState12defaultStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QHistoryState", "defaultState", args)
   }

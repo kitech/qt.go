@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.go
 //
@@ -175,6 +175,8 @@ func (this *QApplication) styleSheet(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QApplication10styleSheetEv
+    // invoke: QString styleSheet()
+    C._ZNK12QApplication10styleSheetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QApplication", "styleSheet", args)
   }
@@ -334,8 +336,10 @@ func (this *QApplication) setStyleSheet(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication13setStyleSheetERK7QString
+    // invoke: void setStyleSheet(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QApplication13setStyleSheetERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QApplication", "setStyleSheet", args)
   }
@@ -355,8 +359,10 @@ func (this *QApplication) setAutoSipEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication17setAutoSipEnabledEb
+    // invoke: void setAutoSipEnabled(const _Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QApplication17setAutoSipEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QApplication", "setAutoSipEnabled", args)
   }
@@ -375,6 +381,8 @@ func (this *QApplication) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QApplication10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QApplication10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QApplication", "metaObject", args)
   }
@@ -792,10 +800,12 @@ func (this *QApplication) notify(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QApplication6notifyEP7QObjectP6QEvent
+    // invoke: bool notify(class QObject *, class QEvent *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN12QApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QApplication", "notify", args)
   }
@@ -814,6 +824,8 @@ func (this *QApplication) autoSipEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QApplication14autoSipEnabledEv
+    // invoke: bool autoSipEnabled()
+    C._ZNK12QApplication14autoSipEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QApplication", "autoSipEnabled", args)
   }

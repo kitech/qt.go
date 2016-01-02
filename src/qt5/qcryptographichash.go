@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -85,18 +85,24 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCryptographicHash7addDataEP9QIODevice
+    // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN18QCryptographicHash7addDataEPKci
+    // invoke: void addData(const char *, int)
     var arg0 = C.CString(args[0].(string))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN18QCryptographicHash7addDataEPKci(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZN18QCryptographicHash7addDataERK10QByteArray
+    // invoke: void addData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QCryptographicHash7addDataERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "addData", args)
   }
@@ -129,6 +135,8 @@ func (this *QCryptographicHash) reset(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QCryptographicHash5resetEv
+    // invoke: void reset()
+    C._ZN18QCryptographicHash5resetEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "reset", args)
   }
@@ -147,6 +155,8 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QCryptographicHash6resultEv
+    // invoke: QByteArray result()
+    C._ZNK18QCryptographicHash6resultEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCryptographicHash", "result", args)
   }

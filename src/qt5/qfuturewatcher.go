@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -111,6 +111,8 @@ func (this *QFutureWatcherBase) isRunning(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK18QFutureWatcherBase9isRunningEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isRunning", args)
   }
@@ -130,8 +132,10 @@ func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase9setPausedEb
+    // invoke: void setPaused(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN18QFutureWatcherBase9setPausedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
   }
@@ -150,6 +154,8 @@ func (this *QFutureWatcherBase) progressMinimum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMinimumEv
+    // invoke: int progressMinimum()
+    C._ZNK18QFutureWatcherBase15progressMinimumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMinimum", args)
   }
@@ -168,6 +174,8 @@ func (this *QFutureWatcherBase) resume(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6resumeEv
+    // invoke: void resume()
+    C._ZN18QFutureWatcherBase6resumeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "resume", args)
   }
@@ -186,6 +194,8 @@ func (this *QFutureWatcherBase) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QFutureWatcherBase10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "metaObject", args)
   }
@@ -204,6 +214,8 @@ func (this *QFutureWatcherBase) isFinished(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isFinishedEv
+    // invoke: bool isFinished()
+    C._ZNK18QFutureWatcherBase10isFinishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isFinished", args)
   }
@@ -222,6 +234,8 @@ func (this *QFutureWatcherBase) progressMaximum(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase15progressMaximumEv
+    // invoke: int progressMaximum()
+    C._ZNK18QFutureWatcherBase15progressMaximumEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressMaximum", args)
   }
@@ -241,8 +255,10 @@ func (this *QFutureWatcherBase) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN18QFutureWatcherBase5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "event", args)
   }
@@ -261,6 +277,8 @@ func (this *QFutureWatcherBase) isCanceled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase10isCanceledEv
+    // invoke: bool isCanceled()
+    C._ZNK18QFutureWatcherBase10isCanceledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isCanceled", args)
   }
@@ -279,6 +297,8 @@ func (this *QFutureWatcherBase) progressValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase13progressValueEv
+    // invoke: int progressValue()
+    C._ZNK18QFutureWatcherBase13progressValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressValue", args)
   }
@@ -297,6 +317,8 @@ func (this *QFutureWatcherBase) isStarted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase9isStartedEv
+    // invoke: bool isStarted()
+    C._ZNK18QFutureWatcherBase9isStartedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isStarted", args)
   }
@@ -316,8 +338,10 @@ func (this *QFutureWatcherBase) setPendingResultsLimit(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase22setPendingResultsLimitEi
+    // invoke: void setPendingResultsLimit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN18QFutureWatcherBase22setPendingResultsLimitEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "setPendingResultsLimit", args)
   }
@@ -336,6 +360,8 @@ func (this *QFutureWatcherBase) cancel(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase6cancelEv
+    // invoke: void cancel()
+    C._ZN18QFutureWatcherBase6cancelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "cancel", args)
   }
@@ -354,6 +380,8 @@ func (this *QFutureWatcherBase) isPaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase8isPausedEv
+    // invoke: bool isPaused()
+    C._ZNK18QFutureWatcherBase8isPausedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "isPaused", args)
   }
@@ -372,6 +400,8 @@ func (this *QFutureWatcherBase) pause(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase5pauseEv
+    // invoke: void pause()
+    C._ZN18QFutureWatcherBase5pauseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "pause", args)
   }
@@ -390,6 +420,8 @@ func (this *QFutureWatcherBase) progressText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK18QFutureWatcherBase12progressTextEv
+    // invoke: QString progressText()
+    C._ZNK18QFutureWatcherBase12progressTextEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "progressText", args)
   }
@@ -413,6 +445,8 @@ func (this *QFutureWatcherBase) togglePaused(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase12togglePausedEv
+    // invoke: void togglePaused()
+    C._ZN18QFutureWatcherBase12togglePausedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "togglePaused", args)
   }
@@ -431,6 +465,8 @@ func (this *QFutureWatcherBase) waitForFinished(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN18QFutureWatcherBase15waitForFinishedEv
+    // invoke: void waitForFinished()
+    C._ZN18QFutureWatcherBase15waitForFinishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFutureWatcherBase", "waitForFinished", args)
   }

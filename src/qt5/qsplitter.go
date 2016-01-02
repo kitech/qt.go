@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -138,10 +138,12 @@ func (this *QSplitter) insertWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12insertWidgetEiP7QWidget
+    // invoke: void insertWidget(int, class QWidget *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN9QSplitter12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSplitter", "insertWidget", args)
   }
@@ -160,6 +162,8 @@ func (this *QSplitter) childrenCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter19childrenCollapsibleEv
+    // invoke: bool childrenCollapsible()
+    C._ZNK9QSplitter19childrenCollapsibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "childrenCollapsible", args)
   }
@@ -178,6 +182,8 @@ func (this *QSplitter) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter5countEv
+    // invoke: int count()
+    C._ZNK9QSplitter5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "count", args)
   }
@@ -196,6 +202,8 @@ func (this *QSplitter) saveState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter9saveStateEv
+    // invoke: QByteArray saveState()
+    C._ZNK9QSplitter9saveStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "saveState", args)
   }
@@ -214,6 +222,8 @@ func (this *QSplitter) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QSplitter10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "metaObject", args)
   }
@@ -232,6 +242,8 @@ func (this *QSplitter) opaqueResize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter12opaqueResizeEv
+    // invoke: bool opaqueResize()
+    C._ZNK9QSplitter12opaqueResizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "opaqueResize", args)
   }
@@ -251,8 +263,10 @@ func (this *QSplitter) addWidget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter9addWidgetEP7QWidget
+    // invoke: void addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSplitter9addWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "addWidget", args)
   }
@@ -277,8 +291,10 @@ func (this *QSplitter) setHandleWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setHandleWidthEi
+    // invoke: void setHandleWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QSplitter14setHandleWidthEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "setHandleWidth", args)
   }
@@ -299,10 +315,12 @@ func (this *QSplitter) setStretchFactor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter16setStretchFactorEii
+    // invoke: void setStretchFactor(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN9QSplitter16setStretchFactorEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSplitter", "setStretchFactor", args)
   }
@@ -321,6 +339,8 @@ func (this *QSplitter) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK9QSplitter15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "minimumSizeHint", args)
   }
@@ -340,8 +360,10 @@ func (this *QSplitter) setOpaqueResize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter15setOpaqueResizeEb
+    // invoke: void setOpaqueResize(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QSplitter15setOpaqueResizeEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "setOpaqueResize", args)
   }
@@ -361,8 +383,10 @@ func (this *QSplitter) widget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6widgetEi
+    // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QSplitter6widgetEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "widget", args)
   }
@@ -381,6 +405,8 @@ func (this *QSplitter) sizes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter5sizesEv
+    // invoke: QList<int> sizes()
+    C._ZNK9QSplitter5sizesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "sizes", args)
   }
@@ -400,8 +426,10 @@ func (this *QSplitter) isCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter13isCollapsibleEi
+    // invoke: bool isCollapsible(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QSplitter13isCollapsibleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "isCollapsible", args)
   }
@@ -422,10 +450,12 @@ func (this *QSplitter) setCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter14setCollapsibleEib
+    // invoke: void setCollapsible(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN9QSplitter14setCollapsibleEib(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QSplitter", "setCollapsible", args)
   }
@@ -445,8 +475,10 @@ func (this *QSplitter) restoreState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter12restoreStateERK10QByteArray
+    // invoke: bool restoreState(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QSplitter12restoreStateERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "restoreState", args)
   }
@@ -480,8 +512,10 @@ func (this *QSplitter) setChildrenCollapsible(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter22setChildrenCollapsibleEb
+    // invoke: void setChildrenCollapsible(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QSplitter22setChildrenCollapsibleEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "setChildrenCollapsible", args)
   }
@@ -500,6 +534,8 @@ func (this *QSplitter) handleWidth(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter11handleWidthEv
+    // invoke: int handleWidth()
+    C._ZNK9QSplitter11handleWidthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "handleWidth", args)
   }
@@ -518,6 +554,8 @@ func (this *QSplitter) refresh(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QSplitter7refreshEv
+    // invoke: void refresh()
+    C._ZN9QSplitter7refreshEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "refresh", args)
   }
@@ -536,6 +574,8 @@ func (this *QSplitter) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QSplitter8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitter", "sizeHint", args)
   }
@@ -555,8 +595,10 @@ func (this *QSplitter) indexOf(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter7indexOfEP7QWidget
+    // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QSplitter7indexOfEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "indexOf", args)
   }
@@ -578,12 +620,14 @@ func (this *QSplitter) getRange(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter8getRangeEiPiS0_
+    // invoke: void getRange(int, int *, int *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
+    C._ZNK9QSplitter8getRangeEiPiS0_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QSplitter", "getRange", args)
   }
@@ -603,8 +647,10 @@ func (this *QSplitter) handle(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QSplitter6handleEi
+    // invoke: QSplitterHandle * handle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QSplitter6handleEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSplitter", "handle", args)
   }
@@ -642,6 +688,8 @@ func (this *QSplitterHandle) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK15QSplitterHandle8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitterHandle", "sizeHint", args)
   }
@@ -660,6 +708,8 @@ func (this *QSplitterHandle) opaqueResize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle12opaqueResizeEv
+    // invoke: bool opaqueResize()
+    C._ZNK15QSplitterHandle12opaqueResizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitterHandle", "opaqueResize", args)
   }
@@ -678,6 +728,8 @@ func (this *QSplitterHandle) splitter(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle8splitterEv
+    // invoke: QSplitter * splitter()
+    C._ZNK15QSplitterHandle8splitterEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitterHandle", "splitter", args)
   }
@@ -696,6 +748,8 @@ func (this *QSplitterHandle) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSplitterHandle10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QSplitterHandle10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSplitterHandle", "metaObject", args)
   }

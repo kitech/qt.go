@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -93,8 +93,10 @@ func (this *QTextList) item(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList4itemEi
+    // invoke: QTextBlock item(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK9QTextList4itemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "item", args)
   }
@@ -114,8 +116,10 @@ func (this *QTextList) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList6removeERK10QTextBlock
+    // invoke: void remove(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTextList6removeERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "remove", args)
   }
@@ -135,8 +139,10 @@ func (this *QTextList) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList9setFormatERK15QTextListFormat
+    // invoke: void setFormat(const class QTextListFormat &)
     var arg0 = args[0].(QTextListFormat).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN9QTextList9setFormatERK15QTextListFormat(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "setFormat", args)
   }
@@ -161,8 +167,10 @@ func (this *QTextList) add(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList3addERK10QTextBlock
+    // invoke: void add(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QTextList3addERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "add", args)
   }
@@ -182,8 +190,10 @@ func (this *QTextList) itemText(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList8itemTextERK10QTextBlock
+    // invoke: QString itemText(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTextList8itemTextERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "itemText", args)
   }
@@ -203,8 +213,10 @@ func (this *QTextList) removeItem(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QTextList10removeItemEi
+    // invoke: void removeItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN9QTextList10removeItemEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "removeItem", args)
   }
@@ -224,8 +236,10 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList10itemNumberERK10QTextBlock
+    // invoke: int itemNumber(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK9QTextList10itemNumberERK10QTextBlock(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextList", "itemNumber", args)
   }
@@ -244,6 +258,8 @@ func (this *QTextList) count(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList5countEv
+    // invoke: int count()
+    C._ZNK9QTextList5countEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextList", "count", args)
   }
@@ -262,6 +278,8 @@ func (this *QTextList) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList6formatEv
+    // invoke: QTextListFormat format()
+    C._ZNK9QTextList6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextList", "format", args)
   }
@@ -294,6 +312,8 @@ func (this *QTextList) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList7isEmptyEv
+    // invoke: bool isEmpty()
+    C.demth_ZNK9QTextList7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextList", "isEmpty", args)
   }
@@ -312,6 +332,8 @@ func (this *QTextList) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QTextList10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QTextList10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextList", "metaObject", args)
   }

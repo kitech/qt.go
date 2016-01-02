@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.go
 //
@@ -162,6 +162,8 @@ func (this *QImageReader) errorString(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader11errorStringEv
+    // invoke: QString errorString()
+    C._ZNK12QImageReader11errorStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "errorString", args)
   }
@@ -180,6 +182,8 @@ func (this *QImageReader) canRead(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader7canReadEv
+    // invoke: bool canRead()
+    C._ZNK12QImageReader7canReadEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "canRead", args)
   }
@@ -213,8 +217,10 @@ func (this *QImageReader) setScaledSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader13setScaledSizeERK5QSize
+    // invoke: void setScaledSize(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader13setScaledSizeERK5QSize(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setScaledSize", args)
   }
@@ -236,10 +242,14 @@ func (this *QImageReader) read(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader4readEP6QImage
+    // invoke: bool read(class QImage *)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader4readEP6QImage(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN12QImageReader4readEv
+    // invoke: QImage read()
+    C._ZN12QImageReader4readEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "read", args)
   }
@@ -259,8 +269,10 @@ func (this *QImageReader) setScaledClipRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader17setScaledClipRectERK5QRect
+    // invoke: void setScaledClipRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader17setScaledClipRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setScaledClipRect", args)
   }
@@ -279,6 +291,8 @@ func (this *QImageReader) imageCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader10imageCountEv
+    // invoke: int imageCount()
+    C._ZNK12QImageReader10imageCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "imageCount", args)
   }
@@ -297,6 +311,8 @@ func (this *QImageReader) textKeys(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader8textKeysEv
+    // invoke: QStringList textKeys()
+    C._ZNK12QImageReader8textKeysEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "textKeys", args)
   }
@@ -315,6 +331,8 @@ func (this *QImageReader) decideFormatFromContent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader23decideFormatFromContentEv
+    // invoke: bool decideFormatFromContent()
+    C._ZNK12QImageReader23decideFormatFromContentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "decideFormatFromContent", args)
   }
@@ -333,6 +351,8 @@ func (this *QImageReader) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK12QImageReader6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "device", args)
   }
@@ -351,6 +371,8 @@ func (this *QImageReader) autoTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader13autoTransformEv
+    // invoke: bool autoTransform()
+    C._ZNK12QImageReader13autoTransformEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "autoTransform", args)
   }
@@ -369,6 +391,8 @@ func (this *QImageReader) jumpToNextImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader15jumpToNextImageEv
+    // invoke: bool jumpToNextImage()
+    C._ZN12QImageReader15jumpToNextImageEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "jumpToNextImage", args)
   }
@@ -401,6 +425,8 @@ func (this *QImageReader) supportedSubTypes(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader17supportedSubTypesEv
+    // invoke: QList<QByteArray> supportedSubTypes()
+    C._ZNK12QImageReader17supportedSubTypesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "supportedSubTypes", args)
   }
@@ -419,6 +445,8 @@ func (this *QImageReader) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader4sizeEv
+    // invoke: QSize size()
+    C._ZNK12QImageReader4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "size", args)
   }
@@ -437,6 +465,8 @@ func (this *QImageReader) backgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader15backgroundColorEv
+    // invoke: QColor backgroundColor()
+    C._ZNK12QImageReader15backgroundColorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "backgroundColor", args)
   }
@@ -455,6 +485,8 @@ func (this *QImageReader) subType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader7subTypeEv
+    // invoke: QByteArray subType()
+    C._ZNK12QImageReader7subTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "subType", args)
   }
@@ -473,6 +505,8 @@ func (this *QImageReader) currentImageNumber(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader18currentImageNumberEv
+    // invoke: int currentImageNumber()
+    C._ZNK12QImageReader18currentImageNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "currentImageNumber", args)
   }
@@ -505,6 +539,8 @@ func (this *QImageReader) loopCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader9loopCountEv
+    // invoke: int loopCount()
+    C._ZNK12QImageReader9loopCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "loopCount", args)
   }
@@ -524,8 +560,10 @@ func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader26setDecideFormatFromContentEb
+    // invoke: void setDecideFormatFromContent(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader26setDecideFormatFromContentEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setDecideFormatFromContent", args)
   }
@@ -544,6 +582,8 @@ func (this *QImageReader) scaledClipRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader14scaledClipRectEv
+    // invoke: QRect scaledClipRect()
+    C._ZNK12QImageReader14scaledClipRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "scaledClipRect", args)
   }
@@ -577,8 +617,10 @@ func (this *QImageReader) text(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader4textERK7QString
+    // invoke: QString text(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK12QImageReader4textERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "text", args)
   }
@@ -597,6 +639,8 @@ func (this *QImageReader) nextImageDelay(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader14nextImageDelayEv
+    // invoke: int nextImageDelay()
+    C._ZNK12QImageReader14nextImageDelayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "nextImageDelay", args)
   }
@@ -615,6 +659,8 @@ func (this *QImageReader) supportsAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader17supportsAnimationEv
+    // invoke: bool supportsAnimation()
+    C._ZNK12QImageReader17supportsAnimationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "supportsAnimation", args)
   }
@@ -634,8 +680,10 @@ func (this *QImageReader) jumpToImage(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader11jumpToImageEi
+    // invoke: bool jumpToImage(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader11jumpToImageEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "jumpToImage", args)
   }
@@ -655,8 +703,10 @@ func (this *QImageReader) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setFileName", args)
   }
@@ -680,6 +730,8 @@ func (this *QImageReader) scaledSize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader10scaledSizeEv
+    // invoke: QSize scaledSize()
+    C._ZNK12QImageReader10scaledSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "scaledSize", args)
   }
@@ -699,8 +751,10 @@ func (this *QImageReader) setAutoTransform(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader16setAutoTransformEb
+    // invoke: void setAutoTransform(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader16setAutoTransformEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setAutoTransform", args)
   }
@@ -720,8 +774,10 @@ func (this *QImageReader) setClipRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader11setClipRectERK5QRect
+    // invoke: void setClipRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader11setClipRectERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setClipRect", args)
   }
@@ -740,6 +796,8 @@ func (this *QImageReader) autoDetectImageFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader21autoDetectImageFormatEv
+    // invoke: bool autoDetectImageFormat()
+    C._ZNK12QImageReader21autoDetectImageFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "autoDetectImageFormat", args)
   }
@@ -758,6 +816,8 @@ func (this *QImageReader) currentImageRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader16currentImageRectEv
+    // invoke: QRect currentImageRect()
+    C._ZNK12QImageReader16currentImageRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "currentImageRect", args)
   }
@@ -776,6 +836,8 @@ func (this *QImageReader) quality(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader7qualityEv
+    // invoke: int quality()
+    C._ZNK12QImageReader7qualityEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "quality", args)
   }
@@ -795,8 +857,10 @@ func (this *QImageReader) setDevice(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader9setDeviceEP9QIODevice(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setDevice", args)
   }
@@ -816,8 +880,10 @@ func (this *QImageReader) setBackgroundColor(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader18setBackgroundColorERK6QColor
+    // invoke: void setBackgroundColor(const class QColor &)
     var arg0 = args[0].(QColor).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader18setBackgroundColorERK6QColor(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setBackgroundColor", args)
   }
@@ -837,8 +903,10 @@ func (this *QImageReader) setQuality(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader10setQualityEi
+    // invoke: void setQuality(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader10setQualityEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setQuality", args)
   }
@@ -858,8 +926,10 @@ func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader24setAutoDetectImageFormatEb
+    // invoke: void setAutoDetectImageFormat(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader24setAutoDetectImageFormatEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setAutoDetectImageFormat", args)
   }
@@ -879,8 +949,10 @@ func (this *QImageReader) setFormat(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QImageReader9setFormatERK10QByteArray
+    // invoke: void setFormat(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QImageReader9setFormatERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QImageReader", "setFormat", args)
   }
@@ -899,6 +971,8 @@ func (this *QImageReader) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK12QImageReader8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "fileName", args)
   }
@@ -917,6 +991,8 @@ func (this *QImageReader) clipRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader8clipRectEv
+    // invoke: QRect clipRect()
+    C._ZNK12QImageReader8clipRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "clipRect", args)
   }
@@ -935,6 +1011,8 @@ func (this *QImageReader) format(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QImageReader6formatEv
+    // invoke: QByteArray format()
+    C._ZNK12QImageReader6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QImageReader", "format", args)
   }

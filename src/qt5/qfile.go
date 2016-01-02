@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -128,10 +128,14 @@ func (this *QFile) symLinkTarget(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QFile13symLinkTargetEv
+    // invoke: QString symLinkTarget()
+    C.demth_ZNK5QFile13symLinkTargetEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QFile13symLinkTargetERK7QString
+    // invoke: QString symLinkTarget(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN5QFile13symLinkTargetERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
   }
@@ -188,14 +192,18 @@ func (this *QFile) link(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile4linkERK7QStringS2_
+    // invoke: bool link(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN5QFile4linkERK7QStringS2_(arg0, arg1)
   case 1:
     // invoke: _ZN5QFile4linkERK7QString
+    // invoke: bool link(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile4linkERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "link", args)
   }
@@ -287,10 +295,14 @@ func (this *QFile) exists(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6existsERK7QString
+    // invoke: bool exists(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile6existsERK7QString(arg0)
   case 1:
     // invoke: _ZNK5QFile6existsEv
+    // invoke: bool exists()
+    C._ZNK5QFile6existsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "exists", args)
   }
@@ -309,6 +321,8 @@ func (this *QFile) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QFile4sizeEv
+    // invoke: qint64 size()
+    C._ZNK5QFile4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "size", args)
   }
@@ -332,14 +346,18 @@ func (this *QFile) resize(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6resizeERK7QStringx
+    // invoke: bool resize(const class QString &, qint64)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
+    C._ZN5QFile6resizeERK7QStringx(arg0, arg1)
   case 1:
     // invoke: _ZN5QFile6resizeEx
+    // invoke: bool resize(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
+    C._ZN5QFile6resizeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
   }
@@ -359,8 +377,10 @@ func (this *QFile) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "setFileName", args)
   }
@@ -382,10 +402,14 @@ func (this *QFile) remove(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6removeEv
+    // invoke: bool remove()
+    C._ZN5QFile6removeEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QFile6removeERK7QString
+    // invoke: bool remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile6removeERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
   }
@@ -409,14 +433,18 @@ func (this *QFile) copy(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile4copyERK7QStringS2_
+    // invoke: bool copy(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN5QFile4copyERK7QStringS2_(arg0, arg1)
   case 1:
     // invoke: _ZN5QFile4copyERK7QString
+    // invoke: bool copy(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile4copyERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
   }
@@ -468,14 +496,18 @@ func (this *QFile) rename(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile6renameERK7QStringS2_
+    // invoke: bool rename(const class QString &, const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
+    C._ZN5QFile6renameERK7QStringS2_(arg0, arg1)
   case 1:
     // invoke: _ZN5QFile6renameERK7QString
+    // invoke: bool rename(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile6renameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
   }
@@ -494,6 +526,8 @@ func (this *QFile) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QFile8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK5QFile8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "fileName", args)
   }
@@ -512,6 +546,8 @@ func (this *QFile) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK5QFile10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK5QFile10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "metaObject", args)
   }
@@ -561,10 +597,14 @@ func (this *QFile) readLink(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN5QFile8readLinkERK7QString
+    // invoke: QString readLink(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN5QFile8readLinkERK7QString(arg0)
   case 1:
     // invoke: _ZNK5QFile8readLinkEv
+    // invoke: QString readLink()
+    C._ZNK5QFile8readLinkEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QFile", "readLink", args)
   }

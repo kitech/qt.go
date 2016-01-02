@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.go
 //
@@ -55,7 +55,7 @@ extern void demth_ZN6QPoint4setYEi(void* qthis, int arg0);
   // proto:  int & QPoint::rx();
 extern void demth_ZN6QPoint2rxEv(void* qthis);
   // proto:  int QPoint::manhattanLength();
-extern void _ZNK6QPoint15manhattanLengthEv(void* qthis);
+extern void demth_ZNK6QPoint15manhattanLengthEv(void* qthis);
   // proto:  void QPointF::QPointF(qreal xpos, qreal ypos);
 extern void* dector_ZN7QPointFC1Edd(double arg0, double arg1);
 extern void _ZN7QPointFC1Edd(void* qthis, double arg0, double arg1);
@@ -121,6 +121,8 @@ func (this *QPoint) ry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint2ryEv
+    // invoke: int & ry()
+    C.demth_ZN6QPoint2ryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "ry", args)
   }
@@ -153,6 +155,8 @@ func (this *QPoint) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QPoint1xEv
+    // invoke: int x()
+    C._ZNK6QPoint1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "x", args)
   }
@@ -176,6 +180,8 @@ func (this *QPoint) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QPoint1yEv
+    // invoke: int y()
+    C._ZNK6QPoint1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "y", args)
   }
@@ -195,8 +201,10 @@ func (this *QPoint) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint4setXEi
+    // invoke: void setX(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QPoint4setXEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPoint", "setX", args)
   }
@@ -215,6 +223,8 @@ func (this *QPoint) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QPoint6isNullEv
+    // invoke: bool isNull()
+    C._ZNK6QPoint6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "isNull", args)
   }
@@ -234,8 +244,10 @@ func (this *QPoint) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint4setYEi
+    // invoke: void setY(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C.demth_ZN6QPoint4setYEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPoint", "setY", args)
   }
@@ -254,6 +266,8 @@ func (this *QPoint) rx(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN6QPoint2rxEv
+    // invoke: int & rx()
+    C.demth_ZN6QPoint2rxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "rx", args)
   }
@@ -272,6 +286,8 @@ func (this *QPoint) manhattanLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK6QPoint15manhattanLengthEv
+    // invoke: int manhattanLength()
+    C.demth_ZNK6QPoint15manhattanLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "manhattanLength", args)
   }
@@ -295,6 +311,8 @@ func (this *QPointF) manhattanLength(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QPointF15manhattanLengthEv
+    // invoke: qreal manhattanLength()
+    C._ZNK7QPointF15manhattanLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "manhattanLength", args)
   }
@@ -313,6 +331,8 @@ func (this *QPointF) toPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QPointF7toPointEv
+    // invoke: QPoint toPoint()
+    C._ZNK7QPointF7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "toPoint", args)
   }
@@ -331,6 +351,8 @@ func (this *QPointF) rx(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF2rxEv
+    // invoke: qreal & rx()
+    C.demth_ZN7QPointF2rxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "rx", args)
   }
@@ -349,6 +371,8 @@ func (this *QPointF) y(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QPointF1yEv
+    // invoke: qreal y()
+    C._ZNK7QPointF1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "y", args)
   }
@@ -367,6 +391,8 @@ func (this *QPointF) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QPointF6isNullEv
+    // invoke: bool isNull()
+    C.demth_ZNK7QPointF6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "isNull", args)
   }
@@ -385,6 +411,8 @@ func (this *QPointF) x(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QPointF1xEv
+    // invoke: qreal x()
+    C._ZNK7QPointF1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "x", args)
   }
@@ -404,8 +432,10 @@ func (this *QPointF) setX(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF4setXEd
+    // invoke: void setX(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QPointF4setXEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPointF", "setX", args)
   }
@@ -424,6 +454,8 @@ func (this *QPointF) ry(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF2ryEv
+    // invoke: qreal & ry()
+    C.demth_ZN7QPointF2ryEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "ry", args)
   }
@@ -457,8 +489,10 @@ func (this *QPointF) setY(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QPointF4setYEd
+    // invoke: void setY(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QPointF4setYEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPointF", "setY", args)
   }

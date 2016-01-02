@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -91,6 +91,8 @@ func (this *QAbstractTransition) targetState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition11targetStateEv
+    // invoke: QAbstractState * targetState()
+    C._ZNK19QAbstractTransition11targetStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetState", args)
   }
@@ -109,6 +111,8 @@ func (this *QAbstractTransition) targetStates(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition12targetStatesEv
+    // invoke: QList<QAbstractState *> targetStates()
+    C._ZNK19QAbstractTransition12targetStatesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "targetStates", args)
   }
@@ -127,6 +131,8 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition11sourceStateEv
+    // invoke: QState * sourceState()
+    C._ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "sourceState", args)
   }
@@ -165,8 +171,10 @@ func (this *QAbstractTransition) setTargetState(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition14setTargetStateEP14QAbstractState
+    // invoke: void setTargetState(class QAbstractState *)
     var arg0 = args[0].(QAbstractState).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QAbstractTransition14setTargetStateEP14QAbstractState(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "setTargetState", args)
   }
@@ -186,8 +194,10 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation
+    // invoke: void addAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "addAnimation", args)
   }
@@ -206,6 +216,8 @@ func (this *QAbstractTransition) animations(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition10animationsEv
+    // invoke: QList<QAbstractAnimation *> animations()
+    C._ZNK19QAbstractTransition10animationsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "animations", args)
   }
@@ -225,8 +237,10 @@ func (this *QAbstractTransition) removeAnimation(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation
+    // invoke: void removeAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN19QAbstractTransition15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "removeAnimation", args)
   }
@@ -245,6 +259,8 @@ func (this *QAbstractTransition) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK19QAbstractTransition10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "metaObject", args)
   }
@@ -263,6 +279,8 @@ func (this *QAbstractTransition) machine(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK19QAbstractTransition7machineEv
+    // invoke: QStateMachine * machine()
+    C._ZNK19QAbstractTransition7machineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTransition", "machine", args)
   }

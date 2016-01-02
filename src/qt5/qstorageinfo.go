@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qstorageinfo.h
 // dst-file: /src/core/qstorageinfo.go
 //
@@ -110,6 +110,8 @@ func (this *QStorageInfo) bytesFree(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo9bytesFreeEv
+    // invoke: qint64 bytesFree()
+    C._ZNK12QStorageInfo9bytesFreeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesFree", args)
   }
@@ -133,6 +135,8 @@ func (this *QStorageInfo) isRoot(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo6isRootEv
+    // invoke: bool isRoot()
+    C.demth_ZNK12QStorageInfo6isRootEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isRoot", args)
   }
@@ -151,6 +155,8 @@ func (this *QStorageInfo) isReadOnly(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo10isReadOnlyEv
+    // invoke: bool isReadOnly()
+    C._ZNK12QStorageInfo10isReadOnlyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReadOnly", args)
   }
@@ -169,6 +175,8 @@ func (this *QStorageInfo) fileSystemType(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo14fileSystemTypeEv
+    // invoke: QByteArray fileSystemType()
+    C._ZNK12QStorageInfo14fileSystemTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "fileSystemType", args)
   }
@@ -188,8 +196,10 @@ func (this *QStorageInfo) setPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStorageInfo7setPathERK7QString
+    // invoke: void setPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN12QStorageInfo7setPathERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "setPath", args)
   }
@@ -222,6 +232,8 @@ func (this *QStorageInfo) name(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo4nameEv
+    // invoke: QString name()
+    C._ZNK12QStorageInfo4nameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "name", args)
   }
@@ -240,6 +252,8 @@ func (this *QStorageInfo) refresh(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStorageInfo7refreshEv
+    // invoke: void refresh()
+    C._ZN12QStorageInfo7refreshEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "refresh", args)
   }
@@ -258,6 +272,8 @@ func (this *QStorageInfo) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo7isValidEv
+    // invoke: bool isValid()
+    C._ZNK12QStorageInfo7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isValid", args)
   }
@@ -276,6 +292,8 @@ func (this *QStorageInfo) isReady(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo7isReadyEv
+    // invoke: bool isReady()
+    C._ZNK12QStorageInfo7isReadyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "isReady", args)
   }
@@ -294,6 +312,8 @@ func (this *QStorageInfo) bytesTotal(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo10bytesTotalEv
+    // invoke: qint64 bytesTotal()
+    C._ZNK12QStorageInfo10bytesTotalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesTotal", args)
   }
@@ -312,6 +332,8 @@ func (this *QStorageInfo) rootPath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo8rootPathEv
+    // invoke: QString rootPath()
+    C._ZNK12QStorageInfo8rootPathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "rootPath", args)
   }
@@ -344,6 +366,8 @@ func (this *QStorageInfo) bytesAvailable(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo14bytesAvailableEv
+    // invoke: qint64 bytesAvailable()
+    C._ZNK12QStorageInfo14bytesAvailableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "bytesAvailable", args)
   }
@@ -376,6 +400,8 @@ func (this *QStorageInfo) device(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo6deviceEv
+    // invoke: QByteArray device()
+    C._ZNK12QStorageInfo6deviceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "device", args)
   }
@@ -394,6 +420,8 @@ func (this *QStorageInfo) displayName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK12QStorageInfo11displayNameEv
+    // invoke: QString displayName()
+    C._ZNK12QStorageInfo11displayNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStorageInfo", "displayName", args)
   }
@@ -413,8 +441,10 @@ func (this *QStorageInfo) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN12QStorageInfo4swapERS_
+    // invoke: void swap(class QStorageInfo &)
     var arg0 = args[0].(QStorageInfo).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN12QStorageInfo4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStorageInfo", "swap", args)
   }

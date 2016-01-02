@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.go
 //
@@ -84,6 +84,8 @@ func (this *QCheckBox) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QCheckBox10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCheckBox", "metaObject", args)
   }
@@ -102,6 +104,8 @@ func (this *QCheckBox) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK9QCheckBox15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCheckBox", "minimumSizeHint", args)
   }
@@ -134,6 +138,8 @@ func (this *QCheckBox) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QCheckBox8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCheckBox", "sizeHint", args)
   }
@@ -153,8 +159,10 @@ func (this *QCheckBox) setTristate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QCheckBox11setTristateEb
+    // invoke: void setTristate(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN9QCheckBox11setTristateEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCheckBox", "setTristate", args)
   }
@@ -178,6 +186,8 @@ func (this *QCheckBox) isTristate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QCheckBox10isTristateEv
+    // invoke: bool isTristate()
+    C._ZNK9QCheckBox10isTristateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QCheckBox", "isTristate", args)
   }

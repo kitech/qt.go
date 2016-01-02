@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.go
 //
@@ -115,6 +115,8 @@ func (this *QRegion) isNull(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion6isNullEv
+    // invoke: bool isNull()
+    C._ZNK7QRegion6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "isNull", args)
   }
@@ -133,6 +135,8 @@ func (this *QRegion) boundingRect(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion12boundingRectEv
+    // invoke: QRect boundingRect()
+    C._ZNK7QRegion12boundingRectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "boundingRect", args)
   }
@@ -156,6 +160,8 @@ func (this *QRegion) rectCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion9rectCountEv
+    // invoke: int rectCount()
+    C._ZNK7QRegion9rectCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "rectCount", args)
   }
@@ -179,14 +185,18 @@ func (this *QRegion) translate(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegion9translateEii
+    // invoke: void translate(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN7QRegion9translateEii(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZN7QRegion9translateERK6QPoint
+    // invoke: void translate(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QRegion9translateERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "translate", args)
   }
@@ -209,12 +219,16 @@ func (this *QRegion) united(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion6unitedERKS_
+    // invoke: QRegion united(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion6unitedERKS_(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QRegion6unitedERK5QRect
+    // invoke: QRegion united(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion6unitedERK5QRect(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "united", args)
   }
@@ -238,14 +252,18 @@ func (this *QRegion) translated(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10translatedERK6QPoint
+    // invoke: QRegion translated(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZNK7QRegion10translatedERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QRegion10translatedEii
+    // invoke: QRegion translated(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZNK7QRegion10translatedEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRegion", "translated", args)
   }
@@ -265,8 +283,10 @@ func (this *QRegion) swap(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegion4swapERS_
+    // invoke: void swap(class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C.demth_ZN7QRegion4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "swap", args)
   }
@@ -303,12 +323,16 @@ func (this *QRegion) contains(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion8containsERK5QRect
+    // invoke: bool contains(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion8containsERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QRegion8containsERK6QPoint
+    // invoke: bool contains(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion8containsERK6QPoint(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "contains", args)
   }
@@ -327,6 +351,8 @@ func (this *QRegion) isEmpty(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK7QRegion7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "isEmpty", args)
   }
@@ -349,12 +375,16 @@ func (this *QRegion) intersected(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion11intersectedERK5QRect
+    // invoke: QRegion intersected(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion11intersectedERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QRegion11intersectedERKS_
+    // invoke: QRegion intersected(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion11intersectedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "intersected", args)
   }
@@ -375,10 +405,12 @@ func (this *QRegion) setRects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QRegion8setRectsEPK5QRecti
+    // invoke: void setRects(const class QRect *, int)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
+    C._ZN7QRegion8setRectsEPK5QRecti(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QRegion", "setRects", args)
   }
@@ -397,6 +429,8 @@ func (this *QRegion) rects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion5rectsEv
+    // invoke: QVector<QRect> rects()
+    C._ZNK7QRegion5rectsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRegion", "rects", args)
   }
@@ -416,8 +450,10 @@ func (this *QRegion) subtracted(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10subtractedERKS_
+    // invoke: QRegion subtracted(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion10subtractedERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "subtracted", args)
   }
@@ -440,12 +476,16 @@ func (this *QRegion) intersects(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion10intersectsERK5QRect
+    // invoke: bool intersects(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion10intersectsERK5QRect(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK7QRegion10intersectsERKS_
+    // invoke: bool intersects(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion10intersectsERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "intersects", args)
   }
@@ -465,8 +505,10 @@ func (this *QRegion) xored(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QRegion5xoredERKS_
+    // invoke: QRegion xored(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZNK7QRegion5xoredERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegion", "xored", args)
   }

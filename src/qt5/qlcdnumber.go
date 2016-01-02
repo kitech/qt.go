@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -115,16 +115,22 @@ func (this *QLCDNumber) display(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber7displayEi
+    // invoke: void display(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber7displayEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZN10QLCDNumber7displayEd
+    // invoke: void display(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber7displayEd(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN10QLCDNumber7displayERK7QString
+    // invoke: void display(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber7displayERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "display", args)
   }
@@ -143,6 +149,8 @@ func (this *QLCDNumber) setHexMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setHexModeEv
+    // invoke: void setHexMode()
+    C._ZN10QLCDNumber10setHexModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
   }
@@ -161,6 +169,8 @@ func (this *QLCDNumber) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QLCDNumber10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
   }
@@ -184,6 +194,8 @@ func (this *QLCDNumber) digitCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber10digitCountEv
+    // invoke: int digitCount()
+    C._ZNK10QLCDNumber10digitCountEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
   }
@@ -220,12 +232,16 @@ func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber13checkOverflowEi
+    // invoke: bool checkOverflow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK10QLCDNumber13checkOverflowEi(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK10QLCDNumber13checkOverflowEd
+    // invoke: bool checkOverflow(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
+    C._ZNK10QLCDNumber13checkOverflowEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
   }
@@ -244,6 +260,8 @@ func (this *QLCDNumber) setDecMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setDecModeEv
+    // invoke: void setDecMode()
+    C._ZN10QLCDNumber10setDecModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
   }
@@ -262,6 +280,8 @@ func (this *QLCDNumber) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK10QLCDNumber8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
   }
@@ -280,6 +300,8 @@ func (this *QLCDNumber) value(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber5valueEv
+    // invoke: double value()
+    C._ZNK10QLCDNumber5valueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "value", args)
   }
@@ -298,6 +320,8 @@ func (this *QLCDNumber) setBinMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setBinModeEv
+    // invoke: void setBinMode()
+    C._ZN10QLCDNumber10setBinModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
   }
@@ -316,6 +340,8 @@ func (this *QLCDNumber) intValue(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber8intValueEv
+    // invoke: int intValue()
+    C._ZNK10QLCDNumber8intValueEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "intValue", args)
   }
@@ -335,8 +361,10 @@ func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber13setDigitCountEi
+    // invoke: void setDigitCount(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber13setDigitCountEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
   }
@@ -356,8 +384,10 @@ func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
+    // invoke: void setSmallDecimalPoint(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber20setSmallDecimalPointEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
   }
@@ -376,6 +406,8 @@ func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
+    // invoke: bool smallDecimalPoint()
+    C._ZNK10QLCDNumber17smallDecimalPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
   }
@@ -394,6 +426,8 @@ func (this *QLCDNumber) setOctMode(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN10QLCDNumber10setOctModeEv
+    // invoke: void setOctMode()
+    C._ZN10QLCDNumber10setOctModeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.go
 //
@@ -64,6 +64,8 @@ func (this *QStaticPlugin) metaData(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK13QStaticPlugin8metaDataEv
+    // invoke: QJsonObject metaData()
+    C._ZNK13QStaticPlugin8metaDataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStaticPlugin", "metaData", args)
   }

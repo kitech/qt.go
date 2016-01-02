@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -82,6 +82,8 @@ func (this *QSlider) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QSlider10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSlider", "metaObject", args)
   }
@@ -101,8 +103,10 @@ func (this *QSlider) event(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QSlider5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN7QSlider5eventEP6QEvent(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSlider", "event", args)
   }
@@ -121,6 +125,8 @@ func (this *QSlider) tickInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider12tickIntervalEv
+    // invoke: int tickInterval()
+    C._ZNK7QSlider12tickIntervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSlider", "tickInterval", args)
   }
@@ -139,6 +145,8 @@ func (this *QSlider) sizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK7QSlider8sizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSlider", "sizeHint", args)
   }
@@ -158,8 +166,10 @@ func (this *QSlider) setTickInterval(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN7QSlider15setTickIntervalEi
+    // invoke: void setTickInterval(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZN7QSlider15setTickIntervalEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSlider", "setTickInterval", args)
   }
@@ -197,6 +207,8 @@ func (this *QSlider) minimumSizeHint(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK7QSlider15minimumSizeHintEv
+    // invoke: QSize minimumSizeHint()
+    C._ZNK7QSlider15minimumSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSlider", "minimumSizeHint", args)
   }

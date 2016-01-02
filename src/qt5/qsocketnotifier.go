@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -81,6 +81,8 @@ func (this *QSocketNotifier) socket(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier6socketEv
+    // invoke: qintptr socket()
+    C._ZNK15QSocketNotifier6socketEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "socket", args)
   }
@@ -99,6 +101,8 @@ func (this *QSocketNotifier) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK15QSocketNotifier9isEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "isEnabled", args)
   }
@@ -118,8 +122,10 @@ func (this *QSocketNotifier) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN15QSocketNotifier10setEnabledEb
+    // invoke: void setEnabled(_Bool)
     var arg0 = C.int8_t(args[0].(int8))
     if false {fmt.Println(arg0)}
+    C._ZN15QSocketNotifier10setEnabledEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "setEnabled", args)
   }
@@ -138,6 +144,8 @@ func (this *QSocketNotifier) metaObject(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK15QSocketNotifier10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK15QSocketNotifier10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSocketNotifier", "metaObject", args)
   }

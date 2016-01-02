@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -102,6 +102,8 @@ func (this *QResource) locale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource6localeEv
+    // invoke: QLocale locale()
+    C._ZNK9QResource6localeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "locale", args)
   }
@@ -121,8 +123,10 @@ func (this *QResource) setLocale(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QResource9setLocaleERK7QLocale
+    // invoke: void setLocale(const class QLocale &)
     var arg0 = args[0].(QLocale).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QResource9setLocaleERK7QLocale(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setLocale", args)
   }
@@ -155,6 +159,8 @@ func (this *QResource) data(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource4dataEv
+    // invoke: const uchar * data()
+    C._ZNK9QResource4dataEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "data", args)
   }
@@ -187,6 +193,8 @@ func (this *QResource) fileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK9QResource8fileNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "fileName", args)
   }
@@ -205,6 +213,8 @@ func (this *QResource) absoluteFilePath(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource16absoluteFilePathEv
+    // invoke: QString absoluteFilePath()
+    C._ZNK9QResource16absoluteFilePathEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "absoluteFilePath", args)
   }
@@ -251,6 +261,8 @@ func (this *QResource) size(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource4sizeEv
+    // invoke: qint64 size()
+    C._ZNK9QResource4sizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "size", args)
   }
@@ -283,6 +295,8 @@ func (this *QResource) isValid(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource7isValidEv
+    // invoke: bool isValid()
+    C._ZNK9QResource7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "isValid", args)
   }
@@ -302,8 +316,10 @@ func (this *QResource) setFileName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN9QResource11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
+    C._ZN9QResource11setFileNameERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QResource", "setFileName", args)
   }
@@ -322,6 +338,8 @@ func (this *QResource) isCompressed(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK9QResource12isCompressedEv
+    // invoke: bool isCompressed()
+    C._ZNK9QResource12isCompressedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QResource", "isCompressed", args)
   }

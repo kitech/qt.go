@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 16:11:29 2016
+// created: Sat Jan  2 20:07:20 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -96,6 +96,8 @@ func (this *QLoggingCategory) isDebugEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory14isDebugEnabledEv
+    // invoke: bool isDebugEnabled()
+    C._ZNK16QLoggingCategory14isDebugEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isDebugEnabled", args)
   }
@@ -130,10 +132,12 @@ func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb
+    // invoke: void setEnabled(enum QtMsgType, _Bool)
     var arg0 = C.int(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int8_t(args[1].(int8))
     if false {fmt.Println(arg1)}
+    C._ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "setEnabled", args)
   }
@@ -153,8 +157,10 @@ func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory9isEnabledE9QtMsgType
+    // invoke: bool isEnabled(enum QtMsgType)
     var arg0 = C.int(args[0].(int32))
     if false {fmt.Println(arg0)}
+    C._ZNK16QLoggingCategory9isEnabledE9QtMsgType(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isEnabled", args)
   }
@@ -173,6 +179,8 @@ func (this *QLoggingCategory) isWarningEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory16isWarningEnabledEv
+    // invoke: bool isWarningEnabled()
+    C._ZNK16QLoggingCategory16isWarningEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isWarningEnabled", args)
   }
@@ -191,6 +199,8 @@ func (this *QLoggingCategory) isInfoEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory13isInfoEnabledEv
+    // invoke: bool isInfoEnabled()
+    C._ZNK16QLoggingCategory13isInfoEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isInfoEnabled", args)
   }
@@ -209,6 +219,8 @@ func (this *QLoggingCategory) categoryName(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory12categoryNameEv
+    // invoke: const char * categoryName()
+    C._ZNK16QLoggingCategory12categoryNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "categoryName", args)
   }
@@ -227,6 +239,8 @@ func (this *QLoggingCategory) isCriticalEnabled(args ...interface{}) () {
   switch matched_index {
   case 0:
     // invoke: _ZNK16QLoggingCategory17isCriticalEnabledEv
+    // invoke: bool isCriticalEnabled()
+    C._ZNK16QLoggingCategory17isCriticalEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isCriticalEnabled", args)
   }
