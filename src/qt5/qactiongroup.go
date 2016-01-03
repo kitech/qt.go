@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QActionGroup)=1
 type QActionGroup struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _triggered QActionGroup_triggered_signal;
 //  _hovered QActionGroup_hovered_signal;
 }
@@ -127,7 +127,7 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroup11setDisabledEb
     // invoke: void setDisabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
   default:
@@ -150,7 +150,7 @@ func (this *QActionGroup) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroup10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
   default:
@@ -271,7 +271,7 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroup10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -314,7 +314,7 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QActionGroup12setExclusiveEb
     // invoke: void setExclusive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QActionGroup12setExclusiveEb(this.qclsinst, arg0)
   default:

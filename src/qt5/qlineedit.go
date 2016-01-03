@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlineedit.h
 // dst-file: /src/widgets/qlineedit.go
 //
@@ -33,13 +33,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLineEdit::cursorBackward(bool mark, int steps);
-extern void _ZN9QLineEdit14cursorBackwardEbi(void* qthis, bool arg0, int arg1);
+extern void _ZN9QLineEdit14cursorBackwardEbi(void* qthis, bool arg0, int32_t arg1);
   // proto:  void QLineEdit::home(bool mark);
 extern void _ZN9QLineEdit4homeEb(void* qthis, bool arg0);
   // proto:  int QLineEdit::selectionStart();
 extern void _ZNK9QLineEdit14selectionStartEv(void* qthis);
   // proto:  void QLineEdit::setCursorPosition(int );
-extern void _ZN9QLineEdit17setCursorPositionEi(void* qthis, int arg0);
+extern void _ZN9QLineEdit17setCursorPositionEi(void* qthis, int32_t arg0);
   // proto:  bool QLineEdit::isRedoAvailable();
 extern void _ZNK9QLineEdit15isRedoAvailableEv(void* qthis);
   // proto:  void QLineEdit::setModified(bool );
@@ -64,7 +64,7 @@ extern void _ZN9QLineEdit18setPlaceholderTextERK7QString(void* qthis, void* arg0
   // proto:  QSize QLineEdit::minimumSizeHint();
 extern void _ZNK9QLineEdit15minimumSizeHintEv(void* qthis);
   // proto:  void QLineEdit::cursorForward(bool mark, int steps);
-extern void _ZN9QLineEdit13cursorForwardEbi(void* qthis, bool arg0, int arg1);
+extern void _ZN9QLineEdit13cursorForwardEbi(void* qthis, bool arg0, int32_t arg1);
   // proto:  void QLineEdit::insert(const QString & );
 extern void _ZN9QLineEdit6insertERK7QString(void* qthis, void* arg0);
   // proto:  void QLineEdit::setText(const QString & );
@@ -92,11 +92,11 @@ extern void _ZN9QLineEdit17cursorWordForwardEb(void* qthis, bool arg0);
   // proto:  void QLineEdit::selectAll();
 extern void _ZN9QLineEdit9selectAllEv(void* qthis);
   // proto:  void QLineEdit::setSelection(int , int );
-extern void _ZN9QLineEdit12setSelectionEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QLineEdit12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QLineEdit::setCompleter(QCompleter * completer);
 extern void _ZN9QLineEdit12setCompleterEP10QCompleter(void* qthis, void* arg0);
   // proto:  void QLineEdit::setMaxLength(int );
-extern void _ZN9QLineEdit12setMaxLengthEi(void* qthis, int arg0);
+extern void _ZN9QLineEdit12setMaxLengthEi(void* qthis, int32_t arg0);
   // proto:  void QLineEdit::~QLineEdit();
 extern void _ZN9QLineEditD0Ev(void* qthis);
   // proto:  void QLineEdit::setReadOnly(bool );
@@ -154,11 +154,11 @@ extern void _ZN9QLineEdit9backspaceEv(void* qthis);
   // proto:  void QLineEdit::redo();
 extern void _ZN9QLineEdit4redoEv(void* qthis);
   // proto:  void QLineEdit::setTextMargins(int left, int top, int right, int bottom);
-extern void _ZN9QLineEdit14setTextMarginsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN9QLineEdit14setTextMarginsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QLineEdit::setInputMask(const QString & inputMask);
 extern void _ZN9QLineEdit12setInputMaskERK7QString(void* qthis, void* arg0);
   // proto:  void QLineEdit::getTextMargins(int * left, int * top, int * right, int * bottom);
-extern void _ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+extern void _ZNK9QLineEdit14getTextMarginsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3);
   // proto:  bool QLineEdit::isReadOnly();
 extern void _ZNK9QLineEdit10isReadOnlyEv(void* qthis);
 */
@@ -176,7 +176,7 @@ func init() {
 // class sizeof(QLineEdit)=1
 type QLineEdit struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _textEdited QLineEdit_textEdited_signal;
 //  _returnPressed QLineEdit_returnPressed_signal;
 //  _selectionChanged QLineEdit_selectionChanged_signal;
@@ -200,7 +200,7 @@ func (this *QLineEdit) cursorBackward(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit14cursorBackwardEbi
     // invoke: void cursorBackward(_Bool, int)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -225,7 +225,7 @@ func (this *QLineEdit) home(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit4homeEb
     // invoke: void home(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit4homeEb(this.qclsinst, arg0)
   default:
@@ -311,7 +311,7 @@ func (this *QLineEdit) setModified(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit11setModifiedEb
     // invoke: void setModified(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit11setModifiedEb(this.qclsinst, arg0)
   default:
@@ -530,7 +530,7 @@ func (this *QLineEdit) cursorForward(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit13cursorForwardEbi
     // invoke: void cursorForward(_Bool, int)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -781,7 +781,7 @@ func (this *QLineEdit) cursorWordForward(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit17cursorWordForwardEb
     // invoke: void cursorWordForward(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit17cursorWordForwardEb(this.qclsinst, arg0)
   default:
@@ -910,7 +910,7 @@ func (this *QLineEdit) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit11setReadOnlyEb(this.qclsinst, arg0)
   default:
@@ -953,7 +953,7 @@ func (this *QLineEdit) setFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit8setFrameEb
     // invoke: void setFrame(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit8setFrameEb(this.qclsinst, arg0)
   default:
@@ -1036,7 +1036,7 @@ func (this *QLineEdit) cursorWordBackward(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit18cursorWordBackwardEb
     // invoke: void cursorWordBackward(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit18cursorWordBackwardEb(this.qclsinst, arg0)
   default:
@@ -1182,7 +1182,7 @@ func (this *QLineEdit) setClearButtonEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit21setClearButtonEnabledEb
     // invoke: void setClearButtonEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit21setClearButtonEnabledEb(this.qclsinst, arg0)
   default:
@@ -1325,7 +1325,7 @@ func (this *QLineEdit) end(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit3endEb
     // invoke: void end(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit3endEb(this.qclsinst, arg0)
   default:
@@ -1348,7 +1348,7 @@ func (this *QLineEdit) setDragEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QLineEdit14setDragEnabledEb
     // invoke: void setDragEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QLineEdit14setDragEnabledEb(this.qclsinst, arg0)
   default:

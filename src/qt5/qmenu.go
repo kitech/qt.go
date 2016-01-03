@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qmenu.h
 // dst-file: /src/widgets/qmenu.go
 //
@@ -71,7 +71,7 @@ extern void _ZN5QMenu12addSeparatorEv(void* qthis);
   // proto:  void QMenu::hideTearOffMenu();
 extern void _ZN5QMenu15hideTearOffMenuEv(void* qthis);
   // proto:  QAction * QMenu::addAction(const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-extern void _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, char* arg2, void* arg3);
+extern void _ZN5QMenu9addActionERK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, unsigned char* arg2, void* arg3);
   // proto:  void QMenu::QMenu(QWidget * parent);
 extern void* dector_ZN5QMenuC1EP7QWidget(void* arg0);
 extern void _ZN5QMenuC1EP7QWidget(void* qthis, void* arg0);
@@ -89,7 +89,7 @@ extern void _ZNK5QMenu12activeActionEv(void* qthis);
   // proto:  bool QMenu::isEmpty();
 extern void _ZNK5QMenu7isEmptyEv(void* qthis);
   // proto:  QAction * QMenu::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member, const QKeySequence & shortcut);
-extern void _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, void* arg2, char* arg3, void* arg4);
+extern void _ZN5QMenu9addActionERK5QIconRK7QStringPK7QObjectPKcRK12QKeySequence(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3, void* arg4);
   // proto:  QRect QMenu::actionGeometry(QAction * );
 extern void _ZNK5QMenu14actionGeometryEP7QAction(void* qthis, void* arg0);
   // proto:  void QMenu::QMenu(const QString & title, QWidget * parent);
@@ -142,7 +142,7 @@ func init() {
 // class sizeof(QMenu)=1
 type QMenu struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToShow QMenu_aboutToShow_signal;
 //  _triggered QMenu_triggered_signal;
 //  _hovered QMenu_hovered_signal;
@@ -252,7 +252,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QKeySequence).qclsinst
     if false {fmt.Println(arg3)}
@@ -272,7 +272,7 @@ func (this *QMenu) addAction(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QObject).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QKeySequence).qclsinst
     if false {fmt.Println(arg4)}
@@ -297,7 +297,7 @@ func (this *QMenu) setTearOffEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu17setTearOffEnabledEb
     // invoke: void setTearOffEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QMenu17setTearOffEnabledEb(this.qclsinst, arg0)
   default:
@@ -718,7 +718,7 @@ func (this *QMenu) setSeparatorsCollapsible(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu24setSeparatorsCollapsibleEb
     // invoke: void setSeparatorsCollapsible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QMenu24setSeparatorsCollapsibleEb(this.qclsinst, arg0)
   default:
@@ -993,7 +993,7 @@ func (this *QMenu) setToolTipsVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QMenu18setToolTipsVisibleEb
     // invoke: void setToolTipsVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QMenu18setToolTipsVisibleEb(this.qclsinst, arg0)
   default:

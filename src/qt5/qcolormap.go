@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcolormap.h
 // dst-file: /src/widgets/qcolormap.go
 //
@@ -37,14 +37,14 @@ extern void _ZNK9QColormap5pixelERK6QColor(void* qthis, void* arg0);
   // proto:  const QVector<QColor> QColormap::colormap();
 extern void _ZNK9QColormap8colormapEv(void* qthis);
   // proto:  const QColor QColormap::colorAt(uint pixel);
-extern void _ZNK9QColormap7colorAtEj(void* qthis, unsigned int arg0);
+extern void _ZNK9QColormap7colorAtEj(void* qthis, int32_t arg0);
   // proto:  void QColormap::~QColormap();
 extern void _ZN9QColormapD0Ev(void* qthis);
   // proto:  void QColormap::QColormap();
 extern void* dector_ZN9QColormapC1Ev();
 extern void _ZN9QColormapC1Ev(void* qthis);
   // proto: static QColormap QColormap::instance(int screen);
-extern void _ZN9QColormap8instanceEi(int arg0);
+extern void _ZN9QColormap8instanceEi(int32_t arg0);
   // proto:  int QColormap::size();
 extern void _ZNK9QColormap4sizeEv(void* qthis);
   // proto:  void QColormap::QColormap(const QColormap & colormap);
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QColormap)=8
 type QColormap struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  uint QColormap::pixel(const QColor & color);

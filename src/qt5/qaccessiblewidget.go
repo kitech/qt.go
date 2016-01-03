@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qaccessiblewidget.h
 // dst-file: /src/widgets/qaccessiblewidget.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  int QAccessibleWidget::childCount();
 extern void _ZNK17QAccessibleWidget10childCountEv(void* qthis);
   // proto:  QAccessibleInterface * QAccessibleWidget::child(int index);
-extern void _ZNK17QAccessibleWidget5childEi(void* qthis, int arg0);
+extern void _ZNK17QAccessibleWidget5childEi(void* qthis, int32_t arg0);
   // proto:  QWindow * QAccessibleWidget::window();
 extern void _ZNK17QAccessibleWidget6windowEv(void* qthis);
   // proto:  QRect QAccessibleWidget::rect();
@@ -78,7 +78,7 @@ func init() {
 // class sizeof(QAccessibleWidget)=32
 type QAccessibleWidget struct {
   /*qbase*/ QAccessibleObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QAccessibleWidget::childCount();

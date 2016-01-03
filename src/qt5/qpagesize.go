@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -47,23 +47,23 @@ extern void _ZNK9QPageSize4nameEv(void* qthis);
   // proto:  QSizeF QPageSize::definitionSize();
 extern void _ZNK9QPageSize14definitionSizeEv(void* qthis);
   // proto:  void QPageSize::swap(QPageSize & other);
-extern void _ZN9QPageSize4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QPageSize4swapERS_(void* qthis, void* arg0);
   // proto:  int QPageSize::windowsId();
 extern void _ZNK9QPageSize9windowsIdEv(void* qthis);
   // proto:  QSize QPageSize::sizePixels(int resolution);
-extern void _ZNK9QPageSize10sizePixelsEi(void* qthis, int arg0);
+extern void _ZNK9QPageSize10sizePixelsEi(void* qthis, int32_t arg0);
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
 extern void* dector_ZN9QPageSizeC1ERKS_(void* arg0);
 extern void _ZN9QPageSizeC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QPageSize::isValid();
 extern void _ZNK9QPageSize7isValidEv(void* qthis);
   // proto:  QRect QPageSize::rectPixels(int resolution);
-extern void _ZNK9QPageSize10rectPixelsEi(void* qthis, int arg0);
+extern void _ZNK9QPageSize10rectPixelsEi(void* qthis, int32_t arg0);
   // proto:  QRect QPageSize::rectPoints();
 extern void _ZNK9QPageSize10rectPointsEv(void* qthis);
   // proto:  void QPageSize::QPageSize(int windowsId, const QSize & pointSize, const QString & name);
-extern void* dector_ZN9QPageSizeC1EiRK5QSizeRK7QString(int arg0, void* arg1, void* arg2);
-extern void _ZN9QPageSizeC1EiRK5QSizeRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+extern void* dector_ZN9QPageSizeC1EiRK5QSizeRK7QString(int32_t arg0, void* arg1, void* arg2);
+extern void _ZN9QPageSizeC1EiRK5QSizeRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  bool QPageSize::isEquivalentTo(const QPageSize & other);
 extern void _ZNK9QPageSize14isEquivalentToERKS_(void* qthis, void* arg0);
   // proto:  QSize QPageSize::sizePoints();
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QPageSize)=1
 type QPageSize struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPageSize::QPageSize();
@@ -190,7 +190,7 @@ func (this *QPageSize) swap(args ...interface{}) () {
     // invoke: void swap(class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QPageSize4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QPageSize4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageSize", "swap", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QScrollerProperties)=1
 type QScrollerProperties struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);

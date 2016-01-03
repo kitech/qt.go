@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -36,13 +36,13 @@ import "qtrt"
 extern void* dector_ZN15QPauseAnimationC1ERKS_(void* arg0);
 extern void _ZN15QPauseAnimationC1ERKS_(void* qthis, void* arg0);
   // proto:  void QPauseAnimation::setDuration(int msecs);
-extern void _ZN15QPauseAnimation11setDurationEi(void* qthis, int arg0);
+extern void _ZN15QPauseAnimation11setDurationEi(void* qthis, int32_t arg0);
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
 extern void* dector_ZN15QPauseAnimationC1EP7QObject(void* arg0);
 extern void _ZN15QPauseAnimationC1EP7QObject(void* qthis, void* arg0);
   // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
-extern void* dector_ZN15QPauseAnimationC1EiP7QObject(int arg0, void* arg1);
-extern void _ZN15QPauseAnimationC1EiP7QObject(void* qthis, int arg0, void* arg1);
+extern void* dector_ZN15QPauseAnimationC1EiP7QObject(int32_t arg0, void* arg1);
+extern void _ZN15QPauseAnimationC1EiP7QObject(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QPauseAnimation::duration();
 extern void _ZNK15QPauseAnimation8durationEv(void* qthis);
   // proto:  const QMetaObject * QPauseAnimation::metaObject();
@@ -64,7 +64,7 @@ func init() {
 // class sizeof(QPauseAnimation)=1
 type QPauseAnimation struct {
   /*qbase*/ QAbstractAnimation;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPauseAnimation::QPauseAnimation(const QPauseAnimation & );

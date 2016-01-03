@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.go
 //
@@ -49,9 +49,9 @@ extern void _ZNK4QUrl10isParentOfERKS_(void* qthis, void* arg0);
   // proto:  QString QUrl::errorString();
 extern void _ZNK4QUrl11errorStringEv(void* qthis);
   // proto:  int QUrl::port(int defaultPort);
-extern void _ZNK4QUrl4portEi(void* qthis, int arg0);
+extern void _ZNK4QUrl4portEi(void* qthis, int32_t arg0);
   // proto:  void QUrl::setPort(int port);
-extern void _ZN4QUrl7setPortEi(void* qthis, int arg0);
+extern void _ZN4QUrl7setPortEi(void* qthis, int32_t arg0);
   // proto:  void QUrl::QUrl(const QUrl & copy);
 extern void* dector_ZN4QUrlC1ERKS_(void* arg0);
 extern void _ZN4QUrlC1ERKS_(void* qthis, void* arg0);
@@ -109,7 +109,7 @@ func init() {
 // class sizeof(QUrl)=8
 type QUrl struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QUrl::isLocalFile();

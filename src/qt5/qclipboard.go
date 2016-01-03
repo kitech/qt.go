@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QClipboard)=1
 type QClipboard struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _changed QClipboard_changed_signal;
 //  _findBufferChanged QClipboard_findBufferChanged_signal;
 //  _selectionChanged QClipboard_selectionChanged_signal;

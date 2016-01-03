@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qopenglwidget.h
 // dst-file: /src/widgets/qopenglwidget.go
 //
@@ -70,7 +70,7 @@ func init() {
 // class sizeof(QOpenGLWidget)=1
 type QOpenGLWidget struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToResize QOpenGLWidget_aboutToResize_signal;
 //  _resized QOpenGLWidget_resized_signal;
 //  _frameSwapped QOpenGLWidget_frameSwapped_signal;

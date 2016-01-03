@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -33,9 +33,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, unsigned long arg1);
+extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, unsigned long arg1);
+extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QWaitCondition::wakeAll();
 extern void _ZN14QWaitCondition7wakeAllEv(void* qthis);
   // proto:  void QWaitCondition::wakeOne();
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QWaitCondition)=8
 type QWaitCondition struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);

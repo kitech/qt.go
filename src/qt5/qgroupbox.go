@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -59,7 +59,7 @@ extern void _ZN9QGroupBoxC1ERKS_(void* qthis, void* arg0);
   // proto:  QString QGroupBox::title();
 extern void _ZNK9QGroupBox5titleEv(void* qthis);
   // proto:  void QGroupBox::setAlignment(int alignment);
-extern void _ZN9QGroupBox12setAlignmentEi(void* qthis, int arg0);
+extern void _ZN9QGroupBox12setAlignmentEi(void* qthis, int32_t arg0);
   // proto:  void QGroupBox::setTitle(const QString & title);
 extern void _ZN9QGroupBox8setTitleERK7QString(void* qthis, void* arg0);
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
@@ -80,7 +80,7 @@ func init() {
 // class sizeof(QGroupBox)=1
 type QGroupBox struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _clicked QGroupBox_clicked_signal;
 //  _toggled QGroupBox_toggled_signal;
 }
@@ -119,7 +119,7 @@ func (this *QGroupBox) setCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBox12setCheckableEb
     // invoke: void setCheckable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGroupBox12setCheckableEb(this.qclsinst, arg0)
   default:
@@ -202,7 +202,7 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBox7setFlatEb
     // invoke: void setFlat(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGroupBox7setFlatEb(this.qclsinst, arg0)
   default:
@@ -264,7 +264,7 @@ func (this *QGroupBox) setChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGroupBox10setCheckedEb
     // invoke: void setChecked(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGroupBox10setCheckedEb(this.qclsinst, arg0)
   default:

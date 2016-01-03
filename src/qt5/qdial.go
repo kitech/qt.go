@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QDial)=1
 type QDial struct {
   /*qbase*/ QAbstractSlider;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QDial::wrapping();
@@ -189,7 +189,7 @@ func (this *QDial) setWrapping(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDial11setWrappingEb
     // invoke: void setWrapping(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QDial11setWrappingEb(this.qclsinst, arg0)
   default:
@@ -232,7 +232,7 @@ func (this *QDial) setNotchesVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QDial17setNotchesVisibleEb
     // invoke: void setNotchesVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QDial17setNotchesVisibleEb(this.qclsinst, arg0)
   default:

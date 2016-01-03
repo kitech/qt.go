@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -69,7 +69,7 @@ func init() {
 // class sizeof(QFileSystemWatcher)=1
 type QFileSystemWatcher struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _directoryChanged QFileSystemWatcher_directoryChanged_signal;
 //  _fileChanged QFileSystemWatcher_fileChanged_signal;
 }

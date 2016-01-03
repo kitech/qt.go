@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -44,14 +44,14 @@ extern void _ZNK13QSignalMapper10metaObjectEv(void* qthis);
   // proto:  void QSignalMapper::setMapping(QObject * sender, QObject * object);
 extern void _ZN13QSignalMapper10setMappingEP7QObjectS1_(void* qthis, void* arg0, void* arg1);
   // proto:  QObject * QSignalMapper::mapping(int id);
-extern void _ZNK13QSignalMapper7mappingEi(void* qthis, int arg0);
+extern void _ZNK13QSignalMapper7mappingEi(void* qthis, int32_t arg0);
   // proto:  void QSignalMapper::QSignalMapper(QObject * parent);
 extern void* dector_ZN13QSignalMapperC1EP7QObject(void* arg0);
 extern void _ZN13QSignalMapperC1EP7QObject(void* qthis, void* arg0);
   // proto:  void QSignalMapper::~QSignalMapper();
 extern void _ZN13QSignalMapperD0Ev(void* qthis);
   // proto:  void QSignalMapper::setMapping(QObject * sender, int id);
-extern void _ZN13QSignalMapper10setMappingEP7QObjecti(void* qthis, void* arg0, int arg1);
+extern void _ZN13QSignalMapper10setMappingEP7QObjecti(void* qthis, void* arg0, int32_t arg1);
   // proto:  QObject * QSignalMapper::mapping(const QString & text);
 extern void _ZNK13QSignalMapper7mappingERK7QString(void* qthis, void* arg0);
   // proto:  void QSignalMapper::map();
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QSignalMapper)=1
 type QSignalMapper struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _mapped QSignalMapper_mapped_signal;
 }
 

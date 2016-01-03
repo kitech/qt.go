@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -47,7 +47,7 @@ extern void _ZN5QFile6renameERK7QStringS2_(void* arg0, void* arg1);
   // proto:  bool QFile::link(const QString & newName);
 extern void _ZN5QFile4linkERK7QString(void* qthis, void* arg0);
   // proto: static bool QFile::resize(const QString & filename, qint64 sz);
-extern void _ZN5QFile6resizeERK7QStringx(void* arg0, long long arg1);
+extern void _ZN5QFile6resizeERK7QStringx(void* arg0, int64_t arg1);
   // proto: static bool QFile::exists(const QString & fileName);
 extern void _ZN5QFile6existsERK7QString(void* arg0);
   // proto:  void QFile::~QFile();
@@ -61,7 +61,7 @@ extern void _ZNK5QFile6existsEv(void* qthis);
   // proto:  qint64 QFile::size();
 extern void _ZNK5QFile4sizeEv(void* qthis);
   // proto:  bool QFile::resize(qint64 sz);
-extern void _ZN5QFile6resizeEx(void* qthis, long long arg0);
+extern void _ZN5QFile6resizeEx(void* qthis, int64_t arg0);
   // proto:  void QFile::QFile(const QFile & );
 extern void* dector_ZN5QFileC1ERKS_(void* arg0);
 extern void _ZN5QFileC1ERKS_(void* qthis, void* arg0);
@@ -74,13 +74,13 @@ extern void _ZN5QFile4copyERK7QString(void* qthis, void* arg0);
   // proto: static QByteArray QFile::encodeName(const QString & fileName);
 extern void demth_ZN5QFile10encodeNameERK7QString(void* arg0);
   // proto: static QString QFile::decodeName(const QByteArray & localFileName);
-extern void _ZN5QFile10decodeNameERK10QByteArray(void* arg0);
+extern void demth_ZN5QFile10decodeNameERK10QByteArray(void* arg0);
   // proto:  bool QFile::rename(const QString & newName);
 extern void _ZN5QFile6renameERK7QString(void* qthis, void* arg0);
   // proto:  QString QFile::fileName();
 extern void _ZNK5QFile8fileNameEv(void* qthis);
   // proto: static QString QFile::decodeName(const char * localFileName);
-extern void demth_ZN5QFile10decodeNameEPKc(char* arg0);
+extern void demth_ZN5QFile10decodeNameEPKc(unsigned char* arg0);
   // proto:  const QMetaObject * QFile::metaObject();
 extern void _ZNK5QFile10metaObjectEv(void* qthis);
   // proto:  void QFile::QFile(const QString & name, QObject * parent);
@@ -110,7 +110,7 @@ func init() {
 // class sizeof(QFile)=1
 type QFile struct {
   /*qbase*/ QFileDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QString QFile::symLinkTarget();

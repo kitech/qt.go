@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qpushbutton.h
 // dst-file: /src/widgets/qpushbutton.go
 //
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QPushButton)=1
 type QPushButton struct {
   /*qbase*/ QAbstractButton;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPushButton::setMenu(QMenu * menu);
@@ -125,7 +125,7 @@ func (this *QPushButton) setFlat(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButton7setFlatEb
     // invoke: void setFlat(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QPushButton7setFlatEb(this.qclsinst, arg0)
   default:
@@ -148,7 +148,7 @@ func (this *QPushButton) setAutoDefault(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButton14setAutoDefaultEb
     // invoke: void setAutoDefault(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QPushButton14setAutoDefaultEb(this.qclsinst, arg0)
   default:
@@ -191,7 +191,7 @@ func (this *QPushButton) setDefault(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QPushButton10setDefaultEb
     // invoke: void setDefault(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QPushButton10setDefaultEb(this.qclsinst, arg0)
   default:

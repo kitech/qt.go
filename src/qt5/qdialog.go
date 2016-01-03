@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -37,13 +37,13 @@ extern void _ZN7QDialog12setExtensionEP7QWidget(void* qthis, void* arg0);
   // proto:  int QDialog::result();
 extern void _ZNK7QDialog6resultEv(void* qthis);
   // proto:  void QDialog::done(int );
-extern void _ZN7QDialog4doneEi(void* qthis, int arg0);
+extern void _ZN7QDialog4doneEi(void* qthis, int32_t arg0);
   // proto:  void QDialog::open();
 extern void _ZN7QDialog4openEv(void* qthis);
   // proto:  void QDialog::~QDialog();
 extern void _ZN7QDialogD0Ev(void* qthis);
   // proto:  void QDialog::setResult(int r);
-extern void _ZN7QDialog9setResultEi(void* qthis, int arg0);
+extern void _ZN7QDialog9setResultEi(void* qthis, int32_t arg0);
   // proto:  void QDialog::setSizeGripEnabled(bool );
 extern void _ZN7QDialog18setSizeGripEnabledEb(void* qthis, bool arg0);
   // proto:  void QDialog::showExtension(bool );
@@ -86,7 +86,7 @@ func init() {
 // class sizeof(QDialog)=1
 type QDialog struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _finished QDialog_finished_signal;
 //  _accepted QDialog_accepted_signal;
 //  _rejected QDialog_rejected_signal;
@@ -229,7 +229,7 @@ func (this *QDialog) setSizeGripEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog18setSizeGripEnabledEb
     // invoke: void setSizeGripEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QDialog18setSizeGripEnabledEb(this.qclsinst, arg0)
   default:
@@ -252,7 +252,7 @@ func (this *QDialog) showExtension(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog13showExtensionEb
     // invoke: void showExtension(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QDialog13showExtensionEb(this.qclsinst, arg0)
   default:
@@ -355,7 +355,7 @@ func (this *QDialog) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QDialog10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -463,7 +463,7 @@ func (this *QDialog) setModal(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog8setModalEb
     // invoke: void setModal(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QDialog8setModalEb(this.qclsinst, arg0)
   default:

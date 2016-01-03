@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -47,7 +47,7 @@ extern void _ZN12QPixmapCache4findERK7QStringP7QPixmap(void* arg0, void* arg1);
   // proto: static void QPixmapCache::remove(const QString & key);
 extern void _ZN12QPixmapCache6removeERK7QString(void* arg0);
   // proto: static void QPixmapCache::setCacheLimit(int );
-extern void _ZN12QPixmapCache13setCacheLimitEi(int arg0);
+extern void _ZN12QPixmapCache13setCacheLimitEi(int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QPixmapCache)=1
 type QPixmapCache struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static int QPixmapCache::cacheLimit();

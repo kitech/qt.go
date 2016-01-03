@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -40,7 +40,7 @@ extern void demth_ZNK10QJsonValue8isDoubleEv(void* qthis);
 extern void* dector_ZN10QJsonValueC1ERK7QString(void* arg0);
 extern void _ZN10QJsonValueC1ERK7QString(void* qthis, void* arg0);
   // proto:  int QJsonValue::toInt(int defaultValue);
-extern void _ZNK10QJsonValue5toIntEi(void* qthis, int arg0);
+extern void _ZNK10QJsonValue5toIntEi(void* qthis, int32_t arg0);
   // proto:  void QJsonValue::QJsonValue(const void * );
 extern void* dector_ZN10QJsonValueC1EPKv(void* arg0);
 extern void demth_ZN10QJsonValueC1EPKv(void* qthis, void* arg0);
@@ -49,8 +49,8 @@ extern void _ZNK10QJsonValue7toArrayEv(void* qthis);
   // proto:  bool QJsonValue::isArray();
 extern void demth_ZNK10QJsonValue7isArrayEv(void* qthis);
   // proto:  void QJsonValue::QJsonValue(const char * s);
-extern void* dector_ZN10QJsonValueC1EPKc(char* arg0);
-extern void demth_ZN10QJsonValueC1EPKc(void* qthis, char* arg0);
+extern void* dector_ZN10QJsonValueC1EPKc(unsigned char* arg0);
+extern void demth_ZN10QJsonValueC1EPKc(void* qthis, unsigned char* arg0);
   // proto:  QString QJsonValue::toString(const QString & defaultValue);
 extern void _ZNK10QJsonValue8toStringERK7QString(void* qthis, void* arg0);
   // proto:  double QJsonValue::toDouble(double defaultValue);
@@ -80,11 +80,11 @@ extern void demth_ZNK10QJsonValue6isNullEv(void* qthis);
   // proto:  bool QJsonValue::isString();
 extern void demth_ZNK10QJsonValue8isStringEv(void* qthis);
   // proto:  void QJsonValue::QJsonValue(int n);
-extern void* dector_ZN10QJsonValueC1Ei(int arg0);
-extern void _ZN10QJsonValueC1Ei(void* qthis, int arg0);
+extern void* dector_ZN10QJsonValueC1Ei(int32_t arg0);
+extern void _ZN10QJsonValueC1Ei(void* qthis, int32_t arg0);
   // proto:  void QJsonValue::QJsonValue(qint64 n);
-extern void* dector_ZN10QJsonValueC1Ex(long long arg0);
-extern void _ZN10QJsonValueC1Ex(void* qthis, long long arg0);
+extern void* dector_ZN10QJsonValueC1Ex(int64_t arg0);
+extern void _ZN10QJsonValueC1Ex(void* qthis, int64_t arg0);
   // proto:  QJsonArray QJsonValueRef::toArray();
 extern void _ZNK13QJsonValueRef7toArrayEv(void* qthis);
   // proto:  QJsonObject QJsonValueRef::toObject();
@@ -112,7 +112,7 @@ extern void demth_ZNK13QJsonValueRef8isStringEv(void* qthis);
   // proto:  QString QJsonValueRef::toString();
 extern void demth_ZNK13QJsonValueRef8toStringEv(void* qthis);
   // proto:  int QJsonValueRef::toInt(int defaultValue);
-extern void demth_ZNK13QJsonValueRef5toIntEi(void* qthis, int arg0);
+extern void demth_ZNK13QJsonValueRef5toIntEi(void* qthis, int32_t arg0);
   // proto:  bool QJsonValueRef::isArray();
 extern void demth_ZNK13QJsonValueRef7isArrayEv(void* qthis);
   // proto:  bool QJsonValueRef::isNull();
@@ -136,25 +136,25 @@ func init() {
 // class sizeof(QJsonValueRefPtr)=16
 type QJsonValueRefPtr struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValuePtr)=24
 type QJsonValuePtr struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValue)=24
 type QJsonValue struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonValueRef)=16
 type QJsonValueRef struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QJsonObject QJsonValue::toObject();
@@ -399,7 +399,7 @@ func (this *QJsonValue) toBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue6toBoolEb
     // invoke: bool toBool(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZNK10QJsonValue6toBoolEb(this.qclsinst, arg0)
   default:
@@ -613,7 +613,7 @@ func (this *QJsonValueRef) toBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef6toBoolEb
     // invoke: bool toBool(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
   case 1:

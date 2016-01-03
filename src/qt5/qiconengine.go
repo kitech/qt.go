@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -39,9 +39,7 @@ extern void _ZNK11QIconEngine8iconNameEv(void* qthis);
   // proto:  bool QIconEngine::write(QDataStream & out);
 extern void _ZNK11QIconEngine5writeER11QDataStream(void* qthis, void* arg0);
   // proto:  void QIconEngine::virtual_hook(int id, void * data);
-extern void _ZN11QIconEngine12virtual_hookEiPv(void* qthis, int arg0, void* arg1);
-  // proto:  QIconEngine * QIconEngine::clone();
-extern void _ZNK11QIconEngine5cloneEv(void* qthis);
+extern void _ZN11QIconEngine12virtual_hookEiPv(void* qthis, int32_t arg0, void* arg1);
   // proto:  QString QIconEngine::key();
 extern void _ZNK11QIconEngine3keyEv(void* qthis);
   // proto:  void QIconEngine::~QIconEngine();
@@ -61,7 +59,7 @@ func init() {
 // class sizeof(QIconEngine)=8
 type QIconEngine struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QIconEngine::read(QDataStream & in);
@@ -152,26 +150,6 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
     C._ZN11QIconEngine12virtual_hookEiPv(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QIconEngine", "virtual_hook", args)
-  }
-
-}
-
-  // proto:  QIconEngine * QIconEngine::clone();
-func (this *QIconEngine) clone(args ...interface{}) () {
-  // clone()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QIconEngine5cloneEv
-    // invoke: QIconEngine * clone()
-    C._ZNK11QIconEngine5cloneEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QIconEngine", "clone", args)
   }
 
 }

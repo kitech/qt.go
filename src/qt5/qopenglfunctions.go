@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglfunctions.h
 // dst-file: /src/gui/qopenglfunctions.go
 //
@@ -36,299 +36,299 @@ import "qtrt"
 extern void* dector_ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(void* arg0);
 extern void _ZN23QOpenGLFunctionsPrivateC1EP14QOpenGLContext(void* qthis, void* arg0);
   // proto:  void QOpenGLFunctions::glBindAttribLocation(GLuint program, GLuint index, const char * name);
-extern void demth_ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc(void* qthis, unsigned int arg0, unsigned int arg1, char* arg2);
+extern void demth_ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2);
   // proto:  void QOpenGLFunctions::glGenFramebuffers(GLsizei n, GLuint * framebuffers);
-extern void demth_ZN16QOpenGLFunctions17glGenFramebuffersEiPj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions17glGenFramebuffersEiPj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glUniform3iv(GLint location, GLsizei count, const GLint * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform3ivEiiPKi(void* qthis, int arg0, int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform3ivEiiPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glVertexAttrib4fv(GLuint indx, const GLfloat * values);
-extern void demth_ZN16QOpenGLFunctions17glVertexAttrib4fvEjPKf(void* qthis, unsigned int arg0, float* arg1);
+extern void demth_ZN16QOpenGLFunctions17glVertexAttrib4fvEjPKf(void* qthis, int32_t arg0, float* arg1);
   // proto:  GLboolean QOpenGLFunctions::glIsBuffer(GLuint buffer);
-extern void demth_ZN16QOpenGLFunctions10glIsBufferEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions10glIsBufferEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glLineWidth(GLfloat width);
 extern void demth_ZN16QOpenGLFunctions11glLineWidthEf(void* qthis, float arg0);
   // proto:  void QOpenGLFunctions::glCompressedTexImage2D(GLenum target, GLint level, GLenum internalformat, GLsizei width, GLsizei height, GLint border, GLsizei imageSize, const void * data);
-extern void demth_ZN16QOpenGLFunctions22glCompressedTexImage2DEjijiiiiPKv(void* qthis, unsigned int arg0, int arg1, unsigned int arg2, int arg3, int arg4, int arg5, int arg6, void* arg7);
+extern void demth_ZN16QOpenGLFunctions22glCompressedTexImage2DEjijiiiiPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, void* arg7);
   // proto:  void QOpenGLFunctions::glDepthRangef(GLclampf zNear, GLclampf zFar);
 extern void demth_ZN16QOpenGLFunctions13glDepthRangefEff(void* qthis, float arg0, float arg1);
   // proto:  void QOpenGLFunctions::glVertexAttrib1fv(GLuint indx, const GLfloat * values);
-extern void demth_ZN16QOpenGLFunctions17glVertexAttrib1fvEjPKf(void* qthis, unsigned int arg0, float* arg1);
+extern void demth_ZN16QOpenGLFunctions17glVertexAttrib1fvEjPKf(void* qthis, int32_t arg0, float* arg1);
   // proto:  void QOpenGLFunctions::glTexParameteriv(GLenum target, GLenum pname, const GLint * params);
-extern void demth_ZN16QOpenGLFunctions16glTexParameterivEjjPKi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions16glTexParameterivEjjPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLenum type, const GLvoid * pixels);
-extern void demth_ZN16QOpenGLFunctions15glTexSubImage2DEjiiiiijjPKv(void* qthis, unsigned int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, void* arg8);
+extern void demth_ZN16QOpenGLFunctions15glTexSubImage2DEjiiiiijjPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7, void* arg8);
   // proto:  void QOpenGLFunctions::glDeleteProgram(GLuint program);
-extern void demth_ZN16QOpenGLFunctions15glDeleteProgramEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions15glDeleteProgramEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glBlendEquationSeparate(GLenum modeRGB, GLenum modeAlpha);
-extern void demth_ZN16QOpenGLFunctions23glBlendEquationSeparateEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions23glBlendEquationSeparateEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glStencilMaskSeparate(GLenum face, GLuint mask);
-extern void demth_ZN16QOpenGLFunctions21glStencilMaskSeparateEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions21glStencilMaskSeparateEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glDrawArrays(GLenum mode, GLint first, GLsizei count);
-extern void demth_ZN16QOpenGLFunctions12glDrawArraysEjii(void* qthis, unsigned int arg0, int arg1, int arg2);
+extern void demth_ZN16QOpenGLFunctions12glDrawArraysEjii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QOpenGLFunctions::glFinish();
 extern void demth_ZN16QOpenGLFunctions8glFinishEv(void* qthis);
   // proto:  void QOpenGLFunctions::glGetVertexAttribPointerv(GLuint index, GLenum pname, void ** pointer);
-extern void demth_ZN16QOpenGLFunctions25glGetVertexAttribPointervEjjPPv(void* qthis, unsigned int arg0, unsigned int arg1, void* arg2);
+extern void demth_ZN16QOpenGLFunctions25glGetVertexAttribPointervEjjPPv(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QOpenGLFunctions::glActiveTexture(GLenum texture);
-extern void demth_ZN16QOpenGLFunctions15glActiveTextureEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions15glActiveTextureEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glFrontFace(GLenum mode);
-extern void demth_ZN16QOpenGLFunctions11glFrontFaceEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glFrontFaceEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glGetTexParameterfv(GLenum target, GLenum pname, GLfloat * params);
-extern void demth_ZN16QOpenGLFunctions19glGetTexParameterfvEjjPf(void* qthis, unsigned int arg0, unsigned int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions19glGetTexParameterfvEjjPf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glPixelStorei(GLenum pname, GLint param);
-extern void demth_ZN16QOpenGLFunctions13glPixelStoreiEji(void* qthis, unsigned int arg0, int arg1);
+extern void demth_ZN16QOpenGLFunctions13glPixelStoreiEji(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glCullFace(GLenum mode);
-extern void demth_ZN16QOpenGLFunctions10glCullFaceEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions10glCullFaceEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glGetShaderiv(GLuint shader, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions13glGetShaderivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions13glGetShaderivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glUniform4i(GLint location, GLint x, GLint y, GLint z, GLint w);
-extern void demth_ZN16QOpenGLFunctions11glUniform4iEiiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4);
+extern void demth_ZN16QOpenGLFunctions11glUniform4iEiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  void QOpenGLFunctions::glReadPixels(GLint x, GLint y, GLsizei width, GLsizei height, GLenum format, GLenum type, GLvoid * pixels);
-extern void demth_ZN16QOpenGLFunctions12glReadPixelsEiiiijjPv(void* qthis, int arg0, int arg1, int arg2, int arg3, unsigned int arg4, unsigned int arg5, void* arg6);
+extern void demth_ZN16QOpenGLFunctions12glReadPixelsEiiiijjPv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, void* arg6);
   // proto:  void QOpenGLFunctions::glTexParameteri(GLenum target, GLenum pname, GLint param);
-extern void demth_ZN16QOpenGLFunctions15glTexParameteriEjji(void* qthis, unsigned int arg0, unsigned int arg1, int arg2);
+extern void demth_ZN16QOpenGLFunctions15glTexParameteriEjji(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QOpenGLFunctions::glGetVertexAttribiv(GLuint index, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions19glGetVertexAttribivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions19glGetVertexAttribivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glClearColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 extern void demth_ZN16QOpenGLFunctions12glClearColorEffff(void* qthis, float arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLFunctions::glClearDepthf(GLclampf depth);
 extern void demth_ZN16QOpenGLFunctions13glClearDepthfEf(void* qthis, float arg0);
   // proto:  void QOpenGLFunctions::glUniform2i(GLint location, GLint x, GLint y);
-extern void demth_ZN16QOpenGLFunctions11glUniform2iEiii(void* qthis, int arg0, int arg1, int arg2);
+extern void demth_ZN16QOpenGLFunctions11glUniform2iEiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QOpenGLFunctions::glGenerateMipmap(GLenum target);
-extern void demth_ZN16QOpenGLFunctions16glGenerateMipmapEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions16glGenerateMipmapEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glCompressedTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLsizei width, GLsizei height, GLenum format, GLsizei imageSize, const void * data);
-extern void demth_ZN16QOpenGLFunctions25glCompressedTexSubImage2DEjiiiiijiPKv(void* qthis, unsigned int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, unsigned int arg6, int arg7, void* arg8);
+extern void demth_ZN16QOpenGLFunctions25glCompressedTexSubImage2DEjiiiiijiPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7, void* arg8);
   // proto:  void QOpenGLFunctions::glUniform3i(GLint location, GLint x, GLint y, GLint z);
-extern void demth_ZN16QOpenGLFunctions11glUniform3iEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN16QOpenGLFunctions11glUniform3iEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glGenTextures(GLsizei n, GLuint * textures);
-extern void demth_ZN16QOpenGLFunctions13glGenTexturesEiPj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions13glGenTexturesEiPj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glGetShaderPrecisionFormat(GLenum shadertype, GLenum precisiontype, GLint * range, GLint * precision);
-extern void demth_ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2, int* arg3);
+extern void demth_ZN16QOpenGLFunctions26glGetShaderPrecisionFormatEjjPiS0_(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3);
   // proto:  void QOpenGLFunctions::~QOpenGLFunctions();
 extern void _ZN16QOpenGLFunctionsD0Ev(void* qthis);
   // proto:  void QOpenGLFunctions::glUniform4fv(GLint location, GLsizei count, const GLfloat * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform4fvEiiPKf(void* qthis, int arg0, int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform4fvEiiPKf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glGetProgramiv(GLuint program, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions14glGetProgramivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions14glGetProgramivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glVertexAttrib2fv(GLuint indx, const GLfloat * values);
-extern void demth_ZN16QOpenGLFunctions17glVertexAttrib2fvEjPKf(void* qthis, unsigned int arg0, float* arg1);
+extern void demth_ZN16QOpenGLFunctions17glVertexAttrib2fvEjPKf(void* qthis, int32_t arg0, float* arg1);
   // proto:  void QOpenGLFunctions::glGetActiveAttrib(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name);
-extern void demth_ZN16QOpenGLFunctions17glGetActiveAttribEjjiPiS0_PjPc(void* qthis, unsigned int arg0, unsigned int arg1, int arg2, int* arg3, int* arg4, unsigned int* arg5, char* arg6);
+extern void demth_ZN16QOpenGLFunctions17glGetActiveAttribEjjiPiS0_PjPc(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t* arg3, int32_t* arg4, int32_t* arg5, unsigned char* arg6);
   // proto:  GLboolean QOpenGLFunctions::glIsRenderbuffer(GLuint renderbuffer);
-extern void demth_ZN16QOpenGLFunctions16glIsRenderbufferEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions16glIsRenderbufferEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glCopyTexSubImage2D(GLenum target, GLint level, GLint xoffset, GLint yoffset, GLint x, GLint y, GLsizei width, GLsizei height);
-extern void demth_ZN16QOpenGLFunctions19glCopyTexSubImage2DEjiiiiiii(void* qthis, unsigned int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
+extern void demth_ZN16QOpenGLFunctions19glCopyTexSubImage2DEjiiiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7);
   // proto:  void QOpenGLFunctions::glShaderSource(GLuint shader, GLsizei count, const char ** string, const GLint * length);
-extern void demth_ZN16QOpenGLFunctions14glShaderSourceEjiPPKcPKi(void* qthis, unsigned int arg0, int arg1, char* arg2, int* arg3);
+extern void demth_ZN16QOpenGLFunctions14glShaderSourceEjiPPKcPKi(void* qthis, int32_t arg0, int32_t arg1, unsigned char* arg2, int32_t* arg3);
   // proto:  void QOpenGLFunctions::glGetVertexAttribfv(GLuint index, GLenum pname, GLfloat * params);
-extern void demth_ZN16QOpenGLFunctions19glGetVertexAttribfvEjjPf(void* qthis, unsigned int arg0, unsigned int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions19glGetVertexAttribfvEjjPf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glDepthFunc(GLenum func);
-extern void demth_ZN16QOpenGLFunctions11glDepthFuncEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glDepthFuncEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glTexImage2D(GLenum target, GLint level, GLint internalformat, GLsizei width, GLsizei height, GLint border, GLenum format, GLenum type, const GLvoid * pixels);
-extern void demth_ZN16QOpenGLFunctions12glTexImage2DEjiiiiijjPKv(void* qthis, unsigned int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, unsigned int arg6, unsigned int arg7, void* arg8);
+extern void demth_ZN16QOpenGLFunctions12glTexImage2DEjiiiiijjPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7, void* arg8);
   // proto:  void QOpenGLFunctions::glDeleteFramebuffers(GLsizei n, const GLuint * framebuffers);
-extern void demth_ZN16QOpenGLFunctions20glDeleteFramebuffersEiPKj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions20glDeleteFramebuffersEiPKj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glHint(GLenum target, GLenum mode);
-extern void demth_ZN16QOpenGLFunctions6glHintEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions6glHintEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  GLint QOpenGLFunctions::glGetUniformLocation(GLuint program, const char * name);
-extern void demth_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(void* qthis, unsigned int arg0, char* arg1);
+extern void demth_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(void* qthis, int32_t arg0, unsigned char* arg1);
   // proto:  GLboolean QOpenGLFunctions::glIsFramebuffer(GLuint framebuffer);
-extern void demth_ZN16QOpenGLFunctions15glIsFramebufferEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions15glIsFramebufferEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glUniform1fv(GLint location, GLsizei count, const GLfloat * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform1fvEiiPKf(void* qthis, int arg0, int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform1fvEiiPKf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  const GLubyte * QOpenGLFunctions::glGetString(GLenum name);
-extern void demth_ZN16QOpenGLFunctions11glGetStringEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glGetStringEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glUniformMatrix2fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-extern void demth_ZN16QOpenGLFunctions18glUniformMatrix2fvEiihPKf(void* qthis, int arg0, int arg1, unsigned char arg2, float* arg3);
+extern void demth_ZN16QOpenGLFunctions18glUniformMatrix2fvEiihPKf(void* qthis, int32_t arg0, int32_t arg1, unsigned char arg2, float* arg3);
   // proto:  void QOpenGLFunctions::QOpenGLFunctions(QOpenGLContext * context);
 extern void* dector_ZN16QOpenGLFunctionsC1EP14QOpenGLContext(void* arg0);
 extern void _ZN16QOpenGLFunctionsC1EP14QOpenGLContext(void* qthis, void* arg0);
   // proto:  void QOpenGLFunctions::glUniformMatrix3fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-extern void demth_ZN16QOpenGLFunctions18glUniformMatrix3fvEiihPKf(void* qthis, int arg0, int arg1, unsigned char arg2, float* arg3);
+extern void demth_ZN16QOpenGLFunctions18glUniformMatrix3fvEiihPKf(void* qthis, int32_t arg0, int32_t arg1, unsigned char arg2, float* arg3);
   // proto:  void QOpenGLFunctions::glBindBuffer(GLenum target, GLuint buffer);
-extern void demth_ZN16QOpenGLFunctions12glBindBufferEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions12glBindBufferEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glUniform2f(GLint location, GLfloat x, GLfloat y);
-extern void demth_ZN16QOpenGLFunctions11glUniform2fEiff(void* qthis, int arg0, float arg1, float arg2);
+extern void demth_ZN16QOpenGLFunctions11glUniform2fEiff(void* qthis, int32_t arg0, float arg1, float arg2);
   // proto:  void QOpenGLFunctions::glUniform3fv(GLint location, GLsizei count, const GLfloat * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform3fvEiiPKf(void* qthis, int arg0, int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform3fvEiiPKf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glUniform2fv(GLint location, GLsizei count, const GLfloat * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform2fvEiiPKf(void* qthis, int arg0, int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform2fvEiiPKf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glGetRenderbufferParameteriv(GLenum target, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions28glGetRenderbufferParameterivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions28glGetRenderbufferParameterivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glGetBufferParameteriv(GLenum target, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions22glGetBufferParameterivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions22glGetBufferParameterivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glUniform1iv(GLint location, GLsizei count, const GLint * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform1ivEiiPKi(void* qthis, int arg0, int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform1ivEiiPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glBlendColor(GLclampf red, GLclampf green, GLclampf blue, GLclampf alpha);
 extern void demth_ZN16QOpenGLFunctions12glBlendColorEffff(void* qthis, float arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLFunctions::glDrawElements(GLenum mode, GLsizei count, GLenum type, const GLvoid * indices);
-extern void demth_ZN16QOpenGLFunctions14glDrawElementsEjijPKv(void* qthis, unsigned int arg0, int arg1, unsigned int arg2, void* arg3);
+extern void demth_ZN16QOpenGLFunctions14glDrawElementsEjijPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, void* arg3);
   // proto:  void QOpenGLFunctions::glBindFramebuffer(GLenum target, GLuint framebuffer);
-extern void demth_ZN16QOpenGLFunctions17glBindFramebufferEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions17glBindFramebufferEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  GLboolean QOpenGLFunctions::glIsProgram(GLuint program);
-extern void demth_ZN16QOpenGLFunctions11glIsProgramEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glIsProgramEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glBlendEquation(GLenum mode);
-extern void demth_ZN16QOpenGLFunctions15glBlendEquationEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions15glBlendEquationEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glShaderBinary(GLint n, const GLuint * shaders, GLenum binaryformat, const void * binary, GLint length);
-extern void demth_ZN16QOpenGLFunctions14glShaderBinaryEiPKjjPKvi(void* qthis, int arg0, unsigned int* arg1, unsigned int arg2, void* arg3, int arg4);
+extern void demth_ZN16QOpenGLFunctions14glShaderBinaryEiPKjjPKvi(void* qthis, int32_t arg0, int32_t* arg1, int32_t arg2, void* arg3, int32_t arg4);
   // proto:  void QOpenGLFunctions::glGetProgramInfoLog(GLuint program, GLsizei bufsize, GLsizei * length, char * infolog);
-extern void demth_ZN16QOpenGLFunctions19glGetProgramInfoLogEjiPiPc(void* qthis, unsigned int arg0, int arg1, int* arg2, char* arg3);
+extern void demth_ZN16QOpenGLFunctions19glGetProgramInfoLogEjiPiPc(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, unsigned char* arg3);
   // proto:  void QOpenGLFunctions::glDeleteBuffers(GLsizei n, const GLuint * buffers);
-extern void demth_ZN16QOpenGLFunctions15glDeleteBuffersEiPKj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions15glDeleteBuffersEiPKj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glScissor(GLint x, GLint y, GLsizei width, GLsizei height);
-extern void demth_ZN16QOpenGLFunctions9glScissorEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN16QOpenGLFunctions9glScissorEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glGenRenderbuffers(GLsizei n, GLuint * renderbuffers);
-extern void demth_ZN16QOpenGLFunctions18glGenRenderbuffersEiPj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions18glGenRenderbuffersEiPj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glVertexAttrib3f(GLuint indx, GLfloat x, GLfloat y, GLfloat z);
-extern void demth_ZN16QOpenGLFunctions16glVertexAttrib3fEjfff(void* qthis, unsigned int arg0, float arg1, float arg2, float arg3);
+extern void demth_ZN16QOpenGLFunctions16glVertexAttrib3fEjfff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3);
   // proto:  GLuint QOpenGLFunctions::glCreateProgram();
 extern void demth_ZN16QOpenGLFunctions15glCreateProgramEv(void* qthis);
   // proto:  void QOpenGLFunctions::glUniform4iv(GLint location, GLsizei count, const GLint * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform4ivEiiPKi(void* qthis, int arg0, int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform4ivEiiPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glEnable(GLenum cap);
-extern void demth_ZN16QOpenGLFunctions8glEnableEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions8glEnableEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glBindTexture(GLenum target, GLuint texture);
-extern void demth_ZN16QOpenGLFunctions13glBindTextureEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions13glBindTextureEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glTexParameterf(GLenum target, GLenum pname, GLfloat param);
-extern void demth_ZN16QOpenGLFunctions15glTexParameterfEjjf(void* qthis, unsigned int arg0, unsigned int arg1, float arg2);
+extern void demth_ZN16QOpenGLFunctions15glTexParameterfEjjf(void* qthis, int32_t arg0, int32_t arg1, float arg2);
   // proto:  void QOpenGLFunctions::glViewport(GLint x, GLint y, GLsizei width, GLsizei height);
-extern void demth_ZN16QOpenGLFunctions10glViewportEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN16QOpenGLFunctions10glViewportEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glSampleCoverage(GLclampf value, GLboolean invert);
 extern void demth_ZN16QOpenGLFunctions16glSampleCoverageEfh(void* qthis, float arg0, unsigned char arg1);
   // proto:  void QOpenGLFunctions::glFramebufferTexture2D(GLenum target, GLenum attachment, GLenum textarget, GLuint texture, GLint level);
-extern void demth_ZN16QOpenGLFunctions22glFramebufferTexture2DEjjjji(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3, int arg4);
+extern void demth_ZN16QOpenGLFunctions22glFramebufferTexture2DEjjjji(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  void QOpenGLFunctions::glVertexAttribPointer(GLuint indx, GLint size, GLenum type, GLboolean normalized, GLsizei stride, const void * ptr);
-extern void demth_ZN16QOpenGLFunctions21glVertexAttribPointerEjijhiPKv(void* qthis, unsigned int arg0, int arg1, unsigned int arg2, unsigned char arg3, int arg4, void* arg5);
+extern void demth_ZN16QOpenGLFunctions21glVertexAttribPointerEjijhiPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, unsigned char arg3, int32_t arg4, void* arg5);
   // proto:  void QOpenGLFunctions::glPolygonOffset(GLfloat factor, GLfloat units);
 extern void demth_ZN16QOpenGLFunctions15glPolygonOffsetEff(void* qthis, float arg0, float arg1);
   // proto:  GLuint QOpenGLFunctions::glCreateShader(GLenum type);
-extern void demth_ZN16QOpenGLFunctions14glCreateShaderEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions14glCreateShaderEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glGetShaderSource(GLuint shader, GLsizei bufsize, GLsizei * length, char * source);
-extern void demth_ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc(void* qthis, unsigned int arg0, int arg1, int* arg2, char* arg3);
+extern void demth_ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, unsigned char* arg3);
   // proto:  GLboolean QOpenGLFunctions::glIsTexture(GLuint texture);
-extern void demth_ZN16QOpenGLFunctions11glIsTextureEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glIsTextureEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glDeleteTextures(GLsizei n, const GLuint * textures);
-extern void demth_ZN16QOpenGLFunctions16glDeleteTexturesEiPKj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions16glDeleteTexturesEiPKj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glGetIntegerv(GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions13glGetIntegervEjPi(void* qthis, unsigned int arg0, int* arg1);
+extern void demth_ZN16QOpenGLFunctions13glGetIntegervEjPi(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glGetBooleanv(GLenum pname, GLboolean * params);
-extern void demth_ZN16QOpenGLFunctions13glGetBooleanvEjPh(void* qthis, unsigned int arg0, unsigned char* arg1);
+extern void demth_ZN16QOpenGLFunctions13glGetBooleanvEjPh(void* qthis, int32_t arg0, unsigned char* arg1);
   // proto:  void QOpenGLFunctions::glGetFloatv(GLenum pname, GLfloat * params);
-extern void demth_ZN16QOpenGLFunctions11glGetFloatvEjPf(void* qthis, unsigned int arg0, float* arg1);
+extern void demth_ZN16QOpenGLFunctions11glGetFloatvEjPf(void* qthis, int32_t arg0, float* arg1);
   // proto:  void QOpenGLFunctions::glDeleteRenderbuffers(GLsizei n, const GLuint * renderbuffers);
-extern void demth_ZN16QOpenGLFunctions21glDeleteRenderbuffersEiPKj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions21glDeleteRenderbuffersEiPKj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  GLenum QOpenGLFunctions::glGetError();
 extern void demth_ZN16QOpenGLFunctions10glGetErrorEv(void* qthis);
   // proto:  void QOpenGLFunctions::glDetachShader(GLuint program, GLuint shader);
-extern void demth_ZN16QOpenGLFunctions14glDetachShaderEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions14glDetachShaderEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glVertexAttrib2f(GLuint indx, GLfloat x, GLfloat y);
-extern void demth_ZN16QOpenGLFunctions16glVertexAttrib2fEjff(void* qthis, unsigned int arg0, float arg1, float arg2);
+extern void demth_ZN16QOpenGLFunctions16glVertexAttrib2fEjff(void* qthis, int32_t arg0, float arg1, float arg2);
   // proto:  void QOpenGLFunctions::glVertexAttrib1f(GLuint indx, GLfloat x);
-extern void demth_ZN16QOpenGLFunctions16glVertexAttrib1fEjf(void* qthis, unsigned int arg0, float arg1);
+extern void demth_ZN16QOpenGLFunctions16glVertexAttrib1fEjf(void* qthis, int32_t arg0, float arg1);
   // proto:  void QOpenGLFunctions::glGenBuffers(GLsizei n, GLuint * buffers);
-extern void demth_ZN16QOpenGLFunctions12glGenBuffersEiPj(void* qthis, int arg0, unsigned int* arg1);
+extern void demth_ZN16QOpenGLFunctions12glGenBuffersEiPj(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QOpenGLFunctions::glClearStencil(GLint s);
-extern void demth_ZN16QOpenGLFunctions14glClearStencilEi(void* qthis, int arg0);
+extern void demth_ZN16QOpenGLFunctions14glClearStencilEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glStencilMask(GLuint mask);
-extern void demth_ZN16QOpenGLFunctions13glStencilMaskEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions13glStencilMaskEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glGetShaderInfoLog(GLuint shader, GLsizei bufsize, GLsizei * length, char * infolog);
-extern void demth_ZN16QOpenGLFunctions18glGetShaderInfoLogEjiPiPc(void* qthis, unsigned int arg0, int arg1, int* arg2, char* arg3);
+extern void demth_ZN16QOpenGLFunctions18glGetShaderInfoLogEjiPiPc(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, unsigned char* arg3);
   // proto:  void QOpenGLFunctions::glReleaseShaderCompiler();
 extern void demth_ZN16QOpenGLFunctions23glReleaseShaderCompilerEv(void* qthis);
   // proto:  void QOpenGLFunctions::glDepthMask(GLboolean flag);
 extern void demth_ZN16QOpenGLFunctions11glDepthMaskEh(void* qthis, unsigned char arg0);
   // proto:  void QOpenGLFunctions::glGetFramebufferAttachmentParameteriv(GLenum target, GLenum attachment, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions37glGetFramebufferAttachmentParameterivEjjjPi(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, int* arg3);
+extern void demth_ZN16QOpenGLFunctions37glGetFramebufferAttachmentParameterivEjjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t* arg3);
   // proto:  void QOpenGLFunctions::glUniform1f(GLint location, GLfloat x);
-extern void demth_ZN16QOpenGLFunctions11glUniform1fEif(void* qthis, int arg0, float arg1);
+extern void demth_ZN16QOpenGLFunctions11glUniform1fEif(void* qthis, int32_t arg0, float arg1);
   // proto:  void QOpenGLFunctions::glGetAttachedShaders(GLuint program, GLsizei maxcount, GLsizei * count, GLuint * shaders);
-extern void demth_ZN16QOpenGLFunctions20glGetAttachedShadersEjiPiPj(void* qthis, unsigned int arg0, int arg1, int* arg2, unsigned int* arg3);
+extern void demth_ZN16QOpenGLFunctions20glGetAttachedShadersEjiPiPj(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3);
   // proto:  void QOpenGLFunctions::glStencilOp(GLenum fail, GLenum zfail, GLenum zpass);
-extern void demth_ZN16QOpenGLFunctions11glStencilOpEjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2);
+extern void demth_ZN16QOpenGLFunctions11glStencilOpEjjj(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QOpenGLFunctions::glStencilFunc(GLenum func, GLint ref, GLuint mask);
-extern void demth_ZN16QOpenGLFunctions13glStencilFuncEjij(void* qthis, unsigned int arg0, int arg1, unsigned int arg2);
+extern void demth_ZN16QOpenGLFunctions13glStencilFuncEjij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QOpenGLFunctions::glAttachShader(GLuint program, GLuint shader);
-extern void demth_ZN16QOpenGLFunctions14glAttachShaderEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions14glAttachShaderEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glDeleteShader(GLuint shader);
-extern void demth_ZN16QOpenGLFunctions14glDeleteShaderEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions14glDeleteShaderEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glCompileShader(GLuint shader);
-extern void demth_ZN16QOpenGLFunctions15glCompileShaderEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions15glCompileShaderEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glEnableVertexAttribArray(GLuint index);
-extern void demth_ZN16QOpenGLFunctions25glEnableVertexAttribArrayEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions25glEnableVertexAttribArrayEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glFramebufferRenderbuffer(GLenum target, GLenum attachment, GLenum renderbuffertarget, GLuint renderbuffer);
-extern void demth_ZN16QOpenGLFunctions25glFramebufferRenderbufferEjjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3);
+extern void demth_ZN16QOpenGLFunctions25glFramebufferRenderbufferEjjjj(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glColorMask(GLboolean red, GLboolean green, GLboolean blue, GLboolean alpha);
 extern void demth_ZN16QOpenGLFunctions11glColorMaskEhhhh(void* qthis, unsigned char arg0, unsigned char arg1, unsigned char arg2, unsigned char arg3);
   // proto:  GLboolean QOpenGLFunctions::glIsEnabled(GLenum cap);
-extern void demth_ZN16QOpenGLFunctions11glIsEnabledEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions11glIsEnabledEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glBindRenderbuffer(GLenum target, GLuint renderbuffer);
-extern void demth_ZN16QOpenGLFunctions18glBindRenderbufferEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions18glBindRenderbufferEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glVertexAttrib3fv(GLuint indx, const GLfloat * values);
-extern void demth_ZN16QOpenGLFunctions17glVertexAttrib3fvEjPKf(void* qthis, unsigned int arg0, float* arg1);
+extern void demth_ZN16QOpenGLFunctions17glVertexAttrib3fvEjPKf(void* qthis, int32_t arg0, float* arg1);
   // proto:  void QOpenGLFunctions::glBlendFunc(GLenum sfactor, GLenum dfactor);
-extern void demth_ZN16QOpenGLFunctions11glBlendFuncEjj(void* qthis, unsigned int arg0, unsigned int arg1);
+extern void demth_ZN16QOpenGLFunctions11glBlendFuncEjj(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glUniform3f(GLint location, GLfloat x, GLfloat y, GLfloat z);
-extern void demth_ZN16QOpenGLFunctions11glUniform3fEifff(void* qthis, int arg0, float arg1, float arg2, float arg3);
+extern void demth_ZN16QOpenGLFunctions11glUniform3fEifff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLFunctions::glVertexAttrib4f(GLuint indx, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void demth_ZN16QOpenGLFunctions16glVertexAttrib4fEjffff(void* qthis, unsigned int arg0, float arg1, float arg2, float arg3, float arg4);
+extern void demth_ZN16QOpenGLFunctions16glVertexAttrib4fEjffff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  GLint QOpenGLFunctions::glGetAttribLocation(GLuint program, const char * name);
-extern void demth_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(void* qthis, unsigned int arg0, char* arg1);
+extern void demth_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(void* qthis, int32_t arg0, unsigned char* arg1);
   // proto:  void QOpenGLFunctions::glUniform2iv(GLint location, GLsizei count, const GLint * v);
-extern void demth_ZN16QOpenGLFunctions12glUniform2ivEiiPKi(void* qthis, int arg0, int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions12glUniform2ivEiiPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glGetUniformiv(GLuint program, GLint location, GLint * params);
-extern void demth_ZN16QOpenGLFunctions14glGetUniformivEjiPi(void* qthis, unsigned int arg0, int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions14glGetUniformivEjiPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glBufferSubData(GLenum target, qopengl_GLintptr offset, qopengl_GLsizeiptr size, const void * data);
-extern void demth_ZN16QOpenGLFunctions15glBufferSubDataEjiiPKv(void* qthis, unsigned int arg0, int arg1, int arg2, void* arg3);
+extern void demth_ZN16QOpenGLFunctions15glBufferSubDataEjiiPKv(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, void* arg3);
   // proto:  void QOpenGLFunctions::glUseProgram(GLuint program);
-extern void demth_ZN16QOpenGLFunctions12glUseProgramEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions12glUseProgramEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glDisable(GLenum cap);
-extern void demth_ZN16QOpenGLFunctions9glDisableEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions9glDisableEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glUniform4f(GLint location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void demth_ZN16QOpenGLFunctions11glUniform4fEiffff(void* qthis, int arg0, float arg1, float arg2, float arg3, float arg4);
+extern void demth_ZN16QOpenGLFunctions11glUniform4fEiffff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  void QOpenGLFunctions::glStencilFuncSeparate(GLenum face, GLenum func, GLint ref, GLuint mask);
-extern void demth_ZN16QOpenGLFunctions21glStencilFuncSeparateEjjij(void* qthis, unsigned int arg0, unsigned int arg1, int arg2, unsigned int arg3);
+extern void demth_ZN16QOpenGLFunctions21glStencilFuncSeparateEjjij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glCopyTexImage2D(GLenum target, GLint level, GLenum internalformat, GLint x, GLint y, GLsizei width, GLsizei height, GLint border);
-extern void demth_ZN16QOpenGLFunctions16glCopyTexImage2DEjijiiiii(void* qthis, unsigned int arg0, int arg1, unsigned int arg2, int arg3, int arg4, int arg5, int arg6, int arg7);
+extern void demth_ZN16QOpenGLFunctions16glCopyTexImage2DEjijiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6, int32_t arg7);
   // proto:  void QOpenGLFunctions::glLinkProgram(GLuint program);
-extern void demth_ZN16QOpenGLFunctions13glLinkProgramEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions13glLinkProgramEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glBufferData(GLenum target, qopengl_GLsizeiptr size, const void * data, GLenum usage);
-extern void demth_ZN16QOpenGLFunctions12glBufferDataEjiPKvj(void* qthis, unsigned int arg0, int arg1, void* arg2, unsigned int arg3);
+extern void demth_ZN16QOpenGLFunctions12glBufferDataEjiPKvj(void* qthis, int32_t arg0, int32_t arg1, void* arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glGetUniformfv(GLuint program, GLint location, GLfloat * params);
-extern void demth_ZN16QOpenGLFunctions14glGetUniformfvEjiPf(void* qthis, unsigned int arg0, int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions14glGetUniformfvEjiPf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glRenderbufferStorage(GLenum target, GLenum internalformat, GLsizei width, GLsizei height);
-extern void demth_ZN16QOpenGLFunctions21glRenderbufferStorageEjjii(void* qthis, unsigned int arg0, unsigned int arg1, int arg2, int arg3);
+extern void demth_ZN16QOpenGLFunctions21glRenderbufferStorageEjjii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  GLboolean QOpenGLFunctions::glIsShader(GLuint shader);
-extern void demth_ZN16QOpenGLFunctions10glIsShaderEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions10glIsShaderEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::initializeOpenGLFunctions();
 extern void _ZN16QOpenGLFunctions25initializeOpenGLFunctionsEv(void* qthis);
   // proto:  void QOpenGLFunctions::glUniform1i(GLint location, GLint x);
-extern void demth_ZN16QOpenGLFunctions11glUniform1iEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN16QOpenGLFunctions11glUniform1iEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLFunctions::glBlendFuncSeparate(GLenum srcRGB, GLenum dstRGB, GLenum srcAlpha, GLenum dstAlpha);
-extern void demth_ZN16QOpenGLFunctions19glBlendFuncSeparateEjjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3);
+extern void demth_ZN16QOpenGLFunctions19glBlendFuncSeparateEjjjj(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glTexParameterfv(GLenum target, GLenum pname, const GLfloat * params);
-extern void demth_ZN16QOpenGLFunctions16glTexParameterfvEjjPKf(void* qthis, unsigned int arg0, unsigned int arg1, float* arg2);
+extern void demth_ZN16QOpenGLFunctions16glTexParameterfvEjjPKf(void* qthis, int32_t arg0, int32_t arg1, float* arg2);
   // proto:  void QOpenGLFunctions::glUniformMatrix4fv(GLint location, GLsizei count, GLboolean transpose, const GLfloat * value);
-extern void demth_ZN16QOpenGLFunctions18glUniformMatrix4fvEiihPKf(void* qthis, int arg0, int arg1, unsigned char arg2, float* arg3);
+extern void demth_ZN16QOpenGLFunctions18glUniformMatrix4fvEiihPKf(void* qthis, int32_t arg0, int32_t arg1, unsigned char arg2, float* arg3);
   // proto:  void QOpenGLFunctions::glValidateProgram(GLuint program);
-extern void demth_ZN16QOpenGLFunctions17glValidateProgramEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions17glValidateProgramEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::QOpenGLFunctions();
 extern void* dector_ZN16QOpenGLFunctionsC1Ev();
 extern void _ZN16QOpenGLFunctionsC1Ev(void* qthis);
   // proto:  void QOpenGLFunctions::glFlush();
 extern void demth_ZN16QOpenGLFunctions7glFlushEv(void* qthis);
   // proto:  GLenum QOpenGLFunctions::glCheckFramebufferStatus(GLenum target);
-extern void demth_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions24glCheckFramebufferStatusEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glStencilOpSeparate(GLenum face, GLenum fail, GLenum zfail, GLenum zpass);
-extern void demth_ZN16QOpenGLFunctions19glStencilOpSeparateEjjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3);
+extern void demth_ZN16QOpenGLFunctions19glStencilOpSeparateEjjjj(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFunctions::glGetTexParameteriv(GLenum target, GLenum pname, GLint * params);
-extern void demth_ZN16QOpenGLFunctions19glGetTexParameterivEjjPi(void* qthis, unsigned int arg0, unsigned int arg1, int* arg2);
+extern void demth_ZN16QOpenGLFunctions19glGetTexParameterivEjjPi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QOpenGLFunctions::glClear(GLbitfield mask);
-extern void demth_ZN16QOpenGLFunctions7glClearEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions7glClearEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFunctions::glGetActiveUniform(GLuint program, GLuint index, GLsizei bufsize, GLsizei * length, GLint * size, GLenum * type, char * name);
-extern void demth_ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc(void* qthis, unsigned int arg0, unsigned int arg1, int arg2, int* arg3, int* arg4, unsigned int* arg5, char* arg6);
+extern void demth_ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t* arg3, int32_t* arg4, int32_t* arg5, unsigned char* arg6);
   // proto:  void QOpenGLFunctions::glDisableVertexAttribArray(GLuint index);
-extern void demth_ZN16QOpenGLFunctions26glDisableVertexAttribArrayEj(void* qthis, unsigned int arg0);
+extern void demth_ZN16QOpenGLFunctions26glDisableVertexAttribArrayEj(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -344,13 +344,13 @@ func init() {
 // class sizeof(QOpenGLFunctionsPrivate)=1152
 type QOpenGLFunctionsPrivate struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions)=8
 type QOpenGLFunctions struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QOpenGLFunctionsPrivate::QOpenGLFunctionsPrivate(QOpenGLContext * ctx);
@@ -378,7 +378,7 @@ func (this *QOpenGLFunctions) glBindAttribLocation(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C.demth_ZN16QOpenGLFunctions20glBindAttribLocationEjjPKc(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -1500,7 +1500,7 @@ func (this *QOpenGLFunctions) glGetActiveAttrib(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = (*C.int32_t)(args[5].(*int32))
     if false {fmt.Println(arg5)}
-    var arg6 = C.CString(args[6].(string))
+    var arg6 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[6].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg6)}
     C.demth_ZN16QOpenGLFunctions17glGetActiveAttribEjjiPiS0_PjPc(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   default:
@@ -1597,7 +1597,7 @@ func (this *QOpenGLFunctions) glShaderSource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
@@ -1776,7 +1776,7 @@ func (this *QOpenGLFunctions) glGetUniformLocation(args ...interface{}) () {
     // invoke: GLint glGetUniformLocation(GLuint, const char *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C.demth_ZN16QOpenGLFunctions20glGetUniformLocationEjPKc(this.qclsinst, arg0, arg1)
   default:
@@ -1881,7 +1881,7 @@ func (this *QOpenGLFunctions) glUniformMatrix2fv(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.char(args[2].(byte))
+    var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
     var arg3 = (*C.float)(args[3].(*float32))
     if false {fmt.Println(arg3)}
@@ -1918,7 +1918,7 @@ func (this *QOpenGLFunctions) glUniformMatrix3fv(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.char(args[2].(byte))
+    var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
     var arg3 = (*C.float)(args[3].(*float32))
     if false {fmt.Println(arg3)}
@@ -2323,7 +2323,7 @@ func (this *QOpenGLFunctions) glGetProgramInfoLog(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     C.demth_ZN16QOpenGLFunctions19glGetProgramInfoLogEjiPiPc(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
@@ -2624,7 +2624,7 @@ func (this *QOpenGLFunctions) glSampleCoverage(args ...interface{}) () {
     // invoke: void glSampleCoverage(GLclampf, GLboolean)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.char(args[1].(byte))
+    var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     C.demth_ZN16QOpenGLFunctions16glSampleCoverageEfh(this.qclsinst, arg0, arg1)
   default:
@@ -2693,7 +2693,7 @@ func (this *QOpenGLFunctions) glVertexAttribPointer(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.char(args[3].(byte))
+    var arg3 = C.uchar(args[3].(byte))
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
@@ -2778,7 +2778,7 @@ func (this *QOpenGLFunctions) glGetShaderSource(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     C.demth_ZN16QOpenGLFunctions17glGetShaderSourceEjiPiPc(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
@@ -2879,7 +2879,7 @@ func (this *QOpenGLFunctions) glGetBooleanv(args ...interface{}) () {
     // invoke: void glGetBooleanv(GLenum, GLboolean *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C.demth_ZN16QOpenGLFunctions13glGetBooleanvEjPh(this.qclsinst, arg0, arg1)
   default:
@@ -3136,7 +3136,7 @@ func (this *QOpenGLFunctions) glGetShaderInfoLog(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     C.demth_ZN16QOpenGLFunctions18glGetShaderInfoLogEjiPiPc(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
@@ -3179,7 +3179,7 @@ func (this *QOpenGLFunctions) glDepthMask(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glDepthMaskEh
     // invoke: void glDepthMask(GLboolean)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C.demth_ZN16QOpenGLFunctions11glDepthMaskEh(this.qclsinst, arg0)
   default:
@@ -3480,13 +3480,13 @@ func (this *QOpenGLFunctions) glColorMask(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QOpenGLFunctions11glColorMaskEhhhh
     // invoke: void glColorMask(GLboolean, GLboolean, GLboolean, GLboolean)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    var arg1 = C.char(args[1].(byte))
+    var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    var arg2 = C.char(args[2].(byte))
+    var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
-    var arg3 = C.char(args[3].(byte))
+    var arg3 = C.uchar(args[3].(byte))
     if false {fmt.Println(arg3)}
     C.demth_ZN16QOpenGLFunctions11glColorMaskEhhhh(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
@@ -3680,7 +3680,7 @@ func (this *QOpenGLFunctions) glGetAttribLocation(args ...interface{}) () {
     // invoke: GLint glGetAttribLocation(GLuint, const char *)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C.demth_ZN16QOpenGLFunctions19glGetAttribLocationEjPKc(this.qclsinst, arg0, arg1)
   default:
@@ -4203,7 +4203,7 @@ func (this *QOpenGLFunctions) glUniformMatrix4fv(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.char(args[2].(byte))
+    var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
     var arg3 = (*C.float)(args[3].(*float32))
     if false {fmt.Println(arg3)}
@@ -4396,7 +4396,7 @@ func (this *QOpenGLFunctions) glGetActiveUniform(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = (*C.int32_t)(args[5].(*int32))
     if false {fmt.Println(arg5)}
-    var arg6 = C.CString(args[6].(string))
+    var arg6 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[6].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg6)}
     C.demth_ZN16QOpenGLFunctions18glGetActiveUniformEjjiPiS0_PjPc(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdatawidgetmapper.h
 // dst-file: /src/widgets/qdatawidgetmapper.go
 //
@@ -38,15 +38,15 @@ extern void _ZN17QDataWidgetMapperC1ERKS_(void* qthis, void* arg0);
   // proto:  int QDataWidgetMapper::currentIndex();
 extern void _ZNK17QDataWidgetMapper12currentIndexEv(void* qthis);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section, const QByteArray & propertyName);
-extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgetiRK10QByteArray(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  QModelIndex QDataWidgetMapper::rootIndex();
 extern void _ZNK17QDataWidgetMapper9rootIndexEv(void* qthis);
   // proto:  void QDataWidgetMapper::setCurrentIndex(int index);
-extern void _ZN17QDataWidgetMapper15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN17QDataWidgetMapper15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  void QDataWidgetMapper::setModel(QAbstractItemModel * model);
 extern void _ZN17QDataWidgetMapper8setModelEP18QAbstractItemModel(void* qthis, void* arg0);
   // proto:  QWidget * QDataWidgetMapper::mappedWidgetAt(int section);
-extern void _ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int arg0);
+extern void _ZNK17QDataWidgetMapper14mappedWidgetAtEi(void* qthis, int32_t arg0);
   // proto:  void QDataWidgetMapper::removeMapping(QWidget * widget);
 extern void _ZN17QDataWidgetMapper13removeMappingEP7QWidget(void* qthis, void* arg0);
   // proto:  void QDataWidgetMapper::toFirst();
@@ -70,7 +70,7 @@ extern void _ZN17QDataWidgetMapper20setCurrentModelIndexERK11QModelIndex(void* q
   // proto:  void QDataWidgetMapper::~QDataWidgetMapper();
 extern void _ZN17QDataWidgetMapperD0Ev(void* qthis);
   // proto:  void QDataWidgetMapper::addMapping(QWidget * widget, int section);
-extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(void* qthis, void* arg0, int arg1);
+extern void _ZN17QDataWidgetMapper10addMappingEP7QWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QDataWidgetMapper::QDataWidgetMapper(QObject * parent);
 extern void* dector_ZN17QDataWidgetMapperC1EP7QObject(void* arg0);
 extern void _ZN17QDataWidgetMapperC1EP7QObject(void* qthis, void* arg0);
@@ -101,7 +101,7 @@ func init() {
 // class sizeof(QDataWidgetMapper)=1
 type QDataWidgetMapper struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentIndexChanged QDataWidgetMapper_currentIndexChanged_signal;
 }
 

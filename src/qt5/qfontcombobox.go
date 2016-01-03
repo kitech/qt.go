@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QFontComboBox)=1
 type QFontComboBox struct {
   /*qbase*/ QComboBox;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentFontChanged QFontComboBox_currentFontChanged_signal;
 }
 

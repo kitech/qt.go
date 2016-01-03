@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.go
 //
@@ -35,11 +35,11 @@ import "qtrt"
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
 extern void _ZN11QPageLayout14setRightMarginEd(void* qthis, double arg0);
   // proto:  void QPageLayout::swap(QPageLayout & other);
-extern void _ZN11QPageLayout4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN11QPageLayout4swapERS_(void* qthis, void* arg0);
   // proto:  QMargins QPageLayout::marginsPoints();
 extern void _ZNK11QPageLayout13marginsPointsEv(void* qthis);
   // proto:  QMargins QPageLayout::marginsPixels(int resolution);
-extern void _ZNK11QPageLayout13marginsPixelsEi(void* qthis, int arg0);
+extern void _ZNK11QPageLayout13marginsPixelsEi(void* qthis, int32_t arg0);
   // proto:  bool QPageLayout::isValid();
 extern void _ZNK11QPageLayout7isValidEv(void* qthis);
   // proto:  QRectF QPageLayout::fullRect();
@@ -69,13 +69,13 @@ extern void _ZN11QPageLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  void QPageLayout::~QPageLayout();
 extern void _ZN11QPageLayoutD0Ev(void* qthis);
   // proto:  QRect QPageLayout::fullRectPixels(int resolution);
-extern void _ZNK11QPageLayout14fullRectPixelsEi(void* qthis, int arg0);
+extern void _ZNK11QPageLayout14fullRectPixelsEi(void* qthis, int32_t arg0);
   // proto:  QMarginsF QPageLayout::margins();
 extern void _ZNK11QPageLayout7marginsEv(void* qthis);
   // proto:  QRect QPageLayout::paintRectPoints();
 extern void _ZNK11QPageLayout15paintRectPointsEv(void* qthis);
   // proto:  QRect QPageLayout::paintRectPixels(int resolution);
-extern void _ZNK11QPageLayout15paintRectPixelsEi(void* qthis, int arg0);
+extern void _ZNK11QPageLayout15paintRectPixelsEi(void* qthis, int32_t arg0);
   // proto:  void QPageLayout::setPageSize(const QPageSize & pageSize, const QMarginsF & minMargins);
 extern void _ZN11QPageLayout11setPageSizeERK9QPageSizeRK9QMarginsF(void* qthis, void* arg0, void* arg1);
   // proto:  QMarginsF QPageLayout::maximumMargins();
@@ -99,7 +99,7 @@ func init() {
 // class sizeof(QPageLayout)=1
 type QPageLayout struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QPageLayout::setRightMargin(qreal rightMargin);
@@ -141,7 +141,7 @@ func (this *QPageLayout) swap(args ...interface{}) () {
     // invoke: void swap(class QPageLayout &)
     var arg0 = args[0].(QPageLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QPageLayout4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN11QPageLayout4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPageLayout", "swap", args)
   }

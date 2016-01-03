@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qcollator.h
 // dst-file: /src/core/qcollator.go
 //
@@ -42,7 +42,7 @@ extern void _ZN9QCollator9setLocaleERK7QLocale(void* qthis, void* arg0);
   // proto:  void QCollator::setNumericMode(bool on);
 extern void _ZN9QCollator14setNumericModeEb(void* qthis, bool arg0);
   // proto:  int QCollator::compare(const QChar * s1, int len1, const QChar * s2, int len2);
-extern void _ZNK9QCollator7compareEPK5QChariS2_i(void* qthis, void* arg0, int arg1, void* arg2, int arg3);
+extern void _ZNK9QCollator7compareEPK5QChariS2_i(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3);
   // proto:  QCollatorSortKey QCollator::sortKey(const QString & string);
 extern void _ZNK9QCollator7sortKeyERK7QString(void* qthis, void* arg0);
   // proto:  int QCollator::compare(const QString & s1, const QString & s2);
@@ -57,13 +57,13 @@ extern void _ZN9QCollatorC1ERKS_(void* qthis, void* arg0);
   // proto:  QLocale QCollator::locale();
 extern void _ZNK9QCollator6localeEv(void* qthis);
   // proto:  void QCollator::swap(QCollator & other);
-extern void _ZN9QCollator4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QCollator4swapERS_(void* qthis, void* arg0);
   // proto:  void QCollator::setIgnorePunctuation(bool on);
 extern void _ZN9QCollator20setIgnorePunctuationEb(void* qthis, bool arg0);
   // proto:  void QCollatorSortKey::~QCollatorSortKey();
 extern void _ZN16QCollatorSortKeyD0Ev(void* qthis);
   // proto:  void QCollatorSortKey::swap(QCollatorSortKey & other);
-extern void _ZN16QCollatorSortKey4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN16QCollatorSortKey4swapERS_(void* qthis, void* arg0);
   // proto:  int QCollatorSortKey::compare(const QCollatorSortKey & key);
 extern void _ZNK16QCollatorSortKey7compareERKS_(void* qthis, void* arg0);
   // proto:  void QCollatorSortKey::QCollatorSortKey(const QCollatorSortKey & other);
@@ -87,13 +87,13 @@ func init() {
 // class sizeof(QCollator)=8
 type QCollator struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QCollatorSortKey)=1
 type QCollatorSortKey struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QCollator::numericMode();
@@ -158,7 +158,7 @@ func (this *QCollator) setNumericMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollator14setNumericModeEb
     // invoke: void setNumericMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QCollator14setNumericModeEb(this.qclsinst, arg0)
   default:
@@ -308,7 +308,7 @@ func (this *QCollator) swap(args ...interface{}) () {
     // invoke: void swap(class QCollator &)
     var arg0 = args[0].(QCollator).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QCollator4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QCollator4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollator", "swap", args)
   }
@@ -329,7 +329,7 @@ func (this *QCollator) setIgnorePunctuation(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QCollator20setIgnorePunctuationEb
     // invoke: void setIgnorePunctuation(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QCollator20setIgnorePunctuationEb(this.qclsinst, arg0)
   default:
@@ -368,7 +368,7 @@ func (this *QCollatorSortKey) swap(args ...interface{}) () {
     // invoke: void swap(class QCollatorSortKey &)
     var arg0 = args[0].(QCollatorSortKey).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN16QCollatorSortKey4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN16QCollatorSortKey4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCollatorSortKey", "swap", args)
   }

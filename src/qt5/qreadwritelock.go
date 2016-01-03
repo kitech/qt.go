@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.go
 //
@@ -60,11 +60,11 @@ extern void _ZN14QReadWriteLock15tryLockForWriteEv(void* qthis);
   // proto:  void QReadWriteLock::unlock();
 extern void _ZN14QReadWriteLock6unlockEv(void* qthis);
   // proto:  bool QReadWriteLock::tryLockForRead(int timeout);
-extern void _ZN14QReadWriteLock14tryLockForReadEi(void* qthis, int arg0);
+extern void _ZN14QReadWriteLock14tryLockForReadEi(void* qthis, int32_t arg0);
   // proto:  void QReadWriteLock::lockForRead();
 extern void _ZN14QReadWriteLock11lockForReadEv(void* qthis);
   // proto:  bool QReadWriteLock::tryLockForWrite(int timeout);
-extern void _ZN14QReadWriteLock15tryLockForWriteEi(void* qthis, int arg0);
+extern void _ZN14QReadWriteLock15tryLockForWriteEi(void* qthis, int32_t arg0);
   // proto:  QReadWriteLock * QReadLocker::readWriteLock();
 extern void demth_ZNK11QReadLocker13readWriteLockEv(void* qthis);
   // proto:  void QReadLocker::~QReadLocker();
@@ -94,19 +94,19 @@ func init() {
 // class sizeof(QWriteLocker)=4
 type QWriteLocker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QReadWriteLock)=8
 type QReadWriteLock struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QReadLocker)=4
 type QReadLocker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QReadWriteLock * QWriteLocker::readWriteLock();

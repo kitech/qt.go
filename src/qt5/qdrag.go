@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QDrag)=1
 type QDrag struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _targetChanged QDrag_targetChanged_signal;
 //  _actionChanged QDrag_actionChanged_signal;
 }

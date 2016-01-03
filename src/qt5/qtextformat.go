@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextformat.h
 // dst-file: /src/gui/qtextformat.go
 //
@@ -62,13 +62,13 @@ extern void demth_ZNK16QTextImageFormat6heightEv(void* qthis);
   // proto:  QTextBlockFormat QTextFormat::toBlockFormat();
 extern void _ZNK11QTextFormat13toBlockFormatEv(void* qthis);
   // proto:  QString QTextFormat::stringProperty(int propertyId);
-extern void _ZNK11QTextFormat14stringPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat14stringPropertyEi(void* qthis, int32_t arg0);
   // proto:  QVector<QTextLength> QTextFormat::lengthVectorProperty(int propertyId);
-extern void _ZNK11QTextFormat20lengthVectorPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat20lengthVectorPropertyEi(void* qthis, int32_t arg0);
   // proto:  int QTextFormat::objectIndex();
 extern void _ZNK11QTextFormat11objectIndexEv(void* qthis);
   // proto:  void QTextFormat::setObjectIndex(int object);
-extern void _ZN11QTextFormat14setObjectIndexEi(void* qthis, int arg0);
+extern void _ZN11QTextFormat14setObjectIndexEi(void* qthis, int32_t arg0);
   // proto:  void QTextFormat::clearForeground();
 extern void demth_ZN11QTextFormat15clearForegroundEv(void* qthis);
   // proto:  bool QTextFormat::isTableCellFormat();
@@ -81,41 +81,41 @@ extern void demth_ZNK11QTextFormat7isValidEv(void* qthis);
 extern void* dector_ZN11QTextFormatC1ERKS_(void* arg0);
 extern void _ZN11QTextFormatC1ERKS_(void* qthis, void* arg0);
   // proto:  QTextLength QTextFormat::lengthProperty(int propertyId);
-extern void _ZNK11QTextFormat14lengthPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat14lengthPropertyEi(void* qthis, int32_t arg0);
   // proto:  void QTextFormat::merge(const QTextFormat & other);
 extern void _ZN11QTextFormat5mergeERKS_(void* qthis, void* arg0);
   // proto:  QColor QTextFormat::colorProperty(int propertyId);
-extern void _ZNK11QTextFormat13colorPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat13colorPropertyEi(void* qthis, int32_t arg0);
   // proto:  void QTextFormat::QTextFormat();
 extern void* dector_ZN11QTextFormatC1Ev();
 extern void _ZN11QTextFormatC1Ev(void* qthis);
   // proto:  void QTextFormat::setForeground(const QBrush & brush);
 extern void demth_ZN11QTextFormat13setForegroundERK6QBrush(void* qthis, void* arg0);
   // proto:  bool QTextFormat::boolProperty(int propertyId);
-extern void _ZNK11QTextFormat12boolPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat12boolPropertyEi(void* qthis, int32_t arg0);
   // proto:  bool QTextFormat::isListFormat();
 extern void demth_ZNK11QTextFormat12isListFormatEv(void* qthis);
   // proto:  void QTextFormat::QTextFormat(int type);
-extern void* dector_ZN11QTextFormatC1Ei(int arg0);
-extern void _ZN11QTextFormatC1Ei(void* qthis, int arg0);
+extern void* dector_ZN11QTextFormatC1Ei(int32_t arg0);
+extern void _ZN11QTextFormatC1Ei(void* qthis, int32_t arg0);
   // proto:  bool QTextFormat::isImageFormat();
 extern void demth_ZNK11QTextFormat13isImageFormatEv(void* qthis);
   // proto:  void QTextFormat::clearProperty(int propertyId);
-extern void _ZN11QTextFormat13clearPropertyEi(void* qthis, int arg0);
+extern void _ZN11QTextFormat13clearPropertyEi(void* qthis, int32_t arg0);
   // proto:  QTextFrameFormat QTextFormat::toFrameFormat();
 extern void _ZNK11QTextFormat13toFrameFormatEv(void* qthis);
   // proto:  QBrush QTextFormat::brushProperty(int propertyId);
-extern void _ZNK11QTextFormat13brushPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat13brushPropertyEi(void* qthis, int32_t arg0);
   // proto:  int QTextFormat::propertyCount();
 extern void _ZNK11QTextFormat13propertyCountEv(void* qthis);
   // proto:  QPen QTextFormat::penProperty(int propertyId);
-extern void _ZNK11QTextFormat11penPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat11penPropertyEi(void* qthis, int32_t arg0);
   // proto:  QVariant QTextFormat::property(int propertyId);
-extern void _ZNK11QTextFormat8propertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat8propertyEi(void* qthis, int32_t arg0);
   // proto:  bool QTextFormat::isTableFormat();
 extern void demth_ZNK11QTextFormat13isTableFormatEv(void* qthis);
   // proto:  void QTextFormat::setProperty(int propertyId, const QVariant & value);
-extern void _ZN11QTextFormat11setPropertyEiRK8QVariant(void* qthis, int arg0, void* arg1);
+extern void _ZN11QTextFormat11setPropertyEiRK8QVariant(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QTextFormat::type();
 extern void _ZNK11QTextFormat4typeEv(void* qthis);
   // proto:  bool QTextFormat::isCharFormat();
@@ -127,17 +127,17 @@ extern void demth_ZNK11QTextFormat13isBlockFormatEv(void* qthis);
   // proto:  QBrush QTextFormat::background();
 extern void demth_ZNK11QTextFormat10backgroundEv(void* qthis);
   // proto:  qreal QTextFormat::doubleProperty(int propertyId);
-extern void _ZNK11QTextFormat14doublePropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat14doublePropertyEi(void* qthis, int32_t arg0);
   // proto:  void QTextFormat::swap(QTextFormat & other);
-extern void _ZN11QTextFormat4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN11QTextFormat4swapERS_(void* qthis, void* arg0);
   // proto:  QTextImageFormat QTextFormat::toImageFormat();
 extern void _ZNK11QTextFormat13toImageFormatEv(void* qthis);
   // proto:  bool QTextFormat::hasProperty(int propertyId);
-extern void _ZNK11QTextFormat11hasPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat11hasPropertyEi(void* qthis, int32_t arg0);
   // proto:  QBrush QTextFormat::foreground();
 extern void demth_ZNK11QTextFormat10foregroundEv(void* qthis);
   // proto:  void QTextFormat::setObjectType(int type);
-extern void demth_ZN11QTextFormat13setObjectTypeEi(void* qthis, int arg0);
+extern void demth_ZN11QTextFormat13setObjectTypeEi(void* qthis, int32_t arg0);
   // proto:  void QTextFormat::setBackground(const QBrush & brush);
 extern void demth_ZN11QTextFormat13setBackgroundERK6QBrush(void* qthis, void* arg0);
   // proto:  QTextTableFormat QTextFormat::toTableFormat();
@@ -145,7 +145,7 @@ extern void _ZNK11QTextFormat13toTableFormatEv(void* qthis);
   // proto:  bool QTextFormat::isFrameFormat();
 extern void demth_ZNK11QTextFormat13isFrameFormatEv(void* qthis);
   // proto:  int QTextFormat::intProperty(int propertyId);
-extern void _ZNK11QTextFormat11intPropertyEi(void* qthis, int arg0);
+extern void _ZNK11QTextFormat11intPropertyEi(void* qthis, int32_t arg0);
   // proto:  QTextCharFormat QTextFormat::toCharFormat();
 extern void _ZNK11QTextFormat12toCharFormatEv(void* qthis);
   // proto:  bool QTextFormat::isEmpty();
@@ -165,7 +165,7 @@ extern void demth_ZN16QTextBlockFormat13setTextIndentEd(void* qthis, double arg0
   // proto:  void QTextBlockFormat::setNonBreakableLines(bool b);
 extern void demth_ZN16QTextBlockFormat20setNonBreakableLinesEb(void* qthis, bool arg0);
   // proto:  void QTextBlockFormat::setIndent(int indent);
-extern void demth_ZN16QTextBlockFormat9setIndentEi(void* qthis, int arg0);
+extern void demth_ZN16QTextBlockFormat9setIndentEi(void* qthis, int32_t arg0);
   // proto:  qreal QTextBlockFormat::textIndent();
 extern void demth_ZNK16QTextBlockFormat10textIndentEv(void* qthis);
   // proto:  qreal QTextBlockFormat::lineHeight();
@@ -191,7 +191,7 @@ extern void demth_ZN16QTextBlockFormat12setTopMarginEd(void* qthis, double arg0)
   // proto:  qreal QTextBlockFormat::leftMargin();
 extern void demth_ZNK16QTextBlockFormat10leftMarginEv(void* qthis);
   // proto:  void QTextBlockFormat::setLineHeight(qreal height, int heightType);
-extern void demth_ZN16QTextBlockFormat13setLineHeightEdi(void* qthis, double arg0, int arg1);
+extern void demth_ZN16QTextBlockFormat13setLineHeightEdi(void* qthis, double arg0, int32_t arg1);
   // proto:  void QTextBlockFormat::setBottomMargin(qreal margin);
 extern void demth_ZN16QTextBlockFormat15setBottomMarginEd(void* qthis, double arg0);
   // proto:  int QTextBlockFormat::lineHeightType();
@@ -225,7 +225,7 @@ extern void demth_ZNK15QTextCharFormat16tableCellRowSpanEv(void* qthis);
   // proto:  void QTextCharFormat::setFontUnderline(bool underline);
 extern void demth_ZN15QTextCharFormat16setFontUnderlineEb(void* qthis, bool arg0);
   // proto:  bool QTextCharFormat::isValid();
-extern void _ZNK15QTextCharFormat7isValidEv(void* qthis);
+extern void demth_ZNK15QTextCharFormat7isValidEv(void* qthis);
   // proto:  bool QTextCharFormat::fontItalic();
 extern void demth_ZNK15QTextCharFormat10fontItalicEv(void* qthis);
   // proto:  void QTextCharFormat::setToolTip(const QString & tip);
@@ -233,7 +233,7 @@ extern void demth_ZN15QTextCharFormat10setToolTipERK7QString(void* qthis, void* 
   // proto:  void QTextCharFormat::setTextOutline(const QPen & pen);
 extern void demth_ZN15QTextCharFormat14setTextOutlineERK4QPen(void* qthis, void* arg0);
   // proto:  void QTextCharFormat::setTableCellRowSpan(int tableCellRowSpan);
-extern void demth_ZN15QTextCharFormat19setTableCellRowSpanEi(void* qthis, int arg0);
+extern void demth_ZN15QTextCharFormat19setTableCellRowSpanEi(void* qthis, int32_t arg0);
   // proto:  void QTextCharFormat::setAnchor(bool anchor);
 extern void demth_ZN15QTextCharFormat9setAnchorEb(void* qthis, bool arg0);
   // proto:  qreal QTextCharFormat::fontPointSize();
@@ -277,13 +277,13 @@ extern void demth_ZNK15QTextCharFormat10anchorHrefEv(void* qthis);
   // proto:  QString QTextCharFormat::anchorName();
 extern void _ZNK15QTextCharFormat10anchorNameEv(void* qthis);
   // proto:  void QTextCharFormat::setFontStretch(int factor);
-extern void demth_ZN15QTextCharFormat14setFontStretchEi(void* qthis, int arg0);
+extern void demth_ZN15QTextCharFormat14setFontStretchEi(void* qthis, int32_t arg0);
   // proto:  void QTextCharFormat::setAnchorName(const QString & name);
 extern void demth_ZN15QTextCharFormat13setAnchorNameERK7QString(void* qthis, void* arg0);
   // proto:  bool QTextCharFormat::fontKerning();
 extern void demth_ZNK15QTextCharFormat11fontKerningEv(void* qthis);
   // proto:  void QTextCharFormat::setFontWeight(int weight);
-extern void demth_ZN15QTextCharFormat13setFontWeightEi(void* qthis, int arg0);
+extern void demth_ZN15QTextCharFormat13setFontWeightEi(void* qthis, int32_t arg0);
   // proto:  bool QTextCharFormat::fontUnderline();
 extern void _ZNK15QTextCharFormat13fontUnderlineEv(void* qthis);
   // proto:  void QTextCharFormat::setFontWordSpacing(qreal spacing);
@@ -295,7 +295,7 @@ extern void demth_ZNK15QTextCharFormat10fontWeightEv(void* qthis);
   // proto:  void QTextCharFormat::setFontOverline(bool overline);
 extern void demth_ZN15QTextCharFormat15setFontOverlineEb(void* qthis, bool arg0);
   // proto:  void QTextCharFormat::setTableCellColumnSpan(int tableCellColumnSpan);
-extern void demth_ZN15QTextCharFormat22setTableCellColumnSpanEi(void* qthis, int arg0);
+extern void demth_ZN15QTextCharFormat22setTableCellColumnSpanEi(void* qthis, int32_t arg0);
   // proto:  QPen QTextCharFormat::textOutline();
 extern void demth_ZNK15QTextCharFormat11textOutlineEv(void* qthis);
   // proto:  void QTextTableFormat::QTextTableFormat();
@@ -316,14 +316,14 @@ extern void demth_ZNK16QTextTableFormat11cellPaddingEv(void* qthis);
   // proto:  void QTextTableFormat::setCellSpacing(qreal spacing);
 extern void demth_ZN16QTextTableFormat14setCellSpacingEd(void* qthis, double arg0);
   // proto:  void QTextTableFormat::setColumns(int columns);
-extern void demth_ZN16QTextTableFormat10setColumnsEi(void* qthis, int arg0);
+extern void demth_ZN16QTextTableFormat10setColumnsEi(void* qthis, int32_t arg0);
   // proto:  void QTextTableFormat::QTextTableFormat(const QTextFormat & fmt);
 extern void* dector_ZN16QTextTableFormatC1ERK11QTextFormat(void* arg0);
 extern void _ZN16QTextTableFormatC1ERK11QTextFormat(void* qthis, void* arg0);
   // proto:  void QTextTableFormat::clearColumnWidthConstraints();
 extern void demth_ZN16QTextTableFormat27clearColumnWidthConstraintsEv(void* qthis);
   // proto:  void QTextTableFormat::setHeaderRowCount(int count);
-extern void demth_ZN16QTextTableFormat17setHeaderRowCountEi(void* qthis, int arg0);
+extern void demth_ZN16QTextTableFormat17setHeaderRowCountEi(void* qthis, int32_t arg0);
   // proto:  qreal QTextTableFormat::cellSpacing();
 extern void demth_ZNK16QTextTableFormat11cellSpacingEv(void* qthis);
   // proto:  void QTextTableCellFormat::QTextTableCellFormat();
@@ -358,7 +358,7 @@ extern void demth_ZNK15QTextListFormat6indentEv(void* qthis);
 extern void* dector_ZN15QTextListFormatC1ERK11QTextFormat(void* arg0);
 extern void _ZN15QTextListFormatC1ERK11QTextFormat(void* qthis, void* arg0);
   // proto:  void QTextListFormat::setIndent(int indent);
-extern void demth_ZN15QTextListFormat9setIndentEi(void* qthis, int arg0);
+extern void demth_ZN15QTextListFormat9setIndentEi(void* qthis, int32_t arg0);
   // proto:  QString QTextListFormat::numberSuffix();
 extern void demth_ZNK15QTextListFormat12numberSuffixEv(void* qthis);
   // proto:  void QTextListFormat::QTextListFormat();
@@ -367,13 +367,13 @@ extern void _ZN15QTextListFormatC1Ev(void* qthis);
   // proto:  QString QTextListFormat::numberPrefix();
 extern void demth_ZNK15QTextListFormat12numberPrefixEv(void* qthis);
   // proto:  bool QTextListFormat::isValid();
-extern void _ZNK15QTextListFormat7isValidEv(void* qthis);
+extern void demth_ZNK15QTextListFormat7isValidEv(void* qthis);
   // proto:  void QTextListFormat::setNumberSuffix(const QString & numberSuffix);
 extern void demth_ZN15QTextListFormat15setNumberSuffixERK7QString(void* qthis, void* arg0);
   // proto:  void QTextListFormat::setNumberPrefix(const QString & numberPrefix);
 extern void demth_ZN15QTextListFormat15setNumberPrefixERK7QString(void* qthis, void* arg0);
   // proto:  bool QTextFrameFormat::isValid();
-extern void _ZNK16QTextFrameFormat7isValidEv(void* qthis);
+extern void demth_ZNK16QTextFrameFormat7isValidEv(void* qthis);
   // proto:  void QTextFrameFormat::setHeight(qreal height);
 extern void demth_ZN16QTextFrameFormat9setHeightEd(void* qthis, double arg0);
   // proto:  void QTextFrameFormat::setBorderBrush(const QBrush & brush);
@@ -439,55 +439,55 @@ func init() {
 // class sizeof(QTextLength)=16
 type QTextLength struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextImageFormat)=1
 type QTextImageFormat struct {
   /*qbase*/ QTextCharFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFormat)=1
 type QTextFormat struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockFormat)=1
 type QTextBlockFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextCharFormat)=1
 type QTextCharFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTableFormat)=1
 type QTextTableFormat struct {
   /*qbase*/ QTextFrameFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTableCellFormat)=1
 type QTextTableCellFormat struct {
   /*qbase*/ QTextCharFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextListFormat)=1
 type QTextListFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrameFormat)=1
 type QTextFrameFormat struct {
   /*qbase*/ QTextFormat;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QTextLength::value(qreal maximumLength);
@@ -1350,7 +1350,7 @@ func (this *QTextFormat) swap(args ...interface{}) () {
     // invoke: void swap(class QTextFormat &)
     var arg0 = args[0].(QTextFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextFormat4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN11QTextFormat4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextFormat", "swap", args)
   }
@@ -1706,7 +1706,7 @@ func (this *QTextBlockFormat) setNonBreakableLines(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QTextBlockFormat20setNonBreakableLinesEb
     // invoke: void setNonBreakableLines(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN16QTextBlockFormat20setNonBreakableLinesEb(this.qclsinst, arg0)
   default:
@@ -2283,7 +2283,7 @@ func (this *QTextCharFormat) setFontUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontUnderlineEb
     // invoke: void setFontUnderline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat16setFontUnderlineEb(this.qclsinst, arg0)
   default:
@@ -2305,7 +2305,7 @@ func (this *QTextCharFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextCharFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK15QTextCharFormat7isValidEv(this.qclsinst)
+    C.demth_ZNK15QTextCharFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextCharFormat", "isValid", args)
   }
@@ -2415,7 +2415,7 @@ func (this *QTextCharFormat) setAnchor(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat9setAnchorEb
     // invoke: void setAnchor(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat9setAnchorEb(this.qclsinst, arg0)
   default:
@@ -2463,7 +2463,7 @@ func (this *QTextCharFormat) setFontStrikeOut(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat16setFontStrikeOutEb
     // invoke: void setFontStrikeOut(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat16setFontStrikeOutEb(this.qclsinst, arg0)
   default:
@@ -2569,7 +2569,7 @@ func (this *QTextCharFormat) setFontFixedPitch(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat17setFontFixedPitchEb
     // invoke: void setFontFixedPitch(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat17setFontFixedPitchEb(this.qclsinst, arg0)
   default:
@@ -2592,7 +2592,7 @@ func (this *QTextCharFormat) setFontItalic(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat13setFontItalicEb
     // invoke: void setFontItalic(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat13setFontItalicEb(this.qclsinst, arg0)
   default:
@@ -2701,7 +2701,7 @@ func (this *QTextCharFormat) setFontKerning(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat14setFontKerningEb
     // invoke: void setFontKerning(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat14setFontKerningEb(this.qclsinst, arg0)
   default:
@@ -2976,7 +2976,7 @@ func (this *QTextCharFormat) setFontOverline(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTextCharFormat15setFontOverlineEb
     // invoke: void setFontOverline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTextCharFormat15setFontOverlineEb(this.qclsinst, arg0)
   default:
@@ -3586,7 +3586,7 @@ func (this *QTextListFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QTextListFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK15QTextListFormat7isValidEv(this.qclsinst)
+    C.demth_ZNK15QTextListFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextListFormat", "isValid", args)
   }
@@ -3652,7 +3652,7 @@ func (this *QTextFrameFormat) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QTextFrameFormat7isValidEv
     // invoke: bool isValid()
-    C._ZNK16QTextFrameFormat7isValidEv(this.qclsinst)
+    C.demth_ZNK16QTextFrameFormat7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameFormat", "isValid", args)
   }

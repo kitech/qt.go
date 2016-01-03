@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qabstractspinbox.h
 // dst-file: /src/widgets/qabstractspinbox.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractSpinBox::stepBy(int steps);
-extern void _ZN16QAbstractSpinBox6stepByEi(void* qthis, int arg0);
+extern void _ZN16QAbstractSpinBox6stepByEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractSpinBox::setReadOnly(bool r);
 extern void _ZN16QAbstractSpinBox11setReadOnlyEb(void* qthis, bool arg0);
   // proto:  void QAbstractSpinBox::setFrame(bool );
@@ -109,7 +109,7 @@ func init() {
 // class sizeof(QAbstractSpinBox)=1
 type QAbstractSpinBox struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _editingFinished QAbstractSpinBox_editingFinished_signal;
 }
 
@@ -150,7 +150,7 @@ func (this *QAbstractSpinBox) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox11setReadOnlyEb(this.qclsinst, arg0)
   default:
@@ -173,7 +173,7 @@ func (this *QAbstractSpinBox) setFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox8setFrameEb
     // invoke: void setFrame(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox8setFrameEb(this.qclsinst, arg0)
   default:
@@ -219,7 +219,7 @@ func (this *QAbstractSpinBox) setAccelerated(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox14setAcceleratedEb
     // invoke: void setAccelerated(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox14setAcceleratedEb(this.qclsinst, arg0)
   default:
@@ -547,7 +547,7 @@ func (this *QAbstractSpinBox) setWrapping(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox11setWrappingEb
     // invoke: void setWrapping(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox11setWrappingEb(this.qclsinst, arg0)
   default:
@@ -570,7 +570,7 @@ func (this *QAbstractSpinBox) setKeyboardTracking(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox19setKeyboardTrackingEb
     // invoke: void setKeyboardTracking(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox19setKeyboardTrackingEb(this.qclsinst, arg0)
   default:
@@ -613,7 +613,7 @@ func (this *QAbstractSpinBox) setGroupSeparatorShown(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QAbstractSpinBox22setGroupSeparatorShownEb
     // invoke: void setGroupSeparatorShown(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QAbstractSpinBox22setGroupSeparatorShownEb(this.qclsinst, arg0)
   default:

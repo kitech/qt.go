@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -56,58 +56,58 @@ extern void _ZNK10QBoxLayout8sizeHintEv(void* qthis);
   // proto:  void QBoxLayout::~QBoxLayout();
 extern void _ZN10QBoxLayoutD0Ev(void* qthis);
   // proto:  void QBoxLayout::insertSpacing(int index, int size);
-extern void _ZN10QBoxLayout13insertSpacingEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QBoxLayout13insertSpacingEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QBoxLayout::setStretch(int index, int stretch);
-extern void _ZN10QBoxLayout10setStretchEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QBoxLayout10setStretchEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QBoxLayout::QBoxLayout(const QBoxLayout & );
 extern void* dector_ZN10QBoxLayoutC1ERKS_(void* arg0);
 extern void _ZN10QBoxLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  void QBoxLayout::insertStretch(int index, int stretch);
-extern void _ZN10QBoxLayout13insertStretchEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QBoxLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QBoxLayout::addLayout(QLayout * layout, int stretch);
-extern void _ZN10QBoxLayout9addLayoutEP7QLayouti(void* qthis, void* arg0, int arg1);
+extern void _ZN10QBoxLayout9addLayoutEP7QLayouti(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QBoxLayout::setStretchFactor(QWidget * w, int stretch);
-extern void _ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int arg1);
+extern void _ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QBoxLayout::invalidate();
 extern void _ZN10QBoxLayout10invalidateEv(void* qthis);
   // proto:  void QBoxLayout::setGeometry(const QRect & );
 extern void _ZN10QBoxLayout11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  void QBoxLayout::addStretch(int stretch);
-extern void _ZN10QBoxLayout10addStretchEi(void* qthis, int arg0);
+extern void _ZN10QBoxLayout10addStretchEi(void* qthis, int32_t arg0);
   // proto:  void QBoxLayout::insertLayout(int index, QLayout * layout, int stretch);
-extern void _ZN10QBoxLayout12insertLayoutEiP7QLayouti(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN10QBoxLayout12insertLayoutEiP7QLayouti(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  bool QBoxLayout::setStretchFactor(QLayout * l, int stretch);
-extern void _ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int arg1);
+extern void _ZN10QBoxLayout16setStretchFactorEP7QLayouti(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QBoxLayout::count();
 extern void _ZNK10QBoxLayout5countEv(void* qthis);
   // proto:  QLayoutItem * QBoxLayout::itemAt(int );
-extern void _ZNK10QBoxLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK10QBoxLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QBoxLayout::metaObject();
 extern void _ZNK10QBoxLayout10metaObjectEv(void* qthis);
   // proto:  void QBoxLayout::insertSpacerItem(int index, QSpacerItem * spacerItem);
-extern void _ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(void* qthis, int arg0, void* arg1);
+extern void _ZN10QBoxLayout16insertSpacerItemEiP11QSpacerItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QBoxLayout::heightForWidth(int );
-extern void _ZNK10QBoxLayout14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK10QBoxLayout14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QBoxLayout::addStrut(int );
-extern void _ZN10QBoxLayout8addStrutEi(void* qthis, int arg0);
+extern void _ZN10QBoxLayout8addStrutEi(void* qthis, int32_t arg0);
   // proto:  QSize QBoxLayout::maximumSize();
 extern void _ZNK10QBoxLayout11maximumSizeEv(void* qthis);
   // proto:  int QBoxLayout::stretch(int index);
-extern void _ZNK10QBoxLayout7stretchEi(void* qthis, int arg0);
+extern void _ZNK10QBoxLayout7stretchEi(void* qthis, int32_t arg0);
   // proto:  void QBoxLayout::addSpacerItem(QSpacerItem * spacerItem);
 extern void _ZN10QBoxLayout13addSpacerItemEP11QSpacerItem(void* qthis, void* arg0);
   // proto:  int QBoxLayout::minimumHeightForWidth(int );
-extern void _ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int arg0);
+extern void _ZNK10QBoxLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0);
   // proto:  QSize QBoxLayout::minimumSize();
 extern void _ZNK10QBoxLayout11minimumSizeEv(void* qthis);
   // proto:  void QBoxLayout::setSpacing(int spacing);
-extern void _ZN10QBoxLayout10setSpacingEi(void* qthis, int arg0);
+extern void _ZN10QBoxLayout10setSpacingEi(void* qthis, int32_t arg0);
   // proto:  QLayoutItem * QBoxLayout::takeAt(int );
-extern void _ZN10QBoxLayout6takeAtEi(void* qthis, int arg0);
+extern void _ZN10QBoxLayout6takeAtEi(void* qthis, int32_t arg0);
   // proto:  void QBoxLayout::insertItem(int index, QLayoutItem * );
-extern void _ZN10QBoxLayout10insertItemEiP11QLayoutItem(void* qthis, int arg0, void* arg1);
+extern void _ZN10QBoxLayout10insertItemEiP11QLayoutItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QBoxLayout::addSpacing(int size);
-extern void _ZN10QBoxLayout10addSpacingEi(void* qthis, int arg0);
+extern void _ZN10QBoxLayout10addSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QVBoxLayout::QVBoxLayout();
 extern void* dector_ZN11QVBoxLayoutC1Ev();
 extern void _ZN11QVBoxLayoutC1Ev(void* qthis);
@@ -136,19 +136,19 @@ func init() {
 // class sizeof(QHBoxLayout)=1
 type QHBoxLayout struct {
   /*qbase*/ QBoxLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBoxLayout)=1
 type QBoxLayout struct {
   /*qbase*/ QLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QVBoxLayout)=1
 type QVBoxLayout struct {
   /*qbase*/ QBoxLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.go
 //
@@ -35,11 +35,11 @@ import "qtrt"
   // proto:  void QProgressDialog::setAutoClose(bool close);
 extern void _ZN15QProgressDialog12setAutoCloseEb(void* qthis, bool arg0);
   // proto:  void QProgressDialog::open(QObject * receiver, const char * member);
-extern void _ZN15QProgressDialog4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN15QProgressDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QProgressDialog::setMaximum(int maximum);
-extern void _ZN15QProgressDialog10setMaximumEi(void* qthis, int arg0);
+extern void _ZN15QProgressDialog10setMaximumEi(void* qthis, int32_t arg0);
   // proto:  void QProgressDialog::setMinimum(int minimum);
-extern void _ZN15QProgressDialog10setMinimumEi(void* qthis, int arg0);
+extern void _ZN15QProgressDialog10setMinimumEi(void* qthis, int32_t arg0);
   // proto:  void QProgressDialog::setLabelText(const QString & text);
 extern void _ZN15QProgressDialog12setLabelTextERK7QString(void* qthis, void* arg0);
   // proto:  bool QProgressDialog::wasCanceled();
@@ -49,7 +49,7 @@ extern void _ZN15QProgressDialogD0Ev(void* qthis);
   // proto:  int QProgressDialog::minimumDuration();
 extern void _ZNK15QProgressDialog15minimumDurationEv(void* qthis);
   // proto:  void QProgressDialog::setMinimumDuration(int ms);
-extern void _ZN15QProgressDialog18setMinimumDurationEi(void* qthis, int arg0);
+extern void _ZN15QProgressDialog18setMinimumDurationEi(void* qthis, int32_t arg0);
   // proto:  int QProgressDialog::maximum();
 extern void _ZNK15QProgressDialog7maximumEv(void* qthis);
   // proto:  void QProgressDialog::setBar(QProgressBar * bar);
@@ -68,7 +68,7 @@ extern void _ZN15QProgressDialog5resetEv(void* qthis);
 extern void* dector_ZN15QProgressDialogC1ERKS_(void* arg0);
 extern void _ZN15QProgressDialogC1ERKS_(void* qthis, void* arg0);
   // proto:  void QProgressDialog::setRange(int minimum, int maximum);
-extern void _ZN15QProgressDialog8setRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN15QProgressDialog8setRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QProgressDialog::setCancelButtonText(const QString & text);
 extern void _ZN15QProgressDialog19setCancelButtonTextERK7QString(void* qthis, void* arg0);
   // proto:  QSize QProgressDialog::sizeHint();
@@ -86,7 +86,7 @@ extern void _ZNK15QProgressDialog5valueEv(void* qthis);
   // proto:  void QProgressDialog::setCancelButton(QPushButton * button);
 extern void _ZN15QProgressDialog15setCancelButtonEP11QPushButton(void* qthis, void* arg0);
   // proto:  void QProgressDialog::setValue(int progress);
-extern void _ZN15QProgressDialog8setValueEi(void* qthis, int arg0);
+extern void _ZN15QProgressDialog8setValueEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -102,7 +102,7 @@ func init() {
 // class sizeof(QProgressDialog)=1
 type QProgressDialog struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _canceled QProgressDialog_canceled_signal;
 }
 
@@ -120,7 +120,7 @@ func (this *QProgressDialog) setAutoClose(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QProgressDialog12setAutoCloseEb
     // invoke: void setAutoClose(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QProgressDialog12setAutoCloseEb(this.qclsinst, arg0)
   default:
@@ -146,7 +146,7 @@ func (this *QProgressDialog) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN15QProgressDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
@@ -595,7 +595,7 @@ func (this *QProgressDialog) setAutoReset(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QProgressDialog12setAutoResetEb
     // invoke: void setAutoReset(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QProgressDialog12setAutoResetEb(this.qclsinst, arg0)
   default:

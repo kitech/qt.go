@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -39,8 +39,8 @@ extern void _ZN20QStyleOptionComboBoxC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN20QStyleOptionComboBoxC1Ev();
 extern void _ZN20QStyleOptionComboBoxC1Ev(void* qthis);
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(int version);
-extern void* dector_ZN20QStyleOptionComboBoxC1Ei(int arg0);
-extern void _ZN20QStyleOptionComboBoxC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionComboBoxC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionComboBoxC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(const QStyleOptionMenuItem & other);
 extern void* dector_ZN20QStyleOptionMenuItemC1ERKS_(void* arg0);
 extern void _ZN20QStyleOptionMenuItemC1ERKS_(void* qthis, void* arg0);
@@ -48,16 +48,16 @@ extern void _ZN20QStyleOptionMenuItemC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN20QStyleOptionMenuItemC1Ev();
 extern void _ZN20QStyleOptionMenuItemC1Ev(void* qthis);
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(int version);
-extern void* dector_ZN20QStyleOptionMenuItemC1Ei(int arg0);
-extern void _ZN20QStyleOptionMenuItemC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionMenuItemC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionMenuItemC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleHintReturnVariant::~QStyleHintReturnVariant();
 extern void _ZN23QStyleHintReturnVariantD0Ev(void* qthis);
   // proto:  void QStyleHintReturnVariant::QStyleHintReturnVariant();
 extern void* dector_ZN23QStyleHintReturnVariantC1Ev();
 extern void _ZN23QStyleHintReturnVariantC1Ev(void* qthis);
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
-extern void* dector_ZN20QStyleOptionTitleBarC1Ei(int arg0);
-extern void _ZN20QStyleOptionTitleBarC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionTitleBarC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionTitleBarC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
 extern void* dector_ZN20QStyleOptionTitleBarC1ERKS_(void* arg0);
 extern void _ZN20QStyleOptionTitleBarC1ERKS_(void* qthis, void* arg0);
@@ -73,8 +73,8 @@ extern void _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTrans
 extern void* dector_ZN24QStyleOptionGraphicsItemC1ERKS_(void* arg0);
 extern void _ZN24QStyleOptionGraphicsItemC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(int version);
-extern void* dector_ZN24QStyleOptionGraphicsItemC1Ei(int arg0);
-extern void _ZN24QStyleOptionGraphicsItemC1Ei(void* qthis, int arg0);
+extern void* dector_ZN24QStyleOptionGraphicsItemC1Ei(int32_t arg0);
+extern void _ZN24QStyleOptionGraphicsItemC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOption::~QStyleOption();
 extern void _ZN12QStyleOptionD0Ev(void* qthis);
   // proto:  void QStyleOption::init(const QWidget * w);
@@ -83,16 +83,16 @@ extern void _ZN12QStyleOption4initEPK7QWidget(void* qthis, void* arg0);
 extern void* dector_ZN12QStyleOptionC1ERKS_(void* arg0);
 extern void _ZN12QStyleOptionC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOption::QStyleOption(int version, int type);
-extern void* dector_ZN12QStyleOptionC1Eii(int arg0, int arg1);
-extern void _ZN12QStyleOptionC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN12QStyleOptionC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN12QStyleOptionC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStyleOption::initFrom(const QWidget * w);
 extern void demth_ZN12QStyleOption8initFromEPK7QWidget(void* qthis, void* arg0);
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget();
 extern void* dector_ZN22QStyleOptionDockWidgetC1Ev();
 extern void _ZN22QStyleOptionDockWidgetC1Ev(void* qthis);
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(int version);
-extern void* dector_ZN22QStyleOptionDockWidgetC1Ei(int arg0);
-extern void _ZN22QStyleOptionDockWidgetC1Ei(void* qthis, int arg0);
+extern void* dector_ZN22QStyleOptionDockWidgetC1Ei(int32_t arg0);
+extern void _ZN22QStyleOptionDockWidgetC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(const QStyleOptionDockWidget & other);
 extern void* dector_ZN22QStyleOptionDockWidgetC1ERKS_(void* arg0);
 extern void _ZN22QStyleOptionDockWidgetC1ERKS_(void* qthis, void* arg0);
@@ -100,8 +100,8 @@ extern void _ZN22QStyleOptionDockWidgetC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN23QStyleOptionProgressBarC1ERKS_(void* arg0);
 extern void _ZN23QStyleOptionProgressBarC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(int version);
-extern void* dector_ZN23QStyleOptionProgressBarC1Ei(int arg0);
-extern void _ZN23QStyleOptionProgressBarC1Ei(void* qthis, int arg0);
+extern void* dector_ZN23QStyleOptionProgressBarC1Ei(int32_t arg0);
+extern void _ZN23QStyleOptionProgressBarC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar();
 extern void* dector_ZN23QStyleOptionProgressBarC1Ev();
 extern void _ZN23QStyleOptionProgressBarC1Ev(void* qthis);
@@ -109,8 +109,8 @@ extern void _ZN23QStyleOptionProgressBarC1Ev(void* qthis);
 extern void* dector_ZN18QStyleOptionSliderC1ERKS_(void* arg0);
 extern void _ZN18QStyleOptionSliderC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionSlider::QStyleOptionSlider(int version);
-extern void* dector_ZN18QStyleOptionSliderC1Ei(int arg0);
-extern void _ZN18QStyleOptionSliderC1Ei(void* qthis, int arg0);
+extern void* dector_ZN18QStyleOptionSliderC1Ei(int32_t arg0);
+extern void _ZN18QStyleOptionSliderC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionSlider::QStyleOptionSlider();
 extern void* dector_ZN18QStyleOptionSliderC1Ev();
 extern void _ZN18QStyleOptionSliderC1Ev(void* qthis);
@@ -121,19 +121,19 @@ extern void _ZN17QStyleOptionFrameC1Ev(void* qthis);
 extern void* dector_ZN17QStyleOptionFrameC1ERKS_(void* arg0);
 extern void _ZN17QStyleOptionFrameC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionFrame::QStyleOptionFrame(int version);
-extern void* dector_ZN17QStyleOptionFrameC1Ei(int arg0);
-extern void _ZN17QStyleOptionFrameC1Ei(void* qthis, int arg0);
+extern void* dector_ZN17QStyleOptionFrameC1Ei(int32_t arg0);
+extern void _ZN17QStyleOptionFrameC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
-extern void* dector_ZN19QStyleOptionComplexC1Eii(int arg0, int arg1);
-extern void _ZN19QStyleOptionComplexC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN19QStyleOptionComplexC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN19QStyleOptionComplexC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(const QStyleOptionComplex & other);
 extern void* dector_ZN19QStyleOptionComplexC1ERKS_(void* arg0);
 extern void _ZN19QStyleOptionComplexC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleHintReturn::~QStyleHintReturn();
 extern void _ZN16QStyleHintReturnD0Ev(void* qthis);
   // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
-extern void* dector_ZN16QStyleHintReturnC1Eii(int arg0, int arg1);
-extern void _ZN16QStyleHintReturnC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN16QStyleHintReturnC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN16QStyleHintReturnC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStyleOptionHeader::QStyleOptionHeader();
 extern void* dector_ZN18QStyleOptionHeaderC1Ev();
 extern void _ZN18QStyleOptionHeaderC1Ev(void* qthis);
@@ -141,8 +141,8 @@ extern void _ZN18QStyleOptionHeaderC1Ev(void* qthis);
 extern void* dector_ZN18QStyleOptionHeaderC1ERKS_(void* arg0);
 extern void _ZN18QStyleOptionHeaderC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionHeader::QStyleOptionHeader(int version);
-extern void* dector_ZN18QStyleOptionHeaderC1Ei(int arg0);
-extern void _ZN18QStyleOptionHeaderC1Ei(void* qthis, int arg0);
+extern void* dector_ZN18QStyleOptionHeaderC1Ei(int32_t arg0);
+extern void _ZN18QStyleOptionHeaderC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
 extern void* dector_ZN19QStyleOptionToolBoxC1Ev();
 extern void _ZN19QStyleOptionToolBoxC1Ev(void* qthis);
@@ -150,11 +150,11 @@ extern void _ZN19QStyleOptionToolBoxC1Ev(void* qthis);
 extern void* dector_ZN19QStyleOptionToolBoxC1ERKS_(void* arg0);
 extern void _ZN19QStyleOptionToolBoxC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(int version);
-extern void* dector_ZN19QStyleOptionToolBoxC1Ei(int arg0);
-extern void _ZN19QStyleOptionToolBoxC1Ei(void* qthis, int arg0);
+extern void* dector_ZN19QStyleOptionToolBoxC1Ei(int32_t arg0);
+extern void _ZN19QStyleOptionToolBoxC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(int version);
-extern void* dector_ZN21QStyleOptionFocusRectC1Ei(int arg0);
-extern void _ZN21QStyleOptionFocusRectC1Ei(void* qthis, int arg0);
+extern void* dector_ZN21QStyleOptionFocusRectC1Ei(int32_t arg0);
+extern void _ZN21QStyleOptionFocusRectC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect();
 extern void* dector_ZN21QStyleOptionFocusRectC1Ev();
 extern void _ZN21QStyleOptionFocusRectC1Ev(void* qthis);
@@ -162,8 +162,8 @@ extern void _ZN21QStyleOptionFocusRectC1Ev(void* qthis);
 extern void* dector_ZN21QStyleOptionFocusRectC1ERKS_(void* arg0);
 extern void _ZN21QStyleOptionFocusRectC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
-extern void* dector_ZN20QStyleOptionGroupBoxC1Ei(int arg0);
-extern void _ZN20QStyleOptionGroupBoxC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionGroupBoxC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionGroupBoxC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(const QStyleOptionGroupBox & other);
 extern void* dector_ZN20QStyleOptionGroupBoxC1ERKS_(void* arg0);
 extern void _ZN20QStyleOptionGroupBoxC1ERKS_(void* qthis, void* arg0);
@@ -174,8 +174,8 @@ extern void _ZN20QStyleOptionGroupBoxC1Ev(void* qthis);
 extern void* dector_ZN15QStyleOptionTabC1ERKS_(void* arg0);
 extern void _ZN15QStyleOptionTabC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionTab::QStyleOptionTab(int version);
-extern void* dector_ZN15QStyleOptionTabC1Ei(int arg0);
-extern void _ZN15QStyleOptionTabC1Ei(void* qthis, int arg0);
+extern void* dector_ZN15QStyleOptionTabC1Ei(int32_t arg0);
+extern void _ZN15QStyleOptionTabC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionTab::QStyleOptionTab();
 extern void* dector_ZN15QStyleOptionTabC1Ev();
 extern void _ZN15QStyleOptionTabC1Ev(void* qthis);
@@ -183,14 +183,14 @@ extern void _ZN15QStyleOptionTabC1Ev(void* qthis);
 extern void* dector_ZN22QStyleOptionTabBarBaseC1Ev();
 extern void _ZN22QStyleOptionTabBarBaseC1Ev(void* qthis);
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(int version);
-extern void* dector_ZN22QStyleOptionTabBarBaseC1Ei(int arg0);
-extern void _ZN22QStyleOptionTabBarBaseC1Ei(void* qthis, int arg0);
+extern void* dector_ZN22QStyleOptionTabBarBaseC1Ei(int32_t arg0);
+extern void _ZN22QStyleOptionTabBarBaseC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(const QStyleOptionTabBarBase & other);
 extern void* dector_ZN22QStyleOptionTabBarBaseC1ERKS_(void* arg0);
 extern void _ZN22QStyleOptionTabBarBaseC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(int version);
-extern void* dector_ZN22QStyleOptionRubberBandC1Ei(int arg0);
-extern void _ZN22QStyleOptionRubberBandC1Ei(void* qthis, int arg0);
+extern void* dector_ZN22QStyleOptionRubberBandC1Ei(int32_t arg0);
+extern void _ZN22QStyleOptionRubberBandC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand();
 extern void* dector_ZN22QStyleOptionRubberBandC1Ev();
 extern void _ZN22QStyleOptionRubberBandC1Ev(void* qthis);
@@ -198,8 +198,8 @@ extern void _ZN22QStyleOptionRubberBandC1Ev(void* qthis);
 extern void* dector_ZN22QStyleOptionRubberBandC1ERKS_(void* arg0);
 extern void _ZN22QStyleOptionRubberBandC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionButton::QStyleOptionButton(int version);
-extern void* dector_ZN18QStyleOptionButtonC1Ei(int arg0);
-extern void _ZN18QStyleOptionButtonC1Ei(void* qthis, int arg0);
+extern void* dector_ZN18QStyleOptionButtonC1Ei(int32_t arg0);
+extern void _ZN18QStyleOptionButtonC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionButton::QStyleOptionButton();
 extern void* dector_ZN18QStyleOptionButtonC1Ev();
 extern void _ZN18QStyleOptionButtonC1Ev(void* qthis);
@@ -212,8 +212,8 @@ extern void _ZN20QStyleHintReturnMaskC1Ev(void* qthis);
   // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
 extern void _ZN20QStyleHintReturnMaskD0Ev(void* qthis);
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
-extern void* dector_ZN22QStyleOptionToolButtonC1Ei(int arg0);
-extern void _ZN22QStyleOptionToolButtonC1Ei(void* qthis, int arg0);
+extern void* dector_ZN22QStyleOptionToolButtonC1Ei(int32_t arg0);
+extern void _ZN22QStyleOptionToolButtonC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton();
 extern void* dector_ZN22QStyleOptionToolButtonC1Ev();
 extern void _ZN22QStyleOptionToolButtonC1Ev(void* qthis);
@@ -221,8 +221,8 @@ extern void _ZN22QStyleOptionToolButtonC1Ev(void* qthis);
 extern void* dector_ZN22QStyleOptionToolButtonC1ERKS_(void* arg0);
 extern void _ZN22QStyleOptionToolButtonC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(int version);
-extern void* dector_ZN20QStyleOptionSizeGripC1Ei(int arg0);
-extern void _ZN20QStyleOptionSizeGripC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionSizeGripC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionSizeGripC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip();
 extern void* dector_ZN20QStyleOptionSizeGripC1Ev();
 extern void _ZN20QStyleOptionSizeGripC1Ev(void* qthis);
@@ -233,8 +233,8 @@ extern void _ZN20QStyleOptionSizeGripC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN20QStyleOptionViewItemC1ERKS_(void* arg0);
 extern void _ZN20QStyleOptionViewItemC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(int version);
-extern void* dector_ZN20QStyleOptionViewItemC1Ei(int arg0);
-extern void _ZN20QStyleOptionViewItemC1Ei(void* qthis, int arg0);
+extern void* dector_ZN20QStyleOptionViewItemC1Ei(int32_t arg0);
+extern void _ZN20QStyleOptionViewItemC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem();
 extern void* dector_ZN20QStyleOptionViewItemC1Ev();
 extern void _ZN20QStyleOptionViewItemC1Ev(void* qthis);
@@ -245,14 +245,14 @@ extern void _ZN19QStyleOptionSpinBoxC1Ev(void* qthis);
 extern void* dector_ZN19QStyleOptionSpinBoxC1ERKS_(void* arg0);
 extern void _ZN19QStyleOptionSpinBoxC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(int version);
-extern void* dector_ZN19QStyleOptionSpinBoxC1Ei(int arg0);
-extern void _ZN19QStyleOptionSpinBoxC1Ei(void* qthis, int arg0);
+extern void* dector_ZN19QStyleOptionSpinBoxC1Ei(int32_t arg0);
+extern void _ZN19QStyleOptionSpinBoxC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(const QStyleOptionToolBar & other);
 extern void* dector_ZN19QStyleOptionToolBarC1ERKS_(void* arg0);
 extern void _ZN19QStyleOptionToolBarC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(int version);
-extern void* dector_ZN19QStyleOptionToolBarC1Ei(int arg0);
-extern void _ZN19QStyleOptionToolBarC1Ei(void* qthis, int arg0);
+extern void* dector_ZN19QStyleOptionToolBarC1Ei(int32_t arg0);
+extern void _ZN19QStyleOptionToolBarC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar();
 extern void* dector_ZN19QStyleOptionToolBarC1Ev();
 extern void _ZN19QStyleOptionToolBarC1Ev(void* qthis);
@@ -260,8 +260,8 @@ extern void _ZN19QStyleOptionToolBarC1Ev(void* qthis);
 extern void* dector_ZN26QStyleOptionTabWidgetFrameC1ERKS_(void* arg0);
 extern void demth_ZN26QStyleOptionTabWidgetFrameC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
-extern void* dector_ZN26QStyleOptionTabWidgetFrameC1Ei(int arg0);
-extern void _ZN26QStyleOptionTabWidgetFrameC1Ei(void* qthis, int arg0);
+extern void* dector_ZN26QStyleOptionTabWidgetFrameC1Ei(int32_t arg0);
+extern void _ZN26QStyleOptionTabWidgetFrameC1Ei(void* qthis, int32_t arg0);
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame();
 extern void* dector_ZN26QStyleOptionTabWidgetFrameC1Ev();
 extern void _ZN26QStyleOptionTabWidgetFrameC1Ev(void* qthis);
@@ -280,163 +280,163 @@ func init() {
 // class sizeof(QStyleOptionComboBox)=1
 type QStyleOptionComboBox struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionMenuItem)=1
 type QStyleOptionMenuItem struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleHintReturnVariant)=24
 type QStyleHintReturnVariant struct {
   /*qbase*/ QStyleHintReturn;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionTitleBar)=1
 type QStyleOptionTitleBar struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionGraphicsItem)=1
 type QStyleOptionGraphicsItem struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOption)=1
 type QStyleOption struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionDockWidget)=1
 type QStyleOptionDockWidget struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionProgressBar)=1
 type QStyleOptionProgressBar struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionSlider)=1
 type QStyleOptionSlider struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionFrame)=1
 type QStyleOptionFrame struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionComplex)=1
 type QStyleOptionComplex struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleHintReturn)=8
 type QStyleHintReturn struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionHeader)=1
 type QStyleOptionHeader struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionToolBox)=1
 type QStyleOptionToolBox struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionFocusRect)=1
 type QStyleOptionFocusRect struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionGroupBox)=1
 type QStyleOptionGroupBox struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionTab)=1
 type QStyleOptionTab struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionTabBarBase)=1
 type QStyleOptionTabBarBase struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionRubberBand)=1
 type QStyleOptionRubberBand struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionButton)=1
 type QStyleOptionButton struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleHintReturnMask)=16
 type QStyleHintReturnMask struct {
   /*qbase*/ QStyleHintReturn;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionToolButton)=1
 type QStyleOptionToolButton struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionSizeGrip)=1
 type QStyleOptionSizeGrip struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionViewItem)=1
 type QStyleOptionViewItem struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionSpinBox)=1
 type QStyleOptionSpinBox struct {
   /*qbase*/ QStyleOptionComplex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionToolBar)=1
 type QStyleOptionToolBar struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QStyleOptionTabWidgetFrame)=1
 type QStyleOptionTabWidgetFrame struct {
   /*qbase*/ QStyleOption;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);

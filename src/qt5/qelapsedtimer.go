@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -48,7 +48,7 @@ extern void _ZNK13QElapsedTimer7msecsToERKS_(void* qthis, void* arg0);
   // proto:  qint64 QElapsedTimer::msecsSinceReference();
 extern void _ZNK13QElapsedTimer19msecsSinceReferenceEv(void* qthis);
   // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-extern void _ZNK13QElapsedTimer10hasExpiredEx(void* qthis, long long arg0);
+extern void _ZNK13QElapsedTimer10hasExpiredEx(void* qthis, int64_t arg0);
   // proto:  qint64 QElapsedTimer::restart();
 extern void _ZN13QElapsedTimer7restartEv(void* qthis);
   // proto:  bool QElapsedTimer::isValid();
@@ -72,7 +72,7 @@ func init() {
 // class sizeof(QElapsedTimer)=16
 type QElapsedTimer struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QElapsedTimer::start();

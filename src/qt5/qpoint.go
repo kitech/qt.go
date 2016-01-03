@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qpoint.h
 // dst-file: /src/core/qpoint.go
 //
@@ -35,23 +35,23 @@ import "qtrt"
   // proto:  int & QPoint::ry();
 extern void demth_ZN6QPoint2ryEv(void* qthis);
   // proto: static int QPoint::dotProduct(const QPoint & p1, const QPoint & p2);
-extern void _ZN6QPoint10dotProductERKS_S1_(void* arg0, void* arg1);
+extern void demth_ZN6QPoint10dotProductERKS_S1_(void* arg0, void* arg1);
   // proto:  int QPoint::x();
-extern void _ZNK6QPoint1xEv(void* qthis);
+extern void demth_ZNK6QPoint1xEv(void* qthis);
   // proto:  void QPoint::QPoint(int xpos, int ypos);
-extern void* dector_ZN6QPointC1Eii(int arg0, int arg1);
-extern void _ZN6QPointC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN6QPointC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN6QPointC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QPoint::y();
-extern void _ZNK6QPoint1yEv(void* qthis);
+extern void demth_ZNK6QPoint1yEv(void* qthis);
   // proto:  void QPoint::setX(int x);
-extern void demth_ZN6QPoint4setXEi(void* qthis, int arg0);
+extern void demth_ZN6QPoint4setXEi(void* qthis, int32_t arg0);
   // proto:  bool QPoint::isNull();
-extern void _ZNK6QPoint6isNullEv(void* qthis);
+extern void demth_ZNK6QPoint6isNullEv(void* qthis);
   // proto:  void QPoint::QPoint();
 extern void* dector_ZN6QPointC1Ev();
 extern void _ZN6QPointC1Ev(void* qthis);
   // proto:  void QPoint::setY(int y);
-extern void demth_ZN6QPoint4setYEi(void* qthis, int arg0);
+extern void demth_ZN6QPoint4setYEi(void* qthis, int32_t arg0);
   // proto:  int & QPoint::rx();
 extern void demth_ZN6QPoint2rxEv(void* qthis);
   // proto:  int QPoint::manhattanLength();
@@ -63,17 +63,17 @@ extern void _ZN7QPointFC1Edd(void* qthis, double arg0, double arg1);
 extern void* dector_ZN7QPointFC1Ev();
 extern void _ZN7QPointFC1Ev(void* qthis);
   // proto:  qreal QPointF::manhattanLength();
-extern void _ZNK7QPointF15manhattanLengthEv(void* qthis);
+extern void demth_ZNK7QPointF15manhattanLengthEv(void* qthis);
   // proto:  QPoint QPointF::toPoint();
-extern void _ZNK7QPointF7toPointEv(void* qthis);
+extern void demth_ZNK7QPointF7toPointEv(void* qthis);
   // proto:  qreal & QPointF::rx();
 extern void demth_ZN7QPointF2rxEv(void* qthis);
   // proto:  qreal QPointF::y();
-extern void _ZNK7QPointF1yEv(void* qthis);
+extern void demth_ZNK7QPointF1yEv(void* qthis);
   // proto:  bool QPointF::isNull();
 extern void demth_ZNK7QPointF6isNullEv(void* qthis);
   // proto:  qreal QPointF::x();
-extern void _ZNK7QPointF1xEv(void* qthis);
+extern void demth_ZNK7QPointF1xEv(void* qthis);
   // proto:  void QPointF::QPointF(const QPoint & p);
 extern void* dector_ZN7QPointFC1ERK6QPoint(void* arg0);
 extern void _ZN7QPointFC1ERK6QPoint(void* qthis, void* arg0);
@@ -82,7 +82,7 @@ extern void demth_ZN7QPointF4setXEd(void* qthis, double arg0);
   // proto:  qreal & QPointF::ry();
 extern void demth_ZN7QPointF2ryEv(void* qthis);
   // proto: static qreal QPointF::dotProduct(const QPointF & p1, const QPointF & p2);
-extern void _ZN7QPointF10dotProductERKS_S1_(void* arg0, void* arg1);
+extern void demth_ZN7QPointF10dotProductERKS_S1_(void* arg0, void* arg1);
   // proto:  void QPointF::setY(qreal y);
 extern void demth_ZN7QPointF4setYEd(void* qthis, double arg0);
 */
@@ -100,13 +100,13 @@ func init() {
 // class sizeof(QPoint)=8
 type QPoint struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPointF)=16
 type QPointF struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int & QPoint::ry();
@@ -156,7 +156,7 @@ func (this *QPoint) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QPoint1xEv
     // invoke: int x()
-    C._ZNK6QPoint1xEv(this.qclsinst)
+    C.demth_ZNK6QPoint1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "x", args)
   }
@@ -181,7 +181,7 @@ func (this *QPoint) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QPoint1yEv
     // invoke: int y()
-    C._ZNK6QPoint1yEv(this.qclsinst)
+    C.demth_ZNK6QPoint1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "y", args)
   }
@@ -224,7 +224,7 @@ func (this *QPoint) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QPoint6isNullEv
     // invoke: bool isNull()
-    C._ZNK6QPoint6isNullEv(this.qclsinst)
+    C.demth_ZNK6QPoint6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPoint", "isNull", args)
   }
@@ -312,7 +312,7 @@ func (this *QPointF) manhattanLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF15manhattanLengthEv
     // invoke: qreal manhattanLength()
-    C._ZNK7QPointF15manhattanLengthEv(this.qclsinst)
+    C.demth_ZNK7QPointF15manhattanLengthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "manhattanLength", args)
   }
@@ -332,7 +332,7 @@ func (this *QPointF) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF7toPointEv
     // invoke: QPoint toPoint()
-    C._ZNK7QPointF7toPointEv(this.qclsinst)
+    C.demth_ZNK7QPointF7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "toPoint", args)
   }
@@ -372,7 +372,7 @@ func (this *QPointF) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF1yEv
     // invoke: qreal y()
-    C._ZNK7QPointF1yEv(this.qclsinst)
+    C.demth_ZNK7QPointF1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "y", args)
   }
@@ -412,7 +412,7 @@ func (this *QPointF) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPointF1xEv
     // invoke: qreal x()
-    C._ZNK7QPointF1xEv(this.qclsinst)
+    C.demth_ZNK7QPointF1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPointF", "x", args)
   }

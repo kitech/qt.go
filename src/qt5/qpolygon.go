@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpolygon.h
 // dst-file: /src/gui/qpolygon.go
 //
@@ -35,11 +35,11 @@ import "qtrt"
   // proto:  QRect QPolygon::boundingRect();
 extern void _ZNK8QPolygon12boundingRectEv(void* qthis);
   // proto:  void QPolygon::setPoint(int index, int x, int y);
-extern void demth_ZN8QPolygon8setPointEiii(void* qthis, int arg0, int arg1, int arg2);
+extern void demth_ZN8QPolygon8setPointEiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPolygon::~QPolygon();
 extern void demth_ZN8QPolygonD0Ev(void* qthis);
   // proto:  void QPolygon::putPoints(int index, int nPoints, const QPolygon & from, int fromIndex);
-extern void _ZN8QPolygon9putPointsEiiRKS_i(void* qthis, int arg0, int arg1, void* arg2, int arg3);
+extern void _ZN8QPolygon9putPointsEiiRKS_i(void* qthis, int32_t arg0, int32_t arg1, void* arg2, int32_t arg3);
   // proto:  QPolygon QPolygon::translated(const QPoint & offset);
 extern void demth_ZNK8QPolygon10translatedERK6QPoint(void* qthis, void* arg0);
   // proto:  QPolygon QPolygon::subtracted(const QPolygon & r);
@@ -47,38 +47,38 @@ extern void _ZNK8QPolygon10subtractedERKS_(void* qthis, void* arg0);
   // proto:  QPolygon QPolygon::intersected(const QPolygon & r);
 extern void _ZNK8QPolygon11intersectedERKS_(void* qthis, void* arg0);
   // proto:  void QPolygon::setPoint(int index, const QPoint & p);
-extern void demth_ZN8QPolygon8setPointEiRK6QPoint(void* qthis, int arg0, void* arg1);
+extern void demth_ZN8QPolygon8setPointEiRK6QPoint(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QPolygon::point(int i, int * x, int * y);
-extern void _ZNK8QPolygon5pointEiPiS0_(void* qthis, int arg0, int* arg1, int* arg2);
+extern void _ZNK8QPolygon5pointEiPiS0_(void* qthis, int32_t arg0, int32_t* arg1, int32_t* arg2);
   // proto:  void QPolygon::translate(int dx, int dy);
-extern void _ZN8QPolygon9translateEii(void* qthis, int arg0, int arg1);
+extern void _ZN8QPolygon9translateEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QPolygon::putPoints(int index, int nPoints, int firstx, int firsty);
-extern void _ZN8QPolygon9putPointsEiiiiz(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN8QPolygon9putPointsEiiiiz(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPolygon::setPoints(int nPoints, int firstx, int firsty);
-extern void _ZN8QPolygon9setPointsEiiiz(void* qthis, int arg0, int arg1, int arg2);
+extern void _ZN8QPolygon9setPointsEiiiz(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPolygon::translate(const QPoint & offset);
 extern void demth_ZN8QPolygon9translateERK6QPoint(void* qthis, void* arg0);
   // proto:  void QPolygon::swap(QPolygon & other);
 extern void demth_ZN8QPolygon4swapERS_(void* qthis, void* arg0);
   // proto:  QPoint QPolygon::point(int i);
-extern void demth_ZNK8QPolygon5pointEi(void* qthis, int arg0);
+extern void demth_ZNK8QPolygon5pointEi(void* qthis, int32_t arg0);
   // proto:  void QPolygon::QPolygon(const QPolygon & a);
 extern void* dector_ZN8QPolygonC1ERKS_(void* arg0);
 extern void demth_ZN8QPolygonC1ERKS_(void* qthis, void* arg0);
   // proto:  void QPolygon::QPolygon(int nPoints, const int * points);
-extern void* dector_ZN8QPolygonC1EiPKi(int arg0, int* arg1);
-extern void _ZN8QPolygonC1EiPKi(void* qthis, int arg0, int* arg1);
+extern void* dector_ZN8QPolygonC1EiPKi(int32_t arg0, int32_t* arg1);
+extern void _ZN8QPolygonC1EiPKi(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  QPolygon QPolygon::united(const QPolygon & r);
 extern void _ZNK8QPolygon6unitedERKS_(void* qthis, void* arg0);
   // proto:  QPolygon QPolygon::translated(int dx, int dy);
-extern void _ZNK8QPolygon10translatedEii(void* qthis, int arg0, int arg1);
+extern void _ZNK8QPolygon10translatedEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QPolygon::putPoints(int index, int nPoints, const int * points);
-extern void _ZN8QPolygon9putPointsEiiPKi(void* qthis, int arg0, int arg1, int* arg2);
+extern void _ZN8QPolygon9putPointsEiiPKi(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2);
   // proto:  void QPolygon::setPoints(int nPoints, const int * points);
-extern void _ZN8QPolygon9setPointsEiPKi(void* qthis, int arg0, int* arg1);
+extern void _ZN8QPolygon9setPointsEiPKi(void* qthis, int32_t arg0, int32_t* arg1);
   // proto:  void QPolygon::QPolygon(int size);
-extern void* dector_ZN8QPolygonC1Ei(int arg0);
-extern void demth_ZN8QPolygonC1Ei(void* qthis, int arg0);
+extern void* dector_ZN8QPolygonC1Ei(int32_t arg0);
+extern void demth_ZN8QPolygonC1Ei(void* qthis, int32_t arg0);
   // proto:  void QPolygon::QPolygon();
 extern void* dector_ZN8QPolygonC1Ev();
 extern void demth_ZN8QPolygonC1Ev(void* qthis);
@@ -100,8 +100,8 @@ extern void _ZNK9QPolygonF9toPolygonEv(void* qthis);
   // proto:  void QPolygonF::~QPolygonF();
 extern void demth_ZN9QPolygonFD0Ev(void* qthis);
   // proto:  void QPolygonF::QPolygonF(int size);
-extern void* dector_ZN9QPolygonFC1Ei(int arg0);
-extern void demth_ZN9QPolygonFC1Ei(void* qthis, int arg0);
+extern void* dector_ZN9QPolygonFC1Ei(int32_t arg0);
+extern void demth_ZN9QPolygonFC1Ei(void* qthis, int32_t arg0);
   // proto:  QPolygonF QPolygonF::subtracted(const QPolygonF & r);
 extern void _ZNK9QPolygonF10subtractedERKS_(void* qthis, void* arg0);
   // proto:  void QPolygonF::QPolygonF();
@@ -121,7 +121,7 @@ extern void demth_ZN9QPolygonFC1ERKS_(void* qthis, void* arg0);
   // proto:  QPolygonF QPolygonF::translated(qreal dx, qreal dy);
 extern void demth_ZNK9QPolygonF10translatedEdd(void* qthis, double arg0, double arg1);
   // proto:  bool QPolygonF::isClosed();
-extern void _ZNK9QPolygonF8isClosedEv(void* qthis);
+extern void demth_ZNK9QPolygonF8isClosedEv(void* qthis);
   // proto:  QPolygonF QPolygonF::united(const QPolygonF & r);
 extern void _ZNK9QPolygonF6unitedERKS_(void* qthis, void* arg0);
 */
@@ -139,13 +139,13 @@ func init() {
 // class sizeof(QPolygon)=1
 type QPolygon struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPolygonF)=1
 type QPolygonF struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QRect QPolygon::boundingRect();
@@ -745,7 +745,7 @@ func (this *QPolygonF) isClosed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPolygonF8isClosedEv
     // invoke: bool isClosed()
-    C._ZNK9QPolygonF8isClosedEv(this.qclsinst)
+    C.demth_ZNK9QPolygonF8isClosedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPolygonF", "isClosed", args)
   }

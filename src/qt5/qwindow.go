@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qwindow.h
 // dst-file: /src/gui/qwindow.go
 //
@@ -70,11 +70,11 @@ extern void _ZNK7QWindow11minimumSizeEv(void* qthis);
   // proto:  QPoint QWindow::mapToGlobal(const QPoint & pos);
 extern void _ZNK7QWindow11mapToGlobalERK6QPoint(void* qthis, void* arg0);
   // proto: static QWindow * QWindow::fromWinId(WId id);
-extern void _ZN7QWindow9fromWinIdEi(uint32_t* arg0);
+extern void _ZN7QWindow9fromWinIdEi(int32_t* arg0);
   // proto:  QMargins QWindow::frameMargins();
 extern void _ZNK7QWindow12frameMarginsEv(void* qthis);
   // proto:  void QWindow::setMaximumWidth(int w);
-extern void _ZN7QWindow15setMaximumWidthEi(void* qthis, int arg0);
+extern void _ZN7QWindow15setMaximumWidthEi(void* qthis, int32_t arg0);
   // proto:  int QWindow::maximumHeight();
 extern void demth_ZNK7QWindow13maximumHeightEv(void* qthis);
   // proto:  bool QWindow::isModal();
@@ -88,7 +88,7 @@ extern void _ZNK7QWindow13frameGeometryEv(void* qthis);
   // proto:  QSurfaceFormat QWindow::requestedFormat();
 extern void _ZNK7QWindow15requestedFormatEv(void* qthis);
   // proto:  void QWindow::setHeight(int arg);
-extern void _ZN7QWindow9setHeightEi(void* qthis, int arg0);
+extern void _ZN7QWindow9setHeightEi(void* qthis, int32_t arg0);
   // proto:  void QWindow::requestActivate();
 extern void _ZN7QWindow15requestActivateEv(void* qthis);
   // proto:  QPoint QWindow::mapFromGlobal(const QPoint & pos);
@@ -118,7 +118,7 @@ extern void _ZN7QWindow5closeEv(void* qthis);
   // proto:  int QWindow::x();
 extern void demth_ZNK7QWindow1xEv(void* qthis);
   // proto:  void QWindow::setMinimumWidth(int w);
-extern void _ZN7QWindow15setMinimumWidthEi(void* qthis, int arg0);
+extern void _ZN7QWindow15setMinimumWidthEi(void* qthis, int32_t arg0);
   // proto:  QRegion QWindow::mask();
 extern void _ZNK7QWindow4maskEv(void* qthis);
   // proto:  QWindow * QWindow::parent();
@@ -129,7 +129,7 @@ extern void _ZN7QWindow16setFramePositionERK6QPoint(void* qthis, void* arg0);
 extern void* dector_ZN7QWindowC1EP7QScreen(void* arg0);
 extern void _ZN7QWindowC1EP7QScreen(void* qthis, void* arg0);
   // proto:  void QWindow::setGeometry(int posx, int posy, int w, int h);
-extern void _ZN7QWindow11setGeometryEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN7QWindow11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  bool QWindow::setKeyboardGrabEnabled(bool grab);
 extern void _ZN7QWindow22setKeyboardGrabEnabledEb(void* qthis, bool arg0);
   // proto:  const QMetaObject * QWindow::metaObject();
@@ -138,15 +138,15 @@ extern void _ZNK7QWindow10metaObjectEv(void* qthis);
 extern void* dector_ZN7QWindowC1EPS_(void* arg0);
 extern void _ZN7QWindowC1EPS_(void* qthis, void* arg0);
   // proto:  void QWindow::setWidth(int arg);
-extern void _ZN7QWindow8setWidthEi(void* qthis, int arg0);
+extern void _ZN7QWindow8setWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWindow::setY(int arg);
-extern void _ZN7QWindow4setYEi(void* qthis, int arg0);
+extern void _ZN7QWindow4setYEi(void* qthis, int32_t arg0);
   // proto:  qreal QWindow::devicePixelRatio();
 extern void _ZNK7QWindow16devicePixelRatioEv(void* qthis);
   // proto:  void QWindow::setBaseSize(const QSize & size);
 extern void _ZN7QWindow11setBaseSizeERK5QSize(void* qthis, void* arg0);
   // proto:  void QWindow::alert(int msec);
-extern void _ZN7QWindow5alertEi(void* qthis, int arg0);
+extern void _ZN7QWindow5alertEi(void* qthis, int32_t arg0);
   // proto:  QPlatformWindow * QWindow::handle();
 extern void _ZNK7QWindow6handleEv(void* qthis);
   // proto:  void QWindow::destroy();
@@ -154,7 +154,7 @@ extern void _ZN7QWindow7destroyEv(void* qthis);
   // proto:  QWindow * QWindow::transientParent();
 extern void _ZNK7QWindow15transientParentEv(void* qthis);
   // proto:  void QWindow::setMinimumHeight(int h);
-extern void _ZN7QWindow16setMinimumHeightEi(void* qthis, int arg0);
+extern void _ZN7QWindow16setMinimumHeightEi(void* qthis, int32_t arg0);
   // proto:  void QWindow::show();
 extern void _ZN7QWindow4showEv(void* qthis);
   // proto:  QSize QWindow::baseSize();
@@ -166,11 +166,11 @@ extern void _ZN7QWindow13showMaximizedEv(void* qthis);
   // proto:  void QWindow::create();
 extern void _ZN7QWindow6createEv(void* qthis);
   // proto:  void QWindow::resize(int w, int h);
-extern void _ZN7QWindow6resizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWindow6resizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QScreen * QWindow::screen();
 extern void _ZNK7QWindow6screenEv(void* qthis);
   // proto:  void QWindow::setPosition(int posx, int posy);
-extern void _ZN7QWindow11setPositionEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWindow11setPositionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QWindow::setOpacity(qreal level);
 extern void _ZN7QWindow10setOpacityEd(void* qthis, double arg0);
   // proto:  void QWindow::setGeometry(const QRect & rect);
@@ -192,7 +192,7 @@ extern void _ZN7QWindow9setFormatERK14QSurfaceFormat(void* qthis, void* arg0);
   // proto:  void QWindow::showFullScreen();
 extern void _ZN7QWindow14showFullScreenEv(void* qthis);
   // proto:  void QWindow::setX(int arg);
-extern void _ZN7QWindow4setXEi(void* qthis, int arg0);
+extern void _ZN7QWindow4setXEi(void* qthis, int32_t arg0);
   // proto:  void QWindow::lower();
 extern void _ZN7QWindow5lowerEv(void* qthis);
   // proto:  void QWindow::requestUpdate();
@@ -212,7 +212,7 @@ extern void demth_ZNK7QWindow12maximumWidthEv(void* qthis);
   // proto:  QPoint QWindow::position();
 extern void demth_ZNK7QWindow8positionEv(void* qthis);
   // proto:  void QWindow::setMaximumHeight(int h);
-extern void _ZN7QWindow16setMaximumHeightEi(void* qthis, int arg0);
+extern void _ZN7QWindow16setMaximumHeightEi(void* qthis, int32_t arg0);
   // proto:  QString QWindow::filePath();
 extern void _ZNK7QWindow8filePathEv(void* qthis);
   // proto:  void QWindow::showNormal();
@@ -236,7 +236,7 @@ func init() {
 // class sizeof(QWindow)=1
 type QWindow struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _modalityChanged QWindow_modalityChanged_signal;
 //  _activeChanged QWindow_activeChanged_signal;
 //  _heightChanged QWindow_heightChanged_signal;
@@ -981,7 +981,7 @@ func (this *QWindow) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWindow10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -1018,7 +1018,7 @@ func (this *QWindow) setMouseGrabEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow19setMouseGrabEnabledEb
     // invoke: bool setMouseGrabEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWindow19setMouseGrabEnabledEb(this.qclsinst, arg0)
   default:
@@ -1283,7 +1283,7 @@ func (this *QWindow) setKeyboardGrabEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWindow22setKeyboardGrabEnabledEb
     // invoke: bool setKeyboardGrabEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWindow22setKeyboardGrabEnabledEb(this.qclsinst, arg0)
   default:

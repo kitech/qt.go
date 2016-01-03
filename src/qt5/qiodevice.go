@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -33,27 +33,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QIODevice::ungetChar(char c);
-extern void _ZN9QIODevice9ungetCharEc(void* qthis, char arg0);
+extern void _ZN9QIODevice9ungetCharEc(void* qthis, unsigned char arg0);
   // proto:  QString QIODevice::errorString();
 extern void _ZNK9QIODevice11errorStringEv(void* qthis);
   // proto:  qint64 QIODevice::write(const QByteArray & data);
 extern void demth_ZN9QIODevice5writeERK10QByteArray(void* qthis, void* arg0);
   // proto:  qint64 QIODevice::write(const char * data);
-extern void _ZN9QIODevice5writeEPKc(void* qthis, char* arg0);
+extern void _ZN9QIODevice5writeEPKc(void* qthis, unsigned char* arg0);
   // proto:  bool QIODevice::isReadable();
 extern void _ZNK9QIODevice10isReadableEv(void* qthis);
   // proto:  qint64 QIODevice::readLine(char * data, qint64 maxlen);
-extern void _ZN9QIODevice8readLineEPcx(void* qthis, char* arg0, long long arg1);
+extern void _ZN9QIODevice8readLineEPcx(void* qthis, unsigned char* arg0, int64_t arg1);
   // proto:  QByteArray QIODevice::readLine(qint64 maxlen);
-extern void _ZN9QIODevice8readLineEx(void* qthis, long long arg0);
+extern void _ZN9QIODevice8readLineEx(void* qthis, int64_t arg0);
   // proto:  bool QIODevice::waitForReadyRead(int msecs);
-extern void _ZN9QIODevice16waitForReadyReadEi(void* qthis, int arg0);
+extern void _ZN9QIODevice16waitForReadyReadEi(void* qthis, int32_t arg0);
   // proto:  qint64 QIODevice::size();
 extern void _ZNK9QIODevice4sizeEv(void* qthis);
   // proto:  bool QIODevice::getChar(char * c);
-extern void _ZN9QIODevice7getCharEPc(void* qthis, char* arg0);
+extern void _ZN9QIODevice7getCharEPc(void* qthis, unsigned char* arg0);
   // proto:  bool QIODevice::putChar(char c);
-extern void _ZN9QIODevice7putCharEc(void* qthis, char arg0);
+extern void _ZN9QIODevice7putCharEc(void* qthis, unsigned char arg0);
   // proto:  bool QIODevice::isTextModeEnabled();
 extern void _ZNK9QIODevice17isTextModeEnabledEv(void* qthis);
   // proto:  bool QIODevice::isSequential();
@@ -61,7 +61,7 @@ extern void _ZNK9QIODevice12isSequentialEv(void* qthis);
   // proto:  qint64 QIODevice::bytesAvailable();
 extern void _ZNK9QIODevice14bytesAvailableEv(void* qthis);
   // proto:  qint64 QIODevice::write(const char * data, qint64 len);
-extern void _ZN9QIODevice5writeEPKcx(void* qthis, char* arg0, long long arg1);
+extern void _ZN9QIODevice5writeEPKcx(void* qthis, unsigned char* arg0, int64_t arg1);
   // proto:  void QIODevice::close();
 extern void _ZN9QIODevice5closeEv(void* qthis);
   // proto:  QByteArray QIODevice::readAll();
@@ -69,20 +69,20 @@ extern void _ZN9QIODevice7readAllEv(void* qthis);
   // proto:  bool QIODevice::atEnd();
 extern void _ZNK9QIODevice5atEndEv(void* qthis);
   // proto:  bool QIODevice::seek(qint64 pos);
-extern void _ZN9QIODevice4seekEx(void* qthis, long long arg0);
+extern void _ZN9QIODevice4seekEx(void* qthis, int64_t arg0);
   // proto:  void QIODevice::QIODevice(const QIODevice & );
 extern void* dector_ZN9QIODeviceC1ERKS_(void* arg0);
 extern void _ZN9QIODeviceC1ERKS_(void* qthis, void* arg0);
   // proto:  qint64 QIODevice::pos();
 extern void _ZNK9QIODevice3posEv(void* qthis);
   // proto:  QByteArray QIODevice::read(qint64 maxlen);
-extern void _ZN9QIODevice4readEx(void* qthis, long long arg0);
+extern void _ZN9QIODevice4readEx(void* qthis, int64_t arg0);
   // proto:  qint64 QIODevice::peek(char * data, qint64 maxlen);
-extern void _ZN9QIODevice4peekEPcx(void* qthis, char* arg0, long long arg1);
+extern void _ZN9QIODevice4peekEPcx(void* qthis, unsigned char* arg0, int64_t arg1);
   // proto:  qint64 QIODevice::read(char * data, qint64 maxlen);
-extern void _ZN9QIODevice4readEPcx(void* qthis, char* arg0, long long arg1);
+extern void _ZN9QIODevice4readEPcx(void* qthis, unsigned char* arg0, int64_t arg1);
   // proto:  bool QIODevice::waitForBytesWritten(int msecs);
-extern void _ZN9QIODevice19waitForBytesWrittenEi(void* qthis, int arg0);
+extern void _ZN9QIODevice19waitForBytesWrittenEi(void* qthis, int32_t arg0);
   // proto:  qint64 QIODevice::bytesToWrite();
 extern void _ZNK9QIODevice12bytesToWriteEv(void* qthis);
   // proto:  bool QIODevice::reset();
@@ -90,7 +90,7 @@ extern void _ZN9QIODevice5resetEv(void* qthis);
   // proto:  bool QIODevice::isWritable();
 extern void _ZNK9QIODevice10isWritableEv(void* qthis);
   // proto:  QByteArray QIODevice::peek(qint64 maxlen);
-extern void _ZN9QIODevice4peekEx(void* qthis, long long arg0);
+extern void _ZN9QIODevice4peekEx(void* qthis, int64_t arg0);
   // proto:  void QIODevice::QIODevice(QObject * parent);
 extern void* dector_ZN9QIODeviceC1EP7QObject(void* arg0);
 extern void _ZN9QIODeviceC1EP7QObject(void* qthis, void* arg0);
@@ -122,7 +122,7 @@ func init() {
 // class sizeof(QIODevice)=1
 type QIODevice struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _readyRead QIODevice_readyRead_signal;
 //  _readChannelFinished QIODevice_readChannelFinished_signal;
 //  _aboutToClose QIODevice_aboutToClose_signal;
@@ -143,7 +143,7 @@ func (this *QIODevice) ungetChar(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice9ungetCharEc
     // invoke: void ungetChar(char)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C._ZN9QIODevice9ungetCharEc(this.qclsinst, arg0)
   default:
@@ -199,13 +199,13 @@ func (this *QIODevice) write(args ...interface{}) () {
   case 1:
     // invoke: _ZN9QIODevice5writeEPKc
     // invoke: qint64 write(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN9QIODevice5writeEPKc(this.qclsinst, arg0)
   case 2:
     // invoke: _ZN9QIODevice5writeEPKcx
     // invoke: qint64 write(const char *, qint64)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
@@ -254,7 +254,7 @@ func (this *QIODevice) readLine(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice8readLineEPcx
     // invoke: qint64 readLine(char *, qint64)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
@@ -328,7 +328,7 @@ func (this *QIODevice) getChar(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice7getCharEPc
     // invoke: bool getChar(char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN9QIODevice7getCharEPc(this.qclsinst, arg0)
   default:
@@ -351,7 +351,7 @@ func (this *QIODevice) putChar(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice7putCharEc
     // invoke: bool putChar(char)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C._ZN9QIODevice7putCharEc(this.qclsinst, arg0)
   default:
@@ -552,7 +552,7 @@ func (this *QIODevice) read(args ...interface{}) () {
   case 1:
     // invoke: _ZN9QIODevice4readEPcx
     // invoke: qint64 read(char *, qint64)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
@@ -581,7 +581,7 @@ func (this *QIODevice) peek(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice4peekEPcx
     // invoke: qint64 peek(char *, qint64)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
@@ -715,7 +715,7 @@ func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice18setTextModeEnabledEb
     // invoke: void setTextModeEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QIODevice18setTextModeEnabledEb(this.qclsinst, arg0)
   default:

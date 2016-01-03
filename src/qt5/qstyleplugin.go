@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -32,8 +32,6 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QStyle * QStylePlugin::create(const QString & key);
-extern void _ZN12QStylePlugin6createERK7QString(void* qthis, void* arg0);
   // proto:  const QMetaObject * QStylePlugin::metaObject();
 extern void _ZNK12QStylePlugin10metaObjectEv(void* qthis);
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
@@ -56,30 +54,7 @@ func init() {
 // class sizeof(QStylePlugin)=1
 type QStylePlugin struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
-}
-
-  // proto:  QStyle * QStylePlugin::create(const QString & key);
-func (this *QStylePlugin) create(args ...interface{}) () {
-  // create(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QStylePlugin6createERK7QString
-    // invoke: QStyle * create(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN12QStylePlugin6createERK7QString(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QStylePlugin", "create", args)
-  }
-
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  const QMetaObject * QStylePlugin::metaObject();

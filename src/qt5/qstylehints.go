@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStyleHints::setMouseDoubleClickInterval(int mouseDoubleClickInterval);
-extern void _ZN11QStyleHints27setMouseDoubleClickIntervalEi(void* qthis, int arg0);
+extern void _ZN11QStyleHints27setMouseDoubleClickIntervalEi(void* qthis, int32_t arg0);
   // proto:  int QStyleHints::mousePressAndHoldInterval();
 extern void _ZNK11QStyleHints25mousePressAndHoldIntervalEv(void* qthis);
   // proto:  int QStyleHints::passwordMaskDelay();
@@ -41,7 +41,7 @@ extern void _ZNK11QStyleHints17passwordMaskDelayEv(void* qthis);
   // proto:  const QMetaObject * QStyleHints::metaObject();
 extern void _ZNK11QStyleHints10metaObjectEv(void* qthis);
   // proto:  void QStyleHints::setKeyboardInputInterval(int keyboardInputInterval);
-extern void _ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int arg0);
+extern void _ZN11QStyleHints24setKeyboardInputIntervalEi(void* qthis, int32_t arg0);
   // proto:  void QStyleHints::QStyleHints();
 extern void* dector_ZN11QStyleHintsC1Ev();
 extern void _ZN11QStyleHintsC1Ev(void* qthis);
@@ -50,7 +50,7 @@ extern void _ZNK11QStyleHints16showIsFullScreenEv(void* qthis);
   // proto:  bool QStyleHints::useRtlExtensions();
 extern void _ZNK11QStyleHints16useRtlExtensionsEv(void* qthis);
   // proto:  void QStyleHints::setStartDragDistance(int startDragDistance);
-extern void _ZN11QStyleHints20setStartDragDistanceEi(void* qthis, int arg0);
+extern void _ZN11QStyleHints20setStartDragDistanceEi(void* qthis, int32_t arg0);
   // proto:  bool QStyleHints::setFocusOnTouchRelease();
 extern void _ZNK11QStyleHints22setFocusOnTouchReleaseEv(void* qthis);
   // proto:  int QStyleHints::startDragVelocity();
@@ -60,9 +60,9 @@ extern void _ZNK11QStyleHints13startDragTimeEv(void* qthis);
   // proto:  int QStyleHints::keyboardInputInterval();
 extern void _ZNK11QStyleHints21keyboardInputIntervalEv(void* qthis);
   // proto:  void QStyleHints::setStartDragTime(int startDragTime);
-extern void _ZN11QStyleHints16setStartDragTimeEi(void* qthis, int arg0);
+extern void _ZN11QStyleHints16setStartDragTimeEi(void* qthis, int32_t arg0);
   // proto:  void QStyleHints::setCursorFlashTime(int cursorFlashTime);
-extern void _ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int arg0);
+extern void _ZN11QStyleHints18setCursorFlashTimeEi(void* qthis, int32_t arg0);
   // proto:  int QStyleHints::cursorFlashTime();
 extern void _ZNK11QStyleHints15cursorFlashTimeEv(void* qthis);
   // proto:  QChar QStyleHints::passwordMaskCharacter();
@@ -92,7 +92,7 @@ func init() {
 // class sizeof(QStyleHints)=1
 type QStyleHints struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _startDragDistanceChanged QStyleHints_startDragDistanceChanged_signal;
 //  _startDragTimeChanged QStyleHints_startDragTimeChanged_signal;
 //  _mouseDoubleClickIntervalChanged QStyleHints_mouseDoubleClickIntervalChanged_signal;

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -37,7 +37,7 @@ extern void _ZN6QFrame12setFrameRectERK5QRect(void* qthis, void* arg0);
   // proto:  int QFrame::lineWidth();
 extern void _ZNK6QFrame9lineWidthEv(void* qthis);
   // proto:  void QFrame::setFrameStyle(int );
-extern void _ZN6QFrame13setFrameStyleEi(void* qthis, int arg0);
+extern void _ZN6QFrame13setFrameStyleEi(void* qthis, int32_t arg0);
   // proto:  QRect QFrame::frameRect();
 extern void _ZNK6QFrame9frameRectEv(void* qthis);
   // proto:  QSize QFrame::sizeHint();
@@ -50,9 +50,9 @@ extern void _ZNK6QFrame10frameStyleEv(void* qthis);
   // proto:  int QFrame::midLineWidth();
 extern void _ZNK6QFrame12midLineWidthEv(void* qthis);
   // proto:  void QFrame::setLineWidth(int );
-extern void _ZN6QFrame12setLineWidthEi(void* qthis, int arg0);
+extern void _ZN6QFrame12setLineWidthEi(void* qthis, int32_t arg0);
   // proto:  void QFrame::setMidLineWidth(int );
-extern void _ZN6QFrame15setMidLineWidthEi(void* qthis, int arg0);
+extern void _ZN6QFrame15setMidLineWidthEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QFrame::metaObject();
 extern void _ZNK6QFrame10metaObjectEv(void* qthis);
   // proto:  int QFrame::frameWidth();
@@ -74,7 +74,7 @@ func init() {
 // class sizeof(QFrame)=1
 type QFrame struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QFrame::setFrameRect(const QRect & );

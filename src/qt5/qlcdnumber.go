@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLCDNumber::display(int num);
-extern void _ZN10QLCDNumber7displayEi(void* qthis, int arg0);
+extern void _ZN10QLCDNumber7displayEi(void* qthis, int32_t arg0);
   // proto:  void QLCDNumber::setHexMode();
 extern void _ZN10QLCDNumber10setHexModeEv(void* qthis);
   // proto:  void QLCDNumber::display(double num);
@@ -48,12 +48,12 @@ extern void _ZNK10QLCDNumber10digitCountEv(void* qthis);
   // proto:  void QLCDNumber::~QLCDNumber();
 extern void _ZN10QLCDNumberD0Ev(void* qthis);
   // proto:  bool QLCDNumber::checkOverflow(int num);
-extern void _ZNK10QLCDNumber13checkOverflowEi(void* qthis, int arg0);
+extern void _ZNK10QLCDNumber13checkOverflowEi(void* qthis, int32_t arg0);
   // proto:  void QLCDNumber::setDecMode();
 extern void _ZN10QLCDNumber10setDecModeEv(void* qthis);
   // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-extern void* dector_ZN10QLCDNumberC1EjP7QWidget(unsigned int arg0, void* arg1);
-extern void _ZN10QLCDNumberC1EjP7QWidget(void* qthis, unsigned int arg0, void* arg1);
+extern void* dector_ZN10QLCDNumberC1EjP7QWidget(int32_t arg0, void* arg1);
+extern void _ZN10QLCDNumberC1EjP7QWidget(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QLCDNumber::checkOverflow(double num);
 extern void _ZNK10QLCDNumber13checkOverflowEd(void* qthis, double arg0);
   // proto:  QSize QLCDNumber::sizeHint();
@@ -70,7 +70,7 @@ extern void _ZN10QLCDNumber10setBinModeEv(void* qthis);
   // proto:  int QLCDNumber::intValue();
 extern void _ZNK10QLCDNumber8intValueEv(void* qthis);
   // proto:  void QLCDNumber::setDigitCount(int nDigits);
-extern void _ZN10QLCDNumber13setDigitCountEi(void* qthis, int arg0);
+extern void _ZN10QLCDNumber13setDigitCountEi(void* qthis, int32_t arg0);
   // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
 extern void _ZN10QLCDNumber20setSmallDecimalPointEb(void* qthis, bool arg0);
   // proto:  bool QLCDNumber::smallDecimalPoint();
@@ -92,7 +92,7 @@ func init() {
 // class sizeof(QLCDNumber)=1
 type QLCDNumber struct {
   /*qbase*/ QFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _overflow QLCDNumber_overflow_signal;
 }
 
@@ -385,7 +385,7 @@ func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
     // invoke: void setSmallDecimalPoint(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QLCDNumber20setSmallDecimalPointEb(this.qclsinst, arg0)
   default:

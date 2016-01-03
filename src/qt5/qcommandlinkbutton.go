@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QCommandLinkButton)=1
 type QCommandLinkButton struct {
   /*qbase*/ QPushButton;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -55,7 +55,7 @@ extern void _ZNK18QFutureWatcherBase13progressValueEv(void* qthis);
   // proto:  bool QFutureWatcherBase::isStarted();
 extern void _ZNK18QFutureWatcherBase9isStartedEv(void* qthis);
   // proto:  void QFutureWatcherBase::setPendingResultsLimit(int limit);
-extern void _ZN18QFutureWatcherBase22setPendingResultsLimitEi(void* qthis, int arg0);
+extern void _ZN18QFutureWatcherBase22setPendingResultsLimitEi(void* qthis, int32_t arg0);
   // proto:  void QFutureWatcherBase::cancel();
 extern void _ZN18QFutureWatcherBase6cancelEv(void* qthis);
   // proto:  bool QFutureWatcherBase::isPaused();
@@ -86,7 +86,7 @@ func init() {
 // class sizeof(QFutureWatcherBase)=1
 type QFutureWatcherBase struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _progressRangeChanged QFutureWatcherBase_progressRangeChanged_signal;
 //  _resumed QFutureWatcherBase_resumed_signal;
 //  _progressValueChanged QFutureWatcherBase_progressValueChanged_signal;
@@ -133,7 +133,7 @@ func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QFutureWatcherBase9setPausedEb
     // invoke: void setPaused(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN18QFutureWatcherBase9setPausedEb(this.qclsinst, arg0)
   default:

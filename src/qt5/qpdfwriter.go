@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -39,7 +39,7 @@ extern void _ZN10QPdfWriter10setCreatorERK7QString(void* qthis, void* arg0);
   // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
 extern void _ZN10QPdfWriter13setPageSizeMMERK6QSizeF(void* qthis, void* arg0);
   // proto:  void QPdfWriter::setResolution(int resolution);
-extern void _ZN10QPdfWriter13setResolutionEi(void* qthis, int arg0);
+extern void _ZN10QPdfWriter13setResolutionEi(void* qthis, int32_t arg0);
   // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
 extern void* dector_ZN10QPdfWriterC1ERKS_(void* arg0);
 extern void _ZN10QPdfWriterC1ERKS_(void* qthis, void* arg0);
@@ -76,7 +76,7 @@ func init() {
 // class sizeof(QPdfWriter)=1
 type QPdfWriter struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPdfWriter::~QPdfWriter();

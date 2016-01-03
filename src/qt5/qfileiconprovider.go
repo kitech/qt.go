@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -59,7 +59,7 @@ func init() {
 // class sizeof(QFileIconProvider)=1
 type QFileIconProvider struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);

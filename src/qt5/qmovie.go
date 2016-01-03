@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -48,7 +48,7 @@ extern void _ZN6QMovie9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  QImage QMovie::currentImage();
 extern void _ZNK6QMovie12currentImageEv(void* qthis);
   // proto:  bool QMovie::jumpToFrame(int frameNumber);
-extern void _ZN6QMovie11jumpToFrameEi(void* qthis, int arg0);
+extern void _ZN6QMovie11jumpToFrameEi(void* qthis, int32_t arg0);
   // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
 extern void* dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(void* arg0, void* arg1, void* arg2);
 extern void _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
@@ -80,7 +80,7 @@ extern void _ZN6QMovie18setBackgroundColorERK6QColor(void* qthis, void* arg0);
   // proto:  bool QMovie::isValid();
 extern void _ZNK6QMovie7isValidEv(void* qthis);
   // proto:  void QMovie::setSpeed(int percentSpeed);
-extern void _ZN6QMovie8setSpeedEi(void* qthis, int arg0);
+extern void _ZN6QMovie8setSpeedEi(void* qthis, int32_t arg0);
   // proto:  void QMovie::QMovie(const QMovie & );
 extern void* dector_ZN6QMovieC1ERKS_(void* arg0);
 extern void _ZN6QMovieC1ERKS_(void* qthis, void* arg0);
@@ -115,7 +115,7 @@ func init() {
 // class sizeof(QMovie)=1
 type QMovie struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _updated QMovie_updated_signal;
 //  _stateChanged QMovie_stateChanged_signal;
 //  _started QMovie_started_signal;
@@ -424,7 +424,7 @@ func (this *QMovie) setPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMovie9setPausedEb
     // invoke: void setPaused(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN6QMovie9setPausedEb(this.qclsinst, arg0)
   default:

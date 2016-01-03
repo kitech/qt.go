@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  QList<QAbstractAnimation *> QStateMachine::defaultAnimations();
 extern void _ZNK13QStateMachine17defaultAnimationsEv(void* qthis);
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
-extern void _ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int arg1);
+extern void _ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QSet<QAbstractState *> QStateMachine::configuration();
 extern void _ZNK13QStateMachine13configurationEv(void* qthis);
   // proto:  void QStateMachine::setRunning(bool running);
@@ -54,7 +54,7 @@ extern void _ZNK13QStateMachine11errorStringEv(void* qthis);
   // proto:  bool QStateMachine::isRunning();
 extern void _ZNK13QStateMachine9isRunningEv(void* qthis);
   // proto:  bool QStateMachine::cancelDelayedEvent(int id);
-extern void _ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int arg0);
+extern void _ZN13QStateMachine18cancelDelayedEventEi(void* qthis, int32_t arg0);
   // proto:  void QStateMachine::~QStateMachine();
 extern void _ZN13QStateMachineD0Ev(void* qthis);
   // proto:  const QMetaObject * QStateMachine::metaObject();
@@ -91,7 +91,7 @@ func init() {
 // class sizeof(QStateMachine)=1
 type QStateMachine struct {
   /*qbase*/ QState;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _started QStateMachine_started_signal;
 //  _runningChanged QStateMachine_runningChanged_signal;
 //  _stopped QStateMachine_stopped_signal;
@@ -177,7 +177,7 @@ func (this *QStateMachine) setRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachine10setRunningEb
     // invoke: void setRunning(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStateMachine10setRunningEb(this.qclsinst, arg0)
   default:
@@ -246,7 +246,7 @@ func (this *QStateMachine) setAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStateMachine11setAnimatedEb
     // invoke: void setAnimated(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStateMachine11setAnimatedEb(this.qclsinst, arg0)
   default:

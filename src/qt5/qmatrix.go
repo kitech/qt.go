@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qmatrix.h
 // dst-file: /src/gui/qmatrix.go
 //
@@ -33,25 +33,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  qreal QMatrix::dx();
-extern void _ZNK7QMatrix2dxEv(void* qthis);
+extern void demth_ZNK7QMatrix2dxEv(void* qthis);
   // proto:  void QMatrix::QMatrix(bool );
 extern void* dector_ZN7QMatrixC1Eb(bool arg0);
 extern void demth_ZN7QMatrixC1Eb(void* qthis, bool arg0);
   // proto:  qreal QMatrix::dy();
-extern void _ZNK7QMatrix2dyEv(void* qthis);
+extern void demth_ZNK7QMatrix2dyEv(void* qthis);
   // proto:  QMatrix & QMatrix::scale(qreal sx, qreal sy);
 extern void _ZN7QMatrix5scaleEdd(void* qthis, double arg0, double arg1);
   // proto:  QMatrix & QMatrix::translate(qreal dx, qreal dy);
 extern void _ZN7QMatrix9translateEdd(void* qthis, double arg0, double arg1);
   // proto:  qreal QMatrix::determinant();
-extern void _ZNK7QMatrix11determinantEv(void* qthis);
+extern void demth_ZNK7QMatrix11determinantEv(void* qthis);
   // proto:  QMatrix & QMatrix::shear(qreal sh, qreal sv);
 extern void _ZN7QMatrix5shearEdd(void* qthis, double arg0, double arg1);
   // proto:  void QMatrix::QMatrix();
 extern void* dector_ZN7QMatrixC1Ev();
 extern void _ZN7QMatrixC1Ev(void* qthis);
   // proto:  qreal QMatrix::m21();
-extern void _ZNK7QMatrix3m21Ev(void* qthis);
+extern void demth_ZNK7QMatrix3m21Ev(void* qthis);
   // proto:  QPointF QMatrix::map(const QPointF & p);
 extern void _ZNK7QMatrix3mapERK7QPointF(void* qthis, void* arg0);
   // proto:  QPolygonF QMatrix::map(const QPolygonF & a);
@@ -74,7 +74,7 @@ extern void _ZNK7QMatrix3mapERK6QLineF(void* qthis, void* arg0);
   // proto:  QPainterPath QMatrix::map(const QPainterPath & p);
 extern void _ZNK7QMatrix3mapERK12QPainterPath(void* qthis, void* arg0);
   // proto:  qreal QMatrix::m11();
-extern void _ZNK7QMatrix3m11Ev(void* qthis);
+extern void demth_ZNK7QMatrix3m11Ev(void* qthis);
   // proto:  QPolygon QMatrix::mapToPolygon(const QRect & r);
 extern void _ZNK7QMatrix12mapToPolygonERK5QRect(void* qthis, void* arg0);
   // proto:  QMatrix QMatrix::inverted(bool * invertible);
@@ -82,7 +82,7 @@ extern void _ZNK7QMatrix8invertedEPb(void* qthis, bool* arg0);
   // proto:  QPoint QMatrix::map(const QPoint & p);
 extern void _ZNK7QMatrix3mapERK6QPoint(void* qthis, void* arg0);
   // proto:  void QMatrix::map(int x, int y, int * tx, int * ty);
-extern void _ZNK7QMatrix3mapEiiPiS0_(void* qthis, int arg0, int arg1, int* arg2, int* arg3);
+extern void _ZNK7QMatrix3mapEiiPiS0_(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3);
   // proto:  QLine QMatrix::map(const QLine & l);
 extern void _ZNK7QMatrix3mapERK5QLine(void* qthis, void* arg0);
   // proto:  QRectF QMatrix::mapRect(const QRectF & );
@@ -93,16 +93,16 @@ extern void demth_ZNK7QMatrix10isIdentityEv(void* qthis);
 extern void* dector_ZN7QMatrixC1Eddddddb(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, bool arg6);
 extern void demth_ZN7QMatrixC1Eddddddb(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, bool arg6);
   // proto:  qreal QMatrix::m12();
-extern void _ZNK7QMatrix3m12Ev(void* qthis);
+extern void demth_ZNK7QMatrix3m12Ev(void* qthis);
   // proto:  bool QMatrix::isInvertible();
-extern void _ZNK7QMatrix12isInvertibleEv(void* qthis);
+extern void demth_ZNK7QMatrix12isInvertibleEv(void* qthis);
   // proto:  QRect QMatrix::mapRect(const QRect & );
 extern void _ZNK7QMatrix7mapRectERK5QRect(void* qthis, void* arg0);
   // proto:  void QMatrix::QMatrix(qreal m11, qreal m12, qreal m21, qreal m22, qreal dx, qreal dy);
 extern void* dector_ZN7QMatrixC1Edddddd(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5);
 extern void _ZN7QMatrixC1Edddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5);
   // proto:  qreal QMatrix::m22();
-extern void _ZNK7QMatrix3m22Ev(void* qthis);
+extern void demth_ZNK7QMatrix3m22Ev(void* qthis);
   // proto:  QPolygon QMatrix::map(const QPolygon & a);
 extern void _ZNK7QMatrix3mapERK8QPolygon(void* qthis, void* arg0);
 */
@@ -120,7 +120,7 @@ func init() {
 // class sizeof(QMatrix)=48
 type QMatrix struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QMatrix::dx();
@@ -136,7 +136,7 @@ func (this *QMatrix) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix2dxEv
     // invoke: qreal dx()
-    C._ZNK7QMatrix2dxEv(this.qclsinst)
+    C.demth_ZNK7QMatrix2dxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "dx", args)
   }
@@ -161,7 +161,7 @@ func (this *QMatrix) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix2dyEv
     // invoke: qreal dy()
-    C._ZNK7QMatrix2dyEv(this.qclsinst)
+    C.demth_ZNK7QMatrix2dyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "dy", args)
   }
@@ -233,7 +233,7 @@ func (this *QMatrix) determinant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix11determinantEv
     // invoke: qreal determinant()
-    C._ZNK7QMatrix11determinantEv(this.qclsinst)
+    C.demth_ZNK7QMatrix11determinantEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "determinant", args)
   }
@@ -279,7 +279,7 @@ func (this *QMatrix) m21(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m21Ev
     // invoke: qreal m21()
-    C._ZNK7QMatrix3m21Ev(this.qclsinst)
+    C.demth_ZNK7QMatrix3m21Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m21", args)
   }
@@ -394,7 +394,7 @@ func (this *QMatrix) m11(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m11Ev
     // invoke: qreal m11()
-    C._ZNK7QMatrix3m11Ev(this.qclsinst)
+    C.demth_ZNK7QMatrix3m11Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m11", args)
   }
@@ -512,7 +512,7 @@ func (this *QMatrix) m12(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m12Ev
     // invoke: qreal m12()
-    C._ZNK7QMatrix3m12Ev(this.qclsinst)
+    C.demth_ZNK7QMatrix3m12Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m12", args)
   }
@@ -532,7 +532,7 @@ func (this *QMatrix) isInvertible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix12isInvertibleEv
     // invoke: bool isInvertible()
-    C._ZNK7QMatrix12isInvertibleEv(this.qclsinst)
+    C.demth_ZNK7QMatrix12isInvertibleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "isInvertible", args)
   }
@@ -552,7 +552,7 @@ func (this *QMatrix) m22(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QMatrix3m22Ev
     // invoke: qreal m22()
-    C._ZNK7QMatrix3m22Ev(this.qclsinst)
+    C.demth_ZNK7QMatrix3m22Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMatrix", "m22", args)
   }

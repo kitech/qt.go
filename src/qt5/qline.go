@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.go
 //
@@ -33,13 +33,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QLine::isNull();
-extern void _ZNK5QLine6isNullEv(void* qthis);
+extern void demth_ZNK5QLine6isNullEv(void* qthis);
   // proto:  QLine QLine::translated(const QPoint & p);
-extern void _ZNK5QLine10translatedERK6QPoint(void* qthis, void* arg0);
+extern void demth_ZNK5QLine10translatedERK6QPoint(void* qthis, void* arg0);
   // proto:  void QLine::setP2(const QPoint & p2);
 extern void demth_ZN5QLine5setP2ERK6QPoint(void* qthis, void* arg0);
   // proto:  int QLine::x2();
-extern void _ZNK5QLine2x2Ev(void* qthis);
+extern void demth_ZNK5QLine2x2Ev(void* qthis);
   // proto:  void QLine::QLine(const QPoint & pt1, const QPoint & pt2);
 extern void* dector_ZN5QLineC1ERK6QPointS2_(void* arg0, void* arg1);
 extern void _ZN5QLineC1ERK6QPointS2_(void* qthis, void* arg0, void* arg1);
@@ -48,30 +48,30 @@ extern void demth_ZN5QLine5setP1ERK6QPoint(void* qthis, void* arg0);
   // proto:  void QLine::translate(const QPoint & p);
 extern void demth_ZN5QLine9translateERK6QPoint(void* qthis, void* arg0);
   // proto:  int QLine::dx();
-extern void _ZNK5QLine2dxEv(void* qthis);
+extern void demth_ZNK5QLine2dxEv(void* qthis);
   // proto:  int QLine::y2();
-extern void _ZNK5QLine2y2Ev(void* qthis);
+extern void demth_ZNK5QLine2y2Ev(void* qthis);
   // proto:  int QLine::dy();
-extern void _ZNK5QLine2dyEv(void* qthis);
+extern void demth_ZNK5QLine2dyEv(void* qthis);
   // proto:  int QLine::y1();
-extern void _ZNK5QLine2y1Ev(void* qthis);
+extern void demth_ZNK5QLine2y1Ev(void* qthis);
   // proto:  QPoint QLine::p1();
-extern void _ZNK5QLine2p1Ev(void* qthis);
+extern void demth_ZNK5QLine2p1Ev(void* qthis);
   // proto:  QPoint QLine::p2();
-extern void _ZNK5QLine2p2Ev(void* qthis);
+extern void demth_ZNK5QLine2p2Ev(void* qthis);
   // proto:  void QLine::QLine(int x1, int y1, int x2, int y2);
-extern void* dector_ZN5QLineC1Eiiii(int arg0, int arg1, int arg2, int arg3);
-extern void _ZN5QLineC1Eiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void* dector_ZN5QLineC1Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
+extern void _ZN5QLineC1Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QLine::translate(int dx, int dy);
-extern void demth_ZN5QLine9translateEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN5QLine9translateEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QLine QLine::translated(int dx, int dy);
-extern void _ZNK5QLine10translatedEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK5QLine10translatedEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QLine::setPoints(const QPoint & p1, const QPoint & p2);
 extern void demth_ZN5QLine9setPointsERK6QPointS2_(void* qthis, void* arg0, void* arg1);
   // proto:  void QLine::setLine(int x1, int y1, int x2, int y2);
-extern void demth_ZN5QLine7setLineEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN5QLine7setLineEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  int QLine::x1();
-extern void _ZNK5QLine2x1Ev(void* qthis);
+extern void demth_ZNK5QLine2x1Ev(void* qthis);
   // proto:  void QLine::QLine();
 extern void* dector_ZN5QLineC1Ev();
 extern void _ZN5QLineC1Ev(void* qthis);
@@ -82,11 +82,11 @@ extern void demth_ZN6QLineF9setPointsERK7QPointFS2_(void* qthis, void* arg0, voi
   // proto:  void QLineF::setP2(const QPointF & p2);
 extern void demth_ZN6QLineF5setP2ERK7QPointF(void* qthis, void* arg0);
   // proto:  QLineF QLineF::translated(qreal dx, qreal dy);
-extern void _ZNK6QLineF10translatedEdd(void* qthis, double arg0, double arg1);
+extern void demth_ZNK6QLineF10translatedEdd(void* qthis, double arg0, double arg1);
   // proto:  void QLineF::setLength(qreal len);
 extern void demth_ZN6QLineF9setLengthEd(void* qthis, double arg0);
   // proto:  qreal QLineF::x1();
-extern void _ZNK6QLineF2x1Ev(void* qthis);
+extern void demth_ZNK6QLineF2x1Ev(void* qthis);
   // proto:  qreal QLineF::angle();
 extern void _ZNK6QLineF5angleEv(void* qthis);
   // proto:  void QLineF::QLineF(const QPointF & pt1, const QPointF & pt2);
@@ -100,41 +100,41 @@ extern void _ZN6QLineFC1ERK5QLine(void* qthis, void* arg0);
   // proto:  void QLineF::setAngle(qreal angle);
 extern void _ZN6QLineF8setAngleEd(void* qthis, double arg0);
   // proto:  qreal QLineF::x2();
-extern void _ZNK6QLineF2x2Ev(void* qthis);
+extern void demth_ZNK6QLineF2x2Ev(void* qthis);
   // proto:  void QLineF::translate(const QPointF & p);
 extern void demth_ZN6QLineF9translateERK7QPointF(void* qthis, void* arg0);
   // proto:  qreal QLineF::dx();
-extern void _ZNK6QLineF2dxEv(void* qthis);
+extern void demth_ZNK6QLineF2dxEv(void* qthis);
   // proto:  void QLineF::QLineF();
 extern void* dector_ZN6QLineFC1Ev();
 extern void _ZN6QLineFC1Ev(void* qthis);
   // proto:  QPointF QLineF::p1();
-extern void _ZNK6QLineF2p1Ev(void* qthis);
+extern void demth_ZNK6QLineF2p1Ev(void* qthis);
   // proto:  QLineF QLineF::normalVector();
-extern void _ZNK6QLineF12normalVectorEv(void* qthis);
+extern void demth_ZNK6QLineF12normalVectorEv(void* qthis);
   // proto:  QLine QLineF::toLine();
-extern void _ZNK6QLineF6toLineEv(void* qthis);
+extern void demth_ZNK6QLineF6toLineEv(void* qthis);
   // proto:  QPointF QLineF::pointAt(qreal t);
-extern void _ZNK6QLineF7pointAtEd(void* qthis, double arg0);
+extern void demth_ZNK6QLineF7pointAtEd(void* qthis, double arg0);
   // proto:  QPointF QLineF::p2();
-extern void _ZNK6QLineF2p2Ev(void* qthis);
+extern void demth_ZNK6QLineF2p2Ev(void* qthis);
   // proto:  qreal QLineF::y2();
-extern void _ZNK6QLineF2y2Ev(void* qthis);
+extern void demth_ZNK6QLineF2y2Ev(void* qthis);
   // proto:  void QLineF::QLineF(qreal x1, qreal y1, qreal x2, qreal y2);
 extern void* dector_ZN6QLineFC1Edddd(double arg0, double arg1, double arg2, double arg3);
 extern void _ZN6QLineFC1Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
   // proto:  qreal QLineF::dy();
-extern void _ZNK6QLineF2dyEv(void* qthis);
+extern void demth_ZNK6QLineF2dyEv(void* qthis);
   // proto:  QLineF QLineF::unitVector();
 extern void _ZNK6QLineF10unitVectorEv(void* qthis);
   // proto:  bool QLineF::isNull();
-extern void _ZNK6QLineF6isNullEv(void* qthis);
+extern void demth_ZNK6QLineF6isNullEv(void* qthis);
   // proto:  qreal QLineF::y1();
-extern void _ZNK6QLineF2y1Ev(void* qthis);
+extern void demth_ZNK6QLineF2y1Ev(void* qthis);
   // proto:  qreal QLineF::angleTo(const QLineF & l);
 extern void _ZNK6QLineF7angleToERKS_(void* qthis, void* arg0);
   // proto:  QLineF QLineF::translated(const QPointF & p);
-extern void _ZNK6QLineF10translatedERK7QPointF(void* qthis, void* arg0);
+extern void demth_ZNK6QLineF10translatedERK7QPointF(void* qthis, void* arg0);
   // proto:  void QLineF::setLine(qreal x1, qreal y1, qreal x2, qreal y2);
 extern void demth_ZN6QLineF7setLineEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
   // proto: static QLineF QLineF::fromPolar(qreal length, qreal angle);
@@ -158,13 +158,13 @@ func init() {
 // class sizeof(QLine)=16
 type QLine struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QLineF)=32
 type QLineF struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QLine::isNull();
@@ -180,7 +180,7 @@ func (this *QLine) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QLine6isNullEv(this.qclsinst)
+    C.demth_ZNK5QLine6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "isNull", args)
   }
@@ -207,7 +207,7 @@ func (this *QLine) translated(args ...interface{}) () {
     // invoke: QLine translated(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QLine10translatedERK6QPoint(this.qclsinst, arg0)
+    C.demth_ZNK5QLine10translatedERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK5QLine10translatedEii
     // invoke: QLine translated(int, int)
@@ -215,7 +215,7 @@ func (this *QLine) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZNK5QLine10translatedEii(this.qclsinst, arg0, arg1)
+    C.demth_ZNK5QLine10translatedEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QLine", "translated", args)
   }
@@ -258,7 +258,7 @@ func (this *QLine) x2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2x2Ev
     // invoke: int x2()
-    C._ZNK5QLine2x2Ev(this.qclsinst)
+    C.demth_ZNK5QLine2x2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "x2", args)
   }
@@ -341,7 +341,7 @@ func (this *QLine) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2dxEv
     // invoke: int dx()
-    C._ZNK5QLine2dxEv(this.qclsinst)
+    C.demth_ZNK5QLine2dxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "dx", args)
   }
@@ -361,7 +361,7 @@ func (this *QLine) y2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2y2Ev
     // invoke: int y2()
-    C._ZNK5QLine2y2Ev(this.qclsinst)
+    C.demth_ZNK5QLine2y2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "y2", args)
   }
@@ -381,7 +381,7 @@ func (this *QLine) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2dyEv
     // invoke: int dy()
-    C._ZNK5QLine2dyEv(this.qclsinst)
+    C.demth_ZNK5QLine2dyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "dy", args)
   }
@@ -401,7 +401,7 @@ func (this *QLine) y1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2y1Ev
     // invoke: int y1()
-    C._ZNK5QLine2y1Ev(this.qclsinst)
+    C.demth_ZNK5QLine2y1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "y1", args)
   }
@@ -421,7 +421,7 @@ func (this *QLine) p1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2p1Ev
     // invoke: QPoint p1()
-    C._ZNK5QLine2p1Ev(this.qclsinst)
+    C.demth_ZNK5QLine2p1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "p1", args)
   }
@@ -441,7 +441,7 @@ func (this *QLine) p2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2p2Ev
     // invoke: QPoint p2()
-    C._ZNK5QLine2p2Ev(this.qclsinst)
+    C.demth_ZNK5QLine2p2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "p2", args)
   }
@@ -519,7 +519,7 @@ func (this *QLine) x1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2x1Ev
     // invoke: int x1()
-    C._ZNK5QLine2x1Ev(this.qclsinst)
+    C.demth_ZNK5QLine2x1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLine", "x1", args)
   }
@@ -632,13 +632,13 @@ func (this *QLineF) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C._ZNK6QLineF10translatedEdd(this.qclsinst, arg0, arg1)
+    C.demth_ZNK6QLineF10translatedEdd(this.qclsinst, arg0, arg1)
   case 1:
     // invoke: _ZNK6QLineF10translatedERK7QPointF
     // invoke: QLineF translated(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QLineF10translatedERK7QPointF(this.qclsinst, arg0)
+    C.demth_ZNK6QLineF10translatedERK7QPointF(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineF", "translated", args)
   }
@@ -681,7 +681,7 @@ func (this *QLineF) x1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2x1Ev
     // invoke: qreal x1()
-    C._ZNK6QLineF2x1Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2x1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "x1", args)
   }
@@ -778,7 +778,7 @@ func (this *QLineF) x2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2x2Ev
     // invoke: qreal x2()
-    C._ZNK6QLineF2x2Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2x2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "x2", args)
   }
@@ -798,7 +798,7 @@ func (this *QLineF) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2dxEv
     // invoke: qreal dx()
-    C._ZNK6QLineF2dxEv(this.qclsinst)
+    C.demth_ZNK6QLineF2dxEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "dx", args)
   }
@@ -818,7 +818,7 @@ func (this *QLineF) p1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2p1Ev
     // invoke: QPointF p1()
-    C._ZNK6QLineF2p1Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2p1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "p1", args)
   }
@@ -838,7 +838,7 @@ func (this *QLineF) normalVector(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF12normalVectorEv
     // invoke: QLineF normalVector()
-    C._ZNK6QLineF12normalVectorEv(this.qclsinst)
+    C.demth_ZNK6QLineF12normalVectorEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "normalVector", args)
   }
@@ -858,7 +858,7 @@ func (this *QLineF) toLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF6toLineEv
     // invoke: QLine toLine()
-    C._ZNK6QLineF6toLineEv(this.qclsinst)
+    C.demth_ZNK6QLineF6toLineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "toLine", args)
   }
@@ -881,7 +881,7 @@ func (this *QLineF) pointAt(args ...interface{}) () {
     // invoke: QPointF pointAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C._ZNK6QLineF7pointAtEd(this.qclsinst, arg0)
+    C.demth_ZNK6QLineF7pointAtEd(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLineF", "pointAt", args)
   }
@@ -901,7 +901,7 @@ func (this *QLineF) p2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2p2Ev
     // invoke: QPointF p2()
-    C._ZNK6QLineF2p2Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2p2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "p2", args)
   }
@@ -921,7 +921,7 @@ func (this *QLineF) y2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2y2Ev
     // invoke: qreal y2()
-    C._ZNK6QLineF2y2Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2y2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "y2", args)
   }
@@ -941,7 +941,7 @@ func (this *QLineF) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2dyEv
     // invoke: qreal dy()
-    C._ZNK6QLineF2dyEv(this.qclsinst)
+    C.demth_ZNK6QLineF2dyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "dy", args)
   }
@@ -981,7 +981,7 @@ func (this *QLineF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF6isNullEv
     // invoke: bool isNull()
-    C._ZNK6QLineF6isNullEv(this.qclsinst)
+    C.demth_ZNK6QLineF6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "isNull", args)
   }
@@ -1001,7 +1001,7 @@ func (this *QLineF) y1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2y1Ev
     // invoke: qreal y1()
-    C._ZNK6QLineF2y1Ev(this.qclsinst)
+    C.demth_ZNK6QLineF2y1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLineF", "y1", args)
   }

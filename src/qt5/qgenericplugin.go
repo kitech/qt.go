@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -35,8 +35,6 @@ import "qtrt"
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
 extern void* dector_ZN14QGenericPluginC1EP7QObject(void* arg0);
 extern void _ZN14QGenericPluginC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QObject * QGenericPlugin::create(const QString & name, const QString & spec);
-extern void _ZN14QGenericPlugin6createERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto:  void QGenericPlugin::~QGenericPlugin();
 extern void _ZN14QGenericPluginD0Ev(void* qthis);
   // proto:  const QMetaObject * QGenericPlugin::metaObject();
@@ -56,38 +54,12 @@ func init() {
 // class sizeof(QGenericPlugin)=1
 type QGenericPlugin struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
 func NewQGenericPlugin(args ...interface{}) QGenericPlugin {
   return QGenericPlugin{}
-}
-
-  // proto:  QObject * QGenericPlugin::create(const QString & name, const QString & spec);
-func (this *QGenericPlugin) create(args ...interface{}) () {
-  // create(const class QString &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QGenericPlugin6createERK7QStringS2_
-    // invoke: QObject * create(const class QString &, const class QString &)
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
-    if false {fmt.Println(arg1)}
-    C._ZN14QGenericPlugin6createERK7QStringS2_(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QGenericPlugin", "create", args)
-  }
-
 }
 
   // proto:  void QGenericPlugin::~QGenericPlugin();

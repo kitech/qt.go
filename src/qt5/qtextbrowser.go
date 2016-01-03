@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtextbrowser.h
 // dst-file: /src/widgets/qtextbrowser.go
 //
@@ -43,7 +43,7 @@ extern void _ZN12QTextBrowser12clearHistoryEv(void* qthis);
   // proto:  const QMetaObject * QTextBrowser::metaObject();
 extern void _ZNK12QTextBrowser10metaObjectEv(void* qthis);
   // proto:  QUrl QTextBrowser::historyUrl(int );
-extern void _ZNK12QTextBrowser10historyUrlEi(void* qthis, int arg0);
+extern void _ZNK12QTextBrowser10historyUrlEi(void* qthis, int32_t arg0);
   // proto:  bool QTextBrowser::isForwardAvailable();
 extern void _ZNK12QTextBrowser18isForwardAvailableEv(void* qthis);
   // proto:  bool QTextBrowser::openExternalLinks();
@@ -65,11 +65,11 @@ extern void _ZN12QTextBrowser12setOpenLinksEb(void* qthis, bool arg0);
   // proto:  void QTextBrowser::forward();
 extern void _ZN12QTextBrowser7forwardEv(void* qthis);
   // proto:  QString QTextBrowser::historyTitle(int );
-extern void _ZNK12QTextBrowser12historyTitleEi(void* qthis, int arg0);
+extern void _ZNK12QTextBrowser12historyTitleEi(void* qthis, int32_t arg0);
   // proto:  void QTextBrowser::setSearchPaths(const QStringList & paths);
 extern void _ZN12QTextBrowser14setSearchPathsERK11QStringList(void* qthis, void* arg0);
   // proto:  QVariant QTextBrowser::loadResource(int type, const QUrl & name);
-extern void _ZN12QTextBrowser12loadResourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+extern void _ZN12QTextBrowser12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1);
   // proto:  QUrl QTextBrowser::source();
 extern void _ZNK12QTextBrowser6sourceEv(void* qthis);
   // proto:  void QTextBrowser::setOpenExternalLinks(bool open);
@@ -97,7 +97,7 @@ func init() {
 // class sizeof(QTextBrowser)=1
 type QTextBrowser struct {
   /*qbase*/ QTextEdit;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _forwardAvailable QTextBrowser_forwardAvailable_signal;
 //  _sourceChanged QTextBrowser_sourceChanged_signal;
 //  _highlighted QTextBrowser_highlighted_signal;
@@ -342,7 +342,7 @@ func (this *QTextBrowser) setOpenLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextBrowser12setOpenLinksEb
     // invoke: void setOpenLinks(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QTextBrowser12setOpenLinksEb(this.qclsinst, arg0)
   default:
@@ -477,7 +477,7 @@ func (this *QTextBrowser) setOpenExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QTextBrowser20setOpenExternalLinksEb
     // invoke: void setOpenExternalLinks(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QTextBrowser20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:

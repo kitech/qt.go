@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qfiledialog.h
 // dst-file: /src/widgets/qfiledialog.go
 //
@@ -67,7 +67,7 @@ extern void _ZNK11QFileDialog10isReadOnlyEv(void* qthis);
   // proto:  QByteArray QFileDialog::saveState();
 extern void _ZNK11QFileDialog9saveStateEv(void* qthis);
   // proto:  void QFileDialog::open(QObject * receiver, const char * member);
-extern void _ZN11QFileDialog4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN11QFileDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QDir QFileDialog::directory();
 extern void _ZNK11QFileDialog9directoryEv(void* qthis);
   // proto:  void QFileDialog::setDirectory(const QDir & directory);
@@ -137,7 +137,7 @@ func init() {
 // class sizeof(QFileDialog)=1
 type QFileDialog struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _filesSelected QFileDialog_filesSelected_signal;
 //  _fileSelected QFileDialog_fileSelected_signal;
 //  _currentChanged QFileDialog_currentChanged_signal;
@@ -226,7 +226,7 @@ func (this *QFileDialog) setConfirmOverwrite(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialog19setConfirmOverwriteEb
     // invoke: void setConfirmOverwrite(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDialog19setConfirmOverwriteEb(this.qclsinst, arg0)
   default:
@@ -539,7 +539,7 @@ func (this *QFileDialog) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN11QFileDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
@@ -582,7 +582,7 @@ func (this *QFileDialog) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialog10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDialog10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -694,7 +694,7 @@ func (this *QFileDialog) setResolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialog18setResolveSymlinksEb
     // invoke: void setResolveSymlinks(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDialog18setResolveSymlinksEb(this.qclsinst, arg0)
   default:
@@ -717,7 +717,7 @@ func (this *QFileDialog) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialog11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDialog11setReadOnlyEb(this.qclsinst, arg0)
   default:
@@ -740,7 +740,7 @@ func (this *QFileDialog) setNameFilterDetailsVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDialog27setNameFilterDetailsVisibleEb
     // invoke: void setNameFilterDetailsVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDialog27setNameFilterDetailsVisibleEb(this.qclsinst, arg0)
   default:

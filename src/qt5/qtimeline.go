@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -48,16 +48,16 @@ extern void _ZN9QTimeLine4stopEv(void* qthis);
   // proto:  void QTimeLine::~QTimeLine();
 extern void _ZN9QTimeLineD0Ev(void* qthis);
   // proto:  void QTimeLine::setUpdateInterval(int interval);
-extern void _ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine17setUpdateIntervalEi(void* qthis, int32_t arg0);
   // proto:  QEasingCurve QTimeLine::easingCurve();
 extern void _ZNK9QTimeLine11easingCurveEv(void* qthis);
   // proto:  int QTimeLine::loopCount();
 extern void _ZNK9QTimeLine9loopCountEv(void* qthis);
   // proto:  void QTimeLine::setStartFrame(int frame);
-extern void _ZN9QTimeLine13setStartFrameEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine13setStartFrameEi(void* qthis, int32_t arg0);
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
-extern void* dector_ZN9QTimeLineC1EiP7QObject(int arg0, void* arg1);
-extern void _ZN9QTimeLineC1EiP7QObject(void* qthis, int arg0, void* arg1);
+extern void* dector_ZN9QTimeLineC1EiP7QObject(int32_t arg0, void* arg1);
+extern void _ZN9QTimeLineC1EiP7QObject(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTimeLine::resume();
 extern void _ZN9QTimeLine6resumeEv(void* qthis);
   // proto:  void QTimeLine::setEasingCurve(const QEasingCurve & curve);
@@ -65,17 +65,17 @@ extern void _ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* ar
   // proto:  int QTimeLine::startFrame();
 extern void _ZNK9QTimeLine10startFrameEv(void* qthis);
   // proto:  void QTimeLine::setEndFrame(int frame);
-extern void _ZN9QTimeLine11setEndFrameEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine11setEndFrameEi(void* qthis, int32_t arg0);
   // proto:  int QTimeLine::updateInterval();
 extern void _ZNK9QTimeLine14updateIntervalEv(void* qthis);
   // proto:  void QTimeLine::setLoopCount(int count);
-extern void _ZN9QTimeLine12setLoopCountEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine12setLoopCountEi(void* qthis, int32_t arg0);
   // proto:  void QTimeLine::setCurrentTime(int msec);
-extern void _ZN9QTimeLine14setCurrentTimeEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine14setCurrentTimeEi(void* qthis, int32_t arg0);
   // proto:  int QTimeLine::currentTime();
 extern void _ZNK9QTimeLine11currentTimeEv(void* qthis);
   // proto:  void QTimeLine::setDuration(int duration);
-extern void _ZN9QTimeLine11setDurationEi(void* qthis, int arg0);
+extern void _ZN9QTimeLine11setDurationEi(void* qthis, int32_t arg0);
   // proto:  void QTimeLine::toggleDirection();
 extern void _ZN9QTimeLine15toggleDirectionEv(void* qthis);
   // proto:  int QTimeLine::endFrame();
@@ -83,11 +83,11 @@ extern void _ZNK9QTimeLine8endFrameEv(void* qthis);
   // proto:  void QTimeLine::setPaused(bool paused);
 extern void _ZN9QTimeLine9setPausedEb(void* qthis, bool arg0);
   // proto:  int QTimeLine::frameForTime(int msec);
-extern void _ZNK9QTimeLine12frameForTimeEi(void* qthis, int arg0);
+extern void _ZNK9QTimeLine12frameForTimeEi(void* qthis, int32_t arg0);
   // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
-extern void _ZN9QTimeLine13setFrameRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  qreal QTimeLine::valueForTime(int msec);
-extern void _ZNK9QTimeLine12valueForTimeEi(void* qthis, int arg0);
+extern void _ZNK9QTimeLine12valueForTimeEi(void* qthis, int32_t arg0);
   // proto:  qreal QTimeLine::currentValue();
 extern void _ZNK9QTimeLine12currentValueEv(void* qthis);
 */
@@ -105,7 +105,7 @@ func init() {
 // class sizeof(QTimeLine)=1
 type QTimeLine struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QTimeLine_valueChanged_signal;
 //  _finished QTimeLine_finished_signal;
 //  _frameChanged QTimeLine_frameChanged_signal;
@@ -566,7 +566,7 @@ func (this *QTimeLine) setPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTimeLine9setPausedEb
     // invoke: void setPaused(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTimeLine9setPausedEb(this.qclsinst, arg0)
   default:

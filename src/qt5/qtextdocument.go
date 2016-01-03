@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.go
 //
@@ -61,15 +61,15 @@ extern void _ZN13QTextDocument4undoEP11QTextCursor(void* qthis, void* arg0);
   // proto:  QString QTextDocument::toPlainText();
 extern void _ZNK13QTextDocument11toPlainTextEv(void* qthis);
   // proto:  void QTextDocument::addResource(int type, const QUrl & name, const QVariant & resource);
-extern void _ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN13QTextDocument11addResourceEiRK4QUrlRK8QVariant(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  QSizeF QTextDocument::size();
 extern void _ZNK13QTextDocument4sizeEv(void* qthis);
   // proto:  QTextObject * QTextDocument::object(int objectIndex);
-extern void _ZNK13QTextDocument6objectEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument6objectEi(void* qthis, int32_t arg0);
   // proto:  QTextDocument * QTextDocument::clone(QObject * parent);
 extern void _ZNK13QTextDocument5cloneEP7QObject(void* qthis, void* arg0);
   // proto:  void QTextDocument::markContentsDirty(int from, int length);
-extern void _ZN13QTextDocument17markContentsDirtyEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QTextDocument17markContentsDirtyEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
 extern void* dector_ZN13QTextDocumentC1EP7QObject(void* arg0);
 extern void _ZN13QTextDocumentC1EP7QObject(void* qthis, void* arg0);
@@ -117,7 +117,7 @@ extern void _ZN13QTextDocument14setIndentWidthEd(void* qthis, double arg0);
   // proto:  QUrl QTextDocument::baseUrl();
 extern void _ZNK13QTextDocument7baseUrlEv(void* qthis);
   // proto:  QTextFrame * QTextDocument::frameAt(int pos);
-extern void _ZNK13QTextDocument7frameAtEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument7frameAtEi(void* qthis, int32_t arg0);
   // proto:  void QTextDocument::QTextDocument(const QTextDocument & );
 extern void* dector_ZN13QTextDocumentC1ERKS_(void* arg0);
 extern void _ZN13QTextDocumentC1ERKS_(void* qthis, void* arg0);
@@ -126,11 +126,11 @@ extern void _ZN13QTextDocument20setDefaultTextOptionERK11QTextOption(void* qthis
   // proto:  QFont QTextDocument::defaultFont();
 extern void _ZNK13QTextDocument11defaultFontEv(void* qthis);
   // proto:  QTextBlock QTextDocument::findBlockByNumber(int blockNumber);
-extern void _ZNK13QTextDocument17findBlockByNumberEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument17findBlockByNumberEi(void* qthis, int32_t arg0);
   // proto:  QTextOption QTextDocument::defaultTextOption();
 extern void _ZNK13QTextDocument17defaultTextOptionEv(void* qthis);
   // proto:  QTextBlock QTextDocument::findBlock(int pos);
-extern void _ZNK13QTextDocument9findBlockEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument9findBlockEi(void* qthis, int32_t arg0);
   // proto:  void QTextDocument::setBaseUrl(const QUrl & url);
 extern void _ZN13QTextDocument10setBaseUrlERK4QUrl(void* qthis, void* arg0);
   // proto:  void QTextDocument::appendUndoItem(QAbstractUndoItem * );
@@ -140,7 +140,7 @@ extern void _ZN13QTextDocument4redoEv(void* qthis);
   // proto:  void QTextDocument::drawContents(QPainter * painter, const QRectF & rect);
 extern void _ZN13QTextDocument12drawContentsEP8QPainterRK6QRectF(void* qthis, void* arg0, void* arg1);
   // proto:  QTextBlock QTextDocument::findBlockByLineNumber(int blockNumber);
-extern void _ZNK13QTextDocument21findBlockByLineNumberEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument21findBlockByLineNumberEi(void* qthis, int32_t arg0);
   // proto:  void QTextDocument::undo();
 extern void _ZN13QTextDocument4undoEv(void* qthis);
   // proto:  qreal QTextDocument::textWidth();
@@ -150,7 +150,7 @@ extern void _ZNK13QTextDocument10metaObjectEv(void* qthis);
   // proto:  int QTextDocument::availableRedoSteps();
 extern void _ZNK13QTextDocument18availableRedoStepsEv(void* qthis);
   // proto:  QChar QTextDocument::characterAt(int pos);
-extern void _ZNK13QTextDocument11characterAtEi(void* qthis, int arg0);
+extern void _ZNK13QTextDocument11characterAtEi(void* qthis, int32_t arg0);
   // proto:  void QTextDocument::setDefaultFont(const QFont & font);
 extern void _ZN13QTextDocument14setDefaultFontERK5QFont(void* qthis, void* arg0);
   // proto:  QTextObject * QTextDocument::objectForFormat(const QTextFormat & );
@@ -176,19 +176,13 @@ extern void _ZN13QTextDocument12setPlainTextERK7QString(void* qthis, void* arg0)
   // proto:  void QTextDocument::clear();
 extern void _ZN13QTextDocument5clearEv(void* qthis);
   // proto:  QVariant QTextDocument::resource(int type, const QUrl & name);
-extern void _ZNK13QTextDocument8resourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+extern void _ZNK13QTextDocument8resourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1);
   // proto:  QTextBlock QTextDocument::begin();
 extern void _ZNK13QTextDocument5beginEv(void* qthis);
   // proto:  void QTextDocument::setMaximumBlockCount(int maximum);
-extern void _ZN13QTextDocument20setMaximumBlockCountEi(void* qthis, int arg0);
+extern void _ZN13QTextDocument20setMaximumBlockCountEi(void* qthis, int32_t arg0);
   // proto:  void QTextDocument::setModified(bool m);
 extern void _ZN13QTextDocument11setModifiedEb(void* qthis, bool arg0);
-  // proto:  void QAbstractUndoItem::undo();
-extern void _ZN17QAbstractUndoItem4undoEv(void* qthis);
-  // proto:  void QAbstractUndoItem::redo();
-extern void _ZN17QAbstractUndoItem4redoEv(void* qthis);
-  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
-extern void demth_ZN17QAbstractUndoItemD0Ev(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -204,7 +198,7 @@ func init() {
 // class sizeof(QTextDocument)=1
 type QTextDocument struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorPositionChanged QTextDocument_cursorPositionChanged_signal;
 //  _documentLayoutChanged QTextDocument_documentLayoutChanged_signal;
 //  _undoCommandAdded QTextDocument_undoCommandAdded_signal;
@@ -220,7 +214,7 @@ type QTextDocument struct {
 // class sizeof(QAbstractUndoItem)=8
 type QAbstractUndoItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTextDocument::setDefaultStyleSheet(const QString & sheet);
@@ -475,7 +469,7 @@ func (this *QTextDocument) setUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTextDocument18setUndoRedoEnabledEb
     // invoke: void setUndoRedoEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QTextDocument18setUndoRedoEnabledEb(this.qclsinst, arg0)
   default:
@@ -999,7 +993,7 @@ func (this *QTextDocument) setUseDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTextDocument19setUseDesignMetricsEb
     // invoke: void setUseDesignMetrics(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QTextDocument19setUseDesignMetricsEb(this.qclsinst, arg0)
   default:
@@ -1716,65 +1710,11 @@ func (this *QTextDocument) setModified(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTextDocument11setModifiedEb
     // invoke: void setModified(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QTextDocument11setModifiedEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextDocument", "setModified", args)
-  }
-
-}
-
-  // proto:  void QAbstractUndoItem::undo();
-func (this *QAbstractUndoItem) undo(args ...interface{}) () {
-  // undo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QAbstractUndoItem4undoEv
-    // invoke: void undo()
-    C._ZN17QAbstractUndoItem4undoEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractUndoItem", "undo", args)
-  }
-
-}
-
-  // proto:  void QAbstractUndoItem::redo();
-func (this *QAbstractUndoItem) redo(args ...interface{}) () {
-  // redo()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QAbstractUndoItem4redoEv
-    // invoke: void redo()
-    C._ZN17QAbstractUndoItem4redoEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractUndoItem", "redo", args)
-  }
-
-}
-
-  // proto:  void QAbstractUndoItem::~QAbstractUndoItem();
-func (this *QAbstractUndoItem) FreeQAbstractUndoItem(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAbstractUndoItem", "~QAbstractUndoItem", args)
   }
 
 }

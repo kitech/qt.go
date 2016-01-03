@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcombobox.h
 // dst-file: /src/widgets/qcombobox.go
 //
@@ -55,7 +55,7 @@ extern void _ZNK9QComboBox8maxCountEv(void* qthis);
   // proto:  void QComboBox::addItem(const QIcon & icon, const QString & text, const QVariant & userData);
 extern void demth_ZN9QComboBox7addItemERK5QIconRK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QComboBox::insertItems(int index, const QStringList & texts);
-extern void _ZN9QComboBox11insertItemsEiRK11QStringList(void* qthis, int arg0, void* arg1);
+extern void _ZN9QComboBox11insertItemsEiRK11QStringList(void* qthis, int32_t arg0, void* arg1);
   // proto:  QSize QComboBox::iconSize();
 extern void _ZNK9QComboBox8iconSizeEv(void* qthis);
   // proto:  QModelIndex QComboBox::rootModelIndex();
@@ -63,23 +63,23 @@ extern void _ZNK9QComboBox14rootModelIndexEv(void* qthis);
   // proto:  void QComboBox::setEditable(bool editable);
 extern void _ZN9QComboBox11setEditableEb(void* qthis, bool arg0);
   // proto:  void QComboBox::setItemIcon(int index, const QIcon & icon);
-extern void _ZN9QComboBox11setItemIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+extern void _ZN9QComboBox11setItemIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QComboBox::autoCompletion();
 extern void _ZNK9QComboBox14autoCompletionEv(void* qthis);
   // proto:  QVariant QComboBox::currentData(int role);
-extern void _ZNK9QComboBox11currentDataEi(void* qthis, int arg0);
+extern void _ZNK9QComboBox11currentDataEi(void* qthis, int32_t arg0);
   // proto:  bool QComboBox::hasFrame();
 extern void _ZNK9QComboBox8hasFrameEv(void* qthis);
   // proto:  const QValidator * QComboBox::validator();
 extern void _ZNK9QComboBox9validatorEv(void* qthis);
   // proto:  QString QComboBox::itemText(int index);
-extern void _ZNK9QComboBox8itemTextEi(void* qthis, int arg0);
+extern void _ZNK9QComboBox8itemTextEi(void* qthis, int32_t arg0);
   // proto:  void QComboBox::setItemData(int index, const QVariant & value, int role);
-extern void _ZN9QComboBox11setItemDataEiRK8QVarianti(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN9QComboBox11setItemDataEiRK8QVarianti(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QComboBox::hidePopup();
 extern void _ZN9QComboBox9hidePopupEv(void* qthis);
   // proto:  void QComboBox::insertItem(int index, const QIcon & icon, const QString & text, const QVariant & userData);
-extern void _ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(void* qthis, int arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN9QComboBox10insertItemEiRK5QIconRK7QStringRK8QVariant(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3);
   // proto:  void QComboBox::setCurrentText(const QString & text);
 extern void _ZN9QComboBox14setCurrentTextERK7QString(void* qthis, void* arg0);
   // proto:  int QComboBox::modelColumn();
@@ -87,7 +87,7 @@ extern void _ZNK9QComboBox11modelColumnEv(void* qthis);
   // proto:  QSize QComboBox::sizeHint();
 extern void _ZNK9QComboBox8sizeHintEv(void* qthis);
   // proto:  QVariant QComboBox::itemData(int index, int role);
-extern void _ZNK9QComboBox8itemDataEii(void* qthis, int arg0, int arg1);
+extern void _ZNK9QComboBox8itemDataEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QComboBox::setCompleter(QCompleter * c);
 extern void _ZN9QComboBox12setCompleterEP10QCompleter(void* qthis, void* arg0);
   // proto:  int QComboBox::maxVisibleItems();
@@ -96,7 +96,7 @@ extern void _ZNK9QComboBox15maxVisibleItemsEv(void* qthis);
 extern void* dector_ZN9QComboBoxC1EP7QWidget(void* arg0);
 extern void _ZN9QComboBoxC1EP7QWidget(void* qthis, void* arg0);
   // proto:  void QComboBox::setCurrentIndex(int index);
-extern void _ZN9QComboBox15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN9QComboBox15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  void QComboBox::QComboBox(const QComboBox & );
 extern void* dector_ZN9QComboBoxC1ERKS_(void* arg0);
 extern void _ZN9QComboBoxC1ERKS_(void* qthis, void* arg0);
@@ -109,7 +109,7 @@ extern void demth_ZN9QComboBox7addItemERK7QStringRK8QVariant(void* qthis, void* 
   // proto:  QCompleter * QComboBox::completer();
 extern void _ZNK9QComboBox9completerEv(void* qthis);
   // proto:  void QComboBox::removeItem(int index);
-extern void _ZN9QComboBox10removeItemEi(void* qthis, int arg0);
+extern void _ZN9QComboBox10removeItemEi(void* qthis, int32_t arg0);
   // proto:  int QComboBox::count();
 extern void _ZNK9QComboBox5countEv(void* qthis);
   // proto:  void QComboBox::setItemDelegate(QAbstractItemDelegate * delegate);
@@ -117,7 +117,7 @@ extern void _ZN9QComboBox15setItemDelegateEP21QAbstractItemDelegate(void* qthis,
   // proto:  void QComboBox::addItems(const QStringList & texts);
 extern void demth_ZN9QComboBox8addItemsERK11QStringList(void* qthis, void* arg0);
   // proto:  void QComboBox::setMinimumContentsLength(int characters);
-extern void _ZN9QComboBox24setMinimumContentsLengthEi(void* qthis, int arg0);
+extern void _ZN9QComboBox24setMinimumContentsLengthEi(void* qthis, int32_t arg0);
   // proto:  bool QComboBox::duplicatesEnabled();
 extern void _ZNK9QComboBox17duplicatesEnabledEv(void* qthis);
   // proto:  void QComboBox::~QComboBox();
@@ -129,7 +129,7 @@ extern void _ZNK9QComboBox21minimumContentsLengthEv(void* qthis);
   // proto:  bool QComboBox::isEditable();
 extern void _ZNK9QComboBox10isEditableEv(void* qthis);
   // proto:  void QComboBox::setMaxCount(int max);
-extern void _ZN9QComboBox11setMaxCountEi(void* qthis, int arg0);
+extern void _ZN9QComboBox11setMaxCountEi(void* qthis, int32_t arg0);
   // proto:  int QComboBox::currentIndex();
 extern void _ZNK9QComboBox12currentIndexEv(void* qthis);
   // proto:  void QComboBox::setDuplicatesEnabled(bool enable);
@@ -143,23 +143,23 @@ extern void _ZNK9QComboBox8lineEditEv(void* qthis);
   // proto:  QAbstractItemDelegate * QComboBox::itemDelegate();
 extern void _ZNK9QComboBox12itemDelegateEv(void* qthis);
   // proto:  void QComboBox::setMaxVisibleItems(int maxItems);
-extern void _ZN9QComboBox18setMaxVisibleItemsEi(void* qthis, int arg0);
+extern void _ZN9QComboBox18setMaxVisibleItemsEi(void* qthis, int32_t arg0);
   // proto:  bool QComboBox::event(QEvent * event);
 extern void _ZN9QComboBox5eventEP6QEvent(void* qthis, void* arg0);
   // proto:  void QComboBox::setModelColumn(int visibleColumn);
-extern void _ZN9QComboBox14setModelColumnEi(void* qthis, int arg0);
+extern void _ZN9QComboBox14setModelColumnEi(void* qthis, int32_t arg0);
   // proto:  void QComboBox::setItemText(int index, const QString & text);
-extern void _ZN9QComboBox11setItemTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN9QComboBox11setItemTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QComboBox::setLineEdit(QLineEdit * edit);
 extern void _ZN9QComboBox11setLineEditEP9QLineEdit(void* qthis, void* arg0);
   // proto:  QIcon QComboBox::itemIcon(int index);
-extern void _ZNK9QComboBox8itemIconEi(void* qthis, int arg0);
+extern void _ZNK9QComboBox8itemIconEi(void* qthis, int32_t arg0);
   // proto:  void QComboBox::insertItem(int index, const QString & text, const QVariant & userData);
-extern void demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(void* qthis, int arg0, void* arg1, void* arg2);
+extern void demth_ZN9QComboBox10insertItemEiRK7QStringRK8QVariant(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  void QComboBox::setValidator(const QValidator * v);
 extern void _ZN9QComboBox12setValidatorEPK10QValidator(void* qthis, void* arg0);
   // proto:  void QComboBox::insertSeparator(int index);
-extern void _ZN9QComboBox15insertSeparatorEi(void* qthis, int arg0);
+extern void _ZN9QComboBox15insertSeparatorEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QComboBox::metaObject();
 extern void _ZNK9QComboBox10metaObjectEv(void* qthis);
 */
@@ -177,7 +177,7 @@ func init() {
 // class sizeof(QComboBox)=1
 type QComboBox struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentIndexChanged QComboBox_currentIndexChanged_signal;
 //  _currentTextChanged QComboBox_currentTextChanged_signal;
 //  _highlighted QComboBox_highlighted_signal;
@@ -242,7 +242,7 @@ func (this *QComboBox) setAutoCompletion(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QComboBox17setAutoCompletionEb
     // invoke: void setAutoCompletion(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QComboBox17setAutoCompletionEb(this.qclsinst, arg0)
   default:
@@ -265,7 +265,7 @@ func (this *QComboBox) setFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QComboBox8setFrameEb
     // invoke: void setFrame(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QComboBox8setFrameEb(this.qclsinst, arg0)
   default:
@@ -521,7 +521,7 @@ func (this *QComboBox) setEditable(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QComboBox11setEditableEb
     // invoke: void setEditable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QComboBox11setEditableEb(this.qclsinst, arg0)
   default:
@@ -1247,7 +1247,7 @@ func (this *QComboBox) setDuplicatesEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QComboBox20setDuplicatesEnabledEb
     // invoke: void setDuplicatesEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QComboBox20setDuplicatesEnabledEb(this.qclsinst, arg0)
   default:

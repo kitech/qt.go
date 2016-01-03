@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdesktopwidget.h
 // dst-file: /src/widgets/qdesktopwidget.go
 //
@@ -33,9 +33,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QRect QDesktopWidget::screenGeometry(const QPoint & point);
-extern void _ZNK14QDesktopWidget14screenGeometryERK6QPoint(void* qthis, void* arg0);
+extern void demth_ZNK14QDesktopWidget14screenGeometryERK6QPoint(void* qthis, void* arg0);
   // proto:  QWidget * QDesktopWidget::screen(int screen);
-extern void _ZN14QDesktopWidget6screenEi(void* qthis, int arg0);
+extern void _ZN14QDesktopWidget6screenEi(void* qthis, int32_t arg0);
   // proto:  const QRect QDesktopWidget::screenGeometry(const QWidget * widget);
 extern void _ZNK14QDesktopWidget14screenGeometryEPK7QWidget(void* qthis, void* arg0);
   // proto:  int QDesktopWidget::numScreens();
@@ -43,7 +43,7 @@ extern void _ZNK14QDesktopWidget10numScreensEv(void* qthis);
   // proto:  void QDesktopWidget::~QDesktopWidget();
 extern void _ZN14QDesktopWidgetD0Ev(void* qthis);
   // proto:  const QRect QDesktopWidget::screenGeometry(int screen);
-extern void _ZNK14QDesktopWidget14screenGeometryEi(void* qthis, int arg0);
+extern void _ZNK14QDesktopWidget14screenGeometryEi(void* qthis, int32_t arg0);
   // proto:  const QRect QDesktopWidget::availableGeometry(const QWidget * widget);
 extern void _ZNK14QDesktopWidget17availableGeometryEPK7QWidget(void* qthis, void* arg0);
   // proto:  void QDesktopWidget::QDesktopWidget(const QDesktopWidget & );
@@ -63,9 +63,9 @@ extern void _ZNK14QDesktopWidget13primaryScreenEv(void* qthis);
 extern void* dector_ZN14QDesktopWidgetC1Ev();
 extern void _ZN14QDesktopWidgetC1Ev(void* qthis);
   // proto:  const QRect QDesktopWidget::availableGeometry(const QPoint & point);
-extern void _ZNK14QDesktopWidget17availableGeometryERK6QPoint(void* qthis, void* arg0);
+extern void demth_ZNK14QDesktopWidget17availableGeometryERK6QPoint(void* qthis, void* arg0);
   // proto:  const QRect QDesktopWidget::availableGeometry(int screen);
-extern void _ZNK14QDesktopWidget17availableGeometryEi(void* qthis, int arg0);
+extern void _ZNK14QDesktopWidget17availableGeometryEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QDesktopWidget::metaObject();
 extern void _ZNK14QDesktopWidget10metaObjectEv(void* qthis);
 */
@@ -83,7 +83,7 @@ func init() {
 // class sizeof(QDesktopWidget)=1
 type QDesktopWidget struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _screenCountChanged QDesktopWidget_screenCountChanged_signal;
 //  _resized QDesktopWidget_resized_signal;
 //  _workAreaResized QDesktopWidget_workAreaResized_signal;
@@ -111,7 +111,7 @@ func (this *QDesktopWidget) screenGeometry(args ...interface{}) () {
     // invoke: const QRect screenGeometry(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK14QDesktopWidget14screenGeometryERK6QPoint(this.qclsinst, arg0)
+    C.demth_ZNK14QDesktopWidget14screenGeometryERK6QPoint(this.qclsinst, arg0)
   case 1:
     // invoke: _ZNK14QDesktopWidget14screenGeometryEPK7QWidget
     // invoke: const QRect screenGeometry(const class QWidget *)
@@ -215,7 +215,7 @@ func (this *QDesktopWidget) availableGeometry(args ...interface{}) () {
     // invoke: const QRect availableGeometry(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK14QDesktopWidget17availableGeometryERK6QPoint(this.qclsinst, arg0)
+    C.demth_ZNK14QDesktopWidget17availableGeometryERK6QPoint(this.qclsinst, arg0)
   case 2:
     // invoke: _ZNK14QDesktopWidget17availableGeometryEi
     // invoke: const QRect availableGeometry(int)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -33,15 +33,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
-extern void _ZN7QCursor6setPosEP7QScreenii(void* arg0, int arg1, int arg2);
+extern void _ZN7QCursor6setPosEP7QScreenii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QPixmap QCursor::pixmap();
 extern void _ZNK7QCursor6pixmapEv(void* qthis);
   // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
-extern void* dector_ZN7QCursorC1ERK7QBitmapS2_ii(void* arg0, void* arg1, int arg2, int arg3);
-extern void _ZN7QCursorC1ERK7QBitmapS2_ii(void* qthis, void* arg0, void* arg1, int arg2, int arg3);
+extern void* dector_ZN7QCursorC1ERK7QBitmapS2_ii(void* arg0, void* arg1, int32_t arg2, int32_t arg3);
+extern void _ZN7QCursorC1ERK7QBitmapS2_ii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QCursor::QCursor(const QPixmap & pixmap, int hotX, int hotY);
-extern void* dector_ZN7QCursorC1ERK7QPixmapii(void* arg0, int arg1, int arg2);
-extern void _ZN7QCursorC1ERK7QPixmapii(void* qthis, void* arg0, int arg1, int arg2);
+extern void* dector_ZN7QCursorC1ERK7QPixmapii(void* arg0, int32_t arg1, int32_t arg2);
+extern void _ZN7QCursorC1ERK7QPixmapii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QCursor::~QCursor();
 extern void _ZN7QCursorD0Ev(void* qthis);
   // proto:  const QBitmap * QCursor::mask();
@@ -50,7 +50,7 @@ extern void _ZNK7QCursor4maskEv(void* qthis);
 extern void* dector_ZN7QCursorC1ERKS_(void* arg0);
 extern void _ZN7QCursorC1ERKS_(void* qthis, void* arg0);
   // proto: static void QCursor::setPos(int x, int y);
-extern void _ZN7QCursor6setPosEii(int arg0, int arg1);
+extern void _ZN7QCursor6setPosEii(int32_t arg0, int32_t arg1);
   // proto: static void QCursor::setPos(QScreen * screen, const QPoint & p);
 extern void demth_ZN7QCursor6setPosEP7QScreenRK6QPoint(void* arg0, void* arg1);
   // proto: static void QCursor::setPos(const QPoint & p);
@@ -81,7 +81,7 @@ func init() {
 // class sizeof(QCursor)=8
 type QCursor struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static void QCursor::setPos(QScreen * screen, int x, int y);

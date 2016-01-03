@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -46,13 +46,13 @@ extern void _ZN9QLockFileD0Ev(void* qthis);
   // proto:  void QLockFile::unlock();
 extern void _ZN9QLockFile6unlockEv(void* qthis);
   // proto:  bool QLockFile::tryLock(int timeout);
-extern void _ZN9QLockFile7tryLockEi(void* qthis, int arg0);
+extern void _ZN9QLockFile7tryLockEi(void* qthis, int32_t arg0);
   // proto:  bool QLockFile::lock();
 extern void _ZN9QLockFile4lockEv(void* qthis);
   // proto:  void QLockFile::setStaleLockTime(int );
-extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int arg0);
+extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int32_t arg0);
   // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
-extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, long long* arg0, void* arg1, void* arg2);
+extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, int64_t* arg0, void* arg1, void* arg2);
   // proto:  void QLockFile::QLockFile(const QString & fileName);
 extern void* dector_ZN9QLockFileC1ERK7QString(void* arg0);
 extern void _ZN9QLockFileC1ERK7QString(void* qthis, void* arg0);
@@ -71,7 +71,7 @@ func init() {
 // class sizeof(QLockFile)=1
 type QLockFile struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QLockFile::removeStaleLockFile();

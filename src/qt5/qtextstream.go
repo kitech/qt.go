@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtextstream.h
 // dst-file: /src/core/qtextstream.go
 //
@@ -33,10 +33,10 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTextStreamManipulator::exec(QTextStream & s);
-extern void _ZN22QTextStreamManipulator4execER11QTextStream(void* qthis, void* arg0);
+extern void demth_ZN22QTextStreamManipulator4execER11QTextStream(void* qthis, void* arg0);
   // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFI m, int a);
-extern void* dector_ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* arg0, int arg1);
-extern void _ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* arg0, int32_t arg1);
+extern void _ZN22QTextStreamManipulatorC1EM11QTextStreamFviEi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTextStreamManipulator::QTextStreamManipulator(QTSMFC m, QChar c);
 extern void* dector_ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(void* arg0, void* arg1);
 extern void _ZN22QTextStreamManipulatorC1EM11QTextStreamFv5QCharES1_(void* qthis, void* arg0, void* arg1);
@@ -53,15 +53,15 @@ extern void _ZN11QTextStreamC1Ev(void* qthis);
   // proto:  bool QTextStream::atEnd();
 extern void _ZNK11QTextStream5atEndEv(void* qthis);
   // proto:  bool QTextStream::readLineInto(QString * line, qint64 maxlen);
-extern void _ZN11QTextStream12readLineIntoEP7QStringx(void* qthis, void* arg0, long long arg1);
+extern void _ZN11QTextStream12readLineIntoEP7QStringx(void* qthis, void* arg0, int64_t arg1);
   // proto:  void QTextStream::setRealNumberPrecision(int precision);
-extern void _ZN11QTextStream22setRealNumberPrecisionEi(void* qthis, int arg0);
+extern void _ZN11QTextStream22setRealNumberPrecisionEi(void* qthis, int32_t arg0);
   // proto:  void QTextStream::setDevice(QIODevice * device);
 extern void _ZN11QTextStream9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  void QTextStream::reset();
 extern void _ZN11QTextStream5resetEv(void* qthis);
   // proto:  bool QTextStream::seek(qint64 pos);
-extern void _ZN11QTextStream4seekEx(void* qthis, long long arg0);
+extern void _ZN11QTextStream4seekEx(void* qthis, int64_t arg0);
   // proto:  QString * QTextStream::string();
 extern void _ZNK11QTextStream6stringEv(void* qthis);
   // proto:  void QTextStream::setAutoDetectUnicode(bool enabled);
@@ -85,13 +85,13 @@ extern void _ZN11QTextStream8setCodecEP10QTextCodec(void* qthis, void* arg0);
   // proto:  void QTextStream::flush();
 extern void _ZN11QTextStream5flushEv(void* qthis);
   // proto:  void QTextStream::setIntegerBase(int base);
-extern void _ZN11QTextStream14setIntegerBaseEi(void* qthis, int arg0);
+extern void _ZN11QTextStream14setIntegerBaseEi(void* qthis, int32_t arg0);
   // proto:  void QTextStream::~QTextStream();
 extern void _ZN11QTextStreamD0Ev(void* qthis);
   // proto:  QLocale QTextStream::locale();
 extern void _ZNK11QTextStream6localeEv(void* qthis);
   // proto:  QString QTextStream::read(qint64 maxlen);
-extern void _ZN11QTextStream4readEx(void* qthis, long long arg0);
+extern void _ZN11QTextStream4readEx(void* qthis, int64_t arg0);
   // proto:  void QTextStream::setPadChar(QChar ch);
 extern void _ZN11QTextStream10setPadCharE5QChar(void* qthis, void* arg0);
   // proto:  int QTextStream::realNumberPrecision();
@@ -103,13 +103,13 @@ extern void _ZN11QTextStream7readAllEv(void* qthis);
   // proto:  void QTextStream::skipWhiteSpace();
 extern void _ZN11QTextStream14skipWhiteSpaceEv(void* qthis);
   // proto:  void QTextStream::setFieldWidth(int width);
-extern void _ZN11QTextStream13setFieldWidthEi(void* qthis, int arg0);
+extern void _ZN11QTextStream13setFieldWidthEi(void* qthis, int32_t arg0);
   // proto:  void QTextStream::setCodec(const char * codecName);
-extern void _ZN11QTextStream8setCodecEPKc(void* qthis, char* arg0);
+extern void _ZN11QTextStream8setCodecEPKc(void* qthis, unsigned char* arg0);
   // proto:  int QTextStream::integerBase();
 extern void _ZNK11QTextStream11integerBaseEv(void* qthis);
   // proto:  QString QTextStream::readLine(qint64 maxlen);
-extern void _ZN11QTextStream8readLineEx(void* qthis, long long arg0);
+extern void _ZN11QTextStream8readLineEx(void* qthis, int64_t arg0);
   // proto:  void QTextStream::QTextStream(const QTextStream & );
 extern void* dector_ZN11QTextStreamC1ERKS_(void* arg0);
 extern void _ZN11QTextStreamC1ERKS_(void* qthis, void* arg0);
@@ -128,13 +128,13 @@ func init() {
 // class sizeof(QTextStreamManipulator)=40
 type QTextStreamManipulator struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextStream)=1
 type QTextStream struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTextStreamManipulator::exec(QTextStream & s);
@@ -153,7 +153,7 @@ func (this *QTextStreamManipulator) exec(args ...interface{}) () {
     // invoke: void exec(class QTextStream &)
     var arg0 = args[0].(QTextStream).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN22QTextStreamManipulator4execER11QTextStream(this.qclsinst, arg0)
+    C.demth_ZN22QTextStreamManipulator4execER11QTextStream(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextStreamManipulator", "exec", args)
   }
@@ -382,7 +382,7 @@ func (this *QTextStream) setAutoDetectUnicode(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextStream20setAutoDetectUnicodeEb
     // invoke: void setAutoDetectUnicode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QTextStream20setAutoDetectUnicodeEb(this.qclsinst, arg0)
   default:
@@ -525,7 +525,7 @@ func (this *QTextStream) setGenerateByteOrderMark(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextStream24setGenerateByteOrderMarkEb
     // invoke: void setGenerateByteOrderMark(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QTextStream24setGenerateByteOrderMarkEb(this.qclsinst, arg0)
   default:
@@ -557,7 +557,7 @@ func (this *QTextStream) setCodec(args ...interface{}) () {
   case 1:
     // invoke: _ZN11QTextStream8setCodecEPKc
     // invoke: void setCodec(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN11QTextStream8setCodecEPKc(this.qclsinst, arg0)
   default:

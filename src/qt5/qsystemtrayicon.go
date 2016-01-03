@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qsystemtrayicon.h
 // dst-file: /src/widgets/qsystemtrayicon.go
 //
@@ -86,7 +86,7 @@ func init() {
 // class sizeof(QSystemTrayIcon)=1
 type QSystemTrayIcon struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QSystemTrayIcon_activated_signal;
 //  _messageClicked QSystemTrayIcon_messageClicked_signal;
 }
@@ -119,7 +119,7 @@ func (this *QSystemTrayIcon) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSystemTrayIcon10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QSystemTrayIcon10setVisibleEb(this.qclsinst, arg0)
   default:

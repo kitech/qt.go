@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.go
 //
@@ -54,115 +54,115 @@ extern void _ZN13QOpenGLShader17compileSourceCodeERK10QByteArray(void* qthis, vo
   // proto:  GLuint QOpenGLShader::shaderId();
 extern void _ZNK13QOpenGLShader8shaderIdEv(void* qthis);
   // proto:  bool QOpenGLShader::compileSourceCode(const char * source);
-extern void _ZN13QOpenGLShader17compileSourceCodeEPKc(void* qthis, char* arg0);
+extern void _ZN13QOpenGLShader17compileSourceCodeEPKc(void* qthis, unsigned char* arg0);
   // proto:  bool QOpenGLShaderProgram::isLinked();
 extern void _ZNK20QOpenGLShaderProgram8isLinkedEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QVector3D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector3D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector3D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QPoint & point);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QPoint(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QPoint(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcffff(void* qthis, char* arg0, float arg1, float arg2, float arg3, float arg4);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcffff(void* qthis, unsigned char* arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, const QVector3D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector3D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector3D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QVector3D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector3Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector3Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QTransform & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK10QTransform(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK10QTransform(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeBuffer(int location, GLenum type, int offset, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram18setAttributeBufferEijiii(void* qthis, int arg0, unsigned int arg1, int arg2, int arg3, int arg4);
+extern void _ZN20QOpenGLShaderProgram18setAttributeBufferEijiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto: static bool QOpenGLShaderProgram::hasOpenGLShaderPrograms(QOpenGLContext * context);
 extern void _ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext(void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const GLfloat [2][2] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA2_Kf(void* qthis, char* arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA2_Kf(void* qthis, unsigned char* arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setPatchVertexCount(int count);
-extern void _ZN20QOpenGLShaderProgram19setPatchVertexCountEi(void* qthis, int arg0);
+extern void _ZN20QOpenGLShaderProgram19setPatchVertexCountEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const GLfloat * values, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii(void* qthis, char* arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii(void* qthis, unsigned char* arg0, float* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const QVector3D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector3Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector3Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const GLfloat [3][3] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA3_Kf(void* qthis, char* arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA3_Kf(void* qthis, unsigned char* arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QVector2D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector2D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector2D(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::bindAttributeLocation(const QByteArray & name, int location);
-extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationERK10QByteArrayi(void* qthis, void* arg0, int arg1);
+extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationERK10QByteArrayi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const GLfloat * values, int count, int tupleSize);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKfii(void* qthis, char* arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKfii(void* qthis, unsigned char* arg0, float* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, GLfloat x, GLfloat y);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiff(void* qthis, int arg0, float arg1, float arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiff(void* qthis, int32_t arg0, float arg1, float arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, const QVector2D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector2D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector2D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const QColor & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK6QColor(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK6QColor(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEifff(void* qthis, int arg0, float arg1, float arg2, float arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEifff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3);
   // proto:  bool QOpenGLShaderProgram::bind();
 extern void _ZN20QOpenGLShaderProgram4bindEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLfloat value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEif(void* qthis, int arg0, float arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEif(void* qthis, int32_t arg0, float arg1);
   // proto:  void QOpenGLShaderProgram::enableAttributeArray(int location);
-extern void _ZN20QOpenGLShaderProgram20enableAttributeArrayEi(void* qthis, int arg0);
+extern void _ZN20QOpenGLShaderProgram20enableAttributeArrayEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLint value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEii(void* qthis, int arg0, int arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLuint value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEij(void* qthis, int arg0, unsigned int arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEij(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QSize & size);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK5QSize(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK5QSize(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QOpenGLShaderProgram::addShader(QOpenGLShader * shader);
 extern void _ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader(void* qthis, void* arg0);
   // proto:  int QOpenGLShaderProgram::attributeLocation(const QString & name);
 extern void _ZNK20QOpenGLShaderProgram17attributeLocationERK7QString(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, GLenum type, const void * values, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEijPKvii(void* qthis, int arg0, unsigned int arg1, void* arg2, int arg3, int arg4);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEijPKvii(void* qthis, int32_t arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t arg4);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QPoint & point);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QPoint(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QPoint(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const QMatrix4x4 * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK10QMatrix4x4i(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK10QMatrix4x4i(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector2D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector2Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector2Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiff(void* qthis, int arg0, float arg1, float arg2);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiff(void* qthis, int32_t arg0, float arg1, float arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QMatrix4x4 * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK10QMatrix4x4i(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK10QMatrix4x4i(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, const QColor & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK6QColor(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK6QColor(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcffff(void* qthis, char* arg0, float arg1, float arg2, float arg3, float arg4);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcffff(void* qthis, unsigned char* arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  GLuint QOpenGLShaderProgram::programId();
 extern void _ZNK20QOpenGLShaderProgram9programIdEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const GLuint * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKji(void* qthis, int arg0, unsigned int* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKji(void* qthis, int32_t arg0, int32_t* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::disableAttributeArray(int location);
-extern void _ZN20QOpenGLShaderProgram21disableAttributeArrayEi(void* qthis, int arg0);
+extern void _ZN20QOpenGLShaderProgram21disableAttributeArrayEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const GLint * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKii(void* qthis, char* arg0, int* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKii(void* qthis, unsigned char* arg0, int32_t* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const GLuint * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKji(void* qthis, char* arg0, unsigned int* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKji(void* qthis, unsigned char* arg0, int32_t* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, const GLfloat * values, int columns, int rows);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcPKfii(void* qthis, char* arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcPKfii(void* qthis, unsigned char* arg0, float* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector4D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector4Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector4Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const QVector2D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector2D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector2D(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEifff(void* qthis, int arg0, float arg1, float arg2, float arg3);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEifff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiffff(void* qthis, int arg0, float arg1, float arg2, float arg3, float arg4);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiffff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  void QOpenGLShaderProgram::bindAttributeLocation(const char * name, int location);
-extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationEPKci(void* qthis, char* arg0, int arg1);
+extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  int QOpenGLShaderProgram::attributeLocation(const char * name);
-extern void _ZNK20QOpenGLShaderProgram17attributeLocationEPKc(void* qthis, char* arg0);
+extern void _ZNK20QOpenGLShaderProgram17attributeLocationEPKc(void* qthis, unsigned char* arg0);
   // proto:  int QOpenGLShaderProgram::uniformLocation(const QString & name);
 extern void _ZNK20QOpenGLShaderProgram15uniformLocationERK7QString(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QPointF & point);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK7QPointF(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK7QPointF(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, const QVector4D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector4D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector4D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const QVector4D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector4Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector4Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  int QOpenGLShaderProgram::uniformLocation(const char * name);
-extern void _ZNK20QOpenGLShaderProgram15uniformLocationEPKc(void* qthis, char* arg0);
+extern void _ZNK20QOpenGLShaderProgram15uniformLocationEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QOpenGLShaderProgram::~QOpenGLShaderProgram();
 extern void _ZN20QOpenGLShaderProgramD0Ev(void* qthis);
   // proto:  QVector<float> QOpenGLShaderProgram::defaultInnerTessellationLevels();
@@ -170,113 +170,113 @@ extern void _ZNK20QOpenGLShaderProgram30defaultInnerTessellationLevelsEv(void* q
   // proto:  bool QOpenGLShaderProgram::link();
 extern void _ZN20QOpenGLShaderProgram4linkEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QVector4D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector4Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector4Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  QList<QOpenGLShader *> QOpenGLShaderProgram::shaders();
 extern void _ZNK20QOpenGLShaderProgram7shadersEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcf(void* qthis, char* arg0, float arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcf(void* qthis, unsigned char* arg0, float arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const QVector3D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector3D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector3D(void* qthis, int32_t arg0, void* arg1);
   // proto:  QVector<float> QOpenGLShaderProgram::defaultOuterTessellationLevels();
 extern void _ZNK20QOpenGLShaderProgram30defaultOuterTessellationLevelsEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QColor & color);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QColor(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QColor(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(const char * name, const QVector2D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector2Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector2Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const GLfloat [4][4] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA4_Kf(void* qthis, char* arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA4_Kf(void* qthis, unsigned char* arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat x, GLfloat y);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcff(void* qthis, char* arg0, float arg1, float arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcff(void* qthis, unsigned char* arg0, float arg1, float arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const GLint * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKii(void* qthis, int arg0, int* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKii(void* qthis, int32_t arg0, int32_t* arg1, int32_t arg2);
   // proto:  QString QOpenGLShaderProgram::log();
 extern void _ZNK20QOpenGLShaderProgram3logEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QSize & size);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK5QSize(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK5QSize(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  int QOpenGLShaderProgram::patchVertexCount();
 extern void _ZNK20QOpenGLShaderProgram16patchVertexCountEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const GLfloat [2][2] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA2_Kf(void* qthis, int arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA2_Kf(void* qthis, int32_t arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QMatrix4x4 & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QMatrix4x4(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QMatrix4x4(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const QVector4D & value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector4D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QOpenGLShaderProgram::create();
 extern void _ZN20QOpenGLShaderProgram6createEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QSizeF & size);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QSizeF(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK6QSizeF(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::removeShader(QOpenGLShader * shader);
 extern void _ZN20QOpenGLShaderProgram12removeShaderEP13QOpenGLShader(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QVector4D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector4D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector4D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLfloat x, GLfloat y);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcff(void* qthis, char* arg0, float arg1, float arg2);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcff(void* qthis, unsigned char* arg0, float arg1, float arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeBuffer(const char * name, GLenum type, int offset, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii(void* qthis, char* arg0, unsigned int arg1, int arg2, int arg3, int arg4);
+extern void _ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii(void* qthis, unsigned char* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, const GLfloat * values, int columns, int rows);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiPKfii(void* qthis, int arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEiPKfii(void* qthis, int32_t arg0, float* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLShaderProgram::disableAttributeArray(const char * name);
-extern void _ZN20QOpenGLShaderProgram21disableAttributeArrayEPKc(void* qthis, char* arg0);
+extern void _ZN20QOpenGLShaderProgram21disableAttributeArrayEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QPointF & point);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK7QPointF(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK7QPointF(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const GLfloat [4][4] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA4_Kf(void* qthis, int arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA4_Kf(void* qthis, int32_t arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(int location, GLfloat value);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEif(void* qthis, int arg0, float arg1);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEif(void* qthis, int32_t arg0, float arg1);
   // proto:  void QOpenGLShaderProgram::bindAttributeLocation(const QString & name, int location);
-extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZN20QOpenGLShaderProgram21bindAttributeLocationERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector3D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector3Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector3Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QColor & color);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QColor(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QColor(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QTransform & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QTransform(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QTransform(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QVector3D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector3D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector3D(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const QVector2D * values, int count);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector2Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPK9QVector2Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  int QOpenGLShaderProgram::attributeLocation(const QByteArray & name);
 extern void _ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLfloat x, GLfloat y, GLfloat z);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcfff(void* qthis, char* arg0, float arg1, float arg2, float arg3);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcfff(void* qthis, unsigned char* arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const QVector4D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector4Di(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPK9QVector4Di(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setAttributeValue(const char * name, GLfloat x, GLfloat y, GLfloat z);
-extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcfff(void* qthis, char* arg0, float arg1, float arg2, float arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeValueEPKcfff(void* qthis, unsigned char* arg0, float arg1, float arg2, float arg3);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const GLfloat [3][3] value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA3_Kf(void* qthis, int arg0, float** arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiPA3_Kf(void* qthis, int32_t arg0, float** arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, GLenum type, const void * values, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcjPKvii(void* qthis, char* arg0, unsigned int arg1, void* arg2, int arg3, int arg4);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcjPKvii(void* qthis, unsigned char* arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t arg4);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLuint value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcj(void* qthis, char* arg0, unsigned int arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcj(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLint value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKci(void* qthis, char* arg0, int arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(QObject * parent);
 extern void* dector_ZN20QOpenGLShaderProgramC1EP7QObject(void* arg0);
 extern void _ZN20QOpenGLShaderProgramC1EP7QObject(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, GLfloat value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcf(void* qthis, char* arg0, float arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcf(void* qthis, unsigned char* arg0, float arg1);
   // proto:  void QOpenGLShaderProgram::enableAttributeArray(const char * name);
-extern void _ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc(void* qthis, char* arg0);
+extern void _ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QMatrix4x4 & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK10QMatrix4x4(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK10QMatrix4x4(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, const QVector4D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector4D(void* qthis, int arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(int location, const GLfloat * values, int tupleSize, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPKfii(void* qthis, int arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEiPKfii(void* qthis, int32_t arg0, float* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QSizeF & size);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QSizeF(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QSizeF(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(const QOpenGLShaderProgram & );
 extern void* dector_ZN20QOpenGLShaderProgramC1ERKS_(void* arg0);
 extern void _ZN20QOpenGLShaderProgramC1ERKS_(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(int location, GLfloat x, GLfloat y, GLfloat z, GLfloat w);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEiffff(void* qthis, int arg0, float arg1, float arg2, float arg3, float arg4);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEiffff(void* qthis, int32_t arg0, float arg1, float arg2, float arg3, float arg4);
   // proto:  void QOpenGLShaderProgram::removeAllShaders();
 extern void _ZN20QOpenGLShaderProgram16removeAllShadersEv(void* qthis);
   // proto:  int QOpenGLShaderProgram::maxGeometryOutputVertices();
 extern void _ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv(void* qthis);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector3D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector3Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector3Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::release();
 extern void _ZN20QOpenGLShaderProgram7releaseEv(void* qthis);
   // proto:  const QMetaObject * QOpenGLShaderProgram::metaObject();
@@ -284,11 +284,11 @@ extern void _ZNK20QOpenGLShaderProgram10metaObjectEv(void* qthis);
   // proto:  int QOpenGLShaderProgram::uniformLocation(const QByteArray & name);
 extern void _ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray(void* qthis, void* arg0);
   // proto:  void QOpenGLShaderProgram::setUniformValue(const char * name, const QVector2D & value);
-extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector2D(void* qthis, char* arg0, void* arg1);
+extern void _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector2D(void* qthis, unsigned char* arg0, void* arg1);
   // proto:  void QOpenGLShaderProgram::setAttributeArray(const char * name, const QVector2D * values, int stride);
-extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di(void* qthis, char* arg0, void* arg1, int arg2);
+extern void _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di(void* qthis, unsigned char* arg0, void* arg1, int32_t arg2);
   // proto:  void QOpenGLShaderProgram::setUniformValueArray(int location, const GLfloat * values, int count, int tupleSize);
-extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKfii(void* qthis, int arg0, float* arg1, int arg2, int arg3);
+extern void _ZN20QOpenGLShaderProgram20setUniformValueArrayEiPKfii(void* qthis, int32_t arg0, float* arg1, int32_t arg2, int32_t arg3);
 */
 import "C"
 // } // <= ext block end
@@ -304,13 +304,13 @@ func init() {
 // class sizeof(QOpenGLShader)=1
 type QOpenGLShader struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLShaderProgram)=1
 type QOpenGLShaderProgram struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QOpenGLShader::QOpenGLShader(const QOpenGLShader & );
@@ -410,7 +410,7 @@ func (this *QOpenGLShader) compileSourceCode(args ...interface{}) () {
   case 2:
     // invoke: _ZN13QOpenGLShader17compileSourceCodeEPKc
     // invoke: bool compileSourceCode(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN13QOpenGLShader17compileSourceCodeEPKc(this.qclsinst, arg0)
   default:
@@ -755,7 +755,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector3D
     // invoke: void setUniformValue(const char *, const class QVector3D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
@@ -771,7 +771,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 2:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcffff
     // invoke: void setUniformValue(const char *, GLfloat, GLfloat, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -793,7 +793,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 4:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA2_Kf
     // invoke: void setUniformValue(const char *, const GLfloat (*)[2])
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
@@ -801,7 +801,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 5:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA3_Kf
     // invoke: void setUniformValue(const char *, const GLfloat (*)[3])
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
@@ -849,7 +849,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 11:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QPoint
     // invoke: void setUniformValue(const char *, const class QPoint &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPoint).qclsinst
     if false {fmt.Println(arg1)}
@@ -879,7 +879,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 14:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK7QPointF
     // invoke: void setUniformValue(const char *, const class QPointF &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPointF).qclsinst
     if false {fmt.Println(arg1)}
@@ -895,7 +895,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 16:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcPA4_Kf
     // invoke: void setUniformValue(const char *, const GLfloat (*)[4])
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
@@ -903,7 +903,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 17:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK5QSize
     // invoke: void setUniformValue(const char *, const class QSize &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QSize).qclsinst
     if false {fmt.Println(arg1)}
@@ -919,7 +919,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 19:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QMatrix4x4
     // invoke: void setUniformValue(const char *, const class QMatrix4x4 &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMatrix4x4).qclsinst
     if false {fmt.Println(arg1)}
@@ -935,7 +935,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 21:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector4D
     // invoke: void setUniformValue(const char *, const class QVector4D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector4D).qclsinst
     if false {fmt.Println(arg1)}
@@ -943,7 +943,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 22:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcff
     // invoke: void setUniformValue(const char *, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -969,7 +969,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 25:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QColor
     // invoke: void setUniformValue(const char *, const class QColor &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
@@ -977,7 +977,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 26:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK10QTransform
     // invoke: void setUniformValue(const char *, const class QTransform &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTransform).qclsinst
     if false {fmt.Println(arg1)}
@@ -993,7 +993,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 28:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcfff
     // invoke: void setUniformValue(const char *, GLfloat, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1013,7 +1013,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 30:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcj
     // invoke: void setUniformValue(const char *, GLuint)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -1021,7 +1021,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 31:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKci
     // invoke: void setUniformValue(const char *, GLint)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -1029,7 +1029,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 32:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcf
     // invoke: void setUniformValue(const char *, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1053,7 +1053,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 35:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK6QSizeF
     // invoke: void setUniformValue(const char *, const class QSizeF &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QSizeF).qclsinst
     if false {fmt.Println(arg1)}
@@ -1075,7 +1075,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
   case 37:
     // invoke: _ZN20QOpenGLShaderProgram15setUniformValueEPKcRK9QVector2D
     // invoke: void setUniformValue(const char *, const class QVector2D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector2D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1185,7 +1185,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector3D
     // invoke: void setAttributeValue(const char *, const class QVector3D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1203,7 +1203,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 2:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector2D
     // invoke: void setAttributeValue(const char *, const class QVector2D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector2D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1231,7 +1231,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 5:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK6QColor
     // invoke: void setAttributeValue(const char *, const class QColor &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QColor).qclsinst
     if false {fmt.Println(arg1)}
@@ -1239,7 +1239,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 6:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcffff
     // invoke: void setAttributeValue(const char *, GLfloat, GLfloat, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1253,7 +1253,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 7:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcPKfii
     // invoke: void setAttributeValue(const char *, const GLfloat *, int, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.float)(args[1].(*float32))
     if false {fmt.Println(arg1)}
@@ -1287,7 +1287,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 10:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcRK9QVector4D
     // invoke: void setAttributeValue(const char *, const class QVector4D &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector4D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1295,7 +1295,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 11:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcf
     // invoke: void setAttributeValue(const char *, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1311,7 +1311,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 13:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcff
     // invoke: void setAttributeValue(const char *, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1349,7 +1349,7 @@ func (this *QOpenGLShaderProgram) setAttributeValue(args ...interface{}) () {
   case 17:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeValueEPKcfff
     // invoke: void setAttributeValue(const char *, GLfloat, GLfloat, GLfloat)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
@@ -1527,7 +1527,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector3Di
     // invoke: void setUniformValueArray(const char *, const class QVector3D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1547,7 +1547,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 2:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKfii
     // invoke: void setUniformValueArray(const char *, const GLfloat *, int, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.float)(args[1].(*float32))
     if false {fmt.Println(arg1)}
@@ -1569,7 +1569,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 4:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK10QMatrix4x4i
     // invoke: void setUniformValueArray(const char *, const class QMatrix4x4 *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QMatrix4x4).qclsinst
     if false {fmt.Println(arg1)}
@@ -1589,7 +1589,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 6:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKii
     // invoke: void setUniformValueArray(const char *, const GLint *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
@@ -1599,7 +1599,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 7:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPKji
     // invoke: void setUniformValueArray(const char *, const GLuint *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
@@ -1619,7 +1619,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 9:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector4Di
     // invoke: void setUniformValueArray(const char *, const class QVector4D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector4D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1629,7 +1629,7 @@ func (this *QOpenGLShaderProgram) setUniformValueArray(args ...interface{}) () {
   case 10:
     // invoke: _ZN20QOpenGLShaderProgram20setUniformValueArrayEPKcPK9QVector2Di
     // invoke: void setUniformValueArray(const char *, const class QVector2D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector2D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1713,7 +1713,7 @@ func (this *QOpenGLShaderProgram) setAttributeBuffer(args ...interface{}) () {
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram18setAttributeBufferEPKcjiii
     // invoke: void setAttributeBuffer(const char *, GLenum, int, int, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -1834,7 +1834,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPKfii
     // invoke: void setAttributeArray(const char *, const GLfloat *, int, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.float)(args[1].(*float32))
     if false {fmt.Println(arg1)}
@@ -1870,7 +1870,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
   case 3:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector4Di
     // invoke: void setAttributeArray(const char *, const class QVector4D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector4D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1900,7 +1900,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
   case 6:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcjPKvii
     // invoke: void setAttributeArray(const char *, GLenum, const void *, int, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -1926,7 +1926,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
   case 8:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector3Di
     // invoke: void setAttributeArray(const char *, const class QVector3D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1936,7 +1936,7 @@ func (this *QOpenGLShaderProgram) setAttributeArray(args ...interface{}) () {
   case 9:
     // invoke: _ZN20QOpenGLShaderProgram17setAttributeArrayEPKcPK9QVector2Di
     // invoke: void setAttributeArray(const char *, const class QVector2D *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector2D).qclsinst
     if false {fmt.Println(arg1)}
@@ -1980,7 +1980,7 @@ func (this *QOpenGLShaderProgram) bindAttributeLocation(args ...interface{}) () 
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram21bindAttributeLocationEPKci
     // invoke: void bindAttributeLocation(const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -2042,7 +2042,7 @@ func (this *QOpenGLShaderProgram) enableAttributeArray(args ...interface{}) () {
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc
     // invoke: void enableAttributeArray(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN20QOpenGLShaderProgram20enableAttributeArrayEPKc(this.qclsinst, arg0)
   default:
@@ -2100,7 +2100,7 @@ func (this *QOpenGLShaderProgram) attributeLocation(args ...interface{}) () {
   case 1:
     // invoke: _ZNK20QOpenGLShaderProgram17attributeLocationEPKc
     // invoke: int attributeLocation(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZNK20QOpenGLShaderProgram17attributeLocationEPKc(this.qclsinst, arg0)
   case 2:
@@ -2158,7 +2158,7 @@ func (this *QOpenGLShaderProgram) disableAttributeArray(args ...interface{}) () 
   case 1:
     // invoke: _ZN20QOpenGLShaderProgram21disableAttributeArrayEPKc
     // invoke: void disableAttributeArray(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN20QOpenGLShaderProgram21disableAttributeArrayEPKc(this.qclsinst, arg0)
   default:
@@ -2193,7 +2193,7 @@ func (this *QOpenGLShaderProgram) uniformLocation(args ...interface{}) () {
   case 1:
     // invoke: _ZNK20QOpenGLShaderProgram15uniformLocationEPKc
     // invoke: int uniformLocation(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZNK20QOpenGLShaderProgram15uniformLocationEPKc(this.qclsinst, arg0)
   case 2:

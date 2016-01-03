@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -76,9 +76,9 @@ extern void _ZN12QPaintEngine11drawEllipseERK5QRect(void* qthis, void* arg0);
 extern void* dector_ZN12QPaintEngineC1ERKS_(void* arg0);
 extern void _ZN12QPaintEngineC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QPaintEngine::isActive();
-extern void _ZNK12QPaintEngine8isActiveEv(void* qthis);
+extern void demth_ZNK12QPaintEngine8isActiveEv(void* qthis);
   // proto:  void QPaintEngine::drawPoints(const QPointF * points, int pointCount);
-extern void _ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN12QPaintEngine10drawPointsEPK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QPoint QPaintEngine::coordinateOffset();
 extern void _ZNK12QPaintEngine16coordinateOffsetEv(void* qthis);
   // proto:  void QPaintEngine::setPaintDevice(QPaintDevice * device);
@@ -87,28 +87,20 @@ extern void _ZN12QPaintEngine14setPaintDeviceEP12QPaintDevice(void* qthis, void*
 extern void _ZN12QPaintEngine13setSystemRectERK5QRect(void* qthis, void* arg0);
   // proto:  void QPaintEngine::~QPaintEngine();
 extern void _ZN12QPaintEngineD0Ev(void* qthis);
-  // proto:  bool QPaintEngine::end();
-extern void _ZN12QPaintEngine3endEv(void* qthis);
   // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
 extern void _ZN12QPaintEngine15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QPaintEngine::setActive(bool newState);
-extern void _ZN12QPaintEngine9setActiveEb(void* qthis, bool arg0);
-  // proto:  void QPaintEngine::drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr);
-extern void _ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_(void* qthis, void* arg0, void* arg1, void* arg2);
+extern void demth_ZN12QPaintEngine9setActiveEb(void* qthis, bool arg0);
   // proto:  void QPaintEngine::drawLines(const QLine * lines, int lineCount);
-extern void _ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int arg1);
+extern void _ZN12QPaintEngine9drawLinesEPK5QLinei(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPaintEngine::drawPath(const QPainterPath & path);
 extern void _ZN12QPaintEngine8drawPathERK12QPainterPath(void* qthis, void* arg0);
   // proto:  void QPaintEngine::drawLines(const QLineF * lines, int lineCount);
-extern void _ZN12QPaintEngine9drawLinesEPK6QLineFi(void* qthis, void* arg0, int arg1);
-  // proto:  void QPaintEngine::updateState(const QPaintEngineState & state);
-extern void _ZN12QPaintEngine11updateStateERK17QPaintEngineState(void* qthis, void* arg0);
-  // proto:  bool QPaintEngine::begin(QPaintDevice * pdev);
-extern void _ZN12QPaintEngine5beginEP12QPaintDevice(void* qthis, void* arg0);
+extern void _ZN12QPaintEngine9drawLinesEPK6QLineFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QRect QPaintEngine::systemRect();
 extern void _ZNK12QPaintEngine10systemRectEv(void* qthis);
   // proto:  void QPaintEngine::drawRects(const QRectF * rects, int rectCount);
-extern void _ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int arg1);
+extern void _ZN12QPaintEngine9drawRectsEPK6QRectFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPaintEngine::setSystemClip(const QRegion & baseClip);
 extern void _ZN12QPaintEngine13setSystemClipERK7QRegion(void* qthis, void* arg0);
   // proto:  QRegion QPaintEngine::systemClip();
@@ -124,13 +116,13 @@ extern void _ZN12QPaintEngine11drawEllipseERK6QRectF(void* qthis, void* arg0);
   // proto:  void QPaintEngine::drawTextItem(const QPointF & p, const QTextItem & textItem);
 extern void _ZN12QPaintEngine12drawTextItemERK7QPointFRK9QTextItem(void* qthis, void* arg0, void* arg1);
   // proto:  void QPaintEngine::fix_neg_rect(int * x, int * y, int * w, int * h);
-extern void demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+extern void demth_ZN12QPaintEngine12fix_neg_rectEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3);
   // proto:  bool QPaintEngine::isExtended();
 extern void demth_ZNK12QPaintEngine10isExtendedEv(void* qthis);
   // proto:  void QPaintEngine::drawRects(const QRect * rects, int rectCount);
-extern void _ZN12QPaintEngine9drawRectsEPK5QRecti(void* qthis, void* arg0, int arg1);
+extern void _ZN12QPaintEngine9drawRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPaintEngine::drawPoints(const QPoint * points, int pointCount);
-extern void _ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int arg1);
+extern void _ZN12QPaintEngine10drawPointsEPK6QPointi(void* qthis, void* arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -146,19 +138,19 @@ func init() {
 // class sizeof(QTextItem)=1
 type QTextItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPaintEngineState)=1
 type QPaintEngineState struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPaintEngine)=1
 type QPaintEngine struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QTextItem::descent();
@@ -591,7 +583,7 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine8isActiveEv
     // invoke: bool isActive()
-    C._ZNK12QPaintEngine8isActiveEv(this.qclsinst)
+    C.demth_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintEngine", "isActive", args)
   }
@@ -716,26 +708,6 @@ func (this *QPaintEngine) FreeQPaintEngine(args ...interface{}) () {
 
 }
 
-  // proto:  bool QPaintEngine::end();
-func (this *QPaintEngine) end(args ...interface{}) () {
-  // end()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPaintEngine3endEv
-    // invoke: bool end()
-    C._ZN12QPaintEngine3endEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPaintEngine", "end", args)
-  }
-
-}
-
   // proto:  void QPaintEngine::drawTiledPixmap(const QRectF & r, const QPixmap & pixmap, const QPointF & s);
 func (this *QPaintEngine) drawTiledPixmap(args ...interface{}) () {
   // drawTiledPixmap(const class QRectF &, const class QPixmap &, const class QPointF &)
@@ -779,40 +751,11 @@ func (this *QPaintEngine) setActive(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPaintEngine9setActiveEb
     // invoke: void setActive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine9setActiveEb(this.qclsinst, arg0)
+    C.demth_ZN12QPaintEngine9setActiveEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "setActive", args)
-  }
-
-}
-
-  // proto:  void QPaintEngine::drawPixmap(const QRectF & r, const QPixmap & pm, const QRectF & sr);
-func (this *QPaintEngine) drawPixmap(args ...interface{}) () {
-  // drawPixmap(const class QRectF &, const class QPixmap &, const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-  vtys[0][1] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
-  vtys[0][2] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_
-    // invoke: void drawPixmap(const class QRectF &, const class QPixmap &, const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QPixmap).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QRectF).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZN12QPaintEngine10drawPixmapERK6QRectFRK7QPixmapS2_(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QPaintEngine", "drawPixmap", args)
   }
 
 }
@@ -874,52 +817,6 @@ func (this *QPaintEngine) drawPath(args ...interface{}) () {
     C._ZN12QPaintEngine8drawPathERK12QPainterPath(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPaintEngine", "drawPath", args)
-  }
-
-}
-
-  // proto:  void QPaintEngine::updateState(const QPaintEngineState & state);
-func (this *QPaintEngine) updateState(args ...interface{}) () {
-  // updateState(const class QPaintEngineState &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPaintEngineState{}) // "const QPaintEngineState &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPaintEngine11updateStateERK17QPaintEngineState
-    // invoke: void updateState(const class QPaintEngineState &)
-    var arg0 = args[0].(QPaintEngineState).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine11updateStateERK17QPaintEngineState(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPaintEngine", "updateState", args)
-  }
-
-}
-
-  // proto:  bool QPaintEngine::begin(QPaintDevice * pdev);
-func (this *QPaintEngine) begin(args ...interface{}) () {
-  // begin(class QPaintDevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPaintDevice{}) // "QPaintDevice *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QPaintEngine5beginEP12QPaintDevice
-    // invoke: bool begin(class QPaintDevice *)
-    var arg0 = args[0].(QPaintDevice).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN12QPaintEngine5beginEP12QPaintDevice(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPaintEngine", "begin", args)
   }
 
 }

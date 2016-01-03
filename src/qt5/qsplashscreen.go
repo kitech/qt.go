@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -44,7 +44,7 @@ extern void _ZN13QSplashScreenC1ERKS_(void* qthis, void* arg0);
   // proto:  const QPixmap QSplashScreen::pixmap();
 extern void _ZNK13QSplashScreen6pixmapEv(void* qthis);
   // proto:  void QSplashScreen::showMessage(const QString & message, int alignment, const QColor & color);
-extern void _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZN13QSplashScreen11showMessageERK7QStringiRK6QColor(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  void QSplashScreen::setPixmap(const QPixmap & pixmap);
 extern void _ZN13QSplashScreen9setPixmapERK7QPixmap(void* qthis, void* arg0);
   // proto:  QString QSplashScreen::message();
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QSplashScreen)=1
 type QSplashScreen struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _messageChanged QSplashScreen_messageChanged_signal;
 }
 

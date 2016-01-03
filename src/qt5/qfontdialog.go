@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.go
 //
@@ -39,7 +39,7 @@ extern void _ZN11QFontDialogC1EP7QWidget(void* qthis, void* arg0);
 extern void* dector_ZN11QFontDialogC1ERKS_(void* arg0);
 extern void _ZN11QFontDialogC1ERKS_(void* qthis, void* arg0);
   // proto:  void QFontDialog::open(QObject * receiver, const char * member);
-extern void _ZN11QFontDialog4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN11QFontDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
 extern void* dector_ZN11QFontDialogC1ERK5QFontP7QWidget(void* arg0, void* arg1);
 extern void _ZN11QFontDialogC1ERK5QFontP7QWidget(void* qthis, void* arg0, void* arg1);
@@ -72,7 +72,7 @@ func init() {
 // class sizeof(QFontDialog)=1
 type QFontDialog struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _fontSelected QFontDialog_fontSelected_signal;
 //  _currentFontChanged QFontDialog_currentFontChanged_signal;
 }
@@ -99,7 +99,7 @@ func (this *QFontDialog) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN11QFontDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:
@@ -142,7 +142,7 @@ func (this *QFontDialog) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFontDialog10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QFontDialog10setVisibleEb(this.qclsinst, arg0)
   default:

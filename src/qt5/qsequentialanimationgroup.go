@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -33,12 +33,12 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-extern void _ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int arg0, int arg1);
+extern void _ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
 extern void* dector_ZN25QSequentialAnimationGroupC1EP7QObject(void* arg0);
 extern void _ZN25QSequentialAnimationGroupC1EP7QObject(void* qthis, void* arg0);
   // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-extern void _ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int arg0);
+extern void _ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int32_t arg0);
   // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
 extern void _ZN25QSequentialAnimationGroupD0Ev(void* qthis);
   // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QSequentialAnimationGroup)=1
 type QSequentialAnimationGroup struct {
   /*qbase*/ QAnimationGroup;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentAnimationChanged QSequentialAnimationGroup_currentAnimationChanged_signal;
 }
 

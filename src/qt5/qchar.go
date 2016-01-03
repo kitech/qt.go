@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qchar.h
 // dst-file: /src/core/qchar.go
 //
@@ -33,78 +33,78 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  ushort QLatin1Char::unicode();
-extern void _ZNK11QLatin1Char7unicodeEv(void* qthis);
+extern void demth_ZNK11QLatin1Char7unicodeEv(void* qthis);
   // proto:  void QLatin1Char::QLatin1Char(char c);
-extern void* dector_ZN11QLatin1CharC1Ec(char arg0);
-extern void _ZN11QLatin1CharC1Ec(void* qthis, char arg0);
+extern void* dector_ZN11QLatin1CharC1Ec(unsigned char arg0);
+extern void _ZN11QLatin1CharC1Ec(void* qthis, unsigned char arg0);
   // proto:  char QLatin1Char::toLatin1();
-extern void _ZNK11QLatin1Char8toLatin1Ev(void* qthis);
+extern void demth_ZNK11QLatin1Char8toLatin1Ev(void* qthis);
   // proto: static uint QChar::toUpper(uint ucs4);
-extern void _ZN5QChar7toUpperEj(unsigned int arg0);
+extern void _ZN5QChar7toUpperEj(int32_t arg0);
   // proto:  bool QChar::hasMirrored();
 extern void demth_ZNK5QChar11hasMirroredEv(void* qthis);
   // proto: static ushort QChar::lowSurrogate(uint ucs4);
-extern void demth_ZN5QChar12lowSurrogateEj(unsigned int arg0);
+extern void demth_ZN5QChar12lowSurrogateEj(int32_t arg0);
   // proto: static bool QChar::isSymbol(uint ucs4);
-extern void _ZN5QChar8isSymbolEj(unsigned int arg0);
+extern void _ZN5QChar8isSymbolEj(int32_t arg0);
   // proto:  uchar QChar::cell();
-extern void _ZNK5QChar4cellEv(void* qthis);
+extern void demth_ZNK5QChar4cellEv(void* qthis);
   // proto: static uint QChar::surrogateToUcs4(QChar high, QChar low);
 extern void demth_ZN5QChar15surrogateToUcs4ES_S_(void* arg0, void* arg1);
   // proto: static bool QChar::isTitleCase(uint ucs4);
-extern void demth_ZN5QChar11isTitleCaseEj(unsigned int arg0);
+extern void demth_ZN5QChar11isTitleCaseEj(int32_t arg0);
   // proto:  bool QChar::isNull();
-extern void _ZNK5QChar6isNullEv(void* qthis);
+extern void demth_ZNK5QChar6isNullEv(void* qthis);
   // proto:  int QChar::digitValue();
 extern void demth_ZNK5QChar10digitValueEv(void* qthis);
   // proto:  QChar QChar::toTitleCase();
 extern void demth_ZNK5QChar11toTitleCaseEv(void* qthis);
   // proto: static bool QChar::isLower(uint ucs4);
-extern void demth_ZN5QChar7isLowerEj(unsigned int arg0);
+extern void demth_ZN5QChar7isLowerEj(int32_t arg0);
   // proto:  bool QChar::isLowSurrogate();
-extern void _ZNK5QChar14isLowSurrogateEv(void* qthis);
+extern void demth_ZNK5QChar14isLowSurrogateEv(void* qthis);
   // proto: static bool QChar::isPrint(uint ucs4);
-extern void _ZN5QChar7isPrintEj(unsigned int arg0);
+extern void _ZN5QChar7isPrintEj(int32_t arg0);
   // proto:  bool QChar::isSymbol();
 extern void demth_ZNK5QChar8isSymbolEv(void* qthis);
   // proto:  bool QChar::isLower();
-extern void _ZNK5QChar7isLowerEv(void* qthis);
+extern void demth_ZNK5QChar7isLowerEv(void* qthis);
   // proto:  QChar QChar::mirroredChar();
 extern void demth_ZNK5QChar12mirroredCharEv(void* qthis);
   // proto:  uchar QChar::row();
-extern void _ZNK5QChar3rowEv(void* qthis);
+extern void demth_ZNK5QChar3rowEv(void* qthis);
   // proto:  bool QChar::isDigit();
-extern void _ZNK5QChar7isDigitEv(void* qthis);
+extern void demth_ZNK5QChar7isDigitEv(void* qthis);
   // proto: static uint QChar::toTitleCase(uint ucs4);
-extern void _ZN5QChar11toTitleCaseEj(unsigned int arg0);
+extern void _ZN5QChar11toTitleCaseEj(int32_t arg0);
   // proto:  bool QChar::isSurrogate();
-extern void _ZNK5QChar11isSurrogateEv(void* qthis);
+extern void demth_ZNK5QChar11isSurrogateEv(void* qthis);
   // proto: static bool QChar::hasMirrored(uint ucs4);
-extern void _ZN5QChar11hasMirroredEj(unsigned int arg0);
+extern void _ZN5QChar11hasMirroredEj(int32_t arg0);
   // proto:  bool QChar::isNumber();
-extern void _ZNK5QChar8isNumberEv(void* qthis);
+extern void demth_ZNK5QChar8isNumberEv(void* qthis);
   // proto: static bool QChar::isHighSurrogate(uint ucs4);
-extern void demth_ZN5QChar15isHighSurrogateEj(unsigned int arg0);
+extern void demth_ZN5QChar15isHighSurrogateEj(int32_t arg0);
   // proto: static uint QChar::toCaseFolded(uint ucs4);
-extern void _ZN5QChar12toCaseFoldedEj(unsigned int arg0);
+extern void _ZN5QChar12toCaseFoldedEj(int32_t arg0);
   // proto:  bool QChar::isMark();
 extern void demth_ZNK5QChar6isMarkEv(void* qthis);
   // proto: static uint QChar::surrogateToUcs4(ushort high, ushort low);
-extern void demth_ZN5QChar15surrogateToUcs4Ett(unsigned short arg0, unsigned short arg1);
+extern void demth_ZN5QChar15surrogateToUcs4Ett(int16_t arg0, int16_t arg1);
   // proto: static uint QChar::toLower(uint ucs4);
-extern void _ZN5QChar7toLowerEj(unsigned int arg0);
+extern void _ZN5QChar7toLowerEj(int32_t arg0);
   // proto: static uint QChar::mirroredChar(uint ucs4);
-extern void _ZN5QChar12mirroredCharEj(unsigned int arg0);
+extern void _ZN5QChar12mirroredCharEj(int32_t arg0);
   // proto:  void QChar::setRow(uchar row);
 extern void demth_ZN5QChar6setRowEh(void* qthis, unsigned char arg0);
   // proto: static QString QChar::decomposition(uint ucs4);
-extern void _ZN5QChar13decompositionEj(unsigned int arg0);
+extern void _ZN5QChar13decompositionEj(int32_t arg0);
   // proto: static int QChar::digitValue(uint ucs4);
-extern void _ZN5QChar10digitValueEj(unsigned int arg0);
+extern void _ZN5QChar10digitValueEj(int32_t arg0);
   // proto:  void QChar::setCell(uchar cell);
 extern void demth_ZN5QChar7setCellEh(void* qthis, unsigned char arg0);
   // proto: static bool QChar::isUpper(uint ucs4);
-extern void demth_ZN5QChar7isUpperEj(unsigned int arg0);
+extern void demth_ZN5QChar7isUpperEj(int32_t arg0);
   // proto:  void QChar::QChar(uchar c, uchar r);
 extern void* dector_ZN5QCharC1Ehh(unsigned char arg0, unsigned char arg1);
 extern void _ZN5QCharC1Ehh(void* qthis, unsigned char arg0, unsigned char arg1);
@@ -113,82 +113,82 @@ extern void demth_ZNK5QChar12toCaseFoldedEv(void* qthis);
   // proto:  bool QChar::isPrint();
 extern void demth_ZNK5QChar7isPrintEv(void* qthis);
   // proto:  void QChar::QChar(char c);
-extern void* dector_ZN5QCharC1Ec(char arg0);
-extern void _ZN5QCharC1Ec(void* qthis, char arg0);
+extern void* dector_ZN5QCharC1Ec(unsigned char arg0);
+extern void _ZN5QCharC1Ec(void* qthis, unsigned char arg0);
   // proto:  bool QChar::isPunct();
 extern void demth_ZNK5QChar7isPunctEv(void* qthis);
   // proto:  QString QChar::decomposition();
 extern void _ZNK5QChar13decompositionEv(void* qthis);
   // proto:  void QChar::QChar(uint rc);
-extern void* dector_ZN5QCharC1Ej(unsigned int arg0);
-extern void _ZN5QCharC1Ej(void* qthis, unsigned int arg0);
+extern void* dector_ZN5QCharC1Ej(int32_t arg0);
+extern void _ZN5QCharC1Ej(void* qthis, int32_t arg0);
   // proto:  void QChar::QChar(int rc);
-extern void* dector_ZN5QCharC1Ei(int arg0);
-extern void _ZN5QCharC1Ei(void* qthis, int arg0);
+extern void* dector_ZN5QCharC1Ei(int32_t arg0);
+extern void _ZN5QCharC1Ei(void* qthis, int32_t arg0);
   // proto:  bool QChar::isSpace();
-extern void _ZNK5QChar7isSpaceEv(void* qthis);
+extern void demth_ZNK5QChar7isSpaceEv(void* qthis);
   // proto:  void QChar::QChar(short rc);
-extern void* dector_ZN5QCharC1Es(short arg0);
-extern void _ZN5QCharC1Es(void* qthis, short arg0);
+extern void* dector_ZN5QCharC1Es(int16_t arg0);
+extern void _ZN5QCharC1Es(void* qthis, int16_t arg0);
   // proto:  void QChar::QChar();
 extern void* dector_ZN5QCharC1Ev();
 extern void _ZN5QCharC1Ev(void* qthis);
   // proto:  void QChar::QChar(ushort rc);
-extern void* dector_ZN5QCharC1Et(unsigned short arg0);
-extern void _ZN5QCharC1Et(void* qthis, unsigned short arg0);
+extern void* dector_ZN5QCharC1Et(int16_t arg0);
+extern void _ZN5QCharC1Et(void* qthis, int16_t arg0);
   // proto:  bool QChar::isUpper();
-extern void _ZNK5QChar7isUpperEv(void* qthis);
+extern void demth_ZNK5QChar7isUpperEv(void* qthis);
   // proto: static unsigned char QChar::combiningClass(uint ucs4);
-extern void _ZN5QChar14combiningClassEj(unsigned int arg0);
+extern void _ZN5QChar14combiningClassEj(int32_t arg0);
   // proto:  bool QChar::isNonCharacter();
-extern void _ZNK5QChar14isNonCharacterEv(void* qthis);
+extern void demth_ZNK5QChar14isNonCharacterEv(void* qthis);
   // proto: static bool QChar::isLetterOrNumber(uint ucs4);
-extern void demth_ZN5QChar16isLetterOrNumberEj(unsigned int arg0);
+extern void demth_ZN5QChar16isLetterOrNumberEj(int32_t arg0);
   // proto: static bool QChar::isDigit(uint ucs4);
-extern void demth_ZN5QChar7isDigitEj(unsigned int arg0);
+extern void demth_ZN5QChar7isDigitEj(int32_t arg0);
   // proto: static bool QChar::isPunct(uint ucs4);
-extern void _ZN5QChar7isPunctEj(unsigned int arg0);
+extern void _ZN5QChar7isPunctEj(int32_t arg0);
   // proto:  bool QChar::isTitleCase();
-extern void _ZNK5QChar11isTitleCaseEv(void* qthis);
+extern void demth_ZNK5QChar11isTitleCaseEv(void* qthis);
   // proto:  bool QChar::isLetter();
-extern void _ZNK5QChar8isLetterEv(void* qthis);
+extern void demth_ZNK5QChar8isLetterEv(void* qthis);
   // proto:  unsigned char QChar::combiningClass();
 extern void demth_ZNK5QChar14combiningClassEv(void* qthis);
   // proto:  bool QChar::isHighSurrogate();
-extern void _ZNK5QChar15isHighSurrogateEv(void* qthis);
+extern void demth_ZNK5QChar15isHighSurrogateEv(void* qthis);
   // proto: static ushort QChar::highSurrogate(uint ucs4);
-extern void demth_ZN5QChar13highSurrogateEj(unsigned int arg0);
+extern void demth_ZN5QChar13highSurrogateEj(int32_t arg0);
   // proto: static bool QChar::requiresSurrogates(uint ucs4);
-extern void demth_ZN5QChar18requiresSurrogatesEj(unsigned int arg0);
+extern void demth_ZN5QChar18requiresSurrogatesEj(int32_t arg0);
   // proto:  bool QChar::isLetterOrNumber();
-extern void _ZNK5QChar16isLetterOrNumberEv(void* qthis);
+extern void demth_ZNK5QChar16isLetterOrNumberEv(void* qthis);
   // proto:  ushort & QChar::unicode();
 extern void demth_ZN5QChar7unicodeEv(void* qthis);
   // proto: static bool QChar::isLowSurrogate(uint ucs4);
-extern void demth_ZN5QChar14isLowSurrogateEj(unsigned int arg0);
+extern void demth_ZN5QChar14isLowSurrogateEj(int32_t arg0);
   // proto: static bool QChar::isNumber(uint ucs4);
-extern void demth_ZN5QChar8isNumberEj(unsigned int arg0);
+extern void demth_ZN5QChar8isNumberEj(int32_t arg0);
   // proto:  QChar QChar::toLower();
 extern void demth_ZNK5QChar7toLowerEv(void* qthis);
   // proto:  void QChar::QChar(uchar c);
 extern void* dector_ZN5QCharC1Eh(unsigned char arg0);
 extern void _ZN5QCharC1Eh(void* qthis, unsigned char arg0);
   // proto: static bool QChar::isLetter(uint ucs4);
-extern void demth_ZN5QChar8isLetterEj(unsigned int arg0);
+extern void demth_ZN5QChar8isLetterEj(int32_t arg0);
   // proto:  QChar QChar::toUpper();
 extern void demth_ZNK5QChar7toUpperEv(void* qthis);
   // proto: static bool QChar::isSpace(uint ucs4);
-extern void demth_ZN5QChar7isSpaceEj(unsigned int arg0);
+extern void demth_ZN5QChar7isSpaceEj(int32_t arg0);
   // proto: static QChar QChar::fromLatin1(char c);
-extern void _ZN5QChar10fromLatin1Ec(char arg0);
+extern void demth_ZN5QChar10fromLatin1Ec(unsigned char arg0);
   // proto: static bool QChar::isSurrogate(uint ucs4);
-extern void demth_ZN5QChar11isSurrogateEj(unsigned int arg0);
+extern void demth_ZN5QChar11isSurrogateEj(int32_t arg0);
   // proto: static bool QChar::isMark(uint ucs4);
-extern void _ZN5QChar6isMarkEj(unsigned int arg0);
+extern void _ZN5QChar6isMarkEj(int32_t arg0);
   // proto: static bool QChar::isNonCharacter(uint ucs4);
-extern void demth_ZN5QChar14isNonCharacterEj(unsigned int arg0);
+extern void demth_ZN5QChar14isNonCharacterEj(int32_t arg0);
   // proto:  char QChar::toLatin1();
-extern void _ZNK5QChar8toLatin1Ev(void* qthis);
+extern void demth_ZNK5QChar8toLatin1Ev(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -204,13 +204,13 @@ func init() {
 // class sizeof(QLatin1Char)=1
 type QLatin1Char struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QChar)=2
 type QChar struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  ushort QLatin1Char::unicode();
@@ -226,7 +226,7 @@ func (this *QLatin1Char) unicode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLatin1Char7unicodeEv
     // invoke: ushort unicode()
-    C._ZNK11QLatin1Char7unicodeEv(this.qclsinst)
+    C.demth_ZNK11QLatin1Char7unicodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLatin1Char", "unicode", args)
   }
@@ -251,7 +251,7 @@ func (this *QLatin1Char) toLatin1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QLatin1Char8toLatin1Ev
     // invoke: char toLatin1()
-    C._ZNK11QLatin1Char8toLatin1Ev(this.qclsinst)
+    C.demth_ZNK11QLatin1Char8toLatin1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLatin1Char", "toLatin1", args)
   }
@@ -342,7 +342,7 @@ func (this *QChar) cell(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar4cellEv
     // invoke: uchar cell()
-    C._ZNK5QChar4cellEv(this.qclsinst)
+    C.demth_ZNK5QChar4cellEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "cell", args)
   }
@@ -390,7 +390,7 @@ func (this *QChar) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QChar6isNullEv(this.qclsinst)
+    C.demth_ZNK5QChar6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isNull", args)
   }
@@ -485,7 +485,7 @@ func (this *QChar) isLowSurrogate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar14isLowSurrogateEv
     // invoke: bool isLowSurrogate()
-    C._ZNK5QChar14isLowSurrogateEv(this.qclsinst)
+    C.demth_ZNK5QChar14isLowSurrogateEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar14isLowSurrogateEj
     // invoke: bool isLowSurrogate(uint)
@@ -563,7 +563,7 @@ func (this *QChar) isLower(args ...interface{}) () {
   case 1:
     // invoke: _ZNK5QChar7isLowerEv
     // invoke: bool isLower()
-    C._ZNK5QChar7isLowerEv(this.qclsinst)
+    C.demth_ZNK5QChar7isLowerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isLower", args)
   }
@@ -612,7 +612,7 @@ func (this *QChar) row(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar3rowEv
     // invoke: uchar row()
-    C._ZNK5QChar3rowEv(this.qclsinst)
+    C.demth_ZNK5QChar3rowEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "row", args)
   }
@@ -635,7 +635,7 @@ func (this *QChar) isDigit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar7isDigitEv
     // invoke: bool isDigit()
-    C._ZNK5QChar7isDigitEv(this.qclsinst)
+    C.demth_ZNK5QChar7isDigitEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar7isDigitEj
     // invoke: bool isDigit(uint)
@@ -678,7 +678,7 @@ func (this *QChar) isSurrogate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar11isSurrogateEv
     // invoke: bool isSurrogate()
-    C._ZNK5QChar11isSurrogateEv(this.qclsinst)
+    C.demth_ZNK5QChar11isSurrogateEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar11isSurrogateEj
     // invoke: bool isSurrogate(uint)
@@ -721,7 +721,7 @@ func (this *QChar) isNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar8isNumberEv
     // invoke: bool isNumber()
-    C._ZNK5QChar8isNumberEv(this.qclsinst)
+    C.demth_ZNK5QChar8isNumberEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar8isNumberEj
     // invoke: bool isNumber(uint)
@@ -833,7 +833,7 @@ func (this *QChar) setRow(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QChar6setRowEh
     // invoke: void setRow(uchar)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C.demth_ZN5QChar6setRowEh(this.qclsinst, arg0)
   default:
@@ -884,7 +884,7 @@ func (this *QChar) setCell(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QChar7setCellEh
     // invoke: void setCell(uchar)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C.demth_ZN5QChar7setCellEh(this.qclsinst, arg0)
   default:
@@ -1044,7 +1044,7 @@ func (this *QChar) isSpace(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar7isSpaceEv
     // invoke: bool isSpace()
-    C._ZNK5QChar7isSpaceEv(this.qclsinst)
+    C.demth_ZNK5QChar7isSpaceEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar7isSpaceEj
     // invoke: bool isSpace(uint)
@@ -1079,7 +1079,7 @@ func (this *QChar) isUpper(args ...interface{}) () {
   case 1:
     // invoke: _ZNK5QChar7isUpperEv
     // invoke: bool isUpper()
-    C._ZNK5QChar7isUpperEv(this.qclsinst)
+    C.demth_ZNK5QChar7isUpperEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isUpper", args)
   }
@@ -1116,7 +1116,7 @@ func (this *QChar) isNonCharacter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar14isNonCharacterEv
     // invoke: bool isNonCharacter()
-    C._ZNK5QChar14isNonCharacterEv(this.qclsinst)
+    C.demth_ZNK5QChar14isNonCharacterEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar14isNonCharacterEj
     // invoke: bool isNonCharacter(uint)
@@ -1193,7 +1193,7 @@ func (this *QChar) isTitleCase(args ...interface{}) () {
   case 1:
     // invoke: _ZNK5QChar11isTitleCaseEv
     // invoke: bool isTitleCase()
-    C._ZNK5QChar11isTitleCaseEv(this.qclsinst)
+    C.demth_ZNK5QChar11isTitleCaseEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isTitleCase", args)
   }
@@ -1216,7 +1216,7 @@ func (this *QChar) isLetter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar8isLetterEv
     // invoke: bool isLetter()
-    C._ZNK5QChar8isLetterEv(this.qclsinst)
+    C.demth_ZNK5QChar8isLetterEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QChar8isLetterEj
     // invoke: bool isLetter(uint)
@@ -1280,7 +1280,7 @@ func (this *QChar) isHighSurrogate(args ...interface{}) () {
   case 1:
     // invoke: _ZNK5QChar15isHighSurrogateEv
     // invoke: bool isHighSurrogate()
-    C._ZNK5QChar15isHighSurrogateEv(this.qclsinst)
+    C.demth_ZNK5QChar15isHighSurrogateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isHighSurrogate", args)
   }
@@ -1337,7 +1337,7 @@ func (this *QChar) isLetterOrNumber(args ...interface{}) () {
   case 1:
     // invoke: _ZNK5QChar16isLetterOrNumberEv
     // invoke: bool isLetterOrNumber()
-    C._ZNK5QChar16isLetterOrNumberEv(this.qclsinst)
+    C.demth_ZNK5QChar16isLetterOrNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "isLetterOrNumber", args)
   }
@@ -1549,7 +1549,7 @@ func (this *QChar) toLatin1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QChar8toLatin1Ev
     // invoke: char toLatin1()
-    C._ZNK5QChar8toLatin1Ev(this.qclsinst)
+    C.demth_ZNK5QChar8toLatin1Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChar", "toLatin1", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSplitter::insertWidget(int index, QWidget * widget);
-extern void _ZN9QSplitter12insertWidgetEiP7QWidget(void* qthis, int arg0, void* arg1);
+extern void _ZN9QSplitter12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QSplitter::childrenCollapsible();
 extern void _ZNK9QSplitter19childrenCollapsibleEv(void* qthis);
   // proto:  int QSplitter::count();
@@ -53,21 +53,21 @@ extern void _ZN9QSplitterC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN9QSplitterC1EP7QWidget(void* arg0);
 extern void _ZN9QSplitterC1EP7QWidget(void* qthis, void* arg0);
   // proto:  void QSplitter::setHandleWidth(int );
-extern void _ZN9QSplitter14setHandleWidthEi(void* qthis, int arg0);
+extern void _ZN9QSplitter14setHandleWidthEi(void* qthis, int32_t arg0);
   // proto:  void QSplitter::setStretchFactor(int index, int stretch);
-extern void _ZN9QSplitter16setStretchFactorEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QSplitter16setStretchFactorEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QSize QSplitter::minimumSizeHint();
 extern void _ZNK9QSplitter15minimumSizeHintEv(void* qthis);
   // proto:  void QSplitter::setOpaqueResize(bool opaque);
 extern void _ZN9QSplitter15setOpaqueResizeEb(void* qthis, bool arg0);
   // proto:  QWidget * QSplitter::widget(int index);
-extern void _ZNK9QSplitter6widgetEi(void* qthis, int arg0);
+extern void _ZNK9QSplitter6widgetEi(void* qthis, int32_t arg0);
   // proto:  QList<int> QSplitter::sizes();
 extern void _ZNK9QSplitter5sizesEv(void* qthis);
   // proto:  bool QSplitter::isCollapsible(int index);
-extern void _ZNK9QSplitter13isCollapsibleEi(void* qthis, int arg0);
+extern void _ZNK9QSplitter13isCollapsibleEi(void* qthis, int32_t arg0);
   // proto:  void QSplitter::setCollapsible(int index, bool );
-extern void _ZN9QSplitter14setCollapsibleEib(void* qthis, int arg0, bool arg1);
+extern void _ZN9QSplitter14setCollapsibleEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  bool QSplitter::restoreState(const QByteArray & state);
 extern void _ZN9QSplitter12restoreStateERK10QByteArray(void* qthis, void* arg0);
   // proto:  void QSplitter::~QSplitter();
@@ -83,9 +83,9 @@ extern void _ZNK9QSplitter8sizeHintEv(void* qthis);
   // proto:  int QSplitter::indexOf(QWidget * w);
 extern void _ZNK9QSplitter7indexOfEP7QWidget(void* qthis, void* arg0);
   // proto:  void QSplitter::getRange(int index, int * , int * );
-extern void _ZNK9QSplitter8getRangeEiPiS0_(void* qthis, int arg0, int* arg1, int* arg2);
+extern void _ZNK9QSplitter8getRangeEiPiS0_(void* qthis, int32_t arg0, int32_t* arg1, int32_t* arg2);
   // proto:  QSplitterHandle * QSplitter::handle(int index);
-extern void _ZNK9QSplitter6handleEi(void* qthis, int arg0);
+extern void _ZNK9QSplitter6handleEi(void* qthis, int32_t arg0);
   // proto:  void QSplitterHandle::~QSplitterHandle();
 extern void _ZN15QSplitterHandleD0Ev(void* qthis);
   // proto:  void QSplitterHandle::QSplitterHandle(const QSplitterHandle & );
@@ -114,14 +114,14 @@ func init() {
 // class sizeof(QSplitter)=1
 type QSplitter struct {
   /*qbase*/ QFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _splitterMoved QSplitter_splitterMoved_signal;
 }
 
 // class sizeof(QSplitterHandle)=1
 type QSplitterHandle struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QSplitter::insertWidget(int index, QWidget * widget);
@@ -361,7 +361,7 @@ func (this *QSplitter) setOpaqueResize(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSplitter15setOpaqueResizeEb
     // invoke: void setOpaqueResize(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QSplitter15setOpaqueResizeEb(this.qclsinst, arg0)
   default:
@@ -453,7 +453,7 @@ func (this *QSplitter) setCollapsible(args ...interface{}) () {
     // invoke: void setCollapsible(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN9QSplitter14setCollapsibleEib(this.qclsinst, arg0, arg1)
   default:
@@ -513,7 +513,7 @@ func (this *QSplitter) setChildrenCollapsible(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSplitter22setChildrenCollapsibleEb
     // invoke: void setChildrenCollapsible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QSplitter22setChildrenCollapsibleEb(this.qclsinst, arg0)
   default:

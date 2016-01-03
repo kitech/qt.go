@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlistview.h
 // dst-file: /src/widgets/qlistview.go
 //
@@ -50,7 +50,7 @@ extern void _ZN9QListView11setWrappingEb(void* qthis, bool arg0);
   // proto:  void QListView::setSelectionRectVisible(bool show);
 extern void _ZN9QListView23setSelectionRectVisibleEb(void* qthis, bool arg0);
   // proto:  void QListView::setBatchSize(int batchSize);
-extern void _ZN9QListView12setBatchSizeEi(void* qthis, int arg0);
+extern void _ZN9QListView12setBatchSizeEi(void* qthis, int32_t arg0);
   // proto:  bool QListView::uniformItemSizes();
 extern void _ZNK9QListView16uniformItemSizesEv(void* qthis);
   // proto:  void QListView::setRootIndex(const QModelIndex & index);
@@ -62,16 +62,16 @@ extern void _ZN9QListView5resetEv(void* qthis);
   // proto:  QSize QListView::gridSize();
 extern void _ZNK9QListView8gridSizeEv(void* qthis);
   // proto:  void QListView::setModelColumn(int column);
-extern void _ZN9QListView14setModelColumnEi(void* qthis, int arg0);
+extern void _ZN9QListView14setModelColumnEi(void* qthis, int32_t arg0);
   // proto:  void QListView::QListView(const QListView & );
 extern void* dector_ZN9QListViewC1ERKS_(void* arg0);
 extern void _ZN9QListViewC1ERKS_(void* qthis, void* arg0);
   // proto:  void QListView::setSpacing(int space);
-extern void _ZN9QListView10setSpacingEi(void* qthis, int arg0);
+extern void _ZN9QListView10setSpacingEi(void* qthis, int32_t arg0);
   // proto:  QRect QListView::visualRect(const QModelIndex & index);
 extern void _ZNK9QListView10visualRectERK11QModelIndex(void* qthis, void* arg0);
   // proto:  bool QListView::isRowHidden(int row);
-extern void _ZNK9QListView11isRowHiddenEi(void* qthis, int arg0);
+extern void _ZNK9QListView11isRowHiddenEi(void* qthis, int32_t arg0);
   // proto:  void QListView::~QListView();
 extern void _ZN9QListViewD0Ev(void* qthis);
   // proto:  const QMetaObject * QListView::metaObject();
@@ -83,7 +83,7 @@ extern void _ZNK9QListView22isSelectionRectVisibleEv(void* qthis);
   // proto:  bool QListView::wordWrap();
 extern void _ZNK9QListView8wordWrapEv(void* qthis);
   // proto:  void QListView::setRowHidden(int row, bool hide);
-extern void _ZN9QListView12setRowHiddenEib(void* qthis, int arg0, bool arg1);
+extern void _ZN9QListView12setRowHiddenEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QListView::clearPropertyFlags();
 extern void _ZN9QListView18clearPropertyFlagsEv(void* qthis);
   // proto:  int QListView::modelColumn();
@@ -105,7 +105,7 @@ func init() {
 // class sizeof(QListView)=1
 type QListView struct {
   /*qbase*/ QAbstractItemView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _indexesMoved QListView_indexesMoved_signal;
 }
 
@@ -128,7 +128,7 @@ func (this *QListView) setWordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView11setWordWrapEb
     // invoke: void setWordWrap(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QListView11setWordWrapEb(this.qclsinst, arg0)
   default:
@@ -237,7 +237,7 @@ func (this *QListView) setWrapping(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView11setWrappingEb
     // invoke: void setWrapping(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QListView11setWrappingEb(this.qclsinst, arg0)
   default:
@@ -260,7 +260,7 @@ func (this *QListView) setSelectionRectVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView23setSelectionRectVisibleEb
     // invoke: void setSelectionRectVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QListView23setSelectionRectVisibleEb(this.qclsinst, arg0)
   default:
@@ -598,7 +598,7 @@ func (this *QListView) setRowHidden(args ...interface{}) () {
     // invoke: void setRowHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN9QListView12setRowHiddenEib(this.qclsinst, arg0, arg1)
   default:
@@ -661,7 +661,7 @@ func (this *QListView) setUniformItemSizes(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListView19setUniformItemSizesEb
     // invoke: void setUniformItemSizes(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QListView19setUniformItemSizesEb(this.qclsinst, arg0)
   default:

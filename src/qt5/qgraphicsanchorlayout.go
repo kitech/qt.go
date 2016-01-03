@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -49,7 +49,7 @@ extern void _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(void* qthis);
   // proto:  void QGraphicsAnchorLayout::invalidate();
 extern void _ZN21QGraphicsAnchorLayout10invalidateEv(void* qthis);
   // proto:  QGraphicsLayoutItem * QGraphicsAnchorLayout::itemAt(int index);
-extern void _ZNK21QGraphicsAnchorLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK21QGraphicsAnchorLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsAnchorLayout::setVerticalSpacing(qreal spacing);
 extern void _ZN21QGraphicsAnchorLayout18setVerticalSpacingEd(void* qthis, double arg0);
   // proto:  void QGraphicsAnchorLayout::setGeometry(const QRectF & rect);
@@ -59,7 +59,7 @@ extern void _ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(void* qthis, doub
   // proto:  void QGraphicsAnchorLayout::~QGraphicsAnchorLayout();
 extern void _ZN21QGraphicsAnchorLayoutD0Ev(void* qthis);
   // proto:  void QGraphicsAnchorLayout::removeAt(int index);
-extern void _ZN21QGraphicsAnchorLayout8removeAtEi(void* qthis, int arg0);
+extern void _ZN21QGraphicsAnchorLayout8removeAtEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsAnchor::~QGraphicsAnchor();
 extern void _ZN15QGraphicsAnchorD0Ev(void* qthis);
   // proto:  void QGraphicsAnchor::unsetSpacing();
@@ -88,13 +88,13 @@ func init() {
 // class sizeof(QGraphicsAnchorLayout)=1
 type QGraphicsAnchorLayout struct {
   /*qbase*/ QGraphicsLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsAnchor)=1
 type QGraphicsAnchor struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);

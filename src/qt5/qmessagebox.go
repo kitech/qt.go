@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -33,9 +33,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int arg3, int arg4, int arg5);
+extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QMessageBox::setButtonText(int button, const QString & text);
-extern void _ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN11QMessageBox13setButtonTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QMessageBox::~QMessageBox();
 extern void _ZN11QMessageBoxD0Ev(void* qthis);
   // proto:  void QMessageBox::setText(const QString & text);
@@ -47,20 +47,20 @@ extern void _ZN11QMessageBox5aboutEP7QWidgetRK7QStringS4_(void* arg0, void* arg1
   // proto:  QString QMessageBox::text();
 extern void _ZNK11QMessageBox4textEv(void* qthis);
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int arg6, int arg7);
+extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7);
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int arg3, int arg4, int arg5);
+extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QMessageBox::QMessageBox(const QMessageBox & );
 extern void* dector_ZN11QMessageBoxC1ERKS_(void* arg0);
 extern void _ZN11QMessageBoxC1ERKS_(void* qthis, void* arg0);
   // proto:  const QMetaObject * QMessageBox::metaObject();
 extern void _ZNK11QMessageBox10metaObjectEv(void* qthis);
   // proto: static int QMessageBox::question(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int arg3, int arg4, int arg5);
+extern void _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  QPushButton * QMessageBox::defaultButton();
 extern void _ZNK11QMessageBox13defaultButtonEv(void* qthis);
   // proto:  void QMessageBox::open(QObject * receiver, const char * member);
-extern void _ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN11QMessageBox4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QList<QAbstractButton *> QMessageBox::buttons();
 extern void _ZNK11QMessageBox7buttonsEv(void* qthis);
   // proto: static void QMessageBox::aboutQt(QWidget * parent, const QString & title);
@@ -75,17 +75,17 @@ extern void _ZN11QMessageBox15setDetailedTextERK7QString(void* qthis, void* arg0
 extern void* dector_ZN11QMessageBoxC1EP7QWidget(void* arg0);
 extern void _ZN11QMessageBoxC1EP7QWidget(void* qthis, void* arg0);
   // proto: static int QMessageBox::critical(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int arg6, int arg7);
+extern void _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7);
   // proto:  QAbstractButton * QMessageBox::clickedButton();
 extern void _ZNK11QMessageBox13clickedButtonEv(void* qthis);
   // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
 extern void _ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0);
   // proto: static int QMessageBox::warning(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int arg6, int arg7);
+extern void _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7);
   // proto:  void QMessageBox::setEscapeButton(QAbstractButton * button);
 extern void _ZN11QMessageBox15setEscapeButtonEP15QAbstractButton(void* qthis, void* arg0);
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, int button0, int button1, int button2);
-extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int arg3, int arg4, int arg5);
+extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(void* arg0, void* arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QMessageBox::setCheckBox(QCheckBox * cb);
 extern void _ZN11QMessageBox11setCheckBoxEP9QCheckBox(void* qthis, void* arg0);
   // proto:  void QMessageBox::setWindowTitle(const QString & title);
@@ -101,9 +101,9 @@ extern void _ZNK11QMessageBox12detailedTextEv(void* qthis);
   // proto:  QCheckBox * QMessageBox::checkBox();
 extern void _ZNK11QMessageBox8checkBoxEv(void* qthis);
   // proto:  QString QMessageBox::buttonText(int button);
-extern void _ZNK11QMessageBox10buttonTextEi(void* qthis, int arg0);
+extern void _ZNK11QMessageBox10buttonTextEi(void* qthis, int32_t arg0);
   // proto: static int QMessageBox::information(QWidget * parent, const QString & title, const QString & text, const QString & button0Text, const QString & button1Text, const QString & button2Text, int defaultButtonNumber, int escapeButtonNumber);
-extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int arg6, int arg7);
+extern void _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, int32_t arg6, int32_t arg7);
 */
 import "C"
 // } // <= ext block end
@@ -119,7 +119,7 @@ func init() {
 // class sizeof(QMessageBox)=1
 type QMessageBox struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _buttonClicked QMessageBox_buttonClicked_signal;
 }
 
@@ -347,7 +347,7 @@ func (this *QMessageBox) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN11QMessageBox4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtemporaryfile.h
 // dst-file: /src/core/qtemporaryfile.go
 //
@@ -58,7 +58,7 @@ extern void _ZNK14QTemporaryFile12fileTemplateEv(void* qthis);
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(const QString & fileName);
 extern void demth_ZN14QTemporaryFile16createNativeFileERK7QString(void* arg0);
   // proto:  bool QTemporaryFile::open();
-extern void _ZN14QTemporaryFile4openEv(void* qthis);
+extern void demth_ZN14QTemporaryFile4openEv(void* qthis);
   // proto: static QTemporaryFile * QTemporaryFile::createLocalFile(const QString & fileName);
 extern void demth_ZN14QTemporaryFile15createLocalFileERK7QString(void* arg0);
   // proto: static QTemporaryFile * QTemporaryFile::createNativeFile(QFile & file);
@@ -86,7 +86,7 @@ func init() {
 // class sizeof(QTemporaryFile)=1
 type QTemporaryFile struct {
   /*qbase*/ QFile;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QTemporaryFile::autoRemove();
@@ -176,7 +176,7 @@ func (this *QTemporaryFile) setAutoRemove(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QTemporaryFile13setAutoRemoveEb
     // invoke: void setAutoRemove(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QTemporaryFile13setAutoRemoveEb(this.qclsinst, arg0)
   default:
@@ -255,7 +255,7 @@ func (this *QTemporaryFile) open(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QTemporaryFile4openEv
     // invoke: bool open()
-    C._ZN14QTemporaryFile4openEv(this.qclsinst)
+    C.demth_ZN14QTemporaryFile4openEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTemporaryFile", "open", args)
   }

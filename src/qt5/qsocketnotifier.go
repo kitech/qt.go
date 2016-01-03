@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -60,7 +60,7 @@ func init() {
 // class sizeof(QSocketNotifier)=1
 type QSocketNotifier struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QSocketNotifier_activated_signal;
 }
 
@@ -123,7 +123,7 @@ func (this *QSocketNotifier) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSocketNotifier10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QSocketNotifier10setEnabledEb(this.qclsinst, arg0)
   default:

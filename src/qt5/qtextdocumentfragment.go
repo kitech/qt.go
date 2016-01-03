@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextdocumentfragment.h
 // dst-file: /src/gui/qtextdocumentfragment.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QTextDocumentFragment)=8
 type QTextDocumentFragment struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static QTextDocumentFragment QTextDocumentFragment::fromHtml(const QString & html, const QTextDocument * resourceProvider);

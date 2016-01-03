@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qstatictext.h
 // dst-file: /src/gui/qstatictext.go
 //
@@ -55,7 +55,7 @@ extern void _ZN11QStaticText12setTextWidthEd(void* qthis, double arg0);
   // proto:  qreal QStaticText::textWidth();
 extern void _ZNK11QStaticText9textWidthEv(void* qthis);
   // proto:  void QStaticText::swap(QStaticText & other);
-extern void _ZN11QStaticText4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN11QStaticText4swapERS_(void* qthis, void* arg0);
   // proto:  QTextOption QStaticText::textOption();
 extern void _ZNK11QStaticText10textOptionEv(void* qthis);
   // proto:  void QStaticText::QStaticText(const QStaticText & other);
@@ -76,7 +76,7 @@ func init() {
 // class sizeof(QStaticText)=1
 type QStaticText struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStaticText::QStaticText(const QString & text);
@@ -269,7 +269,7 @@ func (this *QStaticText) swap(args ...interface{}) () {
     // invoke: void swap(class QStaticText &)
     var arg0 = args[0].(QStaticText).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QStaticText4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN11QStaticText4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStaticText", "swap", args)
   }

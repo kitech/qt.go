@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.go
 //
@@ -41,7 +41,7 @@ extern void _ZNK14QOpenGLTexture6heightEv(void* qthis);
   // proto:  bool QOpenGLTexture::isAutoMipMapGenerationEnabled();
 extern void _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(void* qthis);
   // proto:  void QOpenGLTexture::setCompressedData(int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  void QOpenGLTexture::setMaximumLevelOfDetail(float value);
 extern void _ZN14QOpenGLTexture23setMaximumLevelOfDetailEf(void* qthis, float arg0);
   // proto:  void QOpenGLTexture::setAutoMipMapGenerationEnabled(bool enabled);
@@ -49,25 +49,25 @@ extern void _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(void* qthis, b
   // proto:  int QOpenGLTexture::depth();
 extern void _ZNK14QOpenGLTexture5depthEv(void* qthis);
   // proto:  void QOpenGLTexture::generateMipMaps(int baseLevel, bool resetBaseLevel);
-extern void _ZN14QOpenGLTexture15generateMipMapsEib(void* qthis, int arg0, bool arg1);
+extern void _ZN14QOpenGLTexture15generateMipMapsEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, void* arg2, void* arg3);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3);
   // proto:  void QOpenGLTexture::setMipBaseLevel(int baseLevel);
-extern void _ZN14QOpenGLTexture15setMipBaseLevelEi(void* qthis, int arg0);
+extern void _ZN14QOpenGLTexture15setMipBaseLevelEi(void* qthis, int32_t arg0);
   // proto:  QPair<float, float> QOpenGLTexture::levelOfDetailRange();
 extern void _ZNK14QOpenGLTexture18levelOfDetailRangeEv(void* qthis);
   // proto:  bool QOpenGLTexture::create();
 extern void _ZN14QOpenGLTexture6createEv(void* qthis);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, const void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, int arg2, void* arg3, void* arg4);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPKvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, void* arg3, void* arg4);
   // proto:  void QOpenGLTexture::setLevelOfDetailRange(float min, float max);
 extern void _ZN14QOpenGLTexture21setLevelOfDetailRangeEff(void* qthis, float arg0, float arg1);
   // proto:  void QOpenGLTexture::borderColor(unsigned int * border);
-extern void _ZNK14QOpenGLTexture11borderColorEPj(void* qthis, unsigned int* arg0);
+extern void _ZNK14QOpenGLTexture11borderColorEPj(void* qthis, int32_t* arg0);
   // proto:  bool QOpenGLTexture::isStorageAllocated();
 extern void _ZNK14QOpenGLTexture18isStorageAllocatedEv(void* qthis);
   // proto:  void QOpenGLTexture::borderColor(int * border);
-extern void _ZNK14QOpenGLTexture11borderColorEPi(void* qthis, int* arg0);
+extern void _ZNK14QOpenGLTexture11borderColorEPi(void* qthis, int32_t* arg0);
   // proto:  bool QOpenGLTexture::isTextureView();
 extern void _ZNK14QOpenGLTexture13isTextureViewEv(void* qthis);
   // proto:  bool QOpenGLTexture::isFixedSamplePositions();
@@ -75,9 +75,9 @@ extern void _ZNK14QOpenGLTexture22isFixedSamplePositionsEv(void* qthis);
   // proto:  int QOpenGLTexture::faces();
 extern void _ZNK14QOpenGLTexture5facesEv(void* qthis);
   // proto:  void QOpenGLTexture::setLayers(int layers);
-extern void _ZN14QOpenGLTexture9setLayersEi(void* qthis, int arg0);
+extern void _ZN14QOpenGLTexture9setLayersEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLTexture::setCompressedData(int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiPvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  int QOpenGLTexture::width();
 extern void _ZNK14QOpenGLTexture5widthEv(void* qthis);
   // proto:  int QOpenGLTexture::layers();
@@ -87,27 +87,27 @@ extern void _ZNK14QOpenGLTexture11borderColorEPf(void* qthis, float* arg0);
   // proto:  float QOpenGLTexture::minimumLevelOfDetail();
 extern void _ZNK14QOpenGLTexture20minimumLevelOfDetailEv(void* qthis);
   // proto:  void QOpenGLTexture::setBorderColor(int r, int g, int b, int a);
-extern void _ZN14QOpenGLTexture14setBorderColorEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN14QOpenGLTexture14setBorderColorEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLTexture::setMinimumLevelOfDetail(float value);
 extern void _ZN14QOpenGLTexture23setMinimumLevelOfDetailEf(void* qthis, float arg0);
   // proto:  void QOpenGLTexture::setMipLevels(int levels);
-extern void _ZN14QOpenGLTexture12setMipLevelsEi(void* qthis, int arg0);
+extern void _ZN14QOpenGLTexture12setMipLevelsEi(void* qthis, int32_t arg0);
   // proto:  QPair<int, int> QOpenGLTexture::mipLevelRange();
 extern void _ZNK14QOpenGLTexture13mipLevelRangeEv(void* qthis);
   // proto:  void QOpenGLTexture::setMipMaxLevel(int maxLevel);
-extern void _ZN14QOpenGLTexture14setMipMaxLevelEi(void* qthis, int arg0);
+extern void _ZN14QOpenGLTexture14setMipMaxLevelEi(void* qthis, int32_t arg0);
   // proto:  float QOpenGLTexture::levelofDetailBias();
 extern void _ZNK14QOpenGLTexture17levelofDetailBiasEv(void* qthis);
   // proto:  int QOpenGLTexture::maximumMipLevels();
 extern void _ZNK14QOpenGLTexture16maximumMipLevelsEv(void* qthis);
   // proto:  bool QOpenGLTexture::isBound(uint unit);
-extern void _ZN14QOpenGLTexture7isBoundEj(void* qthis, unsigned int arg0);
+extern void _ZN14QOpenGLTexture7isBoundEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLTexture::setBorderColor(uint r, uint g, uint b, uint a);
-extern void _ZN14QOpenGLTexture14setBorderColorEjjjj(void* qthis, unsigned int arg0, unsigned int arg1, unsigned int arg2, unsigned int arg3);
+extern void _ZN14QOpenGLTexture14setBorderColorEjjjj(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLTexture::setMaximumAnisotropy(float anisotropy);
 extern void _ZN14QOpenGLTexture20setMaximumAnisotropyEf(void* qthis, float arg0);
   // proto:  void QOpenGLTexture::setSamples(int samples);
-extern void _ZN14QOpenGLTexture10setSamplesEi(void* qthis, int arg0);
+extern void _ZN14QOpenGLTexture10setSamplesEi(void* qthis, int32_t arg0);
   // proto:  int QOpenGLTexture::mipLevels();
 extern void _ZNK14QOpenGLTexture9mipLevelsEv(void* qthis);
   // proto:  void QOpenGLTexture::setLevelofDetailBias(float bias);
@@ -115,7 +115,7 @@ extern void _ZN14QOpenGLTexture20setLevelofDetailBiasEf(void* qthis, float arg0)
   // proto:  GLuint QOpenGLTexture::textureId();
 extern void _ZNK14QOpenGLTexture9textureIdEv(void* qthis);
   // proto:  void QOpenGLTexture::setMipLevelRange(int baseLevel, int maxLevel);
-extern void _ZN14QOpenGLTexture16setMipLevelRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN14QOpenGLTexture16setMipLevelRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLTexture::allocateStorage();
 extern void _ZN14QOpenGLTexture15allocateStorageEv(void* qthis);
   // proto:  void QOpenGLTexture::~QOpenGLTexture();
@@ -135,7 +135,7 @@ extern void _ZNK14QOpenGLTexture17maximumAnisotropyEv(void* qthis);
   // proto:  float QOpenGLTexture::maximumLevelOfDetail();
 extern void _ZNK14QOpenGLTexture20maximumLevelOfDetailEv(void* qthis);
   // proto:  void QOpenGLTexture::setSize(int width, int height, int depth);
-extern void _ZN14QOpenGLTexture7setSizeEiii(void* qthis, int arg0, int arg1, int arg2);
+extern void _ZN14QOpenGLTexture7setSizeEiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QOpenGLTexture::isCreated();
 extern void _ZNK14QOpenGLTexture9isCreatedEv(void* qthis);
   // proto:  bool QOpenGLTexture::isBound();
@@ -152,9 +152,9 @@ extern void _ZNK14QOpenGLTexture11borderColorEv(void* qthis);
 extern void* dector_ZN14QOpenGLTextureC1ERKS_(void* arg0);
 extern void _ZN14QOpenGLTextureC1ERKS_(void* qthis, void* arg0);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int layer, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, int arg2, void* arg3, void* arg4);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, void* arg3, void* arg4);
   // proto:  void QOpenGLTexture::setCompressedData(int mipLevel, int dataSize, void * data, const QOpenGLPixelTransferOptions *const options);
-extern void _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int arg0, int arg1, void* arg2, void* arg3);
+extern void _ZN14QOpenGLTexture17setCompressedDataEiiPvPK27QOpenGLPixelTransferOptions(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3);
 */
 import "C"
 // } // <= ext block end
@@ -170,7 +170,7 @@ func init() {
 // class sizeof(QOpenGLTexture)=1
 type QOpenGLTexture struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QOpenGLTexture::bind();
@@ -211,7 +211,7 @@ func (this *QOpenGLTexture) setFixedSamplePositions(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLTexture23setFixedSamplePositionsEb
     // invoke: void setFixedSamplePositions(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QOpenGLTexture23setFixedSamplePositionsEb(this.qclsinst, arg0)
   default:
@@ -435,7 +435,7 @@ func (this *QOpenGLTexture) setAutoMipMapGenerationEnabled(args ...interface{}) 
   case 0:
     // invoke: _ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb
     // invoke: void setAutoMipMapGenerationEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QOpenGLTexture30setAutoMipMapGenerationEnabledEb(this.qclsinst, arg0)
   default:
@@ -483,7 +483,7 @@ func (this *QOpenGLTexture) generateMipMaps(args ...interface{}) () {
     // invoke: void generateMipMaps(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN14QOpenGLTexture15generateMipMapsEib(this.qclsinst, arg0, arg1)
   case 1:

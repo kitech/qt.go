@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -45,7 +45,7 @@ extern void _ZN18QAbstractAnimation5pauseEv(void* qthis);
 extern void* dector_ZN18QAbstractAnimationC1ERKS_(void* arg0);
 extern void _ZN18QAbstractAnimationC1ERKS_(void* qthis, void* arg0);
   // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
-extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int arg0);
+extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int32_t arg0);
   // proto:  int QAbstractAnimation::currentLoop();
 extern void _ZNK18QAbstractAnimation11currentLoopEv(void* qthis);
   // proto:  QAnimationGroup * QAbstractAnimation::group();
@@ -54,8 +54,6 @@ extern void _ZNK18QAbstractAnimation5groupEv(void* qthis);
 extern void _ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0);
   // proto:  int QAbstractAnimation::totalDuration();
 extern void _ZNK18QAbstractAnimation13totalDurationEv(void* qthis);
-  // proto:  int QAbstractAnimation::duration();
-extern void _ZNK18QAbstractAnimation8durationEv(void* qthis);
   // proto:  const QMetaObject * QAbstractAnimation::metaObject();
 extern void _ZNK18QAbstractAnimation10metaObjectEv(void* qthis);
   // proto:  int QAbstractAnimation::currentLoopTime();
@@ -63,7 +61,7 @@ extern void _ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis);
   // proto:  int QAbstractAnimation::currentTime();
 extern void _ZNK18QAbstractAnimation11currentTimeEv(void* qthis);
   // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
-extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int arg0);
+extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractAnimation::~QAbstractAnimation();
 extern void _ZN18QAbstractAnimationD0Ev(void* qthis);
   // proto:  int QAbstractAnimation::loopCount();
@@ -88,7 +86,7 @@ extern void _ZNK16QAnimationDriver9isRunningEv(void* qthis);
   // proto:  qint64 QAnimationDriver::startTime();
 extern void _ZNK16QAnimationDriver9startTimeEv(void* qthis);
   // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
-extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, long long arg0);
+extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, int64_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -104,7 +102,7 @@ func init() {
 // class sizeof(QAbstractAnimation)=1
 type QAbstractAnimation struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentLoopChanged QAbstractAnimation_currentLoopChanged_signal;
 //  _finished QAbstractAnimation_finished_signal;
 //  _stateChanged QAbstractAnimation_stateChanged_signal;
@@ -114,7 +112,7 @@ type QAbstractAnimation struct {
 // class sizeof(QAnimationDriver)=1
 type QAnimationDriver struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _started QAnimationDriver_started_signal;
 //  _stopped QAnimationDriver_stopped_signal;
 }
@@ -261,7 +259,7 @@ func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QAbstractAnimation9setPausedEb
     // invoke: void setPaused(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
   default:
@@ -286,26 +284,6 @@ func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
     C._ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
-  }
-
-}
-
-  // proto:  int QAbstractAnimation::duration();
-func (this *QAbstractAnimation) duration(args ...interface{}) () {
-  // duration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractAnimation8durationEv
-    // invoke: int duration()
-    C._ZNK18QAbstractAnimation8durationEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "duration", args)
   }
 
 }

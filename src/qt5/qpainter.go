@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.go
 //
@@ -39,23 +39,23 @@ extern void _ZN8QPainter11drawPictureERK7QPointFRK8QPicture(void* qthis, void* a
   // proto:  const QMatrix & QPainter::worldMatrix();
 extern void _ZNK8QPainter11worldMatrixEv(void* qthis);
   // proto:  void QPainter::drawText(const QPointF & p, const QString & str, int tf, int justificationPadding);
-extern void _ZN8QPainter8drawTextERK7QPointFRK7QStringii(void* qthis, void* arg0, void* arg1, int arg2, int arg3);
+extern void _ZN8QPainter8drawTextERK7QPointFRK7QStringii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::fillRect(int x, int y, int w, int h, const QColor & color);
-extern void demth_ZN8QPainter8fillRectEiiiiRK6QColor(void* qthis, int arg0, int arg1, int arg2, int arg3, void* arg4);
+extern void demth_ZN8QPainter8fillRectEiiiiRK6QColor(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, void* arg4);
   // proto:  const QMatrix & QPainter::matrix();
 extern void _ZNK8QPainter6matrixEv(void* qthis);
   // proto:  qreal QPainter::opacity();
 extern void _ZNK8QPainter7opacityEv(void* qthis);
   // proto:  void QPainter::drawText(int x, int y, const QString & s);
-extern void demth_ZN8QPainter8drawTextEiiRK7QString(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZN8QPainter8drawTextEiiRK7QString(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::drawTiledPixmap(const QRectF & rect, const QPixmap & pm, const QPointF & offset);
 extern void _ZN8QPainter15drawTiledPixmapERK6QRectFRK7QPixmapRK7QPointF(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QPainter::setBackground(const QBrush & bg);
 extern void _ZN8QPainter13setBackgroundERK6QBrush(void* qthis, void* arg0);
   // proto:  QRect QPainter::boundingRect(const QRect & rect, int flags, const QString & text);
-extern void _ZN8QPainter12boundingRectERK5QRectiRK7QString(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZN8QPainter12boundingRectERK5QRectiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::drawChord(const QRectF & rect, int a, int alen);
-extern void _ZN8QPainter9drawChordERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN8QPainter9drawChordERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::drawImage(const QRectF & r, const QImage & image);
 extern void demth_ZN8QPainter9drawImageERK6QRectFRK6QImage(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::setClipping(bool enable);
@@ -65,7 +65,7 @@ extern void _ZN8QPainter8setBrushERK6QBrush(void* qthis, void* arg0);
   // proto:  void QPainter::setMatrix(const QMatrix & matrix, bool combine);
 extern void _ZN8QPainter9setMatrixERK7QMatrixb(void* qthis, void* arg0, bool arg1);
   // proto:  void QPainter::drawChord(const QRect & , int a, int alen);
-extern void demth_ZN8QPainter9drawChordERK5QRectii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN8QPainter9drawChordERK5QRectii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::eraseRect(const QRectF & );
 extern void _ZN8QPainter9eraseRectERK6QRectF(void* qthis, void* arg0);
   // proto:  void QPainter::translate(const QPoint & offset);
@@ -75,17 +75,17 @@ extern void _ZNK8QPainter20viewTransformEnabledEv(void* qthis);
   // proto:  void QPainter::setPen(const QPen & pen);
 extern void _ZN8QPainter6setPenERK4QPen(void* qthis, void* arg0);
   // proto:  void QPainter::drawLines(const QLineF * lines, int lineCount);
-extern void _ZN8QPainter9drawLinesEPK6QLineFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawLinesEPK6QLineFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::setBrushOrigin(int x, int y);
-extern void demth_ZN8QPainter14setBrushOriginEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN8QPainter14setBrushOriginEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QTransform & QPainter::worldTransform();
 extern void _ZNK8QPainter14worldTransformEv(void* qthis);
   // proto:  void QPainter::drawRects(const QRect * rects, int rectCount);
-extern void _ZN8QPainter9drawRectsEPK5QRecti(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawEllipse(const QPoint & center, int rx, int ry);
-extern void demth_ZN8QPainter11drawEllipseERK6QPointii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN8QPainter11drawEllipseERK6QPointii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::drawArc(int x, int y, int w, int h, int a, int alen);
-extern void demth_ZN8QPainter7drawArcEiiiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+extern void demth_ZN8QPainter7drawArcEiiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QPainter::drawPolyline(const QPolygonF & polyline);
 extern void demth_ZN8QPainter12drawPolylineERK9QPolygonF(void* qthis, void* arg0);
   // proto:  bool QPainter::hasClipping();
@@ -93,19 +93,19 @@ extern void _ZNK8QPainter11hasClippingEv(void* qthis);
   // proto:  void QPainter::drawPixmap(const QRectF & targetRect, const QPixmap & pixmap, const QRectF & sourceRect);
 extern void _ZN8QPainter10drawPixmapERK6QRectFRK7QPixmapS2_(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QPainter::drawStaticText(int left, int top, const QStaticText & staticText);
-extern void demth_ZN8QPainter14drawStaticTextEiiRK11QStaticText(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZN8QPainter14drawStaticTextEiiRK11QStaticText(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::strokePath(const QPainterPath & path, const QPen & pen);
 extern void _ZN8QPainter10strokePathERK12QPainterPathRK4QPen(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawPixmap(int x, int y, const QPixmap & pm, int sx, int sy, int sw, int sh);
-extern void demth_ZN8QPainter10drawPixmapEiiRK7QPixmapiiii(void* qthis, int arg0, int arg1, void* arg2, int arg3, int arg4, int arg5, int arg6);
+extern void demth_ZN8QPainter10drawPixmapEiiRK7QPixmapiiii(void* qthis, int32_t arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t arg4, int32_t arg5, int32_t arg6);
   // proto:  void QPainter::drawRects(const QRectF * rects, int rectCount);
-extern void _ZN8QPainter9drawRectsEPK6QRectFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawRectsEPK6QRectFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawConvexPolygon(const QPoint * points, int pointCount);
-extern void _ZN8QPainter17drawConvexPolygonEPK6QPointi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter17drawConvexPolygonEPK6QPointi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawPath(const QPainterPath & path);
 extern void _ZN8QPainter8drawPathERK12QPainterPath(void* qthis, void* arg0);
   // proto:  void QPainter::drawPixmap(int x, int y, const QPixmap & pm);
-extern void demth_ZN8QPainter10drawPixmapEiiRK7QPixmap(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZN8QPainter10drawPixmapEiiRK7QPixmap(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QMatrix QPainter::combinedMatrix();
 extern void _ZNK8QPainter14combinedMatrixEv(void* qthis);
   // proto:  void QPainter::setMatrixEnabled(bool enabled);
@@ -117,23 +117,23 @@ extern void demth_ZN8QPainter15drawTiledPixmapERK5QRectRK7QPixmapRK6QPoint(void*
   // proto:  void QPainter::setFont(const QFont & f);
 extern void _ZN8QPainter7setFontERK5QFont(void* qthis, void* arg0);
   // proto:  void QPainter::drawChord(int x, int y, int w, int h, int a, int alen);
-extern void demth_ZN8QPainter9drawChordEiiiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+extern void demth_ZN8QPainter9drawChordEiiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QPainter::drawPixmap(int x, int y, int w, int h, const QPixmap & pm);
-extern void demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmap(void* qthis, int arg0, int arg1, int arg2, int arg3, void* arg4);
+extern void demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmap(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, void* arg4);
   // proto:  void QPainter::setWindow(const QRect & window);
 extern void _ZN8QPainter9setWindowERK5QRect(void* qthis, void* arg0);
   // proto:  const QMatrix & QPainter::deviceMatrix();
 extern void _ZNK8QPainter12deviceMatrixEv(void* qthis);
   // proto:  void QPainter::drawLines(const QPointF * pointPairs, int lineCount);
-extern void _ZN8QPainter9drawLinesEPK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawLinesEPK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawPixmap(const QPointF & p, const QPixmap & pm);
 extern void _ZN8QPainter10drawPixmapERK7QPointFRK7QPixmap(void* qthis, void* arg0, void* arg1);
   // proto:  QRect QPainter::boundingRect(int x, int y, int w, int h, int flags, const QString & text);
-extern void demth_ZN8QPainter12boundingRectEiiiiiRK7QString(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, void* arg5);
+extern void demth_ZN8QPainter12boundingRectEiiiiiRK7QString(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, void* arg5);
   // proto:  void QPainter::drawLines(const QLine * lines, int lineCount);
-extern void _ZN8QPainter9drawLinesEPK5QLinei(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawLinesEPK5QLinei(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawPie(int x, int y, int w, int h, int a, int alen);
-extern void demth_ZN8QPainter7drawPieEiiiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+extern void demth_ZN8QPainter7drawPieEiiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  void QPainter::drawPixmap(const QPoint & p, const QPixmap & pm, const QRect & sr);
 extern void demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmapRK5QRect(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QPainter::drawStaticText(const QPointF & topLeftPosition, const QStaticText & staticText);
@@ -148,17 +148,17 @@ extern void demth_ZN8QPainter10drawPointsERK8QPolygon(void* qthis, void* arg0);
   // proto:  void QPainter::drawPicture(const QPoint & p, const QPicture & picture);
 extern void demth_ZN8QPainter11drawPictureERK6QPointRK8QPicture(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawRect(int x1, int y1, int w, int h);
-extern void demth_ZN8QPainter8drawRectEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter8drawRectEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::drawEllipse(const QRectF & r);
 extern void _ZN8QPainter11drawEllipseERK6QRectF(void* qthis, void* arg0);
   // proto:  void QPainter::drawRect(const QRectF & rect);
 extern void demth_ZN8QPainter8drawRectERK6QRectF(void* qthis, void* arg0);
   // proto:  void QPainter::drawPoints(const QPointF * points, int pointCount);
-extern void _ZN8QPainter10drawPointsEPK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter10drawPointsEPK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QRegion QPainter::clipRegion();
 extern void _ZNK8QPainter10clipRegionEv(void* qthis);
   // proto:  void QPainter::drawText(const QRectF & r, int flags, const QString & text, QRectF * br);
-extern void _ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(void* qthis, void* arg0, int arg1, void* arg2, void* arg3);
+extern void _ZN8QPainter8drawTextERK6QRectFiRK7QStringPS0_(void* qthis, void* arg0, int32_t arg1, void* arg2, void* arg3);
   // proto:  void QPainter::drawLine(const QLineF & line);
 extern void demth_ZN8QPainter8drawLineERK6QLineF(void* qthis, void* arg0);
   // proto:  void QPainter::drawLine(const QPointF & p1, const QPointF & p2);
@@ -166,7 +166,7 @@ extern void demth_ZN8QPainter8drawLineERK7QPointFS2_(void* qthis, void* arg0, vo
   // proto:  void QPainter::drawPixmap(const QRect & r, const QPixmap & pm);
 extern void demth_ZN8QPainter10drawPixmapERK5QRectRK7QPixmap(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawTiledPixmap(int x, int y, int w, int h, const QPixmap & , int sx, int sy);
-extern void demth_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(void* qthis, int arg0, int arg1, int arg2, int arg3, void* arg4, int arg5, int arg6);
+extern void demth_ZN8QPainter15drawTiledPixmapEiiiiRK7QPixmapii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, void* arg4, int32_t arg5, int32_t arg6);
   // proto:  QPaintDevice * QPainter::device();
 extern void _ZNK8QPainter6deviceEv(void* qthis);
   // proto:  void QPainter::setViewport(const QRect & viewport);
@@ -176,22 +176,22 @@ extern void _ZN8QPainter8fillRectERK5QRectRK6QColor(void* qthis, void* arg0, voi
   // proto:  void QPainter::setBrushOrigin(const QPointF & );
 extern void _ZN8QPainter14setBrushOriginERK7QPointF(void* qthis, void* arg0);
   // proto:  void QPainter::drawTextItem(int x, int y, const QTextItem & ti);
-extern void demth_ZN8QPainter12drawTextItemEiiRK9QTextItem(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZN8QPainter12drawTextItemEiiRK9QTextItem(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::QPainter(QPaintDevice * );
 extern void* dector_ZN8QPainterC1EP12QPaintDevice(void* arg0);
 extern void _ZN8QPainterC1EP12QPaintDevice(void* qthis, void* arg0);
   // proto:  void QPainter::drawPixmap(int x, int y, int w, int h, const QPixmap & pm, int sx, int sy, int sw, int sh);
-extern void demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, void* arg4, int arg5, int arg6, int arg7, int arg8);
+extern void demth_ZN8QPainter10drawPixmapEiiiiRK7QPixmapiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, void* arg4, int32_t arg5, int32_t arg6, int32_t arg7, int32_t arg8);
   // proto:  void QPainter::drawImage(const QPoint & p, const QImage & image);
 extern void demth_ZN8QPainter9drawImageERK6QPointRK6QImage(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawPie(const QRect & , int a, int alen);
-extern void demth_ZN8QPainter7drawPieERK5QRectii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN8QPainter7drawPieERK5QRectii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::drawTextItem(const QPoint & p, const QTextItem & ti);
 extern void demth_ZN8QPainter12drawTextItemERK6QPointRK9QTextItem(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawLines(const QPoint * pointPairs, int lineCount);
-extern void _ZN8QPainter9drawLinesEPK6QPointi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter9drawLinesEPK6QPointi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::drawPicture(int x, int y, const QPicture & picture);
-extern void demth_ZN8QPainter11drawPictureEiiRK8QPicture(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZN8QPainter11drawPictureEiiRK8QPicture(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::save();
 extern void _ZN8QPainter4saveEv(void* qthis);
   // proto:  void QPainter::translate(qreal dx, qreal dy);
@@ -201,9 +201,9 @@ extern void _ZNK8QPainter17combinedTransformEv(void* qthis);
   // proto:  bool QPainter::end();
 extern void _ZN8QPainter3endEv(void* qthis);
   // proto:  void QPainter::setViewport(int x, int y, int w, int h);
-extern void demth_ZN8QPainter11setViewportEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter11setViewportEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::drawRoundRect(const QRect & r, int xround, int yround);
-extern void demth_ZN8QPainter13drawRoundRectERK5QRectii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN8QPainter13drawRoundRectERK5QRectii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::setWorldTransform(const QTransform & matrix, bool combine);
 extern void _ZN8QPainter17setWorldTransformERK10QTransformb(void* qthis, void* arg0, bool arg1);
   // proto:  void QPainter::drawPoints(const QPolygonF & points);
@@ -213,11 +213,11 @@ extern void _ZN8QPainter7restoreEv(void* qthis);
   // proto:  void QPainter::drawStaticText(const QPoint & topLeftPosition, const QStaticText & staticText);
 extern void demth_ZN8QPainter14drawStaticTextERK6QPointRK11QStaticText(void* qthis, void* arg0, void* arg1);
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, int flags, const QString & text);
-extern void _ZN8QPainter12boundingRectERK6QRectFiRK7QString(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZN8QPainter12boundingRectERK6QRectFiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  void QPainter::fillRect(int x, int y, int w, int h, const QBrush & );
-extern void demth_ZN8QPainter8fillRectEiiiiRK6QBrush(void* qthis, int arg0, int arg1, int arg2, int arg3, void* arg4);
+extern void demth_ZN8QPainter8fillRectEiiiiRK6QBrush(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, void* arg4);
   // proto:  void QPainter::drawRoundRect(const QRectF & r, int xround, int yround);
-extern void _ZN8QPainter13drawRoundRectERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN8QPainter13drawRoundRectERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::drawPoint(const QPoint & p);
 extern void demth_ZN8QPainter9drawPointERK6QPoint(void* qthis, void* arg0);
   // proto: static QPaintDevice * QPainter::redirected(const QPaintDevice * device, QPoint * offset);
@@ -225,17 +225,17 @@ extern void _ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(void* arg0, void* 
   // proto:  void QPainter::shear(qreal sh, qreal sv);
 extern void _ZN8QPainter5shearEdd(void* qthis, double arg0, double arg1);
   // proto:  void QPainter::drawText(const QRect & r, int flags, const QString & text, QRect * br);
-extern void _ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(void* qthis, void* arg0, int arg1, void* arg2, void* arg3);
+extern void _ZN8QPainter8drawTextERK5QRectiRK7QStringPS0_(void* qthis, void* arg0, int32_t arg1, void* arg2, void* arg3);
   // proto:  const QFont & QPainter::font();
 extern void _ZNK8QPainter4fontEv(void* qthis);
   // proto:  const QTransform & QPainter::deviceTransform();
 extern void _ZNK8QPainter15deviceTransformEv(void* qthis);
   // proto:  void QPainter::eraseRect(int x, int y, int w, int h);
-extern void demth_ZN8QPainter9eraseRectEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter9eraseRectEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::resetMatrix();
 extern void _ZN8QPainter11resetMatrixEv(void* qthis);
   // proto:  void QPainter::drawPolyline(const QPoint * points, int pointCount);
-extern void _ZN8QPainter12drawPolylineEPK6QPointi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter12drawPolylineEPK6QPointi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QPaintEngine * QPainter::paintEngine();
 extern void _ZNK8QPainter11paintEngineEv(void* qthis);
   // proto:  void QPainter::drawEllipse(const QRect & r);
@@ -245,7 +245,7 @@ extern void demth_ZN8QPainter8drawLineERK5QLine(void* qthis, void* arg0);
   // proto:  bool QPainter::isActive();
 extern void _ZNK8QPainter8isActiveEv(void* qthis);
   // proto:  void QPainter::drawArc(const QRectF & rect, int a, int alen);
-extern void _ZN8QPainter7drawArcERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN8QPainter7drawArcERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto: static void QPainter::restoreRedirected(const QPaintDevice * device);
 extern void _ZN8QPainter17restoreRedirectedEPK12QPaintDevice(void* arg0);
   // proto:  void QPainter::drawPixmap(const QPointF & p, const QPixmap & pm, const QRectF & sr);
@@ -253,7 +253,7 @@ extern void demth_ZN8QPainter10drawPixmapERK7QPointFRK7QPixmapRK6QRectF(void* qt
   // proto:  void QPainter::drawEllipse(const QPointF & center, qreal rx, qreal ry);
 extern void demth_ZN8QPainter11drawEllipseERK7QPointFdd(void* qthis, void* arg0, double arg1, double arg2);
   // proto:  void QPainter::drawConvexPolygon(const QPointF * points, int pointCount);
-extern void _ZN8QPainter17drawConvexPolygonEPK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter17drawConvexPolygonEPK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::setBrushOrigin(const QPoint & );
 extern void demth_ZN8QPainter14setBrushOriginERK6QPoint(void* qthis, void* arg0);
   // proto:  void QPainter::drawText(const QRectF & r, const QString & text, const QTextOption & o);
@@ -263,9 +263,9 @@ extern void _ZNK8QPainter18worldMatrixEnabledEv(void* qthis);
   // proto:  void QPainter::drawPixmap(const QPoint & p, const QPixmap & pm);
 extern void demth_ZN8QPainter10drawPixmapERK6QPointRK7QPixmap(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawLine(int x1, int y1, int x2, int y2);
-extern void demth_ZN8QPainter8drawLineEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter8drawLineEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::drawPoint(int x, int y);
-extern void demth_ZN8QPainter9drawPointEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN8QPainter9drawPointEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QTransform & QPainter::transform();
 extern void _ZNK8QPainter9transformEv(void* qthis);
   // proto: static void QPainter::setRedirected(const QPaintDevice * device, QPaintDevice * replacement, const QPoint & offset);
@@ -303,27 +303,27 @@ extern void _ZNK8QPainter11brushOriginEv(void* qthis);
   // proto:  void QPainter::drawConvexPolygon(const QPolygonF & polygon);
 extern void demth_ZN8QPainter17drawConvexPolygonERK9QPolygonF(void* qthis, void* arg0);
   // proto:  void QPainter::drawEllipse(int x, int y, int w, int h);
-extern void demth_ZN8QPainter11drawEllipseEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter11drawEllipseEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::drawConvexPolygon(const QPolygon & polygon);
 extern void demth_ZN8QPainter17drawConvexPolygonERK8QPolygon(void* qthis, void* arg0);
   // proto:  void QPainter::drawPoints(const QPoint * points, int pointCount);
-extern void _ZN8QPainter10drawPointsEPK6QPointi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter10drawPointsEPK6QPointi(void* qthis, void* arg0, int32_t arg1);
   // proto:  const QBrush & QPainter::background();
 extern void _ZNK8QPainter10backgroundEv(void* qthis);
   // proto:  void QPainter::drawRoundRect(int x, int y, int w, int h, int , int );
-extern void demth_ZN8QPainter13drawRoundRectEiiiiii(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5);
+extern void demth_ZN8QPainter13drawRoundRectEiiiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5);
   // proto:  QRect QPainter::viewport();
 extern void _ZNK8QPainter8viewportEv(void* qthis);
   // proto:  void QPainter::drawArc(const QRect & , int a, int alen);
-extern void demth_ZN8QPainter7drawArcERK5QRectii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN8QPainter7drawArcERK5QRectii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::fillPath(const QPainterPath & path, const QBrush & brush);
 extern void _ZN8QPainter8fillPathERK12QPainterPathRK6QBrush(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawText(int x, int y, int w, int h, int flags, const QString & text, QRect * br);
-extern void demth_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, void* arg5, void* arg6);
+extern void demth_ZN8QPainter8drawTextEiiiiiRK7QStringP5QRect(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, void* arg5, void* arg6);
   // proto:  bool QPainter::matrixEnabled();
 extern void _ZNK8QPainter13matrixEnabledEv(void* qthis);
   // proto:  void QPainter::drawPolyline(const QPointF * points, int pointCount);
-extern void _ZN8QPainter12drawPolylineEPK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QPainter12drawPolylineEPK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainter::setTransform(const QTransform & transform, bool combine);
 extern void _ZN8QPainter12setTransformERK10QTransformb(void* qthis, void* arg0, bool arg1);
   // proto:  void QPainter::setPen(const QColor & color);
@@ -366,11 +366,11 @@ extern void _ZNK8QPainter16clipBoundingRectEv(void* qthis);
   // proto:  void QPainter::drawLine(const QPoint & p1, const QPoint & p2);
 extern void demth_ZN8QPainter8drawLineERK6QPointS2_(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::drawPie(const QRectF & rect, int a, int alen);
-extern void _ZN8QPainter7drawPieERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN8QPainter7drawPieERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainter::drawText(const QPoint & p, const QString & s);
 extern void demth_ZN8QPainter8drawTextERK6QPointRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  void QPainter::setWindow(int x, int y, int w, int h);
-extern void demth_ZN8QPainter9setWindowEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN8QPainter9setWindowEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QPainter::beginNativePainting();
 extern void _ZN8QPainter19beginNativePaintingEv(void* qthis);
 */
@@ -388,7 +388,7 @@ func init() {
 // class sizeof(QPainter)=1
 type QPainter struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QRectF QPainter::boundingRect(const QRectF & rect, const QString & text, const QTextOption & o);
@@ -1142,7 +1142,7 @@ func (this *QPainter) setClipping(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainter11setClippingEb
     // invoke: void setClipping(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QPainter11setClippingEb(this.qclsinst, arg0)
   default:
@@ -1194,7 +1194,7 @@ func (this *QPainter) setMatrix(args ...interface{}) () {
     // invoke: void setMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN8QPainter9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
@@ -2156,7 +2156,7 @@ func (this *QPainter) setMatrixEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainter16setMatrixEnabledEb
     // invoke: void setMatrixEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QPainter16setMatrixEnabledEb(this.qclsinst, arg0)
   default:
@@ -2331,7 +2331,7 @@ func (this *QPainter) setWorldMatrixEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainter21setWorldMatrixEnabledEb
     // invoke: void setWorldMatrixEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QPainter21setWorldMatrixEnabledEb(this.qclsinst, arg0)
   default:
@@ -2804,7 +2804,7 @@ func (this *QPainter) setWorldTransform(args ...interface{}) () {
     // invoke: void setWorldTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN8QPainter17setWorldTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
@@ -3251,7 +3251,7 @@ func (this *QPainter) setWorldMatrix(args ...interface{}) () {
     // invoke: void setWorldMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN8QPainter14setWorldMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
@@ -3403,7 +3403,7 @@ func (this *QPainter) setTransform(args ...interface{}) () {
     // invoke: void setTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN8QPainter12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:
@@ -3509,7 +3509,7 @@ func (this *QPainter) setViewTransformEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainter23setViewTransformEnabledEb
     // invoke: void setViewTransformEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QPainter23setViewTransformEnabledEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -52,7 +52,7 @@ extern void _ZNK9QFontInfo10fixedPitchEv(void* qthis);
   // proto:  bool QFontInfo::overline();
 extern void _ZNK9QFontInfo8overlineEv(void* qthis);
   // proto:  void QFontInfo::swap(QFontInfo & other);
-extern void _ZN9QFontInfo4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QFontInfo4swapERS_(void* qthis, void* arg0);
   // proto:  void QFontInfo::QFontInfo(const QFont & );
 extern void* dector_ZN9QFontInfoC1ERK5QFont(void* arg0);
 extern void _ZN9QFontInfoC1ERK5QFont(void* qthis, void* arg0);
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QFontInfo)=1
 type QFontInfo struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QFontInfo::rawMode();
@@ -269,7 +269,7 @@ func (this *QFontInfo) swap(args ...interface{}) () {
     // invoke: void swap(class QFontInfo &)
     var arg0 = args[0].(QFontInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontInfo", "swap", args)
   }

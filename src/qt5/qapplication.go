@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qapplication.h
 // dst-file: /src/widgets/qapplication.go
 //
@@ -35,17 +35,17 @@ import "qtrt"
   // proto:  QString QApplication::styleSheet();
 extern void _ZNK12QApplication10styleSheetEv(void* qthis);
   // proto: static QPalette QApplication::palette(const char * className);
-extern void _ZN12QApplication7paletteEPKc(char* arg0);
+extern void _ZN12QApplication7paletteEPKc(unsigned char* arg0);
   // proto: static QWidget * QApplication::activeWindow();
 extern void _ZN12QApplication12activeWindowEv();
   // proto: static void QApplication::setKeyboardInputInterval(int );
-extern void _ZN12QApplication24setKeyboardInputIntervalEi(int arg0);
+extern void _ZN12QApplication24setKeyboardInputIntervalEi(int32_t arg0);
   // proto: static QWidget * QApplication::focusWidget();
 extern void _ZN12QApplication11focusWidgetEv();
   // proto: static QFontMetrics QApplication::fontMetrics();
 extern void _ZN12QApplication11fontMetricsEv();
   // proto: static QFont QApplication::font(const char * className);
-extern void _ZN12QApplication4fontEPKc(char* arg0);
+extern void _ZN12QApplication4fontEPKc(unsigned char* arg0);
   // proto: static QStyle * QApplication::style();
 extern void _ZN12QApplication5styleEv();
   // proto: static QWidget * QApplication::widgetAt(const QPoint & p);
@@ -55,11 +55,11 @@ extern void _ZN12QApplication15setActiveWindowEP7QWidget(void* arg0);
   // proto: static QFont QApplication::font();
 extern void _ZN12QApplication4fontEv();
   // proto: static void QApplication::setWheelScrollLines(int );
-extern void _ZN12QApplication19setWheelScrollLinesEi(int arg0);
+extern void _ZN12QApplication19setWheelScrollLinesEi(int32_t arg0);
   // proto:  void QApplication::setStyleSheet(const QString & sheet);
 extern void _ZN12QApplication13setStyleSheetERK7QString(void* qthis, void* arg0);
   // proto:  void QApplication::setAutoSipEnabled(const bool enabled);
-extern void _ZN12QApplication17setAutoSipEnabledEb(void* qthis, const bool arg0);
+extern void _ZN12QApplication17setAutoSipEnabledEb(void* qthis, bool arg0);
   // proto:  const QMetaObject * QApplication::metaObject();
 extern void _ZNK12QApplication10metaObjectEv(void* qthis);
   // proto: static int QApplication::keyboardInputInterval();
@@ -71,21 +71,21 @@ extern void _ZN12QApplication17startDragDistanceEv();
   // proto: static QDesktopWidget * QApplication::desktop();
 extern void _ZN12QApplication7desktopEv();
   // proto: static void QApplication::setStartDragDistance(int l);
-extern void _ZN12QApplication20setStartDragDistanceEi(int arg0);
+extern void _ZN12QApplication20setStartDragDistanceEi(int32_t arg0);
   // proto: static QFont QApplication::font(const QWidget * );
 extern void _ZN12QApplication4fontEPK7QWidget(void* arg0);
   // proto: static int QApplication::colorSpec();
 extern void _ZN12QApplication9colorSpecEv();
   // proto: static void QApplication::setFont(const QFont & , const char * className);
-extern void _ZN12QApplication7setFontERK5QFontPKc(void* arg0, char* arg1);
+extern void _ZN12QApplication7setFontERK5QFontPKc(void* arg0, unsigned char* arg1);
   // proto: static void QApplication::closeAllWindows();
 extern void _ZN12QApplication15closeAllWindowsEv();
   // proto: static void QApplication::setCursorFlashTime(int );
-extern void _ZN12QApplication18setCursorFlashTimeEi(int arg0);
+extern void _ZN12QApplication18setCursorFlashTimeEi(int32_t arg0);
   // proto: static QWidget * QApplication::widgetAt(int x, int y);
-extern void demth_ZN12QApplication8widgetAtEii(int arg0, int arg1);
+extern void demth_ZN12QApplication8widgetAtEii(int32_t arg0, int32_t arg1);
   // proto: static void QApplication::alert(QWidget * widget, int duration);
-extern void _ZN12QApplication5alertEP7QWidgeti(void* arg0, int arg1);
+extern void _ZN12QApplication5alertEP7QWidgeti(void* arg0, int32_t arg1);
   // proto: static QPalette QApplication::palette(const QWidget * );
 extern void _ZN12QApplication7paletteEPK7QWidget(void* arg0);
   // proto: static int QApplication::wheelScrollLines();
@@ -100,28 +100,28 @@ extern void _ZN12QApplication17activeModalWidgetEv();
   // proto: static QWidget * QApplication::activePopupWidget();
 extern void _ZN12QApplication17activePopupWidgetEv();
   // proto:  void QApplication::QApplication(int & argc, char ** argv, int );
-extern void* dector_ZN12QApplicationC1ERiPPci(int* arg0, char* arg1, int arg2);
-extern void _ZN12QApplicationC1ERiPPci(void* qthis, int* arg0, char* arg1, int arg2);
+extern void* dector_ZN12QApplicationC1ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2);
+extern void _ZN12QApplicationC1ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2);
   // proto: static void QApplication::setStartDragTime(int ms);
-extern void _ZN12QApplication16setStartDragTimeEi(int arg0);
+extern void _ZN12QApplication16setStartDragTimeEi(int32_t arg0);
   // proto: static QWidget * QApplication::topLevelAt(int x, int y);
-extern void demth_ZN12QApplication10topLevelAtEii(int arg0, int arg1);
+extern void demth_ZN12QApplication10topLevelAtEii(int32_t arg0, int32_t arg1);
   // proto: static void QApplication::setStyle(QStyle * );
 extern void _ZN12QApplication8setStyleEP6QStyle(void* arg0);
   // proto:  void QApplication::~QApplication();
 extern void _ZN12QApplicationD0Ev(void* qthis);
   // proto: static void QApplication::setDoubleClickInterval(int );
-extern void _ZN12QApplication22setDoubleClickIntervalEi(int arg0);
+extern void _ZN12QApplication22setDoubleClickIntervalEi(int32_t arg0);
   // proto: static void QApplication::setGlobalStrut(const QSize & );
 extern void _ZN12QApplication14setGlobalStrutERK5QSize(void* arg0);
   // proto: static void QApplication::setColorSpec(int );
-extern void _ZN12QApplication12setColorSpecEi(int arg0);
+extern void _ZN12QApplication12setColorSpecEi(int32_t arg0);
   // proto: static QWidgetList QApplication::allWidgets();
 extern void _ZN12QApplication10allWidgetsEv();
   // proto: static QSize QApplication::globalStrut();
 extern void _ZN12QApplication11globalStrutEv();
   // proto: static void QApplication::setPalette(const QPalette & , const char * className);
-extern void _ZN12QApplication10setPaletteERK8QPalettePKc(void* arg0, char* arg1);
+extern void _ZN12QApplication10setPaletteERK8QPalettePKc(void* arg0, unsigned char* arg1);
   // proto: static QStyle * QApplication::setStyle(const QString & );
 extern void _ZN12QApplication8setStyleERK7QString(void* arg0);
   // proto: static QWidgetList QApplication::topLevelWidgets();
@@ -159,7 +159,7 @@ func init() {
 // class sizeof(QApplication)=1
 type QApplication struct {
   /*qbase*/ QGuiApplication;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _focusChanged QApplication_focusChanged_signal;
 }
 
@@ -360,7 +360,7 @@ func (this *QApplication) setAutoSipEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QApplication17setAutoSipEnabledEb
     // invoke: void setAutoSipEnabled(const _Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QApplication17setAutoSipEnabledEb(this.qclsinst, arg0)
   default:

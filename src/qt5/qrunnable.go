@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -35,14 +35,12 @@ import "qtrt"
   // proto:  void QRunnable::~QRunnable();
 extern void _ZN9QRunnableD0Ev(void* qthis);
   // proto:  void QRunnable::setAutoDelete(bool _autoDelete);
-extern void _ZN9QRunnable13setAutoDeleteEb(void* qthis, bool arg0);
+extern void demth_ZN9QRunnable13setAutoDeleteEb(void* qthis, bool arg0);
   // proto:  void QRunnable::QRunnable();
 extern void* dector_ZN9QRunnableC1Ev();
 extern void _ZN9QRunnableC1Ev(void* qthis);
-  // proto:  void QRunnable::run();
-extern void _ZN9QRunnable3runEv(void* qthis);
   // proto:  bool QRunnable::autoDelete();
-extern void _ZNK9QRunnable10autoDeleteEv(void* qthis);
+extern void demth_ZNK9QRunnable10autoDeleteEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -58,7 +56,7 @@ func init() {
 // class sizeof(QRunnable)=16
 type QRunnable struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QRunnable::~QRunnable();
@@ -89,9 +87,9 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QRunnable13setAutoDeleteEb
     // invoke: void setAutoDelete(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN9QRunnable13setAutoDeleteEb(this.qclsinst, arg0)
+    C.demth_ZN9QRunnable13setAutoDeleteEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRunnable", "setAutoDelete", args)
   }
@@ -101,26 +99,6 @@ func (this *QRunnable) setAutoDelete(args ...interface{}) () {
   // proto:  void QRunnable::QRunnable();
 func NewQRunnable(args ...interface{}) QRunnable {
   return QRunnable{}
-}
-
-  // proto:  void QRunnable::run();
-func (this *QRunnable) run(args ...interface{}) () {
-  // run()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QRunnable3runEv
-    // invoke: void run()
-    C._ZN9QRunnable3runEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QRunnable", "run", args)
-  }
-
 }
 
   // proto:  bool QRunnable::autoDelete();
@@ -136,7 +114,7 @@ func (this *QRunnable) autoDelete(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
     // invoke: bool autoDelete()
-    C._ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    C.demth_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
   }

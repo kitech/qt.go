@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QItemDelegate)=1
 type QItemDelegate struct {
   /*qbase*/ QAbstractItemDelegate;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  const QMetaObject * QItemDelegate::metaObject();
@@ -192,7 +192,7 @@ func (this *QItemDelegate) setClipping(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QItemDelegate11setClippingEb
     // invoke: void setClipping(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QItemDelegate11setClippingEb(this.qclsinst, arg0)
   default:

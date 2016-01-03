@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qscrollarea.h
 // dst-file: /src/widgets/qscrollarea.go
 //
@@ -45,9 +45,9 @@ extern void _ZN11QScrollArea9setWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  QWidget * QScrollArea::takeWidget();
 extern void _ZN11QScrollArea10takeWidgetEv(void* qthis);
   // proto:  void QScrollArea::ensureVisible(int x, int y, int xmargin, int ymargin);
-extern void _ZN11QScrollArea13ensureVisibleEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN11QScrollArea13ensureVisibleEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QScrollArea::ensureWidgetVisible(QWidget * childWidget, int xmargin, int ymargin);
-extern void _ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN11QScrollArea19ensureWidgetVisibleEP7QWidgetii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QWidget * QScrollArea::widget();
 extern void _ZNK11QScrollArea6widgetEv(void* qthis);
   // proto:  QSize QScrollArea::sizeHint();
@@ -75,7 +75,7 @@ func init() {
 // class sizeof(QScrollArea)=1
 type QScrollArea struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QScrollArea::QScrollArea(QWidget * parent);
@@ -97,7 +97,7 @@ func (this *QScrollArea) setWidgetResizable(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollArea18setWidgetResizableEb
     // invoke: void setWidgetResizable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QScrollArea18setWidgetResizableEb(this.qclsinst, arg0)
   default:
@@ -298,7 +298,7 @@ func (this *QScrollArea) focusNextPrevChild(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QScrollArea18focusNextPrevChildEb
     // invoke: bool focusNextPrevChild(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QScrollArea18focusNextPrevChildEb(this.qclsinst, arg0)
   default:

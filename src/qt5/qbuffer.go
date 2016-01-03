@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QBuffer::seek(qint64 off);
-extern void _ZN7QBuffer4seekEx(void* qthis, long long arg0);
+extern void _ZN7QBuffer4seekEx(void* qthis, int64_t arg0);
   // proto:  bool QBuffer::canReadLine();
 extern void _ZNK7QBuffer11canReadLineEv(void* qthis);
   // proto:  void QBuffer::~QBuffer();
@@ -66,7 +66,7 @@ extern void _ZN7QBufferC1EP10QByteArrayP7QObject(void* qthis, void* arg0, void* 
   // proto:  bool QBuffer::atEnd();
 extern void _ZNK7QBuffer5atEndEv(void* qthis);
   // proto:  void QBuffer::setData(const char * data, int len);
-extern void demth_ZN7QBuffer7setDataEPKci(void* qthis, char* arg0, int arg1);
+extern void demth_ZN7QBuffer7setDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -82,7 +82,7 @@ func init() {
 // class sizeof(QBuffer)=1
 type QBuffer struct {
   /*qbase*/ QIODevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QBuffer::seek(qint64 off);
@@ -166,7 +166,7 @@ func (this *QBuffer) setData(args ...interface{}) () {
   case 1:
     // invoke: _ZN7QBuffer7setDataEPKci
     // invoke: void setData(const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}

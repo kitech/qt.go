@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextcursor.h
 // dst-file: /src/gui/qtextcursor.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  int QTextCursor::columnNumber();
 extern void _ZNK11QTextCursor12columnNumberEv(void* qthis);
   // proto:  void QTextCursor::swap(QTextCursor & other);
-extern void _ZN11QTextCursor4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN11QTextCursor4swapERS_(void* qthis, void* arg0);
   // proto:  void QTextCursor::mergeCharFormat(const QTextCharFormat & modifier);
 extern void _ZN11QTextCursor15mergeCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
   // proto:  QTextDocumentFragment QTextCursor::selection();
@@ -77,7 +77,7 @@ extern void _ZN11QTextCursor11insertBlockEv(void* qthis);
 extern void* dector_ZN11QTextCursorC1ERK10QTextBlock(void* arg0);
 extern void _ZN11QTextCursorC1ERK10QTextBlock(void* qthis, void* arg0);
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols);
-extern void _ZN11QTextCursor11insertTableEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QTextCursor11insertTableEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextCursor::QTextCursor();
 extern void* dector_ZN11QTextCursorC1Ev();
 extern void _ZN11QTextCursorC1Ev(void* qthis);
@@ -86,7 +86,7 @@ extern void _ZNK11QTextCursor7atStartEv(void* qthis);
   // proto:  int QTextCursor::selectionStart();
 extern void _ZNK11QTextCursor14selectionStartEv(void* qthis);
   // proto:  void QTextCursor::selectedTableCells(int * firstRow, int * numRows, int * firstColumn, int * numColumns);
-extern void _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+extern void _ZNK11QTextCursor18selectedTableCellsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3);
   // proto:  void QTextCursor::endEditBlock();
 extern void _ZN11QTextCursor12endEditBlockEv(void* qthis);
   // proto:  QString QTextCursor::selectedText();
@@ -155,11 +155,11 @@ extern void _ZNK11QTextCursor12currentTableEv(void* qthis);
   // proto:  void QTextCursor::setKeepPositionOnInsert(bool b);
 extern void _ZN11QTextCursor23setKeepPositionOnInsertEb(void* qthis, bool arg0);
   // proto:  void QTextCursor::setVerticalMovementX(int x);
-extern void _ZN11QTextCursor20setVerticalMovementXEi(void* qthis, int arg0);
+extern void _ZN11QTextCursor20setVerticalMovementXEi(void* qthis, int32_t arg0);
   // proto:  QTextDocument * QTextCursor::document();
 extern void _ZNK11QTextCursor8documentEv(void* qthis);
   // proto:  QTextTable * QTextCursor::insertTable(int rows, int cols, const QTextTableFormat & format);
-extern void _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN11QTextCursor11insertTableEiiRK16QTextTableFormat(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QTextCursor::QTextCursor(QTextFrame * frame);
 extern void* dector_ZN11QTextCursorC1EP10QTextFrame(void* arg0);
 extern void _ZN11QTextCursorC1EP10QTextFrame(void* qthis, void* arg0);
@@ -186,7 +186,7 @@ func init() {
 // class sizeof(QTextCursor)=1
 type QTextCursor struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QTextCursor::columnNumber();
@@ -225,7 +225,7 @@ func (this *QTextCursor) swap(args ...interface{}) () {
     // invoke: void swap(class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN11QTextCursor4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN11QTextCursor4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextCursor", "swap", args)
   }
@@ -1252,7 +1252,7 @@ func (this *QTextCursor) setVisualNavigation(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor19setVisualNavigationEb
     // invoke: void setVisualNavigation(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QTextCursor19setVisualNavigationEb(this.qclsinst, arg0)
   default:
@@ -1318,7 +1318,7 @@ func (this *QTextCursor) setKeepPositionOnInsert(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextCursor23setKeepPositionOnInsertEb
     // invoke: void setKeepPositionOnInsert(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QTextCursor23setKeepPositionOnInsertEb(this.qclsinst, arg0)
   default:

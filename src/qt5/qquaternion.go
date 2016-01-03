@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.go
 //
@@ -97,7 +97,7 @@ extern void demth_ZNK11QQuaternion1yEv(void* qthis);
   // proto:  QVector3D QQuaternion::vector();
 extern void demth_ZNK11QQuaternion6vectorEv(void* qthis);
   // proto: static float QQuaternion::dotProduct(const QQuaternion & q1, const QQuaternion & q2);
-extern void _ZN11QQuaternion10dotProductERKS_S1_(void* arg0, void* arg1);
+extern void demth_ZN11QQuaternion10dotProductERKS_S1_(void* arg0, void* arg1);
   // proto:  void QQuaternion::setVector(float x, float y, float z);
 extern void demth_ZN11QQuaternion9setVectorEfff(void* qthis, float arg0, float arg1, float arg2);
   // proto:  void QQuaternion::QQuaternion(float scalar, float xpos, float ypos, float zpos);
@@ -135,7 +135,7 @@ func init() {
 // class sizeof(QQuaternion)=16
 type QQuaternion struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QQuaternion::getAxisAndAngle(float * x, float * y, float * z, float * angle);

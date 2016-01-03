@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -53,7 +53,7 @@ extern void _ZNK12QImageWriter7qualityEv(void* qthis);
   // proto:  bool QImageWriter::write(const QImage & image);
 extern void _ZN12QImageWriter5writeERK6QImage(void* qthis, void* arg0);
   // proto:  void QImageWriter::setCompression(int compression);
-extern void _ZN12QImageWriter14setCompressionEi(void* qthis, int arg0);
+extern void _ZN12QImageWriter14setCompressionEi(void* qthis, int32_t arg0);
   // proto: static QList<QByteArray> QImageWriter::supportedImageFormats();
 extern void _ZN12QImageWriter21supportedImageFormatsEv();
   // proto:  QString QImageWriter::fileName();
@@ -63,7 +63,7 @@ extern void _ZN12QImageWriter17setOptimizedWriteEb(void* qthis, bool arg0);
   // proto:  QString QImageWriter::errorString();
 extern void _ZNK12QImageWriter11errorStringEv(void* qthis);
   // proto:  void QImageWriter::setQuality(int quality);
-extern void _ZN12QImageWriter10setQualityEi(void* qthis, int arg0);
+extern void _ZN12QImageWriter10setQualityEi(void* qthis, int32_t arg0);
   // proto:  float QImageWriter::gamma();
 extern void _ZNK12QImageWriter5gammaEv(void* qthis);
   // proto:  QString QImageWriter::description();
@@ -115,7 +115,7 @@ func init() {
 // class sizeof(QImageWriter)=8
 type QImageWriter struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QImageWriter::setText(const QString & key, const QString & text);
@@ -392,7 +392,7 @@ func (this *QImageWriter) setOptimizedWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageWriter17setOptimizedWriteEb
     // invoke: void setOptimizedWrite(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QImageWriter17setOptimizedWriteEb(this.qclsinst, arg0)
   default:
@@ -672,7 +672,7 @@ func (this *QImageWriter) setProgressiveScanWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageWriter23setProgressiveScanWriteEb
     // invoke: void setProgressiveScanWrite(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QImageWriter23setProgressiveScanWriteEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.go
 //
@@ -35,15 +35,15 @@ import "qtrt"
   // proto:  void QTableView::resizeRowsToContents();
 extern void _ZN10QTableView20resizeRowsToContentsEv(void* qthis);
   // proto:  void QTableView::setRowHeight(int row, int height);
-extern void _ZN10QTableView12setRowHeightEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTableView12setRowHeightEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QHeaderView * QTableView::verticalHeader();
 extern void _ZNK10QTableView14verticalHeaderEv(void* qthis);
   // proto:  void QTableView::setSpan(int row, int column, int rowSpan, int columnSpan);
-extern void _ZN10QTableView7setSpanEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN10QTableView7setSpanEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QTableView::setSortingEnabled(bool enable);
 extern void _ZN10QTableView17setSortingEnabledEb(void* qthis, bool arg0);
   // proto:  void QTableView::setColumnWidth(int column, int width);
-extern void _ZN10QTableView14setColumnWidthEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTableView14setColumnWidthEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTableView::setWordWrap(bool on);
 extern void _ZN10QTableView11setWordWrapEb(void* qthis, bool arg0);
   // proto:  void QTableView::doItemsLayout();
@@ -53,23 +53,23 @@ extern void _ZN10QTableView17setSelectionModelEP19QItemSelectionModel(void* qthi
   // proto:  void QTableView::setHorizontalHeader(QHeaderView * header);
 extern void _ZN10QTableView19setHorizontalHeaderEP11QHeaderView(void* qthis, void* arg0);
   // proto:  void QTableView::setRowHidden(int row, bool hide);
-extern void _ZN10QTableView12setRowHiddenEib(void* qthis, int arg0, bool arg1);
+extern void _ZN10QTableView12setRowHiddenEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  int QTableView::rowViewportPosition(int row);
-extern void _ZNK10QTableView19rowViewportPositionEi(void* qthis, int arg0);
+extern void _ZNK10QTableView19rowViewportPositionEi(void* qthis, int32_t arg0);
   // proto:  int QTableView::columnAt(int x);
-extern void _ZNK10QTableView8columnAtEi(void* qthis, int arg0);
+extern void _ZNK10QTableView8columnAtEi(void* qthis, int32_t arg0);
   // proto:  bool QTableView::isRowHidden(int row);
-extern void _ZNK10QTableView11isRowHiddenEi(void* qthis, int arg0);
+extern void _ZNK10QTableView11isRowHiddenEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::showColumn(int column);
-extern void _ZN10QTableView10showColumnEi(void* qthis, int arg0);
+extern void _ZN10QTableView10showColumnEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::resizeRowToContents(int row);
-extern void _ZN10QTableView19resizeRowToContentsEi(void* qthis, int arg0);
+extern void _ZN10QTableView19resizeRowToContentsEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::setRootIndex(const QModelIndex & index);
 extern void _ZN10QTableView12setRootIndexERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QTableView::setColumnHidden(int column, bool hide);
-extern void _ZN10QTableView15setColumnHiddenEib(void* qthis, int arg0, bool arg1);
+extern void _ZN10QTableView15setColumnHiddenEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QTableView::hideRow(int row);
-extern void _ZN10QTableView7hideRowEi(void* qthis, int arg0);
+extern void _ZN10QTableView7hideRowEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::resizeColumnsToContents();
 extern void _ZN10QTableView23resizeColumnsToContentsEv(void* qthis);
   // proto:  bool QTableView::wordWrap();
@@ -77,39 +77,39 @@ extern void _ZNK10QTableView8wordWrapEv(void* qthis);
   // proto:  void QTableView::setShowGrid(bool show);
 extern void _ZN10QTableView11setShowGridEb(void* qthis, bool arg0);
   // proto:  bool QTableView::isColumnHidden(int column);
-extern void _ZNK10QTableView14isColumnHiddenEi(void* qthis, int arg0);
+extern void _ZNK10QTableView14isColumnHiddenEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::selectRow(int row);
-extern void _ZN10QTableView9selectRowEi(void* qthis, int arg0);
+extern void _ZN10QTableView9selectRowEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QTableView::metaObject();
 extern void _ZNK10QTableView10metaObjectEv(void* qthis);
   // proto:  bool QTableView::isCornerButtonEnabled();
 extern void _ZNK10QTableView21isCornerButtonEnabledEv(void* qthis);
   // proto:  void QTableView::selectColumn(int column);
-extern void _ZN10QTableView12selectColumnEi(void* qthis, int arg0);
+extern void _ZN10QTableView12selectColumnEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::~QTableView();
 extern void _ZN10QTableViewD0Ev(void* qthis);
   // proto:  void QTableView::resizeColumnToContents(int column);
-extern void _ZN10QTableView22resizeColumnToContentsEi(void* qthis, int arg0);
+extern void _ZN10QTableView22resizeColumnToContentsEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::QTableView(QWidget * parent);
 extern void* dector_ZN10QTableViewC1EP7QWidget(void* arg0);
 extern void _ZN10QTableViewC1EP7QWidget(void* qthis, void* arg0);
   // proto:  void QTableView::sortByColumn(int column);
-extern void _ZN10QTableView12sortByColumnEi(void* qthis, int arg0);
+extern void _ZN10QTableView12sortByColumnEi(void* qthis, int32_t arg0);
   // proto:  int QTableView::columnSpan(int row, int column);
-extern void _ZNK10QTableView10columnSpanEii(void* qthis, int arg0, int arg1);
+extern void _ZNK10QTableView10columnSpanEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QTableView::columnWidth(int column);
-extern void _ZNK10QTableView11columnWidthEi(void* qthis, int arg0);
+extern void _ZNK10QTableView11columnWidthEi(void* qthis, int32_t arg0);
   // proto:  int QTableView::columnViewportPosition(int column);
-extern void _ZNK10QTableView22columnViewportPositionEi(void* qthis, int arg0);
+extern void _ZNK10QTableView22columnViewportPositionEi(void* qthis, int32_t arg0);
   // proto:  int QTableView::rowHeight(int row);
-extern void _ZNK10QTableView9rowHeightEi(void* qthis, int arg0);
+extern void _ZNK10QTableView9rowHeightEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::QTableView(const QTableView & );
 extern void* dector_ZN10QTableViewC1ERKS_(void* arg0);
 extern void _ZN10QTableViewC1ERKS_(void* qthis, void* arg0);
   // proto:  int QTableView::rowAt(int y);
-extern void _ZNK10QTableView5rowAtEi(void* qthis, int arg0);
+extern void _ZNK10QTableView5rowAtEi(void* qthis, int32_t arg0);
   // proto:  int QTableView::rowSpan(int row, int column);
-extern void _ZNK10QTableView7rowSpanEii(void* qthis, int arg0, int arg1);
+extern void _ZNK10QTableView7rowSpanEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTableView::setCornerButtonEnabled(bool enable);
 extern void _ZN10QTableView22setCornerButtonEnabledEb(void* qthis, bool arg0);
   // proto:  QRect QTableView::visualRect(const QModelIndex & index);
@@ -129,9 +129,9 @@ extern void _ZN10QTableView17setVerticalHeaderEP11QHeaderView(void* qthis, void*
   // proto:  bool QTableView::showGrid();
 extern void _ZNK10QTableView8showGridEv(void* qthis);
   // proto:  void QTableView::showRow(int row);
-extern void _ZN10QTableView7showRowEi(void* qthis, int arg0);
+extern void _ZN10QTableView7showRowEi(void* qthis, int32_t arg0);
   // proto:  void QTableView::hideColumn(int column);
-extern void _ZN10QTableView10hideColumnEi(void* qthis, int arg0);
+extern void _ZN10QTableView10hideColumnEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -147,7 +147,7 @@ func init() {
 // class sizeof(QTableView)=1
 type QTableView struct {
   /*qbase*/ QAbstractItemView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTableView::resizeRowsToContents();
@@ -262,7 +262,7 @@ func (this *QTableView) setSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTableView17setSortingEnabledEb
     // invoke: void setSortingEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTableView17setSortingEnabledEb(this.qclsinst, arg0)
   default:
@@ -311,7 +311,7 @@ func (this *QTableView) setWordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTableView11setWordWrapEb
     // invoke: void setWordWrap(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTableView11setWordWrapEb(this.qclsinst, arg0)
   default:
@@ -403,7 +403,7 @@ func (this *QTableView) setRowHidden(args ...interface{}) () {
     // invoke: void setRowHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN10QTableView12setRowHiddenEib(this.qclsinst, arg0, arg1)
   default:
@@ -567,7 +567,7 @@ func (this *QTableView) setColumnHidden(args ...interface{}) () {
     // invoke: void setColumnHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN10QTableView15setColumnHiddenEib(this.qclsinst, arg0, arg1)
   default:
@@ -653,7 +653,7 @@ func (this *QTableView) setShowGrid(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTableView11setShowGridEb
     // invoke: void setShowGrid(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTableView11setShowGridEb(this.qclsinst, arg0)
   default:
@@ -998,7 +998,7 @@ func (this *QTableView) setCornerButtonEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTableView22setCornerButtonEnabledEb
     // invoke: void setCornerButtonEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTableView22setCornerButtonEnabledEb(this.qclsinst, arg0)
   default:

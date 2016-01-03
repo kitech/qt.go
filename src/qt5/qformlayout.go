@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.go
 //
@@ -41,11 +41,11 @@ extern void _ZNK11QFormLayout13labelForFieldEP7QLayout(void* qthis, void* arg0);
   // proto:  void QFormLayout::addRow(const QString & labelText, QLayout * field);
 extern void _ZN11QFormLayout6addRowERK7QStringP7QLayout(void* qthis, void* arg0, void* arg1);
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QLayout * field);
-extern void _ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN11QFormLayout9insertRowEiRK7QStringP7QLayout(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  QWidget * QFormLayout::labelForField(QWidget * field);
 extern void _ZNK11QFormLayout13labelForFieldEP7QWidget(void* qthis, void* arg0);
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QLayout * field);
-extern void _ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN11QFormLayout9insertRowEiP7QWidgetP7QLayout(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  int QFormLayout::count();
 extern void _ZNK11QFormLayout5countEv(void* qthis);
   // proto:  int QFormLayout::spacing();
@@ -54,21 +54,21 @@ extern void _ZNK11QFormLayout7spacingEv(void* qthis);
 extern void* dector_ZN11QFormLayoutC1EP7QWidget(void* arg0);
 extern void _ZN11QFormLayoutC1EP7QWidget(void* qthis, void* arg0);
   // proto:  void QFormLayout::insertRow(int row, QLayout * layout);
-extern void _ZN11QFormLayout9insertRowEiP7QLayout(void* qthis, int arg0, void* arg1);
+extern void _ZN11QFormLayout9insertRowEiP7QLayout(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QFormLayout::setGeometry(const QRect & rect);
 extern void _ZN11QFormLayout11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  void QFormLayout::setVerticalSpacing(int spacing);
-extern void _ZN11QFormLayout18setVerticalSpacingEi(void* qthis, int arg0);
+extern void _ZN11QFormLayout18setVerticalSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QFormLayout::setHorizontalSpacing(int spacing);
-extern void _ZN11QFormLayout20setHorizontalSpacingEi(void* qthis, int arg0);
+extern void _ZN11QFormLayout20setHorizontalSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QFormLayout::insertRow(int row, const QString & labelText, QWidget * field);
-extern void _ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN11QFormLayout9insertRowEiRK7QStringP7QWidget(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  const QMetaObject * QFormLayout::metaObject();
 extern void _ZNK11QFormLayout10metaObjectEv(void* qthis);
   // proto:  void QFormLayout::insertRow(int row, QWidget * label, QWidget * field);
-extern void _ZN11QFormLayout9insertRowEiP7QWidgetS1_(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN11QFormLayout9insertRowEiP7QWidgetS1_(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  void QFormLayout::setSpacing(int );
-extern void _ZN11QFormLayout10setSpacingEi(void* qthis, int arg0);
+extern void _ZN11QFormLayout10setSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QFormLayout::~QFormLayout();
 extern void _ZN11QFormLayoutD0Ev(void* qthis);
   // proto:  void QFormLayout::addRow(QLayout * layout);
@@ -78,9 +78,9 @@ extern void _ZNK11QFormLayout8sizeHintEv(void* qthis);
   // proto:  void QFormLayout::invalidate();
 extern void _ZN11QFormLayout10invalidateEv(void* qthis);
   // proto:  QLayoutItem * QFormLayout::itemAt(int index);
-extern void _ZNK11QFormLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK11QFormLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  QLayoutItem * QFormLayout::takeAt(int index);
-extern void _ZN11QFormLayout6takeAtEi(void* qthis, int arg0);
+extern void _ZN11QFormLayout6takeAtEi(void* qthis, int32_t arg0);
   // proto:  void QFormLayout::addRow(const QString & labelText, QWidget * field);
 extern void _ZN11QFormLayout6addRowERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
   // proto:  QSize QFormLayout::minimumSize();
@@ -92,13 +92,13 @@ extern void _ZN11QFormLayout6addRowEP7QWidgetP7QLayout(void* qthis, void* arg0, 
   // proto:  int QFormLayout::verticalSpacing();
 extern void _ZNK11QFormLayout15verticalSpacingEv(void* qthis);
   // proto:  int QFormLayout::heightForWidth(int width);
-extern void _ZNK11QFormLayout14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK11QFormLayout14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QFormLayout::addItem(QLayoutItem * item);
 extern void _ZN11QFormLayout7addItemEP11QLayoutItem(void* qthis, void* arg0);
   // proto:  bool QFormLayout::hasHeightForWidth();
 extern void _ZNK11QFormLayout17hasHeightForWidthEv(void* qthis);
   // proto:  void QFormLayout::insertRow(int row, QWidget * widget);
-extern void _ZN11QFormLayout9insertRowEiP7QWidget(void* qthis, int arg0, void* arg1);
+extern void _ZN11QFormLayout9insertRowEiP7QWidget(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QFormLayout::addRow(QWidget * label, QWidget * field);
 extern void _ZN11QFormLayout6addRowEP7QWidgetS1_(void* qthis, void* arg0, void* arg1);
 */
@@ -116,7 +116,7 @@ func init() {
 // class sizeof(QFormLayout)=1
 type QFormLayout struct {
   /*qbase*/ QLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QFormLayout::horizontalSpacing();

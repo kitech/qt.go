@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QKeyEventTransition::setKey(int key);
-extern void _ZN19QKeyEventTransition6setKeyEi(void* qthis, int arg0);
+extern void _ZN19QKeyEventTransition6setKeyEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QKeyEventTransition::metaObject();
 extern void _ZNK19QKeyEventTransition10metaObjectEv(void* qthis);
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
@@ -61,7 +61,7 @@ func init() {
 // class sizeof(QKeyEventTransition)=1
 type QKeyEventTransition struct {
   /*qbase*/ QEventTransition;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QKeyEventTransition::setKey(int key);

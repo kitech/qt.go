@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -60,12 +60,12 @@ extern void _ZNK7QRegExp10exactMatchERK7QString(void* qthis, void* arg0);
   // proto:  void QRegExp::swap(QRegExp & other);
 extern void demth_ZN7QRegExp4swapERS_(void* qthis, void* arg0);
   // proto:  int QRegExp::pos(int nth);
-extern void _ZN7QRegExp3posEi(void* qthis, int arg0);
+extern void _ZN7QRegExp3posEi(void* qthis, int32_t arg0);
   // proto:  void QRegExp::QRegExp();
 extern void* dector_ZN7QRegExpC1Ev();
 extern void _ZN7QRegExpC1Ev(void* qthis);
   // proto:  QString QRegExp::cap(int nth);
-extern void _ZN7QRegExp3capEi(void* qthis, int arg0);
+extern void _ZN7QRegExp3capEi(void* qthis, int32_t arg0);
   // proto:  QString QRegExp::errorString();
 extern void _ZN7QRegExp11errorStringEv(void* qthis);
   // proto:  void QRegExp::setMinimal(bool minimal);
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QRegExp)=8
 type QRegExp struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
@@ -420,7 +420,7 @@ func (this *QRegExp) setMinimal(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExp10setMinimalEb
     // invoke: void setMinimal(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QRegExp10setMinimalEb(this.qclsinst, arg0)
   default:

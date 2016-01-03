@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -51,7 +51,7 @@ extern void _ZNK9QTextLine17horizontalAdvanceEv(void* qthis);
   // proto:  QRectF QTextLine::naturalTextRect();
 extern void _ZNK9QTextLine15naturalTextRectEv(void* qthis);
   // proto:  void QTextLine::setNumColumns(int columns, qreal alignmentWidth);
-extern void _ZN9QTextLine13setNumColumnsEid(void* qthis, int arg0, double arg1);
+extern void _ZN9QTextLine13setNumColumnsEid(void* qthis, int32_t arg0, double arg1);
   // proto:  qreal QTextLine::width();
 extern void _ZNK9QTextLine5widthEv(void* qthis);
   // proto:  void QTextLine::setLeadingIncluded(bool included);
@@ -59,20 +59,20 @@ extern void _ZN9QTextLine18setLeadingIncludedEb(void* qthis, bool arg0);
   // proto:  void QTextLine::setPosition(const QPointF & pos);
 extern void _ZN9QTextLine11setPositionERK7QPointF(void* qthis, void* arg0);
   // proto:  int QTextLine::lineNumber();
-extern void _ZNK9QTextLine10lineNumberEv(void* qthis);
+extern void demth_ZNK9QTextLine10lineNumberEv(void* qthis);
   // proto:  QRectF QTextLine::rect();
 extern void _ZNK9QTextLine4rectEv(void* qthis);
   // proto:  void QTextLine::QTextLine();
 extern void* dector_ZN9QTextLineC1Ev();
 extern void demth_ZN9QTextLineC1Ev(void* qthis);
   // proto:  void QTextLine::setNumColumns(int columns);
-extern void _ZN9QTextLine13setNumColumnsEi(void* qthis, int arg0);
+extern void _ZN9QTextLine13setNumColumnsEi(void* qthis, int32_t arg0);
   // proto:  int QTextLine::textLength();
 extern void _ZNK9QTextLine10textLengthEv(void* qthis);
   // proto:  QPointF QTextLine::position();
 extern void _ZNK9QTextLine8positionEv(void* qthis);
   // proto:  QList<QGlyphRun> QTextLine::glyphRuns(int from, int length);
-extern void _ZNK9QTextLine9glyphRunsEii(void* qthis, int arg0, int arg1);
+extern void _ZNK9QTextLine9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  qreal QTextLine::descent();
 extern void _ZNK9QTextLine7descentEv(void* qthis);
   // proto:  qreal QTextLine::naturalTextWidth();
@@ -86,7 +86,7 @@ extern void _ZN11QTextLayout7setFontERK5QFont(void* qthis, void* arg0);
   // proto:  void QTextLayout::setText(const QString & string);
 extern void _ZN11QTextLayout7setTextERK7QString(void* qthis, void* arg0);
   // proto:  bool QTextLayout::isValidCursorPosition(int pos);
-extern void _ZNK11QTextLayout21isValidCursorPositionEi(void* qthis, int arg0);
+extern void _ZNK11QTextLayout21isValidCursorPositionEi(void* qthis, int32_t arg0);
   // proto:  QRectF QTextLayout::boundingRect();
 extern void _ZNK11QTextLayout12boundingRectEv(void* qthis);
   // proto:  void QTextLayout::setRawFont(const QRawFont & rawFont);
@@ -99,17 +99,17 @@ extern void _ZN11QTextLayoutC1ERK7QStringRK5QFontP12QPaintDevice(void* qthis, vo
   // proto:  void QTextLayout::setPosition(const QPointF & p);
 extern void _ZN11QTextLayout11setPositionERK7QPointF(void* qthis, void* arg0);
   // proto:  QTextLine QTextLayout::lineForTextPosition(int pos);
-extern void _ZNK11QTextLayout19lineForTextPositionEi(void* qthis, int arg0);
+extern void _ZNK11QTextLayout19lineForTextPositionEi(void* qthis, int32_t arg0);
   // proto:  const QTextOption & QTextLayout::textOption();
 extern void _ZNK11QTextLayout10textOptionEv(void* qthis);
   // proto:  QTextEngine * QTextLayout::engine();
-extern void _ZNK11QTextLayout6engineEv(void* qthis);
+extern void demth_ZNK11QTextLayout6engineEv(void* qthis);
   // proto:  int QTextLayout::preeditAreaPosition();
 extern void _ZNK11QTextLayout19preeditAreaPositionEv(void* qthis);
   // proto:  void QTextLayout::clearAdditionalFormats();
 extern void _ZN11QTextLayout22clearAdditionalFormatsEv(void* qthis);
   // proto:  int QTextLayout::leftCursorPosition(int oldPos);
-extern void _ZNK11QTextLayout18leftCursorPositionEi(void* qthis, int arg0);
+extern void _ZNK11QTextLayout18leftCursorPositionEi(void* qthis, int32_t arg0);
   // proto:  int QTextLayout::lineCount();
 extern void _ZNK11QTextLayout9lineCountEv(void* qthis);
   // proto:  void QTextLayout::~QTextLayout();
@@ -117,27 +117,27 @@ extern void _ZN11QTextLayoutD0Ev(void* qthis);
   // proto:  void QTextLayout::setCacheEnabled(bool enable);
 extern void _ZN11QTextLayout15setCacheEnabledEb(void* qthis, bool arg0);
   // proto:  QTextLine QTextLayout::lineAt(int i);
-extern void _ZNK11QTextLayout6lineAtEi(void* qthis, int arg0);
+extern void _ZNK11QTextLayout6lineAtEi(void* qthis, int32_t arg0);
   // proto:  int QTextLayout::rightCursorPosition(int oldPos);
-extern void _ZNK11QTextLayout19rightCursorPositionEi(void* qthis, int arg0);
+extern void _ZNK11QTextLayout19rightCursorPositionEi(void* qthis, int32_t arg0);
   // proto:  void QTextLayout::QTextLayout(const QTextBlock & b);
 extern void* dector_ZN11QTextLayoutC1ERK10QTextBlock(void* arg0);
 extern void _ZN11QTextLayoutC1ERK10QTextBlock(void* qthis, void* arg0);
   // proto:  qreal QTextLayout::minimumWidth();
 extern void _ZNK11QTextLayout12minimumWidthEv(void* qthis);
   // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition);
-extern void _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi(void* qthis, void* arg0, void* arg1, int arg2);
+extern void _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFi(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  QFont QTextLayout::font();
 extern void _ZNK11QTextLayout4fontEv(void* qthis);
   // proto:  void QTextLayout::setPreeditArea(int position, const QString & text);
-extern void _ZN11QTextLayout14setPreeditAreaEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN11QTextLayout14setPreeditAreaEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTextLayout::beginLayout();
 extern void _ZN11QTextLayout11beginLayoutEv(void* qthis);
   // proto:  void QTextLayout::QTextLayout(const QString & text);
 extern void* dector_ZN11QTextLayoutC1ERK7QString(void* arg0);
 extern void _ZN11QTextLayoutC1ERK7QString(void* qthis, void* arg0);
   // proto:  void QTextLayout::setFlags(int flags);
-extern void _ZN11QTextLayout8setFlagsEi(void* qthis, int arg0);
+extern void _ZN11QTextLayout8setFlagsEi(void* qthis, int32_t arg0);
   // proto:  QPointF QTextLayout::position();
 extern void _ZNK11QTextLayout8positionEv(void* qthis);
   // proto:  void QTextLayout::clearLayout();
@@ -156,14 +156,14 @@ extern void _ZN11QTextLayout10createLineEv(void* qthis);
   // proto:  QString QTextLayout::preeditAreaText();
 extern void _ZNK11QTextLayout15preeditAreaTextEv(void* qthis);
   // proto:  void QTextLayout::drawCursor(QPainter * p, const QPointF & pos, int cursorPosition, int width);
-extern void _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii(void* qthis, void* arg0, void* arg1, int arg2, int arg3);
+extern void _ZNK11QTextLayout10drawCursorEP8QPainterRK7QPointFii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QTextLayout::endLayout();
 extern void _ZN11QTextLayout9endLayoutEv(void* qthis);
   // proto:  void QTextLayout::QTextLayout();
 extern void* dector_ZN11QTextLayoutC1Ev();
 extern void _ZN11QTextLayoutC1Ev(void* qthis);
   // proto:  QList<QGlyphRun> QTextLayout::glyphRuns(int from, int length);
-extern void _ZNK11QTextLayout9glyphRunsEii(void* qthis, int arg0, int arg1);
+extern void _ZNK11QTextLayout9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextInlineObject::setAscent(qreal a);
 extern void _ZN17QTextInlineObject9setAscentEd(void* qthis, double arg0);
   // proto:  qreal QTextInlineObject::width();
@@ -206,19 +206,19 @@ func init() {
 // class sizeof(QTextLine)=16
 type QTextLine struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextLayout)=8
 type QTextLayout struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextInlineObject)=16
 type QTextInlineObject struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QTextLine::ascent();
@@ -470,7 +470,7 @@ func (this *QTextLine) setLeadingIncluded(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextLine18setLeadingIncludedEb
     // invoke: void setLeadingIncluded(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextLine18setLeadingIncludedEb(this.qclsinst, arg0)
   default:
@@ -515,7 +515,7 @@ func (this *QTextLine) lineNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine10lineNumberEv
     // invoke: int lineNumber()
-    C._ZNK9QTextLine10lineNumberEv(this.qclsinst)
+    C.demth_ZNK9QTextLine10lineNumberEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextLine", "lineNumber", args)
   }
@@ -915,7 +915,7 @@ func (this *QTextLayout) engine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout6engineEv
     // invoke: QTextEngine * engine()
-    C._ZNK11QTextLayout6engineEv(this.qclsinst)
+    C.demth_ZNK11QTextLayout6engineEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextLayout", "engine", args)
   }
@@ -1033,7 +1033,7 @@ func (this *QTextLayout) setCacheEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextLayout15setCacheEnabledEb
     // invoke: void setCacheEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QTextLayout15setCacheEnabledEb(this.qclsinst, arg0)
   default:

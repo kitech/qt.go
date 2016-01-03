@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qcommandlineparser.h
 // dst-file: /src/core/qcommandlineparser.go
 //
@@ -45,7 +45,7 @@ extern void _ZNK18QCommandLineParser6valuesERK18QCommandLineOption(void* qthis, 
   // proto:  bool QCommandLineParser::isSet(const QString & name);
 extern void _ZNK18QCommandLineParser5isSetERK7QString(void* qthis, void* arg0);
   // proto:  void QCommandLineParser::showHelp(int exitCode);
-extern void _ZN18QCommandLineParser8showHelpEi(void* qthis, int arg0);
+extern void _ZN18QCommandLineParser8showHelpEi(void* qthis, int32_t arg0);
   // proto:  bool QCommandLineParser::addOption(const QCommandLineOption & commandLineOption);
 extern void _ZN18QCommandLineParser9addOptionERK18QCommandLineOption(void* qthis, void* arg0);
   // proto:  void QCommandLineParser::showVersion();
@@ -101,7 +101,7 @@ func init() {
 // class sizeof(QCommandLineParser)=8
 type QCommandLineParser struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QCommandLineParser::process(const QStringList & arguments);

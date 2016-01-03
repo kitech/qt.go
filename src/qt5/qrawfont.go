@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qrawfont.h
 // dst-file: /src/gui/qrawfont.go
 //
@@ -43,11 +43,11 @@ extern void _ZNK8QRawFont13lineThicknessEv(void* qthis);
   // proto:  bool QRawFont::isValid();
 extern void _ZNK8QRawFont7isValidEv(void* qthis);
   // proto:  QRectF QRawFont::boundingRect(quint32 glyphIndex);
-extern void _ZNK8QRawFont12boundingRectEj(void* qthis, unsigned int arg0);
+extern void _ZNK8QRawFont12boundingRectEj(void* qthis, int32_t arg0);
   // proto:  bool QRawFont::supportsCharacter(uint ucs4);
-extern void _ZNK8QRawFont17supportsCharacterEj(void* qthis, unsigned int arg0);
+extern void _ZNK8QRawFont17supportsCharacterEj(void* qthis, int32_t arg0);
   // proto:  void QRawFont::swap(QRawFont & other);
-extern void _ZN8QRawFont4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN8QRawFont4swapERS_(void* qthis, void* arg0);
   // proto:  qreal QRawFont::descent();
 extern void _ZNK8QRawFont7descentEv(void* qthis);
   // proto:  void QRawFont::QRawFont();
@@ -56,7 +56,7 @@ extern void _ZN8QRawFontC1Ev(void* qthis);
   // proto:  void QRawFont::setPixelSize(qreal pixelSize);
 extern void _ZN8QRawFont12setPixelSizeEd(void* qthis, double arg0);
   // proto:  bool QRawFont::glyphIndexesForChars(const QChar * chars, int numChars, quint32 * glyphIndexes, int * numGlyphs);
-extern void _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int arg1, unsigned int* arg2, int* arg3);
+extern void _ZNK8QRawFont20glyphIndexesForCharsEPK5QChariPjPi(void* qthis, void* arg0, int32_t arg1, int32_t* arg2, int32_t* arg3);
   // proto:  QString QRawFont::styleName();
 extern void _ZNK8QRawFont9styleNameEv(void* qthis);
   // proto:  qreal QRawFont::underlinePosition();
@@ -68,7 +68,7 @@ extern void _ZNK8QRawFont17supportsCharacterE5QChar(void* qthis, void* arg0);
   // proto:  QString QRawFont::familyName();
 extern void _ZNK8QRawFont10familyNameEv(void* qthis);
   // proto:  bool QRawFont::advancesForGlyphIndexes(const quint32 * glyphIndexes, QPointF * advances, int numGlyphs);
-extern void _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, unsigned int* arg0, void* arg1, int arg2);
+extern void _ZNK8QRawFont23advancesForGlyphIndexesEPKjP7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2);
   // proto:  qreal QRawFont::pixelSize();
 extern void _ZNK8QRawFont9pixelSizeEv(void* qthis);
   // proto:  int QRawFont::weight();
@@ -81,9 +81,9 @@ extern void _ZNK8QRawFont7xHeightEv(void* qthis);
   // proto:  void QRawFont::~QRawFont();
 extern void _ZN8QRawFontD0Ev(void* qthis);
   // proto:  QPainterPath QRawFont::pathForGlyph(quint32 glyphIndex);
-extern void _ZNK8QRawFont12pathForGlyphEj(void* qthis, unsigned int arg0);
+extern void _ZNK8QRawFont12pathForGlyphEj(void* qthis, int32_t arg0);
   // proto:  QByteArray QRawFont::fontTable(const char * tagName);
-extern void _ZNK8QRawFont9fontTableEPKc(void* qthis, char* arg0);
+extern void _ZNK8QRawFont9fontTableEPKc(void* qthis, unsigned char* arg0);
   // proto:  qreal QRawFont::maxCharWidth();
 extern void _ZNK8QRawFont12maxCharWidthEv(void* qthis);
   // proto:  QVector<quint32> QRawFont::glyphIndexesForString(const QString & text);
@@ -103,7 +103,7 @@ func init() {
 // class sizeof(QRawFont)=1
 type QRawFont struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QRawFont::averageCharWidth();
@@ -277,7 +277,7 @@ func (this *QRawFont) swap(args ...interface{}) () {
     // invoke: void swap(class QRawFont &)
     var arg0 = args[0].(QRawFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QRawFont4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN8QRawFont4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRawFont", "swap", args)
   }
@@ -597,7 +597,7 @@ func (this *QRawFont) fontTable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QRawFont9fontTableEPKc
     // invoke: QByteArray fontTable(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZNK8QRawFont9fontTableEPKc(this.qclsinst, arg0)
   default:

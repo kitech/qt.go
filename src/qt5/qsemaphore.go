@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsemaphore.h
 // dst-file: /src/core/qsemaphore.go
 //
@@ -33,21 +33,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSemaphore::acquire(int n);
-extern void _ZN10QSemaphore7acquireEi(void* qthis, int arg0);
+extern void _ZN10QSemaphore7acquireEi(void* qthis, int32_t arg0);
   // proto:  void QSemaphore::release(int n);
-extern void _ZN10QSemaphore7releaseEi(void* qthis, int arg0);
+extern void _ZN10QSemaphore7releaseEi(void* qthis, int32_t arg0);
   // proto:  int QSemaphore::available();
 extern void _ZNK10QSemaphore9availableEv(void* qthis);
   // proto:  bool QSemaphore::tryAcquire(int n, int timeout);
-extern void _ZN10QSemaphore10tryAcquireEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QSemaphore10tryAcquireEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QSemaphore::QSemaphore(const QSemaphore & );
 extern void* dector_ZN10QSemaphoreC1ERKS_(void* arg0);
 extern void _ZN10QSemaphoreC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QSemaphore::tryAcquire(int n);
-extern void _ZN10QSemaphore10tryAcquireEi(void* qthis, int arg0);
+extern void _ZN10QSemaphore10tryAcquireEi(void* qthis, int32_t arg0);
   // proto:  void QSemaphore::QSemaphore(int n);
-extern void* dector_ZN10QSemaphoreC1Ei(int arg0);
-extern void _ZN10QSemaphoreC1Ei(void* qthis, int arg0);
+extern void* dector_ZN10QSemaphoreC1Ei(int32_t arg0);
+extern void _ZN10QSemaphoreC1Ei(void* qthis, int32_t arg0);
   // proto:  void QSemaphore::~QSemaphore();
 extern void _ZN10QSemaphoreD0Ev(void* qthis);
 */
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QSemaphore)=8
 type QSemaphore struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QSemaphore::acquire(int n);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmutex.h
 // dst-file: /src/core/qmutex.go
 //
@@ -49,7 +49,7 @@ extern void demth_ZN12QMutexLockerD0Ev(void* qthis);
   // proto:  void QBasicMutex::lock();
 extern void demth_ZN11QBasicMutex4lockEv(void* qthis);
   // proto:  bool QBasicMutex::tryLock();
-extern void _ZN11QBasicMutex7tryLockEv(void* qthis);
+extern void demth_ZN11QBasicMutex7tryLockEv(void* qthis);
   // proto:  bool QBasicMutex::isRecursive();
 extern void _ZN11QBasicMutex11isRecursiveEv(void* qthis);
   // proto:  void QBasicMutex::unlock();
@@ -57,7 +57,7 @@ extern void demth_ZN11QBasicMutex6unlockEv(void* qthis);
   // proto:  void QMutex::~QMutex();
 extern void _ZN6QMutexD0Ev(void* qthis);
   // proto:  bool QMutex::tryLock(int timeout);
-extern void _ZN6QMutex7tryLockEi(void* qthis, int arg0);
+extern void _ZN6QMutex7tryLockEi(void* qthis, int32_t arg0);
   // proto:  void QMutex::QMutex(const QMutex & );
 extern void* dector_ZN6QMutexC1ERKS_(void* arg0);
 extern void _ZN6QMutexC1ERKS_(void* qthis, void* arg0);
@@ -80,19 +80,19 @@ func init() {
 // class sizeof(QMutexLocker)=4
 type QMutexLocker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBasicMutex)=1
 type QBasicMutex struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMutex)=1
 type QMutex struct {
   /*qbase*/ QBasicMutex;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QMutexLocker::QMutexLocker(QBasicMutex * m);
@@ -207,7 +207,7 @@ func (this *QBasicMutex) tryLock(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QBasicMutex7tryLockEv
     // invoke: bool tryLock()
-    C._ZN11QBasicMutex7tryLockEv(this.qclsinst)
+    C.demth_ZN11QBasicMutex7tryLockEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QBasicMutex", "tryLock", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qmenubar.h
 // dst-file: /src/widgets/qmenubar.go
 //
@@ -83,9 +83,9 @@ extern void _ZN8QMenuBar12setDefaultUpEb(void* qthis, bool arg0);
   // proto:  void QMenuBar::setVisible(bool visible);
 extern void _ZN8QMenuBar10setVisibleEb(void* qthis, bool arg0);
   // proto:  QAction * QMenuBar::addAction(const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, char* arg2);
+extern void _ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2);
   // proto:  int QMenuBar::heightForWidth(int );
-extern void _ZNK8QMenuBar14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK8QMenuBar14heightForWidthEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -101,7 +101,7 @@ func init() {
 // class sizeof(QMenuBar)=1
 type QMenuBar struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _hovered QMenuBar_hovered_signal;
 //  _triggered QMenuBar_triggered_signal;
 }
@@ -135,7 +135,7 @@ func (this *QMenuBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN8QMenuBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -178,7 +178,7 @@ func (this *QMenuBar) setNativeMenuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar16setNativeMenuBarEb
     // invoke: void setNativeMenuBar(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QMenuBar16setNativeMenuBarEb(this.qclsinst, arg0)
   default:
@@ -542,7 +542,7 @@ func (this *QMenuBar) setDefaultUp(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar12setDefaultUpEb
     // invoke: void setDefaultUp(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QMenuBar12setDefaultUpEb(this.qclsinst, arg0)
   default:
@@ -565,7 +565,7 @@ func (this *QMenuBar) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QMenuBar10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QMenuBar10setVisibleEb(this.qclsinst, arg0)
   default:

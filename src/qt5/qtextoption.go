@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -38,11 +38,11 @@ extern void _ZN11QTextOptionC1ERKS_(void* qthis, void* arg0);
   // proto:  qreal QTextOption::tabStop();
 extern void demth_ZNK11QTextOption7tabStopEv(void* qthis);
   // proto:  void QTextOption::setUseDesignMetrics(bool b);
-extern void _ZN11QTextOption19setUseDesignMetricsEb(void* qthis, bool arg0);
+extern void demth_ZN11QTextOption19setUseDesignMetricsEb(void* qthis, bool arg0);
   // proto:  void QTextOption::setTabStop(qreal tabStop);
 extern void demth_ZN11QTextOption10setTabStopEd(void* qthis, double arg0);
   // proto:  bool QTextOption::useDesignMetrics();
-extern void _ZNK11QTextOption16useDesignMetricsEv(void* qthis);
+extern void demth_ZNK11QTextOption16useDesignMetricsEv(void* qthis);
   // proto:  void QTextOption::QTextOption();
 extern void* dector_ZN11QTextOptionC1Ev();
 extern void _ZN11QTextOptionC1Ev(void* qthis);
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QTextOption)=32
 type QTextOption struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
@@ -107,9 +107,9 @@ func (this *QTextOption) setUseDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextOption19setUseDesignMetricsEb
     // invoke: void setUseDesignMetrics(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN11QTextOption19setUseDesignMetricsEb(this.qclsinst, arg0)
+    C.demth_ZN11QTextOption19setUseDesignMetricsEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTextOption", "setUseDesignMetrics", args)
   }
@@ -152,7 +152,7 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    C._ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
+    C.demth_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
   }

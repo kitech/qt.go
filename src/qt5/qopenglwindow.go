@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QOpenGLWindow)=1
 type QOpenGLWindow struct {
   /*qbase*/ QPaintDeviceWindow;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _frameSwapped QOpenGLWindow_frameSwapped_signal;
 }
 

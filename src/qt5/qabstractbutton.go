@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qabstractbutton.h
 // dst-file: /src/widgets/qabstractbutton.go
 //
@@ -58,7 +58,7 @@ extern void _ZNK15QAbstractButton10metaObjectEv(void* qthis);
   // proto:  bool QAbstractButton::isChecked();
 extern void _ZNK15QAbstractButton9isCheckedEv(void* qthis);
   // proto:  void QAbstractButton::setAutoRepeatDelay(int );
-extern void _ZN15QAbstractButton18setAutoRepeatDelayEi(void* qthis, int arg0);
+extern void _ZN15QAbstractButton18setAutoRepeatDelayEi(void* qthis, int32_t arg0);
   // proto:  int QAbstractButton::autoRepeatDelay();
 extern void _ZNK15QAbstractButton15autoRepeatDelayEv(void* qthis);
   // proto:  bool QAbstractButton::autoExclusive();
@@ -68,14 +68,14 @@ extern void _ZN15QAbstractButton6toggleEv(void* qthis);
   // proto:  void QAbstractButton::setIcon(const QIcon & icon);
 extern void _ZN15QAbstractButton7setIconERK5QIcon(void* qthis, void* arg0);
   // proto:  void QAbstractButton::setAutoRepeatInterval(int );
-extern void _ZN15QAbstractButton21setAutoRepeatIntervalEi(void* qthis, int arg0);
+extern void _ZN15QAbstractButton21setAutoRepeatIntervalEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractButton::setAutoRepeat(bool );
 extern void _ZN15QAbstractButton13setAutoRepeatEb(void* qthis, bool arg0);
   // proto:  void QAbstractButton::QAbstractButton(const QAbstractButton & );
 extern void* dector_ZN15QAbstractButtonC1ERKS_(void* arg0);
 extern void _ZN15QAbstractButtonC1ERKS_(void* qthis, void* arg0);
   // proto:  void QAbstractButton::animateClick(int msec);
-extern void _ZN15QAbstractButton12animateClickEi(void* qthis, int arg0);
+extern void _ZN15QAbstractButton12animateClickEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractButton::setDown(bool );
 extern void _ZN15QAbstractButton7setDownEb(void* qthis, bool arg0);
   // proto:  QString QAbstractButton::text();
@@ -109,7 +109,7 @@ func init() {
 // class sizeof(QAbstractButton)=1
 type QAbstractButton struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _released QAbstractButton_released_signal;
 //  _clicked QAbstractButton_clicked_signal;
 //  _pressed QAbstractButton_pressed_signal;
@@ -184,7 +184,7 @@ func (this *QAbstractButton) setChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton10setCheckedEb
     // invoke: void setChecked(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractButton10setCheckedEb(this.qclsinst, arg0)
   default:
@@ -292,7 +292,7 @@ func (this *QAbstractButton) setAutoExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton16setAutoExclusiveEb
     // invoke: void setAutoExclusive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractButton16setAutoExclusiveEb(this.qclsinst, arg0)
   default:
@@ -484,7 +484,7 @@ func (this *QAbstractButton) setAutoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton13setAutoRepeatEb
     // invoke: void setAutoRepeat(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractButton13setAutoRepeatEb(this.qclsinst, arg0)
   default:
@@ -530,7 +530,7 @@ func (this *QAbstractButton) setDown(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton7setDownEb
     // invoke: void setDown(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractButton7setDownEb(this.qclsinst, arg0)
   default:
@@ -596,7 +596,7 @@ func (this *QAbstractButton) setCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractButton12setCheckableEb
     // invoke: void setCheckable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractButton12setCheckableEb(this.qclsinst, arg0)
   default:

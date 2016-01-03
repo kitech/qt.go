@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2, char* arg3);
+extern void _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3);
   // proto:  bool QToolBar::isFloatable();
 extern void _ZNK8QToolBar11isFloatableEv(void* qthis);
   // proto:  QSize QToolBar::iconSize();
@@ -67,7 +67,7 @@ extern void _ZN8QToolBarC1EP7QWidget(void* qthis, void* arg0);
   // proto:  QAction * QToolBar::actionAt(const QPoint & p);
 extern void _ZNK8QToolBar8actionAtERK6QPoint(void* qthis, void* arg0);
   // proto:  QAction * QToolBar::actionAt(int x, int y);
-extern void demth_ZNK8QToolBar8actionAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK8QToolBar8actionAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QToolBar::isFloating();
 extern void _ZNK8QToolBar10isFloatingEv(void* qthis);
   // proto:  QAction * QToolBar::toggleViewAction();
@@ -78,7 +78,7 @@ extern void _ZN8QToolBarC1ERKS_(void* qthis, void* arg0);
   // proto:  void QToolBar::~QToolBar();
 extern void _ZN8QToolBarD0Ev(void* qthis);
   // proto:  QAction * QToolBar::addAction(const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, char* arg2);
+extern void _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2);
   // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
 extern void _ZN8QToolBar12insertWidgetEP7QActionP7QWidget(void* qthis, void* arg0, void* arg1);
   // proto:  QAction * QToolBar::addWidget(QWidget * widget);
@@ -102,7 +102,7 @@ func init() {
 // class sizeof(QToolBar)=1
 type QToolBar struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _iconSizeChanged QToolBar_iconSizeChanged_signal;
 //  _allowedAreasChanged QToolBar_allowedAreasChanged_signal;
 //  _movableChanged QToolBar_movableChanged_signal;
@@ -148,7 +148,7 @@ func (this *QToolBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QObject).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     C._ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
@@ -172,7 +172,7 @@ func (this *QToolBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -306,7 +306,7 @@ func (this *QToolBar) setMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBar10setMovableEb
     // invoke: void setMovable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QToolBar10setMovableEb(this.qclsinst, arg0)
   default:
@@ -392,7 +392,7 @@ func (this *QToolBar) setFloatable(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolBar12setFloatableEb
     // invoke: void setFloatable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN8QToolBar12setFloatableEb(this.qclsinst, arg0)
   default:

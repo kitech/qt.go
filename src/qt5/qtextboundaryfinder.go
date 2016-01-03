@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -42,7 +42,7 @@ extern void _ZN19QTextBoundaryFinder5toEndEv(void* qthis);
 extern void* dector_ZN19QTextBoundaryFinderC1ERKS_(void* arg0);
 extern void _ZN19QTextBoundaryFinderC1ERKS_(void* qthis, void* arg0);
   // proto:  void QTextBoundaryFinder::setPosition(int position);
-extern void _ZN19QTextBoundaryFinder11setPositionEi(void* qthis, int arg0);
+extern void _ZN19QTextBoundaryFinder11setPositionEi(void* qthis, int32_t arg0);
   // proto:  void QTextBoundaryFinder::QTextBoundaryFinder();
 extern void* dector_ZN19QTextBoundaryFinderC1Ev();
 extern void _ZN19QTextBoundaryFinderC1Ev(void* qthis);
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QTextBoundaryFinder)=48
 type QTextBoundaryFinder struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QTextBoundaryFinder::isAtBoundary();

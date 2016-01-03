@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -64,7 +64,7 @@ extern void _ZN10QTransformC1Ev(void* qthis);
   // proto:  qreal QTransform::m32();
 extern void demth_ZNK10QTransform3m32Ev(void* qthis);
   // proto:  void QTransform::map(int x, int y, int * tx, int * ty);
-extern void _ZNK10QTransform3mapEiiPiS0_(void* qthis, int arg0, int arg1, int* arg2, int* arg3);
+extern void _ZNK10QTransform3mapEiiPiS0_(void* qthis, int32_t arg0, int32_t arg1, int32_t* arg2, int32_t* arg3);
   // proto:  QTransform & QTransform::shear(qreal sh, qreal sv);
 extern void _ZN10QTransform5shearEdd(void* qthis, double arg0, double arg1);
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy);
@@ -157,7 +157,7 @@ func init() {
 // class sizeof(QTransform)=88
 type QTransform struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QPoint QTransform::map(const QPoint & p);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QDockWidget)=1
 type QDockWidget struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _featuresChanged QDockWidget_featuresChanged_signal;
 //  _visibilityChanged QDockWidget_visibilityChanged_signal;
 //  _topLevelChanged QDockWidget_topLevelChanged_signal;
@@ -110,7 +110,7 @@ func (this *QDockWidget) setFloating(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDockWidget11setFloatingEb
     // invoke: void setFloating(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QDockWidget11setFloatingEb(this.qclsinst, arg0)
   default:

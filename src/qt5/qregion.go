@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qregion.h
 // dst-file: /src/gui/qregion.go
 //
@@ -42,7 +42,7 @@ extern void _ZN7QRegionC1ERKS_(void* qthis, void* arg0);
   // proto:  int QRegion::rectCount();
 extern void _ZNK7QRegion9rectCountEv(void* qthis);
   // proto:  void QRegion::translate(int dx, int dy);
-extern void _ZN7QRegion9translateEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QRegion9translateEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QRegion QRegion::united(const QRegion & r);
 extern void _ZNK7QRegion6unitedERKS_(void* qthis, void* arg0);
   // proto:  QRegion QRegion::translated(const QPoint & p);
@@ -66,7 +66,7 @@ extern void _ZNK7QRegion7isEmptyEv(void* qthis);
   // proto:  QRegion QRegion::intersected(const QRect & r);
 extern void _ZNK7QRegion11intersectedERK5QRect(void* qthis, void* arg0);
   // proto:  void QRegion::setRects(const QRect * rect, int num);
-extern void _ZN7QRegion8setRectsEPK5QRecti(void* qthis, void* arg0, int arg1);
+extern void _ZN7QRegion8setRectsEPK5QRecti(void* qthis, void* arg0, int32_t arg1);
   // proto:  QVector<QRect> QRegion::rects();
 extern void _ZNK7QRegion5rectsEv(void* qthis);
   // proto:  QRegion QRegion::subtracted(const QRegion & r);
@@ -74,7 +74,7 @@ extern void _ZNK7QRegion10subtractedERKS_(void* qthis, void* arg0);
   // proto:  bool QRegion::intersects(const QRect & r);
 extern void _ZNK7QRegion10intersectsERK5QRect(void* qthis, void* arg0);
   // proto:  QRegion QRegion::translated(int dx, int dy);
-extern void _ZNK7QRegion10translatedEii(void* qthis, int arg0, int arg1);
+extern void _ZNK7QRegion10translatedEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QRegion QRegion::intersected(const QRegion & r);
 extern void _ZNK7QRegion11intersectedERKS_(void* qthis, void* arg0);
   // proto:  QRegion QRegion::united(const QRect & r);
@@ -100,7 +100,7 @@ func init() {
 // class sizeof(QRegion)=8
 type QRegion struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QRegion::isNull();

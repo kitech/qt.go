@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qfontmetrics.h
 // dst-file: /src/gui/qfontmetrics.go
 //
@@ -39,7 +39,7 @@ extern void _ZN12QFontMetricsD0Ev(void* qthis);
   // proto:  int QFontMetrics::lineWidth();
 extern void _ZNK12QFontMetrics9lineWidthEv(void* qthis);
   // proto:  QRect QFontMetrics::boundingRect(const QRect & r, int flags, const QString & text, int tabstops, int * tabarray);
-extern void _ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi(void* qthis, void* arg0, int arg1, void* arg2, int arg3, int* arg4);
+extern void _ZNK12QFontMetrics12boundingRectERK5QRectiRK7QStringiPi(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t* arg4);
   // proto:  int QFontMetrics::minLeftBearing();
 extern void _ZNK12QFontMetrics14minLeftBearingEv(void* qthis);
   // proto:  int QFontMetrics::rightBearing(QChar );
@@ -47,7 +47,7 @@ extern void _ZNK12QFontMetrics12rightBearingE5QChar(void* qthis, void* arg0);
   // proto:  int QFontMetrics::ascent();
 extern void _ZNK12QFontMetrics6ascentEv(void* qthis);
   // proto:  QSize QFontMetrics::size(int flags, const QString & str, int tabstops, int * tabarray);
-extern void _ZNK12QFontMetrics4sizeEiRK7QStringiPi(void* qthis, int arg0, void* arg1, int arg2, int* arg3);
+extern void _ZNK12QFontMetrics4sizeEiRK7QStringiPi(void* qthis, int32_t arg0, void* arg1, int32_t arg2, int32_t* arg3);
   // proto:  int QFontMetrics::overlinePos();
 extern void _ZNK12QFontMetrics11overlinePosEv(void* qthis);
   // proto:  int QFontMetrics::leading();
@@ -69,7 +69,7 @@ extern void _ZNK12QFontMetrics12boundingRectERK7QString(void* qthis, void* arg0)
   // proto:  int QFontMetrics::xHeight();
 extern void _ZNK12QFontMetrics7xHeightEv(void* qthis);
   // proto:  int QFontMetrics::width(const QString & , int len, int flags);
-extern void _ZNK12QFontMetrics5widthERK7QStringii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZNK12QFontMetrics5widthERK7QStringii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  int QFontMetrics::strikeOutPos();
 extern void _ZNK12QFontMetrics12strikeOutPosEv(void* qthis);
   // proto:  int QFontMetrics::lineSpacing();
@@ -83,28 +83,28 @@ extern void _ZN12QFontMetricsC1ERK5QFontP12QPaintDevice(void* qthis, void* arg0,
   // proto:  int QFontMetrics::minRightBearing();
 extern void _ZNK12QFontMetrics15minRightBearingEv(void* qthis);
   // proto:  void QFontMetrics::swap(QFontMetrics & other);
-extern void _ZN12QFontMetrics4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN12QFontMetrics4swapERS_(void* qthis, void* arg0);
   // proto:  QRect QFontMetrics::boundingRect(QChar );
 extern void _ZNK12QFontMetrics12boundingRectE5QChar(void* qthis, void* arg0);
   // proto:  void QFontMetrics::QFontMetrics(const QFont & );
 extern void* dector_ZN12QFontMetricsC1ERK5QFont(void* arg0);
 extern void _ZN12QFontMetricsC1ERK5QFont(void* qthis, void* arg0);
   // proto:  int QFontMetrics::width(const QString & , int len);
-extern void _ZNK12QFontMetrics5widthERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZNK12QFontMetrics5widthERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QRect QFontMetrics::boundingRect(int x, int y, int w, int h, int flags, const QString & text, int tabstops, int * tabarray);
-extern void demth_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, void* arg5, int arg6, int* arg7);
+extern void demth_ZNK12QFontMetrics12boundingRectEiiiiiRK7QStringiPi(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, void* arg5, int32_t arg6, int32_t* arg7);
   // proto:  int QFontMetrics::charWidth(const QString & str, int pos);
-extern void _ZNK12QFontMetrics9charWidthERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZNK12QFontMetrics9charWidthERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QFontMetrics::leftBearing(QChar );
 extern void _ZNK12QFontMetrics11leftBearingE5QChar(void* qthis, void* arg0);
   // proto:  bool QFontMetrics::inFontUcs4(uint ucs4);
-extern void _ZNK12QFontMetrics10inFontUcs4Ej(void* qthis, unsigned int arg0);
+extern void _ZNK12QFontMetrics10inFontUcs4Ej(void* qthis, int32_t arg0);
   // proto:  int QFontMetrics::descent();
 extern void _ZNK12QFontMetrics7descentEv(void* qthis);
   // proto:  bool QFontMetricsF::inFont(QChar );
 extern void _ZNK13QFontMetricsF6inFontE5QChar(void* qthis, void* arg0);
   // proto:  QSizeF QFontMetricsF::size(int flags, const QString & str, int tabstops, int * tabarray);
-extern void _ZNK13QFontMetricsF4sizeEiRK7QStringiPi(void* qthis, int arg0, void* arg1, int arg2, int* arg3);
+extern void _ZNK13QFontMetricsF4sizeEiRK7QStringiPi(void* qthis, int32_t arg0, void* arg1, int32_t arg2, int32_t* arg3);
   // proto:  qreal QFontMetricsF::minRightBearing();
 extern void _ZNK13QFontMetricsF15minRightBearingEv(void* qthis);
   // proto:  void QFontMetricsF::QFontMetricsF(const QFontMetricsF & );
@@ -117,9 +117,9 @@ extern void _ZNK13QFontMetricsF5widthE5QChar(void* qthis, void* arg0);
   // proto:  void QFontMetricsF::~QFontMetricsF();
 extern void _ZN13QFontMetricsFD0Ev(void* qthis);
   // proto:  QRectF QFontMetricsF::boundingRect(const QRectF & r, int flags, const QString & string, int tabstops, int * tabarray);
-extern void _ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi(void* qthis, void* arg0, int arg1, void* arg2, int arg3, int* arg4);
+extern void _ZNK13QFontMetricsF12boundingRectERK6QRectFiRK7QStringiPi(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3, int32_t* arg4);
   // proto:  void QFontMetricsF::swap(QFontMetricsF & other);
-extern void _ZN13QFontMetricsF4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN13QFontMetricsF4swapERS_(void* qthis, void* arg0);
   // proto:  QRectF QFontMetricsF::tightBoundingRect(const QString & text);
 extern void _ZNK13QFontMetricsF17tightBoundingRectERK7QString(void* qthis, void* arg0);
   // proto:  qreal QFontMetricsF::leftBearing(QChar );
@@ -158,7 +158,7 @@ extern void _ZN13QFontMetricsFC1ERK5QFont(void* qthis, void* arg0);
   // proto:  QRectF QFontMetricsF::boundingRect(QChar );
 extern void _ZNK13QFontMetricsF12boundingRectE5QChar(void* qthis, void* arg0);
   // proto:  bool QFontMetricsF::inFontUcs4(uint ucs4);
-extern void _ZNK13QFontMetricsF10inFontUcs4Ej(void* qthis, unsigned int arg0);
+extern void _ZNK13QFontMetricsF10inFontUcs4Ej(void* qthis, int32_t arg0);
   // proto:  qreal QFontMetricsF::minLeftBearing();
 extern void _ZNK13QFontMetricsF14minLeftBearingEv(void* qthis);
   // proto:  qreal QFontMetricsF::ascent();
@@ -182,13 +182,13 @@ func init() {
 // class sizeof(QFontMetrics)=1
 type QFontMetrics struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QFontMetricsF)=1
 type QFontMetricsF struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QFontMetrics::maxWidth();
@@ -720,7 +720,7 @@ func (this *QFontMetrics) swap(args ...interface{}) () {
     // invoke: void swap(class QFontMetrics &)
     var arg0 = args[0].(QFontMetrics).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QFontMetrics4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN12QFontMetrics4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontMetrics", "swap", args)
   }
@@ -1034,7 +1034,7 @@ func (this *QFontMetricsF) swap(args ...interface{}) () {
     // invoke: void swap(class QFontMetricsF &)
     var arg0 = args[0].(QFontMetricsF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN13QFontMetricsF4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN13QFontMetricsF4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFontMetricsF", "swap", args)
   }

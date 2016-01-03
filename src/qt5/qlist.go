@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -35,15 +35,15 @@ import "qtrt"
   // proto:  void ** QListData::prepend();
 extern void _ZN9QListData7prependEv(void* qthis);
   // proto:  void QListData::realloc(int alloc);
-extern void _ZN9QListData7reallocEi(void* qthis, int arg0);
+extern void _ZN9QListData7reallocEi(void* qthis, int32_t arg0);
   // proto:  void ** QListData::end();
 extern void demth_ZNK9QListData3endEv(void* qthis);
   // proto:  void QListData::remove(int i, int n);
-extern void _ZN9QListData6removeEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QListData6removeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void ** QListData::append(const QListData & l);
 extern void _ZN9QListData6appendERKS_(void* qthis, void* arg0);
   // proto:  void QListData::remove(int i);
-extern void _ZN9QListData6removeEi(void* qthis, int arg0);
+extern void _ZN9QListData6removeEi(void* qthis, int32_t arg0);
   // proto:  void ** QListData::append();
 extern void _ZN9QListData6appendEv(void* qthis);
   // proto:  void QListData::dispose();
@@ -53,17 +53,17 @@ extern void demth_ZNK9QListData4sizeEv(void* qthis);
   // proto:  bool QListData::isEmpty();
 extern void demth_ZNK9QListData7isEmptyEv(void* qthis);
   // proto:  void ** QListData::at(int i);
-extern void demth_ZNK9QListData2atEi(void* qthis, int arg0);
+extern void demth_ZNK9QListData2atEi(void* qthis, int32_t arg0);
   // proto:  void ** QListData::erase(void ** xi);
 extern void _ZN9QListData5eraseEPPv(void* qthis, void* arg0);
   // proto:  void ** QListData::append(int n);
-extern void _ZN9QListData6appendEi(void* qthis, int arg0);
+extern void _ZN9QListData6appendEi(void* qthis, int32_t arg0);
   // proto:  void QListData::move(int from, int to);
-extern void _ZN9QListData4moveEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QListData4moveEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void ** QListData::begin();
 extern void demth_ZNK9QListData5beginEv(void* qthis);
   // proto:  void ** QListData::insert(int i);
-extern void _ZN9QListData6insertEi(void* qthis, int arg0);
+extern void _ZN9QListData6insertEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QListData)=8
 type QListData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void ** QListData::prepend();

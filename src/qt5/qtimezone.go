@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtimezone.h
 // dst-file: /src/core/qtimezone.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
 extern void _ZN9QTimeZone20availableTimeZoneIdsEv();
   // proto:  void QTimeZone::swap(QTimeZone & other);
-extern void _ZN9QTimeZone4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QTimeZone4swapERS_(void* qthis, void* arg0);
   // proto:  bool QTimeZone::isValid();
 extern void _ZNK9QTimeZone7isValidEv(void* qthis);
   // proto:  bool QTimeZone::hasDaylightTime();
@@ -43,10 +43,10 @@ extern void _ZNK9QTimeZone15hasDaylightTimeEv(void* qthis);
   // proto: static QTimeZone QTimeZone::utc();
 extern void _ZN9QTimeZone3utcEv();
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds(int offsetSeconds);
-extern void _ZN9QTimeZone20availableTimeZoneIdsEi(int arg0);
+extern void _ZN9QTimeZone20availableTimeZoneIdsEi(int32_t arg0);
   // proto:  void QTimeZone::QTimeZone(int offsetSeconds);
-extern void* dector_ZN9QTimeZoneC1Ei(int arg0);
-extern void _ZN9QTimeZoneC1Ei(void* qthis, int arg0);
+extern void* dector_ZN9QTimeZoneC1Ei(int32_t arg0);
+extern void _ZN9QTimeZoneC1Ei(void* qthis, int32_t arg0);
   // proto:  QString QTimeZone::abbreviation(const QDateTime & atDateTime);
 extern void _ZNK9QTimeZone12abbreviationERK9QDateTime(void* qthis, void* arg0);
   // proto:  void QTimeZone::QTimeZone();
@@ -101,7 +101,7 @@ func init() {
 // class sizeof(QTimeZone)=1
 type QTimeZone struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static QList<QByteArray> QTimeZone::availableTimeZoneIds();
@@ -134,7 +134,7 @@ func (this *QTimeZone) swap(args ...interface{}) () {
     // invoke: void swap(class QTimeZone &)
     var arg0 = args[0].(QTimeZone).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QTimeZone4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QTimeZone4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QTimeZone", "swap", args)
   }

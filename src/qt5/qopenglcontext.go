@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglcontext.h
 // dst-file: /src/gui/qopenglcontext.go
 //
@@ -50,7 +50,7 @@ extern void _ZN21QOpenGLVersionProfileC1Ev(void* qthis);
   // proto:  QPair<int, int> QOpenGLVersionProfile::version();
 extern void _ZNK21QOpenGLVersionProfile7versionEv(void* qthis);
   // proto:  void QOpenGLVersionProfile::setVersion(int majorVersion, int minorVersion);
-extern void _ZN21QOpenGLVersionProfile10setVersionEii(void* qthis, int arg0, int arg1);
+extern void _ZN21QOpenGLVersionProfile10setVersionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QOpenGLVersionProfile::isValid();
 extern void _ZNK21QOpenGLVersionProfile7isValidEv(void* qthis);
   // proto:  bool QOpenGLContext::isValid();
@@ -144,20 +144,20 @@ func init() {
 // class sizeof(QOpenGLVersionProfile)=8
 type QOpenGLVersionProfile struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLContext)=1
 type QOpenGLContext struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToBeDestroyed QOpenGLContext_aboutToBeDestroyed_signal;
 }
 
 // class sizeof(QOpenGLContextGroup)=1
 type QOpenGLContextGroup struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QOpenGLVersionProfile::isLegacyVersion();

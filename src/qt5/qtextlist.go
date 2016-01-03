@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QTextBlock QTextList::item(int i);
-extern void _ZNK9QTextList4itemEi(void* qthis, int arg0);
+extern void _ZNK9QTextList4itemEi(void* qthis, int32_t arg0);
   // proto:  void QTextList::remove(const QTextBlock & );
 extern void _ZN9QTextList6removeERK10QTextBlock(void* qthis, void* arg0);
   // proto:  void QTextList::setFormat(const QTextListFormat & format);
@@ -49,13 +49,13 @@ extern void _ZN9QTextList3addERK10QTextBlock(void* qthis, void* arg0);
   // proto:  QString QTextList::itemText(const QTextBlock & );
 extern void _ZNK9QTextList8itemTextERK10QTextBlock(void* qthis, void* arg0);
   // proto:  void QTextList::removeItem(int i);
-extern void _ZN9QTextList10removeItemEi(void* qthis, int arg0);
+extern void _ZN9QTextList10removeItemEi(void* qthis, int32_t arg0);
   // proto:  int QTextList::itemNumber(const QTextBlock & );
 extern void _ZNK9QTextList10itemNumberERK10QTextBlock(void* qthis, void* arg0);
   // proto:  int QTextList::count();
 extern void _ZNK9QTextList5countEv(void* qthis);
   // proto:  QTextListFormat QTextList::format();
-extern void _ZNK9QTextList6formatEv(void* qthis);
+extern void demth_ZNK9QTextList6formatEv(void* qthis);
   // proto:  void QTextList::~QTextList();
 extern void _ZN9QTextListD0Ev(void* qthis);
   // proto:  bool QTextList::isEmpty();
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QTextList)=1
 type QTextList struct {
   /*qbase*/ QTextBlockGroup;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QTextBlock QTextList::item(int i);
@@ -279,7 +279,7 @@ func (this *QTextList) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList6formatEv
     // invoke: QTextListFormat format()
-    C._ZNK9QTextList6formatEv(this.qclsinst)
+    C.demth_ZNK9QTextList6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextList", "format", args)
   }

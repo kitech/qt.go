@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qstandarditemmodel.h
 // dst-file: /src/gui/qstandarditemmodel.go
 //
@@ -33,32 +33,32 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStandardItemModel::QStandardItemModel(int rows, int columns, QObject * parent);
-extern void* dector_ZN18QStandardItemModelC1EiiP7QObject(int arg0, int arg1, void* arg2);
-extern void _ZN18QStandardItemModelC1EiiP7QObject(void* qthis, int arg0, int arg1, void* arg2);
+extern void* dector_ZN18QStandardItemModelC1EiiP7QObject(int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZN18QStandardItemModelC1EiiP7QObject(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QStandardItemModel::clear();
 extern void _ZN18QStandardItemModel5clearEv(void* qthis);
   // proto:  QStandardItem * QStandardItemModel::item(int row, int column);
-extern void _ZNK18QStandardItemModel4itemEii(void* qthis, int arg0, int arg1);
+extern void _ZNK18QStandardItemModel4itemEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QStandardItemModel::insertRow(int row, const QModelIndex & parent);
-extern void demth_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void demth_ZN18QStandardItemModel9insertRowEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QStandardItemModel::setItem(int row, QStandardItem * item);
-extern void demth_ZN18QStandardItemModel7setItemEiP13QStandardItem(void* qthis, int arg0, void* arg1);
+extern void demth_ZN18QStandardItemModel7setItemEiP13QStandardItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  QModelIndex QStandardItemModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK18QStandardItemModel5indexEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK18QStandardItemModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  bool QStandardItemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN18QStandardItemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int arg2);
+extern void _ZN18QStandardItemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  int QStandardItemModel::columnCount(const QModelIndex & parent);
 extern void _ZNK18QStandardItemModel11columnCountERK11QModelIndex(void* qthis, void* arg0);
   // proto:  QStandardItem * QStandardItemModel::takeItem(int row, int column);
-extern void _ZN18QStandardItemModel8takeItemEii(void* qthis, int arg0, int arg1);
+extern void _ZN18QStandardItemModel8takeItemEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStandardItemModel::setRowCount(int rows);
-extern void _ZN18QStandardItemModel11setRowCountEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel11setRowCountEi(void* qthis, int32_t arg0);
   // proto:  QStandardItem * QStandardItemModel::itemFromIndex(const QModelIndex & index);
 extern void _ZNK18QStandardItemModel13itemFromIndexERK11QModelIndex(void* qthis, void* arg0);
   // proto:  bool QStandardItemModel::insertColumn(int column, const QModelIndex & parent);
-extern void demth_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void demth_ZN18QStandardItemModel12insertColumnEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QStandardItemModel::setVerticalHeaderItem(int row, QStandardItem * item);
-extern void _ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem(void* qthis, int arg0, void* arg1);
+extern void _ZN18QStandardItemModel21setVerticalHeaderItemEiP13QStandardItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QStandardItemModel::QStandardItemModel(const QStandardItemModel & );
 extern void* dector_ZN18QStandardItemModelC1ERKS_(void* arg0);
 extern void _ZN18QStandardItemModelC1ERKS_(void* qthis, void* arg0);
@@ -66,17 +66,17 @@ extern void _ZN18QStandardItemModelC1ERKS_(void* qthis, void* arg0);
 extern void* dector_ZN18QStandardItemModelC1EP7QObject(void* arg0);
 extern void _ZN18QStandardItemModelC1EP7QObject(void* qthis, void* arg0);
   // proto:  QList<QStandardItem *> QStandardItemModel::takeColumn(int column);
-extern void _ZN18QStandardItemModel10takeColumnEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel10takeColumnEi(void* qthis, int32_t arg0);
   // proto:  QStandardItem * QStandardItemModel::takeVerticalHeaderItem(int row);
-extern void _ZN18QStandardItemModel22takeVerticalHeaderItemEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel22takeVerticalHeaderItemEi(void* qthis, int32_t arg0);
   // proto:  bool QStandardItemModel::insertColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN18QStandardItemModel13insertColumnsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN18QStandardItemModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  const QMetaObject * QStandardItemModel::metaObject();
 extern void _ZNK18QStandardItemModel10metaObjectEv(void* qthis);
   // proto:  bool QStandardItemModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void _ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN18QStandardItemModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QStandardItemModel::insertRow(int row, QStandardItem * item);
-extern void demth_ZN18QStandardItemModel9insertRowEiP13QStandardItem(void* qthis, int arg0, void* arg1);
+extern void demth_ZN18QStandardItemModel9insertRowEiP13QStandardItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  QStandardItem * QStandardItemModel::invisibleRootItem();
 extern void _ZNK18QStandardItemModel17invisibleRootItemEv(void* qthis);
   // proto:  void QStandardItemModel::setItemPrototype(const QStandardItem * item);
@@ -86,55 +86,55 @@ extern void _ZN18QStandardItemModel25setHorizontalHeaderLabelsERK11QStringList(v
   // proto:  QModelIndex QStandardItemModel::parent(const QModelIndex & child);
 extern void _ZNK18QStandardItemModel6parentERK11QModelIndex(void* qthis, void* arg0);
   // proto:  bool QStandardItemModel::removeColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN18QStandardItemModel13removeColumnsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN18QStandardItemModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QModelIndex QStandardItemModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK18QStandardItemModel7siblingEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK18QStandardItemModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  int QStandardItemModel::sortRole();
 extern void _ZNK18QStandardItemModel8sortRoleEv(void* qthis);
   // proto:  QStandardItem * QStandardItemModel::takeHorizontalHeaderItem(int column);
-extern void _ZN18QStandardItemModel24takeHorizontalHeaderItemEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel24takeHorizontalHeaderItemEi(void* qthis, int32_t arg0);
   // proto:  QModelIndex QStandardItemModel::indexFromItem(const QStandardItem * item);
 extern void _ZNK18QStandardItemModel13indexFromItemEPK13QStandardItem(void* qthis, void* arg0);
   // proto:  const QStandardItem * QStandardItemModel::itemPrototype();
 extern void _ZNK18QStandardItemModel13itemPrototypeEv(void* qthis);
   // proto:  void QStandardItemModel::setHorizontalHeaderItem(int column, QStandardItem * item);
-extern void _ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem(void* qthis, int arg0, void* arg1);
+extern void _ZN18QStandardItemModel23setHorizontalHeaderItemEiP13QStandardItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  QStandardItem * QStandardItemModel::horizontalHeaderItem(int column);
-extern void _ZNK18QStandardItemModel20horizontalHeaderItemEi(void* qthis, int arg0);
+extern void _ZNK18QStandardItemModel20horizontalHeaderItemEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItemModel::appendRow(QStandardItem * item);
 extern void demth_ZN18QStandardItemModel9appendRowEP13QStandardItem(void* qthis, void* arg0);
   // proto:  QMap<int, QVariant> QStandardItemModel::itemData(const QModelIndex & index);
 extern void _ZNK18QStandardItemModel8itemDataERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QStandardItemModel::setSortRole(int role);
-extern void _ZN18QStandardItemModel11setSortRoleEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel11setSortRoleEi(void* qthis, int32_t arg0);
   // proto:  bool QStandardItemModel::hasChildren(const QModelIndex & parent);
 extern void _ZNK18QStandardItemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QStandardItemModel::~QStandardItemModel();
 extern void _ZN18QStandardItemModelD0Ev(void* qthis);
   // proto:  QVariant QStandardItemModel::data(const QModelIndex & index, int role);
-extern void _ZNK18QStandardItemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int arg1);
+extern void _ZNK18QStandardItemModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QList<QStandardItem *> QStandardItemModel::takeRow(int row);
-extern void _ZN18QStandardItemModel7takeRowEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel7takeRowEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItemModel::setColumnCount(int columns);
-extern void _ZN18QStandardItemModel14setColumnCountEi(void* qthis, int arg0);
+extern void _ZN18QStandardItemModel14setColumnCountEi(void* qthis, int32_t arg0);
   // proto:  QStandardItem * QStandardItemModel::verticalHeaderItem(int row);
-extern void _ZNK18QStandardItemModel18verticalHeaderItemEi(void* qthis, int arg0);
+extern void _ZNK18QStandardItemModel18verticalHeaderItemEi(void* qthis, int32_t arg0);
   // proto:  bool QStandardItemModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void _ZN18QStandardItemModel10removeRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN18QStandardItemModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QStandardItemModel::setVerticalHeaderLabels(const QStringList & labels);
 extern void _ZN18QStandardItemModel23setVerticalHeaderLabelsERK11QStringList(void* qthis, void* arg0);
   // proto:  void QStandardItemModel::setItem(int row, int column, QStandardItem * item);
-extern void _ZN18QStandardItemModel7setItemEiiP13QStandardItem(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN18QStandardItemModel7setItemEiiP13QStandardItem(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QStringList QStandardItemModel::mimeTypes();
 extern void _ZNK18QStandardItemModel9mimeTypesEv(void* qthis);
   // proto:  int QStandardItemModel::rowCount(const QModelIndex & parent);
 extern void _ZNK18QStandardItemModel8rowCountERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QStandardItem::setChild(int row, QStandardItem * item);
-extern void demth_ZN13QStandardItem8setChildEiPS_(void* qthis, int arg0, void* arg1);
+extern void demth_ZN13QStandardItem8setChildEiPS_(void* qthis, int32_t arg0, void* arg1);
   // proto:  QStandardItemModel * QStandardItem::model();
 extern void _ZNK13QStandardItem5modelEv(void* qthis);
   // proto:  void QStandardItem::insertColumns(int column, int count);
-extern void _ZN13QStandardItem13insertColumnsEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QStandardItem13insertColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStandardItem::setSelectable(bool selectable);
 extern void _ZN13QStandardItem13setSelectableEb(void* qthis, bool arg0);
   // proto:  int QStandardItem::column();
@@ -142,7 +142,7 @@ extern void _ZNK13QStandardItem6columnEv(void* qthis);
   // proto:  QString QStandardItem::whatsThis();
 extern void demth_ZNK13QStandardItem9whatsThisEv(void* qthis);
   // proto:  QList<QStandardItem *> QStandardItem::takeColumn(int column);
-extern void _ZN13QStandardItem10takeColumnEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem10takeColumnEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItem::setForeground(const QBrush & brush);
 extern void demth_ZN13QStandardItem13setForegroundERK6QBrush(void* qthis, void* arg0);
   // proto:  bool QStandardItem::isEditable();
@@ -152,11 +152,11 @@ extern void demth_ZNK13QStandardItem4iconEv(void* qthis);
   // proto:  void QStandardItem::setWhatsThis(const QString & whatsThis);
 extern void demth_ZN13QStandardItem12setWhatsThisERK7QString(void* qthis, void* arg0);
   // proto:  QStandardItem * QStandardItem::takeChild(int row, int column);
-extern void _ZN13QStandardItem9takeChildEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QStandardItem9takeChildEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QStandardItem::type();
 extern void _ZNK13QStandardItem4typeEv(void* qthis);
   // proto:  QList<QStandardItem *> QStandardItem::takeRow(int row);
-extern void _ZN13QStandardItem7takeRowEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem7takeRowEi(void* qthis, int32_t arg0);
   // proto:  int QStandardItem::row();
 extern void _ZNK13QStandardItem3rowEv(void* qthis);
   // proto:  bool QStandardItem::isCheckable();
@@ -164,7 +164,7 @@ extern void demth_ZNK13QStandardItem11isCheckableEv(void* qthis);
   // proto:  QString QStandardItem::text();
 extern void demth_ZNK13QStandardItem4textEv(void* qthis);
   // proto:  void QStandardItem::insertRows(int row, int count);
-extern void _ZN13QStandardItem10insertRowsEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QStandardItem10insertRowsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QStandardItem::isDropEnabled();
 extern void demth_ZNK13QStandardItem13isDropEnabledEv(void* qthis);
   // proto:  bool QStandardItem::hasChildren();
@@ -176,7 +176,7 @@ extern void demth_ZN13QStandardItem12setStatusTipERK7QString(void* qthis, void* 
   // proto:  void QStandardItem::appendRow(QStandardItem * item);
 extern void demth_ZN13QStandardItem9appendRowEPS_(void* qthis, void* arg0);
   // proto:  void QStandardItem::setChild(int row, int column, QStandardItem * item);
-extern void _ZN13QStandardItem8setChildEiiPS_(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN13QStandardItem8setChildEiiPS_(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QModelIndex QStandardItem::index();
 extern void _ZNK13QStandardItem5indexEv(void* qthis);
   // proto:  void QStandardItem::setIcon(const QIcon & icon);
@@ -184,22 +184,22 @@ extern void demth_ZN13QStandardItem7setIconERK5QIcon(void* qthis, void* arg0);
   // proto:  void QStandardItem::setToolTip(const QString & toolTip);
 extern void demth_ZN13QStandardItem10setToolTipERK7QString(void* qthis, void* arg0);
   // proto:  void QStandardItem::setData(const QVariant & value, int role);
-extern void _ZN13QStandardItem7setDataERK8QVarianti(void* qthis, void* arg0, int arg1);
+extern void _ZN13QStandardItem7setDataERK8QVarianti(void* qthis, void* arg0, int32_t arg1);
   // proto:  QBrush QStandardItem::background();
 extern void demth_ZNK13QStandardItem10backgroundEv(void* qthis);
   // proto:  QVariant QStandardItem::data(int role);
-extern void _ZNK13QStandardItem4dataEi(void* qthis, int arg0);
+extern void _ZNK13QStandardItem4dataEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItem::QStandardItem(const QStandardItem & other);
 extern void* dector_ZN13QStandardItemC1ERKS_(void* arg0);
 extern void _ZN13QStandardItemC1ERKS_(void* qthis, void* arg0);
   // proto:  QStandardItem * QStandardItem::child(int row, int column);
-extern void _ZNK13QStandardItem5childEii(void* qthis, int arg0, int arg1);
+extern void _ZNK13QStandardItem5childEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QStandardItem::isSelectable();
 extern void demth_ZNK13QStandardItem12isSelectableEv(void* qthis);
   // proto:  QString QStandardItem::toolTip();
 extern void demth_ZNK13QStandardItem7toolTipEv(void* qthis);
   // proto:  void QStandardItem::setRowCount(int rows);
-extern void _ZN13QStandardItem11setRowCountEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem11setRowCountEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItem::QStandardItem(const QString & text);
 extern void* dector_ZN13QStandardItemC1ERK7QString(void* arg0);
 extern void _ZN13QStandardItemC1ERK7QString(void* qthis, void* arg0);
@@ -212,9 +212,9 @@ extern void demth_ZN13QStandardItem17setAccessibleTextERK7QString(void* qthis, v
   // proto:  int QStandardItem::rowCount();
 extern void _ZNK13QStandardItem8rowCountEv(void* qthis);
   // proto:  void QStandardItem::removeColumn(int column);
-extern void _ZN13QStandardItem12removeColumnEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem12removeColumnEi(void* qthis, int32_t arg0);
   // proto:  void QStandardItem::removeRow(int row);
-extern void _ZN13QStandardItem9removeRowEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem9removeRowEi(void* qthis, int32_t arg0);
   // proto:  int QStandardItem::columnCount();
 extern void _ZNK13QStandardItem11columnCountEv(void* qthis);
   // proto:  bool QStandardItem::isTristate();
@@ -222,14 +222,14 @@ extern void demth_ZNK13QStandardItem10isTristateEv(void* qthis);
   // proto:  QStandardItem * QStandardItem::parent();
 extern void _ZNK13QStandardItem6parentEv(void* qthis);
   // proto:  void QStandardItem::insertRow(int row, QStandardItem * item);
-extern void demth_ZN13QStandardItem9insertRowEiPS_(void* qthis, int arg0, void* arg1);
+extern void demth_ZN13QStandardItem9insertRowEiPS_(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QStandardItem::QStandardItem(const QIcon & icon, const QString & text);
 extern void* dector_ZN13QStandardItemC1ERK5QIconRK7QString(void* arg0, void* arg1);
 extern void _ZN13QStandardItemC1ERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  void QStandardItem::setFont(const QFont & font);
 extern void demth_ZN13QStandardItem7setFontERK5QFont(void* qthis, void* arg0);
   // proto:  void QStandardItem::removeColumns(int column, int count);
-extern void _ZN13QStandardItem13removeColumnsEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QStandardItem13removeColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QStandardItem::~QStandardItem();
 extern void _ZN13QStandardItemD0Ev(void* qthis);
   // proto:  void QStandardItem::QStandardItem();
@@ -242,14 +242,14 @@ extern void _ZN13QStandardItem11setEditableEb(void* qthis, bool arg0);
   // proto:  void QStandardItem::setText(const QString & text);
 extern void demth_ZN13QStandardItem7setTextERK7QString(void* qthis, void* arg0);
   // proto:  void QStandardItem::QStandardItem(int rows, int columns);
-extern void* dector_ZN13QStandardItemC1Eii(int arg0, int arg1);
-extern void _ZN13QStandardItemC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN13QStandardItemC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN13QStandardItemC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QStandardItem::isEnabled();
 extern void demth_ZNK13QStandardItem9isEnabledEv(void* qthis);
   // proto:  void QStandardItem::setDropEnabled(bool dropEnabled);
 extern void _ZN13QStandardItem14setDropEnabledEb(void* qthis, bool arg0);
   // proto:  void QStandardItem::setColumnCount(int columns);
-extern void _ZN13QStandardItem14setColumnCountEi(void* qthis, int arg0);
+extern void _ZN13QStandardItem14setColumnCountEi(void* qthis, int32_t arg0);
   // proto:  QString QStandardItem::accessibleText();
 extern void demth_ZNK13QStandardItem14accessibleTextEv(void* qthis);
   // proto:  void QStandardItem::read(QDataStream & in);
@@ -263,7 +263,7 @@ extern void demth_ZNK13QStandardItem10foregroundEv(void* qthis);
   // proto:  QStandardItem * QStandardItem::clone();
 extern void _ZNK13QStandardItem5cloneEv(void* qthis);
   // proto:  void QStandardItem::removeRows(int row, int count);
-extern void _ZN13QStandardItem10removeRowsEii(void* qthis, int arg0, int arg1);
+extern void _ZN13QStandardItem10removeRowsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QSize QStandardItem::sizeHint();
 extern void demth_ZNK13QStandardItem8sizeHintEv(void* qthis);
   // proto:  void QStandardItem::setEnabled(bool enabled);
@@ -293,14 +293,14 @@ func init() {
 // class sizeof(QStandardItemModel)=1
 type QStandardItemModel struct {
   /*qbase*/ QAbstractItemModel;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _itemChanged QStandardItemModel_itemChanged_signal;
 }
 
 // class sizeof(QStandardItem)=1
 type QStandardItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStandardItemModel::QStandardItemModel(int rows, int columns, QObject * parent);
@@ -1452,7 +1452,7 @@ func (this *QStandardItem) setSelectable(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem13setSelectableEb
     // invoke: void setSelectable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem13setSelectableEb(this.qclsinst, arg0)
   default:
@@ -2420,7 +2420,7 @@ func (this *QStandardItem) setEditable(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem11setEditableEb
     // invoke: void setEditable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem11setEditableEb(this.qclsinst, arg0)
   default:
@@ -2486,7 +2486,7 @@ func (this *QStandardItem) setDropEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem14setDropEnabledEb
     // invoke: void setDropEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem14setDropEnabledEb(this.qclsinst, arg0)
   default:
@@ -2575,7 +2575,7 @@ func (this *QStandardItem) setCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem12setCheckableEb
     // invoke: void setCheckable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem12setCheckableEb(this.qclsinst, arg0)
   default:
@@ -2598,7 +2598,7 @@ func (this *QStandardItem) setDragEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem14setDragEnabledEb
     // invoke: void setDragEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem14setDragEnabledEb(this.qclsinst, arg0)
   default:
@@ -2707,7 +2707,7 @@ func (this *QStandardItem) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem10setEnabledEb(this.qclsinst, arg0)
   default:
@@ -2819,7 +2819,7 @@ func (this *QStandardItem) setTristate(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QStandardItem11setTristateEb
     // invoke: void setTristate(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QStandardItem11setTristateEb(this.qclsinst, arg0)
   default:

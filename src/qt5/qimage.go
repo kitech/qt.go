@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qimage.h
 // dst-file: /src/gui/qimage.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  QImage QImage::copy(const QRect & rect);
 extern void _ZNK6QImage4copyERK5QRect(void* qthis, void* arg0);
   // proto: static QTransform QImage::trueMatrix(const QTransform & , int w, int h);
-extern void _ZN6QImage10trueMatrixERK10QTransformii(void* arg0, int arg1, int arg2);
+extern void _ZN6QImage10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  uchar * QImage::bits();
 extern void _ZN6QImage4bitsEv(void* qthis);
   // proto:  void QImage::setAlphaChannel(const QImage & alphaChannel);
@@ -52,19 +52,19 @@ extern void _ZNK6QImage19createHeuristicMaskEb(void* qthis, bool arg0);
   // proto:  const uchar * QImage::constBits();
 extern void _ZNK6QImage9constBitsEv(void* qthis);
   // proto: static QImage QImage::fromData(const QByteArray & data, const char * format);
-extern void demth_ZN6QImage8fromDataERK10QByteArrayPKc(void* arg0, char* arg1);
+extern void demth_ZN6QImage8fromDataERK10QByteArrayPKc(void* arg0, unsigned char* arg1);
   // proto: static QImage QImage::fromData(const uchar * data, int size, const char * format);
-extern void _ZN6QImage8fromDataEPKhiPKc(unsigned char* arg0, int arg1, char* arg2);
+extern void _ZN6QImage8fromDataEPKhiPKc(unsigned char* arg0, int32_t arg1, unsigned char* arg2);
   // proto:  bool QImage::isDetached();
 extern void _ZNK6QImage10isDetachedEv(void* qthis);
   // proto:  void QImage::setOffset(const QPoint & );
 extern void _ZN6QImage9setOffsetERK6QPoint(void* qthis, void* arg0);
   // proto: static QMatrix QImage::trueMatrix(const QMatrix & , int w, int h);
-extern void _ZN6QImage10trueMatrixERK7QMatrixii(void* arg0, int arg1, int arg2);
+extern void _ZN6QImage10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QImage::isGrayscale();
 extern void _ZNK6QImage11isGrayscaleEv(void* qthis);
   // proto:  bool QImage::save(QIODevice * device, const char * format, int quality);
-extern void _ZNK6QImage4saveEP9QIODevicePKci(void* qthis, void* arg0, char* arg1, int arg2);
+extern void _ZNK6QImage4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2);
   // proto:  int QImage::depth();
 extern void _ZNK6QImage5depthEv(void* qthis);
   // proto:  QImage QImage::alphaChannel();
@@ -72,41 +72,41 @@ extern void _ZNK6QImage12alphaChannelEv(void* qthis);
   // proto:  bool QImage::hasAlphaChannel();
 extern void _ZNK6QImage15hasAlphaChannelEv(void* qthis);
   // proto:  bool QImage::loadFromData(const uchar * buf, int len, const char * format);
-extern void _ZN6QImage12loadFromDataEPKhiPKc(void* qthis, unsigned char* arg0, int arg1, char* arg2);
+extern void _ZN6QImage12loadFromDataEPKhiPKc(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2);
   // proto:  int QImage::colorCount();
 extern void _ZNK6QImage10colorCountEv(void* qthis);
   // proto:  bool QImage::allGray();
 extern void _ZNK6QImage7allGrayEv(void* qthis);
   // proto:  void QImage::setColorCount(int );
-extern void _ZN6QImage13setColorCountEi(void* qthis, int arg0);
+extern void _ZN6QImage13setColorCountEi(void* qthis, int32_t arg0);
   // proto:  QRgb QImage::pixel(const QPoint & pt);
 extern void demth_ZNK6QImage5pixelERK6QPoint(void* qthis, void* arg0);
   // proto:  void QImage::setDevicePixelRatio(qreal scaleFactor);
 extern void _ZN6QImage19setDevicePixelRatioEd(void* qthis, double arg0);
   // proto:  QImage QImage::copy(int x, int y, int w, int h);
-extern void demth_ZNK6QImage4copyEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZNK6QImage4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QImage::setText(const QString & key, const QString & value);
 extern void _ZN6QImage7setTextERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto:  QRgb QImage::color(int i);
-extern void _ZNK6QImage5colorEi(void* qthis, int arg0);
+extern void _ZNK6QImage5colorEi(void* qthis, int32_t arg0);
   // proto:  void QImage::setPixel(const QPoint & pt, uint index_or_rgb);
-extern void demth_ZN6QImage8setPixelERK6QPointj(void* qthis, void* arg0, unsigned int arg1);
+extern void demth_ZN6QImage8setPixelERK6QPointj(void* qthis, void* arg0, int32_t arg1);
   // proto:  QPoint QImage::offset();
 extern void _ZNK6QImage6offsetEv(void* qthis);
   // proto:  const uchar * QImage::constScanLine(int );
-extern void _ZNK6QImage13constScanLineEi(void* qthis, int arg0);
+extern void _ZNK6QImage13constScanLineEi(void* qthis, int32_t arg0);
   // proto:  QStringList QImage::textKeys();
 extern void _ZNK6QImage8textKeysEv(void* qthis);
   // proto:  int QImage::dotsPerMeterY();
 extern void _ZNK6QImage13dotsPerMeterYEv(void* qthis);
   // proto:  void QImage::fill(uint pixel);
-extern void _ZN6QImage4fillEj(void* qthis, unsigned int arg0);
+extern void _ZN6QImage4fillEj(void* qthis, int32_t arg0);
   // proto:  QPixelFormat QImage::pixelFormat();
 extern void _ZNK6QImage11pixelFormatEv(void* qthis);
   // proto:  int QImage::dotsPerMeterX();
 extern void _ZNK6QImage13dotsPerMeterXEv(void* qthis);
   // proto:  void QImage::setDotsPerMeterY(int );
-extern void _ZN6QImage16setDotsPerMeterYEi(void* qthis, int arg0);
+extern void _ZN6QImage16setDotsPerMeterYEi(void* qthis, int32_t arg0);
   // proto:  int QImage::bitPlaneCount();
 extern void _ZNK6QImage13bitPlaneCountEv(void* qthis);
   // proto:  void QImage::fill(const QColor & color);
@@ -114,10 +114,10 @@ extern void _ZN6QImage4fillERK6QColor(void* qthis, void* arg0);
   // proto:  void QImage::detach();
 extern void _ZN6QImage6detachEv(void* qthis);
   // proto:  bool QImage::loadFromData(const QByteArray & data, const char * aformat);
-extern void demth_ZN6QImage12loadFromDataERK10QByteArrayPKc(void* qthis, void* arg0, char* arg1);
+extern void demth_ZN6QImage12loadFromDataERK10QByteArrayPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QImage::QImage(const QString & fileName, const char * format);
-extern void* dector_ZN6QImageC1ERK7QStringPKc(void* arg0, char* arg1);
-extern void _ZN6QImageC1ERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void* dector_ZN6QImageC1ERK7QStringPKc(void* arg0, unsigned char* arg1);
+extern void _ZN6QImageC1ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QPaintEngine * QImage::paintEngine();
 extern void _ZNK6QImage11paintEngineEv(void* qthis);
   // proto:  void QImage::QImage(const QImage & );
@@ -134,11 +134,11 @@ extern void demth_ZNK6QImage5validERK6QPoint(void* qthis, void* arg0);
   // proto:  int QImage::pixelIndex(const QPoint & pt);
 extern void demth_ZNK6QImage10pixelIndexERK6QPoint(void* qthis, void* arg0);
   // proto:  void QImage::setDotsPerMeterX(int );
-extern void _ZN6QImage16setDotsPerMeterXEi(void* qthis, int arg0);
+extern void _ZN6QImage16setDotsPerMeterXEi(void* qthis, int32_t arg0);
   // proto:  void QImage::setPixel(int x, int y, uint index_or_rgb);
-extern void _ZN6QImage8setPixelEiij(void* qthis, int arg0, int arg1, unsigned int arg2);
+extern void _ZN6QImage8setPixelEiij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QImage::load(const QString & fileName, const char * format);
-extern void _ZN6QImage4loadERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN6QImage4loadERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QVector<QRgb> QImage::colorTable();
 extern void _ZNK6QImage10colorTableEv(void* qthis);
   // proto:  QSize QImage::size();
@@ -146,34 +146,34 @@ extern void _ZNK6QImage4sizeEv(void* qthis);
   // proto:  int QImage::height();
 extern void _ZNK6QImage6heightEv(void* qthis);
   // proto:  int QImage::pixelIndex(int x, int y);
-extern void _ZNK6QImage10pixelIndexEii(void* qthis, int arg0, int arg1);
+extern void _ZNK6QImage10pixelIndexEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QImage::width();
 extern void _ZNK6QImage5widthEv(void* qthis);
   // proto:  bool QImage::load(QIODevice * device, const char * format);
-extern void _ZN6QImage4loadEP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN6QImage4loadEP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QImage::QImage();
 extern void* dector_ZN6QImageC1Ev();
 extern void _ZN6QImageC1Ev(void* qthis);
   // proto:  uchar * QImage::scanLine(int );
-extern void _ZN6QImage8scanLineEi(void* qthis, int arg0);
+extern void _ZN6QImage8scanLineEi(void* qthis, int32_t arg0);
   // proto:  int QImage::bytesPerLine();
 extern void _ZNK6QImage12bytesPerLineEv(void* qthis);
   // proto:  qint64 QImage::cacheKey();
 extern void _ZNK6QImage8cacheKeyEv(void* qthis);
   // proto:  QRgb QImage::pixel(int x, int y);
-extern void _ZNK6QImage5pixelEii(void* qthis, int arg0, int arg1);
+extern void _ZNK6QImage5pixelEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QImage::~QImage();
 extern void _ZN6QImageD0Ev(void* qthis);
   // proto:  bool QImage::save(const QString & fileName, const char * format, int quality);
-extern void _ZNK6QImage4saveERK7QStringPKci(void* qthis, void* arg0, char* arg1, int arg2);
+extern void _ZNK6QImage4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2);
   // proto:  void QImage::setColor(int i, QRgb c);
-extern void _ZN6QImage8setColorEij(void* qthis, int arg0, unsigned int arg1);
+extern void _ZN6QImage8setColorEij(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QImage::isNull();
 extern void _ZNK6QImage6isNullEv(void* qthis);
   // proto:  int QImage::byteCount();
 extern void _ZNK6QImage9byteCountEv(void* qthis);
   // proto:  bool QImage::valid(int x, int y);
-extern void _ZNK6QImage5validEii(void* qthis, int arg0, int arg1);
+extern void _ZNK6QImage5validEii(void* qthis, int32_t arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -189,7 +189,7 @@ func init() {
 // class sizeof(QImage)=32
 type QImage struct {
   /*qbase*/ QPaintDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QImage QImage::copy(const QRect & rect);
@@ -354,7 +354,7 @@ func (this *QImage) createHeuristicMask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QImage19createHeuristicMaskEb
     // invoke: QImage createHeuristicMask(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZNK6QImage19createHeuristicMaskEb(this.qclsinst, arg0)
   default:
@@ -483,7 +483,7 @@ func (this *QImage) save(args ...interface{}) () {
     // invoke: bool save(class QIODevice *, const char *, int)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
@@ -493,7 +493,7 @@ func (this *QImage) save(args ...interface{}) () {
     // invoke: bool save(const class QString &, const char *, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
@@ -584,11 +584,11 @@ func (this *QImage) loadFromData(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QImage12loadFromDataEPKhiPKc
     // invoke: bool loadFromData(const uchar *, int, const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN6QImage12loadFromDataEPKhiPKc(this.qclsinst, arg0, arg1, arg2)
   case 1:
@@ -596,7 +596,7 @@ func (this *QImage) loadFromData(args ...interface{}) () {
     // invoke: bool loadFromData(const class QByteArray &, const char *)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C.demth_ZN6QImage12loadFromDataERK10QByteArrayPKc(this.qclsinst, arg0, arg1)
   default:
@@ -1234,7 +1234,7 @@ func (this *QImage) load(args ...interface{}) () {
     // invoke: bool load(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN6QImage4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
   case 1:
@@ -1242,7 +1242,7 @@ func (this *QImage) load(args ...interface{}) () {
     // invoke: bool load(class QIODevice *, const char *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN6QImage4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
   default:

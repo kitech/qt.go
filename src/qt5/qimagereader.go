@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qimagereader.h
 // dst-file: /src/gui/qimagereader.go
 //
@@ -87,7 +87,7 @@ extern void _ZN12QImageReader4readEv(void* qthis);
   // proto:  bool QImageReader::supportsAnimation();
 extern void _ZNK12QImageReader17supportsAnimationEv(void* qthis);
   // proto:  bool QImageReader::jumpToImage(int imageNumber);
-extern void _ZN12QImageReader11jumpToImageEi(void* qthis, int arg0);
+extern void _ZN12QImageReader11jumpToImageEi(void* qthis, int32_t arg0);
   // proto:  void QImageReader::setFileName(const QString & fileName);
 extern void _ZN12QImageReader11setFileNameERK7QString(void* qthis, void* arg0);
   // proto:  void QImageReader::QImageReader(const QImageReader & );
@@ -115,7 +115,7 @@ extern void _ZN12QImageReader9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  void QImageReader::setBackgroundColor(const QColor & color);
 extern void _ZN12QImageReader18setBackgroundColorERK6QColor(void* qthis, void* arg0);
   // proto:  void QImageReader::setQuality(int quality);
-extern void _ZN12QImageReader10setQualityEi(void* qthis, int arg0);
+extern void _ZN12QImageReader10setQualityEi(void* qthis, int32_t arg0);
   // proto:  void QImageReader::QImageReader(QIODevice * device, const QByteArray & format);
 extern void* dector_ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(void* arg0, void* arg1);
 extern void _ZN12QImageReaderC1EP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1);
@@ -147,7 +147,7 @@ func init() {
 // class sizeof(QImageReader)=8
 type QImageReader struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QString QImageReader::errorString();
@@ -561,7 +561,7 @@ func (this *QImageReader) setDecideFormatFromContent(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReader26setDecideFormatFromContentEb
     // invoke: void setDecideFormatFromContent(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QImageReader26setDecideFormatFromContentEb(this.qclsinst, arg0)
   default:
@@ -752,7 +752,7 @@ func (this *QImageReader) setAutoTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReader16setAutoTransformEb
     // invoke: void setAutoTransform(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QImageReader16setAutoTransformEb(this.qclsinst, arg0)
   default:
@@ -927,7 +927,7 @@ func (this *QImageReader) setAutoDetectImageFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QImageReader24setAutoDetectImageFormatEb
     // invoke: void setAutoDetectImageFormat(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QImageReader24setAutoDetectImageFormatEb(this.qclsinst, arg0)
   default:

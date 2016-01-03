@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.go
 //
@@ -157,7 +157,7 @@ func init() {
 // class sizeof(QGraphicsColorizeEffect)=1
 type QGraphicsColorizeEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _strengthChanged QGraphicsColorizeEffect_strengthChanged_signal;
 //  _colorChanged QGraphicsColorizeEffect_colorChanged_signal;
 }
@@ -165,14 +165,14 @@ type QGraphicsColorizeEffect struct {
 // class sizeof(QGraphicsEffect)=1
 type QGraphicsEffect struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _enabledChanged QGraphicsEffect_enabledChanged_signal;
 }
 
 // class sizeof(QGraphicsDropShadowEffect)=1
 type QGraphicsDropShadowEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _colorChanged QGraphicsDropShadowEffect_colorChanged_signal;
 //  _offsetChanged QGraphicsDropShadowEffect_offsetChanged_signal;
 //  _blurRadiusChanged QGraphicsDropShadowEffect_blurRadiusChanged_signal;
@@ -181,7 +181,7 @@ type QGraphicsDropShadowEffect struct {
 // class sizeof(QGraphicsOpacityEffect)=1
 type QGraphicsOpacityEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _opacityMaskChanged QGraphicsOpacityEffect_opacityMaskChanged_signal;
 //  _opacityChanged QGraphicsOpacityEffect_opacityChanged_signal;
 }
@@ -189,7 +189,7 @@ type QGraphicsOpacityEffect struct {
 // class sizeof(QGraphicsBlurEffect)=1
 type QGraphicsBlurEffect struct {
   /*qbase*/ QGraphicsEffect;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _blurHintsChanged QGraphicsBlurEffect_blurHintsChanged_signal;
 //  _blurRadiusChanged QGraphicsBlurEffect_blurRadiusChanged_signal;
 }
@@ -396,7 +396,7 @@ func (this *QGraphicsEffect) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsEffect10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QGraphicsEffect10setEnabledEb(this.qclsinst, arg0)
   default:

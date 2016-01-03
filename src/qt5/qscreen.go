@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -37,7 +37,7 @@ extern void _ZNK7QScreen19logicalDotsPerInchYEv(void* qthis);
   // proto:  QRect QScreen::geometry();
 extern void _ZNK7QScreen8geometryEv(void* qthis);
   // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, uint32_t* arg0, int arg1, int arg2, int arg3, int arg4);
+extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  QSize QScreen::size();
 extern void _ZNK7QScreen4sizeEv(void* qthis);
   // proto:  QSizeF QScreen::physicalSize();
@@ -98,7 +98,7 @@ func init() {
 // class sizeof(QScreen)=1
 type QScreen struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _geometryChanged QScreen_geometryChanged_signal;
 //  _virtualGeometryChanged QScreen_virtualGeometryChanged_signal;
 //  _refreshRateChanged QScreen_refreshRateChanged_signal;

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qvector4d.h
 // dst-file: /src/gui/qvector4d.go
 //
@@ -40,9 +40,9 @@ extern void demth_ZN9QVector4D4setWEf(void* qthis, float arg0);
 extern void* dector_ZN9QVector4DC1ERK9QVector2Dff(void* arg0, float arg1, float arg2);
 extern void _ZN9QVector4DC1ERK9QVector2Dff(void* qthis, void* arg0, float arg1, float arg2);
   // proto:  QPointF QVector4D::toPointF();
-extern void _ZNK9QVector4D8toPointFEv(void* qthis);
+extern void demth_ZNK9QVector4D8toPointFEv(void* qthis);
   // proto:  float QVector4D::y();
-extern void _ZNK9QVector4D1yEv(void* qthis);
+extern void demth_ZNK9QVector4D1yEv(void* qthis);
   // proto:  QVector2D QVector4D::toVector2D();
 extern void _ZNK9QVector4D10toVector2DEv(void* qthis);
   // proto:  void QVector4D::setZ(float z);
@@ -62,7 +62,7 @@ extern void _ZN9QVector4DC1ERK9QVector3Df(void* qthis, void* arg0, float arg1);
 extern void* dector_ZN9QVector4DC1ERK7QPointF(void* arg0);
 extern void _ZN9QVector4DC1ERK7QPointF(void* qthis, void* arg0);
   // proto:  float QVector4D::z();
-extern void _ZNK9QVector4D1zEv(void* qthis);
+extern void demth_ZNK9QVector4D1zEv(void* qthis);
   // proto:  void QVector4D::QVector4D();
 extern void* dector_ZN9QVector4DC1Ev();
 extern void _ZN9QVector4DC1Ev(void* qthis);
@@ -76,7 +76,7 @@ extern void _ZN9QVector4DC1ERK6QPoint(void* qthis, void* arg0);
   // proto:  QVector3D QVector4D::toVector3D();
 extern void _ZNK9QVector4D10toVector3DEv(void* qthis);
   // proto:  float QVector4D::x();
-extern void _ZNK9QVector4D1xEv(void* qthis);
+extern void demth_ZNK9QVector4D1xEv(void* qthis);
   // proto:  QVector2D QVector4D::toVector2DAffine();
 extern void _ZNK9QVector4D16toVector2DAffineEv(void* qthis);
   // proto:  float QVector4D::length();
@@ -93,9 +93,9 @@ extern void _ZNK9QVector4D13lengthSquaredEv(void* qthis);
   // proto:  QVector3D QVector4D::toVector3DAffine();
 extern void _ZNK9QVector4D16toVector3DAffineEv(void* qthis);
   // proto:  QPoint QVector4D::toPoint();
-extern void _ZNK9QVector4D7toPointEv(void* qthis);
+extern void demth_ZNK9QVector4D7toPointEv(void* qthis);
   // proto:  float QVector4D::w();
-extern void _ZNK9QVector4D1wEv(void* qthis);
+extern void demth_ZNK9QVector4D1wEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -111,7 +111,7 @@ func init() {
 // class sizeof(QVector4D)=16
 type QVector4D struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QVector4D QVector4D::normalized();
@@ -175,7 +175,7 @@ func (this *QVector4D) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D8toPointFEv
     // invoke: QPointF toPointF()
-    C._ZNK9QVector4D8toPointFEv(this.qclsinst)
+    C.demth_ZNK9QVector4D8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toPointF", args)
   }
@@ -195,7 +195,7 @@ func (this *QVector4D) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1yEv
     // invoke: float y()
-    C._ZNK9QVector4D1yEv(this.qclsinst)
+    C.demth_ZNK9QVector4D1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "y", args)
   }
@@ -278,7 +278,7 @@ func (this *QVector4D) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1zEv
     // invoke: float z()
-    C._ZNK9QVector4D1zEv(this.qclsinst)
+    C.demth_ZNK9QVector4D1zEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "z", args)
   }
@@ -364,7 +364,7 @@ func (this *QVector4D) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1xEv
     // invoke: float x()
-    C._ZNK9QVector4D1xEv(this.qclsinst)
+    C.demth_ZNK9QVector4D1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "x", args)
   }
@@ -498,7 +498,7 @@ func (this *QVector4D) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D7toPointEv
     // invoke: QPoint toPoint()
-    C._ZNK9QVector4D7toPointEv(this.qclsinst)
+    C.demth_ZNK9QVector4D7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "toPoint", args)
   }
@@ -518,7 +518,7 @@ func (this *QVector4D) w(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector4D1wEv
     // invoke: float w()
-    C._ZNK9QVector4D1wEv(this.qclsinst)
+    C.demth_ZNK9QVector4D1wEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector4D", "w", args)
   }

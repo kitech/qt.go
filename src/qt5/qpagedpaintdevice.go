@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -49,8 +49,6 @@ extern void _ZN17QPagedPaintDeviceC1Ev(void* qthis);
 extern void _ZN17QPagedPaintDevice13setPageSizeMMERK6QSizeF(void* qthis, void* arg0);
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
 extern void _ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(void* qthis, void* arg0);
-  // proto:  bool QPagedPaintDevice::newPage();
-extern void _ZN17QPagedPaintDevice7newPageEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -66,7 +64,7 @@ func init() {
 // class sizeof(QPagedPaintDevice)=32
 type QPagedPaintDevice struct {
   /*qbase*/ QPaintDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
@@ -223,26 +221,6 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
     C._ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageLayout", args)
-  }
-
-}
-
-  // proto:  bool QPagedPaintDevice::newPage();
-func (this *QPagedPaintDevice) newPage(args ...interface{}) () {
-  // newPage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QPagedPaintDevice7newPageEv
-    // invoke: bool newPage()
-    C._ZN17QPagedPaintDevice7newPageEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPagedPaintDevice", "newPage", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -47,7 +47,7 @@ extern void _ZN13QMdiSubWindow13setSystemMenuEP5QMenu(void* qthis, void* arg0);
   // proto:  void QMdiSubWindow::~QMdiSubWindow();
 extern void _ZN13QMdiSubWindowD0Ev(void* qthis);
   // proto:  void QMdiSubWindow::setKeyboardSingleStep(int step);
-extern void _ZN13QMdiSubWindow21setKeyboardSingleStepEi(void* qthis, int arg0);
+extern void _ZN13QMdiSubWindow21setKeyboardSingleStepEi(void* qthis, int32_t arg0);
   // proto:  QWidget * QMdiSubWindow::widget();
 extern void _ZNK13QMdiSubWindow6widgetEv(void* qthis);
   // proto:  void QMdiSubWindow::showShaded();
@@ -70,7 +70,7 @@ extern void _ZNK13QMdiSubWindow8isShadedEv(void* qthis);
   // proto:  QMdiArea * QMdiSubWindow::mdiArea();
 extern void _ZNK13QMdiSubWindow7mdiAreaEv(void* qthis);
   // proto:  void QMdiSubWindow::setKeyboardPageStep(int step);
-extern void _ZN13QMdiSubWindow19setKeyboardPageStepEi(void* qthis, int arg0);
+extern void _ZN13QMdiSubWindow19setKeyboardPageStepEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -86,7 +86,7 @@ func init() {
 // class sizeof(QMdiSubWindow)=1
 type QMdiSubWindow struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToActivate QMdiSubWindow_aboutToActivate_signal;
 //  _windowStateChanged QMdiSubWindow_windowStateChanged_signal;
 }

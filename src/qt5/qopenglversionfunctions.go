@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -212,187 +212,187 @@ func init() {
 // class sizeof(QAbstractOpenGLFunctionsPrivate)=16
 type QAbstractOpenGLFunctionsPrivate struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_5_DeprecatedBackend)=1
 type QOpenGLFunctions_4_5_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_2_DeprecatedBackend)=1
 type QOpenGLFunctions_1_2_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_1_CoreBackend)=1
 type QOpenGLFunctions_4_1_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_3_CoreBackend)=1
 type QOpenGLFunctions_3_3_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_5_CoreBackend)=1
 type QOpenGLFunctions_1_5_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_5_CoreBackend)=1
 type QOpenGLFunctions_4_5_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_4_CoreBackend)=1
 type QOpenGLFunctions_4_4_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_3_CoreBackend)=1
 type QOpenGLFunctions_4_3_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_0_DeprecatedBackend)=1
 type QOpenGLFunctions_3_0_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_2_1_CoreBackend)=1
 type QOpenGLFunctions_2_1_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_0_DeprecatedBackend)=1
 type QOpenGLFunctions_1_0_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_0_CoreBackend)=1
 type QOpenGLFunctions_3_0_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_2_CoreBackend)=1
 type QOpenGLFunctions_1_2_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_1_DeprecatedBackend)=1
 type QOpenGLFunctions_1_1_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_2_CoreBackend)=1
 type QOpenGLFunctions_4_2_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_2_0_CoreBackend)=1
 type QOpenGLFunctions_2_0_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_2_CoreBackend)=1
 type QOpenGLFunctions_3_2_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLVersionFunctionsBackend)=1
 type QOpenGLVersionFunctionsBackend struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAbstractOpenGLFunctions)=16
 type QAbstractOpenGLFunctions struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_2_0_DeprecatedBackend)=1
 type QOpenGLFunctions_2_0_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_3_DeprecatedBackend)=1
 type QOpenGLFunctions_1_3_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_4_DeprecatedBackend)=1
 type QOpenGLFunctions_1_4_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_3_CoreBackend)=1
 type QOpenGLFunctions_1_3_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLVersionStatus)=1
 type QOpenGLVersionStatus struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_0_CoreBackend)=1
 type QOpenGLFunctions_1_0_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_1_CoreBackend)=1
 type QOpenGLFunctions_3_1_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_1_CoreBackend)=1
 type QOpenGLFunctions_1_1_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_1_4_CoreBackend)=1
 type QOpenGLFunctions_1_4_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_4_0_CoreBackend)=1
 type QOpenGLFunctions_4_0_CoreBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFunctions_3_3_DeprecatedBackend)=1
 type QOpenGLFunctions_3_3_DeprecatedBackend struct {
   /*qbase*/ QOpenGLVersionFunctionsBackend;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static void QAbstractOpenGLFunctionsPrivate::insertFunctionsBackend(QOpenGLContext * context, const QOpenGLVersionStatus & v, QOpenGLVersionFunctionsBackend * backend);

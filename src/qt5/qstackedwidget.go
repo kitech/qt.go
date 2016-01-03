@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.go
 //
@@ -33,20 +33,20 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStackedWidget::setCurrentIndex(int index);
-extern void _ZN14QStackedWidget15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN14QStackedWidget15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
 extern void* dector_ZN14QStackedWidgetC1EP7QWidget(void* arg0);
 extern void _ZN14QStackedWidgetC1EP7QWidget(void* qthis, void* arg0);
   // proto:  QWidget * QStackedWidget::currentWidget();
 extern void _ZNK14QStackedWidget13currentWidgetEv(void* qthis);
   // proto:  int QStackedWidget::insertWidget(int index, QWidget * w);
-extern void _ZN14QStackedWidget12insertWidgetEiP7QWidget(void* qthis, int arg0, void* arg1);
+extern void _ZN14QStackedWidget12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QStackedWidget::indexOf(QWidget * );
 extern void _ZNK14QStackedWidget7indexOfEP7QWidget(void* qthis, void* arg0);
   // proto:  void QStackedWidget::removeWidget(QWidget * w);
 extern void _ZN14QStackedWidget12removeWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  QWidget * QStackedWidget::widget(int );
-extern void _ZNK14QStackedWidget6widgetEi(void* qthis, int arg0);
+extern void _ZNK14QStackedWidget6widgetEi(void* qthis, int32_t arg0);
   // proto:  int QStackedWidget::addWidget(QWidget * w);
 extern void _ZN14QStackedWidget9addWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  int QStackedWidget::currentIndex();
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QStackedWidget)=1
 type QStackedWidget struct {
   /*qbase*/ QFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _widgetRemoved QStackedWidget_widgetRemoved_signal;
 //  _currentChanged QStackedWidget_currentChanged_signal;
 }

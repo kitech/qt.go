@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicsscene.h
 // dst-file: /src/widgets/qgraphicsscene.go
 //
@@ -73,7 +73,7 @@ extern void _ZN14QGraphicsScene13addSimpleTextERK7QStringRK5QFont(void* qthis, v
   // proto:  QGraphicsLineItem * QGraphicsScene::addLine(qreal x1, qreal y1, qreal x2, qreal y2, const QPen & pen);
 extern void demth_ZN14QGraphicsScene7addLineEddddRK4QPen(void* qthis, double arg0, double arg1, double arg2, double arg3, void* arg4);
   // proto:  void QGraphicsScene::setBspTreeDepth(int depth);
-extern void _ZN14QGraphicsScene15setBspTreeDepthEi(void* qthis, int arg0);
+extern void _ZN14QGraphicsScene15setBspTreeDepthEi(void* qthis, int32_t arg0);
   // proto:  QRectF QGraphicsScene::sceneRect();
 extern void _ZNK14QGraphicsScene9sceneRectEv(void* qthis);
   // proto:  QGraphicsWidget * QGraphicsScene::activeWindow();
@@ -181,7 +181,7 @@ func init() {
 // class sizeof(QGraphicsScene)=1
 type QGraphicsScene struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _changed QGraphicsScene_changed_signal;
 //  _sceneRectChanged QGraphicsScene_sceneRectChanged_signal;
 //  _selectionChanged QGraphicsScene_selectionChanged_signal;
@@ -764,7 +764,7 @@ func (this *QGraphicsScene) setStickyFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGraphicsScene14setStickyFocusEb
     // invoke: void setStickyFocus(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QGraphicsScene14setStickyFocusEb(this.qclsinst, arg0)
   default:
@@ -1331,7 +1331,7 @@ func (this *QGraphicsScene) setSortCacheEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QGraphicsScene19setSortCacheEnabledEb
     // invoke: void setSortCacheEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QGraphicsScene19setSortCacheEnabledEb(this.qclsinst, arg0)
   default:

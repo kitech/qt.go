@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qrubberband.h
 // dst-file: /src/widgets/qrubberband.go
 //
@@ -35,19 +35,19 @@ import "qtrt"
   // proto:  void QRubberBand::resize(const QSize & s);
 extern void demth_ZN11QRubberBand6resizeERK5QSize(void* qthis, void* arg0);
   // proto:  void QRubberBand::setGeometry(int x, int y, int w, int h);
-extern void demth_ZN11QRubberBand11setGeometryEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN11QRubberBand11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QRubberBand::move(const QPoint & p);
 extern void demth_ZN11QRubberBand4moveERK6QPoint(void* qthis, void* arg0);
   // proto:  void QRubberBand::~QRubberBand();
 extern void _ZN11QRubberBandD0Ev(void* qthis);
   // proto:  void QRubberBand::move(int x, int y);
-extern void demth_ZN11QRubberBand4moveEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN11QRubberBand4moveEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QMetaObject * QRubberBand::metaObject();
 extern void _ZNK11QRubberBand10metaObjectEv(void* qthis);
   // proto:  void QRubberBand::setGeometry(const QRect & r);
 extern void _ZN11QRubberBand11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  void QRubberBand::resize(int w, int h);
-extern void demth_ZN11QRubberBand6resizeEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN11QRubberBand6resizeEii(void* qthis, int32_t arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QRubberBand)=1
 type QRubberBand struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QRubberBand::resize(const QSize & s);

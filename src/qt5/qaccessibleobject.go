@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.go
 //
@@ -38,7 +38,7 @@ extern void _ZN22QAccessibleApplicationC1Ev(void* qthis);
   // proto:  QWindow * QAccessibleApplication::window();
 extern void _ZNK22QAccessibleApplication6windowEv(void* qthis);
   // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
-extern void _ZNK22QAccessibleApplication5childEi(void* qthis, int arg0);
+extern void _ZNK22QAccessibleApplication5childEi(void* qthis, int32_t arg0);
   // proto:  int QAccessibleApplication::childCount();
 extern void _ZNK22QAccessibleApplication10childCountEv(void* qthis);
   // proto:  QAccessibleInterface * QAccessibleApplication::parent();
@@ -55,7 +55,7 @@ extern void _ZNK17QAccessibleObject6objectEv(void* qthis);
   // proto:  QRect QAccessibleObject::rect();
 extern void _ZNK17QAccessibleObject4rectEv(void* qthis);
   // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
-extern void _ZNK17QAccessibleObject7childAtEii(void* qthis, int arg0, int arg1);
+extern void _ZNK17QAccessibleObject7childAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
 extern void* dector_ZN17QAccessibleObjectC1ERKS_(void* arg0);
 extern void _ZN17QAccessibleObjectC1ERKS_(void* qthis, void* arg0);
@@ -78,13 +78,13 @@ func init() {
 // class sizeof(QAccessibleApplication)=16
 type QAccessibleApplication struct {
   /*qbase*/ QAccessibleObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAccessibleObject)=16
 type QAccessibleObject struct {
   /*qbase*/ QAccessibleInterface;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QAccessibleApplication::QAccessibleApplication();

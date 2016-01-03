@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qsurfaceformat.h
 // dst-file: /src/gui/qsurfaceformat.go
 //
@@ -35,21 +35,21 @@ import "qtrt"
   // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
 extern void _ZN14QSurfaceFormat13defaultFormatEv();
   // proto:  void QSurfaceFormat::setAlphaBufferSize(int size);
-extern void _ZN14QSurfaceFormat18setAlphaBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat18setAlphaBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  void QSurfaceFormat::setMinorVersion(int minorVersion);
-extern void _ZN14QSurfaceFormat15setMinorVersionEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat15setMinorVersionEi(void* qthis, int32_t arg0);
   // proto:  int QSurfaceFormat::stencilBufferSize();
 extern void _ZNK14QSurfaceFormat17stencilBufferSizeEv(void* qthis);
   // proto:  void QSurfaceFormat::setRedBufferSize(int size);
-extern void _ZN14QSurfaceFormat16setRedBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat16setRedBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  void QSurfaceFormat::setDepthBufferSize(int size);
-extern void _ZN14QSurfaceFormat18setDepthBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat18setDepthBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  int QSurfaceFormat::majorVersion();
 extern void _ZNK14QSurfaceFormat12majorVersionEv(void* qthis);
   // proto:  void QSurfaceFormat::setSamples(int numSamples);
-extern void _ZN14QSurfaceFormat10setSamplesEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat10setSamplesEi(void* qthis, int32_t arg0);
   // proto:  void QSurfaceFormat::setMajorVersion(int majorVersion);
-extern void _ZN14QSurfaceFormat15setMajorVersionEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat15setMajorVersionEi(void* qthis, int32_t arg0);
   // proto: static void QSurfaceFormat::setDefaultFormat(const QSurfaceFormat & format);
 extern void _ZN14QSurfaceFormat16setDefaultFormatERKS_(void* arg0);
   // proto:  int QSurfaceFormat::greenBufferSize();
@@ -57,11 +57,11 @@ extern void _ZNK14QSurfaceFormat15greenBufferSizeEv(void* qthis);
   // proto:  int QSurfaceFormat::minorVersion();
 extern void _ZNK14QSurfaceFormat12minorVersionEv(void* qthis);
   // proto:  void QSurfaceFormat::setStencilBufferSize(int size);
-extern void _ZN14QSurfaceFormat20setStencilBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat20setStencilBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  int QSurfaceFormat::swapInterval();
 extern void _ZNK14QSurfaceFormat12swapIntervalEv(void* qthis);
   // proto:  void QSurfaceFormat::setVersion(int major, int minor);
-extern void _ZN14QSurfaceFormat10setVersionEii(void* qthis, int arg0, int arg1);
+extern void _ZN14QSurfaceFormat10setVersionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QSurfaceFormat::hasAlpha();
 extern void _ZNK14QSurfaceFormat8hasAlphaEv(void* qthis);
   // proto:  void QSurfaceFormat::QSurfaceFormat(const QSurfaceFormat & other);
@@ -79,19 +79,19 @@ extern void _ZNK14QSurfaceFormat13redBufferSizeEv(void* qthis);
   // proto:  void QSurfaceFormat::~QSurfaceFormat();
 extern void _ZN14QSurfaceFormatD0Ev(void* qthis);
   // proto:  void QSurfaceFormat::setGreenBufferSize(int size);
-extern void _ZN14QSurfaceFormat18setGreenBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat18setGreenBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  int QSurfaceFormat::samples();
 extern void _ZNK14QSurfaceFormat7samplesEv(void* qthis);
   // proto:  int QSurfaceFormat::depthBufferSize();
 extern void _ZNK14QSurfaceFormat15depthBufferSizeEv(void* qthis);
   // proto:  void QSurfaceFormat::setBlueBufferSize(int size);
-extern void _ZN14QSurfaceFormat17setBlueBufferSizeEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat17setBlueBufferSizeEi(void* qthis, int32_t arg0);
   // proto:  int QSurfaceFormat::alphaBufferSize();
 extern void _ZNK14QSurfaceFormat15alphaBufferSizeEv(void* qthis);
   // proto:  bool QSurfaceFormat::stereo();
 extern void demth_ZNK14QSurfaceFormat6stereoEv(void* qthis);
   // proto:  void QSurfaceFormat::setSwapInterval(int interval);
-extern void _ZN14QSurfaceFormat15setSwapIntervalEi(void* qthis, int arg0);
+extern void _ZN14QSurfaceFormat15setSwapIntervalEi(void* qthis, int32_t arg0);
   // proto:  void QSurfaceFormat::setStereo(bool enable);
 extern void _ZN14QSurfaceFormat9setStereoEb(void* qthis, bool arg0);
 */
@@ -109,7 +109,7 @@ func init() {
 // class sizeof(QSurfaceFormat)=8
 type QSurfaceFormat struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static QSurfaceFormat QSurfaceFormat::defaultFormat();
@@ -689,7 +689,7 @@ func (this *QSurfaceFormat) setStereo(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QSurfaceFormat9setStereoEb
     // invoke: void setStereo(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QSurfaceFormat9setStereoEb(this.qclsinst, arg0)
   default:

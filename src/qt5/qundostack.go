@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  int QUndoStack::undoLimit();
 extern void _ZNK10QUndoStack9undoLimitEv(void* qthis);
   // proto:  const QUndoCommand * QUndoStack::command(int index);
-extern void _ZNK10QUndoStack7commandEi(void* qthis, int arg0);
+extern void _ZNK10QUndoStack7commandEi(void* qthis, int32_t arg0);
   // proto:  bool QUndoStack::canRedo();
 extern void _ZNK10QUndoStack7canRedoEv(void* qthis);
   // proto:  const QMetaObject * QUndoStack::metaObject();
@@ -76,18 +76,18 @@ extern void _ZNK10QUndoStack8undoTextEv(void* qthis);
   // proto:  int QUndoStack::cleanIndex();
 extern void _ZNK10QUndoStack10cleanIndexEv(void* qthis);
   // proto:  void QUndoStack::setIndex(int idx);
-extern void _ZN10QUndoStack8setIndexEi(void* qthis, int arg0);
+extern void _ZN10QUndoStack8setIndexEi(void* qthis, int32_t arg0);
   // proto:  void QUndoStack::endMacro();
 extern void _ZN10QUndoStack8endMacroEv(void* qthis);
   // proto:  void QUndoStack::setUndoLimit(int limit);
-extern void _ZN10QUndoStack12setUndoLimitEi(void* qthis, int arg0);
+extern void _ZN10QUndoStack12setUndoLimitEi(void* qthis, int32_t arg0);
   // proto:  void QUndoStack::setClean();
 extern void _ZN10QUndoStack8setCleanEv(void* qthis);
   // proto:  void QUndoStack::QUndoStack(const QUndoStack & );
 extern void* dector_ZN10QUndoStackC1ERKS_(void* arg0);
 extern void _ZN10QUndoStackC1ERKS_(void* qthis, void* arg0);
   // proto:  QString QUndoStack::text(int idx);
-extern void _ZNK10QUndoStack4textEi(void* qthis, int arg0);
+extern void _ZNK10QUndoStack4textEi(void* qthis, int32_t arg0);
   // proto:  void QUndoStack::push(QUndoCommand * cmd);
 extern void _ZN10QUndoStack4pushEP12QUndoCommand(void* qthis, void* arg0);
   // proto:  int QUndoCommand::id();
@@ -116,7 +116,7 @@ extern void _ZNK12QUndoCommand10actionTextEv(void* qthis);
   // proto:  void QUndoCommand::~QUndoCommand();
 extern void _ZN12QUndoCommandD0Ev(void* qthis);
   // proto:  const QUndoCommand * QUndoCommand::child(int index);
-extern void _ZNK12QUndoCommand5childEi(void* qthis, int arg0);
+extern void _ZNK12QUndoCommand5childEi(void* qthis, int32_t arg0);
   // proto:  void QUndoCommand::setText(const QString & text);
 extern void _ZN12QUndoCommand7setTextERK7QString(void* qthis, void* arg0);
 */
@@ -134,7 +134,7 @@ func init() {
 // class sizeof(QUndoStack)=1
 type QUndoStack struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _redoTextChanged QUndoStack_redoTextChanged_signal;
 //  _cleanChanged QUndoStack_cleanChanged_signal;
 //  _canUndoChanged QUndoStack_canUndoChanged_signal;
@@ -146,7 +146,7 @@ type QUndoStack struct {
 // class sizeof(QUndoCommand)=16
 type QUndoCommand struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QUndoStack::undoLimit();
@@ -520,7 +520,7 @@ func (this *QUndoStack) setActive(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QUndoStack9setActiveEb
     // invoke: void setActive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QUndoStack9setActiveEb(this.qclsinst, arg0)
   default:

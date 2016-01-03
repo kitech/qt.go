@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);
-extern void _ZN12QPainterPath20setElementPositionAtEidd(void* qthis, int arg0, double arg1, double arg2);
+extern void _ZN12QPainterPath20setElementPositionAtEidd(void* qthis, int32_t arg0, double arg1, double arg2);
   // proto:  QPolygonF QPainterPath::toFillPolygon(const QMatrix & matrix);
 extern void _ZNK12QPainterPath13toFillPolygonERK7QMatrix(void* qthis, void* arg0);
   // proto:  QPainterPath QPainterPath::translated(qreal dx, qreal dy);
@@ -57,7 +57,7 @@ extern void demth_ZN12QPainterPath5arcToEdddddd(void* qthis, double arg0, double
   // proto:  void QPainterPath::addRect(const QRectF & rect);
 extern void _ZN12QPainterPath7addRectERK6QRectF(void* qthis, void* arg0);
   // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int xRnd, int yRnd);
-extern void _ZN12QPainterPath12addRoundRectERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN12QPainterPath12addRoundRectERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPainterPath::addText(qreal x, qreal y, const QFont & f, const QString & text);
 extern void demth_ZN12QPainterPath7addTextEddRK5QFontRK7QString(void* qthis, double arg0, double arg1, void* arg2, void* arg3);
   // proto:  bool QPainterPath::intersects(const QRectF & rect);
@@ -67,7 +67,7 @@ extern void _ZNK12QPainterPath8containsERK7QPointF(void* qthis, void* arg0);
   // proto:  void QPainterPath::arcTo(const QRectF & rect, qreal startAngle, qreal arcLength);
 extern void _ZN12QPainterPath5arcToERK6QRectFdd(void* qthis, void* arg0, double arg1, double arg2);
   // proto:  void QPainterPath::addRoundRect(const QRectF & rect, int roundness);
-extern void demth_ZN12QPainterPath12addRoundRectERK6QRectFi(void* qthis, void* arg0, int arg1);
+extern void demth_ZN12QPainterPath12addRoundRectERK6QRectFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPainterPath::addEllipse(const QPointF & center, qreal rx, qreal ry);
 extern void demth_ZN12QPainterPath10addEllipseERK7QPointFdd(void* qthis, void* arg0, double arg1, double arg2);
   // proto:  void QPainterPath::lineTo(qreal x, qreal y);
@@ -81,7 +81,7 @@ extern void demth_ZN12QPainterPath10addEllipseEdddd(void* qthis, double arg0, do
   // proto:  bool QPainterPath::intersects(const QPainterPath & p);
 extern void _ZNK12QPainterPath10intersectsERKS_(void* qthis, void* arg0);
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int roundness);
-extern void demth_ZN12QPainterPath12addRoundRectEddddi(void* qthis, double arg0, double arg1, double arg2, double arg3, int arg4);
+extern void demth_ZN12QPainterPath12addRoundRectEddddi(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4);
   // proto:  void QPainterPath::QPainterPath(const QPointF & startPoint);
 extern void* dector_ZN12QPainterPathC1ERK7QPointF(void* arg0);
 extern void _ZN12QPainterPathC1ERK7QPointF(void* qthis, void* arg0);
@@ -116,7 +116,7 @@ extern void _ZNK12QPainterPath15currentPositionEv(void* qthis);
   // proto:  QPainterPath QPainterPath::toReversed();
 extern void _ZNK12QPainterPath10toReversedEv(void* qthis);
   // proto:  void QPainterPath::addRoundRect(qreal x, qreal y, qreal w, qreal h, int xRnd, int yRnd);
-extern void demth_ZN12QPainterPath12addRoundRectEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int arg4, int arg5);
+extern void demth_ZN12QPainterPath12addRoundRectEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5);
   // proto:  QRectF QPainterPath::boundingRect();
 extern void _ZNK12QPainterPath12boundingRectEv(void* qthis);
   // proto:  void QPainterPath::swap(QPainterPath & other);
@@ -211,13 +211,13 @@ func init() {
 // class sizeof(QPainterPath)=1
 type QPainterPath struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPainterPathStroker)=1
 type QPainterPathStroker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPainterPath::setElementPositionAt(int i, qreal x, qreal y);

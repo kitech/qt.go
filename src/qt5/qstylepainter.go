@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstylepainter.h
 // dst-file: /src/widgets/qstylepainter.go
 //
@@ -49,7 +49,7 @@ extern void _ZN13QStylePainterC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QStylePainter::begin(QWidget * w);
 extern void demth_ZN13QStylePainter5beginEP7QWidget(void* qthis, void* arg0);
   // proto:  void QStylePainter::drawItemPixmap(const QRect & r, int flags, const QPixmap & pixmap);
-extern void demth_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(void* qthis, void* arg0, int arg1, void* arg2);
+extern void demth_ZN13QStylePainter14drawItemPixmapERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  QStyle * QStylePainter::style();
 extern void demth_ZNK13QStylePainter5styleEv(void* qthis);
 */
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QStylePainter)=1
 type QStylePainter struct {
   /*qbase*/ QPainter;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStylePainter::QStylePainter(QWidget * w);

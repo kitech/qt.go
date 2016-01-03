@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -41,8 +41,6 @@ extern void _ZN20QPictureFormatPluginD0Ev(void* qthis);
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 extern void* dector_ZN20QPictureFormatPluginC1EP7QObject(void* arg0);
 extern void _ZN20QPictureFormatPluginC1EP7QObject(void* qthis, void* arg0);
-  // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
-extern void _ZN20QPictureFormatPlugin16installIOHandlerERK7QString(void* qthis, void* arg0);
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();
 extern void _ZNK20QPictureFormatPlugin10metaObjectEv(void* qthis);
 */
@@ -60,7 +58,7 @@ func init() {
 // class sizeof(QPictureFormatPlugin)=1
 type QPictureFormatPlugin struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
@@ -138,29 +136,6 @@ func (this *QPictureFormatPlugin) FreeQPictureFormatPlugin(args ...interface{}) 
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
 func NewQPictureFormatPlugin(args ...interface{}) QPictureFormatPlugin {
   return QPictureFormatPlugin{}
-}
-
-  // proto:  bool QPictureFormatPlugin::installIOHandler(const QString & format);
-func (this *QPictureFormatPlugin) installIOHandler(args ...interface{}) () {
-  // installIOHandler(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN20QPictureFormatPlugin16installIOHandlerERK7QString
-    // invoke: bool installIOHandler(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN20QPictureFormatPlugin16installIOHandlerERK7QString(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPictureFormatPlugin", "installIOHandler", args)
-  }
-
 }
 
   // proto:  const QMetaObject * QPictureFormatPlugin::metaObject();

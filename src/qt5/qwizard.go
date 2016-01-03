@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.go
 //
@@ -75,13 +75,13 @@ extern void _ZNK7QWizard11currentPageEv(void* qthis);
   // proto:  void QWizard::next();
 extern void _ZN7QWizard4nextEv(void* qthis);
   // proto:  QWizardPage * QWizard::page(int id);
-extern void _ZNK7QWizard4pageEi(void* qthis, int arg0);
+extern void _ZNK7QWizard4pageEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QWizard::metaObject();
 extern void _ZNK7QWizard10metaObjectEv(void* qthis);
   // proto:  void QWizard::setField(const QString & name, const QVariant & value);
 extern void _ZN7QWizard8setFieldERK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1);
   // proto:  void QWizard::setPage(int id, QWizardPage * page);
-extern void _ZN7QWizard7setPageEiP11QWizardPage(void* qthis, int arg0, void* arg1);
+extern void _ZN7QWizard7setPageEiP11QWizardPage(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QWizard::restart();
 extern void _ZN7QWizard7restartEv(void* qthis);
   // proto:  void QWizard::back();
@@ -89,9 +89,9 @@ extern void _ZN7QWizard4backEv(void* qthis);
   // proto:  QSize QWizard::sizeHint();
 extern void _ZNK7QWizard8sizeHintEv(void* qthis);
   // proto:  void QWizard::setDefaultProperty(const char * className, const char * property, const char * changedSignal);
-extern void _ZN7QWizard18setDefaultPropertyEPKcS1_S1_(void* qthis, char* arg0, char* arg1, char* arg2);
+extern void _ZN7QWizard18setDefaultPropertyEPKcS1_S1_(void* qthis, unsigned char* arg0, unsigned char* arg1, unsigned char* arg2);
   // proto:  void QWizard::setStartId(int id);
-extern void _ZN7QWizard10setStartIdEi(void* qthis, int arg0);
+extern void _ZN7QWizard10setStartIdEi(void* qthis, int32_t arg0);
   // proto:  void QWizard::~QWizard();
 extern void _ZN7QWizardD0Ev(void* qthis);
   // proto:  QList<int> QWizard::visitedPages();
@@ -106,7 +106,7 @@ extern void _ZN7QWizardC1ERKS_(void* qthis, void* arg0);
   // proto:  int QWizard::addPage(QWizardPage * page);
 extern void _ZN7QWizard7addPageEP11QWizardPage(void* qthis, void* arg0);
   // proto:  void QWizard::removePage(int id);
-extern void _ZN7QWizard10removePageEi(void* qthis, int arg0);
+extern void _ZN7QWizard10removePageEi(void* qthis, int32_t arg0);
   // proto:  QList<int> QWizard::pageIds();
 extern void _ZNK7QWizard7pageIdsEv(void* qthis);
   // proto:  int QWizard::currentId();
@@ -114,7 +114,7 @@ extern void _ZNK7QWizard9currentIdEv(void* qthis);
   // proto:  void QWizard::setVisible(bool visible);
 extern void _ZN7QWizard10setVisibleEb(void* qthis, bool arg0);
   // proto:  bool QWizard::hasVisitedPage(int id);
-extern void _ZNK7QWizard14hasVisitedPageEi(void* qthis, int arg0);
+extern void _ZNK7QWizard14hasVisitedPageEi(void* qthis, int32_t arg0);
   // proto:  QVariant QWizard::field(const QString & name);
 extern void _ZNK7QWizard5fieldERK7QString(void* qthis, void* arg0);
   // proto:  bool QWizard::validateCurrentPage();
@@ -136,14 +136,14 @@ func init() {
 // class sizeof(QWizardPage)=1
 type QWizardPage struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _completeChanged QWizardPage_completeChanged_signal;
 }
 
 // class sizeof(QWizard)=1
 type QWizard struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _pageRemoved QWizard_pageRemoved_signal;
 //  _pageAdded QWizard_pageAdded_signal;
 //  _helpRequested QWizard_helpRequested_signal;
@@ -350,7 +350,7 @@ func (this *QWizardPage) setFinalPage(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWizardPage12setFinalPageEb
     // invoke: void setFinalPage(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QWizardPage12setFinalPageEb(this.qclsinst, arg0)
   default:
@@ -410,7 +410,7 @@ func (this *QWizardPage) setCommitPage(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWizardPage13setCommitPageEb
     // invoke: void setCommitPage(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QWizardPage13setCommitPageEb(this.qclsinst, arg0)
   default:
@@ -696,11 +696,11 @@ func (this *QWizard) setDefaultProperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWizard18setDefaultPropertyEPKcS1_S1_
     // invoke: void setDefaultProperty(const char *, const char *, const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN7QWizard18setDefaultPropertyEPKcS1_S1_(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -911,7 +911,7 @@ func (this *QWizard) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWizard10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWizard10setVisibleEb(this.qclsinst, arg0)
   default:

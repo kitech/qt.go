@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -129,7 +129,7 @@ extern void _ZN13QDateTimeEdit16clearMaximumDateEv(void* qthis);
   // proto:  void QDateTimeEdit::setCalendarPopup(bool enable);
 extern void _ZN13QDateTimeEdit16setCalendarPopupEb(void* qthis, bool arg0);
   // proto:  void QDateTimeEdit::stepBy(int steps);
-extern void _ZN13QDateTimeEdit6stepByEi(void* qthis, int arg0);
+extern void _ZN13QDateTimeEdit6stepByEi(void* qthis, int32_t arg0);
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTime & dt, QWidget * parent);
 extern void* dector_ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget(void* arg0, void* arg1);
 extern void _ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget(void* qthis, void* arg0, void* arg1);
@@ -142,7 +142,7 @@ extern void _ZNK13QDateTimeEdit8sizeHintEv(void* qthis);
   // proto:  int QDateTimeEdit::sectionCount();
 extern void _ZNK13QDateTimeEdit12sectionCountEv(void* qthis);
   // proto:  void QDateTimeEdit::setCurrentSectionIndex(int index);
-extern void _ZN13QDateTimeEdit22setCurrentSectionIndexEi(void* qthis, int arg0);
+extern void _ZN13QDateTimeEdit22setCurrentSectionIndexEi(void* qthis, int32_t arg0);
   // proto:  void QDateTimeEdit::clearMinimumTime();
 extern void _ZN13QDateTimeEdit16clearMinimumTimeEv(void* qthis);
   // proto:  void QDateTimeEdit::setTimeRange(const QTime & min, const QTime & max);
@@ -166,21 +166,21 @@ func init() {
 // class sizeof(QTimeEdit)=1
 type QTimeEdit struct {
   /*qbase*/ QDateTimeEdit;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _userTimeChanged QTimeEdit_userTimeChanged_signal;
 }
 
 // class sizeof(QDateEdit)=1
 type QDateEdit struct {
   /*qbase*/ QDateTimeEdit;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _userDateChanged QDateEdit_userDateChanged_signal;
 }
 
 // class sizeof(QDateTimeEdit)=1
 type QDateTimeEdit struct {
   /*qbase*/ QAbstractSpinBox;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _dateChanged QDateTimeEdit_dateChanged_signal;
 //  _timeChanged QDateTimeEdit_timeChanged_signal;
 //  _dateTimeChanged QDateTimeEdit_dateTimeChanged_signal;
@@ -945,7 +945,7 @@ func (this *QDateTimeEdit) setCalendarPopup(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QDateTimeEdit16setCalendarPopupEb
     // invoke: void setCalendarPopup(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QDateTimeEdit16setCalendarPopupEb(this.qclsinst, arg0)
   default:

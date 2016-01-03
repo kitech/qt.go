@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicslinearlayout.h
 // dst-file: /src/widgets/qgraphicslinearlayout.go
 //
@@ -41,35 +41,35 @@ extern void _ZN21QGraphicsLinearLayoutC1EP19QGraphicsLayoutItem(void* qthis, voi
 extern void* dector_ZN21QGraphicsLinearLayoutC1ERKS_(void* arg0);
 extern void _ZN21QGraphicsLinearLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  QGraphicsLayoutItem * QGraphicsLinearLayout::itemAt(int index);
-extern void _ZNK21QGraphicsLinearLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK21QGraphicsLinearLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsLinearLayout::invalidate();
 extern void _ZN21QGraphicsLinearLayout10invalidateEv(void* qthis);
   // proto:  void QGraphicsLinearLayout::setGeometry(const QRectF & rect);
 extern void _ZN21QGraphicsLinearLayout11setGeometryERK6QRectF(void* qthis, void* arg0);
   // proto:  void QGraphicsLinearLayout::addStretch(int stretch);
-extern void demth_ZN21QGraphicsLinearLayout10addStretchEi(void* qthis, int arg0);
+extern void demth_ZN21QGraphicsLinearLayout10addStretchEi(void* qthis, int32_t arg0);
   // proto:  int QGraphicsLinearLayout::count();
 extern void _ZNK21QGraphicsLinearLayout5countEv(void* qthis);
   // proto:  void QGraphicsLinearLayout::setSpacing(qreal spacing);
 extern void _ZN21QGraphicsLinearLayout10setSpacingEd(void* qthis, double arg0);
   // proto:  void QGraphicsLinearLayout::insertItem(int index, QGraphicsLayoutItem * item);
-extern void _ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(void* qthis, int arg0, void* arg1);
+extern void _ZN21QGraphicsLinearLayout10insertItemEiP19QGraphicsLayoutItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QGraphicsLinearLayout::~QGraphicsLinearLayout();
 extern void _ZN21QGraphicsLinearLayoutD0Ev(void* qthis);
   // proto:  void QGraphicsLinearLayout::dump(int indent);
-extern void _ZNK21QGraphicsLinearLayout4dumpEi(void* qthis, int arg0);
+extern void _ZNK21QGraphicsLinearLayout4dumpEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsLinearLayout::setStretchFactor(QGraphicsLayoutItem * item, int stretch);
-extern void _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(void* qthis, void* arg0, int arg1);
+extern void _ZN21QGraphicsLinearLayout16setStretchFactorEP19QGraphicsLayoutItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QGraphicsLinearLayout::addItem(QGraphicsLayoutItem * item);
 extern void demth_ZN21QGraphicsLinearLayout7addItemEP19QGraphicsLayoutItem(void* qthis, void* arg0);
   // proto:  qreal QGraphicsLinearLayout::itemSpacing(int index);
-extern void _ZNK21QGraphicsLinearLayout11itemSpacingEi(void* qthis, int arg0);
+extern void _ZNK21QGraphicsLinearLayout11itemSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsLinearLayout::removeAt(int index);
-extern void _ZN21QGraphicsLinearLayout8removeAtEi(void* qthis, int arg0);
+extern void _ZN21QGraphicsLinearLayout8removeAtEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsLinearLayout::insertStretch(int index, int stretch);
-extern void _ZN21QGraphicsLinearLayout13insertStretchEii(void* qthis, int arg0, int arg1);
+extern void _ZN21QGraphicsLinearLayout13insertStretchEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGraphicsLinearLayout::setItemSpacing(int index, qreal spacing);
-extern void _ZN21QGraphicsLinearLayout14setItemSpacingEid(void* qthis, int arg0, double arg1);
+extern void _ZN21QGraphicsLinearLayout14setItemSpacingEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsLinearLayout::removeItem(QGraphicsLayoutItem * item);
 extern void _ZN21QGraphicsLinearLayout10removeItemEP19QGraphicsLayoutItem(void* qthis, void* arg0);
   // proto:  int QGraphicsLinearLayout::stretchFactor(QGraphicsLayoutItem * item);
@@ -89,7 +89,7 @@ func init() {
 // class sizeof(QGraphicsLinearLayout)=1
 type QGraphicsLinearLayout struct {
   /*qbase*/ QGraphicsLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qreal QGraphicsLinearLayout::spacing();

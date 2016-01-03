@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qloggingcategory.h
 // dst-file: /src/core/qloggingcategory.go
 //
@@ -33,30 +33,30 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
-extern void* dector_ZN16QLoggingCategoryC1EPKc9QtMsgType(char* arg0, int arg1);
-extern void _ZN16QLoggingCategoryC1EPKc9QtMsgType(void* qthis, char* arg0, int arg1);
+extern void* dector_ZN16QLoggingCategoryC1EPKc9QtMsgType(unsigned char* arg0, int32_t arg1);
+extern void _ZN16QLoggingCategoryC1EPKc9QtMsgType(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  void QLoggingCategory::QLoggingCategory(const QLoggingCategory & );
 extern void* dector_ZN16QLoggingCategoryC1ERKS_(void* arg0);
 extern void _ZN16QLoggingCategoryC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QLoggingCategory::isDebugEnabled();
-extern void _ZNK16QLoggingCategory14isDebugEnabledEv(void* qthis);
+extern void demth_ZNK16QLoggingCategory14isDebugEnabledEv(void* qthis);
   // proto:  void QLoggingCategory::~QLoggingCategory();
 extern void _ZN16QLoggingCategoryD0Ev(void* qthis);
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category);
-extern void* dector_ZN16QLoggingCategoryC1EPKc(char* arg0);
-extern void _ZN16QLoggingCategoryC1EPKc(void* qthis, char* arg0);
+extern void* dector_ZN16QLoggingCategoryC1EPKc(unsigned char* arg0);
+extern void _ZN16QLoggingCategoryC1EPKc(void* qthis, unsigned char* arg0);
   // proto:  void QLoggingCategory::setEnabled(QtMsgType type, bool enable);
-extern void _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(void* qthis, int arg0, bool arg1);
+extern void _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(void* qthis, int32_t arg0, bool arg1);
   // proto:  bool QLoggingCategory::isEnabled(QtMsgType type);
-extern void _ZNK16QLoggingCategory9isEnabledE9QtMsgType(void* qthis, int arg0);
+extern void _ZNK16QLoggingCategory9isEnabledE9QtMsgType(void* qthis, int32_t arg0);
   // proto:  bool QLoggingCategory::isWarningEnabled();
-extern void _ZNK16QLoggingCategory16isWarningEnabledEv(void* qthis);
+extern void demth_ZNK16QLoggingCategory16isWarningEnabledEv(void* qthis);
   // proto:  bool QLoggingCategory::isInfoEnabled();
-extern void _ZNK16QLoggingCategory13isInfoEnabledEv(void* qthis);
+extern void demth_ZNK16QLoggingCategory13isInfoEnabledEv(void* qthis);
   // proto:  const char * QLoggingCategory::categoryName();
-extern void _ZNK16QLoggingCategory12categoryNameEv(void* qthis);
+extern void demth_ZNK16QLoggingCategory12categoryNameEv(void* qthis);
   // proto:  bool QLoggingCategory::isCriticalEnabled();
-extern void _ZNK16QLoggingCategory17isCriticalEnabledEv(void* qthis);
+extern void demth_ZNK16QLoggingCategory17isCriticalEnabledEv(void* qthis);
   // proto: static QLoggingCategory * QLoggingCategory::defaultCategory();
 extern void _ZN16QLoggingCategory15defaultCategoryEv();
   // proto: static void QLoggingCategory::setFilterRules(const QString & rules);
@@ -76,7 +76,7 @@ func init() {
 // class sizeof(QLoggingCategory)=24
 type QLoggingCategory struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QLoggingCategory::QLoggingCategory(const char * category, QtMsgType severityLevel);
@@ -97,7 +97,7 @@ func (this *QLoggingCategory) isDebugEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory14isDebugEnabledEv
     // invoke: bool isDebugEnabled()
-    C._ZNK16QLoggingCategory14isDebugEnabledEv(this.qclsinst)
+    C.demth_ZNK16QLoggingCategory14isDebugEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isDebugEnabled", args)
   }
@@ -133,9 +133,9 @@ func (this *QLoggingCategory) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QLoggingCategory10setEnabledE9QtMsgTypeb
     // invoke: void setEnabled(enum QtMsgType, _Bool)
-    var arg0 = C.int(args[0].(int32))
+    var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN16QLoggingCategory10setEnabledE9QtMsgTypeb(this.qclsinst, arg0, arg1)
   default:
@@ -158,7 +158,7 @@ func (this *QLoggingCategory) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory9isEnabledE9QtMsgType
     // invoke: bool isEnabled(enum QtMsgType)
-    var arg0 = C.int(args[0].(int32))
+    var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     C._ZNK16QLoggingCategory9isEnabledE9QtMsgType(this.qclsinst, arg0)
   default:
@@ -180,7 +180,7 @@ func (this *QLoggingCategory) isWarningEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory16isWarningEnabledEv
     // invoke: bool isWarningEnabled()
-    C._ZNK16QLoggingCategory16isWarningEnabledEv(this.qclsinst)
+    C.demth_ZNK16QLoggingCategory16isWarningEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isWarningEnabled", args)
   }
@@ -200,7 +200,7 @@ func (this *QLoggingCategory) isInfoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory13isInfoEnabledEv
     // invoke: bool isInfoEnabled()
-    C._ZNK16QLoggingCategory13isInfoEnabledEv(this.qclsinst)
+    C.demth_ZNK16QLoggingCategory13isInfoEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isInfoEnabled", args)
   }
@@ -220,7 +220,7 @@ func (this *QLoggingCategory) categoryName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory12categoryNameEv
     // invoke: const char * categoryName()
-    C._ZNK16QLoggingCategory12categoryNameEv(this.qclsinst)
+    C.demth_ZNK16QLoggingCategory12categoryNameEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "categoryName", args)
   }
@@ -240,7 +240,7 @@ func (this *QLoggingCategory) isCriticalEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QLoggingCategory17isCriticalEnabledEv
     // invoke: bool isCriticalEnabled()
-    C._ZNK16QLoggingCategory17isCriticalEnabledEv(this.qclsinst)
+    C.demth_ZNK16QLoggingCategory17isCriticalEnabledEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLoggingCategory", "isCriticalEnabled", args)
   }

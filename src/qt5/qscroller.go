@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -58,11 +58,11 @@ extern void _ZN9QScroller11hasScrollerEP7QObject(void* arg0);
 extern void* dector_ZN9QScrollerC1ERKS_(void* arg0);
 extern void _ZN9QScrollerC1ERKS_(void* qthis, void* arg0);
   // proto:  void QScroller::scrollTo(const QPointF & pos, int scrollTime);
-extern void _ZN9QScroller8scrollToERK7QPointFi(void* qthis, void* arg0, int arg1);
+extern void _ZN9QScroller8scrollToERK7QPointFi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QScroller::stop();
 extern void _ZN9QScroller4stopEv(void* qthis);
   // proto:  void QScroller::ensureVisible(const QRectF & rect, qreal xmargin, qreal ymargin, int scrollTime);
-extern void _ZN9QScroller13ensureVisibleERK6QRectFddi(void* qthis, void* arg0, double arg1, double arg2, int arg3);
+extern void _ZN9QScroller13ensureVisibleERK6QRectFddi(void* qthis, void* arg0, double arg1, double arg2, int32_t arg3);
   // proto:  void QScroller::QScroller(QObject * target);
 extern void* dector_ZN9QScrollerC1EP7QObject(void* arg0);
 extern void _ZN9QScrollerC1EP7QObject(void* qthis, void* arg0);
@@ -95,7 +95,7 @@ func init() {
 // class sizeof(QScroller)=1
 type QScroller struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _stateChanged QScroller_stateChanged_signal;
 //  _scrollerPropertiesChanged QScroller_scrollerPropertiesChanged_signal;
 }

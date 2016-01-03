@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qeasingcurve.h
 // dst-file: /src/core/qeasingcurve.go
 //
@@ -76,7 +76,7 @@ func init() {
 // class sizeof(QEasingCurve)=8
 type QEasingCurve struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QEasingCurve::QEasingCurve(const QEasingCurve & other);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicssceneevent.h
 // dst-file: /src/widgets/qgraphicssceneevent.go
 //
@@ -141,7 +141,7 @@ extern void _ZNK24QGraphicsSceneWheelEvent3posEv(void* qthis);
   // proto:  void QGraphicsSceneWheelEvent::~QGraphicsSceneWheelEvent();
 extern void _ZN24QGraphicsSceneWheelEventD0Ev(void* qthis);
   // proto:  void QGraphicsSceneWheelEvent::setDelta(int delta);
-extern void _ZN24QGraphicsSceneWheelEvent8setDeltaEi(void* qthis, int arg0);
+extern void _ZN24QGraphicsSceneWheelEvent8setDeltaEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsSceneWheelEvent::setScenePos(const QPointF & pos);
 extern void _ZN24QGraphicsSceneWheelEvent11setScenePosERK7QPointF(void* qthis, void* arg0);
   // proto:  void QGraphicsSceneWheelEvent::QGraphicsSceneWheelEvent(const QGraphicsSceneWheelEvent & );
@@ -224,55 +224,55 @@ func init() {
 // class sizeof(QGraphicsSceneMoveEvent)=1
 type QGraphicsSceneMoveEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneContextMenuEvent)=1
 type QGraphicsSceneContextMenuEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneMouseEvent)=1
 type QGraphicsSceneMouseEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneHelpEvent)=1
 type QGraphicsSceneHelpEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneHoverEvent)=1
 type QGraphicsSceneHoverEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneWheelEvent)=1
 type QGraphicsSceneWheelEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneDragDropEvent)=1
 type QGraphicsSceneDragDropEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneEvent)=1
 type QGraphicsSceneEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGraphicsSceneResizeEvent)=1
 type QGraphicsSceneResizeEvent struct {
   /*qbase*/ QGraphicsSceneEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QPointF QGraphicsSceneMoveEvent::newPos();

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlayoutitem.h
 // dst-file: /src/widgets/qlayoutitem.go
 //
@@ -34,36 +34,24 @@ import "qtrt"
 #include <uchar.h>
   // proto:  QSpacerItem * QLayoutItem::spacerItem();
 extern void _ZN11QLayoutItem10spacerItemEv(void* qthis);
-  // proto:  QSize QLayoutItem::minimumSize();
-extern void _ZNK11QLayoutItem11minimumSizeEv(void* qthis);
   // proto:  QWidget * QLayoutItem::widget();
 extern void _ZN11QLayoutItem6widgetEv(void* qthis);
   // proto:  void QLayoutItem::invalidate();
 extern void _ZN11QLayoutItem10invalidateEv(void* qthis);
-  // proto:  void QLayoutItem::setGeometry(const QRect & );
-extern void _ZN11QLayoutItem11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  QLayout * QLayoutItem::layout();
 extern void _ZN11QLayoutItem6layoutEv(void* qthis);
-  // proto:  bool QLayoutItem::isEmpty();
-extern void _ZNK11QLayoutItem7isEmptyEv(void* qthis);
-  // proto:  QSize QLayoutItem::sizeHint();
-extern void _ZNK11QLayoutItem8sizeHintEv(void* qthis);
   // proto:  void QLayoutItem::~QLayoutItem();
 extern void _ZN11QLayoutItemD0Ev(void* qthis);
   // proto:  bool QLayoutItem::hasHeightForWidth();
 extern void _ZNK11QLayoutItem17hasHeightForWidthEv(void* qthis);
   // proto:  int QLayoutItem::heightForWidth(int );
-extern void _ZNK11QLayoutItem14heightForWidthEi(void* qthis, int arg0);
-  // proto:  QRect QLayoutItem::geometry();
-extern void _ZNK11QLayoutItem8geometryEv(void* qthis);
-  // proto:  QSize QLayoutItem::maximumSize();
-extern void _ZNK11QLayoutItem11maximumSizeEv(void* qthis);
+extern void _ZNK11QLayoutItem14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  int QLayoutItem::minimumHeightForWidth(int );
-extern void _ZNK11QLayoutItem21minimumHeightForWidthEi(void* qthis, int arg0);
+extern void _ZNK11QLayoutItem21minimumHeightForWidthEi(void* qthis, int32_t arg0);
   // proto:  QSize QSpacerItem::minimumSize();
 extern void _ZNK11QSpacerItem11minimumSizeEv(void* qthis);
   // proto:  QSizePolicy QSpacerItem::sizePolicy();
-extern void _ZNK11QSpacerItem10sizePolicyEv(void* qthis);
+extern void demth_ZNK11QSpacerItem10sizePolicyEv(void* qthis);
   // proto:  void QSpacerItem::~QSpacerItem();
 extern void _ZN11QSpacerItemD0Ev(void* qthis);
   // proto:  QSize QSpacerItem::sizeHint();
@@ -94,7 +82,7 @@ extern void _ZN11QWidgetItem6widgetEv(void* qthis);
   // proto:  void QWidgetItem::setGeometry(const QRect & );
 extern void _ZN11QWidgetItem11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  int QWidgetItem::heightForWidth(int );
-extern void _ZNK11QWidgetItem14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK11QWidgetItem14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWidgetItem::QWidgetItem(const QWidgetItem & );
 extern void* dector_ZN11QWidgetItemC1ERKS_(void* arg0);
 extern void _ZN11QWidgetItemC1ERKS_(void* qthis, void* arg0);
@@ -109,7 +97,7 @@ extern void _ZNK13QWidgetItemV28sizeHintEv(void* qthis);
   // proto:  QSize QWidgetItemV2::minimumSize();
 extern void _ZNK13QWidgetItemV211minimumSizeEv(void* qthis);
   // proto:  int QWidgetItemV2::heightForWidth(int width);
-extern void _ZNK13QWidgetItemV214heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK13QWidgetItemV214heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWidgetItemV2::~QWidgetItemV2();
 extern void _ZN13QWidgetItemV2D0Ev(void* qthis);
   // proto:  void QWidgetItemV2::QWidgetItemV2(QWidget * widget);
@@ -135,25 +123,25 @@ func init() {
 // class sizeof(QLayoutItem)=1
 type QLayoutItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSpacerItem)=1
 type QSpacerItem struct {
   /*qbase*/ QLayoutItem;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QWidgetItem)=1
 type QWidgetItem struct {
   /*qbase*/ QLayoutItem;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QWidgetItemV2)=1
 type QWidgetItemV2 struct {
   /*qbase*/ QWidgetItem;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QSpacerItem * QLayoutItem::spacerItem();
@@ -172,26 +160,6 @@ func (this *QLayoutItem) spacerItem(args ...interface{}) () {
     C._ZN11QLayoutItem10spacerItemEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "spacerItem", args)
-  }
-
-}
-
-  // proto:  QSize QLayoutItem::minimumSize();
-func (this *QLayoutItem) minimumSize(args ...interface{}) () {
-  // minimumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QLayoutItem11minimumSizeEv
-    // invoke: QSize minimumSize()
-    C._ZNK11QLayoutItem11minimumSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "minimumSize", args)
   }
 
 }
@@ -236,29 +204,6 @@ func (this *QLayoutItem) invalidate(args ...interface{}) () {
 
 }
 
-  // proto:  void QLayoutItem::setGeometry(const QRect & );
-func (this *QLayoutItem) setGeometry(args ...interface{}) () {
-  // setGeometry(const class QRect &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRect{}) // "const QRect &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QLayoutItem11setGeometryERK5QRect
-    // invoke: void setGeometry(const class QRect &)
-    var arg0 = args[0].(QRect).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN11QLayoutItem11setGeometryERK5QRect(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "setGeometry", args)
-  }
-
-}
-
   // proto:  QLayout * QLayoutItem::layout();
 func (this *QLayoutItem) layout(args ...interface{}) () {
   // layout()
@@ -275,46 +220,6 @@ func (this *QLayoutItem) layout(args ...interface{}) () {
     C._ZN11QLayoutItem6layoutEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayoutItem", "layout", args)
-  }
-
-}
-
-  // proto:  bool QLayoutItem::isEmpty();
-func (this *QLayoutItem) isEmpty(args ...interface{}) () {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QLayoutItem7isEmptyEv
-    // invoke: bool isEmpty()
-    C._ZNK11QLayoutItem7isEmptyEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "isEmpty", args)
-  }
-
-}
-
-  // proto:  QSize QLayoutItem::sizeHint();
-func (this *QLayoutItem) sizeHint(args ...interface{}) () {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QLayoutItem8sizeHintEv
-    // invoke: QSize sizeHint()
-    C._ZNK11QLayoutItem8sizeHintEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "sizeHint", args)
   }
 
 }
@@ -376,46 +281,6 @@ func (this *QLayoutItem) heightForWidth(args ...interface{}) () {
 
 }
 
-  // proto:  QRect QLayoutItem::geometry();
-func (this *QLayoutItem) geometry(args ...interface{}) () {
-  // geometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QLayoutItem8geometryEv
-    // invoke: QRect geometry()
-    C._ZNK11QLayoutItem8geometryEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "geometry", args)
-  }
-
-}
-
-  // proto:  QSize QLayoutItem::maximumSize();
-func (this *QLayoutItem) maximumSize(args ...interface{}) () {
-  // maximumSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QLayoutItem11maximumSizeEv
-    // invoke: QSize maximumSize()
-    C._ZNK11QLayoutItem11maximumSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayoutItem", "maximumSize", args)
-  }
-
-}
-
   // proto:  int QLayoutItem::minimumHeightForWidth(int );
 func (this *QLayoutItem) minimumHeightForWidth(args ...interface{}) () {
   // minimumHeightForWidth(int)
@@ -472,7 +337,7 @@ func (this *QSpacerItem) sizePolicy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QSpacerItem10sizePolicyEv
     // invoke: QSizePolicy sizePolicy()
-    C._ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
+    C.demth_ZNK11QSpacerItem10sizePolicyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSpacerItem", "sizePolicy", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qvector3d.h
 // dst-file: /src/gui/qvector3d.go
 //
@@ -33,17 +33,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  float QVector3D::x();
-extern void _ZNK9QVector3D1xEv(void* qthis);
+extern void demth_ZNK9QVector3D1xEv(void* qthis);
   // proto:  QPoint QVector3D::toPoint();
-extern void _ZNK9QVector3D7toPointEv(void* qthis);
+extern void demth_ZNK9QVector3D7toPointEv(void* qthis);
   // proto:  float QVector3D::distanceToLine(const QVector3D & point, const QVector3D & direction);
 extern void _ZNK9QVector3D14distanceToLineERKS_S1_(void* qthis, void* arg0, void* arg1);
   // proto:  float QVector3D::y();
-extern void _ZNK9QVector3D1yEv(void* qthis);
+extern void demth_ZNK9QVector3D1yEv(void* qthis);
   // proto: static QVector3D QVector3D::normal(const QVector3D & v1, const QVector3D & v2);
 extern void _ZN9QVector3D6normalERKS_S1_(void* arg0, void* arg1);
   // proto:  QPointF QVector3D::toPointF();
-extern void _ZNK9QVector3D8toPointFEv(void* qthis);
+extern void demth_ZNK9QVector3D8toPointFEv(void* qthis);
   // proto:  void QVector3D::normalize();
 extern void _ZN9QVector3D9normalizeEv(void* qthis);
   // proto:  QVector3D QVector3D::unproject(const QMatrix4x4 & modelView, const QMatrix4x4 & projection, const QRect & viewport);
@@ -55,7 +55,7 @@ extern void _ZNK9QVector3D7projectERK10QMatrix4x4S2_RK5QRect(void* qthis, void* 
   // proto: static QVector3D QVector3D::crossProduct(const QVector3D & v1, const QVector3D & v2);
 extern void _ZN9QVector3D12crossProductERKS_S1_(void* arg0, void* arg1);
   // proto:  float QVector3D::z();
-extern void _ZNK9QVector3D1zEv(void* qthis);
+extern void demth_ZNK9QVector3D1zEv(void* qthis);
   // proto:  void QVector3D::setZ(float z);
 extern void demth_ZN9QVector3D4setZEf(void* qthis, float arg0);
   // proto:  QVector2D QVector3D::toVector2D();
@@ -118,7 +118,7 @@ func init() {
 // class sizeof(QVector3D)=12
 type QVector3D struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  float QVector3D::x();
@@ -134,7 +134,7 @@ func (this *QVector3D) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D1xEv
     // invoke: float x()
-    C._ZNK9QVector3D1xEv(this.qclsinst)
+    C.demth_ZNK9QVector3D1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector3D", "x", args)
   }
@@ -154,7 +154,7 @@ func (this *QVector3D) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D7toPointEv
     // invoke: QPoint toPoint()
-    C._ZNK9QVector3D7toPointEv(this.qclsinst)
+    C.demth_ZNK9QVector3D7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector3D", "toPoint", args)
   }
@@ -200,7 +200,7 @@ func (this *QVector3D) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D1yEv
     // invoke: float y()
-    C._ZNK9QVector3D1yEv(this.qclsinst)
+    C.demth_ZNK9QVector3D1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector3D", "y", args)
   }
@@ -234,7 +234,7 @@ func (this *QVector3D) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D8toPointFEv
     // invoke: QPointF toPointF()
-    C._ZNK9QVector3D8toPointFEv(this.qclsinst)
+    C.demth_ZNK9QVector3D8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector3D", "toPointF", args)
   }
@@ -369,7 +369,7 @@ func (this *QVector3D) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector3D1zEv
     // invoke: float z()
-    C._ZNK9QVector3D1zEv(this.qclsinst)
+    C.demth_ZNK9QVector3D1zEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector3D", "z", args)
   }

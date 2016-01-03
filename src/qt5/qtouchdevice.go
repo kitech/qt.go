@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -37,7 +37,7 @@ extern void _ZN12QTouchDevice7setNameERK7QString(void* qthis, void* arg0);
   // proto:  QString QTouchDevice::name();
 extern void _ZNK12QTouchDevice4nameEv(void* qthis);
   // proto:  void QTouchDevice::setMaximumTouchPoints(int max);
-extern void _ZN12QTouchDevice21setMaximumTouchPointsEi(void* qthis, int arg0);
+extern void _ZN12QTouchDevice21setMaximumTouchPointsEi(void* qthis, int32_t arg0);
   // proto: static QList<const QTouchDevice *> QTouchDevice::devices();
 extern void _ZN12QTouchDevice7devicesEv();
   // proto:  void QTouchDevice::QTouchDevice();
@@ -62,7 +62,7 @@ func init() {
 // class sizeof(QTouchDevice)=8
 type QTouchDevice struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTouchDevice::setName(const QString & name);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qfont.h
 // dst-file: /src/gui/qfont.go
 //
@@ -47,7 +47,7 @@ extern void _ZNK5QFont9strikeOutEv(void* qthis);
   // proto:  int QFont::pixelSize();
 extern void _ZNK5QFont9pixelSizeEv(void* qthis);
   // proto:  void QFont::setWeight(int );
-extern void _ZN5QFont9setWeightEi(void* qthis, int arg0);
+extern void _ZN5QFont9setWeightEi(void* qthis, int32_t arg0);
   // proto:  int QFont::weight();
 extern void _ZNK5QFont6weightEv(void* qthis);
   // proto: static void QFont::insertSubstitutions(const QString & , const QStringList & );
@@ -63,10 +63,10 @@ extern void _ZN5QFont12setUnderlineEb(void* qthis, bool arg0);
   // proto:  qreal QFont::letterSpacing();
 extern void _ZNK5QFont13letterSpacingEv(void* qthis);
   // proto:  void QFont::setPointSize(int );
-extern void _ZN5QFont12setPointSizeEi(void* qthis, int arg0);
+extern void _ZN5QFont12setPointSizeEi(void* qthis, int32_t arg0);
   // proto:  void QFont::QFont(const QString & family, int pointSize, int weight, bool italic);
-extern void* dector_ZN5QFontC1ERK7QStringiib(void* arg0, int arg1, int arg2, bool arg3);
-extern void _ZN5QFontC1ERK7QStringiib(void* qthis, void* arg0, int arg1, int arg2, bool arg3);
+extern void* dector_ZN5QFontC1ERK7QStringiib(void* arg0, int32_t arg1, int32_t arg2, bool arg3);
+extern void _ZN5QFontC1ERK7QStringiib(void* qthis, void* arg0, int32_t arg1, int32_t arg2, bool arg3);
   // proto:  void QFont::setOverline(bool );
 extern void _ZN5QFont11setOverlineEb(void* qthis, bool arg0);
   // proto:  QString QFont::family();
@@ -85,7 +85,7 @@ extern void _ZNK5QFont8overlineEv(void* qthis);
   // proto:  void QFont::~QFont();
 extern void _ZN5QFontD0Ev(void* qthis);
   // proto:  void QFont::resolve(uint mask);
-extern void demth_ZN5QFont7resolveEj(void* qthis, unsigned int arg0);
+extern void demth_ZN5QFont7resolveEj(void* qthis, int32_t arg0);
   // proto:  void QFont::setBold(bool );
 extern void demth_ZN5QFont7setBoldEb(void* qthis, bool arg0);
   // proto: static void QFont::cacheStatistics();
@@ -103,7 +103,7 @@ extern void _ZNK5QFont10pointSizeFEv(void* qthis);
   // proto: static void QFont::insertSubstitution(const QString & , const QString & );
 extern void _ZN5QFont18insertSubstitutionERK7QStringS2_(void* arg0, void* arg1);
   // proto:  void QFont::setStretch(int );
-extern void _ZN5QFont10setStretchEi(void* qthis, int arg0);
+extern void _ZN5QFont10setStretchEi(void* qthis, int32_t arg0);
   // proto:  QString QFont::styleName();
 extern void _ZNK5QFont9styleNameEv(void* qthis);
   // proto:  void QFont::QFont();
@@ -135,7 +135,7 @@ extern void _ZN5QFont13setFixedPitchEb(void* qthis, bool arg0);
   // proto: static void QFont::removeSubstitutions(const QString & );
 extern void _ZN5QFont19removeSubstitutionsERK7QString(void* arg0);
   // proto:  void QFont::setPixelSize(int );
-extern void _ZN5QFont12setPixelSizeEi(void* qthis, int arg0);
+extern void _ZN5QFont12setPixelSizeEi(void* qthis, int32_t arg0);
   // proto: static void QFont::initialize();
 extern void _ZN5QFont10initializeEv();
   // proto:  QString QFont::key();
@@ -143,7 +143,7 @@ extern void _ZNK5QFont3keyEv(void* qthis);
   // proto:  QString QFont::lastResortFont();
 extern void _ZNK5QFont14lastResortFontEv(void* qthis);
   // proto:  void QFont::swap(QFont & other);
-extern void _ZN5QFont4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN5QFont4swapERS_(void* qthis, void* arg0);
   // proto:  QString QFont::defaultFamily();
 extern void _ZNK5QFont13defaultFamilyEv(void* qthis);
   // proto:  void QFont::setStrikeOut(bool );
@@ -173,7 +173,7 @@ func init() {
 // class sizeof(QFont)=1
 type QFont struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QFont::setWordSpacing(qreal spacing);
@@ -233,7 +233,7 @@ func (this *QFont) setRawMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont10setRawModeEb
     // invoke: void setRawMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont10setRawModeEb(this.qclsinst, arg0)
   default:
@@ -468,7 +468,7 @@ func (this *QFont) setUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont12setUnderlineEb
     // invoke: void setUnderline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont12setUnderlineEb(this.qclsinst, arg0)
   default:
@@ -539,7 +539,7 @@ func (this *QFont) setOverline(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont11setOverlineEb
     // invoke: void setOverline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont11setOverlineEb(this.qclsinst, arg0)
   default:
@@ -602,7 +602,7 @@ func (this *QFont) setItalic(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont9setItalicEb
     // invoke: void setItalic(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN5QFont9setItalicEb(this.qclsinst, arg0)
   default:
@@ -682,7 +682,7 @@ func (this *QFont) setBold(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont7setBoldEb
     // invoke: void setBold(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN5QFont7setBoldEb(this.qclsinst, arg0)
   default:
@@ -979,7 +979,7 @@ func (this *QFont) setKerning(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont10setKerningEb
     // invoke: void setKerning(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont10setKerningEb(this.qclsinst, arg0)
   default:
@@ -1056,7 +1056,7 @@ func (this *QFont) setFixedPitch(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont13setFixedPitchEb
     // invoke: void setFixedPitch(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont13setFixedPitchEb(this.qclsinst, arg0)
   default:
@@ -1172,7 +1172,7 @@ func (this *QFont) swap(args ...interface{}) () {
     // invoke: void swap(class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN5QFont4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN5QFont4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFont", "swap", args)
   }
@@ -1213,7 +1213,7 @@ func (this *QFont) setStrikeOut(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QFont12setStrikeOutEb
     // invoke: void setStrikeOut(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN5QFont12setStrikeOutEb(this.qclsinst, arg0)
   default:

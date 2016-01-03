@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -82,7 +82,7 @@ func init() {
 // class sizeof(QInputMethod)=1
 type QInputMethod struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorRectangleChanged QInputMethod_cursorRectangleChanged_signal;
 //  _localeChanged QInputMethod_localeChanged_signal;
 //  _inputDirectionChanged QInputMethod_inputDirectionChanged_signal;
@@ -250,7 +250,7 @@ func (this *QInputMethod) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputMethod10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QInputMethod10setVisibleEb(this.qclsinst, arg0)
   default:

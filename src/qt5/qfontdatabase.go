@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.go
 //
@@ -46,13 +46,13 @@ extern void _ZNK13QFontDatabase6italicERK7QStringS2_(void* qthis, void* arg0, vo
 extern void* dector_ZN13QFontDatabaseC1Ev();
 extern void _ZN13QFontDatabaseC1Ev(void* qthis);
   // proto: static QStringList QFontDatabase::applicationFontFamilies(int id);
-extern void _ZN13QFontDatabase23applicationFontFamiliesEi(int arg0);
+extern void _ZN13QFontDatabase23applicationFontFamiliesEi(int32_t arg0);
   // proto:  bool QFontDatabase::hasFamily(const QString & family);
 extern void _ZNK13QFontDatabase9hasFamilyERK7QString(void* qthis, void* arg0);
   // proto:  bool QFontDatabase::isFixedPitch(const QString & family, const QString & style);
 extern void _ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto:  QFont QFontDatabase::font(const QString & family, const QString & style, int pointSize);
-extern void _ZNK13QFontDatabase4fontERK7QStringS2_i(void* qthis, void* arg0, void* arg1, int arg2);
+extern void _ZNK13QFontDatabase4fontERK7QStringS2_i(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  int QFontDatabase::weight(const QString & family, const QString & style);
 extern void _ZNK13QFontDatabase6weightERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto: static bool QFontDatabase::removeAllApplicationFonts();
@@ -66,7 +66,7 @@ extern void _ZNK13QFontDatabase15isPrivateFamilyERK7QString(void* qthis, void* a
   // proto:  bool QFontDatabase::isScalable(const QString & family, const QString & style);
 extern void _ZNK13QFontDatabase10isScalableERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto: static bool QFontDatabase::removeApplicationFont(int id);
-extern void _ZN13QFontDatabase21removeApplicationFontEi(int arg0);
+extern void _ZN13QFontDatabase21removeApplicationFontEi(int32_t arg0);
   // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
 extern void _ZN13QFontDatabase11styleStringERK9QFontInfo(void* qthis, void* arg0);
   // proto:  bool QFontDatabase::isBitmapScalable(const QString & family, const QString & style);
@@ -94,7 +94,7 @@ func init() {
 // class sizeof(QFontDatabase)=8
 type QFontDatabase struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QList<int> QFontDatabase::pointSizes(const QString & family, const QString & style);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -33,14 +33,14 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
-extern void _ZN8QLibrary7resolveERK7QStringS2_PKc(void* arg0, void* arg1, char* arg2);
+extern void _ZN8QLibrary7resolveERK7QStringS2_PKc(void* arg0, void* arg1, unsigned char* arg2);
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
 extern void* dector_ZN8QLibraryC1ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2);
 extern void _ZN8QLibraryC1ERK7QStringS2_P7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  const QMetaObject * QLibrary::metaObject();
 extern void _ZNK8QLibrary10metaObjectEv(void* qthis);
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const char * symbol);
-extern void _ZN8QLibrary7resolveERK7QStringPKc(void* arg0, char* arg1);
+extern void _ZN8QLibrary7resolveERK7QStringPKc(void* arg0, unsigned char* arg1);
   // proto:  void QLibrary::QLibrary(QObject * parent);
 extern void* dector_ZN8QLibraryC1EP7QObject(void* arg0);
 extern void _ZN8QLibraryC1EP7QObject(void* qthis, void* arg0);
@@ -63,20 +63,20 @@ extern void _ZN8QLibrary9isLibraryERK7QString(void* arg0);
   // proto:  bool QLibrary::unload();
 extern void _ZN8QLibrary6unloadEv(void* qthis);
   // proto:  QFunctionPointer QLibrary::resolve(const char * symbol);
-extern void _ZN8QLibrary7resolveEPKc(void* qthis, char* arg0);
+extern void _ZN8QLibrary7resolveEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, const QString & version);
 extern void _ZN8QLibrary21setFileNameAndVersionERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto:  void QLibrary::setFileNameAndVersion(const QString & fileName, int verNum);
-extern void _ZN8QLibrary21setFileNameAndVersionERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZN8QLibrary21setFileNameAndVersionERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-extern void* dector_ZN8QLibraryC1ERK7QStringiP7QObject(void* arg0, int arg1, void* arg2);
-extern void _ZN8QLibraryC1ERK7QStringiP7QObject(void* qthis, void* arg0, int arg1, void* arg2);
+extern void* dector_ZN8QLibraryC1ERK7QStringiP7QObject(void* arg0, int32_t arg1, void* arg2);
+extern void _ZN8QLibraryC1ERK7QStringiP7QObject(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  void QLibrary::~QLibrary();
 extern void _ZN8QLibraryD0Ev(void* qthis);
   // proto:  QString QLibrary::errorString();
 extern void _ZNK8QLibrary11errorStringEv(void* qthis);
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, int verNum, const char * symbol);
-extern void _ZN8QLibrary7resolveERK7QStringiPKc(void* arg0, int arg1, char* arg2);
+extern void _ZN8QLibrary7resolveERK7QStringiPKc(void* arg0, int32_t arg1, unsigned char* arg2);
 */
 import "C"
 // } // <= ext block end
@@ -92,7 +92,7 @@ func init() {
 // class sizeof(QLibrary)=1
 type QLibrary struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static QFunctionPointer QLibrary::resolve(const QString & fileName, const QString & version, const char * symbol);
@@ -283,7 +283,7 @@ func (this *QLibrary) resolve(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN8QLibrary7resolveERK7QStringS2_PKc(arg0, arg1, arg2)
   case 1:
@@ -291,13 +291,13 @@ func (this *QLibrary) resolve(args ...interface{}) () {
     // invoke: QFunctionPointer resolve(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN8QLibrary7resolveERK7QStringPKc(arg0, arg1)
   case 2:
     // invoke: _ZN8QLibrary7resolveEPKc
     // invoke: QFunctionPointer resolve(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN8QLibrary7resolveEPKc(this.qclsinst, arg0)
   case 3:
@@ -307,7 +307,7 @@ func (this *QLibrary) resolve(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C._ZN8QLibrary7resolveERK7QStringiPKc(arg0, arg1, arg2)
   default:

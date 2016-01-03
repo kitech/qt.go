@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlayout.h
 // dst-file: /src/widgets/qlayout.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QLayout::setContentsMargins(int left, int top, int right, int bottom);
-extern void _ZN7QLayout18setContentsMarginsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN7QLayout18setContentsMarginsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  int QLayout::spacing();
 extern void _ZNK7QLayout7spacingEv(void* qthis);
   // proto:  void QLayout::QLayout();
@@ -41,8 +41,6 @@ extern void* dector_ZN7QLayoutC1Ev();
 extern void _ZN7QLayoutC1Ev(void* qthis);
   // proto:  QRect QLayout::geometry();
 extern void _ZNK7QLayout8geometryEv(void* qthis);
-  // proto:  int QLayout::count();
-extern void _ZNK7QLayout5countEv(void* qthis);
   // proto:  QSize QLayout::maximumSize();
 extern void _ZNK7QLayout11maximumSizeEv(void* qthis);
   // proto:  void QLayout::setMenuBar(QWidget * w);
@@ -53,8 +51,6 @@ extern void _ZNK7QLayout7indexOfEP7QWidget(void* qthis, void* arg0);
 extern void _ZN7QLayout10setEnabledEb(void* qthis, bool arg0);
   // proto:  QSize QLayout::minimumSize();
 extern void _ZNK7QLayout11minimumSizeEv(void* qthis);
-  // proto:  QLayoutItem * QLayout::takeAt(int index);
-extern void _ZN7QLayout6takeAtEi(void* qthis, int arg0);
   // proto:  QSize QLayout::totalMaximumSize();
 extern void _ZNK7QLayout16totalMaximumSizeEv(void* qthis);
   // proto:  void QLayout::invalidate();
@@ -68,18 +64,16 @@ extern void _ZNK7QLayout13totalSizeHintEv(void* qthis);
   // proto:  void QLayout::QLayout(QWidget * parent);
 extern void* dector_ZN7QLayoutC1EP7QWidget(void* arg0);
 extern void _ZN7QLayoutC1EP7QWidget(void* qthis, void* arg0);
-  // proto:  void QLayout::addItem(QLayoutItem * );
-extern void _ZN7QLayout7addItemEP11QLayoutItem(void* qthis, void* arg0);
   // proto:  int QLayout::totalHeightForWidth(int w);
-extern void _ZNK7QLayout19totalHeightForWidthEi(void* qthis, int arg0);
+extern void _ZNK7QLayout19totalHeightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QLayout::setMargin(int );
-extern void _ZN7QLayout9setMarginEi(void* qthis, int arg0);
+extern void _ZN7QLayout9setMarginEi(void* qthis, int32_t arg0);
   // proto:  bool QLayout::isEmpty();
 extern void _ZNK7QLayout7isEmptyEv(void* qthis);
   // proto:  void QLayout::addWidget(QWidget * w);
 extern void _ZN7QLayout9addWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  void QLayout::getContentsMargins(int * left, int * top, int * right, int * bottom);
-extern void _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+extern void _ZNK7QLayout18getContentsMarginsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3);
   // proto:  QLayout * QLayout::layout();
 extern void _ZN7QLayout6layoutEv(void* qthis);
   // proto:  bool QLayout::activate();
@@ -91,7 +85,7 @@ extern void _ZN7QLayoutD0Ev(void* qthis);
   // proto:  int QLayout::margin();
 extern void _ZNK7QLayout6marginEv(void* qthis);
   // proto:  void QLayout::setSpacing(int );
-extern void _ZN7QLayout10setSpacingEi(void* qthis, int arg0);
+extern void _ZN7QLayout10setSpacingEi(void* qthis, int32_t arg0);
   // proto:  QWidget * QLayout::menuBar();
 extern void _ZNK7QLayout7menuBarEv(void* qthis);
   // proto:  void QLayout::QLayout(const QLayout & );
@@ -99,8 +93,6 @@ extern void* dector_ZN7QLayoutC1ERKS_(void* arg0);
 extern void _ZN7QLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  const QMetaObject * QLayout::metaObject();
 extern void _ZNK7QLayout10metaObjectEv(void* qthis);
-  // proto:  QLayoutItem * QLayout::itemAt(int index);
-extern void _ZNK7QLayout6itemAtEi(void* qthis, int arg0);
   // proto:  QWidget * QLayout::parentWidget();
 extern void _ZNK7QLayout12parentWidgetEv(void* qthis);
   // proto:  void QLayout::removeWidget(QWidget * w);
@@ -132,7 +124,7 @@ func init() {
 // class sizeof(QLayout)=1
 type QLayout struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QLayout::setContentsMargins(int left, int top, int right, int bottom);
@@ -221,26 +213,6 @@ func (this *QLayout) geometry(args ...interface{}) () {
 
 }
 
-  // proto:  int QLayout::count();
-func (this *QLayout) count(args ...interface{}) () {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLayout5countEv
-    // invoke: int count()
-    C._ZNK7QLayout5countEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLayout", "count", args)
-  }
-
-}
-
   // proto:  QSize QLayout::maximumSize();
 func (this *QLayout) maximumSize(args ...interface{}) () {
   // maximumSize()
@@ -321,7 +293,7 @@ func (this *QLayout) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QLayout10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QLayout10setEnabledEb(this.qclsinst, arg0)
   default:
@@ -346,29 +318,6 @@ func (this *QLayout) minimumSize(args ...interface{}) () {
     C._ZNK7QLayout11minimumSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "minimumSize", args)
-  }
-
-}
-
-  // proto:  QLayoutItem * QLayout::takeAt(int index);
-func (this *QLayout) takeAt(args ...interface{}) () {
-  // takeAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLayout6takeAtEi
-    // invoke: QLayoutItem * takeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN7QLayout6takeAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLayout", "takeAt", args)
   }
 
 }
@@ -469,29 +418,6 @@ func (this *QLayout) totalSizeHint(args ...interface{}) () {
     C._ZNK7QLayout13totalSizeHintEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "totalSizeHint", args)
-  }
-
-}
-
-  // proto:  void QLayout::addItem(QLayoutItem * );
-func (this *QLayout) addItem(args ...interface{}) () {
-  // addItem(class QLayoutItem *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QLayoutItem{}) // "QLayoutItem *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QLayout7addItemEP11QLayoutItem
-    // invoke: void addItem(class QLayoutItem *)
-    var arg0 = args[0].(QLayoutItem).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN7QLayout7addItemEP11QLayoutItem(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLayout", "addItem", args)
   }
 
 }
@@ -770,29 +696,6 @@ func (this *QLayout) metaObject(args ...interface{}) () {
     C._ZNK7QLayout10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QLayout", "metaObject", args)
-  }
-
-}
-
-  // proto:  QLayoutItem * QLayout::itemAt(int index);
-func (this *QLayout) itemAt(args ...interface{}) () {
-  // itemAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QLayout6itemAtEi
-    // invoke: QLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK7QLayout6itemAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLayout", "itemAt", args)
   }
 
 }

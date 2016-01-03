@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -40,7 +40,7 @@ extern void _ZNK15QImageIOHandler10imageCountEv(void* qthis);
   // proto:  QRect QImageIOHandler::currentImageRect();
 extern void _ZNK15QImageIOHandler16currentImageRectEv(void* qthis);
   // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
-extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int arg0);
+extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int32_t arg0);
   // proto:  int QImageIOHandler::currentImageNumber();
 extern void _ZNK15QImageIOHandler18currentImageNumberEv(void* qthis);
   // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
@@ -54,8 +54,6 @@ extern void _ZNK15QImageIOHandler9loopCountEv(void* qthis);
   // proto:  void QImageIOHandler::QImageIOHandler();
 extern void* dector_ZN15QImageIOHandlerC1Ev();
 extern void _ZN15QImageIOHandlerC1Ev(void* qthis);
-  // proto:  bool QImageIOHandler::read(QImage * image);
-extern void _ZN15QImageIOHandler4readEP6QImage(void* qthis, void* arg0);
   // proto:  QByteArray QImageIOHandler::name();
 extern void _ZNK15QImageIOHandler4nameEv(void* qthis);
   // proto:  QByteArray QImageIOHandler::format();
@@ -64,8 +62,6 @@ extern void _ZNK15QImageIOHandler6formatEv(void* qthis);
 extern void _ZNK15QImageIOHandler14nextImageDelayEv(void* qthis);
   // proto:  void QImageIOHandler::setDevice(QIODevice * device);
 extern void _ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0);
-  // proto:  bool QImageIOHandler::canRead();
-extern void _ZNK15QImageIOHandler7canReadEv(void* qthis);
   // proto:  QIODevice * QImageIOHandler::device();
 extern void _ZNK15QImageIOHandler6deviceEv(void* qthis);
   // proto:  bool QImageIOHandler::write(const QImage & image);
@@ -74,8 +70,6 @@ extern void _ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0);
 extern void _ZNK14QImageIOPlugin10metaObjectEv(void* qthis);
   // proto:  void QImageIOPlugin::~QImageIOPlugin();
 extern void _ZN14QImageIOPluginD0Ev(void* qthis);
-  // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
-extern void _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1);
   // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
 extern void* dector_ZN14QImageIOPluginC1EP7QObject(void* arg0);
 extern void _ZN14QImageIOPluginC1EP7QObject(void* qthis, void* arg0);
@@ -94,13 +88,13 @@ func init() {
 // class sizeof(QImageIOHandler)=1
 type QImageIOHandler struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QImageIOPlugin)=1
 type QImageIOPlugin struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
@@ -271,29 +265,6 @@ func (this *QImageIOHandler) loopCount(args ...interface{}) () {
 
 }
 
-  // proto:  bool QImageIOHandler::read(QImage * image);
-func (this *QImageIOHandler) read(args ...interface{}) () {
-  // read(class QImage *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QImage{}) // "QImage *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QImageIOHandler4readEP6QImage
-    // invoke: bool read(class QImage *)
-    var arg0 = args[0].(QImage).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler4readEP6QImage(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "read", args)
-  }
-
-}
-
   // proto:  QByteArray QImageIOHandler::name();
 func (this *QImageIOHandler) name(args ...interface{}) () {
   // name()
@@ -377,26 +348,6 @@ func (this *QImageIOHandler) setDevice(args ...interface{}) () {
 
 }
 
-  // proto:  bool QImageIOHandler::canRead();
-func (this *QImageIOHandler) canRead(args ...interface{}) () {
-  // canRead()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler7canReadEv
-    // invoke: bool canRead()
-    C._ZNK15QImageIOHandler7canReadEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "canRead", args)
-  }
-
-}
-
   // proto:  QIODevice * QImageIOHandler::device();
 func (this *QImageIOHandler) device(args ...interface{}) () {
   // device()
@@ -470,32 +421,6 @@ func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
   switch matched_index {
   default:
     qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
-  }
-
-}
-
-  // proto:  QImageIOHandler * QImageIOPlugin::create(QIODevice * device, const QByteArray & format);
-func (this *QImageIOPlugin) create(args ...interface{}) () {
-  // create(class QIODevice *, const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-  vtys[0][1] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray
-    // invoke: QImageIOHandler * create(class QIODevice *, const class QByteArray &)
-    var arg0 = args[0].(QIODevice).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QByteArray).qclsinst
-    if false {fmt.Println(arg1)}
-    C._ZNK14QImageIOPlugin6createEP9QIODeviceRK10QByteArray(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QImageIOPlugin", "create", args)
   }
 
 }

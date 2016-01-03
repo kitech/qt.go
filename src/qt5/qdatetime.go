@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qdatetime.h
 // dst-file: /src/core/qdatetime.go
 //
@@ -33,9 +33,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QTime QTime::addMSecs(int ms);
-extern void _ZNK5QTime8addMSecsEi(void* qthis, int arg0);
+extern void _ZNK5QTime8addMSecsEi(void* qthis, int32_t arg0);
   // proto: static QTime QTime::fromMSecsSinceStartOfDay(int msecs);
-extern void demth_ZN5QTime24fromMSecsSinceStartOfDayEi(int arg0);
+extern void demth_ZN5QTime24fromMSecsSinceStartOfDayEi(int32_t arg0);
   // proto: static QTime QTime::currentTime();
 extern void _ZN5QTime11currentTimeEv();
   // proto:  int QTime::second();
@@ -45,32 +45,32 @@ extern void _ZN5QTime7restartEv(void* qthis);
   // proto:  void QTime::start();
 extern void _ZN5QTime5startEv(void* qthis);
   // proto:  bool QTime::isNull();
-extern void _ZNK5QTime6isNullEv(void* qthis);
+extern void demth_ZNK5QTime6isNullEv(void* qthis);
   // proto:  int QTime::msecsSinceStartOfDay();
-extern void _ZNK5QTime20msecsSinceStartOfDayEv(void* qthis);
+extern void demth_ZNK5QTime20msecsSinceStartOfDayEv(void* qthis);
   // proto:  int QTime::hour();
 extern void _ZNK5QTime4hourEv(void* qthis);
   // proto:  int QTime::elapsed();
 extern void _ZNK5QTime7elapsedEv(void* qthis);
   // proto:  QTime QTime::addSecs(int secs);
-extern void _ZNK5QTime7addSecsEi(void* qthis, int arg0);
+extern void _ZNK5QTime7addSecsEi(void* qthis, int32_t arg0);
   // proto:  bool QTime::isValid();
 extern void _ZNK5QTime7isValidEv(void* qthis);
   // proto:  void QTime::QTime(int ms);
-extern void* dector_ZN5QTimeC1Ei(int arg0);
-extern void _ZN5QTimeC1Ei(void* qthis, int arg0);
+extern void* dector_ZN5QTimeC1Ei(int32_t arg0);
+extern void _ZN5QTimeC1Ei(void* qthis, int32_t arg0);
   // proto:  int QTime::msec();
 extern void _ZNK5QTime4msecEv(void* qthis);
   // proto:  void QTime::QTime(int h, int m, int s, int ms);
-extern void* dector_ZN5QTimeC1Eiiii(int arg0, int arg1, int arg2, int arg3);
-extern void _ZN5QTimeC1Eiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void* dector_ZN5QTimeC1Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
+extern void _ZN5QTimeC1Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  int QTime::secsTo(const QTime & );
 extern void _ZNK5QTime6secsToERKS_(void* qthis, void* arg0);
   // proto:  void QTime::QTime();
 extern void* dector_ZN5QTimeC1Ev();
 extern void _ZN5QTimeC1Ev(void* qthis);
   // proto:  bool QTime::setHMS(int h, int m, int s, int ms);
-extern void _ZN5QTime6setHMSEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN5QTime6setHMSEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  QString QTime::toString(const QString & format);
 extern void _ZNK5QTime8toStringERK7QString(void* qthis, void* arg0);
   // proto:  int QTime::msecsTo(const QTime & );
@@ -78,13 +78,13 @@ extern void _ZNK5QTime7msecsToERKS_(void* qthis, void* arg0);
   // proto:  int QTime::minute();
 extern void _ZNK5QTime6minuteEv(void* qthis);
   // proto: static bool QTime::isValid(int h, int m, int s, int ms);
-extern void _ZN5QTime7isValidEiiii(int arg0, int arg1, int arg2, int arg3);
+extern void _ZN5QTime7isValidEiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto: static QTime QTime::fromString(const QString & s, const QString & format);
 extern void _ZN5QTime10fromStringERK7QStringS2_(void* arg0, void* arg1);
   // proto:  QDateTime QDateTime::toLocalTime();
 extern void demth_ZNK9QDateTime11toLocalTimeEv(void* qthis);
   // proto:  void QDateTime::setOffsetFromUtc(int offsetSeconds);
-extern void _ZN9QDateTime16setOffsetFromUtcEi(void* qthis, int arg0);
+extern void _ZN9QDateTime16setOffsetFromUtcEi(void* qthis, int32_t arg0);
   // proto:  QTimeZone QDateTime::timeZone();
 extern void _ZNK9QDateTime8timeZoneEv(void* qthis);
   // proto:  void QDateTime::setTime(const QTime & time);
@@ -92,7 +92,7 @@ extern void _ZN9QDateTime7setTimeERK5QTime(void* qthis, void* arg0);
   // proto:  qint64 QDateTime::toMSecsSinceEpoch();
 extern void _ZNK9QDateTime17toMSecsSinceEpochEv(void* qthis);
   // proto:  void QDateTime::setTime_t(uint secsSince1Jan1970UTC);
-extern void _ZN9QDateTime9setTime_tEj(void* qthis, unsigned int arg0);
+extern void _ZN9QDateTime9setTime_tEj(void* qthis, int32_t arg0);
   // proto:  void QDateTime::QDateTime(const QDateTime & other);
 extern void* dector_ZN9QDateTimeC1ERKS_(void* arg0);
 extern void _ZN9QDateTimeC1ERKS_(void* qthis, void* arg0);
@@ -106,17 +106,17 @@ extern void _ZNK9QDateTime7isValidEv(void* qthis);
   // proto:  QString QDateTime::toString(const QString & format);
 extern void _ZNK9QDateTime8toStringERK7QString(void* qthis, void* arg0);
   // proto:  QDateTime QDateTime::addYears(int years);
-extern void _ZNK9QDateTime8addYearsEi(void* qthis, int arg0);
+extern void _ZNK9QDateTime8addYearsEi(void* qthis, int32_t arg0);
   // proto:  void QDateTime::setMSecsSinceEpoch(qint64 msecs);
-extern void _ZN9QDateTime18setMSecsSinceEpochEx(void* qthis, long long arg0);
+extern void _ZN9QDateTime18setMSecsSinceEpochEx(void* qthis, int64_t arg0);
   // proto:  QDateTime QDateTime::toOffsetFromUtc(int offsetSeconds);
-extern void _ZNK9QDateTime15toOffsetFromUtcEi(void* qthis, int arg0);
+extern void _ZNK9QDateTime15toOffsetFromUtcEi(void* qthis, int32_t arg0);
   // proto:  void QDateTime::setUtcOffset(int seconds);
-extern void _ZN9QDateTime12setUtcOffsetEi(void* qthis, int arg0);
+extern void _ZN9QDateTime12setUtcOffsetEi(void* qthis, int32_t arg0);
   // proto:  QDateTime QDateTime::addSecs(qint64 secs);
-extern void _ZNK9QDateTime7addSecsEx(void* qthis, long long arg0);
+extern void _ZNK9QDateTime7addSecsEx(void* qthis, int64_t arg0);
   // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs);
-extern void _ZN9QDateTime19fromMSecsSinceEpochEx(long long arg0);
+extern void _ZN9QDateTime19fromMSecsSinceEpochEx(int64_t arg0);
   // proto:  void QDateTime::QDateTime(const QDate & date, const QTime & time, const QTimeZone & timeZone);
 extern void* dector_ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(void* arg0, void* arg1, void* arg2);
 extern void _ZN9QDateTimeC1ERK5QDateRK5QTimeRK9QTimeZone(void* qthis, void* arg0, void* arg1, void* arg2);
@@ -142,13 +142,13 @@ extern void _ZNK9QDateTime13offsetFromUtcEv(void* qthis);
 extern void* dector_ZN9QDateTimeC1ERK5QDate(void* arg0);
 extern void _ZN9QDateTimeC1ERK5QDate(void* qthis, void* arg0);
   // proto:  QDateTime QDateTime::addMSecs(qint64 msecs);
-extern void _ZNK9QDateTime8addMSecsEx(void* qthis, long long arg0);
+extern void _ZNK9QDateTime8addMSecsEx(void* qthis, int64_t arg0);
   // proto:  qint64 QDateTime::secsTo(const QDateTime & );
 extern void _ZNK9QDateTime6secsToERKS_(void* qthis, void* arg0);
   // proto:  void QDateTime::~QDateTime();
 extern void _ZN9QDateTimeD0Ev(void* qthis);
   // proto:  QDateTime QDateTime::addMonths(int months);
-extern void _ZNK9QDateTime9addMonthsEi(void* qthis, int arg0);
+extern void _ZNK9QDateTime9addMonthsEi(void* qthis, int32_t arg0);
   // proto: static QDateTime QDateTime::currentDateTime();
 extern void _ZN9QDateTime15currentDateTimeEv();
   // proto:  QDateTime QDateTime::toTimeZone(const QTimeZone & toZone);
@@ -156,21 +156,21 @@ extern void _ZNK9QDateTime10toTimeZoneERK9QTimeZone(void* qthis, void* arg0);
   // proto:  qint64 QDateTime::msecsTo(const QDateTime & );
 extern void _ZNK9QDateTime7msecsToERKS_(void* qthis, void* arg0);
   // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC);
-extern void _ZN9QDateTime10fromTime_tEj(unsigned int arg0);
+extern void _ZN9QDateTime10fromTime_tEj(int32_t arg0);
   // proto: static QDateTime QDateTime::fromTime_t(uint secsSince1Jan1970UTC, const QTimeZone & timeZone);
-extern void _ZN9QDateTime10fromTime_tEjRK9QTimeZone(unsigned int arg0, void* arg1);
+extern void _ZN9QDateTime10fromTime_tEjRK9QTimeZone(int32_t arg0, void* arg1);
   // proto:  void QDateTime::setDate(const QDate & date);
 extern void _ZN9QDateTime7setDateERK5QDate(void* qthis, void* arg0);
   // proto:  int QDateTime::utcOffset();
 extern void _ZNK9QDateTime9utcOffsetEv(void* qthis);
   // proto: static QDateTime QDateTime::fromMSecsSinceEpoch(qint64 msecs, const QTimeZone & timeZone);
-extern void _ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone(long long arg0, void* arg1);
+extern void _ZN9QDateTime19fromMSecsSinceEpochExRK9QTimeZone(int64_t arg0, void* arg1);
   // proto:  QTime QDateTime::time();
 extern void _ZNK9QDateTime4timeEv(void* qthis);
   // proto:  qint64 QDateTime::daysTo(const QDateTime & );
 extern void _ZNK9QDateTime6daysToERKS_(void* qthis, void* arg0);
   // proto:  QDateTime QDateTime::addDays(qint64 days);
-extern void _ZNK9QDateTime7addDaysEx(void* qthis, long long arg0);
+extern void _ZNK9QDateTime7addDaysEx(void* qthis, int64_t arg0);
   // proto:  void QDateTime::setTimeZone(const QTimeZone & toZone);
 extern void _ZN9QDateTime11setTimeZoneERK9QTimeZone(void* qthis, void* arg0);
   // proto: static QDateTime QDateTime::currentDateTimeUtc();
@@ -178,26 +178,26 @@ extern void _ZN9QDateTime18currentDateTimeUtcEv();
   // proto:  qint64 QDate::daysTo(const QDate & );
 extern void _ZNK5QDate6daysToERKS_(void* qthis, void* arg0);
   // proto:  QDate QDate::addYears(int years);
-extern void _ZNK5QDate8addYearsEi(void* qthis, int arg0);
+extern void _ZNK5QDate8addYearsEi(void* qthis, int32_t arg0);
   // proto:  int QDate::month();
 extern void _ZNK5QDate5monthEv(void* qthis);
   // proto:  qint64 QDate::toJulianDay();
-extern void _ZNK5QDate11toJulianDayEv(void* qthis);
+extern void demth_ZNK5QDate11toJulianDayEv(void* qthis);
   // proto:  void QDate::QDate(qint64 julianDay);
-extern void* dector_ZN5QDateC1Ex(long long arg0);
-extern void _ZN5QDateC1Ex(void* qthis, long long arg0);
+extern void* dector_ZN5QDateC1Ex(int64_t arg0);
+extern void _ZN5QDateC1Ex(void* qthis, int64_t arg0);
   // proto:  void QDate::QDate();
 extern void* dector_ZN5QDateC1Ev();
 extern void _ZN5QDateC1Ev(void* qthis);
   // proto:  void QDate::getDate(int * year, int * month, int * day);
-extern void _ZN5QDate7getDateEPiS0_S0_(void* qthis, int* arg0, int* arg1, int* arg2);
+extern void _ZN5QDate7getDateEPiS0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2);
   // proto: static QDate QDate::currentDate();
 extern void _ZN5QDate11currentDateEv();
   // proto:  void QDate::QDate(int y, int m, int d);
-extern void* dector_ZN5QDateC1Eiii(int arg0, int arg1, int arg2);
-extern void _ZN5QDateC1Eiii(void* qthis, int arg0, int arg1, int arg2);
+extern void* dector_ZN5QDateC1Eiii(int32_t arg0, int32_t arg1, int32_t arg2);
+extern void _ZN5QDateC1Eiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  int QDate::weekNumber(int * yearNum);
-extern void _ZNK5QDate10weekNumberEPi(void* qthis, int* arg0);
+extern void _ZNK5QDate10weekNumberEPi(void* qthis, int32_t* arg0);
   // proto:  QString QDate::toString(const QString & format);
 extern void _ZNK5QDate8toStringERK7QString(void* qthis, void* arg0);
   // proto:  int QDate::dayOfYear();
@@ -205,29 +205,29 @@ extern void _ZNK5QDate9dayOfYearEv(void* qthis);
   // proto:  int QDate::day();
 extern void _ZNK5QDate3dayEv(void* qthis);
   // proto:  bool QDate::setDate(int year, int month, int day);
-extern void _ZN5QDate7setDateEiii(void* qthis, int arg0, int arg1, int arg2);
+extern void _ZN5QDate7setDateEiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QDate::isNull();
-extern void _ZNK5QDate6isNullEv(void* qthis);
+extern void demth_ZNK5QDate6isNullEv(void* qthis);
   // proto: static QDate QDate::fromJulianDay(qint64 jd);
-extern void demth_ZN5QDate13fromJulianDayEx(long long arg0);
+extern void demth_ZN5QDate13fromJulianDayEx(int64_t arg0);
   // proto:  bool QDate::isValid();
-extern void _ZNK5QDate7isValidEv(void* qthis);
+extern void demth_ZNK5QDate7isValidEv(void* qthis);
   // proto:  QDate QDate::addDays(qint64 days);
-extern void _ZNK5QDate7addDaysEx(void* qthis, long long arg0);
+extern void _ZNK5QDate7addDaysEx(void* qthis, int64_t arg0);
   // proto: static bool QDate::isValid(int y, int m, int d);
-extern void _ZN5QDate7isValidEiii(int arg0, int arg1, int arg2);
+extern void _ZN5QDate7isValidEiii(int32_t arg0, int32_t arg1, int32_t arg2);
   // proto:  int QDate::daysInMonth();
 extern void _ZNK5QDate11daysInMonthEv(void* qthis);
   // proto: static QDate QDate::fromString(const QString & s, const QString & format);
 extern void _ZN5QDate10fromStringERK7QStringS2_(void* arg0, void* arg1);
   // proto: static bool QDate::isLeapYear(int year);
-extern void _ZN5QDate10isLeapYearEi(int arg0);
+extern void _ZN5QDate10isLeapYearEi(int32_t arg0);
   // proto:  int QDate::daysInYear();
 extern void _ZNK5QDate10daysInYearEv(void* qthis);
   // proto:  int QDate::dayOfWeek();
 extern void _ZNK5QDate9dayOfWeekEv(void* qthis);
   // proto:  QDate QDate::addMonths(int months);
-extern void _ZNK5QDate9addMonthsEi(void* qthis, int arg0);
+extern void _ZNK5QDate9addMonthsEi(void* qthis, int32_t arg0);
   // proto:  int QDate::year();
 extern void _ZNK5QDate4yearEv(void* qthis);
 */
@@ -245,19 +245,19 @@ func init() {
 // class sizeof(QTime)=4
 type QTime struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDateTime)=1
 type QDateTime struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDate)=8
 type QDate struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QTime QTime::addMSecs(int ms);
@@ -384,7 +384,7 @@ func (this *QTime) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QTime6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QTime6isNullEv(this.qclsinst)
+    C.demth_ZNK5QTime6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTime", "isNull", args)
   }
@@ -404,7 +404,7 @@ func (this *QTime) msecsSinceStartOfDay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QTime20msecsSinceStartOfDayEv
     // invoke: int msecsSinceStartOfDay()
-    C._ZNK5QTime20msecsSinceStartOfDayEv(this.qclsinst)
+    C.demth_ZNK5QTime20msecsSinceStartOfDayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTime", "msecsSinceStartOfDay", args)
   }
@@ -1571,7 +1571,7 @@ func (this *QDate) toJulianDay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDate11toJulianDayEv
     // invoke: qint64 toJulianDay()
-    C._ZNK5QDate11toJulianDayEv(this.qclsinst)
+    C.demth_ZNK5QDate11toJulianDayEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDate", "toJulianDay", args)
   }
@@ -1757,7 +1757,7 @@ func (this *QDate) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDate6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QDate6isNullEv(this.qclsinst)
+    C.demth_ZNK5QDate6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDate", "isNull", args)
   }
@@ -1796,7 +1796,7 @@ func (this *QDate) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDate7isValidEv
     // invoke: bool isValid()
-    C._ZNK5QDate7isValidEv(this.qclsinst)
+    C.demth_ZNK5QDate7isValidEv(this.qclsinst)
   case 1:
     // invoke: _ZN5QDate7isValidEiii
     // invoke: bool isValid(int, int, int)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qabstractslider.h
 // dst-file: /src/widgets/qabstractslider.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAbstractSlider::setSliderPosition(int );
-extern void _ZN15QAbstractSlider17setSliderPositionEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider17setSliderPositionEi(void* qthis, int32_t arg0);
   // proto:  bool QAbstractSlider::isSliderDown();
 extern void _ZNK15QAbstractSlider12isSliderDownEv(void* qthis);
   // proto:  int QAbstractSlider::value();
@@ -50,15 +50,15 @@ extern void _ZNK15QAbstractSlider10singleStepEv(void* qthis);
   // proto:  int QAbstractSlider::pageStep();
 extern void _ZNK15QAbstractSlider8pageStepEv(void* qthis);
   // proto:  void QAbstractSlider::setMaximum(int );
-extern void _ZN15QAbstractSlider10setMaximumEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider10setMaximumEi(void* qthis, int32_t arg0);
   // proto:  bool QAbstractSlider::invertedControls();
 extern void _ZNK15QAbstractSlider16invertedControlsEv(void* qthis);
   // proto:  void QAbstractSlider::setValue(int );
-extern void _ZN15QAbstractSlider8setValueEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider8setValueEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractSlider::~QAbstractSlider();
 extern void _ZN15QAbstractSliderD0Ev(void* qthis);
   // proto:  void QAbstractSlider::setPageStep(int );
-extern void _ZN15QAbstractSlider11setPageStepEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider11setPageStepEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractSlider::setSliderDown(bool );
 extern void _ZN15QAbstractSlider13setSliderDownEb(void* qthis, bool arg0);
   // proto:  int QAbstractSlider::maximum();
@@ -66,7 +66,7 @@ extern void _ZNK15QAbstractSlider7maximumEv(void* qthis);
   // proto:  const QMetaObject * QAbstractSlider::metaObject();
 extern void _ZNK15QAbstractSlider10metaObjectEv(void* qthis);
   // proto:  void QAbstractSlider::setSingleStep(int );
-extern void _ZN15QAbstractSlider13setSingleStepEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider13setSingleStepEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractSlider::setInvertedAppearance(bool );
 extern void _ZN15QAbstractSlider21setInvertedAppearanceEb(void* qthis, bool arg0);
   // proto:  bool QAbstractSlider::hasTracking();
@@ -81,9 +81,9 @@ extern void _ZN15QAbstractSlider11setTrackingEb(void* qthis, bool arg0);
 extern void* dector_ZN15QAbstractSliderC1EP7QWidget(void* arg0);
 extern void _ZN15QAbstractSliderC1EP7QWidget(void* qthis, void* arg0);
   // proto:  void QAbstractSlider::setRange(int min, int max);
-extern void _ZN15QAbstractSlider8setRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN15QAbstractSlider8setRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QAbstractSlider::setMinimum(int );
-extern void _ZN15QAbstractSlider10setMinimumEi(void* qthis, int arg0);
+extern void _ZN15QAbstractSlider10setMinimumEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -99,7 +99,7 @@ func init() {
 // class sizeof(QAbstractSlider)=1
 type QAbstractSlider struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _sliderReleased QAbstractSlider_sliderReleased_signal;
 //  _rangeChanged QAbstractSlider_rangeChanged_signal;
 //  _sliderPressed QAbstractSlider_sliderPressed_signal;
@@ -185,7 +185,7 @@ func (this *QAbstractSlider) setInvertedControls(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider19setInvertedControlsEb
     // invoke: void setInvertedControls(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractSlider19setInvertedControlsEb(this.qclsinst, arg0)
   default:
@@ -376,7 +376,7 @@ func (this *QAbstractSlider) setSliderDown(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider13setSliderDownEb
     // invoke: void setSliderDown(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractSlider13setSliderDownEb(this.qclsinst, arg0)
   default:
@@ -462,7 +462,7 @@ func (this *QAbstractSlider) setInvertedAppearance(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider21setInvertedAppearanceEb
     // invoke: void setInvertedAppearance(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractSlider21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:
@@ -545,7 +545,7 @@ func (this *QAbstractSlider) setTracking(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QAbstractSlider11setTrackingEb
     // invoke: void setTracking(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QAbstractSlider11setTrackingEb(this.qclsinst, arg0)
   default:

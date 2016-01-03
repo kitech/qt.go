@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qxmlstream.h
 // dst-file: /src/core/qxmlstream.go
 //
@@ -132,7 +132,7 @@ extern void _ZN16QXmlStreamReaderD0Ev(void* qthis);
   // proto:  QStringRef QXmlStreamReader::processingInstructionTarget();
 extern void _ZNK16QXmlStreamReader27processingInstructionTargetEv(void* qthis);
   // proto:  void QXmlStreamReader::addData(const char * data);
-extern void _ZN16QXmlStreamReader7addDataEPKc(void* qthis, char* arg0);
+extern void _ZN16QXmlStreamReader7addDataEPKc(void* qthis, unsigned char* arg0);
   // proto:  QStringRef QXmlStreamReader::dtdSystemId();
 extern void _ZNK16QXmlStreamReader11dtdSystemIdEv(void* qthis);
   // proto:  QStringRef QXmlStreamReader::prefix();
@@ -156,8 +156,8 @@ extern void _ZN16QXmlStreamReader20readNextStartElementEv(void* qthis);
   // proto:  bool QXmlStreamReader::isComment();
 extern void demth_ZNK16QXmlStreamReader9isCommentEv(void* qthis);
   // proto:  void QXmlStreamReader::QXmlStreamReader(const char * data);
-extern void* dector_ZN16QXmlStreamReaderC1EPKc(char* arg0);
-extern void _ZN16QXmlStreamReaderC1EPKc(void* qthis, char* arg0);
+extern void* dector_ZN16QXmlStreamReaderC1EPKc(unsigned char* arg0);
+extern void _ZN16QXmlStreamReaderC1EPKc(void* qthis, unsigned char* arg0);
   // proto:  void QXmlStreamReader::skipCurrentElement();
 extern void _ZN16QXmlStreamReader18skipCurrentElementEv(void* qthis);
   // proto:  bool QXmlStreamReader::isEntityReference();
@@ -250,7 +250,7 @@ extern void _ZN16QXmlStreamWriter17writeEmptyElementERK7QString(void* qthis, voi
   // proto:  void QXmlStreamWriter::writeDTD(const QString & dtd);
 extern void _ZN16QXmlStreamWriter8writeDTDERK7QString(void* qthis, void* arg0);
   // proto:  void QXmlStreamWriter::setAutoFormattingIndent(int spacesOrTabs);
-extern void _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(void* qthis, int arg0);
+extern void _ZN16QXmlStreamWriter23setAutoFormattingIndentEi(void* qthis, int32_t arg0);
   // proto:  void QXmlStreamWriter::writeAttribute(const QXmlStreamAttribute & attribute);
 extern void _ZN16QXmlStreamWriter14writeAttributeERK19QXmlStreamAttribute(void* qthis, void* arg0);
   // proto:  void QXmlStreamWriter::writeStartElement(const QString & namespaceUri, const QString & name);
@@ -280,7 +280,7 @@ extern void _ZN16QXmlStreamWriter20writeEntityReferenceERK7QString(void* qthis, 
   // proto:  void QXmlStreamWriter::setAutoFormatting(bool );
 extern void _ZN16QXmlStreamWriter17setAutoFormattingEb(void* qthis, bool arg0);
   // proto:  void QXmlStreamWriter::setCodec(const char * codecName);
-extern void _ZN16QXmlStreamWriter8setCodecEPKc(void* qthis, char* arg0);
+extern void _ZN16QXmlStreamWriter8setCodecEPKc(void* qthis, unsigned char* arg0);
   // proto:  int QXmlStreamWriter::autoFormattingIndent();
 extern void _ZNK16QXmlStreamWriter20autoFormattingIndentEv(void* qthis);
   // proto:  void QXmlStreamWriter::~QXmlStreamWriter();
@@ -360,55 +360,55 @@ func init() {
 // class sizeof(QXmlStreamStringRef)=16
 type QXmlStreamStringRef struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamReader)=1
 type QXmlStreamReader struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamEntityResolver)=8
 type QXmlStreamEntityResolver struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamNamespaceDeclaration)=40
 type QXmlStreamNamespaceDeclaration struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamEntityDeclaration)=88
 type QXmlStreamEntityDeclaration struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamAttributes)=1
 type QXmlStreamAttributes struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamWriter)=1
 type QXmlStreamWriter struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamNotationDeclaration)=56
 type QXmlStreamNotationDeclaration struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QXmlStreamAttribute)=80
 type QXmlStreamAttribute struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QXmlStreamStringRef::size();
@@ -696,7 +696,7 @@ func (this *QXmlStreamReader) addData(args ...interface{}) () {
   case 1:
     // invoke: _ZN16QXmlStreamReader7addDataEPKc
     // invoke: void addData(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN16QXmlStreamReader7addDataEPKc(this.qclsinst, arg0)
   case 2:
@@ -1333,7 +1333,7 @@ func (this *QXmlStreamReader) setNamespaceProcessing(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamReader22setNamespaceProcessingEb
     // invoke: void setNamespaceProcessing(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QXmlStreamReader22setNamespaceProcessingEb(this.qclsinst, arg0)
   default:
@@ -1963,7 +1963,7 @@ func (this *QXmlStreamWriter) writeStartDocument(args ...interface{}) () {
     // invoke: void writeStartDocument(const class QString &, _Bool)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN16QXmlStreamWriter18writeStartDocumentERK7QStringb(this.qclsinst, arg0, arg1)
   case 1:
@@ -2005,7 +2005,7 @@ func (this *QXmlStreamWriter) setCodec(args ...interface{}) () {
   case 1:
     // invoke: _ZN16QXmlStreamWriter8setCodecEPKc
     // invoke: void setCodec(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN16QXmlStreamWriter8setCodecEPKc(this.qclsinst, arg0)
   default:
@@ -2442,7 +2442,7 @@ func (this *QXmlStreamWriter) setAutoFormatting(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QXmlStreamWriter17setAutoFormattingEb
     // invoke: void setAutoFormatting(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN16QXmlStreamWriter17setAutoFormattingEb(this.qclsinst, arg0)
   default:

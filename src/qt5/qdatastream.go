@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
-extern void _ZN11QDataStream9readBytesERPcRj(void* qthis, char* arg0, unsigned int* arg1);
+extern void _ZN11QDataStream9readBytesERPcRj(void* qthis, unsigned char* arg0, int32_t* arg1);
   // proto:  void QDataStream::unsetDevice();
 extern void _ZN11QDataStream11unsetDeviceEv(void* qthis);
   // proto:  void QDataStream::QDataStream(const QDataStream & );
@@ -45,9 +45,9 @@ extern void _ZN11QDataStreamC1EP9QIODevice(void* qthis, void* arg0);
   // proto:  void QDataStream::~QDataStream();
 extern void _ZN11QDataStreamD0Ev(void* qthis);
   // proto:  int QDataStream::skipRawData(int len);
-extern void _ZN11QDataStream11skipRawDataEi(void* qthis, int arg0);
+extern void _ZN11QDataStream11skipRawDataEi(void* qthis, int32_t arg0);
   // proto:  QDataStream & QDataStream::writeBytes(const char * , uint len);
-extern void _ZN11QDataStream10writeBytesEPKcj(void* qthis, char* arg0, unsigned int arg1);
+extern void _ZN11QDataStream10writeBytesEPKcj(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  void QDataStream::QDataStream();
 extern void* dector_ZN11QDataStreamC1Ev();
 extern void _ZN11QDataStreamC1Ev(void* qthis);
@@ -61,13 +61,13 @@ extern void demth_ZNK11QDataStream7versionEv(void* qthis);
   // proto:  bool QDataStream::atEnd();
 extern void _ZNK11QDataStream5atEndEv(void* qthis);
   // proto:  void QDataStream::setVersion(int );
-extern void demth_ZN11QDataStream10setVersionEi(void* qthis, int arg0);
+extern void demth_ZN11QDataStream10setVersionEi(void* qthis, int32_t arg0);
   // proto:  void QDataStream::setDevice(QIODevice * );
 extern void _ZN11QDataStream9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  int QDataStream::writeRawData(const char * , int len);
-extern void _ZN11QDataStream12writeRawDataEPKci(void* qthis, char* arg0, int arg1);
+extern void _ZN11QDataStream12writeRawDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  int QDataStream::readRawData(char * , int len);
-extern void _ZN11QDataStream11readRawDataEPci(void* qthis, char* arg0, int arg1);
+extern void _ZN11QDataStream11readRawDataEPci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  QIODevice * QDataStream::device();
 extern void demth_ZNK11QDataStream6deviceEv(void* qthis);
 */
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QDataStream)=1
 type QDataStream struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QDataStream & QDataStream::readBytes(char *& , uint & len);
@@ -103,9 +103,9 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream9readBytesERPcRj
     // invoke: QDataStream & readBytes(char *&, uint &)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
+    var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
     C._ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
   default:
@@ -191,7 +191,7 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream10writeBytesEPKcj
     // invoke: QDataStream & writeBytes(const char *, uint)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -323,7 +323,7 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream12writeRawDataEPKci
     // invoke: int writeRawData(const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -349,7 +349,7 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QDataStream11readRawDataEPci
     // invoke: int readRawData(char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}

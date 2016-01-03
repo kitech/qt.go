@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qoffscreensurface.h
 // dst-file: /src/gui/qoffscreensurface.go
 //
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QOffscreenSurface)=1
 type QOffscreenSurface struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _screenChanged QOffscreenSurface_screenChanged_signal;
 }
 

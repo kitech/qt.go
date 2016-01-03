@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -33,15 +33,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
-extern void* dector_ZN7QBitRefC1ER9QBitArrayi(void* arg0, int arg1);
-extern void demth_ZN7QBitRefC1ER9QBitArrayi(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN7QBitRefC1ER9QBitArrayi(void* arg0, int32_t arg1);
+extern void demth_ZN7QBitRefC1ER9QBitArrayi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QBitArray::QBitArray(int size, bool val);
-extern void* dector_ZN9QBitArrayC1Eib(int arg0, bool arg1);
-extern void _ZN9QBitArrayC1Eib(void* qthis, int arg0, bool arg1);
+extern void* dector_ZN9QBitArrayC1Eib(int32_t arg0, bool arg1);
+extern void _ZN9QBitArrayC1Eib(void* qthis, int32_t arg0, bool arg1);
   // proto:  bool QBitArray::isEmpty();
 extern void demth_ZNK9QBitArray7isEmptyEv(void* qthis);
   // proto:  void QBitArray::setBit(int i);
-extern void demth_ZN9QBitArray6setBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray6setBitEi(void* qthis, int32_t arg0);
   // proto:  int QBitArray::size();
 extern void demth_ZNK9QBitArray4sizeEv(void* qthis);
   // proto:  void QBitArray::swap(QBitArray & other);
@@ -56,32 +56,32 @@ extern void demth_ZN9QBitArray6detachEv(void* qthis);
 extern void* dector_ZN9QBitArrayC1Ev();
 extern void demth_ZN9QBitArrayC1Ev(void* qthis);
   // proto:  bool QBitArray::at(int i);
-extern void demth_ZNK9QBitArray2atEi(void* qthis, int arg0);
+extern void demth_ZNK9QBitArray2atEi(void* qthis, int32_t arg0);
   // proto:  void QBitArray::clear();
 extern void demth_ZN9QBitArray5clearEv(void* qthis);
   // proto:  void QBitArray::clearBit(int i);
-extern void demth_ZN9QBitArray8clearBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray8clearBitEi(void* qthis, int32_t arg0);
   // proto:  bool QBitArray::testBit(int i);
-extern void demth_ZNK9QBitArray7testBitEi(void* qthis, int arg0);
+extern void demth_ZNK9QBitArray7testBitEi(void* qthis, int32_t arg0);
   // proto:  void QBitArray::truncate(int pos);
-extern void demth_ZN9QBitArray8truncateEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray8truncateEi(void* qthis, int32_t arg0);
   // proto:  bool QBitArray::toggleBit(int i);
-extern void demth_ZN9QBitArray9toggleBitEi(void* qthis, int arg0);
+extern void demth_ZN9QBitArray9toggleBitEi(void* qthis, int32_t arg0);
   // proto:  void QBitArray::QBitArray(const QBitArray & other);
 extern void* dector_ZN9QBitArrayC1ERKS_(void* arg0);
 extern void demth_ZN9QBitArrayC1ERKS_(void* qthis, void* arg0);
   // proto:  void QBitArray::fill(bool val, int first, int last);
-extern void _ZN9QBitArray4fillEbii(void* qthis, bool arg0, int arg1, int arg2);
+extern void _ZN9QBitArray4fillEbii(void* qthis, bool arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QBitArray::isNull();
 extern void demth_ZNK9QBitArray6isNullEv(void* qthis);
   // proto:  void QBitArray::setBit(int i, bool val);
-extern void demth_ZN9QBitArray6setBitEib(void* qthis, int arg0, bool arg1);
+extern void demth_ZN9QBitArray6setBitEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QBitArray::resize(int size);
-extern void _ZN9QBitArray6resizeEi(void* qthis, int arg0);
+extern void _ZN9QBitArray6resizeEi(void* qthis, int32_t arg0);
   // proto:  bool QBitArray::isDetached();
 extern void demth_ZNK9QBitArray10isDetachedEv(void* qthis);
   // proto:  bool QBitArray::fill(bool val, int size);
-extern void demth_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int arg1);
+extern void demth_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -97,13 +97,13 @@ func init() {
 // class sizeof(QBitRef)=16
 type QBitRef struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QBitArray)=8
 type QBitArray struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QBitRef::QBitRef(QBitArray & array, int idx);
@@ -162,7 +162,7 @@ func (this *QBitArray) setBit(args ...interface{}) () {
     // invoke: void setBit(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C.demth_ZN9QBitArray6setBitEib(this.qclsinst, arg0, arg1)
   default:
@@ -234,7 +234,7 @@ func (this *QBitArray) count(args ...interface{}) () {
   case 1:
     // invoke: _ZNK9QBitArray5countEb
     // invoke: int count(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZNK9QBitArray5countEb(this.qclsinst, arg0)
   default:
@@ -418,7 +418,7 @@ func (this *QBitArray) fill(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QBitArray4fillEbii
     // invoke: void fill(_Bool, int, int)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -428,7 +428,7 @@ func (this *QBitArray) fill(args ...interface{}) () {
   case 1:
     // invoke: _ZN9QBitArray4fillEbi
     // invoke: bool fill(_Bool, int)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}

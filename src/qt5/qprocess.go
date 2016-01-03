@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -60,7 +60,7 @@ extern void _ZN8QProcess7executeERK7QString(void* arg0);
   // proto:  void QProcess::closeWriteChannel();
 extern void _ZN8QProcess17closeWriteChannelEv(void* qthis);
   // proto: static bool QProcess::startDetached(const QString & program, const QStringList & arguments, const QString & workingDirectory, qint64 * pid);
-extern void _ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(void* arg0, void* arg1, void* arg2, long long* arg3);
+extern void _ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(void* arg0, void* arg1, void* arg2, int64_t* arg3);
   // proto:  QProcessEnvironment QProcess::processEnvironment();
 extern void _ZNK8QProcess18processEnvironmentEv(void* qthis);
   // proto:  QByteArray QProcess::readAllStandardOutput();
@@ -70,7 +70,7 @@ extern void _ZN8QProcess10nullDeviceEv();
   // proto: static int QProcess::execute(const QString & program, const QStringList & arguments);
 extern void _ZN8QProcess7executeERK7QStringRK11QStringList(void* arg0, void* arg1);
   // proto:  bool QProcess::waitForBytesWritten(int msecs);
-extern void _ZN8QProcess19waitForBytesWrittenEi(void* qthis, int arg0);
+extern void _ZN8QProcess19waitForBytesWrittenEi(void* qthis, int32_t arg0);
   // proto:  void QProcess::QProcess(QObject * parent);
 extern void* dector_ZN8QProcessC1EP7QObject(void* arg0);
 extern void _ZN8QProcessC1EP7QObject(void* qthis, void* arg0);
@@ -83,7 +83,7 @@ extern void _ZNK8QProcess9argumentsEv(void* qthis);
   // proto:  bool QProcess::isSequential();
 extern void _ZNK8QProcess12isSequentialEv(void* qthis);
   // proto:  bool QProcess::waitForReadyRead(int msecs);
-extern void _ZN8QProcess16waitForReadyReadEi(void* qthis, int arg0);
+extern void _ZN8QProcess16waitForReadyReadEi(void* qthis, int32_t arg0);
   // proto:  void QProcess::setWorkingDirectory(const QString & dir);
 extern void _ZN8QProcess19setWorkingDirectoryERK7QString(void* qthis, void* arg0);
   // proto:  void QProcess::terminate();
@@ -95,7 +95,7 @@ extern void _ZNK8QProcess14bytesAvailableEv(void* qthis);
   // proto:  const QMetaObject * QProcess::metaObject();
 extern void _ZNK8QProcess10metaObjectEv(void* qthis);
   // proto:  bool QProcess::waitForStarted(int msecs);
-extern void _ZN8QProcess14waitForStartedEi(void* qthis, int arg0);
+extern void _ZN8QProcess14waitForStartedEi(void* qthis, int32_t arg0);
   // proto:  QByteArray QProcess::readAllStandardError();
 extern void _ZN8QProcess20readAllStandardErrorEv(void* qthis);
   // proto:  int QProcess::exitCode();
@@ -107,7 +107,7 @@ extern void _ZNK8QProcess11canReadLineEv(void* qthis);
   // proto:  void QProcess::setStandardOutputProcess(QProcess * destination);
 extern void _ZN8QProcess24setStandardOutputProcessEPS_(void* qthis, void* arg0);
   // proto:  bool QProcess::waitForFinished(int msecs);
-extern void _ZN8QProcess15waitForFinishedEi(void* qthis, int arg0);
+extern void _ZN8QProcess15waitForFinishedEi(void* qthis, int32_t arg0);
   // proto:  qint64 QProcess::bytesToWrite();
 extern void _ZNK8QProcess12bytesToWriteEv(void* qthis);
   // proto:  QString QProcess::workingDirectory();
@@ -161,7 +161,7 @@ func init() {
 // class sizeof(QProcess)=1
 type QProcess struct {
   /*qbase*/ QIODevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _stateChanged QProcess_stateChanged_signal;
 //  _started QProcess_started_signal;
 //  _finished QProcess_finished_signal;
@@ -173,7 +173,7 @@ type QProcess struct {
 // class sizeof(QProcessEnvironment)=1
 type QProcessEnvironment struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QProcess::close();

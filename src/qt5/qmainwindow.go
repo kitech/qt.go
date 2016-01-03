@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -60,9 +60,9 @@ extern void _ZN11QMainWindow10addToolBarERK7QString(void* qthis, void* arg0);
   // proto:  void QMainWindow::setIconSize(const QSize & iconSize);
 extern void _ZN11QMainWindow11setIconSizeERK5QSize(void* qthis, void* arg0);
   // proto:  QByteArray QMainWindow::saveState(int version);
-extern void _ZNK11QMainWindow9saveStateEi(void* qthis, int arg0);
+extern void _ZNK11QMainWindow9saveStateEi(void* qthis, int32_t arg0);
   // proto:  bool QMainWindow::restoreState(const QByteArray & state, int version);
-extern void _ZN11QMainWindow12restoreStateERK10QByteArrayi(void* qthis, void* arg0, int arg1);
+extern void _ZN11QMainWindow12restoreStateERK10QByteArrayi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QMainWindow::insertToolBar(QToolBar * before, QToolBar * toolbar);
 extern void _ZN11QMainWindow13insertToolBarEP8QToolBarS1_(void* qthis, void* arg0, void* arg1);
   // proto:  QMenu * QMainWindow::createPopupMenu();
@@ -122,7 +122,7 @@ func init() {
 // class sizeof(QMainWindow)=1
 type QMainWindow struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _toolButtonStyleChanged QMainWindow_toolButtonStyleChanged_signal;
 //  _iconSizeChanged QMainWindow_iconSizeChanged_signal;
 }
@@ -161,7 +161,7 @@ func (this *QMainWindow) setAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow11setAnimatedEb
     // invoke: void setAnimated(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QMainWindow11setAnimatedEb(this.qclsinst, arg0)
   default:
@@ -184,7 +184,7 @@ func (this *QMainWindow) setDockNestingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow21setDockNestingEnabledEb
     // invoke: void setDockNestingEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QMainWindow21setDockNestingEnabledEb(this.qclsinst, arg0)
   default:
@@ -273,7 +273,7 @@ func (this *QMainWindow) setDocumentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow15setDocumentModeEb
     // invoke: void setDocumentMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QMainWindow15setDocumentModeEb(this.qclsinst, arg0)
   default:
@@ -518,7 +518,7 @@ func (this *QMainWindow) setUnifiedTitleAndToolBarOnMac(args ...interface{}) () 
   case 0:
     // invoke: _ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb
     // invoke: void setUnifiedTitleAndToolBarOnMac(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QMainWindow30setUnifiedTitleAndToolBarOnMacEb(this.qclsinst, arg0)
   default:

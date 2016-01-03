@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -61,7 +61,7 @@ func init() {
 // class sizeof(QScrollBar)=1
 type QScrollBar struct {
   /*qbase*/ QAbstractSlider;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QScrollBar::event(QEvent * event);

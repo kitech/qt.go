@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcalendarwidget.h
 // dst-file: /src/widgets/qcalendarwidget.go
 //
@@ -43,7 +43,7 @@ extern void _ZN15QCalendarWidget16showSelectedDateEv(void* qthis);
   // proto:  QSize QCalendarWidget::minimumSizeHint();
 extern void _ZNK15QCalendarWidget15minimumSizeHintEv(void* qthis);
   // proto:  void QCalendarWidget::setDateEditAcceptDelay(int delay);
-extern void _ZN15QCalendarWidget22setDateEditAcceptDelayEi(void* qthis, int arg0);
+extern void _ZN15QCalendarWidget22setDateEditAcceptDelayEi(void* qthis, int32_t arg0);
   // proto:  void QCalendarWidget::setGridVisible(bool show);
 extern void _ZN15QCalendarWidget14setGridVisibleEb(void* qthis, bool arg0);
   // proto:  void QCalendarWidget::~QCalendarWidget();
@@ -99,7 +99,7 @@ extern void _ZN15QCalendarWidget14setMaximumDateERK5QDate(void* qthis, void* arg
   // proto:  QTextCharFormat QCalendarWidget::headerTextFormat();
 extern void _ZNK15QCalendarWidget16headerTextFormatEv(void* qthis);
   // proto:  void QCalendarWidget::setCurrentPage(int year, int month);
-extern void _ZN15QCalendarWidget14setCurrentPageEii(void* qthis, int arg0, int arg1);
+extern void _ZN15QCalendarWidget14setCurrentPageEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QCalendarWidget::showToday();
 extern void _ZN15QCalendarWidget9showTodayEv(void* qthis);
   // proto:  void QCalendarWidget::showNextYear();
@@ -119,7 +119,7 @@ func init() {
 // class sizeof(QCalendarWidget)=1
 type QCalendarWidget struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _activated QCalendarWidget_activated_signal;
 //  _clicked QCalendarWidget_clicked_signal;
 //  _currentPageChanged QCalendarWidget_currentPageChanged_signal;
@@ -263,7 +263,7 @@ func (this *QCalendarWidget) setGridVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget14setGridVisibleEb
     // invoke: void setGridVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QCalendarWidget14setGridVisibleEb(this.qclsinst, arg0)
   default:
@@ -388,7 +388,7 @@ func (this *QCalendarWidget) setNavigationBarVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget23setNavigationBarVisibleEb
     // invoke: void setNavigationBarVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QCalendarWidget23setNavigationBarVisibleEb(this.qclsinst, arg0)
   default:
@@ -543,7 +543,7 @@ func (this *QCalendarWidget) setDateEditEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QCalendarWidget18setDateEditEnabledEb
     // invoke: void setDateEditEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QCalendarWidget18setDateEditEnabledEb(this.qclsinst, arg0)
   default:

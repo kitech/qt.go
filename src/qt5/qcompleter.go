@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -42,7 +42,7 @@ extern void _ZNK10QCompleter5popupEv(void* qthis);
   // proto:  void QCompleter::complete(const QRect & rect);
 extern void _ZN10QCompleter8completeERK5QRect(void* qthis, void* arg0);
   // proto:  void QCompleter::setCompletionRole(int role);
-extern void _ZN10QCompleter17setCompletionRoleEi(void* qthis, int arg0);
+extern void _ZN10QCompleter17setCompletionRoleEi(void* qthis, int32_t arg0);
   // proto:  int QCompleter::completionCount();
 extern void _ZNK10QCompleter15completionCountEv(void* qthis);
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
@@ -53,7 +53,7 @@ extern void _ZNK10QCompleter12currentIndexEv(void* qthis);
   // proto:  QString QCompleter::pathFromIndex(const QModelIndex & index);
 extern void _ZNK10QCompleter13pathFromIndexERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QCompleter::setMaxVisibleItems(int maxItems);
-extern void _ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int arg0);
+extern void _ZN10QCompleter18setMaxVisibleItemsEi(void* qthis, int32_t arg0);
   // proto:  int QCompleter::completionColumn();
 extern void _ZNK10QCompleter16completionColumnEv(void* qthis);
   // proto:  int QCompleter::maxVisibleItems();
@@ -69,13 +69,13 @@ extern void _ZNK10QCompleter5modelEv(void* qthis);
   // proto:  QString QCompleter::currentCompletion();
 extern void _ZNK10QCompleter17currentCompletionEv(void* qthis);
   // proto:  void QCompleter::setCompletionColumn(int column);
-extern void _ZN10QCompleter19setCompletionColumnEi(void* qthis, int arg0);
+extern void _ZN10QCompleter19setCompletionColumnEi(void* qthis, int32_t arg0);
   // proto:  void QCompleter::setCompletionPrefix(const QString & prefix);
 extern void _ZN10QCompleter19setCompletionPrefixERK7QString(void* qthis, void* arg0);
   // proto:  QAbstractItemModel * QCompleter::completionModel();
 extern void _ZNK10QCompleter15completionModelEv(void* qthis);
   // proto:  bool QCompleter::setCurrentRow(int row);
-extern void _ZN10QCompleter13setCurrentRowEi(void* qthis, int arg0);
+extern void _ZN10QCompleter13setCurrentRowEi(void* qthis, int32_t arg0);
   // proto:  int QCompleter::currentRow();
 extern void _ZNK10QCompleter10currentRowEv(void* qthis);
   // proto:  void QCompleter::setModel(QAbstractItemModel * c);
@@ -113,7 +113,7 @@ func init() {
 // class sizeof(QCompleter)=1
 type QCompleter struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _highlighted QCompleter_highlighted_signal;
 //  _activated QCompleter_activated_signal;
 }
@@ -363,7 +363,7 @@ func (this *QCompleter) setWrapAround(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QCompleter13setWrapAroundEb
     // invoke: void setWrapAround(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QCompleter13setWrapAroundEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qstringlistmodel.h
 // dst-file: /src/core/qstringlistmodel.go
 //
@@ -36,15 +36,15 @@ import "qtrt"
 extern void* dector_ZN16QStringListModelC1ERK11QStringListP7QObject(void* arg0, void* arg1);
 extern void _ZN16QStringListModelC1ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1);
   // proto:  bool QStringListModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void _ZN16QStringListModel10insertRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN16QStringListModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QVariant QStringListModel::data(const QModelIndex & index, int role);
-extern void _ZNK16QStringListModel4dataERK11QModelIndexi(void* qthis, void* arg0, int arg1);
+extern void _ZNK16QStringListModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QStringList QStringListModel::stringList();
 extern void _ZNK16QStringListModel10stringListEv(void* qthis);
   // proto:  const QMetaObject * QStringListModel::metaObject();
 extern void _ZNK16QStringListModel10metaObjectEv(void* qthis);
   // proto:  bool QStringListModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void _ZN16QStringListModel10removeRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN16QStringListModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QStringListModel::QStringListModel(QObject * parent);
 extern void* dector_ZN16QStringListModelC1EP7QObject(void* arg0);
 extern void _ZN16QStringListModelC1EP7QObject(void* qthis, void* arg0);
@@ -52,11 +52,11 @@ extern void _ZN16QStringListModelC1EP7QObject(void* qthis, void* arg0);
 extern void* dector_ZN16QStringListModelC1ERKS_(void* arg0);
 extern void _ZN16QStringListModelC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QStringListModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int arg2);
+extern void _ZN16QStringListModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  int QStringListModel::rowCount(const QModelIndex & parent);
 extern void _ZNK16QStringListModel8rowCountERK11QModelIndex(void* qthis, void* arg0);
   // proto:  QModelIndex QStringListModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK16QStringListModel7siblingEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK16QStringListModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QStringListModel::setStringList(const QStringList & strings);
 extern void _ZN16QStringListModel13setStringListERK11QStringList(void* qthis, void* arg0);
 */
@@ -74,7 +74,7 @@ func init() {
 // class sizeof(QStringListModel)=1
 type QStringListModel struct {
   /*qbase*/ QAbstractListModel;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStringListModel::QStringListModel(const QStringList & strings, QObject * parent);

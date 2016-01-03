@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtreeview.h
 // dst-file: /src/widgets/qtreeview.go
 //
@@ -39,9 +39,9 @@ extern void _ZNK9QTreeView10isAnimatedEv(void* qthis);
   // proto:  bool QTreeView::isExpanded(const QModelIndex & index);
 extern void _ZNK9QTreeView10isExpandedERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QTreeView::setColumnHidden(int column, bool hide);
-extern void _ZN9QTreeView15setColumnHiddenEib(void* qthis, int arg0, bool arg1);
+extern void _ZN9QTreeView15setColumnHiddenEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QTreeView::setIndentation(int i);
-extern void _ZN9QTreeView14setIndentationEi(void* qthis, int arg0);
+extern void _ZN9QTreeView14setIndentationEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QTreeView::metaObject();
 extern void _ZNK9QTreeView10metaObjectEv(void* qthis);
   // proto:  void QTreeView::reset();
@@ -49,11 +49,11 @@ extern void _ZN9QTreeView5resetEv(void* qthis);
   // proto:  void QTreeView::setExpandsOnDoubleClick(bool enable);
 extern void _ZN9QTreeView23setExpandsOnDoubleClickEb(void* qthis, bool arg0);
   // proto:  void QTreeView::setFirstColumnSpanned(int row, const QModelIndex & parent, bool span);
-extern void _ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(void* qthis, int arg0, void* arg1, bool arg2);
+extern void _ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(void* qthis, int32_t arg0, void* arg1, bool arg2);
   // proto:  void QTreeView::sortByColumn(int column);
-extern void _ZN9QTreeView12sortByColumnEi(void* qthis, int arg0);
+extern void _ZN9QTreeView12sortByColumnEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::setRowHidden(int row, const QModelIndex & parent, bool hide);
-extern void _ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(void* qthis, int arg0, void* arg1, bool arg2);
+extern void _ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(void* qthis, int32_t arg0, void* arg1, bool arg2);
   // proto:  void QTreeView::expand(const QModelIndex & index);
 extern void _ZN9QTreeView6expandERK11QModelIndex(void* qthis, void* arg0);
   // proto:  int QTreeView::autoExpandDelay();
@@ -66,13 +66,13 @@ extern void _ZN9QTreeViewD0Ev(void* qthis);
   // proto:  int QTreeView::indentation();
 extern void _ZNK9QTreeView11indentationEv(void* qthis);
   // proto:  int QTreeView::columnViewportPosition(int column);
-extern void _ZNK9QTreeView22columnViewportPositionEi(void* qthis, int arg0);
+extern void _ZNK9QTreeView22columnViewportPositionEi(void* qthis, int32_t arg0);
   // proto:  bool QTreeView::expandsOnDoubleClick();
 extern void _ZNK9QTreeView20expandsOnDoubleClickEv(void* qthis);
   // proto:  bool QTreeView::isSortingEnabled();
 extern void _ZNK9QTreeView16isSortingEnabledEv(void* qthis);
   // proto:  void QTreeView::showColumn(int column);
-extern void _ZN9QTreeView10showColumnEi(void* qthis, int arg0);
+extern void _ZN9QTreeView10showColumnEi(void* qthis, int32_t arg0);
   // proto:  QRect QTreeView::visualRect(const QModelIndex & index);
 extern void _ZNK9QTreeView10visualRectERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QTreeView::collapse(const QModelIndex & index);
@@ -90,17 +90,17 @@ extern void _ZN9QTreeView15setHeaderHiddenEb(void* qthis, bool arg0);
   // proto:  bool QTreeView::allColumnsShowFocus();
 extern void _ZNK9QTreeView19allColumnsShowFocusEv(void* qthis);
   // proto:  int QTreeView::columnWidth(int column);
-extern void _ZNK9QTreeView11columnWidthEi(void* qthis, int arg0);
+extern void _ZNK9QTreeView11columnWidthEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::resizeColumnToContents(int column);
-extern void _ZN9QTreeView22resizeColumnToContentsEi(void* qthis, int arg0);
+extern void _ZN9QTreeView22resizeColumnToContentsEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::setAutoExpandDelay(int delay);
-extern void _ZN9QTreeView18setAutoExpandDelayEi(void* qthis, int arg0);
+extern void _ZN9QTreeView18setAutoExpandDelayEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::setAllColumnsShowFocus(bool enable);
 extern void _ZN9QTreeView22setAllColumnsShowFocusEb(void* qthis, bool arg0);
   // proto:  bool QTreeView::isFirstColumnSpanned(int row, const QModelIndex & parent);
-extern void _ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK9QTreeView20isFirstColumnSpannedEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeView::hideColumn(int column);
-extern void _ZN9QTreeView10hideColumnEi(void* qthis, int arg0);
+extern void _ZN9QTreeView10hideColumnEi(void* qthis, int32_t arg0);
   // proto:  int QTreeView::treePosition();
 extern void _ZNK9QTreeView12treePositionEv(void* qthis);
   // proto:  void QTreeView::setExpanded(const QModelIndex & index, bool expand);
@@ -108,7 +108,7 @@ extern void _ZN9QTreeView11setExpandedERK11QModelIndexb(void* qthis, void* arg0,
   // proto:  void QTreeView::resetIndentation();
 extern void _ZN9QTreeView16resetIndentationEv(void* qthis);
   // proto:  bool QTreeView::isRowHidden(int row, const QModelIndex & parent);
-extern void _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK9QTreeView11isRowHiddenEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeView::QTreeView(const QTreeView & );
 extern void* dector_ZN9QTreeViewC1ERKS_(void* arg0);
 extern void _ZN9QTreeViewC1ERKS_(void* qthis, void* arg0);
@@ -119,7 +119,7 @@ extern void _ZNK9QTreeView8wordWrapEv(void* qthis);
   // proto:  void QTreeView::doItemsLayout();
 extern void _ZN9QTreeView13doItemsLayoutEv(void* qthis);
   // proto:  void QTreeView::setTreePosition(int logicalIndex);
-extern void _ZN9QTreeView15setTreePositionEi(void* qthis, int arg0);
+extern void _ZN9QTreeView15setTreePositionEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::keyboardSearch(const QString & search);
 extern void _ZN9QTreeView14keyboardSearchERK7QString(void* qthis, void* arg0);
   // proto:  void QTreeView::setRootIndex(const QModelIndex & index);
@@ -141,17 +141,17 @@ extern void _ZN9QTreeView18setRootIsDecoratedEb(void* qthis, bool arg0);
   // proto:  bool QTreeView::isHeaderHidden();
 extern void _ZNK9QTreeView14isHeaderHiddenEv(void* qthis);
   // proto:  int QTreeView::columnAt(int x);
-extern void _ZNK9QTreeView8columnAtEi(void* qthis, int arg0);
+extern void _ZNK9QTreeView8columnAtEi(void* qthis, int32_t arg0);
   // proto:  void QTreeView::setModel(QAbstractItemModel * model);
 extern void _ZN9QTreeView8setModelEP18QAbstractItemModel(void* qthis, void* arg0);
   // proto:  bool QTreeView::isColumnHidden(int column);
-extern void _ZNK9QTreeView14isColumnHiddenEi(void* qthis, int arg0);
+extern void _ZNK9QTreeView14isColumnHiddenEi(void* qthis, int32_t arg0);
   // proto:  bool QTreeView::uniformRowHeights();
 extern void _ZNK9QTreeView17uniformRowHeightsEv(void* qthis);
   // proto:  void QTreeView::setUniformRowHeights(bool uniform);
 extern void _ZN9QTreeView20setUniformRowHeightsEb(void* qthis, bool arg0);
   // proto:  void QTreeView::expandToDepth(int depth);
-extern void _ZN9QTreeView13expandToDepthEi(void* qthis, int arg0);
+extern void _ZN9QTreeView13expandToDepthEi(void* qthis, int32_t arg0);
   // proto:  QModelIndex QTreeView::indexBelow(const QModelIndex & index);
 extern void _ZNK9QTreeView10indexBelowERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QTreeView::expandAll();
@@ -159,7 +159,7 @@ extern void _ZN9QTreeView9expandAllEv(void* qthis);
   // proto:  QModelIndex QTreeView::indexAt(const QPoint & p);
 extern void _ZNK9QTreeView7indexAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QTreeView::setColumnWidth(int column, int width);
-extern void _ZN9QTreeView14setColumnWidthEii(void* qthis, int arg0, int arg1);
+extern void _ZN9QTreeView14setColumnWidthEii(void* qthis, int32_t arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -175,7 +175,7 @@ func init() {
 // class sizeof(QTreeView)=1
 type QTreeView struct {
   /*qbase*/ QAbstractItemView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _collapsed QTreeView_collapsed_signal;
 //  _expanded QTreeView_expanded_signal;
 }
@@ -263,7 +263,7 @@ func (this *QTreeView) setColumnHidden(args ...interface{}) () {
     // invoke: void setColumnHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN9QTreeView15setColumnHiddenEib(this.qclsinst, arg0, arg1)
   default:
@@ -349,7 +349,7 @@ func (this *QTreeView) setExpandsOnDoubleClick(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView23setExpandsOnDoubleClickEb
     // invoke: void setExpandsOnDoubleClick(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView23setExpandsOnDoubleClickEb(this.qclsinst, arg0)
   default:
@@ -378,7 +378,7 @@ func (this *QTreeView) setFirstColumnSpanned(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int8_t(args[2].(int8))
+    var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
     C._ZN9QTreeView21setFirstColumnSpannedEiRK11QModelIndexb(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -434,7 +434,7 @@ func (this *QTreeView) setRowHidden(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.int8_t(args[2].(int8))
+    var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
     C._ZN9QTreeView12setRowHiddenEiRK11QModelIndexb(this.qclsinst, arg0, arg1, arg2)
   default:
@@ -671,7 +671,7 @@ func (this *QTreeView) setWordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView11setWordWrapEb
     // invoke: void setWordWrap(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView11setWordWrapEb(this.qclsinst, arg0)
   default:
@@ -757,7 +757,7 @@ func (this *QTreeView) setHeaderHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView15setHeaderHiddenEb
     // invoke: void setHeaderHidden(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView15setHeaderHiddenEb(this.qclsinst, arg0)
   default:
@@ -869,7 +869,7 @@ func (this *QTreeView) setAllColumnsShowFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView22setAllColumnsShowFocusEb
     // invoke: void setAllColumnsShowFocus(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView22setAllColumnsShowFocusEb(this.qclsinst, arg0)
   default:
@@ -964,7 +964,7 @@ func (this *QTreeView) setExpanded(args ...interface{}) () {
     // invoke: void setExpanded(const class QModelIndex &, _Bool)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN9QTreeView11setExpandedERK11QModelIndexb(this.qclsinst, arg0, arg1)
   default:
@@ -1162,7 +1162,7 @@ func (this *QTreeView) setItemsExpandable(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView18setItemsExpandableEb
     // invoke: void setItemsExpandable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView18setItemsExpandableEb(this.qclsinst, arg0)
   default:
@@ -1228,7 +1228,7 @@ func (this *QTreeView) setAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView11setAnimatedEb
     // invoke: void setAnimated(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView11setAnimatedEb(this.qclsinst, arg0)
   default:
@@ -1251,7 +1251,7 @@ func (this *QTreeView) setSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView17setSortingEnabledEb
     // invoke: void setSortingEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView17setSortingEnabledEb(this.qclsinst, arg0)
   default:
@@ -1294,7 +1294,7 @@ func (this *QTreeView) setRootIsDecorated(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView18setRootIsDecoratedEb
     // invoke: void setRootIsDecorated(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView18setRootIsDecoratedEb(this.qclsinst, arg0)
   default:
@@ -1426,7 +1426,7 @@ func (this *QTreeView) setUniformRowHeights(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTreeView20setUniformRowHeightsEb
     // invoke: void setUniformRowHeights(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTreeView20setUniformRowHeightsEb(this.qclsinst, arg0)
   default:

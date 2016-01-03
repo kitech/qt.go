@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -39,7 +39,7 @@ extern void _ZN12QMapDataBase10createDataEv();
   // proto:  void QMapDataBase::rotateRight(QMapNodeBase * x);
 extern void _ZN12QMapDataBase11rotateRightEP12QMapNodeBase(void* qthis, void* arg0);
   // proto:  void QMapDataBase::freeTree(QMapNodeBase * root, int alignment);
-extern void _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(void* qthis, void* arg0, int arg1);
+extern void _ZN12QMapDataBase8freeTreeEP12QMapNodeBasei(void* qthis, void* arg0, int32_t arg1);
   // proto: static void QMapDataBase::freeData(QMapDataBase * d);
 extern void _ZN12QMapDataBase8freeDataEPS_(void* arg0);
   // proto:  void QMapDataBase::rotateLeft(QMapNodeBase * x);
@@ -47,17 +47,17 @@ extern void _ZN12QMapDataBase10rotateLeftEP12QMapNodeBase(void* qthis, void* arg
   // proto:  void QMapDataBase::recalcMostLeftNode();
 extern void _ZN12QMapDataBase18recalcMostLeftNodeEv(void* qthis);
   // proto:  QMapNodeBase * QMapDataBase::createNode(int size, int alignment, QMapNodeBase * parent, bool left);
-extern void _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(void* qthis, int arg0, int arg1, void* arg2, bool arg3);
+extern void _ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(void* qthis, int32_t arg0, int32_t arg1, void* arg2, bool arg3);
   // proto:  void QMapDataBase::freeNodeAndRebalance(QMapNodeBase * z);
 extern void _ZN12QMapDataBase20freeNodeAndRebalanceEP12QMapNodeBase(void* qthis, void* arg0);
   // proto:  void QMapNodeBase::setParent(QMapNodeBase * pp);
-extern void _ZN12QMapNodeBase9setParentEPS_(void* qthis, void* arg0);
+extern void demth_ZN12QMapNodeBase9setParentEPS_(void* qthis, void* arg0);
   // proto:  QMapNodeBase * QMapNodeBase::previousNode();
-extern void _ZN12QMapNodeBase12previousNodeEv(void* qthis);
+extern void demth_ZN12QMapNodeBase12previousNodeEv(void* qthis);
   // proto:  QMapNodeBase * QMapNodeBase::nextNode();
-extern void _ZN12QMapNodeBase8nextNodeEv(void* qthis);
+extern void demth_ZN12QMapNodeBase8nextNodeEv(void* qthis);
   // proto:  QMapNodeBase * QMapNodeBase::parent();
-extern void _ZNK12QMapNodeBase6parentEv(void* qthis);
+extern void demth_ZNK12QMapNodeBase6parentEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -73,13 +73,13 @@ func init() {
 // class sizeof(QMapDataBase)=1
 type QMapDataBase struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMapNodeBase)=24
 type QMapNodeBase struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QMapDataBase::rebalance(QMapNodeBase * x);
@@ -248,7 +248,7 @@ func (this *QMapDataBase) createNode(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QMapNodeBase).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.int8_t(args[3].(int8))
+    var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
     C._ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
@@ -296,7 +296,7 @@ func (this *QMapNodeBase) setParent(args ...interface{}) () {
     // invoke: void setParent(struct QMapNodeBase *)
     var arg0 = args[0].(QMapNodeBase).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN12QMapNodeBase9setParentEPS_(this.qclsinst, arg0)
+    C.demth_ZN12QMapNodeBase9setParentEPS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "setParent", args)
   }
@@ -318,7 +318,7 @@ func (this *QMapNodeBase) previousNode(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapNodeBase12previousNodeEv
     // invoke: QMapNodeBase * previousNode()
-    C._ZN12QMapNodeBase12previousNodeEv(this.qclsinst)
+    C.demth_ZN12QMapNodeBase12previousNodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "previousNode", args)
   }
@@ -340,7 +340,7 @@ func (this *QMapNodeBase) nextNode(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapNodeBase8nextNodeEv
     // invoke: QMapNodeBase * nextNode()
-    C._ZN12QMapNodeBase8nextNodeEv(this.qclsinst)
+    C.demth_ZN12QMapNodeBase8nextNodeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "nextNode", args)
   }
@@ -360,7 +360,7 @@ func (this *QMapNodeBase) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QMapNodeBase6parentEv
     // invoke: QMapNodeBase * parent()
-    C._ZNK12QMapNodeBase6parentEv(this.qclsinst)
+    C.demth_ZNK12QMapNodeBase6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QMapNodeBase", "parent", args)
   }

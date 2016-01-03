@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -42,8 +42,8 @@ extern void _ZN17QSignalTransitionD0Ev(void* qthis);
 extern void* dector_ZN17QSignalTransitionC1ERKS_(void* arg0);
 extern void _ZN17QSignalTransitionC1ERKS_(void* qthis, void* arg0);
   // proto:  void QSignalTransition::QSignalTransition(const QObject * sender, const char * signal, QState * sourceState);
-extern void* dector_ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(void* arg0, char* arg1, void* arg2);
-extern void _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(void* qthis, void* arg0, char* arg1, void* arg2);
+extern void* dector_ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(void* arg0, unsigned char* arg1, void* arg2);
+extern void _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState(void* qthis, void* arg0, unsigned char* arg1, void* arg2);
   // proto:  QObject * QSignalTransition::senderObject();
 extern void _ZNK17QSignalTransition12senderObjectEv(void* qthis);
   // proto:  void QSignalTransition::QSignalTransition(QState * sourceState);
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QSignalTransition)=1
 type QSignalTransition struct {
   /*qbase*/ QAbstractTransition;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _senderObjectChanged QSignalTransition_senderObjectChanged_signal;
 //  _signalChanged QSignalTransition_signalChanged_signal;
 }

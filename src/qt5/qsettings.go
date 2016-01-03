@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.go
 //
@@ -48,14 +48,14 @@ extern void _ZN9QSettings4syncEv(void* qthis);
   // proto:  void QSettings::setValue(const QString & key, const QVariant & value);
 extern void _ZN9QSettings8setValueERK7QStringRK8QVariant(void* qthis, void* arg0, void* arg1);
   // proto:  void QSettings::setArrayIndex(int i);
-extern void _ZN9QSettings13setArrayIndexEi(void* qthis, int arg0);
+extern void _ZN9QSettings13setArrayIndexEi(void* qthis, int32_t arg0);
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
 extern void* dector_ZN9QSettingsC1ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2);
 extern void _ZN9QSettingsC1ERK7QStringS2_P7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QSettings::setIniCodec(QTextCodec * codec);
 extern void _ZN9QSettings11setIniCodecEP10QTextCodec(void* qthis, void* arg0);
   // proto:  void QSettings::setIniCodec(const char * codecName);
-extern void _ZN9QSettings11setIniCodecEPKc(void* qthis, char* arg0);
+extern void _ZN9QSettings11setIniCodecEPKc(void* qthis, unsigned char* arg0);
   // proto:  int QSettings::beginReadArray(const QString & prefix);
 extern void _ZN9QSettings14beginReadArrayERK7QString(void* qthis, void* arg0);
   // proto:  void QSettings::clear();
@@ -83,7 +83,7 @@ extern void _ZN9QSettings6removeERK7QString(void* qthis, void* arg0);
   // proto:  void QSettings::endGroup();
 extern void _ZN9QSettings8endGroupEv(void* qthis);
   // proto:  void QSettings::beginWriteArray(const QString & prefix, int size);
-extern void _ZN9QSettings15beginWriteArrayERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZN9QSettings15beginWriteArrayERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QSettings::beginGroup(const QString & prefix);
 extern void _ZN9QSettings10beginGroupERK7QString(void* qthis, void* arg0);
   // proto:  QStringList QSettings::childKeys();
@@ -114,7 +114,7 @@ func init() {
 // class sizeof(QSettings)=1
 type QSettings struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QSettings::QSettings(QObject * parent);
@@ -294,7 +294,7 @@ func (this *QSettings) setIniCodec(args ...interface{}) () {
   case 1:
     // invoke: _ZN9QSettings11setIniCodecEPKc
     // invoke: void setIniCodec(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN9QSettings11setIniCodecEPKc(this.qclsinst, arg0)
   default:
@@ -494,7 +494,7 @@ func (this *QSettings) setFallbacksEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSettings19setFallbacksEnabledEb
     // invoke: void setFallbacksEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QSettings19setFallbacksEnabledEb(this.qclsinst, arg0)
   default:

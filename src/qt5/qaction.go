@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qaction.h
 // dst-file: /src/widgets/qaction.go
 //
@@ -73,7 +73,7 @@ extern void _ZN7QAction12setWhatsThisERK7QString(void* qthis, void* arg0);
   // proto:  QMenu * QAction::menu();
 extern void _ZNK7QAction4menuEv(void* qthis);
   // proto:  void QAction::trigger();
-extern void _ZN7QAction7triggerEv(void* qthis);
+extern void demth_ZN7QAction7triggerEv(void* qthis);
   // proto:  QFont QAction::font();
 extern void _ZNK7QAction4fontEv(void* qthis);
   // proto:  void QAction::QAction(const QIcon & icon, const QString & text, QObject * parent);
@@ -131,7 +131,7 @@ extern void _ZNK7QAction9isEnabledEv(void* qthis);
   // proto:  QString QAction::text();
 extern void _ZNK7QAction4textEv(void* qthis);
   // proto:  void QAction::hover();
-extern void _ZN7QAction5hoverEv(void* qthis);
+extern void demth_ZN7QAction5hoverEv(void* qthis);
   // proto:  bool QAction::isIconVisibleInMenu();
 extern void _ZNK7QAction19isIconVisibleInMenuEv(void* qthis);
   // proto:  void QAction::setToolTip(const QString & tip);
@@ -153,7 +153,7 @@ func init() {
 // class sizeof(QAction)=1
 type QAction struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _changed QAction_changed_signal;
 //  _hovered QAction_hovered_signal;
 //  _triggered QAction_triggered_signal;
@@ -194,7 +194,7 @@ func (this *QAction) setAutoRepeat(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction13setAutoRepeatEb
     // invoke: void setAutoRepeat(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction13setAutoRepeatEb(this.qclsinst, arg0)
   default:
@@ -431,7 +431,7 @@ func (this *QAction) setIconVisibleInMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction20setIconVisibleInMenuEb
     // invoke: void setIconVisibleInMenu(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction20setIconVisibleInMenuEb(this.qclsinst, arg0)
   default:
@@ -536,7 +536,7 @@ func (this *QAction) trigger(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction7triggerEv
     // invoke: void trigger()
-    C._ZN7QAction7triggerEv(this.qclsinst)
+    C.demth_ZN7QAction7triggerEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "trigger", args)
   }
@@ -577,7 +577,7 @@ func (this *QAction) setChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction10setCheckedEb
     // invoke: void setChecked(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction10setCheckedEb(this.qclsinst, arg0)
   default:
@@ -600,7 +600,7 @@ func (this *QAction) setDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction11setDisabledEb
     // invoke: void setDisabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN7QAction11setDisabledEb(this.qclsinst, arg0)
   default:
@@ -772,7 +772,7 @@ func (this *QAction) setCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction12setCheckableEb
     // invoke: void setCheckable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction12setCheckableEb(this.qclsinst, arg0)
   default:
@@ -835,7 +835,7 @@ func (this *QAction) setSeparator(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction12setSeparatorEb
     // invoke: void setSeparator(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction12setSeparatorEb(this.qclsinst, arg0)
   default:
@@ -878,7 +878,7 @@ func (this *QAction) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -1086,7 +1086,7 @@ func (this *QAction) hover(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction5hoverEv
     // invoke: void hover()
-    C._ZN7QAction5hoverEv(this.qclsinst)
+    C.demth_ZN7QAction5hoverEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAction", "hover", args)
   }
@@ -1150,7 +1150,7 @@ func (this *QAction) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QAction10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QAction10setEnabledEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qfactoryinterface.h
 // dst-file: /src/core/qfactoryinterface.go
 //
@@ -34,8 +34,6 @@ import "qtrt"
 #include <uchar.h>
   // proto:  void QFactoryInterface::~QFactoryInterface();
 extern void _ZN17QFactoryInterfaceD0Ev(void* qthis);
-  // proto:  QStringList QFactoryInterface::keys();
-extern void _ZNK17QFactoryInterface4keysEv(void* qthis);
 */
 import "C"
 // } // <= ext block end
@@ -51,7 +49,7 @@ func init() {
 // class sizeof(QFactoryInterface)=8
 type QFactoryInterface struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QFactoryInterface::~QFactoryInterface();
@@ -64,26 +62,6 @@ func (this *QFactoryInterface) FreeQFactoryInterface(args ...interface{}) () {
   switch matched_index {
   default:
     qtrt.ErrorResolve("QFactoryInterface", "~QFactoryInterface", args)
-  }
-
-}
-
-  // proto:  QStringList QFactoryInterface::keys();
-func (this *QFactoryInterface) keys(args ...interface{}) () {
-  // keys()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QFactoryInterface4keysEv
-    // invoke: QStringList keys()
-    C._ZNK17QFactoryInterface4keysEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFactoryInterface", "keys", args)
   }
 
 }

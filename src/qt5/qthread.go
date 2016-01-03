@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -44,11 +44,11 @@ extern void _ZN7QThread18yieldCurrentThreadEv();
   // proto:  bool QThread::isInterruptionRequested();
 extern void _ZNK7QThread23isInterruptionRequestedEv(void* qthis);
   // proto: static void QThread::msleep(unsigned long );
-extern void _ZN7QThread6msleepEm(unsigned long arg0);
+extern void _ZN7QThread6msleepEm(int32_t arg0);
   // proto:  void QThread::requestInterruption();
 extern void _ZN7QThread19requestInterruptionEv(void* qthis);
   // proto:  void QThread::exit(int retcode);
-extern void _ZN7QThread4exitEi(void* qthis, int arg0);
+extern void _ZN7QThread4exitEi(void* qthis, int32_t arg0);
   // proto:  bool QThread::event(QEvent * event);
 extern void _ZN7QThread5eventEP6QEvent(void* qthis, void* arg0);
   // proto:  uint QThread::stackSize();
@@ -56,17 +56,17 @@ extern void _ZNK7QThread9stackSizeEv(void* qthis);
   // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
 extern void _ZNK7QThread15eventDispatcherEv(void* qthis);
   // proto:  void QThread::setStackSize(uint stackSize);
-extern void _ZN7QThread12setStackSizeEj(void* qthis, unsigned int arg0);
+extern void _ZN7QThread12setStackSizeEj(void* qthis, int32_t arg0);
   // proto:  bool QThread::isFinished();
 extern void _ZNK7QThread10isFinishedEv(void* qthis);
   // proto: static void QThread::sleep(unsigned long );
-extern void _ZN7QThread5sleepEm(unsigned long arg0);
+extern void _ZN7QThread5sleepEm(int32_t arg0);
   // proto: static void QThread::usleep(unsigned long );
-extern void _ZN7QThread6usleepEm(unsigned long arg0);
+extern void _ZN7QThread6usleepEm(int32_t arg0);
   // proto: static int QThread::idealThreadCount();
 extern void _ZN7QThread16idealThreadCountEv();
   // proto:  bool QThread::wait(unsigned long time);
-extern void _ZN7QThread4waitEm(void* qthis, unsigned long arg0);
+extern void _ZN7QThread4waitEm(void* qthis, int32_t arg0);
   // proto: static QThread * QThread::currentThread();
 extern void _ZN7QThread13currentThreadEv();
   // proto:  bool QThread::isRunning();
@@ -94,7 +94,7 @@ func init() {
 // class sizeof(QThread)=1
 type QThread struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _started QThread_started_signal;
 //  _finished QThread_finished_signal;
 }

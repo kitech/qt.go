@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtreewidget.h
 // dst-file: /src/widgets/qtreewidget.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTreeWidget::setColumnCount(int columns);
-extern void _ZN11QTreeWidget14setColumnCountEi(void* qthis, int arg0);
+extern void _ZN11QTreeWidget14setColumnCountEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidget::~QTreeWidget();
 extern void _ZN11QTreeWidgetD0Ev(void* qthis);
   // proto:  QList<QTreeWidgetItem *> QTreeWidget::selectedItems();
@@ -48,9 +48,9 @@ extern void _ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(void* qthis, vo
   // proto:  int QTreeWidget::indexOfTopLevelItem(QTreeWidgetItem * item);
 extern void _ZNK11QTreeWidget19indexOfTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  void QTreeWidget::insertTopLevelItem(int index, QTreeWidgetItem * item);
-extern void _ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(void* qthis, int arg0, void* arg1);
+extern void _ZN11QTreeWidget18insertTopLevelItemEiP15QTreeWidgetItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidget::setItemWidget(QTreeWidgetItem * item, int column, QWidget * widget);
-extern void _ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZN11QTreeWidget13setItemWidgetEP15QTreeWidgetItemiP7QWidget(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  bool QTreeWidget::isItemSelected(const QTreeWidgetItem * item);
 extern void _ZNK11QTreeWidget14isItemSelectedEPK15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  int QTreeWidget::currentColumn();
@@ -70,15 +70,15 @@ extern void _ZNK11QTreeWidget9itemBelowEPK15QTreeWidgetItem(void* qthis, void* a
   // proto:  int QTreeWidget::sortColumn();
 extern void _ZNK11QTreeWidget10sortColumnEv(void* qthis);
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(int x, int y);
-extern void demth_ZNK11QTreeWidget6itemAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK11QTreeWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QTreeWidgetItem * QTreeWidget::currentItem();
 extern void _ZNK11QTreeWidget11currentItemEv(void* qthis);
   // proto:  QTreeWidgetItem * QTreeWidget::itemAt(const QPoint & p);
 extern void _ZNK11QTreeWidget6itemAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void _ZN11QTreeWidget14setCurrentItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QTreeWidgetItem * QTreeWidget::topLevelItem(int index);
-extern void _ZNK11QTreeWidget12topLevelItemEi(void* qthis, int arg0);
+extern void _ZNK11QTreeWidget12topLevelItemEi(void* qthis, int32_t arg0);
   // proto:  int QTreeWidget::topLevelItemCount();
 extern void _ZNK11QTreeWidget17topLevelItemCountEv(void* qthis);
   // proto:  QTreeWidgetItem * QTreeWidget::headerItem();
@@ -86,7 +86,7 @@ extern void _ZNK11QTreeWidget10headerItemEv(void* qthis);
   // proto:  void QTreeWidget::setFirstItemColumnSpanned(const QTreeWidgetItem * item, bool span);
 extern void _ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1);
   // proto:  void QTreeWidget::removeItemWidget(QTreeWidgetItem * item, int column);
-extern void demth_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void demth_ZN11QTreeWidget16removeItemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QTreeWidgetItem * QTreeWidget::itemAbove(const QTreeWidgetItem * item);
 extern void _ZNK11QTreeWidget9itemAboveEPK15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  void QTreeWidget::expandItem(const QTreeWidgetItem * item);
@@ -96,17 +96,17 @@ extern void _ZN11QTreeWidget13setHeaderItemEP15QTreeWidgetItem(void* qthis, void
   // proto:  void QTreeWidget::collapseItem(const QTreeWidgetItem * item);
 extern void _ZN11QTreeWidget12collapseItemEPK15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  QTreeWidgetItem * QTreeWidget::takeTopLevelItem(int index);
-extern void _ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int arg0);
+extern void _ZN11QTreeWidget16takeTopLevelItemEi(void* qthis, int32_t arg0);
   // proto:  QWidget * QTreeWidget::itemWidget(QTreeWidgetItem * item, int column);
-extern void _ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void _ZNK11QTreeWidget10itemWidgetEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidget::editItem(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void _ZN11QTreeWidget8editItemEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidget::setItemExpanded(const QTreeWidgetItem * item, bool expand);
 extern void _ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(void* qthis, void* arg0, bool arg1);
   // proto:  void QTreeWidget::addTopLevelItem(QTreeWidgetItem * item);
 extern void _ZN11QTreeWidget15addTopLevelItemEP15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  void QTreeWidget::closePersistentEditor(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void _ZN11QTreeWidget21closePersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidget::QTreeWidget(QWidget * parent);
 extern void* dector_ZN11QTreeWidgetC1EP7QWidget(void* arg0);
 extern void _ZN11QTreeWidgetC1EP7QWidget(void* qthis, void* arg0);
@@ -119,7 +119,7 @@ extern void demth_ZN11QTreeWidget14setHeaderLabelERK7QString(void* qthis, void* 
   // proto:  bool QTreeWidget::isItemHidden(const QTreeWidgetItem * item);
 extern void _ZNK11QTreeWidget12isItemHiddenEPK15QTreeWidgetItem(void* qthis, void* arg0);
   // proto:  void QTreeWidget::openPersistentEditor(QTreeWidgetItem * item, int column);
-extern void _ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int arg1);
+extern void _ZN11QTreeWidget20openPersistentEditorEP15QTreeWidgetItemi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QTreeWidget::columnCount();
 extern void _ZNK11QTreeWidget11columnCountEv(void* qthis);
   // proto:  void QTreeWidget::setCurrentItem(QTreeWidgetItem * item);
@@ -131,17 +131,17 @@ extern void demth_ZN15QTreeWidgetItem21setFirstColumnSpannedEb(void* qthis, bool
   // proto:  int QTreeWidgetItem::indexOfChild(QTreeWidgetItem * child);
 extern void demth_ZNK15QTreeWidgetItem12indexOfChildEPS_(void* qthis, void* arg0);
   // proto:  QVariant QTreeWidgetItem::data(int column, int role);
-extern void _ZNK15QTreeWidgetItem4dataEii(void* qthis, int arg0, int arg1);
+extern void _ZNK15QTreeWidgetItem4dataEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QTreeWidgetItem * QTreeWidgetItem::parent();
 extern void demth_ZNK15QTreeWidgetItem6parentEv(void* qthis);
   // proto:  void QTreeWidgetItem::setFont(int column, const QFont & font);
-extern void demth_ZN15QTreeWidgetItem7setFontEiRK5QFont(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem7setFontEiRK5QFont(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::setData(int column, int role, const QVariant & value);
-extern void _ZN15QTreeWidgetItem7setDataEiiRK8QVariant(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN15QTreeWidgetItem7setDataEiiRK8QVariant(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QFont QTreeWidgetItem::font(int column);
-extern void demth_ZNK15QTreeWidgetItem4fontEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem4fontEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidgetItem::setStatusTip(int column, const QString & statusTip);
-extern void demth_ZN15QTreeWidgetItem12setStatusTipEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem12setStatusTipEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::setExpanded(bool expand);
 extern void demth_ZN15QTreeWidgetItem11setExpandedEb(void* qthis, bool arg0);
   // proto:  void QTreeWidgetItem::write(QDataStream & out);
@@ -151,64 +151,64 @@ extern void demth_ZNK15QTreeWidgetItem10isExpandedEv(void* qthis);
   // proto:  QList<QTreeWidgetItem *> QTreeWidgetItem::takeChildren();
 extern void _ZN15QTreeWidgetItem12takeChildrenEv(void* qthis);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EPS_i(void* arg0, int arg1);
-extern void _ZN15QTreeWidgetItemC1EPS_i(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN15QTreeWidgetItemC1EPS_i(void* arg0, int32_t arg1);
+extern void _ZN15QTreeWidgetItemC1EPS_i(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidgetItem::setIcon(int column, const QIcon & icon);
-extern void demth_ZN15QTreeWidgetItem7setIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem7setIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, QTreeWidgetItem * after, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EPS_S0_i(void* arg0, void* arg1, int arg2);
-extern void _ZN15QTreeWidgetItemC1EPS_S0_i(void* qthis, void* arg0, void* arg1, int arg2);
+extern void* dector_ZN15QTreeWidgetItemC1EPS_S0_i(void* arg0, void* arg1, int32_t arg2);
+extern void _ZN15QTreeWidgetItemC1EPS_S0_i(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  QString QTreeWidgetItem::toolTip(int column);
-extern void demth_ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem7toolTipEi(void* qthis, int32_t arg0);
   // proto:  QColor QTreeWidgetItem::backgroundColor(int column);
-extern void demth_ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem15backgroundColorEi(void* qthis, int32_t arg0);
   // proto:  QString QTreeWidgetItem::text(int column);
-extern void demth_ZNK15QTreeWidgetItem4textEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem4textEi(void* qthis, int32_t arg0);
   // proto:  bool QTreeWidgetItem::isHidden();
 extern void demth_ZNK15QTreeWidgetItem8isHiddenEv(void* qthis);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, QTreeWidgetItem * after, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i(void* arg0, void* arg1, int arg2);
-extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i(void* qthis, void* arg0, void* arg1, int arg2);
+extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i(void* arg0, void* arg1, int32_t arg2);
+extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgetPS_i(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  void QTreeWidgetItem::setTextAlignment(int column, int alignment);
-extern void demth_ZN15QTreeWidgetItem16setTextAlignmentEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN15QTreeWidgetItem16setTextAlignmentEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTreeWidgetItem::insertChild(int index, QTreeWidgetItem * child);
-extern void _ZN15QTreeWidgetItem11insertChildEiPS_(void* qthis, int arg0, void* arg1);
+extern void _ZN15QTreeWidgetItem11insertChildEiPS_(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(const QTreeWidgetItem & other);
 extern void* dector_ZN15QTreeWidgetItemC1ERKS_(void* arg0);
 extern void _ZN15QTreeWidgetItemC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QTreeWidgetItem::isDisabled();
 extern void demth_ZNK15QTreeWidgetItem10isDisabledEv(void* qthis);
   // proto:  void QTreeWidgetItem::setText(int column, const QString & text);
-extern void demth_ZN15QTreeWidgetItem7setTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem7setTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::setTextColor(int column, const QColor & color);
-extern void demth_ZN15QTreeWidgetItem12setTextColorEiRK6QColor(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem12setTextColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1);
   // proto:  QSize QTreeWidgetItem::sizeHint(int column);
-extern void demth_ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem8sizeHintEi(void* qthis, int32_t arg0);
   // proto:  QString QTreeWidgetItem::whatsThis(int column);
-extern void demth_ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem9whatsThisEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidgetItem::setWhatsThis(int column, const QString & whatsThis);
-extern void demth_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem12setWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(int type);
-extern void* dector_ZN15QTreeWidgetItemC1Ei(int arg0);
-extern void _ZN15QTreeWidgetItemC1Ei(void* qthis, int arg0);
+extern void* dector_ZN15QTreeWidgetItemC1Ei(int32_t arg0);
+extern void _ZN15QTreeWidgetItemC1Ei(void* qthis, int32_t arg0);
   // proto:  QColor QTreeWidgetItem::textColor(int column);
-extern void demth_ZNK15QTreeWidgetItem9textColorEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem9textColorEi(void* qthis, int32_t arg0);
   // proto:  QIcon QTreeWidgetItem::icon(int column);
-extern void demth_ZNK15QTreeWidgetItem4iconEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem4iconEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidgetItem::setToolTip(int column, const QString & toolTip);
-extern void demth_ZN15QTreeWidgetItem10setToolTipEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem10setToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, const QStringList & strings, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi(void* arg0, void* arg1, int arg2);
-extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi(void* qthis, void* arg0, void* arg1, int arg2);
+extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi(void* arg0, void* arg1, int32_t arg2);
+extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgetRK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  bool QTreeWidgetItem::isFirstColumnSpanned();
 extern void demth_ZNK15QTreeWidgetItem20isFirstColumnSpannedEv(void* qthis);
   // proto:  int QTreeWidgetItem::textAlignment(int column);
-extern void demth_ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem13textAlignmentEi(void* qthis, int32_t arg0);
   // proto:  QTreeWidgetItem * QTreeWidgetItem::child(int index);
-extern void demth_ZNK15QTreeWidgetItem5childEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem5childEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(const QStringList & strings, int type);
-extern void* dector_ZN15QTreeWidgetItemC1ERK11QStringListi(void* arg0, int arg1);
-extern void _ZN15QTreeWidgetItemC1ERK11QStringListi(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN15QTreeWidgetItemC1ERK11QStringListi(void* arg0, int32_t arg1);
+extern void _ZN15QTreeWidgetItemC1ERK11QStringListi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidgetItem::setSelected(bool select);
 extern void demth_ZN15QTreeWidgetItem11setSelectedEb(void* qthis, bool arg0);
   // proto:  void QTreeWidgetItem::~QTreeWidgetItem();
@@ -218,14 +218,14 @@ extern void demth_ZN15QTreeWidgetItem9setHiddenEb(void* qthis, bool arg0);
   // proto:  int QTreeWidgetItem::columnCount();
 extern void demth_ZNK15QTreeWidgetItem11columnCountEv(void* qthis);
   // proto:  QTreeWidgetItem * QTreeWidgetItem::takeChild(int index);
-extern void _ZN15QTreeWidgetItem9takeChildEi(void* qthis, int arg0);
+extern void _ZN15QTreeWidgetItem9takeChildEi(void* qthis, int32_t arg0);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidgetItem * parent, const QStringList & strings, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EPS_RK11QStringListi(void* arg0, void* arg1, int arg2);
-extern void _ZN15QTreeWidgetItemC1EPS_RK11QStringListi(void* qthis, void* arg0, void* arg1, int arg2);
+extern void* dector_ZN15QTreeWidgetItemC1EPS_RK11QStringListi(void* arg0, void* arg1, int32_t arg2);
+extern void _ZN15QTreeWidgetItemC1EPS_RK11QStringListi(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  void QTreeWidgetItem::setDisabled(bool disabled);
 extern void demth_ZN15QTreeWidgetItem11setDisabledEb(void* qthis, bool arg0);
   // proto:  void QTreeWidgetItem::setBackground(int column, const QBrush & brush);
-extern void demth_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem13setBackgroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTreeWidgetItem::addChild(QTreeWidgetItem * child);
 extern void _ZN15QTreeWidgetItem8addChildEPS_(void* qthis, void* arg0);
   // proto:  void QTreeWidgetItem::removeChild(QTreeWidgetItem * child);
@@ -233,20 +233,20 @@ extern void _ZN15QTreeWidgetItem11removeChildEPS_(void* qthis, void* arg0);
   // proto:  QTreeWidgetItem * QTreeWidgetItem::clone();
 extern void _ZNK15QTreeWidgetItem5cloneEv(void* qthis);
   // proto:  void QTreeWidgetItem::QTreeWidgetItem(QTreeWidget * view, int type);
-extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgeti(void* arg0, int arg1);
-extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgeti(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN15QTreeWidgetItemC1EP11QTreeWidgeti(void* arg0, int32_t arg1);
+extern void _ZN15QTreeWidgetItemC1EP11QTreeWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QTreeWidgetItem::setSizeHint(int column, const QSize & size);
-extern void demth_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem11setSizeHintEiRK5QSize(void* qthis, int32_t arg0, void* arg1);
   // proto:  QBrush QTreeWidgetItem::foreground(int column);
-extern void demth_ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem10foregroundEi(void* qthis, int32_t arg0);
   // proto:  int QTreeWidgetItem::childCount();
 extern void demth_ZNK15QTreeWidgetItem10childCountEv(void* qthis);
   // proto:  void QTreeWidgetItem::setBackgroundColor(int column, const QColor & color);
-extern void demth_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem18setBackgroundColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1);
   // proto:  QString QTreeWidgetItem::statusTip(int column);
-extern void demth_ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem9statusTipEi(void* qthis, int32_t arg0);
   // proto:  QBrush QTreeWidgetItem::background(int column);
-extern void demth_ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int arg0);
+extern void demth_ZNK15QTreeWidgetItem10backgroundEi(void* qthis, int32_t arg0);
   // proto:  int QTreeWidgetItem::type();
 extern void demth_ZNK15QTreeWidgetItem4typeEv(void* qthis);
   // proto:  QTreeWidget * QTreeWidgetItem::treeWidget();
@@ -254,7 +254,7 @@ extern void demth_ZNK15QTreeWidgetItem10treeWidgetEv(void* qthis);
   // proto:  void QTreeWidgetItem::read(QDataStream & in);
 extern void _ZN15QTreeWidgetItem4readER11QDataStream(void* qthis, void* arg0);
   // proto:  void QTreeWidgetItem::setForeground(int column, const QBrush & brush);
-extern void demth_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(void* qthis, int arg0, void* arg1);
+extern void demth_ZN15QTreeWidgetItem13setForegroundEiRK6QBrush(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QTreeWidgetItem::isSelected();
 extern void demth_ZNK15QTreeWidgetItem10isSelectedEv(void* qthis);
 */
@@ -272,7 +272,7 @@ func init() {
 // class sizeof(QTreeWidget)=1
 type QTreeWidget struct {
   /*qbase*/ QTreeView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _itemDoubleClicked QTreeWidget_itemDoubleClicked_signal;
 //  _itemClicked QTreeWidget_itemClicked_signal;
 //  _currentItemChanged QTreeWidget_currentItemChanged_signal;
@@ -288,7 +288,7 @@ type QTreeWidget struct {
 // class sizeof(QTreeWidgetItem)=1
 type QTreeWidgetItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTreeWidget::setColumnCount(int columns);
@@ -393,7 +393,7 @@ func (this *QTreeWidget) setItemHidden(args ...interface{}) () {
     // invoke: void setItemHidden(const class QTreeWidgetItem *, _Bool)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QTreeWidget13setItemHiddenEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -847,7 +847,7 @@ func (this *QTreeWidget) setFirstItemColumnSpanned(args ...interface{}) () {
     // invoke: void setFirstItemColumnSpanned(const class QTreeWidgetItem *, _Bool)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QTreeWidget25setFirstItemColumnSpannedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -1066,7 +1066,7 @@ func (this *QTreeWidget) setItemExpanded(args ...interface{}) () {
     // invoke: void setItemExpanded(const class QTreeWidgetItem *, _Bool)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QTreeWidget15setItemExpandedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -1279,7 +1279,7 @@ func (this *QTreeWidget) setItemSelected(args ...interface{}) () {
     // invoke: void setItemSelected(const class QTreeWidgetItem *, _Bool)
     var arg0 = args[0].(QTreeWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QTreeWidget15setItemSelectedEPK15QTreeWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -1302,7 +1302,7 @@ func (this *QTreeWidgetItem) setFirstColumnSpanned(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem21setFirstColumnSpannedEb
     // invoke: void setFirstColumnSpanned(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTreeWidgetItem21setFirstColumnSpannedEb(this.qclsinst, arg0)
   default:
@@ -1498,7 +1498,7 @@ func (this *QTreeWidgetItem) setExpanded(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setExpandedEb
     // invoke: void setExpanded(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTreeWidgetItem11setExpandedEb(this.qclsinst, arg0)
   default:
@@ -2038,7 +2038,7 @@ func (this *QTreeWidgetItem) setSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setSelectedEb
     // invoke: void setSelected(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTreeWidgetItem11setSelectedEb(this.qclsinst, arg0)
   default:
@@ -2075,7 +2075,7 @@ func (this *QTreeWidgetItem) setHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem9setHiddenEb
     // invoke: void setHidden(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTreeWidgetItem9setHiddenEb(this.qclsinst, arg0)
   default:
@@ -2141,7 +2141,7 @@ func (this *QTreeWidgetItem) setDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QTreeWidgetItem11setDisabledEb
     // invoke: void setDisabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QTreeWidgetItem11setDisabledEb(this.qclsinst, arg0)
   default:

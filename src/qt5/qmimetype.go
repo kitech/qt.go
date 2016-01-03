@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -55,7 +55,7 @@ extern void _ZNK9QMimeType7isValidEv(void* qthis);
 extern void* dector_ZN9QMimeTypeC1Ev();
 extern void _ZN9QMimeTypeC1Ev(void* qthis);
   // proto:  void QMimeType::swap(QMimeType & other);
-extern void _ZN9QMimeType4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QMimeType4swapERS_(void* qthis, void* arg0);
   // proto:  QStringList QMimeType::suffixes();
 extern void _ZNK9QMimeType8suffixesEv(void* qthis);
   // proto:  QString QMimeType::genericIconName();
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QMimeType)=1
 type QMimeType struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QMimeType::~QMimeType();
@@ -266,7 +266,7 @@ func (this *QMimeType) swap(args ...interface{}) () {
     // invoke: void swap(class QMimeType &)
     var arg0 = args[0].(QMimeType).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QMimeType4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QMimeType4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMimeType", "swap", args)
   }

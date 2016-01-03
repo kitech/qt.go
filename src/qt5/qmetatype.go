@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -33,71 +33,71 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QMetaType::destroy(int type, void * data);
-extern void _ZN9QMetaType7destroyEiPv(int arg0, void* arg1);
+extern void _ZN9QMetaType7destroyEiPv(int32_t arg0, void* arg1);
   // proto: static bool QMetaType::hasRegisteredConverterFunction(int fromTypeId, int toTypeId);
-extern void _ZN9QMetaType30hasRegisteredConverterFunctionEii(int arg0, int arg1);
+extern void _ZN9QMetaType30hasRegisteredConverterFunctionEii(int32_t arg0, int32_t arg1);
   // proto:  const QMetaObject * QMetaType::metaObject();
 extern void demth_ZNK9QMetaType10metaObjectEv(void* qthis);
   // proto: static bool QMetaType::hasRegisteredDebugStreamOperator(int typeId);
-extern void _ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(int arg0);
+extern void _ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(int32_t arg0);
   // proto: static void * QMetaType::create(int type, const void * copy);
-extern void _ZN9QMetaType6createEiPKv(int arg0, void* arg1);
+extern void _ZN9QMetaType6createEiPKv(int32_t arg0, void* arg1);
   // proto:  void QMetaType::destroy(void * data);
 extern void demth_ZNK9QMetaType7destroyEPv(void* qthis, void* arg0);
   // proto: static int QMetaType::registerTypedef(const char * typeName, int aliasId);
-extern void _ZN9QMetaType15registerTypedefEPKci(char* arg0, int arg1);
+extern void _ZN9QMetaType15registerTypedefEPKci(unsigned char* arg0, int32_t arg1);
   // proto: static void QMetaType::destruct(int type, void * where);
-extern void _ZN9QMetaType8destructEiPv(int arg0, void* arg1);
+extern void _ZN9QMetaType8destructEiPv(int32_t arg0, void* arg1);
   // proto:  bool QMetaType::isValid();
 extern void demth_ZNK9QMetaType7isValidEv(void* qthis);
   // proto: static void * QMetaType::construct(int type, void * where, const void * copy);
-extern void _ZN9QMetaType9constructEiPvPKv(int arg0, void* arg1, void* arg2);
+extern void _ZN9QMetaType9constructEiPvPKv(int32_t arg0, void* arg1, void* arg2);
   // proto: static bool QMetaType::equals(const void * lhs, const void * rhs, int typeId, int * result);
-extern void _ZN9QMetaType6equalsEPKvS1_iPi(void* arg0, void* arg1, int arg2, int* arg3);
+extern void _ZN9QMetaType6equalsEPKvS1_iPi(void* arg0, void* arg1, int32_t arg2, int32_t* arg3);
   // proto:  void * QMetaType::construct(void * where, const void * copy);
 extern void demth_ZNK9QMetaType9constructEPvPKv(void* qthis, void* arg0, void* arg1);
   // proto: static bool QMetaType::isRegistered(int type);
-extern void _ZN9QMetaType12isRegisteredEi(int arg0);
+extern void _ZN9QMetaType12isRegisteredEi(int32_t arg0);
   // proto: static bool QMetaType::unregisterType(int type);
-extern void _ZN9QMetaType14unregisterTypeEi(int arg0);
+extern void _ZN9QMetaType14unregisterTypeEi(int32_t arg0);
   // proto:  void QMetaType::QMetaType(const QMetaType & other);
 extern void* dector_ZN9QMetaTypeC1ERKS_(void* arg0);
 extern void _ZN9QMetaTypeC1ERKS_(void* qthis, void* arg0);
   // proto: static const QMetaObject * QMetaType::metaObjectForType(int type);
-extern void _ZN9QMetaType17metaObjectForTypeEi(int arg0);
+extern void _ZN9QMetaType17metaObjectForTypeEi(int32_t arg0);
   // proto: static bool QMetaType::load(QDataStream & stream, int type, void * data);
-extern void _ZN9QMetaType4loadER11QDataStreamiPv(void* arg0, int arg1, void* arg2);
+extern void _ZN9QMetaType4loadER11QDataStreamiPv(void* arg0, int32_t arg1, void* arg2);
   // proto:  void * QMetaType::create(const void * copy);
 extern void demth_ZNK9QMetaType6createEPKv(void* qthis, void* arg0);
   // proto: static int QMetaType::sizeOf(int type);
-extern void _ZN9QMetaType6sizeOfEi(int arg0);
+extern void _ZN9QMetaType6sizeOfEi(int32_t arg0);
   // proto: static bool QMetaType::hasRegisteredComparators(int typeId);
-extern void _ZN9QMetaType24hasRegisteredComparatorsEi(int arg0);
+extern void _ZN9QMetaType24hasRegisteredComparatorsEi(int32_t arg0);
   // proto: static bool QMetaType::save(QDataStream & stream, int type, const void * data);
-extern void _ZN9QMetaType4saveER11QDataStreamiPKv(void* arg0, int arg1, void* arg2);
+extern void _ZN9QMetaType4saveER11QDataStreamiPKv(void* arg0, int32_t arg1, void* arg2);
   // proto:  void QMetaType::destruct(void * data);
 extern void demth_ZNK9QMetaType8destructEPv(void* qthis, void* arg0);
   // proto:  void QMetaType::~QMetaType();
 extern void demth_ZN9QMetaTypeD0Ev(void* qthis);
   // proto: static int QMetaType::type(const char * typeName);
-extern void _ZN9QMetaType4typeEPKc(char* arg0);
+extern void _ZN9QMetaType4typeEPKc(unsigned char* arg0);
   // proto: static int QMetaType::type(const ::QByteArray & typeName);
 extern void _ZN9QMetaType4typeERK10QByteArray(void* arg0);
   // proto: static bool QMetaType::debugStream(QDebug & dbg, const void * rhs, int typeId);
-extern void _ZN9QMetaType11debugStreamER6QDebugPKvi(void* arg0, void* arg1, int arg2);
+extern void _ZN9QMetaType11debugStreamER6QDebugPKvi(void* arg0, void* arg1, int32_t arg2);
   // proto:  int QMetaType::sizeOf();
 extern void demth_ZNK9QMetaType6sizeOfEv(void* qthis);
   // proto: static const char * QMetaType::typeName(int type);
-extern void _ZN9QMetaType8typeNameEi(int arg0);
+extern void _ZN9QMetaType8typeNameEi(int32_t arg0);
   // proto: static bool QMetaType::convert(const void * from, int fromTypeId, void * to, int toTypeId);
-extern void _ZN9QMetaType7convertEPKviPvi(void* arg0, int arg1, void* arg2, int arg3);
+extern void _ZN9QMetaType7convertEPKviPvi(void* arg0, int32_t arg1, void* arg2, int32_t arg3);
   // proto:  void QMetaType::QMetaType(const int type);
-extern void* dector_ZN9QMetaTypeC1Ei(const int arg0);
-extern void _ZN9QMetaTypeC1Ei(void* qthis, const int arg0);
+extern void* dector_ZN9QMetaTypeC1Ei(int32_t arg0);
+extern void _ZN9QMetaTypeC1Ei(void* qthis, int32_t arg0);
   // proto: static int QMetaType::registerNormalizedTypedef(const ::QByteArray & normalizedTypeName, int aliasId);
-extern void _ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(void* arg0, int arg1);
+extern void _ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(void* arg0, int32_t arg1);
   // proto: static bool QMetaType::compare(const void * lhs, const void * rhs, int typeId, int * result);
-extern void _ZN9QMetaType7compareEPKvS1_iPi(void* arg0, void* arg1, int arg2, int* arg3);
+extern void _ZN9QMetaType7compareEPKvS1_iPi(void* arg0, void* arg1, int32_t arg2, int32_t* arg3);
   // proto:  bool QMetaType::isRegistered();
 extern void demth_ZNK9QMetaType12isRegisteredEv(void* qthis);
 */
@@ -115,7 +115,7 @@ func init() {
 // class sizeof(QMetaType)=80
 type QMetaType struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static void QMetaType::destroy(int type, void * data);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qguiapplication.h
 // dst-file: /src/gui/qguiapplication.go
 //
@@ -96,8 +96,8 @@ extern void demth_ZN15QGuiApplication13isLeftToRightEv();
   // proto: static QWindow * QGuiApplication::topLevelAt(const QPoint & pos);
 extern void _ZN15QGuiApplication10topLevelAtERK6QPoint(void* arg0);
   // proto:  void QGuiApplication::QGuiApplication(int & argc, char ** argv, int );
-extern void* dector_ZN15QGuiApplicationC1ERiPPci(int* arg0, char* arg1, int arg2);
-extern void _ZN15QGuiApplicationC1ERiPPci(void* qthis, int* arg0, char* arg1, int arg2);
+extern void* dector_ZN15QGuiApplicationC1ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2);
+extern void _ZN15QGuiApplicationC1ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2);
   // proto: static void QGuiApplication::setDesktopSettingsAware(bool on);
 extern void _ZN15QGuiApplication23setDesktopSettingsAwareEb(bool arg0);
   // proto: static QWindow * QGuiApplication::modalWindow();
@@ -137,7 +137,7 @@ func init() {
 // class sizeof(QGuiApplication)=1
 type QGuiApplication struct {
   /*qbase*/ QCoreApplication;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _saveStateRequest QGuiApplication_saveStateRequest_signal;
 //  _applicationStateChanged QGuiApplication_applicationStateChanged_signal;
 //  _screenAdded QGuiApplication_screenAdded_signal;

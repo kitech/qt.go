@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qregularexpression.h
 // dst-file: /src/core/qregularexpression.go
 //
@@ -51,7 +51,7 @@ extern void _ZN31QRegularExpressionMatchIteratorD0Ev(void* qthis);
   // proto:  QRegularExpressionMatch QRegularExpressionMatchIterator::next();
 extern void _ZN31QRegularExpressionMatchIterator4nextEv(void* qthis);
   // proto:  void QRegularExpressionMatchIterator::swap(QRegularExpressionMatchIterator & other);
-extern void _ZN31QRegularExpressionMatchIterator4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN31QRegularExpressionMatchIterator4swapERS_(void* qthis, void* arg0);
   // proto:  int QRegularExpression::patternErrorOffset();
 extern void _ZNK18QRegularExpression18patternErrorOffsetEv(void* qthis);
   // proto:  QString QRegularExpression::pattern();
@@ -66,7 +66,7 @@ extern void _ZN18QRegularExpression6escapeERK7QString(void* arg0);
 extern void* dector_ZN18QRegularExpressionC1Ev();
 extern void _ZN18QRegularExpressionC1Ev(void* qthis);
   // proto:  void QRegularExpression::swap(QRegularExpression & other);
-extern void _ZN18QRegularExpression4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN18QRegularExpression4swapERS_(void* qthis, void* arg0);
   // proto:  QString QRegularExpression::errorString();
 extern void _ZNK18QRegularExpression11errorStringEv(void* qthis);
   // proto:  bool QRegularExpression::isValid();
@@ -88,11 +88,11 @@ extern void _ZN23QRegularExpressionMatchC1Ev(void* qthis);
   // proto:  bool QRegularExpressionMatch::isValid();
 extern void _ZNK23QRegularExpressionMatch7isValidEv(void* qthis);
   // proto:  int QRegularExpressionMatch::capturedLength(int nth);
-extern void _ZNK23QRegularExpressionMatch14capturedLengthEi(void* qthis, int arg0);
+extern void _ZNK23QRegularExpressionMatch14capturedLengthEi(void* qthis, int32_t arg0);
   // proto:  int QRegularExpressionMatch::capturedLength(const QString & name);
 extern void _ZNK23QRegularExpressionMatch14capturedLengthERK7QString(void* qthis, void* arg0);
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(int nth);
-extern void _ZNK23QRegularExpressionMatch11capturedRefEi(void* qthis, int arg0);
+extern void _ZNK23QRegularExpressionMatch11capturedRefEi(void* qthis, int32_t arg0);
   // proto:  int QRegularExpressionMatch::capturedEnd(const QString & name);
 extern void _ZNK23QRegularExpressionMatch11capturedEndERK7QString(void* qthis, void* arg0);
   // proto:  QString QRegularExpressionMatch::captured(const QString & name);
@@ -103,11 +103,11 @@ extern void _ZNK23QRegularExpressionMatch13capturedTextsEv(void* qthis);
 extern void* dector_ZN23QRegularExpressionMatchC1ERKS_(void* arg0);
 extern void _ZN23QRegularExpressionMatchC1ERKS_(void* qthis, void* arg0);
   // proto:  void QRegularExpressionMatch::swap(QRegularExpressionMatch & other);
-extern void _ZN23QRegularExpressionMatch4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN23QRegularExpressionMatch4swapERS_(void* qthis, void* arg0);
   // proto:  void QRegularExpressionMatch::~QRegularExpressionMatch();
 extern void _ZN23QRegularExpressionMatchD0Ev(void* qthis);
   // proto:  int QRegularExpressionMatch::capturedEnd(int nth);
-extern void _ZNK23QRegularExpressionMatch11capturedEndEi(void* qthis, int arg0);
+extern void _ZNK23QRegularExpressionMatch11capturedEndEi(void* qthis, int32_t arg0);
   // proto:  QStringRef QRegularExpressionMatch::capturedRef(const QString & name);
 extern void _ZNK23QRegularExpressionMatch11capturedRefERK7QString(void* qthis, void* arg0);
   // proto:  bool QRegularExpressionMatch::hasMatch();
@@ -117,9 +117,9 @@ extern void _ZNK23QRegularExpressionMatch13capturedStartERK7QString(void* qthis,
   // proto:  QRegularExpression QRegularExpressionMatch::regularExpression();
 extern void _ZNK23QRegularExpressionMatch17regularExpressionEv(void* qthis);
   // proto:  QString QRegularExpressionMatch::captured(int nth);
-extern void _ZNK23QRegularExpressionMatch8capturedEi(void* qthis, int arg0);
+extern void _ZNK23QRegularExpressionMatch8capturedEi(void* qthis, int32_t arg0);
   // proto:  int QRegularExpressionMatch::capturedStart(int nth);
-extern void _ZNK23QRegularExpressionMatch13capturedStartEi(void* qthis, int arg0);
+extern void _ZNK23QRegularExpressionMatch13capturedStartEi(void* qthis, int32_t arg0);
   // proto:  bool QRegularExpressionMatch::hasPartialMatch();
 extern void _ZNK23QRegularExpressionMatch15hasPartialMatchEv(void* qthis);
 */
@@ -137,19 +137,19 @@ func init() {
 // class sizeof(QRegularExpressionMatchIterator)=1
 type QRegularExpressionMatchIterator struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QRegularExpression)=1
 type QRegularExpression struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QRegularExpressionMatch)=1
 type QRegularExpressionMatch struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QRegularExpressionMatchIterator::hasNext();
@@ -287,7 +287,7 @@ func (this *QRegularExpressionMatchIterator) swap(args ...interface{}) () {
     // invoke: void swap(class QRegularExpressionMatchIterator &)
     var arg0 = args[0].(QRegularExpressionMatchIterator).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN31QRegularExpressionMatchIterator4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN31QRegularExpressionMatchIterator4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatchIterator", "swap", args)
   }
@@ -403,7 +403,7 @@ func (this *QRegularExpression) swap(args ...interface{}) () {
     // invoke: void swap(class QRegularExpression &)
     var arg0 = args[0].(QRegularExpression).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN18QRegularExpression4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN18QRegularExpression4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpression", "swap", args)
   }
@@ -722,7 +722,7 @@ func (this *QRegularExpressionMatch) swap(args ...interface{}) () {
     // invoke: void swap(class QRegularExpressionMatch &)
     var arg0 = args[0].(QRegularExpressionMatch).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN23QRegularExpressionMatch4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN23QRegularExpressionMatch4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QRegularExpressionMatch", "swap", args)
   }

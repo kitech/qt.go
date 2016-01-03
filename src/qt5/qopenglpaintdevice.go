@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglpaintdevice.h
 // dst-file: /src/gui/qopenglpaintdevice.go
 //
@@ -41,8 +41,8 @@ extern void _ZN18QOpenGLPaintDevice15setPaintFlippedEb(void* qthis, bool arg0);
   // proto:  void QOpenGLPaintDevice::~QOpenGLPaintDevice();
 extern void _ZN18QOpenGLPaintDeviceD0Ev(void* qthis);
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(int width, int height);
-extern void* dector_ZN18QOpenGLPaintDeviceC1Eii(int arg0, int arg1);
-extern void _ZN18QOpenGLPaintDeviceC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN18QOpenGLPaintDeviceC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN18QOpenGLPaintDeviceC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QOpenGLPaintDevice::QOpenGLPaintDevice(const QOpenGLPaintDevice & );
 extern void* dector_ZN18QOpenGLPaintDeviceC1ERKS_(void* arg0);
 extern void _ZN18QOpenGLPaintDeviceC1ERKS_(void* qthis, void* arg0);
@@ -54,7 +54,7 @@ extern void _ZN18QOpenGLPaintDevice19setDevicePixelRatioEd(void* qthis, double a
 extern void* dector_ZN18QOpenGLPaintDeviceC1Ev();
 extern void _ZN18QOpenGLPaintDeviceC1Ev(void* qthis);
   // proto:  int QOpenGLPaintDevice::devType();
-extern void _ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis);
+extern void demth_ZNK18QOpenGLPaintDevice7devTypeEv(void* qthis);
   // proto:  qreal QOpenGLPaintDevice::dotsPerMeterX();
 extern void _ZNK18QOpenGLPaintDevice13dotsPerMeterXEv(void* qthis);
   // proto:  void QOpenGLPaintDevice::setDotsPerMeterX(qreal );
@@ -87,7 +87,7 @@ func init() {
 // class sizeof(QOpenGLPaintDevice)=1
 type QOpenGLPaintDevice struct {
   /*qbase*/ QPaintDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QPaintEngine * QOpenGLPaintDevice::paintEngine();
@@ -144,7 +144,7 @@ func (this *QOpenGLPaintDevice) setPaintFlipped(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLPaintDevice15setPaintFlippedEb
     // invoke: void setPaintFlipped(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN18QOpenGLPaintDevice15setPaintFlippedEb(this.qclsinst, arg0)
   default:
@@ -228,7 +228,7 @@ func (this *QOpenGLPaintDevice) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLPaintDevice7devTypeEv
     // invoke: int devType()
-    C._ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
+    C.demth_ZNK18QOpenGLPaintDevice7devTypeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLPaintDevice", "devType", args)
   }

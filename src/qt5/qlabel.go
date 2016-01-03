@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.go
 //
@@ -43,23 +43,23 @@ extern void _ZN6QLabel7setTextERK7QString(void* qthis, void* arg0);
   // proto:  const QPixmap * QLabel::pixmap();
 extern void _ZNK6QLabel6pixmapEv(void* qthis);
   // proto:  void QLabel::setIndent(int );
-extern void _ZN6QLabel9setIndentEi(void* qthis, int arg0);
+extern void _ZN6QLabel9setIndentEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QLabel::metaObject();
 extern void _ZNK6QLabel10metaObjectEv(void* qthis);
   // proto:  void QLabel::~QLabel();
 extern void _ZN6QLabelD0Ev(void* qthis);
   // proto:  void QLabel::setSelection(int , int );
-extern void _ZN6QLabel12setSelectionEii(void* qthis, int arg0, int arg1);
+extern void _ZN6QLabel12setSelectionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QLabel::hasScaledContents();
 extern void _ZNK6QLabel17hasScaledContentsEv(void* qthis);
   // proto:  QString QLabel::text();
 extern void _ZNK6QLabel4textEv(void* qthis);
   // proto:  int QLabel::heightForWidth(int );
-extern void _ZNK6QLabel14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK6QLabel14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  bool QLabel::openExternalLinks();
 extern void _ZNK6QLabel17openExternalLinksEv(void* qthis);
   // proto:  void QLabel::setNum(int );
-extern void _ZN6QLabel6setNumEi(void* qthis, int arg0);
+extern void _ZN6QLabel6setNumEi(void* qthis, int32_t arg0);
   // proto:  void QLabel::setPixmap(const QPixmap & );
 extern void _ZN6QLabel9setPixmapERK7QPixmap(void* qthis, void* arg0);
   // proto:  void QLabel::setOpenExternalLinks(bool open);
@@ -73,7 +73,7 @@ extern void _ZN6QLabel11setWordWrapEb(void* qthis, bool arg0);
   // proto:  void QLabel::clear();
 extern void _ZN6QLabel5clearEv(void* qthis);
   // proto:  void QLabel::setMargin(int );
-extern void _ZN6QLabel9setMarginEi(void* qthis, int arg0);
+extern void _ZN6QLabel9setMarginEi(void* qthis, int32_t arg0);
   // proto:  QSize QLabel::minimumSizeHint();
 extern void _ZNK6QLabel15minimumSizeHintEv(void* qthis);
   // proto:  int QLabel::selectionStart();
@@ -114,7 +114,7 @@ func init() {
 // class sizeof(QLabel)=1
 type QLabel struct {
   /*qbase*/ QFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _linkActivated QLabel_linkActivated_signal;
 //  _linkHovered QLabel_linkHovered_signal;
 }
@@ -440,7 +440,7 @@ func (this *QLabel) setOpenExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QLabel20setOpenExternalLinksEb
     // invoke: void setOpenExternalLinks(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN6QLabel20setOpenExternalLinksEb(this.qclsinst, arg0)
   default:
@@ -503,7 +503,7 @@ func (this *QLabel) setWordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QLabel11setWordWrapEb
     // invoke: void setWordWrap(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN6QLabel11setWordWrapEb(this.qclsinst, arg0)
   default:
@@ -737,7 +737,7 @@ func (this *QLabel) setScaledContents(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QLabel17setScaledContentsEb
     // invoke: void setScaledContents(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN6QLabel17setScaledContentsEb(this.qclsinst, arg0)
   default:

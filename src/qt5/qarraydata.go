@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -33,13 +33,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QArrayData * QArrayData::sharedNull();
-extern void _ZN10QArrayData10sharedNullEv();
+extern void demth_ZN10QArrayData10sharedNullEv();
   // proto: static void QArrayData::deallocate(QArrayData * data, int objectSize, int alignment);
-extern void _ZN10QArrayData10deallocateEPS_ii(void* arg0, int arg1, int arg2);
+extern void _ZN10QArrayData10deallocateEPS_ii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  bool QArrayData::isMutable();
-extern void _ZNK10QArrayData9isMutableEv(void* qthis);
+extern void demth_ZNK10QArrayData9isMutableEv(void* qthis);
   // proto:  int QArrayData::detachCapacity(int newSize);
-extern void _ZNK10QArrayData14detachCapacityEi(void* qthis, int arg0);
+extern void demth_ZNK10QArrayData14detachCapacityEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -55,7 +55,7 @@ func init() {
 // class sizeof(QArrayData)=1
 type QArrayData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static QArrayData * QArrayData::sharedNull();
@@ -99,7 +99,7 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
     // invoke: bool isMutable()
-    C._ZNK10QArrayData9isMutableEv(this.qclsinst)
+    C.demth_ZNK10QArrayData9isMutableEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
   }
@@ -122,7 +122,7 @@ func (this *QArrayData) detachCapacity(args ...interface{}) () {
     // invoke: int detachCapacity(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZNK10QArrayData14detachCapacityEi(this.qclsinst, arg0)
+    C.demth_ZNK10QArrayData14detachCapacityEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QArrayData", "detachCapacity", args)
   }

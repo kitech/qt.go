@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -37,8 +37,6 @@ extern void _ZNK17QIconEnginePlugin10metaObjectEv(void* qthis);
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
 extern void* dector_ZN17QIconEnginePluginC1EP7QObject(void* arg0);
 extern void _ZN17QIconEnginePluginC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
-extern void _ZN17QIconEnginePlugin6createERK7QString(void* qthis, void* arg0);
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
 extern void _ZN17QIconEnginePluginD0Ev(void* qthis);
 */
@@ -56,7 +54,7 @@ func init() {
 // class sizeof(QIconEnginePlugin)=1
 type QIconEnginePlugin struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
@@ -82,29 +80,6 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
 func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
   return QIconEnginePlugin{}
-}
-
-  // proto:  QIconEngine * QIconEnginePlugin::create(const QString & filename);
-func (this *QIconEnginePlugin) create(args ...interface{}) () {
-  // create(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN17QIconEnginePlugin6createERK7QString
-    // invoke: QIconEngine * create(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN17QIconEnginePlugin6createERK7QString(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QIconEnginePlugin", "create", args)
-  }
-
 }
 
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();

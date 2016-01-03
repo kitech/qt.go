@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -47,9 +47,9 @@ extern void _ZN11QTranslatorD0Ev(void* qthis);
   // proto:  bool QTranslator::load(const QString & filename, const QString & directory, const QString & search_delimiters, const QString & suffix);
 extern void _ZN11QTranslator4loadERK7QStringS2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
   // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
-extern void _ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, char* arg0, char* arg1, char* arg2, int arg3);
+extern void _ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3);
   // proto:  bool QTranslator::load(const uchar * data, int len, const QString & directory);
-extern void _ZN11QTranslator4loadEPKhiRK7QString(void* qthis, unsigned char* arg0, int arg1, void* arg2);
+extern void _ZN11QTranslator4loadEPKhiRK7QString(void* qthis, unsigned char* arg0, int32_t arg1, void* arg2);
   // proto:  bool QTranslator::load(const QLocale & locale, const QString & filename, const QString & prefix, const QString & directory, const QString & suffix);
 extern void _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4);
 */
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QTranslator)=1
 type QTranslator struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  const QMetaObject * QTranslator::metaObject();
@@ -170,7 +170,7 @@ func (this *QTranslator) load(args ...interface{}) () {
   case 1:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
     // invoke: bool load(const uchar *, int, const class QString &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -214,11 +214,11 @@ func (this *QTranslator) translate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTranslator9translateEPKcS1_S1_i
     // invoke: QString translate(const char *, const char *, const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}

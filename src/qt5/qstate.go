@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -39,7 +39,7 @@ extern void _ZNK6QState12initialStateEv(void* qthis);
   // proto:  void QState::~QState();
 extern void _ZN6QStateD0Ev(void* qthis);
   // proto:  void QState::assignProperty(QObject * object, const char * name, const QVariant & value);
-extern void _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(void* qthis, void* arg0, char* arg1, void* arg2);
+extern void _ZN6QState14assignPropertyEP7QObjectPKcRK8QVariant(void* qthis, void* arg0, unsigned char* arg1, void* arg2);
   // proto:  void QState::QState(const QState & );
 extern void* dector_ZN6QStateC1ERKS_(void* arg0);
 extern void _ZN6QStateC1ERKS_(void* qthis, void* arg0);
@@ -55,7 +55,7 @@ extern void _ZN6QState13addTransitionEP19QAbstractTransition(void* qthis, void* 
   // proto:  void QState::removeTransition(QAbstractTransition * transition);
 extern void _ZN6QState16removeTransitionEP19QAbstractTransition(void* qthis, void* arg0);
   // proto:  QSignalTransition * QState::addTransition(const QObject * sender, const char * signal, QAbstractState * target);
-extern void _ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(void* qthis, void* arg0, char* arg1, void* arg2);
+extern void _ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(void* qthis, void* arg0, unsigned char* arg1, void* arg2);
   // proto:  QAbstractTransition * QState::addTransition(QAbstractState * target);
 extern void _ZN6QState13addTransitionEP14QAbstractState(void* qthis, void* arg0);
   // proto:  QList<QAbstractTransition *> QState::transitions();
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QState)=1
 type QState struct {
   /*qbase*/ QAbstractState;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _childModeChanged QState_childModeChanged_signal;
 //  _errorStateChanged QState_errorStateChanged_signal;
 //  _finished QState_finished_signal;
@@ -157,7 +157,7 @@ func (this *QState) assignProperty(args ...interface{}) () {
     // invoke: void assignProperty(class QObject *, const char *, const class QVariant &)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVariant).qclsinst
     if false {fmt.Println(arg2)}
@@ -246,7 +246,7 @@ func (this *QState) addTransition(args ...interface{}) () {
     // invoke: QSignalTransition * addTransition(const class QObject *, const char *, class QAbstractState *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QAbstractState).qclsinst
     if false {fmt.Println(arg2)}

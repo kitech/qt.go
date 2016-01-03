@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -37,7 +37,7 @@ extern void _ZN11QThreadPoolD0Ev(void* qthis);
   // proto:  int QThreadPool::expiryTimeout();
 extern void _ZNK11QThreadPool13expiryTimeoutEv(void* qthis);
   // proto:  bool QThreadPool::waitForDone(int msecs);
-extern void _ZN11QThreadPool11waitForDoneEi(void* qthis, int arg0);
+extern void _ZN11QThreadPool11waitForDoneEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QThreadPool::metaObject();
 extern void _ZNK11QThreadPool10metaObjectEv(void* qthis);
   // proto:  void QThreadPool::cancel(QRunnable * runnable);
@@ -47,9 +47,9 @@ extern void _ZN11QThreadPool8tryStartEP9QRunnable(void* qthis, void* arg0);
   // proto: static QThreadPool * QThreadPool::globalInstance();
 extern void _ZN11QThreadPool14globalInstanceEv();
   // proto:  void QThreadPool::setMaxThreadCount(int maxThreadCount);
-extern void _ZN11QThreadPool17setMaxThreadCountEi(void* qthis, int arg0);
+extern void _ZN11QThreadPool17setMaxThreadCountEi(void* qthis, int32_t arg0);
   // proto:  void QThreadPool::setExpiryTimeout(int expiryTimeout);
-extern void _ZN11QThreadPool16setExpiryTimeoutEi(void* qthis, int arg0);
+extern void _ZN11QThreadPool16setExpiryTimeoutEi(void* qthis, int32_t arg0);
   // proto:  void QThreadPool::reserveThread();
 extern void _ZN11QThreadPool13reserveThreadEv(void* qthis);
   // proto:  void QThreadPool::clear();
@@ -58,7 +58,7 @@ extern void _ZN11QThreadPool5clearEv(void* qthis);
 extern void* dector_ZN11QThreadPoolC1EP7QObject(void* arg0);
 extern void _ZN11QThreadPoolC1EP7QObject(void* qthis, void* arg0);
   // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
-extern void _ZN11QThreadPool5startEP9QRunnablei(void* qthis, void* arg0, int arg1);
+extern void _ZN11QThreadPool5startEP9QRunnablei(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QThreadPool::maxThreadCount();
 extern void _ZNK11QThreadPool14maxThreadCountEv(void* qthis);
   // proto:  void QThreadPool::releaseThread();
@@ -80,7 +80,7 @@ func init() {
 // class sizeof(QThreadPool)=1
 type QThreadPool struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QThreadPool::~QThreadPool();

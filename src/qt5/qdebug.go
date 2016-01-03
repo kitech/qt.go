@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
-extern void demth_ZN8QNoDebug10maybeQuoteEc(void* qthis, const char arg0);
+extern void demth_ZN8QNoDebug10maybeQuoteEc(void* qthis, unsigned char arg0);
   // proto:  QNoDebug & QNoDebug::quote();
 extern void demth_ZN8QNoDebug5quoteEv(void* qthis);
   // proto:  QNoDebug & QNoDebug::space();
@@ -62,8 +62,8 @@ extern void demth_ZN6QDebugC1ERKS_(void* qthis, void* arg0);
   // proto:  QDebug & QDebug::space();
 extern void demth_ZN6QDebug5spaceEv(void* qthis);
   // proto:  void QDebug::QDebug(QtMsgType t);
-extern void* dector_ZN6QDebugC1E9QtMsgType(int arg0);
-extern void demth_ZN6QDebugC1E9QtMsgType(void* qthis, int arg0);
+extern void* dector_ZN6QDebugC1E9QtMsgType(int32_t arg0);
+extern void demth_ZN6QDebugC1E9QtMsgType(void* qthis, int32_t arg0);
   // proto:  QDebug & QDebug::maybeSpace();
 extern void demth_ZN6QDebug10maybeSpaceEv(void* qthis);
   // proto:  QDebug & QDebug::resetFormat();
@@ -78,14 +78,14 @@ extern void demth_ZN6QDebug4swapERS_(void* qthis, void* arg0);
   // proto:  QDebug & QDebug::nospace();
 extern void demth_ZN6QDebug7nospaceEv(void* qthis);
   // proto:  bool QDebug::autoInsertSpaces();
-extern void _ZNK6QDebug16autoInsertSpacesEv(void* qthis);
+extern void demth_ZNK6QDebug16autoInsertSpacesEv(void* qthis);
   // proto:  void QDebug::QDebug(QIODevice * device);
 extern void* dector_ZN6QDebugC1EP9QIODevice(void* arg0);
 extern void demth_ZN6QDebugC1EP9QIODevice(void* qthis, void* arg0);
   // proto:  QDebug & QDebug::quote();
 extern void demth_ZN6QDebug5quoteEv(void* qthis);
   // proto:  QDebug & QDebug::maybeQuote(char c);
-extern void demth_ZN6QDebug10maybeQuoteEc(void* qthis, char arg0);
+extern void demth_ZN6QDebug10maybeQuoteEc(void* qthis, unsigned char arg0);
 */
 import "C"
 // } // <= ext block end
@@ -101,19 +101,19 @@ func init() {
 // class sizeof(QNoDebug)=1
 type QNoDebug struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDebugStateSaver)=1
 type QDebugStateSaver struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDebug)=8
 type QDebug struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
@@ -130,7 +130,7 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug10maybeQuoteEc
     // invoke: QNoDebug & maybeQuote(const char)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C.demth_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:
@@ -371,7 +371,7 @@ func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug19setAutoInsertSpacesEb
     // invoke: void setAutoInsertSpaces(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN6QDebug19setAutoInsertSpacesEb(this.qclsinst, arg0)
   default:
@@ -436,7 +436,7 @@ func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QDebug16autoInsertSpacesEv
     // invoke: bool autoInsertSpaces()
-    C._ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
+    C.demth_ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
   }
@@ -477,7 +477,7 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug10maybeQuoteEc
     // invoke: QDebug & maybeQuote(char)
-    var arg0 = C.char(args[0].(byte))
+    var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
     C.demth_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:

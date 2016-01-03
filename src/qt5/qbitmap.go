@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qbitmap.h
 // dst-file: /src/gui/qbitmap.go
 //
@@ -39,8 +39,8 @@ extern void _ZN7QBitmapC1ERK7QPixmap(void* qthis, void* arg0);
 extern void* dector_ZN7QBitmapC1ERK5QSize(void* arg0);
 extern void _ZN7QBitmapC1ERK5QSize(void* qthis, void* arg0);
   // proto:  void QBitmap::QBitmap(int w, int h);
-extern void* dector_ZN7QBitmapC1Eii(int arg0, int arg1);
-extern void _ZN7QBitmapC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN7QBitmapC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN7QBitmapC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QBitmap::~QBitmap();
 extern void _ZN7QBitmapD0Ev(void* qthis);
   // proto:  void QBitmap::swap(QBitmap & other);
@@ -50,8 +50,8 @@ extern void _ZNK7QBitmap11transformedERK7QMatrix(void* qthis, void* arg0);
   // proto:  void QBitmap::clear();
 extern void demth_ZN7QBitmap5clearEv(void* qthis);
   // proto:  void QBitmap::QBitmap(const QString & fileName, const char * format);
-extern void* dector_ZN7QBitmapC1ERK7QStringPKc(void* arg0, char* arg1);
-extern void _ZN7QBitmapC1ERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void* dector_ZN7QBitmapC1ERK7QStringPKc(void* arg0, unsigned char* arg1);
+extern void _ZN7QBitmapC1ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QBitmap::QBitmap();
 extern void* dector_ZN7QBitmapC1Ev();
 extern void _ZN7QBitmapC1Ev(void* qthis);
@@ -72,7 +72,7 @@ func init() {
 // class sizeof(QBitmap)=1
 type QBitmap struct {
   /*qbase*/ QPixmap;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QBitmap::QBitmap(const QPixmap & );

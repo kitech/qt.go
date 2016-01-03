@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QEventLoop::exit(int returnCode);
-extern void _ZN10QEventLoop4exitEi(void* qthis, int arg0);
+extern void _ZN10QEventLoop4exitEi(void* qthis, int32_t arg0);
   // proto:  void QEventLoop::quit();
 extern void _ZN10QEventLoop4quitEv(void* qthis);
   // proto:  void QEventLoop::QEventLoop(QObject * parent);
@@ -78,13 +78,13 @@ func init() {
 // class sizeof(QEventLoop)=1
 type QEventLoop struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QEventLoopLocker)=8
 type QEventLoopLocker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QEventLoop::exit(int returnCode);

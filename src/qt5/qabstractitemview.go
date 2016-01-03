@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qabstractitemview.h
 // dst-file: /src/widgets/qabstractitemview.go
 //
@@ -41,7 +41,7 @@ extern void _ZN17QAbstractItemView21setDropIndicatorShownEb(void* qthis, bool ar
   // proto:  QSize QAbstractItemView::sizeHintForIndex(const QModelIndex & index);
 extern void _ZNK17QAbstractItemView16sizeHintForIndexERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QAbstractItemView::setItemDelegateForColumn(int column, QAbstractItemDelegate * delegate);
-extern void _ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(void* qthis, int arg0, void* arg1);
+extern void _ZN17QAbstractItemView24setItemDelegateForColumnEiP21QAbstractItemDelegate(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QAbstractItemView::dragEnabled();
 extern void _ZNK17QAbstractItemView11dragEnabledEv(void* qthis);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegate(const QModelIndex & index);
@@ -51,19 +51,17 @@ extern void _ZN17QAbstractItemView14keyboardSearchERK7QString(void* qthis, void*
   // proto:  QModelIndex QAbstractItemView::rootIndex();
 extern void _ZNK17QAbstractItemView9rootIndexEv(void* qthis);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForColumn(int column);
-extern void _ZNK17QAbstractItemView21itemDelegateForColumnEi(void* qthis, int arg0);
+extern void _ZNK17QAbstractItemView21itemDelegateForColumnEi(void* qthis, int32_t arg0);
   // proto:  QItemSelectionModel * QAbstractItemView::selectionModel();
 extern void _ZNK17QAbstractItemView14selectionModelEv(void* qthis);
   // proto:  void QAbstractItemView::reset();
 extern void _ZN17QAbstractItemView5resetEv(void* qthis);
   // proto:  void QAbstractItemView::setItemDelegateForRow(int row, QAbstractItemDelegate * delegate);
-extern void _ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(void* qthis, int arg0, void* arg1);
+extern void _ZN17QAbstractItemView21setItemDelegateForRowEiP21QAbstractItemDelegate(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QAbstractItemView::setRootIndex(const QModelIndex & index);
 extern void _ZN17QAbstractItemView12setRootIndexERK11QModelIndex(void* qthis, void* arg0);
   // proto:  void QAbstractItemView::setAutoScrollMargin(int margin);
-extern void _ZN17QAbstractItemView19setAutoScrollMarginEi(void* qthis, int arg0);
-  // proto:  QRect QAbstractItemView::visualRect(const QModelIndex & index);
-extern void _ZNK17QAbstractItemView10visualRectERK11QModelIndex(void* qthis, void* arg0);
+extern void _ZN17QAbstractItemView19setAutoScrollMarginEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractItemView::doItemsLayout();
 extern void _ZN17QAbstractItemView13doItemsLayoutEv(void* qthis);
   // proto:  void QAbstractItemView::~QAbstractItemView();
@@ -79,7 +77,7 @@ extern void _ZN17QAbstractItemView14setDragEnabledEb(void* qthis, bool arg0);
   // proto:  QModelIndex QAbstractItemView::currentIndex();
 extern void _ZNK17QAbstractItemView12currentIndexEv(void* qthis);
   // proto:  int QAbstractItemView::sizeHintForRow(int row);
-extern void _ZNK17QAbstractItemView14sizeHintForRowEi(void* qthis, int arg0);
+extern void _ZNK17QAbstractItemView14sizeHintForRowEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractItemView::QAbstractItemView(QWidget * parent);
 extern void* dector_ZN17QAbstractItemViewC1EP7QWidget(void* arg0);
 extern void _ZN17QAbstractItemViewC1EP7QWidget(void* qthis, void* arg0);
@@ -99,7 +97,7 @@ extern void _ZN17QAbstractItemView4editERK11QModelIndex(void* qthis, void* arg0)
   // proto:  void QAbstractItemView::setAlternatingRowColors(bool enable);
 extern void _ZN17QAbstractItemView23setAlternatingRowColorsEb(void* qthis, bool arg0);
   // proto:  int QAbstractItemView::sizeHintForColumn(int column);
-extern void _ZNK17QAbstractItemView17sizeHintForColumnEi(void* qthis, int arg0);
+extern void _ZNK17QAbstractItemView17sizeHintForColumnEi(void* qthis, int32_t arg0);
   // proto:  void QAbstractItemView::setIconSize(const QSize & size);
 extern void _ZN17QAbstractItemView11setIconSizeERK5QSize(void* qthis, void* arg0);
   // proto:  void QAbstractItemView::closePersistentEditor(const QModelIndex & index);
@@ -114,8 +112,6 @@ extern void _ZN17QAbstractItemView11scrollToTopEv(void* qthis);
 extern void _ZN17QAbstractItemView17setSelectionModelEP19QItemSelectionModel(void* qthis, void* arg0);
   // proto:  void QAbstractItemView::setCurrentIndex(const QModelIndex & index);
 extern void _ZN17QAbstractItemView15setCurrentIndexERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QModelIndex QAbstractItemView::indexAt(const QPoint & point);
-extern void _ZNK17QAbstractItemView7indexAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QAbstractItemView::setTabKeyNavigation(bool enable);
 extern void _ZN17QAbstractItemView19setTabKeyNavigationEb(void* qthis, bool arg0);
   // proto:  void QAbstractItemView::setIndexWidget(const QModelIndex & index, QWidget * widget);
@@ -131,7 +127,7 @@ extern void _ZNK17QAbstractItemView10metaObjectEv(void* qthis);
   // proto:  void QAbstractItemView::openPersistentEditor(const QModelIndex & index);
 extern void _ZN17QAbstractItemView20openPersistentEditorERK11QModelIndex(void* qthis, void* arg0);
   // proto:  QAbstractItemDelegate * QAbstractItemView::itemDelegateForRow(int row);
-extern void _ZNK17QAbstractItemView18itemDelegateForRowEi(void* qthis, int arg0);
+extern void _ZNK17QAbstractItemView18itemDelegateForRowEi(void* qthis, int32_t arg0);
   // proto:  bool QAbstractItemView::dragDropOverwriteMode();
 extern void _ZNK17QAbstractItemView21dragDropOverwriteModeEv(void* qthis);
   // proto:  bool QAbstractItemView::tabKeyNavigation();
@@ -155,7 +151,7 @@ func init() {
 // class sizeof(QAbstractItemView)=1
 type QAbstractItemView struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _iconSizeChanged QAbstractItemView_iconSizeChanged_signal;
 //  _clicked QAbstractItemView_clicked_signal;
 //  _viewportEntered QAbstractItemView_viewportEntered_signal;
@@ -222,7 +218,7 @@ func (this *QAbstractItemView) setDropIndicatorShown(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemView21setDropIndicatorShownEb
     // invoke: void setDropIndicatorShown(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView21setDropIndicatorShownEb(this.qclsinst, arg0)
   default:
@@ -507,29 +503,6 @@ func (this *QAbstractItemView) setAutoScrollMargin(args ...interface{}) () {
 
 }
 
-  // proto:  QRect QAbstractItemView::visualRect(const QModelIndex & index);
-func (this *QAbstractItemView) visualRect(args ...interface{}) () {
-  // visualRect(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAbstractItemView10visualRectERK11QModelIndex
-    // invoke: QRect visualRect(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK17QAbstractItemView10visualRectERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemView", "visualRect", args)
-  }
-
-}
-
   // proto:  void QAbstractItemView::doItemsLayout();
 func (this *QAbstractItemView) doItemsLayout(args ...interface{}) () {
   // doItemsLayout()
@@ -641,7 +614,7 @@ func (this *QAbstractItemView) setDragEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemView14setDragEnabledEb
     // invoke: void setDragEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView14setDragEnabledEb(this.qclsinst, arg0)
   default:
@@ -800,7 +773,7 @@ func (this *QAbstractItemView) setAlternatingRowColors(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemView23setAlternatingRowColorsEb
     // invoke: void setAlternatingRowColors(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView23setAlternatingRowColorsEb(this.qclsinst, arg0)
   default:
@@ -892,7 +865,7 @@ func (this *QAbstractItemView) setDragDropOverwriteMode(args ...interface{}) () 
   case 0:
     // invoke: _ZN17QAbstractItemView24setDragDropOverwriteModeEb
     // invoke: void setDragDropOverwriteMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView24setDragDropOverwriteModeEb(this.qclsinst, arg0)
   default:
@@ -987,29 +960,6 @@ func (this *QAbstractItemView) setCurrentIndex(args ...interface{}) () {
 
 }
 
-  // proto:  QModelIndex QAbstractItemView::indexAt(const QPoint & point);
-func (this *QAbstractItemView) indexAt(args ...interface{}) () {
-  // indexAt(const class QPoint &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK17QAbstractItemView7indexAtERK6QPoint
-    // invoke: QModelIndex indexAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK17QAbstractItemView7indexAtERK6QPoint(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemView", "indexAt", args)
-  }
-
-}
-
   // proto:  void QAbstractItemView::setTabKeyNavigation(bool enable);
 func (this *QAbstractItemView) setTabKeyNavigation(args ...interface{}) () {
   // setTabKeyNavigation(_Bool)
@@ -1024,7 +974,7 @@ func (this *QAbstractItemView) setTabKeyNavigation(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemView19setTabKeyNavigationEb
     // invoke: void setTabKeyNavigation(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView19setTabKeyNavigationEb(this.qclsinst, arg0)
   default:
@@ -1073,7 +1023,7 @@ func (this *QAbstractItemView) setAutoScroll(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QAbstractItemView13setAutoScrollEb
     // invoke: void setAutoScroll(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN17QAbstractItemView13setAutoScrollEb(this.qclsinst, arg0)
   default:

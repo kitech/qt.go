@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -39,7 +39,7 @@ extern void _ZN18QCryptographicHashD0Ev(void* qthis);
   // proto:  void QCryptographicHash::reset();
 extern void _ZN18QCryptographicHash5resetEv(void* qthis);
   // proto:  void QCryptographicHash::addData(const char * data, int length);
-extern void _ZN18QCryptographicHash7addDataEPKci(void* qthis, char* arg0, int arg1);
+extern void _ZN18QCryptographicHash7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  QByteArray QCryptographicHash::result();
 extern void _ZNK18QCryptographicHash6resultEv(void* qthis);
   // proto:  void QCryptographicHash::addData(const QByteArray & data);
@@ -62,7 +62,7 @@ func init() {
 // class sizeof(QCryptographicHash)=8
 type QCryptographicHash struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QCryptographicHash::addData(QIODevice * device);
@@ -92,7 +92,7 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
   case 1:
     // invoke: _ZN18QCryptographicHash7addDataEPKci
     // invoke: void addData(const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}

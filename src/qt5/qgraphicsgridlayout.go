@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicsgridlayout.h
 // dst-file: /src/widgets/qgraphicsgridlayout.go
 //
@@ -33,48 +33,48 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);
-extern void _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout21setRowPreferredHeightEid(void* qthis, int32_t arg0, double arg1);
   // proto:  int QGraphicsGridLayout::columnCount();
 extern void _ZNK19QGraphicsGridLayout11columnCountEv(void* qthis);
   // proto:  QGraphicsLayoutItem * QGraphicsGridLayout::itemAt(int index);
-extern void _ZNK19QGraphicsGridLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  int QGraphicsGridLayout::count();
 extern void _ZNK19QGraphicsGridLayout5countEv(void* qthis);
   // proto:  void QGraphicsGridLayout::setColumnFixedWidth(int column, qreal width);
-extern void _ZN19QGraphicsGridLayout19setColumnFixedWidthEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout19setColumnFixedWidthEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsGridLayout::setColumnMaximumWidth(int column, qreal width);
-extern void _ZN19QGraphicsGridLayout21setColumnMaximumWidthEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout21setColumnMaximumWidthEid(void* qthis, int32_t arg0, double arg1);
   // proto:  int QGraphicsGridLayout::rowStretchFactor(int row);
-extern void _ZNK19QGraphicsGridLayout16rowStretchFactorEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout16rowStretchFactorEi(void* qthis, int32_t arg0);
   // proto:  qreal QGraphicsGridLayout::verticalSpacing();
 extern void _ZNK19QGraphicsGridLayout15verticalSpacingEv(void* qthis);
   // proto:  int QGraphicsGridLayout::columnStretchFactor(int column);
-extern void _ZNK19QGraphicsGridLayout19columnStretchFactorEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout19columnStretchFactorEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::setRowMaximumHeight(int row, qreal height);
-extern void _ZN19QGraphicsGridLayout19setRowMaximumHeightEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout19setRowMaximumHeightEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsGridLayout::removeItem(QGraphicsLayoutItem * item);
 extern void _ZN19QGraphicsGridLayout10removeItemEP19QGraphicsLayoutItem(void* qthis, void* arg0);
   // proto:  void QGraphicsGridLayout::~QGraphicsGridLayout();
 extern void _ZN19QGraphicsGridLayoutD0Ev(void* qthis);
   // proto:  qreal QGraphicsGridLayout::rowMinimumHeight(int row);
-extern void _ZNK19QGraphicsGridLayout16rowMinimumHeightEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0);
   // proto:  qreal QGraphicsGridLayout::rowMaximumHeight(int row);
-extern void _ZNK19QGraphicsGridLayout16rowMaximumHeightEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout16rowMaximumHeightEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(QGraphicsLayoutItem * parent);
 extern void* dector_ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(void* arg0);
 extern void _ZN19QGraphicsGridLayoutC1EP19QGraphicsLayoutItem(void* qthis, void* arg0);
   // proto:  void QGraphicsGridLayout::setColumnSpacing(int column, qreal spacing);
-extern void _ZN19QGraphicsGridLayout16setColumnSpacingEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout16setColumnSpacingEid(void* qthis, int32_t arg0, double arg1);
   // proto:  qreal QGraphicsGridLayout::rowSpacing(int row);
-extern void _ZNK19QGraphicsGridLayout10rowSpacingEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout10rowSpacingEi(void* qthis, int32_t arg0);
   // proto:  qreal QGraphicsGridLayout::columnMaximumWidth(int column);
-extern void _ZNK19QGraphicsGridLayout18columnMaximumWidthEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout18columnMaximumWidthEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::setRowFixedHeight(int row, qreal height);
-extern void _ZN19QGraphicsGridLayout17setRowFixedHeightEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout17setRowFixedHeightEid(void* qthis, int32_t arg0, double arg1);
   // proto:  qreal QGraphicsGridLayout::rowPreferredHeight(int row);
-extern void _ZNK19QGraphicsGridLayout18rowPreferredHeightEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout18rowPreferredHeightEi(void* qthis, int32_t arg0);
   // proto:  QGraphicsLayoutItem * QGraphicsGridLayout::itemAt(int row, int column);
-extern void _ZNK19QGraphicsGridLayout6itemAtEii(void* qthis, int arg0, int arg1);
+extern void _ZNK19QGraphicsGridLayout6itemAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGraphicsGridLayout::setVerticalSpacing(qreal spacing);
 extern void _ZN19QGraphicsGridLayout18setVerticalSpacingEd(void* qthis, double arg0);
   // proto:  void QGraphicsGridLayout::setGeometry(const QRectF & rect);
@@ -84,34 +84,34 @@ extern void _ZNK19QGraphicsGridLayout8rowCountEv(void* qthis);
   // proto:  void QGraphicsGridLayout::setSpacing(qreal spacing);
 extern void _ZN19QGraphicsGridLayout10setSpacingEd(void* qthis, double arg0);
   // proto:  void QGraphicsGridLayout::setRowStretchFactor(int row, int stretch);
-extern void _ZN19QGraphicsGridLayout19setRowStretchFactorEii(void* qthis, int arg0, int arg1);
+extern void _ZN19QGraphicsGridLayout19setRowStretchFactorEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  qreal QGraphicsGridLayout::columnMinimumWidth(int column);
-extern void _ZNK19QGraphicsGridLayout18columnMinimumWidthEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout18columnMinimumWidthEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::setColumnMinimumWidth(int column, qreal width);
-extern void _ZN19QGraphicsGridLayout21setColumnMinimumWidthEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout21setColumnMinimumWidthEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsGridLayout::setRowMinimumHeight(int row, qreal height);
-extern void _ZN19QGraphicsGridLayout19setRowMinimumHeightEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout19setRowMinimumHeightEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsGridLayout::setHorizontalSpacing(qreal spacing);
 extern void _ZN19QGraphicsGridLayout20setHorizontalSpacingEd(void* qthis, double arg0);
   // proto:  qreal QGraphicsGridLayout::horizontalSpacing();
 extern void _ZNK19QGraphicsGridLayout17horizontalSpacingEv(void* qthis);
   // proto:  void QGraphicsGridLayout::setColumnStretchFactor(int column, int stretch);
-extern void _ZN19QGraphicsGridLayout22setColumnStretchFactorEii(void* qthis, int arg0, int arg1);
+extern void _ZN19QGraphicsGridLayout22setColumnStretchFactorEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGraphicsGridLayout::invalidate();
 extern void _ZN19QGraphicsGridLayout10invalidateEv(void* qthis);
   // proto:  qreal QGraphicsGridLayout::columnPreferredWidth(int column);
-extern void _ZNK19QGraphicsGridLayout20columnPreferredWidthEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout20columnPreferredWidthEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::setColumnPreferredWidth(int column, qreal width);
-extern void _ZN19QGraphicsGridLayout23setColumnPreferredWidthEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout23setColumnPreferredWidthEid(void* qthis, int32_t arg0, double arg1);
   // proto:  qreal QGraphicsGridLayout::columnSpacing(int column);
-extern void _ZNK19QGraphicsGridLayout13columnSpacingEi(void* qthis, int arg0);
+extern void _ZNK19QGraphicsGridLayout13columnSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsGridLayout::QGraphicsGridLayout(const QGraphicsGridLayout & );
 extern void* dector_ZN19QGraphicsGridLayoutC1ERKS_(void* arg0);
 extern void _ZN19QGraphicsGridLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  void QGraphicsGridLayout::setRowSpacing(int row, qreal spacing);
-extern void _ZN19QGraphicsGridLayout13setRowSpacingEid(void* qthis, int arg0, double arg1);
+extern void _ZN19QGraphicsGridLayout13setRowSpacingEid(void* qthis, int32_t arg0, double arg1);
   // proto:  void QGraphicsGridLayout::removeAt(int index);
-extern void _ZN19QGraphicsGridLayout8removeAtEi(void* qthis, int arg0);
+extern void _ZN19QGraphicsGridLayout8removeAtEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -127,7 +127,7 @@ func init() {
 // class sizeof(QGraphicsGridLayout)=1
 type QGraphicsGridLayout struct {
   /*qbase*/ QGraphicsLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGraphicsGridLayout::setRowPreferredHeight(int row, qreal height);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopengldebug.h
 // dst-file: /src/gui/qopengldebug.go
 //
@@ -85,13 +85,13 @@ func init() {
 // class sizeof(QOpenGLDebugMessage)=1
 type QOpenGLDebugMessage struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLDebugLogger)=1
 type QOpenGLDebugLogger struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _messageLogged QOpenGLDebugLogger_messageLogged_signal;
 }
 

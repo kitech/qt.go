@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qprogressbar.h
 // dst-file: /src/widgets/qprogressbar.go
 //
@@ -47,7 +47,7 @@ extern void _ZNK12QProgressBar18invertedAppearanceEv(void* qthis);
   // proto:  QString QProgressBar::text();
 extern void _ZNK12QProgressBar4textEv(void* qthis);
   // proto:  void QProgressBar::setMinimum(int minimum);
-extern void _ZN12QProgressBar10setMinimumEi(void* qthis, int arg0);
+extern void _ZN12QProgressBar10setMinimumEi(void* qthis, int32_t arg0);
   // proto:  void QProgressBar::QProgressBar(const QProgressBar & );
 extern void* dector_ZN12QProgressBarC1ERKS_(void* arg0);
 extern void _ZN12QProgressBarC1ERKS_(void* qthis, void* arg0);
@@ -59,13 +59,13 @@ extern void _ZN12QProgressBar14setTextVisibleEb(void* qthis, bool arg0);
   // proto:  int QProgressBar::value();
 extern void _ZNK12QProgressBar5valueEv(void* qthis);
   // proto:  void QProgressBar::setValue(int value);
-extern void _ZN12QProgressBar8setValueEi(void* qthis, int arg0);
+extern void _ZN12QProgressBar8setValueEi(void* qthis, int32_t arg0);
   // proto:  QSize QProgressBar::minimumSizeHint();
 extern void _ZNK12QProgressBar15minimumSizeHintEv(void* qthis);
   // proto:  int QProgressBar::minimum();
 extern void _ZNK12QProgressBar7minimumEv(void* qthis);
   // proto:  void QProgressBar::setRange(int minimum, int maximum);
-extern void _ZN12QProgressBar8setRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN12QProgressBar8setRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QSize QProgressBar::sizeHint();
 extern void _ZNK12QProgressBar8sizeHintEv(void* qthis);
   // proto:  void QProgressBar::resetFormat();
@@ -77,7 +77,7 @@ extern void _ZN12QProgressBar21setInvertedAppearanceEb(void* qthis, bool arg0);
   // proto:  void QProgressBar::~QProgressBar();
 extern void _ZN12QProgressBarD0Ev(void* qthis);
   // proto:  void QProgressBar::setMaximum(int maximum);
-extern void _ZN12QProgressBar10setMaximumEi(void* qthis, int arg0);
+extern void _ZN12QProgressBar10setMaximumEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func init() {
 // class sizeof(QProgressBar)=1
 type QProgressBar struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QProgressBar_valueChanged_signal;
 }
 
@@ -282,7 +282,7 @@ func (this *QProgressBar) setTextVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar14setTextVisibleEb
     // invoke: void setTextVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QProgressBar14setTextVisibleEb(this.qclsinst, arg0)
   default:
@@ -474,7 +474,7 @@ func (this *QProgressBar) setInvertedAppearance(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QProgressBar21setInvertedAppearanceEb
     // invoke: void setInvertedAppearance(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QProgressBar21setInvertedAppearanceEb(this.qclsinst, arg0)
   default:

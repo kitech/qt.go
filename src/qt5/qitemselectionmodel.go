@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -77,7 +77,7 @@ extern void demth_ZN19QItemSelectionRangeC1ERK11QModelIndexS2_(void* qthis, void
   // proto:  const QPersistentModelIndex & QItemSelectionRange::topLeft();
 extern void demth_ZNK19QItemSelectionRange7topLeftEv(void* qthis);
   // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
-extern void demth_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void demth_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
 extern void* dector_ZN19QItemSelectionRangeC1ERK11QModelIndex(void* arg0);
 extern void demth_ZN19QItemSelectionRangeC1ERK11QModelIndex(void* qthis, void* arg0);
@@ -108,7 +108,7 @@ extern void _ZN19QItemSelectionModel8setModelEP18QAbstractItemModel(void* qthis,
 extern void* dector_ZN19QItemSelectionModelC1ERKS_(void* arg0);
 extern void _ZN19QItemSelectionModelC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
-extern void _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model);
 extern void* dector_ZN19QItemSelectionModelC1EP18QAbstractItemModel(void* arg0);
 extern void _ZN19QItemSelectionModelC1EP18QAbstractItemModel(void* qthis, void* arg0);
@@ -119,15 +119,15 @@ extern void _ZN19QItemSelectionModel17clearCurrentIndexEv(void* qthis);
   // proto:  QModelIndexList QItemSelectionModel::selectedIndexes();
 extern void _ZNK19QItemSelectionModel15selectedIndexesEv(void* qthis);
   // proto:  QModelIndexList QItemSelectionModel::selectedColumns(int row);
-extern void _ZNK19QItemSelectionModel15selectedColumnsEi(void* qthis, int arg0);
+extern void _ZNK19QItemSelectionModel15selectedColumnsEi(void* qthis, int32_t arg0);
   // proto:  bool QItemSelectionModel::isColumnSelected(int column, const QModelIndex & parent);
-extern void _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QItemSelectionModel::columnIntersectsSelection(int column, const QModelIndex & parent);
-extern void _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QItemSelectionModel::~QItemSelectionModel();
 extern void _ZN19QItemSelectionModelD0Ev(void* qthis);
   // proto:  bool QItemSelectionModel::isRowSelected(int row, const QModelIndex & parent);
-extern void _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(void* qthis, int arg0, void* arg1);
+extern void _ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model, QObject * parent);
 extern void* dector_ZN19QItemSelectionModelC1EP18QAbstractItemModelP7QObject(void* arg0, void* arg1);
 extern void _ZN19QItemSelectionModelC1EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1);
@@ -138,7 +138,7 @@ extern void _ZNK19QItemSelectionModel12hasSelectionEv(void* qthis);
   // proto:  QAbstractItemModel * QItemSelectionModel::model();
 extern void _ZN19QItemSelectionModel5modelEv(void* qthis);
   // proto:  QModelIndexList QItemSelectionModel::selectedRows(int column);
-extern void _ZNK19QItemSelectionModel12selectedRowsEi(void* qthis, int arg0);
+extern void _ZNK19QItemSelectionModel12selectedRowsEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -154,19 +154,19 @@ func init() {
 // class sizeof(QItemSelection)=1
 type QItemSelection struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QItemSelectionRange)=16
 type QItemSelectionRange struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QItemSelectionModel)=1
 type QItemSelectionModel struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentRowChanged QItemSelectionModel_currentRowChanged_signal;
 //  _currentColumnChanged QItemSelectionModel_currentColumnChanged_signal;
 //  _modelChanged QItemSelectionModel_modelChanged_signal;

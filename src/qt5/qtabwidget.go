@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtabwidget.h
 // dst-file: /src/widgets/qtabwidget.go
 //
@@ -39,11 +39,11 @@ extern void _ZNK10QTabWidget5countEv(void* qthis);
   // proto:  void QTabWidget::setDocumentMode(bool set);
 extern void _ZN10QTabWidget15setDocumentModeEb(void* qthis, bool arg0);
   // proto:  int QTabWidget::heightForWidth(int width);
-extern void _ZNK10QTabWidget14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  int QTabWidget::addTab(QWidget * widget, const QString & );
 extern void _ZN10QTabWidget6addTabEP7QWidgetRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  QString QTabWidget::tabText(int index);
-extern void _ZNK10QTabWidget7tabTextEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget7tabTextEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::clear();
 extern void _ZN10QTabWidget5clearEv(void* qthis);
   // proto:  bool QTabWidget::hasHeightForWidth();
@@ -53,7 +53,7 @@ extern void _ZNK10QTabWidget6tabBarEv(void* qthis);
   // proto:  bool QTabWidget::tabsClosable();
 extern void _ZNK10QTabWidget12tabsClosableEv(void* qthis);
   // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QIcon & icon, const QString & label);
-extern void _ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString(void* qthis, int arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN10QTabWidget9insertTabEiP7QWidgetRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3);
   // proto:  int QTabWidget::addTab(QWidget * widget, const QIcon & icon, const QString & label);
 extern void _ZN10QTabWidget6addTabEP7QWidgetRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QTabWidget::setUsesScrollButtons(bool useButtons);
@@ -61,21 +61,21 @@ extern void _ZN10QTabWidget20setUsesScrollButtonsEb(void* qthis, bool arg0);
   // proto:  const QMetaObject * QTabWidget::metaObject();
 extern void _ZNK10QTabWidget10metaObjectEv(void* qthis);
   // proto:  QString QTabWidget::tabToolTip(int index);
-extern void _ZNK10QTabWidget10tabToolTipEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget10tabToolTipEi(void* qthis, int32_t arg0);
   // proto:  QWidget * QTabWidget::currentWidget();
 extern void _ZNK10QTabWidget13currentWidgetEv(void* qthis);
   // proto:  void QTabWidget::setIconSize(const QSize & size);
 extern void _ZN10QTabWidget11setIconSizeERK5QSize(void* qthis, void* arg0);
   // proto:  QWidget * QTabWidget::widget(int index);
-extern void _ZNK10QTabWidget6widgetEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget6widgetEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::setMovable(bool movable);
 extern void _ZN10QTabWidget10setMovableEb(void* qthis, bool arg0);
   // proto:  bool QTabWidget::documentMode();
 extern void _ZNK10QTabWidget12documentModeEv(void* qthis);
   // proto:  QString QTabWidget::tabWhatsThis(int index);
-extern void _ZNK10QTabWidget12tabWhatsThisEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget12tabWhatsThisEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::setTabText(int index, const QString & );
-extern void _ZN10QTabWidget10setTabTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN10QTabWidget10setTabTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTabWidget::QTabWidget(const QTabWidget & );
 extern void* dector_ZN10QTabWidgetC1ERKS_(void* arg0);
 extern void _ZN10QTabWidgetC1ERKS_(void* qthis, void* arg0);
@@ -85,11 +85,11 @@ extern void _ZN10QTabWidgetC1EP7QWidget(void* qthis, void* arg0);
   // proto:  bool QTabWidget::tabBarAutoHide();
 extern void _ZNK10QTabWidget14tabBarAutoHideEv(void* qthis);
   // proto:  void QTabWidget::setTabIcon(int index, const QIcon & icon);
-extern void _ZN10QTabWidget10setTabIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+extern void _ZN10QTabWidget10setTabIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1);
   // proto:  QIcon QTabWidget::tabIcon(int index);
-extern void _ZNK10QTabWidget7tabIconEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget7tabIconEi(void* qthis, int32_t arg0);
   // proto:  bool QTabWidget::isTabEnabled(int index);
-extern void _ZNK10QTabWidget12isTabEnabledEi(void* qthis, int arg0);
+extern void _ZNK10QTabWidget12isTabEnabledEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::setTabBarAutoHide(bool enabled);
 extern void _ZN10QTabWidget17setTabBarAutoHideEb(void* qthis, bool arg0);
   // proto:  QSize QTabWidget::iconSize();
@@ -99,19 +99,19 @@ extern void _ZN10QTabWidget15setTabsClosableEb(void* qthis, bool arg0);
   // proto:  QSize QTabWidget::minimumSizeHint();
 extern void _ZNK10QTabWidget15minimumSizeHintEv(void* qthis);
   // proto:  void QTabWidget::setCurrentIndex(int index);
-extern void _ZN10QTabWidget15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN10QTabWidget15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::~QTabWidget();
 extern void _ZN10QTabWidgetD0Ev(void* qthis);
   // proto:  void QTabWidget::setTabWhatsThis(int index, const QString & text);
-extern void _ZN10QTabWidget15setTabWhatsThisEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN10QTabWidget15setTabWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  QSize QTabWidget::sizeHint();
 extern void _ZNK10QTabWidget8sizeHintEv(void* qthis);
   // proto:  int QTabWidget::indexOf(QWidget * widget);
 extern void _ZNK10QTabWidget7indexOfEP7QWidget(void* qthis, void* arg0);
   // proto:  void QTabWidget::removeTab(int index);
-extern void _ZN10QTabWidget9removeTabEi(void* qthis, int arg0);
+extern void _ZN10QTabWidget9removeTabEi(void* qthis, int32_t arg0);
   // proto:  void QTabWidget::setTabToolTip(int index, const QString & tip);
-extern void _ZN10QTabWidget13setTabToolTipEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN10QTabWidget13setTabToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QTabWidget::isMovable();
 extern void _ZNK10QTabWidget9isMovableEv(void* qthis);
   // proto:  bool QTabWidget::usesScrollButtons();
@@ -119,9 +119,9 @@ extern void _ZNK10QTabWidget17usesScrollButtonsEv(void* qthis);
   // proto:  int QTabWidget::currentIndex();
 extern void _ZNK10QTabWidget12currentIndexEv(void* qthis);
   // proto:  int QTabWidget::insertTab(int index, QWidget * widget, const QString & );
-extern void _ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN10QTabWidget9insertTabEiP7QWidgetRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  void QTabWidget::setTabEnabled(int index, bool );
-extern void _ZN10QTabWidget13setTabEnabledEib(void* qthis, int arg0, bool arg1);
+extern void _ZN10QTabWidget13setTabEnabledEib(void* qthis, int32_t arg0, bool arg1);
 */
 import "C"
 // } // <= ext block end
@@ -137,7 +137,7 @@ func init() {
 // class sizeof(QTabWidget)=1
 type QTabWidget struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _tabCloseRequested QTabWidget_tabCloseRequested_signal;
 //  _tabBarDoubleClicked QTabWidget_tabBarDoubleClicked_signal;
 //  _tabBarClicked QTabWidget_tabBarClicked_signal;
@@ -201,7 +201,7 @@ func (this *QTabWidget) setDocumentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidget15setDocumentModeEb
     // invoke: void setDocumentMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTabWidget15setDocumentModeEb(this.qclsinst, arg0)
   default:
@@ -438,7 +438,7 @@ func (this *QTabWidget) setUsesScrollButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidget20setUsesScrollButtonsEb
     // invoke: void setUsesScrollButtons(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTabWidget20setUsesScrollButtonsEb(this.qclsinst, arg0)
   default:
@@ -570,7 +570,7 @@ func (this *QTabWidget) setMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidget10setMovableEb
     // invoke: void setMovable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTabWidget10setMovableEb(this.qclsinst, arg0)
   default:
@@ -759,7 +759,7 @@ func (this *QTabWidget) setTabBarAutoHide(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidget17setTabBarAutoHideEb
     // invoke: void setTabBarAutoHide(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTabWidget17setTabBarAutoHideEb(this.qclsinst, arg0)
   default:
@@ -802,7 +802,7 @@ func (this *QTabWidget) setTabsClosable(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTabWidget15setTabsClosableEb
     // invoke: void setTabsClosable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTabWidget15setTabsClosableEb(this.qclsinst, arg0)
   default:
@@ -1063,7 +1063,7 @@ func (this *QTabWidget) setTabEnabled(args ...interface{}) () {
     // invoke: void setTabEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN10QTabWidget13setTabEnabledEib(this.qclsinst, arg0, arg1)
   default:

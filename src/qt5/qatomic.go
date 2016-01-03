@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -33,8 +33,8 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAtomicInt::QAtomicInt(int value);
-extern void* dector_ZN10QAtomicIntC1Ei(int arg0);
-extern void _ZN10QAtomicIntC1Ei(void* qthis, int arg0);
+extern void* dector_ZN10QAtomicIntC1Ei(int32_t arg0);
+extern void _ZN10QAtomicIntC1Ei(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -50,7 +50,7 @@ func init() {
 // class sizeof(QAtomicInt)=1
 type QAtomicInt struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QAtomicInt::QAtomicInt(int value);

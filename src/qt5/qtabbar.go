@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtabbar.h
 // dst-file: /src/widgets/qtabbar.go
 //
@@ -37,7 +37,7 @@ extern void _ZNK7QTabBar17usesScrollButtonsEv(void* qthis);
   // proto:  bool QTabBar::autoHide();
 extern void _ZNK7QTabBar8autoHideEv(void* qthis);
   // proto:  QString QTabBar::tabToolTip(int index);
-extern void _ZNK7QTabBar10tabToolTipEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar10tabToolTipEi(void* qthis, int32_t arg0);
   // proto:  bool QTabBar::expanding();
 extern void _ZNK7QTabBar9expandingEv(void* qthis);
   // proto:  void QTabBar::setDocumentMode(bool set);
@@ -47,7 +47,7 @@ extern void _ZNK7QTabBar5countEv(void* qthis);
   // proto:  void QTabBar::setChangeCurrentOnDrag(bool change);
 extern void _ZN7QTabBar22setChangeCurrentOnDragEb(void* qthis, bool arg0);
   // proto:  QIcon QTabBar::tabIcon(int index);
-extern void _ZNK7QTabBar7tabIconEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar7tabIconEi(void* qthis, int32_t arg0);
   // proto:  QSize QTabBar::minimumSizeHint();
 extern void _ZNK7QTabBar15minimumSizeHintEv(void* qthis);
   // proto:  void QTabBar::setTabsClosable(bool closable);
@@ -55,30 +55,30 @@ extern void _ZN7QTabBar15setTabsClosableEb(void* qthis, bool arg0);
   // proto:  bool QTabBar::changeCurrentOnDrag();
 extern void _ZNK7QTabBar19changeCurrentOnDragEv(void* qthis);
   // proto:  void QTabBar::setTabWhatsThis(int index, const QString & text);
-extern void _ZN7QTabBar15setTabWhatsThisEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar15setTabWhatsThisEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  const QMetaObject * QTabBar::metaObject();
 extern void _ZNK7QTabBar10metaObjectEv(void* qthis);
   // proto:  void QTabBar::QTabBar(const QTabBar & );
 extern void* dector_ZN7QTabBarC1ERKS_(void* arg0);
 extern void _ZN7QTabBarC1ERKS_(void* qthis, void* arg0);
   // proto:  int QTabBar::insertTab(int index, const QIcon & icon, const QString & text);
-extern void _ZN7QTabBar9insertTabEiRK5QIconRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+extern void _ZN7QTabBar9insertTabEiRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  void QTabBar::setTabIcon(int index, const QIcon & icon);
-extern void _ZN7QTabBar10setTabIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar10setTabIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QTabBar::isMovable();
 extern void _ZNK7QTabBar9isMovableEv(void* qthis);
   // proto:  void QTabBar::setExpanding(bool enabled);
 extern void _ZN7QTabBar12setExpandingEb(void* qthis, bool arg0);
   // proto:  void QTabBar::removeTab(int index);
-extern void _ZN7QTabBar9removeTabEi(void* qthis, int arg0);
+extern void _ZN7QTabBar9removeTabEi(void* qthis, int32_t arg0);
   // proto:  void QTabBar::setTabEnabled(int index, bool );
-extern void _ZN7QTabBar13setTabEnabledEib(void* qthis, int arg0, bool arg1);
+extern void _ZN7QTabBar13setTabEnabledEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  bool QTabBar::isTabEnabled(int index);
-extern void _ZNK7QTabBar12isTabEnabledEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar12isTabEnabledEi(void* qthis, int32_t arg0);
   // proto:  void QTabBar::setCurrentIndex(int index);
-extern void _ZN7QTabBar15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN7QTabBar15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  QRect QTabBar::tabRect(int index);
-extern void _ZNK7QTabBar7tabRectEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar7tabRectEi(void* qthis, int32_t arg0);
   // proto:  bool QTabBar::tabsClosable();
 extern void _ZNK7QTabBar12tabsClosableEv(void* qthis);
   // proto:  void QTabBar::setMovable(bool movable);
@@ -88,36 +88,36 @@ extern void _ZN7QTabBar11setAutoHideEb(void* qthis, bool arg0);
   // proto:  QSize QTabBar::iconSize();
 extern void _ZNK7QTabBar8iconSizeEv(void* qthis);
   // proto:  QString QTabBar::tabText(int index);
-extern void _ZNK7QTabBar7tabTextEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar7tabTextEi(void* qthis, int32_t arg0);
   // proto:  QString QTabBar::tabWhatsThis(int index);
-extern void _ZNK7QTabBar12tabWhatsThisEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar12tabWhatsThisEi(void* qthis, int32_t arg0);
   // proto:  bool QTabBar::documentMode();
 extern void _ZNK7QTabBar12documentModeEv(void* qthis);
   // proto:  int QTabBar::tabAt(const QPoint & pos);
 extern void _ZNK7QTabBar5tabAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QTabBar::setTabData(int index, const QVariant & data);
-extern void _ZN7QTabBar10setTabDataEiRK8QVariant(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar10setTabDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTabBar::QTabBar(QWidget * parent);
 extern void* dector_ZN7QTabBarC1EP7QWidget(void* arg0);
 extern void _ZN7QTabBarC1EP7QWidget(void* qthis, void* arg0);
   // proto:  QColor QTabBar::tabTextColor(int index);
-extern void _ZNK7QTabBar12tabTextColorEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar12tabTextColorEi(void* qthis, int32_t arg0);
   // proto:  void QTabBar::~QTabBar();
 extern void _ZN7QTabBarD0Ev(void* qthis);
   // proto:  int QTabBar::insertTab(int index, const QString & text);
-extern void _ZN7QTabBar9insertTabEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar9insertTabEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QTabBar::addTab(const QString & text);
 extern void _ZN7QTabBar6addTabERK7QString(void* qthis, void* arg0);
   // proto:  int QTabBar::addTab(const QIcon & icon, const QString & text);
 extern void _ZN7QTabBar6addTabERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  void QTabBar::setTabToolTip(int index, const QString & tip);
-extern void _ZN7QTabBar13setTabToolTipEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar13setTabToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTabBar::setTabTextColor(int index, const QColor & color);
-extern void _ZN7QTabBar15setTabTextColorEiRK6QColor(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar15setTabTextColorEiRK6QColor(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTabBar::moveTab(int from, int to);
-extern void _ZN7QTabBar7moveTabEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QTabBar7moveTabEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QVariant QTabBar::tabData(int index);
-extern void _ZNK7QTabBar7tabDataEi(void* qthis, int arg0);
+extern void _ZNK7QTabBar7tabDataEi(void* qthis, int32_t arg0);
   // proto:  bool QTabBar::drawBase();
 extern void _ZNK7QTabBar8drawBaseEv(void* qthis);
   // proto:  int QTabBar::currentIndex();
@@ -131,7 +131,7 @@ extern void _ZNK7QTabBar8sizeHintEv(void* qthis);
   // proto:  void QTabBar::setIconSize(const QSize & size);
 extern void _ZN7QTabBar11setIconSizeERK5QSize(void* qthis, void* arg0);
   // proto:  void QTabBar::setTabText(int index, const QString & text);
-extern void _ZN7QTabBar10setTabTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN7QTabBar10setTabTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
 */
 import "C"
 // } // <= ext block end
@@ -147,7 +147,7 @@ func init() {
 // class sizeof(QTabBar)=1
 type QTabBar struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _tabCloseRequested QTabBar_tabCloseRequested_signal;
 //  _tabBarDoubleClicked QTabBar_tabBarDoubleClicked_signal;
 //  _tabMoved QTabBar_tabMoved_signal;
@@ -252,7 +252,7 @@ func (this *QTabBar) setDocumentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar15setDocumentModeEb
     // invoke: void setDocumentMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar15setDocumentModeEb(this.qclsinst, arg0)
   default:
@@ -295,7 +295,7 @@ func (this *QTabBar) setChangeCurrentOnDrag(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar22setChangeCurrentOnDragEb
     // invoke: void setChangeCurrentOnDrag(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar22setChangeCurrentOnDragEb(this.qclsinst, arg0)
   default:
@@ -361,7 +361,7 @@ func (this *QTabBar) setTabsClosable(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar15setTabsClosableEb
     // invoke: void setTabsClosable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar15setTabsClosableEb(this.qclsinst, arg0)
   default:
@@ -542,7 +542,7 @@ func (this *QTabBar) setExpanding(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar12setExpandingEb
     // invoke: void setExpanding(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar12setExpandingEb(this.qclsinst, arg0)
   default:
@@ -591,7 +591,7 @@ func (this *QTabBar) setTabEnabled(args ...interface{}) () {
     // invoke: void setTabEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN7QTabBar13setTabEnabledEib(this.qclsinst, arg0, arg1)
   default:
@@ -703,7 +703,7 @@ func (this *QTabBar) setMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar10setMovableEb
     // invoke: void setMovable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar10setMovableEb(this.qclsinst, arg0)
   default:
@@ -726,7 +726,7 @@ func (this *QTabBar) setAutoHide(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar11setAutoHideEb
     // invoke: void setAutoHide(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar11setAutoHideEb(this.qclsinst, arg0)
   default:
@@ -1097,7 +1097,7 @@ func (this *QTabBar) setDrawBase(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar11setDrawBaseEb
     // invoke: void setDrawBase(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar11setDrawBaseEb(this.qclsinst, arg0)
   default:
@@ -1120,7 +1120,7 @@ func (this *QTabBar) setUsesScrollButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QTabBar20setUsesScrollButtonsEb
     // invoke: void setUsesScrollButtons(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QTabBar20setUsesScrollButtonsEb(this.qclsinst, arg0)
   default:

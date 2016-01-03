@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -62,14 +62,14 @@ extern void _ZNK13QTextFragment8positionEv(void* qthis);
 extern void* dector_ZN13QTextFragmentC1ERKS_(void* arg0);
 extern void demth_ZN13QTextFragmentC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QTextFragment::contains(int position);
-extern void _ZNK13QTextFragment8containsEi(void* qthis, int arg0);
+extern void _ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0);
   // proto:  void QTextFragment::QTextFragment();
 extern void* dector_ZN13QTextFragmentC1Ev();
 extern void demth_ZN13QTextFragmentC1Ev(void* qthis);
   // proto:  QString QTextFragment::text();
 extern void _ZNK13QTextFragment4textEv(void* qthis);
   // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int arg0, int arg1);
+extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QTextFragment::isValid();
 extern void demth_ZNK13QTextFragment7isValidEv(void* qthis);
   // proto:  QTextCharFormat QTextFragment::charFormat();
@@ -94,11 +94,11 @@ extern void _ZNK10QTextBlock4textEv(void* qthis);
   // proto:  int QTextBlock::lineCount();
 extern void _ZNK10QTextBlock9lineCountEv(void* qthis);
   // proto:  bool QTextBlock::contains(int position);
-extern void _ZNK10QTextBlock8containsEi(void* qthis, int arg0);
+extern void _ZNK10QTextBlock8containsEi(void* qthis, int32_t arg0);
   // proto:  int QTextBlock::blockNumber();
 extern void _ZNK10QTextBlock11blockNumberEv(void* qthis);
   // proto:  void QTextBlock::setRevision(int rev);
-extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int arg0);
+extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int32_t arg0);
   // proto:  void QTextBlock::setVisible(bool visible);
 extern void _ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0);
   // proto:  void QTextBlock::clearLayout();
@@ -124,13 +124,13 @@ extern void _ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void
   // proto:  int QTextBlock::blockFormatIndex();
 extern void _ZNK10QTextBlock16blockFormatIndexEv(void* qthis);
   // proto:  void QTextBlock::setUserState(int state);
-extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int arg0);
+extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int32_t arg0);
   // proto:  int QTextBlock::fragmentIndex();
 extern void demth_ZNK10QTextBlock13fragmentIndexEv(void* qthis);
   // proto:  bool QTextBlock::isVisible();
 extern void _ZNK10QTextBlock9isVisibleEv(void* qthis);
   // proto:  void QTextBlock::setLineCount(int count);
-extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int arg0);
+extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int32_t arg0);
   // proto:  QTextBlock QTextBlock::next();
 extern void _ZNK10QTextBlock4nextEv(void* qthis);
   // proto:  QTextBlockFormat QTextBlock::blockFormat();
@@ -153,7 +153,7 @@ extern void _ZN15QTextBlockGroupD0Ev(void* qthis);
 extern void* dector_ZN15QTextBlockGroupC1EP13QTextDocument(void* arg0);
 extern void _ZN15QTextBlockGroupC1EP13QTextDocument(void* qthis, void* arg0);
   // proto:  QTextFrameFormat QTextFrame::frameFormat();
-extern void _ZNK10QTextFrame11frameFormatEv(void* qthis);
+extern void demth_ZNK10QTextFrame11frameFormatEv(void* qthis);
   // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
 extern void _ZNK10QTextFrame10layoutDataEv(void* qthis);
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
@@ -197,43 +197,43 @@ func init() {
 // class sizeof(QTextObject)=1
 type QTextObject struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockUserData)=8
 type QTextBlockUserData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFragment)=16
 type QTextFragment struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrameLayoutData)=8
 type QTextFrameLayoutData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlock)=16
 type QTextBlock struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextBlockGroup)=1
 type QTextBlockGroup struct {
   /*qbase*/ QTextObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextFrame)=1
 type QTextFrame struct {
   /*qbase*/ QTextObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QTextDocumentPrivate * QTextObject::docHandle();
@@ -782,7 +782,7 @@ func (this *QTextBlock) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QTextBlock10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -1232,7 +1232,7 @@ func (this *QTextFrame) frameFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11frameFormatEv
     // invoke: QTextFrameFormat frameFormat()
-    C._ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    C.demth_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
   }

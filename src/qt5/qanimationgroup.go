@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-extern void _ZNK15QAnimationGroup11animationAtEi(void* qthis, int arg0);
+extern void _ZNK15QAnimationGroup11animationAtEi(void* qthis, int32_t arg0);
   // proto:  void QAnimationGroup::~QAnimationGroup();
 extern void _ZN15QAnimationGroupD0Ev(void* qthis);
   // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
@@ -51,9 +51,9 @@ extern void _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(void* qthis
   // proto:  void QAnimationGroup::clear();
 extern void _ZN15QAnimationGroup5clearEv(void* qthis);
   // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-extern void _ZN15QAnimationGroup13takeAnimationEi(void* qthis, int arg0);
+extern void _ZN15QAnimationGroup13takeAnimationEi(void* qthis, int32_t arg0);
   // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
-extern void _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(void* qthis, int arg0, void* arg1);
+extern void _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(void* qthis, int32_t arg0, void* arg1);
   // proto:  const QMetaObject * QAnimationGroup::metaObject();
 extern void _ZNK15QAnimationGroup10metaObjectEv(void* qthis);
   // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QAnimationGroup)=1
 type QAnimationGroup struct {
   /*qbase*/ QAbstractAnimation;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);

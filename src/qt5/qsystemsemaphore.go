@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  QString QSystemSemaphore::key();
 extern void _ZNK16QSystemSemaphore3keyEv(void* qthis);
   // proto:  bool QSystemSemaphore::release(int n);
-extern void _ZN16QSystemSemaphore7releaseEi(void* qthis, int arg0);
+extern void _ZN16QSystemSemaphore7releaseEi(void* qthis, int32_t arg0);
   // proto:  QString QSystemSemaphore::errorString();
 extern void _ZNK16QSystemSemaphore11errorStringEv(void* qthis);
   // proto:  void QSystemSemaphore::QSystemSemaphore(const QSystemSemaphore & );
@@ -60,7 +60,7 @@ func init() {
 // class sizeof(QSystemSemaphore)=1
 type QSystemSemaphore struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QString QSystemSemaphore::key();

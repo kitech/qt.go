@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.go
 //
@@ -33,8 +33,8 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
-extern void* dector_ZN10QPictureIOC1ERK7QStringPKc(void* arg0, char* arg1);
-extern void _ZN10QPictureIOC1ERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void* dector_ZN10QPictureIOC1ERK7QStringPKc(void* arg0, unsigned char* arg1);
+extern void _ZN10QPictureIOC1ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QString QPictureIO::description();
 extern void _ZNK10QPictureIO11descriptionEv(void* qthis);
   // proto: static QList<QByteArray> QPictureIO::inputFormats();
@@ -63,16 +63,16 @@ extern void _ZN10QPictureIO4readEv(void* qthis);
   // proto:  QString QPictureIO::fileName();
 extern void _ZNK10QPictureIO8fileNameEv(void* qthis);
   // proto:  void QPictureIO::QPictureIO(QIODevice * ioDevice, const char * format);
-extern void* dector_ZN10QPictureIOC1EP9QIODevicePKc(void* arg0, char* arg1);
-extern void _ZN10QPictureIOC1EP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+extern void* dector_ZN10QPictureIOC1EP9QIODevicePKc(void* arg0, unsigned char* arg1);
+extern void _ZN10QPictureIOC1EP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  const char * QPictureIO::format();
 extern void _ZNK10QPictureIO6formatEv(void* qthis);
   // proto:  void QPictureIO::setQuality(int );
-extern void _ZN10QPictureIO10setQualityEi(void* qthis, int arg0);
+extern void _ZN10QPictureIO10setQualityEi(void* qthis, int32_t arg0);
   // proto:  const QPicture & QPictureIO::picture();
 extern void _ZNK10QPictureIO7pictureEv(void* qthis);
   // proto:  void QPictureIO::setFormat(const char * );
-extern void _ZN10QPictureIO9setFormatEPKc(void* qthis, char* arg0);
+extern void _ZN10QPictureIO9setFormatEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QPictureIO::setDescription(const QString & );
 extern void _ZN10QPictureIO14setDescriptionERK7QString(void* qthis, void* arg0);
   // proto: static QByteArray QPictureIO::pictureFormat(const QString & fileName);
@@ -80,7 +80,7 @@ extern void _ZN10QPictureIO13pictureFormatERK7QString(void* arg0);
   // proto:  void QPictureIO::setIODevice(QIODevice * );
 extern void _ZN10QPictureIO11setIODeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  void QPictureIO::setStatus(int );
-extern void _ZN10QPictureIO9setStatusEi(void* qthis, int arg0);
+extern void _ZN10QPictureIO9setStatusEi(void* qthis, int32_t arg0);
   // proto:  QIODevice * QPictureIO::ioDevice();
 extern void _ZNK10QPictureIO8ioDeviceEv(void* qthis);
   // proto:  float QPictureIO::gamma();
@@ -90,7 +90,7 @@ extern void _ZN10QPictureIO13outputFormatsEv();
   // proto:  void QPictureIO::setPicture(const QPicture & );
 extern void _ZN10QPictureIO10setPictureERK8QPicture(void* qthis, void* arg0);
   // proto:  void QPictureIO::setParameters(const char * );
-extern void _ZN10QPictureIO13setParametersEPKc(void* qthis, char* arg0);
+extern void _ZN10QPictureIO13setParametersEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QPictureIO::QPictureIO();
 extern void* dector_ZN10QPictureIOC1Ev();
 extern void _ZN10QPictureIOC1Ev(void* qthis);
@@ -105,14 +105,14 @@ extern void _ZNK8QPicture4sizeEv(void* qthis);
   // proto:  bool QPicture::isNull();
 extern void _ZNK8QPicture6isNullEv(void* qthis);
   // proto:  bool QPicture::save(QIODevice * dev, const char * format);
-extern void _ZN8QPicture4saveEP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN8QPicture4saveEP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QPicture::detach();
 extern void _ZN8QPicture6detachEv(void* qthis);
   // proto: static QList<QByteArray> QPicture::inputFormats();
 extern void _ZN8QPicture12inputFormatsEv();
   // proto:  void QPicture::QPicture(int formatVersion);
-extern void* dector_ZN8QPictureC1Ei(int arg0);
-extern void _ZN8QPictureC1Ei(void* qthis, int arg0);
+extern void* dector_ZN8QPictureC1Ei(int32_t arg0);
+extern void _ZN8QPictureC1Ei(void* qthis, int32_t arg0);
   // proto:  void QPicture::QPicture(const QPicture & );
 extern void* dector_ZN8QPictureC1ERKS_(void* arg0);
 extern void _ZN8QPictureC1ERKS_(void* qthis, void* arg0);
@@ -121,7 +121,7 @@ extern void _ZNK8QPicture10isDetachedEv(void* qthis);
   // proto: static QStringList QPicture::outputFormatList();
 extern void _ZN8QPicture16outputFormatListEv();
   // proto:  void QPicture::setData(const char * data, uint size);
-extern void _ZN8QPicture7setDataEPKcj(void* qthis, char* arg0, unsigned int arg1);
+extern void _ZN8QPicture7setDataEPKcj(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto: static QList<QByteArray> QPicture::outputFormats();
 extern void _ZN8QPicture13outputFormatsEv();
   // proto:  int QPicture::devType();
@@ -129,15 +129,15 @@ extern void _ZNK8QPicture7devTypeEv(void* qthis);
   // proto: static const char * QPicture::pictureFormat(const QString & fileName);
 extern void _ZN8QPicture13pictureFormatERK7QString(void* arg0);
   // proto:  bool QPicture::save(const QString & fileName, const char * format);
-extern void _ZN8QPicture4saveERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN8QPicture4saveERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  bool QPicture::load(const QString & fileName, const char * format);
-extern void _ZN8QPicture4loadERK7QStringPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN8QPicture4loadERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  void QPicture::~QPicture();
 extern void _ZN8QPictureD0Ev(void* qthis);
   // proto:  void QPicture::setBoundingRect(const QRect & r);
 extern void _ZN8QPicture15setBoundingRectERK5QRect(void* qthis, void* arg0);
   // proto:  bool QPicture::load(QIODevice * dev, const char * format);
-extern void _ZN8QPicture4loadEP9QIODevicePKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN8QPicture4loadEP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QRect QPicture::boundingRect();
 extern void _ZNK8QPicture12boundingRectEv(void* qthis);
   // proto:  bool QPicture::play(QPainter * p);
@@ -159,13 +159,13 @@ func init() {
 // class sizeof(QPictureIO)=8
 type QPictureIO struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPicture)=1
 type QPicture struct {
   /*qbase*/ QPaintDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
@@ -478,7 +478,7 @@ func (this *QPictureIO) setFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPictureIO9setFormatEPKc
     // invoke: void setFormat(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN10QPictureIO9setFormatEPKc(this.qclsinst, arg0)
   default:
@@ -647,7 +647,7 @@ func (this *QPictureIO) setParameters(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPictureIO13setParametersEPKc
     // invoke: void setParameters(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN10QPictureIO13setParametersEPKc(this.qclsinst, arg0)
   default:
@@ -774,7 +774,7 @@ func (this *QPicture) save(args ...interface{}) () {
     // invoke: bool save(class QIODevice *, const char *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN8QPicture4saveEP9QIODevicePKc(this.qclsinst, arg0, arg1)
   case 1:
@@ -782,7 +782,7 @@ func (this *QPicture) save(args ...interface{}) () {
     // invoke: bool save(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN8QPicture4saveERK7QStringPKc(this.qclsinst, arg0, arg1)
   default:
@@ -879,7 +879,7 @@ func (this *QPicture) setData(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPicture7setDataEPKcj
     // invoke: void setData(const char *, uint)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -959,7 +959,7 @@ func (this *QPicture) load(args ...interface{}) () {
     // invoke: bool load(const class QString &, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN8QPicture4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
   case 1:
@@ -967,7 +967,7 @@ func (this *QPicture) load(args ...interface{}) () {
     // invoke: bool load(class QIODevice *, const char *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN8QPicture4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qidentityproxymodel.h
 // dst-file: /src/core/qidentityproxymodel.go
 //
@@ -33,19 +33,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN19QIdentityProxyModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  bool QIdentityProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN19QIdentityProxyModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QItemSelection QIdentityProxyModel::mapSelectionFromSource(const QItemSelection & selection);
 extern void _ZNK19QIdentityProxyModel22mapSelectionFromSourceERK14QItemSelection(void* qthis, void* arg0);
   // proto:  QModelIndex QIdentityProxyModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK19QIdentityProxyModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  bool QIdentityProxyModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN19QIdentityProxyModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  bool QIdentityProxyModel::insertColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN19QIdentityProxyModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QModelIndex QIdentityProxyModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK19QIdentityProxyModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  const QMetaObject * QIdentityProxyModel::metaObject();
 extern void _ZNK19QIdentityProxyModel10metaObjectEv(void* qthis);
   // proto:  void QIdentityProxyModel::~QIdentityProxyModel();
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QIdentityProxyModel)=1
 type QIdentityProxyModel struct {
   /*qbase*/ QAbstractProxyModel;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QIdentityProxyModel::removeRows(int row, int count, const QModelIndex & parent);

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicstransform.h
 // dst-file: /src/widgets/qgraphicstransform.go
 //
@@ -78,8 +78,6 @@ extern void* dector_ZN14QGraphicsScaleC1EP7QObject(void* arg0);
 extern void _ZN14QGraphicsScaleC1EP7QObject(void* qthis, void* arg0);
   // proto:  void QGraphicsScale::~QGraphicsScale();
 extern void _ZN14QGraphicsScaleD0Ev(void* qthis);
-  // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
-extern void _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(void* qthis, void* arg0);
   // proto:  void QGraphicsTransform::~QGraphicsTransform();
 extern void _ZN18QGraphicsTransformD0Ev(void* qthis);
   // proto:  void QGraphicsTransform::QGraphicsTransform(QObject * parent);
@@ -102,7 +100,7 @@ func init() {
 // class sizeof(QGraphicsRotation)=1
 type QGraphicsRotation struct {
   /*qbase*/ QGraphicsTransform;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _originChanged QGraphicsRotation_originChanged_signal;
 //  _axisChanged QGraphicsRotation_axisChanged_signal;
 //  _angleChanged QGraphicsRotation_angleChanged_signal;
@@ -111,7 +109,7 @@ type QGraphicsRotation struct {
 // class sizeof(QGraphicsScale)=1
 type QGraphicsScale struct {
   /*qbase*/ QGraphicsTransform;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _yScaleChanged QGraphicsScale_yScaleChanged_signal;
 //  _xScaleChanged QGraphicsScale_xScaleChanged_signal;
 //  _zScaleChanged QGraphicsScale_zScaleChanged_signal;
@@ -122,7 +120,7 @@ type QGraphicsScale struct {
 // class sizeof(QGraphicsTransform)=1
 type QGraphicsTransform struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QVector3D QGraphicsRotation::origin();
@@ -549,29 +547,6 @@ func (this *QGraphicsScale) FreeQGraphicsScale(args ...interface{}) () {
   switch matched_index {
   default:
     qtrt.ErrorResolve("QGraphicsScale", "~QGraphicsScale", args)
-  }
-
-}
-
-  // proto:  void QGraphicsTransform::applyTo(QMatrix4x4 * matrix);
-func (this *QGraphicsTransform) applyTo(args ...interface{}) () {
-  // applyTo(class QMatrix4x4 *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QMatrix4x4{}) // "QMatrix4x4 *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QGraphicsTransform7applyToEP10QMatrix4x4
-    // invoke: void applyTo(class QMatrix4x4 *)
-    var arg0 = args[0].(QMatrix4x4).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK18QGraphicsTransform7applyToEP10QMatrix4x4(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsTransform", "applyTo", args)
   }
 
 }

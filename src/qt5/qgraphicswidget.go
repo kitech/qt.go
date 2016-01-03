@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -45,7 +45,7 @@ extern void demth_ZNK15QGraphicsWidget4rectEv(void* qthis);
   // proto:  QSizeF QGraphicsWidget::size();
 extern void _ZNK15QGraphicsWidget4sizeEv(void* qthis);
   // proto:  void QGraphicsWidget::releaseShortcut(int id);
-extern void _ZN15QGraphicsWidget15releaseShortcutEi(void* qthis, int arg0);
+extern void _ZN15QGraphicsWidget15releaseShortcutEi(void* qthis, int32_t arg0);
   // proto:  void QGraphicsWidget::setWindowFrameMargins(qreal left, qreal top, qreal right, qreal bottom);
 extern void _ZN15QGraphicsWidget21setWindowFrameMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
   // proto:  int QGraphicsWidget::type();
@@ -82,7 +82,7 @@ extern void _ZNK15QGraphicsWidget5styleEv(void* qthis);
   // proto:  QPainterPath QGraphicsWidget::shape();
 extern void _ZNK15QGraphicsWidget5shapeEv(void* qthis);
   // proto:  void QGraphicsWidget::setShortcutEnabled(int id, bool enabled);
-extern void _ZN15QGraphicsWidget18setShortcutEnabledEib(void* qthis, int arg0, bool arg1);
+extern void _ZN15QGraphicsWidget18setShortcutEnabledEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QGraphicsWidget::removeAction(QAction * action);
 extern void _ZN15QGraphicsWidget12removeActionEP7QAction(void* qthis, void* arg0);
   // proto:  void QGraphicsWidget::insertAction(QAction * before, QAction * action);
@@ -112,7 +112,7 @@ extern void _ZNK15QGraphicsWidget4fontEv(void* qthis);
   // proto:  QList<QAction *> QGraphicsWidget::actions();
 extern void _ZNK15QGraphicsWidget7actionsEv(void* qthis);
   // proto:  void QGraphicsWidget::setShortcutAutoRepeat(int id, bool enabled);
-extern void _ZN15QGraphicsWidget21setShortcutAutoRepeatEib(void* qthis, int arg0, bool arg1);
+extern void _ZN15QGraphicsWidget21setShortcutAutoRepeatEib(void* qthis, int32_t arg0, bool arg1);
   // proto: static void QGraphicsWidget::setTabOrder(QGraphicsWidget * first, QGraphicsWidget * second);
 extern void _ZN15QGraphicsWidget11setTabOrderEPS_S0_(void* arg0, void* arg1);
   // proto:  void QGraphicsWidget::getWindowFrameMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
@@ -140,7 +140,7 @@ func init() {
 // class sizeof(QGraphicsWidget)=1
 type QGraphicsWidget struct {
   /*qbase*/ QGraphicsObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _layoutChanged QGraphicsWidget_layoutChanged_signal;
 //  _geometryChanged QGraphicsWidget_geometryChanged_signal;
 }
@@ -159,7 +159,7 @@ func (this *QGraphicsWidget) setAutoFillBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget21setAutoFillBackgroundEb
     // invoke: void setAutoFillBackground(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN15QGraphicsWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
   default:
@@ -682,7 +682,7 @@ func (this *QGraphicsWidget) setShortcutEnabled(args ...interface{}) () {
     // invoke: void setShortcutEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN15QGraphicsWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
   default:
@@ -1009,7 +1009,7 @@ func (this *QGraphicsWidget) setShortcutAutoRepeat(args ...interface{}) () {
     // invoke: void setShortcutAutoRepeat(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN15QGraphicsWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
   default:

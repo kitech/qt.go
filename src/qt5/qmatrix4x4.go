@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.go
 //
@@ -56,13 +56,13 @@ extern void _ZNK10QMatrix4x48toAffineEv(void* qthis);
   // proto:  QRectF QMatrix4x4::mapRect(const QRectF & rect);
 extern void _ZNK10QMatrix4x47mapRectERK6QRectF(void* qthis, void* arg0);
   // proto:  void QMatrix4x4::setColumn(int index, const QVector4D & value);
-extern void demth_ZN10QMatrix4x49setColumnEiRK9QVector4D(void* qthis, int arg0, void* arg1);
+extern void demth_ZN10QMatrix4x49setColumnEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1);
   // proto:  bool QMatrix4x4::isIdentity();
 extern void demth_ZNK10QMatrix4x410isIdentityEv(void* qthis);
   // proto:  QVector4D QMatrix4x4::column(int index);
-extern void demth_ZNK10QMatrix4x46columnEi(void* qthis, int arg0);
+extern void demth_ZNK10QMatrix4x46columnEi(void* qthis, int32_t arg0);
   // proto:  void QMatrix4x4::setRow(int index, const QVector4D & value);
-extern void demth_ZN10QMatrix4x46setRowEiRK9QVector4D(void* qthis, int arg0, void* arg1);
+extern void demth_ZN10QMatrix4x46setRowEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QMatrix4x4::flipCoordinates();
 extern void _ZN10QMatrix4x415flipCoordinatesEv(void* qthis);
   // proto:  QMatrix3x3 QMatrix4x4::normalMatrix();
@@ -96,8 +96,8 @@ extern void _ZN10QMatrix4x47frustumEffffff(void* qthis, float arg0, float arg1, 
   // proto:  QPoint QMatrix4x4::map(const QPoint & point);
 extern void demth_ZNK10QMatrix4x43mapERK6QPoint(void* qthis, void* arg0);
   // proto:  void QMatrix4x4::QMatrix4x4(int );
-extern void* dector_ZN10QMatrix4x4C1Ei(int arg0);
-extern void _ZN10QMatrix4x4C1Ei(void* qthis, int arg0);
+extern void* dector_ZN10QMatrix4x4C1Ei(int32_t arg0);
+extern void _ZN10QMatrix4x4C1Ei(void* qthis, int32_t arg0);
   // proto:  void QMatrix4x4::optimize();
 extern void _ZN10QMatrix4x48optimizeEv(void* qthis);
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
@@ -127,8 +127,8 @@ extern void _ZN10QMatrix4x46rotateEffff(void* qthis, float arg0, float arg1, flo
   // proto:  void QMatrix4x4::fill(float value);
 extern void demth_ZN10QMatrix4x44fillEf(void* qthis, float arg0);
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values, int cols, int rows);
-extern void* dector_ZN10QMatrix4x4C1EPKfii(float* arg0, int arg1, int arg2);
-extern void _ZN10QMatrix4x4C1EPKfii(void* qthis, float* arg0, int arg1, int arg2);
+extern void* dector_ZN10QMatrix4x4C1EPKfii(float* arg0, int32_t arg1, int32_t arg2);
+extern void _ZN10QMatrix4x4C1EPKfii(void* qthis, float* arg0, int32_t arg1, int32_t arg2);
   // proto:  QTransform QMatrix4x4::toTransform(float distanceToPlane);
 extern void _ZNK10QMatrix4x411toTransformEf(void* qthis, float arg0);
   // proto:  QMatrix4x4 QMatrix4x4::transposed();
@@ -138,7 +138,7 @@ extern void demth_ZNK10QMatrix4x43mapERK7QPointF(void* qthis, void* arg0);
   // proto:  void QMatrix4x4::scale(float factor);
 extern void _ZN10QMatrix4x45scaleEf(void* qthis, float arg0);
   // proto:  QVector4D QMatrix4x4::row(int index);
-extern void demth_ZNK10QMatrix4x43rowEi(void* qthis, int arg0);
+extern void demth_ZNK10QMatrix4x43rowEi(void* qthis, int32_t arg0);
   // proto:  void QMatrix4x4::rotate(float angle, const QVector3D & vector);
 extern void _ZN10QMatrix4x46rotateEfRK9QVector3D(void* qthis, float arg0, void* arg1);
   // proto:  QVector4D QMatrix4x4::map(const QVector4D & point);
@@ -158,7 +158,7 @@ func init() {
 // class sizeof(QMatrix4x4)=68
 type QMatrix4x4 struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QTransform QMatrix4x4::toTransform();

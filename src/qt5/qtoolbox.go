@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtoolbox.h
 // dst-file: /src/widgets/qtoolbox.go
 //
@@ -33,34 +33,34 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QToolBox::removeItem(int index);
-extern void _ZN8QToolBox10removeItemEi(void* qthis, int arg0);
+extern void _ZN8QToolBox10removeItemEi(void* qthis, int32_t arg0);
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QString & text);
-extern void demth_ZN8QToolBox10insertItemEiP7QWidgetRK7QString(void* qthis, int arg0, void* arg1, void* arg2);
+extern void demth_ZN8QToolBox10insertItemEiP7QWidgetRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2);
   // proto:  QString QToolBox::itemText(int index);
-extern void _ZNK8QToolBox8itemTextEi(void* qthis, int arg0);
+extern void _ZNK8QToolBox8itemTextEi(void* qthis, int32_t arg0);
   // proto:  int QToolBox::indexOf(QWidget * widget);
 extern void _ZNK8QToolBox7indexOfEP7QWidget(void* qthis, void* arg0);
   // proto:  QString QToolBox::itemToolTip(int index);
-extern void _ZNK8QToolBox11itemToolTipEi(void* qthis, int arg0);
+extern void _ZNK8QToolBox11itemToolTipEi(void* qthis, int32_t arg0);
   // proto:  void QToolBox::QToolBox(const QToolBox & );
 extern void* dector_ZN8QToolBoxC1ERKS_(void* arg0);
 extern void _ZN8QToolBoxC1ERKS_(void* qthis, void* arg0);
   // proto:  void QToolBox::setCurrentWidget(QWidget * widget);
 extern void _ZN8QToolBox16setCurrentWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  void QToolBox::setCurrentIndex(int index);
-extern void _ZN8QToolBox15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN8QToolBox15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  void QToolBox::setItemIcon(int index, const QIcon & icon);
-extern void _ZN8QToolBox11setItemIconEiRK5QIcon(void* qthis, int arg0, void* arg1);
+extern void _ZN8QToolBox11setItemIconEiRK5QIcon(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QToolBox::setItemText(int index, const QString & text);
-extern void _ZN8QToolBox11setItemTextEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN8QToolBox11setItemTextEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QToolBox::count();
 extern void _ZNK8QToolBox5countEv(void* qthis);
   // proto:  const QMetaObject * QToolBox::metaObject();
 extern void _ZNK8QToolBox10metaObjectEv(void* qthis);
   // proto:  QWidget * QToolBox::widget(int index);
-extern void _ZNK8QToolBox6widgetEi(void* qthis, int arg0);
+extern void _ZNK8QToolBox6widgetEi(void* qthis, int32_t arg0);
   // proto:  void QToolBox::setItemToolTip(int index, const QString & toolTip);
-extern void _ZN8QToolBox14setItemToolTipEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN8QToolBox14setItemToolTipEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QToolBox::currentIndex();
 extern void _ZNK8QToolBox12currentIndexEv(void* qthis);
   // proto:  QWidget * QToolBox::currentWidget();
@@ -68,17 +68,17 @@ extern void _ZNK8QToolBox13currentWidgetEv(void* qthis);
   // proto:  int QToolBox::addItem(QWidget * widget, const QString & text);
 extern void demth_ZN8QToolBox7addItemEP7QWidgetRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  bool QToolBox::isItemEnabled(int index);
-extern void _ZNK8QToolBox13isItemEnabledEi(void* qthis, int arg0);
+extern void _ZNK8QToolBox13isItemEnabledEi(void* qthis, int32_t arg0);
   // proto:  void QToolBox::setItemEnabled(int index, bool enabled);
-extern void _ZN8QToolBox14setItemEnabledEib(void* qthis, int arg0, bool arg1);
+extern void _ZN8QToolBox14setItemEnabledEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  QIcon QToolBox::itemIcon(int index);
-extern void _ZNK8QToolBox8itemIconEi(void* qthis, int arg0);
+extern void _ZNK8QToolBox8itemIconEi(void* qthis, int32_t arg0);
   // proto:  void QToolBox::~QToolBox();
 extern void _ZN8QToolBoxD0Ev(void* qthis);
   // proto:  int QToolBox::addItem(QWidget * widget, const QIcon & icon, const QString & text);
 extern void demth_ZN8QToolBox7addItemEP7QWidgetRK5QIconRK7QString(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  int QToolBox::insertItem(int index, QWidget * widget, const QIcon & icon, const QString & text);
-extern void _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(void* qthis, int arg0, void* arg1, void* arg2, void* arg3);
+extern void _ZN8QToolBox10insertItemEiP7QWidgetRK5QIconRK7QString(void* qthis, int32_t arg0, void* arg1, void* arg2, void* arg3);
 */
 import "C"
 // } // <= ext block end
@@ -94,7 +94,7 @@ func init() {
 // class sizeof(QToolBox)=1
 type QToolBox struct {
   /*qbase*/ QFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _currentChanged QToolBox_currentChanged_signal;
 }
 
@@ -550,7 +550,7 @@ func (this *QToolBox) setItemEnabled(args ...interface{}) () {
     // invoke: void setItemEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN8QToolBox14setItemEnabledEib(this.qclsinst, arg0, arg1)
   default:

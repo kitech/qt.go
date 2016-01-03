@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qnamespace.h
 // dst-file: /src/core/qnamespace.go
 //
@@ -47,7 +47,7 @@ func init() {
 // class sizeof(QInternal)=1
 type QInternal struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // <= body block end

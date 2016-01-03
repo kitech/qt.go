@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/quuid.h
 // dst-file: /src/core/quuid.go
 //
@@ -46,8 +46,8 @@ extern void demth_ZN5QUuid12createUuidV5ERKS_RK7QString(void* arg0, void* arg1);
   // proto: static QUuid QUuid::createUuid();
 extern void _ZN5QUuid10createUuidEv();
   // proto:  void QUuid::QUuid(uint l, ushort w1, ushort w2, uchar b1, uchar b2, uchar b3, uchar b4, uchar b5, uchar b6, uchar b7, uchar b8);
-extern void* dector_ZN5QUuidC1Ejtthhhhhhhh(unsigned int arg0, unsigned short arg1, unsigned short arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10);
-extern void _ZN5QUuidC1Ejtthhhhhhhh(void* qthis, unsigned int arg0, unsigned short arg1, unsigned short arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10);
+extern void* dector_ZN5QUuidC1Ejtthhhhhhhh(int32_t arg0, int16_t arg1, int16_t arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10);
+extern void _ZN5QUuidC1Ejtthhhhhhhh(void* qthis, int32_t arg0, int16_t arg1, int16_t arg2, unsigned char arg3, unsigned char arg4, unsigned char arg5, unsigned char arg6, unsigned char arg7, unsigned char arg8, unsigned char arg9, unsigned char arg10);
   // proto:  void QUuid::QUuid(const QByteArray & );
 extern void* dector_ZN5QUuidC1ERK10QByteArray(void* arg0);
 extern void _ZN5QUuidC1ERK10QByteArray(void* qthis, void* arg0);
@@ -59,8 +59,8 @@ extern void _ZN5QUuidC1Ev(void* qthis);
   // proto:  QByteArray QUuid::toByteArray();
 extern void _ZNK5QUuid11toByteArrayEv(void* qthis);
   // proto:  void QUuid::QUuid(const char * );
-extern void* dector_ZN5QUuidC1EPKc(char* arg0);
-extern void _ZN5QUuidC1EPKc(void* qthis, char* arg0);
+extern void* dector_ZN5QUuidC1EPKc(unsigned char* arg0);
+extern void _ZN5QUuidC1EPKc(void* qthis, unsigned char* arg0);
   // proto: static QUuid QUuid::createUuidV5(const QUuid & ns, const QByteArray & baseData);
 extern void _ZN5QUuid12createUuidV5ERKS_RK10QByteArray(void* arg0, void* arg1);
   // proto: static QUuid QUuid::fromRfc4122(const QByteArray & );
@@ -82,7 +82,7 @@ func init() {
 // class sizeof(QUuid)=16
 type QUuid struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QUuid::QUuid(const QString & );

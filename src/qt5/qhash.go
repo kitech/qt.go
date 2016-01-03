@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -35,11 +35,11 @@ import "qtrt"
   // proto:  void QHashData::hasShrunk();
 extern void demth_ZN9QHashData9hasShrunkEv(void* qthis);
   // proto:  void * QHashData::allocateNode(int nodeAlign);
-extern void _ZN9QHashData12allocateNodeEi(void* qthis, int arg0);
+extern void _ZN9QHashData12allocateNodeEi(void* qthis, int32_t arg0);
   // proto:  bool QHashData::willGrow();
 extern void demth_ZN9QHashData8willGrowEv(void* qthis);
   // proto:  void QHashData::rehash(int hint);
-extern void _ZN9QHashData6rehashEi(void* qthis, int arg0);
+extern void _ZN9QHashData6rehashEi(void* qthis, int32_t arg0);
   // proto:  void QHashData::freeNode(void * node);
 extern void _ZN9QHashData8freeNodeEPv(void* qthis, void* arg0);
 */
@@ -57,13 +57,13 @@ func init() {
 // class sizeof(QHashDummyValue)=1
 type QHashDummyValue struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QHashData)=1
 type QHashData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QHashData::hasShrunk();

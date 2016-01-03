@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgesture.h
 // dst-file: /src/widgets/qgesture.go
 //
@@ -109,7 +109,7 @@ extern void _ZN18QTapAndHoldGestureD0Ev(void* qthis);
   // proto:  QPointF QTapAndHoldGesture::position();
 extern void _ZNK18QTapAndHoldGesture8positionEv(void* qthis);
   // proto: static void QTapAndHoldGesture::setTimeout(int msecs);
-extern void _ZN18QTapAndHoldGesture10setTimeoutEi(int arg0);
+extern void _ZN18QTapAndHoldGesture10setTimeoutEi(int32_t arg0);
   // proto: static int QTapAndHoldGesture::timeout();
 extern void _ZN18QTapAndHoldGesture7timeoutEv();
   // proto:  const QMetaObject * QTapAndHoldGesture::metaObject();
@@ -185,43 +185,43 @@ func init() {
 // class sizeof(QSwipeGesture)=1
 type QSwipeGesture struct {
   /*qbase*/ QGesture;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGesture)=1
 type QGesture struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QGestureEvent)=1
 type QGestureEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPanGesture)=1
 type QPanGesture struct {
   /*qbase*/ QGesture;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTapAndHoldGesture)=1
 type QTapAndHoldGesture struct {
   /*qbase*/ QGesture;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTapGesture)=1
 type QTapGesture struct {
   /*qbase*/ QGesture;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPinchGesture)=1
 type QPinchGesture struct {
   /*qbase*/ QGesture;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QSwipeGesture::~QSwipeGesture();
@@ -587,7 +587,7 @@ func (this *QGestureEvent) setAccepted(args ...interface{}) () {
     // invoke: void setAccepted(class QGesture *, _Bool)
     var arg0 = args[0].(QGesture).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN13QGestureEvent11setAcceptedEP8QGestureb(this.qclsinst, arg0, arg1)
   default:

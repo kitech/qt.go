@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.go
 //
@@ -35,11 +35,11 @@ import "qtrt"
   // proto:  double QInputDialog::doubleMaximum();
 extern void _ZNK12QInputDialog13doubleMaximumEv(void* qthis);
   // proto:  void QInputDialog::setIntMaximum(int max);
-extern void _ZN12QInputDialog13setIntMaximumEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog13setIntMaximumEi(void* qthis, int32_t arg0);
   // proto:  const QMetaObject * QInputDialog::metaObject();
 extern void _ZNK12QInputDialog10metaObjectEv(void* qthis);
   // proto:  void QInputDialog::setIntStep(int step);
-extern void _ZN12QInputDialog10setIntStepEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog10setIntStepEi(void* qthis, int32_t arg0);
   // proto:  int QInputDialog::intMaximum();
 extern void _ZNK12QInputDialog10intMaximumEv(void* qthis);
   // proto:  int QInputDialog::intStep();
@@ -47,13 +47,13 @@ extern void _ZNK12QInputDialog7intStepEv(void* qthis);
   // proto:  int QInputDialog::doubleDecimals();
 extern void _ZNK12QInputDialog14doubleDecimalsEv(void* qthis);
   // proto:  void QInputDialog::setDoubleDecimals(int decimals);
-extern void _ZN12QInputDialog17setDoubleDecimalsEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog17setDoubleDecimalsEi(void* qthis, int32_t arg0);
   // proto:  void QInputDialog::setIntMinimum(int min);
-extern void _ZN12QInputDialog13setIntMinimumEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog13setIntMinimumEi(void* qthis, int32_t arg0);
   // proto:  void QInputDialog::setTextValue(const QString & text);
 extern void _ZN12QInputDialog12setTextValueERK7QString(void* qthis, void* arg0);
   // proto:  void QInputDialog::done(int result);
-extern void _ZN12QInputDialog4doneEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog4doneEi(void* qthis, int32_t arg0);
   // proto:  void QInputDialog::~QInputDialog();
 extern void _ZN12QInputDialogD0Ev(void* qthis);
   // proto:  void QInputDialog::QInputDialog(const QInputDialog & );
@@ -84,19 +84,19 @@ extern void _ZN12QInputDialog16setComboBoxItemsERK11QStringList(void* qthis, voi
   // proto:  bool QInputDialog::isComboBoxEditable();
 extern void _ZNK12QInputDialog18isComboBoxEditableEv(void* qthis);
   // proto:  void QInputDialog::open(QObject * receiver, const char * member);
-extern void _ZN12QInputDialog4openEP7QObjectPKc(void* qthis, void* arg0, char* arg1);
+extern void _ZN12QInputDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  QString QInputDialog::okButtonText();
 extern void _ZNK12QInputDialog12okButtonTextEv(void* qthis);
   // proto:  QSize QInputDialog::sizeHint();
 extern void _ZNK12QInputDialog8sizeHintEv(void* qthis);
   // proto:  void QInputDialog::setIntRange(int min, int max);
-extern void _ZN12QInputDialog11setIntRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN12QInputDialog11setIntRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QSize QInputDialog::minimumSizeHint();
 extern void _ZNK12QInputDialog15minimumSizeHintEv(void* qthis);
   // proto:  void QInputDialog::setDoubleValue(double value);
 extern void _ZN12QInputDialog14setDoubleValueEd(void* qthis, double arg0);
   // proto:  void QInputDialog::setIntValue(int value);
-extern void _ZN12QInputDialog11setIntValueEi(void* qthis, int arg0);
+extern void _ZN12QInputDialog11setIntValueEi(void* qthis, int32_t arg0);
   // proto:  double QInputDialog::doubleValue();
 extern void _ZNK12QInputDialog11doubleValueEv(void* qthis);
   // proto:  void QInputDialog::setCancelButtonText(const QString & text);
@@ -124,7 +124,7 @@ func init() {
 // class sizeof(QInputDialog)=1
 type QInputDialog struct {
   /*qbase*/ QDialog;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _doubleValueChanged QInputDialog_doubleValueChanged_signal;
 //  _intValueChanged QInputDialog_intValueChanged_signal;
 //  _textValueChanged QInputDialog_textValueChanged_signal;
@@ -510,7 +510,7 @@ func (this *QInputDialog) setComboBoxEditable(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputDialog19setComboBoxEditableEb
     // invoke: void setComboBoxEditable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QInputDialog19setComboBoxEditableEb(this.qclsinst, arg0)
   default:
@@ -533,7 +533,7 @@ func (this *QInputDialog) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QInputDialog10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QInputDialog10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -665,7 +665,7 @@ func (this *QInputDialog) open(args ...interface{}) () {
     // invoke: void open(class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN12QInputDialog4openEP7QObjectPKc(this.qclsinst, arg0, arg1)
   default:

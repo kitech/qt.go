@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -48,7 +48,7 @@ extern void _ZN4QPen8setBrushERK6QBrush(void* qthis, void* arg0);
   // proto:  QColor QPen::color();
 extern void _ZNK4QPen5colorEv(void* qthis);
   // proto:  void QPen::setWidth(int width);
-extern void _ZN4QPen8setWidthEi(void* qthis, int arg0);
+extern void _ZN4QPen8setWidthEi(void* qthis, int32_t arg0);
   // proto:  qreal QPen::widthF();
 extern void _ZNK4QPen6widthFEv(void* qthis);
   // proto:  void QPen::setCosmetic(bool cosmetic);
@@ -72,7 +72,7 @@ extern void _ZN4QPenC1Ev(void* qthis);
   // proto:  int QPen::width();
 extern void _ZNK4QPen5widthEv(void* qthis);
   // proto:  void QPen::swap(QPen & other);
-extern void _ZN4QPen4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN4QPen4swapERS_(void* qthis, void* arg0);
   // proto:  QBrush QPen::brush();
 extern void _ZNK4QPen5brushEv(void* qthis);
   // proto:  bool QPen::isCosmetic();
@@ -94,7 +94,7 @@ func init() {
 // class sizeof(QPen)=8
 type QPen struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPen::~QPen();
@@ -279,7 +279,7 @@ func (this *QPen) setCosmetic(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen11setCosmeticEb
     // invoke: void setCosmetic(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN4QPen11setCosmeticEb(this.qclsinst, arg0)
   default:
@@ -430,7 +430,7 @@ func (this *QPen) swap(args ...interface{}) () {
     // invoke: void swap(class QPen &)
     var arg0 = args[0].(QPen).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN4QPen4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN4QPen4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPen", "swap", args)
   }

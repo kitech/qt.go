@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qplaintextedit.h
 // dst-file: /src/widgets/qplaintextedit.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  void QPlainTextDocumentLayout::requestUpdate();
 extern void _ZN24QPlainTextDocumentLayout13requestUpdateEv(void* qthis);
   // proto:  void QPlainTextDocumentLayout::setCursorWidth(int width);
-extern void _ZN24QPlainTextDocumentLayout14setCursorWidthEi(void* qthis, int arg0);
+extern void _ZN24QPlainTextDocumentLayout14setCursorWidthEi(void* qthis, int32_t arg0);
   // proto:  QRectF QPlainTextDocumentLayout::frameBoundingRect(QTextFrame * );
 extern void _ZNK24QPlainTextDocumentLayout17frameBoundingRectEP10QTextFrame(void* qthis, void* arg0);
   // proto:  int QPlainTextDocumentLayout::pageCount();
@@ -68,7 +68,7 @@ extern void _ZN14QPlainTextEdit18setTabChangesFocusEb(void* qthis, bool arg0);
   // proto:  QString QPlainTextEdit::toPlainText();
 extern void demth_ZNK14QPlainTextEdit11toPlainTextEv(void* qthis);
   // proto:  QVariant QPlainTextEdit::loadResource(int type, const QUrl & name);
-extern void _ZN14QPlainTextEdit12loadResourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+extern void _ZN14QPlainTextEdit12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QPlainTextEdit::tabStopWidth();
 extern void _ZNK14QPlainTextEdit12tabStopWidthEv(void* qthis);
   // proto:  bool QPlainTextEdit::isReadOnly();
@@ -90,7 +90,7 @@ extern void _ZN14QPlainTextEdit11setDocumentEP13QTextDocument(void* qthis, void*
   // proto:  void QPlainTextEdit::print(QPagedPaintDevice * printer);
 extern void _ZNK14QPlainTextEdit5printEP17QPagedPaintDevice(void* qthis, void* arg0);
   // proto:  void QPlainTextEdit::setTabStopWidth(int width);
-extern void _ZN14QPlainTextEdit15setTabStopWidthEi(void* qthis, int arg0);
+extern void _ZN14QPlainTextEdit15setTabStopWidthEi(void* qthis, int32_t arg0);
   // proto:  bool QPlainTextEdit::backgroundVisible();
 extern void _ZNK14QPlainTextEdit17backgroundVisibleEv(void* qthis);
   // proto:  void QPlainTextEdit::redo();
@@ -115,13 +115,13 @@ extern void _ZN14QPlainTextEdit13setTextCursorERK11QTextCursor(void* qthis, void
   // proto:  void QPlainTextEdit::paste();
 extern void _ZN14QPlainTextEdit5pasteEv(void* qthis);
   // proto:  void QPlainTextEdit::zoomIn(int range);
-extern void _ZN14QPlainTextEdit6zoomInEi(void* qthis, int arg0);
+extern void _ZN14QPlainTextEdit6zoomInEi(void* qthis, int32_t arg0);
   // proto:  void QPlainTextEdit::setMaximumBlockCount(int maximum);
-extern void demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(void* qthis, int arg0);
+extern void demth_ZN14QPlainTextEdit20setMaximumBlockCountEi(void* qthis, int32_t arg0);
   // proto:  QTextCharFormat QPlainTextEdit::currentCharFormat();
 extern void _ZNK14QPlainTextEdit17currentCharFormatEv(void* qthis);
   // proto:  void QPlainTextEdit::setCursorWidth(int width);
-extern void _ZN14QPlainTextEdit14setCursorWidthEi(void* qthis, int arg0);
+extern void _ZN14QPlainTextEdit14setCursorWidthEi(void* qthis, int32_t arg0);
   // proto:  QString QPlainTextEdit::documentTitle();
 extern void demth_ZNK14QPlainTextEdit13documentTitleEv(void* qthis);
   // proto:  void QPlainTextEdit::selectAll();
@@ -163,7 +163,7 @@ extern void _ZN14QPlainTextEdit10appendHtmlERK7QString(void* qthis, void* arg0);
   // proto:  bool QPlainTextEdit::isUndoRedoEnabled();
 extern void demth_ZNK14QPlainTextEdit17isUndoRedoEnabledEv(void* qthis);
   // proto:  void QPlainTextEdit::zoomOut(int range);
-extern void _ZN14QPlainTextEdit7zoomOutEi(void* qthis, int arg0);
+extern void _ZN14QPlainTextEdit7zoomOutEi(void* qthis, int32_t arg0);
   // proto:  void QPlainTextEdit::setPlaceholderText(const QString & placeholderText);
 extern void _ZN14QPlainTextEdit18setPlaceholderTextERK7QString(void* qthis, void* arg0);
   // proto:  void QPlainTextEdit::undo();
@@ -193,13 +193,13 @@ func init() {
 // class sizeof(QPlainTextDocumentLayout)=1
 type QPlainTextDocumentLayout struct {
   /*qbase*/ QAbstractTextDocumentLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QPlainTextEdit)=1
 type QPlainTextEdit struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorPositionChanged QPlainTextEdit_cursorPositionChanged_signal;
 //  _modificationChanged QPlainTextEdit_modificationChanged_signal;
 //  _redoAvailable QPlainTextEdit_redoAvailable_signal;
@@ -534,7 +534,7 @@ func (this *QPlainTextEdit) setTabChangesFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit18setTabChangesFocusEb
     // invoke: void setTabChangesFocus(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QPlainTextEdit18setTabChangesFocusEb(this.qclsinst, arg0)
   default:
@@ -643,7 +643,7 @@ func (this *QPlainTextEdit) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QPlainTextEdit11setReadOnlyEb(this.qclsinst, arg0)
   default:
@@ -686,7 +686,7 @@ func (this *QPlainTextEdit) setCenterOnScroll(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit17setCenterOnScrollEb
     // invoke: void setCenterOnScroll(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QPlainTextEdit17setCenterOnScrollEb(this.qclsinst, arg0)
   default:
@@ -886,7 +886,7 @@ func (this *QPlainTextEdit) setOverwriteMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit16setOverwriteModeEb
     // invoke: void setOverwriteMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QPlainTextEdit16setOverwriteModeEb(this.qclsinst, arg0)
   default:
@@ -1210,7 +1210,7 @@ func (this *QPlainTextEdit) setBackgroundVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit20setBackgroundVisibleEb
     // invoke: void setBackgroundVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN14QPlainTextEdit20setBackgroundVisibleEb(this.qclsinst, arg0)
   default:
@@ -1233,7 +1233,7 @@ func (this *QPlainTextEdit) setUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QPlainTextEdit18setUndoRedoEnabledEb
     // invoke: void setUndoRedoEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN14QPlainTextEdit18setUndoRedoEnabledEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.go
 //
@@ -37,7 +37,7 @@ extern void _ZN15QListWidgetItemD0Ev(void* qthis);
   // proto:  bool QListWidgetItem::isHidden();
 extern void demth_ZNK15QListWidgetItem8isHiddenEv(void* qthis);
   // proto:  void QListWidgetItem::setData(int role, const QVariant & value);
-extern void _ZN15QListWidgetItem7setDataEiRK8QVariant(void* qthis, int arg0, void* arg1);
+extern void _ZN15QListWidgetItem7setDataEiRK8QVariant(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QListWidgetItem::setBackground(const QBrush & brush);
 extern void demth_ZN15QListWidgetItem13setBackgroundERK6QBrush(void* qthis, void* arg0);
   // proto:  void QListWidgetItem::setSelected(bool select);
@@ -45,10 +45,10 @@ extern void demth_ZN15QListWidgetItem11setSelectedEb(void* qthis, bool arg0);
   // proto:  QFont QListWidgetItem::font();
 extern void demth_ZNK15QListWidgetItem4fontEv(void* qthis);
   // proto:  void QListWidgetItem::setTextAlignment(int alignment);
-extern void demth_ZN15QListWidgetItem16setTextAlignmentEi(void* qthis, int arg0);
+extern void demth_ZN15QListWidgetItem16setTextAlignmentEi(void* qthis, int32_t arg0);
   // proto:  void QListWidgetItem::QListWidgetItem(QListWidget * view, int type);
-extern void* dector_ZN15QListWidgetItemC1EP11QListWidgeti(void* arg0, int arg1);
-extern void _ZN15QListWidgetItemC1EP11QListWidgeti(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN15QListWidgetItemC1EP11QListWidgeti(void* arg0, int32_t arg1);
+extern void _ZN15QListWidgetItemC1EP11QListWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QListWidgetItem::write(QDataStream & out);
 extern void _ZNK15QListWidgetItem5writeER11QDataStream(void* qthis, void* arg0);
   // proto:  QString QListWidgetItem::whatsThis();
@@ -56,8 +56,8 @@ extern void demth_ZNK15QListWidgetItem9whatsThisEv(void* qthis);
   // proto:  int QListWidgetItem::type();
 extern void demth_ZNK15QListWidgetItem4typeEv(void* qthis);
   // proto:  void QListWidgetItem::QListWidgetItem(const QIcon & icon, const QString & text, QListWidget * view, int type);
-extern void* dector_ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti(void* arg0, void* arg1, void* arg2, int arg3);
-extern void _ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, void* arg2, int arg3);
+extern void* dector_ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti(void* arg0, void* arg1, void* arg2, int32_t arg3);
+extern void _ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, void* arg2, int32_t arg3);
   // proto:  QIcon QListWidgetItem::icon();
 extern void demth_ZNK15QListWidgetItem4iconEv(void* qthis);
   // proto:  QColor QListWidgetItem::textColor();
@@ -79,10 +79,10 @@ extern void demth_ZN15QListWidgetItem7setFontERK5QFont(void* qthis, void* arg0);
   // proto:  void QListWidgetItem::setText(const QString & text);
 extern void demth_ZN15QListWidgetItem7setTextERK7QString(void* qthis, void* arg0);
   // proto:  void QListWidgetItem::QListWidgetItem(const QString & text, QListWidget * view, int type);
-extern void* dector_ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti(void* arg0, void* arg1, int arg2);
-extern void _ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, int arg2);
+extern void* dector_ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti(void* arg0, void* arg1, int32_t arg2);
+extern void _ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  QVariant QListWidgetItem::data(int role);
-extern void _ZNK15QListWidgetItem4dataEi(void* qthis, int arg0);
+extern void _ZNK15QListWidgetItem4dataEi(void* qthis, int32_t arg0);
   // proto:  QSize QListWidgetItem::sizeHint();
 extern void demth_ZNK15QListWidgetItem8sizeHintEv(void* qthis);
   // proto:  void QListWidgetItem::setWhatsThis(const QString & whatsThis);
@@ -126,11 +126,11 @@ extern void _ZN11QListWidgetC1EP7QWidget(void* qthis, void* arg0);
   // proto:  int QListWidget::currentRow();
 extern void _ZNK11QListWidget10currentRowEv(void* qthis);
   // proto:  QListWidgetItem * QListWidget::item(int row);
-extern void _ZNK11QListWidget4itemEi(void* qthis, int arg0);
+extern void _ZNK11QListWidget4itemEi(void* qthis, int32_t arg0);
   // proto:  QListWidgetItem * QListWidget::itemAt(const QPoint & p);
 extern void _ZNK11QListWidget6itemAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QListWidget::insertItem(int row, const QString & label);
-extern void _ZN11QListWidget10insertItemEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void _ZN11QListWidget10insertItemEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  int QListWidget::row(const QListWidgetItem * item);
 extern void _ZNK11QListWidget3rowEPK15QListWidgetItem(void* qthis, void* arg0);
   // proto:  void QListWidget::openPersistentEditor(QListWidgetItem * item);
@@ -148,7 +148,7 @@ extern void _ZN11QListWidgetD0Ev(void* qthis);
   // proto:  void QListWidget::addItem(QListWidgetItem * item);
 extern void demth_ZN11QListWidget7addItemEP15QListWidgetItem(void* qthis, void* arg0);
   // proto:  QListWidgetItem * QListWidget::takeItem(int row);
-extern void _ZN11QListWidget8takeItemEi(void* qthis, int arg0);
+extern void _ZN11QListWidget8takeItemEi(void* qthis, int32_t arg0);
   // proto:  bool QListWidget::isSortingEnabled();
 extern void _ZNK11QListWidget16isSortingEnabledEv(void* qthis);
   // proto:  void QListWidget::addItems(const QStringList & labels);
@@ -160,9 +160,9 @@ extern void _ZNK11QListWidget10metaObjectEv(void* qthis);
   // proto:  void QListWidget::setItemSelected(const QListWidgetItem * item, bool select);
 extern void _ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(void* qthis, void* arg0, bool arg1);
   // proto:  void QListWidget::insertItem(int row, QListWidgetItem * item);
-extern void _ZN11QListWidget10insertItemEiP15QListWidgetItem(void* qthis, int arg0, void* arg1);
+extern void _ZN11QListWidget10insertItemEiP15QListWidgetItem(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QListWidget::setCurrentRow(int row);
-extern void _ZN11QListWidget13setCurrentRowEi(void* qthis, int arg0);
+extern void _ZN11QListWidget13setCurrentRowEi(void* qthis, int32_t arg0);
   // proto:  void QListWidget::setSortingEnabled(bool enable);
 extern void _ZN11QListWidget17setSortingEnabledEb(void* qthis, bool arg0);
   // proto:  QRect QListWidget::visualItemRect(const QListWidgetItem * item);
@@ -174,11 +174,11 @@ extern void _ZN11QListWidget21closePersistentEditorEP15QListWidgetItem(void* qth
   // proto:  bool QListWidget::isItemHidden(const QListWidgetItem * item);
 extern void _ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(void* qthis, void* arg0);
   // proto:  QListWidgetItem * QListWidget::itemAt(int x, int y);
-extern void demth_ZNK11QListWidget6itemAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK11QListWidget6itemAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QListWidget::addItem(const QString & label);
 extern void demth_ZN11QListWidget7addItemERK7QString(void* qthis, void* arg0);
   // proto:  void QListWidget::insertItems(int row, const QStringList & labels);
-extern void _ZN11QListWidget11insertItemsEiRK11QStringList(void* qthis, int arg0, void* arg1);
+extern void _ZN11QListWidget11insertItemsEiRK11QStringList(void* qthis, int32_t arg0, void* arg1);
   // proto:  QListWidgetItem * QListWidget::currentItem();
 extern void _ZNK11QListWidget11currentItemEv(void* qthis);
   // proto:  void QListWidget::setCurrentItem(QListWidgetItem * item);
@@ -205,13 +205,13 @@ func init() {
 // class sizeof(QListWidgetItem)=1
 type QListWidgetItem struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QListWidget)=1
 type QListWidget struct {
   /*qbase*/ QListView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _itemDoubleClicked QListWidget_itemDoubleClicked_signal;
 //  _itemClicked QListWidget_itemClicked_signal;
 //  _currentItemChanged QListWidget_currentItemChanged_signal;
@@ -321,7 +321,7 @@ func (this *QListWidgetItem) setSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QListWidgetItem11setSelectedEb
     // invoke: void setSelected(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QListWidgetItem11setSelectedEb(this.qclsinst, arg0)
   default:
@@ -902,7 +902,7 @@ func (this *QListWidgetItem) setHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QListWidgetItem9setHiddenEb
     // invoke: void setHidden(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN15QListWidgetItem9setHiddenEb(this.qclsinst, arg0)
   default:
@@ -1287,7 +1287,7 @@ func (this *QListWidget) setItemHidden(args ...interface{}) () {
     // invoke: void setItemHidden(const class QListWidgetItem *, _Bool)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QListWidget13setItemHiddenEPK15QListWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -1465,7 +1465,7 @@ func (this *QListWidget) setItemSelected(args ...interface{}) () {
     // invoke: void setItemSelected(const class QListWidgetItem *, _Bool)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QListWidget15setItemSelectedEPK15QListWidgetItemb(this.qclsinst, arg0, arg1)
   default:
@@ -1515,7 +1515,7 @@ func (this *QListWidget) setSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QListWidget17setSortingEnabledEb
     // invoke: void setSortingEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QListWidget17setSortingEnabledEb(this.qclsinst, arg0)
   default:

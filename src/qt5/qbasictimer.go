@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -44,7 +44,7 @@ extern void demth_ZNK11QBasicTimer8isActiveEv(void* qthis);
 extern void* dector_ZN11QBasicTimerC1Ev();
 extern void demth_ZN11QBasicTimerC1Ev(void* qthis);
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
-extern void _ZN11QBasicTimer5startEiP7QObject(void* qthis, int arg0, void* arg1);
+extern void _ZN11QBasicTimer5startEiP7QObject(void* qthis, int32_t arg0, void* arg1);
 */
 import "C"
 // } // <= ext block end
@@ -60,7 +60,7 @@ func init() {
 // class sizeof(QBasicTimer)=4
 type QBasicTimer struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QBasicTimer::~QBasicTimer();

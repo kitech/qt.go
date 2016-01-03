@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  qint64 QFileDevice::size();
 extern void _ZNK11QFileDevice4sizeEv(void* qthis);
   // proto:  bool QFileDevice::seek(qint64 offset);
-extern void _ZN11QFileDevice4seekEx(void* qthis, long long arg0);
+extern void _ZN11QFileDevice4seekEx(void* qthis, int64_t arg0);
   // proto:  bool QFileDevice::unmap(uchar * address);
 extern void _ZN11QFileDevice5unmapEPh(void* qthis, unsigned char* arg0);
   // proto:  void QFileDevice::close();
@@ -68,7 +68,7 @@ extern void _ZN11QFileDeviceC1ERKS_(void* qthis, void* arg0);
   // proto:  const QMetaObject * QFileDevice::metaObject();
 extern void _ZNK11QFileDevice10metaObjectEv(void* qthis);
   // proto:  bool QFileDevice::resize(qint64 sz);
-extern void _ZN11QFileDevice6resizeEx(void* qthis, long long arg0);
+extern void _ZN11QFileDevice6resizeEx(void* qthis, int64_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -84,7 +84,7 @@ func init() {
 // class sizeof(QFileDevice)=1
 type QFileDevice struct {
   /*qbase*/ QIODevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  qint64 QFileDevice::size();
@@ -144,7 +144,7 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice5unmapEPh
     // invoke: bool unmap(uchar *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
   default:

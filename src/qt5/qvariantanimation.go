@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qvariantanimation.h
 // dst-file: /src/core/qvariantanimation.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QVariantAnimation::setDuration(int msecs);
-extern void _ZN17QVariantAnimation11setDurationEi(void* qthis, int arg0);
+extern void _ZN17QVariantAnimation11setDurationEi(void* qthis, int32_t arg0);
   // proto:  void QVariantAnimation::setKeyValueAt(qreal step, const QVariant & value);
 extern void _ZN17QVariantAnimation13setKeyValueAtEdRK8QVariant(void* qthis, double arg0, void* arg1);
   // proto:  QVariant QVariantAnimation::endValue();
@@ -81,7 +81,7 @@ func init() {
 // class sizeof(QVariantAnimation)=1
 type QVariantAnimation struct {
   /*qbase*/ QAbstractAnimation;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QVariantAnimation_valueChanged_signal;
 }
 

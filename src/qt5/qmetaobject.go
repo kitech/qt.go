@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QMetaEnum::value(int index);
-extern void _ZNK9QMetaEnum5valueEi(void* qthis, int arg0);
+extern void _ZNK9QMetaEnum5valueEi(void* qthis, int32_t arg0);
   // proto:  const char * QMetaEnum::name();
 extern void _ZNK9QMetaEnum4nameEv(void* qthis);
   // proto:  bool QMetaEnum::isFlag();
@@ -41,20 +41,20 @@ extern void _ZNK9QMetaEnum6isFlagEv(void* qthis);
   // proto:  const char * QMetaEnum::scope();
 extern void _ZNK9QMetaEnum5scopeEv(void* qthis);
   // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
-extern void _ZNK9QMetaEnum10keyToValueEPKcPb(void* qthis, char* arg0, bool* arg1);
+extern void _ZNK9QMetaEnum10keyToValueEPKcPb(void* qthis, unsigned char* arg0, bool* arg1);
   // proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
 extern void demth_ZNK9QMetaEnum19enclosingMetaObjectEv(void* qthis);
   // proto:  QByteArray QMetaEnum::valueToKeys(int value);
-extern void _ZNK9QMetaEnum11valueToKeysEi(void* qthis, int arg0);
+extern void _ZNK9QMetaEnum11valueToKeysEi(void* qthis, int32_t arg0);
   // proto:  void QMetaEnum::QMetaEnum();
 extern void* dector_ZN9QMetaEnumC1Ev();
 extern void _ZN9QMetaEnumC1Ev(void* qthis);
   // proto:  int QMetaEnum::keysToValue(const char * keys, bool * ok);
-extern void _ZNK9QMetaEnum11keysToValueEPKcPb(void* qthis, char* arg0, bool* arg1);
+extern void _ZNK9QMetaEnum11keysToValueEPKcPb(void* qthis, unsigned char* arg0, bool* arg1);
   // proto:  const char * QMetaEnum::key(int index);
-extern void _ZNK9QMetaEnum3keyEi(void* qthis, int arg0);
+extern void _ZNK9QMetaEnum3keyEi(void* qthis, int32_t arg0);
   // proto:  const char * QMetaEnum::valueToKey(int value);
-extern void _ZNK9QMetaEnum10valueToKeyEi(void* qthis, int arg0);
+extern void _ZNK9QMetaEnum10valueToKeyEi(void* qthis, int32_t arg0);
   // proto:  int QMetaEnum::keyCount();
 extern void _ZNK9QMetaEnum8keyCountEv(void* qthis);
   // proto:  bool QMetaEnum::isValid();
@@ -79,12 +79,12 @@ extern void _ZNK11QMetaMethod8typeNameEv(void* qthis);
   // proto:  int QMetaMethod::attributes();
 extern void _ZNK11QMetaMethod10attributesEv(void* qthis);
   // proto:  void QMetaMethod::getParameterTypes(int * types);
-extern void _ZNK11QMetaMethod17getParameterTypesEPi(void* qthis, int* arg0);
+extern void _ZNK11QMetaMethod17getParameterTypesEPi(void* qthis, int32_t* arg0);
   // proto:  void QMetaMethod::QMetaMethod();
 extern void* dector_ZN11QMetaMethodC1Ev();
 extern void _ZN11QMetaMethodC1Ev(void* qthis);
   // proto:  int QMetaMethod::parameterType(int index);
-extern void _ZNK11QMetaMethod13parameterTypeEi(void* qthis, int arg0);
+extern void _ZNK11QMetaMethod13parameterTypeEi(void* qthis, int32_t arg0);
   // proto:  QByteArray QMetaMethod::name();
 extern void _ZNK11QMetaMethod4nameEv(void* qthis);
   // proto:  int QMetaMethod::returnType();
@@ -179,25 +179,25 @@ func init() {
 // class sizeof(QMetaEnum)=16
 type QMetaEnum struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMetaClassInfo)=16
 type QMetaClassInfo struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMetaMethod)=16
 type QMetaMethod struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QMetaProperty)=32
 type QMetaProperty struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QMetaEnum::value(int index);
@@ -298,7 +298,7 @@ func (this *QMetaEnum) keyToValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum10keyToValueEPKcPb
     // invoke: int keyToValue(const char *, _Bool *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
@@ -372,7 +372,7 @@ func (this *QMetaEnum) keysToValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum11keysToValueEPKcPb
     // invoke: int keysToValue(const char *, _Bool *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}

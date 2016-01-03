@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -73,7 +73,7 @@ func init() {
 // class sizeof(QAbstractTransition)=1
 type QAbstractTransition struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _targetStateChanged QAbstractTransition_targetStateChanged_signal;
 //  _targetStatesChanged QAbstractTransition_targetStatesChanged_signal;
 //  _triggered QAbstractTransition_triggered_signal;

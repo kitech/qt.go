@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qheaderview.h
 // dst-file: /src/widgets/qheaderview.go
 //
@@ -37,9 +37,9 @@ extern void _ZNK11QHeaderView18maximumSectionSizeEv(void* qthis);
   // proto:  QSize QHeaderView::sizeHint();
 extern void _ZNK11QHeaderView8sizeHintEv(void* qthis);
   // proto:  int QHeaderView::sectionPosition(int logicalIndex);
-extern void _ZNK11QHeaderView15sectionPositionEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView15sectionPositionEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::sectionSize(int logicalIndex);
-extern void _ZNK11QHeaderView11sectionSizeEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView11sectionSizeEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::QHeaderView(const QHeaderView & );
 extern void* dector_ZN11QHeaderViewC1ERKS_(void* arg0);
 extern void _ZN11QHeaderViewC1ERKS_(void* qthis, void* arg0);
@@ -56,27 +56,27 @@ extern void _ZNK11QHeaderView17sectionsClickableEv(void* qthis);
   // proto:  int QHeaderView::resizeContentsPrecision();
 extern void _ZNK11QHeaderView23resizeContentsPrecisionEv(void* qthis);
   // proto:  void QHeaderView::setOffsetToSectionPosition(int visualIndex);
-extern void _ZN11QHeaderView26setOffsetToSectionPositionEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView26setOffsetToSectionPositionEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::length();
 extern void _ZNK11QHeaderView6lengthEv(void* qthis);
   // proto:  void QHeaderView::hideSection(int logicalIndex);
-extern void demth_ZN11QHeaderView11hideSectionEi(void* qthis, int arg0);
+extern void demth_ZN11QHeaderView11hideSectionEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::sortIndicatorSection();
 extern void _ZNK11QHeaderView20sortIndicatorSectionEv(void* qthis);
   // proto:  bool QHeaderView::cascadingSectionResizes();
 extern void _ZNK11QHeaderView23cascadingSectionResizesEv(void* qthis);
   // proto:  void QHeaderView::setMinimumSectionSize(int size);
-extern void _ZN11QHeaderView21setMinimumSectionSizeEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView21setMinimumSectionSizeEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::visualIndexAt(int position);
-extern void _ZNK11QHeaderView13visualIndexAtEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView13visualIndexAtEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::setOffset(int offset);
-extern void _ZN11QHeaderView9setOffsetEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView9setOffsetEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::logicalIndexAt(const QPoint & pos);
 extern void demth_ZNK11QHeaderView14logicalIndexAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QHeaderView::~QHeaderView();
 extern void _ZN11QHeaderViewD0Ev(void* qthis);
   // proto:  int QHeaderView::sectionViewportPosition(int logicalIndex);
-extern void _ZNK11QHeaderView23sectionViewportPositionEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView23sectionViewportPositionEi(void* qthis, int32_t arg0);
   // proto:  bool QHeaderView::highlightSections();
 extern void _ZNK11QHeaderView17highlightSectionsEv(void* qthis);
   // proto:  int QHeaderView::offset();
@@ -86,7 +86,7 @@ extern void _ZN11QHeaderView21setSortIndicatorShownEb(void* qthis, bool arg0);
   // proto:  const QMetaObject * QHeaderView::metaObject();
 extern void _ZNK11QHeaderView10metaObjectEv(void* qthis);
   // proto:  void QHeaderView::showSection(int logicalIndex);
-extern void demth_ZN11QHeaderView11showSectionEi(void* qthis, int arg0);
+extern void demth_ZN11QHeaderView11showSectionEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::setVisible(bool v);
 extern void _ZN11QHeaderView10setVisibleEb(void* qthis, bool arg0);
   // proto:  int QHeaderView::hiddenSectionCount();
@@ -94,17 +94,17 @@ extern void _ZNK11QHeaderView18hiddenSectionCountEv(void* qthis);
   // proto:  void QHeaderView::setSectionsClickable(bool clickable);
 extern void _ZN11QHeaderView20setSectionsClickableEb(void* qthis, bool arg0);
   // proto:  void QHeaderView::setResizeContentsPrecision(int precision);
-extern void _ZN11QHeaderView26setResizeContentsPrecisionEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView26setResizeContentsPrecisionEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::defaultSectionSize();
 extern void _ZNK11QHeaderView18defaultSectionSizeEv(void* qthis);
   // proto:  void QHeaderView::setOffsetToLastSection();
 extern void _ZN11QHeaderView22setOffsetToLastSectionEv(void* qthis);
   // proto:  void QHeaderView::swapSections(int first, int second);
-extern void _ZN11QHeaderView12swapSectionsEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QHeaderView12swapSectionsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QHeaderView::count();
 extern void _ZNK11QHeaderView5countEv(void* qthis);
   // proto:  int QHeaderView::visualIndex(int logicalIndex);
-extern void _ZNK11QHeaderView11visualIndexEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView11visualIndexEi(void* qthis, int32_t arg0);
   // proto:  bool QHeaderView::sectionsMoved();
 extern void _ZNK11QHeaderView13sectionsMovedEv(void* qthis);
   // proto:  int QHeaderView::stretchSectionCount();
@@ -120,31 +120,31 @@ extern void _ZNK11QHeaderView18minimumSectionSizeEv(void* qthis);
   // proto:  void QHeaderView::setCascadingSectionResizes(bool enable);
 extern void _ZN11QHeaderView26setCascadingSectionResizesEb(void* qthis, bool arg0);
   // proto:  void QHeaderView::setDefaultSectionSize(int size);
-extern void _ZN11QHeaderView21setDefaultSectionSizeEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView21setDefaultSectionSizeEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::moveSection(int from, int to);
-extern void _ZN11QHeaderView11moveSectionEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QHeaderView11moveSectionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QHeaderView::stretchLastSection();
 extern void _ZNK11QHeaderView18stretchLastSectionEv(void* qthis);
   // proto:  int QHeaderView::sectionSizeHint(int logicalIndex);
-extern void _ZNK11QHeaderView15sectionSizeHintEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView15sectionSizeHintEi(void* qthis, int32_t arg0);
   // proto:  bool QHeaderView::sectionsMovable();
 extern void _ZNK11QHeaderView15sectionsMovableEv(void* qthis);
   // proto:  bool QHeaderView::isSectionHidden(int logicalIndex);
-extern void _ZNK11QHeaderView15isSectionHiddenEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView15isSectionHiddenEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::logicalIndexAt(int x, int y);
-extern void demth_ZNK11QHeaderView14logicalIndexAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK11QHeaderView14logicalIndexAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QHeaderView::logicalIndexAt(int position);
-extern void _ZNK11QHeaderView14logicalIndexAtEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView14logicalIndexAtEi(void* qthis, int32_t arg0);
   // proto:  int QHeaderView::logicalIndex(int visualIndex);
-extern void _ZNK11QHeaderView12logicalIndexEi(void* qthis, int arg0);
+extern void _ZNK11QHeaderView12logicalIndexEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::setMaximumSectionSize(int size);
-extern void _ZN11QHeaderView21setMaximumSectionSizeEi(void* qthis, int arg0);
+extern void _ZN11QHeaderView21setMaximumSectionSizeEi(void* qthis, int32_t arg0);
   // proto:  void QHeaderView::setHighlightSections(bool highlight);
 extern void _ZN11QHeaderView20setHighlightSectionsEb(void* qthis, bool arg0);
   // proto:  void QHeaderView::setSectionHidden(int logicalIndex, bool hide);
-extern void _ZN11QHeaderView16setSectionHiddenEib(void* qthis, int arg0, bool arg1);
+extern void _ZN11QHeaderView16setSectionHiddenEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QHeaderView::resizeSection(int logicalIndex, int size);
-extern void _ZN11QHeaderView13resizeSectionEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QHeaderView13resizeSectionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QHeaderView::restoreState(const QByteArray & state);
 extern void _ZN11QHeaderView12restoreStateERK10QByteArray(void* qthis, void* arg0);
   // proto:  void QHeaderView::setModel(QAbstractItemModel * model);
@@ -166,7 +166,7 @@ func init() {
 // class sizeof(QHeaderView)=1
 type QHeaderView struct {
   /*qbase*/ QAbstractItemView;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _sectionHandleDoubleClicked QHeaderView_sectionHandleDoubleClicked_signal;
 //  _sectionEntered QHeaderView_sectionEntered_signal;
 //  _sortIndicatorChanged QHeaderView_sortIndicatorChanged_signal;
@@ -284,7 +284,7 @@ func (this *QHeaderView) setStretchLastSection(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView21setStretchLastSectionEb
     // invoke: void setStretchLastSection(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView21setStretchLastSectionEb(this.qclsinst, arg0)
   default:
@@ -703,7 +703,7 @@ func (this *QHeaderView) setSortIndicatorShown(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView21setSortIndicatorShownEb
     // invoke: void setSortIndicatorShown(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView21setSortIndicatorShownEb(this.qclsinst, arg0)
   default:
@@ -769,7 +769,7 @@ func (this *QHeaderView) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -812,7 +812,7 @@ func (this *QHeaderView) setSectionsClickable(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView20setSectionsClickableEb
     // invoke: void setSectionsClickable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView20setSectionsClickableEb(this.qclsinst, arg0)
   default:
@@ -1027,7 +1027,7 @@ func (this *QHeaderView) setSectionsMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView18setSectionsMovableEb
     // invoke: void setSectionsMovable(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView18setSectionsMovableEb(this.qclsinst, arg0)
   default:
@@ -1090,7 +1090,7 @@ func (this *QHeaderView) setCascadingSectionResizes(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView26setCascadingSectionResizesEb
     // invoke: void setCascadingSectionResizes(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView26setCascadingSectionResizesEb(this.qclsinst, arg0)
   default:
@@ -1294,7 +1294,7 @@ func (this *QHeaderView) setHighlightSections(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QHeaderView20setHighlightSectionsEb
     // invoke: void setHighlightSections(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN11QHeaderView20setHighlightSectionsEb(this.qclsinst, arg0)
   default:
@@ -1320,7 +1320,7 @@ func (this *QHeaderView) setSectionHidden(args ...interface{}) () {
     // invoke: void setSectionHidden(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN11QHeaderView16setSectionHiddenEib(this.qclsinst, arg0, arg1)
   default:

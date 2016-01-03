@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QTemporaryDir)=1
 type QTemporaryDir struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QTemporaryDir::remove();
@@ -145,7 +145,7 @@ func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTemporaryDir13setAutoRemoveEb
     // invoke: void setAutoRemove(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QTemporaryDir13setAutoRemoveEb(this.qclsinst, arg0)
   default:

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -46,7 +46,7 @@ extern void _ZN11QProxyStyle12setBaseStyleEP6QStyle(void* qthis, void* arg0);
   // proto:  void QProxyStyle::polish(QPalette & pal);
 extern void _ZN11QProxyStyle6polishER8QPalette(void* qthis, void* arg0);
   // proto:  void QProxyStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-extern void _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int arg2, void* arg3);
+extern void _ZNK11QProxyStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3);
   // proto:  void QProxyStyle::~QProxyStyle();
 extern void _ZN11QProxyStyleD0Ev(void* qthis);
   // proto:  QStyle * QProxyStyle::baseStyle();
@@ -59,9 +59,9 @@ extern void _ZN11QProxyStyle6polishEP12QApplication(void* qthis, void* arg0);
   // proto:  void QProxyStyle::polish(QWidget * widget);
 extern void _ZN11QProxyStyle6polishEP7QWidget(void* qthis, void* arg0);
   // proto:  QRect QProxyStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-extern void _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int arg2, bool arg3, void* arg4);
+extern void _ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4);
   // proto:  QRect QProxyStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-extern void _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  const QMetaObject * QProxyStyle::metaObject();
 extern void _ZNK11QProxyStyle10metaObjectEv(void* qthis);
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
@@ -82,7 +82,7 @@ func init() {
 // class sizeof(QProxyStyle)=1
 type QProxyStyle struct {
   /*qbase*/ QCommonStyle;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QProxyStyle::unpolish(QWidget * widget);
@@ -296,7 +296,7 @@ func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int8_t(args[3].(int8))
+    var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}

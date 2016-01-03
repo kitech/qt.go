@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qstringmatcher.h
 // dst-file: /src/core/qstringmatcher.go
 //
@@ -39,7 +39,7 @@ extern void _ZN14QStringMatcherC1Ev(void* qthis);
 extern void* dector_ZN14QStringMatcherC1ERKS_(void* arg0);
 extern void _ZN14QStringMatcherC1ERKS_(void* qthis, void* arg0);
   // proto:  int QStringMatcher::indexIn(const QChar * str, int length, int from);
-extern void _ZNK14QStringMatcher7indexInEPK5QCharii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZNK14QStringMatcher7indexInEPK5QCharii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QStringMatcher::setPattern(const QString & pattern);
 extern void _ZN14QStringMatcher10setPatternERK7QString(void* qthis, void* arg0);
   // proto:  QString QStringMatcher::pattern();
@@ -47,7 +47,7 @@ extern void _ZNK14QStringMatcher7patternEv(void* qthis);
   // proto:  void QStringMatcher::~QStringMatcher();
 extern void _ZN14QStringMatcherD0Ev(void* qthis);
   // proto:  int QStringMatcher::indexIn(const QString & str, int from);
-extern void _ZNK14QStringMatcher7indexInERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZNK14QStringMatcher7indexInERK7QStringi(void* qthis, void* arg0, int32_t arg1);
 */
 import "C"
 // } // <= ext block end
@@ -63,7 +63,7 @@ func init() {
 // class sizeof(QStringMatcher)=1048
 type QStringMatcher struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStringMatcher::QStringMatcher();

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qsize.h
 // dst-file: /src/core/qsize.go
 //
@@ -33,35 +33,35 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QSize QSize::boundedTo(const QSize & );
-extern void _ZNK5QSize9boundedToERKS_(void* qthis, void* arg0);
+extern void demth_ZNK5QSize9boundedToERKS_(void* qthis, void* arg0);
   // proto:  bool QSize::isValid();
-extern void _ZNK5QSize7isValidEv(void* qthis);
+extern void demth_ZNK5QSize7isValidEv(void* qthis);
   // proto:  bool QSize::isNull();
-extern void _ZNK5QSize6isNullEv(void* qthis);
+extern void demth_ZNK5QSize6isNullEv(void* qthis);
   // proto:  void QSize::QSize();
 extern void* dector_ZN5QSizeC1Ev();
 extern void _ZN5QSizeC1Ev(void* qthis);
   // proto:  QSize QSize::expandedTo(const QSize & );
-extern void _ZNK5QSize10expandedToERKS_(void* qthis, void* arg0);
+extern void demth_ZNK5QSize10expandedToERKS_(void* qthis, void* arg0);
   // proto:  int QSize::height();
-extern void _ZNK5QSize6heightEv(void* qthis);
+extern void demth_ZNK5QSize6heightEv(void* qthis);
   // proto:  int & QSize::rheight();
 extern void demth_ZN5QSize7rheightEv(void* qthis);
   // proto:  void QSize::QSize(int w, int h);
-extern void* dector_ZN5QSizeC1Eii(int arg0, int arg1);
-extern void _ZN5QSizeC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN5QSizeC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN5QSizeC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QSize::width();
-extern void _ZNK5QSize5widthEv(void* qthis);
+extern void demth_ZNK5QSize5widthEv(void* qthis);
   // proto:  QSize QSize::transposed();
-extern void _ZNK5QSize10transposedEv(void* qthis);
+extern void demth_ZNK5QSize10transposedEv(void* qthis);
   // proto:  int & QSize::rwidth();
 extern void demth_ZN5QSize6rwidthEv(void* qthis);
   // proto:  void QSize::setHeight(int h);
-extern void demth_ZN5QSize9setHeightEi(void* qthis, int arg0);
+extern void demth_ZN5QSize9setHeightEi(void* qthis, int32_t arg0);
   // proto:  bool QSize::isEmpty();
-extern void _ZNK5QSize7isEmptyEv(void* qthis);
+extern void demth_ZNK5QSize7isEmptyEv(void* qthis);
   // proto:  void QSize::setWidth(int w);
-extern void demth_ZN5QSize8setWidthEi(void* qthis, int arg0);
+extern void demth_ZN5QSize8setWidthEi(void* qthis, int32_t arg0);
   // proto:  void QSize::transpose();
 extern void _ZN5QSize9transposeEv(void* qthis);
   // proto:  qreal & QSizeF::rheight();
@@ -69,35 +69,35 @@ extern void demth_ZN6QSizeF7rheightEv(void* qthis);
   // proto:  qreal & QSizeF::rwidth();
 extern void demth_ZN6QSizeF6rwidthEv(void* qthis);
   // proto:  QSizeF QSizeF::transposed();
-extern void _ZNK6QSizeF10transposedEv(void* qthis);
+extern void demth_ZNK6QSizeF10transposedEv(void* qthis);
   // proto:  bool QSizeF::isValid();
-extern void _ZNK6QSizeF7isValidEv(void* qthis);
+extern void demth_ZNK6QSizeF7isValidEv(void* qthis);
   // proto:  void QSizeF::setHeight(qreal h);
 extern void demth_ZN6QSizeF9setHeightEd(void* qthis, double arg0);
   // proto:  void QSizeF::QSizeF();
 extern void* dector_ZN6QSizeFC1Ev();
 extern void _ZN6QSizeFC1Ev(void* qthis);
   // proto:  qreal QSizeF::width();
-extern void _ZNK6QSizeF5widthEv(void* qthis);
+extern void demth_ZNK6QSizeF5widthEv(void* qthis);
   // proto:  bool QSizeF::isNull();
 extern void demth_ZNK6QSizeF6isNullEv(void* qthis);
   // proto:  QSizeF QSizeF::boundedTo(const QSizeF & );
-extern void _ZNK6QSizeF9boundedToERKS_(void* qthis, void* arg0);
+extern void demth_ZNK6QSizeF9boundedToERKS_(void* qthis, void* arg0);
   // proto:  qreal QSizeF::height();
-extern void _ZNK6QSizeF6heightEv(void* qthis);
+extern void demth_ZNK6QSizeF6heightEv(void* qthis);
   // proto:  void QSizeF::transpose();
 extern void _ZN6QSizeF9transposeEv(void* qthis);
   // proto:  void QSizeF::QSizeF(const QSize & sz);
 extern void* dector_ZN6QSizeFC1ERK5QSize(void* arg0);
 extern void _ZN6QSizeFC1ERK5QSize(void* qthis, void* arg0);
   // proto:  QSizeF QSizeF::expandedTo(const QSizeF & );
-extern void _ZNK6QSizeF10expandedToERKS_(void* qthis, void* arg0);
+extern void demth_ZNK6QSizeF10expandedToERKS_(void* qthis, void* arg0);
   // proto:  bool QSizeF::isEmpty();
-extern void _ZNK6QSizeF7isEmptyEv(void* qthis);
+extern void demth_ZNK6QSizeF7isEmptyEv(void* qthis);
   // proto:  void QSizeF::setWidth(qreal w);
 extern void demth_ZN6QSizeF8setWidthEd(void* qthis, double arg0);
   // proto:  QSize QSizeF::toSize();
-extern void _ZNK6QSizeF6toSizeEv(void* qthis);
+extern void demth_ZNK6QSizeF6toSizeEv(void* qthis);
   // proto:  void QSizeF::QSizeF(qreal w, qreal h);
 extern void* dector_ZN6QSizeFC1Edd(double arg0, double arg1);
 extern void _ZN6QSizeFC1Edd(void* qthis, double arg0, double arg1);
@@ -116,13 +116,13 @@ func init() {
 // class sizeof(QSize)=8
 type QSize struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSizeF)=16
 type QSizeF struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QSize QSize::boundedTo(const QSize & );
@@ -141,7 +141,7 @@ func (this *QSize) boundedTo(args ...interface{}) () {
     // invoke: QSize boundedTo(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QSize9boundedToERKS_(this.qclsinst, arg0)
+    C.demth_ZNK5QSize9boundedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "boundedTo", args)
   }
@@ -161,7 +161,7 @@ func (this *QSize) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize7isValidEv
     // invoke: bool isValid()
-    C._ZNK5QSize7isValidEv(this.qclsinst)
+    C.demth_ZNK5QSize7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isValid", args)
   }
@@ -181,7 +181,7 @@ func (this *QSize) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize6isNullEv
     // invoke: bool isNull()
-    C._ZNK5QSize6isNullEv(this.qclsinst)
+    C.demth_ZNK5QSize6isNullEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isNull", args)
   }
@@ -209,7 +209,7 @@ func (this *QSize) expandedTo(args ...interface{}) () {
     // invoke: QSize expandedTo(const class QSize &)
     var arg0 = args[0].(QSize).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK5QSize10expandedToERKS_(this.qclsinst, arg0)
+    C.demth_ZNK5QSize10expandedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSize", "expandedTo", args)
   }
@@ -229,7 +229,7 @@ func (this *QSize) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize6heightEv
     // invoke: int height()
-    C._ZNK5QSize6heightEv(this.qclsinst)
+    C.demth_ZNK5QSize6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "height", args)
   }
@@ -269,7 +269,7 @@ func (this *QSize) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize5widthEv
     // invoke: int width()
-    C._ZNK5QSize5widthEv(this.qclsinst)
+    C.demth_ZNK5QSize5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "width", args)
   }
@@ -289,7 +289,7 @@ func (this *QSize) transposed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize10transposedEv
     // invoke: QSize transposed()
-    C._ZNK5QSize10transposedEv(this.qclsinst)
+    C.demth_ZNK5QSize10transposedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "transposed", args)
   }
@@ -352,7 +352,7 @@ func (this *QSize) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QSize7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK5QSize7isEmptyEv(this.qclsinst)
+    C.demth_ZNK5QSize7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSize", "isEmpty", args)
   }
@@ -455,7 +455,7 @@ func (this *QSizeF) transposed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF10transposedEv
     // invoke: QSizeF transposed()
-    C._ZNK6QSizeF10transposedEv(this.qclsinst)
+    C.demth_ZNK6QSizeF10transposedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "transposed", args)
   }
@@ -475,7 +475,7 @@ func (this *QSizeF) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF7isValidEv
     // invoke: bool isValid()
-    C._ZNK6QSizeF7isValidEv(this.qclsinst)
+    C.demth_ZNK6QSizeF7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "isValid", args)
   }
@@ -523,7 +523,7 @@ func (this *QSizeF) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF5widthEv
     // invoke: qreal width()
-    C._ZNK6QSizeF5widthEv(this.qclsinst)
+    C.demth_ZNK6QSizeF5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "width", args)
   }
@@ -566,7 +566,7 @@ func (this *QSizeF) boundedTo(args ...interface{}) () {
     // invoke: QSizeF boundedTo(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QSizeF9boundedToERKS_(this.qclsinst, arg0)
+    C.demth_ZNK6QSizeF9boundedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "boundedTo", args)
   }
@@ -586,7 +586,7 @@ func (this *QSizeF) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF6heightEv
     // invoke: qreal height()
-    C._ZNK6QSizeF6heightEv(this.qclsinst)
+    C.demth_ZNK6QSizeF6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "height", args)
   }
@@ -629,7 +629,7 @@ func (this *QSizeF) expandedTo(args ...interface{}) () {
     // invoke: QSizeF expandedTo(const class QSizeF &)
     var arg0 = args[0].(QSizeF).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK6QSizeF10expandedToERKS_(this.qclsinst, arg0)
+    C.demth_ZNK6QSizeF10expandedToERKS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QSizeF", "expandedTo", args)
   }
@@ -649,7 +649,7 @@ func (this *QSizeF) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF7isEmptyEv
     // invoke: bool isEmpty()
-    C._ZNK6QSizeF7isEmptyEv(this.qclsinst)
+    C.demth_ZNK6QSizeF7isEmptyEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "isEmpty", args)
   }
@@ -692,7 +692,7 @@ func (this *QSizeF) toSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QSizeF6toSizeEv
     // invoke: QSize toSize()
-    C._ZNK6QSizeF6toSizeEv(this.qclsinst)
+    C.demth_ZNK6QSizeF6toSizeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSizeF", "toSize", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.go
 //
@@ -43,13 +43,13 @@ extern void _ZNK7QLocale9zeroDigitEv(void* qthis);
   // proto:  QString QLocale::name();
 extern void _ZNK7QLocale4nameEv(void* qthis);
   // proto:  QString QLocale::toCurrencyString(qlonglong , const QString & symbol);
-extern void _ZNK7QLocale16toCurrencyStringExRK7QString(void* qthis, long long arg0, void* arg1);
+extern void _ZNK7QLocale16toCurrencyStringExRK7QString(void* qthis, int64_t arg0, void* arg1);
   // proto:  float QLocale::toFloat(const QString & s, bool * ok);
 extern void _ZNK7QLocale7toFloatERK7QStringPb(void* qthis, void* arg0, bool* arg1);
   // proto: static QLocale QLocale::c();
-extern void _ZN7QLocale1cEv();
+extern void demth_ZN7QLocale1cEv();
   // proto:  QString QLocale::toCurrencyString(uint , const QString & symbol);
-extern void demth_ZNK7QLocale16toCurrencyStringEjRK7QString(void* qthis, unsigned int arg0, void* arg1);
+extern void demth_ZNK7QLocale16toCurrencyStringEjRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  QString QLocale::createSeparatedList(const QStringList & strl);
 extern void _ZNK7QLocale19createSeparatedListERK11QStringList(void* qthis, void* arg0);
   // proto:  uint QLocale::toUInt(const QString & s, bool * ok);
@@ -63,19 +63,19 @@ extern void _ZNK7QLocale10toLongLongERK7QStringPb(void* qthis, void* arg0, bool*
   // proto:  short QLocale::toShort(const QString & s, bool * ok);
 extern void _ZNK7QLocale7toShortERK7QStringPb(void* qthis, void* arg0, bool* arg1);
   // proto:  QString QLocale::toString(float i, char f, int prec);
-extern void demth_ZNK7QLocale8toStringEfci(void* qthis, float arg0, char arg1, int arg2);
+extern void demth_ZNK7QLocale8toStringEfci(void* qthis, float arg0, unsigned char arg1, int32_t arg2);
   // proto:  QString QLocale::toString(const QDateTime & dateTime, const QString & format);
 extern void _ZNK7QLocale8toStringERK9QDateTimeRK7QString(void* qthis, void* arg0, void* arg1);
   // proto:  QDateTime QLocale::toDateTime(const QString & string, const QString & format);
 extern void _ZNK7QLocale10toDateTimeERK7QStringS2_(void* qthis, void* arg0, void* arg1);
   // proto:  QString QLocale::toCurrencyString(short , const QString & symbol);
-extern void demth_ZNK7QLocale16toCurrencyStringEsRK7QString(void* qthis, short arg0, void* arg1);
+extern void demth_ZNK7QLocale16toCurrencyStringEsRK7QString(void* qthis, int16_t arg0, void* arg1);
   // proto:  QChar QLocale::groupSeparator();
 extern void _ZNK7QLocale14groupSeparatorEv(void* qthis);
   // proto:  QString QLocale::toCurrencyString(double , const QString & symbol);
 extern void _ZNK7QLocale16toCurrencyStringEdRK7QString(void* qthis, double arg0, void* arg1);
   // proto:  QString QLocale::toCurrencyString(qulonglong , const QString & symbol);
-extern void _ZNK7QLocale16toCurrencyStringEyRK7QString(void* qthis, unsigned long long arg0, void* arg1);
+extern void _ZNK7QLocale16toCurrencyStringEyRK7QString(void* qthis, int64_t arg0, void* arg1);
   // proto:  void QLocale::QLocale(const QString & name);
 extern void* dector_ZN7QLocaleC1ERK7QString(void* arg0);
 extern void _ZN7QLocaleC1ERK7QString(void* qthis, void* arg0);
@@ -101,7 +101,7 @@ extern void _ZNK7QLocale7percentEv(void* qthis);
   // proto:  qulonglong QLocale::toULongLong(const QString & s, bool * ok);
 extern void _ZNK7QLocale11toULongLongERK7QStringPb(void* qthis, void* arg0, bool* arg1);
   // proto:  QString QLocale::toString(double i, char f, int prec);
-extern void _ZNK7QLocale8toStringEdci(void* qthis, double arg0, char arg1, int arg2);
+extern void _ZNK7QLocale8toStringEdci(void* qthis, double arg0, unsigned char arg1, int32_t arg2);
   // proto:  QStringList QLocale::uiLanguages();
 extern void _ZNK7QLocale11uiLanguagesEv(void* qthis);
   // proto:  QString QLocale::bcp47Name();
@@ -111,7 +111,7 @@ extern void _ZNK7QLocale6toTimeERK7QStringS2_(void* qthis, void* arg0, void* arg
   // proto:  ushort QLocale::toUShort(const QString & s, bool * ok);
 extern void _ZNK7QLocale8toUShortERK7QStringPb(void* qthis, void* arg0, bool* arg1);
   // proto:  QString QLocale::toCurrencyString(ushort , const QString & symbol);
-extern void demth_ZNK7QLocale16toCurrencyStringEtRK7QString(void* qthis, unsigned short arg0, void* arg1);
+extern void demth_ZNK7QLocale16toCurrencyStringEtRK7QString(void* qthis, int16_t arg0, void* arg1);
   // proto:  double QLocale::toDouble(const QString & s, bool * ok);
 extern void _ZNK7QLocale8toDoubleERK7QStringPb(void* qthis, void* arg0, bool* arg1);
   // proto: static QLocale QLocale::system();
@@ -123,21 +123,21 @@ extern void _ZNK7QLocale11exponentialEv(void* qthis);
   // proto:  QString QLocale::toCurrencyString(float , const QString & symbol);
 extern void demth_ZNK7QLocale16toCurrencyStringEfRK7QString(void* qthis, float arg0, void* arg1);
   // proto:  QString QLocale::toString(int i);
-extern void demth_ZNK7QLocale8toStringEi(void* qthis, int arg0);
+extern void demth_ZNK7QLocale8toStringEi(void* qthis, int32_t arg0);
   // proto:  QString QLocale::toString(uint i);
-extern void demth_ZNK7QLocale8toStringEj(void* qthis, unsigned int arg0);
+extern void demth_ZNK7QLocale8toStringEj(void* qthis, int32_t arg0);
   // proto:  QString QLocale::toString(qlonglong i);
-extern void _ZNK7QLocale8toStringEx(void* qthis, long long arg0);
+extern void _ZNK7QLocale8toStringEx(void* qthis, int64_t arg0);
   // proto:  QString QLocale::toString(qulonglong i);
-extern void _ZNK7QLocale8toStringEy(void* qthis, unsigned long long arg0);
+extern void _ZNK7QLocale8toStringEy(void* qthis, int64_t arg0);
   // proto:  QString QLocale::toString(ushort i);
-extern void demth_ZNK7QLocale8toStringEt(void* qthis, unsigned short arg0);
+extern void demth_ZNK7QLocale8toStringEt(void* qthis, int16_t arg0);
   // proto:  QString QLocale::amText();
 extern void _ZNK7QLocale6amTextEv(void* qthis);
   // proto:  QString QLocale::toCurrencyString(int , const QString & symbol);
-extern void demth_ZNK7QLocale16toCurrencyStringEiRK7QString(void* qthis, int arg0, void* arg1);
+extern void demth_ZNK7QLocale16toCurrencyStringEiRK7QString(void* qthis, int32_t arg0, void* arg1);
   // proto:  QString QLocale::toString(short i);
-extern void demth_ZNK7QLocale8toStringEs(void* qthis, short arg0);
+extern void demth_ZNK7QLocale8toStringEs(void* qthis, int16_t arg0);
   // proto:  void QLocale::QLocale();
 extern void* dector_ZN7QLocaleC1Ev();
 extern void _ZN7QLocaleC1Ev(void* qthis);
@@ -158,7 +158,7 @@ func init() {
 // class sizeof(QLocale)=1
 type QLocale struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QString QLocale::pmText();
@@ -636,7 +636,7 @@ func (this *QLocale) toString(args ...interface{}) () {
     // invoke: QString toString(float, char, int)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.char(args[1].(byte))
+    var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
@@ -670,7 +670,7 @@ func (this *QLocale) toString(args ...interface{}) () {
     // invoke: QString toString(double, char, int)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    var arg1 = C.char(args[1].(byte))
+    var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}

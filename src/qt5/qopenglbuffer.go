@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglbuffer.h
 // dst-file: /src/gui/qopenglbuffer.go
 //
@@ -33,13 +33,13 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);
-extern void _ZN13QOpenGLBuffer4readEiPvi(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN13QOpenGLBuffer4readEiPvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  bool QOpenGLBuffer::bind();
 extern void _ZN13QOpenGLBuffer4bindEv(void* qthis);
   // proto:  void QOpenGLBuffer::destroy();
 extern void _ZN13QOpenGLBuffer7destroyEv(void* qthis);
   // proto:  void QOpenGLBuffer::allocate(int count);
-extern void demth_ZN13QOpenGLBuffer8allocateEi(void* qthis, int arg0);
+extern void demth_ZN13QOpenGLBuffer8allocateEi(void* qthis, int32_t arg0);
   // proto:  bool QOpenGLBuffer::unmap();
 extern void _ZN13QOpenGLBuffer5unmapEv(void* qthis);
   // proto:  void QOpenGLBuffer::QOpenGLBuffer(const QOpenGLBuffer & other);
@@ -48,7 +48,7 @@ extern void _ZN13QOpenGLBufferC1ERKS_(void* qthis, void* arg0);
   // proto:  int QOpenGLBuffer::size();
 extern void _ZNK13QOpenGLBuffer4sizeEv(void* qthis);
   // proto:  void QOpenGLBuffer::allocate(const void * data, int count);
-extern void _ZN13QOpenGLBuffer8allocateEPKvi(void* qthis, void* arg0, int arg1);
+extern void _ZN13QOpenGLBuffer8allocateEPKvi(void* qthis, void* arg0, int32_t arg1);
   // proto:  GLuint QOpenGLBuffer::bufferId();
 extern void _ZNK13QOpenGLBuffer8bufferIdEv(void* qthis);
   // proto:  void QOpenGLBuffer::QOpenGLBuffer();
@@ -63,7 +63,7 @@ extern void _ZN13QOpenGLBuffer7releaseEv(void* qthis);
   // proto:  bool QOpenGLBuffer::isCreated();
 extern void _ZNK13QOpenGLBuffer9isCreatedEv(void* qthis);
   // proto:  void QOpenGLBuffer::write(int offset, const void * data, int count);
-extern void _ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN13QOpenGLBuffer5writeEiPKvi(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QOpenGLBuffer)=8
 type QOpenGLBuffer struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QOpenGLBuffer::read(int offset, void * data, int count);

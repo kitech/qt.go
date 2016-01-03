@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -45,9 +45,9 @@ extern void _ZN6QStyle6polishER8QPalette(void* qthis, void* arg0);
 extern void* dector_ZN6QStyleC1Ev();
 extern void _ZN6QStyleC1Ev(void* qthis);
   // proto:  QRect QStyle::itemPixmapRect(const QRect & r, int flags, const QPixmap & pixmap);
-extern void _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int arg1, void* arg2);
+extern void _ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(void* qthis, void* arg0, int32_t arg1, void* arg2);
   // proto:  QRect QStyle::itemTextRect(const QFontMetrics & fm, const QRect & r, int flags, bool enabled, const QString & text);
-extern void _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int arg2, bool arg3, void* arg4);
+extern void _ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(void* qthis, void* arg0, void* arg1, int32_t arg2, bool arg3, void* arg4);
   // proto:  const QStyle * QStyle::proxy();
 extern void _ZNK6QStyle5proxyEv(void* qthis);
   // proto:  QPalette QStyle::standardPalette();
@@ -57,13 +57,13 @@ extern void _ZNK6QStyle10metaObjectEv(void* qthis);
   // proto:  void QStyle::polish(QApplication * );
 extern void _ZN6QStyle6polishEP12QApplication(void* qthis, void* arg0);
   // proto:  void QStyle::drawItemPixmap(QPainter * painter, const QRect & rect, int alignment, const QPixmap & pixmap);
-extern void _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int arg2, void* arg3);
+extern void _ZNK6QStyle14drawItemPixmapEP8QPainterRK5QRectiRK7QPixmap(void* qthis, void* arg0, void* arg1, int32_t arg2, void* arg3);
   // proto:  void QStyle::polish(QWidget * );
 extern void _ZN6QStyle6polishEP7QWidget(void* qthis, void* arg0);
   // proto: static int QStyle::sliderPositionFromValue(int min, int max, int val, int space, bool upsideDown);
-extern void _ZN6QStyle23sliderPositionFromValueEiiiib(int arg0, int arg1, int arg2, int arg3, bool arg4);
+extern void _ZN6QStyle23sliderPositionFromValueEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4);
   // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
-extern void _ZN6QStyle23sliderValueFromPositionEiiiib(int arg0, int arg1, int arg2, int arg3, bool arg4);
+extern void _ZN6QStyle23sliderValueFromPositionEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4);
   // proto:  void QStyle::unpolish(QApplication * );
 extern void _ZN6QStyle8unpolishEP12QApplication(void* qthis, void* arg0);
 */
@@ -81,7 +81,7 @@ func init() {
 // class sizeof(QStyle)=1
 type QStyle struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QStyle::QStyle(const QStyle & );
@@ -229,7 +229,7 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    var arg3 = C.int8_t(args[3].(int8))
+    var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}

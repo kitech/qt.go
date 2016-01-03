@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static void QCoreApplication::sendPostedEvents(QObject * receiver, int event_type);
-extern void _ZN16QCoreApplication16sendPostedEventsEP7QObjecti(void* arg0, int arg1);
+extern void _ZN16QCoreApplication16sendPostedEventsEP7QObjecti(void* arg0, int32_t arg1);
   // proto: static void QCoreApplication::addLibraryPath(const QString & );
 extern void _ZN16QCoreApplication14addLibraryPathERK7QString(void* arg0);
   // proto: static qint64 QCoreApplication::applicationPid();
@@ -45,7 +45,7 @@ extern void _ZN16QCoreApplication16organizationNameEv();
   // proto:  void QCoreApplication::installNativeEventFilter(QAbstractNativeEventFilter * filterObj);
 extern void _ZN16QCoreApplication24installNativeEventFilterEP26QAbstractNativeEventFilter(void* qthis, void* arg0);
   // proto: static QCoreApplication * QCoreApplication::instance();
-extern void _ZN16QCoreApplication8instanceEv();
+extern void demth_ZN16QCoreApplication8instanceEv();
   // proto: static bool QCoreApplication::isSetuidAllowed();
 extern void _ZN16QCoreApplication15isSetuidAllowedEv();
   // proto: static QString QCoreApplication::applicationName();
@@ -56,13 +56,13 @@ extern void _ZN16QCoreApplicationC1ERKS_(void* qthis, void* arg0);
   // proto: static void QCoreApplication::setSetuidAllowed(bool allow);
 extern void _ZN16QCoreApplication16setSetuidAllowedEb(bool arg0);
   // proto: static void QCoreApplication::postEvent(QObject * receiver, QEvent * event, int priority);
-extern void _ZN16QCoreApplication9postEventEP7QObjectP6QEventi(void* arg0, void* arg1, int arg2);
+extern void _ZN16QCoreApplication9postEventEP7QObjectP6QEventi(void* arg0, void* arg1, int32_t arg2);
   // proto: static QStringList QCoreApplication::libraryPaths();
 extern void _ZN16QCoreApplication12libraryPathsEv();
   // proto: static void QCoreApplication::removeLibraryPath(const QString & );
 extern void _ZN16QCoreApplication17removeLibraryPathERK7QString(void* arg0);
   // proto: static QString QCoreApplication::translate(const char * context, const char * key, const char * disambiguation, int n);
-extern void _ZN16QCoreApplication9translateEPKcS1_S1_i(char* arg0, char* arg1, char* arg2, int arg3);
+extern void _ZN16QCoreApplication9translateEPKcS1_S1_i(unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3);
   // proto: static QString QCoreApplication::applicationFilePath();
 extern void _ZN16QCoreApplication19applicationFilePathEv();
   // proto: static bool QCoreApplication::removeTranslator(QTranslator * messageFile);
@@ -70,7 +70,7 @@ extern void _ZN16QCoreApplication16removeTranslatorEP11QTranslator(void* arg0);
   // proto: static void QCoreApplication::setOrganizationName(const QString & orgName);
 extern void _ZN16QCoreApplication19setOrganizationNameERK7QString(void* arg0);
   // proto: static void QCoreApplication::exit(int retcode);
-extern void _ZN16QCoreApplication4exitEi(int arg0);
+extern void _ZN16QCoreApplication4exitEi(int32_t arg0);
   // proto: static QString QCoreApplication::applicationVersion();
 extern void _ZN16QCoreApplication18applicationVersionEv();
   // proto: static void QCoreApplication::quit();
@@ -112,12 +112,12 @@ extern void _ZN16QCoreApplication6notifyEP7QObjectP6QEvent(void* qthis, void* ar
   // proto: static bool QCoreApplication::isQuitLockEnabled();
 extern void _ZN16QCoreApplication17isQuitLockEnabledEv();
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
-extern void _ZN16QCoreApplication18removePostedEventsEP7QObjecti(void* arg0, int arg1);
+extern void _ZN16QCoreApplication18removePostedEventsEP7QObjecti(void* arg0, int32_t arg1);
   // proto:  const QMetaObject * QCoreApplication::metaObject();
 extern void _ZNK16QCoreApplication10metaObjectEv(void* qthis);
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-extern void* dector_ZN16QCoreApplicationC1ERiPPci(int* arg0, char* arg1, int arg2);
-extern void _ZN16QCoreApplicationC1ERiPPci(void* qthis, int* arg0, char* arg1, int arg2);
+extern void* dector_ZN16QCoreApplicationC1ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2);
+extern void _ZN16QCoreApplicationC1ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2);
   // proto: static void QCoreApplication::setApplicationVersion(const QString & version);
 extern void _ZN16QCoreApplication21setApplicationVersionERK7QString(void* arg0);
   // proto: static void QCoreApplication::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
@@ -137,7 +137,7 @@ func init() {
 // class sizeof(QCoreApplication)=1
 type QCoreApplication struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _aboutToQuit QCoreApplication_aboutToQuit_signal;
 //  _applicationVersionChanged QCoreApplication_applicationVersionChanged_signal;
 //  _organizationDomainChanged QCoreApplication_organizationDomainChanged_signal;

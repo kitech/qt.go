@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qundogroup.h
 // dst-file: /src/widgets/qundogroup.go
 //
@@ -85,7 +85,7 @@ func init() {
 // class sizeof(QUndoGroup)=1
 type QUndoGroup struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _redoTextChanged QUndoGroup_redoTextChanged_signal;
 //  _cleanChanged QUndoGroup_cleanChanged_signal;
 //  _canUndoChanged QUndoGroup_canUndoChanged_signal;

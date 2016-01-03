@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qkeysequence.h
 // dst-file: /src/gui/qkeysequence.go
 //
@@ -40,8 +40,8 @@ extern void _ZNK12QKeySequence7isEmptyEv(void* qthis);
 extern void* dector_ZN12QKeySequenceC1ERKS_(void* arg0);
 extern void _ZN12QKeySequenceC1ERKS_(void* qthis, void* arg0);
   // proto:  void QKeySequence::QKeySequence(int k1, int k2, int k3, int k4);
-extern void* dector_ZN12QKeySequenceC1Eiiii(int arg0, int arg1, int arg2, int arg3);
-extern void _ZN12QKeySequenceC1Eiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void* dector_ZN12QKeySequenceC1Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
+extern void _ZN12QKeySequenceC1Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  int QKeySequence::count();
 extern void _ZNK12QKeySequence5countEv(void* qthis);
   // proto: static QKeySequence QKeySequence::mnemonic(const QString & text);
@@ -68,7 +68,7 @@ func init() {
 // class sizeof(QKeySequence)=8
 type QKeySequence struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QKeySequence::isDetached();

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -37,7 +37,7 @@ extern void _ZNK9QDirModel12iconProviderEv(void* qthis);
   // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
 extern void _ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0);
   // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-extern void _ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int arg1);
+extern void _ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1);
   // proto:  QStringList QDirModel::nameFilters();
 extern void _ZNK9QDirModel11nameFiltersEv(void* qthis);
   // proto:  bool QDirModel::isReadOnly();
@@ -63,14 +63,14 @@ extern void _ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg
   // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
 extern void _ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0);
   // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  void QDirModel::QDirModel(QObject * parent);
 extern void* dector_ZN9QDirModelC1EP7QObject(void* arg0);
 extern void _ZN9QDirModelC1EP7QObject(void* qthis, void* arg0);
   // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-extern void _ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int arg2);
+extern void _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2);
   // proto:  void QDirModel::setLazyChildCount(bool enable);
 extern void _ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0);
   // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
@@ -113,7 +113,7 @@ func init() {
 // class sizeof(QDirModel)=1
 type QDirModel struct {
   /*qbase*/ QAbstractItemModel;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QFileIconProvider * QDirModel::iconProvider();
@@ -526,7 +526,7 @@ func (this *QDirModel) setLazyChildCount(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel17setLazyChildCountEb
     // invoke: void setLazyChildCount(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
   default:
@@ -713,7 +713,7 @@ func (this *QDirModel) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QDirModel11setReadOnlyEb(this.qclsinst, arg0)
   default:
@@ -736,7 +736,7 @@ func (this *QDirModel) setResolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QDirModel18setResolveSymlinksEb
     // invoke: void setResolveSymlinks(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
   default:

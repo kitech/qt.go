@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.go
 //
@@ -33,25 +33,25 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);
-extern void _ZN11QGridLayout19setRowMinimumHeightEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QGridLayout19setRowMinimumHeightEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QLayoutItem * QGridLayout::takeAt(int index);
-extern void _ZN11QGridLayout6takeAtEi(void* qthis, int arg0);
+extern void _ZN11QGridLayout6takeAtEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::getItemPosition(int idx, int * row, int * column, int * rowSpan, int * columnSpan);
-extern void _ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_(void* qthis, int arg0, int* arg1, int* arg2, int* arg3, int* arg4);
+extern void _ZNK11QGridLayout15getItemPositionEiPiS0_S0_S0_(void* qthis, int32_t arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3, int32_t* arg4);
   // proto:  int QGridLayout::minimumHeightForWidth(int );
-extern void _ZNK11QGridLayout21minimumHeightForWidthEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout21minimumHeightForWidthEi(void* qthis, int32_t arg0);
   // proto:  int QGridLayout::rowMinimumHeight(int row);
-extern void _ZNK11QGridLayout16rowMinimumHeightEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::invalidate();
 extern void _ZN11QGridLayout10invalidateEv(void* qthis);
   // proto:  int QGridLayout::count();
 extern void _ZNK11QGridLayout5countEv(void* qthis);
   // proto:  void QGridLayout::setColumnStretch(int column, int stretch);
-extern void _ZN11QGridLayout16setColumnStretchEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QGridLayout16setColumnStretchEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QGridLayout::spacing();
 extern void _ZNK11QGridLayout7spacingEv(void* qthis);
   // proto:  int QGridLayout::rowStretch(int row);
-extern void _ZNK11QGridLayout10rowStretchEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout10rowStretchEi(void* qthis, int32_t arg0);
   // proto:  QSize QGridLayout::sizeHint();
 extern void _ZNK11QGridLayout8sizeHintEv(void* qthis);
   // proto:  int QGridLayout::rowCount();
@@ -59,28 +59,28 @@ extern void _ZNK11QGridLayout8rowCountEv(void* qthis);
   // proto:  void QGridLayout::setGeometry(const QRect & );
 extern void _ZN11QGridLayout11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  void QGridLayout::setVerticalSpacing(int spacing);
-extern void _ZN11QGridLayout18setVerticalSpacingEi(void* qthis, int arg0);
+extern void _ZN11QGridLayout18setVerticalSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::setHorizontalSpacing(int spacing);
-extern void _ZN11QGridLayout20setHorizontalSpacingEi(void* qthis, int arg0);
+extern void _ZN11QGridLayout20setHorizontalSpacingEi(void* qthis, int32_t arg0);
   // proto:  int QGridLayout::columnStretch(int column);
-extern void _ZNK11QGridLayout13columnStretchEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout13columnStretchEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::QGridLayout(const QGridLayout & );
 extern void* dector_ZN11QGridLayoutC1ERKS_(void* arg0);
 extern void _ZN11QGridLayoutC1ERKS_(void* qthis, void* arg0);
   // proto:  int QGridLayout::columnCount();
 extern void _ZNK11QGridLayout11columnCountEv(void* qthis);
   // proto:  int QGridLayout::columnMinimumWidth(int column);
-extern void _ZNK11QGridLayout18columnMinimumWidthEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout18columnMinimumWidthEi(void* qthis, int32_t arg0);
   // proto:  QSize QGridLayout::minimumSize();
 extern void _ZNK11QGridLayout11minimumSizeEv(void* qthis);
   // proto:  bool QGridLayout::hasHeightForWidth();
 extern void _ZNK11QGridLayout17hasHeightForWidthEv(void* qthis);
   // proto:  QRect QGridLayout::cellRect(int row, int column);
-extern void _ZNK11QGridLayout8cellRectEii(void* qthis, int arg0, int arg1);
+extern void _ZNK11QGridLayout8cellRectEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGridLayout::setRowStretch(int row, int stretch);
-extern void _ZN11QGridLayout13setRowStretchEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QGridLayout13setRowStretchEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QLayoutItem * QGridLayout::itemAtPosition(int row, int column);
-extern void _ZNK11QGridLayout14itemAtPositionEii(void* qthis, int arg0, int arg1);
+extern void _ZNK11QGridLayout14itemAtPositionEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QMetaObject * QGridLayout::metaObject();
 extern void _ZNK11QGridLayout10metaObjectEv(void* qthis);
   // proto:  int QGridLayout::verticalSpacing();
@@ -91,20 +91,20 @@ extern void _ZN11QGridLayoutC1EP7QWidget(void* qthis, void* arg0);
   // proto:  int QGridLayout::horizontalSpacing();
 extern void _ZNK11QGridLayout17horizontalSpacingEv(void* qthis);
   // proto:  void QGridLayout::setColumnMinimumWidth(int column, int minSize);
-extern void _ZN11QGridLayout21setColumnMinimumWidthEii(void* qthis, int arg0, int arg1);
+extern void _ZN11QGridLayout21setColumnMinimumWidthEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGridLayout::QGridLayout();
 extern void* dector_ZN11QGridLayoutC1Ev();
 extern void _ZN11QGridLayoutC1Ev(void* qthis);
   // proto:  int QGridLayout::heightForWidth(int );
-extern void _ZNK11QGridLayout14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::~QGridLayout();
 extern void _ZN11QGridLayoutD0Ev(void* qthis);
   // proto:  void QGridLayout::setSpacing(int spacing);
-extern void _ZN11QGridLayout10setSpacingEi(void* qthis, int arg0);
+extern void _ZN11QGridLayout10setSpacingEi(void* qthis, int32_t arg0);
   // proto:  void QGridLayout::addWidget(QWidget * w);
 extern void demth_ZN11QGridLayout9addWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  QLayoutItem * QGridLayout::itemAt(int index);
-extern void _ZNK11QGridLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK11QGridLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  QSize QGridLayout::maximumSize();
 extern void _ZNK11QGridLayout11maximumSizeEv(void* qthis);
 */
@@ -122,7 +122,7 @@ func init() {
 // class sizeof(QGridLayout)=1
 type QGridLayout struct {
   /*qbase*/ QLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGridLayout::setRowMinimumHeight(int row, int minSize);

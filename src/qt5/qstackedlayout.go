@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
-extern void _ZN14QStackedLayout12insertWidgetEiP7QWidget(void* qthis, int arg0, void* arg1);
+extern void _ZN14QStackedLayout12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
 extern void* dector_ZN14QStackedLayoutC1EP7QLayout(void* arg0);
 extern void _ZN14QStackedLayoutC1EP7QLayout(void* qthis, void* arg0);
@@ -45,7 +45,7 @@ extern void _ZN14QStackedLayout11setGeometryERK5QRect(void* qthis, void* arg0);
   // proto:  QWidget * QStackedLayout::currentWidget();
 extern void _ZNK14QStackedLayout13currentWidgetEv(void* qthis);
   // proto:  QLayoutItem * QStackedLayout::takeAt(int );
-extern void _ZN14QStackedLayout6takeAtEi(void* qthis, int arg0);
+extern void _ZN14QStackedLayout6takeAtEi(void* qthis, int32_t arg0);
   // proto:  QSize QStackedLayout::minimumSize();
 extern void _ZNK14QStackedLayout11minimumSizeEv(void* qthis);
   // proto:  QSize QStackedLayout::sizeHint();
@@ -64,22 +64,22 @@ extern void _ZN14QStackedLayout16setCurrentWidgetEP7QWidget(void* qthis, void* a
   // proto:  const QMetaObject * QStackedLayout::metaObject();
 extern void _ZNK14QStackedLayout10metaObjectEv(void* qthis);
   // proto:  void QStackedLayout::setCurrentIndex(int index);
-extern void _ZN14QStackedLayout15setCurrentIndexEi(void* qthis, int arg0);
+extern void _ZN14QStackedLayout15setCurrentIndexEi(void* qthis, int32_t arg0);
   // proto:  QLayoutItem * QStackedLayout::itemAt(int );
-extern void _ZNK14QStackedLayout6itemAtEi(void* qthis, int arg0);
+extern void _ZNK14QStackedLayout6itemAtEi(void* qthis, int32_t arg0);
   // proto:  void QStackedLayout::~QStackedLayout();
 extern void _ZN14QStackedLayoutD0Ev(void* qthis);
   // proto:  int QStackedLayout::addWidget(QWidget * w);
 extern void _ZN14QStackedLayout9addWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  int QStackedLayout::heightForWidth(int width);
-extern void _ZNK14QStackedLayout14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK14QStackedLayout14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  bool QStackedLayout::hasHeightForWidth();
 extern void _ZNK14QStackedLayout17hasHeightForWidthEv(void* qthis);
   // proto:  void QStackedLayout::QStackedLayout();
 extern void* dector_ZN14QStackedLayoutC1Ev();
 extern void _ZN14QStackedLayoutC1Ev(void* qthis);
   // proto:  QWidget * QStackedLayout::widget(int );
-extern void _ZNK14QStackedLayout6widgetEi(void* qthis, int arg0);
+extern void _ZNK14QStackedLayout6widgetEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ func init() {
 // class sizeof(QStackedLayout)=1
 type QStackedLayout struct {
   /*qbase*/ QLayout;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _widgetRemoved QStackedLayout_widgetRemoved_signal;
 //  _currentChanged QStackedLayout_currentChanged_signal;
 }

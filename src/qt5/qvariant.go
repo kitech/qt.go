@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qvariant.h
 // dst-file: /src/core/qvariant.go
 //
@@ -38,8 +38,8 @@ extern void demth_ZN24QVariantComparisonHelperC1ERK8QVariant(void* qthis, void* 
   // proto:  double QVariant::toDouble(bool * ok);
 extern void _ZNK8QVariant8toDoubleEPb(void* qthis, bool* arg0);
   // proto:  void QVariant::QVariant(const char * str);
-extern void* dector_ZN8QVariantC1EPKc(char* arg0);
-extern void _ZN8QVariantC1EPKc(void* qthis, char* arg0);
+extern void* dector_ZN8QVariantC1EPKc(unsigned char* arg0);
+extern void _ZN8QVariantC1EPKc(void* qthis, unsigned char* arg0);
   // proto:  qlonglong QVariant::toLongLong(bool * ok);
 extern void _ZNK8QVariant10toLongLongEPb(void* qthis, bool* arg0);
   // proto:  void QVariant::QVariant(const QPointF & pt);
@@ -117,7 +117,7 @@ extern void _ZNK8QVariant6toHashEv(void* qthis);
   // proto:  QMap<QString, QVariant> QVariant::toMap();
 extern void _ZNK8QVariant5toMapEv(void* qthis);
   // proto:  bool QVariant::canConvert(int targetTypeId);
-extern void _ZNK8QVariant10canConvertEi(void* qthis, int arg0);
+extern void _ZNK8QVariant10canConvertEi(void* qthis, int32_t arg0);
   // proto:  void QVariant::QVariant(const QRectF & rect);
 extern void* dector_ZN8QVariantC1ERK6QRectF(void* arg0);
 extern void _ZN8QVariantC1ERK6QRectF(void* qthis, void* arg0);
@@ -134,8 +134,8 @@ extern void demth_ZN8QVariantC1EPv(void* qthis, void* arg0);
   // proto:  QPersistentModelIndex QVariant::toPersistentModelIndex();
 extern void _ZNK8QVariant22toPersistentModelIndexEv(void* qthis);
   // proto:  void QVariant::QVariant(int typeId, const void * copy, uint flags);
-extern void* dector_ZN8QVariantC1EiPKvj(int arg0, void* arg1, unsigned int arg2);
-extern void _ZN8QVariantC1EiPKvj(void* qthis, int arg0, void* arg1, unsigned int arg2);
+extern void* dector_ZN8QVariantC1EiPKvj(int32_t arg0, void* arg1, int32_t arg2);
+extern void _ZN8QVariantC1EiPKvj(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  QLineF QVariant::toLineF();
 extern void _ZNK8QVariant7toLineFEv(void* qthis);
   // proto:  QJsonObject QVariant::toJsonObject();
@@ -180,7 +180,7 @@ extern void _ZN8QVariantC1ERK5QTime(void* qthis, void* arg0);
 extern void* dector_ZN8QVariantC1ERK9QDateTime(void* arg0);
 extern void _ZN8QVariantC1ERK9QDateTime(void* qthis, void* arg0);
   // proto:  bool QVariant::convert(int targetTypeId);
-extern void _ZN8QVariant7convertEi(void* qthis, int arg0);
+extern void _ZN8QVariant7convertEi(void* qthis, int32_t arg0);
   // proto:  QRegExp QVariant::toRegExp();
 extern void _ZNK8QVariant8toRegExpEv(void* qthis);
   // proto:  QPointF QVariant::toPointF();
@@ -189,14 +189,14 @@ extern void _ZNK8QVariant8toPointFEv(void* qthis);
 extern void* dector_ZN8QVariantC1E5QChar(void* arg0);
 extern void _ZN8QVariantC1E5QChar(void* qthis, void* arg0);
   // proto: static const char * QVariant::typeToName(int typeId);
-extern void _ZN8QVariant10typeToNameEi(int arg0);
+extern void _ZN8QVariant10typeToNameEi(int32_t arg0);
   // proto:  QSizeF QVariant::toSizeF();
 extern void _ZNK8QVariant7toSizeFEv(void* qthis);
   // proto:  void QVariant::swap(QVariant & other);
 extern void demth_ZN8QVariant4swapERS_(void* qthis, void* arg0);
   // proto:  void QVariant::QVariant(int typeId, const void * copy);
-extern void* dector_ZN8QVariantC1EiPKv(int arg0, void* arg1);
-extern void _ZN8QVariantC1EiPKv(void* qthis, int arg0, void* arg1);
+extern void* dector_ZN8QVariantC1EiPKv(int32_t arg0, void* arg1);
+extern void _ZN8QVariantC1EiPKv(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QVariant::QVariant(const QEasingCurve & easing);
 extern void* dector_ZN8QVariantC1ERK12QEasingCurve(void* arg0);
 extern void _ZN8QVariantC1ERK12QEasingCurve(void* qthis, void* arg0);
@@ -208,22 +208,22 @@ extern void _ZNK8QVariant6toRectEv(void* qthis);
 extern void* dector_ZN8QVariantC1ERK10QByteArray(void* arg0);
 extern void _ZN8QVariantC1ERK10QByteArray(void* qthis, void* arg0);
   // proto:  void QVariant::QVariant(qlonglong ll);
-extern void* dector_ZN8QVariantC1Ex(long long arg0);
-extern void _ZN8QVariantC1Ex(void* qthis, long long arg0);
+extern void* dector_ZN8QVariantC1Ex(int64_t arg0);
+extern void _ZN8QVariantC1Ex(void* qthis, int64_t arg0);
   // proto:  void QVariant::QVariant(qulonglong ull);
-extern void* dector_ZN8QVariantC1Ey(unsigned long long arg0);
-extern void _ZN8QVariantC1Ey(void* qthis, unsigned long long arg0);
+extern void* dector_ZN8QVariantC1Ey(int64_t arg0);
+extern void _ZN8QVariantC1Ey(void* qthis, int64_t arg0);
   // proto:  void QVariant::QVariant();
 extern void* dector_ZN8QVariantC1Ev();
 extern void _ZN8QVariantC1Ev(void* qthis);
   // proto:  bool QVariant::toBool();
 extern void _ZNK8QVariant6toBoolEv(void* qthis);
   // proto:  void QVariant::QVariant(uint ui);
-extern void* dector_ZN8QVariantC1Ej(unsigned int arg0);
-extern void _ZN8QVariantC1Ej(void* qthis, unsigned int arg0);
+extern void* dector_ZN8QVariantC1Ej(int32_t arg0);
+extern void _ZN8QVariantC1Ej(void* qthis, int32_t arg0);
   // proto:  void QVariant::QVariant(int i);
-extern void* dector_ZN8QVariantC1Ei(int arg0);
-extern void _ZN8QVariantC1Ei(void* qthis, int arg0);
+extern void* dector_ZN8QVariantC1Ei(int32_t arg0);
+extern void _ZN8QVariantC1Ei(void* qthis, int32_t arg0);
   // proto:  void QVariant::QVariant(float f);
 extern void* dector_ZN8QVariantC1Ef(float arg0);
 extern void _ZN8QVariantC1Ef(void* qthis, float arg0);
@@ -264,7 +264,7 @@ extern void _ZNK19QSequentialIterable4sizeEv(void* qthis);
   // proto:  bool QSequentialIterable::canReverseIterate();
 extern void _ZNK19QSequentialIterable17canReverseIterateEv(void* qthis);
   // proto:  QVariant QSequentialIterable::at(int idx);
-extern void _ZNK19QSequentialIterable2atEi(void* qthis, int arg0);
+extern void _ZNK19QSequentialIterable2atEi(void* qthis, int32_t arg0);
   // proto:  int QAssociativeIterable::size();
 extern void _ZNK20QAssociativeIterable4sizeEv(void* qthis);
   // proto:  QVariant QAssociativeIterable::value(const QVariant & key);
@@ -284,25 +284,25 @@ func init() {
 // class sizeof(QVariantComparisonHelper)=8
 type QVariantComparisonHelper struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QVariant)=16
 type QVariant struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QSequentialIterable)=104
 type QSequentialIterable struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QAssociativeIterable)=112
 type QAssociativeIterable struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QVariantComparisonHelper::QVariantComparisonHelper(const QVariant & var);

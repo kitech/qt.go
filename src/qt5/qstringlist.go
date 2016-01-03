@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qstringlist.h
 // dst-file: /src/core/qstringlist.go
 //
@@ -33,20 +33,20 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);
-extern void demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList11lastIndexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QStringList::QStringList();
 extern void* dector_ZN11QStringListC1Ev();
 extern void demth_ZN11QStringListC1Ev(void* qthis);
   // proto:  int QStringList::indexOf(const QRegExp & rx, int from);
-extern void demth_ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList7indexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QStringList::indexOf(QRegExp & rx, int from);
-extern void demth_ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList7indexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QStringList::indexOf(const QRegularExpression & re, int from);
-extern void demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList7indexOfERK18QRegularExpressioni(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QStringList::lastIndexOf(const QRegExp & rx, int from);
-extern void demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList11lastIndexOfERK7QRegExpi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QStringList::lastIndexOf(QRegExp & rx, int from);
-extern void demth_ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int arg1);
+extern void demth_ZNK11QStringList11lastIndexOfER7QRegExpi(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QStringList::QStringList(const QString & i);
 extern void* dector_ZN11QStringListC1ERK7QString(void* arg0);
 extern void demth_ZN11QStringListC1ERK7QString(void* qthis, void* arg0);
@@ -65,7 +65,7 @@ func init() {
 // class sizeof(QStringList)=1
 type QStringList struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QStringList::lastIndexOf(const QRegularExpression & re, int from);

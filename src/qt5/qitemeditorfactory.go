@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -32,27 +32,23 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
-extern void _ZNK22QItemEditorCreatorBase17valuePropertyNameEv(void* qthis);
-  // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
-extern void _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();
 extern void _ZN22QItemEditorCreatorBaseD0Ev(void* qthis);
   // proto:  void QItemEditorFactory::QItemEditorFactory();
 extern void* dector_ZN18QItemEditorFactoryC1Ev();
 extern void demth_ZN18QItemEditorFactoryC1Ev(void* qthis);
   // proto:  QByteArray QItemEditorFactory::valuePropertyName(int userType);
-extern void _ZNK18QItemEditorFactory17valuePropertyNameEi(void* qthis, int arg0);
+extern void _ZNK18QItemEditorFactory17valuePropertyNameEi(void* qthis, int32_t arg0);
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
 extern void _ZN18QItemEditorFactory14defaultFactoryEv();
   // proto:  void QItemEditorFactory::~QItemEditorFactory();
 extern void _ZN18QItemEditorFactoryD0Ev(void* qthis);
   // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
-extern void _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(void* qthis, int arg0, void* arg1);
+extern void _ZN18QItemEditorFactory14registerEditorEiP22QItemEditorCreatorBase(void* qthis, int32_t arg0, void* arg1);
   // proto: static void QItemEditorFactory::setDefaultFactory(QItemEditorFactory * factory);
 extern void _ZN18QItemEditorFactory17setDefaultFactoryEPS_(void* arg0);
   // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
-extern void _ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int arg0, void* arg1);
+extern void _ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int32_t arg0, void* arg1);
 */
 import "C"
 // } // <= ext block end
@@ -68,56 +64,13 @@ func init() {
 // class sizeof(QItemEditorCreatorBase)=8
 type QItemEditorCreatorBase struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QItemEditorFactory)=1
 type QItemEditorFactory struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
-}
-
-  // proto:  QByteArray QItemEditorCreatorBase::valuePropertyName();
-func (this *QItemEditorCreatorBase) valuePropertyName(args ...interface{}) () {
-  // valuePropertyName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QItemEditorCreatorBase17valuePropertyNameEv
-    // invoke: QByteArray valuePropertyName()
-    C._ZNK22QItemEditorCreatorBase17valuePropertyNameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QItemEditorCreatorBase", "valuePropertyName", args)
-  }
-
-}
-
-  // proto:  QWidget * QItemEditorCreatorBase::createWidget(QWidget * parent);
-func (this *QItemEditorCreatorBase) createWidget(args ...interface{}) () {
-  // createWidget(class QWidget *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget
-    // invoke: QWidget * createWidget(class QWidget *)
-    var arg0 = args[0].(QWidget).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK22QItemEditorCreatorBase12createWidgetEP7QWidget(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QItemEditorCreatorBase", "createWidget", args)
-  }
-
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QItemEditorCreatorBase::~QItemEditorCreatorBase();

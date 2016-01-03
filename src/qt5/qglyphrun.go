@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.go
 //
@@ -39,11 +39,11 @@ extern void _ZN9QGlyphRun15setBoundingRectERK6QRectF(void* qthis, void* arg0);
   // proto:  bool QGlyphRun::overline();
 extern void _ZNK9QGlyphRun8overlineEv(void* qthis);
   // proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
-extern void _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(void* qthis, unsigned int* arg0, void* arg1, int arg2);
+extern void _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2);
   // proto:  void QGlyphRun::setOverline(bool overline);
 extern void _ZN9QGlyphRun11setOverlineEb(void* qthis, bool arg0);
   // proto:  void QGlyphRun::swap(QGlyphRun & other);
-extern void _ZN9QGlyphRun4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QGlyphRun4swapERS_(void* qthis, void* arg0);
   // proto:  void QGlyphRun::setUnderline(bool underline);
 extern void _ZN9QGlyphRun12setUnderlineEb(void* qthis, bool arg0);
   // proto:  QVector<QPointF> QGlyphRun::positions();
@@ -91,7 +91,7 @@ func init() {
 // class sizeof(QGlyphRun)=1
 type QGlyphRun struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGlyphRun::~QGlyphRun();
@@ -194,7 +194,7 @@ func (this *QGlyphRun) setOverline(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun11setOverlineEb
     // invoke: void setOverline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGlyphRun11setOverlineEb(this.qclsinst, arg0)
   default:
@@ -219,7 +219,7 @@ func (this *QGlyphRun) swap(args ...interface{}) () {
     // invoke: void swap(class QGlyphRun &)
     var arg0 = args[0].(QGlyphRun).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QGlyphRun", "swap", args)
   }
@@ -240,7 +240,7 @@ func (this *QGlyphRun) setUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun12setUnderlineEb
     // invoke: void setUnderline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGlyphRun12setUnderlineEb(this.qclsinst, arg0)
   default:
@@ -431,7 +431,7 @@ func (this *QGlyphRun) setRightToLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun14setRightToLeftEb
     // invoke: void setRightToLeft(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGlyphRun14setRightToLeftEb(this.qclsinst, arg0)
   default:
@@ -474,7 +474,7 @@ func (this *QGlyphRun) setStrikeOut(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QGlyphRun12setStrikeOutEb
     // invoke: void setStrikeOut(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QGlyphRun12setStrikeOutEb(this.qclsinst, arg0)
   default:

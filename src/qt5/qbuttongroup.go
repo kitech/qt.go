@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
-extern void _ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int arg1);
+extern void _ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1);
   // proto:  QList<QAbstractButton *> QButtonGroup::buttons();
 extern void _ZNK12QButtonGroup7buttonsEv(void* qthis);
   // proto:  void QButtonGroup::~QButtonGroup();
@@ -51,7 +51,7 @@ extern void _ZNK12QButtonGroup10metaObjectEv(void* qthis);
 extern void* dector_ZN12QButtonGroupC1EP7QObject(void* arg0);
 extern void _ZN12QButtonGroupC1EP7QObject(void* qthis, void* arg0);
   // proto:  QAbstractButton * QButtonGroup::button(int id);
-extern void _ZNK12QButtonGroup6buttonEi(void* qthis, int arg0);
+extern void _ZNK12QButtonGroup6buttonEi(void* qthis, int32_t arg0);
   // proto:  int QButtonGroup::checkedId();
 extern void _ZNK12QButtonGroup9checkedIdEv(void* qthis);
   // proto:  QAbstractButton * QButtonGroup::checkedButton();
@@ -59,7 +59,7 @@ extern void _ZNK12QButtonGroup13checkedButtonEv(void* qthis);
   // proto:  void QButtonGroup::setExclusive(bool );
 extern void _ZN12QButtonGroup12setExclusiveEb(void* qthis, bool arg0);
   // proto:  void QButtonGroup::setId(QAbstractButton * button, int id);
-extern void _ZN12QButtonGroup5setIdEP15QAbstractButtoni(void* qthis, void* arg0, int arg1);
+extern void _ZN12QButtonGroup5setIdEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QButtonGroup::exclusive();
 extern void _ZNK12QButtonGroup9exclusiveEv(void* qthis);
 */
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QButtonGroup)=1
 type QButtonGroup struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _buttonToggled QButtonGroup_buttonToggled_signal;
 //  _buttonClicked QButtonGroup_buttonClicked_signal;
 //  _buttonReleased QButtonGroup_buttonReleased_signal;
@@ -292,7 +292,7 @@ func (this *QButtonGroup) setExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QButtonGroup12setExclusiveEb
     // invoke: void setExclusive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN12QButtonGroup12setExclusiveEb(this.qclsinst, arg0)
   default:

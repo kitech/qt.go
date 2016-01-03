@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -38,10 +38,6 @@ extern void _ZN15QGraphicsLayout14updateGeometryEv(void* qthis);
 extern void _ZNK15QGraphicsLayout11isActivatedEv(void* qthis);
   // proto:  void QGraphicsLayout::invalidate();
 extern void _ZN15QGraphicsLayout10invalidateEv(void* qthis);
-  // proto:  void QGraphicsLayout::removeAt(int index);
-extern void _ZN15QGraphicsLayout8removeAtEi(void* qthis, int arg0);
-  // proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
-extern void _ZNK15QGraphicsLayout6itemAtEi(void* qthis, int arg0);
   // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
 extern void* dector_ZN15QGraphicsLayoutC1ERKS_(void* arg0);
 extern void _ZN15QGraphicsLayoutC1ERKS_(void* qthis, void* arg0);
@@ -59,8 +55,6 @@ extern void _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(bool arg0);
 extern void _ZN15QGraphicsLayoutD0Ev(void* qthis);
   // proto:  void QGraphicsLayout::activate();
 extern void _ZN15QGraphicsLayout8activateEv(void* qthis);
-  // proto:  int QGraphicsLayout::count();
-extern void _ZNK15QGraphicsLayout5countEv(void* qthis);
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
 extern void* dector_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(void* arg0);
 extern void _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(void* qthis, void* arg0);
@@ -79,7 +73,7 @@ func init() {
 // class sizeof(QGraphicsLayout)=1
 type QGraphicsLayout struct {
   /*qbase*/ QGraphicsLayoutItem;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QGraphicsLayout::updateGeometry();
@@ -138,52 +132,6 @@ func (this *QGraphicsLayout) invalidate(args ...interface{}) () {
     C._ZN15QGraphicsLayout10invalidateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "invalidate", args)
-  }
-
-}
-
-  // proto:  void QGraphicsLayout::removeAt(int index);
-func (this *QGraphicsLayout) removeAt(args ...interface{}) () {
-  // removeAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QGraphicsLayout8removeAtEi
-    // invoke: void removeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN15QGraphicsLayout8removeAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "removeAt", args)
-  }
-
-}
-
-  // proto:  QGraphicsLayoutItem * QGraphicsLayout::itemAt(int i);
-func (this *QGraphicsLayout) itemAt(args ...interface{}) () {
-  // itemAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsLayout6itemAtEi
-    // invoke: QGraphicsLayoutItem * itemAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK15QGraphicsLayout6itemAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "itemAt", args)
   }
 
 }
@@ -338,26 +286,6 @@ func (this *QGraphicsLayout) activate(args ...interface{}) () {
     C._ZN15QGraphicsLayout8activateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "activate", args)
-  }
-
-}
-
-  // proto:  int QGraphicsLayout::count();
-func (this *QGraphicsLayout) count(args ...interface{}) () {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsLayout5countEv
-    // invoke: int count()
-    C._ZNK15QGraphicsLayout5countEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "count", args)
   }
 
 }

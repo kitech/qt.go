@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -41,7 +41,7 @@ extern void _ZNK7QSlider12tickIntervalEv(void* qthis);
   // proto:  QSize QSlider::sizeHint();
 extern void _ZNK7QSlider8sizeHintEv(void* qthis);
   // proto:  void QSlider::setTickInterval(int ti);
-extern void _ZN7QSlider15setTickIntervalEi(void* qthis, int arg0);
+extern void _ZN7QSlider15setTickIntervalEi(void* qthis, int32_t arg0);
   // proto:  void QSlider::QSlider(const QSlider & );
 extern void* dector_ZN7QSliderC1ERKS_(void* arg0);
 extern void _ZN7QSliderC1ERKS_(void* qthis, void* arg0);
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QSlider)=1
 type QSlider struct {
   /*qbase*/ QAbstractSlider;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  const QMetaObject * QSlider::metaObject();

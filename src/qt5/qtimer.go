@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qtimer.h
 // dst-file: /src/core/qtimer.go
 //
@@ -37,19 +37,19 @@ extern void _ZN6QTimerD0Ev(void* qthis);
   // proto:  void QTimer::stop();
 extern void _ZN6QTimer4stopEv(void* qthis);
   // proto:  int QTimer::timerId();
-extern void _ZNK6QTimer7timerIdEv(void* qthis);
+extern void demth_ZNK6QTimer7timerIdEv(void* qthis);
   // proto:  void QTimer::setSingleShot(bool singleShot);
 extern void demth_ZN6QTimer13setSingleShotEb(void* qthis, bool arg0);
   // proto: static void QTimer::singleShot(int msec, const QObject * receiver, const char * member);
-extern void _ZN6QTimer10singleShotEiPK7QObjectPKc(int arg0, void* arg1, char* arg2);
+extern void _ZN6QTimer10singleShotEiPK7QObjectPKc(int32_t arg0, void* arg1, unsigned char* arg2);
   // proto:  void QTimer::start();
 extern void _ZN6QTimer5startEv(void* qthis);
   // proto:  int QTimer::interval();
-extern void _ZNK6QTimer8intervalEv(void* qthis);
+extern void demth_ZNK6QTimer8intervalEv(void* qthis);
   // proto:  void QTimer::setInterval(int msec);
-extern void _ZN6QTimer11setIntervalEi(void* qthis, int arg0);
+extern void _ZN6QTimer11setIntervalEi(void* qthis, int32_t arg0);
   // proto:  void QTimer::start(int msec);
-extern void _ZN6QTimer5startEi(void* qthis, int arg0);
+extern void _ZN6QTimer5startEi(void* qthis, int32_t arg0);
   // proto:  void QTimer::QTimer(const QTimer & );
 extern void* dector_ZN6QTimerC1ERKS_(void* arg0);
 extern void demth_ZN6QTimerC1ERKS_(void* qthis, void* arg0);
@@ -79,7 +79,7 @@ func init() {
 // class sizeof(QTimer)=1
 type QTimer struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _timeout QTimer_timeout_signal;
 }
 
@@ -130,7 +130,7 @@ func (this *QTimer) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer7timerIdEv
     // invoke: int timerId()
-    C._ZNK6QTimer7timerIdEv(this.qclsinst)
+    C.demth_ZNK6QTimer7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "timerId", args)
   }
@@ -151,7 +151,7 @@ func (this *QTimer) setSingleShot(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QTimer13setSingleShotEb
     // invoke: void setSingleShot(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN6QTimer13setSingleShotEb(this.qclsinst, arg0)
   default:
@@ -216,7 +216,7 @@ func (this *QTimer) interval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QTimer8intervalEv
     // invoke: int interval()
-    C._ZNK6QTimer8intervalEv(this.qclsinst)
+    C.demth_ZNK6QTimer8intervalEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimer", "interval", args)
   }

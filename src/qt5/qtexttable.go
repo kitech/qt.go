@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -46,8 +46,8 @@ extern void _ZNK14QTextTableCell7rowSpanEv(void* qthis);
   // proto:  int QTextTableCell::firstPosition();
 extern void _ZNK14QTextTableCell13firstPositionEv(void* qthis);
   // proto:  void QTextTableCell::QTextTableCell(const QTextTable * t, int f);
-extern void* dector_ZN14QTextTableCellC1EPK10QTextTablei(void* arg0, int arg1);
-extern void _ZN14QTextTableCellC1EPK10QTextTablei(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN14QTextTableCellC1EPK10QTextTablei(void* arg0, int32_t arg1);
+extern void _ZN14QTextTableCellC1EPK10QTextTablei(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QTextTableCell::tableCellFormatIndex();
 extern void _ZNK14QTextTableCell20tableCellFormatIndexEv(void* qthis);
   // proto:  int QTextTableCell::columnSpan();
@@ -68,17 +68,17 @@ extern void _ZNK14QTextTableCell19firstCursorPositionEv(void* qthis);
 extern void* dector_ZN14QTextTableCellC1Ev();
 extern void _ZN14QTextTableCellC1Ev(void* qthis);
   // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
-extern void _ZNK10QTextTable6cellAtEii(void* qthis, int arg0, int arg1);
+extern void _ZNK10QTextTable6cellAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QTextTable::rows();
 extern void _ZNK10QTextTable4rowsEv(void* qthis);
   // proto:  void QTextTable::removeRows(int pos, int num);
-extern void _ZN10QTextTable10removeRowsEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTextTable10removeRowsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  int QTextTable::columns();
 extern void _ZNK10QTextTable7columnsEv(void* qthis);
   // proto:  void QTextTable::appendRows(int count);
-extern void _ZN10QTextTable10appendRowsEi(void* qthis, int arg0);
+extern void _ZN10QTextTable10appendRowsEi(void* qthis, int32_t arg0);
   // proto:  void QTextTable::resize(int rows, int cols);
-extern void _ZN10QTextTable6resizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTextTable6resizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
 extern void _ZNK10QTextTable6cellAtERK11QTextCursor(void* qthis, void* arg0);
   // proto:  void QTextTable::QTextTable(const QTextTable & );
@@ -87,32 +87,32 @@ extern void _ZN10QTextTableC1ERKS_(void* qthis, void* arg0);
   // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
 extern void _ZN10QTextTable9setFormatERK16QTextTableFormat(void* qthis, void* arg0);
   // proto:  void QTextTable::insertColumns(int pos, int num);
-extern void _ZN10QTextTable13insertColumnsEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTextTable13insertColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
-extern void _ZN10QTextTable9splitCellEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN10QTextTable9splitCellEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
-extern void _ZN10QTextTable10mergeCellsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN10QTextTable10mergeCellsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QTextTable::insertRows(int pos, int num);
-extern void _ZN10QTextTable10insertRowsEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTextTable10insertRowsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextTable::~QTextTable();
 extern void _ZN10QTextTableD0Ev(void* qthis);
   // proto:  void QTextTable::QTextTable(QTextDocument * doc);
 extern void* dector_ZN10QTextTableC1EP13QTextDocument(void* arg0);
 extern void _ZN10QTextTableC1EP13QTextDocument(void* qthis, void* arg0);
   // proto:  QTextTableCell QTextTable::cellAt(int position);
-extern void _ZNK10QTextTable6cellAtEi(void* qthis, int arg0);
+extern void _ZNK10QTextTable6cellAtEi(void* qthis, int32_t arg0);
   // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
 extern void _ZNK10QTextTable8rowStartERK11QTextCursor(void* qthis, void* arg0);
   // proto:  QTextTableFormat QTextTable::format();
-extern void _ZNK10QTextTable6formatEv(void* qthis);
+extern void demth_ZNK10QTextTable6formatEv(void* qthis);
   // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
 extern void _ZNK10QTextTable6rowEndERK11QTextCursor(void* qthis, void* arg0);
   // proto:  const QMetaObject * QTextTable::metaObject();
 extern void _ZNK10QTextTable10metaObjectEv(void* qthis);
   // proto:  void QTextTable::removeColumns(int pos, int num);
-extern void _ZN10QTextTable13removeColumnsEii(void* qthis, int arg0, int arg1);
+extern void _ZN10QTextTable13removeColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QTextTable::appendColumns(int count);
-extern void _ZN10QTextTable13appendColumnsEi(void* qthis, int arg0);
+extern void _ZN10QTextTable13appendColumnsEi(void* qthis, int32_t arg0);
   // proto:  void QTextTable::mergeCells(const QTextCursor & cursor);
 extern void _ZN10QTextTable10mergeCellsERK11QTextCursor(void* qthis, void* arg0);
 */
@@ -130,13 +130,13 @@ func init() {
 // class sizeof(QTextTableCell)=16
 type QTextTableCell struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTextTable)=1
 type QTextTable struct {
   /*qbase*/ QTextFrame;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
@@ -763,7 +763,7 @@ func (this *QTextTable) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextTable6formatEv
     // invoke: QTextTableFormat format()
-    C._ZNK10QTextTable6formatEv(this.qclsinst)
+    C.demth_ZNK10QTextTable6formatEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTable", "format", args)
   }

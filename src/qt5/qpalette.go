@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -44,7 +44,7 @@ extern void demth_ZNK8QPalette10foregroundEv(void* qthis);
   // proto:  const QBrush & QPalette::background();
 extern void demth_ZNK8QPalette10backgroundEv(void* qthis);
   // proto:  void QPalette::resolve(uint mask);
-extern void demth_ZN8QPalette7resolveEj(void* qthis, unsigned int arg0);
+extern void demth_ZN8QPalette7resolveEj(void* qthis, int32_t arg0);
   // proto:  void QPalette::QPalette();
 extern void* dector_ZN8QPaletteC1Ev();
 extern void _ZN8QPaletteC1Ev(void* qthis);
@@ -54,7 +54,7 @@ extern void _ZN8QPaletteC1ERK6QColor(void* qthis, void* arg0);
   // proto:  bool QPalette::isCopyOf(const QPalette & p);
 extern void _ZNK8QPalette8isCopyOfERKS_(void* qthis, void* arg0);
   // proto:  void QPalette::swap(QPalette & other);
-extern void _ZN8QPalette4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN8QPalette4swapERS_(void* qthis, void* arg0);
   // proto:  uint QPalette::resolve();
 extern void demth_ZNK8QPalette7resolveEv(void* qthis);
   // proto:  const QBrush & QPalette::window();
@@ -121,7 +121,7 @@ func init() {
 // class sizeof(QPalette)=16
 type QPalette struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
@@ -280,7 +280,7 @@ func (this *QPalette) swap(args ...interface{}) () {
     // invoke: void swap(class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QPalette4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN8QPalette4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPalette", "swap", args)
   }

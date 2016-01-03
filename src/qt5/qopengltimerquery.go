@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -63,7 +63,7 @@ extern void _ZN17QOpenGLTimerQuery15recordTimestampEv(void* qthis);
   // proto:  bool QOpenGLTimerQuery::isResultAvailable();
 extern void _ZNK17QOpenGLTimerQuery17isResultAvailableEv(void* qthis);
   // proto:  void QOpenGLTimeMonitor::setSampleCount(int sampleCount);
-extern void _ZN18QOpenGLTimeMonitor14setSampleCountEi(void* qthis, int arg0);
+extern void _ZN18QOpenGLTimeMonitor14setSampleCountEi(void* qthis, int32_t arg0);
   // proto:  int QOpenGLTimeMonitor::sampleCount();
 extern void _ZNK18QOpenGLTimeMonitor11sampleCountEv(void* qthis);
   // proto:  void QOpenGLTimeMonitor::destroy();
@@ -109,13 +109,13 @@ func init() {
 // class sizeof(QOpenGLTimerQuery)=1
 type QOpenGLTimerQuery struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLTimeMonitor)=1
 type QOpenGLTimeMonitor struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(const QOpenGLTimerQuery & );

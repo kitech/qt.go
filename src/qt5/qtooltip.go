@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -44,7 +44,7 @@ extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRect(void* arg
 extern void* dector_ZN8QToolTipC1Ev();
 extern void _ZN8QToolTipC1Ev(void* qthis);
   // proto: static void QToolTip::showText(const QPoint & pos, const QString & text, QWidget * w, const QRect & rect, int msecShowTime);
-extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* arg0, void* arg1, void* arg2, void* arg3, int arg4);
+extern void _ZN8QToolTip8showTextERK6QPointRK7QStringP7QWidgetRK5QRecti(void* arg0, void* arg1, void* arg2, void* arg3, int32_t arg4);
   // proto: static QString QToolTip::text();
 extern void _ZN8QToolTip4textEv();
   // proto: static QFont QToolTip::font();
@@ -70,7 +70,7 @@ func init() {
 // class sizeof(QToolTip)=1
 type QToolTip struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static void QToolTip::setFont(const QFont & );

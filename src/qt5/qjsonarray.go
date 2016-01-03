@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -37,7 +37,7 @@ extern void _ZNK10QJsonArray5firstEv(void* qthis);
   // proto:  bool QJsonArray::empty();
 extern void demth_ZNK10QJsonArray5emptyEv(void* qthis);
   // proto:  QJsonValue QJsonArray::takeAt(int i);
-extern void _ZN10QJsonArray6takeAtEi(void* qthis, int arg0);
+extern void _ZN10QJsonArray6takeAtEi(void* qthis, int32_t arg0);
   // proto:  void QJsonArray::removeLast();
 extern void demth_ZN10QJsonArray10removeLastEv(void* qthis);
   // proto:  void QJsonArray::pop_front();
@@ -54,7 +54,7 @@ extern void demth_ZNK10QJsonArray5countEv(void* qthis);
 extern void* dector_ZN10QJsonArrayC1Ev();
 extern void _ZN10QJsonArrayC1Ev(void* qthis);
   // proto:  QJsonValue QJsonArray::at(int i);
-extern void _ZNK10QJsonArray2atEi(void* qthis, int arg0);
+extern void _ZNK10QJsonArray2atEi(void* qthis, int32_t arg0);
   // proto:  void QJsonArray::pop_back();
 extern void demth_ZN10QJsonArray8pop_backEv(void* qthis);
   // proto:  bool QJsonArray::isEmpty();
@@ -66,7 +66,7 @@ extern void _ZNK10QJsonArray4lastEv(void* qthis);
   // proto:  void QJsonArray::removeFirst();
 extern void demth_ZN10QJsonArray11removeFirstEv(void* qthis);
   // proto:  void QJsonArray::removeAt(int i);
-extern void _ZN10QJsonArray8removeAtEi(void* qthis, int arg0);
+extern void _ZN10QJsonArray8removeAtEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -82,7 +82,7 @@ func init() {
 // class sizeof(QJsonArray)=16
 type QJsonArray struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QJsonValue QJsonArray::first();

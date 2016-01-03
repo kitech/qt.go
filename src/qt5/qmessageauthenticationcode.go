@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -40,7 +40,7 @@ extern void _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, 
 extern void* dector_ZN26QMessageAuthenticationCodeC1ERKS_(void* arg0);
 extern void _ZN26QMessageAuthenticationCodeC1ERKS_(void* qthis, void* arg0);
   // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
-extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, char* arg0, int arg1);
+extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
   // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
 extern void _ZN26QMessageAuthenticationCodeD0Ev(void* qthis);
   // proto:  void QMessageAuthenticationCode::reset();
@@ -64,7 +64,7 @@ func init() {
 // class sizeof(QMessageAuthenticationCode)=8
 type QMessageAuthenticationCode struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QByteArray QMessageAuthenticationCode::result();
@@ -114,7 +114,7 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
   case 1:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEPKci
     // invoke: void addData(const char *, int)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}

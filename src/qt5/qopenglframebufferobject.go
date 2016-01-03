@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qopenglframebufferobject.h
 // dst-file: /src/gui/qopenglframebufferobject.go
 //
@@ -35,9 +35,9 @@ import "qtrt"
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
 extern void _ZN30QOpenGLFramebufferObjectFormatD0Ev(void* qthis);
   // proto:  void QOpenGLFramebufferObjectFormat::setTextureTarget(GLenum target);
-extern void _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj(void* qthis, unsigned int arg0);
+extern void _ZN30QOpenGLFramebufferObjectFormat16setTextureTargetEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFramebufferObjectFormat::setInternalTextureFormat(GLenum internalTextureFormat);
-extern void _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(void* qthis, unsigned int arg0);
+extern void _ZN30QOpenGLFramebufferObjectFormat24setInternalTextureFormatEj(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat(const QOpenGLFramebufferObjectFormat & other);
 extern void* dector_ZN30QOpenGLFramebufferObjectFormatC1ERKS_(void* arg0);
 extern void _ZN30QOpenGLFramebufferObjectFormatC1ERKS_(void* qthis, void* arg0);
@@ -46,7 +46,7 @@ extern void _ZNK30QOpenGLFramebufferObjectFormat6mipmapEv(void* qthis);
   // proto:  GLenum QOpenGLFramebufferObjectFormat::textureTarget();
 extern void _ZNK30QOpenGLFramebufferObjectFormat13textureTargetEv(void* qthis);
   // proto:  void QOpenGLFramebufferObjectFormat::setSamples(int samples);
-extern void _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(void* qthis, int arg0);
+extern void _ZN30QOpenGLFramebufferObjectFormat10setSamplesEi(void* qthis, int32_t arg0);
   // proto:  void QOpenGLFramebufferObjectFormat::QOpenGLFramebufferObjectFormat();
 extern void* dector_ZN30QOpenGLFramebufferObjectFormatC1Ev();
 extern void _ZN30QOpenGLFramebufferObjectFormatC1Ev(void* qthis);
@@ -70,8 +70,8 @@ extern void _ZN24QOpenGLFramebufferObject24hasOpenGLFramebufferBlitEv();
   // proto:  GLuint QOpenGLFramebufferObject::texture();
 extern void _ZNK24QOpenGLFramebufferObject7textureEv(void* qthis);
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(const QSize & size, GLenum target);
-extern void* dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(void* arg0, unsigned int arg1);
-extern void _ZN24QOpenGLFramebufferObjectC1ERK5QSizej(void* qthis, void* arg0, unsigned int arg1);
+extern void* dector_ZN24QOpenGLFramebufferObjectC1ERK5QSizej(void* arg0, int32_t arg1);
+extern void _ZN24QOpenGLFramebufferObjectC1ERK5QSizej(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QOpenGLFramebufferObject::release();
 extern void _ZN24QOpenGLFramebufferObject7releaseEv(void* qthis);
   // proto: static bool QOpenGLFramebufferObject::hasOpenGLFramebufferObjects();
@@ -81,14 +81,14 @@ extern void _ZNK24QOpenGLFramebufferObject7toImageEb(void* qthis, bool arg0);
   // proto:  GLuint QOpenGLFramebufferObject::handle();
 extern void _ZNK24QOpenGLFramebufferObject6handleEv(void* qthis);
   // proto:  int QOpenGLFramebufferObject::height();
-extern void _ZNK24QOpenGLFramebufferObject6heightEv(void* qthis);
+extern void demth_ZNK24QOpenGLFramebufferObject6heightEv(void* qthis);
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, QOpenGLFramebufferObject * source, GLbitfield buffers, GLenum filter);
-extern void _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj(void* arg0, void* arg1, unsigned int arg2, unsigned int arg3);
+extern void _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_S0_jj(void* arg0, void* arg1, int32_t arg2, int32_t arg3);
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, const QOpenGLFramebufferObjectFormat & format);
-extern void* dector_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(int arg0, int arg1, void* arg2);
-extern void _ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(void* qthis, int arg0, int arg1, void* arg2);
+extern void* dector_ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZN24QOpenGLFramebufferObjectC1EiiRK30QOpenGLFramebufferObjectFormat(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto: static void QOpenGLFramebufferObject::blitFramebuffer(QOpenGLFramebufferObject * target, const QRect & targetRect, QOpenGLFramebufferObject * source, const QRect & sourceRect, GLbitfield buffers, GLenum filter);
-extern void _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj(void* arg0, void* arg1, void* arg2, void* arg3, unsigned int arg4, unsigned int arg5);
+extern void _ZN24QOpenGLFramebufferObject15blitFramebufferEPS_RK5QRectS0_S3_jj(void* arg0, void* arg1, void* arg2, void* arg3, int32_t arg4, int32_t arg5);
   // proto:  QImage QOpenGLFramebufferObject::toImage();
 extern void _ZNK24QOpenGLFramebufferObject7toImageEv(void* qthis);
   // proto:  QSize QOpenGLFramebufferObject::size();
@@ -105,10 +105,10 @@ extern void _ZN24QOpenGLFramebufferObject4bindEv(void* qthis);
   // proto:  bool QOpenGLFramebufferObject::isBound();
 extern void _ZNK24QOpenGLFramebufferObject7isBoundEv(void* qthis);
   // proto:  int QOpenGLFramebufferObject::width();
-extern void _ZNK24QOpenGLFramebufferObject5widthEv(void* qthis);
+extern void demth_ZNK24QOpenGLFramebufferObject5widthEv(void* qthis);
   // proto:  void QOpenGLFramebufferObject::QOpenGLFramebufferObject(int width, int height, GLenum target);
-extern void* dector_ZN24QOpenGLFramebufferObjectC1Eiij(int arg0, int arg1, unsigned int arg2);
-extern void _ZN24QOpenGLFramebufferObjectC1Eiij(void* qthis, int arg0, int arg1, unsigned int arg2);
+extern void* dector_ZN24QOpenGLFramebufferObjectC1Eiij(int32_t arg0, int32_t arg1, int32_t arg2);
+extern void _ZN24QOpenGLFramebufferObjectC1Eiij(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2);
 */
 import "C"
 // } // <= ext block end
@@ -124,13 +124,13 @@ func init() {
 // class sizeof(QOpenGLFramebufferObjectFormat)=8
 type QOpenGLFramebufferObjectFormat struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QOpenGLFramebufferObject)=1
 type QOpenGLFramebufferObject struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QOpenGLFramebufferObjectFormat::~QOpenGLFramebufferObjectFormat();
@@ -275,7 +275,7 @@ func (this *QOpenGLFramebufferObjectFormat) setMipmap(args ...interface{}) () {
   case 0:
     // invoke: _ZN30QOpenGLFramebufferObjectFormat9setMipmapEb
     // invoke: void setMipmap(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN30QOpenGLFramebufferObjectFormat9setMipmapEb(this.qclsinst, arg0)
   default:
@@ -467,7 +467,7 @@ func (this *QOpenGLFramebufferObject) toImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject7toImageEb
     // invoke: QImage toImage(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZNK24QOpenGLFramebufferObject7toImageEb(this.qclsinst, arg0)
   case 1:
@@ -513,7 +513,7 @@ func (this *QOpenGLFramebufferObject) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject6heightEv
     // invoke: int height()
-    C._ZNK24QOpenGLFramebufferObject6heightEv(this.qclsinst)
+    C.demth_ZNK24QOpenGLFramebufferObject6heightEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "height", args)
   }
@@ -641,7 +641,7 @@ func (this *QOpenGLFramebufferObject) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLFramebufferObject5widthEv
     // invoke: int width()
-    C._ZNK24QOpenGLFramebufferObject5widthEv(this.qclsinst)
+    C.demth_ZNK24QOpenGLFramebufferObject5widthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLFramebufferObject", "width", args)
   }

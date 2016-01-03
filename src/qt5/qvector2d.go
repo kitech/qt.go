@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qvector2d.h
 // dst-file: /src/gui/qvector2d.go
 //
@@ -33,14 +33,14 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QPointF QVector2D::toPointF();
-extern void _ZNK9QVector2D8toPointFEv(void* qthis);
+extern void demth_ZNK9QVector2D8toPointFEv(void* qthis);
   // proto:  void QVector2D::setX(float x);
 extern void demth_ZN9QVector2D4setXEf(void* qthis, float arg0);
   // proto:  void QVector2D::QVector2D(const QVector4D & vector);
 extern void* dector_ZN9QVector2DC1ERK9QVector4D(void* arg0);
 extern void _ZN9QVector2DC1ERK9QVector4D(void* qthis, void* arg0);
   // proto:  QPoint QVector2D::toPoint();
-extern void _ZNK9QVector2D7toPointEv(void* qthis);
+extern void demth_ZNK9QVector2D7toPointEv(void* qthis);
   // proto:  float QVector2D::length();
 extern void _ZNK9QVector2D6lengthEv(void* qthis);
   // proto:  void QVector2D::setY(float y);
@@ -63,12 +63,12 @@ extern void _ZNK9QVector2D10toVector3DEv(void* qthis);
   // proto:  float QVector2D::lengthSquared();
 extern void _ZNK9QVector2D13lengthSquaredEv(void* qthis);
   // proto:  float QVector2D::y();
-extern void _ZNK9QVector2D1yEv(void* qthis);
+extern void demth_ZNK9QVector2D1yEv(void* qthis);
   // proto:  void QVector2D::QVector2D(const QVector3D & vector);
 extern void* dector_ZN9QVector2DC1ERK9QVector3D(void* arg0);
 extern void _ZN9QVector2DC1ERK9QVector3D(void* qthis, void* arg0);
   // proto:  float QVector2D::x();
-extern void _ZNK9QVector2D1xEv(void* qthis);
+extern void demth_ZNK9QVector2D1xEv(void* qthis);
   // proto:  void QVector2D::QVector2D(const QPointF & point);
 extern void* dector_ZN9QVector2DC1ERK7QPointF(void* arg0);
 extern void _ZN9QVector2DC1ERK7QPointF(void* qthis, void* arg0);
@@ -97,7 +97,7 @@ func init() {
 // class sizeof(QVector2D)=8
 type QVector2D struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QPointF QVector2D::toPointF();
@@ -113,7 +113,7 @@ func (this *QVector2D) toPointF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D8toPointFEv
     // invoke: QPointF toPointF()
-    C._ZNK9QVector2D8toPointFEv(this.qclsinst)
+    C.demth_ZNK9QVector2D8toPointFEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "toPointF", args)
   }
@@ -161,7 +161,7 @@ func (this *QVector2D) toPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D7toPointEv
     // invoke: QPoint toPoint()
-    C._ZNK9QVector2D7toPointEv(this.qclsinst)
+    C.demth_ZNK9QVector2D7toPointEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "toPoint", args)
   }
@@ -310,7 +310,7 @@ func (this *QVector2D) y(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D1yEv
     // invoke: float y()
-    C._ZNK9QVector2D1yEv(this.qclsinst)
+    C.demth_ZNK9QVector2D1yEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "y", args)
   }
@@ -330,7 +330,7 @@ func (this *QVector2D) x(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QVector2D1xEv
     // invoke: float x()
-    C._ZNK9QVector2D1xEv(this.qclsinst)
+    C.demth_ZNK9QVector2D1xEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QVector2D", "x", args)
   }

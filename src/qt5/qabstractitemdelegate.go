@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -45,13 +45,9 @@ extern void* dector_ZN21QAbstractItemDelegateC1EP7QObject(void* arg0);
 extern void _ZN21QAbstractItemDelegateC1EP7QObject(void* qthis, void* arg0);
   // proto:  QWidget * QAbstractItemDelegate::createEditor(QWidget * parent, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void _ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
-  // proto:  void QAbstractItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2);
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(const QAbstractItemDelegate & );
 extern void* dector_ZN21QAbstractItemDelegateC1ERKS_(void* arg0);
 extern void _ZN21QAbstractItemDelegateC1ERKS_(void* qthis, void* arg0);
-  // proto:  QSize QAbstractItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-extern void _ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1);
   // proto:  bool QAbstractItemDelegate::editorEvent(QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void _ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3);
   // proto:  bool QAbstractItemDelegate::helpEvent(QHelpEvent * event, QAbstractItemView * view, const QStyleOptionViewItem & option, const QModelIndex & index);
@@ -77,7 +73,7 @@ func init() {
 // class sizeof(QAbstractItemDelegate)=1
 type QAbstractItemDelegate struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _closeEditor QAbstractItemDelegate_closeEditor_signal;
 //  _commitData QAbstractItemDelegate_commitData_signal;
 //  _sizeHintChanged QAbstractItemDelegate_sizeHintChanged_signal;
@@ -208,61 +204,6 @@ func (this *QAbstractItemDelegate) createEditor(args ...interface{}) () {
     C._ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "createEditor", args)
-  }
-
-}
-
-  // proto:  void QAbstractItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
-func (this *QAbstractItemDelegate) paint(args ...interface{}) () {
-  // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPainter{}) // "QPainter *"
-  vtys[0][1] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: void paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(QPainter).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QStyleOptionViewItem).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZNK21QAbstractItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QAbstractItemDelegate", "paint", args)
-  }
-
-}
-
-  // proto:  QSize QAbstractItemDelegate::sizeHint(const QStyleOptionViewItem & option, const QModelIndex & index);
-func (this *QAbstractItemDelegate) sizeHint(args ...interface{}) () {
-  // sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
-  vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex
-    // invoke: QSize sizeHint(const class QStyleOptionViewItem &, const class QModelIndex &)
-    var arg0 = args[0].(QStyleOptionViewItem).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
-    if false {fmt.Println(arg1)}
-    C._ZNK21QAbstractItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QAbstractItemDelegate", "sizeHint", args)
   }
 
 }

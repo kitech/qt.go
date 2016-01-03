@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSpinBox::setMinimum(int min);
-extern void _ZN8QSpinBox10setMinimumEi(void* qthis, int arg0);
+extern void _ZN8QSpinBox10setMinimumEi(void* qthis, int32_t arg0);
   // proto:  QString QSpinBox::cleanText();
 extern void _ZNK8QSpinBox9cleanTextEv(void* qthis);
   // proto:  int QSpinBox::value();
@@ -41,11 +41,11 @@ extern void _ZNK8QSpinBox5valueEv(void* qthis);
   // proto:  void QSpinBox::~QSpinBox();
 extern void _ZN8QSpinBoxD0Ev(void* qthis);
   // proto:  void QSpinBox::setMaximum(int max);
-extern void _ZN8QSpinBox10setMaximumEi(void* qthis, int arg0);
+extern void _ZN8QSpinBox10setMaximumEi(void* qthis, int32_t arg0);
   // proto:  void QSpinBox::setValue(int val);
-extern void _ZN8QSpinBox8setValueEi(void* qthis, int arg0);
+extern void _ZN8QSpinBox8setValueEi(void* qthis, int32_t arg0);
   // proto:  void QSpinBox::setDisplayIntegerBase(int base);
-extern void _ZN8QSpinBox21setDisplayIntegerBaseEi(void* qthis, int arg0);
+extern void _ZN8QSpinBox21setDisplayIntegerBaseEi(void* qthis, int32_t arg0);
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
 extern void* dector_ZN8QSpinBoxC1EP7QWidget(void* arg0);
 extern void _ZN8QSpinBoxC1EP7QWidget(void* qthis, void* arg0);
@@ -71,9 +71,9 @@ extern void _ZNK8QSpinBox6suffixEv(void* qthis);
   // proto:  int QSpinBox::minimum();
 extern void _ZNK8QSpinBox7minimumEv(void* qthis);
   // proto:  void QSpinBox::setSingleStep(int val);
-extern void _ZN8QSpinBox13setSingleStepEi(void* qthis, int arg0);
+extern void _ZN8QSpinBox13setSingleStepEi(void* qthis, int32_t arg0);
   // proto:  void QSpinBox::setRange(int min, int max);
-extern void _ZN8QSpinBox8setRangeEii(void* qthis, int arg0, int arg1);
+extern void _ZN8QSpinBox8setRangeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QString QDoubleSpinBox::textFromValue(double val);
 extern void _ZNK14QDoubleSpinBox13textFromValueEd(void* qthis, double arg0);
   // proto:  void QDoubleSpinBox::setSingleStep(double val);
@@ -110,7 +110,7 @@ extern void _ZN14QDoubleSpinBox10setMinimumEd(void* qthis, double arg0);
   // proto:  void QDoubleSpinBox::setMaximum(double max);
 extern void _ZN14QDoubleSpinBox10setMaximumEd(void* qthis, double arg0);
   // proto:  void QDoubleSpinBox::setDecimals(int prec);
-extern void _ZN14QDoubleSpinBox11setDecimalsEi(void* qthis, int arg0);
+extern void _ZN14QDoubleSpinBox11setDecimalsEi(void* qthis, int32_t arg0);
   // proto:  double QDoubleSpinBox::value();
 extern void _ZNK14QDoubleSpinBox5valueEv(void* qthis);
   // proto:  void QDoubleSpinBox::setRange(double min, double max);
@@ -137,14 +137,14 @@ func init() {
 // class sizeof(QSpinBox)=1
 type QSpinBox struct {
   /*qbase*/ QAbstractSpinBox;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QSpinBox_valueChanged_signal;
 }
 
 // class sizeof(QDoubleSpinBox)=1
 type QDoubleSpinBox struct {
   /*qbase*/ QAbstractSpinBox;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _valueChanged QDoubleSpinBox_valueChanged_signal;
 }
 

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -67,7 +67,7 @@ func init() {
 // class sizeof(QCommonStyle)=1
 type QCommonStyle struct {
   /*qbase*/ QStyle;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QCommonStyle::polish(QWidget * widget);

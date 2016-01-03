@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -35,7 +35,7 @@ import "qtrt"
   // proto:  void QStatusBar::~QStatusBar();
 extern void _ZN10QStatusBarD0Ev(void* qthis);
   // proto:  int QStatusBar::insertPermanentWidget(int index, QWidget * widget, int stretch);
-extern void _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QStatusBar::removeWidget(QWidget * widget);
 extern void _ZN10QStatusBar12removeWidgetEP7QWidget(void* qthis, void* arg0);
   // proto:  void QStatusBar::QStatusBar(const QStatusBar & );
@@ -44,7 +44,7 @@ extern void _ZN10QStatusBarC1ERKS_(void* qthis, void* arg0);
   // proto:  void QStatusBar::setSizeGripEnabled(bool );
 extern void _ZN10QStatusBar18setSizeGripEnabledEb(void* qthis, bool arg0);
   // proto:  void QStatusBar::addPermanentWidget(QWidget * widget, int stretch);
-extern void _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(void* qthis, void* arg0, int arg1);
+extern void _ZN10QStatusBar18addPermanentWidgetEP7QWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  bool QStatusBar::isSizeGripEnabled();
 extern void _ZNK10QStatusBar17isSizeGripEnabledEv(void* qthis);
   // proto:  void QStatusBar::clearMessage();
@@ -54,11 +54,11 @@ extern void _ZNK10QStatusBar14currentMessageEv(void* qthis);
   // proto:  const QMetaObject * QStatusBar::metaObject();
 extern void _ZNK10QStatusBar10metaObjectEv(void* qthis);
   // proto:  void QStatusBar::showMessage(const QString & text, int timeout);
-extern void _ZN10QStatusBar11showMessageERK7QStringi(void* qthis, void* arg0, int arg1);
+extern void _ZN10QStatusBar11showMessageERK7QStringi(void* qthis, void* arg0, int32_t arg1);
   // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
-extern void _ZN10QStatusBar12insertWidgetEiP7QWidgeti(void* qthis, int arg0, void* arg1, int arg2);
+extern void _ZN10QStatusBar12insertWidgetEiP7QWidgeti(void* qthis, int32_t arg0, void* arg1, int32_t arg2);
   // proto:  void QStatusBar::addWidget(QWidget * widget, int stretch);
-extern void _ZN10QStatusBar9addWidgetEP7QWidgeti(void* qthis, void* arg0, int arg1);
+extern void _ZN10QStatusBar9addWidgetEP7QWidgeti(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
 extern void* dector_ZN10QStatusBarC1EP7QWidget(void* arg0);
 extern void _ZN10QStatusBarC1EP7QWidget(void* qthis, void* arg0);
@@ -77,7 +77,7 @@ func init() {
 // class sizeof(QStatusBar)=1
 type QStatusBar struct {
   /*qbase*/ QWidget;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _messageChanged QStatusBar_messageChanged_signal;
 }
 
@@ -166,7 +166,7 @@ func (this *QStatusBar) setSizeGripEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QStatusBar18setSizeGripEnabledEb
     // invoke: void setSizeGripEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN10QStatusBar18setSizeGripEnabledEb(this.qclsinst, arg0)
   default:

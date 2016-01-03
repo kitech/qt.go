@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.go
 //
@@ -39,7 +39,7 @@ extern void _ZN9QTextEdit13setFontFamilyERK7QString(void* qthis, void* arg0);
   // proto:  QString QTextEdit::toPlainText();
 extern void _ZNK9QTextEdit11toPlainTextEv(void* qthis);
   // proto:  void QTextEdit::setCursorWidth(int width);
-extern void _ZN9QTextEdit14setCursorWidthEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit14setCursorWidthEi(void* qthis, int32_t arg0);
   // proto:  QMenu * QTextEdit::createStandardContextMenu();
 extern void _ZN9QTextEdit25createStandardContextMenuEv(void* qthis);
   // proto:  QTextDocument * QTextEdit::document();
@@ -69,11 +69,11 @@ extern void _ZN9QTextEdit22setTextBackgroundColorERK6QColor(void* qthis, void* a
   // proto:  int QTextEdit::tabStopWidth();
 extern void _ZNK9QTextEdit12tabStopWidthEv(void* qthis);
   // proto:  void QTextEdit::setFontWeight(int w);
-extern void _ZN9QTextEdit13setFontWeightEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit13setFontWeightEi(void* qthis, int32_t arg0);
   // proto:  void QTextEdit::selectAll();
 extern void _ZN9QTextEdit9selectAllEv(void* qthis);
   // proto:  void QTextEdit::zoomOut(int range);
-extern void _ZN9QTextEdit7zoomOutEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit7zoomOutEi(void* qthis, int32_t arg0);
   // proto:  void QTextEdit::redo();
 extern void _ZN9QTextEdit4redoEv(void* qthis);
   // proto:  void QTextEdit::setFontPointSize(qreal s);
@@ -103,7 +103,7 @@ extern void _ZN9QTextEdit16setOverwriteModeEb(void* qthis, bool arg0);
   // proto:  void QTextEdit::undo();
 extern void _ZN9QTextEdit4undoEv(void* qthis);
   // proto:  void QTextEdit::zoomIn(int range);
-extern void _ZN9QTextEdit6zoomInEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit6zoomInEi(void* qthis, int32_t arg0);
   // proto:  void QTextEdit::setDocumentTitle(const QString & title);
 extern void demth_ZN9QTextEdit16setDocumentTitleERK7QString(void* qthis, void* arg0);
   // proto:  bool QTextEdit::canPaste();
@@ -113,7 +113,7 @@ extern void _ZNK9QTextEdit6toHtmlEv(void* qthis);
   // proto:  QMenu * QTextEdit::createStandardContextMenu(const QPoint & position);
 extern void _ZN9QTextEdit25createStandardContextMenuERK6QPoint(void* qthis, void* arg0);
   // proto:  void QTextEdit::setTabStopWidth(int width);
-extern void _ZN9QTextEdit15setTabStopWidthEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit15setTabStopWidthEi(void* qthis, int32_t arg0);
   // proto:  QString QTextEdit::documentTitle();
 extern void demth_ZNK9QTextEdit13documentTitleEv(void* qthis);
   // proto:  bool QTextEdit::isUndoRedoEnabled();
@@ -148,7 +148,7 @@ extern void _ZN9QTextEdit13setTextCursorERK11QTextCursor(void* qthis, void* arg0
   // proto:  void QTextEdit::setCurrentCharFormat(const QTextCharFormat & format);
 extern void _ZN9QTextEdit20setCurrentCharFormatERK15QTextCharFormat(void* qthis, void* arg0);
   // proto:  QVariant QTextEdit::loadResource(int type, const QUrl & name);
-extern void _ZN9QTextEdit12loadResourceEiRK4QUrl(void* qthis, int arg0, void* arg1);
+extern void _ZN9QTextEdit12loadResourceEiRK4QUrl(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QTextEdit::setTabChangesFocus(bool b);
 extern void _ZN9QTextEdit18setTabChangesFocusEb(void* qthis, bool arg0);
   // proto:  void QTextEdit::setHtml(const QString & text);
@@ -156,7 +156,7 @@ extern void _ZN9QTextEdit7setHtmlERK7QString(void* qthis, void* arg0);
   // proto:  QRect QTextEdit::cursorRect(const QTextCursor & cursor);
 extern void _ZNK9QTextEdit10cursorRectERK11QTextCursor(void* qthis, void* arg0);
   // proto:  void QTextEdit::setLineWrapColumnOrWidth(int w);
-extern void _ZN9QTextEdit24setLineWrapColumnOrWidthEi(void* qthis, int arg0);
+extern void _ZN9QTextEdit24setLineWrapColumnOrWidthEi(void* qthis, int32_t arg0);
   // proto:  void QTextEdit::setFontItalic(bool b);
 extern void _ZN9QTextEdit13setFontItalicEb(void* qthis, bool arg0);
   // proto:  const QMetaObject * QTextEdit::metaObject();
@@ -202,7 +202,7 @@ func init() {
 // class sizeof(QTextEdit)=1
 type QTextEdit struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _cursorPositionChanged QTextEdit_cursorPositionChanged_signal;
 //  _redoAvailable QTextEdit_redoAvailable_signal;
 //  _selectionChanged QTextEdit_selectionChanged_signal;
@@ -496,7 +496,7 @@ func (this *QTextEdit) setFontUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit16setFontUnderlineEb
     // invoke: void setFontUnderline(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit16setFontUnderlineEb(this.qclsinst, arg0)
   default:
@@ -937,7 +937,7 @@ func (this *QTextEdit) setOverwriteMode(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit16setOverwriteModeEb
     // invoke: void setOverwriteMode(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit16setOverwriteModeEb(this.qclsinst, arg0)
   default:
@@ -1172,7 +1172,7 @@ func (this *QTextEdit) setAcceptRichText(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit17setAcceptRichTextEb
     // invoke: void setAcceptRichText(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit17setAcceptRichTextEb(this.qclsinst, arg0)
   default:
@@ -1238,7 +1238,7 @@ func (this *QTextEdit) setUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit18setUndoRedoEnabledEb
     // invoke: void setUndoRedoEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN9QTextEdit18setUndoRedoEnabledEb(this.qclsinst, arg0)
   default:
@@ -1444,7 +1444,7 @@ func (this *QTextEdit) setTabChangesFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit18setTabChangesFocusEb
     // invoke: void setTabChangesFocus(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit18setTabChangesFocusEb(this.qclsinst, arg0)
   default:
@@ -1513,7 +1513,7 @@ func (this *QTextEdit) setFontItalic(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit13setFontItalicEb
     // invoke: void setFontItalic(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit13setFontItalicEb(this.qclsinst, arg0)
   default:
@@ -1748,7 +1748,7 @@ func (this *QTextEdit) setReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QTextEdit11setReadOnlyEb
     // invoke: void setReadOnly(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN9QTextEdit11setReadOnlyEb(this.qclsinst, arg0)
   default:

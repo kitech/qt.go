@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
-extern void _ZNK7QPixmap4saveERK7QStringPKci(void* qthis, void* arg0, char* arg1, int arg2);
+extern void _ZNK7QPixmap4saveERK7QStringPKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2);
   // proto:  void QPixmap::swap(QPixmap & other);
 extern void demth_ZN7QPixmap4swapERS_(void* qthis, void* arg0);
   // proto:  bool QPixmap::isQBitmap();
@@ -44,25 +44,25 @@ extern void _ZNK7QPixmap16devicePixelRatioEv(void* qthis);
 extern void* dector_ZN7QPixmapC1ERK5QSize(void* arg0);
 extern void _ZN7QPixmapC1ERK5QSize(void* qthis, void* arg0);
   // proto:  void QPixmap::fill(const QPaintDevice * device, int xofs, int yofs);
-extern void demth_ZN7QPixmap4fillEPK12QPaintDeviceii(void* qthis, void* arg0, int arg1, int arg2);
+extern void demth_ZN7QPixmap4fillEPK12QPaintDeviceii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPixmap::QPixmap(const QSize & s, int type);
-extern void* dector_ZN7QPixmapC1ERK5QSizei(void* arg0, int arg1);
-extern void _ZN7QPixmapC1ERK5QSizei(void* qthis, void* arg0, int arg1);
+extern void* dector_ZN7QPixmapC1ERK5QSizei(void* arg0, int32_t arg1);
+extern void _ZN7QPixmapC1ERK5QSizei(void* qthis, void* arg0, int32_t arg1);
   // proto:  void QPixmap::fill(const QColor & fillColor);
 extern void _ZN7QPixmap4fillERK6QColor(void* qthis, void* arg0);
   // proto:  int QPixmap::devType();
 extern void _ZNK7QPixmap7devTypeEv(void* qthis);
   // proto:  void QPixmap::scroll(int dx, int dy, int x, int y, int width, int height, QRegion * exposed);
-extern void demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(void* qthis, int arg0, int arg1, int arg2, int arg3, int arg4, int arg5, void* arg6);
+extern void demth_ZN7QPixmap6scrollEiiiiiiP7QRegion(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4, int32_t arg5, void* arg6);
   // proto:  QPixmap QPixmap::copy(const QRect & rect);
 extern void _ZNK7QPixmap4copyERK5QRect(void* qthis, void* arg0);
   // proto: static QTransform QPixmap::trueMatrix(const QTransform & m, int w, int h);
-extern void _ZN7QPixmap10trueMatrixERK10QTransformii(void* arg0, int arg1, int arg2);
+extern void _ZN7QPixmap10trueMatrixERK10QTransformii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  void QPixmap::QPixmap(int w, int h);
-extern void* dector_ZN7QPixmapC1Eii(int arg0, int arg1);
-extern void _ZN7QPixmapC1Eii(void* qthis, int arg0, int arg1);
+extern void* dector_ZN7QPixmapC1Eii(int32_t arg0, int32_t arg1);
+extern void _ZN7QPixmapC1Eii(void* qthis, int32_t arg0, int32_t arg1);
   // proto: static QPixmap QPixmap::grabWindow(WId , int x, int y, int w, int h);
-extern void _ZN7QPixmap10grabWindowEiiiii(uint32_t* arg0, int arg1, int arg2, int arg3, int arg4);
+extern void _ZN7QPixmap10grabWindowEiiiii(int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  void QPixmap::fill(const QPaintDevice * device, const QPoint & ofs);
 extern void _ZN7QPixmap4fillEPK12QPaintDeviceRK6QPoint(void* qthis, void* arg0, void* arg1);
   // proto:  bool QPixmap::isDetached();
@@ -70,13 +70,13 @@ extern void _ZNK7QPixmap10isDetachedEv(void* qthis);
   // proto:  bool QPixmap::isNull();
 extern void _ZNK7QPixmap6isNullEv(void* qthis);
   // proto:  QPixmap QPixmap::copy(int x, int y, int width, int height);
-extern void demth_ZNK7QPixmap4copyEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZNK7QPixmap4copyEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto: static int QPixmap::defaultDepth();
 extern void _ZN7QPixmap12defaultDepthEv();
   // proto:  void QPixmap::detach();
 extern void _ZN7QPixmap6detachEv(void* qthis);
   // proto:  void QPixmap::scroll(int dx, int dy, const QRect & rect, QRegion * exposed);
-extern void _ZN7QPixmap6scrollEiiRK5QRectP7QRegion(void* qthis, int arg0, int arg1, void* arg2, void* arg3);
+extern void _ZN7QPixmap6scrollEiiRK5QRectP7QRegion(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3);
   // proto:  void QPixmap::setMask(const QBitmap & );
 extern void _ZN7QPixmap7setMaskERK7QBitmap(void* qthis, void* arg0);
   // proto:  void QPixmap::QPixmap();
@@ -101,7 +101,7 @@ extern void _ZNK7QPixmap5depthEv(void* qthis);
   // proto:  QImage QPixmap::toImage();
 extern void _ZNK7QPixmap7toImageEv(void* qthis);
   // proto: static QPixmap QPixmap::grabWidget(QObject * widget, int x, int y, int w, int h);
-extern void demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(void* arg0, int arg1, int arg2, int arg3, int arg4);
+extern void demth_ZN7QPixmap10grabWidgetEP7QObjectiiii(void* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
   // proto:  QPlatformPixmap * QPixmap::handle();
 extern void _ZNK7QPixmap6handleEv(void* qthis);
   // proto:  bool QPixmap::hasAlphaChannel();
@@ -109,7 +109,7 @@ extern void _ZNK7QPixmap15hasAlphaChannelEv(void* qthis);
   // proto:  QRect QPixmap::rect();
 extern void _ZNK7QPixmap4rectEv(void* qthis);
   // proto: static QMatrix QPixmap::trueMatrix(const QMatrix & m, int w, int h);
-extern void _ZN7QPixmap10trueMatrixERK7QMatrixii(void* arg0, int arg1, int arg2);
+extern void _ZN7QPixmap10trueMatrixERK7QMatrixii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QBitmap QPixmap::mask();
 extern void _ZNK7QPixmap4maskEv(void* qthis);
   // proto:  int QPixmap::width();
@@ -121,7 +121,7 @@ extern void _ZN7QPixmapD0Ev(void* qthis);
   // proto:  int QPixmap::height();
 extern void _ZNK7QPixmap6heightEv(void* qthis);
   // proto:  bool QPixmap::save(QIODevice * device, const char * format, int quality);
-extern void _ZNK7QPixmap4saveEP9QIODevicePKci(void* qthis, void* arg0, char* arg1, int arg2);
+extern void _ZNK7QPixmap4saveEP9QIODevicePKci(void* qthis, void* arg0, unsigned char* arg1, int32_t arg2);
   // proto:  QSize QPixmap::size();
 extern void _ZNK7QPixmap4sizeEv(void* qthis);
   // proto:  bool QPixmap::hasAlpha();
@@ -141,7 +141,7 @@ func init() {
 // class sizeof(QPixmap)=1
 type QPixmap struct {
   /*qbase*/ QPaintDevice;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  bool QPixmap::save(const QString & fileName, const char * format, int quality);
@@ -167,7 +167,7 @@ func (this *QPixmap) save(args ...interface{}) () {
     // invoke: bool save(const class QString &, const char *, int)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
@@ -177,7 +177,7 @@ func (this *QPixmap) save(args ...interface{}) () {
     // invoke: bool save(class QIODevice *, const char *, int)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
@@ -622,7 +622,7 @@ func (this *QPixmap) createHeuristicMask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap19createHeuristicMaskEb
     // invoke: QBitmap createHeuristicMask(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZNK7QPixmap19createHeuristicMaskEb(this.qclsinst, arg0)
   default:

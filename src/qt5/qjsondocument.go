@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qjsondocument.h
 // dst-file: /src/core/qjsondocument.go
 //
@@ -50,7 +50,7 @@ extern void _ZNK13QJsonDocument9toVariantEv(void* qthis);
   // proto:  bool QJsonDocument::isEmpty();
 extern void _ZNK13QJsonDocument7isEmptyEv(void* qthis);
   // proto:  const char * QJsonDocument::rawData(int * size);
-extern void _ZNK13QJsonDocument7rawDataEPi(void* qthis, int* arg0);
+extern void _ZNK13QJsonDocument7rawDataEPi(void* qthis, int32_t* arg0);
   // proto:  bool QJsonDocument::isObject();
 extern void _ZNK13QJsonDocument8isObjectEv(void* qthis);
   // proto:  void QJsonDocument::~QJsonDocument();
@@ -76,13 +76,13 @@ func init() {
 // class sizeof(QJsonDocument)=8
 type QJsonDocument struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QJsonParseError)=8
 type QJsonParseError struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QJsonObject QJsonDocument::object();

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qgraphicsview.h
 // dst-file: /src/widgets/qgraphicsview.go
 //
@@ -41,7 +41,7 @@ extern void _ZNK13QGraphicsView12mapFromSceneERK6QRectF(void* qthis, void* arg0)
   // proto:  void QGraphicsView::translate(qreal dx, qreal dy);
 extern void _ZN13QGraphicsView9translateEdd(void* qthis, double arg0, double arg1);
   // proto:  QPointF QGraphicsView::mapToScene(int x, int y);
-extern void demth_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK13QGraphicsView10mapToSceneEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QMetaObject * QGraphicsView::metaObject();
 extern void _ZNK13QGraphicsView10metaObjectEv(void* qthis);
   // proto:  void QGraphicsView::setSceneRect(qreal x, qreal y, qreal w, qreal h);
@@ -60,7 +60,7 @@ extern void _ZN13QGraphicsView18setBackgroundBrushERK6QBrush(void* qthis, void* 
   // proto:  bool QGraphicsView::isTransformed();
 extern void _ZNK13QGraphicsView13isTransformedEv(void* qthis);
   // proto:  QGraphicsItem * QGraphicsView::itemAt(int x, int y);
-extern void demth_ZNK13QGraphicsView6itemAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK13QGraphicsView6itemAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGraphicsView::centerOn(const QPointF & pos);
 extern void _ZN13QGraphicsView8centerOnERK7QPointF(void* qthis, void* arg0);
   // proto:  void QGraphicsView::setForegroundBrush(const QBrush & brush);
@@ -80,7 +80,7 @@ extern void _ZN13QGraphicsView14setInteractiveEb(void* qthis, bool arg0);
   // proto:  QMatrix QGraphicsView::matrix();
 extern void _ZNK13QGraphicsView6matrixEv(void* qthis);
   // proto:  QPolygonF QGraphicsView::mapToScene(int x, int y, int w, int h);
-extern void demth_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZNK13QGraphicsView10mapToSceneEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QGraphicsView::QGraphicsView(QGraphicsScene * scene, QWidget * parent);
 extern void* dector_ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(void* arg0, void* arg1);
 extern void _ZN13QGraphicsViewC1EP14QGraphicsSceneP7QWidget(void* qthis, void* arg0, void* arg1);
@@ -96,7 +96,7 @@ extern void _ZN13QGraphicsView18resetCachedContentEv(void* qthis);
   // proto:  QPolygonF QGraphicsView::mapToScene(const QPolygon & polygon);
 extern void _ZNK13QGraphicsView10mapToSceneERK8QPolygon(void* qthis, void* arg0);
   // proto:  void QGraphicsView::ensureVisible(const QGraphicsItem * item, int xmargin, int ymargin);
-extern void _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN13QGraphicsView13ensureVisibleEPK13QGraphicsItemii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QRectF QGraphicsView::sceneRect();
 extern void _ZNK13QGraphicsView9sceneRectEv(void* qthis);
   // proto:  QGraphicsScene * QGraphicsView::scene();
@@ -108,17 +108,17 @@ extern void _ZNK13QGraphicsView15backgroundBrushEv(void* qthis);
   // proto:  QPoint QGraphicsView::mapFromScene(qreal x, qreal y);
 extern void demth_ZNK13QGraphicsView12mapFromSceneEdd(void* qthis, double arg0, double arg1);
   // proto:  void QGraphicsView::ensureVisible(const QRectF & rect, int xmargin, int ymargin);
-extern void _ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN13QGraphicsView13ensureVisibleERK6QRectFii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items();
 extern void _ZNK13QGraphicsView5itemsEv(void* qthis);
   // proto:  QTransform QGraphicsView::transform();
 extern void _ZNK13QGraphicsView9transformEv(void* qthis);
   // proto:  QList<QGraphicsItem *> QGraphicsView::items(int x, int y);
-extern void demth_ZNK13QGraphicsView5itemsEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK13QGraphicsView5itemsEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QGraphicsView::centerOn(qreal x, qreal y);
 extern void demth_ZN13QGraphicsView8centerOnEdd(void* qthis, double arg0, double arg1);
   // proto:  void QGraphicsView::ensureVisible(qreal x, qreal y, qreal w, qreal h, int xmargin, int ymargin);
-extern void demth_ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int arg4, int arg5);
+extern void demth_ZN13QGraphicsView13ensureVisibleEddddii(void* qthis, double arg0, double arg1, double arg2, double arg3, int32_t arg4, int32_t arg5);
   // proto:  void QGraphicsView::rotate(qreal angle);
 extern void _ZN13QGraphicsView6rotateEd(void* qthis, double arg0);
   // proto:  QPolygon QGraphicsView::mapFromScene(qreal x, qreal y, qreal w, qreal h);
@@ -160,7 +160,7 @@ func init() {
 // class sizeof(QGraphicsView)=1
 type QGraphicsView struct {
   /*qbase*/ QAbstractScrollArea;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _rubberBandChanged QGraphicsView_rubberBandChanged_signal;
 }
 
@@ -474,7 +474,7 @@ func (this *QGraphicsView) setMatrix(args ...interface{}) () {
     // invoke: void setMatrix(const class QMatrix &, _Bool)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN13QGraphicsView9setMatrixERK7QMatrixb(this.qclsinst, arg0, arg1)
   default:
@@ -736,7 +736,7 @@ func (this *QGraphicsView) setInteractive(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QGraphicsView14setInteractiveEb
     // invoke: void setInteractive(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN13QGraphicsView14setInteractiveEb(this.qclsinst, arg0)
   default:
@@ -1073,7 +1073,7 @@ func (this *QGraphicsView) setTransform(args ...interface{}) () {
     // invoke: void setTransform(const class QTransform &, _Bool)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN13QGraphicsView12setTransformERK10QTransformb(this.qclsinst, arg0, arg1)
   default:

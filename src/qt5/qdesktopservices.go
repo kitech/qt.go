@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -37,7 +37,7 @@ extern void _ZN16QDesktopServices15unsetUrlHandlerERK7QString(void* arg0);
   // proto: static bool QDesktopServices::openUrl(const QUrl & url);
 extern void _ZN16QDesktopServices7openUrlERK4QUrl(void* arg0);
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-extern void _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, char* arg2);
+extern void _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, unsigned char* arg2);
 */
 import "C"
 // } // <= ext block end
@@ -53,7 +53,7 @@ func init() {
 // class sizeof(QDesktopServices)=1
 type QDesktopServices struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);

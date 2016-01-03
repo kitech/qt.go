@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -55,7 +55,7 @@ extern void _ZNK13QBackingStore17hasStaticContentsEv(void* qthis);
   // proto:  void QBackingStore::endPaint();
 extern void _ZN13QBackingStore8endPaintEv(void* qthis);
   // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
-extern void _ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int arg1, int arg2);
+extern void _ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QPlatformBackingStore * QBackingStore::handle();
 extern void _ZNK13QBackingStore6handleEv(void* qthis);
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
@@ -76,7 +76,7 @@ func init() {
 // class sizeof(QBackingStore)=1
 type QBackingStore struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  QPaintDevice * QBackingStore::paintDevice();

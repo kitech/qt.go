@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtWidgets/qwidget.h
 // dst-file: /src/widgets/qwidget.go
 //
@@ -67,7 +67,7 @@ extern void _ZNK7QWidget13sizeIncrementEv(void* qthis);
   // proto:  void QWidget::repaint(const QRect & );
 extern void _ZN7QWidget7repaintERK5QRect(void* qthis, void* arg0);
   // proto:  void QWidget::update(int x, int y, int w, int h);
-extern void demth_ZN7QWidget6updateEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN7QWidget6updateEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  QString QWidget::windowFilePath();
 extern void _ZNK7QWidget14windowFilePathEv(void* qthis);
   // proto:  void QWidget::clearMask();
@@ -115,7 +115,7 @@ extern void _ZN7QWidget8setStyleEP6QStyle(void* qthis, void* arg0);
   // proto:  void QWidget::repaint();
 extern void _ZN7QWidget7repaintEv(void* qthis);
   // proto:  void QWidget::setBaseSize(int basew, int baseh);
-extern void _ZN7QWidget11setBaseSizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget11setBaseSizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QWidget::isWindowModified();
 extern void _ZNK7QWidget16isWindowModifiedEv(void* qthis);
   // proto:  const QRect & QWidget::geometry();
@@ -131,11 +131,11 @@ extern void _ZNK7QWidget13frameGeometryEv(void* qthis);
   // proto:  QSize QWidget::sizeHint();
 extern void _ZNK7QWidget8sizeHintEv(void* qthis);
   // proto:  void QWidget::setMinimumWidth(int minw);
-extern void _ZN7QWidget15setMinimumWidthEi(void* qthis, int arg0);
+extern void _ZN7QWidget15setMinimumWidthEi(void* qthis, int32_t arg0);
   // proto:  bool QWidget::isVisibleTo(const QWidget * );
 extern void _ZNK7QWidget11isVisibleToEPKS_(void* qthis, void* arg0);
   // proto:  void QWidget::setMaximumSize(int maxw, int maxh);
-extern void _ZN7QWidget14setMaximumSizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget14setMaximumSizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QWidget::hasMouseTracking();
 extern void demth_ZNK7QWidget16hasMouseTrackingEv(void* qthis);
   // proto:  void QWidget::update(const QRect & );
@@ -145,7 +145,7 @@ extern void demth_ZNK7QWidget8isHiddenEv(void* qthis);
   // proto:  int QWidget::devType();
 extern void _ZNK7QWidget7devTypeEv(void* qthis);
   // proto:  QWidget * QWidget::childAt(int x, int y);
-extern void demth_ZNK7QWidget7childAtEii(void* qthis, int arg0, int arg1);
+extern void demth_ZNK7QWidget7childAtEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QWidget::activateWindow();
 extern void _ZN7QWidget14activateWindowEv(void* qthis);
   // proto:  QRect QWidget::normalGeometry();
@@ -187,7 +187,7 @@ extern void _ZNK7QWidget12saveGeometryEv(void* qthis);
   // proto:  bool QWidget::isEnabled();
 extern void demth_ZNK7QWidget9isEnabledEv(void* qthis);
   // proto:  void QWidget::setFixedHeight(int h);
-extern void _ZN7QWidget14setFixedHeightEi(void* qthis, int arg0);
+extern void _ZN7QWidget14setFixedHeightEi(void* qthis, int32_t arg0);
   // proto:  QRegion QWidget::mask();
 extern void _ZNK7QWidget4maskEv(void* qthis);
   // proto:  void QWidget::stackUnder(QWidget * );
@@ -213,7 +213,7 @@ extern void demth_ZNK7QWidget8fontInfoEv(void* qthis);
   // proto:  bool QWidget::autoFillBackground();
 extern void _ZNK7QWidget18autoFillBackgroundEv(void* qthis);
   // proto:  void QWidget::scroll(int dx, int dy, const QRect & );
-extern void _ZN7QWidget6scrollEiiRK5QRect(void* qthis, int arg0, int arg1, void* arg2);
+extern void _ZN7QWidget6scrollEiiRK5QRect(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
   // proto:  QFontMetrics QWidget::fontMetrics();
 extern void demth_ZNK7QWidget11fontMetricsEv(void* qthis);
   // proto:  void QWidget::adjustSize();
@@ -223,7 +223,7 @@ extern void _ZNK7QWidget20previousInFocusChainEv(void* qthis);
   // proto:  bool QWidget::updatesEnabled();
 extern void demth_ZNK7QWidget14updatesEnabledEv(void* qthis);
   // proto:  void QWidget::setMaximumHeight(int maxh);
-extern void _ZN7QWidget16setMaximumHeightEi(void* qthis, int arg0);
+extern void _ZN7QWidget16setMaximumHeightEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::showMaximized();
 extern void _ZN7QWidget13showMaximizedEv(void* qthis);
   // proto:  QPoint QWidget::mapFrom(const QWidget * , const QPoint & );
@@ -233,7 +233,7 @@ extern void _ZNK7QWidget1xEv(void* qthis);
   // proto:  void QWidget::clearFocus();
 extern void _ZN7QWidget10clearFocusEv(void* qthis);
   // proto: static QWidget * QWidget::find(WId );
-extern void _ZN7QWidget4findEi(uint32_t* arg0);
+extern void _ZN7QWidget4findEi(int32_t* arg0);
   // proto:  const QPalette & QWidget::palette();
 extern void _ZNK7QWidget7paletteEv(void* qthis);
   // proto:  void QWidget::setSizePolicy(QSizePolicy );
@@ -241,7 +241,7 @@ extern void _ZN7QWidget13setSizePolicyE11QSizePolicy(void* qthis, void* arg0);
   // proto:  void QWidget::setMask(const QRegion & );
 extern void _ZN7QWidget7setMaskERK7QRegion(void* qthis, void* arg0);
   // proto:  void QWidget::setMaximumWidth(int maxw);
-extern void _ZN7QWidget15setMaximumWidthEi(void* qthis, int arg0);
+extern void _ZN7QWidget15setMaximumWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::setWindowIconText(const QString & );
 extern void _ZN7QWidget17setWindowIconTextERK7QString(void* qthis, void* arg0);
   // proto:  void QWidget::setWindowIcon(const QIcon & icon);
@@ -249,7 +249,7 @@ extern void _ZN7QWidget13setWindowIconERK5QIcon(void* qthis, void* arg0);
   // proto:  void QWidget::~QWidget();
 extern void _ZN7QWidgetD0Ev(void* qthis);
   // proto:  void QWidget::getContentsMargins(int * left, int * top, int * right, int * bottom);
-extern void _ZNK7QWidget18getContentsMarginsEPiS0_S0_S0_(void* qthis, int* arg0, int* arg1, int* arg2, int* arg3);
+extern void _ZNK7QWidget18getContentsMarginsEPiS0_S0_S0_(void* qthis, int32_t* arg0, int32_t* arg1, int32_t* arg2, int32_t* arg3);
   // proto:  QSize QWidget::minimumSizeHint();
 extern void _ZNK7QWidget15minimumSizeHintEv(void* qthis);
   // proto:  void QWidget::setWindowModified(bool );
@@ -269,17 +269,17 @@ extern void _ZNK7QWidget10styleSheetEv(void* qthis);
   // proto:  QWidget * QWidget::childAt(const QPoint & p);
 extern void _ZNK7QWidget7childAtERK6QPoint(void* qthis, void* arg0);
   // proto:  void QWidget::repaint(int x, int y, int w, int h);
-extern void _ZN7QWidget7repaintEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN7QWidget7repaintEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  QString QWidget::whatsThis();
 extern void _ZNK7QWidget9whatsThisEv(void* qthis);
   // proto:  const QFont & QWidget::font();
 extern void demth_ZNK7QWidget4fontEv(void* qthis);
   // proto:  void QWidget::setMinimumSize(int minw, int minh);
-extern void _ZN7QWidget14setMinimumSizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget14setMinimumSizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  const QMetaObject * QWidget::metaObject();
 extern void _ZNK7QWidget10metaObjectEv(void* qthis);
   // proto:  void QWidget::setMinimumHeight(int minh);
-extern void _ZN7QWidget16setMinimumHeightEi(void* qthis, int arg0);
+extern void _ZN7QWidget16setMinimumHeightEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::update(const QRegion & );
 extern void _ZN7QWidget6updateERK7QRegion(void* qthis, void* arg0);
   // proto:  qreal QWidget::windowOpacity();
@@ -289,7 +289,7 @@ extern void _ZNK7QWidget14childrenRegionEv(void* qthis);
   // proto:  void QWidget::setWindowFilePath(const QString & filePath);
 extern void _ZN7QWidget17setWindowFilePathERK7QString(void* qthis, void* arg0);
   // proto:  void QWidget::setShortcutEnabled(int id, bool enable);
-extern void _ZN7QWidget18setShortcutEnabledEib(void* qthis, int arg0, bool arg1);
+extern void _ZN7QWidget18setShortcutEnabledEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QWidget::raise();
 extern void _ZN7QWidget5raiseEv(void* qthis);
   // proto:  QString QWidget::statusTip();
@@ -307,7 +307,7 @@ extern void _ZN7QWidget15releaseKeyboardEv(void* qthis);
   // proto: static QWidget * QWidget::mouseGrabber();
 extern void _ZN7QWidget12mouseGrabberEv();
   // proto:  void QWidget::setFixedWidth(int w);
-extern void _ZN7QWidget13setFixedWidthEi(void* qthis, int arg0);
+extern void _ZN7QWidget13setFixedWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::addAction(QAction * action);
 extern void _ZN7QWidget9addActionEP7QAction(void* qthis, void* arg0);
   // proto:  void QWidget::setDisabled(bool );
@@ -315,11 +315,11 @@ extern void _ZN7QWidget11setDisabledEb(void* qthis, bool arg0);
   // proto:  QIcon QWidget::windowIcon();
 extern void _ZNK7QWidget10windowIconEv(void* qthis);
   // proto:  void QWidget::setContentsMargins(int left, int top, int right, int bottom);
-extern void _ZN7QWidget18setContentsMarginsEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void _ZN7QWidget18setContentsMarginsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  QString QWidget::windowRole();
 extern void _ZNK7QWidget10windowRoleEv(void* qthis);
   // proto:  void QWidget::setShortcutAutoRepeat(int id, bool enable);
-extern void _ZN7QWidget21setShortcutAutoRepeatEib(void* qthis, int arg0, bool arg1);
+extern void _ZN7QWidget21setShortcutAutoRepeatEib(void* qthis, int32_t arg0, bool arg1);
   // proto:  void QWidget::showFullScreen();
 extern void _ZN7QWidget14showFullScreenEv(void* qthis);
   // proto:  void QWidget::grabMouse();
@@ -333,7 +333,7 @@ extern void _ZNK7QWidget7toolTipEv(void* qthis);
   // proto:  void QWidget::setWhatsThis(const QString & );
 extern void _ZN7QWidget12setWhatsThisERK7QString(void* qthis, void* arg0);
   // proto:  void QWidget::resize(int w, int h);
-extern void demth_ZN7QWidget6resizeEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN7QWidget6resizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QWidget * QWidget::parentWidget();
 extern void demth_ZNK7QWidget12parentWidgetEv(void* qthis);
   // proto:  QPoint QWidget::pos();
@@ -353,15 +353,15 @@ extern void _ZN7QWidget14setWindowTitleERK7QString(void* qthis, void* arg0);
   // proto:  QWidget * QWidget::window();
 extern void _ZNK7QWidget6windowEv(void* qthis);
   // proto:  void QWidget::scroll(int dx, int dy);
-extern void _ZN7QWidget6scrollEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget6scrollEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QWidget::releaseShortcut(int id);
-extern void _ZN7QWidget15releaseShortcutEi(void* qthis, int arg0);
+extern void _ZN7QWidget15releaseShortcutEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::setToolTipDuration(int msec);
-extern void _ZN7QWidget18setToolTipDurationEi(void* qthis, int arg0);
+extern void _ZN7QWidget18setToolTipDurationEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::setGeometry(int x, int y, int w, int h);
-extern void demth_ZN7QWidget11setGeometryEiiii(void* qthis, int arg0, int arg1, int arg2, int arg3);
+extern void demth_ZN7QWidget11setGeometryEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
   // proto:  void QWidget::setSizeIncrement(int w, int h);
-extern void _ZN7QWidget16setSizeIncrementEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget16setSizeIncrementEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  void QWidget::setUpdatesEnabled(bool enable);
 extern void _ZN7QWidget17setUpdatesEnabledEb(void* qthis, bool arg0);
   // proto:  void QWidget::lower();
@@ -381,7 +381,7 @@ extern void _ZN7QWidget5closeEv(void* qthis);
   // proto:  void QWidget::showMinimized();
 extern void _ZN7QWidget13showMinimizedEv(void* qthis);
   // proto:  void QWidget::setFixedSize(int w, int h);
-extern void _ZN7QWidget12setFixedSizeEii(void* qthis, int arg0, int arg1);
+extern void _ZN7QWidget12setFixedSizeEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  QSize QWidget::minimumSize();
 extern void _ZNK7QWidget11minimumSizeEv(void* qthis);
   // proto:  void QWidget::setEnabled(bool );
@@ -389,7 +389,7 @@ extern void _ZN7QWidget10setEnabledEb(void* qthis, bool arg0);
   // proto:  int QWidget::maximumHeight();
 extern void demth_ZNK7QWidget13maximumHeightEv(void* qthis);
   // proto:  void QWidget::move(int x, int y);
-extern void demth_ZN7QWidget4moveEii(void* qthis, int arg0, int arg1);
+extern void demth_ZN7QWidget4moveEii(void* qthis, int32_t arg0, int32_t arg1);
   // proto:  bool QWidget::isAncestorOf(const QWidget * child);
 extern void _ZNK7QWidget12isAncestorOfEPKS_(void* qthis, void* arg0);
   // proto:  void QWidget::QWidget(const QWidget & );
@@ -416,7 +416,7 @@ extern void _ZN7QWidget9setLayoutEP7QLayout(void* qthis, void* arg0);
   // proto:  bool QWidget::underMouse();
 extern void demth_ZNK7QWidget10underMouseEv(void* qthis);
   // proto:  int QWidget::heightForWidth(int );
-extern void _ZNK7QWidget14heightForWidthEi(void* qthis, int arg0);
+extern void _ZNK7QWidget14heightForWidthEi(void* qthis, int32_t arg0);
   // proto:  void QWidget::setFont(const QFont & );
 extern void _ZN7QWidget7setFontERK5QFont(void* qthis, void* arg0);
   // proto:  QWidget * QWidget::nativeParentWidget();
@@ -464,7 +464,7 @@ func init() {
 // class sizeof(QWidget)=1
 type QWidget struct {
   /*qbase*/ QObject;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _windowIconChanged QWidget_windowIconChanged_signal;
 //  _windowTitleChanged QWidget_windowTitleChanged_signal;
 //  _customContextMenuRequested QWidget_customContextMenuRequested_signal;
@@ -474,7 +474,7 @@ type QWidget struct {
 // class sizeof(QWidgetData)=1
 type QWidgetData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QWidget::setGraphicsEffect(QGraphicsEffect * effect);
@@ -1881,7 +1881,7 @@ func (this *QWidget) setVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget10setVisibleEb
     // invoke: void setVisible(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget10setVisibleEb(this.qclsinst, arg0)
   default:
@@ -2330,7 +2330,7 @@ func (this *QWidget) setAcceptDrops(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget14setAcceptDropsEb
     // invoke: void setAcceptDrops(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget14setAcceptDropsEb(this.qclsinst, arg0)
   default:
@@ -2965,7 +2965,7 @@ func (this *QWidget) setWindowModified(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget17setWindowModifiedEb
     // invoke: void setWindowModified(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget17setWindowModifiedEb(this.qclsinst, arg0)
   default:
@@ -3260,7 +3260,7 @@ func (this *QWidget) setShortcutEnabled(args ...interface{}) () {
     // invoke: void setShortcutEnabled(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN7QWidget18setShortcutEnabledEib(this.qclsinst, arg0, arg1)
   default:
@@ -3490,7 +3490,7 @@ func (this *QWidget) setDisabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget11setDisabledEb
     // invoke: void setDisabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget11setDisabledEb(this.qclsinst, arg0)
   default:
@@ -3556,7 +3556,7 @@ func (this *QWidget) setShortcutAutoRepeat(args ...interface{}) () {
     // invoke: void setShortcutAutoRepeat(int, _Bool)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = C.int8_t(args[1].(int8))
+    var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
     C._ZN7QWidget21setShortcutAutoRepeatEib(this.qclsinst, arg0, arg1)
   default:
@@ -3705,7 +3705,7 @@ func (this *QWidget) setAutoFillBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget21setAutoFillBackgroundEb
     // invoke: void setAutoFillBackground(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget21setAutoFillBackgroundEb(this.qclsinst, arg0)
   default:
@@ -3877,7 +3877,7 @@ func (this *QWidget) setUpdatesEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget17setUpdatesEnabledEb
     // invoke: void setUpdatesEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget17setUpdatesEnabledEb(this.qclsinst, arg0)
   default:
@@ -3920,7 +3920,7 @@ func (this *QWidget) setMouseTracking(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget16setMouseTrackingEb
     // invoke: void setMouseTracking(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN7QWidget16setMouseTrackingEb(this.qclsinst, arg0)
   default:
@@ -4069,7 +4069,7 @@ func (this *QWidget) setEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget10setEnabledEb
     // invoke: void setEnabled(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget10setEnabledEb(this.qclsinst, arg0)
   default:
@@ -4458,7 +4458,7 @@ func (this *QWidget) setHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWidget9setHiddenEb
     // invoke: void setHidden(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QWidget9setHiddenEb(this.qclsinst, arg0)
   default:

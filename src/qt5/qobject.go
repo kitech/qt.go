@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -49,12 +49,10 @@ extern void demth_ZN14QSignalBlocker7reblockEv(void* qthis);
 extern void demth_ZN14QSignalBlockerD0Ev(void* qthis);
   // proto:  QMetaObject * QObjectData::dynamicMetaObject();
 extern void _ZNK11QObjectData17dynamicMetaObjectEv(void* qthis);
-  // proto:  void QObjectData::~QObjectData();
-extern void _ZN11QObjectDataD0Ev(void* qthis);
   // proto:  void QObjectUserData::~QObjectUserData();
 extern void _ZN15QObjectUserDataD0Ev(void* qthis);
   // proto:  bool QObject::inherits(const char * classname);
-extern void demth_ZNK7QObject8inheritsEPKc(void* qthis, char* arg0);
+extern void demth_ZNK7QObject8inheritsEPKc(void* qthis, unsigned char* arg0);
   // proto:  void QObject::moveToThread(QThread * thread);
 extern void _ZN7QObject12moveToThreadEP7QThread(void* qthis, void* arg0);
   // proto:  void QObject::removeEventFilter(QObject * );
@@ -64,7 +62,7 @@ extern void _ZN7QObject14dumpObjectTreeEv(void* qthis);
   // proto:  bool QObject::eventFilter(QObject * , QEvent * );
 extern void _ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void* arg1);
   // proto:  void QObject::setUserData(uint id, QObjectUserData * data);
-extern void _ZN7QObject11setUserDataEjP15QObjectUserData(void* qthis, unsigned int arg0, void* arg1);
+extern void _ZN7QObject11setUserDataEjP15QObjectUserData(void* qthis, int32_t arg0, void* arg1);
   // proto:  void QObject::QObject(const QObject & );
 extern void* dector_ZN7QObjectC1ERKS_(void* arg0);
 extern void _ZN7QObjectC1ERKS_(void* qthis, void* arg0);
@@ -77,7 +75,7 @@ extern void _ZNK7QObject20dynamicPropertyNamesEv(void* qthis);
   // proto:  bool QObject::isWidgetType();
 extern void demth_ZNK7QObject12isWidgetTypeEv(void* qthis);
   // proto:  QVariant QObject::property(const char * name);
-extern void _ZNK7QObject8propertyEPKc(void* qthis, char* arg0);
+extern void _ZNK7QObject8propertyEPKc(void* qthis, unsigned char* arg0);
   // proto:  QThread * QObject::thread();
 extern void _ZNK7QObject6threadEv(void* qthis);
   // proto:  const QMetaObject * QObject::metaObject();
@@ -85,13 +83,13 @@ extern void _ZNK7QObject10metaObjectEv(void* qthis);
   // proto:  void QObject::setParent(QObject * );
 extern void _ZN7QObject9setParentEPS_(void* qthis, void* arg0);
   // proto:  bool QObject::disconnect(const QObject * receiver, const char * member);
-extern void demth_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, char* arg1);
+extern void demth_ZNK7QObject10disconnectEPKS_PKc(void* qthis, void* arg0, unsigned char* arg1);
   // proto:  const QObjectList & QObject::children();
 extern void demth_ZNK7QObject8childrenEv(void* qthis);
   // proto:  bool QObject::isWindowType();
 extern void demth_ZNK7QObject12isWindowTypeEv(void* qthis);
   // proto:  bool QObject::disconnect(const char * signal, const QObject * receiver, const char * member);
-extern void demth_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, char* arg0, void* arg1, char* arg2);
+extern void demth_ZNK7QObject10disconnectEPKcPKS_S1_(void* qthis, unsigned char* arg0, void* arg1, unsigned char* arg2);
   // proto:  void QObject::deleteLater();
 extern void _ZN7QObject11deleteLaterEv(void* qthis);
   // proto:  void QObject::~QObject();
@@ -102,15 +100,15 @@ extern void _ZN7QObjectC1EPS_(void* qthis, void* arg0);
   // proto:  QString QObject::objectName();
 extern void _ZNK7QObject10objectNameEv(void* qthis);
   // proto:  bool QObject::setProperty(const char * name, const QVariant & value);
-extern void _ZN7QObject11setPropertyEPKcRK8QVariant(void* qthis, char* arg0, void* arg1);
+extern void _ZN7QObject11setPropertyEPKcRK8QVariant(void* qthis, unsigned char* arg0, void* arg1);
   // proto: static bool QObject::disconnect(const QObject * sender, const char * signal, const QObject * receiver, const char * member);
-extern void _ZN7QObject10disconnectEPKS_PKcS1_S3_(void* arg0, char* arg1, void* arg2, char* arg3);
+extern void _ZN7QObject10disconnectEPKS_PKcS1_S3_(void* arg0, unsigned char* arg1, void* arg2, unsigned char* arg3);
   // proto:  bool QObject::signalsBlocked();
 extern void demth_ZNK7QObject14signalsBlockedEv(void* qthis);
   // proto: static uint QObject::registerUserData();
 extern void _ZN7QObject16registerUserDataEv();
   // proto:  QObjectUserData * QObject::userData(uint id);
-extern void _ZNK7QObject8userDataEj(void* qthis, unsigned int arg0);
+extern void _ZNK7QObject8userDataEj(void* qthis, int32_t arg0);
   // proto:  QObject * QObject::parent();
 extern void demth_ZNK7QObject6parentEv(void* qthis);
   // proto:  void QObject::installEventFilter(QObject * );
@@ -122,7 +120,7 @@ extern void _ZN7QObject13setObjectNameERK7QString(void* qthis, void* arg0);
   // proto:  void QObject::dumpObjectInfo();
 extern void _ZN7QObject14dumpObjectInfoEv(void* qthis);
   // proto:  void QObject::killTimer(int id);
-extern void _ZN7QObject9killTimerEi(void* qthis, int arg0);
+extern void _ZN7QObject9killTimerEi(void* qthis, int32_t arg0);
 */
 import "C"
 // } // <= ext block end
@@ -138,25 +136,25 @@ func init() {
 // class sizeof(QSignalBlocker)=16
 type QSignalBlocker struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QObjectData)=1
 type QObjectData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QObjectUserData)=8
 type QObjectUserData struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QObject)=1
 type QObject struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 //  _destroyed QObject_destroyed_signal;
 //  _objectNameChanged QObject_objectNameChanged_signal;
 }
@@ -240,20 +238,6 @@ func (this *QObjectData) dynamicMetaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QObjectData::~QObjectData();
-func (this *QObjectData) FreeQObjectData(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QObjectData", "~QObjectData", args)
-  }
-
-}
-
   // proto:  void QObjectUserData::~QObjectUserData();
 func (this *QObjectUserData) FreeQObjectUserData(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -282,7 +266,7 @@ func (this *QObject) inherits(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject8inheritsEPKc
     // invoke: bool inherits(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C.demth_ZNK7QObject8inheritsEPKc(this.qclsinst, arg0)
   default:
@@ -505,7 +489,7 @@ func (this *QObject) property(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject8propertyEPKc
     // invoke: QVariant property(const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C._ZNK7QObject8propertyEPKc(this.qclsinst, arg0)
   default:
@@ -626,17 +610,17 @@ func (this *QObject) disconnect(args ...interface{}) () {
     // invoke: bool disconnect(const class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C.demth_ZNK7QObject10disconnectEPKS_PKc(this.qclsinst, arg0, arg1)
   case 2:
     // invoke: _ZNK7QObject10disconnectEPKcPKS_S1_
     // invoke: bool disconnect(const char *, const class QObject *, const char *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QObject).qclsinst
     if false {fmt.Println(arg1)}
-    var arg2 = C.CString(args[2].(string))
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg2)}
     C.demth_ZNK7QObject10disconnectEPKcPKS_S1_(this.qclsinst, arg0, arg1, arg2)
   case 3:
@@ -644,11 +628,11 @@ func (this *QObject) disconnect(args ...interface{}) () {
     // invoke: bool disconnect(const class QObject *, const char *, const class QObject *, const char *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = C.CString(args[1].(string))
+    var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QObject).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = C.CString(args[3].(string))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg3)}
     C._ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)
   default:
@@ -766,7 +750,7 @@ func (this *QObject) setProperty(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObject11setPropertyEPKcRK8QVariant
     // invoke: bool setProperty(const char *, const class QVariant &)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
@@ -891,7 +875,7 @@ func (this *QObject) blockSignals(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObject12blockSignalsEb
     // invoke: bool blockSignals(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C._ZN7QObject12blockSignalsEb(this.qclsinst, arg0)
   default:

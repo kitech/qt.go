@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -44,9 +44,9 @@ extern void _ZNK9QUrlQuery19queryValueDelimiterEv(void* qthis);
   // proto:  QChar QUrlQuery::queryPairDelimiter();
 extern void _ZNK9QUrlQuery18queryPairDelimiterEv(void* qthis);
   // proto: static QChar QUrlQuery::defaultQueryValueDelimiter();
-extern void _ZN9QUrlQuery26defaultQueryValueDelimiterEv();
+extern void demth_ZN9QUrlQuery26defaultQueryValueDelimiterEv();
   // proto:  void QUrlQuery::swap(QUrlQuery & other);
-extern void _ZN9QUrlQuery4swapERS_(void* qthis, void* arg0);
+extern void demth_ZN9QUrlQuery4swapERS_(void* qthis, void* arg0);
   // proto:  bool QUrlQuery::isDetached();
 extern void _ZNK9QUrlQuery10isDetachedEv(void* qthis);
   // proto:  void QUrlQuery::QUrlQuery();
@@ -63,7 +63,7 @@ extern void _ZNK9QUrlQuery7isEmptyEv(void* qthis);
   // proto:  void QUrlQuery::removeQueryItem(const QString & key);
 extern void _ZN9QUrlQuery15removeQueryItemERK7QString(void* qthis, void* arg0);
   // proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
-extern void _ZN9QUrlQuery25defaultQueryPairDelimiterEv();
+extern void demth_ZN9QUrlQuery25defaultQueryPairDelimiterEv();
   // proto:  void QUrlQuery::QUrlQuery(const QUrl & url);
 extern void* dector_ZN9QUrlQueryC1ERK4QUrl(void* arg0);
 extern void _ZN9QUrlQueryC1ERK4QUrl(void* qthis, void* arg0);
@@ -89,7 +89,7 @@ func init() {
 // class sizeof(QUrlQuery)=1
 type QUrlQuery struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
@@ -210,7 +210,7 @@ func (this *QUrlQuery) swap(args ...interface{}) () {
     // invoke: void swap(class QUrlQuery &)
     var arg0 = args[0].(QUrlQuery).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
+    C.demth_ZN9QUrlQuery4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QUrlQuery", "swap", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sat Jan  2 20:07:20 2016
+// created: Sun Jan  3 17:27:54 2016
 // src-file: /QtCore/qcoreevent.h
 // dst-file: /src/core/qcoreevent.go
 //
@@ -33,7 +33,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  int QDeferredDeleteEvent::loopLevel();
-extern void _ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis);
+extern void demth_ZNK20QDeferredDeleteEvent9loopLevelEv(void* qthis);
   // proto:  void QDeferredDeleteEvent::~QDeferredDeleteEvent();
 extern void _ZN20QDeferredDeleteEventD0Ev(void* qthis);
   // proto:  void QDeferredDeleteEvent::QDeferredDeleteEvent();
@@ -47,22 +47,22 @@ extern void _ZN27QDynamicPropertyChangeEventC1ERK10QByteArray(void* qthis, void*
   // proto:  QByteArray QDynamicPropertyChangeEvent::propertyName();
 extern void demth_ZNK27QDynamicPropertyChangeEvent12propertyNameEv(void* qthis);
   // proto:  void QTimerEvent::QTimerEvent(int timerId);
-extern void* dector_ZN11QTimerEventC1Ei(int arg0);
-extern void _ZN11QTimerEventC1Ei(void* qthis, int arg0);
+extern void* dector_ZN11QTimerEventC1Ei(int32_t arg0);
+extern void _ZN11QTimerEventC1Ei(void* qthis, int32_t arg0);
   // proto:  void QTimerEvent::~QTimerEvent();
 extern void _ZN11QTimerEventD0Ev(void* qthis);
   // proto:  int QTimerEvent::timerId();
-extern void _ZNK11QTimerEvent7timerIdEv(void* qthis);
+extern void demth_ZNK11QTimerEvent7timerIdEv(void* qthis);
   // proto:  bool QChildEvent::added();
-extern void _ZNK11QChildEvent5addedEv(void* qthis);
+extern void demth_ZNK11QChildEvent5addedEv(void* qthis);
   // proto:  bool QChildEvent::polished();
-extern void _ZNK11QChildEvent8polishedEv(void* qthis);
+extern void demth_ZNK11QChildEvent8polishedEv(void* qthis);
   // proto:  void QChildEvent::~QChildEvent();
 extern void _ZN11QChildEventD0Ev(void* qthis);
   // proto:  bool QChildEvent::removed();
-extern void _ZNK11QChildEvent7removedEv(void* qthis);
+extern void demth_ZNK11QChildEvent7removedEv(void* qthis);
   // proto:  QObject * QChildEvent::child();
-extern void _ZNK11QChildEvent5childEv(void* qthis);
+extern void demth_ZNK11QChildEvent5childEv(void* qthis);
   // proto:  void QEvent::setAccepted(bool accepted);
 extern void demth_ZN6QEvent11setAcceptedEb(void* qthis, bool arg0);
   // proto:  void QEvent::ignore();
@@ -77,7 +77,7 @@ extern void _ZN6QEventC1ERKS_(void* qthis, void* arg0);
   // proto:  void QEvent::accept();
 extern void demth_ZN6QEvent6acceptEv(void* qthis);
   // proto: static int QEvent::registerEventType(int hint);
-extern void _ZN6QEvent17registerEventTypeEi(int arg0);
+extern void _ZN6QEvent17registerEventTypeEi(int32_t arg0);
   // proto:  bool QEvent::spontaneous();
 extern void demth_ZNK6QEvent11spontaneousEv(void* qthis);
 */
@@ -95,31 +95,31 @@ func init() {
 // class sizeof(QDeferredDeleteEvent)=24
 type QDeferredDeleteEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QDynamicPropertyChangeEvent)=32
 type QDynamicPropertyChangeEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QTimerEvent)=24
 type QTimerEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QChildEvent)=32
 type QChildEvent struct {
   /*qbase*/ QEvent;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // class sizeof(QEvent)=24
 type QEvent struct {
   // qbase: None;
-  qclsinst uint64 /* *mut c_void*/;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
   // proto:  int QDeferredDeleteEvent::loopLevel();
@@ -135,7 +135,7 @@ func (this *QDeferredDeleteEvent) loopLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QDeferredDeleteEvent9loopLevelEv
     // invoke: int loopLevel()
-    C._ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
+    C.demth_ZNK20QDeferredDeleteEvent9loopLevelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDeferredDeleteEvent", "loopLevel", args)
   }
@@ -232,7 +232,7 @@ func (this *QTimerEvent) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTimerEvent7timerIdEv
     // invoke: int timerId()
-    C._ZNK11QTimerEvent7timerIdEv(this.qclsinst)
+    C.demth_ZNK11QTimerEvent7timerIdEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTimerEvent", "timerId", args)
   }
@@ -252,7 +252,7 @@ func (this *QChildEvent) added(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5addedEv
     // invoke: bool added()
-    C._ZNK11QChildEvent5addedEv(this.qclsinst)
+    C.demth_ZNK11QChildEvent5addedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "added", args)
   }
@@ -272,7 +272,7 @@ func (this *QChildEvent) polished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent8polishedEv
     // invoke: bool polished()
-    C._ZNK11QChildEvent8polishedEv(this.qclsinst)
+    C.demth_ZNK11QChildEvent8polishedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "polished", args)
   }
@@ -306,7 +306,7 @@ func (this *QChildEvent) removed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent7removedEv
     // invoke: bool removed()
-    C._ZNK11QChildEvent7removedEv(this.qclsinst)
+    C.demth_ZNK11QChildEvent7removedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "removed", args)
   }
@@ -326,7 +326,7 @@ func (this *QChildEvent) child(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QChildEvent5childEv
     // invoke: QObject * child()
-    C._ZNK11QChildEvent5childEv(this.qclsinst)
+    C.demth_ZNK11QChildEvent5childEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QChildEvent", "child", args)
   }
@@ -347,7 +347,7 @@ func (this *QEvent) setAccepted(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QEvent11setAcceptedEb
     // invoke: void setAccepted(_Bool)
-    var arg0 = C.int8_t(args[0].(int8))
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
     C.demth_ZN6QEvent11setAcceptedEb(this.qclsinst, arg0)
   default:
