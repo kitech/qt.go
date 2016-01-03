@@ -40,6 +40,14 @@ func StringTy(pointer bool) reflect.Type {
 	return reflect.TypeOf(s)
 }
 
+func RuneTy(pointer bool) reflect.Type {
+	var s rune = '\000'
+	if pointer {
+		return reflect.TypeOf(&s)
+	}
+	return reflect.TypeOf(s)
+}
+
 func Int16Ty(pointer bool) reflect.Type {
 	if pointer {
 		var v = uint16(0)
