@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 17:27:54 2016
+// created: Sun Jan  3 20:07:07 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.go
 //
@@ -795,7 +795,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(const char *, const GLfloat (*)[2])
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEPKcPA2_Kf(this.qclsinst, arg0, arg1)
   case 5:
@@ -803,7 +803,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(const char *, const GLfloat (*)[3])
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEPKcPA3_Kf(this.qclsinst, arg0, arg1)
   case 6:
@@ -897,7 +897,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(const char *, const GLfloat (*)[4])
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEPKcPA4_Kf(this.qclsinst, arg0, arg1)
   case 17:
@@ -913,7 +913,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(int, const GLfloat (*)[2])
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEiPA2_Kf(this.qclsinst, arg0, arg1)
   case 19:
@@ -963,7 +963,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(int, const GLfloat (*)[4])
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEiPA4_Kf(this.qclsinst, arg0, arg1)
   case 25:
@@ -1007,7 +1007,7 @@ func (this *QOpenGLShaderProgram) setUniformValue(args ...interface{}) () {
     // invoke: void setUniformValue(int, const GLfloat (*)[3])
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(unsafe.Pointer)
+    var arg1 = (**C.float)((unsafe.Pointer)(reflect.ValueOf(args[1].([][]float32)).UnsafeAddr()))
     if false {fmt.Println(arg1)}
     C._ZN20QOpenGLShaderProgram15setUniformValueEiPA3_Kf(this.qclsinst, arg0, arg1)
   case 30:

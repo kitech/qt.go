@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 17:27:54 2016
+// created: Sun Jan  3 20:07:07 2016
 // src-file: /QtCore/qstring.h
 // dst-file: /src/core/qstring.go
 //
@@ -2536,7 +2536,7 @@ func (this *QString) toWCharArray(args ...interface{}) () {
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.StringTy(false) // "wchar_t *"
+  vtys[0][0] = qtrt.RuneTy(false) // "wchar_t *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -2544,7 +2544,7 @@ func (this *QString) toWCharArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QString12toWCharArrayEPw
     // invoke: int toWCharArray(wchar_t *)
-    var arg0 = C.CString(args[0].(string))
+    var arg0 = (*C.wchar_t)((unsafe.Pointer)(reflect.ValueOf(args[0].([]rune)).UnsafeAddr()))
     if false {fmt.Println(arg0)}
     C.demth_ZNK7QString12toWCharArrayEPw(this.qclsinst, arg0)
   default:
