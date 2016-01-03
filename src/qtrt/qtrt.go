@@ -9,7 +9,7 @@ import (
 func KeepMe() {}
 
 func SymbolResolve(args []interface{}, vtys map[int32]map[int32]reflect.Type) int32 {
-	return 0
+	return -1
 }
 
 func ErrorResolve(class, method string, args []interface{}) {
