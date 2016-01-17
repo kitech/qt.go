@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,44 +28,46 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QRegExp::QRegExp(const QRegExp & rx);
-extern void* dector_ZN7QRegExpC1ERKS_(void* arg0);
-extern void _ZN7QRegExpC1ERKS_(void* qthis, void* arg0);
-  // proto:  QStringList QRegExp::capturedTexts();
-extern void _ZN7QRegExp13capturedTextsEv(void* qthis);
-  // proto:  int QRegExp::captureCount();
-extern void _ZNK7QRegExp12captureCountEv(void* qthis);
-  // proto: static QString QRegExp::escape(const QString & str);
-extern void _ZN7QRegExp6escapeERK7QString(void* arg0);
-  // proto:  bool QRegExp::isEmpty();
-extern void _ZNK7QRegExp7isEmptyEv(void* qthis);
-  // proto:  bool QRegExp::isMinimal();
-extern void _ZNK7QRegExp9isMinimalEv(void* qthis);
-  // proto:  int QRegExp::matchedLength();
-extern void _ZNK7QRegExp13matchedLengthEv(void* qthis);
-  // proto:  QString QRegExp::pattern();
-extern void _ZNK7QRegExp7patternEv(void* qthis);
-  // proto:  void QRegExp::setPattern(const QString & pattern);
-extern void _ZN7QRegExp10setPatternERK7QString(void* qthis, void* arg0);
-  // proto:  bool QRegExp::isValid();
-extern void _ZNK7QRegExp7isValidEv(void* qthis);
-  // proto:  void QRegExp::~QRegExp();
-extern void _ZN7QRegExpD0Ev(void* qthis);
-  // proto:  bool QRegExp::exactMatch(const QString & str);
-extern void _ZNK7QRegExp10exactMatchERK7QString(void* qthis, void* arg0);
-  // proto:  void QRegExp::swap(QRegExp & other);
-extern void demth_ZN7QRegExp4swapERS_(void* qthis, void* arg0);
   // proto:  int QRegExp::pos(int nth);
-extern void _ZN7QRegExp3posEi(void* qthis, int32_t arg0);
-  // proto:  void QRegExp::QRegExp();
-extern void* dector_ZN7QRegExpC1Ev();
-extern void _ZN7QRegExpC1Ev(void* qthis);
-  // proto:  QString QRegExp::cap(int nth);
-extern void _ZN7QRegExp3capEi(void* qthis, int32_t arg0);
-  // proto:  QString QRegExp::errorString();
-extern void _ZN7QRegExp11errorStringEv(void* qthis);
+extern void _ZN7QRegExp3posEi(void* qthis, int32_t arg0); // 4
+  // proto:  int QRegExp::matchedLength();
+extern void _ZNK7QRegExp13matchedLengthEv(void* qthis); // 4
   // proto:  void QRegExp::setMinimal(bool minimal);
-extern void _ZN7QRegExp10setMinimalEb(void* qthis, bool arg0);
+extern void _ZN7QRegExp10setMinimalEb(void* qthis, bool arg0); // 4
+  // proto:  void QRegExp::QRegExp();
+extern void _ZN7QRegExpC2Ev(void* qthis); // 3
+  // proto:  void QRegExp::QRegExp(const QRegExp & rx);
+extern void _ZN7QRegExpC2ERKS_(void* qthis, void* arg0); // 3
+  // proto: static QString QRegExp::escape(const QString & str);
+extern void _ZN7QRegExp6escapeERK7QString(void* arg0); // 4
+  // proto:  void QRegExp::setPattern(const QString & pattern);
+extern void _ZN7QRegExp10setPatternERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QString QRegExp::pattern();
+extern void _ZNK7QRegExp7patternEv(void* qthis); // 4
+  // proto:  QRegExp::PatternSyntax QRegExp::patternSyntax();
+extern void _ZNK7QRegExp13patternSyntaxEv(void* qthis); // 4
+  // proto:  bool QRegExp::isEmpty();
+extern void _ZNK7QRegExp7isEmptyEv(void* qthis); // 4
+  // proto:  void QRegExp::swap(QRegExp & other);
+extern void _ZN7QRegExp4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  Qt::CaseSensitivity QRegExp::caseSensitivity();
+extern void _ZNK7QRegExp15caseSensitivityEv(void* qthis); // 4
+  // proto:  QString QRegExp::errorString();
+extern void _ZN7QRegExp11errorStringEv(void* qthis); // 4
+  // proto:  QStringList QRegExp::capturedTexts();
+extern void _ZN7QRegExp13capturedTextsEv(void* qthis); // 4
+  // proto:  bool QRegExp::isValid();
+extern void _ZNK7QRegExp7isValidEv(void* qthis); // 4
+  // proto:  bool QRegExp::exactMatch(const QString & str);
+extern void _ZNK7QRegExp10exactMatchERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QString QRegExp::cap(int nth);
+extern void _ZN7QRegExp3capEi(void* qthis, int32_t arg0); // 4
+  // proto:  bool QRegExp::isMinimal();
+extern void _ZNK7QRegExp9isMinimalEv(void* qthis); // 4
+  // proto:  void QRegExp::~QRegExp();
+extern void _ZN7QRegExpD2Ev(void* qthis); // 4
+  // proto:  int QRegExp::captureCount();
+extern void _ZNK7QRegExp12captureCountEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -88,108 +86,30 @@ type QRegExp struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QRegExp::QRegExp(const QRegExp & rx);
-func NewQRegExp(args ...interface{}) QRegExp {
-  return QRegExp{}
-}
-
-  // proto:  QStringList QRegExp::capturedTexts();
-func (this *QRegExp) capturedTexts(args ...interface{}) () {
-  // capturedTexts()
-  // capturedTexts()
+// pos(int)
+func (this *QRegExp) pos(args ...interface{}) () {
+  // pos(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QRegExp13capturedTextsEv
-    // invoke: QStringList capturedTexts()
-    C._ZN7QRegExp13capturedTextsEv(this.qclsinst)
+    // invoke: _ZN7QRegExp3posEi
+    // invoke: int pos(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN7QRegExp3posEi(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QRegExp", "capturedTexts", args)
+    qtrt.ErrorResolve("QRegExp", "pos", args)
   }
 
 }
 
-  // proto:  int QRegExp::captureCount();
-func (this *QRegExp) captureCount(args ...interface{}) () {
-  // captureCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegExp12captureCountEv
-    // invoke: int captureCount()
-    C._ZNK7QRegExp12captureCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QRegExp", "captureCount", args)
-  }
-
-}
-
-  // proto: static QString QRegExp::escape(const QString & str);
-func (this *QRegExp) escape_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QRegExp", "escape", args)
-  }
-
-}
-
-  // proto:  bool QRegExp::isEmpty();
-func (this *QRegExp) isEmpty(args ...interface{}) () {
-  // isEmpty()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegExp7isEmptyEv
-    // invoke: bool isEmpty()
-    C._ZNK7QRegExp7isEmptyEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QRegExp", "isEmpty", args)
-  }
-
-}
-
-  // proto:  bool QRegExp::isMinimal();
-func (this *QRegExp) isMinimal(args ...interface{}) () {
-  // isMinimal()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QRegExp9isMinimalEv
-    // invoke: bool isMinimal()
-    C._ZNK7QRegExp9isMinimalEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QRegExp", "isMinimal", args)
-  }
-
-}
-
-  // proto:  int QRegExp::matchedLength();
+// matchedLength()
 func (this *QRegExp) matchedLength(args ...interface{}) () {
   // matchedLength()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -209,27 +129,87 @@ func (this *QRegExp) matchedLength(args ...interface{}) () {
 
 }
 
-  // proto:  QString QRegExp::pattern();
-func (this *QRegExp) pattern(args ...interface{}) () {
-  // pattern()
+// setMinimal(_Bool)
+func (this *QRegExp) setMinimal(args ...interface{}) () {
+  // setMinimal(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QRegExp7patternEv
-    // invoke: QString pattern()
-    C._ZNK7QRegExp7patternEv(this.qclsinst)
+    // invoke: _ZN7QRegExp10setMinimalEb
+    // invoke: void setMinimal(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN7QRegExp10setMinimalEb(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QRegExp", "pattern", args)
+    qtrt.ErrorResolve("QRegExp", "setMinimal", args)
   }
 
 }
 
-  // proto:  void QRegExp::setPattern(const QString & pattern);
+// QRegExp()
+func NewQRegExp(args ...interface{}) QRegExp {
+  // QRegExp()
+  // QRegExp(const class QRegExp &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QRegExp{}) // "const QRegExp &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QRegExpC1Ev
+    // invoke: void QRegExp()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QRegExpC2Ev(qthis)
+  case 1:
+    // invoke: _ZN7QRegExpC1ERKS_
+    // invoke: void QRegExp(const class QRegExp &)
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QRegExpC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QRegExp", "QRegExp", args)
+  }
+
+  return QRegExp{}
+}
+
+// escape(const class QString &)
+func (this *QRegExp) escape_s(args ...interface{}) () {
+  // escape(const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QRegExp6escapeERK7QString
+    // invoke: QString escape(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN7QRegExp6escapeERK7QString(arg0)
+  default:
+    qtrt.ErrorResolve("QRegExp", "escape", args)
+  }
+
+}
+
+// setPattern(const class QString &)
 func (this *QRegExp) setPattern(args ...interface{}) () {
   // setPattern(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +232,150 @@ func (this *QRegExp) setPattern(args ...interface{}) () {
 
 }
 
-  // proto:  bool QRegExp::isValid();
+// pattern()
+func (this *QRegExp) pattern(args ...interface{}) () {
+  // pattern()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QRegExp7patternEv
+    // invoke: QString pattern()
+    C._ZNK7QRegExp7patternEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "pattern", args)
+  }
+
+}
+
+// patternSyntax()
+func (this *QRegExp) patternSyntax(args ...interface{}) () {
+  // patternSyntax()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QRegExp13patternSyntaxEv
+    // invoke: QRegExp::PatternSyntax patternSyntax()
+    C._ZNK7QRegExp13patternSyntaxEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "patternSyntax", args)
+  }
+
+}
+
+// isEmpty()
+func (this *QRegExp) isEmpty(args ...interface{}) () {
+  // isEmpty()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QRegExp7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK7QRegExp7isEmptyEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "isEmpty", args)
+  }
+
+}
+
+// swap(class QRegExp &)
+func (this *QRegExp) swap(args ...interface{}) () {
+  // swap(class QRegExp &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QRegExp4swapERS_
+    // invoke: void swap(class QRegExp &)
+    var arg0 = args[0].(QRegExp).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN7QRegExp4swapERS_(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QRegExp", "swap", args)
+  }
+
+}
+
+// caseSensitivity()
+func (this *QRegExp) caseSensitivity(args ...interface{}) () {
+  // caseSensitivity()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QRegExp15caseSensitivityEv
+    // invoke: Qt::CaseSensitivity caseSensitivity()
+    C._ZNK7QRegExp15caseSensitivityEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "caseSensitivity", args)
+  }
+
+}
+
+// errorString()
+func (this *QRegExp) errorString(args ...interface{}) () {
+  // errorString()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QRegExp11errorStringEv
+    // invoke: QString errorString()
+    C._ZN7QRegExp11errorStringEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "errorString", args)
+  }
+
+}
+
+// capturedTexts()
+func (this *QRegExp) capturedTexts(args ...interface{}) () {
+  // capturedTexts()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QRegExp13capturedTextsEv
+    // invoke: QStringList capturedTexts()
+    C._ZN7QRegExp13capturedTextsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "capturedTexts", args)
+  }
+
+}
+
+// isValid()
 func (this *QRegExp) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -272,21 +395,7 @@ func (this *QRegExp) isValid(args ...interface{}) () {
 
 }
 
-  // proto:  void QRegExp::~QRegExp();
-func (this *QRegExp) FreeQRegExp(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QRegExp", "~QRegExp", args)
-  }
-
-}
-
-  // proto:  bool QRegExp::exactMatch(const QString & str);
+// exactMatch(const class QString &)
 func (this *QRegExp) exactMatch(args ...interface{}) () {
   // exactMatch(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -309,65 +418,13 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
 
 }
 
-  // proto:  void QRegExp::swap(QRegExp & other);
-func (this *QRegExp) swap(args ...interface{}) () {
-  // swap(class QRegExp &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegExp{}) // "QRegExp &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegExp4swapERS_
-    // invoke: void swap(class QRegExp &)
-    var arg0 = args[0].(QRegExp).qclsinst
-    if false {fmt.Println(arg0)}
-    C.demth_ZN7QRegExp4swapERS_(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRegExp", "swap", args)
-  }
-
-}
-
-  // proto:  int QRegExp::pos(int nth);
-func (this *QRegExp) pos(args ...interface{}) () {
-  // pos(int)
-  // pos(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QRegExp3posEi
-    // invoke: int pos(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN7QRegExp3posEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QRegExp", "pos", args)
-  }
-
-}
-
-  // proto:  QString QRegExp::cap(int nth);
+// cap(int)
 func (this *QRegExp) cap(args ...interface{}) () {
   // cap(int)
-  // cap(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
   vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -384,47 +441,62 @@ func (this *QRegExp) cap(args ...interface{}) () {
 
 }
 
-  // proto:  QString QRegExp::errorString();
-func (this *QRegExp) errorString(args ...interface{}) () {
-  // errorString()
-  // errorString()
+// isMinimal()
+func (this *QRegExp) isMinimal(args ...interface{}) () {
+  // isMinimal()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[1] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QRegExp11errorStringEv
-    // invoke: QString errorString()
-    C._ZN7QRegExp11errorStringEv(this.qclsinst)
+    // invoke: _ZNK7QRegExp9isMinimalEv
+    // invoke: bool isMinimal()
+    C._ZNK7QRegExp9isMinimalEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QRegExp", "errorString", args)
+    qtrt.ErrorResolve("QRegExp", "isMinimal", args)
   }
 
 }
 
-  // proto:  void QRegExp::setMinimal(bool minimal);
-func (this *QRegExp) setMinimal(args ...interface{}) () {
-  // setMinimal(_Bool)
+// ~QRegExp()
+func (this *QRegExp) FreeQRegExp(args ...interface{}) () {
+  // ~QRegExp()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QRegExp10setMinimalEb
-    // invoke: void setMinimal(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN7QRegExp10setMinimalEb(this.qclsinst, arg0)
+    // invoke: _ZN7QRegExpD0Ev
+    // invoke: void ~QRegExp()
+    C._ZN7QRegExpD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QRegExp", "setMinimal", args)
+    qtrt.ErrorResolve("QRegExp", "~QRegExp", args)
+  }
+
+}
+
+// captureCount()
+func (this *QRegExp) captureCount(args ...interface{}) () {
+  // captureCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QRegExp12captureCountEv
+    // invoke: int captureCount()
+    C._ZNK7QRegExp12captureCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QRegExp", "captureCount", args)
   }
 
 }

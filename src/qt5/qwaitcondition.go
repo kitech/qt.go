@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,22 +28,18 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, int32_t arg1);
-  // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
-extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, int32_t arg1);
-  // proto:  void QWaitCondition::wakeAll();
-extern void _ZN14QWaitCondition7wakeAllEv(void* qthis);
-  // proto:  void QWaitCondition::wakeOne();
-extern void _ZN14QWaitCondition7wakeOneEv(void* qthis);
-  // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
-extern void* dector_ZN14QWaitConditionC1ERKS_(void* arg0);
-extern void _ZN14QWaitConditionC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QWaitCondition::~QWaitCondition();
-extern void _ZN14QWaitConditionD0Ev(void* qthis);
   // proto:  void QWaitCondition::QWaitCondition();
-extern void* dector_ZN14QWaitConditionC1Ev();
-extern void _ZN14QWaitConditionC1Ev(void* qthis);
+extern void _ZN14QWaitConditionC2Ev(void* qthis); // 3
+  // proto:  void QWaitCondition::wakeAll();
+extern void _ZN14QWaitCondition7wakeAllEv(void* qthis); // 4
+  // proto:  void QWaitCondition::wakeOne();
+extern void _ZN14QWaitCondition7wakeOneEv(void* qthis); // 4
+  // proto:  void QWaitCondition::~QWaitCondition();
+extern void _ZN14QWaitConditionD2Ev(void* qthis); // 4
+  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
+extern void _ZN14QWaitCondition4waitEP14QReadWriteLockm(void* qthis, void* arg0, int32_t arg1); // 4
+  // proto:  bool QWaitCondition::wait(QMutex * lockedMutex, unsigned long time);
+extern void _ZN14QWaitCondition4waitEP6QMutexm(void* qthis, void* arg0, int32_t arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -66,7 +58,90 @@ type QWaitCondition struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QWaitCondition::wait(QReadWriteLock * lockedReadWriteLock, unsigned long time);
+// QWaitCondition()
+func NewQWaitCondition(args ...interface{}) QWaitCondition {
+  // QWaitCondition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QWaitConditionC1Ev
+    // invoke: void QWaitCondition()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QWaitConditionC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
+  }
+
+  return QWaitCondition{}
+}
+
+// wakeAll()
+func (this *QWaitCondition) wakeAll(args ...interface{}) () {
+  // wakeAll()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QWaitCondition7wakeAllEv
+    // invoke: void wakeAll()
+    C._ZN14QWaitCondition7wakeAllEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QWaitCondition", "wakeAll", args)
+  }
+
+}
+
+// wakeOne()
+func (this *QWaitCondition) wakeOne(args ...interface{}) () {
+  // wakeOne()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QWaitCondition7wakeOneEv
+    // invoke: void wakeOne()
+    C._ZN14QWaitCondition7wakeOneEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QWaitCondition", "wakeOne", args)
+  }
+
+}
+
+// ~QWaitCondition()
+func (this *QWaitCondition) FreeQWaitCondition(args ...interface{}) () {
+  // ~QWaitCondition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QWaitConditionD0Ev
+    // invoke: void ~QWaitCondition()
+    C._ZN14QWaitConditionD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
+  }
+
+}
+
+// wait(class QReadWriteLock *, unsigned long)
 func (this *QWaitCondition) wait(args ...interface{}) () {
   // wait(class QReadWriteLock *, unsigned long)
   // wait(class QMutex *, unsigned long)
@@ -100,65 +175,6 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
     C._ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
-  }
-
-}
-
-  // proto:  void QWaitCondition::wakeAll();
-func (this *QWaitCondition) wakeAll(args ...interface{}) () {
-  // wakeAll()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QWaitCondition7wakeAllEv
-    // invoke: void wakeAll()
-    C._ZN14QWaitCondition7wakeAllEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QWaitCondition", "wakeAll", args)
-  }
-
-}
-
-  // proto:  void QWaitCondition::wakeOne();
-func (this *QWaitCondition) wakeOne(args ...interface{}) () {
-  // wakeOne()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN14QWaitCondition7wakeOneEv
-    // invoke: void wakeOne()
-    C._ZN14QWaitCondition7wakeOneEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QWaitCondition", "wakeOne", args)
-  }
-
-}
-
-  // proto:  void QWaitCondition::QWaitCondition(const QWaitCondition & );
-func NewQWaitCondition(args ...interface{}) QWaitCondition {
-  return QWaitCondition{}
-}
-
-  // proto:  void QWaitCondition::~QWaitCondition();
-func (this *QWaitCondition) FreeQWaitCondition(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QWaitCondition", "~QWaitCondition", args)
   }
 
 }

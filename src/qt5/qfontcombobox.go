@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,22 +28,22 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
-extern void* dector_ZN13QFontComboBoxC1ERKS_(void* arg0);
-extern void _ZN13QFontComboBoxC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QFontComboBox::~QFontComboBox();
-extern void _ZN13QFontComboBoxD0Ev(void* qthis);
-  // proto:  const QMetaObject * QFontComboBox::metaObject();
-extern void _ZNK13QFontComboBox10metaObjectEv(void* qthis);
-  // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
-extern void* dector_ZN13QFontComboBoxC1EP7QWidget(void* arg0);
-extern void _ZN13QFontComboBoxC1EP7QWidget(void* qthis, void* arg0);
-  // proto:  QSize QFontComboBox::sizeHint();
-extern void _ZNK13QFontComboBox8sizeHintEv(void* qthis);
-  // proto:  QFont QFontComboBox::currentFont();
-extern void _ZNK13QFontComboBox11currentFontEv(void* qthis);
+  // proto:  FontFilters QFontComboBox::fontFilters();
+extern void _ZNK13QFontComboBox11fontFiltersEv(void* qthis); // 4
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
-extern void _ZN13QFontComboBox14setCurrentFontERK5QFont(void* qthis, void* arg0);
+extern void _ZN13QFontComboBox14setCurrentFontERK5QFont(void* qthis, void* arg0); // 4
+  // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
+extern void _ZN13QFontComboBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+  // proto:  QSize QFontComboBox::sizeHint();
+extern void _ZNK13QFontComboBox8sizeHintEv(void* qthis); // 4
+  // proto:  const QMetaObject * QFontComboBox::metaObject();
+extern void _ZNK13QFontComboBox10metaObjectEv(void* qthis); // 4
+  // proto:  QFont QFontComboBox::currentFont();
+extern void _ZNK13QFontComboBox11currentFontEv(void* qthis); // 4
+  // proto:  void QFontComboBox::~QFontComboBox();
+extern void _ZN13QFontComboBoxD2Ev(void* qthis); // 4
+  // proto:  QFontDatabase::WritingSystem QFontComboBox::writingSystem();
+extern void _ZNK13QFontComboBox13writingSystemEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -67,28 +63,9 @@ type QFontComboBox struct {
 //  _currentFontChanged QFontComboBox_currentFontChanged_signal;
 }
 
-  // proto:  void QFontComboBox::QFontComboBox(const QFontComboBox & );
-func NewQFontComboBox(args ...interface{}) QFontComboBox {
-  return QFontComboBox{}
-}
-
-  // proto:  void QFontComboBox::~QFontComboBox();
-func (this *QFontComboBox) FreeQFontComboBox(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QFontComboBox", "~QFontComboBox", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QFontComboBox::metaObject();
-func (this *QFontComboBox) metaObject(args ...interface{}) () {
-  // metaObject()
+// fontFilters()
+func (this *QFontComboBox) fontFilters(args ...interface{}) () {
+  // fontFilters()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -97,16 +74,65 @@ func (this *QFontComboBox) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QFontComboBox10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK13QFontComboBox10metaObjectEv(this.qclsinst)
+    // invoke: _ZNK13QFontComboBox11fontFiltersEv
+    // invoke: FontFilters fontFilters()
+    C._ZNK13QFontComboBox11fontFiltersEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontComboBox", "metaObject", args)
+    qtrt.ErrorResolve("QFontComboBox", "fontFilters", args)
   }
 
 }
 
-  // proto:  QSize QFontComboBox::sizeHint();
+// setCurrentFont(const class QFont &)
+func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
+  // setCurrentFont(const class QFont &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QFontComboBox14setCurrentFontERK5QFont
+    // invoke: void setCurrentFont(const class QFont &)
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN13QFontComboBox14setCurrentFontERK5QFont(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
+  }
+
+}
+
+// QFontComboBox(class QWidget *)
+func NewQFontComboBox(args ...interface{}) QFontComboBox {
+  // QFontComboBox(class QWidget *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QFontComboBoxC1EP7QWidget
+    // invoke: void QFontComboBox(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QFontComboBoxC2EP7QWidget(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QFontComboBox", "QFontComboBox", args)
+  }
+
+  return QFontComboBox{}
+}
+
+// sizeHint()
 func (this *QFontComboBox) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -126,7 +152,27 @@ func (this *QFontComboBox) sizeHint(args ...interface{}) () {
 
 }
 
-  // proto:  QFont QFontComboBox::currentFont();
+// metaObject()
+func (this *QFontComboBox) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QFontComboBox10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QFontComboBox10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontComboBox", "metaObject", args)
+  }
+
+}
+
+// currentFont()
 func (this *QFontComboBox) currentFont(args ...interface{}) () {
   // currentFont()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -146,25 +192,42 @@ func (this *QFontComboBox) currentFont(args ...interface{}) () {
 
 }
 
-  // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
-func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
-  // setCurrentFont(const class QFont &)
+// ~QFontComboBox()
+func (this *QFontComboBox) FreeQFontComboBox(args ...interface{}) () {
+  // ~QFontComboBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFont{}) // "const QFont &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN13QFontComboBox14setCurrentFontERK5QFont
-    // invoke: void setCurrentFont(const class QFont &)
-    var arg0 = args[0].(QFont).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN13QFontComboBox14setCurrentFontERK5QFont(this.qclsinst, arg0)
+    // invoke: _ZN13QFontComboBoxD0Ev
+    // invoke: void ~QFontComboBox()
+    C._ZN13QFontComboBoxD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontComboBox", "setCurrentFont", args)
+    qtrt.ErrorResolve("QFontComboBox", "~QFontComboBox", args)
+  }
+
+}
+
+// writingSystem()
+func (this *QFontComboBox) writingSystem(args ...interface{}) () {
+  // writingSystem()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QFontComboBox13writingSystemEv
+    // invoke: QFontDatabase::WritingSystem writingSystem()
+    C._ZNK13QFontComboBox13writingSystemEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontComboBox", "writingSystem", args)
   }
 
 }

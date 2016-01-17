@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,26 +28,18 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QClipboard::~QClipboard();
-extern void _ZN10QClipboardD0Ev(void* qthis);
-  // proto:  void QClipboard::QClipboard(QObject * parent);
-extern void* dector_ZN10QClipboardC1EP7QObject(void* arg0);
-extern void _ZN10QClipboardC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QClipboard::QClipboard(const QClipboard & );
-extern void* dector_ZN10QClipboardC1ERKS_(void* arg0);
-extern void _ZN10QClipboardC1ERKS_(void* qthis, void* arg0);
-  // proto:  bool QClipboard::supportsFindBuffer();
-extern void _ZNK10QClipboard18supportsFindBufferEv(void* qthis);
-  // proto:  bool QClipboard::ownsFindBuffer();
-extern void _ZNK10QClipboard14ownsFindBufferEv(void* qthis);
   // proto:  bool QClipboard::ownsClipboard();
-extern void _ZNK10QClipboard13ownsClipboardEv(void* qthis);
-  // proto:  const QMetaObject * QClipboard::metaObject();
-extern void _ZNK10QClipboard10metaObjectEv(void* qthis);
+extern void _ZNK10QClipboard13ownsClipboardEv(void* qthis); // 4
+  // proto:  bool QClipboard::supportsFindBuffer();
+extern void _ZNK10QClipboard18supportsFindBufferEv(void* qthis); // 4
+  // proto:  bool QClipboard::ownsFindBuffer();
+extern void _ZNK10QClipboard14ownsFindBufferEv(void* qthis); // 4
   // proto:  bool QClipboard::supportsSelection();
-extern void _ZNK10QClipboard17supportsSelectionEv(void* qthis);
+extern void _ZNK10QClipboard17supportsSelectionEv(void* qthis); // 4
+  // proto:  const QMetaObject * QClipboard::metaObject();
+extern void _ZNK10QClipboard10metaObjectEv(void* qthis); // 4
   // proto:  bool QClipboard::ownsSelection();
-extern void _ZNK10QClipboard13ownsSelectionEv(void* qthis);
+extern void _ZNK10QClipboard13ownsSelectionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -74,66 +62,7 @@ type QClipboard struct {
 //  _dataChanged QClipboard_dataChanged_signal;
 }
 
-  // proto:  void QClipboard::~QClipboard();
-func (this *QClipboard) FreeQClipboard(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QClipboard", "~QClipboard", args)
-  }
-
-}
-
-  // proto:  void QClipboard::QClipboard(QObject * parent);
-func NewQClipboard(args ...interface{}) QClipboard {
-  return QClipboard{}
-}
-
-  // proto:  bool QClipboard::supportsFindBuffer();
-func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
-  // supportsFindBuffer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard18supportsFindBufferEv
-    // invoke: bool supportsFindBuffer()
-    C._ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
-  }
-
-}
-
-  // proto:  bool QClipboard::ownsFindBuffer();
-func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
-  // ownsFindBuffer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QClipboard14ownsFindBufferEv
-    // invoke: bool ownsFindBuffer()
-    C._ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
-  }
-
-}
-
-  // proto:  bool QClipboard::ownsClipboard();
+// ownsClipboard()
 func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   // ownsClipboard()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -153,9 +82,9 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QClipboard::metaObject();
-func (this *QClipboard) metaObject(args ...interface{}) () {
-  // metaObject()
+// supportsFindBuffer()
+func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
+  // supportsFindBuffer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -164,16 +93,36 @@ func (this *QClipboard) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QClipboard10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK10QClipboard10metaObjectEv(this.qclsinst)
+    // invoke: _ZNK10QClipboard18supportsFindBufferEv
+    // invoke: bool supportsFindBuffer()
+    C._ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QClipboard", "metaObject", args)
+    qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
 
 }
 
-  // proto:  bool QClipboard::supportsSelection();
+// ownsFindBuffer()
+func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
+  // ownsFindBuffer()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QClipboard14ownsFindBufferEv
+    // invoke: bool ownsFindBuffer()
+    C._ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
+  }
+
+}
+
+// supportsSelection()
 func (this *QClipboard) supportsSelection(args ...interface{}) () {
   // supportsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,7 +142,27 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
 
 }
 
-  // proto:  bool QClipboard::ownsSelection();
+// metaObject()
+func (this *QClipboard) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QClipboard10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QClipboard10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QClipboard", "metaObject", args)
+  }
+
+}
+
+// ownsSelection()
 func (this *QClipboard) ownsSelection(args ...interface{}) () {
   // ownsSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)

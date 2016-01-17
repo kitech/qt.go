@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qgenericplugin.h
 // dst-file: /src/gui/qgenericplugin.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,13 +28,12 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
-extern void* dector_ZN14QGenericPluginC1EP7QObject(void* arg0);
-extern void _ZN14QGenericPluginC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QGenericPlugin::~QGenericPlugin();
-extern void _ZN14QGenericPluginD0Ev(void* qthis);
   // proto:  const QMetaObject * QGenericPlugin::metaObject();
-extern void _ZNK14QGenericPlugin10metaObjectEv(void* qthis);
+extern void _ZNK14QGenericPlugin10metaObjectEv(void* qthis); // 4
+  // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
+extern void _ZN14QGenericPluginC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QGenericPlugin::~QGenericPlugin();
+extern void _ZN14QGenericPluginD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -57,26 +52,7 @@ type QGenericPlugin struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QGenericPlugin::QGenericPlugin(QObject * parent);
-func NewQGenericPlugin(args ...interface{}) QGenericPlugin {
-  return QGenericPlugin{}
-}
-
-  // proto:  void QGenericPlugin::~QGenericPlugin();
-func (this *QGenericPlugin) FreeQGenericPlugin(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QGenericPlugin::metaObject();
+// metaObject()
 func (this *QGenericPlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -92,6 +68,52 @@ func (this *QGenericPlugin) metaObject(args ...interface{}) () {
     C._ZNK14QGenericPlugin10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGenericPlugin", "metaObject", args)
+  }
+
+}
+
+// QGenericPlugin(class QObject *)
+func NewQGenericPlugin(args ...interface{}) QGenericPlugin {
+  // QGenericPlugin(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QGenericPluginC1EP7QObject
+    // invoke: void QGenericPlugin(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QGenericPluginC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QGenericPlugin", "QGenericPlugin", args)
+  }
+
+  return QGenericPlugin{}
+}
+
+// ~QGenericPlugin()
+func (this *QGenericPlugin) FreeQGenericPlugin(args ...interface{}) () {
+  // ~QGenericPlugin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QGenericPluginD0Ev
+    // invoke: void ~QGenericPlugin()
+    C._ZN14QGenericPluginD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGenericPlugin", "~QGenericPlugin", args)
   }
 
 }

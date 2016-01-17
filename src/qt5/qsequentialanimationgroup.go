@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qsequentialanimationgroup.h
 // dst-file: /src/core/qsequentialanimationgroup.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,24 +28,20 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
-extern void _ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-extern void* dector_ZN25QSequentialAnimationGroupC1EP7QObject(void* arg0);
-extern void _ZN25QSequentialAnimationGroupC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
-extern void _ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int32_t arg0);
-  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
-extern void _ZN25QSequentialAnimationGroupD0Ev(void* qthis);
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(const QSequentialAnimationGroup & );
-extern void* dector_ZN25QSequentialAnimationGroupC1ERKS_(void* arg0);
-extern void _ZN25QSequentialAnimationGroupC1ERKS_(void* qthis, void* arg0);
   // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-extern void _ZNK25QSequentialAnimationGroup10metaObjectEv(void* qthis);
-  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-extern void _ZNK25QSequentialAnimationGroup16currentAnimationEv(void* qthis);
+extern void _ZNK25QSequentialAnimationGroup10metaObjectEv(void* qthis); // 4
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
+extern void _ZN25QSequentialAnimationGroup11insertPauseEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
+extern void _ZN25QSequentialAnimationGroup8addPauseEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
+extern void _ZN25QSequentialAnimationGroupD2Ev(void* qthis); // 4
+  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
+extern void _ZN25QSequentialAnimationGroupC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  int QSequentialAnimationGroup::duration();
-extern void _ZNK25QSequentialAnimationGroup8durationEv(void* qthis);
+extern void _ZNK25QSequentialAnimationGroup8durationEv(void* qthis); // 4
+  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
+extern void _ZNK25QSequentialAnimationGroup16currentAnimationEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +61,27 @@ type QSequentialAnimationGroup struct {
 //  _currentAnimationChanged QSequentialAnimationGroup_currentAnimationChanged_signal;
 }
 
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::insertPause(int index, int msecs);
+// metaObject()
+func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK25QSequentialAnimationGroup10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK25QSequentialAnimationGroup10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSequentialAnimationGroup", "metaObject", args)
+  }
+
+}
+
+// insertPause(int, int)
 func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
   // insertPause(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -95,12 +107,7 @@ func (this *QSequentialAnimationGroup) insertPause(args ...interface{}) () {
 
 }
 
-  // proto:  void QSequentialAnimationGroup::QSequentialAnimationGroup(QObject * parent);
-func NewQSequentialAnimationGroup(args ...interface{}) QSequentialAnimationGroup {
-  return QSequentialAnimationGroup{}
-}
-
-  // proto:  QPauseAnimation * QSequentialAnimationGroup::addPause(int msecs);
+// addPause(int)
 func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
   // addPause(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -123,61 +130,53 @@ func (this *QSequentialAnimationGroup) addPause(args ...interface{}) () {
 
 }
 
-  // proto:  void QSequentialAnimationGroup::~QSequentialAnimationGroup();
+// ~QSequentialAnimationGroup()
 func (this *QSequentialAnimationGroup) FreeQSequentialAnimationGroup(args ...interface{}) () {
+  // ~QSequentialAnimationGroup()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN25QSequentialAnimationGroupD0Ev
+    // invoke: void ~QSequentialAnimationGroup()
+    C._ZN25QSequentialAnimationGroupD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "~QSequentialAnimationGroup", args)
   }
 
 }
 
-  // proto:  const QMetaObject * QSequentialAnimationGroup::metaObject();
-func (this *QSequentialAnimationGroup) metaObject(args ...interface{}) () {
-  // metaObject()
+// QSequentialAnimationGroup(class QObject *)
+func NewQSequentialAnimationGroup(args ...interface{}) QSequentialAnimationGroup {
+  // QSequentialAnimationGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK25QSequentialAnimationGroup10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK25QSequentialAnimationGroup10metaObjectEv(this.qclsinst)
+    // invoke: _ZN25QSequentialAnimationGroupC1EP7QObject
+    // invoke: void QSequentialAnimationGroup(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN25QSequentialAnimationGroupC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QSequentialAnimationGroup", "metaObject", args)
+    qtrt.ErrorResolve("QSequentialAnimationGroup", "QSequentialAnimationGroup", args)
   }
 
+  return QSequentialAnimationGroup{}
 }
 
-  // proto:  QAbstractAnimation * QSequentialAnimationGroup::currentAnimation();
-func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () {
-  // currentAnimation()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK25QSequentialAnimationGroup16currentAnimationEv
-    // invoke: QAbstractAnimation * currentAnimation()
-    C._ZNK25QSequentialAnimationGroup16currentAnimationEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QSequentialAnimationGroup", "currentAnimation", args)
-  }
-
-}
-
-  // proto:  int QSequentialAnimationGroup::duration();
+// duration()
 func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
   // duration()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -193,6 +192,26 @@ func (this *QSequentialAnimationGroup) duration(args ...interface{}) () {
     C._ZNK25QSequentialAnimationGroup8durationEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSequentialAnimationGroup", "duration", args)
+  }
+
+}
+
+// currentAnimation()
+func (this *QSequentialAnimationGroup) currentAnimation(args ...interface{}) () {
+  // currentAnimation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK25QSequentialAnimationGroup16currentAnimationEv
+    // invoke: QAbstractAnimation * currentAnimation()
+    C._ZNK25QSequentialAnimationGroup16currentAnimationEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSequentialAnimationGroup", "currentAnimation", args)
   }
 
 }

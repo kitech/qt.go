@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,22 +28,16 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QAbstractState::~QAbstractState();
-extern void _ZN14QAbstractStateD0Ev(void* qthis);
-  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-extern void* dector_ZN14QAbstractStateC1ERKS_(void* arg0);
-extern void _ZN14QAbstractStateC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QAbstractState::QAbstractState(QState * parent);
-extern void* dector_ZN14QAbstractStateC1EP6QState(void* arg0);
-extern void _ZN14QAbstractStateC1EP6QState(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QAbstractState::metaObject();
-extern void _ZNK14QAbstractState10metaObjectEv(void* qthis);
-  // proto:  QState * QAbstractState::parentState();
-extern void _ZNK14QAbstractState11parentStateEv(void* qthis);
   // proto:  QStateMachine * QAbstractState::machine();
-extern void _ZNK14QAbstractState7machineEv(void* qthis);
+extern void _ZNK14QAbstractState7machineEv(void* qthis); // 4
   // proto:  bool QAbstractState::active();
-extern void _ZNK14QAbstractState6activeEv(void* qthis);
+extern void _ZNK14QAbstractState6activeEv(void* qthis); // 4
+  // proto:  const QMetaObject * QAbstractState::metaObject();
+extern void _ZNK14QAbstractState10metaObjectEv(void* qthis); // 4
+  // proto:  QState * QAbstractState::parentState();
+extern void _ZNK14QAbstractState11parentStateEv(void* qthis); // 4
+  // proto:  void QAbstractState::~QAbstractState();
+extern void _ZN14QAbstractStateD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -69,66 +59,7 @@ type QAbstractState struct {
 //  _activeChanged QAbstractState_activeChanged_signal;
 }
 
-  // proto:  void QAbstractState::~QAbstractState();
-func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
-  }
-
-}
-
-  // proto:  void QAbstractState::QAbstractState(const QAbstractState & );
-func NewQAbstractState(args ...interface{}) QAbstractState {
-  return QAbstractState{}
-}
-
-  // proto:  const QMetaObject * QAbstractState::metaObject();
-func (this *QAbstractState) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QAbstractState10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK14QAbstractState10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractState", "metaObject", args)
-  }
-
-}
-
-  // proto:  QState * QAbstractState::parentState();
-func (this *QAbstractState) parentState(args ...interface{}) () {
-  // parentState()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QAbstractState11parentStateEv
-    // invoke: QState * parentState()
-    C._ZNK14QAbstractState11parentStateEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractState", "parentState", args)
-  }
-
-}
-
-  // proto:  QStateMachine * QAbstractState::machine();
+// machine()
 func (this *QAbstractState) machine(args ...interface{}) () {
   // machine()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -148,7 +79,7 @@ func (this *QAbstractState) machine(args ...interface{}) () {
 
 }
 
-  // proto:  bool QAbstractState::active();
+// active()
 func (this *QAbstractState) active(args ...interface{}) () {
   // active()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -164,6 +95,66 @@ func (this *QAbstractState) active(args ...interface{}) () {
     C._ZNK14QAbstractState6activeEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
+  }
+
+}
+
+// metaObject()
+func (this *QAbstractState) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QAbstractState10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK14QAbstractState10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractState", "metaObject", args)
+  }
+
+}
+
+// parentState()
+func (this *QAbstractState) parentState(args ...interface{}) () {
+  // parentState()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QAbstractState11parentStateEv
+    // invoke: QState * parentState()
+    C._ZNK14QAbstractState11parentStateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractState", "parentState", args)
+  }
+
+}
+
+// ~QAbstractState()
+func (this *QAbstractState) FreeQAbstractState(args ...interface{}) () {
+  // ~QAbstractState()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QAbstractStateD0Ev
+    // invoke: void ~QAbstractState()
+    C._ZN14QAbstractStateD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractState", "~QAbstractState", args)
   }
 
 }

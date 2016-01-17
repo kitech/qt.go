@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,42 +28,38 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QActionGroup::QActionGroup(QObject * parent);
-extern void* dector_ZN12QActionGroupC1EP7QObject(void* arg0);
-extern void _ZN12QActionGroupC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QList<QAction *> QActionGroup::actions();
-extern void _ZNK12QActionGroup7actionsEv(void* qthis);
-  // proto:  void QActionGroup::setDisabled(bool b);
-extern void demth_ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0);
-  // proto:  void QActionGroup::setEnabled(bool );
-extern void _ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0);
-  // proto:  const QMetaObject * QActionGroup::metaObject();
-extern void _ZNK12QActionGroup10metaObjectEv(void* qthis);
   // proto:  QAction * QActionGroup::addAction(QAction * a);
-extern void _ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0);
-  // proto:  void QActionGroup::~QActionGroup();
-extern void _ZN12QActionGroupD0Ev(void* qthis);
-  // proto:  QAction * QActionGroup::checkedAction();
-extern void _ZNK12QActionGroup13checkedActionEv(void* qthis);
+extern void _ZN12QActionGroup9addActionEP7QAction(void* qthis, void* arg0); // 4
   // proto:  QAction * QActionGroup::addAction(const QIcon & icon, const QString & text);
-extern void _ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
-  // proto:  void QActionGroup::setVisible(bool );
-extern void _ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0);
-  // proto:  bool QActionGroup::isVisible();
-extern void _ZNK12QActionGroup9isVisibleEv(void* qthis);
-  // proto:  void QActionGroup::setExclusive(bool );
-extern void _ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0);
+extern void _ZN12QActionGroup9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
   // proto:  QAction * QActionGroup::addAction(const QString & text);
-extern void _ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0);
-  // proto:  bool QActionGroup::isEnabled();
-extern void _ZNK12QActionGroup9isEnabledEv(void* qthis);
-  // proto:  bool QActionGroup::isExclusive();
-extern void _ZNK12QActionGroup11isExclusiveEv(void* qthis);
+extern void _ZN12QActionGroup9addActionERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QList<QAction *> QActionGroup::actions();
+extern void _ZNK12QActionGroup7actionsEv(void* qthis); // 4
+  // proto:  QAction * QActionGroup::checkedAction();
+extern void _ZNK12QActionGroup13checkedActionEv(void* qthis); // 4
+  // proto:  void QActionGroup::setDisabled(bool b);
+extern void _ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0); // 2
+  // proto:  void QActionGroup::QActionGroup(QObject * parent);
+extern void _ZN12QActionGroupC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QActionGroup::setEnabled(bool );
+extern void _ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0); // 4
+  // proto:  void QActionGroup::setExclusive(bool );
+extern void _ZN12QActionGroup12setExclusiveEb(void* qthis, bool arg0); // 4
   // proto:  void QActionGroup::removeAction(QAction * a);
-extern void _ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0);
-  // proto:  void QActionGroup::QActionGroup(const QActionGroup & );
-extern void* dector_ZN12QActionGroupC1ERKS_(void* arg0);
-extern void _ZN12QActionGroupC1ERKS_(void* qthis, void* arg0);
+extern void _ZN12QActionGroup12removeActionEP7QAction(void* qthis, void* arg0); // 4
+  // proto:  bool QActionGroup::isExclusive();
+extern void _ZNK12QActionGroup11isExclusiveEv(void* qthis); // 4
+  // proto:  const QMetaObject * QActionGroup::metaObject();
+extern void _ZNK12QActionGroup10metaObjectEv(void* qthis); // 4
+  // proto:  void QActionGroup::~QActionGroup();
+extern void _ZN12QActionGroupD2Ev(void* qthis); // 4
+  // proto:  bool QActionGroup::isVisible();
+extern void _ZNK12QActionGroup9isVisibleEv(void* qthis); // 4
+  // proto:  void QActionGroup::setVisible(bool );
+extern void _ZN12QActionGroup10setVisibleEb(void* qthis, bool arg0); // 4
+  // proto:  bool QActionGroup::isEnabled();
+extern void _ZNK12QActionGroup9isEnabledEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -88,98 +80,7 @@ type QActionGroup struct {
 //  _hovered QActionGroup_hovered_signal;
 }
 
-  // proto:  void QActionGroup::QActionGroup(QObject * parent);
-func NewQActionGroup(args ...interface{}) QActionGroup {
-  return QActionGroup{}
-}
-
-  // proto:  QList<QAction *> QActionGroup::actions();
-func (this *QActionGroup) actions(args ...interface{}) () {
-  // actions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup7actionsEv
-    // invoke: QList<QAction *> actions()
-    C._ZNK12QActionGroup7actionsEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "actions", args)
-  }
-
-}
-
-  // proto:  void QActionGroup::setDisabled(bool b);
-func (this *QActionGroup) setDisabled(args ...interface{}) () {
-  // setDisabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup11setDisabledEb
-    // invoke: void setDisabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.demth_ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
-  }
-
-}
-
-  // proto:  void QActionGroup::setEnabled(bool );
-func (this *QActionGroup) setEnabled(args ...interface{}) () {
-  // setEnabled(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN12QActionGroup10setEnabledEb
-    // invoke: void setEnabled(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QActionGroup::metaObject();
-func (this *QActionGroup) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QActionGroup10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK12QActionGroup10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QActionGroup", "metaObject", args)
-  }
-
-}
-
-  // proto:  QAction * QActionGroup::addAction(QAction * a);
+// addAction(class QAction *)
 func (this *QActionGroup) addAction(args ...interface{}) () {
   // addAction(class QAction *)
   // addAction(const class QIcon &, const class QString &)
@@ -223,21 +124,27 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
 
 }
 
-  // proto:  void QActionGroup::~QActionGroup();
-func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
+// actions()
+func (this *QActionGroup) actions(args ...interface{}) () {
+  // actions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK12QActionGroup7actionsEv
+    // invoke: QList<QAction *> actions()
+    C._ZNK12QActionGroup7actionsEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
+    qtrt.ErrorResolve("QActionGroup", "actions", args)
   }
 
 }
 
-  // proto:  QAction * QActionGroup::checkedAction();
+// checkedAction()
 func (this *QActionGroup) checkedAction(args ...interface{}) () {
   // checkedAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -257,9 +164,9 @@ func (this *QActionGroup) checkedAction(args ...interface{}) () {
 
 }
 
-  // proto:  void QActionGroup::setVisible(bool );
-func (this *QActionGroup) setVisible(args ...interface{}) () {
-  // setVisible(_Bool)
+// setDisabled(_Bool)
+func (this *QActionGroup) setDisabled(args ...interface{}) () {
+  // setDisabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -269,38 +176,67 @@ func (this *QActionGroup) setVisible(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN12QActionGroup10setVisibleEb
-    // invoke: void setVisible(_Bool)
+    // invoke: _ZN12QActionGroup11setDisabledEb
+    // invoke: void setDisabled(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
+    C._ZN12QActionGroup11setDisabledEb(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QActionGroup", "setVisible", args)
+    qtrt.ErrorResolve("QActionGroup", "setDisabled", args)
   }
 
 }
 
-  // proto:  bool QActionGroup::isVisible();
-func (this *QActionGroup) isVisible(args ...interface{}) () {
-  // isVisible()
+// QActionGroup(class QObject *)
+func NewQActionGroup(args ...interface{}) QActionGroup {
+  // QActionGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK12QActionGroup9isVisibleEv
-    // invoke: bool isVisible()
-    C._ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+    // invoke: _ZN12QActionGroupC1EP7QObject
+    // invoke: void QActionGroup(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN12QActionGroupC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QActionGroup", "isVisible", args)
+    qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
+  }
+
+  return QActionGroup{}
+}
+
+// setEnabled(_Bool)
+func (this *QActionGroup) setEnabled(args ...interface{}) () {
+  // setEnabled(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QActionGroup10setEnabledEb
+    // invoke: void setEnabled(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN12QActionGroup10setEnabledEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QActionGroup", "setEnabled", args)
   }
 
 }
 
-  // proto:  void QActionGroup::setExclusive(bool );
+// setExclusive(_Bool)
 func (this *QActionGroup) setExclusive(args ...interface{}) () {
   // setExclusive(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -323,27 +259,30 @@ func (this *QActionGroup) setExclusive(args ...interface{}) () {
 
 }
 
-  // proto:  bool QActionGroup::isEnabled();
-func (this *QActionGroup) isEnabled(args ...interface{}) () {
-  // isEnabled()
+// removeAction(class QAction *)
+func (this *QActionGroup) removeAction(args ...interface{}) () {
+  // removeAction(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK12QActionGroup9isEnabledEv
-    // invoke: bool isEnabled()
-    C._ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+    // invoke: _ZN12QActionGroup12removeActionEP7QAction
+    // invoke: void removeAction(class QAction *)
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN12QActionGroup12removeActionEP7QAction(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
+    qtrt.ErrorResolve("QActionGroup", "removeAction", args)
   }
 
 }
 
-  // proto:  bool QActionGroup::isExclusive();
+// isExclusive()
 func (this *QActionGroup) isExclusive(args ...interface{}) () {
   // isExclusive()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -363,25 +302,105 @@ func (this *QActionGroup) isExclusive(args ...interface{}) () {
 
 }
 
-  // proto:  void QActionGroup::removeAction(QAction * a);
-func (this *QActionGroup) removeAction(args ...interface{}) () {
-  // removeAction(class QAction *)
+// metaObject()
+func (this *QActionGroup) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN12QActionGroup12removeActionEP7QAction
-    // invoke: void removeAction(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN12QActionGroup12removeActionEP7QAction(this.qclsinst, arg0)
+    // invoke: _ZNK12QActionGroup10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QActionGroup10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QActionGroup", "removeAction", args)
+    qtrt.ErrorResolve("QActionGroup", "metaObject", args)
+  }
+
+}
+
+// ~QActionGroup()
+func (this *QActionGroup) FreeQActionGroup(args ...interface{}) () {
+  // ~QActionGroup()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QActionGroupD0Ev
+    // invoke: void ~QActionGroup()
+    C._ZN12QActionGroupD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QActionGroup", "~QActionGroup", args)
+  }
+
+}
+
+// isVisible()
+func (this *QActionGroup) isVisible(args ...interface{}) () {
+  // isVisible()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QActionGroup9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QActionGroup", "isVisible", args)
+  }
+
+}
+
+// setVisible(_Bool)
+func (this *QActionGroup) setVisible(args ...interface{}) () {
+  // setVisible(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QActionGroup10setVisibleEb
+    // invoke: void setVisible(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN12QActionGroup10setVisibleEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QActionGroup", "setVisible", args)
+  }
+
+}
+
+// isEnabled()
+func (this *QActionGroup) isEnabled(args ...interface{}) () {
+  // isEnabled()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QActionGroup9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
   }
 
 }

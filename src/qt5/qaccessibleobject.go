@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qaccessibleobject.h
 // dst-file: /src/gui/qaccessibleobject.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,36 +29,33 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAccessibleApplication::QAccessibleApplication();
-extern void* dector_ZN22QAccessibleApplicationC1Ev();
-extern void _ZN22QAccessibleApplicationC1Ev(void* qthis);
-  // proto:  QWindow * QAccessibleApplication::window();
-extern void _ZNK22QAccessibleApplication6windowEv(void* qthis);
-  // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
-extern void _ZNK22QAccessibleApplication5childEi(void* qthis, int32_t arg0);
-  // proto:  int QAccessibleApplication::childCount();
-extern void _ZNK22QAccessibleApplication10childCountEv(void* qthis);
+extern void _ZN22QAccessibleApplicationC2Ev(void* qthis); // 3
   // proto:  QAccessibleInterface * QAccessibleApplication::parent();
-extern void _ZNK22QAccessibleApplication6parentEv(void* qthis);
-  // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
-extern void _ZNK22QAccessibleApplication10focusChildEv(void* qthis);
+extern void _ZNK22QAccessibleApplication6parentEv(void* qthis); // 4
   // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
-extern void _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(void* qthis, void* arg0);
-  // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
-extern void* dector_ZN17QAccessibleObjectC1EP7QObject(void* arg0);
-extern void _ZN17QAccessibleObjectC1EP7QObject(void* qthis, void* arg0);
+extern void _ZNK22QAccessibleApplication12indexOfChildEPK20QAccessibleInterface(void* qthis, void* arg0); // 4
+  // proto:  QAccessible::State QAccessibleApplication::state();
+extern void _ZNK22QAccessibleApplication5stateEv(void* qthis); // 4
+  // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
+extern void _ZNK22QAccessibleApplication10focusChildEv(void* qthis); // 4
+  // proto:  QWindow * QAccessibleApplication::window();
+extern void _ZNK22QAccessibleApplication6windowEv(void* qthis); // 4
+  // proto:  QAccessible::Role QAccessibleApplication::role();
+extern void _ZNK22QAccessibleApplication4roleEv(void* qthis); // 4
+  // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
+extern void _ZNK22QAccessibleApplication5childEi(void* qthis, int32_t arg0); // 4
+  // proto:  int QAccessibleApplication::childCount();
+extern void _ZNK22QAccessibleApplication10childCountEv(void* qthis); // 4
   // proto:  QObject * QAccessibleObject::object();
-extern void _ZNK17QAccessibleObject6objectEv(void* qthis);
-  // proto:  QRect QAccessibleObject::rect();
-extern void _ZNK17QAccessibleObject4rectEv(void* qthis);
-  // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
-extern void _ZNK17QAccessibleObject7childAtEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  void QAccessibleObject::QAccessibleObject(const QAccessibleObject & );
-extern void* dector_ZN17QAccessibleObjectC1ERKS_(void* arg0);
-extern void _ZN17QAccessibleObjectC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK17QAccessibleObject6objectEv(void* qthis); // 4
   // proto:  bool QAccessibleObject::isValid();
-extern void _ZNK17QAccessibleObject7isValidEv(void* qthis);
-  // proto:  void QAccessibleObject::~QAccessibleObject();
-extern void _ZN17QAccessibleObjectD0Ev(void* qthis);
+extern void _ZNK17QAccessibleObject7isValidEv(void* qthis); // 4
+  // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
+extern void _ZN17QAccessibleObjectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
+extern void _ZNK17QAccessibleObject7childAtEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  QRect QAccessibleObject::rect();
+extern void _ZNK17QAccessibleObject4rectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -87,75 +80,30 @@ type QAccessibleObject struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QAccessibleApplication::QAccessibleApplication();
+// QAccessibleApplication()
 func NewQAccessibleApplication(args ...interface{}) QAccessibleApplication {
+  // QAccessibleApplication()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QAccessibleApplicationC1Ev
+    // invoke: void QAccessibleApplication()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QAccessibleApplicationC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "QAccessibleApplication", args)
+  }
+
   return QAccessibleApplication{}
 }
 
-  // proto:  QWindow * QAccessibleApplication::window();
-func (this *QAccessibleApplication) window(args ...interface{}) () {
-  // window()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QAccessibleApplication6windowEv
-    // invoke: QWindow * window()
-    C._ZNK22QAccessibleApplication6windowEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleApplication", "window", args)
-  }
-
-}
-
-  // proto:  QAccessibleInterface * QAccessibleApplication::child(int index);
-func (this *QAccessibleApplication) child(args ...interface{}) () {
-  // child(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QAccessibleApplication5childEi
-    // invoke: QAccessibleInterface * child(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK22QAccessibleApplication5childEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAccessibleApplication", "child", args)
-  }
-
-}
-
-  // proto:  int QAccessibleApplication::childCount();
-func (this *QAccessibleApplication) childCount(args ...interface{}) () {
-  // childCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QAccessibleApplication10childCountEv
-    // invoke: int childCount()
-    C._ZNK22QAccessibleApplication10childCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleApplication", "childCount", args)
-  }
-
-}
-
-  // proto:  QAccessibleInterface * QAccessibleApplication::parent();
+// parent()
 func (this *QAccessibleApplication) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -175,27 +123,7 @@ func (this *QAccessibleApplication) parent(args ...interface{}) () {
 
 }
 
-  // proto:  QAccessibleInterface * QAccessibleApplication::focusChild();
-func (this *QAccessibleApplication) focusChild(args ...interface{}) () {
-  // focusChild()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK22QAccessibleApplication10focusChildEv
-    // invoke: QAccessibleInterface * focusChild()
-    C._ZNK22QAccessibleApplication10focusChildEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAccessibleApplication", "focusChild", args)
-  }
-
-}
-
-  // proto:  int QAccessibleApplication::indexOfChild(const QAccessibleInterface * );
+// indexOfChild(const class QAccessibleInterface *)
 func (this *QAccessibleApplication) indexOfChild(args ...interface{}) () {
   // indexOfChild(const class QAccessibleInterface *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -218,12 +146,130 @@ func (this *QAccessibleApplication) indexOfChild(args ...interface{}) () {
 
 }
 
-  // proto:  void QAccessibleObject::QAccessibleObject(QObject * object);
-func NewQAccessibleObject(args ...interface{}) QAccessibleObject {
-  return QAccessibleObject{}
+// state()
+func (this *QAccessibleApplication) state(args ...interface{}) () {
+  // state()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication5stateEv
+    // invoke: QAccessible::State state()
+    C._ZNK22QAccessibleApplication5stateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "state", args)
+  }
+
 }
 
-  // proto:  QObject * QAccessibleObject::object();
+// focusChild()
+func (this *QAccessibleApplication) focusChild(args ...interface{}) () {
+  // focusChild()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication10focusChildEv
+    // invoke: QAccessibleInterface * focusChild()
+    C._ZNK22QAccessibleApplication10focusChildEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "focusChild", args)
+  }
+
+}
+
+// window()
+func (this *QAccessibleApplication) window(args ...interface{}) () {
+  // window()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication6windowEv
+    // invoke: QWindow * window()
+    C._ZNK22QAccessibleApplication6windowEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "window", args)
+  }
+
+}
+
+// role()
+func (this *QAccessibleApplication) role(args ...interface{}) () {
+  // role()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication4roleEv
+    // invoke: QAccessible::Role role()
+    C._ZNK22QAccessibleApplication4roleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "role", args)
+  }
+
+}
+
+// child(int)
+func (this *QAccessibleApplication) child(args ...interface{}) () {
+  // child(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication5childEi
+    // invoke: QAccessibleInterface * child(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK22QAccessibleApplication5childEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "child", args)
+  }
+
+}
+
+// childCount()
+func (this *QAccessibleApplication) childCount(args ...interface{}) () {
+  // childCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QAccessibleApplication10childCountEv
+    // invoke: int childCount()
+    C._ZNK22QAccessibleApplication10childCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleApplication", "childCount", args)
+  }
+
+}
+
+// object()
 func (this *QAccessibleObject) object(args ...interface{}) () {
   // object()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -243,9 +289,9 @@ func (this *QAccessibleObject) object(args ...interface{}) () {
 
 }
 
-  // proto:  QRect QAccessibleObject::rect();
-func (this *QAccessibleObject) rect(args ...interface{}) () {
-  // rect()
+// isValid()
+func (this *QAccessibleObject) isValid(args ...interface{}) () {
+  // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -254,16 +300,42 @@ func (this *QAccessibleObject) rect(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK17QAccessibleObject4rectEv
-    // invoke: QRect rect()
-    C._ZNK17QAccessibleObject4rectEv(this.qclsinst)
+    // invoke: _ZNK17QAccessibleObject7isValidEv
+    // invoke: bool isValid()
+    C._ZNK17QAccessibleObject7isValidEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QAccessibleObject", "rect", args)
+    qtrt.ErrorResolve("QAccessibleObject", "isValid", args)
   }
 
 }
 
-  // proto:  QAccessibleInterface * QAccessibleObject::childAt(int x, int y);
+// QAccessibleObject(class QObject *)
+func NewQAccessibleObject(args ...interface{}) QAccessibleObject {
+  // QAccessibleObject(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN17QAccessibleObjectC1EP7QObject
+    // invoke: void QAccessibleObject(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN17QAccessibleObjectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAccessibleObject", "QAccessibleObject", args)
+  }
+
+  return QAccessibleObject{}
+}
+
+// childAt(int, int)
 func (this *QAccessibleObject) childAt(args ...interface{}) () {
   // childAt(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -289,9 +361,9 @@ func (this *QAccessibleObject) childAt(args ...interface{}) () {
 
 }
 
-  // proto:  bool QAccessibleObject::isValid();
-func (this *QAccessibleObject) isValid(args ...interface{}) () {
-  // isValid()
+// rect()
+func (this *QAccessibleObject) rect(args ...interface{}) () {
+  // rect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -300,25 +372,11 @@ func (this *QAccessibleObject) isValid(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK17QAccessibleObject7isValidEv
-    // invoke: bool isValid()
-    C._ZNK17QAccessibleObject7isValidEv(this.qclsinst)
+    // invoke: _ZNK17QAccessibleObject4rectEv
+    // invoke: QRect rect()
+    C._ZNK17QAccessibleObject4rectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QAccessibleObject", "isValid", args)
-  }
-
-}
-
-  // proto:  void QAccessibleObject::~QAccessibleObject();
-func (this *QAccessibleObject) FreeQAccessibleObject(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAccessibleObject", "~QAccessibleObject", args)
+    qtrt.ErrorResolve("QAccessibleObject", "rect", args)
   }
 
 }

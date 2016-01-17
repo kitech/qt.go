@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qgraphicseffect.h
 // dst-file: /src/widgets/qgraphicseffect.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,116 +28,98 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
-extern void _ZN23QGraphicsColorizeEffect8setColorERK6QColor(void* qthis, void* arg0);
-  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
-extern void* dector_ZN23QGraphicsColorizeEffectC1ERKS_(void* arg0);
-extern void _ZN23QGraphicsColorizeEffectC1ERKS_(void* qthis, void* arg0);
   // proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
-extern void _ZN23QGraphicsColorizeEffect11setStrengthEd(void* qthis, double arg0);
-  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(QObject * parent);
-extern void* dector_ZN23QGraphicsColorizeEffectC1EP7QObject(void* arg0);
-extern void _ZN23QGraphicsColorizeEffectC1EP7QObject(void* qthis, void* arg0);
+extern void _ZN23QGraphicsColorizeEffect11setStrengthEd(void* qthis, double arg0); // 4
   // proto:  qreal QGraphicsColorizeEffect::strength();
-extern void _ZNK23QGraphicsColorizeEffect8strengthEv(void* qthis);
-  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
-extern void _ZN23QGraphicsColorizeEffectD0Ev(void* qthis);
-  // proto:  QColor QGraphicsColorizeEffect::color();
-extern void _ZNK23QGraphicsColorizeEffect5colorEv(void* qthis);
+extern void _ZNK23QGraphicsColorizeEffect8strengthEv(void* qthis); // 4
   // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
-extern void _ZNK23QGraphicsColorizeEffect10metaObjectEv(void* qthis);
-  // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
-extern void _ZNK15QGraphicsEffect15boundingRectForERK6QRectF(void* qthis, void* arg0);
-  // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
-extern void _ZNK15QGraphicsEffect6sourceEv(void* qthis);
-  // proto:  void QGraphicsEffect::update();
-extern void _ZN15QGraphicsEffect6updateEv(void* qthis);
-  // proto:  void QGraphicsEffect::setEnabled(bool enable);
-extern void _ZN15QGraphicsEffect10setEnabledEb(void* qthis, bool arg0);
-  // proto:  const QMetaObject * QGraphicsEffect::metaObject();
-extern void _ZNK15QGraphicsEffect10metaObjectEv(void* qthis);
-  // proto:  bool QGraphicsEffect::isEnabled();
-extern void _ZNK15QGraphicsEffect9isEnabledEv(void* qthis);
+extern void _ZNK23QGraphicsColorizeEffect10metaObjectEv(void* qthis); // 4
+  // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
+extern void _ZN23QGraphicsColorizeEffect8setColorERK6QColor(void* qthis, void* arg0); // 4
+  // proto:  QColor QGraphicsColorizeEffect::color();
+extern void _ZNK23QGraphicsColorizeEffect5colorEv(void* qthis); // 4
+  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(QObject * parent);
+extern void _ZN23QGraphicsColorizeEffectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
+extern void _ZN23QGraphicsColorizeEffectD2Ev(void* qthis); // 4
   // proto:  QRectF QGraphicsEffect::boundingRect();
-extern void _ZNK15QGraphicsEffect12boundingRectEv(void* qthis);
+extern void _ZNK15QGraphicsEffect12boundingRectEv(void* qthis); // 4
+  // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
+extern void _ZNK15QGraphicsEffect15boundingRectForERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsEffect::~QGraphicsEffect();
-extern void _ZN15QGraphicsEffectD0Ev(void* qthis);
-  // proto:  void QGraphicsEffect::QGraphicsEffect(const QGraphicsEffect & );
-extern void* dector_ZN15QGraphicsEffectC1ERKS_(void* arg0);
-extern void _ZN15QGraphicsEffectC1ERKS_(void* qthis, void* arg0);
+extern void _ZN15QGraphicsEffectD2Ev(void* qthis); // 4
+  // proto:  bool QGraphicsEffect::isEnabled();
+extern void _ZNK15QGraphicsEffect9isEnabledEv(void* qthis); // 4
+  // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
+extern void _ZNK15QGraphicsEffect6sourceEv(void* qthis); // 4
+  // proto:  void QGraphicsEffect::setEnabled(bool enable);
+extern void _ZN15QGraphicsEffect10setEnabledEb(void* qthis, bool arg0); // 4
+  // proto:  void QGraphicsEffect::update();
+extern void _ZN15QGraphicsEffect6updateEv(void* qthis); // 4
+  // proto:  const QMetaObject * QGraphicsEffect::metaObject();
+extern void _ZNK15QGraphicsEffect10metaObjectEv(void* qthis); // 4
   // proto:  void QGraphicsEffect::QGraphicsEffect(QObject * parent);
-extern void* dector_ZN15QGraphicsEffectC1EP7QObject(void* arg0);
-extern void _ZN15QGraphicsEffectC1EP7QObject(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
-extern void _ZNK25QGraphicsDropShadowEffect10metaObjectEv(void* qthis);
-  // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
-extern void _ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF(void* qthis, void* arg0);
-  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
-extern void* dector_ZN25QGraphicsDropShadowEffectC1EP7QObject(void* arg0);
-extern void _ZN25QGraphicsDropShadowEffectC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QPointF QGraphicsDropShadowEffect::offset();
-extern void _ZNK25QGraphicsDropShadowEffect6offsetEv(void* qthis);
+extern void _ZN15QGraphicsEffectC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
-extern void demth_ZN25QGraphicsDropShadowEffect10setYOffsetEd(void* qthis, double arg0);
-  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
-extern void demth_ZNK25QGraphicsDropShadowEffect7xOffsetEv(void* qthis);
-  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
-extern void _ZNK25QGraphicsDropShadowEffect10blurRadiusEv(void* qthis);
-  // proto:  QColor QGraphicsDropShadowEffect::color();
-extern void _ZNK25QGraphicsDropShadowEffect5colorEv(void* qthis);
-  // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
-extern void _ZN25QGraphicsDropShadowEffect8setColorERK6QColor(void* qthis, void* arg0);
-  // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
-extern void _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(void* qthis, void* arg0);
-  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
-extern void demth_ZN25QGraphicsDropShadowEffect9setOffsetEdd(void* qthis, double arg0, double arg1);
-  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
-extern void demth_ZN25QGraphicsDropShadowEffect9setOffsetEd(void* qthis, double arg0);
-  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(const QGraphicsDropShadowEffect & );
-extern void* dector_ZN25QGraphicsDropShadowEffectC1ERKS_(void* arg0);
-extern void _ZN25QGraphicsDropShadowEffectC1ERKS_(void* qthis, void* arg0);
-  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
-extern void demth_ZNK25QGraphicsDropShadowEffect7yOffsetEv(void* qthis);
+extern void _ZN25QGraphicsDropShadowEffect10setYOffsetEd(void* qthis, double arg0); // 2
+  // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
+extern void _ZNK25QGraphicsDropShadowEffect15boundingRectForERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
-extern void demth_ZN25QGraphicsDropShadowEffect10setXOffsetEd(void* qthis, double arg0);
+extern void _ZN25QGraphicsDropShadowEffect10setXOffsetEd(void* qthis, double arg0); // 2
+  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
+extern void _ZNK25QGraphicsDropShadowEffect10blurRadiusEv(void* qthis); // 4
   // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
-extern void _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(void* qthis, double arg0);
+extern void _ZN25QGraphicsDropShadowEffect13setBlurRadiusEd(void* qthis, double arg0); // 4
+  // proto:  QColor QGraphicsDropShadowEffect::color();
+extern void _ZNK25QGraphicsDropShadowEffect5colorEv(void* qthis); // 4
+  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal dx, qreal dy);
+extern void _ZN25QGraphicsDropShadowEffect9setOffsetEdd(void* qthis, double arg0, double arg1); // 2
+  // proto:  void QGraphicsDropShadowEffect::setOffset(qreal d);
+extern void _ZN25QGraphicsDropShadowEffect9setOffsetEd(void* qthis, double arg0); // 2
+  // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
+extern void _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
-extern void _ZN25QGraphicsDropShadowEffectD0Ev(void* qthis);
-  // proto:  void QGraphicsOpacityEffect::QGraphicsOpacityEffect(QObject * parent);
-extern void* dector_ZN22QGraphicsOpacityEffectC1EP7QObject(void* arg0);
-extern void _ZN22QGraphicsOpacityEffectC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QGraphicsOpacityEffect::~QGraphicsOpacityEffect();
-extern void _ZN22QGraphicsOpacityEffectD0Ev(void* qthis);
-  // proto:  void QGraphicsOpacityEffect::setOpacityMask(const QBrush & mask);
-extern void _ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(void* qthis, void* arg0);
-  // proto:  void QGraphicsOpacityEffect::QGraphicsOpacityEffect(const QGraphicsOpacityEffect & );
-extern void* dector_ZN22QGraphicsOpacityEffectC1ERKS_(void* arg0);
-extern void _ZN22QGraphicsOpacityEffectC1ERKS_(void* qthis, void* arg0);
-  // proto:  QBrush QGraphicsOpacityEffect::opacityMask();
-extern void _ZNK22QGraphicsOpacityEffect11opacityMaskEv(void* qthis);
-  // proto:  const QMetaObject * QGraphicsOpacityEffect::metaObject();
-extern void _ZNK22QGraphicsOpacityEffect10metaObjectEv(void* qthis);
+extern void _ZN25QGraphicsDropShadowEffectD2Ev(void* qthis); // 4
+  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
+extern void _ZN25QGraphicsDropShadowEffectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  QPointF QGraphicsDropShadowEffect::offset();
+extern void _ZNK25QGraphicsDropShadowEffect6offsetEv(void* qthis); // 4
+  // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
+extern void _ZNK25QGraphicsDropShadowEffect10metaObjectEv(void* qthis); // 4
+  // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
+extern void _ZN25QGraphicsDropShadowEffect8setColorERK6QColor(void* qthis, void* arg0); // 4
+  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
+extern void _ZNK25QGraphicsDropShadowEffect7yOffsetEv(void* qthis); // 2
+  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
+extern void _ZNK25QGraphicsDropShadowEffect7xOffsetEv(void* qthis); // 2
   // proto:  qreal QGraphicsOpacityEffect::opacity();
-extern void _ZNK22QGraphicsOpacityEffect7opacityEv(void* qthis);
+extern void _ZNK22QGraphicsOpacityEffect7opacityEv(void* qthis); // 4
+  // proto:  void QGraphicsOpacityEffect::~QGraphicsOpacityEffect();
+extern void _ZN22QGraphicsOpacityEffectD2Ev(void* qthis); // 4
   // proto:  void QGraphicsOpacityEffect::setOpacity(qreal opacity);
-extern void _ZN22QGraphicsOpacityEffect10setOpacityEd(void* qthis, double arg0);
-  // proto:  qreal QGraphicsBlurEffect::blurRadius();
-extern void _ZNK19QGraphicsBlurEffect10blurRadiusEv(void* qthis);
-  // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
-extern void _ZN19QGraphicsBlurEffect13setBlurRadiusEd(void* qthis, double arg0);
-  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
-extern void _ZN19QGraphicsBlurEffectD0Ev(void* qthis);
-  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(const QGraphicsBlurEffect & );
-extern void* dector_ZN19QGraphicsBlurEffectC1ERKS_(void* arg0);
-extern void _ZN19QGraphicsBlurEffectC1ERKS_(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
-extern void _ZNK19QGraphicsBlurEffect10metaObjectEv(void* qthis);
-  // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
-extern void _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(void* qthis, void* arg0);
+extern void _ZN22QGraphicsOpacityEffect10setOpacityEd(void* qthis, double arg0); // 4
+  // proto:  QBrush QGraphicsOpacityEffect::opacityMask();
+extern void _ZNK22QGraphicsOpacityEffect11opacityMaskEv(void* qthis); // 4
+  // proto:  void QGraphicsOpacityEffect::QGraphicsOpacityEffect(QObject * parent);
+extern void _ZN22QGraphicsOpacityEffectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QGraphicsOpacityEffect::metaObject();
+extern void _ZNK22QGraphicsOpacityEffect10metaObjectEv(void* qthis); // 4
+  // proto:  void QGraphicsOpacityEffect::setOpacityMask(const QBrush & mask);
+extern void _ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(QObject * parent);
-extern void* dector_ZN19QGraphicsBlurEffectC1EP7QObject(void* arg0);
-extern void _ZN19QGraphicsBlurEffectC1EP7QObject(void* qthis, void* arg0);
+extern void _ZN19QGraphicsBlurEffectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  BlurHints QGraphicsBlurEffect::blurHints();
+extern void _ZNK19QGraphicsBlurEffect9blurHintsEv(void* qthis); // 4
+  // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
+extern void _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(void* qthis, void* arg0); // 4
+  // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
+extern void _ZN19QGraphicsBlurEffect13setBlurRadiusEd(void* qthis, double arg0); // 4
+  // proto:  qreal QGraphicsBlurEffect::blurRadius();
+extern void _ZNK19QGraphicsBlurEffect10blurRadiusEv(void* qthis); // 4
+  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
+extern void _ZN19QGraphicsBlurEffectD2Ev(void* qthis); // 4
+  // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
+extern void _ZNK19QGraphicsBlurEffect10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -194,35 +172,7 @@ type QGraphicsBlurEffect struct {
 //  _blurRadiusChanged QGraphicsBlurEffect_blurRadiusChanged_signal;
 }
 
-  // proto:  void QGraphicsColorizeEffect::setColor(const QColor & c);
-func (this *QGraphicsColorizeEffect) setColor(args ...interface{}) () {
-  // setColor(const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN23QGraphicsColorizeEffect8setColorERK6QColor
-    // invoke: void setColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN23QGraphicsColorizeEffect8setColorERK6QColor(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsColorizeEffect", "setColor", args)
-  }
-
-}
-
-  // proto:  void QGraphicsColorizeEffect::QGraphicsColorizeEffect(const QGraphicsColorizeEffect & );
-func NewQGraphicsColorizeEffect(args ...interface{}) QGraphicsColorizeEffect {
-  return QGraphicsColorizeEffect{}
-}
-
-  // proto:  void QGraphicsColorizeEffect::setStrength(qreal strength);
+// setStrength(qreal)
 func (this *QGraphicsColorizeEffect) setStrength(args ...interface{}) () {
   // setStrength(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -245,7 +195,7 @@ func (this *QGraphicsColorizeEffect) setStrength(args ...interface{}) () {
 
 }
 
-  // proto:  qreal QGraphicsColorizeEffect::strength();
+// strength()
 func (this *QGraphicsColorizeEffect) strength(args ...interface{}) () {
   // strength()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,41 +215,7 @@ func (this *QGraphicsColorizeEffect) strength(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsColorizeEffect::~QGraphicsColorizeEffect();
-func (this *QGraphicsColorizeEffect) FreeQGraphicsColorizeEffect(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsColorizeEffect", "~QGraphicsColorizeEffect", args)
-  }
-
-}
-
-  // proto:  QColor QGraphicsColorizeEffect::color();
-func (this *QGraphicsColorizeEffect) color(args ...interface{}) () {
-  // color()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK23QGraphicsColorizeEffect5colorEv
-    // invoke: QColor color()
-    C._ZNK23QGraphicsColorizeEffect5colorEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsColorizeEffect", "color", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QGraphicsColorizeEffect::metaObject();
+// metaObject()
 func (this *QGraphicsColorizeEffect) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -319,7 +235,116 @@ func (this *QGraphicsColorizeEffect) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  QRectF QGraphicsEffect::boundingRectFor(const QRectF & sourceRect);
+// setColor(const class QColor &)
+func (this *QGraphicsColorizeEffect) setColor(args ...interface{}) () {
+  // setColor(const class QColor &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QGraphicsColorizeEffect8setColorERK6QColor
+    // invoke: void setColor(const class QColor &)
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN23QGraphicsColorizeEffect8setColorERK6QColor(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsColorizeEffect", "setColor", args)
+  }
+
+}
+
+// color()
+func (this *QGraphicsColorizeEffect) color(args ...interface{}) () {
+  // color()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK23QGraphicsColorizeEffect5colorEv
+    // invoke: QColor color()
+    C._ZNK23QGraphicsColorizeEffect5colorEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsColorizeEffect", "color", args)
+  }
+
+}
+
+// QGraphicsColorizeEffect(class QObject *)
+func NewQGraphicsColorizeEffect(args ...interface{}) QGraphicsColorizeEffect {
+  // QGraphicsColorizeEffect(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QGraphicsColorizeEffectC1EP7QObject
+    // invoke: void QGraphicsColorizeEffect(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QGraphicsColorizeEffectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsColorizeEffect", "QGraphicsColorizeEffect", args)
+  }
+
+  return QGraphicsColorizeEffect{}
+}
+
+// ~QGraphicsColorizeEffect()
+func (this *QGraphicsColorizeEffect) FreeQGraphicsColorizeEffect(args ...interface{}) () {
+  // ~QGraphicsColorizeEffect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QGraphicsColorizeEffectD0Ev
+    // invoke: void ~QGraphicsColorizeEffect()
+    C._ZN23QGraphicsColorizeEffectD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsColorizeEffect", "~QGraphicsColorizeEffect", args)
+  }
+
+}
+
+// boundingRect()
+func (this *QGraphicsEffect) boundingRect(args ...interface{}) () {
+  // boundingRect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QGraphicsEffect12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK15QGraphicsEffect12boundingRectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsEffect", "boundingRect", args)
+  }
+
+}
+
+// boundingRectFor(const class QRectF &)
 func (this *QGraphicsEffect) boundingRectFor(args ...interface{}) () {
   // boundingRectFor(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -342,7 +367,47 @@ func (this *QGraphicsEffect) boundingRectFor(args ...interface{}) () {
 
 }
 
-  // proto:  QGraphicsEffectSource * QGraphicsEffect::source();
+// ~QGraphicsEffect()
+func (this *QGraphicsEffect) FreeQGraphicsEffect(args ...interface{}) () {
+  // ~QGraphicsEffect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsEffectD0Ev
+    // invoke: void ~QGraphicsEffect()
+    C._ZN15QGraphicsEffectD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsEffect", "~QGraphicsEffect", args)
+  }
+
+}
+
+// isEnabled()
+func (this *QGraphicsEffect) isEnabled(args ...interface{}) () {
+  // isEnabled()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QGraphicsEffect9isEnabledEv
+    // invoke: bool isEnabled()
+    C._ZNK15QGraphicsEffect9isEnabledEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsEffect", "isEnabled", args)
+  }
+
+}
+
+// source()
 func (this *QGraphicsEffect) source(args ...interface{}) () {
   // source()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,27 +427,7 @@ func (this *QGraphicsEffect) source(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsEffect::update();
-func (this *QGraphicsEffect) update(args ...interface{}) () {
-  // update()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QGraphicsEffect6updateEv
-    // invoke: void update()
-    C._ZN15QGraphicsEffect6updateEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsEffect", "update", args)
-  }
-
-}
-
-  // proto:  void QGraphicsEffect::setEnabled(bool enable);
+// setEnabled(_Bool)
 func (this *QGraphicsEffect) setEnabled(args ...interface{}) () {
   // setEnabled(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -405,7 +450,27 @@ func (this *QGraphicsEffect) setEnabled(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QGraphicsEffect::metaObject();
+// update()
+func (this *QGraphicsEffect) update(args ...interface{}) () {
+  // update()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsEffect6updateEv
+    // invoke: void update()
+    C._ZN15QGraphicsEffect6updateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsEffect", "update", args)
+  }
+
+}
+
+// metaObject()
 func (this *QGraphicsEffect) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -425,86 +490,56 @@ func (this *QGraphicsEffect) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  bool QGraphicsEffect::isEnabled();
-func (this *QGraphicsEffect) isEnabled(args ...interface{}) () {
-  // isEnabled()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsEffect9isEnabledEv
-    // invoke: bool isEnabled()
-    C._ZNK15QGraphicsEffect9isEnabledEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsEffect", "isEnabled", args)
-  }
-
-}
-
-  // proto:  QRectF QGraphicsEffect::boundingRect();
-func (this *QGraphicsEffect) boundingRect(args ...interface{}) () {
-  // boundingRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QGraphicsEffect12boundingRectEv
-    // invoke: QRectF boundingRect()
-    C._ZNK15QGraphicsEffect12boundingRectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsEffect", "boundingRect", args)
-  }
-
-}
-
-  // proto:  void QGraphicsEffect::~QGraphicsEffect();
-func (this *QGraphicsEffect) FreeQGraphicsEffect(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsEffect", "~QGraphicsEffect", args)
-  }
-
-}
-
-  // proto:  void QGraphicsEffect::QGraphicsEffect(const QGraphicsEffect & );
+// QGraphicsEffect(class QObject *)
 func NewQGraphicsEffect(args ...interface{}) QGraphicsEffect {
+  // QGraphicsEffect(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsEffectC1EP7QObject
+    // invoke: void QGraphicsEffect(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QGraphicsEffectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsEffect", "QGraphicsEffect", args)
+  }
+
   return QGraphicsEffect{}
 }
 
-  // proto:  const QMetaObject * QGraphicsDropShadowEffect::metaObject();
-func (this *QGraphicsDropShadowEffect) metaObject(args ...interface{}) () {
-  // metaObject()
+// setYOffset(qreal)
+func (this *QGraphicsDropShadowEffect) setYOffset(args ...interface{}) () {
+  // setYOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK25QGraphicsDropShadowEffect10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK25QGraphicsDropShadowEffect10metaObjectEv(this.qclsinst)
+    // invoke: _ZN25QGraphicsDropShadowEffect10setYOffsetEd
+    // invoke: void setYOffset(qreal)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsDropShadowEffect10setYOffsetEd(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "metaObject", args)
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setYOffset", args)
   }
 
 }
 
-  // proto:  QRectF QGraphicsDropShadowEffect::boundingRectFor(const QRectF & rect);
+// boundingRectFor(const class QRectF &)
 func (this *QGraphicsDropShadowEffect) boundingRectFor(args ...interface{}) () {
   // boundingRectFor(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -527,34 +562,9 @@ func (this *QGraphicsDropShadowEffect) boundingRectFor(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsDropShadowEffect::QGraphicsDropShadowEffect(QObject * parent);
-func NewQGraphicsDropShadowEffect(args ...interface{}) QGraphicsDropShadowEffect {
-  return QGraphicsDropShadowEffect{}
-}
-
-  // proto:  QPointF QGraphicsDropShadowEffect::offset();
-func (this *QGraphicsDropShadowEffect) offset(args ...interface{}) () {
-  // offset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK25QGraphicsDropShadowEffect6offsetEv
-    // invoke: QPointF offset()
-    C._ZNK25QGraphicsDropShadowEffect6offsetEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "offset", args)
-  }
-
-}
-
-  // proto:  void QGraphicsDropShadowEffect::setYOffset(qreal dy);
-func (this *QGraphicsDropShadowEffect) setYOffset(args ...interface{}) () {
-  // setYOffset(qreal)
+// setXOffset(qreal)
+func (this *QGraphicsDropShadowEffect) setXOffset(args ...interface{}) () {
+  // setXOffset(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -564,38 +574,18 @@ func (this *QGraphicsDropShadowEffect) setYOffset(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN25QGraphicsDropShadowEffect10setYOffsetEd
-    // invoke: void setYOffset(qreal)
+    // invoke: _ZN25QGraphicsDropShadowEffect10setXOffsetEd
+    // invoke: void setXOffset(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.demth_ZN25QGraphicsDropShadowEffect10setYOffsetEd(this.qclsinst, arg0)
+    C._ZN25QGraphicsDropShadowEffect10setXOffsetEd(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setYOffset", args)
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setXOffset", args)
   }
 
 }
 
-  // proto:  qreal QGraphicsDropShadowEffect::xOffset();
-func (this *QGraphicsDropShadowEffect) xOffset(args ...interface{}) () {
-  // xOffset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK25QGraphicsDropShadowEffect7xOffsetEv
-    // invoke: qreal xOffset()
-    C.demth_ZNK25QGraphicsDropShadowEffect7xOffsetEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "xOffset", args)
-  }
-
-}
-
-  // proto:  qreal QGraphicsDropShadowEffect::blurRadius();
+// blurRadius()
 func (this *QGraphicsDropShadowEffect) blurRadius(args ...interface{}) () {
   // blurRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -615,137 +605,7 @@ func (this *QGraphicsDropShadowEffect) blurRadius(args ...interface{}) () {
 
 }
 
-  // proto:  QColor QGraphicsDropShadowEffect::color();
-func (this *QGraphicsDropShadowEffect) color(args ...interface{}) () {
-  // color()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK25QGraphicsDropShadowEffect5colorEv
-    // invoke: QColor color()
-    C._ZNK25QGraphicsDropShadowEffect5colorEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "color", args)
-  }
-
-}
-
-  // proto:  void QGraphicsDropShadowEffect::setColor(const QColor & color);
-func (this *QGraphicsDropShadowEffect) setColor(args ...interface{}) () {
-  // setColor(const class QColor &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN25QGraphicsDropShadowEffect8setColorERK6QColor
-    // invoke: void setColor(const class QColor &)
-    var arg0 = args[0].(QColor).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN25QGraphicsDropShadowEffect8setColorERK6QColor(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setColor", args)
-  }
-
-}
-
-  // proto:  void QGraphicsDropShadowEffect::setOffset(const QPointF & ofs);
-func (this *QGraphicsDropShadowEffect) setOffset(args ...interface{}) () {
-  // setOffset(const class QPointF &)
-  // setOffset(qreal, qreal)
-  // setOffset(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
-  vtys[1][1] = qtrt.DoubleTy(false) // "qreal"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.DoubleTy(false) // "qreal"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF
-    // invoke: void setOffset(const class QPointF &)
-    var arg0 = args[0].(QPointF).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEdd
-    // invoke: void setOffset(qreal, qreal)
-    var arg0 = C.double(args[0].(float64))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.double(args[1].(float64))
-    if false {fmt.Println(arg1)}
-    C.demth_ZN25QGraphicsDropShadowEffect9setOffsetEdd(this.qclsinst, arg0, arg1)
-  case 2:
-    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEd
-    // invoke: void setOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
-    if false {fmt.Println(arg0)}
-    C.demth_ZN25QGraphicsDropShadowEffect9setOffsetEd(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setOffset", args)
-  }
-
-}
-
-  // proto:  qreal QGraphicsDropShadowEffect::yOffset();
-func (this *QGraphicsDropShadowEffect) yOffset(args ...interface{}) () {
-  // yOffset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK25QGraphicsDropShadowEffect7yOffsetEv
-    // invoke: qreal yOffset()
-    C.demth_ZNK25QGraphicsDropShadowEffect7yOffsetEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "yOffset", args)
-  }
-
-}
-
-  // proto:  void QGraphicsDropShadowEffect::setXOffset(qreal dx);
-func (this *QGraphicsDropShadowEffect) setXOffset(args ...interface{}) () {
-  // setXOffset(qreal)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN25QGraphicsDropShadowEffect10setXOffsetEd
-    // invoke: void setXOffset(qreal)
-    var arg0 = C.double(args[0].(float64))
-    if false {fmt.Println(arg0)}
-    C.demth_ZN25QGraphicsDropShadowEffect10setXOffsetEd(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setXOffset", args)
-  }
-
-}
-
-  // proto:  void QGraphicsDropShadowEffect::setBlurRadius(qreal blurRadius);
+// setBlurRadius(qreal)
 func (this *QGraphicsDropShadowEffect) setBlurRadius(args ...interface{}) () {
   // setBlurRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,65 +628,119 @@ func (this *QGraphicsDropShadowEffect) setBlurRadius(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsDropShadowEffect::~QGraphicsDropShadowEffect();
-func (this *QGraphicsDropShadowEffect) FreeQGraphicsDropShadowEffect(args ...interface{}) () {
+// color()
+func (this *QGraphicsDropShadowEffect) color(args ...interface{}) () {
+  // color()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK25QGraphicsDropShadowEffect5colorEv
+    // invoke: QColor color()
+    C._ZNK25QGraphicsDropShadowEffect5colorEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "color", args)
+  }
+
+}
+
+// setOffset(qreal, qreal)
+func (this *QGraphicsDropShadowEffect) setOffset(args ...interface{}) () {
+  // setOffset(qreal, qreal)
+  // setOffset(qreal)
+  // setOffset(const class QPointF &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.DoubleTy(false) // "qreal"
+  vtys[0][1] = qtrt.DoubleTy(false) // "qreal"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.DoubleTy(false) // "qreal"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QPointF{}) // "const QPointF &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEdd
+    // invoke: void setOffset(qreal, qreal)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.double(args[1].(float64))
+    if false {fmt.Println(arg1)}
+    C._ZN25QGraphicsDropShadowEffect9setOffsetEdd(this.qclsinst, arg0, arg1)
+  case 1:
+    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetEd
+    // invoke: void setOffset(qreal)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsDropShadowEffect9setOffsetEd(this.qclsinst, arg0)
+  case 2:
+    // invoke: _ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF
+    // invoke: void setOffset(const class QPointF &)
+    var arg0 = args[0].(QPointF).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsDropShadowEffect9setOffsetERK7QPointF(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setOffset", args)
+  }
+
+}
+
+// ~QGraphicsDropShadowEffect()
+func (this *QGraphicsDropShadowEffect) FreeQGraphicsDropShadowEffect(args ...interface{}) () {
+  // ~QGraphicsDropShadowEffect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN25QGraphicsDropShadowEffectD0Ev
+    // invoke: void ~QGraphicsDropShadowEffect()
+    C._ZN25QGraphicsDropShadowEffectD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsDropShadowEffect", "~QGraphicsDropShadowEffect", args)
   }
 
 }
 
-  // proto:  void QGraphicsOpacityEffect::QGraphicsOpacityEffect(QObject * parent);
-func NewQGraphicsOpacityEffect(args ...interface{}) QGraphicsOpacityEffect {
-  return QGraphicsOpacityEffect{}
-}
-
-  // proto:  void QGraphicsOpacityEffect::~QGraphicsOpacityEffect();
-func (this *QGraphicsOpacityEffect) FreeQGraphicsOpacityEffect(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsOpacityEffect", "~QGraphicsOpacityEffect", args)
-  }
-
-}
-
-  // proto:  void QGraphicsOpacityEffect::setOpacityMask(const QBrush & mask);
-func (this *QGraphicsOpacityEffect) setOpacityMask(args ...interface{}) () {
-  // setOpacityMask(const class QBrush &)
+// QGraphicsDropShadowEffect(class QObject *)
+func NewQGraphicsDropShadowEffect(args ...interface{}) QGraphicsDropShadowEffect {
+  // QGraphicsDropShadowEffect(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QBrush{}) // "const QBrush &"
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush
-    // invoke: void setOpacityMask(const class QBrush &)
-    var arg0 = args[0].(QBrush).qclsinst
+    // invoke: _ZN25QGraphicsDropShadowEffectC1EP7QObject
+    // invoke: void QGraphicsDropShadowEffect(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(this.qclsinst, arg0)
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN25QGraphicsDropShadowEffectC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QGraphicsOpacityEffect", "setOpacityMask", args)
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "QGraphicsDropShadowEffect", args)
   }
 
+  return QGraphicsDropShadowEffect{}
 }
 
-  // proto:  QBrush QGraphicsOpacityEffect::opacityMask();
-func (this *QGraphicsOpacityEffect) opacityMask(args ...interface{}) () {
-  // opacityMask()
+// offset()
+func (this *QGraphicsDropShadowEffect) offset(args ...interface{}) () {
+  // offset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -835,17 +749,17 @@ func (this *QGraphicsOpacityEffect) opacityMask(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK22QGraphicsOpacityEffect11opacityMaskEv
-    // invoke: QBrush opacityMask()
-    C._ZNK22QGraphicsOpacityEffect11opacityMaskEv(this.qclsinst)
+    // invoke: _ZNK25QGraphicsDropShadowEffect6offsetEv
+    // invoke: QPointF offset()
+    C._ZNK25QGraphicsDropShadowEffect6offsetEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGraphicsOpacityEffect", "opacityMask", args)
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "offset", args)
   }
 
 }
 
-  // proto:  const QMetaObject * QGraphicsOpacityEffect::metaObject();
-func (this *QGraphicsOpacityEffect) metaObject(args ...interface{}) () {
+// metaObject()
+func (this *QGraphicsDropShadowEffect) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -855,16 +769,79 @@ func (this *QGraphicsOpacityEffect) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK22QGraphicsOpacityEffect10metaObjectEv
+    // invoke: _ZNK25QGraphicsDropShadowEffect10metaObjectEv
     // invoke: const QMetaObject * metaObject()
-    C._ZNK22QGraphicsOpacityEffect10metaObjectEv(this.qclsinst)
+    C._ZNK25QGraphicsDropShadowEffect10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGraphicsOpacityEffect", "metaObject", args)
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "metaObject", args)
   }
 
 }
 
-  // proto:  qreal QGraphicsOpacityEffect::opacity();
+// setColor(const class QColor &)
+func (this *QGraphicsDropShadowEffect) setColor(args ...interface{}) () {
+  // setColor(const class QColor &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QColor{}) // "const QColor &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN25QGraphicsDropShadowEffect8setColorERK6QColor
+    // invoke: void setColor(const class QColor &)
+    var arg0 = args[0].(QColor).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN25QGraphicsDropShadowEffect8setColorERK6QColor(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "setColor", args)
+  }
+
+}
+
+// yOffset()
+func (this *QGraphicsDropShadowEffect) yOffset(args ...interface{}) () {
+  // yOffset()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK25QGraphicsDropShadowEffect7yOffsetEv
+    // invoke: qreal yOffset()
+    C._ZNK25QGraphicsDropShadowEffect7yOffsetEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "yOffset", args)
+  }
+
+}
+
+// xOffset()
+func (this *QGraphicsDropShadowEffect) xOffset(args ...interface{}) () {
+  // xOffset()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK25QGraphicsDropShadowEffect7xOffsetEv
+    // invoke: qreal xOffset()
+    C._ZNK25QGraphicsDropShadowEffect7xOffsetEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsDropShadowEffect", "xOffset", args)
+  }
+
+}
+
+// opacity()
 func (this *QGraphicsOpacityEffect) opacity(args ...interface{}) () {
   // opacity()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -884,7 +861,27 @@ func (this *QGraphicsOpacityEffect) opacity(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsOpacityEffect::setOpacity(qreal opacity);
+// ~QGraphicsOpacityEffect()
+func (this *QGraphicsOpacityEffect) FreeQGraphicsOpacityEffect(args ...interface{}) () {
+  // ~QGraphicsOpacityEffect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QGraphicsOpacityEffectD0Ev
+    // invoke: void ~QGraphicsOpacityEffect()
+    C._ZN22QGraphicsOpacityEffectD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsOpacityEffect", "~QGraphicsOpacityEffect", args)
+  }
+
+}
+
+// setOpacity(qreal)
 func (this *QGraphicsOpacityEffect) setOpacity(args ...interface{}) () {
   // setOpacity(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -907,9 +904,9 @@ func (this *QGraphicsOpacityEffect) setOpacity(args ...interface{}) () {
 
 }
 
-  // proto:  qreal QGraphicsBlurEffect::blurRadius();
-func (this *QGraphicsBlurEffect) blurRadius(args ...interface{}) () {
-  // blurRadius()
+// opacityMask()
+func (this *QGraphicsOpacityEffect) opacityMask(args ...interface{}) () {
+  // opacityMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -918,16 +915,154 @@ func (this *QGraphicsBlurEffect) blurRadius(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK19QGraphicsBlurEffect10blurRadiusEv
-    // invoke: qreal blurRadius()
-    C._ZNK19QGraphicsBlurEffect10blurRadiusEv(this.qclsinst)
+    // invoke: _ZNK22QGraphicsOpacityEffect11opacityMaskEv
+    // invoke: QBrush opacityMask()
+    C._ZNK22QGraphicsOpacityEffect11opacityMaskEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGraphicsBlurEffect", "blurRadius", args)
+    qtrt.ErrorResolve("QGraphicsOpacityEffect", "opacityMask", args)
   }
 
 }
 
-  // proto:  void QGraphicsBlurEffect::setBlurRadius(qreal blurRadius);
+// QGraphicsOpacityEffect(class QObject *)
+func NewQGraphicsOpacityEffect(args ...interface{}) QGraphicsOpacityEffect {
+  // QGraphicsOpacityEffect(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QGraphicsOpacityEffectC1EP7QObject
+    // invoke: void QGraphicsOpacityEffect(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QGraphicsOpacityEffectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsOpacityEffect", "QGraphicsOpacityEffect", args)
+  }
+
+  return QGraphicsOpacityEffect{}
+}
+
+// metaObject()
+func (this *QGraphicsOpacityEffect) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK22QGraphicsOpacityEffect10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK22QGraphicsOpacityEffect10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsOpacityEffect", "metaObject", args)
+  }
+
+}
+
+// setOpacityMask(const class QBrush &)
+func (this *QGraphicsOpacityEffect) setOpacityMask(args ...interface{}) () {
+  // setOpacityMask(const class QBrush &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QBrush{}) // "const QBrush &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush
+    // invoke: void setOpacityMask(const class QBrush &)
+    var arg0 = args[0].(QBrush).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN22QGraphicsOpacityEffect14setOpacityMaskERK6QBrush(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsOpacityEffect", "setOpacityMask", args)
+  }
+
+}
+
+// QGraphicsBlurEffect(class QObject *)
+func NewQGraphicsBlurEffect(args ...interface{}) QGraphicsBlurEffect {
+  // QGraphicsBlurEffect(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QGraphicsBlurEffectC1EP7QObject
+    // invoke: void QGraphicsBlurEffect(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QGraphicsBlurEffectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsBlurEffect", "QGraphicsBlurEffect", args)
+  }
+
+  return QGraphicsBlurEffect{}
+}
+
+// blurHints()
+func (this *QGraphicsBlurEffect) blurHints(args ...interface{}) () {
+  // blurHints()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QGraphicsBlurEffect9blurHintsEv
+    // invoke: BlurHints blurHints()
+    C._ZNK19QGraphicsBlurEffect9blurHintsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsBlurEffect", "blurHints", args)
+  }
+
+}
+
+// boundingRectFor(const class QRectF &)
+func (this *QGraphicsBlurEffect) boundingRectFor(args ...interface{}) () {
+  // boundingRectFor(const class QRectF &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF
+    // invoke: QRectF boundingRectFor(const class QRectF &)
+    var arg0 = args[0].(QRectF).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsBlurEffect", "boundingRectFor", args)
+  }
+
+}
+
+// setBlurRadius(qreal)
 func (this *QGraphicsBlurEffect) setBlurRadius(args ...interface{}) () {
   // setBlurRadius(qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -950,26 +1085,47 @@ func (this *QGraphicsBlurEffect) setBlurRadius(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsBlurEffect::~QGraphicsBlurEffect();
-func (this *QGraphicsBlurEffect) FreeQGraphicsBlurEffect(args ...interface{}) () {
+// blurRadius()
+func (this *QGraphicsBlurEffect) blurRadius(args ...interface{}) () {
+  // blurRadius()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK19QGraphicsBlurEffect10blurRadiusEv
+    // invoke: qreal blurRadius()
+    C._ZNK19QGraphicsBlurEffect10blurRadiusEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsBlurEffect", "blurRadius", args)
+  }
+
+}
+
+// ~QGraphicsBlurEffect()
+func (this *QGraphicsBlurEffect) FreeQGraphicsBlurEffect(args ...interface{}) () {
+  // ~QGraphicsBlurEffect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QGraphicsBlurEffectD0Ev
+    // invoke: void ~QGraphicsBlurEffect()
+    C._ZN19QGraphicsBlurEffectD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "~QGraphicsBlurEffect", args)
   }
 
 }
 
-  // proto:  void QGraphicsBlurEffect::QGraphicsBlurEffect(const QGraphicsBlurEffect & );
-func NewQGraphicsBlurEffect(args ...interface{}) QGraphicsBlurEffect {
-  return QGraphicsBlurEffect{}
-}
-
-  // proto:  const QMetaObject * QGraphicsBlurEffect::metaObject();
+// metaObject()
 func (this *QGraphicsBlurEffect) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -985,29 +1141,6 @@ func (this *QGraphicsBlurEffect) metaObject(args ...interface{}) () {
     C._ZNK19QGraphicsBlurEffect10metaObjectEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QGraphicsBlurEffect", "metaObject", args)
-  }
-
-}
-
-  // proto:  QRectF QGraphicsBlurEffect::boundingRectFor(const QRectF & rect);
-func (this *QGraphicsBlurEffect) boundingRectFor(args ...interface{}) () {
-  // boundingRectFor(const class QRectF &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRectF{}) // "const QRectF &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF
-    // invoke: QRectF boundingRectFor(const class QRectF &)
-    var arg0 = args[0].(QRectF).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK19QGraphicsBlurEffect15boundingRectForERK6QRectF(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGraphicsBlurEffect", "boundingRectFor", args)
   }
 
 }

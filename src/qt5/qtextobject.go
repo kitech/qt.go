@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,156 +28,144 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QTextDocumentPrivate * QTextObject::docHandle();
-extern void _ZNK11QTextObject9docHandleEv(void* qthis);
-  // proto:  void QTextObject::~QTextObject();
-extern void _ZN11QTextObjectD0Ev(void* qthis);
-  // proto:  void QTextObject::QTextObject(const QTextObject & );
-extern void* dector_ZN11QTextObjectC1ERKS_(void* arg0);
-extern void _ZN11QTextObjectC1ERKS_(void* qthis, void* arg0);
   // proto:  QTextFormat QTextObject::format();
-extern void _ZNK11QTextObject6formatEv(void* qthis);
-  // proto:  int QTextObject::formatIndex();
-extern void _ZNK11QTextObject11formatIndexEv(void* qthis);
-  // proto:  QTextDocument * QTextObject::document();
-extern void _ZNK11QTextObject8documentEv(void* qthis);
-  // proto:  int QTextObject::objectIndex();
-extern void _ZNK11QTextObject11objectIndexEv(void* qthis);
-  // proto:  void QTextObject::QTextObject(QTextDocument * doc);
-extern void* dector_ZN11QTextObjectC1EP13QTextDocument(void* arg0);
-extern void _ZN11QTextObjectC1EP13QTextDocument(void* qthis, void* arg0);
+extern void _ZNK11QTextObject6formatEv(void* qthis); // 4
+  // proto:  QTextDocumentPrivate * QTextObject::docHandle();
+extern void _ZNK11QTextObject9docHandleEv(void* qthis); // 4
   // proto:  const QMetaObject * QTextObject::metaObject();
-extern void _ZNK11QTextObject10metaObjectEv(void* qthis);
+extern void _ZNK11QTextObject10metaObjectEv(void* qthis); // 4
+  // proto:  int QTextObject::formatIndex();
+extern void _ZNK11QTextObject11formatIndexEv(void* qthis); // 4
+  // proto:  int QTextObject::objectIndex();
+extern void _ZNK11QTextObject11objectIndexEv(void* qthis); // 4
+  // proto:  QTextDocument * QTextObject::document();
+extern void _ZNK11QTextObject8documentEv(void* qthis); // 4
   // proto:  void QTextBlockUserData::~QTextBlockUserData();
-extern void _ZN18QTextBlockUserDataD0Ev(void* qthis);
-  // proto:  int QTextFragment::charFormatIndex();
-extern void _ZNK13QTextFragment15charFormatIndexEv(void* qthis);
-  // proto:  int QTextFragment::position();
-extern void _ZNK13QTextFragment8positionEv(void* qthis);
-  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-extern void* dector_ZN13QTextFragmentC1ERKS_(void* arg0);
-extern void demth_ZN13QTextFragmentC1ERKS_(void* qthis, void* arg0);
-  // proto:  bool QTextFragment::contains(int position);
-extern void _ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0);
-  // proto:  void QTextFragment::QTextFragment();
-extern void* dector_ZN13QTextFragmentC1Ev();
-extern void demth_ZN13QTextFragmentC1Ev(void* qthis);
-  // proto:  QString QTextFragment::text();
-extern void _ZNK13QTextFragment4textEv(void* qthis);
-  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
-extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZN18QTextBlockUserDataD2Ev(void* qthis); // 4
   // proto:  bool QTextFragment::isValid();
-extern void demth_ZNK13QTextFragment7isValidEv(void* qthis);
+extern void _ZNK13QTextFragment7isValidEv(void* qthis); // 2
+  // proto:  int QTextFragment::charFormatIndex();
+extern void _ZNK13QTextFragment15charFormatIndexEv(void* qthis); // 4
+  // proto:  QString QTextFragment::text();
+extern void _ZNK13QTextFragment4textEv(void* qthis); // 4
+  // proto:  bool QTextFragment::contains(int position);
+extern void _ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextCharFormat QTextFragment::charFormat();
-extern void _ZNK13QTextFragment10charFormatEv(void* qthis);
+extern void _ZNK13QTextFragment10charFormatEv(void* qthis); // 4
+  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
+extern void _ZN13QTextFragmentC2ERKS_(void* qthis, void* arg0); // 1
+  // proto:  void QTextFragment::QTextFragment();
+extern void _ZN13QTextFragmentC2Ev(void* qthis); // 1
   // proto:  int QTextFragment::length();
-extern void _ZNK13QTextFragment6lengthEv(void* qthis);
+extern void _ZNK13QTextFragment6lengthEv(void* qthis); // 4
+  // proto:  int QTextFragment::position();
+extern void _ZNK13QTextFragment8positionEv(void* qthis); // 4
+  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
+extern void _ZNK13QTextFragment9glyphRunsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
-extern void _ZN20QTextFrameLayoutDataD0Ev(void* qthis);
-  // proto:  const QTextDocument * QTextBlock::document();
-extern void _ZNK10QTextBlock8documentEv(void* qthis);
-  // proto:  QTextBlock QTextBlock::previous();
-extern void _ZNK10QTextBlock8previousEv(void* qthis);
-  // proto:  int QTextBlock::length();
-extern void _ZNK10QTextBlock6lengthEv(void* qthis);
-  // proto:  QTextBlockUserData * QTextBlock::userData();
-extern void _ZNK10QTextBlock8userDataEv(void* qthis);
-  // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-extern void* dector_ZN10QTextBlockC1ERKS_(void* arg0);
-extern void demth_ZN10QTextBlockC1ERKS_(void* qthis, void* arg0);
-  // proto:  QString QTextBlock::text();
-extern void _ZNK10QTextBlock4textEv(void* qthis);
-  // proto:  int QTextBlock::lineCount();
-extern void _ZNK10QTextBlock9lineCountEv(void* qthis);
-  // proto:  bool QTextBlock::contains(int position);
-extern void _ZNK10QTextBlock8containsEi(void* qthis, int32_t arg0);
-  // proto:  int QTextBlock::blockNumber();
-extern void _ZNK10QTextBlock11blockNumberEv(void* qthis);
-  // proto:  void QTextBlock::setRevision(int rev);
-extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int32_t arg0);
-  // proto:  void QTextBlock::setVisible(bool visible);
-extern void _ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0);
-  // proto:  void QTextBlock::clearLayout();
-extern void _ZN10QTextBlock11clearLayoutEv(void* qthis);
-  // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-extern void demth_ZNK10QTextBlock9docHandleEv(void* qthis);
-  // proto:  int QTextBlock::userState();
-extern void _ZNK10QTextBlock9userStateEv(void* qthis);
-  // proto:  int QTextBlock::charFormatIndex();
-extern void _ZNK10QTextBlock15charFormatIndexEv(void* qthis);
-  // proto:  int QTextBlock::revision();
-extern void _ZNK10QTextBlock8revisionEv(void* qthis);
-  // proto:  int QTextBlock::position();
-extern void _ZNK10QTextBlock8positionEv(void* qthis);
-  // proto:  bool QTextBlock::isValid();
-extern void _ZNK10QTextBlock7isValidEv(void* qthis);
-  // proto:  QTextList * QTextBlock::textList();
-extern void _ZNK10QTextBlock8textListEv(void* qthis);
-  // proto:  QTextLayout * QTextBlock::layout();
-extern void _ZNK10QTextBlock6layoutEv(void* qthis);
-  // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
-extern void _ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void* arg0);
+extern void _ZN20QTextFrameLayoutDataD2Ev(void* qthis); // 4
   // proto:  int QTextBlock::blockFormatIndex();
-extern void _ZNK10QTextBlock16blockFormatIndexEv(void* qthis);
-  // proto:  void QTextBlock::setUserState(int state);
-extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int32_t arg0);
-  // proto:  int QTextBlock::fragmentIndex();
-extern void demth_ZNK10QTextBlock13fragmentIndexEv(void* qthis);
-  // proto:  bool QTextBlock::isVisible();
-extern void _ZNK10QTextBlock9isVisibleEv(void* qthis);
-  // proto:  void QTextBlock::setLineCount(int count);
-extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int32_t arg0);
-  // proto:  QTextBlock QTextBlock::next();
-extern void _ZNK10QTextBlock4nextEv(void* qthis);
-  // proto:  QTextBlockFormat QTextBlock::blockFormat();
-extern void _ZNK10QTextBlock11blockFormatEv(void* qthis);
-  // proto:  void QTextBlock::QTextBlock();
-extern void* dector_ZN10QTextBlockC1Ev();
-extern void demth_ZN10QTextBlockC1Ev(void* qthis);
-  // proto:  int QTextBlock::firstLineNumber();
-extern void _ZNK10QTextBlock15firstLineNumberEv(void* qthis);
+extern void _ZNK10QTextBlock16blockFormatIndexEv(void* qthis); // 4
+  // proto:  QString QTextBlock::text();
+extern void _ZNK10QTextBlock4textEv(void* qthis); // 4
+  // proto:  int QTextBlock::lineCount();
+extern void _ZNK10QTextBlock9lineCountEv(void* qthis); // 4
+  // proto:  void QTextBlock::clearLayout();
+extern void _ZN10QTextBlock11clearLayoutEv(void* qthis); // 4
   // proto:  QTextCharFormat QTextBlock::charFormat();
-extern void _ZNK10QTextBlock10charFormatEv(void* qthis);
-  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
-extern void* dector_ZN15QTextBlockGroupC1ERKS_(void* arg0);
-extern void _ZN15QTextBlockGroupC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK10QTextBlock10charFormatEv(void* qthis); // 4
+  // proto:  void QTextBlock::setRevision(int rev);
+extern void _ZN10QTextBlock11setRevisionEi(void* qthis, int32_t arg0); // 4
+  // proto:  QTextList * QTextBlock::textList();
+extern void _ZNK10QTextBlock8textListEv(void* qthis); // 4
+  // proto:  int QTextBlock::userState();
+extern void _ZNK10QTextBlock9userStateEv(void* qthis); // 4
+  // proto:  void QTextBlock::setUserState(int state);
+extern void _ZN10QTextBlock12setUserStateEi(void* qthis, int32_t arg0); // 4
+  // proto:  QTextBlock::iterator QTextBlock::end();
+extern void _ZNK10QTextBlock3endEv(void* qthis); // 4
+  // proto:  QTextBlockFormat QTextBlock::blockFormat();
+extern void _ZNK10QTextBlock11blockFormatEv(void* qthis); // 4
+  // proto:  QVector<QTextLayout::FormatRange> QTextBlock::textFormats();
+extern void _ZNK10QTextBlock11textFormatsEv(void* qthis); // 4
+  // proto:  bool QTextBlock::contains(int position);
+extern void _ZNK10QTextBlock8containsEi(void* qthis, int32_t arg0); // 4
+  // proto:  QTextBlock QTextBlock::next();
+extern void _ZNK10QTextBlock4nextEv(void* qthis); // 4
+  // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
+extern void _ZNK10QTextBlock9docHandleEv(void* qthis); // 2
+  // proto:  int QTextBlock::fragmentIndex();
+extern void _ZNK10QTextBlock13fragmentIndexEv(void* qthis); // 2
+  // proto:  int QTextBlock::firstLineNumber();
+extern void _ZNK10QTextBlock15firstLineNumberEv(void* qthis); // 4
+  // proto:  const QTextDocument * QTextBlock::document();
+extern void _ZNK10QTextBlock8documentEv(void* qthis); // 4
+  // proto:  int QTextBlock::revision();
+extern void _ZNK10QTextBlock8revisionEv(void* qthis); // 4
+  // proto:  QTextBlockUserData * QTextBlock::userData();
+extern void _ZNK10QTextBlock8userDataEv(void* qthis); // 4
+  // proto:  QTextBlock::iterator QTextBlock::begin();
+extern void _ZNK10QTextBlock5beginEv(void* qthis); // 4
+  // proto:  bool QTextBlock::isValid();
+extern void _ZNK10QTextBlock7isValidEv(void* qthis); // 4
+  // proto:  void QTextBlock::setLineCount(int count);
+extern void _ZN10QTextBlock12setLineCountEi(void* qthis, int32_t arg0); // 4
+  // proto:  int QTextBlock::blockNumber();
+extern void _ZNK10QTextBlock11blockNumberEv(void* qthis); // 4
+  // proto:  QTextBlock QTextBlock::previous();
+extern void _ZNK10QTextBlock8previousEv(void* qthis); // 4
+  // proto:  QTextLayout * QTextBlock::layout();
+extern void _ZNK10QTextBlock6layoutEv(void* qthis); // 4
+  // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
+extern void _ZN10QTextBlock11setUserDataEP18QTextBlockUserData(void* qthis, void* arg0); // 4
+  // proto:  Qt::LayoutDirection QTextBlock::textDirection();
+extern void _ZNK10QTextBlock13textDirectionEv(void* qthis); // 4
+  // proto:  int QTextBlock::charFormatIndex();
+extern void _ZNK10QTextBlock15charFormatIndexEv(void* qthis); // 4
+  // proto:  int QTextBlock::length();
+extern void _ZNK10QTextBlock6lengthEv(void* qthis); // 4
+  // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
+extern void _ZN10QTextBlockC2ERKS_(void* qthis, void* arg0); // 1
+  // proto:  void QTextBlock::QTextBlock();
+extern void _ZN10QTextBlockC2Ev(void* qthis); // 1
+  // proto:  bool QTextBlock::isVisible();
+extern void _ZNK10QTextBlock9isVisibleEv(void* qthis); // 4
+  // proto:  int QTextBlock::position();
+extern void _ZNK10QTextBlock8positionEv(void* qthis); // 4
+  // proto:  void QTextBlock::setVisible(bool visible);
+extern void _ZN10QTextBlock10setVisibleEb(void* qthis, bool arg0); // 4
   // proto:  const QMetaObject * QTextBlockGroup::metaObject();
-extern void _ZNK15QTextBlockGroup10metaObjectEv(void* qthis);
-  // proto:  void QTextBlockGroup::~QTextBlockGroup();
-extern void _ZN15QTextBlockGroupD0Ev(void* qthis);
-  // proto:  void QTextBlockGroup::QTextBlockGroup(QTextDocument * doc);
-extern void* dector_ZN15QTextBlockGroupC1EP13QTextDocument(void* arg0);
-extern void _ZN15QTextBlockGroupC1EP13QTextDocument(void* qthis, void* arg0);
-  // proto:  QTextFrameFormat QTextFrame::frameFormat();
-extern void demth_ZNK10QTextFrame11frameFormatEv(void* qthis);
-  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
-extern void _ZNK10QTextFrame10layoutDataEv(void* qthis);
-  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
-extern void _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(void* qthis, void* arg0);
+extern void _ZNK15QTextBlockGroup10metaObjectEv(void* qthis); // 4
   // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-extern void demth_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(void* qthis, void* arg0);
-  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
-extern void* dector_ZN10QTextFrameC1ERKS_(void* arg0);
-extern void _ZN10QTextFrameC1ERKS_(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QTextFrame::metaObject();
-extern void _ZNK10QTextFrame10metaObjectEv(void* qthis);
-  // proto:  QTextFrame * QTextFrame::parentFrame();
-extern void _ZNK10QTextFrame11parentFrameEv(void* qthis);
-  // proto:  int QTextFrame::firstPosition();
-extern void _ZNK10QTextFrame13firstPositionEv(void* qthis);
+extern void _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(void* qthis, void* arg0); // 2
   // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-extern void _ZNK10QTextFrame11childFramesEv(void* qthis);
-  // proto:  void QTextFrame::~QTextFrame();
-extern void _ZN10QTextFrameD0Ev(void* qthis);
-  // proto:  QTextCursor QTextFrame::lastCursorPosition();
-extern void _ZNK10QTextFrame18lastCursorPositionEv(void* qthis);
-  // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
-extern void* dector_ZN10QTextFrameC1EP13QTextDocument(void* arg0);
-extern void _ZN10QTextFrameC1EP13QTextDocument(void* qthis, void* arg0);
-  // proto:  int QTextFrame::lastPosition();
-extern void _ZNK10QTextFrame12lastPositionEv(void* qthis);
+extern void _ZNK10QTextFrame11childFramesEv(void* qthis); // 4
+  // proto:  QTextFrame * QTextFrame::parentFrame();
+extern void _ZNK10QTextFrame11parentFrameEv(void* qthis); // 4
   // proto:  QTextCursor QTextFrame::firstCursorPosition();
-extern void _ZNK10QTextFrame19firstCursorPositionEv(void* qthis);
+extern void _ZNK10QTextFrame19firstCursorPositionEv(void* qthis); // 4
+  // proto:  QTextCursor QTextFrame::lastCursorPosition();
+extern void _ZNK10QTextFrame18lastCursorPositionEv(void* qthis); // 4
+  // proto:  int QTextFrame::firstPosition();
+extern void _ZNK10QTextFrame13firstPositionEv(void* qthis); // 4
+  // proto:  QTextFrame::iterator QTextFrame::begin();
+extern void _ZNK10QTextFrame5beginEv(void* qthis); // 4
+  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
+extern void _ZNK10QTextFrame10layoutDataEv(void* qthis); // 4
+  // proto:  QTextFrame::iterator QTextFrame::end();
+extern void _ZNK10QTextFrame3endEv(void* qthis); // 4
+  // proto:  void QTextFrame::~QTextFrame();
+extern void _ZN10QTextFrameD2Ev(void* qthis); // 4
+  // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
+extern void _ZN10QTextFrameC2EP13QTextDocument(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QTextFrame::metaObject();
+extern void _ZNK10QTextFrame10metaObjectEv(void* qthis); // 4
+  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
+extern void _ZN10QTextFrame13setLayoutDataEP20QTextFrameLayoutData(void* qthis, void* arg0); // 4
+  // proto:  QTextFrameFormat QTextFrame::frameFormat();
+extern void _ZNK10QTextFrame11frameFormatEv(void* qthis); // 2
+  // proto:  int QTextFrame::lastPosition();
+extern void _ZNK10QTextFrame12lastPositionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -236,46 +220,7 @@ type QTextFrame struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QTextDocumentPrivate * QTextObject::docHandle();
-func (this *QTextObject) docHandle(args ...interface{}) () {
-  // docHandle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextObject9docHandleEv
-    // invoke: QTextDocumentPrivate * docHandle()
-    C._ZNK11QTextObject9docHandleEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextObject", "docHandle", args)
-  }
-
-}
-
-  // proto:  void QTextObject::~QTextObject();
-func (this *QTextObject) FreeQTextObject(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QTextObject", "~QTextObject", args)
-  }
-
-}
-
-  // proto:  void QTextObject::QTextObject(const QTextObject & );
-func NewQTextObject(args ...interface{}) QTextObject {
-  return QTextObject{}
-}
-
-  // proto:  QTextFormat QTextObject::format();
+// format()
 func (this *QTextObject) format(args ...interface{}) () {
   // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -295,9 +240,9 @@ func (this *QTextObject) format(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextObject::formatIndex();
-func (this *QTextObject) formatIndex(args ...interface{}) () {
-  // formatIndex()
+// docHandle()
+func (this *QTextObject) docHandle(args ...interface{}) () {
+  // docHandle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -306,56 +251,16 @@ func (this *QTextObject) formatIndex(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK11QTextObject11formatIndexEv
-    // invoke: int formatIndex()
-    C._ZNK11QTextObject11formatIndexEv(this.qclsinst)
+    // invoke: _ZNK11QTextObject9docHandleEv
+    // invoke: QTextDocumentPrivate * docHandle()
+    C._ZNK11QTextObject9docHandleEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextObject", "formatIndex", args)
+    qtrt.ErrorResolve("QTextObject", "docHandle", args)
   }
 
 }
 
-  // proto:  QTextDocument * QTextObject::document();
-func (this *QTextObject) document(args ...interface{}) () {
-  // document()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextObject8documentEv
-    // invoke: QTextDocument * document()
-    C._ZNK11QTextObject8documentEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextObject", "document", args)
-  }
-
-}
-
-  // proto:  int QTextObject::objectIndex();
-func (this *QTextObject) objectIndex(args ...interface{}) () {
-  // objectIndex()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QTextObject11objectIndexEv
-    // invoke: int objectIndex()
-    C._ZNK11QTextObject11objectIndexEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextObject", "objectIndex", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QTextObject::metaObject();
+// metaObject()
 func (this *QTextObject) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -375,21 +280,107 @@ func (this *QTextObject) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextBlockUserData::~QTextBlockUserData();
-func (this *QTextBlockUserData) FreeQTextBlockUserData(args ...interface{}) () {
+// formatIndex()
+func (this *QTextObject) formatIndex(args ...interface{}) () {
+  // formatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK11QTextObject11formatIndexEv
+    // invoke: int formatIndex()
+    C._ZNK11QTextObject11formatIndexEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextObject", "formatIndex", args)
+  }
+
+}
+
+// objectIndex()
+func (this *QTextObject) objectIndex(args ...interface{}) () {
+  // objectIndex()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QTextObject11objectIndexEv
+    // invoke: int objectIndex()
+    C._ZNK11QTextObject11objectIndexEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextObject", "objectIndex", args)
+  }
+
+}
+
+// document()
+func (this *QTextObject) document(args ...interface{}) () {
+  // document()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QTextObject8documentEv
+    // invoke: QTextDocument * document()
+    C._ZNK11QTextObject8documentEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextObject", "document", args)
+  }
+
+}
+
+// ~QTextBlockUserData()
+func (this *QTextBlockUserData) FreeQTextBlockUserData(args ...interface{}) () {
+  // ~QTextBlockUserData()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QTextBlockUserDataD0Ev
+    // invoke: void ~QTextBlockUserData()
+    C._ZN18QTextBlockUserDataD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlockUserData", "~QTextBlockUserData", args)
   }
 
 }
 
-  // proto:  int QTextFragment::charFormatIndex();
+// isValid()
+func (this *QTextFragment) isValid(args ...interface{}) () {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTextFragment7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QTextFragment7isValidEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFragment", "isValid", args)
+  }
+
+}
+
+// charFormatIndex()
 func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
   // charFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -409,9 +400,9 @@ func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextFragment::position();
-func (this *QTextFragment) position(args ...interface{}) () {
-  // position()
+// text()
+func (this *QTextFragment) text(args ...interface{}) () {
+  // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -420,21 +411,16 @@ func (this *QTextFragment) position(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QTextFragment8positionEv
-    // invoke: int position()
-    C._ZNK13QTextFragment8positionEv(this.qclsinst)
+    // invoke: _ZNK13QTextFragment4textEv
+    // invoke: QString text()
+    C._ZNK13QTextFragment4textEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextFragment", "position", args)
+    qtrt.ErrorResolve("QTextFragment", "text", args)
   }
 
 }
 
-  // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-func NewQTextFragment(args ...interface{}) QTextFragment {
-  return QTextFragment{}
-}
-
-  // proto:  bool QTextFragment::contains(int position);
+// contains(int)
 func (this *QTextFragment) contains(args ...interface{}) () {
   // contains(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -457,9 +443,9 @@ func (this *QTextFragment) contains(args ...interface{}) () {
 
 }
 
-  // proto:  QString QTextFragment::text();
-func (this *QTextFragment) text(args ...interface{}) () {
-  // text()
+// charFormat()
+func (this *QTextFragment) charFormat(args ...interface{}) () {
+  // charFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -468,16 +454,90 @@ func (this *QTextFragment) text(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QTextFragment4textEv
-    // invoke: QString text()
-    C._ZNK13QTextFragment4textEv(this.qclsinst)
+    // invoke: _ZNK13QTextFragment10charFormatEv
+    // invoke: QTextCharFormat charFormat()
+    C._ZNK13QTextFragment10charFormatEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextFragment", "text", args)
+    qtrt.ErrorResolve("QTextFragment", "charFormat", args)
   }
 
 }
 
-  // proto:  QList<QGlyphRun> QTextFragment::glyphRuns(int from, int length);
+// QTextFragment(const class QTextFragment &)
+func NewQTextFragment(args ...interface{}) QTextFragment {
+  // QTextFragment(const class QTextFragment &)
+  // QTextFragment()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextFragment{}) // "const QTextFragment &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QTextFragmentC1ERKS_
+    // invoke: void QTextFragment(const class QTextFragment &)
+    var arg0 = args[0].(QTextFragment).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QTextFragmentC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN13QTextFragmentC1Ev
+    // invoke: void QTextFragment()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QTextFragmentC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QTextFragment", "QTextFragment", args)
+  }
+
+  return QTextFragment{}
+}
+
+// length()
+func (this *QTextFragment) length(args ...interface{}) () {
+  // length()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTextFragment6lengthEv
+    // invoke: int length()
+    C._ZNK13QTextFragment6lengthEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFragment", "length", args)
+  }
+
+}
+
+// position()
+func (this *QTextFragment) position(args ...interface{}) () {
+  // position()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTextFragment8positionEv
+    // invoke: int position()
+    C._ZNK13QTextFragment8positionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFragment", "position", args)
+  }
+
+}
+
+// glyphRuns(int, int)
 func (this *QTextFragment) glyphRuns(args ...interface{}) () {
   // glyphRuns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -503,83 +563,29 @@ func (this *QTextFragment) glyphRuns(args ...interface{}) () {
 
 }
 
-  // proto:  bool QTextFragment::isValid();
-func (this *QTextFragment) isValid(args ...interface{}) () {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QTextFragment7isValidEv
-    // invoke: bool isValid()
-    C.demth_ZNK13QTextFragment7isValidEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFragment", "isValid", args)
-  }
-
-}
-
-  // proto:  QTextCharFormat QTextFragment::charFormat();
-func (this *QTextFragment) charFormat(args ...interface{}) () {
-  // charFormat()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QTextFragment10charFormatEv
-    // invoke: QTextCharFormat charFormat()
-    C._ZNK13QTextFragment10charFormatEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFragment", "charFormat", args)
-  }
-
-}
-
-  // proto:  int QTextFragment::length();
-func (this *QTextFragment) length(args ...interface{}) () {
-  // length()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QTextFragment6lengthEv
-    // invoke: int length()
-    C._ZNK13QTextFragment6lengthEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFragment", "length", args)
-  }
-
-}
-
-  // proto:  void QTextFrameLayoutData::~QTextFrameLayoutData();
+// ~QTextFrameLayoutData()
 func (this *QTextFrameLayoutData) FreeQTextFrameLayoutData(args ...interface{}) () {
+  // ~QTextFrameLayoutData()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN20QTextFrameLayoutDataD0Ev
+    // invoke: void ~QTextFrameLayoutData()
+    C._ZN20QTextFrameLayoutDataD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrameLayoutData", "~QTextFrameLayoutData", args)
   }
 
 }
 
-  // proto:  const QTextDocument * QTextBlock::document();
-func (this *QTextBlock) document(args ...interface{}) () {
-  // document()
+// blockFormatIndex()
+func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
+  // blockFormatIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -588,81 +594,16 @@ func (this *QTextBlock) document(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock8documentEv
-    // invoke: const QTextDocument * document()
-    C._ZNK10QTextBlock8documentEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock16blockFormatIndexEv
+    // invoke: int blockFormatIndex()
+    C._ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "document", args)
+    qtrt.ErrorResolve("QTextBlock", "blockFormatIndex", args)
   }
 
 }
 
-  // proto:  QTextBlock QTextBlock::previous();
-func (this *QTextBlock) previous(args ...interface{}) () {
-  // previous()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock8previousEv
-    // invoke: QTextBlock previous()
-    C._ZNK10QTextBlock8previousEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "previous", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::length();
-func (this *QTextBlock) length(args ...interface{}) () {
-  // length()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock6lengthEv
-    // invoke: int length()
-    C._ZNK10QTextBlock6lengthEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "length", args)
-  }
-
-}
-
-  // proto:  QTextBlockUserData * QTextBlock::userData();
-func (this *QTextBlock) userData(args ...interface{}) () {
-  // userData()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock8userDataEv
-    // invoke: QTextBlockUserData * userData()
-    C._ZNK10QTextBlock8userDataEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "userData", args)
-  }
-
-}
-
-  // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-func NewQTextBlock(args ...interface{}) QTextBlock {
-  return QTextBlock{}
-}
-
-  // proto:  QString QTextBlock::text();
+// text()
 func (this *QTextBlock) text(args ...interface{}) () {
   // text()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -682,7 +623,7 @@ func (this *QTextBlock) text(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextBlock::lineCount();
+// lineCount()
 func (this *QTextBlock) lineCount(args ...interface{}) () {
   // lineCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -702,32 +643,9 @@ func (this *QTextBlock) lineCount(args ...interface{}) () {
 
 }
 
-  // proto:  bool QTextBlock::contains(int position);
-func (this *QTextBlock) contains(args ...interface{}) () {
-  // contains(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock8containsEi
-    // invoke: bool contains(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "contains", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::blockNumber();
-func (this *QTextBlock) blockNumber(args ...interface{}) () {
-  // blockNumber()
+// clearLayout()
+func (this *QTextBlock) clearLayout(args ...interface{}) () {
+  // clearLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -736,16 +654,36 @@ func (this *QTextBlock) blockNumber(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock11blockNumberEv
-    // invoke: int blockNumber()
-    C._ZNK10QTextBlock11blockNumberEv(this.qclsinst)
+    // invoke: _ZN10QTextBlock11clearLayoutEv
+    // invoke: void clearLayout()
+    C._ZN10QTextBlock11clearLayoutEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "blockNumber", args)
+    qtrt.ErrorResolve("QTextBlock", "clearLayout", args)
   }
 
 }
 
-  // proto:  void QTextBlock::setRevision(int rev);
+// charFormat()
+func (this *QTextBlock) charFormat(args ...interface{}) () {
+  // charFormat()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock10charFormatEv
+    // invoke: QTextCharFormat charFormat()
+    C._ZNK10QTextBlock10charFormatEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "charFormat", args)
+  }
+
+}
+
+// setRevision(int)
 func (this *QTextBlock) setRevision(args ...interface{}) () {
   // setRevision(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -768,170 +706,7 @@ func (this *QTextBlock) setRevision(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextBlock::setVisible(bool visible);
-func (this *QTextBlock) setVisible(args ...interface{}) () {
-  // setVisible(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextBlock10setVisibleEb
-    // invoke: void setVisible(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "setVisible", args)
-  }
-
-}
-
-  // proto:  void QTextBlock::clearLayout();
-func (this *QTextBlock) clearLayout(args ...interface{}) () {
-  // clearLayout()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextBlock11clearLayoutEv
-    // invoke: void clearLayout()
-    C._ZN10QTextBlock11clearLayoutEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "clearLayout", args)
-  }
-
-}
-
-  // proto:  QTextDocumentPrivate * QTextBlock::docHandle();
-func (this *QTextBlock) docHandle(args ...interface{}) () {
-  // docHandle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock9docHandleEv
-    // invoke: QTextDocumentPrivate * docHandle()
-    C.demth_ZNK10QTextBlock9docHandleEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "docHandle", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::userState();
-func (this *QTextBlock) userState(args ...interface{}) () {
-  // userState()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock9userStateEv
-    // invoke: int userState()
-    C._ZNK10QTextBlock9userStateEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "userState", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::charFormatIndex();
-func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
-  // charFormatIndex()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock15charFormatIndexEv
-    // invoke: int charFormatIndex()
-    C._ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "charFormatIndex", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::revision();
-func (this *QTextBlock) revision(args ...interface{}) () {
-  // revision()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock8revisionEv
-    // invoke: int revision()
-    C._ZNK10QTextBlock8revisionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "revision", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::position();
-func (this *QTextBlock) position(args ...interface{}) () {
-  // position()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock8positionEv
-    // invoke: int position()
-    C._ZNK10QTextBlock8positionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "position", args)
-  }
-
-}
-
-  // proto:  bool QTextBlock::isValid();
-func (this *QTextBlock) isValid(args ...interface{}) () {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock7isValidEv
-    // invoke: bool isValid()
-    C._ZNK10QTextBlock7isValidEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "isValid", args)
-  }
-
-}
-
-  // proto:  QTextList * QTextBlock::textList();
+// textList()
 func (this *QTextBlock) textList(args ...interface{}) () {
   // textList()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -951,9 +726,9 @@ func (this *QTextBlock) textList(args ...interface{}) () {
 
 }
 
-  // proto:  QTextLayout * QTextBlock::layout();
-func (this *QTextBlock) layout(args ...interface{}) () {
-  // layout()
+// userState()
+func (this *QTextBlock) userState(args ...interface{}) () {
+  // userState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -962,59 +737,16 @@ func (this *QTextBlock) layout(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock6layoutEv
-    // invoke: QTextLayout * layout()
-    C._ZNK10QTextBlock6layoutEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock9userStateEv
+    // invoke: int userState()
+    C._ZNK10QTextBlock9userStateEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "layout", args)
+    qtrt.ErrorResolve("QTextBlock", "userState", args)
   }
 
 }
 
-  // proto:  void QTextBlock::setUserData(QTextBlockUserData * data);
-func (this *QTextBlock) setUserData(args ...interface{}) () {
-  // setUserData(class QTextBlockUserData *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextBlockUserData{}) // "QTextBlockUserData *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextBlock11setUserDataEP18QTextBlockUserData
-    // invoke: void setUserData(class QTextBlockUserData *)
-    var arg0 = args[0].(QTextBlockUserData).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "setUserData", args)
-  }
-
-}
-
-  // proto:  int QTextBlock::blockFormatIndex();
-func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
-  // blockFormatIndex()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextBlock16blockFormatIndexEv
-    // invoke: int blockFormatIndex()
-    C._ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextBlock", "blockFormatIndex", args)
-  }
-
-}
-
-  // proto:  void QTextBlock::setUserState(int state);
+// setUserState(int)
 func (this *QTextBlock) setUserState(args ...interface{}) () {
   // setUserState(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1037,7 +769,130 @@ func (this *QTextBlock) setUserState(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextBlock::fragmentIndex();
+// end()
+func (this *QTextBlock) end(args ...interface{}) () {
+  // end()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock3endEv
+    // invoke: QTextBlock::iterator end()
+    C._ZNK10QTextBlock3endEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "end", args)
+  }
+
+}
+
+// blockFormat()
+func (this *QTextBlock) blockFormat(args ...interface{}) () {
+  // blockFormat()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock11blockFormatEv
+    // invoke: QTextBlockFormat blockFormat()
+    C._ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "blockFormat", args)
+  }
+
+}
+
+// textFormats()
+func (this *QTextBlock) textFormats(args ...interface{}) () {
+  // textFormats()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock11textFormatsEv
+    // invoke: QVector<QTextLayout::FormatRange> textFormats()
+    C._ZNK10QTextBlock11textFormatsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "textFormats", args)
+  }
+
+}
+
+// contains(int)
+func (this *QTextBlock) contains(args ...interface{}) () {
+  // contains(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock8containsEi
+    // invoke: bool contains(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "contains", args)
+  }
+
+}
+
+// next()
+func (this *QTextBlock) next(args ...interface{}) () {
+  // next()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock4nextEv
+    // invoke: QTextBlock next()
+    C._ZNK10QTextBlock4nextEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "next", args)
+  }
+
+}
+
+// docHandle()
+func (this *QTextBlock) docHandle(args ...interface{}) () {
+  // docHandle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock9docHandleEv
+    // invoke: QTextDocumentPrivate * docHandle()
+    C._ZNK10QTextBlock9docHandleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "docHandle", args)
+  }
+
+}
+
+// fragmentIndex()
 func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
   // fragmentIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1050,16 +905,16 @@ func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock13fragmentIndexEv
     // invoke: int fragmentIndex()
-    C.demth_ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
+    C._ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextBlock", "fragmentIndex", args)
   }
 
 }
 
-  // proto:  bool QTextBlock::isVisible();
-func (this *QTextBlock) isVisible(args ...interface{}) () {
-  // isVisible()
+// firstLineNumber()
+func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
+  // firstLineNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1068,16 +923,116 @@ func (this *QTextBlock) isVisible(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock9isVisibleEv
-    // invoke: bool isVisible()
-    C._ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock15firstLineNumberEv
+    // invoke: int firstLineNumber()
+    C._ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "isVisible", args)
+    qtrt.ErrorResolve("QTextBlock", "firstLineNumber", args)
   }
 
 }
 
-  // proto:  void QTextBlock::setLineCount(int count);
+// document()
+func (this *QTextBlock) document(args ...interface{}) () {
+  // document()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock8documentEv
+    // invoke: const QTextDocument * document()
+    C._ZNK10QTextBlock8documentEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "document", args)
+  }
+
+}
+
+// revision()
+func (this *QTextBlock) revision(args ...interface{}) () {
+  // revision()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock8revisionEv
+    // invoke: int revision()
+    C._ZNK10QTextBlock8revisionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "revision", args)
+  }
+
+}
+
+// userData()
+func (this *QTextBlock) userData(args ...interface{}) () {
+  // userData()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock8userDataEv
+    // invoke: QTextBlockUserData * userData()
+    C._ZNK10QTextBlock8userDataEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "userData", args)
+  }
+
+}
+
+// begin()
+func (this *QTextBlock) begin(args ...interface{}) () {
+  // begin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock5beginEv
+    // invoke: QTextBlock::iterator begin()
+    C._ZNK10QTextBlock5beginEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "begin", args)
+  }
+
+}
+
+// isValid()
+func (this *QTextBlock) isValid(args ...interface{}) () {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock7isValidEv
+    // invoke: bool isValid()
+    C._ZNK10QTextBlock7isValidEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "isValid", args)
+  }
+
+}
+
+// setLineCount(int)
 func (this *QTextBlock) setLineCount(args ...interface{}) () {
   // setLineCount(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1100,9 +1055,9 @@ func (this *QTextBlock) setLineCount(args ...interface{}) () {
 
 }
 
-  // proto:  QTextBlock QTextBlock::next();
-func (this *QTextBlock) next(args ...interface{}) () {
-  // next()
+// blockNumber()
+func (this *QTextBlock) blockNumber(args ...interface{}) () {
+  // blockNumber()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1111,18 +1066,18 @@ func (this *QTextBlock) next(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock4nextEv
-    // invoke: QTextBlock next()
-    C._ZNK10QTextBlock4nextEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock11blockNumberEv
+    // invoke: int blockNumber()
+    C._ZNK10QTextBlock11blockNumberEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "next", args)
+    qtrt.ErrorResolve("QTextBlock", "blockNumber", args)
   }
 
 }
 
-  // proto:  QTextBlockFormat QTextBlock::blockFormat();
-func (this *QTextBlock) blockFormat(args ...interface{}) () {
-  // blockFormat()
+// previous()
+func (this *QTextBlock) previous(args ...interface{}) () {
+  // previous()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1131,18 +1086,18 @@ func (this *QTextBlock) blockFormat(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock11blockFormatEv
-    // invoke: QTextBlockFormat blockFormat()
-    C._ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock8previousEv
+    // invoke: QTextBlock previous()
+    C._ZNK10QTextBlock8previousEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "blockFormat", args)
+    qtrt.ErrorResolve("QTextBlock", "previous", args)
   }
 
 }
 
-  // proto:  int QTextBlock::firstLineNumber();
-func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
-  // firstLineNumber()
+// layout()
+func (this *QTextBlock) layout(args ...interface{}) () {
+  // layout()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1151,18 +1106,41 @@ func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock15firstLineNumberEv
-    // invoke: int firstLineNumber()
-    C._ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock6layoutEv
+    // invoke: QTextLayout * layout()
+    C._ZNK10QTextBlock6layoutEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "firstLineNumber", args)
+    qtrt.ErrorResolve("QTextBlock", "layout", args)
   }
 
 }
 
-  // proto:  QTextCharFormat QTextBlock::charFormat();
-func (this *QTextBlock) charFormat(args ...interface{}) () {
-  // charFormat()
+// setUserData(class QTextBlockUserData *)
+func (this *QTextBlock) setUserData(args ...interface{}) () {
+  // setUserData(class QTextBlockUserData *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextBlockUserData{}) // "QTextBlockUserData *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextBlock11setUserDataEP18QTextBlockUserData
+    // invoke: void setUserData(class QTextBlockUserData *)
+    var arg0 = args[0].(QTextBlockUserData).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QTextBlock11setUserDataEP18QTextBlockUserData(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "setUserData", args)
+  }
+
+}
+
+// textDirection()
+func (this *QTextBlock) textDirection(args ...interface{}) () {
+  // textDirection()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1171,21 +1149,153 @@ func (this *QTextBlock) charFormat(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextBlock10charFormatEv
-    // invoke: QTextCharFormat charFormat()
-    C._ZNK10QTextBlock10charFormatEv(this.qclsinst)
+    // invoke: _ZNK10QTextBlock13textDirectionEv
+    // invoke: Qt::LayoutDirection textDirection()
+    C._ZNK10QTextBlock13textDirectionEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextBlock", "charFormat", args)
+    qtrt.ErrorResolve("QTextBlock", "textDirection", args)
   }
 
 }
 
-  // proto:  void QTextBlockGroup::QTextBlockGroup(const QTextBlockGroup & );
-func NewQTextBlockGroup(args ...interface{}) QTextBlockGroup {
-  return QTextBlockGroup{}
+// charFormatIndex()
+func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
+  // charFormatIndex()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock15charFormatIndexEv
+    // invoke: int charFormatIndex()
+    C._ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "charFormatIndex", args)
+  }
+
 }
 
-  // proto:  const QMetaObject * QTextBlockGroup::metaObject();
+// length()
+func (this *QTextBlock) length(args ...interface{}) () {
+  // length()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock6lengthEv
+    // invoke: int length()
+    C._ZNK10QTextBlock6lengthEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "length", args)
+  }
+
+}
+
+// QTextBlock(const class QTextBlock &)
+func NewQTextBlock(args ...interface{}) QTextBlock {
+  // QTextBlock(const class QTextBlock &)
+  // QTextBlock()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextBlock{}) // "const QTextBlock &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextBlockC1ERKS_
+    // invoke: void QTextBlock(const class QTextBlock &)
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QTextBlockC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN10QTextBlockC1Ev
+    // invoke: void QTextBlock()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QTextBlockC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "QTextBlock", args)
+  }
+
+  return QTextBlock{}
+}
+
+// isVisible()
+func (this *QTextBlock) isVisible(args ...interface{}) () {
+  // isVisible()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock9isVisibleEv
+    // invoke: bool isVisible()
+    C._ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "isVisible", args)
+  }
+
+}
+
+// position()
+func (this *QTextBlock) position(args ...interface{}) () {
+  // position()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextBlock8positionEv
+    // invoke: int position()
+    C._ZNK10QTextBlock8positionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "position", args)
+  }
+
+}
+
+// setVisible(_Bool)
+func (this *QTextBlock) setVisible(args ...interface{}) () {
+  // setVisible(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextBlock10setVisibleEb
+    // invoke: void setVisible(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN10QTextBlock10setVisibleEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextBlock", "setVisible", args)
+  }
+
+}
+
+// metaObject()
 func (this *QTextBlockGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1205,23 +1315,32 @@ func (this *QTextBlockGroup) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextBlockGroup::~QTextBlockGroup();
-func (this *QTextBlockGroup) FreeQTextBlockGroup(args ...interface{}) () {
+// setFrameFormat(const class QTextFrameFormat &)
+func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
+  // setFrameFormat(const class QTextFrameFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextFrameFormat{}) // "const QTextFrameFormat &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat
+    // invoke: void setFrameFormat(const class QTextFrameFormat &)
+    var arg0 = args[0].(QTextFrameFormat).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QTextBlockGroup", "~QTextBlockGroup", args)
+    qtrt.ErrorResolve("QTextFrame", "setFrameFormat", args)
   }
 
 }
 
-  // proto:  QTextFrameFormat QTextFrame::frameFormat();
-func (this *QTextFrame) frameFormat(args ...interface{}) () {
-  // frameFormat()
+// childFrames()
+func (this *QTextFrame) childFrames(args ...interface{}) () {
+  // childFrames()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1230,16 +1349,116 @@ func (this *QTextFrame) frameFormat(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextFrame11frameFormatEv
-    // invoke: QTextFrameFormat frameFormat()
-    C.demth_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    // invoke: _ZNK10QTextFrame11childFramesEv
+    // invoke: QList<QTextFrame *> childFrames()
+    C._ZNK10QTextFrame11childFramesEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
+    qtrt.ErrorResolve("QTextFrame", "childFrames", args)
   }
 
 }
 
-  // proto:  QTextFrameLayoutData * QTextFrame::layoutData();
+// parentFrame()
+func (this *QTextFrame) parentFrame(args ...interface{}) () {
+  // parentFrame()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame11parentFrameEv
+    // invoke: QTextFrame * parentFrame()
+    C._ZNK10QTextFrame11parentFrameEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "parentFrame", args)
+  }
+
+}
+
+// firstCursorPosition()
+func (this *QTextFrame) firstCursorPosition(args ...interface{}) () {
+  // firstCursorPosition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame19firstCursorPositionEv
+    // invoke: QTextCursor firstCursorPosition()
+    C._ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "firstCursorPosition", args)
+  }
+
+}
+
+// lastCursorPosition()
+func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
+  // lastCursorPosition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame18lastCursorPositionEv
+    // invoke: QTextCursor lastCursorPosition()
+    C._ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "lastCursorPosition", args)
+  }
+
+}
+
+// firstPosition()
+func (this *QTextFrame) firstPosition(args ...interface{}) () {
+  // firstPosition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame13firstPositionEv
+    // invoke: int firstPosition()
+    C._ZNK10QTextFrame13firstPositionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "firstPosition", args)
+  }
+
+}
+
+// begin()
+func (this *QTextFrame) begin(args ...interface{}) () {
+  // begin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame5beginEv
+    // invoke: QTextFrame::iterator begin()
+    C._ZNK10QTextFrame5beginEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "begin", args)
+  }
+
+}
+
+// layoutData()
 func (this *QTextFrame) layoutData(args ...interface{}) () {
   // layoutData()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1259,7 +1478,93 @@ func (this *QTextFrame) layoutData(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
+// end()
+func (this *QTextFrame) end(args ...interface{}) () {
+  // end()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame3endEv
+    // invoke: QTextFrame::iterator end()
+    C._ZNK10QTextFrame3endEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "end", args)
+  }
+
+}
+
+// ~QTextFrame()
+func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
+  // ~QTextFrame()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextFrameD0Ev
+    // invoke: void ~QTextFrame()
+    C._ZN10QTextFrameD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "~QTextFrame", args)
+  }
+
+}
+
+// QTextFrame(class QTextDocument *)
+func NewQTextFrame(args ...interface{}) QTextFrame {
+  // QTextFrame(class QTextDocument *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextFrameC1EP13QTextDocument
+    // invoke: void QTextFrame(class QTextDocument *)
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QTextFrameC2EP13QTextDocument(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "QTextFrame", args)
+  }
+
+  return QTextFrame{}
+}
+
+// metaObject()
+func (this *QTextFrame) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextFrame10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QTextFrame10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextFrame", "metaObject", args)
+  }
+
+}
+
+// setLayoutData(class QTextFrameLayoutData *)
 func (this *QTextFrame) setLayoutData(args ...interface{}) () {
   // setLayoutData(class QTextFrameLayoutData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1282,37 +1587,9 @@ func (this *QTextFrame) setLayoutData(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextFrame::setFrameFormat(const QTextFrameFormat & format);
-func (this *QTextFrame) setFrameFormat(args ...interface{}) () {
-  // setFrameFormat(const class QTextFrameFormat &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextFrameFormat{}) // "const QTextFrameFormat &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat
-    // invoke: void setFrameFormat(const class QTextFrameFormat &)
-    var arg0 = args[0].(QTextFrameFormat).qclsinst
-    if false {fmt.Println(arg0)}
-    C.demth_ZN10QTextFrame14setFrameFormatERK16QTextFrameFormat(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "setFrameFormat", args)
-  }
-
-}
-
-  // proto:  void QTextFrame::QTextFrame(const QTextFrame & );
-func NewQTextFrame(args ...interface{}) QTextFrame {
-  return QTextFrame{}
-}
-
-  // proto:  const QMetaObject * QTextFrame::metaObject();
-func (this *QTextFrame) metaObject(args ...interface{}) () {
-  // metaObject()
+// frameFormat()
+func (this *QTextFrame) frameFormat(args ...interface{}) () {
+  // frameFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1321,110 +1598,16 @@ func (this *QTextFrame) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextFrame10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK10QTextFrame10metaObjectEv(this.qclsinst)
+    // invoke: _ZNK10QTextFrame11frameFormatEv
+    // invoke: QTextFrameFormat frameFormat()
+    C._ZNK10QTextFrame11frameFormatEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextFrame", "metaObject", args)
+    qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
   }
 
 }
 
-  // proto:  QTextFrame * QTextFrame::parentFrame();
-func (this *QTextFrame) parentFrame(args ...interface{}) () {
-  // parentFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextFrame11parentFrameEv
-    // invoke: QTextFrame * parentFrame()
-    C._ZNK10QTextFrame11parentFrameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "parentFrame", args)
-  }
-
-}
-
-  // proto:  int QTextFrame::firstPosition();
-func (this *QTextFrame) firstPosition(args ...interface{}) () {
-  // firstPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextFrame13firstPositionEv
-    // invoke: int firstPosition()
-    C._ZNK10QTextFrame13firstPositionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "firstPosition", args)
-  }
-
-}
-
-  // proto:  QList<QTextFrame *> QTextFrame::childFrames();
-func (this *QTextFrame) childFrames(args ...interface{}) () {
-  // childFrames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextFrame11childFramesEv
-    // invoke: QList<QTextFrame *> childFrames()
-    C._ZNK10QTextFrame11childFramesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "childFrames", args)
-  }
-
-}
-
-  // proto:  void QTextFrame::~QTextFrame();
-func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QTextFrame", "~QTextFrame", args)
-  }
-
-}
-
-  // proto:  QTextCursor QTextFrame::lastCursorPosition();
-func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
-  // lastCursorPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextFrame18lastCursorPositionEv
-    // invoke: QTextCursor lastCursorPosition()
-    C._ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "lastCursorPosition", args)
-  }
-
-}
-
-  // proto:  int QTextFrame::lastPosition();
+// lastPosition()
 func (this *QTextFrame) lastPosition(args ...interface{}) () {
   // lastPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1440,26 +1623,6 @@ func (this *QTextFrame) lastPosition(args ...interface{}) () {
     C._ZNK10QTextFrame12lastPositionEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextFrame", "lastPosition", args)
-  }
-
-}
-
-  // proto:  QTextCursor QTextFrame::firstCursorPosition();
-func (this *QTextFrame) firstCursorPosition(args ...interface{}) () {
-  // firstCursorPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextFrame19firstCursorPositionEv
-    // invoke: QTextCursor firstCursorPosition()
-    C._ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextFrame", "firstCursorPosition", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qlockfile.h
 // dst-file: /src/core/qlockfile.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,30 +28,28 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QLockFile::removeStaleLockFile();
-extern void _ZN9QLockFile19removeStaleLockFileEv(void* qthis);
-  // proto:  int QLockFile::staleLockTime();
-extern void _ZNK9QLockFile13staleLockTimeEv(void* qthis);
-  // proto:  bool QLockFile::isLocked();
-extern void _ZNK9QLockFile8isLockedEv(void* qthis);
-  // proto:  void QLockFile::QLockFile(const QLockFile & );
-extern void* dector_ZN9QLockFileC1ERKS_(void* arg0);
-extern void _ZN9QLockFileC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QLockFile::~QLockFile();
-extern void _ZN9QLockFileD0Ev(void* qthis);
-  // proto:  void QLockFile::unlock();
-extern void _ZN9QLockFile6unlockEv(void* qthis);
-  // proto:  bool QLockFile::tryLock(int timeout);
-extern void _ZN9QLockFile7tryLockEi(void* qthis, int32_t arg0);
-  // proto:  bool QLockFile::lock();
-extern void _ZN9QLockFile4lockEv(void* qthis);
-  // proto:  void QLockFile::setStaleLockTime(int );
-extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int32_t arg0);
   // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
-extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, int64_t* arg0, void* arg1, void* arg2);
+extern void _ZNK9QLockFile11getLockInfoEPxP7QStringS2_(void* qthis, int64_t* arg0, void* arg1, void* arg2); // 4
+  // proto:  void QLockFile::setStaleLockTime(int );
+extern void _ZN9QLockFile16setStaleLockTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QLockFile::QLockFile(const QString & fileName);
-extern void* dector_ZN9QLockFileC1ERK7QString(void* arg0);
-extern void _ZN9QLockFileC1ERK7QString(void* qthis, void* arg0);
+extern void _ZN9QLockFileC2ERK7QString(void* qthis, void* arg0); // 3
+  // proto:  bool QLockFile::lock();
+extern void _ZN9QLockFile4lockEv(void* qthis); // 4
+  // proto:  void QLockFile::~QLockFile();
+extern void _ZN9QLockFileD2Ev(void* qthis); // 4
+  // proto:  bool QLockFile::removeStaleLockFile();
+extern void _ZN9QLockFile19removeStaleLockFileEv(void* qthis); // 4
+  // proto:  bool QLockFile::isLocked();
+extern void _ZNK9QLockFile8isLockedEv(void* qthis); // 4
+  // proto:  int QLockFile::staleLockTime();
+extern void _ZNK9QLockFile13staleLockTimeEv(void* qthis); // 4
+  // proto:  bool QLockFile::tryLock(int timeout);
+extern void _ZN9QLockFile7tryLockEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QLockFile::unlock();
+extern void _ZN9QLockFile6unlockEv(void* qthis); // 4
+  // proto:  QLockFile::LockError QLockFile::error();
+extern void _ZNK9QLockFile5errorEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -74,172 +68,7 @@ type QLockFile struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QLockFile::removeStaleLockFile();
-func (this *QLockFile) removeStaleLockFile(args ...interface{}) () {
-  // removeStaleLockFile()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QLockFile19removeStaleLockFileEv
-    // invoke: bool removeStaleLockFile()
-    C._ZN9QLockFile19removeStaleLockFileEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLockFile", "removeStaleLockFile", args)
-  }
-
-}
-
-  // proto:  int QLockFile::staleLockTime();
-func (this *QLockFile) staleLockTime(args ...interface{}) () {
-  // staleLockTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QLockFile13staleLockTimeEv
-    // invoke: int staleLockTime()
-    C._ZNK9QLockFile13staleLockTimeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLockFile", "staleLockTime", args)
-  }
-
-}
-
-  // proto:  bool QLockFile::isLocked();
-func (this *QLockFile) isLocked(args ...interface{}) () {
-  // isLocked()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QLockFile8isLockedEv
-    // invoke: bool isLocked()
-    C._ZNK9QLockFile8isLockedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLockFile", "isLocked", args)
-  }
-
-}
-
-  // proto:  void QLockFile::QLockFile(const QLockFile & );
-func NewQLockFile(args ...interface{}) QLockFile {
-  return QLockFile{}
-}
-
-  // proto:  void QLockFile::~QLockFile();
-func (this *QLockFile) FreeQLockFile(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QLockFile", "~QLockFile", args)
-  }
-
-}
-
-  // proto:  void QLockFile::unlock();
-func (this *QLockFile) unlock(args ...interface{}) () {
-  // unlock()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QLockFile6unlockEv
-    // invoke: void unlock()
-    C._ZN9QLockFile6unlockEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLockFile", "unlock", args)
-  }
-
-}
-
-  // proto:  bool QLockFile::tryLock(int timeout);
-func (this *QLockFile) tryLock(args ...interface{}) () {
-  // tryLock(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QLockFile7tryLockEi
-    // invoke: bool tryLock(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN9QLockFile7tryLockEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLockFile", "tryLock", args)
-  }
-
-}
-
-  // proto:  bool QLockFile::lock();
-func (this *QLockFile) lock(args ...interface{}) () {
-  // lock()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QLockFile4lockEv
-    // invoke: bool lock()
-    C._ZN9QLockFile4lockEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLockFile", "lock", args)
-  }
-
-}
-
-  // proto:  void QLockFile::setStaleLockTime(int );
-func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
-  // setStaleLockTime(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QLockFile16setStaleLockTimeEi
-    // invoke: void setStaleLockTime(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN9QLockFile16setStaleLockTimeEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLockFile", "setStaleLockTime", args)
-  }
-
-}
-
-  // proto:  bool QLockFile::getLockInfo(qint64 * pid, QString * hostname, QString * appname);
+// getLockInfo(qint64 *, class QString *, class QString *)
 func (this *QLockFile) getLockInfo(args ...interface{}) () {
   // getLockInfo(qint64 *, class QString *, class QString *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -264,6 +93,218 @@ func (this *QLockFile) getLockInfo(args ...interface{}) () {
     C._ZNK9QLockFile11getLockInfoEPxP7QStringS2_(this.qclsinst, arg0, arg1, arg2)
   default:
     qtrt.ErrorResolve("QLockFile", "getLockInfo", args)
+  }
+
+}
+
+// setStaleLockTime(int)
+func (this *QLockFile) setStaleLockTime(args ...interface{}) () {
+  // setStaleLockTime(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFile16setStaleLockTimeEi
+    // invoke: void setStaleLockTime(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN9QLockFile16setStaleLockTimeEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QLockFile", "setStaleLockTime", args)
+  }
+
+}
+
+// QLockFile(const class QString &)
+func NewQLockFile(args ...interface{}) QLockFile {
+  // QLockFile(const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFileC1ERK7QString
+    // invoke: void QLockFile(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QLockFileC2ERK7QString(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QLockFile", "QLockFile", args)
+  }
+
+  return QLockFile{}
+}
+
+// lock()
+func (this *QLockFile) lock(args ...interface{}) () {
+  // lock()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFile4lockEv
+    // invoke: bool lock()
+    C._ZN9QLockFile4lockEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "lock", args)
+  }
+
+}
+
+// ~QLockFile()
+func (this *QLockFile) FreeQLockFile(args ...interface{}) () {
+  // ~QLockFile()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFileD0Ev
+    // invoke: void ~QLockFile()
+    C._ZN9QLockFileD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "~QLockFile", args)
+  }
+
+}
+
+// removeStaleLockFile()
+func (this *QLockFile) removeStaleLockFile(args ...interface{}) () {
+  // removeStaleLockFile()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFile19removeStaleLockFileEv
+    // invoke: bool removeStaleLockFile()
+    C._ZN9QLockFile19removeStaleLockFileEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "removeStaleLockFile", args)
+  }
+
+}
+
+// isLocked()
+func (this *QLockFile) isLocked(args ...interface{}) () {
+  // isLocked()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QLockFile8isLockedEv
+    // invoke: bool isLocked()
+    C._ZNK9QLockFile8isLockedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "isLocked", args)
+  }
+
+}
+
+// staleLockTime()
+func (this *QLockFile) staleLockTime(args ...interface{}) () {
+  // staleLockTime()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QLockFile13staleLockTimeEv
+    // invoke: int staleLockTime()
+    C._ZNK9QLockFile13staleLockTimeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "staleLockTime", args)
+  }
+
+}
+
+// tryLock(int)
+func (this *QLockFile) tryLock(args ...interface{}) () {
+  // tryLock(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFile7tryLockEi
+    // invoke: bool tryLock(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN9QLockFile7tryLockEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QLockFile", "tryLock", args)
+  }
+
+}
+
+// unlock()
+func (this *QLockFile) unlock(args ...interface{}) () {
+  // unlock()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QLockFile6unlockEv
+    // invoke: void unlock()
+    C._ZN9QLockFile6unlockEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "unlock", args)
+  }
+
+}
+
+// error()
+func (this *QLockFile) error(args ...interface{}) () {
+  // error()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QLockFile5errorEv
+    // invoke: QLockFile::LockError error()
+    C._ZNK9QLockFile5errorEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLockFile", "error", args)
   }
 
 }

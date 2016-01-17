@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,10 +28,10 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto: static QStyle * QStyleFactory::create(const QString & );
-extern void _ZN13QStyleFactory6createERK7QString(void* arg0);
   // proto: static QStringList QStyleFactory::keys();
-extern void _ZN13QStyleFactory4keysEv();
+extern void _ZN13QStyleFactory4keysEv(); // 4
+  // proto: static QStyle * QStyleFactory::create(const QString & );
+extern void _ZN13QStyleFactory6createERK7QString(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -54,30 +50,45 @@ type QStyleFactory struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto: static QStyle * QStyleFactory::create(const QString & );
-func (this *QStyleFactory) create_s(args ...interface{}) () {
+// keys()
+func (this *QStyleFactory) keys_s(args ...interface{}) () {
+  // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN13QStyleFactory4keysEv
+    // invoke: QStringList keys()
+    C._ZN13QStyleFactory4keysEv()
   default:
-    qtrt.ErrorResolve("QStyleFactory", "create", args)
+    qtrt.ErrorResolve("QStyleFactory", "keys", args)
   }
 
 }
 
-  // proto: static QStringList QStyleFactory::keys();
-func (this *QStyleFactory) keys_s(args ...interface{}) () {
+// create(const class QString &)
+func (this *QStyleFactory) create_s(args ...interface{}) () {
+  // create(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN13QStyleFactory6createERK7QString
+    // invoke: QStyle * create(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN13QStyleFactory6createERK7QString(arg0)
   default:
-    qtrt.ErrorResolve("QStyleFactory", "keys", args)
+    qtrt.ErrorResolve("QStyleFactory", "create", args)
   }
 
 }

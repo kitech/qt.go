@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qabstractanimation.h
 // dst-file: /src/core/qabstractanimation.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,61 +28,60 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QAbstractAnimation::resume();
-extern void _ZN18QAbstractAnimation6resumeEv(void* qthis);
-  // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
-extern void* dector_ZN18QAbstractAnimationC1EP7QObject(void* arg0);
-extern void _ZN18QAbstractAnimationC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QAbstractAnimation::stop();
-extern void _ZN18QAbstractAnimation4stopEv(void* qthis);
-  // proto:  void QAbstractAnimation::pause();
-extern void _ZN18QAbstractAnimation5pauseEv(void* qthis);
-  // proto:  void QAbstractAnimation::QAbstractAnimation(const QAbstractAnimation & );
-extern void* dector_ZN18QAbstractAnimationC1ERKS_(void* arg0);
-extern void _ZN18QAbstractAnimationC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
-extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int32_t arg0);
   // proto:  int QAbstractAnimation::currentLoop();
-extern void _ZNK18QAbstractAnimation11currentLoopEv(void* qthis);
-  // proto:  QAnimationGroup * QAbstractAnimation::group();
-extern void _ZNK18QAbstractAnimation5groupEv(void* qthis);
-  // proto:  void QAbstractAnimation::setPaused(bool );
-extern void _ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0);
-  // proto:  int QAbstractAnimation::totalDuration();
-extern void _ZNK18QAbstractAnimation13totalDurationEv(void* qthis);
-  // proto:  const QMetaObject * QAbstractAnimation::metaObject();
-extern void _ZNK18QAbstractAnimation10metaObjectEv(void* qthis);
+extern void _ZNK18QAbstractAnimation11currentLoopEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::currentLoopTime();
-extern void _ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis);
-  // proto:  int QAbstractAnimation::currentTime();
-extern void _ZNK18QAbstractAnimation11currentTimeEv(void* qthis);
+extern void _ZNK18QAbstractAnimation15currentLoopTimeEv(void* qthis); // 4
   // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
-extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int32_t arg0);
+extern void _ZN18QAbstractAnimation14setCurrentTimeEi(void* qthis, int32_t arg0); // 4
   // proto:  void QAbstractAnimation::~QAbstractAnimation();
-extern void _ZN18QAbstractAnimationD0Ev(void* qthis);
+extern void _ZN18QAbstractAnimationD2Ev(void* qthis); // 4
+  // proto:  void QAbstractAnimation::pause();
+extern void _ZN18QAbstractAnimation5pauseEv(void* qthis); // 4
+  // proto:  QAnimationGroup * QAbstractAnimation::group();
+extern void _ZNK18QAbstractAnimation5groupEv(void* qthis); // 4
   // proto:  int QAbstractAnimation::loopCount();
-extern void _ZNK18QAbstractAnimation9loopCountEv(void* qthis);
+extern void _ZNK18QAbstractAnimation9loopCountEv(void* qthis); // 4
+  // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
+extern void _ZN18QAbstractAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  QAbstractAnimation::State QAbstractAnimation::state();
+extern void _ZNK18QAbstractAnimation5stateEv(void* qthis); // 4
+  // proto:  QAbstractAnimation::Direction QAbstractAnimation::direction();
+extern void _ZNK18QAbstractAnimation9directionEv(void* qthis); // 4
+  // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
+extern void _ZN18QAbstractAnimation12setLoopCountEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QAbstractAnimation::resume();
+extern void _ZN18QAbstractAnimation6resumeEv(void* qthis); // 4
+  // proto:  void QAbstractAnimation::stop();
+extern void _ZN18QAbstractAnimation4stopEv(void* qthis); // 4
+  // proto:  const QMetaObject * QAbstractAnimation::metaObject();
+extern void _ZNK18QAbstractAnimation10metaObjectEv(void* qthis); // 4
+  // proto:  int QAbstractAnimation::currentTime();
+extern void _ZNK18QAbstractAnimation11currentTimeEv(void* qthis); // 4
+  // proto:  int QAbstractAnimation::totalDuration();
+extern void _ZNK18QAbstractAnimation13totalDurationEv(void* qthis); // 4
+  // proto:  void QAbstractAnimation::setPaused(bool );
+extern void _ZN18QAbstractAnimation9setPausedEb(void* qthis, bool arg0); // 4
   // proto:  void QAnimationDriver::advance();
-extern void _ZN16QAnimationDriver7advanceEv(void* qthis);
-  // proto:  void QAnimationDriver::~QAnimationDriver();
-extern void _ZN16QAnimationDriverD0Ev(void* qthis);
+extern void _ZN16QAnimationDriver7advanceEv(void* qthis); // 4
   // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
-extern void* dector_ZN16QAnimationDriverC1EP7QObject(void* arg0);
-extern void _ZN16QAnimationDriverC1EP7QObject(void* qthis, void* arg0);
-  // proto:  qint64 QAnimationDriver::elapsed();
-extern void _ZNK16QAnimationDriver7elapsedEv(void* qthis);
-  // proto:  void QAnimationDriver::install();
-extern void _ZN16QAnimationDriver7installEv(void* qthis);
+extern void _ZN16QAnimationDriverC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  const QMetaObject * QAnimationDriver::metaObject();
-extern void _ZNK16QAnimationDriver10metaObjectEv(void* qthis);
-  // proto:  void QAnimationDriver::uninstall();
-extern void _ZN16QAnimationDriver9uninstallEv(void* qthis);
-  // proto:  bool QAnimationDriver::isRunning();
-extern void _ZNK16QAnimationDriver9isRunningEv(void* qthis);
+extern void _ZNK16QAnimationDriver10metaObjectEv(void* qthis); // 4
   // proto:  qint64 QAnimationDriver::startTime();
-extern void _ZNK16QAnimationDriver9startTimeEv(void* qthis);
+extern void _ZNK16QAnimationDriver9startTimeEv(void* qthis); // 4
+  // proto:  qint64 QAnimationDriver::elapsed();
+extern void _ZNK16QAnimationDriver7elapsedEv(void* qthis); // 4
   // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
-extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, int64_t arg0);
+extern void _ZN16QAnimationDriver12setStartTimeEx(void* qthis, int64_t arg0); // 4
+  // proto:  void QAnimationDriver::install();
+extern void _ZN16QAnimationDriver7installEv(void* qthis); // 4
+  // proto:  void QAnimationDriver::~QAnimationDriver();
+extern void _ZN16QAnimationDriverD2Ev(void* qthis); // 4
+  // proto:  bool QAnimationDriver::isRunning();
+extern void _ZNK16QAnimationDriver9isRunningEv(void* qthis); // 4
+  // proto:  void QAnimationDriver::uninstall();
+extern void _ZN16QAnimationDriver9uninstallEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -117,95 +112,7 @@ type QAnimationDriver struct {
 //  _stopped QAnimationDriver_stopped_signal;
 }
 
-  // proto:  void QAbstractAnimation::resume();
-func (this *QAbstractAnimation) resume(args ...interface{}) () {
-  // resume()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractAnimation6resumeEv
-    // invoke: void resume()
-    C._ZN18QAbstractAnimation6resumeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "resume", args)
-  }
-
-}
-
-  // proto:  void QAbstractAnimation::QAbstractAnimation(QObject * parent);
-func NewQAbstractAnimation(args ...interface{}) QAbstractAnimation {
-  return QAbstractAnimation{}
-}
-
-  // proto:  void QAbstractAnimation::stop();
-func (this *QAbstractAnimation) stop(args ...interface{}) () {
-  // stop()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractAnimation4stopEv
-    // invoke: void stop()
-    C._ZN18QAbstractAnimation4stopEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "stop", args)
-  }
-
-}
-
-  // proto:  void QAbstractAnimation::pause();
-func (this *QAbstractAnimation) pause(args ...interface{}) () {
-  // pause()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractAnimation5pauseEv
-    // invoke: void pause()
-    C._ZN18QAbstractAnimation5pauseEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "pause", args)
-  }
-
-}
-
-  // proto:  void QAbstractAnimation::setLoopCount(int loopCount);
-func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
-  // setLoopCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractAnimation12setLoopCountEi
-    // invoke: void setLoopCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN18QAbstractAnimation12setLoopCountEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "setLoopCount", args)
-  }
-
-}
-
-  // proto:  int QAbstractAnimation::currentLoop();
+// currentLoop()
 func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
   // currentLoop()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,90 +132,7 @@ func (this *QAbstractAnimation) currentLoop(args ...interface{}) () {
 
 }
 
-  // proto:  QAnimationGroup * QAbstractAnimation::group();
-func (this *QAbstractAnimation) group(args ...interface{}) () {
-  // group()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractAnimation5groupEv
-    // invoke: QAnimationGroup * group()
-    C._ZNK18QAbstractAnimation5groupEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "group", args)
-  }
-
-}
-
-  // proto:  void QAbstractAnimation::setPaused(bool );
-func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
-  // setPaused(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractAnimation9setPausedEb
-    // invoke: void setPaused(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "setPaused", args)
-  }
-
-}
-
-  // proto:  int QAbstractAnimation::totalDuration();
-func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
-  // totalDuration()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractAnimation13totalDurationEv
-    // invoke: int totalDuration()
-    C._ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QAbstractAnimation::metaObject();
-func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractAnimation10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK18QAbstractAnimation10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "metaObject", args)
-  }
-
-}
-
-  // proto:  int QAbstractAnimation::currentLoopTime();
+// currentLoopTime()
 func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
   // currentLoopTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -328,27 +152,7 @@ func (this *QAbstractAnimation) currentLoopTime(args ...interface{}) () {
 
 }
 
-  // proto:  int QAbstractAnimation::currentTime();
-func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
-  // currentTime()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractAnimation11currentTimeEv
-    // invoke: int currentTime()
-    C._ZNK18QAbstractAnimation11currentTimeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractAnimation", "currentTime", args)
-  }
-
-}
-
-  // proto:  void QAbstractAnimation::setCurrentTime(int msecs);
+// setCurrentTime(int)
 func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
   // setCurrentTime(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -371,21 +175,67 @@ func (this *QAbstractAnimation) setCurrentTime(args ...interface{}) () {
 
 }
 
-  // proto:  void QAbstractAnimation::~QAbstractAnimation();
+// ~QAbstractAnimation()
 func (this *QAbstractAnimation) FreeQAbstractAnimation(args ...interface{}) () {
+  // ~QAbstractAnimation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimationD0Ev
+    // invoke: void ~QAbstractAnimation()
+    C._ZN18QAbstractAnimationD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractAnimation", "~QAbstractAnimation", args)
   }
 
 }
 
-  // proto:  int QAbstractAnimation::loopCount();
+// pause()
+func (this *QAbstractAnimation) pause(args ...interface{}) () {
+  // pause()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimation5pauseEv
+    // invoke: void pause()
+    C._ZN18QAbstractAnimation5pauseEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "pause", args)
+  }
+
+}
+
+// group()
+func (this *QAbstractAnimation) group(args ...interface{}) () {
+  // group()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation5groupEv
+    // invoke: QAnimationGroup * group()
+    C._ZNK18QAbstractAnimation5groupEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "group", args)
+  }
+
+}
+
+// loopCount()
 func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -405,7 +255,219 @@ func (this *QAbstractAnimation) loopCount(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationDriver::advance();
+// QAbstractAnimation(class QObject *)
+func NewQAbstractAnimation(args ...interface{}) QAbstractAnimation {
+  // QAbstractAnimation(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimationC1EP7QObject
+    // invoke: void QAbstractAnimation(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QAbstractAnimationC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "QAbstractAnimation", args)
+  }
+
+  return QAbstractAnimation{}
+}
+
+// state()
+func (this *QAbstractAnimation) state(args ...interface{}) () {
+  // state()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation5stateEv
+    // invoke: QAbstractAnimation::State state()
+    C._ZNK18QAbstractAnimation5stateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "state", args)
+  }
+
+}
+
+// direction()
+func (this *QAbstractAnimation) direction(args ...interface{}) () {
+  // direction()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation9directionEv
+    // invoke: QAbstractAnimation::Direction direction()
+    C._ZNK18QAbstractAnimation9directionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "direction", args)
+  }
+
+}
+
+// setLoopCount(int)
+func (this *QAbstractAnimation) setLoopCount(args ...interface{}) () {
+  // setLoopCount(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimation12setLoopCountEi
+    // invoke: void setLoopCount(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN18QAbstractAnimation12setLoopCountEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "setLoopCount", args)
+  }
+
+}
+
+// resume()
+func (this *QAbstractAnimation) resume(args ...interface{}) () {
+  // resume()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimation6resumeEv
+    // invoke: void resume()
+    C._ZN18QAbstractAnimation6resumeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "resume", args)
+  }
+
+}
+
+// stop()
+func (this *QAbstractAnimation) stop(args ...interface{}) () {
+  // stop()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimation4stopEv
+    // invoke: void stop()
+    C._ZN18QAbstractAnimation4stopEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "stop", args)
+  }
+
+}
+
+// metaObject()
+func (this *QAbstractAnimation) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractAnimation10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "metaObject", args)
+  }
+
+}
+
+// currentTime()
+func (this *QAbstractAnimation) currentTime(args ...interface{}) () {
+  // currentTime()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation11currentTimeEv
+    // invoke: int currentTime()
+    C._ZNK18QAbstractAnimation11currentTimeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "currentTime", args)
+  }
+
+}
+
+// totalDuration()
+func (this *QAbstractAnimation) totalDuration(args ...interface{}) () {
+  // totalDuration()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractAnimation13totalDurationEv
+    // invoke: int totalDuration()
+    C._ZNK18QAbstractAnimation13totalDurationEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "totalDuration", args)
+  }
+
+}
+
+// setPaused(_Bool)
+func (this *QAbstractAnimation) setPaused(args ...interface{}) () {
+  // setPaused(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractAnimation9setPausedEb
+    // invoke: void setPaused(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN18QAbstractAnimation9setPausedEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractAnimation", "setPaused", args)
+  }
+
+}
+
+// advance()
 func (this *QAnimationDriver) advance(args ...interface{}) () {
   // advance()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -425,66 +487,33 @@ func (this *QAnimationDriver) advance(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationDriver::~QAnimationDriver();
-func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
+// QAnimationDriver(class QObject *)
+func NewQAnimationDriver(args ...interface{}) QAnimationDriver {
+  // QAnimationDriver(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN16QAnimationDriverC1EP7QObject
+    // invoke: void QAnimationDriver(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QAnimationDriverC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QAnimationDriver", "~QAnimationDriver", args)
+    qtrt.ErrorResolve("QAnimationDriver", "QAnimationDriver", args)
   }
 
-}
-
-  // proto:  void QAnimationDriver::QAnimationDriver(QObject * parent);
-func NewQAnimationDriver(args ...interface{}) QAnimationDriver {
   return QAnimationDriver{}
 }
 
-  // proto:  qint64 QAnimationDriver::elapsed();
-func (this *QAnimationDriver) elapsed(args ...interface{}) () {
-  // elapsed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QAnimationDriver7elapsedEv
-    // invoke: qint64 elapsed()
-    C._ZNK16QAnimationDriver7elapsedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAnimationDriver", "elapsed", args)
-  }
-
-}
-
-  // proto:  void QAnimationDriver::install();
-func (this *QAnimationDriver) install(args ...interface{}) () {
-  // install()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QAnimationDriver7installEv
-    // invoke: void install()
-    C._ZN16QAnimationDriver7installEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAnimationDriver", "install", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QAnimationDriver::metaObject();
+// metaObject()
 func (this *QAnimationDriver) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -504,47 +533,7 @@ func (this *QAnimationDriver) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationDriver::uninstall();
-func (this *QAnimationDriver) uninstall(args ...interface{}) () {
-  // uninstall()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN16QAnimationDriver9uninstallEv
-    // invoke: void uninstall()
-    C._ZN16QAnimationDriver9uninstallEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAnimationDriver", "uninstall", args)
-  }
-
-}
-
-  // proto:  bool QAnimationDriver::isRunning();
-func (this *QAnimationDriver) isRunning(args ...interface{}) () {
-  // isRunning()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK16QAnimationDriver9isRunningEv
-    // invoke: bool isRunning()
-    C._ZNK16QAnimationDriver9isRunningEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAnimationDriver", "isRunning", args)
-  }
-
-}
-
-  // proto:  qint64 QAnimationDriver::startTime();
+// startTime()
 func (this *QAnimationDriver) startTime(args ...interface{}) () {
   // startTime()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -564,7 +553,27 @@ func (this *QAnimationDriver) startTime(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationDriver::setStartTime(qint64 startTime);
+// elapsed()
+func (this *QAnimationDriver) elapsed(args ...interface{}) () {
+  // elapsed()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK16QAnimationDriver7elapsedEv
+    // invoke: qint64 elapsed()
+    C._ZNK16QAnimationDriver7elapsedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationDriver", "elapsed", args)
+  }
+
+}
+
+// setStartTime(qint64)
 func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
   // setStartTime(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -583,6 +592,86 @@ func (this *QAnimationDriver) setStartTime(args ...interface{}) () {
     C._ZN16QAnimationDriver12setStartTimeEx(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QAnimationDriver", "setStartTime", args)
+  }
+
+}
+
+// install()
+func (this *QAnimationDriver) install(args ...interface{}) () {
+  // install()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QAnimationDriver7installEv
+    // invoke: void install()
+    C._ZN16QAnimationDriver7installEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationDriver", "install", args)
+  }
+
+}
+
+// ~QAnimationDriver()
+func (this *QAnimationDriver) FreeQAnimationDriver(args ...interface{}) () {
+  // ~QAnimationDriver()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QAnimationDriverD0Ev
+    // invoke: void ~QAnimationDriver()
+    C._ZN16QAnimationDriverD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationDriver", "~QAnimationDriver", args)
+  }
+
+}
+
+// isRunning()
+func (this *QAnimationDriver) isRunning(args ...interface{}) () {
+  // isRunning()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK16QAnimationDriver9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK16QAnimationDriver9isRunningEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationDriver", "isRunning", args)
+  }
+
+}
+
+// uninstall()
+func (this *QAnimationDriver) uninstall(args ...interface{}) () {
+  // uninstall()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QAnimationDriver9uninstallEv
+    // invoke: void uninstall()
+    C._ZN16QAnimationDriver9uninstallEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationDriver", "uninstall", args)
   }
 
 }

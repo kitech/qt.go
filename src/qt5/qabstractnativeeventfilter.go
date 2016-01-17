@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,14 +28,10 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
-extern void* dector_ZN26QAbstractNativeEventFilterC1Ev();
-extern void _ZN26QAbstractNativeEventFilterC1Ev(void* qthis);
-  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter(const QAbstractNativeEventFilter & );
-extern void* dector_ZN26QAbstractNativeEventFilterC1ERKS_(void* arg0);
-extern void _ZN26QAbstractNativeEventFilterC1ERKS_(void* qthis, void* arg0);
   // proto:  void QAbstractNativeEventFilter::~QAbstractNativeEventFilter();
-extern void _ZN26QAbstractNativeEventFilterD0Ev(void* qthis);
+extern void _ZN26QAbstractNativeEventFilterD2Ev(void* qthis); // 4
+  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
+extern void _ZN26QAbstractNativeEventFilterC2Ev(void* qthis); // 3
 */
 import "C"
 // } // <= ext block end
@@ -58,23 +50,47 @@ type QAbstractNativeEventFilter struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
-func NewQAbstractNativeEventFilter(args ...interface{}) QAbstractNativeEventFilter {
-  return QAbstractNativeEventFilter{}
-}
-
-  // proto:  void QAbstractNativeEventFilter::~QAbstractNativeEventFilter();
+// ~QAbstractNativeEventFilter()
 func (this *QAbstractNativeEventFilter) FreeQAbstractNativeEventFilter(args ...interface{}) () {
+  // ~QAbstractNativeEventFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN26QAbstractNativeEventFilterD0Ev
+    // invoke: void ~QAbstractNativeEventFilter()
+    C._ZN26QAbstractNativeEventFilterD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "~QAbstractNativeEventFilter", args)
   }
 
+}
+
+// QAbstractNativeEventFilter()
+func NewQAbstractNativeEventFilter(args ...interface{}) QAbstractNativeEventFilter {
+  // QAbstractNativeEventFilter()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QAbstractNativeEventFilterC1Ev
+    // invoke: void QAbstractNativeEventFilter()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN26QAbstractNativeEventFilterC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QAbstractNativeEventFilter", "QAbstractNativeEventFilter", args)
+  }
+
+  return QAbstractNativeEventFilter{}
 }
 
 // <= body block end

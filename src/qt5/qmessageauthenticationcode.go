@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,23 +28,20 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QByteArray QMessageAuthenticationCode::result();
-extern void _ZNK26QMessageAuthenticationCode6resultEv(void* qthis);
-  // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
-extern void _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, void* arg0);
-  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-extern void* dector_ZN26QMessageAuthenticationCodeC1ERKS_(void* arg0);
-extern void _ZN26QMessageAuthenticationCodeC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
-extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1);
-  // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-extern void _ZN26QMessageAuthenticationCodeD0Ev(void* qthis);
   // proto:  void QMessageAuthenticationCode::reset();
-extern void _ZN26QMessageAuthenticationCode5resetEv(void* qthis);
+extern void _ZN26QMessageAuthenticationCode5resetEv(void* qthis); // 4
+  // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
+extern void _ZN26QMessageAuthenticationCodeD2Ev(void* qthis); // 4
+  // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
+extern void _ZN26QMessageAuthenticationCode7addDataERK10QByteArray(void* qthis, void* arg0); // 4
+  // proto:  void QMessageAuthenticationCode::addData(const char * data, int length);
+extern void _ZN26QMessageAuthenticationCode7addDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 4
   // proto:  bool QMessageAuthenticationCode::addData(QIODevice * device);
-extern void _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(void* qthis, void* arg0);
+extern void _ZN26QMessageAuthenticationCode7addDataEP9QIODevice(void* qthis, void* arg0); // 4
   // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
-extern void _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(void* qthis, void* arg0);
+extern void _ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(void* qthis, void* arg0); // 4
+  // proto:  QByteArray QMessageAuthenticationCode::result();
+extern void _ZNK26QMessageAuthenticationCode6resultEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -67,9 +60,9 @@ type QMessageAuthenticationCode struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QByteArray QMessageAuthenticationCode::result();
-func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
-  // result()
+// reset()
+func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
+  // reset()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -78,16 +71,36 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK26QMessageAuthenticationCode6resultEv
-    // invoke: QByteArray result()
-    C._ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+    // invoke: _ZN26QMessageAuthenticationCode5resetEv
+    // invoke: void reset()
+    C._ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
+    qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
   }
 
 }
 
-  // proto:  void QMessageAuthenticationCode::addData(const QByteArray & data);
+// ~QMessageAuthenticationCode()
+func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...interface{}) () {
+  // ~QMessageAuthenticationCode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QMessageAuthenticationCodeD0Ev
+    // invoke: void ~QMessageAuthenticationCode()
+    C._ZN26QMessageAuthenticationCodeD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
+  }
+
+}
+
+// addData(const class QByteArray &)
 func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
   // addData(const class QByteArray &)
   // addData(const char *, int)
@@ -114,7 +127,7 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
   case 1:
     // invoke: _ZN26QMessageAuthenticationCode7addDataEPKci
     // invoke: void addData(const char *, int)
-    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).UnsafeAddr()))
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
@@ -131,46 +144,7 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
 
 }
 
-  // proto:  void QMessageAuthenticationCode::QMessageAuthenticationCode(const QMessageAuthenticationCode & );
-func NewQMessageAuthenticationCode(args ...interface{}) QMessageAuthenticationCode {
-  return QMessageAuthenticationCode{}
-}
-
-  // proto:  void QMessageAuthenticationCode::~QMessageAuthenticationCode();
-func (this *QMessageAuthenticationCode) FreeQMessageAuthenticationCode(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QMessageAuthenticationCode", "~QMessageAuthenticationCode", args)
-  }
-
-}
-
-  // proto:  void QMessageAuthenticationCode::reset();
-func (this *QMessageAuthenticationCode) reset(args ...interface{}) () {
-  // reset()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN26QMessageAuthenticationCode5resetEv
-    // invoke: void reset()
-    C._ZN26QMessageAuthenticationCode5resetEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMessageAuthenticationCode", "reset", args)
-  }
-
-}
-
-  // proto:  void QMessageAuthenticationCode::setKey(const QByteArray & key);
+// setKey(const class QByteArray &)
 func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
   // setKey(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -189,6 +163,26 @@ func (this *QMessageAuthenticationCode) setKey(args ...interface{}) () {
     C._ZN26QMessageAuthenticationCode6setKeyERK10QByteArray(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "setKey", args)
+  }
+
+}
+
+// result()
+func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
+  // result()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK26QMessageAuthenticationCode6resultEv
+    // invoke: QByteArray result()
+    C._ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
   }
 
 }

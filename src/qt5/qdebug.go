@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,60 +28,52 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
-extern void demth_ZN8QNoDebug10maybeQuoteEc(void* qthis, unsigned char arg0);
-  // proto:  QNoDebug & QNoDebug::quote();
-extern void demth_ZN8QNoDebug5quoteEv(void* qthis);
-  // proto:  QNoDebug & QNoDebug::space();
-extern void demth_ZN8QNoDebug5spaceEv(void* qthis);
-  // proto:  QNoDebug & QNoDebug::nospace();
-extern void demth_ZN8QNoDebug7nospaceEv(void* qthis);
-  // proto:  QNoDebug & QNoDebug::noquote();
-extern void demth_ZN8QNoDebug7noquoteEv(void* qthis);
   // proto:  QNoDebug & QNoDebug::maybeSpace();
-extern void demth_ZN8QNoDebug10maybeSpaceEv(void* qthis);
+extern void _ZN8QNoDebug10maybeSpaceEv(void* qthis); // 2
+  // proto:  QNoDebug & QNoDebug::space();
+extern void _ZN8QNoDebug5spaceEv(void* qthis); // 2
+  // proto:  QNoDebug & QNoDebug::quote();
+extern void _ZN8QNoDebug5quoteEv(void* qthis); // 2
+  // proto:  QNoDebug & QNoDebug::nospace();
+extern void _ZN8QNoDebug7nospaceEv(void* qthis); // 2
+  // proto:  QNoDebug & QNoDebug::noquote();
+extern void _ZN8QNoDebug7noquoteEv(void* qthis); // 2
+  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+extern void _ZN8QNoDebug10maybeQuoteEc(void* qthis, unsigned char arg0); // 2
   // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
-extern void* dector_ZN16QDebugStateSaverC1ER6QDebug(void* arg0);
-extern void _ZN16QDebugStateSaverC1ER6QDebug(void* qthis, void* arg0);
-  // proto:  void QDebugStateSaver::QDebugStateSaver(const QDebugStateSaver & );
-extern void* dector_ZN16QDebugStateSaverC1ERKS_(void* arg0);
-extern void _ZN16QDebugStateSaverC1ERKS_(void* qthis, void* arg0);
+extern void _ZN16QDebugStateSaverC2ER6QDebug(void* qthis, void* arg0); // 3
   // proto:  void QDebugStateSaver::~QDebugStateSaver();
-extern void _ZN16QDebugStateSaverD0Ev(void* qthis);
-  // proto:  QDebug & QDebug::noquote();
-extern void demth_ZN6QDebug7noquoteEv(void* qthis);
+extern void _ZN16QDebugStateSaverD2Ev(void* qthis); // 4
   // proto:  void QDebug::~QDebug();
-extern void _ZN6QDebugD0Ev(void* qthis);
-  // proto:  void QDebug::QDebug(const QDebug & o);
-extern void* dector_ZN6QDebugC1ERKS_(void* arg0);
-extern void demth_ZN6QDebugC1ERKS_(void* qthis, void* arg0);
+extern void _ZN6QDebugD2Ev(void* qthis); // 4
   // proto:  QDebug & QDebug::space();
-extern void demth_ZN6QDebug5spaceEv(void* qthis);
-  // proto:  void QDebug::QDebug(QtMsgType t);
-extern void* dector_ZN6QDebugC1E9QtMsgType(int32_t arg0);
-extern void demth_ZN6QDebugC1E9QtMsgType(void* qthis, int32_t arg0);
-  // proto:  QDebug & QDebug::maybeSpace();
-extern void demth_ZN6QDebug10maybeSpaceEv(void* qthis);
-  // proto:  QDebug & QDebug::resetFormat();
-extern void _ZN6QDebug11resetFormatEv(void* qthis);
+extern void _ZN6QDebug5spaceEv(void* qthis); // 2
   // proto:  void QDebug::setAutoInsertSpaces(bool b);
-extern void demth_ZN6QDebug19setAutoInsertSpacesEb(void* qthis, bool arg0);
-  // proto:  void QDebug::QDebug(QString * string);
-extern void* dector_ZN6QDebugC1EP7QString(void* arg0);
-extern void demth_ZN6QDebugC1EP7QString(void* qthis, void* arg0);
-  // proto:  void QDebug::swap(QDebug & other);
-extern void demth_ZN6QDebug4swapERS_(void* qthis, void* arg0);
-  // proto:  QDebug & QDebug::nospace();
-extern void demth_ZN6QDebug7nospaceEv(void* qthis);
+extern void _ZN6QDebug19setAutoInsertSpacesEb(void* qthis, bool arg0); // 2
   // proto:  bool QDebug::autoInsertSpaces();
-extern void demth_ZNK6QDebug16autoInsertSpacesEv(void* qthis);
-  // proto:  void QDebug::QDebug(QIODevice * device);
-extern void* dector_ZN6QDebugC1EP9QIODevice(void* arg0);
-extern void demth_ZN6QDebugC1EP9QIODevice(void* qthis, void* arg0);
+extern void _ZNK6QDebug16autoInsertSpacesEv(void* qthis); // 2
+  // proto:  QDebug & QDebug::nospace();
+extern void _ZN6QDebug7nospaceEv(void* qthis); // 2
+  // proto:  QDebug & QDebug::resetFormat();
+extern void _ZN6QDebug11resetFormatEv(void* qthis); // 4
+  // proto:  QDebug & QDebug::noquote();
+extern void _ZN6QDebug7noquoteEv(void* qthis); // 2
+  // proto:  void QDebug::swap(QDebug & other);
+extern void _ZN6QDebug4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QDebug & QDebug::quote();
-extern void demth_ZN6QDebug5quoteEv(void* qthis);
+extern void _ZN6QDebug5quoteEv(void* qthis); // 2
+  // proto:  void QDebug::QDebug(const QDebug & o);
+extern void _ZN6QDebugC2ERKS_(void* qthis, void* arg0); // 1
+  // proto:  void QDebug::QDebug(QtMsgType t);
+extern void _ZN6QDebugC2E9QtMsgType(void* qthis, int32_t arg0); // 1
+  // proto:  void QDebug::QDebug(QString * string);
+extern void _ZN6QDebugC2EP7QString(void* qthis, void* arg0); // 1
+  // proto:  void QDebug::QDebug(QIODevice * device);
+extern void _ZN6QDebugC2EP9QIODevice(void* qthis, void* arg0); // 1
+  // proto:  QDebug & QDebug::maybeSpace();
+extern void _ZN6QDebug10maybeSpaceEv(void* qthis); // 2
   // proto:  QDebug & QDebug::maybeQuote(char c);
-extern void demth_ZN6QDebug10maybeQuoteEc(void* qthis, unsigned char arg0);
+extern void _ZN6QDebug10maybeQuoteEc(void* qthis, unsigned char arg0); // 2
 */
 import "C"
 // } // <= ext block end
@@ -116,7 +104,107 @@ type QDebug struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
+// maybeSpace()
+func (this *QNoDebug) maybeSpace(args ...interface{}) () {
+  // maybeSpace()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QNoDebug10maybeSpaceEv
+    // invoke: QNoDebug & maybeSpace()
+    C._ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
+  }
+
+}
+
+// space()
+func (this *QNoDebug) space(args ...interface{}) () {
+  // space()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QNoDebug5spaceEv
+    // invoke: QNoDebug & space()
+    C._ZN8QNoDebug5spaceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QNoDebug", "space", args)
+  }
+
+}
+
+// quote()
+func (this *QNoDebug) quote(args ...interface{}) () {
+  // quote()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QNoDebug5quoteEv
+    // invoke: QNoDebug & quote()
+    C._ZN8QNoDebug5quoteEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QNoDebug", "quote", args)
+  }
+
+}
+
+// nospace()
+func (this *QNoDebug) nospace(args ...interface{}) () {
+  // nospace()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QNoDebug7nospaceEv
+    // invoke: QNoDebug & nospace()
+    C._ZN8QNoDebug7nospaceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QNoDebug", "nospace", args)
+  }
+
+}
+
+// noquote()
+func (this *QNoDebug) noquote(args ...interface{}) () {
+  // noquote()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QNoDebug7noquoteEv
+    // invoke: QNoDebug & noquote()
+    C._ZN8QNoDebug7noquoteEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QNoDebug", "noquote", args)
+  }
+
+}
+
+// maybeQuote(const char)
 func (this *QNoDebug) maybeQuote(args ...interface{}) () {
   // maybeQuote(const char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,135 +220,62 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
     // invoke: QNoDebug & maybeQuote(const char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.demth_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
+    C._ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
   }
 
 }
 
-  // proto:  QNoDebug & QNoDebug::quote();
-func (this *QNoDebug) quote(args ...interface{}) () {
-  // quote()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QNoDebug5quoteEv
-    // invoke: QNoDebug & quote()
-    C.demth_ZN8QNoDebug5quoteEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QNoDebug", "quote", args)
-  }
-
-}
-
-  // proto:  QNoDebug & QNoDebug::space();
-func (this *QNoDebug) space(args ...interface{}) () {
-  // space()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QNoDebug5spaceEv
-    // invoke: QNoDebug & space()
-    C.demth_ZN8QNoDebug5spaceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QNoDebug", "space", args)
-  }
-
-}
-
-  // proto:  QNoDebug & QNoDebug::nospace();
-func (this *QNoDebug) nospace(args ...interface{}) () {
-  // nospace()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QNoDebug7nospaceEv
-    // invoke: QNoDebug & nospace()
-    C.demth_ZN8QNoDebug7nospaceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QNoDebug", "nospace", args)
-  }
-
-}
-
-  // proto:  QNoDebug & QNoDebug::noquote();
-func (this *QNoDebug) noquote(args ...interface{}) () {
-  // noquote()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QNoDebug7noquoteEv
-    // invoke: QNoDebug & noquote()
-    C.demth_ZN8QNoDebug7noquoteEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QNoDebug", "noquote", args)
-  }
-
-}
-
-  // proto:  QNoDebug & QNoDebug::maybeSpace();
-func (this *QNoDebug) maybeSpace(args ...interface{}) () {
-  // maybeSpace()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QNoDebug10maybeSpaceEv
-    // invoke: QNoDebug & maybeSpace()
-    C.demth_ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
-  }
-
-}
-
-  // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
+// QDebugStateSaver(class QDebug &)
 func NewQDebugStateSaver(args ...interface{}) QDebugStateSaver {
+  // QDebugStateSaver(class QDebug &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QDebug{}) // "QDebug &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QDebugStateSaverC1ER6QDebug
+    // invoke: void QDebugStateSaver(class QDebug &)
+    var arg0 = args[0].(QDebug).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QDebugStateSaverC2ER6QDebug(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QDebugStateSaver", "QDebugStateSaver", args)
+  }
+
   return QDebugStateSaver{}
 }
 
-  // proto:  void QDebugStateSaver::~QDebugStateSaver();
+// ~QDebugStateSaver()
 func (this *QDebugStateSaver) FreeQDebugStateSaver(args ...interface{}) () {
+  // ~QDebugStateSaver()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN16QDebugStateSaverD0Ev
+    // invoke: void ~QDebugStateSaver()
+    C._ZN16QDebugStateSaverD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "~QDebugStateSaver", args)
   }
 
 }
 
-  // proto:  QDebug & QDebug::noquote();
-func (this *QDebug) noquote(args ...interface{}) () {
-  // noquote()
+// ~QDebug()
+func (this *QDebug) FreeQDebug(args ...interface{}) () {
+  // ~QDebug()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -269,35 +284,16 @@ func (this *QDebug) noquote(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QDebug7noquoteEv
-    // invoke: QDebug & noquote()
-    C.demth_ZN6QDebug7noquoteEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDebug", "noquote", args)
-  }
-
-}
-
-  // proto:  void QDebug::~QDebug();
-func (this *QDebug) FreeQDebug(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
+    // invoke: _ZN6QDebugD0Ev
+    // invoke: void ~QDebug()
+    C._ZN6QDebugD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "~QDebug", args)
   }
 
 }
 
-  // proto:  void QDebug::QDebug(const QDebug & o);
-func NewQDebug(args ...interface{}) QDebug {
-  return QDebug{}
-}
-
-  // proto:  QDebug & QDebug::space();
+// space()
 func (this *QDebug) space(args ...interface{}) () {
   // space()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -310,16 +306,39 @@ func (this *QDebug) space(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug5spaceEv
     // invoke: QDebug & space()
-    C.demth_ZN6QDebug5spaceEv(this.qclsinst)
+    C._ZN6QDebug5spaceEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "space", args)
   }
 
 }
 
-  // proto:  QDebug & QDebug::maybeSpace();
-func (this *QDebug) maybeSpace(args ...interface{}) () {
-  // maybeSpace()
+// setAutoInsertSpaces(_Bool)
+func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
+  // setAutoInsertSpaces(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QDebug19setAutoInsertSpacesEb
+    // invoke: void setAutoInsertSpaces(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN6QDebug19setAutoInsertSpacesEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
+  }
+
+}
+
+// autoInsertSpaces()
+func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
+  // autoInsertSpaces()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -328,16 +347,36 @@ func (this *QDebug) maybeSpace(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QDebug10maybeSpaceEv
-    // invoke: QDebug & maybeSpace()
-    C.demth_ZN6QDebug10maybeSpaceEv(this.qclsinst)
+    // invoke: _ZNK6QDebug16autoInsertSpacesEv
+    // invoke: bool autoInsertSpaces()
+    C._ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QDebug", "maybeSpace", args)
+    qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
   }
 
 }
 
-  // proto:  QDebug & QDebug::resetFormat();
+// nospace()
+func (this *QDebug) nospace(args ...interface{}) () {
+  // nospace()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QDebug7nospaceEv
+    // invoke: QDebug & nospace()
+    C._ZN6QDebug7nospaceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDebug", "nospace", args)
+  }
+
+}
+
+// resetFormat()
 func (this *QDebug) resetFormat(args ...interface{}) () {
   // resetFormat()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -357,30 +396,27 @@ func (this *QDebug) resetFormat(args ...interface{}) () {
 
 }
 
-  // proto:  void QDebug::setAutoInsertSpaces(bool b);
-func (this *QDebug) setAutoInsertSpaces(args ...interface{}) () {
-  // setAutoInsertSpaces(_Bool)
+// noquote()
+func (this *QDebug) noquote(args ...interface{}) () {
+  // noquote()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QDebug19setAutoInsertSpacesEb
-    // invoke: void setAutoInsertSpaces(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C.demth_ZN6QDebug19setAutoInsertSpacesEb(this.qclsinst, arg0)
+    // invoke: _ZN6QDebug7noquoteEv
+    // invoke: QDebug & noquote()
+    C._ZN6QDebug7noquoteEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QDebug", "setAutoInsertSpaces", args)
+    qtrt.ErrorResolve("QDebug", "noquote", args)
   }
 
 }
 
-  // proto:  void QDebug::swap(QDebug & other);
+// swap(class QDebug &)
 func (this *QDebug) swap(args ...interface{}) () {
   // swap(class QDebug &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -396,54 +432,14 @@ func (this *QDebug) swap(args ...interface{}) () {
     // invoke: void swap(class QDebug &)
     var arg0 = args[0].(QDebug).qclsinst
     if false {fmt.Println(arg0)}
-    C.demth_ZN6QDebug4swapERS_(this.qclsinst, arg0)
+    C._ZN6QDebug4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "swap", args)
   }
 
 }
 
-  // proto:  QDebug & QDebug::nospace();
-func (this *QDebug) nospace(args ...interface{}) () {
-  // nospace()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QDebug7nospaceEv
-    // invoke: QDebug & nospace()
-    C.demth_ZN6QDebug7nospaceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDebug", "nospace", args)
-  }
-
-}
-
-  // proto:  bool QDebug::autoInsertSpaces();
-func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
-  // autoInsertSpaces()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QDebug16autoInsertSpacesEv
-    // invoke: bool autoInsertSpaces()
-    C.demth_ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
-  }
-
-}
-
-  // proto:  QDebug & QDebug::quote();
+// quote()
 func (this *QDebug) quote(args ...interface{}) () {
   // quote()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -456,14 +452,93 @@ func (this *QDebug) quote(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug5quoteEv
     // invoke: QDebug & quote()
-    C.demth_ZN6QDebug5quoteEv(this.qclsinst)
+    C._ZN6QDebug5quoteEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QDebug", "quote", args)
   }
 
 }
 
-  // proto:  QDebug & QDebug::maybeQuote(char c);
+// QDebug(const class QDebug &)
+func NewQDebug(args ...interface{}) QDebug {
+  // QDebug(const class QDebug &)
+  // QDebug(enum QtMsgType)
+  // QDebug(class QString *)
+  // QDebug(class QIODevice *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QDebug{}) // "const QDebug &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.Int32Ty(false) // "QtMsgType"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QString{}) // "QString *"
+  vtys[3] = make(map[int32]reflect.Type)
+  vtys[3][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QDebugC1ERKS_
+    // invoke: void QDebug(const class QDebug &)
+    var arg0 = args[0].(QDebug).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QDebugC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN6QDebugC1E9QtMsgType
+    // invoke: void QDebug(enum QtMsgType)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QDebugC2E9QtMsgType(qthis, arg0)
+  case 2:
+    // invoke: _ZN6QDebugC1EP7QString
+    // invoke: void QDebug(class QString *)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QDebugC2EP7QString(qthis, arg0)
+  case 3:
+    // invoke: _ZN6QDebugC1EP9QIODevice
+    // invoke: void QDebug(class QIODevice *)
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QDebugC2EP9QIODevice(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QDebug", "QDebug", args)
+  }
+
+  return QDebug{}
+}
+
+// maybeSpace()
+func (this *QDebug) maybeSpace(args ...interface{}) () {
+  // maybeSpace()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QDebug10maybeSpaceEv
+    // invoke: QDebug & maybeSpace()
+    C._ZN6QDebug10maybeSpaceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDebug", "maybeSpace", args)
+  }
+
+}
+
+// maybeQuote(char)
 func (this *QDebug) maybeQuote(args ...interface{}) () {
   // maybeQuote(char)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -479,7 +554,7 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
     // invoke: QDebug & maybeQuote(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.demth_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
+    C._ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
   }

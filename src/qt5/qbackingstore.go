@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,35 +28,34 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QPaintDevice * QBackingStore::paintDevice();
-extern void _ZN13QBackingStore11paintDeviceEv(void* qthis);
-  // proto:  QWindow * QBackingStore::window();
-extern void _ZNK13QBackingStore6windowEv(void* qthis);
-  // proto:  QSize QBackingStore::size();
-extern void _ZNK13QBackingStore4sizeEv(void* qthis);
-  // proto:  QRegion QBackingStore::staticContents();
-extern void _ZNK13QBackingStore14staticContentsEv(void* qthis);
-  // proto:  void QBackingStore::~QBackingStore();
-extern void _ZN13QBackingStoreD0Ev(void* qthis);
-  // proto:  void QBackingStore::setStaticContents(const QRegion & region);
-extern void _ZN13QBackingStore17setStaticContentsERK7QRegion(void* qthis, void* arg0);
-  // proto:  void QBackingStore::resize(const QSize & size);
-extern void _ZN13QBackingStore6resizeERK5QSize(void* qthis, void* arg0);
-  // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
-extern void _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(void* qthis, void* arg0, void* arg1, void* arg2);
-  // proto:  void QBackingStore::beginPaint(const QRegion & );
-extern void _ZN13QBackingStore10beginPaintERK7QRegion(void* qthis, void* arg0);
-  // proto:  bool QBackingStore::hasStaticContents();
-extern void _ZNK13QBackingStore17hasStaticContentsEv(void* qthis);
-  // proto:  void QBackingStore::endPaint();
-extern void _ZN13QBackingStore8endPaintEv(void* qthis);
-  // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
-extern void _ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
-  // proto:  QPlatformBackingStore * QBackingStore::handle();
-extern void _ZNK13QBackingStore6handleEv(void* qthis);
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
-extern void* dector_ZN13QBackingStoreC1EP7QWindow(void* arg0);
-extern void _ZN13QBackingStoreC1EP7QWindow(void* qthis, void* arg0);
+extern void _ZN13QBackingStoreC2EP7QWindow(void* qthis, void* arg0); // 3
+  // proto:  QPlatformBackingStore * QBackingStore::handle();
+extern void _ZNK13QBackingStore6handleEv(void* qthis); // 4
+  // proto:  QPaintDevice * QBackingStore::paintDevice();
+extern void _ZN13QBackingStore11paintDeviceEv(void* qthis); // 4
+  // proto:  QRegion QBackingStore::staticContents();
+extern void _ZNK13QBackingStore14staticContentsEv(void* qthis); // 4
+  // proto:  void QBackingStore::beginPaint(const QRegion & );
+extern void _ZN13QBackingStore10beginPaintERK7QRegion(void* qthis, void* arg0); // 4
+  // proto:  void QBackingStore::endPaint();
+extern void _ZN13QBackingStore8endPaintEv(void* qthis); // 4
+  // proto:  bool QBackingStore::hasStaticContents();
+extern void _ZNK13QBackingStore17hasStaticContentsEv(void* qthis); // 4
+  // proto:  QWindow * QBackingStore::window();
+extern void _ZNK13QBackingStore6windowEv(void* qthis); // 4
+  // proto:  void QBackingStore::setStaticContents(const QRegion & region);
+extern void _ZN13QBackingStore17setStaticContentsERK7QRegion(void* qthis, void* arg0); // 4
+  // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
+extern void _ZN13QBackingStore5flushERK7QRegionP7QWindowRK6QPoint(void* qthis, void* arg0, void* arg1, void* arg2); // 4
+  // proto:  QSize QBackingStore::size();
+extern void _ZNK13QBackingStore4sizeEv(void* qthis); // 4
+  // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
+extern void _ZN13QBackingStore6scrollERK7QRegionii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 4
+  // proto:  void QBackingStore::resize(const QSize & size);
+extern void _ZN13QBackingStore6resizeERK5QSize(void* qthis, void* arg0); // 4
+  // proto:  void QBackingStore::~QBackingStore();
+extern void _ZN13QBackingStoreD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -79,7 +74,53 @@ type QBackingStore struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QPaintDevice * QBackingStore::paintDevice();
+// QBackingStore(class QWindow *)
+func NewQBackingStore(args ...interface{}) QBackingStore {
+  // QBackingStore(class QWindow *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QBackingStoreC1EP7QWindow
+    // invoke: void QBackingStore(class QWindow *)
+    var arg0 = args[0].(QWindow).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QBackingStoreC2EP7QWindow(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "QBackingStore", args)
+  }
+
+  return QBackingStore{}
+}
+
+// handle()
+func (this *QBackingStore) handle(args ...interface{}) () {
+  // handle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QBackingStore6handleEv
+    // invoke: QPlatformBackingStore * handle()
+    C._ZNK13QBackingStore6handleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "handle", args)
+  }
+
+}
+
+// paintDevice()
 func (this *QBackingStore) paintDevice(args ...interface{}) () {
   // paintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -99,47 +140,7 @@ func (this *QBackingStore) paintDevice(args ...interface{}) () {
 
 }
 
-  // proto:  QWindow * QBackingStore::window();
-func (this *QBackingStore) window(args ...interface{}) () {
-  // window()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QBackingStore6windowEv
-    // invoke: QWindow * window()
-    C._ZNK13QBackingStore6windowEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QBackingStore", "window", args)
-  }
-
-}
-
-  // proto:  QSize QBackingStore::size();
-func (this *QBackingStore) size(args ...interface{}) () {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QBackingStore4sizeEv
-    // invoke: QSize size()
-    C._ZNK13QBackingStore4sizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QBackingStore", "size", args)
-  }
-
-}
-
-  // proto:  QRegion QBackingStore::staticContents();
+// staticContents()
 func (this *QBackingStore) staticContents(args ...interface{}) () {
   // staticContents()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -159,21 +160,90 @@ func (this *QBackingStore) staticContents(args ...interface{}) () {
 
 }
 
-  // proto:  void QBackingStore::~QBackingStore();
-func (this *QBackingStore) FreeQBackingStore(args ...interface{}) () {
+// beginPaint(const class QRegion &)
+func (this *QBackingStore) beginPaint(args ...interface{}) () {
+  // beginPaint(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
+    // invoke: void beginPaint(const class QRegion &)
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
+    qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
   }
 
 }
 
-  // proto:  void QBackingStore::setStaticContents(const QRegion & region);
+// endPaint()
+func (this *QBackingStore) endPaint(args ...interface{}) () {
+  // endPaint()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QBackingStore8endPaintEv
+    // invoke: void endPaint()
+    C._ZN13QBackingStore8endPaintEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "endPaint", args)
+  }
+
+}
+
+// hasStaticContents()
+func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
+  // hasStaticContents()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QBackingStore17hasStaticContentsEv
+    // invoke: bool hasStaticContents()
+    C._ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
+  }
+
+}
+
+// window()
+func (this *QBackingStore) window(args ...interface{}) () {
+  // window()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QBackingStore6windowEv
+    // invoke: QWindow * window()
+    C._ZNK13QBackingStore6windowEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "window", args)
+  }
+
+}
+
+// setStaticContents(const class QRegion &)
 func (this *QBackingStore) setStaticContents(args ...interface{}) () {
   // setStaticContents(const class QRegion &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -196,30 +266,7 @@ func (this *QBackingStore) setStaticContents(args ...interface{}) () {
 
 }
 
-  // proto:  void QBackingStore::resize(const QSize & size);
-func (this *QBackingStore) resize(args ...interface{}) () {
-  // resize(const class QSize &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSize{}) // "const QSize &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QBackingStore6resizeERK5QSize
-    // invoke: void resize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QBackingStore", "resize", args)
-  }
-
-}
-
-  // proto:  void QBackingStore::flush(const QRegion & region, QWindow * window, const QPoint & offset);
+// flush(const class QRegion &, class QWindow *, const class QPoint &)
 func (this *QBackingStore) flush(args ...interface{}) () {
   // flush(const class QRegion &, class QWindow *, const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,32 +295,9 @@ func (this *QBackingStore) flush(args ...interface{}) () {
 
 }
 
-  // proto:  void QBackingStore::beginPaint(const QRegion & );
-func (this *QBackingStore) beginPaint(args ...interface{}) () {
-  // beginPaint(const class QRegion &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QBackingStore10beginPaintERK7QRegion
-    // invoke: void beginPaint(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN13QBackingStore10beginPaintERK7QRegion(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QBackingStore", "beginPaint", args)
-  }
-
-}
-
-  // proto:  bool QBackingStore::hasStaticContents();
-func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
-  // hasStaticContents()
+// size()
+func (this *QBackingStore) size(args ...interface{}) () {
+  // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -282,36 +306,16 @@ func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QBackingStore17hasStaticContentsEv
-    // invoke: bool hasStaticContents()
-    C._ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+    // invoke: _ZNK13QBackingStore4sizeEv
+    // invoke: QSize size()
+    C._ZNK13QBackingStore4sizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
+    qtrt.ErrorResolve("QBackingStore", "size", args)
   }
 
 }
 
-  // proto:  void QBackingStore::endPaint();
-func (this *QBackingStore) endPaint(args ...interface{}) () {
-  // endPaint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QBackingStore8endPaintEv
-    // invoke: void endPaint()
-    C._ZN13QBackingStore8endPaintEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QBackingStore", "endPaint", args)
-  }
-
-}
-
-  // proto:  bool QBackingStore::scroll(const QRegion & area, int dx, int dy);
+// scroll(const class QRegion &, int, int)
 func (this *QBackingStore) scroll(args ...interface{}) () {
   // scroll(const class QRegion &, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -340,9 +344,32 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
 
 }
 
-  // proto:  QPlatformBackingStore * QBackingStore::handle();
-func (this *QBackingStore) handle(args ...interface{}) () {
-  // handle()
+// resize(const class QSize &)
+func (this *QBackingStore) resize(args ...interface{}) () {
+  // resize(const class QSize &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QSize{}) // "const QSize &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QBackingStore6resizeERK5QSize
+    // invoke: void resize(const class QSize &)
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN13QBackingStore6resizeERK5QSize(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QBackingStore", "resize", args)
+  }
+
+}
+
+// ~QBackingStore()
+func (this *QBackingStore) FreeQBackingStore(args ...interface{}) () {
+  // ~QBackingStore()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -351,18 +378,13 @@ func (this *QBackingStore) handle(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QBackingStore6handleEv
-    // invoke: QPlatformBackingStore * handle()
-    C._ZNK13QBackingStore6handleEv(this.qclsinst)
+    // invoke: _ZN13QBackingStoreD0Ev
+    // invoke: void ~QBackingStore()
+    C._ZN13QBackingStoreD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QBackingStore", "handle", args)
+    qtrt.ErrorResolve("QBackingStore", "~QBackingStore", args)
   }
 
-}
-
-  // proto:  void QBackingStore::QBackingStore(QWindow * window);
-func NewQBackingStore(args ...interface{}) QBackingStore {
-  return QBackingStore{}
 }
 
 // <= body block end

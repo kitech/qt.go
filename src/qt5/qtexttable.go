@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qtexttable.h
 // dst-file: /src/gui/qtexttable.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,88 +29,81 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
-extern void* dector_ZN14QTextTableCellC1ERKS_(void* arg0);
-extern void _ZN14QTextTableCellC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
-extern void _ZN14QTextTableCell9setFormatERK15QTextCharFormat(void* qthis, void* arg0);
-  // proto:  int QTextTableCell::lastPosition();
-extern void _ZNK14QTextTableCell12lastPositionEv(void* qthis);
-  // proto:  void QTextTableCell::~QTextTableCell();
-extern void _ZN14QTextTableCellD0Ev(void* qthis);
-  // proto:  int QTextTableCell::rowSpan();
-extern void _ZNK14QTextTableCell7rowSpanEv(void* qthis);
-  // proto:  int QTextTableCell::firstPosition();
-extern void _ZNK14QTextTableCell13firstPositionEv(void* qthis);
-  // proto:  void QTextTableCell::QTextTableCell(const QTextTable * t, int f);
-extern void* dector_ZN14QTextTableCellC1EPK10QTextTablei(void* arg0, int32_t arg1);
-extern void _ZN14QTextTableCellC1EPK10QTextTablei(void* qthis, void* arg0, int32_t arg1);
-  // proto:  int QTextTableCell::tableCellFormatIndex();
-extern void _ZNK14QTextTableCell20tableCellFormatIndexEv(void* qthis);
-  // proto:  int QTextTableCell::columnSpan();
-extern void _ZNK14QTextTableCell10columnSpanEv(void* qthis);
-  // proto:  QTextCharFormat QTextTableCell::format();
-extern void _ZNK14QTextTableCell6formatEv(void* qthis);
-  // proto:  int QTextTableCell::row();
-extern void _ZNK14QTextTableCell3rowEv(void* qthis);
-  // proto:  bool QTextTableCell::isValid();
-extern void demth_ZNK14QTextTableCell7isValidEv(void* qthis);
-  // proto:  QTextCursor QTextTableCell::lastCursorPosition();
-extern void _ZNK14QTextTableCell18lastCursorPositionEv(void* qthis);
-  // proto:  int QTextTableCell::column();
-extern void _ZNK14QTextTableCell6columnEv(void* qthis);
-  // proto:  QTextCursor QTextTableCell::firstCursorPosition();
-extern void _ZNK14QTextTableCell19firstCursorPositionEv(void* qthis);
+extern void _ZN14QTextTableCellC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QTextTableCell::QTextTableCell();
-extern void* dector_ZN14QTextTableCellC1Ev();
-extern void _ZN14QTextTableCellC1Ev(void* qthis);
-  // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
-extern void _ZNK10QTextTable6cellAtEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  int QTextTable::rows();
-extern void _ZNK10QTextTable4rowsEv(void* qthis);
-  // proto:  void QTextTable::removeRows(int pos, int num);
-extern void _ZN10QTextTable10removeRowsEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  int QTextTable::columns();
-extern void _ZNK10QTextTable7columnsEv(void* qthis);
+extern void _ZN14QTextTableCellC2Ev(void* qthis); // 1
+  // proto:  int QTextTableCell::rowSpan();
+extern void _ZNK14QTextTableCell7rowSpanEv(void* qthis); // 4
+  // proto:  QTextCursor QTextTableCell::firstCursorPosition();
+extern void _ZNK14QTextTableCell19firstCursorPositionEv(void* qthis); // 4
+  // proto:  QTextCharFormat QTextTableCell::format();
+extern void _ZNK14QTextTableCell6formatEv(void* qthis); // 4
+  // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
+extern void _ZN14QTextTableCell9setFormatERK15QTextCharFormat(void* qthis, void* arg0); // 4
+  // proto:  bool QTextTableCell::isValid();
+extern void _ZNK14QTextTableCell7isValidEv(void* qthis); // 2
+  // proto:  QTextFrame::iterator QTextTableCell::begin();
+extern void _ZNK14QTextTableCell5beginEv(void* qthis); // 4
+  // proto:  QTextCursor QTextTableCell::lastCursorPosition();
+extern void _ZNK14QTextTableCell18lastCursorPositionEv(void* qthis); // 4
+  // proto:  int QTextTableCell::tableCellFormatIndex();
+extern void _ZNK14QTextTableCell20tableCellFormatIndexEv(void* qthis); // 4
+  // proto:  int QTextTableCell::column();
+extern void _ZNK14QTextTableCell6columnEv(void* qthis); // 4
+  // proto:  int QTextTableCell::columnSpan();
+extern void _ZNK14QTextTableCell10columnSpanEv(void* qthis); // 4
+  // proto:  QTextFrame::iterator QTextTableCell::end();
+extern void _ZNK14QTextTableCell3endEv(void* qthis); // 4
+  // proto:  int QTextTableCell::lastPosition();
+extern void _ZNK14QTextTableCell12lastPositionEv(void* qthis); // 4
+  // proto:  int QTextTableCell::firstPosition();
+extern void _ZNK14QTextTableCell13firstPositionEv(void* qthis); // 4
+  // proto:  int QTextTableCell::row();
+extern void _ZNK14QTextTableCell3rowEv(void* qthis); // 4
   // proto:  void QTextTable::appendRows(int count);
-extern void _ZN10QTextTable10appendRowsEi(void* qthis, int32_t arg0);
-  // proto:  void QTextTable::resize(int rows, int cols);
-extern void _ZN10QTextTable6resizeEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
-extern void _ZNK10QTextTable6cellAtERK11QTextCursor(void* qthis, void* arg0);
-  // proto:  void QTextTable::QTextTable(const QTextTable & );
-extern void* dector_ZN10QTextTableC1ERKS_(void* arg0);
-extern void _ZN10QTextTableC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
-extern void _ZN10QTextTable9setFormatERK16QTextTableFormat(void* qthis, void* arg0);
-  // proto:  void QTextTable::insertColumns(int pos, int num);
-extern void _ZN10QTextTable13insertColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
-extern void _ZN10QTextTable9splitCellEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
-  // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
-extern void _ZN10QTextTable10mergeCellsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3);
-  // proto:  void QTextTable::insertRows(int pos, int num);
-extern void _ZN10QTextTable10insertRowsEii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZN10QTextTable10appendRowsEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextTable::~QTextTable();
-extern void _ZN10QTextTableD0Ev(void* qthis);
-  // proto:  void QTextTable::QTextTable(QTextDocument * doc);
-extern void* dector_ZN10QTextTableC1EP13QTextDocument(void* arg0);
-extern void _ZN10QTextTableC1EP13QTextDocument(void* qthis, void* arg0);
+extern void _ZN10QTextTableD2Ev(void* qthis); // 4
+  // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
+extern void _ZN10QTextTable9splitCellEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
+  // proto:  int QTextTable::rows();
+extern void _ZNK10QTextTable4rowsEv(void* qthis); // 4
+  // proto:  QTextTableCell QTextTable::cellAt(const QTextCursor & c);
+extern void _ZNK10QTextTable6cellAtERK11QTextCursor(void* qthis, void* arg0); // 4
+  // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
+extern void _ZNK10QTextTable6cellAtEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  QTextTableCell QTextTable::cellAt(int position);
-extern void _ZNK10QTextTable6cellAtEi(void* qthis, int32_t arg0);
-  // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
-extern void _ZNK10QTextTable8rowStartERK11QTextCursor(void* qthis, void* arg0);
+extern void _ZNK10QTextTable6cellAtEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
+extern void _ZN10QTextTable9setFormatERK16QTextTableFormat(void* qthis, void* arg0); // 4
   // proto:  QTextTableFormat QTextTable::format();
-extern void demth_ZNK10QTextTable6formatEv(void* qthis);
-  // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
-extern void _ZNK10QTextTable6rowEndERK11QTextCursor(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QTextTable::metaObject();
-extern void _ZNK10QTextTable10metaObjectEv(void* qthis);
-  // proto:  void QTextTable::removeColumns(int pos, int num);
-extern void _ZN10QTextTable13removeColumnsEii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZNK10QTextTable6formatEv(void* qthis); // 2
+  // proto:  void QTextTable::removeRows(int pos, int num);
+extern void _ZN10QTextTable10removeRowsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  int QTextTable::columns();
+extern void _ZNK10QTextTable7columnsEv(void* qthis); // 4
   // proto:  void QTextTable::appendColumns(int count);
-extern void _ZN10QTextTable13appendColumnsEi(void* qthis, int32_t arg0);
+extern void _ZN10QTextTable13appendColumnsEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QTextTable::insertRows(int pos, int num);
+extern void _ZN10QTextTable10insertRowsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
+extern void _ZN10QTextTable10mergeCellsEiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 4
   // proto:  void QTextTable::mergeCells(const QTextCursor & cursor);
-extern void _ZN10QTextTable10mergeCellsERK11QTextCursor(void* qthis, void* arg0);
+extern void _ZN10QTextTable10mergeCellsERK11QTextCursor(void* qthis, void* arg0); // 4
+  // proto:  void QTextTable::resize(int rows, int cols);
+extern void _ZN10QTextTable6resizeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
+extern void _ZNK10QTextTable8rowStartERK11QTextCursor(void* qthis, void* arg0); // 4
+  // proto:  const QMetaObject * QTextTable::metaObject();
+extern void _ZNK10QTextTable10metaObjectEv(void* qthis); // 4
+  // proto:  void QTextTable::QTextTable(QTextDocument * doc);
+extern void _ZN10QTextTableC2EP13QTextDocument(void* qthis, void* arg0); // 3
+  // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
+extern void _ZNK10QTextTable6rowEndERK11QTextCursor(void* qthis, void* arg0); // 4
+  // proto:  void QTextTable::insertColumns(int pos, int num);
+extern void _ZN10QTextTable13insertColumnsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  void QTextTable::removeColumns(int pos, int num);
+extern void _ZN10QTextTable13removeColumnsEii(void* qthis, int32_t arg0, int32_t arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -139,12 +128,101 @@ type QTextTable struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QTextTableCell::QTextTableCell(const QTextTableCell & o);
+// QTextTableCell(const class QTextTableCell &)
 func NewQTextTableCell(args ...interface{}) QTextTableCell {
+  // QTextTableCell(const class QTextTableCell &)
+  // QTextTableCell()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextTableCell{}) // "const QTextTableCell &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QTextTableCellC1ERKS_
+    // invoke: void QTextTableCell(const class QTextTableCell &)
+    var arg0 = args[0].(QTextTableCell).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QTextTableCellC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN14QTextTableCellC1Ev
+    // invoke: void QTextTableCell()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QTextTableCellC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "QTextTableCell", args)
+  }
+
   return QTextTableCell{}
 }
 
-  // proto:  void QTextTableCell::setFormat(const QTextCharFormat & format);
+// rowSpan()
+func (this *QTextTableCell) rowSpan(args ...interface{}) () {
+  // rowSpan()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell7rowSpanEv
+    // invoke: int rowSpan()
+    C._ZNK14QTextTableCell7rowSpanEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "rowSpan", args)
+  }
+
+}
+
+// firstCursorPosition()
+func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
+  // firstCursorPosition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell19firstCursorPositionEv
+    // invoke: QTextCursor firstCursorPosition()
+    C._ZNK14QTextTableCell19firstCursorPositionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "firstCursorPosition", args)
+  }
+
+}
+
+// format()
+func (this *QTextTableCell) format(args ...interface{}) () {
+  // format()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell6formatEv
+    // invoke: QTextCharFormat format()
+    C._ZNK14QTextTableCell6formatEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "format", args)
+  }
+
+}
+
+// setFormat(const class QTextCharFormat &)
 func (this *QTextTableCell) setFormat(args ...interface{}) () {
   // setFormat(const class QTextCharFormat &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -167,161 +245,7 @@ func (this *QTextTableCell) setFormat(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextTableCell::lastPosition();
-func (this *QTextTableCell) lastPosition(args ...interface{}) () {
-  // lastPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell12lastPositionEv
-    // invoke: int lastPosition()
-    C._ZNK14QTextTableCell12lastPositionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "lastPosition", args)
-  }
-
-}
-
-  // proto:  void QTextTableCell::~QTextTableCell();
-func (this *QTextTableCell) FreeQTextTableCell(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "~QTextTableCell", args)
-  }
-
-}
-
-  // proto:  int QTextTableCell::rowSpan();
-func (this *QTextTableCell) rowSpan(args ...interface{}) () {
-  // rowSpan()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell7rowSpanEv
-    // invoke: int rowSpan()
-    C._ZNK14QTextTableCell7rowSpanEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "rowSpan", args)
-  }
-
-}
-
-  // proto:  int QTextTableCell::firstPosition();
-func (this *QTextTableCell) firstPosition(args ...interface{}) () {
-  // firstPosition()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell13firstPositionEv
-    // invoke: int firstPosition()
-    C._ZNK14QTextTableCell13firstPositionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "firstPosition", args)
-  }
-
-}
-
-  // proto:  int QTextTableCell::tableCellFormatIndex();
-func (this *QTextTableCell) tableCellFormatIndex(args ...interface{}) () {
-  // tableCellFormatIndex()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell20tableCellFormatIndexEv
-    // invoke: int tableCellFormatIndex()
-    C._ZNK14QTextTableCell20tableCellFormatIndexEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "tableCellFormatIndex", args)
-  }
-
-}
-
-  // proto:  int QTextTableCell::columnSpan();
-func (this *QTextTableCell) columnSpan(args ...interface{}) () {
-  // columnSpan()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell10columnSpanEv
-    // invoke: int columnSpan()
-    C._ZNK14QTextTableCell10columnSpanEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "columnSpan", args)
-  }
-
-}
-
-  // proto:  QTextCharFormat QTextTableCell::format();
-func (this *QTextTableCell) format(args ...interface{}) () {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell6formatEv
-    // invoke: QTextCharFormat format()
-    C._ZNK14QTextTableCell6formatEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "format", args)
-  }
-
-}
-
-  // proto:  int QTextTableCell::row();
-func (this *QTextTableCell) row(args ...interface{}) () {
-  // row()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK14QTextTableCell3rowEv
-    // invoke: int row()
-    C._ZNK14QTextTableCell3rowEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTextTableCell", "row", args)
-  }
-
-}
-
-  // proto:  bool QTextTableCell::isValid();
+// isValid()
 func (this *QTextTableCell) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -334,14 +258,34 @@ func (this *QTextTableCell) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QTextTableCell7isValidEv
     // invoke: bool isValid()
-    C.demth_ZNK14QTextTableCell7isValidEv(this.qclsinst)
+    C._ZNK14QTextTableCell7isValidEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTextTableCell", "isValid", args)
   }
 
 }
 
-  // proto:  QTextCursor QTextTableCell::lastCursorPosition();
+// begin()
+func (this *QTextTableCell) begin(args ...interface{}) () {
+  // begin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell5beginEv
+    // invoke: QTextFrame::iterator begin()
+    C._ZNK14QTextTableCell5beginEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "begin", args)
+  }
+
+}
+
+// lastCursorPosition()
 func (this *QTextTableCell) lastCursorPosition(args ...interface{}) () {
   // lastCursorPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -361,7 +305,27 @@ func (this *QTextTableCell) lastCursorPosition(args ...interface{}) () {
 
 }
 
-  // proto:  int QTextTableCell::column();
+// tableCellFormatIndex()
+func (this *QTextTableCell) tableCellFormatIndex(args ...interface{}) () {
+  // tableCellFormatIndex()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell20tableCellFormatIndexEv
+    // invoke: int tableCellFormatIndex()
+    C._ZNK14QTextTableCell20tableCellFormatIndexEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "tableCellFormatIndex", args)
+  }
+
+}
+
+// column()
 func (this *QTextTableCell) column(args ...interface{}) () {
   // column()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -381,9 +345,9 @@ func (this *QTextTableCell) column(args ...interface{}) () {
 
 }
 
-  // proto:  QTextCursor QTextTableCell::firstCursorPosition();
-func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
-  // firstCursorPosition()
+// columnSpan()
+func (this *QTextTableCell) columnSpan(args ...interface{}) () {
+  // columnSpan()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -392,62 +356,18 @@ func (this *QTextTableCell) firstCursorPosition(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK14QTextTableCell19firstCursorPositionEv
-    // invoke: QTextCursor firstCursorPosition()
-    C._ZNK14QTextTableCell19firstCursorPositionEv(this.qclsinst)
+    // invoke: _ZNK14QTextTableCell10columnSpanEv
+    // invoke: int columnSpan()
+    C._ZNK14QTextTableCell10columnSpanEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextTableCell", "firstCursorPosition", args)
+    qtrt.ErrorResolve("QTextTableCell", "columnSpan", args)
   }
 
 }
 
-  // proto:  QTextTableCell QTextTable::cellAt(int row, int col);
-func (this *QTextTable) cellAt(args ...interface{}) () {
-  // cellAt(int, int)
-  // cellAt(const class QTextCursor &)
-  // cellAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QTextCursor{}) // "const QTextCursor &"
-  vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QTextTable6cellAtEii
-    // invoke: QTextTableCell cellAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C._ZNK10QTextTable6cellAtEii(this.qclsinst, arg0, arg1)
-  case 1:
-    // invoke: _ZNK10QTextTable6cellAtERK11QTextCursor
-    // invoke: QTextTableCell cellAt(const class QTextCursor &)
-    var arg0 = args[0].(QTextCursor).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK10QTextTable6cellAtERK11QTextCursor(this.qclsinst, arg0)
-  case 2:
-    // invoke: _ZNK10QTextTable6cellAtEi
-    // invoke: QTextTableCell cellAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QTextTable6cellAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextTable", "cellAt", args)
-  }
-
-}
-
-  // proto:  int QTextTable::rows();
-func (this *QTextTable) rows(args ...interface{}) () {
-  // rows()
+// end()
+func (this *QTextTableCell) end(args ...interface{}) () {
+  // end()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -456,44 +376,18 @@ func (this *QTextTable) rows(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextTable4rowsEv
-    // invoke: int rows()
-    C._ZNK10QTextTable4rowsEv(this.qclsinst)
+    // invoke: _ZNK14QTextTableCell3endEv
+    // invoke: QTextFrame::iterator end()
+    C._ZNK14QTextTableCell3endEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextTable", "rows", args)
+    qtrt.ErrorResolve("QTextTableCell", "end", args)
   }
 
 }
 
-  // proto:  void QTextTable::removeRows(int pos, int num);
-func (this *QTextTable) removeRows(args ...interface{}) () {
-  // removeRows(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextTable10removeRowsEii
-    // invoke: void removeRows(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C._ZN10QTextTable10removeRowsEii(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTextTable", "removeRows", args)
-  }
-
-}
-
-  // proto:  int QTextTable::columns();
-func (this *QTextTable) columns(args ...interface{}) () {
-  // columns()
+// lastPosition()
+func (this *QTextTableCell) lastPosition(args ...interface{}) () {
+  // lastPosition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -502,16 +396,56 @@ func (this *QTextTable) columns(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextTable7columnsEv
-    // invoke: int columns()
-    C._ZNK10QTextTable7columnsEv(this.qclsinst)
+    // invoke: _ZNK14QTextTableCell12lastPositionEv
+    // invoke: int lastPosition()
+    C._ZNK14QTextTableCell12lastPositionEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextTable", "columns", args)
+    qtrt.ErrorResolve("QTextTableCell", "lastPosition", args)
   }
 
 }
 
-  // proto:  void QTextTable::appendRows(int count);
+// firstPosition()
+func (this *QTextTableCell) firstPosition(args ...interface{}) () {
+  // firstPosition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell13firstPositionEv
+    // invoke: int firstPosition()
+    C._ZNK14QTextTableCell13firstPositionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "firstPosition", args)
+  }
+
+}
+
+// row()
+func (this *QTextTableCell) row(args ...interface{}) () {
+  // row()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QTextTableCell3rowEv
+    // invoke: int row()
+    C._ZNK14QTextTableCell3rowEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTableCell", "row", args)
+  }
+
+}
+
+// appendRows(int)
 func (this *QTextTable) appendRows(args ...interface{}) () {
   // appendRows(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -534,87 +468,27 @@ func (this *QTextTable) appendRows(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextTable::resize(int rows, int cols);
-func (this *QTextTable) resize(args ...interface{}) () {
-  // resize(int, int)
+// ~QTextTable()
+func (this *QTextTable) FreeQTextTable(args ...interface{}) () {
+  // ~QTextTable()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QTextTable6resizeEii
-    // invoke: void resize(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C._ZN10QTextTable6resizeEii(this.qclsinst, arg0, arg1)
+    // invoke: _ZN10QTextTableD0Ev
+    // invoke: void ~QTextTable()
+    C._ZN10QTextTableD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextTable", "resize", args)
+    qtrt.ErrorResolve("QTextTable", "~QTextTable", args)
   }
 
 }
 
-  // proto:  void QTextTable::QTextTable(const QTextTable & );
-func NewQTextTable(args ...interface{}) QTextTable {
-  return QTextTable{}
-}
-
-  // proto:  void QTextTable::setFormat(const QTextTableFormat & format);
-func (this *QTextTable) setFormat(args ...interface{}) () {
-  // setFormat(const class QTextTableFormat &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextTableFormat{}) // "const QTextTableFormat &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextTable9setFormatERK16QTextTableFormat
-    // invoke: void setFormat(const class QTextTableFormat &)
-    var arg0 = args[0].(QTextTableFormat).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN10QTextTable9setFormatERK16QTextTableFormat(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextTable", "setFormat", args)
-  }
-
-}
-
-  // proto:  void QTextTable::insertColumns(int pos, int num);
-func (this *QTextTable) insertColumns(args ...interface{}) () {
-  // insertColumns(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextTable13insertColumnsEii
-    // invoke: void insertColumns(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C._ZN10QTextTable13insertColumnsEii(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QTextTable", "insertColumns", args)
-  }
-
-}
-
-  // proto:  void QTextTable::splitCell(int row, int col, int numRows, int numCols);
+// splitCell(int, int, int, int)
 func (this *QTextTable) splitCell(args ...interface{}) () {
   // splitCell(int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -646,7 +520,209 @@ func (this *QTextTable) splitCell(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextTable::mergeCells(int row, int col, int numRows, int numCols);
+// rows()
+func (this *QTextTable) rows(args ...interface{}) () {
+  // rows()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextTable4rowsEv
+    // invoke: int rows()
+    C._ZNK10QTextTable4rowsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTable", "rows", args)
+  }
+
+}
+
+// cellAt(const class QTextCursor &)
+func (this *QTextTable) cellAt(args ...interface{}) () {
+  // cellAt(const class QTextCursor &)
+  // cellAt(int, int)
+  // cellAt(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextCursor{}) // "const QTextCursor &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextTable6cellAtERK11QTextCursor
+    // invoke: QTextTableCell cellAt(const class QTextCursor &)
+    var arg0 = args[0].(QTextCursor).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK10QTextTable6cellAtERK11QTextCursor(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZNK10QTextTable6cellAtEii
+    // invoke: QTextTableCell cellAt(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZNK10QTextTable6cellAtEii(this.qclsinst, arg0, arg1)
+  case 2:
+    // invoke: _ZNK10QTextTable6cellAtEi
+    // invoke: QTextTableCell cellAt(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QTextTable6cellAtEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextTable", "cellAt", args)
+  }
+
+}
+
+// setFormat(const class QTextTableFormat &)
+func (this *QTextTable) setFormat(args ...interface{}) () {
+  // setFormat(const class QTextTableFormat &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextTableFormat{}) // "const QTextTableFormat &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextTable9setFormatERK16QTextTableFormat
+    // invoke: void setFormat(const class QTextTableFormat &)
+    var arg0 = args[0].(QTextTableFormat).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QTextTable9setFormatERK16QTextTableFormat(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextTable", "setFormat", args)
+  }
+
+}
+
+// format()
+func (this *QTextTable) format(args ...interface{}) () {
+  // format()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextTable6formatEv
+    // invoke: QTextTableFormat format()
+    C._ZNK10QTextTable6formatEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTable", "format", args)
+  }
+
+}
+
+// removeRows(int, int)
+func (this *QTextTable) removeRows(args ...interface{}) () {
+  // removeRows(int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextTable10removeRowsEii
+    // invoke: void removeRows(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZN10QTextTable10removeRowsEii(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QTextTable", "removeRows", args)
+  }
+
+}
+
+// columns()
+func (this *QTextTable) columns(args ...interface{}) () {
+  // columns()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QTextTable7columnsEv
+    // invoke: int columns()
+    C._ZNK10QTextTable7columnsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTextTable", "columns", args)
+  }
+
+}
+
+// appendColumns(int)
+func (this *QTextTable) appendColumns(args ...interface{}) () {
+  // appendColumns(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextTable13appendColumnsEi
+    // invoke: void appendColumns(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN10QTextTable13appendColumnsEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QTextTable", "appendColumns", args)
+  }
+
+}
+
+// insertRows(int, int)
+func (this *QTextTable) insertRows(args ...interface{}) () {
+  // insertRows(int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextTable10insertRowsEii
+    // invoke: void insertRows(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZN10QTextTable10insertRowsEii(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QTextTable", "insertRows", args)
+  }
+
+}
+
+// mergeCells(int, int, int, int)
 func (this *QTextTable) mergeCells(args ...interface{}) () {
   // mergeCells(int, int, int, int)
   // mergeCells(const class QTextCursor &)
@@ -687,9 +763,9 @@ func (this *QTextTable) mergeCells(args ...interface{}) () {
 
 }
 
-  // proto:  void QTextTable::insertRows(int pos, int num);
-func (this *QTextTable) insertRows(args ...interface{}) () {
-  // insertRows(int, int)
+// resize(int, int)
+func (this *QTextTable) resize(args ...interface{}) () {
+  // resize(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -700,34 +776,20 @@ func (this *QTextTable) insertRows(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QTextTable10insertRowsEii
-    // invoke: void insertRows(int, int)
+    // invoke: _ZN10QTextTable6resizeEii
+    // invoke: void resize(int, int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C._ZN10QTextTable10insertRowsEii(this.qclsinst, arg0, arg1)
+    C._ZN10QTextTable6resizeEii(this.qclsinst, arg0, arg1)
   default:
-    qtrt.ErrorResolve("QTextTable", "insertRows", args)
+    qtrt.ErrorResolve("QTextTable", "resize", args)
   }
 
 }
 
-  // proto:  void QTextTable::~QTextTable();
-func (this *QTextTable) FreeQTextTable(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QTextTable", "~QTextTable", args)
-  }
-
-}
-
-  // proto:  QTextCursor QTextTable::rowStart(const QTextCursor & c);
+// rowStart(const class QTextCursor &)
 func (this *QTextTable) rowStart(args ...interface{}) () {
   // rowStart(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -750,9 +812,9 @@ func (this *QTextTable) rowStart(args ...interface{}) () {
 
 }
 
-  // proto:  QTextTableFormat QTextTable::format();
-func (this *QTextTable) format(args ...interface{}) () {
-  // format()
+// metaObject()
+func (this *QTextTable) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -761,16 +823,42 @@ func (this *QTextTable) format(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextTable6formatEv
-    // invoke: QTextTableFormat format()
-    C.demth_ZNK10QTextTable6formatEv(this.qclsinst)
+    // invoke: _ZNK10QTextTable10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QTextTable10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTextTable", "format", args)
+    qtrt.ErrorResolve("QTextTable", "metaObject", args)
   }
 
 }
 
-  // proto:  QTextCursor QTextTable::rowEnd(const QTextCursor & c);
+// QTextTable(class QTextDocument *)
+func NewQTextTable(args ...interface{}) QTextTable {
+  // QTextTable(class QTextDocument *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QTextTableC1EP13QTextDocument
+    // invoke: void QTextTable(class QTextDocument *)
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QTextTableC2EP13QTextDocument(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QTextTable", "QTextTable", args)
+  }
+
+  return QTextTable{}
+}
+
+// rowEnd(const class QTextCursor &)
 func (this *QTextTable) rowEnd(args ...interface{}) () {
   // rowEnd(const class QTextCursor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -793,27 +881,33 @@ func (this *QTextTable) rowEnd(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QTextTable::metaObject();
-func (this *QTextTable) metaObject(args ...interface{}) () {
-  // metaObject()
+// insertColumns(int, int)
+func (this *QTextTable) insertColumns(args ...interface{}) () {
+  // insertColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QTextTable10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK10QTextTable10metaObjectEv(this.qclsinst)
+    // invoke: _ZN10QTextTable13insertColumnsEii
+    // invoke: void insertColumns(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZN10QTextTable13insertColumnsEii(this.qclsinst, arg0, arg1)
   default:
-    qtrt.ErrorResolve("QTextTable", "metaObject", args)
+    qtrt.ErrorResolve("QTextTable", "insertColumns", args)
   }
 
 }
 
-  // proto:  void QTextTable::removeColumns(int pos, int num);
+// removeColumns(int, int)
 func (this *QTextTable) removeColumns(args ...interface{}) () {
   // removeColumns(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -835,29 +929,6 @@ func (this *QTextTable) removeColumns(args ...interface{}) () {
     C._ZN10QTextTable13removeColumnsEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QTextTable", "removeColumns", args)
-  }
-
-}
-
-  // proto:  void QTextTable::appendColumns(int count);
-func (this *QTextTable) appendColumns(args ...interface{}) () {
-  // appendColumns(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QTextTable13appendColumnsEi
-    // invoke: void appendColumns(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN10QTextTable13appendColumnsEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QTextTable", "appendColumns", args)
   }
 
 }

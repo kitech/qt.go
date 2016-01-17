@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,18 +28,16 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
-extern void* dector_ZN19QScrollerPropertiesC1ERKS_(void* arg0);
-extern void _ZN19QScrollerPropertiesC1ERKS_(void* qthis, void* arg0);
-  // proto: static void QScrollerProperties::setDefaultScrollerProperties(const QScrollerProperties & sp);
-extern void _ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(void* arg0);
-  // proto:  void QScrollerProperties::~QScrollerProperties();
-extern void _ZN19QScrollerPropertiesD0Ev(void* qthis);
   // proto: static void QScrollerProperties::unsetDefaultScrollerProperties();
-extern void _ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv();
+extern void _ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv(); // 4
   // proto:  void QScrollerProperties::QScrollerProperties();
-extern void* dector_ZN19QScrollerPropertiesC1Ev();
-extern void _ZN19QScrollerPropertiesC1Ev(void* qthis);
+extern void _ZN19QScrollerPropertiesC2Ev(void* qthis); // 3
+  // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
+extern void _ZN19QScrollerPropertiesC2ERKS_(void* qthis, void* arg0); // 3
+  // proto: static void QScrollerProperties::setDefaultScrollerProperties(const QScrollerProperties & sp);
+extern void _ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(void* arg0); // 4
+  // proto:  void QScrollerProperties::~QScrollerProperties();
+extern void _ZN19QScrollerPropertiesD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -62,49 +56,99 @@ type QScrollerProperties struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
-func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
-  return QScrollerProperties{}
-}
-
-  // proto: static void QScrollerProperties::setDefaultScrollerProperties(const QScrollerProperties & sp);
-func (this *QScrollerProperties) setDefaultScrollerProperties_s(args ...interface{}) () {
+// unsetDefaultScrollerProperties()
+func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interface{}) () {
+  // unsetDefaultScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv
+    // invoke: void unsetDefaultScrollerProperties()
+    C._ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv()
+  default:
+    qtrt.ErrorResolve("QScrollerProperties", "unsetDefaultScrollerProperties", args)
+  }
+
+}
+
+// QScrollerProperties()
+func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
+  // QScrollerProperties()
+  // QScrollerProperties(const class QScrollerProperties &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QScrollerProperties{}) // "const QScrollerProperties &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QScrollerPropertiesC1Ev
+    // invoke: void QScrollerProperties()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QScrollerPropertiesC2Ev(qthis)
+  case 1:
+    // invoke: _ZN19QScrollerPropertiesC1ERKS_
+    // invoke: void QScrollerProperties(const class QScrollerProperties &)
+    var arg0 = args[0].(QScrollerProperties).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QScrollerPropertiesC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QScrollerProperties", "QScrollerProperties", args)
+  }
+
+  return QScrollerProperties{}
+}
+
+// setDefaultScrollerProperties(const class QScrollerProperties &)
+func (this *QScrollerProperties) setDefaultScrollerProperties_s(args ...interface{}) () {
+  // setDefaultScrollerProperties(const class QScrollerProperties &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QScrollerProperties{}) // "const QScrollerProperties &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_
+    // invoke: void setDefaultScrollerProperties(const class QScrollerProperties &)
+    var arg0 = args[0].(QScrollerProperties).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(arg0)
   default:
     qtrt.ErrorResolve("QScrollerProperties", "setDefaultScrollerProperties", args)
   }
 
 }
 
-  // proto:  void QScrollerProperties::~QScrollerProperties();
+// ~QScrollerProperties()
 func (this *QScrollerProperties) FreeQScrollerProperties(args ...interface{}) () {
+  // ~QScrollerProperties()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN19QScrollerPropertiesD0Ev
+    // invoke: void ~QScrollerProperties()
+    C._ZN19QScrollerPropertiesD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollerProperties", "~QScrollerProperties", args)
-  }
-
-}
-
-  // proto: static void QScrollerProperties::unsetDefaultScrollerProperties();
-func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QScrollerProperties", "unsetDefaultScrollerProperties", args)
   }
 
 }

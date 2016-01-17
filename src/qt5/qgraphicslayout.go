@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,31 +29,27 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QGraphicsLayout::updateGeometry();
-extern void _ZN15QGraphicsLayout14updateGeometryEv(void* qthis);
-  // proto:  bool QGraphicsLayout::isActivated();
-extern void _ZNK15QGraphicsLayout11isActivatedEv(void* qthis);
-  // proto:  void QGraphicsLayout::invalidate();
-extern void _ZN15QGraphicsLayout10invalidateEv(void* qthis);
-  // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
-extern void* dector_ZN15QGraphicsLayoutC1ERKS_(void* arg0);
-extern void _ZN15QGraphicsLayoutC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
-extern void _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3);
-  // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
-extern void _ZN15QGraphicsLayout18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3);
-  // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
-extern void _ZN15QGraphicsLayout11widgetEventEP6QEvent(void* qthis, void* arg0);
-  // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
-extern void _ZN15QGraphicsLayout28instantInvalidatePropagationEv();
-  // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
-extern void _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(bool arg0);
-  // proto:  void QGraphicsLayout::~QGraphicsLayout();
-extern void _ZN15QGraphicsLayoutD0Ev(void* qthis);
+extern void _ZN15QGraphicsLayout14updateGeometryEv(void* qthis); // 4
   // proto:  void QGraphicsLayout::activate();
-extern void _ZN15QGraphicsLayout8activateEv(void* qthis);
+extern void _ZN15QGraphicsLayout8activateEv(void* qthis); // 4
+  // proto:  bool QGraphicsLayout::isActivated();
+extern void _ZNK15QGraphicsLayout11isActivatedEv(void* qthis); // 4
+  // proto:  void QGraphicsLayout::invalidate();
+extern void _ZN15QGraphicsLayout10invalidateEv(void* qthis); // 4
+  // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
+extern void _ZNK15QGraphicsLayout18getContentsMarginsEPdS0_S0_S0_(void* qthis, double* arg0, double* arg1, double* arg2, double* arg3); // 4
+  // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
+extern void _ZN15QGraphicsLayout18setContentsMarginsEdddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 4
+  // proto:  void QGraphicsLayout::~QGraphicsLayout();
+extern void _ZN15QGraphicsLayoutD2Ev(void* qthis); // 4
+  // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
+extern void _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(bool arg0); // 4
+  // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
+extern void _ZN15QGraphicsLayout28instantInvalidatePropagationEv(); // 4
+  // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
+extern void _ZN15QGraphicsLayout11widgetEventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
-extern void* dector_ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(void* arg0);
-extern void _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem(void* qthis, void* arg0);
+extern void _ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -76,7 +68,7 @@ type QGraphicsLayout struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QGraphicsLayout::updateGeometry();
+// updateGeometry()
 func (this *QGraphicsLayout) updateGeometry(args ...interface{}) () {
   // updateGeometry()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,7 +88,27 @@ func (this *QGraphicsLayout) updateGeometry(args ...interface{}) () {
 
 }
 
-  // proto:  bool QGraphicsLayout::isActivated();
+// activate()
+func (this *QGraphicsLayout) activate(args ...interface{}) () {
+  // activate()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsLayout8activateEv
+    // invoke: void activate()
+    C._ZN15QGraphicsLayout8activateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsLayout", "activate", args)
+  }
+
+}
+
+// isActivated()
 func (this *QGraphicsLayout) isActivated(args ...interface{}) () {
   // isActivated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -116,7 +128,7 @@ func (this *QGraphicsLayout) isActivated(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsLayout::invalidate();
+// invalidate()
 func (this *QGraphicsLayout) invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -136,12 +148,7 @@ func (this *QGraphicsLayout) invalidate(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsLayout::QGraphicsLayout(const QGraphicsLayout & );
-func NewQGraphicsLayout(args ...interface{}) QGraphicsLayout {
-  return QGraphicsLayout{}
-}
-
-  // proto:  void QGraphicsLayout::getContentsMargins(qreal * left, qreal * top, qreal * right, qreal * bottom);
+// getContentsMargins(qreal *, qreal *, qreal *, qreal *)
 func (this *QGraphicsLayout) getContentsMargins(args ...interface{}) () {
   // getContentsMargins(qreal *, qreal *, qreal *, qreal *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -173,7 +180,7 @@ func (this *QGraphicsLayout) getContentsMargins(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsLayout::setContentsMargins(qreal left, qreal top, qreal right, qreal bottom);
+// setContentsMargins(qreal, qreal, qreal, qreal)
 func (this *QGraphicsLayout) setContentsMargins(args ...interface{}) () {
   // setContentsMargins(qreal, qreal, qreal, qreal)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,7 +212,70 @@ func (this *QGraphicsLayout) setContentsMargins(args ...interface{}) () {
 
 }
 
-  // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
+// ~QGraphicsLayout()
+func (this *QGraphicsLayout) FreeQGraphicsLayout(args ...interface{}) () {
+  // ~QGraphicsLayout()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsLayoutD0Ev
+    // invoke: void ~QGraphicsLayout()
+    C._ZN15QGraphicsLayoutD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
+  }
+
+}
+
+// setInstantInvalidatePropagation(_Bool)
+func (this *QGraphicsLayout) setInstantInvalidatePropagation_s(args ...interface{}) () {
+  // setInstantInvalidatePropagation(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsLayout31setInstantInvalidatePropagationEb
+    // invoke: void setInstantInvalidatePropagation(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN15QGraphicsLayout31setInstantInvalidatePropagationEb(arg0)
+  default:
+    qtrt.ErrorResolve("QGraphicsLayout", "setInstantInvalidatePropagation", args)
+  }
+
+}
+
+// instantInvalidatePropagation()
+func (this *QGraphicsLayout) instantInvalidatePropagation_s(args ...interface{}) () {
+  // instantInvalidatePropagation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QGraphicsLayout28instantInvalidatePropagationEv
+    // invoke: bool instantInvalidatePropagation()
+    C._ZN15QGraphicsLayout28instantInvalidatePropagationEv()
+  default:
+    qtrt.ErrorResolve("QGraphicsLayout", "instantInvalidatePropagation", args)
+  }
+
+}
+
+// widgetEvent(class QEvent *)
 func (this *QGraphicsLayout) widgetEvent(args ...interface{}) () {
   // widgetEvent(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -228,66 +298,30 @@ func (this *QGraphicsLayout) widgetEvent(args ...interface{}) () {
 
 }
 
-  // proto: static bool QGraphicsLayout::instantInvalidatePropagation();
-func (this *QGraphicsLayout) instantInvalidatePropagation_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "instantInvalidatePropagation", args)
-  }
-
-}
-
-  // proto: static void QGraphicsLayout::setInstantInvalidatePropagation(bool enable);
-func (this *QGraphicsLayout) setInstantInvalidatePropagation_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "setInstantInvalidatePropagation", args)
-  }
-
-}
-
-  // proto:  void QGraphicsLayout::~QGraphicsLayout();
-func (this *QGraphicsLayout) FreeQGraphicsLayout(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QGraphicsLayout", "~QGraphicsLayout", args)
-  }
-
-}
-
-  // proto:  void QGraphicsLayout::activate();
-func (this *QGraphicsLayout) activate(args ...interface{}) () {
-  // activate()
+// QGraphicsLayout(class QGraphicsLayoutItem *)
+func NewQGraphicsLayout(args ...interface{}) QGraphicsLayout {
+  // QGraphicsLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QGraphicsLayoutItem{}) // "QGraphicsLayoutItem *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN15QGraphicsLayout8activateEv
-    // invoke: void activate()
-    C._ZN15QGraphicsLayout8activateEv(this.qclsinst)
+    // invoke: _ZN15QGraphicsLayoutC1EP19QGraphicsLayoutItem
+    // invoke: void QGraphicsLayout(class QGraphicsLayoutItem *)
+    var arg0 = args[0].(QGraphicsLayoutItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QGraphicsLayout", "activate", args)
+    qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }
 
+  return QGraphicsLayout{}
 }
 
 // <= body block end

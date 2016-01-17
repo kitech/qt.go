@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,19 +29,19 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  const QMetaObject * QMouseEventTransition::metaObject();
-extern void _ZNK21QMouseEventTransition10metaObjectEv(void* qthis);
-  // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
-extern void* dector_ZN21QMouseEventTransitionC1EP6QState(void* arg0);
-extern void _ZN21QMouseEventTransitionC1EP6QState(void* qthis, void* arg0);
-  // proto:  void QMouseEventTransition::QMouseEventTransition(const QMouseEventTransition & );
-extern void* dector_ZN21QMouseEventTransitionC1ERKS_(void* arg0);
-extern void _ZN21QMouseEventTransitionC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK21QMouseEventTransition10metaObjectEv(void* qthis); // 4
   // proto:  void QMouseEventTransition::setHitTestPath(const QPainterPath & path);
-extern void _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(void* qthis, void* arg0);
-  // proto:  void QMouseEventTransition::~QMouseEventTransition();
-extern void _ZN21QMouseEventTransitionD0Ev(void* qthis);
+extern void _ZN21QMouseEventTransition14setHitTestPathERK12QPainterPath(void* qthis, void* arg0); // 4
+  // proto:  Qt::KeyboardModifiers QMouseEventTransition::modifierMask();
+extern void _ZNK21QMouseEventTransition12modifierMaskEv(void* qthis); // 4
   // proto:  QPainterPath QMouseEventTransition::hitTestPath();
-extern void _ZNK21QMouseEventTransition11hitTestPathEv(void* qthis);
+extern void _ZNK21QMouseEventTransition11hitTestPathEv(void* qthis); // 4
+  // proto:  void QMouseEventTransition::~QMouseEventTransition();
+extern void _ZN21QMouseEventTransitionD2Ev(void* qthis); // 4
+  // proto:  Qt::MouseButton QMouseEventTransition::button();
+extern void _ZNK21QMouseEventTransition6buttonEv(void* qthis); // 4
+  // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
+extern void _ZN21QMouseEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -64,7 +60,7 @@ type QMouseEventTransition struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  const QMetaObject * QMouseEventTransition::metaObject();
+// metaObject()
 func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -84,12 +80,7 @@ func (this *QMouseEventTransition) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
-func NewQMouseEventTransition(args ...interface{}) QMouseEventTransition {
-  return QMouseEventTransition{}
-}
-
-  // proto:  void QMouseEventTransition::setHitTestPath(const QPainterPath & path);
+// setHitTestPath(const class QPainterPath &)
 func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
   // setHitTestPath(const class QPainterPath &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,21 +103,27 @@ func (this *QMouseEventTransition) setHitTestPath(args ...interface{}) () {
 
 }
 
-  // proto:  void QMouseEventTransition::~QMouseEventTransition();
-func (this *QMouseEventTransition) FreeQMouseEventTransition(args ...interface{}) () {
+// modifierMask()
+func (this *QMouseEventTransition) modifierMask(args ...interface{}) () {
+  // modifierMask()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK21QMouseEventTransition12modifierMaskEv
+    // invoke: Qt::KeyboardModifiers modifierMask()
+    C._ZNK21QMouseEventTransition12modifierMaskEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
+    qtrt.ErrorResolve("QMouseEventTransition", "modifierMask", args)
   }
 
 }
 
-  // proto:  QPainterPath QMouseEventTransition::hitTestPath();
+// hitTestPath()
 func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
   // hitTestPath()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -144,6 +141,72 @@ func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
   }
 
+}
+
+// ~QMouseEventTransition()
+func (this *QMouseEventTransition) FreeQMouseEventTransition(args ...interface{}) () {
+  // ~QMouseEventTransition()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN21QMouseEventTransitionD0Ev
+    // invoke: void ~QMouseEventTransition()
+    C._ZN21QMouseEventTransitionD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMouseEventTransition", "~QMouseEventTransition", args)
+  }
+
+}
+
+// button()
+func (this *QMouseEventTransition) button(args ...interface{}) () {
+  // button()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QMouseEventTransition6buttonEv
+    // invoke: Qt::MouseButton button()
+    C._ZNK21QMouseEventTransition6buttonEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMouseEventTransition", "button", args)
+  }
+
+}
+
+// QMouseEventTransition(class QState *)
+func NewQMouseEventTransition(args ...interface{}) QMouseEventTransition {
+  // QMouseEventTransition(class QState *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QState{}) // "QState *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN21QMouseEventTransitionC1EP6QState
+    // invoke: void QMouseEventTransition(class QState *)
+    var arg0 = args[0].(QState).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QMouseEventTransitionC2EP6QState(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QMouseEventTransition", "QMouseEventTransition", args)
+  }
+
+  return QMouseEventTransition{}
 }
 
 // <= body block end

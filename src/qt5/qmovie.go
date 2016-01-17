@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,74 +28,72 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QMovie::QMovie(QObject * parent);
-extern void* dector_ZN6QMovieC1EP7QObject(void* arg0);
-extern void _ZN6QMovieC1EP7QObject(void* qthis, void* arg0);
-  // proto:  int QMovie::speed();
-extern void _ZNK6QMovie5speedEv(void* qthis);
-  // proto:  bool QMovie::jumpToNextFrame();
-extern void _ZN6QMovie15jumpToNextFrameEv(void* qthis);
-  // proto:  int QMovie::frameCount();
-extern void _ZNK6QMovie10frameCountEv(void* qthis);
   // proto:  void QMovie::setScaledSize(const QSize & size);
-extern void _ZN6QMovie13setScaledSizeERK5QSize(void* qthis, void* arg0);
-  // proto:  void QMovie::setDevice(QIODevice * device);
-extern void _ZN6QMovie9setDeviceEP9QIODevice(void* qthis, void* arg0);
-  // proto:  QImage QMovie::currentImage();
-extern void _ZNK6QMovie12currentImageEv(void* qthis);
-  // proto:  bool QMovie::jumpToFrame(int frameNumber);
-extern void _ZN6QMovie11jumpToFrameEi(void* qthis, int32_t arg0);
-  // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
-extern void* dector_ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(void* arg0, void* arg1, void* arg2);
-extern void _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
-  // proto:  const QMetaObject * QMovie::metaObject();
-extern void _ZNK6QMovie10metaObjectEv(void* qthis);
-  // proto:  void QMovie::~QMovie();
-extern void _ZN6QMovieD0Ev(void* qthis);
-  // proto:  void QMovie::start();
-extern void _ZN6QMovie5startEv(void* qthis);
-  // proto:  int QMovie::loopCount();
-extern void _ZNK6QMovie9loopCountEv(void* qthis);
-  // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
-extern void* dector_ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(void* arg0, void* arg1, void* arg2);
-extern void _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2);
-  // proto:  void QMovie::setFormat(const QByteArray & format);
-extern void _ZN6QMovie9setFormatERK10QByteArray(void* qthis, void* arg0);
-  // proto: static QList<QByteArray> QMovie::supportedFormats();
-extern void _ZN6QMovie16supportedFormatsEv();
-  // proto:  QRect QMovie::frameRect();
-extern void _ZNK6QMovie9frameRectEv(void* qthis);
-  // proto:  void QMovie::setPaused(bool paused);
-extern void _ZN6QMovie9setPausedEb(void* qthis, bool arg0);
-  // proto:  QSize QMovie::scaledSize();
-extern void _ZN6QMovie10scaledSizeEv(void* qthis);
-  // proto:  QIODevice * QMovie::device();
-extern void _ZNK6QMovie6deviceEv(void* qthis);
-  // proto:  void QMovie::setBackgroundColor(const QColor & color);
-extern void _ZN6QMovie18setBackgroundColorERK6QColor(void* qthis, void* arg0);
-  // proto:  bool QMovie::isValid();
-extern void _ZNK6QMovie7isValidEv(void* qthis);
-  // proto:  void QMovie::setSpeed(int percentSpeed);
-extern void _ZN6QMovie8setSpeedEi(void* qthis, int32_t arg0);
-  // proto:  void QMovie::QMovie(const QMovie & );
-extern void* dector_ZN6QMovieC1ERKS_(void* arg0);
-extern void _ZN6QMovieC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QMovie::stop();
-extern void _ZN6QMovie4stopEv(void* qthis);
-  // proto:  int QMovie::currentFrameNumber();
-extern void _ZNK6QMovie18currentFrameNumberEv(void* qthis);
+extern void _ZN6QMovie13setScaledSizeERK5QSize(void* qthis, void* arg0); // 4
   // proto:  int QMovie::nextFrameDelay();
-extern void _ZNK6QMovie14nextFrameDelayEv(void* qthis);
-  // proto:  QPixmap QMovie::currentPixmap();
-extern void _ZNK6QMovie13currentPixmapEv(void* qthis);
+extern void _ZNK6QMovie14nextFrameDelayEv(void* qthis); // 4
+  // proto:  int QMovie::speed();
+extern void _ZNK6QMovie5speedEv(void* qthis); // 4
+  // proto:  int QMovie::frameCount();
+extern void _ZNK6QMovie10frameCountEv(void* qthis); // 4
+  // proto:  int QMovie::currentFrameNumber();
+extern void _ZNK6QMovie18currentFrameNumberEv(void* qthis); // 4
+  // proto:  int QMovie::loopCount();
+extern void _ZNK6QMovie9loopCountEv(void* qthis); // 4
+  // proto:  void QMovie::setFormat(const QByteArray & format);
+extern void _ZN6QMovie9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
   // proto:  QByteArray QMovie::format();
-extern void _ZNK6QMovie6formatEv(void* qthis);
-  // proto:  QString QMovie::fileName();
-extern void _ZNK6QMovie8fileNameEv(void* qthis);
+extern void _ZNK6QMovie6formatEv(void* qthis); // 4
+  // proto:  void QMovie::start();
+extern void _ZN6QMovie5startEv(void* qthis); // 4
+  // proto:  QMovie::MovieState QMovie::state();
+extern void _ZNK6QMovie5stateEv(void* qthis); // 4
   // proto:  QColor QMovie::backgroundColor();
-extern void _ZNK6QMovie15backgroundColorEv(void* qthis);
+extern void _ZNK6QMovie15backgroundColorEv(void* qthis); // 4
+  // proto:  void QMovie::setDevice(QIODevice * device);
+extern void _ZN6QMovie9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+  // proto:  bool QMovie::jumpToFrame(int frameNumber);
+extern void _ZN6QMovie11jumpToFrameEi(void* qthis, int32_t arg0); // 4
+  // proto:  QRect QMovie::frameRect();
+extern void _ZNK6QMovie9frameRectEv(void* qthis); // 4
+  // proto:  bool QMovie::isValid();
+extern void _ZNK6QMovie7isValidEv(void* qthis); // 4
+  // proto:  void QMovie::setBackgroundColor(const QColor & color);
+extern void _ZN6QMovie18setBackgroundColorERK6QColor(void* qthis, void* arg0); // 4
+  // proto:  void QMovie::stop();
+extern void _ZN6QMovie4stopEv(void* qthis); // 4
+  // proto:  QString QMovie::fileName();
+extern void _ZNK6QMovie8fileNameEv(void* qthis); // 4
+  // proto:  QImage QMovie::currentImage();
+extern void _ZNK6QMovie12currentImageEv(void* qthis); // 4
+  // proto:  QIODevice * QMovie::device();
+extern void _ZNK6QMovie6deviceEv(void* qthis); // 4
+  // proto:  const QMetaObject * QMovie::metaObject();
+extern void _ZNK6QMovie10metaObjectEv(void* qthis); // 4
+  // proto:  QPixmap QMovie::currentPixmap();
+extern void _ZNK6QMovie13currentPixmapEv(void* qthis); // 4
+  // proto:  void QMovie::~QMovie();
+extern void _ZN6QMovieD2Ev(void* qthis); // 4
   // proto:  void QMovie::setFileName(const QString & fileName);
-extern void _ZN6QMovie11setFileNameERK7QString(void* qthis, void* arg0);
+extern void _ZN6QMovie11setFileNameERK7QString(void* qthis, void* arg0); // 4
+  // proto:  void QMovie::setSpeed(int percentSpeed);
+extern void _ZN6QMovie8setSpeedEi(void* qthis, int32_t arg0); // 4
+  // proto:  QMovie::CacheMode QMovie::cacheMode();
+extern void _ZNK6QMovie9cacheModeEv(void* qthis); // 4
+  // proto:  QSize QMovie::scaledSize();
+extern void _ZN6QMovie10scaledSizeEv(void* qthis); // 4
+  // proto:  void QMovie::QMovie(QObject * parent);
+extern void _ZN6QMovieC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
+extern void _ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+  // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
+extern void _ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+  // proto: static QList<QByteArray> QMovie::supportedFormats();
+extern void _ZN6QMovie16supportedFormatsEv(); // 4
+  // proto:  bool QMovie::jumpToNextFrame();
+extern void _ZN6QMovie15jumpToNextFrameEv(void* qthis); // 4
+  // proto:  void QMovie::setPaused(bool paused);
+extern void _ZN6QMovie9setPausedEb(void* qthis, bool arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -125,72 +119,7 @@ type QMovie struct {
 //  _frameChanged QMovie_frameChanged_signal;
 }
 
-  // proto:  void QMovie::QMovie(QObject * parent);
-func NewQMovie(args ...interface{}) QMovie {
-  return QMovie{}
-}
-
-  // proto:  int QMovie::speed();
-func (this *QMovie) speed(args ...interface{}) () {
-  // speed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie5speedEv
-    // invoke: int speed()
-    C._ZNK6QMovie5speedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "speed", args)
-  }
-
-}
-
-  // proto:  bool QMovie::jumpToNextFrame();
-func (this *QMovie) jumpToNextFrame(args ...interface{}) () {
-  // jumpToNextFrame()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QMovie15jumpToNextFrameEv
-    // invoke: bool jumpToNextFrame()
-    C._ZN6QMovie15jumpToNextFrameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "jumpToNextFrame", args)
-  }
-
-}
-
-  // proto:  int QMovie::frameCount();
-func (this *QMovie) frameCount(args ...interface{}) () {
-  // frameCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie10frameCountEv
-    // invoke: int frameCount()
-    C._ZNK6QMovie10frameCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "frameCount", args)
-  }
-
-}
-
-  // proto:  void QMovie::setScaledSize(const QSize & size);
+// setScaledSize(const class QSize &)
 func (this *QMovie) setScaledSize(args ...interface{}) () {
   // setScaledSize(const class QSize &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -213,32 +142,9 @@ func (this *QMovie) setScaledSize(args ...interface{}) () {
 
 }
 
-  // proto:  void QMovie::setDevice(QIODevice * device);
-func (this *QMovie) setDevice(args ...interface{}) () {
-  // setDevice(class QIODevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QMovie9setDeviceEP9QIODevice
-    // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN6QMovie9setDeviceEP9QIODevice(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMovie", "setDevice", args)
-  }
-
-}
-
-  // proto:  QImage QMovie::currentImage();
-func (this *QMovie) currentImage(args ...interface{}) () {
-  // currentImage()
+// nextFrameDelay()
+func (this *QMovie) nextFrameDelay(args ...interface{}) () {
+  // nextFrameDelay()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -247,41 +153,18 @@ func (this *QMovie) currentImage(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK6QMovie12currentImageEv
-    // invoke: QImage currentImage()
-    C._ZNK6QMovie12currentImageEv(this.qclsinst)
+    // invoke: _ZNK6QMovie14nextFrameDelayEv
+    // invoke: int nextFrameDelay()
+    C._ZNK6QMovie14nextFrameDelayEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "currentImage", args)
+    qtrt.ErrorResolve("QMovie", "nextFrameDelay", args)
   }
 
 }
 
-  // proto:  bool QMovie::jumpToFrame(int frameNumber);
-func (this *QMovie) jumpToFrame(args ...interface{}) () {
-  // jumpToFrame(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QMovie11jumpToFrameEi
-    // invoke: bool jumpToFrame(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN6QMovie11jumpToFrameEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QMovie::metaObject();
-func (this *QMovie) metaObject(args ...interface{}) () {
-  // metaObject()
+// speed()
+func (this *QMovie) speed(args ...interface{}) () {
+  // speed()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -290,32 +173,18 @@ func (this *QMovie) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK6QMovie10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK6QMovie10metaObjectEv(this.qclsinst)
+    // invoke: _ZNK6QMovie5speedEv
+    // invoke: int speed()
+    C._ZNK6QMovie5speedEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "metaObject", args)
+    qtrt.ErrorResolve("QMovie", "speed", args)
   }
 
 }
 
-  // proto:  void QMovie::~QMovie();
-func (this *QMovie) FreeQMovie(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QMovie", "~QMovie", args)
-  }
-
-}
-
-  // proto:  void QMovie::start();
-func (this *QMovie) start(args ...interface{}) () {
-  // start()
+// frameCount()
+func (this *QMovie) frameCount(args ...interface{}) () {
+  // frameCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -324,16 +193,36 @@ func (this *QMovie) start(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QMovie5startEv
-    // invoke: void start()
-    C._ZN6QMovie5startEv(this.qclsinst)
+    // invoke: _ZNK6QMovie10frameCountEv
+    // invoke: int frameCount()
+    C._ZNK6QMovie10frameCountEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "start", args)
+    qtrt.ErrorResolve("QMovie", "frameCount", args)
   }
 
 }
 
-  // proto:  int QMovie::loopCount();
+// currentFrameNumber()
+func (this *QMovie) currentFrameNumber(args ...interface{}) () {
+  // currentFrameNumber()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie18currentFrameNumberEv
+    // invoke: int currentFrameNumber()
+    C._ZNK6QMovie18currentFrameNumberEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "currentFrameNumber", args)
+  }
+
+}
+
+// loopCount()
 func (this *QMovie) loopCount(args ...interface{}) () {
   // loopCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -353,7 +242,7 @@ func (this *QMovie) loopCount(args ...interface{}) () {
 
 }
 
-  // proto:  void QMovie::setFormat(const QByteArray & format);
+// setFormat(const class QByteArray &)
 func (this *QMovie) setFormat(args ...interface{}) () {
   // setFormat(const class QByteArray &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -376,21 +265,133 @@ func (this *QMovie) setFormat(args ...interface{}) () {
 
 }
 
-  // proto: static QList<QByteArray> QMovie::supportedFormats();
-func (this *QMovie) supportedFormats_s(args ...interface{}) () {
+// format()
+func (this *QMovie) format(args ...interface{}) () {
+  // format()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie6formatEv
+    // invoke: QByteArray format()
+    C._ZNK6QMovie6formatEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "supportedFormats", args)
+    qtrt.ErrorResolve("QMovie", "format", args)
   }
 
 }
 
-  // proto:  QRect QMovie::frameRect();
+// start()
+func (this *QMovie) start(args ...interface{}) () {
+  // start()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie5startEv
+    // invoke: void start()
+    C._ZN6QMovie5startEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "start", args)
+  }
+
+}
+
+// state()
+func (this *QMovie) state(args ...interface{}) () {
+  // state()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie5stateEv
+    // invoke: QMovie::MovieState state()
+    C._ZNK6QMovie5stateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "state", args)
+  }
+
+}
+
+// backgroundColor()
+func (this *QMovie) backgroundColor(args ...interface{}) () {
+  // backgroundColor()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie15backgroundColorEv
+    // invoke: QColor backgroundColor()
+    C._ZNK6QMovie15backgroundColorEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "backgroundColor", args)
+  }
+
+}
+
+// setDevice(class QIODevice *)
+func (this *QMovie) setDevice(args ...interface{}) () {
+  // setDevice(class QIODevice *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN6QMovie9setDeviceEP9QIODevice(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QMovie", "setDevice", args)
+  }
+
+}
+
+// jumpToFrame(int)
+func (this *QMovie) jumpToFrame(args ...interface{}) () {
+  // jumpToFrame(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie11jumpToFrameEi
+    // invoke: bool jumpToFrame(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN6QMovie11jumpToFrameEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
+  }
+
+}
+
+// frameRect()
 func (this *QMovie) frameRect(args ...interface{}) () {
   // frameRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -410,32 +411,9 @@ func (this *QMovie) frameRect(args ...interface{}) () {
 
 }
 
-  // proto:  void QMovie::setPaused(bool paused);
-func (this *QMovie) setPaused(args ...interface{}) () {
-  // setPaused(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QMovie9setPausedEb
-    // invoke: void setPaused(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN6QMovie9setPausedEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QMovie", "setPaused", args)
-  }
-
-}
-
-  // proto:  QSize QMovie::scaledSize();
-func (this *QMovie) scaledSize(args ...interface{}) () {
-  // scaledSize()
+// isValid()
+func (this *QMovie) isValid(args ...interface{}) () {
+  // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -444,36 +422,16 @@ func (this *QMovie) scaledSize(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QMovie10scaledSizeEv
-    // invoke: QSize scaledSize()
-    C._ZN6QMovie10scaledSizeEv(this.qclsinst)
+    // invoke: _ZNK6QMovie7isValidEv
+    // invoke: bool isValid()
+    C._ZNK6QMovie7isValidEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "scaledSize", args)
+    qtrt.ErrorResolve("QMovie", "isValid", args)
   }
 
 }
 
-  // proto:  QIODevice * QMovie::device();
-func (this *QMovie) device(args ...interface{}) () {
-  // device()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie6deviceEv
-    // invoke: QIODevice * device()
-    C._ZNK6QMovie6deviceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "device", args)
-  }
-
-}
-
-  // proto:  void QMovie::setBackgroundColor(const QColor & color);
+// setBackgroundColor(const class QColor &)
 func (this *QMovie) setBackgroundColor(args ...interface{}) () {
   // setBackgroundColor(const class QColor &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -496,9 +454,9 @@ func (this *QMovie) setBackgroundColor(args ...interface{}) () {
 
 }
 
-  // proto:  bool QMovie::isValid();
-func (this *QMovie) isValid(args ...interface{}) () {
-  // isValid()
+// stop()
+func (this *QMovie) stop(args ...interface{}) () {
+  // stop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -507,16 +465,159 @@ func (this *QMovie) isValid(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK6QMovie7isValidEv
-    // invoke: bool isValid()
-    C._ZNK6QMovie7isValidEv(this.qclsinst)
+    // invoke: _ZN6QMovie4stopEv
+    // invoke: void stop()
+    C._ZN6QMovie4stopEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "isValid", args)
+    qtrt.ErrorResolve("QMovie", "stop", args)
   }
 
 }
 
-  // proto:  void QMovie::setSpeed(int percentSpeed);
+// fileName()
+func (this *QMovie) fileName(args ...interface{}) () {
+  // fileName()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie8fileNameEv
+    // invoke: QString fileName()
+    C._ZNK6QMovie8fileNameEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "fileName", args)
+  }
+
+}
+
+// currentImage()
+func (this *QMovie) currentImage(args ...interface{}) () {
+  // currentImage()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie12currentImageEv
+    // invoke: QImage currentImage()
+    C._ZNK6QMovie12currentImageEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "currentImage", args)
+  }
+
+}
+
+// device()
+func (this *QMovie) device(args ...interface{}) () {
+  // device()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie6deviceEv
+    // invoke: QIODevice * device()
+    C._ZNK6QMovie6deviceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "device", args)
+  }
+
+}
+
+// metaObject()
+func (this *QMovie) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK6QMovie10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "metaObject", args)
+  }
+
+}
+
+// currentPixmap()
+func (this *QMovie) currentPixmap(args ...interface{}) () {
+  // currentPixmap()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK6QMovie13currentPixmapEv
+    // invoke: QPixmap currentPixmap()
+    C._ZNK6QMovie13currentPixmapEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "currentPixmap", args)
+  }
+
+}
+
+// ~QMovie()
+func (this *QMovie) FreeQMovie(args ...interface{}) () {
+  // ~QMovie()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovieD0Ev
+    // invoke: void ~QMovie()
+    C._ZN6QMovieD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "~QMovie", args)
+  }
+
+}
+
+// setFileName(const class QString &)
+func (this *QMovie) setFileName(args ...interface{}) () {
+  // setFileName(const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie11setFileNameERK7QString
+    // invoke: void setFileName(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN6QMovie11setFileNameERK7QString(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QMovie", "setFileName", args)
+  }
+
+}
+
+// setSpeed(int)
 func (this *QMovie) setSpeed(args ...interface{}) () {
   // setSpeed(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,9 +640,9 @@ func (this *QMovie) setSpeed(args ...interface{}) () {
 
 }
 
-  // proto:  void QMovie::stop();
-func (this *QMovie) stop(args ...interface{}) () {
-  // stop()
+// cacheMode()
+func (this *QMovie) cacheMode(args ...interface{}) () {
+  // cacheMode()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -550,18 +651,18 @@ func (this *QMovie) stop(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN6QMovie4stopEv
-    // invoke: void stop()
-    C._ZN6QMovie4stopEv(this.qclsinst)
+    // invoke: _ZNK6QMovie9cacheModeEv
+    // invoke: QMovie::CacheMode cacheMode()
+    C._ZNK6QMovie9cacheModeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "stop", args)
+    qtrt.ErrorResolve("QMovie", "cacheMode", args)
   }
 
 }
 
-  // proto:  int QMovie::currentFrameNumber();
-func (this *QMovie) currentFrameNumber(args ...interface{}) () {
-  // currentFrameNumber()
+// scaledSize()
+func (this *QMovie) scaledSize(args ...interface{}) () {
+  // scaledSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -570,134 +671,134 @@ func (this *QMovie) currentFrameNumber(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK6QMovie18currentFrameNumberEv
-    // invoke: int currentFrameNumber()
-    C._ZNK6QMovie18currentFrameNumberEv(this.qclsinst)
+    // invoke: _ZN6QMovie10scaledSizeEv
+    // invoke: QSize scaledSize()
+    C._ZN6QMovie10scaledSizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QMovie", "currentFrameNumber", args)
+    qtrt.ErrorResolve("QMovie", "scaledSize", args)
   }
 
 }
 
-  // proto:  int QMovie::nextFrameDelay();
-func (this *QMovie) nextFrameDelay(args ...interface{}) () {
-  // nextFrameDelay()
+// QMovie(class QObject *)
+func NewQMovie(args ...interface{}) QMovie {
+  // QMovie(class QObject *)
+  // QMovie(class QIODevice *, const class QByteArray &, class QObject *)
+  // QMovie(const class QString &, const class QByteArray &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+  vtys[1][1] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  vtys[1][2] = reflect.TypeOf(QObject{}) // "QObject *"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[2][1] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+  vtys[2][2] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK6QMovie14nextFrameDelayEv
-    // invoke: int nextFrameDelay()
-    C._ZNK6QMovie14nextFrameDelayEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "nextFrameDelay", args)
-  }
-
-}
-
-  // proto:  QPixmap QMovie::currentPixmap();
-func (this *QMovie) currentPixmap(args ...interface{}) () {
-  // currentPixmap()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie13currentPixmapEv
-    // invoke: QPixmap currentPixmap()
-    C._ZNK6QMovie13currentPixmapEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "currentPixmap", args)
-  }
-
-}
-
-  // proto:  QByteArray QMovie::format();
-func (this *QMovie) format(args ...interface{}) () {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie6formatEv
-    // invoke: QByteArray format()
-    C._ZNK6QMovie6formatEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "format", args)
-  }
-
-}
-
-  // proto:  QString QMovie::fileName();
-func (this *QMovie) fileName(args ...interface{}) () {
-  // fileName()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie8fileNameEv
-    // invoke: QString fileName()
-    C._ZNK6QMovie8fileNameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "fileName", args)
-  }
-
-}
-
-  // proto:  QColor QMovie::backgroundColor();
-func (this *QMovie) backgroundColor(args ...interface{}) () {
-  // backgroundColor()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK6QMovie15backgroundColorEv
-    // invoke: QColor backgroundColor()
-    C._ZNK6QMovie15backgroundColorEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QMovie", "backgroundColor", args)
-  }
-
-}
-
-  // proto:  void QMovie::setFileName(const QString & fileName);
-func (this *QMovie) setFileName(args ...interface{}) () {
-  // setFileName(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN6QMovie11setFileNameERK7QString
-    // invoke: void setFileName(const class QString &)
+    // invoke: _ZN6QMovieC1EP7QObject
+    // invoke: void QMovie(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QMovieC2EP7QObject(qthis, arg0)
+  case 1:
+    // invoke: _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject
+    // invoke: void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QByteArray).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)
+  case 2:
+    // invoke: _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject
+    // invoke: void QMovie(const class QString &, const class QByteArray &, class QObject *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN6QMovie11setFileNameERK7QString(this.qclsinst, arg0)
+    var arg1 = args[1].(QByteArray).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QObject).qclsinst
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)
   default:
-    qtrt.ErrorResolve("QMovie", "setFileName", args)
+    qtrt.ErrorResolve("QMovie", "QMovie", args)
+  }
+
+  return QMovie{}
+}
+
+// supportedFormats()
+func (this *QMovie) supportedFormats_s(args ...interface{}) () {
+  // supportedFormats()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie16supportedFormatsEv
+    // invoke: QList<QByteArray> supportedFormats()
+    C._ZN6QMovie16supportedFormatsEv()
+  default:
+    qtrt.ErrorResolve("QMovie", "supportedFormats", args)
+  }
+
+}
+
+// jumpToNextFrame()
+func (this *QMovie) jumpToNextFrame(args ...interface{}) () {
+  // jumpToNextFrame()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie15jumpToNextFrameEv
+    // invoke: bool jumpToNextFrame()
+    C._ZN6QMovie15jumpToNextFrameEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QMovie", "jumpToNextFrame", args)
+  }
+
+}
+
+// setPaused(_Bool)
+func (this *QMovie) setPaused(args ...interface{}) () {
+  // setPaused(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN6QMovie9setPausedEb
+    // invoke: void setPaused(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN6QMovie9setPausedEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QMovie", "setPaused", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,25 +29,21 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QCommonStyle::polish(QWidget * widget);
-extern void _ZN12QCommonStyle6polishEP7QWidget(void* qthis, void* arg0);
+extern void _ZN12QCommonStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QCommonStyle::polish(QPalette & );
-extern void _ZN12QCommonStyle6polishER8QPalette(void* qthis, void* arg0);
-  // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
-extern void* dector_ZN12QCommonStyleC1ERKS_(void* arg0);
-extern void _ZN12QCommonStyleC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QCommonStyle::unpolish(QWidget * widget);
-extern void _ZN12QCommonStyle8unpolishEP7QWidget(void* qthis, void* arg0);
-  // proto:  void QCommonStyle::unpolish(QApplication * application);
-extern void _ZN12QCommonStyle8unpolishEP12QApplication(void* qthis, void* arg0);
+extern void _ZN12QCommonStyle6polishER8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QCommonStyle::polish(QApplication * app);
-extern void _ZN12QCommonStyle6polishEP12QApplication(void* qthis, void* arg0);
+extern void _ZN12QCommonStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  void QCommonStyle::QCommonStyle();
-extern void* dector_ZN12QCommonStyleC1Ev();
-extern void _ZN12QCommonStyleC1Ev(void* qthis);
-  // proto:  const QMetaObject * QCommonStyle::metaObject();
-extern void _ZNK12QCommonStyle10metaObjectEv(void* qthis);
+extern void _ZN12QCommonStyleC2Ev(void* qthis); // 3
   // proto:  void QCommonStyle::~QCommonStyle();
-extern void _ZN12QCommonStyleD0Ev(void* qthis);
+extern void _ZN12QCommonStyleD2Ev(void* qthis); // 4
+  // proto:  const QMetaObject * QCommonStyle::metaObject();
+extern void _ZNK12QCommonStyle10metaObjectEv(void* qthis); // 4
+  // proto:  void QCommonStyle::unpolish(QWidget * widget);
+extern void _ZN12QCommonStyle8unpolishEP7QWidget(void* qthis, void* arg0); // 4
+  // proto:  void QCommonStyle::unpolish(QApplication * application);
+extern void _ZN12QCommonStyle8unpolishEP12QApplication(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -70,7 +62,7 @@ type QCommonStyle struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QCommonStyle::polish(QWidget * widget);
+// polish(class QWidget *)
 func (this *QCommonStyle) polish(args ...interface{}) () {
   // polish(class QWidget *)
   // polish(class QPalette &)
@@ -111,12 +103,70 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
 
 }
 
-  // proto:  void QCommonStyle::QCommonStyle(const QCommonStyle & );
+// QCommonStyle()
 func NewQCommonStyle(args ...interface{}) QCommonStyle {
+  // QCommonStyle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QCommonStyleC1Ev
+    // invoke: void QCommonStyle()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN12QCommonStyleC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QCommonStyle", "QCommonStyle", args)
+  }
+
   return QCommonStyle{}
 }
 
-  // proto:  void QCommonStyle::unpolish(QWidget * widget);
+// ~QCommonStyle()
+func (this *QCommonStyle) FreeQCommonStyle(args ...interface{}) () {
+  // ~QCommonStyle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QCommonStyleD0Ev
+    // invoke: void ~QCommonStyle()
+    C._ZN12QCommonStyleD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
+  }
+
+}
+
+// metaObject()
+func (this *QCommonStyle) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK12QCommonStyle10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK12QCommonStyle10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
+  }
+
+}
+
+// unpolish(class QWidget *)
 func (this *QCommonStyle) unpolish(args ...interface{}) () {
   // unpolish(class QWidget *)
   // unpolish(class QApplication *)
@@ -144,40 +194,6 @@ func (this *QCommonStyle) unpolish(args ...interface{}) () {
     C._ZN12QCommonStyle8unpolishEP12QApplication(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QCommonStyle", "unpolish", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QCommonStyle::metaObject();
-func (this *QCommonStyle) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK12QCommonStyle10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK12QCommonStyle10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QCommonStyle", "metaObject", args)
-  }
-
-}
-
-  // proto:  void QCommonStyle::~QCommonStyle();
-func (this *QCommonStyle) FreeQCommonStyle(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QCommonStyle", "~QCommonStyle", args)
   }
 
 }

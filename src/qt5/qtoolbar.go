@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qtoolbar.h
 // dst-file: /src/widgets/qtoolbar.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,60 +29,61 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3);
-  // proto:  bool QToolBar::isFloatable();
-extern void _ZNK8QToolBar11isFloatableEv(void* qthis);
-  // proto:  QSize QToolBar::iconSize();
-extern void _ZNK8QToolBar8iconSizeEv(void* qthis);
-  // proto:  QRect QToolBar::actionGeometry(QAction * action);
-extern void _ZNK8QToolBar14actionGeometryEP7QAction(void* qthis, void* arg0);
-  // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
-extern void _ZNK8QToolBar15widgetForActionEP7QAction(void* qthis, void* arg0);
-  // proto:  void QToolBar::clear();
-extern void _ZN8QToolBar5clearEv(void* qthis);
-  // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
-extern void* dector_ZN8QToolBarC1ERK7QStringP7QWidget(void* arg0, void* arg1);
-extern void _ZN8QToolBarC1ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1);
-  // proto:  void QToolBar::setMovable(bool movable);
-extern void _ZN8QToolBar10setMovableEb(void* qthis, bool arg0);
-  // proto:  bool QToolBar::isMovable();
-extern void _ZNK8QToolBar9isMovableEv(void* qthis);
-  // proto:  void QToolBar::setIconSize(const QSize & iconSize);
-extern void _ZN8QToolBar11setIconSizeERK5QSize(void* qthis, void* arg0);
-  // proto:  QAction * QToolBar::addSeparator();
-extern void _ZN8QToolBar12addSeparatorEv(void* qthis);
-  // proto:  void QToolBar::setFloatable(bool floatable);
-extern void _ZN8QToolBar12setFloatableEb(void* qthis, bool arg0);
-  // proto:  QAction * QToolBar::addAction(const QString & text);
-extern void _ZN8QToolBar9addActionERK7QString(void* qthis, void* arg0);
-  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
-extern void _ZN8QToolBar9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1);
-  // proto:  void QToolBar::QToolBar(QWidget * parent);
-extern void* dector_ZN8QToolBarC1EP7QWidget(void* arg0);
-extern void _ZN8QToolBarC1EP7QWidget(void* qthis, void* arg0);
-  // proto:  QAction * QToolBar::actionAt(const QPoint & p);
-extern void _ZNK8QToolBar8actionAtERK6QPoint(void* qthis, void* arg0);
-  // proto:  QAction * QToolBar::actionAt(int x, int y);
-extern void demth_ZNK8QToolBar8actionAtEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  bool QToolBar::isFloating();
-extern void _ZNK8QToolBar10isFloatingEv(void* qthis);
-  // proto:  QAction * QToolBar::toggleViewAction();
-extern void _ZNK8QToolBar16toggleViewActionEv(void* qthis);
-  // proto:  void QToolBar::QToolBar(const QToolBar & );
-extern void* dector_ZN8QToolBarC1ERKS_(void* arg0);
-extern void _ZN8QToolBarC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QToolBar::~QToolBar();
-extern void _ZN8QToolBarD0Ev(void* qthis);
+extern void _ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, void* arg2, unsigned char* arg3); // 4
   // proto:  QAction * QToolBar::addAction(const QString & text, const QObject * receiver, const char * member);
-extern void _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2);
-  // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
-extern void _ZN8QToolBar12insertWidgetEP7QActionP7QWidget(void* qthis, void* arg0, void* arg1);
-  // proto:  QAction * QToolBar::addWidget(QWidget * widget);
-extern void _ZN8QToolBar9addWidgetEP7QWidget(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QToolBar::metaObject();
-extern void _ZNK8QToolBar10metaObjectEv(void* qthis);
+extern void _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(void* qthis, void* arg0, void* arg1, unsigned char* arg2); // 4
+  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text);
+extern void _ZN8QToolBar9addActionERK5QIconRK7QString(void* qthis, void* arg0, void* arg1); // 4
+  // proto:  QAction * QToolBar::addAction(const QString & text);
+extern void _ZN8QToolBar9addActionERK7QString(void* qthis, void* arg0); // 4
+  // proto:  Qt::Orientation QToolBar::orientation();
+extern void _ZNK8QToolBar11orientationEv(void* qthis); // 4
+  // proto:  QAction * QToolBar::actionAt(int x, int y);
+extern void _ZNK8QToolBar8actionAtEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+  // proto:  QAction * QToolBar::actionAt(const QPoint & p);
+extern void _ZNK8QToolBar8actionAtERK6QPoint(void* qthis, void* arg0); // 4
+  // proto:  bool QToolBar::isFloating();
+extern void _ZNK8QToolBar10isFloatingEv(void* qthis); // 4
+  // proto:  QRect QToolBar::actionGeometry(QAction * action);
+extern void _ZNK8QToolBar14actionGeometryEP7QAction(void* qthis, void* arg0); // 4
+  // proto:  bool QToolBar::isFloatable();
+extern void _ZNK8QToolBar11isFloatableEv(void* qthis); // 4
   // proto:  QAction * QToolBar::insertSeparator(QAction * before);
-extern void _ZN8QToolBar15insertSeparatorEP7QAction(void* qthis, void* arg0);
+extern void _ZN8QToolBar15insertSeparatorEP7QAction(void* qthis, void* arg0); // 4
+  // proto:  QAction * QToolBar::toggleViewAction();
+extern void _ZNK8QToolBar16toggleViewActionEv(void* qthis); // 4
+  // proto:  void QToolBar::setMovable(bool movable);
+extern void _ZN8QToolBar10setMovableEb(void* qthis, bool arg0); // 4
+  // proto:  bool QToolBar::isMovable();
+extern void _ZNK8QToolBar9isMovableEv(void* qthis); // 4
+  // proto:  void QToolBar::QToolBar(QWidget * parent);
+extern void _ZN8QToolBarC2EP7QWidget(void* qthis, void* arg0); // 3
+  // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
+extern void _ZN8QToolBarC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+  // proto:  QAction * QToolBar::addSeparator();
+extern void _ZN8QToolBar12addSeparatorEv(void* qthis); // 4
+  // proto:  QSize QToolBar::iconSize();
+extern void _ZNK8QToolBar8iconSizeEv(void* qthis); // 4
+  // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
+extern void _ZN8QToolBar12insertWidgetEP7QActionP7QWidget(void* qthis, void* arg0, void* arg1); // 4
+  // proto:  void QToolBar::~QToolBar();
+extern void _ZN8QToolBarD2Ev(void* qthis); // 4
+  // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
+extern void _ZNK8QToolBar15widgetForActionEP7QAction(void* qthis, void* arg0); // 4
+  // proto:  QAction * QToolBar::addWidget(QWidget * widget);
+extern void _ZN8QToolBar9addWidgetEP7QWidget(void* qthis, void* arg0); // 4
+  // proto:  const QMetaObject * QToolBar::metaObject();
+extern void _ZNK8QToolBar10metaObjectEv(void* qthis); // 4
+  // proto:  void QToolBar::setFloatable(bool floatable);
+extern void _ZN8QToolBar12setFloatableEb(void* qthis, bool arg0); // 4
+  // proto:  Qt::ToolBarAreas QToolBar::allowedAreas();
+extern void _ZNK8QToolBar12allowedAreasEv(void* qthis); // 4
+  // proto:  void QToolBar::clear();
+extern void _ZN8QToolBar5clearEv(void* qthis); // 4
+  // proto:  void QToolBar::setIconSize(const QSize & iconSize);
+extern void _ZN8QToolBar11setIconSizeERK5QSize(void* qthis, void* arg0); // 4
+  // proto:  Qt::ToolButtonStyle QToolBar::toolButtonStyle();
+extern void _ZNK8QToolBar15toolButtonStyleEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -113,12 +110,12 @@ type QToolBar struct {
 //  _visibilityChanged QToolBar_visibilityChanged_signal;
 }
 
-  // proto:  QAction * QToolBar::addAction(const QIcon & icon, const QString & text, const QObject * receiver, const char * member);
+// addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
 func (this *QToolBar) addAction(args ...interface{}) () {
   // addAction(const class QIcon &, const class QString &, const class QObject *, const char *)
-  // addAction(const class QString &)
-  // addAction(const class QIcon &, const class QString &)
   // addAction(const class QString &, const class QObject *, const char *)
+  // addAction(const class QIcon &, const class QString &)
+  // addAction(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -128,13 +125,13 @@ func (this *QToolBar) addAction(args ...interface{}) () {
   vtys[0][3] = qtrt.ByteTy(true) // "const char *"
   vtys[1] = make(map[int32]reflect.Type)
   vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[1][1] = reflect.TypeOf(QObject{}) // "const QObject *"
+  vtys[1][2] = qtrt.ByteTy(true) // "const char *"
   vtys[2] = make(map[int32]reflect.Type)
   vtys[2][0] = reflect.TypeOf(QIcon{}) // "const QIcon &"
   vtys[2][1] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[3] = make(map[int32]reflect.Type)
   vtys[3][0] = reflect.TypeOf(QString{}) // "const QString &"
-  vtys[3][1] = reflect.TypeOf(QObject{}) // "const QObject *"
-  vtys[3][2] = qtrt.ByteTy(true) // "const char *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -148,15 +145,19 @@ func (this *QToolBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QObject).qclsinst
     if false {fmt.Println(arg2)}
-    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).UnsafeAddr()))
+    var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).Pointer()))
     if false {fmt.Println(arg3)}
     C._ZN8QToolBar9addActionERK5QIconRK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2, arg3)
   case 1:
-    // invoke: _ZN8QToolBar9addActionERK7QString
-    // invoke: QAction * addAction(const class QString &)
+    // invoke: _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc
+    // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBar9addActionERK7QString(this.qclsinst, arg0)
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
+    if false {fmt.Println(arg2)}
+    C._ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
   case 2:
     // invoke: _ZN8QToolBar9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
@@ -166,24 +167,20 @@ func (this *QToolBar) addAction(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     C._ZN8QToolBar9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
   case 3:
-    // invoke: _ZN8QToolBar9addActionERK7QStringPK7QObjectPKc
-    // invoke: QAction * addAction(const class QString &, const class QObject *, const char *)
+    // invoke: _ZN8QToolBar9addActionERK7QString
+    // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QObject).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).UnsafeAddr()))
-    if false {fmt.Println(arg2)}
-    C._ZN8QToolBar9addActionERK7QStringPK7QObjectPKc(this.qclsinst, arg0, arg1, arg2)
+    C._ZN8QToolBar9addActionERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QToolBar", "addAction", args)
   }
 
 }
 
-  // proto:  bool QToolBar::isFloatable();
-func (this *QToolBar) isFloatable(args ...interface{}) () {
-  // isFloatable()
+// orientation()
+func (this *QToolBar) orientation(args ...interface{}) () {
+  // orientation()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -192,18 +189,53 @@ func (this *QToolBar) isFloatable(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QToolBar11isFloatableEv
-    // invoke: bool isFloatable()
-    C._ZNK8QToolBar11isFloatableEv(this.qclsinst)
+    // invoke: _ZNK8QToolBar11orientationEv
+    // invoke: Qt::Orientation orientation()
+    C._ZNK8QToolBar11orientationEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QToolBar", "isFloatable", args)
+    qtrt.ErrorResolve("QToolBar", "orientation", args)
   }
 
 }
 
-  // proto:  QSize QToolBar::iconSize();
-func (this *QToolBar) iconSize(args ...interface{}) () {
-  // iconSize()
+// actionAt(int, int)
+func (this *QToolBar) actionAt(args ...interface{}) () {
+  // actionAt(int, int)
+  // actionAt(const class QPoint &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QToolBar8actionAtEii
+    // invoke: QAction * actionAt(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZNK8QToolBar8actionAtEii(this.qclsinst, arg0, arg1)
+  case 1:
+    // invoke: _ZNK8QToolBar8actionAtERK6QPoint
+    // invoke: QAction * actionAt(const class QPoint &)
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK8QToolBar8actionAtERK6QPoint(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QToolBar", "actionAt", args)
+  }
+
+}
+
+// isFloating()
+func (this *QToolBar) isFloating(args ...interface{}) () {
+  // isFloating()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -212,16 +244,16 @@ func (this *QToolBar) iconSize(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QToolBar8iconSizeEv
-    // invoke: QSize iconSize()
-    C._ZNK8QToolBar8iconSizeEv(this.qclsinst)
+    // invoke: _ZNK8QToolBar10isFloatingEv
+    // invoke: bool isFloating()
+    C._ZNK8QToolBar10isFloatingEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QToolBar", "iconSize", args)
+    qtrt.ErrorResolve("QToolBar", "isFloating", args)
   }
 
 }
 
-  // proto:  QRect QToolBar::actionGeometry(QAction * action);
+// actionGeometry(class QAction *)
 func (this *QToolBar) actionGeometry(args ...interface{}) () {
   // actionGeometry(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -244,9 +276,29 @@ func (this *QToolBar) actionGeometry(args ...interface{}) () {
 
 }
 
-  // proto:  QWidget * QToolBar::widgetForAction(QAction * action);
-func (this *QToolBar) widgetForAction(args ...interface{}) () {
-  // widgetForAction(class QAction *)
+// isFloatable()
+func (this *QToolBar) isFloatable(args ...interface{}) () {
+  // isFloatable()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QToolBar11isFloatableEv
+    // invoke: bool isFloatable()
+    C._ZNK8QToolBar11isFloatableEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QToolBar", "isFloatable", args)
+  }
+
+}
+
+// insertSeparator(class QAction *)
+func (this *QToolBar) insertSeparator(args ...interface{}) () {
+  // insertSeparator(class QAction *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -256,20 +308,20 @@ func (this *QToolBar) widgetForAction(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QToolBar15widgetForActionEP7QAction
-    // invoke: QWidget * widgetForAction(class QAction *)
+    // invoke: _ZN8QToolBar15insertSeparatorEP7QAction
+    // invoke: QAction * insertSeparator(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK8QToolBar15widgetForActionEP7QAction(this.qclsinst, arg0)
+    C._ZN8QToolBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QToolBar", "widgetForAction", args)
+    qtrt.ErrorResolve("QToolBar", "insertSeparator", args)
   }
 
 }
 
-  // proto:  void QToolBar::clear();
-func (this *QToolBar) clear(args ...interface{}) () {
-  // clear()
+// toggleViewAction()
+func (this *QToolBar) toggleViewAction(args ...interface{}) () {
+  // toggleViewAction()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -278,21 +330,16 @@ func (this *QToolBar) clear(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QToolBar5clearEv
-    // invoke: void clear()
-    C._ZN8QToolBar5clearEv(this.qclsinst)
+    // invoke: _ZNK8QToolBar16toggleViewActionEv
+    // invoke: QAction * toggleViewAction()
+    C._ZNK8QToolBar16toggleViewActionEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QToolBar", "clear", args)
+    qtrt.ErrorResolve("QToolBar", "toggleViewAction", args)
   }
 
 }
 
-  // proto:  void QToolBar::QToolBar(const QString & title, QWidget * parent);
-func NewQToolBar(args ...interface{}) QToolBar {
-  return QToolBar{}
-}
-
-  // proto:  void QToolBar::setMovable(bool movable);
+// setMovable(_Bool)
 func (this *QToolBar) setMovable(args ...interface{}) () {
   // setMovable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -315,7 +362,7 @@ func (this *QToolBar) setMovable(args ...interface{}) () {
 
 }
 
-  // proto:  bool QToolBar::isMovable();
+// isMovable()
 func (this *QToolBar) isMovable(args ...interface{}) () {
   // isMovable()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -335,30 +382,47 @@ func (this *QToolBar) isMovable(args ...interface{}) () {
 
 }
 
-  // proto:  void QToolBar::setIconSize(const QSize & iconSize);
-func (this *QToolBar) setIconSize(args ...interface{}) () {
-  // setIconSize(const class QSize &)
+// QToolBar(class QWidget *)
+func NewQToolBar(args ...interface{}) QToolBar {
+  // QToolBar(class QWidget *)
+  // QToolBar(const class QString &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QSize{}) // "const QSize &"
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QToolBar11setIconSizeERK5QSize
-    // invoke: void setIconSize(const class QSize &)
-    var arg0 = args[0].(QSize).qclsinst
+    // invoke: _ZN8QToolBarC1EP7QWidget
+    // invoke: void QToolBar(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBar11setIconSizeERK5QSize(this.qclsinst, arg0)
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN8QToolBarC2EP7QWidget(qthis, arg0)
+  case 1:
+    // invoke: _ZN8QToolBarC1ERK7QStringP7QWidget
+    // invoke: void QToolBar(const class QString &, class QWidget *)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN8QToolBarC2ERK7QStringP7QWidget(qthis, arg0, arg1)
   default:
-    qtrt.ErrorResolve("QToolBar", "setIconSize", args)
+    qtrt.ErrorResolve("QToolBar", "QToolBar", args)
   }
 
+  return QToolBar{}
 }
 
-  // proto:  QAction * QToolBar::addSeparator();
+// addSeparator()
 func (this *QToolBar) addSeparator(args ...interface{}) () {
   // addSeparator()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -378,67 +442,9 @@ func (this *QToolBar) addSeparator(args ...interface{}) () {
 
 }
 
-  // proto:  void QToolBar::setFloatable(bool floatable);
-func (this *QToolBar) setFloatable(args ...interface{}) () {
-  // setFloatable(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN8QToolBar12setFloatableEb
-    // invoke: void setFloatable(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN8QToolBar12setFloatableEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QToolBar", "setFloatable", args)
-  }
-
-}
-
-  // proto:  QAction * QToolBar::actionAt(const QPoint & p);
-func (this *QToolBar) actionAt(args ...interface{}) () {
-  // actionAt(const class QPoint &)
-  // actionAt(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1][1] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QToolBar8actionAtERK6QPoint
-    // invoke: QAction * actionAt(const class QPoint &)
-    var arg0 = args[0].(QPoint).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK8QToolBar8actionAtERK6QPoint(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK8QToolBar8actionAtEii
-    // invoke: QAction * actionAt(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C.demth_ZNK8QToolBar8actionAtEii(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QToolBar", "actionAt", args)
-  }
-
-}
-
-  // proto:  bool QToolBar::isFloating();
-func (this *QToolBar) isFloating(args ...interface{}) () {
-  // isFloating()
+// iconSize()
+func (this *QToolBar) iconSize(args ...interface{}) () {
+  // iconSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -447,50 +453,16 @@ func (this *QToolBar) isFloating(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK8QToolBar10isFloatingEv
-    // invoke: bool isFloating()
-    C._ZNK8QToolBar10isFloatingEv(this.qclsinst)
+    // invoke: _ZNK8QToolBar8iconSizeEv
+    // invoke: QSize iconSize()
+    C._ZNK8QToolBar8iconSizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QToolBar", "isFloating", args)
+    qtrt.ErrorResolve("QToolBar", "iconSize", args)
   }
 
 }
 
-  // proto:  QAction * QToolBar::toggleViewAction();
-func (this *QToolBar) toggleViewAction(args ...interface{}) () {
-  // toggleViewAction()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK8QToolBar16toggleViewActionEv
-    // invoke: QAction * toggleViewAction()
-    C._ZNK8QToolBar16toggleViewActionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QToolBar", "toggleViewAction", args)
-  }
-
-}
-
-  // proto:  void QToolBar::~QToolBar();
-func (this *QToolBar) FreeQToolBar(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
-  }
-
-}
-
-  // proto:  QAction * QToolBar::insertWidget(QAction * before, QWidget * widget);
+// insertWidget(class QAction *, class QWidget *)
 func (this *QToolBar) insertWidget(args ...interface{}) () {
   // insertWidget(class QAction *, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -516,7 +488,50 @@ func (this *QToolBar) insertWidget(args ...interface{}) () {
 
 }
 
-  // proto:  QAction * QToolBar::addWidget(QWidget * widget);
+// ~QToolBar()
+func (this *QToolBar) FreeQToolBar(args ...interface{}) () {
+  // ~QToolBar()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QToolBarD0Ev
+    // invoke: void ~QToolBar()
+    C._ZN8QToolBarD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QToolBar", "~QToolBar", args)
+  }
+
+}
+
+// widgetForAction(class QAction *)
+func (this *QToolBar) widgetForAction(args ...interface{}) () {
+  // widgetForAction(class QAction *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QToolBar15widgetForActionEP7QAction
+    // invoke: QWidget * widgetForAction(class QAction *)
+    var arg0 = args[0].(QAction).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK8QToolBar15widgetForActionEP7QAction(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QToolBar", "widgetForAction", args)
+  }
+
+}
+
+// addWidget(class QWidget *)
 func (this *QToolBar) addWidget(args ...interface{}) () {
   // addWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -539,7 +554,7 @@ func (this *QToolBar) addWidget(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QToolBar::metaObject();
+// metaObject()
 func (this *QToolBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -559,25 +574,108 @@ func (this *QToolBar) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  QAction * QToolBar::insertSeparator(QAction * before);
-func (this *QToolBar) insertSeparator(args ...interface{}) () {
-  // insertSeparator(class QAction *)
+// setFloatable(_Bool)
+func (this *QToolBar) setFloatable(args ...interface{}) () {
+  // setFloatable(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAction{}) // "QAction *"
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN8QToolBar15insertSeparatorEP7QAction
-    // invoke: QAction * insertSeparator(class QAction *)
-    var arg0 = args[0].(QAction).qclsinst
+    // invoke: _ZN8QToolBar12setFloatableEb
+    // invoke: void setFloatable(_Bool)
+    var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C._ZN8QToolBar15insertSeparatorEP7QAction(this.qclsinst, arg0)
+    C._ZN8QToolBar12setFloatableEb(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QToolBar", "insertSeparator", args)
+    qtrt.ErrorResolve("QToolBar", "setFloatable", args)
+  }
+
+}
+
+// allowedAreas()
+func (this *QToolBar) allowedAreas(args ...interface{}) () {
+  // allowedAreas()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QToolBar12allowedAreasEv
+    // invoke: Qt::ToolBarAreas allowedAreas()
+    C._ZNK8QToolBar12allowedAreasEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QToolBar", "allowedAreas", args)
+  }
+
+}
+
+// clear()
+func (this *QToolBar) clear(args ...interface{}) () {
+  // clear()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QToolBar5clearEv
+    // invoke: void clear()
+    C._ZN8QToolBar5clearEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QToolBar", "clear", args)
+  }
+
+}
+
+// setIconSize(const class QSize &)
+func (this *QToolBar) setIconSize(args ...interface{}) () {
+  // setIconSize(const class QSize &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QSize{}) // "const QSize &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QToolBar11setIconSizeERK5QSize
+    // invoke: void setIconSize(const class QSize &)
+    var arg0 = args[0].(QSize).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN8QToolBar11setIconSizeERK5QSize(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QToolBar", "setIconSize", args)
+  }
+
+}
+
+// toolButtonStyle()
+func (this *QToolBar) toolButtonStyle(args ...interface{}) () {
+  // toolButtonStyle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QToolBar15toolButtonStyleEv
+    // invoke: Qt::ToolButtonStyle toolButtonStyle()
+    C._ZNK8QToolBar15toolButtonStyleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QToolBar", "toolButtonStyle", args)
   }
 
 }

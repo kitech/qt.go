@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qstyleoption.h
 // dst-file: /src/widgets/qstyleoption.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,238 +29,121 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
-extern void* dector_ZN20QStyleOptionComboBoxC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionComboBoxC1ERKS_(void* qthis, void* arg0);
+extern void _ZN20QStyleOptionComboBoxC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionComboBox::QStyleOptionComboBox();
-extern void* dector_ZN20QStyleOptionComboBoxC1Ev();
-extern void _ZN20QStyleOptionComboBoxC1Ev(void* qthis);
-  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(int version);
-extern void* dector_ZN20QStyleOptionComboBoxC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionComboBoxC1Ei(void* qthis, int32_t arg0);
+extern void _ZN20QStyleOptionComboBoxC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(const QStyleOptionMenuItem & other);
-extern void* dector_ZN20QStyleOptionMenuItemC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionMenuItemC1ERKS_(void* qthis, void* arg0);
+extern void _ZN20QStyleOptionMenuItemC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem();
-extern void* dector_ZN20QStyleOptionMenuItemC1Ev();
-extern void _ZN20QStyleOptionMenuItemC1Ev(void* qthis);
-  // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(int version);
-extern void* dector_ZN20QStyleOptionMenuItemC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionMenuItemC1Ei(void* qthis, int32_t arg0);
+extern void _ZN20QStyleOptionMenuItemC2Ev(void* qthis); // 3
   // proto:  void QStyleHintReturnVariant::~QStyleHintReturnVariant();
-extern void _ZN23QStyleHintReturnVariantD0Ev(void* qthis);
+extern void _ZN23QStyleHintReturnVariantD2Ev(void* qthis); // 4
   // proto:  void QStyleHintReturnVariant::QStyleHintReturnVariant();
-extern void* dector_ZN23QStyleHintReturnVariantC1Ev();
-extern void _ZN23QStyleHintReturnVariantC1Ev(void* qthis);
-  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
-extern void* dector_ZN20QStyleOptionTitleBarC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionTitleBarC1Ei(void* qthis, int32_t arg0);
-  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
-extern void* dector_ZN20QStyleOptionTitleBarC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionTitleBarC1ERKS_(void* qthis, void* arg0);
+extern void _ZN23QStyleHintReturnVariantC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar();
-extern void* dector_ZN20QStyleOptionTitleBarC1Ev();
-extern void _ZN20QStyleOptionTitleBarC1Ev(void* qthis);
-  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
-extern void* dector_ZN24QStyleOptionGraphicsItemC1Ev();
-extern void _ZN24QStyleOptionGraphicsItemC1Ev(void* qthis);
+extern void _ZN20QStyleOptionTitleBarC2Ev(void* qthis); // 3
+  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(const QStyleOptionTitleBar & other);
+extern void _ZN20QStyleOptionTitleBarC2ERKS_(void* qthis, void* arg0); // 1
   // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-extern void _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(void* arg0);
+extern void _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(void* arg0); // 4
+  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
+extern void _ZN24QStyleOptionGraphicsItemC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(const QStyleOptionGraphicsItem & other);
-extern void* dector_ZN24QStyleOptionGraphicsItemC1ERKS_(void* arg0);
-extern void _ZN24QStyleOptionGraphicsItemC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem(int version);
-extern void* dector_ZN24QStyleOptionGraphicsItemC1Ei(int32_t arg0);
-extern void _ZN24QStyleOptionGraphicsItemC1Ei(void* qthis, int32_t arg0);
+extern void _ZN24QStyleOptionGraphicsItemC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOption::~QStyleOption();
-extern void _ZN12QStyleOptionD0Ev(void* qthis);
+extern void _ZN12QStyleOptionD2Ev(void* qthis); // 4
   // proto:  void QStyleOption::init(const QWidget * w);
-extern void _ZN12QStyleOption4initEPK7QWidget(void* qthis, void* arg0);
+extern void _ZN12QStyleOption4initEPK7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStyleOption::QStyleOption(const QStyleOption & other);
-extern void* dector_ZN12QStyleOptionC1ERKS_(void* arg0);
-extern void _ZN12QStyleOptionC1ERKS_(void* qthis, void* arg0);
+extern void _ZN12QStyleOptionC2ERKS_(void* qthis, void* arg0); // 3
   // proto:  void QStyleOption::QStyleOption(int version, int type);
-extern void* dector_ZN12QStyleOptionC1Eii(int32_t arg0, int32_t arg1);
-extern void _ZN12QStyleOptionC1Eii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZN12QStyleOptionC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
   // proto:  void QStyleOption::initFrom(const QWidget * w);
-extern void demth_ZN12QStyleOption8initFromEPK7QWidget(void* qthis, void* arg0);
+extern void _ZN12QStyleOption8initFromEPK7QWidget(void* qthis, void* arg0); // 2
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget();
-extern void* dector_ZN22QStyleOptionDockWidgetC1Ev();
-extern void _ZN22QStyleOptionDockWidgetC1Ev(void* qthis);
-  // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(int version);
-extern void* dector_ZN22QStyleOptionDockWidgetC1Ei(int32_t arg0);
-extern void _ZN22QStyleOptionDockWidgetC1Ei(void* qthis, int32_t arg0);
+extern void _ZN22QStyleOptionDockWidgetC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget(const QStyleOptionDockWidget & other);
-extern void* dector_ZN22QStyleOptionDockWidgetC1ERKS_(void* arg0);
-extern void _ZN22QStyleOptionDockWidgetC1ERKS_(void* qthis, void* arg0);
+extern void _ZN22QStyleOptionDockWidgetC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(const QStyleOptionProgressBar & other);
-extern void* dector_ZN23QStyleOptionProgressBarC1ERKS_(void* arg0);
-extern void _ZN23QStyleOptionProgressBarC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(int version);
-extern void* dector_ZN23QStyleOptionProgressBarC1Ei(int32_t arg0);
-extern void _ZN23QStyleOptionProgressBarC1Ei(void* qthis, int32_t arg0);
+extern void _ZN23QStyleOptionProgressBarC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar();
-extern void* dector_ZN23QStyleOptionProgressBarC1Ev();
-extern void _ZN23QStyleOptionProgressBarC1Ev(void* qthis);
+extern void _ZN23QStyleOptionProgressBarC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionSlider::QStyleOptionSlider(const QStyleOptionSlider & other);
-extern void* dector_ZN18QStyleOptionSliderC1ERKS_(void* arg0);
-extern void _ZN18QStyleOptionSliderC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionSlider::QStyleOptionSlider(int version);
-extern void* dector_ZN18QStyleOptionSliderC1Ei(int32_t arg0);
-extern void _ZN18QStyleOptionSliderC1Ei(void* qthis, int32_t arg0);
+extern void _ZN18QStyleOptionSliderC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionSlider::QStyleOptionSlider();
-extern void* dector_ZN18QStyleOptionSliderC1Ev();
-extern void _ZN18QStyleOptionSliderC1Ev(void* qthis);
+extern void _ZN18QStyleOptionSliderC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionFrame::QStyleOptionFrame();
-extern void* dector_ZN17QStyleOptionFrameC1Ev();
-extern void _ZN17QStyleOptionFrameC1Ev(void* qthis);
+extern void _ZN17QStyleOptionFrameC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionFrame::QStyleOptionFrame(const QStyleOptionFrame & other);
-extern void* dector_ZN17QStyleOptionFrameC1ERKS_(void* arg0);
-extern void _ZN17QStyleOptionFrameC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionFrame::QStyleOptionFrame(int version);
-extern void* dector_ZN17QStyleOptionFrameC1Ei(int32_t arg0);
-extern void _ZN17QStyleOptionFrameC1Ei(void* qthis, int32_t arg0);
+extern void _ZN17QStyleOptionFrameC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
-extern void* dector_ZN19QStyleOptionComplexC1Eii(int32_t arg0, int32_t arg1);
-extern void _ZN19QStyleOptionComplexC1Eii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZN19QStyleOptionComplexC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
   // proto:  void QStyleOptionComplex::QStyleOptionComplex(const QStyleOptionComplex & other);
-extern void* dector_ZN19QStyleOptionComplexC1ERKS_(void* arg0);
-extern void _ZN19QStyleOptionComplexC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleHintReturn::~QStyleHintReturn();
-extern void _ZN16QStyleHintReturnD0Ev(void* qthis);
+extern void _ZN19QStyleOptionComplexC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
-extern void* dector_ZN16QStyleHintReturnC1Eii(int32_t arg0, int32_t arg1);
-extern void _ZN16QStyleHintReturnC1Eii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZN16QStyleHintReturnC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
+  // proto:  void QStyleHintReturn::~QStyleHintReturn();
+extern void _ZN16QStyleHintReturnD2Ev(void* qthis); // 4
   // proto:  void QStyleOptionHeader::QStyleOptionHeader();
-extern void* dector_ZN18QStyleOptionHeaderC1Ev();
-extern void _ZN18QStyleOptionHeaderC1Ev(void* qthis);
+extern void _ZN18QStyleOptionHeaderC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionHeader::QStyleOptionHeader(const QStyleOptionHeader & other);
-extern void* dector_ZN18QStyleOptionHeaderC1ERKS_(void* arg0);
-extern void _ZN18QStyleOptionHeaderC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionHeader::QStyleOptionHeader(int version);
-extern void* dector_ZN18QStyleOptionHeaderC1Ei(int32_t arg0);
-extern void _ZN18QStyleOptionHeaderC1Ei(void* qthis, int32_t arg0);
+extern void _ZN18QStyleOptionHeaderC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
-extern void* dector_ZN19QStyleOptionToolBoxC1Ev();
-extern void _ZN19QStyleOptionToolBoxC1Ev(void* qthis);
+extern void _ZN19QStyleOptionToolBoxC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(const QStyleOptionToolBox & other);
-extern void* dector_ZN19QStyleOptionToolBoxC1ERKS_(void* arg0);
-extern void _ZN19QStyleOptionToolBoxC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox(int version);
-extern void* dector_ZN19QStyleOptionToolBoxC1Ei(int32_t arg0);
-extern void _ZN19QStyleOptionToolBoxC1Ei(void* qthis, int32_t arg0);
-  // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(int version);
-extern void* dector_ZN21QStyleOptionFocusRectC1Ei(int32_t arg0);
-extern void _ZN21QStyleOptionFocusRectC1Ei(void* qthis, int32_t arg0);
+extern void _ZN19QStyleOptionToolBoxC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect();
-extern void* dector_ZN21QStyleOptionFocusRectC1Ev();
-extern void _ZN21QStyleOptionFocusRectC1Ev(void* qthis);
+extern void _ZN21QStyleOptionFocusRectC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(const QStyleOptionFocusRect & other);
-extern void* dector_ZN21QStyleOptionFocusRectC1ERKS_(void* arg0);
-extern void _ZN21QStyleOptionFocusRectC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
-extern void* dector_ZN20QStyleOptionGroupBoxC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionGroupBoxC1Ei(void* qthis, int32_t arg0);
+extern void _ZN21QStyleOptionFocusRectC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(const QStyleOptionGroupBox & other);
-extern void* dector_ZN20QStyleOptionGroupBoxC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionGroupBoxC1ERKS_(void* qthis, void* arg0);
+extern void _ZN20QStyleOptionGroupBoxC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox();
-extern void* dector_ZN20QStyleOptionGroupBoxC1Ev();
-extern void _ZN20QStyleOptionGroupBoxC1Ev(void* qthis);
+extern void _ZN20QStyleOptionGroupBoxC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
-extern void* dector_ZN15QStyleOptionTabC1ERKS_(void* arg0);
-extern void _ZN15QStyleOptionTabC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionTab::QStyleOptionTab(int version);
-extern void* dector_ZN15QStyleOptionTabC1Ei(int32_t arg0);
-extern void _ZN15QStyleOptionTabC1Ei(void* qthis, int32_t arg0);
+extern void _ZN15QStyleOptionTabC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionTab::QStyleOptionTab();
-extern void* dector_ZN15QStyleOptionTabC1Ev();
-extern void _ZN15QStyleOptionTabC1Ev(void* qthis);
+extern void _ZN15QStyleOptionTabC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase();
-extern void* dector_ZN22QStyleOptionTabBarBaseC1Ev();
-extern void _ZN22QStyleOptionTabBarBaseC1Ev(void* qthis);
-  // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(int version);
-extern void* dector_ZN22QStyleOptionTabBarBaseC1Ei(int32_t arg0);
-extern void _ZN22QStyleOptionTabBarBaseC1Ei(void* qthis, int32_t arg0);
+extern void _ZN22QStyleOptionTabBarBaseC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase(const QStyleOptionTabBarBase & other);
-extern void* dector_ZN22QStyleOptionTabBarBaseC1ERKS_(void* arg0);
-extern void _ZN22QStyleOptionTabBarBaseC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(int version);
-extern void* dector_ZN22QStyleOptionRubberBandC1Ei(int32_t arg0);
-extern void _ZN22QStyleOptionRubberBandC1Ei(void* qthis, int32_t arg0);
+extern void _ZN22QStyleOptionTabBarBaseC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand();
-extern void* dector_ZN22QStyleOptionRubberBandC1Ev();
-extern void _ZN22QStyleOptionRubberBandC1Ev(void* qthis);
+extern void _ZN22QStyleOptionRubberBandC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(const QStyleOptionRubberBand & other);
-extern void* dector_ZN22QStyleOptionRubberBandC1ERKS_(void* arg0);
-extern void _ZN22QStyleOptionRubberBandC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionButton::QStyleOptionButton(int version);
-extern void* dector_ZN18QStyleOptionButtonC1Ei(int32_t arg0);
-extern void _ZN18QStyleOptionButtonC1Ei(void* qthis, int32_t arg0);
+extern void _ZN22QStyleOptionRubberBandC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionButton::QStyleOptionButton();
-extern void* dector_ZN18QStyleOptionButtonC1Ev();
-extern void _ZN18QStyleOptionButtonC1Ev(void* qthis);
+extern void _ZN18QStyleOptionButtonC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionButton::QStyleOptionButton(const QStyleOptionButton & other);
-extern void* dector_ZN18QStyleOptionButtonC1ERKS_(void* arg0);
-extern void _ZN18QStyleOptionButtonC1ERKS_(void* qthis, void* arg0);
+extern void _ZN18QStyleOptionButtonC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
-extern void* dector_ZN20QStyleHintReturnMaskC1Ev();
-extern void _ZN20QStyleHintReturnMaskC1Ev(void* qthis);
+extern void _ZN20QStyleHintReturnMaskC2Ev(void* qthis); // 3
   // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
-extern void _ZN20QStyleHintReturnMaskD0Ev(void* qthis);
-  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
-extern void* dector_ZN22QStyleOptionToolButtonC1Ei(int32_t arg0);
-extern void _ZN22QStyleOptionToolButtonC1Ei(void* qthis, int32_t arg0);
+extern void _ZN20QStyleHintReturnMaskD2Ev(void* qthis); // 4
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton();
-extern void* dector_ZN22QStyleOptionToolButtonC1Ev();
-extern void _ZN22QStyleOptionToolButtonC1Ev(void* qthis);
+extern void _ZN22QStyleOptionToolButtonC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(const QStyleOptionToolButton & other);
-extern void* dector_ZN22QStyleOptionToolButtonC1ERKS_(void* arg0);
-extern void _ZN22QStyleOptionToolButtonC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(int version);
-extern void* dector_ZN20QStyleOptionSizeGripC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionSizeGripC1Ei(void* qthis, int32_t arg0);
+extern void _ZN22QStyleOptionToolButtonC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip();
-extern void* dector_ZN20QStyleOptionSizeGripC1Ev();
-extern void _ZN20QStyleOptionSizeGripC1Ev(void* qthis);
+extern void _ZN20QStyleOptionSizeGripC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(const QStyleOptionSizeGrip & other);
-extern void* dector_ZN20QStyleOptionSizeGripC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionSizeGripC1ERKS_(void* qthis, void* arg0);
+extern void _ZN20QStyleOptionSizeGripC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
-extern void* dector_ZN20QStyleOptionViewItemC1ERKS_(void* arg0);
-extern void _ZN20QStyleOptionViewItemC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(int version);
-extern void* dector_ZN20QStyleOptionViewItemC1Ei(int32_t arg0);
-extern void _ZN20QStyleOptionViewItemC1Ei(void* qthis, int32_t arg0);
+extern void _ZN20QStyleOptionViewItemC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionViewItem::QStyleOptionViewItem();
-extern void* dector_ZN20QStyleOptionViewItemC1Ev();
-extern void _ZN20QStyleOptionViewItemC1Ev(void* qthis);
+extern void _ZN20QStyleOptionViewItemC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
-extern void* dector_ZN19QStyleOptionSpinBoxC1Ev();
-extern void _ZN19QStyleOptionSpinBoxC1Ev(void* qthis);
+extern void _ZN19QStyleOptionSpinBoxC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(const QStyleOptionSpinBox & other);
-extern void* dector_ZN19QStyleOptionSpinBoxC1ERKS_(void* arg0);
-extern void _ZN19QStyleOptionSpinBoxC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox(int version);
-extern void* dector_ZN19QStyleOptionSpinBoxC1Ei(int32_t arg0);
-extern void _ZN19QStyleOptionSpinBoxC1Ei(void* qthis, int32_t arg0);
+extern void _ZN19QStyleOptionSpinBoxC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(const QStyleOptionToolBar & other);
-extern void* dector_ZN19QStyleOptionToolBarC1ERKS_(void* arg0);
-extern void _ZN19QStyleOptionToolBarC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(int version);
-extern void* dector_ZN19QStyleOptionToolBarC1Ei(int32_t arg0);
-extern void _ZN19QStyleOptionToolBarC1Ei(void* qthis, int32_t arg0);
+extern void _ZN19QStyleOptionToolBarC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionToolBar::QStyleOptionToolBar();
-extern void* dector_ZN19QStyleOptionToolBarC1Ev();
-extern void _ZN19QStyleOptionToolBarC1Ev(void* qthis);
+extern void _ZN19QStyleOptionToolBarC2Ev(void* qthis); // 3
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
-extern void* dector_ZN26QStyleOptionTabWidgetFrameC1ERKS_(void* arg0);
-extern void demth_ZN26QStyleOptionTabWidgetFrameC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(int version);
-extern void* dector_ZN26QStyleOptionTabWidgetFrameC1Ei(int32_t arg0);
-extern void _ZN26QStyleOptionTabWidgetFrameC1Ei(void* qthis, int32_t arg0);
+extern void _ZN26QStyleOptionTabWidgetFrameC2ERKS_(void* qthis, void* arg0); // 1
   // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame();
-extern void* dector_ZN26QStyleOptionTabWidgetFrameC1Ev();
-extern void _ZN26QStyleOptionTabWidgetFrameC1Ev(void* qthis);
+extern void _ZN26QStyleOptionTabWidgetFrameC2Ev(void* qthis); // 3
 */
 import "C"
 // } // <= ext block end
@@ -439,74 +318,229 @@ type QStyleOptionTabWidgetFrame struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QStyleOptionComboBox::QStyleOptionComboBox(const QStyleOptionComboBox & other);
+// QStyleOptionComboBox(const class QStyleOptionComboBox &)
 func NewQStyleOptionComboBox(args ...interface{}) QStyleOptionComboBox {
-  return QStyleOptionComboBox{}
-}
-
-  // proto:  void QStyleOptionMenuItem::QStyleOptionMenuItem(const QStyleOptionMenuItem & other);
-func NewQStyleOptionMenuItem(args ...interface{}) QStyleOptionMenuItem {
-  return QStyleOptionMenuItem{}
-}
-
-  // proto:  void QStyleHintReturnVariant::~QStyleHintReturnVariant();
-func (this *QStyleHintReturnVariant) FreeQStyleHintReturnVariant(args ...interface{}) () {
+  // QStyleOptionComboBox(const class QStyleOptionComboBox &)
+  // QStyleOptionComboBox()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionComboBox{}) // "const QStyleOptionComboBox &"
+  vtys[1] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionComboBoxC1ERKS_
+    // invoke: void QStyleOptionComboBox(const class QStyleOptionComboBox &)
+    var arg0 = args[0].(QStyleOptionComboBox).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionComboBoxC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN20QStyleOptionComboBoxC1Ev
+    // invoke: void QStyleOptionComboBox()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionComboBoxC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionComboBox", "QStyleOptionComboBox", args)
+  }
+
+  return QStyleOptionComboBox{}
+}
+
+// QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
+func NewQStyleOptionMenuItem(args ...interface{}) QStyleOptionMenuItem {
+  // QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
+  // QStyleOptionMenuItem()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionMenuItem{}) // "const QStyleOptionMenuItem &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionMenuItemC1ERKS_
+    // invoke: void QStyleOptionMenuItem(const class QStyleOptionMenuItem &)
+    var arg0 = args[0].(QStyleOptionMenuItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionMenuItemC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN20QStyleOptionMenuItemC1Ev
+    // invoke: void QStyleOptionMenuItem()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionMenuItemC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionMenuItem", "QStyleOptionMenuItem", args)
+  }
+
+  return QStyleOptionMenuItem{}
+}
+
+// ~QStyleHintReturnVariant()
+func (this *QStyleHintReturnVariant) FreeQStyleHintReturnVariant(args ...interface{}) () {
+  // ~QStyleHintReturnVariant()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QStyleHintReturnVariantD0Ev
+    // invoke: void ~QStyleHintReturnVariant()
+    C._ZN23QStyleHintReturnVariantD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturnVariant", "~QStyleHintReturnVariant", args)
   }
 
 }
 
-  // proto:  void QStyleHintReturnVariant::QStyleHintReturnVariant();
+// QStyleHintReturnVariant()
 func NewQStyleHintReturnVariant(args ...interface{}) QStyleHintReturnVariant {
-  return QStyleHintReturnVariant{}
-}
-
-  // proto:  void QStyleOptionTitleBar::QStyleOptionTitleBar(int version);
-func NewQStyleOptionTitleBar(args ...interface{}) QStyleOptionTitleBar {
-  return QStyleOptionTitleBar{}
-}
-
-  // proto:  void QStyleOptionGraphicsItem::QStyleOptionGraphicsItem();
-func NewQStyleOptionGraphicsItem(args ...interface{}) QStyleOptionGraphicsItem {
-  return QStyleOptionGraphicsItem{}
-}
-
-  // proto: static qreal QStyleOptionGraphicsItem::levelOfDetailFromTransform(const QTransform & worldTransform);
-func (this *QStyleOptionGraphicsItem) levelOfDetailFromTransform_s(args ...interface{}) () {
+  // QStyleHintReturnVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN23QStyleHintReturnVariantC1Ev
+    // invoke: void QStyleHintReturnVariant()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QStyleHintReturnVariantC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleHintReturnVariant", "QStyleHintReturnVariant", args)
+  }
+
+  return QStyleHintReturnVariant{}
+}
+
+// QStyleOptionTitleBar()
+func NewQStyleOptionTitleBar(args ...interface{}) QStyleOptionTitleBar {
+  // QStyleOptionTitleBar()
+  // QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionTitleBar{}) // "const QStyleOptionTitleBar &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionTitleBarC1Ev
+    // invoke: void QStyleOptionTitleBar()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionTitleBarC2Ev(qthis)
+  case 1:
+    // invoke: _ZN20QStyleOptionTitleBarC1ERKS_
+    // invoke: void QStyleOptionTitleBar(const class QStyleOptionTitleBar &)
+    var arg0 = args[0].(QStyleOptionTitleBar).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionTitleBarC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionTitleBar", "QStyleOptionTitleBar", args)
+  }
+
+  return QStyleOptionTitleBar{}
+}
+
+// levelOfDetailFromTransform(const class QTransform &)
+func (this *QStyleOptionGraphicsItem) levelOfDetailFromTransform_s(args ...interface{}) () {
+  // levelOfDetailFromTransform(const class QTransform &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTransform{}) // "const QTransform &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform
+    // invoke: qreal levelOfDetailFromTransform(const class QTransform &)
+    var arg0 = args[0].(QTransform).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN24QStyleOptionGraphicsItem26levelOfDetailFromTransformERK10QTransform(arg0)
   default:
     qtrt.ErrorResolve("QStyleOptionGraphicsItem", "levelOfDetailFromTransform", args)
   }
 
 }
 
-  // proto:  void QStyleOption::~QStyleOption();
-func (this *QStyleOption) FreeQStyleOption(args ...interface{}) () {
+// QStyleOptionGraphicsItem()
+func NewQStyleOptionGraphicsItem(args ...interface{}) QStyleOptionGraphicsItem {
+  // QStyleOptionGraphicsItem()
+  // QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionGraphicsItem{}) // "const QStyleOptionGraphicsItem &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN24QStyleOptionGraphicsItemC1Ev
+    // invoke: void QStyleOptionGraphicsItem()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN24QStyleOptionGraphicsItemC2Ev(qthis)
+  case 1:
+    // invoke: _ZN24QStyleOptionGraphicsItemC1ERKS_
+    // invoke: void QStyleOptionGraphicsItem(const class QStyleOptionGraphicsItem &)
+    var arg0 = args[0].(QStyleOptionGraphicsItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN24QStyleOptionGraphicsItemC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionGraphicsItem", "QStyleOptionGraphicsItem", args)
+  }
+
+  return QStyleOptionGraphicsItem{}
+}
+
+// ~QStyleOption()
+func (this *QStyleOption) FreeQStyleOption(args ...interface{}) () {
+  // ~QStyleOption()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QStyleOptionD0Ev
+    // invoke: void ~QStyleOption()
+    C._ZN12QStyleOptionD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleOption", "~QStyleOption", args)
   }
 
 }
 
-  // proto:  void QStyleOption::init(const QWidget * w);
+// init(const class QWidget *)
 func (this *QStyleOption) init(args ...interface{}) () {
   // init(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -529,12 +563,47 @@ func (this *QStyleOption) init(args ...interface{}) () {
 
 }
 
-  // proto:  void QStyleOption::QStyleOption(const QStyleOption & other);
+// QStyleOption(const class QStyleOption &)
 func NewQStyleOption(args ...interface{}) QStyleOption {
+  // QStyleOption(const class QStyleOption &)
+  // QStyleOption(int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOption{}) // "const QStyleOption &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.Int32Ty(false) // "int"
+  vtys[1][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN12QStyleOptionC1ERKS_
+    // invoke: void QStyleOption(const class QStyleOption &)
+    var arg0 = args[0].(QStyleOption).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN12QStyleOptionC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN12QStyleOptionC1Eii
+    // invoke: void QStyleOption(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN12QStyleOptionC2Eii(qthis, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QStyleOption", "QStyleOption", args)
+  }
+
   return QStyleOption{}
 }
 
-  // proto:  void QStyleOption::initFrom(const QWidget * w);
+// initFrom(const class QWidget *)
 func (this *QStyleOption) initFrom(args ...interface{}) () {
   // initFrom(const class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -550,143 +619,754 @@ func (this *QStyleOption) initFrom(args ...interface{}) () {
     // invoke: void initFrom(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.demth_ZN12QStyleOption8initFromEPK7QWidget(this.qclsinst, arg0)
+    C._ZN12QStyleOption8initFromEPK7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QStyleOption", "initFrom", args)
   }
 
 }
 
-  // proto:  void QStyleOptionDockWidget::QStyleOptionDockWidget();
+// QStyleOptionDockWidget()
 func NewQStyleOptionDockWidget(args ...interface{}) QStyleOptionDockWidget {
-  return QStyleOptionDockWidget{}
-}
-
-  // proto:  void QStyleOptionProgressBar::QStyleOptionProgressBar(const QStyleOptionProgressBar & other);
-func NewQStyleOptionProgressBar(args ...interface{}) QStyleOptionProgressBar {
-  return QStyleOptionProgressBar{}
-}
-
-  // proto:  void QStyleOptionSlider::QStyleOptionSlider(const QStyleOptionSlider & other);
-func NewQStyleOptionSlider(args ...interface{}) QStyleOptionSlider {
-  return QStyleOptionSlider{}
-}
-
-  // proto:  void QStyleOptionFrame::QStyleOptionFrame();
-func NewQStyleOptionFrame(args ...interface{}) QStyleOptionFrame {
-  return QStyleOptionFrame{}
-}
-
-  // proto:  void QStyleOptionComplex::QStyleOptionComplex(int version, int type);
-func NewQStyleOptionComplex(args ...interface{}) QStyleOptionComplex {
-  return QStyleOptionComplex{}
-}
-
-  // proto:  void QStyleHintReturn::~QStyleHintReturn();
-func (this *QStyleHintReturn) FreeQStyleHintReturn(args ...interface{}) () {
+  // QStyleOptionDockWidget()
+  // QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionDockWidget{}) // "const QStyleOptionDockWidget &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN22QStyleOptionDockWidgetC1Ev
+    // invoke: void QStyleOptionDockWidget()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionDockWidgetC2Ev(qthis)
+  case 1:
+    // invoke: _ZN22QStyleOptionDockWidgetC1ERKS_
+    // invoke: void QStyleOptionDockWidget(const class QStyleOptionDockWidget &)
+    var arg0 = args[0].(QStyleOptionDockWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionDockWidgetC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionDockWidget", "QStyleOptionDockWidget", args)
+  }
+
+  return QStyleOptionDockWidget{}
+}
+
+// QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
+func NewQStyleOptionProgressBar(args ...interface{}) QStyleOptionProgressBar {
+  // QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
+  // QStyleOptionProgressBar()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionProgressBar{}) // "const QStyleOptionProgressBar &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QStyleOptionProgressBarC1ERKS_
+    // invoke: void QStyleOptionProgressBar(const class QStyleOptionProgressBar &)
+    var arg0 = args[0].(QStyleOptionProgressBar).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QStyleOptionProgressBarC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN23QStyleOptionProgressBarC1Ev
+    // invoke: void QStyleOptionProgressBar()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QStyleOptionProgressBarC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionProgressBar", "QStyleOptionProgressBar", args)
+  }
+
+  return QStyleOptionProgressBar{}
+}
+
+// QStyleOptionSlider(const class QStyleOptionSlider &)
+func NewQStyleOptionSlider(args ...interface{}) QStyleOptionSlider {
+  // QStyleOptionSlider(const class QStyleOptionSlider &)
+  // QStyleOptionSlider()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionSlider{}) // "const QStyleOptionSlider &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QStyleOptionSliderC1ERKS_
+    // invoke: void QStyleOptionSlider(const class QStyleOptionSlider &)
+    var arg0 = args[0].(QStyleOptionSlider).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionSliderC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN18QStyleOptionSliderC1Ev
+    // invoke: void QStyleOptionSlider()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionSliderC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionSlider", "QStyleOptionSlider", args)
+  }
+
+  return QStyleOptionSlider{}
+}
+
+// QStyleOptionFrame()
+func NewQStyleOptionFrame(args ...interface{}) QStyleOptionFrame {
+  // QStyleOptionFrame()
+  // QStyleOptionFrame(const class QStyleOptionFrame &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionFrame{}) // "const QStyleOptionFrame &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN17QStyleOptionFrameC1Ev
+    // invoke: void QStyleOptionFrame()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN17QStyleOptionFrameC2Ev(qthis)
+  case 1:
+    // invoke: _ZN17QStyleOptionFrameC1ERKS_
+    // invoke: void QStyleOptionFrame(const class QStyleOptionFrame &)
+    var arg0 = args[0].(QStyleOptionFrame).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN17QStyleOptionFrameC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionFrame", "QStyleOptionFrame", args)
+  }
+
+  return QStyleOptionFrame{}
+}
+
+// QStyleOptionComplex(int, int)
+func NewQStyleOptionComplex(args ...interface{}) QStyleOptionComplex {
+  // QStyleOptionComplex(int, int)
+  // QStyleOptionComplex(const class QStyleOptionComplex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionComplex{}) // "const QStyleOptionComplex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QStyleOptionComplexC1Eii
+    // invoke: void QStyleOptionComplex(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionComplexC2Eii(qthis, arg0, arg1)
+  case 1:
+    // invoke: _ZN19QStyleOptionComplexC1ERKS_
+    // invoke: void QStyleOptionComplex(const class QStyleOptionComplex &)
+    var arg0 = args[0].(QStyleOptionComplex).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionComplexC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionComplex", "QStyleOptionComplex", args)
+  }
+
+  return QStyleOptionComplex{}
+}
+
+// QStyleHintReturn(int, int)
+func NewQStyleHintReturn(args ...interface{}) QStyleHintReturn {
+  // QStyleHintReturn(int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QStyleHintReturnC1Eii
+    // invoke: void QStyleHintReturn(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QStyleHintReturnC2Eii(qthis, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QStyleHintReturn", "QStyleHintReturn", args)
+  }
+
+  return QStyleHintReturn{}
+}
+
+// ~QStyleHintReturn()
+func (this *QStyleHintReturn) FreeQStyleHintReturn(args ...interface{}) () {
+  // ~QStyleHintReturn()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QStyleHintReturnD0Ev
+    // invoke: void ~QStyleHintReturn()
+    C._ZN16QStyleHintReturnD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturn", "~QStyleHintReturn", args)
   }
 
 }
 
-  // proto:  void QStyleHintReturn::QStyleHintReturn(int version, int type);
-func NewQStyleHintReturn(args ...interface{}) QStyleHintReturn {
-  return QStyleHintReturn{}
-}
-
-  // proto:  void QStyleOptionHeader::QStyleOptionHeader();
+// QStyleOptionHeader()
 func NewQStyleOptionHeader(args ...interface{}) QStyleOptionHeader {
-  return QStyleOptionHeader{}
-}
-
-  // proto:  void QStyleOptionToolBox::QStyleOptionToolBox();
-func NewQStyleOptionToolBox(args ...interface{}) QStyleOptionToolBox {
-  return QStyleOptionToolBox{}
-}
-
-  // proto:  void QStyleOptionFocusRect::QStyleOptionFocusRect(int version);
-func NewQStyleOptionFocusRect(args ...interface{}) QStyleOptionFocusRect {
-  return QStyleOptionFocusRect{}
-}
-
-  // proto:  void QStyleOptionGroupBox::QStyleOptionGroupBox(int version);
-func NewQStyleOptionGroupBox(args ...interface{}) QStyleOptionGroupBox {
-  return QStyleOptionGroupBox{}
-}
-
-  // proto:  void QStyleOptionTab::QStyleOptionTab(const QStyleOptionTab & other);
-func NewQStyleOptionTab(args ...interface{}) QStyleOptionTab {
-  return QStyleOptionTab{}
-}
-
-  // proto:  void QStyleOptionTabBarBase::QStyleOptionTabBarBase();
-func NewQStyleOptionTabBarBase(args ...interface{}) QStyleOptionTabBarBase {
-  return QStyleOptionTabBarBase{}
-}
-
-  // proto:  void QStyleOptionRubberBand::QStyleOptionRubberBand(int version);
-func NewQStyleOptionRubberBand(args ...interface{}) QStyleOptionRubberBand {
-  return QStyleOptionRubberBand{}
-}
-
-  // proto:  void QStyleOptionButton::QStyleOptionButton(int version);
-func NewQStyleOptionButton(args ...interface{}) QStyleOptionButton {
-  return QStyleOptionButton{}
-}
-
-  // proto:  void QStyleHintReturnMask::QStyleHintReturnMask();
-func NewQStyleHintReturnMask(args ...interface{}) QStyleHintReturnMask {
-  return QStyleHintReturnMask{}
-}
-
-  // proto:  void QStyleHintReturnMask::~QStyleHintReturnMask();
-func (this *QStyleHintReturnMask) FreeQStyleHintReturnMask(args ...interface{}) () {
+  // QStyleOptionHeader()
+  // QStyleOptionHeader(const class QStyleOptionHeader &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionHeader{}) // "const QStyleOptionHeader &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN18QStyleOptionHeaderC1Ev
+    // invoke: void QStyleOptionHeader()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionHeaderC2Ev(qthis)
+  case 1:
+    // invoke: _ZN18QStyleOptionHeaderC1ERKS_
+    // invoke: void QStyleOptionHeader(const class QStyleOptionHeader &)
+    var arg0 = args[0].(QStyleOptionHeader).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionHeaderC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionHeader", "QStyleOptionHeader", args)
+  }
+
+  return QStyleOptionHeader{}
+}
+
+// QStyleOptionToolBox()
+func NewQStyleOptionToolBox(args ...interface{}) QStyleOptionToolBox {
+  // QStyleOptionToolBox()
+  // QStyleOptionToolBox(const class QStyleOptionToolBox &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionToolBox{}) // "const QStyleOptionToolBox &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QStyleOptionToolBoxC1Ev
+    // invoke: void QStyleOptionToolBox()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionToolBoxC2Ev(qthis)
+  case 1:
+    // invoke: _ZN19QStyleOptionToolBoxC1ERKS_
+    // invoke: void QStyleOptionToolBox(const class QStyleOptionToolBox &)
+    var arg0 = args[0].(QStyleOptionToolBox).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionToolBoxC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionToolBox", "QStyleOptionToolBox", args)
+  }
+
+  return QStyleOptionToolBox{}
+}
+
+// QStyleOptionFocusRect()
+func NewQStyleOptionFocusRect(args ...interface{}) QStyleOptionFocusRect {
+  // QStyleOptionFocusRect()
+  // QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionFocusRect{}) // "const QStyleOptionFocusRect &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN21QStyleOptionFocusRectC1Ev
+    // invoke: void QStyleOptionFocusRect()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QStyleOptionFocusRectC2Ev(qthis)
+  case 1:
+    // invoke: _ZN21QStyleOptionFocusRectC1ERKS_
+    // invoke: void QStyleOptionFocusRect(const class QStyleOptionFocusRect &)
+    var arg0 = args[0].(QStyleOptionFocusRect).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QStyleOptionFocusRectC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionFocusRect", "QStyleOptionFocusRect", args)
+  }
+
+  return QStyleOptionFocusRect{}
+}
+
+// QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
+func NewQStyleOptionGroupBox(args ...interface{}) QStyleOptionGroupBox {
+  // QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
+  // QStyleOptionGroupBox()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionGroupBox{}) // "const QStyleOptionGroupBox &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionGroupBoxC1ERKS_
+    // invoke: void QStyleOptionGroupBox(const class QStyleOptionGroupBox &)
+    var arg0 = args[0].(QStyleOptionGroupBox).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionGroupBoxC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN20QStyleOptionGroupBoxC1Ev
+    // invoke: void QStyleOptionGroupBox()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionGroupBoxC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionGroupBox", "QStyleOptionGroupBox", args)
+  }
+
+  return QStyleOptionGroupBox{}
+}
+
+// QStyleOptionTab(const class QStyleOptionTab &)
+func NewQStyleOptionTab(args ...interface{}) QStyleOptionTab {
+  // QStyleOptionTab(const class QStyleOptionTab &)
+  // QStyleOptionTab()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionTab{}) // "const QStyleOptionTab &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QStyleOptionTabC1ERKS_
+    // invoke: void QStyleOptionTab(const class QStyleOptionTab &)
+    var arg0 = args[0].(QStyleOptionTab).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QStyleOptionTabC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN15QStyleOptionTabC1Ev
+    // invoke: void QStyleOptionTab()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QStyleOptionTabC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionTab", "QStyleOptionTab", args)
+  }
+
+  return QStyleOptionTab{}
+}
+
+// QStyleOptionTabBarBase()
+func NewQStyleOptionTabBarBase(args ...interface{}) QStyleOptionTabBarBase {
+  // QStyleOptionTabBarBase()
+  // QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionTabBarBase{}) // "const QStyleOptionTabBarBase &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QStyleOptionTabBarBaseC1Ev
+    // invoke: void QStyleOptionTabBarBase()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionTabBarBaseC2Ev(qthis)
+  case 1:
+    // invoke: _ZN22QStyleOptionTabBarBaseC1ERKS_
+    // invoke: void QStyleOptionTabBarBase(const class QStyleOptionTabBarBase &)
+    var arg0 = args[0].(QStyleOptionTabBarBase).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionTabBarBaseC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionTabBarBase", "QStyleOptionTabBarBase", args)
+  }
+
+  return QStyleOptionTabBarBase{}
+}
+
+// QStyleOptionRubberBand()
+func NewQStyleOptionRubberBand(args ...interface{}) QStyleOptionRubberBand {
+  // QStyleOptionRubberBand()
+  // QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionRubberBand{}) // "const QStyleOptionRubberBand &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QStyleOptionRubberBandC1Ev
+    // invoke: void QStyleOptionRubberBand()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionRubberBandC2Ev(qthis)
+  case 1:
+    // invoke: _ZN22QStyleOptionRubberBandC1ERKS_
+    // invoke: void QStyleOptionRubberBand(const class QStyleOptionRubberBand &)
+    var arg0 = args[0].(QStyleOptionRubberBand).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionRubberBandC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionRubberBand", "QStyleOptionRubberBand", args)
+  }
+
+  return QStyleOptionRubberBand{}
+}
+
+// QStyleOptionButton()
+func NewQStyleOptionButton(args ...interface{}) QStyleOptionButton {
+  // QStyleOptionButton()
+  // QStyleOptionButton(const class QStyleOptionButton &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionButton{}) // "const QStyleOptionButton &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QStyleOptionButtonC1Ev
+    // invoke: void QStyleOptionButton()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionButtonC2Ev(qthis)
+  case 1:
+    // invoke: _ZN18QStyleOptionButtonC1ERKS_
+    // invoke: void QStyleOptionButton(const class QStyleOptionButton &)
+    var arg0 = args[0].(QStyleOptionButton).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QStyleOptionButtonC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionButton", "QStyleOptionButton", args)
+  }
+
+  return QStyleOptionButton{}
+}
+
+// QStyleHintReturnMask()
+func NewQStyleHintReturnMask(args ...interface{}) QStyleHintReturnMask {
+  // QStyleHintReturnMask()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleHintReturnMaskC1Ev
+    // invoke: void QStyleHintReturnMask()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleHintReturnMaskC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleHintReturnMask", "QStyleHintReturnMask", args)
+  }
+
+  return QStyleHintReturnMask{}
+}
+
+// ~QStyleHintReturnMask()
+func (this *QStyleHintReturnMask) FreeQStyleHintReturnMask(args ...interface{}) () {
+  // ~QStyleHintReturnMask()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleHintReturnMaskD0Ev
+    // invoke: void ~QStyleHintReturnMask()
+    C._ZN20QStyleHintReturnMaskD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QStyleHintReturnMask", "~QStyleHintReturnMask", args)
   }
 
 }
 
-  // proto:  void QStyleOptionToolButton::QStyleOptionToolButton(int version);
+// QStyleOptionToolButton()
 func NewQStyleOptionToolButton(args ...interface{}) QStyleOptionToolButton {
+  // QStyleOptionToolButton()
+  // QStyleOptionToolButton(const class QStyleOptionToolButton &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionToolButton{}) // "const QStyleOptionToolButton &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN22QStyleOptionToolButtonC1Ev
+    // invoke: void QStyleOptionToolButton()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionToolButtonC2Ev(qthis)
+  case 1:
+    // invoke: _ZN22QStyleOptionToolButtonC1ERKS_
+    // invoke: void QStyleOptionToolButton(const class QStyleOptionToolButton &)
+    var arg0 = args[0].(QStyleOptionToolButton).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN22QStyleOptionToolButtonC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionToolButton", "QStyleOptionToolButton", args)
+  }
+
   return QStyleOptionToolButton{}
 }
 
-  // proto:  void QStyleOptionSizeGrip::QStyleOptionSizeGrip(int version);
+// QStyleOptionSizeGrip()
 func NewQStyleOptionSizeGrip(args ...interface{}) QStyleOptionSizeGrip {
+  // QStyleOptionSizeGrip()
+  // QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionSizeGrip{}) // "const QStyleOptionSizeGrip &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionSizeGripC1Ev
+    // invoke: void QStyleOptionSizeGrip()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionSizeGripC2Ev(qthis)
+  case 1:
+    // invoke: _ZN20QStyleOptionSizeGripC1ERKS_
+    // invoke: void QStyleOptionSizeGrip(const class QStyleOptionSizeGrip &)
+    var arg0 = args[0].(QStyleOptionSizeGrip).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionSizeGripC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionSizeGrip", "QStyleOptionSizeGrip", args)
+  }
+
   return QStyleOptionSizeGrip{}
 }
 
-  // proto:  void QStyleOptionViewItem::QStyleOptionViewItem(const QStyleOptionViewItem & other);
+// QStyleOptionViewItem(const class QStyleOptionViewItem &)
 func NewQStyleOptionViewItem(args ...interface{}) QStyleOptionViewItem {
+  // QStyleOptionViewItem(const class QStyleOptionViewItem &)
+  // QStyleOptionViewItem()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionViewItem{}) // "const QStyleOptionViewItem &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN20QStyleOptionViewItemC1ERKS_
+    // invoke: void QStyleOptionViewItem(const class QStyleOptionViewItem &)
+    var arg0 = args[0].(QStyleOptionViewItem).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionViewItemC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN20QStyleOptionViewItemC1Ev
+    // invoke: void QStyleOptionViewItem()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN20QStyleOptionViewItemC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionViewItem", "QStyleOptionViewItem", args)
+  }
+
   return QStyleOptionViewItem{}
 }
 
-  // proto:  void QStyleOptionSpinBox::QStyleOptionSpinBox();
+// QStyleOptionSpinBox()
 func NewQStyleOptionSpinBox(args ...interface{}) QStyleOptionSpinBox {
+  // QStyleOptionSpinBox()
+  // QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QStyleOptionSpinBox{}) // "const QStyleOptionSpinBox &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QStyleOptionSpinBoxC1Ev
+    // invoke: void QStyleOptionSpinBox()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionSpinBoxC2Ev(qthis)
+  case 1:
+    // invoke: _ZN19QStyleOptionSpinBoxC1ERKS_
+    // invoke: void QStyleOptionSpinBox(const class QStyleOptionSpinBox &)
+    var arg0 = args[0].(QStyleOptionSpinBox).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionSpinBoxC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QStyleOptionSpinBox", "QStyleOptionSpinBox", args)
+  }
+
   return QStyleOptionSpinBox{}
 }
 
-  // proto:  void QStyleOptionToolBar::QStyleOptionToolBar(const QStyleOptionToolBar & other);
+// QStyleOptionToolBar(const class QStyleOptionToolBar &)
 func NewQStyleOptionToolBar(args ...interface{}) QStyleOptionToolBar {
+  // QStyleOptionToolBar(const class QStyleOptionToolBar &)
+  // QStyleOptionToolBar()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionToolBar{}) // "const QStyleOptionToolBar &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QStyleOptionToolBarC1ERKS_
+    // invoke: void QStyleOptionToolBar(const class QStyleOptionToolBar &)
+    var arg0 = args[0].(QStyleOptionToolBar).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionToolBarC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN19QStyleOptionToolBarC1Ev
+    // invoke: void QStyleOptionToolBar()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QStyleOptionToolBarC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionToolBar", "QStyleOptionToolBar", args)
+  }
+
   return QStyleOptionToolBar{}
 }
 
-  // proto:  void QStyleOptionTabWidgetFrame::QStyleOptionTabWidgetFrame(const QStyleOptionTabWidgetFrame & other);
+// QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
 func NewQStyleOptionTabWidgetFrame(args ...interface{}) QStyleOptionTabWidgetFrame {
+  // QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
+  // QStyleOptionTabWidgetFrame()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStyleOptionTabWidgetFrame{}) // "const QStyleOptionTabWidgetFrame &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN26QStyleOptionTabWidgetFrameC1ERKS_
+    // invoke: void QStyleOptionTabWidgetFrame(const class QStyleOptionTabWidgetFrame &)
+    var arg0 = args[0].(QStyleOptionTabWidgetFrame).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN26QStyleOptionTabWidgetFrameC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN26QStyleOptionTabWidgetFrameC1Ev
+    // invoke: void QStyleOptionTabWidgetFrame()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN26QStyleOptionTabWidgetFrameC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QStyleOptionTabWidgetFrame", "QStyleOptionTabWidgetFrame", args)
+  }
+
   return QStyleOptionTabWidgetFrame{}
 }
 

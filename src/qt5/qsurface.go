@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,10 +28,12 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QSurface::supportsOpenGL();
-extern void _ZNK8QSurface14supportsOpenGLEv(void* qthis);
   // proto:  void QSurface::~QSurface();
-extern void _ZN8QSurfaceD0Ev(void* qthis);
+extern void _ZN8QSurfaceD2Ev(void* qthis); // 4
+  // proto:  QSurface::SurfaceClass QSurface::surfaceClass();
+extern void _ZNK8QSurface12surfaceClassEv(void* qthis); // 4
+  // proto:  bool QSurface::supportsOpenGL();
+extern void _ZNK8QSurface14supportsOpenGLEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -54,7 +52,47 @@ type QSurface struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QSurface::supportsOpenGL();
+// ~QSurface()
+func (this *QSurface) FreeQSurface(args ...interface{}) () {
+  // ~QSurface()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN8QSurfaceD0Ev
+    // invoke: void ~QSurface()
+    C._ZN8QSurfaceD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSurface", "~QSurface", args)
+  }
+
+}
+
+// surfaceClass()
+func (this *QSurface) surfaceClass(args ...interface{}) () {
+  // surfaceClass()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK8QSurface12surfaceClassEv
+    // invoke: QSurface::SurfaceClass surfaceClass()
+    C._ZNK8QSurface12surfaceClassEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSurface", "surfaceClass", args)
+  }
+
+}
+
+// supportsOpenGL()
 func (this *QSurface) supportsOpenGL(args ...interface{}) () {
   // supportsOpenGL()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -70,20 +108,6 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
     C._ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
-  }
-
-}
-
-  // proto:  void QSurface::~QSurface();
-func (this *QSurface) FreeQSurface(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QSurface", "~QSurface", args)
   }
 
 }

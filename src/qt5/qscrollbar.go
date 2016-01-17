@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,20 +28,16 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QScrollBar::event(QEvent * event);
-extern void _ZN10QScrollBar5eventEP6QEvent(void* qthis, void* arg0);
-  // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-extern void* dector_ZN10QScrollBarC1ERKS_(void* arg0);
-extern void _ZN10QScrollBarC1ERKS_(void* qthis, void* arg0);
   // proto:  const QMetaObject * QScrollBar::metaObject();
-extern void _ZNK10QScrollBar10metaObjectEv(void* qthis);
+extern void _ZNK10QScrollBar10metaObjectEv(void* qthis); // 4
   // proto:  QSize QScrollBar::sizeHint();
-extern void _ZNK10QScrollBar8sizeHintEv(void* qthis);
+extern void _ZNK10QScrollBar8sizeHintEv(void* qthis); // 4
   // proto:  void QScrollBar::QScrollBar(QWidget * parent);
-extern void* dector_ZN10QScrollBarC1EP7QWidget(void* arg0);
-extern void _ZN10QScrollBarC1EP7QWidget(void* qthis, void* arg0);
+extern void _ZN10QScrollBarC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  void QScrollBar::~QScrollBar();
-extern void _ZN10QScrollBarD0Ev(void* qthis);
+extern void _ZN10QScrollBarD2Ev(void* qthis); // 4
+  // proto:  bool QScrollBar::event(QEvent * event);
+extern void _ZN10QScrollBar5eventEP6QEvent(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -64,35 +56,7 @@ type QScrollBar struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QScrollBar::event(QEvent * event);
-func (this *QScrollBar) event(args ...interface{}) () {
-  // event(class QEvent *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QScrollBar5eventEP6QEvent
-    // invoke: bool event(class QEvent *)
-    var arg0 = args[0].(QEvent).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QScrollBar", "event", args)
-  }
-
-}
-
-  // proto:  void QScrollBar::QScrollBar(const QScrollBar & );
-func NewQScrollBar(args ...interface{}) QScrollBar {
-  return QScrollBar{}
-}
-
-  // proto:  const QMetaObject * QScrollBar::metaObject();
+// metaObject()
 func (this *QScrollBar) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -112,7 +76,7 @@ func (this *QScrollBar) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  QSize QScrollBar::sizeHint();
+// sizeHint()
 func (this *QScrollBar) sizeHint(args ...interface{}) () {
   // sizeHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -132,16 +96,71 @@ func (this *QScrollBar) sizeHint(args ...interface{}) () {
 
 }
 
-  // proto:  void QScrollBar::~QScrollBar();
-func (this *QScrollBar) FreeQScrollBar(args ...interface{}) () {
+// QScrollBar(class QWidget *)
+func NewQScrollBar(args ...interface{}) QScrollBar {
+  // QScrollBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN10QScrollBarC1EP7QWidget
+    // invoke: void QScrollBar(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QScrollBarC2EP7QWidget(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QScrollBar", "QScrollBar", args)
+  }
+
+  return QScrollBar{}
+}
+
+// ~QScrollBar()
+func (this *QScrollBar) FreeQScrollBar(args ...interface{}) () {
+  // ~QScrollBar()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QScrollBarD0Ev
+    // invoke: void ~QScrollBar()
+    C._ZN10QScrollBarD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScrollBar", "~QScrollBar", args)
+  }
+
+}
+
+// event(class QEvent *)
+func (this *QScrollBar) event(args ...interface{}) () {
+  // event(class QEvent *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QEvent{}) // "QEvent *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QScrollBar5eventEP6QEvent
+    // invoke: bool event(class QEvent *)
+    var arg0 = args[0].(QEvent).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QScrollBar", "event", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
-extern void _ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1);
+extern void _ZN20QContiguousCacheData12allocateDataEii(int32_t arg0, int32_t arg1); // 4
   // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
-extern void _ZN20QContiguousCacheData8freeDataEPS_(void* arg0);
+extern void _ZN20QContiguousCacheData8freeDataEPS_(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -54,28 +50,49 @@ type QContiguousCacheData struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto: static QContiguousCacheData * QContiguousCacheData::allocateData(int size, int alignment);
+// allocateData(int, int)
 func (this *QContiguousCacheData) allocateData_s(args ...interface{}) () {
+  // allocateData(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN20QContiguousCacheData12allocateDataEii
+    // invoke: QContiguousCacheData * allocateData(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "allocateData", args)
   }
 
 }
 
-  // proto: static void QContiguousCacheData::freeData(QContiguousCacheData * data);
+// freeData(struct QContiguousCacheData *)
 func (this *QContiguousCacheData) freeData_s(args ...interface{}) () {
+  // freeData(struct QContiguousCacheData *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QContiguousCacheData{}) // "QContiguousCacheData *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN20QContiguousCacheData8freeDataEPS_
+    // invoke: void freeData(struct QContiguousCacheData *)
+    var arg0 = args[0].(QContiguousCacheData).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN20QContiguousCacheData8freeDataEPS_(arg0)
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "freeData", args)
   }

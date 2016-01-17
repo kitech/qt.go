@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qeventloop.h
 // dst-file: /src/core/qeventloop.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,37 +28,30 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QEventLoop::exit(int returnCode);
-extern void _ZN10QEventLoop4exitEi(void* qthis, int32_t arg0);
   // proto:  void QEventLoop::quit();
-extern void _ZN10QEventLoop4quitEv(void* qthis);
-  // proto:  void QEventLoop::QEventLoop(QObject * parent);
-extern void* dector_ZN10QEventLoopC1EP7QObject(void* arg0);
-extern void _ZN10QEventLoopC1EP7QObject(void* qthis, void* arg0);
+extern void _ZN10QEventLoop4quitEv(void* qthis); // 4
   // proto:  bool QEventLoop::isRunning();
-extern void _ZNK10QEventLoop9isRunningEv(void* qthis);
-  // proto:  const QMetaObject * QEventLoop::metaObject();
-extern void _ZNK10QEventLoop10metaObjectEv(void* qthis);
+extern void _ZNK10QEventLoop9isRunningEv(void* qthis); // 4
+  // proto:  void QEventLoop::QEventLoop(QObject * parent);
+extern void _ZN10QEventLoopC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QEventLoop::exit(int returnCode);
+extern void _ZN10QEventLoop4exitEi(void* qthis, int32_t arg0); // 4
   // proto:  void QEventLoop::wakeUp();
-extern void _ZN10QEventLoop6wakeUpEv(void* qthis);
+extern void _ZN10QEventLoop6wakeUpEv(void* qthis); // 4
   // proto:  void QEventLoop::~QEventLoop();
-extern void _ZN10QEventLoopD0Ev(void* qthis);
+extern void _ZN10QEventLoopD2Ev(void* qthis); // 4
+  // proto:  const QMetaObject * QEventLoop::metaObject();
+extern void _ZNK10QEventLoop10metaObjectEv(void* qthis); // 4
   // proto:  bool QEventLoop::event(QEvent * event);
-extern void _ZN10QEventLoop5eventEP6QEvent(void* qthis, void* arg0);
-  // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
-extern void* dector_ZN16QEventLoopLockerC1EP7QThread(void* arg0);
-extern void _ZN16QEventLoopLockerC1EP7QThread(void* qthis, void* arg0);
-  // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
-extern void* dector_ZN16QEventLoopLockerC1EP10QEventLoop(void* arg0);
-extern void _ZN16QEventLoopLockerC1EP10QEventLoop(void* qthis, void* arg0);
-  // proto:  void QEventLoopLocker::QEventLoopLocker();
-extern void* dector_ZN16QEventLoopLockerC1Ev();
-extern void _ZN16QEventLoopLockerC1Ev(void* qthis);
-  // proto:  void QEventLoopLocker::QEventLoopLocker(const QEventLoopLocker & );
-extern void* dector_ZN16QEventLoopLockerC1ERKS_(void* arg0);
-extern void _ZN16QEventLoopLockerC1ERKS_(void* qthis, void* arg0);
+extern void _ZN10QEventLoop5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QEventLoopLocker::~QEventLoopLocker();
-extern void _ZN16QEventLoopLockerD0Ev(void* qthis);
+extern void _ZN16QEventLoopLockerD2Ev(void* qthis); // 4
+  // proto:  void QEventLoopLocker::QEventLoopLocker();
+extern void _ZN16QEventLoopLockerC2Ev(void* qthis); // 3
+  // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
+extern void _ZN16QEventLoopLockerC2EP7QThread(void* qthis, void* arg0); // 3
+  // proto:  void QEventLoopLocker::QEventLoopLocker(QEventLoop * loop);
+extern void _ZN16QEventLoopLockerC2EP10QEventLoop(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -87,7 +76,73 @@ type QEventLoopLocker struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QEventLoop::exit(int returnCode);
+// quit()
+func (this *QEventLoop) quit(args ...interface{}) () {
+  // quit()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QEventLoop4quitEv
+    // invoke: void quit()
+    C._ZN10QEventLoop4quitEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QEventLoop", "quit", args)
+  }
+
+}
+
+// isRunning()
+func (this *QEventLoop) isRunning(args ...interface{}) () {
+  // isRunning()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QEventLoop9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK10QEventLoop9isRunningEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QEventLoop", "isRunning", args)
+  }
+
+}
+
+// QEventLoop(class QObject *)
+func NewQEventLoop(args ...interface{}) QEventLoop {
+  // QEventLoop(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QEventLoopC1EP7QObject
+    // invoke: void QEventLoop(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QEventLoopC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QEventLoop", "QEventLoop", args)
+  }
+
+  return QEventLoop{}
+}
+
+// exit(int)
 func (this *QEventLoop) exit(args ...interface{}) () {
   // exit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -110,72 +165,7 @@ func (this *QEventLoop) exit(args ...interface{}) () {
 
 }
 
-  // proto:  void QEventLoop::quit();
-func (this *QEventLoop) quit(args ...interface{}) () {
-  // quit()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QEventLoop4quitEv
-    // invoke: void quit()
-    C._ZN10QEventLoop4quitEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QEventLoop", "quit", args)
-  }
-
-}
-
-  // proto:  void QEventLoop::QEventLoop(QObject * parent);
-func NewQEventLoop(args ...interface{}) QEventLoop {
-  return QEventLoop{}
-}
-
-  // proto:  bool QEventLoop::isRunning();
-func (this *QEventLoop) isRunning(args ...interface{}) () {
-  // isRunning()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QEventLoop9isRunningEv
-    // invoke: bool isRunning()
-    C._ZNK10QEventLoop9isRunningEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QEventLoop", "isRunning", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QEventLoop::metaObject();
-func (this *QEventLoop) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QEventLoop10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK10QEventLoop10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QEventLoop", "metaObject", args)
-  }
-
-}
-
-  // proto:  void QEventLoop::wakeUp();
+// wakeUp()
 func (this *QEventLoop) wakeUp(args ...interface{}) () {
   // wakeUp()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -195,21 +185,47 @@ func (this *QEventLoop) wakeUp(args ...interface{}) () {
 
 }
 
-  // proto:  void QEventLoop::~QEventLoop();
+// ~QEventLoop()
 func (this *QEventLoop) FreeQEventLoop(args ...interface{}) () {
+  // ~QEventLoop()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN10QEventLoopD0Ev
+    // invoke: void ~QEventLoop()
+    C._ZN10QEventLoopD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoop", "~QEventLoop", args)
   }
 
 }
 
-  // proto:  bool QEventLoop::event(QEvent * event);
+// metaObject()
+func (this *QEventLoop) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QEventLoop10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QEventLoop10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QEventLoop", "metaObject", args)
+  }
+
+}
+
+// event(class QEvent *)
 func (this *QEventLoop) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -232,23 +248,69 @@ func (this *QEventLoop) event(args ...interface{}) () {
 
 }
 
-  // proto:  void QEventLoopLocker::QEventLoopLocker(QThread * thread);
-func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
-  return QEventLoopLocker{}
-}
-
-  // proto:  void QEventLoopLocker::~QEventLoopLocker();
+// ~QEventLoopLocker()
 func (this *QEventLoopLocker) FreeQEventLoopLocker(args ...interface{}) () {
+  // ~QEventLoopLocker()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN16QEventLoopLockerD0Ev
+    // invoke: void ~QEventLoopLocker()
+    C._ZN16QEventLoopLockerD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QEventLoopLocker", "~QEventLoopLocker", args)
   }
 
+}
+
+// QEventLoopLocker()
+func NewQEventLoopLocker(args ...interface{}) QEventLoopLocker {
+  // QEventLoopLocker()
+  // QEventLoopLocker(class QThread *)
+  // QEventLoopLocker(class QEventLoop *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QThread{}) // "QThread *"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QEventLoop{}) // "QEventLoop *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QEventLoopLockerC1Ev
+    // invoke: void QEventLoopLocker()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QEventLoopLockerC2Ev(qthis)
+  case 1:
+    // invoke: _ZN16QEventLoopLockerC1EP7QThread
+    // invoke: void QEventLoopLocker(class QThread *)
+    var arg0 = args[0].(QThread).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QEventLoopLockerC2EP7QThread(qthis, arg0)
+  case 2:
+    // invoke: _ZN16QEventLoopLockerC1EP10QEventLoop
+    // invoke: void QEventLoopLocker(class QEventLoop *)
+    var arg0 = args[0].(QEventLoop).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QEventLoopLockerC2EP10QEventLoop(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QEventLoopLocker", "QEventLoopLocker", args)
+  }
+
+  return QEventLoopLocker{}
 }
 
 // <= body block end

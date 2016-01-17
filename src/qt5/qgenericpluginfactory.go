@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qgenericpluginfactory.h
 // dst-file: /src/gui/qgenericpluginfactory.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,10 +28,10 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-extern void _ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1);
   // proto: static QStringList QGenericPluginFactory::keys();
-extern void _ZN21QGenericPluginFactory4keysEv();
+extern void _ZN21QGenericPluginFactory4keysEv(); // 4
+  // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
+extern void _ZN21QGenericPluginFactory6createERK7QStringS2_(void* arg0, void* arg1); // 4
 */
 import "C"
 // } // <= ext block end
@@ -54,30 +50,48 @@ type QGenericPluginFactory struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto: static QObject * QGenericPluginFactory::create(const QString & , const QString & );
-func (this *QGenericPluginFactory) create_s(args ...interface{}) () {
+// keys()
+func (this *QGenericPluginFactory) keys_s(args ...interface{}) () {
+  // keys()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN21QGenericPluginFactory4keysEv
+    // invoke: QStringList keys()
+    C._ZN21QGenericPluginFactory4keysEv()
   default:
-    qtrt.ErrorResolve("QGenericPluginFactory", "create", args)
+    qtrt.ErrorResolve("QGenericPluginFactory", "keys", args)
   }
 
 }
 
-  // proto: static QStringList QGenericPluginFactory::keys();
-func (this *QGenericPluginFactory) keys_s(args ...interface{}) () {
+// create(const class QString &, const class QString &)
+func (this *QGenericPluginFactory) create_s(args ...interface{}) () {
+  // create(const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN21QGenericPluginFactory6createERK7QStringS2_
+    // invoke: QObject * create(const class QString &, const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    C._ZN21QGenericPluginFactory6createERK7QStringS2_(arg0, arg1)
   default:
-    qtrt.ErrorResolve("QGenericPluginFactory", "keys", args)
+    qtrt.ErrorResolve("QGenericPluginFactory", "create", args)
   }
 
 }

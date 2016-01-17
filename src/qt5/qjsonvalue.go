@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,95 +28,90 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QJsonObject QJsonValue::toObject();
-extern void _ZNK10QJsonValue8toObjectEv(void* qthis);
-  // proto:  bool QJsonValue::isDouble();
-extern void demth_ZNK10QJsonValue8isDoubleEv(void* qthis);
-  // proto:  void QJsonValue::QJsonValue(const QString & s);
-extern void* dector_ZN10QJsonValueC1ERK7QString(void* arg0);
-extern void _ZN10QJsonValueC1ERK7QString(void* qthis, void* arg0);
-  // proto:  int QJsonValue::toInt(int defaultValue);
-extern void _ZNK10QJsonValue5toIntEi(void* qthis, int32_t arg0);
-  // proto:  void QJsonValue::QJsonValue(const void * );
-extern void* dector_ZN10QJsonValueC1EPKv(void* arg0);
-extern void demth_ZN10QJsonValueC1EPKv(void* qthis, void* arg0);
-  // proto:  QJsonArray QJsonValue::toArray();
-extern void _ZNK10QJsonValue7toArrayEv(void* qthis);
-  // proto:  bool QJsonValue::isArray();
-extern void demth_ZNK10QJsonValue7isArrayEv(void* qthis);
-  // proto:  void QJsonValue::QJsonValue(const char * s);
-extern void* dector_ZN10QJsonValueC1EPKc(unsigned char* arg0);
-extern void demth_ZN10QJsonValueC1EPKc(void* qthis, unsigned char* arg0);
-  // proto:  QString QJsonValue::toString(const QString & defaultValue);
-extern void _ZNK10QJsonValue8toStringERK7QString(void* qthis, void* arg0);
-  // proto:  double QJsonValue::toDouble(double defaultValue);
-extern void _ZNK10QJsonValue8toDoubleEd(void* qthis, double arg0);
-  // proto:  void QJsonValue::~QJsonValue();
-extern void _ZN10QJsonValueD0Ev(void* qthis);
-  // proto:  QVariant QJsonValue::toVariant();
-extern void _ZNK10QJsonValue9toVariantEv(void* qthis);
-  // proto:  bool QJsonValue::isObject();
-extern void demth_ZNK10QJsonValue8isObjectEv(void* qthis);
-  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-extern void _ZN10QJsonValue11fromVariantERK8QVariant(void* arg0);
-  // proto:  bool QJsonValue::toBool(bool defaultValue);
-extern void _ZNK10QJsonValue6toBoolEb(void* qthis, bool arg0);
   // proto:  void QJsonValue::QJsonValue(double n);
-extern void* dector_ZN10QJsonValueC1Ed(double arg0);
-extern void _ZN10QJsonValueC1Ed(void* qthis, double arg0);
-  // proto:  bool QJsonValue::isBool();
-extern void demth_ZNK10QJsonValue6isBoolEv(void* qthis);
+extern void _ZN10QJsonValueC2Ed(void* qthis, double arg0); // 3
   // proto:  void QJsonValue::QJsonValue(bool b);
-extern void* dector_ZN10QJsonValueC1Eb(bool arg0);
-extern void _ZN10QJsonValueC1Eb(void* qthis, bool arg0);
-  // proto:  bool QJsonValue::isUndefined();
-extern void demth_ZNK10QJsonValue11isUndefinedEv(void* qthis);
-  // proto:  bool QJsonValue::isNull();
-extern void demth_ZNK10QJsonValue6isNullEv(void* qthis);
-  // proto:  bool QJsonValue::isString();
-extern void demth_ZNK10QJsonValue8isStringEv(void* qthis);
+extern void _ZN10QJsonValueC2Eb(void* qthis, bool arg0); // 3
   // proto:  void QJsonValue::QJsonValue(int n);
-extern void* dector_ZN10QJsonValueC1Ei(int32_t arg0);
-extern void _ZN10QJsonValueC1Ei(void* qthis, int32_t arg0);
+extern void _ZN10QJsonValueC2Ei(void* qthis, int32_t arg0); // 3
+  // proto:  void QJsonValue::QJsonValue(const QString & s);
+extern void _ZN10QJsonValueC2ERK7QString(void* qthis, void* arg0); // 3
+  // proto:  void QJsonValue::QJsonValue(const char * s);
+extern void _ZN10QJsonValueC2EPKc(void* qthis, unsigned char* arg0); // 1
   // proto:  void QJsonValue::QJsonValue(qint64 n);
-extern void* dector_ZN10QJsonValueC1Ex(int64_t arg0);
-extern void _ZN10QJsonValueC1Ex(void* qthis, int64_t arg0);
-  // proto:  QJsonArray QJsonValueRef::toArray();
-extern void _ZNK13QJsonValueRef7toArrayEv(void* qthis);
-  // proto:  QJsonObject QJsonValueRef::toObject();
-extern void _ZNK13QJsonValueRef8toObjectEv(void* qthis);
-  // proto:  bool QJsonValueRef::isBool();
-extern void demth_ZNK13QJsonValueRef6isBoolEv(void* qthis);
-  // proto:  bool QJsonValueRef::isDouble();
-extern void demth_ZNK13QJsonValueRef8isDoubleEv(void* qthis);
-  // proto:  double QJsonValueRef::toDouble();
-extern void demth_ZNK13QJsonValueRef8toDoubleEv(void* qthis);
-  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
-extern void demth_ZNK13QJsonValueRef6toBoolEb(void* qthis, bool arg0);
-  // proto:  double QJsonValueRef::toDouble(double defaultValue);
-extern void demth_ZNK13QJsonValueRef8toDoubleEd(void* qthis, double arg0);
-  // proto:  bool QJsonValueRef::toBool();
-extern void demth_ZNK13QJsonValueRef6toBoolEv(void* qthis);
-  // proto:  QVariant QJsonValueRef::toVariant();
-extern void _ZNK13QJsonValueRef9toVariantEv(void* qthis);
-  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
-extern void demth_ZNK13QJsonValueRef8toStringERK7QString(void* qthis, void* arg0);
-  // proto:  bool QJsonValueRef::isObject();
-extern void demth_ZNK13QJsonValueRef8isObjectEv(void* qthis);
-  // proto:  bool QJsonValueRef::isString();
-extern void demth_ZNK13QJsonValueRef8isStringEv(void* qthis);
-  // proto:  QString QJsonValueRef::toString();
-extern void demth_ZNK13QJsonValueRef8toStringEv(void* qthis);
-  // proto:  int QJsonValueRef::toInt(int defaultValue);
-extern void demth_ZNK13QJsonValueRef5toIntEi(void* qthis, int32_t arg0);
+extern void _ZN10QJsonValueC2Ex(void* qthis, int64_t arg0); // 3
+  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
+extern void _ZN10QJsonValue11fromVariantERK8QVariant(void* arg0); // 4
+  // proto:  void QJsonValue::~QJsonValue();
+extern void _ZN10QJsonValueD2Ev(void* qthis); // 4
+  // proto:  QJsonObject QJsonValue::toObject();
+extern void _ZNK10QJsonValue8toObjectEv(void* qthis); // 4
+  // proto:  bool QJsonValue::toBool(bool defaultValue);
+extern void _ZNK10QJsonValue6toBoolEb(void* qthis, bool arg0); // 4
+  // proto:  QVariant QJsonValue::toVariant();
+extern void _ZNK10QJsonValue9toVariantEv(void* qthis); // 4
+  // proto:  QString QJsonValue::toString(const QString & defaultValue);
+extern void _ZNK10QJsonValue8toStringERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QJsonValue::Type QJsonValue::type();
+extern void _ZNK10QJsonValue4typeEv(void* qthis); // 4
+  // proto:  bool QJsonValue::isUndefined();
+extern void _ZNK10QJsonValue11isUndefinedEv(void* qthis); // 2
+  // proto:  bool QJsonValue::isArray();
+extern void _ZNK10QJsonValue7isArrayEv(void* qthis); // 2
+  // proto:  bool QJsonValue::isBool();
+extern void _ZNK10QJsonValue6isBoolEv(void* qthis); // 2
+  // proto:  bool QJsonValue::isObject();
+extern void _ZNK10QJsonValue8isObjectEv(void* qthis); // 2
+  // proto:  bool QJsonValue::isDouble();
+extern void _ZNK10QJsonValue8isDoubleEv(void* qthis); // 2
+  // proto:  QJsonArray QJsonValue::toArray();
+extern void _ZNK10QJsonValue7toArrayEv(void* qthis); // 4
+  // proto:  bool QJsonValue::isString();
+extern void _ZNK10QJsonValue8isStringEv(void* qthis); // 2
+  // proto:  int QJsonValue::toInt(int defaultValue);
+extern void _ZNK10QJsonValue5toIntEi(void* qthis, int32_t arg0); // 4
+  // proto:  bool QJsonValue::isNull();
+extern void _ZNK10QJsonValue6isNullEv(void* qthis); // 2
+  // proto:  double QJsonValue::toDouble(double defaultValue);
+extern void _ZNK10QJsonValue8toDoubleEd(void* qthis, double arg0); // 4
   // proto:  bool QJsonValueRef::isArray();
-extern void demth_ZNK13QJsonValueRef7isArrayEv(void* qthis);
-  // proto:  bool QJsonValueRef::isNull();
-extern void demth_ZNK13QJsonValueRef6isNullEv(void* qthis);
+extern void _ZNK13QJsonValueRef7isArrayEv(void* qthis); // 2
+  // proto:  QJsonArray QJsonValueRef::toArray();
+extern void _ZNK13QJsonValueRef7toArrayEv(void* qthis); // 4
+  // proto:  bool QJsonValueRef::isString();
+extern void _ZNK13QJsonValueRef8isStringEv(void* qthis); // 2
+  // proto:  QJsonObject QJsonValueRef::toObject();
+extern void _ZNK13QJsonValueRef8toObjectEv(void* qthis); // 4
+  // proto:  int QJsonValueRef::toInt(int defaultValue);
+extern void _ZNK13QJsonValueRef5toIntEi(void* qthis, int32_t arg0); // 2
   // proto:  int QJsonValueRef::toInt();
-extern void demth_ZNK13QJsonValueRef5toIntEv(void* qthis);
+extern void _ZNK13QJsonValueRef5toIntEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::isBool();
+extern void _ZNK13QJsonValueRef6isBoolEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::isNull();
+extern void _ZNK13QJsonValueRef6isNullEv(void* qthis); // 2
+  // proto:  double QJsonValueRef::toDouble(double defaultValue);
+extern void _ZNK13QJsonValueRef8toDoubleEd(void* qthis, double arg0); // 2
+  // proto:  double QJsonValueRef::toDouble();
+extern void _ZNK13QJsonValueRef8toDoubleEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::toBool();
+extern void _ZNK13QJsonValueRef6toBoolEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
+extern void _ZNK13QJsonValueRef6toBoolEb(void* qthis, bool arg0); // 2
+  // proto:  QVariant QJsonValueRef::toVariant();
+extern void _ZNK13QJsonValueRef9toVariantEv(void* qthis); // 4
+  // proto:  QString QJsonValueRef::toString();
+extern void _ZNK13QJsonValueRef8toStringEv(void* qthis); // 2
+  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
+extern void _ZNK13QJsonValueRef8toStringERK7QString(void* qthis, void* arg0); // 2
   // proto:  bool QJsonValueRef::isUndefined();
-extern void demth_ZNK13QJsonValueRef11isUndefinedEv(void* qthis);
+extern void _ZNK13QJsonValueRef11isUndefinedEv(void* qthis); // 2
+  // proto:  QJsonValue::Type QJsonValueRef::type();
+extern void _ZNK13QJsonValueRef4typeEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::isObject();
+extern void _ZNK13QJsonValueRef8isObjectEv(void* qthis); // 2
+  // proto:  bool QJsonValueRef::isDouble();
+extern void _ZNK13QJsonValueRef8isDoubleEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -157,15 +148,136 @@ type QJsonValueRef struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QJsonObject QJsonValue::toObject();
-func (this *QJsonValue) toObject(args ...interface{}) () {
-  // toObject()
-  // toObject(const class QJsonObject &)
+// QJsonValue(double)
+func NewQJsonValue(args ...interface{}) QJsonValue {
+  // QJsonValue(double)
+  // QJsonValue(_Bool)
+  // QJsonValue(int)
+  // QJsonValue(const class QString &)
+  // QJsonValue(const char *)
+  // QJsonValue(qint64)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QJsonObject{}) // "const QJsonObject &"
+  vtys[1][0] = qtrt.BoolTy(false) // "bool"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = qtrt.Int32Ty(false) // "int"
+  vtys[3] = make(map[int32]reflect.Type)
+  vtys[3][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[4] = make(map[int32]reflect.Type)
+  vtys[4][0] = qtrt.ByteTy(true) // "const char *"
+  vtys[5] = make(map[int32]reflect.Type)
+  vtys[5][0] = qtrt.Int64Ty(false) // "qint64"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonValueC1Ed
+    // invoke: void QJsonValue(double)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2Ed(qthis, arg0)
+  case 1:
+    // invoke: _ZN10QJsonValueC1Eb
+    // invoke: void QJsonValue(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2Eb(qthis, arg0)
+  case 2:
+    // invoke: _ZN10QJsonValueC1Ei
+    // invoke: void QJsonValue(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2Ei(qthis, arg0)
+  case 3:
+    // invoke: _ZN10QJsonValueC1ERK7QString
+    // invoke: void QJsonValue(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2ERK7QString(qthis, arg0)
+  case 4:
+    // invoke: _ZN10QJsonValueC1EPKc
+    // invoke: void QJsonValue(const char *)
+    var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2EPKc(qthis, arg0)
+  case 5:
+    // invoke: _ZN10QJsonValueC1Ex
+    // invoke: void QJsonValue(qint64)
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonValueC2Ex(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "QJsonValue", args)
+  }
+
+  return QJsonValue{}
+}
+
+// fromVariant(const class QVariant &)
+func (this *QJsonValue) fromVariant_s(args ...interface{}) () {
+  // fromVariant(const class QVariant &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QVariant{}) // "const QVariant &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonValue11fromVariantERK8QVariant
+    // invoke: QJsonValue fromVariant(const class QVariant &)
+    var arg0 = args[0].(QVariant).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QJsonValue11fromVariantERK8QVariant(arg0)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "fromVariant", args)
+  }
+
+}
+
+// ~QJsonValue()
+func (this *QJsonValue) FreeQJsonValue(args ...interface{}) () {
+  // ~QJsonValue()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonValueD0Ev
+    // invoke: void ~QJsonValue()
+    C._ZN10QJsonValueD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "~QJsonValue", args)
+  }
+
+}
+
+// toObject()
+func (this *QJsonValue) toObject(args ...interface{}) () {
+  // toObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
@@ -180,212 +292,7 @@ func (this *QJsonValue) toObject(args ...interface{}) () {
 
 }
 
-  // proto:  bool QJsonValue::isDouble();
-func (this *QJsonValue) isDouble(args ...interface{}) () {
-  // isDouble()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue8isDoubleEv
-    // invoke: bool isDouble()
-    C.demth_ZNK10QJsonValue8isDoubleEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "isDouble", args)
-  }
-
-}
-
-  // proto:  void QJsonValue::QJsonValue(const QString & s);
-func NewQJsonValue(args ...interface{}) QJsonValue {
-  return QJsonValue{}
-}
-
-  // proto:  int QJsonValue::toInt(int defaultValue);
-func (this *QJsonValue) toInt(args ...interface{}) () {
-  // toInt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue5toIntEi
-    // invoke: int toInt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "toInt", args)
-  }
-
-}
-
-  // proto:  QJsonArray QJsonValue::toArray();
-func (this *QJsonValue) toArray(args ...interface{}) () {
-  // toArray(const class QJsonArray &)
-  // toArray()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QJsonArray{}) // "const QJsonArray &"
-  vtys[1] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue7toArrayEv
-    // invoke: QJsonArray toArray()
-    C._ZNK10QJsonValue7toArrayEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "toArray", args)
-  }
-
-}
-
-  // proto:  bool QJsonValue::isArray();
-func (this *QJsonValue) isArray(args ...interface{}) () {
-  // isArray()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue7isArrayEv
-    // invoke: bool isArray()
-    C.demth_ZNK10QJsonValue7isArrayEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "isArray", args)
-  }
-
-}
-
-  // proto:  QString QJsonValue::toString(const QString & defaultValue);
-func (this *QJsonValue) toString(args ...interface{}) () {
-  // toString(const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue8toStringERK7QString
-    // invoke: QString toString(const class QString &)
-    var arg0 = args[0].(QString).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "toString", args)
-  }
-
-}
-
-  // proto:  double QJsonValue::toDouble(double defaultValue);
-func (this *QJsonValue) toDouble(args ...interface{}) () {
-  // toDouble(double)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.DoubleTy(false) // "double"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue8toDoubleEd
-    // invoke: double toDouble(double)
-    var arg0 = C.double(args[0].(float64))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "toDouble", args)
-  }
-
-}
-
-  // proto:  void QJsonValue::~QJsonValue();
-func (this *QJsonValue) FreeQJsonValue(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QJsonValue", "~QJsonValue", args)
-  }
-
-}
-
-  // proto:  QVariant QJsonValue::toVariant();
-func (this *QJsonValue) toVariant(args ...interface{}) () {
-  // toVariant()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue9toVariantEv
-    // invoke: QVariant toVariant()
-    C._ZNK10QJsonValue9toVariantEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "toVariant", args)
-  }
-
-}
-
-  // proto:  bool QJsonValue::isObject();
-func (this *QJsonValue) isObject(args ...interface{}) () {
-  // isObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonValue8isObjectEv
-    // invoke: bool isObject()
-    C.demth_ZNK10QJsonValue8isObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValue", "isObject", args)
-  }
-
-}
-
-  // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
-func (this *QJsonValue) fromVariant_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QJsonValue", "fromVariant", args)
-  }
-
-}
-
-  // proto:  bool QJsonValue::toBool(bool defaultValue);
+// toBool(_Bool)
 func (this *QJsonValue) toBool(args ...interface{}) () {
   // toBool(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -408,9 +315,9 @@ func (this *QJsonValue) toBool(args ...interface{}) () {
 
 }
 
-  // proto:  bool QJsonValue::isBool();
-func (this *QJsonValue) isBool(args ...interface{}) () {
-  // isBool()
+// toVariant()
+func (this *QJsonValue) toVariant(args ...interface{}) () {
+  // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -419,16 +326,59 @@ func (this *QJsonValue) isBool(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QJsonValue6isBoolEv
-    // invoke: bool isBool()
-    C.demth_ZNK10QJsonValue6isBoolEv(this.qclsinst)
+    // invoke: _ZNK10QJsonValue9toVariantEv
+    // invoke: QVariant toVariant()
+    C._ZNK10QJsonValue9toVariantEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonValue", "isBool", args)
+    qtrt.ErrorResolve("QJsonValue", "toVariant", args)
   }
 
 }
 
-  // proto:  bool QJsonValue::isUndefined();
+// toString(const class QString &)
+func (this *QJsonValue) toString(args ...interface{}) () {
+  // toString(const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue8toStringERK7QString
+    // invoke: QString toString(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "toString", args)
+  }
+
+}
+
+// type()
+func (this *QJsonValue) type_(args ...interface{}) () {
+  // type()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue4typeEv
+    // invoke: QJsonValue::Type type()
+    C._ZNK10QJsonValue4typeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "type", args)
+  }
+
+}
+
+// isUndefined()
 func (this *QJsonValue) isUndefined(args ...interface{}) () {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -441,16 +391,16 @@ func (this *QJsonValue) isUndefined(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue11isUndefinedEv
     // invoke: bool isUndefined()
-    C.demth_ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
+    C._ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isUndefined", args)
   }
 
 }
 
-  // proto:  bool QJsonValue::isNull();
-func (this *QJsonValue) isNull(args ...interface{}) () {
-  // isNull()
+// isArray()
+func (this *QJsonValue) isArray(args ...interface{}) () {
+  // isArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -459,16 +409,96 @@ func (this *QJsonValue) isNull(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QJsonValue6isNullEv
-    // invoke: bool isNull()
-    C.demth_ZNK10QJsonValue6isNullEv(this.qclsinst)
+    // invoke: _ZNK10QJsonValue7isArrayEv
+    // invoke: bool isArray()
+    C._ZNK10QJsonValue7isArrayEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonValue", "isNull", args)
+    qtrt.ErrorResolve("QJsonValue", "isArray", args)
   }
 
 }
 
-  // proto:  bool QJsonValue::isString();
+// isBool()
+func (this *QJsonValue) isBool(args ...interface{}) () {
+  // isBool()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue6isBoolEv
+    // invoke: bool isBool()
+    C._ZNK10QJsonValue6isBoolEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "isBool", args)
+  }
+
+}
+
+// isObject()
+func (this *QJsonValue) isObject(args ...interface{}) () {
+  // isObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue8isObjectEv
+    // invoke: bool isObject()
+    C._ZNK10QJsonValue8isObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "isObject", args)
+  }
+
+}
+
+// isDouble()
+func (this *QJsonValue) isDouble(args ...interface{}) () {
+  // isDouble()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue8isDoubleEv
+    // invoke: bool isDouble()
+    C._ZNK10QJsonValue8isDoubleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "isDouble", args)
+  }
+
+}
+
+// toArray()
+func (this *QJsonValue) toArray(args ...interface{}) () {
+  // toArray()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue7toArrayEv
+    // invoke: QJsonArray toArray()
+    C._ZNK10QJsonValue7toArrayEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "toArray", args)
+  }
+
+}
+
+// isString()
 func (this *QJsonValue) isString(args ...interface{}) () {
   // isString()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -481,14 +511,100 @@ func (this *QJsonValue) isString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue8isStringEv
     // invoke: bool isString()
-    C.demth_ZNK10QJsonValue8isStringEv(this.qclsinst)
+    C._ZNK10QJsonValue8isStringEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValue", "isString", args)
   }
 
 }
 
-  // proto:  QJsonArray QJsonValueRef::toArray();
+// toInt(int)
+func (this *QJsonValue) toInt(args ...interface{}) () {
+  // toInt(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue5toIntEi
+    // invoke: int toInt(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "toInt", args)
+  }
+
+}
+
+// isNull()
+func (this *QJsonValue) isNull(args ...interface{}) () {
+  // isNull()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue6isNullEv
+    // invoke: bool isNull()
+    C._ZNK10QJsonValue6isNullEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "isNull", args)
+  }
+
+}
+
+// toDouble(double)
+func (this *QJsonValue) toDouble(args ...interface{}) () {
+  // toDouble(double)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.DoubleTy(false) // "double"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonValue8toDoubleEd
+    // invoke: double toDouble(double)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QJsonValue", "toDouble", args)
+  }
+
+}
+
+// isArray()
+func (this *QJsonValueRef) isArray(args ...interface{}) () {
+  // isArray()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef7isArrayEv
+    // invoke: bool isArray()
+    C._ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "isArray", args)
+  }
+
+}
+
+// toArray()
 func (this *QJsonValueRef) toArray(args ...interface{}) () {
   // toArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -508,7 +624,27 @@ func (this *QJsonValueRef) toArray(args ...interface{}) () {
 
 }
 
-  // proto:  QJsonObject QJsonValueRef::toObject();
+// isString()
+func (this *QJsonValueRef) isString(args ...interface{}) () {
+  // isString()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef8isStringEv
+    // invoke: bool isString()
+    C._ZNK13QJsonValueRef8isStringEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "isString", args)
+  }
+
+}
+
+// toObject()
 func (this *QJsonValueRef) toObject(args ...interface{}) () {
   // toObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -528,7 +664,36 @@ func (this *QJsonValueRef) toObject(args ...interface{}) () {
 
 }
 
-  // proto:  bool QJsonValueRef::isBool();
+// toInt(int)
+func (this *QJsonValueRef) toInt(args ...interface{}) () {
+  // toInt(int)
+  // toInt()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef5toIntEi
+    // invoke: int toInt(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZNK13QJsonValueRef5toIntEv
+    // invoke: int toInt()
+    C._ZNK13QJsonValueRef5toIntEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "toInt", args)
+  }
+
+}
+
+// isBool()
 func (this *QJsonValueRef) isBool(args ...interface{}) () {
   // isBool()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -541,16 +706,16 @@ func (this *QJsonValueRef) isBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isBoolEv
     // invoke: bool isBool()
-    C.demth_ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
+    C._ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isBool", args)
   }
 
 }
 
-  // proto:  bool QJsonValueRef::isDouble();
-func (this *QJsonValueRef) isDouble(args ...interface{}) () {
-  // isDouble()
+// isNull()
+func (this *QJsonValueRef) isNull(args ...interface{}) () {
+  // isNull()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -559,74 +724,74 @@ func (this *QJsonValueRef) isDouble(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QJsonValueRef8isDoubleEv
-    // invoke: bool isDouble()
-    C.demth_ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
+    // invoke: _ZNK13QJsonValueRef6isNullEv
+    // invoke: bool isNull()
+    C._ZNK13QJsonValueRef6isNullEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonValueRef", "isDouble", args)
+    qtrt.ErrorResolve("QJsonValueRef", "isNull", args)
   }
 
 }
 
-  // proto:  double QJsonValueRef::toDouble();
+// toDouble(double)
 func (this *QJsonValueRef) toDouble(args ...interface{}) () {
-  // toDouble()
   // toDouble(double)
+  // toDouble()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.DoubleTy(false) // "double"
   vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "double"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QJsonValueRef8toDoubleEv
-    // invoke: double toDouble()
-    C.demth_ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
-  case 1:
     // invoke: _ZNK13QJsonValueRef8toDoubleEd
     // invoke: double toDouble(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.demth_ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
+    C._ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZNK13QJsonValueRef8toDoubleEv
+    // invoke: double toDouble()
+    C._ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toDouble", args)
   }
 
 }
 
-  // proto:  bool QJsonValueRef::toBool(bool defaultValue);
+// toBool()
 func (this *QJsonValueRef) toBool(args ...interface{}) () {
-  // toBool(_Bool)
   // toBool()
+  // toBool(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
   vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.BoolTy(false) // "bool"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
+    // invoke: _ZNK13QJsonValueRef6toBoolEv
+    // invoke: bool toBool()
+    C._ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
+  case 1:
     // invoke: _ZNK13QJsonValueRef6toBoolEb
     // invoke: bool toBool(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.demth_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK13QJsonValueRef6toBoolEv
-    // invoke: bool toBool()
-    C.demth_ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
+    C._ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toBool", args)
   }
 
 }
 
-  // proto:  QVariant QJsonValueRef::toVariant();
+// toVariant()
 func (this *QJsonValueRef) toVariant(args ...interface{}) () {
   // toVariant()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -646,145 +811,36 @@ func (this *QJsonValueRef) toVariant(args ...interface{}) () {
 
 }
 
-  // proto:  QString QJsonValueRef::toString(const QString & defaultValue);
+// toString()
 func (this *QJsonValueRef) toString(args ...interface{}) () {
-  // toString(const class QString &)
   // toString()
+  // toString(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
   vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
+    // invoke: _ZNK13QJsonValueRef8toStringEv
+    // invoke: QString toString()
+    C._ZNK13QJsonValueRef8toStringEv(this.qclsinst)
+  case 1:
     // invoke: _ZNK13QJsonValueRef8toStringERK7QString
     // invoke: QString toString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.demth_ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK13QJsonValueRef8toStringEv
-    // invoke: QString toString()
-    C.demth_ZNK13QJsonValueRef8toStringEv(this.qclsinst)
+    C._ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toString", args)
   }
 
 }
 
-  // proto:  bool QJsonValueRef::isObject();
-func (this *QJsonValueRef) isObject(args ...interface{}) () {
-  // isObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QJsonValueRef8isObjectEv
-    // invoke: bool isObject()
-    C.demth_ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValueRef", "isObject", args)
-  }
-
-}
-
-  // proto:  bool QJsonValueRef::isString();
-func (this *QJsonValueRef) isString(args ...interface{}) () {
-  // isString()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QJsonValueRef8isStringEv
-    // invoke: bool isString()
-    C.demth_ZNK13QJsonValueRef8isStringEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValueRef", "isString", args)
-  }
-
-}
-
-  // proto:  int QJsonValueRef::toInt(int defaultValue);
-func (this *QJsonValueRef) toInt(args ...interface{}) () {
-  // toInt(int)
-  // toInt()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QJsonValueRef5toIntEi
-    // invoke: int toInt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C.demth_ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK13QJsonValueRef5toIntEv
-    // invoke: int toInt()
-    C.demth_ZNK13QJsonValueRef5toIntEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValueRef", "toInt", args)
-  }
-
-}
-
-  // proto:  bool QJsonValueRef::isArray();
-func (this *QJsonValueRef) isArray(args ...interface{}) () {
-  // isArray()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QJsonValueRef7isArrayEv
-    // invoke: bool isArray()
-    C.demth_ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValueRef", "isArray", args)
-  }
-
-}
-
-  // proto:  bool QJsonValueRef::isNull();
-func (this *QJsonValueRef) isNull(args ...interface{}) () {
-  // isNull()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QJsonValueRef6isNullEv
-    // invoke: bool isNull()
-    C.demth_ZNK13QJsonValueRef6isNullEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonValueRef", "isNull", args)
-  }
-
-}
-
-  // proto:  bool QJsonValueRef::isUndefined();
+// isUndefined()
 func (this *QJsonValueRef) isUndefined(args ...interface{}) () {
   // isUndefined()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -797,9 +853,69 @@ func (this *QJsonValueRef) isUndefined(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef11isUndefinedEv
     // invoke: bool isUndefined()
-    C.demth_ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
+    C._ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isUndefined", args)
+  }
+
+}
+
+// type()
+func (this *QJsonValueRef) type_(args ...interface{}) () {
+  // type()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef4typeEv
+    // invoke: QJsonValue::Type type()
+    C._ZNK13QJsonValueRef4typeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "type", args)
+  }
+
+}
+
+// isObject()
+func (this *QJsonValueRef) isObject(args ...interface{}) () {
+  // isObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef8isObjectEv
+    // invoke: bool isObject()
+    C._ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "isObject", args)
+  }
+
+}
+
+// isDouble()
+func (this *QJsonValueRef) isDouble(args ...interface{}) () {
+  // isDouble()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QJsonValueRef8isDoubleEv
+    // invoke: bool isDouble()
+    C._ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonValueRef", "isDouble", args)
   }
 
 }

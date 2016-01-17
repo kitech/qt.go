@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qscreen.h
 // dst-file: /src/gui/qscreen.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,57 +28,62 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  qreal QScreen::logicalDotsPerInchY();
-extern void _ZNK7QScreen19logicalDotsPerInchYEv(void* qthis);
-  // proto:  QRect QScreen::geometry();
-extern void _ZNK7QScreen8geometryEv(void* qthis);
-  // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
-extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4);
-  // proto:  QSize QScreen::size();
-extern void _ZNK7QScreen4sizeEv(void* qthis);
-  // proto:  QSizeF QScreen::physicalSize();
-extern void _ZNK7QScreen12physicalSizeEv(void* qthis);
-  // proto:  QPlatformScreen * QScreen::handle();
-extern void _ZNK7QScreen6handleEv(void* qthis);
-  // proto:  QRect QScreen::availableVirtualGeometry();
-extern void _ZNK7QScreen24availableVirtualGeometryEv(void* qthis);
-  // proto:  void QScreen::~QScreen();
-extern void _ZN7QScreenD0Ev(void* qthis);
-  // proto:  QSize QScreen::virtualSize();
-extern void _ZNK7QScreen11virtualSizeEv(void* qthis);
-  // proto:  qreal QScreen::devicePixelRatio();
-extern void _ZNK7QScreen16devicePixelRatioEv(void* qthis);
-  // proto:  QList<QScreen *> QScreen::virtualSiblings();
-extern void _ZNK7QScreen15virtualSiblingsEv(void* qthis);
-  // proto:  void QScreen::QScreen(const QScreen & );
-extern void* dector_ZN7QScreenC1ERKS_(void* arg0);
-extern void _ZN7QScreenC1ERKS_(void* qthis, void* arg0);
-  // proto:  QRect QScreen::virtualGeometry();
-extern void _ZNK7QScreen15virtualGeometryEv(void* qthis);
-  // proto:  qreal QScreen::logicalDotsPerInch();
-extern void _ZNK7QScreen18logicalDotsPerInchEv(void* qthis);
-  // proto:  qreal QScreen::physicalDotsPerInch();
-extern void _ZNK7QScreen19physicalDotsPerInchEv(void* qthis);
   // proto:  qreal QScreen::refreshRate();
-extern void _ZNK7QScreen11refreshRateEv(void* qthis);
-  // proto:  const QMetaObject * QScreen::metaObject();
-extern void _ZNK7QScreen10metaObjectEv(void* qthis);
-  // proto:  QSize QScreen::availableSize();
-extern void _ZNK7QScreen13availableSizeEv(void* qthis);
-  // proto:  QString QScreen::name();
-extern void _ZNK7QScreen4nameEv(void* qthis);
+extern void _ZNK7QScreen11refreshRateEv(void* qthis); // 4
   // proto:  QSize QScreen::availableVirtualSize();
-extern void _ZNK7QScreen20availableVirtualSizeEv(void* qthis);
-  // proto:  qreal QScreen::logicalDotsPerInchX();
-extern void _ZNK7QScreen19logicalDotsPerInchXEv(void* qthis);
-  // proto:  QRect QScreen::availableGeometry();
-extern void _ZNK7QScreen17availableGeometryEv(void* qthis);
-  // proto:  qreal QScreen::physicalDotsPerInchX();
-extern void _ZNK7QScreen20physicalDotsPerInchXEv(void* qthis);
+extern void _ZNK7QScreen20availableVirtualSizeEv(void* qthis); // 4
+  // proto:  Qt::ScreenOrientation QScreen::orientation();
+extern void _ZNK7QScreen11orientationEv(void* qthis); // 4
+  // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
+extern void _ZN7QScreen10grabWindowEiiiii(void* qthis, int32_t* arg0, int32_t arg1, int32_t arg2, int32_t arg3, int32_t arg4); // 4
+  // proto:  Qt::ScreenOrientation QScreen::nativeOrientation();
+extern void _ZNK7QScreen17nativeOrientationEv(void* qthis); // 4
+  // proto:  QSize QScreen::size();
+extern void _ZNK7QScreen4sizeEv(void* qthis); // 4
   // proto:  qreal QScreen::physicalDotsPerInchY();
-extern void _ZNK7QScreen20physicalDotsPerInchYEv(void* qthis);
+extern void _ZNK7QScreen20physicalDotsPerInchYEv(void* qthis); // 4
+  // proto:  qreal QScreen::logicalDotsPerInch();
+extern void _ZNK7QScreen18logicalDotsPerInchEv(void* qthis); // 4
+  // proto:  QList<QScreen *> QScreen::virtualSiblings();
+extern void _ZNK7QScreen15virtualSiblingsEv(void* qthis); // 4
+  // proto:  QRect QScreen::availableGeometry();
+extern void _ZNK7QScreen17availableGeometryEv(void* qthis); // 4
+  // proto:  Qt::ScreenOrientations QScreen::orientationUpdateMask();
+extern void _ZNK7QScreen21orientationUpdateMaskEv(void* qthis); // 4
+  // proto:  Qt::ScreenOrientation QScreen::primaryOrientation();
+extern void _ZNK7QScreen18primaryOrientationEv(void* qthis); // 4
+  // proto:  QPlatformScreen * QScreen::handle();
+extern void _ZNK7QScreen6handleEv(void* qthis); // 4
+  // proto:  QRect QScreen::availableVirtualGeometry();
+extern void _ZNK7QScreen24availableVirtualGeometryEv(void* qthis); // 4
+  // proto:  void QScreen::~QScreen();
+extern void _ZN7QScreenD2Ev(void* qthis); // 4
+  // proto:  QSize QScreen::availableSize();
+extern void _ZNK7QScreen13availableSizeEv(void* qthis); // 4
+  // proto:  QRect QScreen::virtualGeometry();
+extern void _ZNK7QScreen15virtualGeometryEv(void* qthis); // 4
+  // proto:  qreal QScreen::physicalDotsPerInch();
+extern void _ZNK7QScreen19physicalDotsPerInchEv(void* qthis); // 4
+  // proto:  QSizeF QScreen::physicalSize();
+extern void _ZNK7QScreen12physicalSizeEv(void* qthis); // 4
+  // proto:  const QMetaObject * QScreen::metaObject();
+extern void _ZNK7QScreen10metaObjectEv(void* qthis); // 4
+  // proto:  QString QScreen::name();
+extern void _ZNK7QScreen4nameEv(void* qthis); // 4
+  // proto:  qreal QScreen::logicalDotsPerInchY();
+extern void _ZNK7QScreen19logicalDotsPerInchYEv(void* qthis); // 4
+  // proto:  qreal QScreen::logicalDotsPerInchX();
+extern void _ZNK7QScreen19logicalDotsPerInchXEv(void* qthis); // 4
+  // proto:  qreal QScreen::devicePixelRatio();
+extern void _ZNK7QScreen16devicePixelRatioEv(void* qthis); // 4
+  // proto:  QRect QScreen::geometry();
+extern void _ZNK7QScreen8geometryEv(void* qthis); // 4
   // proto:  int QScreen::depth();
-extern void _ZNK7QScreen5depthEv(void* qthis);
+extern void _ZNK7QScreen5depthEv(void* qthis); // 4
+  // proto:  QSize QScreen::virtualSize();
+extern void _ZNK7QScreen11virtualSizeEv(void* qthis); // 4
+  // proto:  qreal QScreen::physicalDotsPerInchX();
+extern void _ZNK7QScreen20physicalDotsPerInchXEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -110,9 +111,9 @@ type QScreen struct {
 //  _orientationChanged QScreen_orientationChanged_signal;
 }
 
-  // proto:  qreal QScreen::logicalDotsPerInchY();
-func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
-  // logicalDotsPerInchY()
+// refreshRate()
+func (this *QScreen) refreshRate(args ...interface{}) () {
+  // refreshRate()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -121,18 +122,18 @@ func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QScreen19logicalDotsPerInchYEv
-    // invoke: qreal logicalDotsPerInchY()
-    C._ZNK7QScreen19logicalDotsPerInchYEv(this.qclsinst)
+    // invoke: _ZNK7QScreen11refreshRateEv
+    // invoke: qreal refreshRate()
+    C._ZNK7QScreen11refreshRateEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QScreen", "logicalDotsPerInchY", args)
+    qtrt.ErrorResolve("QScreen", "refreshRate", args)
   }
 
 }
 
-  // proto:  QRect QScreen::geometry();
-func (this *QScreen) geometry(args ...interface{}) () {
-  // geometry()
+// availableVirtualSize()
+func (this *QScreen) availableVirtualSize(args ...interface{}) () {
+  // availableVirtualSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -141,22 +142,42 @@ func (this *QScreen) geometry(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QScreen8geometryEv
-    // invoke: QRect geometry()
-    C._ZNK7QScreen8geometryEv(this.qclsinst)
+    // invoke: _ZNK7QScreen20availableVirtualSizeEv
+    // invoke: QSize availableVirtualSize()
+    C._ZNK7QScreen20availableVirtualSizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QScreen", "geometry", args)
+    qtrt.ErrorResolve("QScreen", "availableVirtualSize", args)
   }
 
 }
 
-  // proto:  QPixmap QScreen::grabWindow(WId window, int x, int y, int w, int h);
+// orientation()
+func (this *QScreen) orientation(args ...interface{}) () {
+  // orientation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen11orientationEv
+    // invoke: Qt::ScreenOrientation orientation()
+    C._ZNK7QScreen11orientationEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "orientation", args)
+  }
+
+}
+
+// grabWindow(WId, int, int, int, int)
 func (this *QScreen) grabWindow(args ...interface{}) () {
   // grabWindow(WId, int, int, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "WId"
+  vtys[0][0] = qtrt.Int32Ty(true) // "WId"
   vtys[0][1] = qtrt.Int32Ty(false) // "int"
   vtys[0][2] = qtrt.Int32Ty(false) // "int"
   vtys[0][3] = qtrt.Int32Ty(false) // "int"
@@ -185,7 +206,27 @@ func (this *QScreen) grabWindow(args ...interface{}) () {
 
 }
 
-  // proto:  QSize QScreen::size();
+// nativeOrientation()
+func (this *QScreen) nativeOrientation(args ...interface{}) () {
+  // nativeOrientation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen17nativeOrientationEv
+    // invoke: Qt::ScreenOrientation nativeOrientation()
+    C._ZNK7QScreen17nativeOrientationEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "nativeOrientation", args)
+  }
+
+}
+
+// size()
 func (this *QScreen) size(args ...interface{}) () {
   // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -205,366 +246,7 @@ func (this *QScreen) size(args ...interface{}) () {
 
 }
 
-  // proto:  QSizeF QScreen::physicalSize();
-func (this *QScreen) physicalSize(args ...interface{}) () {
-  // physicalSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen12physicalSizeEv
-    // invoke: QSizeF physicalSize()
-    C._ZNK7QScreen12physicalSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "physicalSize", args)
-  }
-
-}
-
-  // proto:  QPlatformScreen * QScreen::handle();
-func (this *QScreen) handle(args ...interface{}) () {
-  // handle()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen6handleEv
-    // invoke: QPlatformScreen * handle()
-    C._ZNK7QScreen6handleEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "handle", args)
-  }
-
-}
-
-  // proto:  QRect QScreen::availableVirtualGeometry();
-func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
-  // availableVirtualGeometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen24availableVirtualGeometryEv
-    // invoke: QRect availableVirtualGeometry()
-    C._ZNK7QScreen24availableVirtualGeometryEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "availableVirtualGeometry", args)
-  }
-
-}
-
-  // proto:  void QScreen::~QScreen();
-func (this *QScreen) FreeQScreen(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QScreen", "~QScreen", args)
-  }
-
-}
-
-  // proto:  QSize QScreen::virtualSize();
-func (this *QScreen) virtualSize(args ...interface{}) () {
-  // virtualSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen11virtualSizeEv
-    // invoke: QSize virtualSize()
-    C._ZNK7QScreen11virtualSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "virtualSize", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::devicePixelRatio();
-func (this *QScreen) devicePixelRatio(args ...interface{}) () {
-  // devicePixelRatio()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen16devicePixelRatioEv
-    // invoke: qreal devicePixelRatio()
-    C._ZNK7QScreen16devicePixelRatioEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "devicePixelRatio", args)
-  }
-
-}
-
-  // proto:  QList<QScreen *> QScreen::virtualSiblings();
-func (this *QScreen) virtualSiblings(args ...interface{}) () {
-  // virtualSiblings()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen15virtualSiblingsEv
-    // invoke: QList<QScreen *> virtualSiblings()
-    C._ZNK7QScreen15virtualSiblingsEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "virtualSiblings", args)
-  }
-
-}
-
-  // proto:  void QScreen::QScreen(const QScreen & );
-func NewQScreen(args ...interface{}) QScreen {
-  return QScreen{}
-}
-
-  // proto:  QRect QScreen::virtualGeometry();
-func (this *QScreen) virtualGeometry(args ...interface{}) () {
-  // virtualGeometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen15virtualGeometryEv
-    // invoke: QRect virtualGeometry()
-    C._ZNK7QScreen15virtualGeometryEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "virtualGeometry", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::logicalDotsPerInch();
-func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
-  // logicalDotsPerInch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen18logicalDotsPerInchEv
-    // invoke: qreal logicalDotsPerInch()
-    C._ZNK7QScreen18logicalDotsPerInchEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "logicalDotsPerInch", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::physicalDotsPerInch();
-func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
-  // physicalDotsPerInch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen19physicalDotsPerInchEv
-    // invoke: qreal physicalDotsPerInch()
-    C._ZNK7QScreen19physicalDotsPerInchEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "physicalDotsPerInch", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::refreshRate();
-func (this *QScreen) refreshRate(args ...interface{}) () {
-  // refreshRate()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen11refreshRateEv
-    // invoke: qreal refreshRate()
-    C._ZNK7QScreen11refreshRateEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "refreshRate", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QScreen::metaObject();
-func (this *QScreen) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK7QScreen10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "metaObject", args)
-  }
-
-}
-
-  // proto:  QSize QScreen::availableSize();
-func (this *QScreen) availableSize(args ...interface{}) () {
-  // availableSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen13availableSizeEv
-    // invoke: QSize availableSize()
-    C._ZNK7QScreen13availableSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "availableSize", args)
-  }
-
-}
-
-  // proto:  QString QScreen::name();
-func (this *QScreen) name(args ...interface{}) () {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen4nameEv
-    // invoke: QString name()
-    C._ZNK7QScreen4nameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "name", args)
-  }
-
-}
-
-  // proto:  QSize QScreen::availableVirtualSize();
-func (this *QScreen) availableVirtualSize(args ...interface{}) () {
-  // availableVirtualSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen20availableVirtualSizeEv
-    // invoke: QSize availableVirtualSize()
-    C._ZNK7QScreen20availableVirtualSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "availableVirtualSize", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::logicalDotsPerInchX();
-func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
-  // logicalDotsPerInchX()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen19logicalDotsPerInchXEv
-    // invoke: qreal logicalDotsPerInchX()
-    C._ZNK7QScreen19logicalDotsPerInchXEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "logicalDotsPerInchX", args)
-  }
-
-}
-
-  // proto:  QRect QScreen::availableGeometry();
-func (this *QScreen) availableGeometry(args ...interface{}) () {
-  // availableGeometry()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen17availableGeometryEv
-    // invoke: QRect availableGeometry()
-    C._ZNK7QScreen17availableGeometryEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "availableGeometry", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::physicalDotsPerInchX();
-func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
-  // physicalDotsPerInchX()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QScreen20physicalDotsPerInchXEv
-    // invoke: qreal physicalDotsPerInchX()
-    C._ZNK7QScreen20physicalDotsPerInchXEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QScreen", "physicalDotsPerInchX", args)
-  }
-
-}
-
-  // proto:  qreal QScreen::physicalDotsPerInchY();
+// physicalDotsPerInchY()
 func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
   // physicalDotsPerInchY()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -584,7 +266,367 @@ func (this *QScreen) physicalDotsPerInchY(args ...interface{}) () {
 
 }
 
-  // proto:  int QScreen::depth();
+// logicalDotsPerInch()
+func (this *QScreen) logicalDotsPerInch(args ...interface{}) () {
+  // logicalDotsPerInch()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen18logicalDotsPerInchEv
+    // invoke: qreal logicalDotsPerInch()
+    C._ZNK7QScreen18logicalDotsPerInchEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "logicalDotsPerInch", args)
+  }
+
+}
+
+// virtualSiblings()
+func (this *QScreen) virtualSiblings(args ...interface{}) () {
+  // virtualSiblings()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen15virtualSiblingsEv
+    // invoke: QList<QScreen *> virtualSiblings()
+    C._ZNK7QScreen15virtualSiblingsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "virtualSiblings", args)
+  }
+
+}
+
+// availableGeometry()
+func (this *QScreen) availableGeometry(args ...interface{}) () {
+  // availableGeometry()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen17availableGeometryEv
+    // invoke: QRect availableGeometry()
+    C._ZNK7QScreen17availableGeometryEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "availableGeometry", args)
+  }
+
+}
+
+// orientationUpdateMask()
+func (this *QScreen) orientationUpdateMask(args ...interface{}) () {
+  // orientationUpdateMask()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen21orientationUpdateMaskEv
+    // invoke: Qt::ScreenOrientations orientationUpdateMask()
+    C._ZNK7QScreen21orientationUpdateMaskEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "orientationUpdateMask", args)
+  }
+
+}
+
+// primaryOrientation()
+func (this *QScreen) primaryOrientation(args ...interface{}) () {
+  // primaryOrientation()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen18primaryOrientationEv
+    // invoke: Qt::ScreenOrientation primaryOrientation()
+    C._ZNK7QScreen18primaryOrientationEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "primaryOrientation", args)
+  }
+
+}
+
+// handle()
+func (this *QScreen) handle(args ...interface{}) () {
+  // handle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen6handleEv
+    // invoke: QPlatformScreen * handle()
+    C._ZNK7QScreen6handleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "handle", args)
+  }
+
+}
+
+// availableVirtualGeometry()
+func (this *QScreen) availableVirtualGeometry(args ...interface{}) () {
+  // availableVirtualGeometry()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen24availableVirtualGeometryEv
+    // invoke: QRect availableVirtualGeometry()
+    C._ZNK7QScreen24availableVirtualGeometryEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "availableVirtualGeometry", args)
+  }
+
+}
+
+// ~QScreen()
+func (this *QScreen) FreeQScreen(args ...interface{}) () {
+  // ~QScreen()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QScreenD0Ev
+    // invoke: void ~QScreen()
+    C._ZN7QScreenD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "~QScreen", args)
+  }
+
+}
+
+// availableSize()
+func (this *QScreen) availableSize(args ...interface{}) () {
+  // availableSize()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen13availableSizeEv
+    // invoke: QSize availableSize()
+    C._ZNK7QScreen13availableSizeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "availableSize", args)
+  }
+
+}
+
+// virtualGeometry()
+func (this *QScreen) virtualGeometry(args ...interface{}) () {
+  // virtualGeometry()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen15virtualGeometryEv
+    // invoke: QRect virtualGeometry()
+    C._ZNK7QScreen15virtualGeometryEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "virtualGeometry", args)
+  }
+
+}
+
+// physicalDotsPerInch()
+func (this *QScreen) physicalDotsPerInch(args ...interface{}) () {
+  // physicalDotsPerInch()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen19physicalDotsPerInchEv
+    // invoke: qreal physicalDotsPerInch()
+    C._ZNK7QScreen19physicalDotsPerInchEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "physicalDotsPerInch", args)
+  }
+
+}
+
+// physicalSize()
+func (this *QScreen) physicalSize(args ...interface{}) () {
+  // physicalSize()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen12physicalSizeEv
+    // invoke: QSizeF physicalSize()
+    C._ZNK7QScreen12physicalSizeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "physicalSize", args)
+  }
+
+}
+
+// metaObject()
+func (this *QScreen) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QScreen10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "metaObject", args)
+  }
+
+}
+
+// name()
+func (this *QScreen) name(args ...interface{}) () {
+  // name()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen4nameEv
+    // invoke: QString name()
+    C._ZNK7QScreen4nameEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "name", args)
+  }
+
+}
+
+// logicalDotsPerInchY()
+func (this *QScreen) logicalDotsPerInchY(args ...interface{}) () {
+  // logicalDotsPerInchY()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen19logicalDotsPerInchYEv
+    // invoke: qreal logicalDotsPerInchY()
+    C._ZNK7QScreen19logicalDotsPerInchYEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "logicalDotsPerInchY", args)
+  }
+
+}
+
+// logicalDotsPerInchX()
+func (this *QScreen) logicalDotsPerInchX(args ...interface{}) () {
+  // logicalDotsPerInchX()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen19logicalDotsPerInchXEv
+    // invoke: qreal logicalDotsPerInchX()
+    C._ZNK7QScreen19logicalDotsPerInchXEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "logicalDotsPerInchX", args)
+  }
+
+}
+
+// devicePixelRatio()
+func (this *QScreen) devicePixelRatio(args ...interface{}) () {
+  // devicePixelRatio()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen16devicePixelRatioEv
+    // invoke: qreal devicePixelRatio()
+    C._ZNK7QScreen16devicePixelRatioEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "devicePixelRatio", args)
+  }
+
+}
+
+// geometry()
+func (this *QScreen) geometry(args ...interface{}) () {
+  // geometry()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen8geometryEv
+    // invoke: QRect geometry()
+    C._ZNK7QScreen8geometryEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "geometry", args)
+  }
+
+}
+
+// depth()
 func (this *QScreen) depth(args ...interface{}) () {
   // depth()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -600,6 +642,46 @@ func (this *QScreen) depth(args ...interface{}) () {
     C._ZNK7QScreen5depthEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QScreen", "depth", args)
+  }
+
+}
+
+// virtualSize()
+func (this *QScreen) virtualSize(args ...interface{}) () {
+  // virtualSize()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen11virtualSizeEv
+    // invoke: QSize virtualSize()
+    C._ZNK7QScreen11virtualSizeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "virtualSize", args)
+  }
+
+}
+
+// physicalDotsPerInchX()
+func (this *QScreen) physicalDotsPerInchX(args ...interface{}) () {
+  // physicalDotsPerInchX()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QScreen20physicalDotsPerInchXEv
+    // invoke: qreal physicalDotsPerInchX()
+    C._ZNK7QScreen20physicalDotsPerInchXEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QScreen", "physicalDotsPerInchX", args)
   }
 
 }

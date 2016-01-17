@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtWidgets/qlcdnumber.h
 // dst-file: /src/widgets/qlcdnumber.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,51 +28,50 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QLCDNumber::display(int num);
-extern void _ZN10QLCDNumber7displayEi(void* qthis, int32_t arg0);
-  // proto:  void QLCDNumber::setHexMode();
-extern void _ZN10QLCDNumber10setHexModeEv(void* qthis);
-  // proto:  void QLCDNumber::display(double num);
-extern void _ZN10QLCDNumber7displayEd(void* qthis, double arg0);
-  // proto:  const QMetaObject * QLCDNumber::metaObject();
-extern void _ZNK10QLCDNumber10metaObjectEv(void* qthis);
-  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-extern void* dector_ZN10QLCDNumberC1ERKS_(void* arg0);
-extern void _ZN10QLCDNumberC1ERKS_(void* qthis, void* arg0);
-  // proto:  int QLCDNumber::digitCount();
-extern void _ZNK10QLCDNumber10digitCountEv(void* qthis);
-  // proto:  void QLCDNumber::~QLCDNumber();
-extern void _ZN10QLCDNumberD0Ev(void* qthis);
-  // proto:  bool QLCDNumber::checkOverflow(int num);
-extern void _ZNK10QLCDNumber13checkOverflowEi(void* qthis, int32_t arg0);
-  // proto:  void QLCDNumber::setDecMode();
-extern void _ZN10QLCDNumber10setDecModeEv(void* qthis);
-  // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
-extern void* dector_ZN10QLCDNumberC1EjP7QWidget(int32_t arg0, void* arg1);
-extern void _ZN10QLCDNumberC1EjP7QWidget(void* qthis, int32_t arg0, void* arg1);
-  // proto:  bool QLCDNumber::checkOverflow(double num);
-extern void _ZNK10QLCDNumber13checkOverflowEd(void* qthis, double arg0);
-  // proto:  QSize QLCDNumber::sizeHint();
-extern void _ZNK10QLCDNumber8sizeHintEv(void* qthis);
-  // proto:  void QLCDNumber::display(const QString & str);
-extern void _ZN10QLCDNumber7displayERK7QString(void* qthis, void* arg0);
-  // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
-extern void* dector_ZN10QLCDNumberC1EP7QWidget(void* arg0);
-extern void _ZN10QLCDNumberC1EP7QWidget(void* qthis, void* arg0);
-  // proto:  double QLCDNumber::value();
-extern void _ZNK10QLCDNumber5valueEv(void* qthis);
-  // proto:  void QLCDNumber::setBinMode();
-extern void _ZN10QLCDNumber10setBinModeEv(void* qthis);
-  // proto:  int QLCDNumber::intValue();
-extern void _ZNK10QLCDNumber8intValueEv(void* qthis);
-  // proto:  void QLCDNumber::setDigitCount(int nDigits);
-extern void _ZN10QLCDNumber13setDigitCountEi(void* qthis, int32_t arg0);
   // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
-extern void _ZN10QLCDNumber20setSmallDecimalPointEb(void* qthis, bool arg0);
+extern void _ZN10QLCDNumber20setSmallDecimalPointEb(void* qthis, bool arg0); // 4
+  // proto:  void QLCDNumber::setDecMode();
+extern void _ZN10QLCDNumber10setDecModeEv(void* qthis); // 4
   // proto:  bool QLCDNumber::smallDecimalPoint();
-extern void _ZNK10QLCDNumber17smallDecimalPointEv(void* qthis);
+extern void _ZNK10QLCDNumber17smallDecimalPointEv(void* qthis); // 4
+  // proto:  void QLCDNumber::setHexMode();
+extern void _ZN10QLCDNumber10setHexModeEv(void* qthis); // 4
+  // proto:  void QLCDNumber::~QLCDNumber();
+extern void _ZN10QLCDNumberD2Ev(void* qthis); // 4
+  // proto:  QLCDNumber::SegmentStyle QLCDNumber::segmentStyle();
+extern void _ZNK10QLCDNumber12segmentStyleEv(void* qthis); // 4
+  // proto:  void QLCDNumber::QLCDNumber(uint numDigits, QWidget * parent);
+extern void _ZN10QLCDNumberC2EjP7QWidget(void* qthis, int32_t arg0, void* arg1); // 3
+  // proto:  void QLCDNumber::QLCDNumber(QWidget * parent);
+extern void _ZN10QLCDNumberC2EP7QWidget(void* qthis, void* arg0); // 3
+  // proto:  int QLCDNumber::intValue();
+extern void _ZNK10QLCDNumber8intValueEv(void* qthis); // 4
+  // proto:  int QLCDNumber::digitCount();
+extern void _ZNK10QLCDNumber10digitCountEv(void* qthis); // 4
+  // proto:  QSize QLCDNumber::sizeHint();
+extern void _ZNK10QLCDNumber8sizeHintEv(void* qthis); // 4
   // proto:  void QLCDNumber::setOctMode();
-extern void _ZN10QLCDNumber10setOctModeEv(void* qthis);
+extern void _ZN10QLCDNumber10setOctModeEv(void* qthis); // 4
+  // proto:  const QMetaObject * QLCDNumber::metaObject();
+extern void _ZNK10QLCDNumber10metaObjectEv(void* qthis); // 4
+  // proto:  void QLCDNumber::setBinMode();
+extern void _ZN10QLCDNumber10setBinModeEv(void* qthis); // 4
+  // proto:  double QLCDNumber::value();
+extern void _ZNK10QLCDNumber5valueEv(void* qthis); // 4
+  // proto:  void QLCDNumber::setDigitCount(int nDigits);
+extern void _ZN10QLCDNumber13setDigitCountEi(void* qthis, int32_t arg0); // 4
+  // proto:  QLCDNumber::Mode QLCDNumber::mode();
+extern void _ZNK10QLCDNumber4modeEv(void* qthis); // 4
+  // proto:  bool QLCDNumber::checkOverflow(int num);
+extern void _ZNK10QLCDNumber13checkOverflowEi(void* qthis, int32_t arg0); // 4
+  // proto:  bool QLCDNumber::checkOverflow(double num);
+extern void _ZNK10QLCDNumber13checkOverflowEd(void* qthis, double arg0); // 4
+  // proto:  void QLCDNumber::display(int num);
+extern void _ZN10QLCDNumber7displayEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QLCDNumber::display(double num);
+extern void _ZN10QLCDNumber7displayEd(void* qthis, double arg0); // 4
+  // proto:  void QLCDNumber::display(const QString & str);
+extern void _ZN10QLCDNumber7displayERK7QString(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -96,7 +91,385 @@ type QLCDNumber struct {
 //  _overflow QLCDNumber_overflow_signal;
 }
 
-  // proto:  void QLCDNumber::display(int num);
+// setSmallDecimalPoint(_Bool)
+func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
+  // setSmallDecimalPoint(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
+    // invoke: void setSmallDecimalPoint(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber20setSmallDecimalPointEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
+  }
+
+}
+
+// setDecMode()
+func (this *QLCDNumber) setDecMode(args ...interface{}) () {
+  // setDecMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber10setDecModeEv
+    // invoke: void setDecMode()
+    C._ZN10QLCDNumber10setDecModeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
+  }
+
+}
+
+// smallDecimalPoint()
+func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
+  // smallDecimalPoint()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
+    // invoke: bool smallDecimalPoint()
+    C._ZNK10QLCDNumber17smallDecimalPointEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
+  }
+
+}
+
+// setHexMode()
+func (this *QLCDNumber) setHexMode(args ...interface{}) () {
+  // setHexMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber10setHexModeEv
+    // invoke: void setHexMode()
+    C._ZN10QLCDNumber10setHexModeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
+  }
+
+}
+
+// ~QLCDNumber()
+func (this *QLCDNumber) FreeQLCDNumber(args ...interface{}) () {
+  // ~QLCDNumber()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumberD0Ev
+    // invoke: void ~QLCDNumber()
+    C._ZN10QLCDNumberD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
+  }
+
+}
+
+// segmentStyle()
+func (this *QLCDNumber) segmentStyle(args ...interface{}) () {
+  // segmentStyle()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber12segmentStyleEv
+    // invoke: QLCDNumber::SegmentStyle segmentStyle()
+    C._ZNK10QLCDNumber12segmentStyleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "segmentStyle", args)
+  }
+
+}
+
+// QLCDNumber(uint, class QWidget *)
+func NewQLCDNumber(args ...interface{}) QLCDNumber {
+  // QLCDNumber(uint, class QWidget *)
+  // QLCDNumber(class QWidget *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "uint"
+  vtys[0][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumberC1EjP7QWidget
+    // invoke: void QLCDNumber(uint, class QWidget *)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QLCDNumberC2EjP7QWidget(qthis, arg0, arg1)
+  case 1:
+    // invoke: _ZN10QLCDNumberC1EP7QWidget
+    // invoke: void QLCDNumber(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QLCDNumberC2EP7QWidget(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "QLCDNumber", args)
+  }
+
+  return QLCDNumber{}
+}
+
+// intValue()
+func (this *QLCDNumber) intValue(args ...interface{}) () {
+  // intValue()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber8intValueEv
+    // invoke: int intValue()
+    C._ZNK10QLCDNumber8intValueEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "intValue", args)
+  }
+
+}
+
+// digitCount()
+func (this *QLCDNumber) digitCount(args ...interface{}) () {
+  // digitCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber10digitCountEv
+    // invoke: int digitCount()
+    C._ZNK10QLCDNumber10digitCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
+  }
+
+}
+
+// sizeHint()
+func (this *QLCDNumber) sizeHint(args ...interface{}) () {
+  // sizeHint()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK10QLCDNumber8sizeHintEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
+  }
+
+}
+
+// setOctMode()
+func (this *QLCDNumber) setOctMode(args ...interface{}) () {
+  // setOctMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber10setOctModeEv
+    // invoke: void setOctMode()
+    C._ZN10QLCDNumber10setOctModeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
+  }
+
+}
+
+// metaObject()
+func (this *QLCDNumber) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK10QLCDNumber10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
+  }
+
+}
+
+// setBinMode()
+func (this *QLCDNumber) setBinMode(args ...interface{}) () {
+  // setBinMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber10setBinModeEv
+    // invoke: void setBinMode()
+    C._ZN10QLCDNumber10setBinModeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
+  }
+
+}
+
+// value()
+func (this *QLCDNumber) value(args ...interface{}) () {
+  // value()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber5valueEv
+    // invoke: double value()
+    C._ZNK10QLCDNumber5valueEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "value", args)
+  }
+
+}
+
+// setDigitCount(int)
+func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
+  // setDigitCount(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QLCDNumber13setDigitCountEi
+    // invoke: void setDigitCount(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN10QLCDNumber13setDigitCountEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
+  }
+
+}
+
+// mode()
+func (this *QLCDNumber) mode(args ...interface{}) () {
+  // mode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber4modeEv
+    // invoke: QLCDNumber::Mode mode()
+    C._ZNK10QLCDNumber4modeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "mode", args)
+  }
+
+}
+
+// checkOverflow(int)
+func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
+  // checkOverflow(int)
+  // checkOverflow(double)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = qtrt.DoubleTy(false) // "double"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QLCDNumber13checkOverflowEi
+    // invoke: bool checkOverflow(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QLCDNumber13checkOverflowEi(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZNK10QLCDNumber13checkOverflowEd
+    // invoke: bool checkOverflow(double)
+    var arg0 = C.double(args[0].(float64))
+    if false {fmt.Println(arg0)}
+    C._ZNK10QLCDNumber13checkOverflowEd(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
+  }
+
+}
+
+// display(int)
 func (this *QLCDNumber) display(args ...interface{}) () {
   // display(int)
   // display(double)
@@ -133,303 +506,6 @@ func (this *QLCDNumber) display(args ...interface{}) () {
     C._ZN10QLCDNumber7displayERK7QString(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QLCDNumber", "display", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setHexMode();
-func (this *QLCDNumber) setHexMode(args ...interface{}) () {
-  // setHexMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setHexModeEv
-    // invoke: void setHexMode()
-    C._ZN10QLCDNumber10setHexModeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setHexMode", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QLCDNumber::metaObject();
-func (this *QLCDNumber) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK10QLCDNumber10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "metaObject", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::QLCDNumber(const QLCDNumber & );
-func NewQLCDNumber(args ...interface{}) QLCDNumber {
-  return QLCDNumber{}
-}
-
-  // proto:  int QLCDNumber::digitCount();
-func (this *QLCDNumber) digitCount(args ...interface{}) () {
-  // digitCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber10digitCountEv
-    // invoke: int digitCount()
-    C._ZNK10QLCDNumber10digitCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "digitCount", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::~QLCDNumber();
-func (this *QLCDNumber) FreeQLCDNumber(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "~QLCDNumber", args)
-  }
-
-}
-
-  // proto:  bool QLCDNumber::checkOverflow(int num);
-func (this *QLCDNumber) checkOverflow(args ...interface{}) () {
-  // checkOverflow(int)
-  // checkOverflow(double)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = qtrt.DoubleTy(false) // "double"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber13checkOverflowEi
-    // invoke: bool checkOverflow(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QLCDNumber13checkOverflowEi(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZNK10QLCDNumber13checkOverflowEd
-    // invoke: bool checkOverflow(double)
-    var arg0 = C.double(args[0].(float64))
-    if false {fmt.Println(arg0)}
-    C._ZNK10QLCDNumber13checkOverflowEd(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "checkOverflow", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setDecMode();
-func (this *QLCDNumber) setDecMode(args ...interface{}) () {
-  // setDecMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setDecModeEv
-    // invoke: void setDecMode()
-    C._ZN10QLCDNumber10setDecModeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setDecMode", args)
-  }
-
-}
-
-  // proto:  QSize QLCDNumber::sizeHint();
-func (this *QLCDNumber) sizeHint(args ...interface{}) () {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber8sizeHintEv
-    // invoke: QSize sizeHint()
-    C._ZNK10QLCDNumber8sizeHintEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "sizeHint", args)
-  }
-
-}
-
-  // proto:  double QLCDNumber::value();
-func (this *QLCDNumber) value(args ...interface{}) () {
-  // value()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber5valueEv
-    // invoke: double value()
-    C._ZNK10QLCDNumber5valueEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "value", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setBinMode();
-func (this *QLCDNumber) setBinMode(args ...interface{}) () {
-  // setBinMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setBinModeEv
-    // invoke: void setBinMode()
-    C._ZN10QLCDNumber10setBinModeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setBinMode", args)
-  }
-
-}
-
-  // proto:  int QLCDNumber::intValue();
-func (this *QLCDNumber) intValue(args ...interface{}) () {
-  // intValue()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber8intValueEv
-    // invoke: int intValue()
-    C._ZNK10QLCDNumber8intValueEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "intValue", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setDigitCount(int nDigits);
-func (this *QLCDNumber) setDigitCount(args ...interface{}) () {
-  // setDigitCount(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber13setDigitCountEi
-    // invoke: void setDigitCount(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN10QLCDNumber13setDigitCountEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setDigitCount", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setSmallDecimalPoint(bool );
-func (this *QLCDNumber) setSmallDecimalPoint(args ...interface{}) () {
-  // setSmallDecimalPoint(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber20setSmallDecimalPointEb
-    // invoke: void setSmallDecimalPoint(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN10QLCDNumber20setSmallDecimalPointEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setSmallDecimalPoint", args)
-  }
-
-}
-
-  // proto:  bool QLCDNumber::smallDecimalPoint();
-func (this *QLCDNumber) smallDecimalPoint(args ...interface{}) () {
-  // smallDecimalPoint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QLCDNumber17smallDecimalPointEv
-    // invoke: bool smallDecimalPoint()
-    C._ZNK10QLCDNumber17smallDecimalPointEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "smallDecimalPoint", args)
-  }
-
-}
-
-  // proto:  void QLCDNumber::setOctMode();
-func (this *QLCDNumber) setOctMode(args ...interface{}) () {
-  // setOctMode()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QLCDNumber10setOctModeEv
-    // invoke: void setOctMode()
-    C._ZN10QLCDNumber10setOctModeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QLCDNumber", "setOctMode", args)
   }
 
 }

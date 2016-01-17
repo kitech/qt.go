@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,10 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
-extern void _ZN23QTreeWidgetItemIteratorD0Ev(void* qthis);
+extern void _ZN23QTreeWidgetItemIteratorD2Ev(void* qthis); // 4
   // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
-extern void* dector_ZN23QTreeWidgetItemIteratorC1ERKS_(void* arg0);
-extern void _ZN23QTreeWidgetItemIteratorC1ERKS_(void* qthis, void* arg0);
+extern void _ZN23QTreeWidgetItemIteratorC2ERKS_(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -55,22 +50,49 @@ type QTreeWidgetItemIterator struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
+// ~QTreeWidgetItemIterator()
 func (this *QTreeWidgetItemIterator) FreeQTreeWidgetItemIterator(args ...interface{}) () {
+  // ~QTreeWidgetItemIterator()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN23QTreeWidgetItemIteratorD0Ev
+    // invoke: void ~QTreeWidgetItemIterator()
+    C._ZN23QTreeWidgetItemIteratorD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "~QTreeWidgetItemIterator", args)
   }
 
 }
 
-  // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
+// QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
 func NewQTreeWidgetItemIterator(args ...interface{}) QTreeWidgetItemIterator {
+  // QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTreeWidgetItemIterator{}) // "const QTreeWidgetItemIterator &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QTreeWidgetItemIteratorC1ERKS_
+    // invoke: void QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
+    var arg0 = args[0].(QTreeWidgetItemIterator).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QTreeWidgetItemIteratorC2ERKS_(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QTreeWidgetItemIterator", "QTreeWidgetItemIterator", args)
+  }
+
   return QTreeWidgetItemIterator{}
 }
 

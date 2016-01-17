@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,20 +28,18 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  const QMetaObject * QHistoryState::metaObject();
-extern void _ZNK13QHistoryState10metaObjectEv(void* qthis);
-  // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-extern void* dector_ZN13QHistoryStateC1ERKS_(void* arg0);
-extern void _ZN13QHistoryStateC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
-extern void _ZN13QHistoryState15setDefaultStateEP14QAbstractState(void* qthis, void* arg0);
-  // proto:  void QHistoryState::QHistoryState(QState * parent);
-extern void* dector_ZN13QHistoryStateC1EP6QState(void* arg0);
-extern void _ZN13QHistoryStateC1EP6QState(void* qthis, void* arg0);
-  // proto:  QAbstractState * QHistoryState::defaultState();
-extern void _ZNK13QHistoryState12defaultStateEv(void* qthis);
+  // proto:  QHistoryState::HistoryType QHistoryState::historyType();
+extern void _ZNK13QHistoryState11historyTypeEv(void* qthis); // 4
   // proto:  void QHistoryState::~QHistoryState();
-extern void _ZN13QHistoryStateD0Ev(void* qthis);
+extern void _ZN13QHistoryStateD2Ev(void* qthis); // 4
+  // proto:  QAbstractState * QHistoryState::defaultState();
+extern void _ZNK13QHistoryState12defaultStateEv(void* qthis); // 4
+  // proto:  void QHistoryState::QHistoryState(QState * parent);
+extern void _ZN13QHistoryStateC2EP6QState(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QHistoryState::metaObject();
+extern void _ZNK13QHistoryState10metaObjectEv(void* qthis); // 4
+  // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
+extern void _ZN13QHistoryState15setDefaultStateEP14QAbstractState(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -66,9 +60,9 @@ type QHistoryState struct {
 //  _historyTypeChanged QHistoryState_historyTypeChanged_signal;
 }
 
-  // proto:  const QMetaObject * QHistoryState::metaObject();
-func (this *QHistoryState) metaObject(args ...interface{}) () {
-  // metaObject()
+// historyType()
+func (this *QHistoryState) historyType(args ...interface{}) () {
+  // historyType()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -77,44 +71,36 @@ func (this *QHistoryState) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QHistoryState10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK13QHistoryState10metaObjectEv(this.qclsinst)
+    // invoke: _ZNK13QHistoryState11historyTypeEv
+    // invoke: QHistoryState::HistoryType historyType()
+    C._ZNK13QHistoryState11historyTypeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QHistoryState", "metaObject", args)
+    qtrt.ErrorResolve("QHistoryState", "historyType", args)
   }
 
 }
 
-  // proto:  void QHistoryState::QHistoryState(const QHistoryState & );
-func NewQHistoryState(args ...interface{}) QHistoryState {
-  return QHistoryState{}
-}
-
-  // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
-func (this *QHistoryState) setDefaultState(args ...interface{}) () {
-  // setDefaultState(class QAbstractState *)
+// ~QHistoryState()
+func (this *QHistoryState) FreeQHistoryState(args ...interface{}) () {
+  // ~QHistoryState()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN13QHistoryState15setDefaultStateEP14QAbstractState
-    // invoke: void setDefaultState(class QAbstractState *)
-    var arg0 = args[0].(QAbstractState).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN13QHistoryState15setDefaultStateEP14QAbstractState(this.qclsinst, arg0)
+    // invoke: _ZN13QHistoryStateD0Ev
+    // invoke: void ~QHistoryState()
+    C._ZN13QHistoryStateD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
+    qtrt.ErrorResolve("QHistoryState", "~QHistoryState", args)
   }
 
 }
 
-  // proto:  QAbstractState * QHistoryState::defaultState();
+// defaultState()
 func (this *QHistoryState) defaultState(args ...interface{}) () {
   // defaultState()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -134,16 +120,71 @@ func (this *QHistoryState) defaultState(args ...interface{}) () {
 
 }
 
-  // proto:  void QHistoryState::~QHistoryState();
-func (this *QHistoryState) FreeQHistoryState(args ...interface{}) () {
+// QHistoryState(class QState *)
+func NewQHistoryState(args ...interface{}) QHistoryState {
+  // QHistoryState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QState{}) // "QState *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN13QHistoryStateC1EP6QState
+    // invoke: void QHistoryState(class QState *)
+    var arg0 = args[0].(QState).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QHistoryStateC2EP6QState(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QHistoryState", "~QHistoryState", args)
+    qtrt.ErrorResolve("QHistoryState", "QHistoryState", args)
+  }
+
+  return QHistoryState{}
+}
+
+// metaObject()
+func (this *QHistoryState) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QHistoryState10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK13QHistoryState10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QHistoryState", "metaObject", args)
+  }
+
+}
+
+// setDefaultState(class QAbstractState *)
+func (this *QHistoryState) setDefaultState(args ...interface{}) () {
+  // setDefaultState(class QAbstractState *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAbstractState{}) // "QAbstractState *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QHistoryState15setDefaultStateEP14QAbstractState
+    // invoke: void setDefaultState(class QAbstractState *)
+    var arg0 = args[0].(QAbstractState).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN13QHistoryState15setDefaultStateEP14QAbstractState(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QHistoryState", "setDefaultState", args)
   }
 
 }

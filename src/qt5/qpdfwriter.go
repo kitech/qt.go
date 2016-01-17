@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qpdfwriter.h
 // dst-file: /src/gui/qpdfwriter.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,35 +28,30 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QPdfWriter::~QPdfWriter();
-extern void _ZN10QPdfWriterD0Ev(void* qthis);
-  // proto:  void QPdfWriter::setCreator(const QString & creator);
-extern void _ZN10QPdfWriter10setCreatorERK7QString(void* qthis, void* arg0);
-  // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
-extern void _ZN10QPdfWriter13setPageSizeMMERK6QSizeF(void* qthis, void* arg0);
-  // proto:  void QPdfWriter::setResolution(int resolution);
-extern void _ZN10QPdfWriter13setResolutionEi(void* qthis, int32_t arg0);
-  // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-extern void* dector_ZN10QPdfWriterC1ERKS_(void* arg0);
-extern void _ZN10QPdfWriterC1ERKS_(void* qthis, void* arg0);
   // proto:  bool QPdfWriter::newPage();
-extern void _ZN10QPdfWriter7newPageEv(void* qthis);
-  // proto:  QString QPdfWriter::title();
-extern void _ZNK10QPdfWriter5titleEv(void* qthis);
+extern void _ZN10QPdfWriter7newPageEv(void* qthis); // 4
   // proto:  QString QPdfWriter::creator();
-extern void _ZNK10QPdfWriter7creatorEv(void* qthis);
-  // proto:  int QPdfWriter::resolution();
-extern void _ZNK10QPdfWriter10resolutionEv(void* qthis);
-  // proto:  const QMetaObject * QPdfWriter::metaObject();
-extern void _ZNK10QPdfWriter10metaObjectEv(void* qthis);
-  // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
-extern void* dector_ZN10QPdfWriterC1ERK7QString(void* arg0);
-extern void _ZN10QPdfWriterC1ERK7QString(void* qthis, void* arg0);
-  // proto:  void QPdfWriter::QPdfWriter(QIODevice * device);
-extern void* dector_ZN10QPdfWriterC1EP9QIODevice(void* arg0);
-extern void _ZN10QPdfWriterC1EP9QIODevice(void* qthis, void* arg0);
+extern void _ZNK10QPdfWriter7creatorEv(void* qthis); // 4
+  // proto:  void QPdfWriter::~QPdfWriter();
+extern void _ZN10QPdfWriterD2Ev(void* qthis); // 4
   // proto:  void QPdfWriter::setTitle(const QString & title);
-extern void _ZN10QPdfWriter8setTitleERK7QString(void* qthis, void* arg0);
+extern void _ZN10QPdfWriter8setTitleERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QString QPdfWriter::title();
+extern void _ZNK10QPdfWriter5titleEv(void* qthis); // 4
+  // proto:  void QPdfWriter::QPdfWriter(const QString & filename);
+extern void _ZN10QPdfWriterC2ERK7QString(void* qthis, void* arg0); // 3
+  // proto:  void QPdfWriter::QPdfWriter(QIODevice * device);
+extern void _ZN10QPdfWriterC2EP9QIODevice(void* qthis, void* arg0); // 3
+  // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
+extern void _ZN10QPdfWriter13setPageSizeMMERK6QSizeF(void* qthis, void* arg0); // 4
+  // proto:  void QPdfWriter::setResolution(int resolution);
+extern void _ZN10QPdfWriter13setResolutionEi(void* qthis, int32_t arg0); // 4
+  // proto:  const QMetaObject * QPdfWriter::metaObject();
+extern void _ZNK10QPdfWriter10metaObjectEv(void* qthis); // 4
+  // proto:  void QPdfWriter::setCreator(const QString & creator);
+extern void _ZN10QPdfWriter10setCreatorERK7QString(void* qthis, void* arg0); // 4
+  // proto:  int QPdfWriter::resolution();
+extern void _ZNK10QPdfWriter10resolutionEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -79,23 +70,69 @@ type QPdfWriter struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QPdfWriter::~QPdfWriter();
-func (this *QPdfWriter) FreeQPdfWriter(args ...interface{}) () {
+// newPage()
+func (this *QPdfWriter) newPage(args ...interface{}) () {
+  // newPage()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN10QPdfWriter7newPageEv
+    // invoke: bool newPage()
+    C._ZN10QPdfWriter7newPageEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPdfWriter", "newPage", args)
+  }
+
+}
+
+// creator()
+func (this *QPdfWriter) creator(args ...interface{}) () {
+  // creator()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QPdfWriter7creatorEv
+    // invoke: QString creator()
+    C._ZNK10QPdfWriter7creatorEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPdfWriter", "creator", args)
+  }
+
+}
+
+// ~QPdfWriter()
+func (this *QPdfWriter) FreeQPdfWriter(args ...interface{}) () {
+  // ~QPdfWriter()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QPdfWriterD0Ev
+    // invoke: void ~QPdfWriter()
+    C._ZN10QPdfWriterD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPdfWriter", "~QPdfWriter", args)
   }
 
 }
 
-  // proto:  void QPdfWriter::setCreator(const QString & creator);
-func (this *QPdfWriter) setCreator(args ...interface{}) () {
-  // setCreator(const class QString &)
+// setTitle(const class QString &)
+func (this *QPdfWriter) setTitle(args ...interface{}) () {
+  // setTitle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -105,18 +142,75 @@ func (this *QPdfWriter) setCreator(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QPdfWriter10setCreatorERK7QString
-    // invoke: void setCreator(const class QString &)
+    // invoke: _ZN10QPdfWriter8setTitleERK7QString
+    // invoke: void setTitle(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QPdfWriter10setCreatorERK7QString(this.qclsinst, arg0)
+    C._ZN10QPdfWriter8setTitleERK7QString(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QPdfWriter", "setCreator", args)
+    qtrt.ErrorResolve("QPdfWriter", "setTitle", args)
   }
 
 }
 
-  // proto:  void QPdfWriter::setPageSizeMM(const QSizeF & size);
+// title()
+func (this *QPdfWriter) title(args ...interface{}) () {
+  // title()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QPdfWriter5titleEv
+    // invoke: QString title()
+    C._ZNK10QPdfWriter5titleEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPdfWriter", "title", args)
+  }
+
+}
+
+// QPdfWriter(const class QString &)
+func NewQPdfWriter(args ...interface{}) QPdfWriter {
+  // QPdfWriter(const class QString &)
+  // QPdfWriter(class QIODevice *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QPdfWriterC1ERK7QString
+    // invoke: void QPdfWriter(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QPdfWriterC2ERK7QString(qthis, arg0)
+  case 1:
+    // invoke: _ZN10QPdfWriterC1EP9QIODevice
+    // invoke: void QPdfWriter(class QIODevice *)
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QPdfWriterC2EP9QIODevice(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QPdfWriter", "QPdfWriter", args)
+  }
+
+  return QPdfWriter{}
+}
+
+// setPageSizeMM(const class QSizeF &)
 func (this *QPdfWriter) setPageSizeMM(args ...interface{}) () {
   // setPageSizeMM(const class QSizeF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,7 +233,7 @@ func (this *QPdfWriter) setPageSizeMM(args ...interface{}) () {
 
 }
 
-  // proto:  void QPdfWriter::setResolution(int resolution);
+// setResolution(int)
 func (this *QPdfWriter) setResolution(args ...interface{}) () {
   // setResolution(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -162,92 +256,7 @@ func (this *QPdfWriter) setResolution(args ...interface{}) () {
 
 }
 
-  // proto:  void QPdfWriter::QPdfWriter(const QPdfWriter & );
-func NewQPdfWriter(args ...interface{}) QPdfWriter {
-  return QPdfWriter{}
-}
-
-  // proto:  bool QPdfWriter::newPage();
-func (this *QPdfWriter) newPage(args ...interface{}) () {
-  // newPage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QPdfWriter7newPageEv
-    // invoke: bool newPage()
-    C._ZN10QPdfWriter7newPageEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPdfWriter", "newPage", args)
-  }
-
-}
-
-  // proto:  QString QPdfWriter::title();
-func (this *QPdfWriter) title(args ...interface{}) () {
-  // title()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QPdfWriter5titleEv
-    // invoke: QString title()
-    C._ZNK10QPdfWriter5titleEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPdfWriter", "title", args)
-  }
-
-}
-
-  // proto:  QString QPdfWriter::creator();
-func (this *QPdfWriter) creator(args ...interface{}) () {
-  // creator()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QPdfWriter7creatorEv
-    // invoke: QString creator()
-    C._ZNK10QPdfWriter7creatorEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPdfWriter", "creator", args)
-  }
-
-}
-
-  // proto:  int QPdfWriter::resolution();
-func (this *QPdfWriter) resolution(args ...interface{}) () {
-  // resolution()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QPdfWriter10resolutionEv
-    // invoke: int resolution()
-    C._ZNK10QPdfWriter10resolutionEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPdfWriter", "resolution", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QPdfWriter::metaObject();
+// metaObject()
 func (this *QPdfWriter) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -267,9 +276,9 @@ func (this *QPdfWriter) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QPdfWriter::setTitle(const QString & title);
-func (this *QPdfWriter) setTitle(args ...interface{}) () {
-  // setTitle(const class QString &)
+// setCreator(const class QString &)
+func (this *QPdfWriter) setCreator(args ...interface{}) () {
+  // setCreator(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -279,13 +288,33 @@ func (this *QPdfWriter) setTitle(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QPdfWriter8setTitleERK7QString
-    // invoke: void setTitle(const class QString &)
+    // invoke: _ZN10QPdfWriter10setCreatorERK7QString
+    // invoke: void setCreator(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZN10QPdfWriter8setTitleERK7QString(this.qclsinst, arg0)
+    C._ZN10QPdfWriter10setCreatorERK7QString(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QPdfWriter", "setTitle", args)
+    qtrt.ErrorResolve("QPdfWriter", "setCreator", args)
+  }
+
+}
+
+// resolution()
+func (this *QPdfWriter) resolution(args ...interface{}) () {
+  // resolution()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QPdfWriter10resolutionEv
+    // invoke: int resolution()
+    C._ZNK10QPdfWriter10resolutionEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPdfWriter", "resolution", args)
   }
 
 }

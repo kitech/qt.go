@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qimageiohandler.h
 // dst-file: /src/gui/qimageiohandler.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,47 +28,42 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
-extern void* dector_ZN15QImageIOHandlerC1ERKS_(void* arg0);
-extern void _ZN15QImageIOHandlerC1ERKS_(void* qthis, void* arg0);
-  // proto:  int QImageIOHandler::imageCount();
-extern void _ZNK15QImageIOHandler10imageCountEv(void* qthis);
-  // proto:  QRect QImageIOHandler::currentImageRect();
-extern void _ZNK15QImageIOHandler16currentImageRectEv(void* qthis);
-  // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
-extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int32_t arg0);
-  // proto:  int QImageIOHandler::currentImageNumber();
-extern void _ZNK15QImageIOHandler18currentImageNumberEv(void* qthis);
-  // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
-extern void _ZN15QImageIOHandler9setFormatERK10QByteArray(void* qthis, void* arg0);
-  // proto:  bool QImageIOHandler::jumpToNextImage();
-extern void _ZN15QImageIOHandler15jumpToNextImageEv(void* qthis);
-  // proto:  void QImageIOHandler::~QImageIOHandler();
-extern void _ZN15QImageIOHandlerD0Ev(void* qthis);
-  // proto:  int QImageIOHandler::loopCount();
-extern void _ZNK15QImageIOHandler9loopCountEv(void* qthis);
-  // proto:  void QImageIOHandler::QImageIOHandler();
-extern void* dector_ZN15QImageIOHandlerC1Ev();
-extern void _ZN15QImageIOHandlerC1Ev(void* qthis);
-  // proto:  QByteArray QImageIOHandler::name();
-extern void _ZNK15QImageIOHandler4nameEv(void* qthis);
-  // proto:  QByteArray QImageIOHandler::format();
-extern void _ZNK15QImageIOHandler6formatEv(void* qthis);
-  // proto:  int QImageIOHandler::nextImageDelay();
-extern void _ZNK15QImageIOHandler14nextImageDelayEv(void* qthis);
-  // proto:  void QImageIOHandler::setDevice(QIODevice * device);
-extern void _ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0);
   // proto:  QIODevice * QImageIOHandler::device();
-extern void _ZNK15QImageIOHandler6deviceEv(void* qthis);
+extern void _ZNK15QImageIOHandler6deviceEv(void* qthis); // 4
+  // proto:  int QImageIOHandler::imageCount();
+extern void _ZNK15QImageIOHandler10imageCountEv(void* qthis); // 4
+  // proto:  int QImageIOHandler::loopCount();
+extern void _ZNK15QImageIOHandler9loopCountEv(void* qthis); // 4
+  // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
+extern void _ZN15QImageIOHandler9setFormatERK10QByteArray(void* qthis, void* arg0); // 4
+  // proto:  QByteArray QImageIOHandler::format();
+extern void _ZNK15QImageIOHandler6formatEv(void* qthis); // 4
   // proto:  bool QImageIOHandler::write(const QImage & image);
-extern void _ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
-extern void _ZNK14QImageIOPlugin10metaObjectEv(void* qthis);
+extern void _ZN15QImageIOHandler5writeERK6QImage(void* qthis, void* arg0); // 4
+  // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
+extern void _ZN15QImageIOHandler11jumpToImageEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QImageIOHandler::setDevice(QIODevice * device);
+extern void _ZN15QImageIOHandler9setDeviceEP9QIODevice(void* qthis, void* arg0); // 4
+  // proto:  bool QImageIOHandler::jumpToNextImage();
+extern void _ZN15QImageIOHandler15jumpToNextImageEv(void* qthis); // 4
+  // proto:  int QImageIOHandler::currentImageNumber();
+extern void _ZNK15QImageIOHandler18currentImageNumberEv(void* qthis); // 4
+  // proto:  void QImageIOHandler::~QImageIOHandler();
+extern void _ZN15QImageIOHandlerD2Ev(void* qthis); // 4
+  // proto:  void QImageIOHandler::QImageIOHandler();
+extern void _ZN15QImageIOHandlerC2Ev(void* qthis); // 3
+  // proto:  QRect QImageIOHandler::currentImageRect();
+extern void _ZNK15QImageIOHandler16currentImageRectEv(void* qthis); // 4
+  // proto:  QByteArray QImageIOHandler::name();
+extern void _ZNK15QImageIOHandler4nameEv(void* qthis); // 4
+  // proto:  int QImageIOHandler::nextImageDelay();
+extern void _ZNK15QImageIOHandler14nextImageDelayEv(void* qthis); // 4
   // proto:  void QImageIOPlugin::~QImageIOPlugin();
-extern void _ZN14QImageIOPluginD0Ev(void* qthis);
+extern void _ZN14QImageIOPluginD2Ev(void* qthis); // 4
   // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
-extern void* dector_ZN14QImageIOPluginC1EP7QObject(void* arg0);
-extern void _ZN14QImageIOPluginC1EP7QObject(void* qthis, void* arg0);
+extern void _ZN14QImageIOPluginC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
+extern void _ZNK14QImageIOPlugin10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -97,258 +88,7 @@ type QImageIOPlugin struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QImageIOHandler::QImageIOHandler(const QImageIOHandler & );
-func NewQImageIOHandler(args ...interface{}) QImageIOHandler {
-  return QImageIOHandler{}
-}
-
-  // proto:  int QImageIOHandler::imageCount();
-func (this *QImageIOHandler) imageCount(args ...interface{}) () {
-  // imageCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler10imageCountEv
-    // invoke: int imageCount()
-    C._ZNK15QImageIOHandler10imageCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "imageCount", args)
-  }
-
-}
-
-  // proto:  QRect QImageIOHandler::currentImageRect();
-func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
-  // currentImageRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler16currentImageRectEv
-    // invoke: QRect currentImageRect()
-    C._ZNK15QImageIOHandler16currentImageRectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "currentImageRect", args)
-  }
-
-}
-
-  // proto:  bool QImageIOHandler::jumpToImage(int imageNumber);
-func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
-  // jumpToImage(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QImageIOHandler11jumpToImageEi
-    // invoke: bool jumpToImage(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler11jumpToImageEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
-  }
-
-}
-
-  // proto:  int QImageIOHandler::currentImageNumber();
-func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
-  // currentImageNumber()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler18currentImageNumberEv
-    // invoke: int currentImageNumber()
-    C._ZNK15QImageIOHandler18currentImageNumberEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "currentImageNumber", args)
-  }
-
-}
-
-  // proto:  void QImageIOHandler::setFormat(const QByteArray & format);
-func (this *QImageIOHandler) setFormat(args ...interface{}) () {
-  // setFormat(const class QByteArray &)
-  // setFormat(const class QByteArray &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-  vtys[1] = make(map[int32]reflect.Type)
-  vtys[1][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QImageIOHandler9setFormatERK10QByteArray
-    // invoke: void setFormat(const class QByteArray &)
-    var arg0 = args[0].(QByteArray).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler9setFormatERK10QByteArray(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
-  }
-
-}
-
-  // proto:  bool QImageIOHandler::jumpToNextImage();
-func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
-  // jumpToNextImage()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QImageIOHandler15jumpToNextImageEv
-    // invoke: bool jumpToNextImage()
-    C._ZN15QImageIOHandler15jumpToNextImageEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "jumpToNextImage", args)
-  }
-
-}
-
-  // proto:  void QImageIOHandler::~QImageIOHandler();
-func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "~QImageIOHandler", args)
-  }
-
-}
-
-  // proto:  int QImageIOHandler::loopCount();
-func (this *QImageIOHandler) loopCount(args ...interface{}) () {
-  // loopCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler9loopCountEv
-    // invoke: int loopCount()
-    C._ZNK15QImageIOHandler9loopCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "loopCount", args)
-  }
-
-}
-
-  // proto:  QByteArray QImageIOHandler::name();
-func (this *QImageIOHandler) name(args ...interface{}) () {
-  // name()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler4nameEv
-    // invoke: QByteArray name()
-    C._ZNK15QImageIOHandler4nameEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "name", args)
-  }
-
-}
-
-  // proto:  QByteArray QImageIOHandler::format();
-func (this *QImageIOHandler) format(args ...interface{}) () {
-  // format()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler6formatEv
-    // invoke: QByteArray format()
-    C._ZNK15QImageIOHandler6formatEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "format", args)
-  }
-
-}
-
-  // proto:  int QImageIOHandler::nextImageDelay();
-func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
-  // nextImageDelay()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QImageIOHandler14nextImageDelayEv
-    // invoke: int nextImageDelay()
-    C._ZNK15QImageIOHandler14nextImageDelayEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "nextImageDelay", args)
-  }
-
-}
-
-  // proto:  void QImageIOHandler::setDevice(QIODevice * device);
-func (this *QImageIOHandler) setDevice(args ...interface{}) () {
-  // setDevice(class QIODevice *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QImageIOHandler9setDeviceEP9QIODevice
-    // invoke: void setDevice(class QIODevice *)
-    var arg0 = args[0].(QIODevice).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN15QImageIOHandler9setDeviceEP9QIODevice(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
-  }
-
-}
-
-  // proto:  QIODevice * QImageIOHandler::device();
+// device()
 func (this *QImageIOHandler) device(args ...interface{}) () {
   // device()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -368,7 +108,90 @@ func (this *QImageIOHandler) device(args ...interface{}) () {
 
 }
 
-  // proto:  bool QImageIOHandler::write(const QImage & image);
+// imageCount()
+func (this *QImageIOHandler) imageCount(args ...interface{}) () {
+  // imageCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler10imageCountEv
+    // invoke: int imageCount()
+    C._ZNK15QImageIOHandler10imageCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "imageCount", args)
+  }
+
+}
+
+// loopCount()
+func (this *QImageIOHandler) loopCount(args ...interface{}) () {
+  // loopCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler9loopCountEv
+    // invoke: int loopCount()
+    C._ZNK15QImageIOHandler9loopCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "loopCount", args)
+  }
+
+}
+
+// setFormat(const class QByteArray &)
+func (this *QImageIOHandler) setFormat(args ...interface{}) () {
+  // setFormat(const class QByteArray &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QByteArray{}) // "const QByteArray &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandler9setFormatERK10QByteArray
+    // invoke: void setFormat(const class QByteArray &)
+    var arg0 = args[0].(QByteArray).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN15QImageIOHandler9setFormatERK10QByteArray(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "setFormat", args)
+  }
+
+}
+
+// format()
+func (this *QImageIOHandler) format(args ...interface{}) () {
+  // format()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler6formatEv
+    // invoke: QByteArray format()
+    C._ZNK15QImageIOHandler6formatEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "format", args)
+  }
+
+}
+
+// write(const class QImage &)
 func (this *QImageIOHandler) write(args ...interface{}) () {
   // write(const class QImage &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -391,7 +214,242 @@ func (this *QImageIOHandler) write(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QImageIOPlugin::metaObject();
+// jumpToImage(int)
+func (this *QImageIOHandler) jumpToImage(args ...interface{}) () {
+  // jumpToImage(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandler11jumpToImageEi
+    // invoke: bool jumpToImage(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN15QImageIOHandler11jumpToImageEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "jumpToImage", args)
+  }
+
+}
+
+// setDevice(class QIODevice *)
+func (this *QImageIOHandler) setDevice(args ...interface{}) () {
+  // setDevice(class QIODevice *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QIODevice{}) // "QIODevice *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandler9setDeviceEP9QIODevice
+    // invoke: void setDevice(class QIODevice *)
+    var arg0 = args[0].(QIODevice).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN15QImageIOHandler9setDeviceEP9QIODevice(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "setDevice", args)
+  }
+
+}
+
+// jumpToNextImage()
+func (this *QImageIOHandler) jumpToNextImage(args ...interface{}) () {
+  // jumpToNextImage()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandler15jumpToNextImageEv
+    // invoke: bool jumpToNextImage()
+    C._ZN15QImageIOHandler15jumpToNextImageEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "jumpToNextImage", args)
+  }
+
+}
+
+// currentImageNumber()
+func (this *QImageIOHandler) currentImageNumber(args ...interface{}) () {
+  // currentImageNumber()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler18currentImageNumberEv
+    // invoke: int currentImageNumber()
+    C._ZNK15QImageIOHandler18currentImageNumberEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "currentImageNumber", args)
+  }
+
+}
+
+// ~QImageIOHandler()
+func (this *QImageIOHandler) FreeQImageIOHandler(args ...interface{}) () {
+  // ~QImageIOHandler()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandlerD0Ev
+    // invoke: void ~QImageIOHandler()
+    C._ZN15QImageIOHandlerD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "~QImageIOHandler", args)
+  }
+
+}
+
+// QImageIOHandler()
+func NewQImageIOHandler(args ...interface{}) QImageIOHandler {
+  // QImageIOHandler()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QImageIOHandlerC1Ev
+    // invoke: void QImageIOHandler()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QImageIOHandlerC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "QImageIOHandler", args)
+  }
+
+  return QImageIOHandler{}
+}
+
+// currentImageRect()
+func (this *QImageIOHandler) currentImageRect(args ...interface{}) () {
+  // currentImageRect()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler16currentImageRectEv
+    // invoke: QRect currentImageRect()
+    C._ZNK15QImageIOHandler16currentImageRectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "currentImageRect", args)
+  }
+
+}
+
+// name()
+func (this *QImageIOHandler) name(args ...interface{}) () {
+  // name()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler4nameEv
+    // invoke: QByteArray name()
+    C._ZNK15QImageIOHandler4nameEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "name", args)
+  }
+
+}
+
+// nextImageDelay()
+func (this *QImageIOHandler) nextImageDelay(args ...interface{}) () {
+  // nextImageDelay()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QImageIOHandler14nextImageDelayEv
+    // invoke: int nextImageDelay()
+    C._ZNK15QImageIOHandler14nextImageDelayEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOHandler", "nextImageDelay", args)
+  }
+
+}
+
+// ~QImageIOPlugin()
+func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
+  // ~QImageIOPlugin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QImageIOPluginD0Ev
+    // invoke: void ~QImageIOPlugin()
+    C._ZN14QImageIOPluginD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
+  }
+
+}
+
+// QImageIOPlugin(class QObject *)
+func NewQImageIOPlugin(args ...interface{}) QImageIOPlugin {
+  // QImageIOPlugin(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QImageIOPluginC1EP7QObject
+    // invoke: void QImageIOPlugin(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QImageIOPluginC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QImageIOPlugin", "QImageIOPlugin", args)
+  }
+
+  return QImageIOPlugin{}
+}
+
+// metaObject()
 func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -409,25 +467,6 @@ func (this *QImageIOPlugin) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QImageIOPlugin", "metaObject", args)
   }
 
-}
-
-  // proto:  void QImageIOPlugin::~QImageIOPlugin();
-func (this *QImageIOPlugin) FreeQImageIOPlugin(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QImageIOPlugin", "~QImageIOPlugin", args)
-  }
-
-}
-
-  // proto:  void QImageIOPlugin::QImageIOPlugin(QObject * parent);
-func NewQImageIOPlugin(args ...interface{}) QImageIOPlugin {
-  return QImageIOPlugin{}
 }
 
 // <= body block end

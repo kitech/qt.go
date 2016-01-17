@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qglyphrun.h
 // dst-file: /src/gui/qglyphrun.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,50 +28,50 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QGlyphRun::~QGlyphRun();
-extern void _ZN9QGlyphRunD0Ev(void* qthis);
-  // proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
-extern void _ZN9QGlyphRun15setBoundingRectERK6QRectF(void* qthis, void* arg0);
-  // proto:  bool QGlyphRun::overline();
-extern void _ZNK9QGlyphRun8overlineEv(void* qthis);
-  // proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
-extern void _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2);
-  // proto:  void QGlyphRun::setOverline(bool overline);
-extern void _ZN9QGlyphRun11setOverlineEb(void* qthis, bool arg0);
-  // proto:  void QGlyphRun::swap(QGlyphRun & other);
-extern void demth_ZN9QGlyphRun4swapERS_(void* qthis, void* arg0);
-  // proto:  void QGlyphRun::setUnderline(bool underline);
-extern void _ZN9QGlyphRun12setUnderlineEb(void* qthis, bool arg0);
-  // proto:  QVector<QPointF> QGlyphRun::positions();
-extern void _ZNK9QGlyphRun9positionsEv(void* qthis);
-  // proto:  void QGlyphRun::clear();
-extern void _ZN9QGlyphRun5clearEv(void* qthis);
-  // proto:  bool QGlyphRun::strikeOut();
-extern void _ZNK9QGlyphRun9strikeOutEv(void* qthis);
-  // proto:  void QGlyphRun::QGlyphRun();
-extern void* dector_ZN9QGlyphRunC1Ev();
-extern void _ZN9QGlyphRunC1Ev(void* qthis);
-  // proto:  QRawFont QGlyphRun::rawFont();
-extern void _ZNK9QGlyphRun7rawFontEv(void* qthis);
-  // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
-extern void _ZN9QGlyphRun10setRawFontERK8QRawFont(void* qthis, void* arg0);
-  // proto:  void QGlyphRun::QGlyphRun(const QGlyphRun & other);
-extern void* dector_ZN9QGlyphRunC1ERKS_(void* arg0);
-extern void _ZN9QGlyphRunC1ERKS_(void* qthis, void* arg0);
-  // proto:  bool QGlyphRun::isRightToLeft();
-extern void _ZNK9QGlyphRun13isRightToLeftEv(void* qthis);
-  // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
-extern void _ZNK9QGlyphRun12glyphIndexesEv(void* qthis);
   // proto:  QRectF QGlyphRun::boundingRect();
-extern void _ZNK9QGlyphRun12boundingRectEv(void* qthis);
-  // proto:  void QGlyphRun::setRightToLeft(bool on);
-extern void _ZN9QGlyphRun14setRightToLeftEb(void* qthis, bool arg0);
+extern void _ZNK9QGlyphRun12boundingRectEv(void* qthis); // 4
+  // proto:  QRawFont QGlyphRun::rawFont();
+extern void _ZNK9QGlyphRun7rawFontEv(void* qthis); // 4
   // proto:  bool QGlyphRun::underline();
-extern void _ZNK9QGlyphRun9underlineEv(void* qthis);
-  // proto:  void QGlyphRun::setStrikeOut(bool strikeOut);
-extern void _ZN9QGlyphRun12setStrikeOutEb(void* qthis, bool arg0);
+extern void _ZNK9QGlyphRun9underlineEv(void* qthis); // 4
+  // proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
+extern void _ZN9QGlyphRun15setBoundingRectERK6QRectF(void* qthis, void* arg0); // 4
+  // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
+extern void _ZN9QGlyphRun10setRawFontERK8QRawFont(void* qthis, void* arg0); // 4
   // proto:  bool QGlyphRun::isEmpty();
-extern void _ZNK9QGlyphRun7isEmptyEv(void* qthis);
+extern void _ZNK9QGlyphRun7isEmptyEv(void* qthis); // 4
+  // proto:  void QGlyphRun::swap(QGlyphRun & other);
+extern void _ZN9QGlyphRun4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
+extern void _ZN9QGlyphRun10setRawDataEPKjPK7QPointFi(void* qthis, int32_t* arg0, void* arg1, int32_t arg2); // 4
+  // proto:  bool QGlyphRun::isRightToLeft();
+extern void _ZNK9QGlyphRun13isRightToLeftEv(void* qthis); // 4
+  // proto:  bool QGlyphRun::strikeOut();
+extern void _ZNK9QGlyphRun9strikeOutEv(void* qthis); // 4
+  // proto:  void QGlyphRun::~QGlyphRun();
+extern void _ZN9QGlyphRunD2Ev(void* qthis); // 4
+  // proto:  void QGlyphRun::setOverline(bool overline);
+extern void _ZN9QGlyphRun11setOverlineEb(void* qthis, bool arg0); // 4
+  // proto:  void QGlyphRun::setRightToLeft(bool on);
+extern void _ZN9QGlyphRun14setRightToLeftEb(void* qthis, bool arg0); // 4
+  // proto:  void QGlyphRun::setStrikeOut(bool strikeOut);
+extern void _ZN9QGlyphRun12setStrikeOutEb(void* qthis, bool arg0); // 4
+  // proto:  QVector<QPointF> QGlyphRun::positions();
+extern void _ZNK9QGlyphRun9positionsEv(void* qthis); // 4
+  // proto:  void QGlyphRun::clear();
+extern void _ZN9QGlyphRun5clearEv(void* qthis); // 4
+  // proto:  void QGlyphRun::QGlyphRun(const QGlyphRun & other);
+extern void _ZN9QGlyphRunC2ERKS_(void* qthis, void* arg0); // 3
+  // proto:  void QGlyphRun::QGlyphRun();
+extern void _ZN9QGlyphRunC2Ev(void* qthis); // 3
+  // proto:  bool QGlyphRun::overline();
+extern void _ZNK9QGlyphRun8overlineEv(void* qthis); // 4
+  // proto:  GlyphRunFlags QGlyphRun::flags();
+extern void _ZNK9QGlyphRun5flagsEv(void* qthis); // 4
+  // proto:  void QGlyphRun::setUnderline(bool underline);
+extern void _ZN9QGlyphRun12setUnderlineEb(void* qthis, bool arg0); // 4
+  // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
+extern void _ZNK9QGlyphRun12glyphIndexesEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -94,21 +90,67 @@ type QGlyphRun struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QGlyphRun::~QGlyphRun();
-func (this *QGlyphRun) FreeQGlyphRun(args ...interface{}) () {
+// boundingRect()
+func (this *QGlyphRun) boundingRect(args ...interface{}) () {
+  // boundingRect()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun12boundingRectEv
+    // invoke: QRectF boundingRect()
+    C._ZNK9QGlyphRun12boundingRectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGlyphRun", "~QGlyphRun", args)
+    qtrt.ErrorResolve("QGlyphRun", "boundingRect", args)
   }
 
 }
 
-  // proto:  void QGlyphRun::setBoundingRect(const QRectF & boundingRect);
+// rawFont()
+func (this *QGlyphRun) rawFont(args ...interface{}) () {
+  // rawFont()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun7rawFontEv
+    // invoke: QRawFont rawFont()
+    C._ZNK9QGlyphRun7rawFontEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "rawFont", args)
+  }
+
+}
+
+// underline()
+func (this *QGlyphRun) underline(args ...interface{}) () {
+  // underline()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun9underlineEv
+    // invoke: bool underline()
+    C._ZNK9QGlyphRun9underlineEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "underline", args)
+  }
+
+}
+
+// setBoundingRect(const class QRectF &)
 func (this *QGlyphRun) setBoundingRect(args ...interface{}) () {
   // setBoundingRect(const class QRectF &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -131,9 +173,32 @@ func (this *QGlyphRun) setBoundingRect(args ...interface{}) () {
 
 }
 
-  // proto:  bool QGlyphRun::overline();
-func (this *QGlyphRun) overline(args ...interface{}) () {
-  // overline()
+// setRawFont(const class QRawFont &)
+func (this *QGlyphRun) setRawFont(args ...interface{}) () {
+  // setRawFont(const class QRawFont &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QRawFont{}) // "const QRawFont &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRun10setRawFontERK8QRawFont
+    // invoke: void setRawFont(const class QRawFont &)
+    var arg0 = args[0].(QRawFont).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun10setRawFontERK8QRawFont(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "setRawFont", args)
+  }
+
+}
+
+// isEmpty()
+func (this *QGlyphRun) isEmpty(args ...interface{}) () {
+  // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -142,16 +207,39 @@ func (this *QGlyphRun) overline(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QGlyphRun8overlineEv
-    // invoke: bool overline()
-    C._ZNK9QGlyphRun8overlineEv(this.qclsinst)
+    // invoke: _ZNK9QGlyphRun7isEmptyEv
+    // invoke: bool isEmpty()
+    C._ZNK9QGlyphRun7isEmptyEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGlyphRun", "overline", args)
+    qtrt.ErrorResolve("QGlyphRun", "isEmpty", args)
   }
 
 }
 
-  // proto:  void QGlyphRun::setRawData(const quint32 * glyphIndexArray, const QPointF * glyphPositionArray, int size);
+// swap(class QGlyphRun &)
+func (this *QGlyphRun) swap(args ...interface{}) () {
+  // swap(class QGlyphRun &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QGlyphRun{}) // "QGlyphRun &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRun4swapERS_
+    // invoke: void swap(class QGlyphRun &)
+    var arg0 = args[0].(QGlyphRun).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "swap", args)
+  }
+
+}
+
+// setRawData(const quint32 *, const class QPointF *, int)
 func (this *QGlyphRun) setRawData(args ...interface{}) () {
   // setRawData(const quint32 *, const class QPointF *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -180,7 +268,67 @@ func (this *QGlyphRun) setRawData(args ...interface{}) () {
 
 }
 
-  // proto:  void QGlyphRun::setOverline(bool overline);
+// isRightToLeft()
+func (this *QGlyphRun) isRightToLeft(args ...interface{}) () {
+  // isRightToLeft()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun13isRightToLeftEv
+    // invoke: bool isRightToLeft()
+    C._ZNK9QGlyphRun13isRightToLeftEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "isRightToLeft", args)
+  }
+
+}
+
+// strikeOut()
+func (this *QGlyphRun) strikeOut(args ...interface{}) () {
+  // strikeOut()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun9strikeOutEv
+    // invoke: bool strikeOut()
+    C._ZNK9QGlyphRun9strikeOutEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "strikeOut", args)
+  }
+
+}
+
+// ~QGlyphRun()
+func (this *QGlyphRun) FreeQGlyphRun(args ...interface{}) () {
+  // ~QGlyphRun()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRunD0Ev
+    // invoke: void ~QGlyphRun()
+    C._ZN9QGlyphRunD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "~QGlyphRun", args)
+  }
+
+}
+
+// setOverline(_Bool)
 func (this *QGlyphRun) setOverline(args ...interface{}) () {
   // setOverline(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,221 +351,7 @@ func (this *QGlyphRun) setOverline(args ...interface{}) () {
 
 }
 
-  // proto:  void QGlyphRun::swap(QGlyphRun & other);
-func (this *QGlyphRun) swap(args ...interface{}) () {
-  // swap(class QGlyphRun &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QGlyphRun{}) // "QGlyphRun &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGlyphRun4swapERS_
-    // invoke: void swap(class QGlyphRun &)
-    var arg0 = args[0].(QGlyphRun).qclsinst
-    if false {fmt.Println(arg0)}
-    C.demth_ZN9QGlyphRun4swapERS_(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "swap", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::setUnderline(bool underline);
-func (this *QGlyphRun) setUnderline(args ...interface{}) () {
-  // setUnderline(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGlyphRun12setUnderlineEb
-    // invoke: void setUnderline(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN9QGlyphRun12setUnderlineEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "setUnderline", args)
-  }
-
-}
-
-  // proto:  QVector<QPointF> QGlyphRun::positions();
-func (this *QGlyphRun) positions(args ...interface{}) () {
-  // positions()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun9positionsEv
-    // invoke: QVector<QPointF> positions()
-    C._ZNK9QGlyphRun9positionsEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "positions", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::clear();
-func (this *QGlyphRun) clear(args ...interface{}) () {
-  // clear()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGlyphRun5clearEv
-    // invoke: void clear()
-    C._ZN9QGlyphRun5clearEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "clear", args)
-  }
-
-}
-
-  // proto:  bool QGlyphRun::strikeOut();
-func (this *QGlyphRun) strikeOut(args ...interface{}) () {
-  // strikeOut()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun9strikeOutEv
-    // invoke: bool strikeOut()
-    C._ZNK9QGlyphRun9strikeOutEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "strikeOut", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::QGlyphRun();
-func NewQGlyphRun(args ...interface{}) QGlyphRun {
-  return QGlyphRun{}
-}
-
-  // proto:  QRawFont QGlyphRun::rawFont();
-func (this *QGlyphRun) rawFont(args ...interface{}) () {
-  // rawFont()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun7rawFontEv
-    // invoke: QRawFont rawFont()
-    C._ZNK9QGlyphRun7rawFontEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "rawFont", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::setRawFont(const QRawFont & rawFont);
-func (this *QGlyphRun) setRawFont(args ...interface{}) () {
-  // setRawFont(const class QRawFont &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRawFont{}) // "const QRawFont &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QGlyphRun10setRawFontERK8QRawFont
-    // invoke: void setRawFont(const class QRawFont &)
-    var arg0 = args[0].(QRawFont).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN9QGlyphRun10setRawFontERK8QRawFont(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "setRawFont", args)
-  }
-
-}
-
-  // proto:  bool QGlyphRun::isRightToLeft();
-func (this *QGlyphRun) isRightToLeft(args ...interface{}) () {
-  // isRightToLeft()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun13isRightToLeftEv
-    // invoke: bool isRightToLeft()
-    C._ZNK9QGlyphRun13isRightToLeftEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "isRightToLeft", args)
-  }
-
-}
-
-  // proto:  QVector<quint32> QGlyphRun::glyphIndexes();
-func (this *QGlyphRun) glyphIndexes(args ...interface{}) () {
-  // glyphIndexes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun12glyphIndexesEv
-    // invoke: QVector<quint32> glyphIndexes()
-    C._ZNK9QGlyphRun12glyphIndexesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "glyphIndexes", args)
-  }
-
-}
-
-  // proto:  QRectF QGlyphRun::boundingRect();
-func (this *QGlyphRun) boundingRect(args ...interface{}) () {
-  // boundingRect()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun12boundingRectEv
-    // invoke: QRectF boundingRect()
-    C._ZNK9QGlyphRun12boundingRectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "boundingRect", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::setRightToLeft(bool on);
+// setRightToLeft(_Bool)
 func (this *QGlyphRun) setRightToLeft(args ...interface{}) () {
   // setRightToLeft(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -440,27 +374,7 @@ func (this *QGlyphRun) setRightToLeft(args ...interface{}) () {
 
 }
 
-  // proto:  bool QGlyphRun::underline();
-func (this *QGlyphRun) underline(args ...interface{}) () {
-  // underline()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QGlyphRun9underlineEv
-    // invoke: bool underline()
-    C._ZNK9QGlyphRun9underlineEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QGlyphRun", "underline", args)
-  }
-
-}
-
-  // proto:  void QGlyphRun::setStrikeOut(bool strikeOut);
+// setStrikeOut(_Bool)
 func (this *QGlyphRun) setStrikeOut(args ...interface{}) () {
   // setStrikeOut(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -483,9 +397,9 @@ func (this *QGlyphRun) setStrikeOut(args ...interface{}) () {
 
 }
 
-  // proto:  bool QGlyphRun::isEmpty();
-func (this *QGlyphRun) isEmpty(args ...interface{}) () {
-  // isEmpty()
+// positions()
+func (this *QGlyphRun) positions(args ...interface{}) () {
+  // positions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -494,11 +408,148 @@ func (this *QGlyphRun) isEmpty(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QGlyphRun7isEmptyEv
-    // invoke: bool isEmpty()
-    C._ZNK9QGlyphRun7isEmptyEv(this.qclsinst)
+    // invoke: _ZNK9QGlyphRun9positionsEv
+    // invoke: QVector<QPointF> positions()
+    C._ZNK9QGlyphRun9positionsEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QGlyphRun", "isEmpty", args)
+    qtrt.ErrorResolve("QGlyphRun", "positions", args)
+  }
+
+}
+
+// clear()
+func (this *QGlyphRun) clear(args ...interface{}) () {
+  // clear()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRun5clearEv
+    // invoke: void clear()
+    C._ZN9QGlyphRun5clearEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "clear", args)
+  }
+
+}
+
+// QGlyphRun(const class QGlyphRun &)
+func NewQGlyphRun(args ...interface{}) QGlyphRun {
+  // QGlyphRun(const class QGlyphRun &)
+  // QGlyphRun()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QGlyphRun{}) // "const QGlyphRun &"
+  vtys[1] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRunC1ERKS_
+    // invoke: void QGlyphRun(const class QGlyphRun &)
+    var arg0 = args[0].(QGlyphRun).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QGlyphRunC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN9QGlyphRunC1Ev
+    // invoke: void QGlyphRun()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QGlyphRunC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "QGlyphRun", args)
+  }
+
+  return QGlyphRun{}
+}
+
+// overline()
+func (this *QGlyphRun) overline(args ...interface{}) () {
+  // overline()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun8overlineEv
+    // invoke: bool overline()
+    C._ZNK9QGlyphRun8overlineEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "overline", args)
+  }
+
+}
+
+// flags()
+func (this *QGlyphRun) flags(args ...interface{}) () {
+  // flags()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun5flagsEv
+    // invoke: GlyphRunFlags flags()
+    C._ZNK9QGlyphRun5flagsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "flags", args)
+  }
+
+}
+
+// setUnderline(_Bool)
+func (this *QGlyphRun) setUnderline(args ...interface{}) () {
+  // setUnderline(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QGlyphRun12setUnderlineEb
+    // invoke: void setUnderline(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN9QGlyphRun12setUnderlineEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "setUnderline", args)
+  }
+
+}
+
+// glyphIndexes()
+func (this *QGlyphRun) glyphIndexes(args ...interface{}) () {
+  // glyphIndexes()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QGlyphRun12glyphIndexesEv
+    // invoke: QVector<quint32> glyphIndexes()
+    C._ZNK9QGlyphRun12glyphIndexesEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QGlyphRun", "glyphIndexes", args)
   }
 
 }

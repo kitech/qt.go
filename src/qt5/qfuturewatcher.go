@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qfuturewatcher.h
 // dst-file: /src/core/qfuturewatcher.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,45 +28,50 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QFutureWatcherBase::isRunning();
-extern void _ZNK18QFutureWatcherBase9isRunningEv(void* qthis);
-  // proto:  void QFutureWatcherBase::setPaused(bool paused);
-extern void _ZN18QFutureWatcherBase9setPausedEb(void* qthis, bool arg0);
-  // proto:  int QFutureWatcherBase::progressMinimum();
-extern void _ZNK18QFutureWatcherBase15progressMinimumEv(void* qthis);
-  // proto:  void QFutureWatcherBase::resume();
-extern void _ZN18QFutureWatcherBase6resumeEv(void* qthis);
-  // proto:  const QMetaObject * QFutureWatcherBase::metaObject();
-extern void _ZNK18QFutureWatcherBase10metaObjectEv(void* qthis);
-  // proto:  bool QFutureWatcherBase::isFinished();
-extern void _ZNK18QFutureWatcherBase10isFinishedEv(void* qthis);
-  // proto:  int QFutureWatcherBase::progressMaximum();
-extern void _ZNK18QFutureWatcherBase15progressMaximumEv(void* qthis);
-  // proto:  bool QFutureWatcherBase::event(QEvent * event);
-extern void _ZN18QFutureWatcherBase5eventEP6QEvent(void* qthis, void* arg0);
-  // proto:  bool QFutureWatcherBase::isCanceled();
-extern void _ZNK18QFutureWatcherBase10isCanceledEv(void* qthis);
-  // proto:  int QFutureWatcherBase::progressValue();
-extern void _ZNK18QFutureWatcherBase13progressValueEv(void* qthis);
   // proto:  bool QFutureWatcherBase::isStarted();
-extern void _ZNK18QFutureWatcherBase9isStartedEv(void* qthis);
-  // proto:  void QFutureWatcherBase::setPendingResultsLimit(int limit);
-extern void _ZN18QFutureWatcherBase22setPendingResultsLimitEi(void* qthis, int32_t arg0);
+extern void _ZNK18QFutureWatcherBase9isStartedEv(void* qthis); // 4
   // proto:  void QFutureWatcherBase::cancel();
-extern void _ZN18QFutureWatcherBase6cancelEv(void* qthis);
-  // proto:  bool QFutureWatcherBase::isPaused();
-extern void _ZNK18QFutureWatcherBase8isPausedEv(void* qthis);
-  // proto:  void QFutureWatcherBase::pause();
-extern void _ZN18QFutureWatcherBase5pauseEv(void* qthis);
-  // proto:  QString QFutureWatcherBase::progressText();
-extern void _ZNK18QFutureWatcherBase12progressTextEv(void* qthis);
-  // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
-extern void* dector_ZN18QFutureWatcherBaseC1EP7QObject(void* arg0);
-extern void _ZN18QFutureWatcherBaseC1EP7QObject(void* qthis, void* arg0);
+extern void _ZN18QFutureWatcherBase6cancelEv(void* qthis); // 4
+  // proto:  bool QFutureWatcherBase::event(QEvent * event);
+extern void _ZN18QFutureWatcherBase5eventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QFutureWatcherBase::togglePaused();
-extern void _ZN18QFutureWatcherBase12togglePausedEv(void* qthis);
+extern void _ZN18QFutureWatcherBase12togglePausedEv(void* qthis); // 4
+  // proto:  int QFutureWatcherBase::progressMinimum();
+extern void _ZNK18QFutureWatcherBase15progressMinimumEv(void* qthis); // 4
   // proto:  void QFutureWatcherBase::waitForFinished();
-extern void _ZN18QFutureWatcherBase15waitForFinishedEv(void* qthis);
+extern void _ZN18QFutureWatcherBase15waitForFinishedEv(void* qthis); // 4
+  // proto:  void QFutureWatcherBase::resume();
+extern void _ZN18QFutureWatcherBase6resumeEv(void* qthis); // 4
+  // proto:  int QFutureWatcherBase::progressMaximum();
+extern void _ZNK18QFutureWatcherBase15progressMaximumEv(void* qthis); // 4
+  // proto:  bool QFutureWatcherBase::isFinished();
+extern void _ZNK18QFutureWatcherBase10isFinishedEv(void* qthis); // 4
+  // proto:  QString QFutureWatcherBase::progressText();
+extern void _ZNK18QFutureWatcherBase12progressTextEv(void* qthis); // 4
+  // proto:  void QFutureWatcherBase::setPendingResultsLimit(int limit);
+extern void _ZN18QFutureWatcherBase22setPendingResultsLimitEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QFutureWatcherBase::pause();
+extern void _ZN18QFutureWatcherBase5pauseEv(void* qthis); // 4
+  // proto:  const QMetaObject * QFutureWatcherBase::metaObject();
+extern void _ZNK18QFutureWatcherBase10metaObjectEv(void* qthis); // 4
+  // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
+extern void _ZN18QFutureWatcherBaseC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  bool QFutureWatcherBase::isRunning();
+extern void _ZNK18QFutureWatcherBase9isRunningEv(void* qthis); // 4
+  // proto:  bool QFutureWatcherBase::isCanceled();
+extern void _ZNK18QFutureWatcherBase10isCanceledEv(void* qthis); // 4
+  // proto:  bool QFutureWatcherBase::isPaused();
+extern void _ZNK18QFutureWatcherBase8isPausedEv(void* qthis); // 4
+  // proto:  int QFutureWatcherBase::progressValue();
+extern void _ZNK18QFutureWatcherBase13progressValueEv(void* qthis); // 4
+  // proto:  void QFutureWatcherBase::setPaused(bool paused);
+extern void _ZN18QFutureWatcherBase9setPausedEb(void* qthis, bool arg0); // 4
+  // proto:  void QFutureWatcher<void>::~QFutureWatcher();
+extern void _ZN14QFutureWatcherIvED2Ev(void* qthis); // 4
+  // proto:  void QFutureWatcher<void>::QFutureWatcher(QObject * _parent);
+extern void _ZN14QFutureWatcherIvEC2EP7QObject(void* qthis, void* arg0); // 1
+  // proto:  QFuture<void> QFutureWatcher<void>::future();
+extern void _ZNK14QFutureWatcherIvE6futureEv(void* qthis); // 2
 */
 import "C"
 // } // <= ext block end
@@ -99,9 +100,15 @@ type QFutureWatcherBase struct {
 //  _progressTextChanged QFutureWatcherBase_progressTextChanged_signal;
 }
 
-  // proto:  bool QFutureWatcherBase::isRunning();
-func (this *QFutureWatcherBase) isRunning(args ...interface{}) () {
-  // isRunning()
+// class sizeof(QFutureWatcher<void>)=1
+type QFutureWatcher_void_ struct {
+  /*qbase*/ QFutureWatcherBase;
+  qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// isStarted()
+func (this *QFutureWatcherBase) isStarted(args ...interface{}) () {
+  // isStarted()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -110,41 +117,18 @@ func (this *QFutureWatcherBase) isRunning(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase9isRunningEv
-    // invoke: bool isRunning()
-    C._ZNK18QFutureWatcherBase9isRunningEv(this.qclsinst)
+    // invoke: _ZNK18QFutureWatcherBase9isStartedEv
+    // invoke: bool isStarted()
+    C._ZNK18QFutureWatcherBase9isStartedEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "isRunning", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "isStarted", args)
   }
 
 }
 
-  // proto:  void QFutureWatcherBase::setPaused(bool paused);
-func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
-  // setPaused(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QFutureWatcherBase9setPausedEb
-    // invoke: void setPaused(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN18QFutureWatcherBase9setPausedEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
-  }
-
-}
-
-  // proto:  int QFutureWatcherBase::progressMinimum();
-func (this *QFutureWatcherBase) progressMinimum(args ...interface{}) () {
-  // progressMinimum()
+// cancel()
+func (this *QFutureWatcherBase) cancel(args ...interface{}) () {
+  // cancel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -153,96 +137,16 @@ func (this *QFutureWatcherBase) progressMinimum(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase15progressMinimumEv
-    // invoke: int progressMinimum()
-    C._ZNK18QFutureWatcherBase15progressMinimumEv(this.qclsinst)
+    // invoke: _ZN18QFutureWatcherBase6cancelEv
+    // invoke: void cancel()
+    C._ZN18QFutureWatcherBase6cancelEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "progressMinimum", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "cancel", args)
   }
 
 }
 
-  // proto:  void QFutureWatcherBase::resume();
-func (this *QFutureWatcherBase) resume(args ...interface{}) () {
-  // resume()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QFutureWatcherBase6resumeEv
-    // invoke: void resume()
-    C._ZN18QFutureWatcherBase6resumeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "resume", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QFutureWatcherBase::metaObject();
-func (this *QFutureWatcherBase) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QFutureWatcherBase10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK18QFutureWatcherBase10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "metaObject", args)
-  }
-
-}
-
-  // proto:  bool QFutureWatcherBase::isFinished();
-func (this *QFutureWatcherBase) isFinished(args ...interface{}) () {
-  // isFinished()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QFutureWatcherBase10isFinishedEv
-    // invoke: bool isFinished()
-    C._ZNK18QFutureWatcherBase10isFinishedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "isFinished", args)
-  }
-
-}
-
-  // proto:  int QFutureWatcherBase::progressMaximum();
-func (this *QFutureWatcherBase) progressMaximum(args ...interface{}) () {
-  // progressMaximum()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QFutureWatcherBase15progressMaximumEv
-    // invoke: int progressMaximum()
-    C._ZNK18QFutureWatcherBase15progressMaximumEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "progressMaximum", args)
-  }
-
-}
-
-  // proto:  bool QFutureWatcherBase::event(QEvent * event);
+// event(class QEvent *)
 func (this *QFutureWatcherBase) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -265,9 +169,9 @@ func (this *QFutureWatcherBase) event(args ...interface{}) () {
 
 }
 
-  // proto:  bool QFutureWatcherBase::isCanceled();
-func (this *QFutureWatcherBase) isCanceled(args ...interface{}) () {
-  // isCanceled()
+// togglePaused()
+func (this *QFutureWatcherBase) togglePaused(args ...interface{}) () {
+  // togglePaused()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -276,18 +180,18 @@ func (this *QFutureWatcherBase) isCanceled(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase10isCanceledEv
-    // invoke: bool isCanceled()
-    C._ZNK18QFutureWatcherBase10isCanceledEv(this.qclsinst)
+    // invoke: _ZN18QFutureWatcherBase12togglePausedEv
+    // invoke: void togglePaused()
+    C._ZN18QFutureWatcherBase12togglePausedEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "isCanceled", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "togglePaused", args)
   }
 
 }
 
-  // proto:  int QFutureWatcherBase::progressValue();
-func (this *QFutureWatcherBase) progressValue(args ...interface{}) () {
-  // progressValue()
+// progressMinimum()
+func (this *QFutureWatcherBase) progressMinimum(args ...interface{}) () {
+  // progressMinimum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -296,18 +200,18 @@ func (this *QFutureWatcherBase) progressValue(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase13progressValueEv
-    // invoke: int progressValue()
-    C._ZNK18QFutureWatcherBase13progressValueEv(this.qclsinst)
+    // invoke: _ZNK18QFutureWatcherBase15progressMinimumEv
+    // invoke: int progressMinimum()
+    C._ZNK18QFutureWatcherBase15progressMinimumEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "progressValue", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "progressMinimum", args)
   }
 
 }
 
-  // proto:  bool QFutureWatcherBase::isStarted();
-func (this *QFutureWatcherBase) isStarted(args ...interface{}) () {
-  // isStarted()
+// waitForFinished()
+func (this *QFutureWatcherBase) waitForFinished(args ...interface{}) () {
+  // waitForFinished()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -316,16 +220,96 @@ func (this *QFutureWatcherBase) isStarted(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase9isStartedEv
-    // invoke: bool isStarted()
-    C._ZNK18QFutureWatcherBase9isStartedEv(this.qclsinst)
+    // invoke: _ZN18QFutureWatcherBase15waitForFinishedEv
+    // invoke: void waitForFinished()
+    C._ZN18QFutureWatcherBase15waitForFinishedEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "isStarted", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "waitForFinished", args)
   }
 
 }
 
-  // proto:  void QFutureWatcherBase::setPendingResultsLimit(int limit);
+// resume()
+func (this *QFutureWatcherBase) resume(args ...interface{}) () {
+  // resume()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QFutureWatcherBase6resumeEv
+    // invoke: void resume()
+    C._ZN18QFutureWatcherBase6resumeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "resume", args)
+  }
+
+}
+
+// progressMaximum()
+func (this *QFutureWatcherBase) progressMaximum(args ...interface{}) () {
+  // progressMaximum()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QFutureWatcherBase15progressMaximumEv
+    // invoke: int progressMaximum()
+    C._ZNK18QFutureWatcherBase15progressMaximumEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "progressMaximum", args)
+  }
+
+}
+
+// isFinished()
+func (this *QFutureWatcherBase) isFinished(args ...interface{}) () {
+  // isFinished()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QFutureWatcherBase10isFinishedEv
+    // invoke: bool isFinished()
+    C._ZNK18QFutureWatcherBase10isFinishedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "isFinished", args)
+  }
+
+}
+
+// progressText()
+func (this *QFutureWatcherBase) progressText(args ...interface{}) () {
+  // progressText()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QFutureWatcherBase12progressTextEv
+    // invoke: QString progressText()
+    C._ZNK18QFutureWatcherBase12progressTextEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "progressText", args)
+  }
+
+}
+
+// setPendingResultsLimit(int)
 func (this *QFutureWatcherBase) setPendingResultsLimit(args ...interface{}) () {
   // setPendingResultsLimit(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -348,47 +332,7 @@ func (this *QFutureWatcherBase) setPendingResultsLimit(args ...interface{}) () {
 
 }
 
-  // proto:  void QFutureWatcherBase::cancel();
-func (this *QFutureWatcherBase) cancel(args ...interface{}) () {
-  // cancel()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QFutureWatcherBase6cancelEv
-    // invoke: void cancel()
-    C._ZN18QFutureWatcherBase6cancelEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "cancel", args)
-  }
-
-}
-
-  // proto:  bool QFutureWatcherBase::isPaused();
-func (this *QFutureWatcherBase) isPaused(args ...interface{}) () {
-  // isPaused()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QFutureWatcherBase8isPausedEv
-    // invoke: bool isPaused()
-    C._ZNK18QFutureWatcherBase8isPausedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "isPaused", args)
-  }
-
-}
-
-  // proto:  void QFutureWatcherBase::pause();
+// pause()
 func (this *QFutureWatcherBase) pause(args ...interface{}) () {
   // pause()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -408,9 +352,9 @@ func (this *QFutureWatcherBase) pause(args ...interface{}) () {
 
 }
 
-  // proto:  QString QFutureWatcherBase::progressText();
-func (this *QFutureWatcherBase) progressText(args ...interface{}) () {
-  // progressText()
+// metaObject()
+func (this *QFutureWatcherBase) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -419,23 +363,44 @@ func (this *QFutureWatcherBase) progressText(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QFutureWatcherBase12progressTextEv
-    // invoke: QString progressText()
-    C._ZNK18QFutureWatcherBase12progressTextEv(this.qclsinst)
+    // invoke: _ZNK18QFutureWatcherBase10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QFutureWatcherBase10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "progressText", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "metaObject", args)
   }
 
 }
 
-  // proto:  void QFutureWatcherBase::QFutureWatcherBase(QObject * parent);
+// QFutureWatcherBase(class QObject *)
 func NewQFutureWatcherBase(args ...interface{}) QFutureWatcherBase {
+  // QFutureWatcherBase(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QFutureWatcherBaseC1EP7QObject
+    // invoke: void QFutureWatcherBase(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QFutureWatcherBaseC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "QFutureWatcherBase", args)
+  }
+
   return QFutureWatcherBase{}
 }
 
-  // proto:  void QFutureWatcherBase::togglePaused();
-func (this *QFutureWatcherBase) togglePaused(args ...interface{}) () {
-  // togglePaused()
+// isRunning()
+func (this *QFutureWatcherBase) isRunning(args ...interface{}) () {
+  // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -444,18 +409,18 @@ func (this *QFutureWatcherBase) togglePaused(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN18QFutureWatcherBase12togglePausedEv
-    // invoke: void togglePaused()
-    C._ZN18QFutureWatcherBase12togglePausedEv(this.qclsinst)
+    // invoke: _ZNK18QFutureWatcherBase9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK18QFutureWatcherBase9isRunningEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "togglePaused", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "isRunning", args)
   }
 
 }
 
-  // proto:  void QFutureWatcherBase::waitForFinished();
-func (this *QFutureWatcherBase) waitForFinished(args ...interface{}) () {
-  // waitForFinished()
+// isCanceled()
+func (this *QFutureWatcherBase) isCanceled(args ...interface{}) () {
+  // isCanceled()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -464,11 +429,140 @@ func (this *QFutureWatcherBase) waitForFinished(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN18QFutureWatcherBase15waitForFinishedEv
-    // invoke: void waitForFinished()
-    C._ZN18QFutureWatcherBase15waitForFinishedEv(this.qclsinst)
+    // invoke: _ZNK18QFutureWatcherBase10isCanceledEv
+    // invoke: bool isCanceled()
+    C._ZNK18QFutureWatcherBase10isCanceledEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFutureWatcherBase", "waitForFinished", args)
+    qtrt.ErrorResolve("QFutureWatcherBase", "isCanceled", args)
+  }
+
+}
+
+// isPaused()
+func (this *QFutureWatcherBase) isPaused(args ...interface{}) () {
+  // isPaused()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QFutureWatcherBase8isPausedEv
+    // invoke: bool isPaused()
+    C._ZNK18QFutureWatcherBase8isPausedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "isPaused", args)
+  }
+
+}
+
+// progressValue()
+func (this *QFutureWatcherBase) progressValue(args ...interface{}) () {
+  // progressValue()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QFutureWatcherBase13progressValueEv
+    // invoke: int progressValue()
+    C._ZNK18QFutureWatcherBase13progressValueEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "progressValue", args)
+  }
+
+}
+
+// setPaused(_Bool)
+func (this *QFutureWatcherBase) setPaused(args ...interface{}) () {
+  // setPaused(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QFutureWatcherBase9setPausedEb
+    // invoke: void setPaused(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN18QFutureWatcherBase9setPausedEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QFutureWatcherBase", "setPaused", args)
+  }
+
+}
+
+// ~QFutureWatcher()
+func (this *QFutureWatcher_void_) FreeQFutureWatcher_void_(args ...interface{}) () {
+  // ~QFutureWatcher()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QFutureWatcherIvED0Ev
+    // invoke: void ~QFutureWatcher()
+    C._ZN14QFutureWatcherIvED2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcher<void>", "~QFutureWatcher", args)
+  }
+
+}
+
+// QFutureWatcher(class QObject *)
+func NewQFutureWatcher_void_(args ...interface{}) QFutureWatcher_void_ {
+  // QFutureWatcher(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN14QFutureWatcherIvEC1EP7QObject
+    // invoke: void QFutureWatcher(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN14QFutureWatcherIvEC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QFutureWatcher<void>", "QFutureWatcher", args)
+  }
+
+  return QFutureWatcher_void_{}
+}
+
+// future()
+func (this *QFutureWatcher_void_) future(args ...interface{}) () {
+  // future()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK14QFutureWatcherIvE6futureEv
+    // invoke: QFuture<void> future()
+    C._ZNK14QFutureWatcherIvE6futureEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFutureWatcher<void>", "future", args)
   }
 
 }

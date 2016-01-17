@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qplugin.h
 // dst-file: /src/core/qplugin.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  QJsonObject QStaticPlugin::metaData();
-extern void _ZNK13QStaticPlugin8metaDataEv(void* qthis);
+extern void _ZNK13QStaticPlugin8metaDataEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -52,7 +48,7 @@ type QStaticPlugin struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QJsonObject QStaticPlugin::metaData();
+// metaData()
 func (this *QStaticPlugin) metaData(args ...interface{}) () {
   // metaData()
   var vtys = make(map[int32]map[int32]reflect.Type)

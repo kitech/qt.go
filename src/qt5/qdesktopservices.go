@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,12 +28,12 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-extern void _ZN16QDesktopServices15unsetUrlHandlerERK7QString(void* arg0);
-  // proto: static bool QDesktopServices::openUrl(const QUrl & url);
-extern void _ZN16QDesktopServices7openUrlERK4QUrl(void* arg0);
   // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-extern void _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, unsigned char* arg2);
+extern void _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(void* arg0, void* arg1, unsigned char* arg2); // 4
+  // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
+extern void _ZN16QDesktopServices15unsetUrlHandlerERK7QString(void* arg0); // 4
+  // proto: static bool QDesktopServices::openUrl(const QUrl & url);
+extern void _ZN16QDesktopServices7openUrlERK4QUrl(void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -56,44 +52,77 @@ type QDesktopServices struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto: static void QDesktopServices::unsetUrlHandler(const QString & scheme);
-func (this *QDesktopServices) unsetUrlHandler_s(args ...interface{}) () {
+// setUrlHandler(const class QString &, class QObject *, const char *)
+func (this *QDesktopServices) setUrlHandler_s(args ...interface{}) () {
+  // setUrlHandler(const class QString &, class QObject *, const char *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[0][1] = reflect.TypeOf(QObject{}) // "QObject *"
+  vtys[0][2] = qtrt.ByteTy(true) // "const char *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc
+    // invoke: void setUrlHandler(const class QString &, class QObject *, const char *)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QObject).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
+    if false {fmt.Println(arg2)}
+    C._ZN16QDesktopServices13setUrlHandlerERK7QStringP7QObjectPKc(arg0, arg1, arg2)
+  default:
+    qtrt.ErrorResolve("QDesktopServices", "setUrlHandler", args)
+  }
+
+}
+
+// unsetUrlHandler(const class QString &)
+func (this *QDesktopServices) unsetUrlHandler_s(args ...interface{}) () {
+  // unsetUrlHandler(const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QDesktopServices15unsetUrlHandlerERK7QString
+    // invoke: void unsetUrlHandler(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN16QDesktopServices15unsetUrlHandlerERK7QString(arg0)
   default:
     qtrt.ErrorResolve("QDesktopServices", "unsetUrlHandler", args)
   }
 
 }
 
-  // proto: static bool QDesktopServices::openUrl(const QUrl & url);
+// openUrl(const class QUrl &)
 func (this *QDesktopServices) openUrl_s(args ...interface{}) () {
+  // openUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN16QDesktopServices7openUrlERK4QUrl
+    // invoke: bool openUrl(const class QUrl &)
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN16QDesktopServices7openUrlERK4QUrl(arg0)
   default:
     qtrt.ErrorResolve("QDesktopServices", "openUrl", args)
-  }
-
-}
-
-  // proto: static void QDesktopServices::setUrlHandler(const QString & scheme, QObject * receiver, const char * method);
-func (this *QDesktopServices) setUrlHandler_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QDesktopServices", "setUrlHandler", args)
   }
 
 }

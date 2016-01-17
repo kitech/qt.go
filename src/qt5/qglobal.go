@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qglobal.h
 // dst-file: /src/core/qglobal.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -42,6 +38,30 @@ func init() {
   if false {fmt.Println(123)}
   if false {reflect.TypeOf(123)}
   if false {reflect.TypeOf(unsafe.Sizeof(0))}
+}
+
+// class sizeof(QIntegerForSize<4>)=1
+type QIntegerForSize_4_ struct {
+  // qbase: None;
+  qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// class sizeof(QIntegerForSize<8>)=1
+type QIntegerForSize_8_ struct {
+  // qbase: None;
+  qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// class sizeof(QIntegerForSize<2>)=1
+type QIntegerForSize_2_ struct {
+  // qbase: None;
+  qclsinst unsafe.Pointer /* *C.void */;
+}
+
+// class sizeof(QIntegerForSize<1>)=1
+type QIntegerForSize_1_ struct {
+  // qbase: None;
+  qclsinst unsafe.Pointer /* *C.void */;
 }
 
 // <= body block end

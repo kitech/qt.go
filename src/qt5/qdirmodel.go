@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,72 +28,76 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QFileIconProvider * QDirModel::iconProvider();
-extern void _ZNK9QDirModel12iconProviderEv(void* qthis);
-  // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
-extern void _ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-extern void _ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1);
-  // proto:  QStringList QDirModel::nameFilters();
-extern void _ZNK9QDirModel11nameFiltersEv(void* qthis);
-  // proto:  bool QDirModel::isReadOnly();
-extern void _ZNK9QDirModel10isReadOnlyEv(void* qthis);
   // proto:  int QDirModel::columnCount(const QModelIndex & parent);
-extern void _ZNK9QDirModel11columnCountERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QStringList QDirModel::mimeTypes();
-extern void _ZNK9QDirModel9mimeTypesEv(void* qthis);
-  // proto:  void QDirModel::~QDirModel();
-extern void _ZN9QDirModelD0Ev(void* qthis);
-  // proto:  bool QDirModel::remove(const QModelIndex & index);
-extern void _ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QString QDirModel::fileName(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileNameERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QDirModel::metaObject();
-extern void _ZNK9QDirModel10metaObjectEv(void* qthis);
-  // proto:  bool QDirModel::resolveSymlinks();
-extern void _ZNK9QDirModel15resolveSymlinksEv(void* qthis);
-  // proto:  void QDirModel::refresh(const QModelIndex & parent);
-extern void _ZN9QDirModel7refreshERK11QModelIndex(void* qthis, void* arg0);
+extern void _ZNK9QDirModel11columnCountERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setNameFilters(const QStringList & filters);
-extern void _ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg0);
+extern void _ZN9QDirModel14setNameFiltersERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
-extern void _ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0);
-  // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  void QDirModel::QDirModel(QObject * parent);
-extern void* dector_ZN9QDirModelC1EP7QObject(void* arg0);
-extern void _ZN9QDirModelC1EP7QObject(void* qthis, void* arg0);
-  // proto:  QModelIndex QDirModel::index(const QString & path, int column);
-extern void _ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1);
-  // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2);
+extern void _ZN9QDirModel15setIconProviderEP17QFileIconProvider(void* qthis, void* arg0); // 4
   // proto:  void QDirModel::setLazyChildCount(bool enable);
-extern void _ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0);
-  // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileIconERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-extern void _ZNK9QDirModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0);
+extern void _ZN9QDirModel17setLazyChildCountEb(void* qthis, bool arg0); // 4
   // proto:  bool QDirModel::isDir(const QModelIndex & index);
-extern void _ZNK9QDirModel5isDirERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
-extern void _ZN9QDirModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1);
-  // proto:  bool QDirModel::rmdir(const QModelIndex & index);
-extern void _ZN9QDirModel5rmdirERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QString QDirModel::filePath(const QModelIndex & index);
-extern void _ZNK9QDirModel8filePathERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  int QDirModel::rowCount(const QModelIndex & parent);
-extern void _ZNK9QDirModel8rowCountERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  void QDirModel::setReadOnly(bool enable);
-extern void _ZN9QDirModel11setReadOnlyEb(void* qthis, bool arg0);
-  // proto:  void QDirModel::QDirModel(const QDirModel & );
-extern void* dector_ZN9QDirModelC1ERKS_(void* arg0);
-extern void _ZN9QDirModelC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QDirModel::setResolveSymlinks(bool enable);
-extern void _ZN9QDirModel18setResolveSymlinksEb(void* qthis, bool arg0);
+extern void _ZNK9QDirModel5isDirERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  bool QDirModel::lazyChildCount();
-extern void _ZNK9QDirModel14lazyChildCountEv(void* qthis);
+extern void _ZNK9QDirModel14lazyChildCountEv(void* qthis); // 4
+  // proto:  void QDirModel::refresh(const QModelIndex & parent);
+extern void _ZN9QDirModel7refreshERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QDirModel::resolveSymlinks();
+extern void _ZNK9QDirModel15resolveSymlinksEv(void* qthis); // 4
+  // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
+extern void _ZNK9QDirModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  QModelIndex QDirModel::index(const QString & path, int column);
+extern void _ZNK9QDirModel5indexERK7QStringi(void* qthis, void* arg0, int32_t arg1); // 4
+  // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
+extern void _ZNK9QDirModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QDirModel::isReadOnly();
+extern void _ZNK9QDirModel10isReadOnlyEv(void* qthis); // 4
+  // proto:  QString QDirModel::filePath(const QModelIndex & index);
+extern void _ZNK9QDirModel8filePathERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
+extern void _ZN9QDirModel5mkdirERK11QModelIndexRK7QString(void* qthis, void* arg0, void* arg1); // 4
+  // proto:  bool QDirModel::rmdir(const QModelIndex & index);
+extern void _ZN9QDirModel5rmdirERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  void QDirModel::setResolveSymlinks(bool enable);
+extern void _ZN9QDirModel18setResolveSymlinksEb(void* qthis, bool arg0); // 4
   // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
-extern void _ZNK9QDirModel8fileInfoERK11QModelIndex(void* qthis, void* arg0);
+extern void _ZNK9QDirModel8fileInfoERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
+extern void _ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+  // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
+extern void _ZNK9QDirModel6parentERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  QString QDirModel::fileName(const QModelIndex & index);
+extern void _ZNK9QDirModel8fileNameERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  int QDirModel::rowCount(const QModelIndex & parent);
+extern void _ZNK9QDirModel8rowCountERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  void QDirModel::~QDirModel();
+extern void _ZN9QDirModelD2Ev(void* qthis); // 4
+  // proto:  const QMetaObject * QDirModel::metaObject();
+extern void _ZNK9QDirModel10metaObjectEv(void* qthis); // 4
+  // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
+extern void _ZNK9QDirModel4dataERK11QModelIndexi(void* qthis, void* arg0, int32_t arg1); // 4
+  // proto:  QStringList QDirModel::mimeTypes();
+extern void _ZNK9QDirModel9mimeTypesEv(void* qthis); // 4
+  // proto:  QDir::SortFlags QDirModel::sorting();
+extern void _ZNK9QDirModel7sortingEv(void* qthis); // 4
+  // proto:  QFileIconProvider * QDirModel::iconProvider();
+extern void _ZNK9QDirModel12iconProviderEv(void* qthis); // 4
+  // proto:  QStringList QDirModel::nameFilters();
+extern void _ZNK9QDirModel11nameFiltersEv(void* qthis); // 4
+  // proto:  void QDirModel::QDirModel(QObject * parent);
+extern void _ZN9QDirModelC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  bool QDirModel::remove(const QModelIndex & index);
+extern void _ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  QDir::Filters QDirModel::filter();
+extern void _ZNK9QDirModel6filterEv(void* qthis); // 4
+  // proto:  void QDirModel::setReadOnly(bool enable);
+extern void _ZN9QDirModel11setReadOnlyEb(void* qthis, bool arg0); // 4
+  // proto:  Qt::ItemFlags QDirModel::flags(const QModelIndex & index);
+extern void _ZNK9QDirModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
+extern void _ZNK9QDirModel8fileIconERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  Qt::DropActions QDirModel::supportedDropActions();
+extern void _ZNK9QDirModel20supportedDropActionsEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -116,116 +116,7 @@ type QDirModel struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QFileIconProvider * QDirModel::iconProvider();
-func (this *QDirModel) iconProvider(args ...interface{}) () {
-  // iconProvider()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel12iconProviderEv
-    // invoke: QFileIconProvider * iconProvider()
-    C._ZNK9QDirModel12iconProviderEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "iconProvider", args)
-  }
-
-}
-
-  // proto:  QModelIndex QDirModel::parent(const QModelIndex & child);
-func (this *QDirModel) parent(args ...interface{}) () {
-  // parent(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel6parentERK11QModelIndex
-    // invoke: QModelIndex parent(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "parent", args)
-  }
-
-}
-
-  // proto:  QVariant QDirModel::data(const QModelIndex & index, int role);
-func (this *QDirModel) data(args ...interface{}) () {
-  // data(const class QModelIndex &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel4dataERK11QModelIndexi
-    // invoke: QVariant data(const class QModelIndex &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C._ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QDirModel", "data", args)
-  }
-
-}
-
-  // proto:  QStringList QDirModel::nameFilters();
-func (this *QDirModel) nameFilters(args ...interface{}) () {
-  // nameFilters()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel11nameFiltersEv
-    // invoke: QStringList nameFilters()
-    C._ZNK9QDirModel11nameFiltersEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "nameFilters", args)
-  }
-
-}
-
-  // proto:  bool QDirModel::isReadOnly();
-func (this *QDirModel) isReadOnly(args ...interface{}) () {
-  // isReadOnly()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel10isReadOnlyEv
-    // invoke: bool isReadOnly()
-    C._ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
-  }
-
-}
-
-  // proto:  int QDirModel::columnCount(const QModelIndex & parent);
+// columnCount(const class QModelIndex &)
 func (this *QDirModel) columnCount(args ...interface{}) () {
   // columnCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -248,150 +139,7 @@ func (this *QDirModel) columnCount(args ...interface{}) () {
 
 }
 
-  // proto:  QStringList QDirModel::mimeTypes();
-func (this *QDirModel) mimeTypes(args ...interface{}) () {
-  // mimeTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel9mimeTypesEv
-    // invoke: QStringList mimeTypes()
-    C._ZNK9QDirModel9mimeTypesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
-  }
-
-}
-
-  // proto:  void QDirModel::~QDirModel();
-func (this *QDirModel) FreeQDirModel(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
-  }
-
-}
-
-  // proto:  bool QDirModel::remove(const QModelIndex & index);
-func (this *QDirModel) remove(args ...interface{}) () {
-  // remove(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel6removeERK11QModelIndex
-    // invoke: bool remove(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "remove", args)
-  }
-
-}
-
-  // proto:  QString QDirModel::fileName(const QModelIndex & index);
-func (this *QDirModel) fileName(args ...interface{}) () {
-  // fileName(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8fileNameERK11QModelIndex
-    // invoke: QString fileName(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "fileName", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QDirModel::metaObject();
-func (this *QDirModel) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK9QDirModel10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "metaObject", args)
-  }
-
-}
-
-  // proto:  bool QDirModel::resolveSymlinks();
-func (this *QDirModel) resolveSymlinks(args ...interface{}) () {
-  // resolveSymlinks()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel15resolveSymlinksEv
-    // invoke: bool resolveSymlinks()
-    C._ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
-  }
-
-}
-
-  // proto:  void QDirModel::refresh(const QModelIndex & parent);
-func (this *QDirModel) refresh(args ...interface{}) () {
-  // refresh(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel7refreshERK11QModelIndex
-    // invoke: void refresh(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN9QDirModel7refreshERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "refresh", args)
-  }
-
-}
-
-  // proto:  void QDirModel::setNameFilters(const QStringList & filters);
+// setNameFilters(const class QStringList &)
 func (this *QDirModel) setNameFilters(args ...interface{}) () {
   // setNameFilters(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -414,7 +162,7 @@ func (this *QDirModel) setNameFilters(args ...interface{}) () {
 
 }
 
-  // proto:  void QDirModel::setIconProvider(QFileIconProvider * provider);
+// setIconProvider(class QFileIconProvider *)
 func (this *QDirModel) setIconProvider(args ...interface{}) () {
   // setIconProvider(class QFileIconProvider *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -437,7 +185,116 @@ func (this *QDirModel) setIconProvider(args ...interface{}) () {
 
 }
 
-  // proto:  QModelIndex QDirModel::index(int row, int column, const QModelIndex & parent);
+// setLazyChildCount(_Bool)
+func (this *QDirModel) setLazyChildCount(args ...interface{}) () {
+  // setLazyChildCount(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel17setLazyChildCountEb
+    // invoke: void setLazyChildCount(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
+  }
+
+}
+
+// isDir(const class QModelIndex &)
+func (this *QDirModel) isDir(args ...interface{}) () {
+  // isDir(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel5isDirERK11QModelIndex
+    // invoke: bool isDir(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "isDir", args)
+  }
+
+}
+
+// lazyChildCount()
+func (this *QDirModel) lazyChildCount(args ...interface{}) () {
+  // lazyChildCount()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel14lazyChildCountEv
+    // invoke: bool lazyChildCount()
+    C._ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
+  }
+
+}
+
+// refresh(const class QModelIndex &)
+func (this *QDirModel) refresh(args ...interface{}) () {
+  // refresh(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel7refreshERK11QModelIndex
+    // invoke: void refresh(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QDirModel7refreshERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "refresh", args)
+  }
+
+}
+
+// resolveSymlinks()
+func (this *QDirModel) resolveSymlinks(args ...interface{}) () {
+  // resolveSymlinks()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel15resolveSymlinksEv
+    // invoke: bool resolveSymlinks()
+    C._ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
+  }
+
+}
+
+// index(int, int, const class QModelIndex &)
 func (this *QDirModel) index(args ...interface{}) () {
   // index(int, int, const class QModelIndex &)
   // index(const class QString &, int)
@@ -478,12 +335,168 @@ func (this *QDirModel) index(args ...interface{}) () {
 
 }
 
-  // proto:  void QDirModel::QDirModel(QObject * parent);
-func NewQDirModel(args ...interface{}) QDirModel {
-  return QDirModel{}
+// hasChildren(const class QModelIndex &)
+func (this *QDirModel) hasChildren(args ...interface{}) () {
+  // hasChildren(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel11hasChildrenERK11QModelIndex
+    // invoke: bool hasChildren(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "hasChildren", args)
+  }
+
 }
 
-  // proto:  bool QDirModel::setData(const QModelIndex & index, const QVariant & value, int role);
+// isReadOnly()
+func (this *QDirModel) isReadOnly(args ...interface{}) () {
+  // isReadOnly()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel10isReadOnlyEv
+    // invoke: bool isReadOnly()
+    C._ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
+  }
+
+}
+
+// filePath(const class QModelIndex &)
+func (this *QDirModel) filePath(args ...interface{}) () {
+  // filePath(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel8filePathERK11QModelIndex
+    // invoke: QString filePath(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "filePath", args)
+  }
+
+}
+
+// mkdir(const class QModelIndex &, const class QString &)
+func (this *QDirModel) mkdir(args ...interface{}) () {
+  // mkdir(const class QModelIndex &, const class QString &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel5mkdirERK11QModelIndexRK7QString
+    // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QString).qclsinst
+    if false {fmt.Println(arg1)}
+    C._ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QDirModel", "mkdir", args)
+  }
+
+}
+
+// rmdir(const class QModelIndex &)
+func (this *QDirModel) rmdir(args ...interface{}) () {
+  // rmdir(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel5rmdirERK11QModelIndex
+    // invoke: bool rmdir(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "rmdir", args)
+  }
+
+}
+
+// setResolveSymlinks(_Bool)
+func (this *QDirModel) setResolveSymlinks(args ...interface{}) () {
+  // setResolveSymlinks(_Bool)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.BoolTy(false) // "bool"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel18setResolveSymlinksEb
+    // invoke: void setResolveSymlinks(_Bool)
+    var arg0 = C.bool(args[0].(bool))
+    if false {fmt.Println(arg0)}
+    C._ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
+  }
+
+}
+
+// fileInfo(const class QModelIndex &)
+func (this *QDirModel) fileInfo(args ...interface{}) () {
+  // fileInfo(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel8fileInfoERK11QModelIndex
+    // invoke: QFileInfo fileInfo(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "fileInfo", args)
+  }
+
+}
+
+// setData(const class QModelIndex &, const class QVariant &, int)
 func (this *QDirModel) setData(args ...interface{}) () {
   // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -512,32 +525,9 @@ func (this *QDirModel) setData(args ...interface{}) () {
 
 }
 
-  // proto:  void QDirModel::setLazyChildCount(bool enable);
-func (this *QDirModel) setLazyChildCount(args ...interface{}) () {
-  // setLazyChildCount(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel17setLazyChildCountEb
-    // invoke: void setLazyChildCount(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN9QDirModel17setLazyChildCountEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setLazyChildCount", args)
-  }
-
-}
-
-  // proto:  QIcon QDirModel::fileIcon(const QModelIndex & index);
-func (this *QDirModel) fileIcon(args ...interface{}) () {
-  // fileIcon(const class QModelIndex &)
+// parent(const class QModelIndex &)
+func (this *QDirModel) parent(args ...interface{}) () {
+  // parent(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -547,20 +537,20 @@ func (this *QDirModel) fileIcon(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QDirModel8fileIconERK11QModelIndex
-    // invoke: QIcon fileIcon(const class QModelIndex &)
+    // invoke: _ZNK9QDirModel6parentERK11QModelIndex
+    // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    C._ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QDirModel", "fileIcon", args)
+    qtrt.ErrorResolve("QDirModel", "parent", args)
   }
 
 }
 
-  // proto:  bool QDirModel::hasChildren(const QModelIndex & index);
-func (this *QDirModel) hasChildren(args ...interface{}) () {
-  // hasChildren(const class QModelIndex &)
+// fileName(const class QModelIndex &)
+func (this *QDirModel) fileName(args ...interface{}) () {
+  // fileName(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -570,113 +560,18 @@ func (this *QDirModel) hasChildren(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QDirModel11hasChildrenERK11QModelIndex
-    // invoke: bool hasChildren(const class QModelIndex &)
+    // invoke: _ZNK9QDirModel8fileNameERK11QModelIndex
+    // invoke: QString fileName(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    C._ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QDirModel", "hasChildren", args)
+    qtrt.ErrorResolve("QDirModel", "fileName", args)
   }
 
 }
 
-  // proto:  bool QDirModel::isDir(const QModelIndex & index);
-func (this *QDirModel) isDir(args ...interface{}) () {
-  // isDir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel5isDirERK11QModelIndex
-    // invoke: bool isDir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "isDir", args)
-  }
-
-}
-
-  // proto:  QModelIndex QDirModel::mkdir(const QModelIndex & parent, const QString & name);
-func (this *QDirModel) mkdir(args ...interface{}) () {
-  // mkdir(const class QModelIndex &, const class QString &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(QString{}) // "const QString &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel5mkdirERK11QModelIndexRK7QString
-    // invoke: QModelIndex mkdir(const class QModelIndex &, const class QString &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QString).qclsinst
-    if false {fmt.Println(arg1)}
-    C._ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QDirModel", "mkdir", args)
-  }
-
-}
-
-  // proto:  bool QDirModel::rmdir(const QModelIndex & index);
-func (this *QDirModel) rmdir(args ...interface{}) () {
-  // rmdir(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel5rmdirERK11QModelIndex
-    // invoke: bool rmdir(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "rmdir", args)
-  }
-
-}
-
-  // proto:  QString QDirModel::filePath(const QModelIndex & index);
-func (this *QDirModel) filePath(args ...interface{}) () {
-  // filePath(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel8filePathERK11QModelIndex
-    // invoke: QString filePath(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "filePath", args)
-  }
-
-}
-
-  // proto:  int QDirModel::rowCount(const QModelIndex & parent);
+// rowCount(const class QModelIndex &)
 func (this *QDirModel) rowCount(args ...interface{}) () {
   // rowCount(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -699,7 +594,222 @@ func (this *QDirModel) rowCount(args ...interface{}) () {
 
 }
 
-  // proto:  void QDirModel::setReadOnly(bool enable);
+// ~QDirModel()
+func (this *QDirModel) FreeQDirModel(args ...interface{}) () {
+  // ~QDirModel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModelD0Ev
+    // invoke: void ~QDirModel()
+    C._ZN9QDirModelD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "~QDirModel", args)
+  }
+
+}
+
+// metaObject()
+func (this *QDirModel) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QDirModel10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "metaObject", args)
+  }
+
+}
+
+// data(const class QModelIndex &, int)
+func (this *QDirModel) data(args ...interface{}) () {
+  // data(const class QModelIndex &, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel4dataERK11QModelIndexi
+    // invoke: QVariant data(const class QModelIndex &, int)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QDirModel", "data", args)
+  }
+
+}
+
+// mimeTypes()
+func (this *QDirModel) mimeTypes(args ...interface{}) () {
+  // mimeTypes()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel9mimeTypesEv
+    // invoke: QStringList mimeTypes()
+    C._ZNK9QDirModel9mimeTypesEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "mimeTypes", args)
+  }
+
+}
+
+// sorting()
+func (this *QDirModel) sorting(args ...interface{}) () {
+  // sorting()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel7sortingEv
+    // invoke: QDir::SortFlags sorting()
+    C._ZNK9QDirModel7sortingEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "sorting", args)
+  }
+
+}
+
+// iconProvider()
+func (this *QDirModel) iconProvider(args ...interface{}) () {
+  // iconProvider()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel12iconProviderEv
+    // invoke: QFileIconProvider * iconProvider()
+    C._ZNK9QDirModel12iconProviderEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "iconProvider", args)
+  }
+
+}
+
+// nameFilters()
+func (this *QDirModel) nameFilters(args ...interface{}) () {
+  // nameFilters()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel11nameFiltersEv
+    // invoke: QStringList nameFilters()
+    C._ZNK9QDirModel11nameFiltersEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "nameFilters", args)
+  }
+
+}
+
+// QDirModel(class QObject *)
+func NewQDirModel(args ...interface{}) QDirModel {
+  // QDirModel(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModelC1EP7QObject
+    // invoke: void QDirModel(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QDirModelC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "QDirModel", args)
+  }
+
+  return QDirModel{}
+}
+
+// remove(const class QModelIndex &)
+func (this *QDirModel) remove(args ...interface{}) () {
+  // remove(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QDirModel6removeERK11QModelIndex
+    // invoke: bool remove(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "remove", args)
+  }
+
+}
+
+// filter()
+func (this *QDirModel) filter(args ...interface{}) () {
+  // filter()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel6filterEv
+    // invoke: QDir::Filters filter()
+    C._ZNK9QDirModel6filterEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "filter", args)
+  }
+
+}
+
+// setReadOnly(_Bool)
 func (this *QDirModel) setReadOnly(args ...interface{}) () {
   // setReadOnly(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -722,52 +832,9 @@ func (this *QDirModel) setReadOnly(args ...interface{}) () {
 
 }
 
-  // proto:  void QDirModel::setResolveSymlinks(bool enable);
-func (this *QDirModel) setResolveSymlinks(args ...interface{}) () {
-  // setResolveSymlinks(_Bool)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.BoolTy(false) // "bool"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QDirModel18setResolveSymlinksEb
-    // invoke: void setResolveSymlinks(_Bool)
-    var arg0 = C.bool(args[0].(bool))
-    if false {fmt.Println(arg0)}
-    C._ZN9QDirModel18setResolveSymlinksEb(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QDirModel", "setResolveSymlinks", args)
-  }
-
-}
-
-  // proto:  bool QDirModel::lazyChildCount();
-func (this *QDirModel) lazyChildCount(args ...interface{}) () {
-  // lazyChildCount()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QDirModel14lazyChildCountEv
-    // invoke: bool lazyChildCount()
-    C._ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
-  }
-
-}
-
-  // proto:  QFileInfo QDirModel::fileInfo(const QModelIndex & index);
-func (this *QDirModel) fileInfo(args ...interface{}) () {
-  // fileInfo(const class QModelIndex &)
+// flags(const class QModelIndex &)
+func (this *QDirModel) flags(args ...interface{}) () {
+  // flags(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -777,13 +844,56 @@ func (this *QDirModel) fileInfo(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QDirModel8fileInfoERK11QModelIndex
-    // invoke: QFileInfo fileInfo(const class QModelIndex &)
+    // invoke: _ZNK9QDirModel5flagsERK11QModelIndex
+    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    C._ZNK9QDirModel5flagsERK11QModelIndex(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QDirModel", "fileInfo", args)
+    qtrt.ErrorResolve("QDirModel", "flags", args)
+  }
+
+}
+
+// fileIcon(const class QModelIndex &)
+func (this *QDirModel) fileIcon(args ...interface{}) () {
+  // fileIcon(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel8fileIconERK11QModelIndex
+    // invoke: QIcon fileIcon(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QDirModel", "fileIcon", args)
+  }
+
+}
+
+// supportedDropActions()
+func (this *QDirModel) supportedDropActions(args ...interface{}) () {
+  // supportedDropActions()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QDirModel20supportedDropActionsEv
+    // invoke: Qt::DropActions supportedDropActions()
+    C._ZNK9QDirModel20supportedDropActionsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QDirModel", "supportedDropActions", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,28 +28,24 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
-extern void* dector_ZN24QOpenGLVertexArrayObjectC1ERKS_(void* arg0);
-extern void _ZN24QOpenGLVertexArrayObjectC1ERKS_(void* qthis, void* arg0);
-  // proto:  GLuint QOpenGLVertexArrayObject::objectId();
-extern void _ZNK24QOpenGLVertexArrayObject8objectIdEv(void* qthis);
-  // proto:  void QOpenGLVertexArrayObject::release();
-extern void _ZN24QOpenGLVertexArrayObject7releaseEv(void* qthis);
-  // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
-extern void _ZNK24QOpenGLVertexArrayObject10metaObjectEv(void* qthis);
-  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(QObject * parent);
-extern void* dector_ZN24QOpenGLVertexArrayObjectC1EP7QObject(void* arg0);
-extern void _ZN24QOpenGLVertexArrayObjectC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QOpenGLVertexArrayObject::bind();
-extern void _ZN24QOpenGLVertexArrayObject4bindEv(void* qthis);
   // proto:  bool QOpenGLVertexArrayObject::isCreated();
-extern void _ZNK24QOpenGLVertexArrayObject9isCreatedEv(void* qthis);
-  // proto:  void QOpenGLVertexArrayObject::destroy();
-extern void _ZN24QOpenGLVertexArrayObject7destroyEv(void* qthis);
-  // proto:  bool QOpenGLVertexArrayObject::create();
-extern void _ZN24QOpenGLVertexArrayObject6createEv(void* qthis);
+extern void _ZNK24QOpenGLVertexArrayObject9isCreatedEv(void* qthis); // 4
+  // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
+extern void _ZNK24QOpenGLVertexArrayObject10metaObjectEv(void* qthis); // 4
+  // proto:  GLuint QOpenGLVertexArrayObject::objectId();
+extern void _ZNK24QOpenGLVertexArrayObject8objectIdEv(void* qthis); // 4
+  // proto:  void QOpenGLVertexArrayObject::bind();
+extern void _ZN24QOpenGLVertexArrayObject4bindEv(void* qthis); // 4
   // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
-extern void _ZN24QOpenGLVertexArrayObjectD0Ev(void* qthis);
+extern void _ZN24QOpenGLVertexArrayObjectD2Ev(void* qthis); // 4
+  // proto:  void QOpenGLVertexArrayObject::release();
+extern void _ZN24QOpenGLVertexArrayObject7releaseEv(void* qthis); // 4
+  // proto:  void QOpenGLVertexArrayObject::destroy();
+extern void _ZN24QOpenGLVertexArrayObject7destroyEv(void* qthis); // 4
+  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(QObject * parent);
+extern void _ZN24QOpenGLVertexArrayObjectC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  bool QOpenGLVertexArrayObject::create();
+extern void _ZN24QOpenGLVertexArrayObject6createEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -72,92 +64,7 @@ type QOpenGLVertexArrayObject struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(const QOpenGLVertexArrayObject & );
-func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
-  return QOpenGLVertexArrayObject{}
-}
-
-  // proto:  GLuint QOpenGLVertexArrayObject::objectId();
-func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
-  // objectId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK24QOpenGLVertexArrayObject8objectIdEv
-    // invoke: GLuint objectId()
-    C._ZNK24QOpenGLVertexArrayObject8objectIdEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "objectId", args)
-  }
-
-}
-
-  // proto:  void QOpenGLVertexArrayObject::release();
-func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
-  // release()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN24QOpenGLVertexArrayObject7releaseEv
-    // invoke: void release()
-    C._ZN24QOpenGLVertexArrayObject7releaseEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "release", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QOpenGLVertexArrayObject::metaObject();
-func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK24QOpenGLVertexArrayObject10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK24QOpenGLVertexArrayObject10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "metaObject", args)
-  }
-
-}
-
-  // proto:  void QOpenGLVertexArrayObject::bind();
-func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
-  // bind()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN24QOpenGLVertexArrayObject4bindEv
-    // invoke: void bind()
-    C._ZN24QOpenGLVertexArrayObject4bindEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "bind", args)
-  }
-
-}
-
-  // proto:  bool QOpenGLVertexArrayObject::isCreated();
+// isCreated()
 func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
   // isCreated()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,7 +84,107 @@ func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
 
 }
 
-  // proto:  void QOpenGLVertexArrayObject::destroy();
+// metaObject()
+func (this *QOpenGLVertexArrayObject) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK24QOpenGLVertexArrayObject10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK24QOpenGLVertexArrayObject10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "metaObject", args)
+  }
+
+}
+
+// objectId()
+func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
+  // objectId()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK24QOpenGLVertexArrayObject8objectIdEv
+    // invoke: GLuint objectId()
+    C._ZNK24QOpenGLVertexArrayObject8objectIdEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "objectId", args)
+  }
+
+}
+
+// bind()
+func (this *QOpenGLVertexArrayObject) bind(args ...interface{}) () {
+  // bind()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN24QOpenGLVertexArrayObject4bindEv
+    // invoke: void bind()
+    C._ZN24QOpenGLVertexArrayObject4bindEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "bind", args)
+  }
+
+}
+
+// ~QOpenGLVertexArrayObject()
+func (this *QOpenGLVertexArrayObject) FreeQOpenGLVertexArrayObject(args ...interface{}) () {
+  // ~QOpenGLVertexArrayObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN24QOpenGLVertexArrayObjectD0Ev
+    // invoke: void ~QOpenGLVertexArrayObject()
+    C._ZN24QOpenGLVertexArrayObjectD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "~QOpenGLVertexArrayObject", args)
+  }
+
+}
+
+// release()
+func (this *QOpenGLVertexArrayObject) release(args ...interface{}) () {
+  // release()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN24QOpenGLVertexArrayObject7releaseEv
+    // invoke: void release()
+    C._ZN24QOpenGLVertexArrayObject7releaseEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "release", args)
+  }
+
+}
+
+// destroy()
 func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
   // destroy()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -197,7 +204,33 @@ func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
 
 }
 
-  // proto:  bool QOpenGLVertexArrayObject::create();
+// QOpenGLVertexArrayObject(class QObject *)
+func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
+  // QOpenGLVertexArrayObject(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN24QOpenGLVertexArrayObjectC1EP7QObject
+    // invoke: void QOpenGLVertexArrayObject(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN24QOpenGLVertexArrayObjectC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "QOpenGLVertexArrayObject", args)
+  }
+
+  return QOpenGLVertexArrayObject{}
+}
+
+// create()
 func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
   // create()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -213,20 +246,6 @@ func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
     C._ZN24QOpenGLVertexArrayObject6createEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "create", args)
-  }
-
-}
-
-  // proto:  void QOpenGLVertexArrayObject::~QOpenGLVertexArrayObject();
-func (this *QOpenGLVertexArrayObject) FreeQOpenGLVertexArrayObject(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QOpenGLVertexArrayObject", "~QOpenGLVertexArrayObject", args)
   }
 
 }

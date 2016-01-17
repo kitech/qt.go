@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,27 +28,22 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QTemporaryDir::remove();
-extern void _ZN13QTemporaryDir6removeEv(void* qthis);
-  // proto:  bool QTemporaryDir::autoRemove();
-extern void _ZNK13QTemporaryDir10autoRemoveEv(void* qthis);
-  // proto:  bool QTemporaryDir::isValid();
-extern void _ZNK13QTemporaryDir7isValidEv(void* qthis);
-  // proto:  void QTemporaryDir::setAutoRemove(bool b);
-extern void _ZN13QTemporaryDir13setAutoRemoveEb(void* qthis, bool arg0);
   // proto:  void QTemporaryDir::~QTemporaryDir();
-extern void _ZN13QTemporaryDirD0Ev(void* qthis);
+extern void _ZN13QTemporaryDirD2Ev(void* qthis); // 4
+  // proto:  void QTemporaryDir::setAutoRemove(bool b);
+extern void _ZN13QTemporaryDir13setAutoRemoveEb(void* qthis, bool arg0); // 4
   // proto:  void QTemporaryDir::QTemporaryDir();
-extern void* dector_ZN13QTemporaryDirC1Ev();
-extern void _ZN13QTemporaryDirC1Ev(void* qthis);
+extern void _ZN13QTemporaryDirC2Ev(void* qthis); // 3
   // proto:  void QTemporaryDir::QTemporaryDir(const QString & templateName);
-extern void* dector_ZN13QTemporaryDirC1ERK7QString(void* arg0);
-extern void _ZN13QTemporaryDirC1ERK7QString(void* qthis, void* arg0);
+extern void _ZN13QTemporaryDirC2ERK7QString(void* qthis, void* arg0); // 3
+  // proto:  bool QTemporaryDir::isValid();
+extern void _ZNK13QTemporaryDir7isValidEv(void* qthis); // 4
+  // proto:  bool QTemporaryDir::remove();
+extern void _ZN13QTemporaryDir6removeEv(void* qthis); // 4
+  // proto:  bool QTemporaryDir::autoRemove();
+extern void _ZNK13QTemporaryDir10autoRemoveEv(void* qthis); // 4
   // proto:  QString QTemporaryDir::path();
-extern void _ZNK13QTemporaryDir4pathEv(void* qthis);
-  // proto:  void QTemporaryDir::QTemporaryDir(const QTemporaryDir & );
-extern void* dector_ZN13QTemporaryDirC1ERKS_(void* arg0);
-extern void _ZN13QTemporaryDirC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK13QTemporaryDir4pathEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,9 +62,9 @@ type QTemporaryDir struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QTemporaryDir::remove();
-func (this *QTemporaryDir) remove(args ...interface{}) () {
-  // remove()
+// ~QTemporaryDir()
+func (this *QTemporaryDir) FreeQTemporaryDir(args ...interface{}) () {
+  // ~QTemporaryDir()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -82,56 +73,16 @@ func (this *QTemporaryDir) remove(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN13QTemporaryDir6removeEv
-    // invoke: bool remove()
-    C._ZN13QTemporaryDir6removeEv(this.qclsinst)
+    // invoke: _ZN13QTemporaryDirD0Ev
+    // invoke: void ~QTemporaryDir()
+    C._ZN13QTemporaryDirD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QTemporaryDir", "remove", args)
+    qtrt.ErrorResolve("QTemporaryDir", "~QTemporaryDir", args)
   }
 
 }
 
-  // proto:  bool QTemporaryDir::autoRemove();
-func (this *QTemporaryDir) autoRemove(args ...interface{}) () {
-  // autoRemove()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QTemporaryDir10autoRemoveEv
-    // invoke: bool autoRemove()
-    C._ZNK13QTemporaryDir10autoRemoveEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTemporaryDir", "autoRemove", args)
-  }
-
-}
-
-  // proto:  bool QTemporaryDir::isValid();
-func (this *QTemporaryDir) isValid(args ...interface{}) () {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QTemporaryDir7isValidEv
-    // invoke: bool isValid()
-    C._ZNK13QTemporaryDir7isValidEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QTemporaryDir", "isValid", args)
-  }
-
-}
-
-  // proto:  void QTemporaryDir::setAutoRemove(bool b);
+// setAutoRemove(_Bool)
 func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
   // setAutoRemove(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,26 +105,101 @@ func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
 
 }
 
-  // proto:  void QTemporaryDir::~QTemporaryDir();
-func (this *QTemporaryDir) FreeQTemporaryDir(args ...interface{}) () {
+// QTemporaryDir()
+func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
+  // QTemporaryDir()
+  // QTemporaryDir(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QString{}) // "const QString &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN13QTemporaryDirC1Ev
+    // invoke: void QTemporaryDir()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QTemporaryDirC2Ev(qthis)
+  case 1:
+    // invoke: _ZN13QTemporaryDirC1ERK7QString
+    // invoke: void QTemporaryDir(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QTemporaryDirC2ERK7QString(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QTemporaryDir", "~QTemporaryDir", args)
+    qtrt.ErrorResolve("QTemporaryDir", "QTemporaryDir", args)
+  }
+
+  return QTemporaryDir{}
+}
+
+// isValid()
+func (this *QTemporaryDir) isValid(args ...interface{}) () {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTemporaryDir7isValidEv
+    // invoke: bool isValid()
+    C._ZNK13QTemporaryDir7isValidEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTemporaryDir", "isValid", args)
   }
 
 }
 
-  // proto:  void QTemporaryDir::QTemporaryDir();
-func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
-  return QTemporaryDir{}
+// remove()
+func (this *QTemporaryDir) remove(args ...interface{}) () {
+  // remove()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QTemporaryDir6removeEv
+    // invoke: bool remove()
+    C._ZN13QTemporaryDir6removeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTemporaryDir", "remove", args)
+  }
+
 }
 
-  // proto:  QString QTemporaryDir::path();
+// autoRemove()
+func (this *QTemporaryDir) autoRemove(args ...interface{}) () {
+  // autoRemove()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QTemporaryDir10autoRemoveEv
+    // invoke: bool autoRemove()
+    C._ZNK13QTemporaryDir10autoRemoveEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QTemporaryDir", "autoRemove", args)
+  }
+
+}
+
+// path()
 func (this *QTemporaryDir) path(args ...interface{}) () {
   // path()
   var vtys = make(map[int32]map[int32]reflect.Type)

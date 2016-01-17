@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qkeysequenceedit.h
 // dst-file: /src/widgets/qkeysequenceedit.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,25 +28,20 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
-extern void* dector_ZN16QKeySequenceEditC1ERKS_(void* arg0);
-extern void _ZN16QKeySequenceEditC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
-extern void* dector_ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget(void* arg0, void* arg1);
-extern void _ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget(void* qthis, void* arg0, void* arg1);
-  // proto:  void QKeySequenceEdit::clear();
-extern void _ZN16QKeySequenceEdit5clearEv(void* qthis);
-  // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
-extern void _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(void* qthis, void* arg0);
-  // proto:  QKeySequence QKeySequenceEdit::keySequence();
-extern void _ZNK16QKeySequenceEdit11keySequenceEv(void* qthis);
-  // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
-extern void _ZN16QKeySequenceEditD0Ev(void* qthis);
   // proto:  void QKeySequenceEdit::QKeySequenceEdit(QWidget * parent);
-extern void* dector_ZN16QKeySequenceEditC1EP7QWidget(void* arg0);
-extern void _ZN16QKeySequenceEditC1EP7QWidget(void* qthis, void* arg0);
+extern void _ZN16QKeySequenceEditC2EP7QWidget(void* qthis, void* arg0); // 3
+  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequence & keySequence, QWidget * parent);
+extern void _ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+  // proto:  void QKeySequenceEdit::clear();
+extern void _ZN16QKeySequenceEdit5clearEv(void* qthis); // 4
   // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
-extern void _ZNK16QKeySequenceEdit10metaObjectEv(void* qthis);
+extern void _ZNK16QKeySequenceEdit10metaObjectEv(void* qthis); // 4
+  // proto:  QKeySequence QKeySequenceEdit::keySequence();
+extern void _ZNK16QKeySequenceEdit11keySequenceEv(void* qthis); // 4
+  // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
+extern void _ZN16QKeySequenceEditD2Ev(void* qthis); // 4
+  // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
+extern void _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,12 +62,47 @@ type QKeySequenceEdit struct {
 //  _keySequenceChanged QKeySequenceEdit_keySequenceChanged_signal;
 }
 
-  // proto:  void QKeySequenceEdit::QKeySequenceEdit(const QKeySequenceEdit & );
+// QKeySequenceEdit(class QWidget *)
 func NewQKeySequenceEdit(args ...interface{}) QKeySequenceEdit {
+  // QKeySequenceEdit(class QWidget *)
+  // QKeySequenceEdit(const class QKeySequence &, class QWidget *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QKeySequence{}) // "const QKeySequence &"
+  vtys[1][1] = reflect.TypeOf(QWidget{}) // "QWidget *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QKeySequenceEditC1EP7QWidget
+    // invoke: void QKeySequenceEdit(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QKeySequenceEditC2EP7QWidget(qthis, arg0)
+  case 1:
+    // invoke: _ZN16QKeySequenceEditC1ERK12QKeySequenceP7QWidget
+    // invoke: void QKeySequenceEdit(const class QKeySequence &, class QWidget *)
+    var arg0 = args[0].(QKeySequence).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QWidget).qclsinst
+    if false {fmt.Println(arg1)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN16QKeySequenceEditC2ERK12QKeySequenceP7QWidget(qthis, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QKeySequenceEdit", "QKeySequenceEdit", args)
+  }
+
   return QKeySequenceEdit{}
 }
 
-  // proto:  void QKeySequenceEdit::clear();
+// clear()
 func (this *QKeySequenceEdit) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -96,30 +122,27 @@ func (this *QKeySequenceEdit) clear(args ...interface{}) () {
 
 }
 
-  // proto:  void QKeySequenceEdit::setKeySequence(const QKeySequence & keySequence);
-func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
-  // setKeySequence(const class QKeySequence &)
+// metaObject()
+func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QKeySequence{}) // "const QKeySequence &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence
-    // invoke: void setKeySequence(const class QKeySequence &)
-    var arg0 = args[0].(QKeySequence).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
+    // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
+    qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
   }
 
 }
 
-  // proto:  QKeySequence QKeySequenceEdit::keySequence();
+// keySequence()
 func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
   // keySequence()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -139,23 +162,9 @@ func (this *QKeySequenceEdit) keySequence(args ...interface{}) () {
 
 }
 
-  // proto:  void QKeySequenceEdit::~QKeySequenceEdit();
+// ~QKeySequenceEdit()
 func (this *QKeySequenceEdit) FreeQKeySequenceEdit(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QKeySequenceEdit::metaObject();
-func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
-  // metaObject()
+  // ~QKeySequenceEdit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -164,11 +173,34 @@ func (this *QKeySequenceEdit) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK16QKeySequenceEdit10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK16QKeySequenceEdit10metaObjectEv(this.qclsinst)
+    // invoke: _ZN16QKeySequenceEditD0Ev
+    // invoke: void ~QKeySequenceEdit()
+    C._ZN16QKeySequenceEditD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QKeySequenceEdit", "metaObject", args)
+    qtrt.ErrorResolve("QKeySequenceEdit", "~QKeySequenceEdit", args)
+  }
+
+}
+
+// setKeySequence(const class QKeySequence &)
+func (this *QKeySequenceEdit) setKeySequence(args ...interface{}) () {
+  // setKeySequence(const class QKeySequence &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QKeySequence{}) // "const QKeySequence &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence
+    // invoke: void setKeySequence(const class QKeySequence &)
+    var arg0 = args[0].(QKeySequence).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN16QKeySequenceEdit14setKeySequenceERK12QKeySequence(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QKeySequenceEdit", "setKeySequence", args)
   }
 
 }

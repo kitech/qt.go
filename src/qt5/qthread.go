@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,53 +28,56 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QThread::QThread(QObject * parent);
-extern void* dector_ZN7QThreadC1EP7QObject(void* arg0);
-extern void _ZN7QThreadC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
-extern void _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QThread::metaObject();
-extern void _ZNK7QThread10metaObjectEv(void* qthis);
-  // proto: static void QThread::yieldCurrentThread();
-extern void _ZN7QThread18yieldCurrentThreadEv();
-  // proto:  bool QThread::isInterruptionRequested();
-extern void _ZNK7QThread23isInterruptionRequestedEv(void* qthis);
-  // proto: static void QThread::msleep(unsigned long );
-extern void _ZN7QThread6msleepEm(int32_t arg0);
-  // proto:  void QThread::requestInterruption();
-extern void _ZN7QThread19requestInterruptionEv(void* qthis);
-  // proto:  void QThread::exit(int retcode);
-extern void _ZN7QThread4exitEi(void* qthis, int32_t arg0);
-  // proto:  bool QThread::event(QEvent * event);
-extern void _ZN7QThread5eventEP6QEvent(void* qthis, void* arg0);
-  // proto:  uint QThread::stackSize();
-extern void _ZNK7QThread9stackSizeEv(void* qthis);
   // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-extern void _ZNK7QThread15eventDispatcherEv(void* qthis);
-  // proto:  void QThread::setStackSize(uint stackSize);
-extern void _ZN7QThread12setStackSizeEj(void* qthis, int32_t arg0);
-  // proto:  bool QThread::isFinished();
-extern void _ZNK7QThread10isFinishedEv(void* qthis);
-  // proto: static void QThread::sleep(unsigned long );
-extern void _ZN7QThread5sleepEm(int32_t arg0);
-  // proto: static void QThread::usleep(unsigned long );
-extern void _ZN7QThread6usleepEm(int32_t arg0);
-  // proto: static int QThread::idealThreadCount();
-extern void _ZN7QThread16idealThreadCountEv();
-  // proto:  bool QThread::wait(unsigned long time);
-extern void _ZN7QThread4waitEm(void* qthis, int32_t arg0);
+extern void _ZNK7QThread15eventDispatcherEv(void* qthis); // 4
   // proto: static QThread * QThread::currentThread();
-extern void _ZN7QThread13currentThreadEv();
-  // proto:  bool QThread::isRunning();
-extern void _ZNK7QThread9isRunningEv(void* qthis);
+extern void _ZN7QThread13currentThreadEv(); // 4
   // proto:  void QThread::terminate();
-extern void _ZN7QThread9terminateEv(void* qthis);
-  // proto:  void QThread::~QThread();
-extern void _ZN7QThreadD0Ev(void* qthis);
+extern void _ZN7QThread9terminateEv(void* qthis); // 4
+  // proto: static void QThread::sleep(unsigned long );
+extern void _ZN7QThread5sleepEm(int32_t arg0); // 4
+  // proto: static void QThread::msleep(unsigned long );
+extern void _ZN7QThread6msleepEm(int32_t arg0); // 4
+  // proto:  uint QThread::stackSize();
+extern void _ZNK7QThread9stackSizeEv(void* qthis); // 4
+  // proto:  bool QThread::event(QEvent * event);
+extern void _ZN7QThread5eventEP6QEvent(void* qthis, void* arg0); // 4
+  // proto: static void QThread::usleep(unsigned long );
+extern void _ZN7QThread6usleepEm(int32_t arg0); // 4
   // proto:  void QThread::quit();
-extern void _ZN7QThread4quitEv(void* qthis);
+extern void _ZN7QThread4quitEv(void* qthis); // 4
   // proto:  int QThread::loopLevel();
-extern void _ZNK7QThread9loopLevelEv(void* qthis);
+extern void _ZNK7QThread9loopLevelEv(void* qthis); // 4
+  // proto:  QThread::Priority QThread::priority();
+extern void _ZNK7QThread8priorityEv(void* qthis); // 4
+  // proto:  bool QThread::isFinished();
+extern void _ZNK7QThread10isFinishedEv(void* qthis); // 4
+  // proto:  void QThread::exit(int retcode);
+extern void _ZN7QThread4exitEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
+extern void _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(void* qthis, void* arg0); // 4
+  // proto:  void QThread::setStackSize(uint stackSize);
+extern void _ZN7QThread12setStackSizeEj(void* qthis, int32_t arg0); // 4
+  // proto:  void QThread::~QThread();
+extern void _ZN7QThreadD2Ev(void* qthis); // 4
+  // proto:  bool QThread::isRunning();
+extern void _ZNK7QThread9isRunningEv(void* qthis); // 4
+  // proto:  bool QThread::isInterruptionRequested();
+extern void _ZNK7QThread23isInterruptionRequestedEv(void* qthis); // 4
+  // proto:  void QThread::requestInterruption();
+extern void _ZN7QThread19requestInterruptionEv(void* qthis); // 4
+  // proto:  void QThread::QThread(QObject * parent);
+extern void _ZN7QThreadC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  bool QThread::wait(unsigned long time);
+extern void _ZN7QThread4waitEm(void* qthis, int32_t arg0); // 4
+  // proto:  const QMetaObject * QThread::metaObject();
+extern void _ZNK7QThread10metaObjectEv(void* qthis); // 4
+  // proto: static int QThread::idealThreadCount();
+extern void _ZN7QThread16idealThreadCountEv(); // 4
+  // proto: static Qt::HANDLE QThread::currentThreadId();
+extern void _ZN7QThread15currentThreadIdEv(); // 4
+  // proto: static void QThread::yieldCurrentThread();
+extern void _ZN7QThread18yieldCurrentThreadEv(); // 4
 */
 import "C"
 // } // <= ext block end
@@ -99,105 +98,115 @@ type QThread struct {
 //  _finished QThread_finished_signal;
 }
 
-  // proto:  void QThread::QThread(QObject * parent);
-func NewQThread(args ...interface{}) QThread {
-  return QThread{}
-}
-
-  // proto:  void QThread::setEventDispatcher(QAbstractEventDispatcher * eventDispatcher);
-func (this *QThread) setEventDispatcher(args ...interface{}) () {
-  // setEventDispatcher(class QAbstractEventDispatcher *)
+// eventDispatcher()
+func (this *QThread) eventDispatcher(args ...interface{}) () {
+  // eventDispatcher()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractEventDispatcher{}) // "QAbstractEventDispatcher *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher
-    // invoke: void setEventDispatcher(class QAbstractEventDispatcher *)
-    var arg0 = args[0].(QAbstractEventDispatcher).qclsinst
+    // invoke: _ZNK7QThread15eventDispatcherEv
+    // invoke: QAbstractEventDispatcher * eventDispatcher()
+    C._ZNK7QThread15eventDispatcherEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QThread", "eventDispatcher", args)
+  }
+
+}
+
+// currentThread()
+func (this *QThread) currentThread_s(args ...interface{}) () {
+  // currentThread()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread13currentThreadEv
+    // invoke: QThread * currentThread()
+    C._ZN7QThread13currentThreadEv()
+  default:
+    qtrt.ErrorResolve("QThread", "currentThread", args)
+  }
+
+}
+
+// terminate()
+func (this *QThread) terminate(args ...interface{}) () {
+  // terminate()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread9terminateEv
+    // invoke: void terminate()
+    C._ZN7QThread9terminateEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QThread", "terminate", args)
+  }
+
+}
+
+// sleep(unsigned long)
+func (this *QThread) sleep_s(args ...interface{}) () {
+  // sleep(unsigned long)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread5sleepEm
+    // invoke: void sleep(unsigned long)
+    var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(this.qclsinst, arg0)
+    C._ZN7QThread5sleepEm(arg0)
   default:
-    qtrt.ErrorResolve("QThread", "setEventDispatcher", args)
+    qtrt.ErrorResolve("QThread", "sleep", args)
   }
 
 }
 
-  // proto:  const QMetaObject * QThread::metaObject();
-func (this *QThread) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QThread10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK7QThread10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QThread", "metaObject", args)
-  }
-
-}
-
-  // proto: static void QThread::yieldCurrentThread();
-func (this *QThread) yieldCurrentThread_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QThread", "yieldCurrentThread", args)
-  }
-
-}
-
-  // proto:  bool QThread::isInterruptionRequested();
-func (this *QThread) isInterruptionRequested(args ...interface{}) () {
-  // isInterruptionRequested()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK7QThread23isInterruptionRequestedEv
-    // invoke: bool isInterruptionRequested()
-    C._ZNK7QThread23isInterruptionRequestedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QThread", "isInterruptionRequested", args)
-  }
-
-}
-
-  // proto: static void QThread::msleep(unsigned long );
+// msleep(unsigned long)
 func (this *QThread) msleep_s(args ...interface{}) () {
+  // msleep(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread6msleepEm
+    // invoke: void msleep(unsigned long)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN7QThread6msleepEm(arg0)
   default:
     qtrt.ErrorResolve("QThread", "msleep", args)
   }
 
 }
 
-  // proto:  void QThread::requestInterruption();
-func (this *QThread) requestInterruption(args ...interface{}) () {
-  // requestInterruption()
+// stackSize()
+func (this *QThread) stackSize(args ...interface{}) () {
+  // stackSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -206,39 +215,16 @@ func (this *QThread) requestInterruption(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QThread19requestInterruptionEv
-    // invoke: void requestInterruption()
-    C._ZN7QThread19requestInterruptionEv(this.qclsinst)
+    // invoke: _ZNK7QThread9stackSizeEv
+    // invoke: uint stackSize()
+    C._ZNK7QThread9stackSizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "requestInterruption", args)
+    qtrt.ErrorResolve("QThread", "stackSize", args)
   }
 
 }
 
-  // proto:  void QThread::exit(int retcode);
-func (this *QThread) exit(args ...interface{}) () {
-  // exit(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN7QThread4exitEi
-    // invoke: void exit(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN7QThread4exitEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QThread", "exit", args)
-  }
-
-}
-
-  // proto:  bool QThread::event(QEvent * event);
+// event(class QEvent *)
 func (this *QThread) event(args ...interface{}) () {
   // event(class QEvent *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -261,9 +247,32 @@ func (this *QThread) event(args ...interface{}) () {
 
 }
 
-  // proto:  uint QThread::stackSize();
-func (this *QThread) stackSize(args ...interface{}) () {
-  // stackSize()
+// usleep(unsigned long)
+func (this *QThread) usleep_s(args ...interface{}) () {
+  // usleep(unsigned long)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "unsigned long"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread6usleepEm
+    // invoke: void usleep(unsigned long)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN7QThread6usleepEm(arg0)
+  default:
+    qtrt.ErrorResolve("QThread", "usleep", args)
+  }
+
+}
+
+// quit()
+func (this *QThread) quit(args ...interface{}) () {
+  // quit()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -272,18 +281,18 @@ func (this *QThread) stackSize(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QThread9stackSizeEv
-    // invoke: uint stackSize()
-    C._ZNK7QThread9stackSizeEv(this.qclsinst)
+    // invoke: _ZN7QThread4quitEv
+    // invoke: void quit()
+    C._ZN7QThread4quitEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "stackSize", args)
+    qtrt.ErrorResolve("QThread", "quit", args)
   }
 
 }
 
-  // proto:  QAbstractEventDispatcher * QThread::eventDispatcher();
-func (this *QThread) eventDispatcher(args ...interface{}) () {
-  // eventDispatcher()
+// loopLevel()
+func (this *QThread) loopLevel(args ...interface{}) () {
+  // loopLevel()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -292,16 +301,102 @@ func (this *QThread) eventDispatcher(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QThread15eventDispatcherEv
-    // invoke: QAbstractEventDispatcher * eventDispatcher()
-    C._ZNK7QThread15eventDispatcherEv(this.qclsinst)
+    // invoke: _ZNK7QThread9loopLevelEv
+    // invoke: int loopLevel()
+    C._ZNK7QThread9loopLevelEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "eventDispatcher", args)
+    qtrt.ErrorResolve("QThread", "loopLevel", args)
   }
 
 }
 
-  // proto:  void QThread::setStackSize(uint stackSize);
+// priority()
+func (this *QThread) priority(args ...interface{}) () {
+  // priority()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QThread8priorityEv
+    // invoke: QThread::Priority priority()
+    C._ZNK7QThread8priorityEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QThread", "priority", args)
+  }
+
+}
+
+// isFinished()
+func (this *QThread) isFinished(args ...interface{}) () {
+  // isFinished()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QThread10isFinishedEv
+    // invoke: bool isFinished()
+    C._ZNK7QThread10isFinishedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QThread", "isFinished", args)
+  }
+
+}
+
+// exit(int)
+func (this *QThread) exit(args ...interface{}) () {
+  // exit(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread4exitEi
+    // invoke: void exit(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN7QThread4exitEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QThread", "exit", args)
+  }
+
+}
+
+// setEventDispatcher(class QAbstractEventDispatcher *)
+func (this *QThread) setEventDispatcher(args ...interface{}) () {
+  // setEventDispatcher(class QAbstractEventDispatcher *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAbstractEventDispatcher{}) // "QAbstractEventDispatcher *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher
+    // invoke: void setEventDispatcher(class QAbstractEventDispatcher *)
+    var arg0 = args[0].(QAbstractEventDispatcher).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN7QThread18setEventDispatcherEP24QAbstractEventDispatcher(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QThread", "setEventDispatcher", args)
+  }
+
+}
+
+// setStackSize(uint)
 func (this *QThread) setStackSize(args ...interface{}) () {
   // setStackSize(uint)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -324,9 +419,9 @@ func (this *QThread) setStackSize(args ...interface{}) () {
 
 }
 
-  // proto:  bool QThread::isFinished();
-func (this *QThread) isFinished(args ...interface{}) () {
-  // isFinished()
+// ~QThread()
+func (this *QThread) FreeQThread(args ...interface{}) () {
+  // ~QThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -335,58 +430,102 @@ func (this *QThread) isFinished(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QThread10isFinishedEv
-    // invoke: bool isFinished()
-    C._ZNK7QThread10isFinishedEv(this.qclsinst)
+    // invoke: _ZN7QThreadD0Ev
+    // invoke: void ~QThread()
+    C._ZN7QThreadD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "isFinished", args)
+    qtrt.ErrorResolve("QThread", "~QThread", args)
   }
 
 }
 
-  // proto: static void QThread::sleep(unsigned long );
-func (this *QThread) sleep_s(args ...interface{}) () {
+// isRunning()
+func (this *QThread) isRunning(args ...interface{}) () {
+  // isRunning()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK7QThread9isRunningEv
+    // invoke: bool isRunning()
+    C._ZNK7QThread9isRunningEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "sleep", args)
+    qtrt.ErrorResolve("QThread", "isRunning", args)
   }
 
 }
 
-  // proto: static void QThread::usleep(unsigned long );
-func (this *QThread) usleep_s(args ...interface{}) () {
+// isInterruptionRequested()
+func (this *QThread) isInterruptionRequested(args ...interface{}) () {
+  // isInterruptionRequested()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK7QThread23isInterruptionRequestedEv
+    // invoke: bool isInterruptionRequested()
+    C._ZNK7QThread23isInterruptionRequestedEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "usleep", args)
+    qtrt.ErrorResolve("QThread", "isInterruptionRequested", args)
   }
 
 }
 
-  // proto: static int QThread::idealThreadCount();
-func (this *QThread) idealThreadCount_s(args ...interface{}) () {
+// requestInterruption()
+func (this *QThread) requestInterruption(args ...interface{}) () {
+  // requestInterruption()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN7QThread19requestInterruptionEv
+    // invoke: void requestInterruption()
+    C._ZN7QThread19requestInterruptionEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "idealThreadCount", args)
+    qtrt.ErrorResolve("QThread", "requestInterruption", args)
   }
 
 }
 
-  // proto:  bool QThread::wait(unsigned long time);
+// QThread(class QObject *)
+func NewQThread(args ...interface{}) QThread {
+  // QThread(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QThreadC1EP7QObject
+    // invoke: void QThread(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QThreadC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QThread", "QThread", args)
+  }
+
+  return QThread{}
+}
+
+// wait(unsigned long)
 func (this *QThread) wait(args ...interface{}) () {
   // wait(unsigned long)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -409,23 +548,9 @@ func (this *QThread) wait(args ...interface{}) () {
 
 }
 
-  // proto: static QThread * QThread::currentThread();
-func (this *QThread) currentThread_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QThread", "currentThread", args)
-  }
-
-}
-
-  // proto:  bool QThread::isRunning();
-func (this *QThread) isRunning(args ...interface{}) () {
-  // isRunning()
+// metaObject()
+func (this *QThread) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -434,18 +559,18 @@ func (this *QThread) isRunning(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QThread9isRunningEv
-    // invoke: bool isRunning()
-    C._ZNK7QThread9isRunningEv(this.qclsinst)
+    // invoke: _ZNK7QThread10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK7QThread10metaObjectEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QThread", "isRunning", args)
+    qtrt.ErrorResolve("QThread", "metaObject", args)
   }
 
 }
 
-  // proto:  void QThread::terminate();
-func (this *QThread) terminate(args ...interface{}) () {
-  // terminate()
+// idealThreadCount()
+func (this *QThread) idealThreadCount_s(args ...interface{}) () {
+  // idealThreadCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -454,32 +579,18 @@ func (this *QThread) terminate(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QThread9terminateEv
-    // invoke: void terminate()
-    C._ZN7QThread9terminateEv(this.qclsinst)
+    // invoke: _ZN7QThread16idealThreadCountEv
+    // invoke: int idealThreadCount()
+    C._ZN7QThread16idealThreadCountEv()
   default:
-    qtrt.ErrorResolve("QThread", "terminate", args)
+    qtrt.ErrorResolve("QThread", "idealThreadCount", args)
   }
 
 }
 
-  // proto:  void QThread::~QThread();
-func (this *QThread) FreeQThread(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QThread", "~QThread", args)
-  }
-
-}
-
-  // proto:  void QThread::quit();
-func (this *QThread) quit(args ...interface{}) () {
-  // quit()
+// currentThreadId()
+func (this *QThread) currentThreadId_s(args ...interface{}) () {
+  // currentThreadId()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -488,18 +599,18 @@ func (this *QThread) quit(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN7QThread4quitEv
-    // invoke: void quit()
-    C._ZN7QThread4quitEv(this.qclsinst)
+    // invoke: _ZN7QThread15currentThreadIdEv
+    // invoke: Qt::HANDLE currentThreadId()
+    C._ZN7QThread15currentThreadIdEv()
   default:
-    qtrt.ErrorResolve("QThread", "quit", args)
+    qtrt.ErrorResolve("QThread", "currentThreadId", args)
   }
 
 }
 
-  // proto:  int QThread::loopLevel();
-func (this *QThread) loopLevel(args ...interface{}) () {
-  // loopLevel()
+// yieldCurrentThread()
+func (this *QThread) yieldCurrentThread_s(args ...interface{}) () {
+  // yieldCurrentThread()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -508,11 +619,11 @@ func (this *QThread) loopLevel(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QThread9loopLevelEv
-    // invoke: int loopLevel()
-    C._ZNK7QThread9loopLevelEv(this.qclsinst)
+    // invoke: _ZN7QThread18yieldCurrentThreadEv
+    // invoke: void yieldCurrentThread()
+    C._ZN7QThread18yieldCurrentThreadEv()
   default:
-    qtrt.ErrorResolve("QThread", "loopLevel", args)
+    qtrt.ErrorResolve("QThread", "yieldCurrentThread", args)
   }
 
 }

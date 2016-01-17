@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,40 +28,38 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
-extern void _ZN7QCursor6setPosEP7QScreenii(void* arg0, int32_t arg1, int32_t arg2);
   // proto:  QPixmap QCursor::pixmap();
-extern void _ZNK7QCursor6pixmapEv(void* qthis);
-  // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
-extern void* dector_ZN7QCursorC1ERK7QBitmapS2_ii(void* arg0, void* arg1, int32_t arg2, int32_t arg3);
-extern void _ZN7QCursorC1ERK7QBitmapS2_ii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3);
-  // proto:  void QCursor::QCursor(const QPixmap & pixmap, int hotX, int hotY);
-extern void* dector_ZN7QCursorC1ERK7QPixmapii(void* arg0, int32_t arg1, int32_t arg2);
-extern void _ZN7QCursorC1ERK7QPixmapii(void* qthis, void* arg0, int32_t arg1, int32_t arg2);
-  // proto:  void QCursor::~QCursor();
-extern void _ZN7QCursorD0Ev(void* qthis);
-  // proto:  const QBitmap * QCursor::mask();
-extern void _ZNK7QCursor4maskEv(void* qthis);
-  // proto:  void QCursor::QCursor(const QCursor & cursor);
-extern void* dector_ZN7QCursorC1ERKS_(void* arg0);
-extern void _ZN7QCursorC1ERKS_(void* qthis, void* arg0);
-  // proto: static void QCursor::setPos(int x, int y);
-extern void _ZN7QCursor6setPosEii(int32_t arg0, int32_t arg1);
+extern void _ZNK7QCursor6pixmapEv(void* qthis); // 4
+  // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
+extern void _ZN7QCursor6setPosEP7QScreenii(void* arg0, int32_t arg1, int32_t arg2); // 4
   // proto: static void QCursor::setPos(QScreen * screen, const QPoint & p);
-extern void demth_ZN7QCursor6setPosEP7QScreenRK6QPoint(void* arg0, void* arg1);
+extern void _ZN7QCursor6setPosEP7QScreenRK6QPoint(void* arg0, void* arg1); // 2
+  // proto: static void QCursor::setPos(int x, int y);
+extern void _ZN7QCursor6setPosEii(int32_t arg0, int32_t arg1); // 4
   // proto: static void QCursor::setPos(const QPoint & p);
-extern void demth_ZN7QCursor6setPosERK6QPoint(void* arg0);
-  // proto:  const QBitmap * QCursor::bitmap();
-extern void _ZNK7QCursor6bitmapEv(void* qthis);
-  // proto: static QPoint QCursor::pos(const QScreen * screen);
-extern void _ZN7QCursor3posEPK7QScreen(void* arg0);
+extern void _ZN7QCursor6setPosERK6QPoint(void* arg0); // 2
+  // proto:  const QBitmap * QCursor::mask();
+extern void _ZNK7QCursor4maskEv(void* qthis); // 4
   // proto: static QPoint QCursor::pos();
-extern void _ZN7QCursor3posEv();
-  // proto:  void QCursor::QCursor();
-extern void* dector_ZN7QCursorC1Ev();
-extern void _ZN7QCursorC1Ev(void* qthis);
+extern void _ZN7QCursor3posEv(); // 4
+  // proto: static QPoint QCursor::pos(const QScreen * screen);
+extern void _ZN7QCursor3posEPK7QScreen(void* arg0); // 4
   // proto:  QPoint QCursor::hotSpot();
-extern void _ZNK7QCursor7hotSpotEv(void* qthis);
+extern void _ZNK7QCursor7hotSpotEv(void* qthis); // 4
+  // proto:  const QBitmap * QCursor::bitmap();
+extern void _ZNK7QCursor6bitmapEv(void* qthis); // 4
+  // proto:  void QCursor::~QCursor();
+extern void _ZN7QCursorD2Ev(void* qthis); // 4
+  // proto:  Qt::CursorShape QCursor::shape();
+extern void _ZNK7QCursor5shapeEv(void* qthis); // 4
+  // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
+extern void _ZN7QCursorC2ERK7QBitmapS2_ii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3); // 3
+  // proto:  void QCursor::QCursor(const QPixmap & pixmap, int hotX, int hotY);
+extern void _ZN7QCursorC2ERK7QPixmapii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 3
+  // proto:  void QCursor::QCursor(const QCursor & cursor);
+extern void _ZN7QCursorC2ERKS_(void* qthis, void* arg0); // 3
+  // proto:  void QCursor::QCursor();
+extern void _ZN7QCursorC2Ev(void* qthis); // 3
 */
 import "C"
 // } // <= ext block end
@@ -84,21 +78,7 @@ type QCursor struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto: static void QCursor::setPos(QScreen * screen, int x, int y);
-func (this *QCursor) setPos_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QCursor", "setPos", args)
-  }
-
-}
-
-  // proto:  QPixmap QCursor::pixmap();
+// pixmap()
 func (this *QCursor) pixmap(args ...interface{}) () {
   // pixmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -118,26 +98,69 @@ func (this *QCursor) pixmap(args ...interface{}) () {
 
 }
 
-  // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
-func NewQCursor(args ...interface{}) QCursor {
-  return QCursor{}
-}
-
-  // proto:  void QCursor::~QCursor();
-func (this *QCursor) FreeQCursor(args ...interface{}) () {
+// setPos(class QScreen *, int, int)
+func (this *QCursor) setPos_s(args ...interface{}) () {
+  // setPos(class QScreen *, int, int)
+  // setPos(class QScreen *, const class QPoint &)
+  // setPos(int, int)
+  // setPos(const class QPoint &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QScreen{}) // "QScreen *"
+  vtys[1][1] = reflect.TypeOf(QPoint{}) // "const QPoint &"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = qtrt.Int32Ty(false) // "int"
+  vtys[2][1] = qtrt.Int32Ty(false) // "int"
+  vtys[3] = make(map[int32]reflect.Type)
+  vtys[3][0] = reflect.TypeOf(QPoint{}) // "const QPoint &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN7QCursor6setPosEP7QScreenii
+    // invoke: void setPos(class QScreen *, int, int)
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    C._ZN7QCursor6setPosEP7QScreenii(arg0, arg1, arg2)
+  case 1:
+    // invoke: _ZN7QCursor6setPosEP7QScreenRK6QPoint
+    // invoke: void setPos(class QScreen *, const class QPoint &)
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QPoint).qclsinst
+    if false {fmt.Println(arg1)}
+    C._ZN7QCursor6setPosEP7QScreenRK6QPoint(arg0, arg1)
+  case 2:
+    // invoke: _ZN7QCursor6setPosEii
+    // invoke: void setPos(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZN7QCursor6setPosEii(arg0, arg1)
+  case 3:
+    // invoke: _ZN7QCursor6setPosERK6QPoint
+    // invoke: void setPos(const class QPoint &)
+    var arg0 = args[0].(QPoint).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN7QCursor6setPosERK6QPoint(arg0)
   default:
-    qtrt.ErrorResolve("QCursor", "~QCursor", args)
+    qtrt.ErrorResolve("QCursor", "setPos", args)
   }
 
 }
 
-  // proto:  const QBitmap * QCursor::mask();
+// mask()
 func (this *QCursor) mask(args ...interface{}) () {
   // mask()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -157,7 +180,56 @@ func (this *QCursor) mask(args ...interface{}) () {
 
 }
 
-  // proto:  const QBitmap * QCursor::bitmap();
+// pos()
+func (this *QCursor) pos_s(args ...interface{}) () {
+  // pos()
+  // pos(const class QScreen *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QScreen{}) // "const QScreen *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QCursor3posEv
+    // invoke: QPoint pos()
+    C._ZN7QCursor3posEv()
+  case 1:
+    // invoke: _ZN7QCursor3posEPK7QScreen
+    // invoke: QPoint pos(const class QScreen *)
+    var arg0 = args[0].(QScreen).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN7QCursor3posEPK7QScreen(arg0)
+  default:
+    qtrt.ErrorResolve("QCursor", "pos", args)
+  }
+
+}
+
+// hotSpot()
+func (this *QCursor) hotSpot(args ...interface{}) () {
+  // hotSpot()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QCursor7hotSpotEv
+    // invoke: QPoint hotSpot()
+    C._ZNK7QCursor7hotSpotEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QCursor", "hotSpot", args)
+  }
+
+}
+
+// bitmap()
 func (this *QCursor) bitmap(args ...interface{}) () {
   // bitmap()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -177,23 +249,9 @@ func (this *QCursor) bitmap(args ...interface{}) () {
 
 }
 
-  // proto: static QPoint QCursor::pos(const QScreen * screen);
-func (this *QCursor) pos_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QCursor", "pos", args)
-  }
-
-}
-
-  // proto:  QPoint QCursor::hotSpot();
-func (this *QCursor) hotSpot(args ...interface{}) () {
-  // hotSpot()
+// ~QCursor()
+func (this *QCursor) FreeQCursor(args ...interface{}) () {
+  // ~QCursor()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -202,13 +260,104 @@ func (this *QCursor) hotSpot(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK7QCursor7hotSpotEv
-    // invoke: QPoint hotSpot()
-    C._ZNK7QCursor7hotSpotEv(this.qclsinst)
+    // invoke: _ZN7QCursorD0Ev
+    // invoke: void ~QCursor()
+    C._ZN7QCursorD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QCursor", "hotSpot", args)
+    qtrt.ErrorResolve("QCursor", "~QCursor", args)
   }
 
+}
+
+// shape()
+func (this *QCursor) shape(args ...interface{}) () {
+  // shape()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK7QCursor5shapeEv
+    // invoke: Qt::CursorShape shape()
+    C._ZNK7QCursor5shapeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QCursor", "shape", args)
+  }
+
+}
+
+// QCursor(const class QBitmap &, const class QBitmap &, int, int)
+func NewQCursor(args ...interface{}) QCursor {
+  // QCursor(const class QBitmap &, const class QBitmap &, int, int)
+  // QCursor(const class QPixmap &, int, int)
+  // QCursor(const class QCursor &)
+  // QCursor()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QBitmap{}) // "const QBitmap &"
+  vtys[0][1] = reflect.TypeOf(QBitmap{}) // "const QBitmap &"
+  vtys[0][2] = qtrt.Int32Ty(false) // "int"
+  vtys[0][3] = qtrt.Int32Ty(false) // "int"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QPixmap{}) // "const QPixmap &"
+  vtys[1][1] = qtrt.Int32Ty(false) // "int"
+  vtys[1][2] = qtrt.Int32Ty(false) // "int"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QCursor{}) // "const QCursor &"
+  vtys[3] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN7QCursorC1ERK7QBitmapS2_ii
+    // invoke: void QCursor(const class QBitmap &, const class QBitmap &, int, int)
+    var arg0 = args[0].(QBitmap).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QBitmap).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QCursorC2ERK7QBitmapS2_ii(qthis, arg0, arg1, arg2, arg3)
+  case 1:
+    // invoke: _ZN7QCursorC1ERK7QPixmapii
+    // invoke: void QCursor(const class QPixmap &, int, int)
+    var arg0 = args[0].(QPixmap).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QCursorC2ERK7QPixmapii(qthis, arg0, arg1, arg2)
+  case 2:
+    // invoke: _ZN7QCursorC1ERKS_
+    // invoke: void QCursor(const class QCursor &)
+    var arg0 = args[0].(QCursor).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QCursorC2ERKS_(qthis, arg0)
+  case 3:
+    // invoke: _ZN7QCursorC1Ev
+    // invoke: void QCursor()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN7QCursorC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QCursor", "QCursor", args)
+  }
+
+  return QCursor{}
 }
 
 // <= body block end

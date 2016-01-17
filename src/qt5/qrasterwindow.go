@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qrasterwindow.h
 // dst-file: /src/gui/qrasterwindow.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,14 +28,10 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
-extern void* dector_ZN13QRasterWindowC1EP7QWindow(void* arg0);
-extern void _ZN13QRasterWindowC1EP7QWindow(void* qthis, void* arg0);
   // proto:  const QMetaObject * QRasterWindow::metaObject();
-extern void _ZNK13QRasterWindow10metaObjectEv(void* qthis);
-  // proto:  void QRasterWindow::QRasterWindow(const QRasterWindow & );
-extern void* dector_ZN13QRasterWindowC1ERKS_(void* arg0);
-extern void _ZN13QRasterWindowC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK13QRasterWindow10metaObjectEv(void* qthis); // 4
+  // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
+extern void _ZN13QRasterWindowC2EP7QWindow(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -58,12 +50,7 @@ type QRasterWindow struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QRasterWindow::QRasterWindow(QWindow * parent);
-func NewQRasterWindow(args ...interface{}) QRasterWindow {
-  return QRasterWindow{}
-}
-
-  // proto:  const QMetaObject * QRasterWindow::metaObject();
+// metaObject()
 func (this *QRasterWindow) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -81,6 +68,32 @@ func (this *QRasterWindow) metaObject(args ...interface{}) () {
     qtrt.ErrorResolve("QRasterWindow", "metaObject", args)
   }
 
+}
+
+// QRasterWindow(class QWindow *)
+func NewQRasterWindow(args ...interface{}) QRasterWindow {
+  // QRasterWindow(class QWindow *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWindow{}) // "QWindow *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QRasterWindowC1EP7QWindow
+    // invoke: void QRasterWindow(class QWindow *)
+    var arg0 = args[0].(QWindow).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QRasterWindowC2EP7QWindow(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QRasterWindow", "QRasterWindow", args)
+  }
+
+  return QRasterWindow{}
 }
 
 // <= body block end

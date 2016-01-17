@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,27 +28,22 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
-extern void _ZN18QSyntaxHighlighterD0Ev(void* qthis);
-  // proto:  void QSyntaxHighlighter::rehighlight();
-extern void _ZN18QSyntaxHighlighter11rehighlightEv(void* qthis);
-  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
-extern void* dector_ZN18QSyntaxHighlighterC1EP7QObject(void* arg0);
-extern void _ZN18QSyntaxHighlighterC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
-extern void _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(void* qthis, void* arg0);
   // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
-extern void _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(void* qthis, void* arg0);
+extern void _ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
+  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
+extern void _ZN18QSyntaxHighlighterC2EP7QObject(void* qthis, void* arg0); // 3
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QTextDocument * parent);
-extern void* dector_ZN18QSyntaxHighlighterC1EP13QTextDocument(void* arg0);
-extern void _ZN18QSyntaxHighlighterC1EP13QTextDocument(void* qthis, void* arg0);
-  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(const QSyntaxHighlighter & );
-extern void* dector_ZN18QSyntaxHighlighterC1ERKS_(void* arg0);
-extern void _ZN18QSyntaxHighlighterC1ERKS_(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
-extern void _ZNK18QSyntaxHighlighter10metaObjectEv(void* qthis);
+extern void _ZN18QSyntaxHighlighterC2EP13QTextDocument(void* qthis, void* arg0); // 3
   // proto:  QTextDocument * QSyntaxHighlighter::document();
-extern void _ZNK18QSyntaxHighlighter8documentEv(void* qthis);
+extern void _ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
+  // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
+extern void _ZN18QSyntaxHighlighterD2Ev(void* qthis); // 4
+  // proto:  void QSyntaxHighlighter::rehighlight();
+extern void _ZN18QSyntaxHighlighter11rehighlightEv(void* qthis); // 4
+  // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
+extern void _ZNK18QSyntaxHighlighter10metaObjectEv(void* qthis); // 4
+  // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
+extern void _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -71,69 +62,7 @@ type QSyntaxHighlighter struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
-func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QSyntaxHighlighter", "~QSyntaxHighlighter", args)
-  }
-
-}
-
-  // proto:  void QSyntaxHighlighter::rehighlight();
-func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
-  // rehighlight()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QSyntaxHighlighter11rehighlightEv
-    // invoke: void rehighlight()
-    C._ZN18QSyntaxHighlighter11rehighlightEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlight", args)
-  }
-
-}
-
-  // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
-func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
-  return QSyntaxHighlighter{}
-}
-
-  // proto:  void QSyntaxHighlighter::rehighlightBlock(const QTextBlock & block);
-func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
-  // rehighlightBlock(const class QTextBlock &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QTextBlock{}) // "const QTextBlock &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock
-    // invoke: void rehighlightBlock(const class QTextBlock &)
-    var arg0 = args[0].(QTextBlock).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
-  }
-
-}
-
-  // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
+// setDocument(class QTextDocument *)
 func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
   // setDocument(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -156,7 +85,104 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QSyntaxHighlighter::metaObject();
+// QSyntaxHighlighter(class QObject *)
+func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
+  // QSyntaxHighlighter(class QObject *)
+  // QSyntaxHighlighter(class QTextDocument *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QTextDocument{}) // "QTextDocument *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QSyntaxHighlighterC1EP7QObject
+    // invoke: void QSyntaxHighlighter(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QSyntaxHighlighterC2EP7QObject(qthis, arg0)
+  case 1:
+    // invoke: _ZN18QSyntaxHighlighterC1EP13QTextDocument
+    // invoke: void QSyntaxHighlighter(class QTextDocument *)
+    var arg0 = args[0].(QTextDocument).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QSyntaxHighlighter", "QSyntaxHighlighter", args)
+  }
+
+  return QSyntaxHighlighter{}
+}
+
+// document()
+func (this *QSyntaxHighlighter) document(args ...interface{}) () {
+  // document()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QSyntaxHighlighter8documentEv
+    // invoke: QTextDocument * document()
+    C._ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
+  }
+
+}
+
+// ~QSyntaxHighlighter()
+func (this *QSyntaxHighlighter) FreeQSyntaxHighlighter(args ...interface{}) () {
+  // ~QSyntaxHighlighter()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QSyntaxHighlighterD0Ev
+    // invoke: void ~QSyntaxHighlighter()
+    C._ZN18QSyntaxHighlighterD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSyntaxHighlighter", "~QSyntaxHighlighter", args)
+  }
+
+}
+
+// rehighlight()
+func (this *QSyntaxHighlighter) rehighlight(args ...interface{}) () {
+  // rehighlight()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QSyntaxHighlighter11rehighlightEv
+    // invoke: void rehighlight()
+    C._ZN18QSyntaxHighlighter11rehighlightEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlight", args)
+  }
+
+}
+
+// metaObject()
 func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -176,22 +202,25 @@ func (this *QSyntaxHighlighter) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  QTextDocument * QSyntaxHighlighter::document();
-func (this *QSyntaxHighlighter) document(args ...interface{}) () {
-  // document()
+// rehighlightBlock(const class QTextBlock &)
+func (this *QSyntaxHighlighter) rehighlightBlock(args ...interface{}) () {
+  // rehighlightBlock(const class QTextBlock &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QTextBlock{}) // "const QTextBlock &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QSyntaxHighlighter8documentEv
-    // invoke: QTextDocument * document()
-    C._ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+    // invoke: _ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock
+    // invoke: void rehighlightBlock(const class QTextBlock &)
+    var arg0 = args[0].(QTextBlock).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN18QSyntaxHighlighter16rehighlightBlockERK10QTextBlock(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
+    qtrt.ErrorResolve("QSyntaxHighlighter", "rehighlightBlock", args)
   }
 
 }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qabstractitemmodel.h
 // dst-file: /src/core/qabstractitemmodel.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,156 +28,148 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, void * ptr, const QAbstractItemModel * amodel);
-extern void* dector_ZN11QModelIndexC1EiiPvPK18QAbstractItemModel(int32_t arg0, int32_t arg1, void* arg2, void* arg3);
-extern void demth_ZN11QModelIndexC1EiiPvPK18QAbstractItemModel(void* qthis, int32_t arg0, int32_t arg1, void* arg2, void* arg3);
-  // proto:  void QModelIndex::QModelIndex();
-extern void* dector_ZN11QModelIndexC1Ev();
-extern void _ZN11QModelIndexC1Ev(void* qthis);
-  // proto:  int QModelIndex::column();
-extern void demth_ZNK11QModelIndex6columnEv(void* qthis);
-  // proto:  quintptr QModelIndex::internalId();
-extern void demth_ZNK11QModelIndex10internalIdEv(void* qthis);
-  // proto:  QModelIndex QModelIndex::child(int row, int column);
-extern void demth_ZNK11QModelIndex5childEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  void * QModelIndex::internalPointer();
-extern void demth_ZNK11QModelIndex15internalPointerEv(void* qthis);
-  // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, quintptr id, const QAbstractItemModel * amodel);
-extern void* dector_ZN11QModelIndexC1EiiiPK18QAbstractItemModel(int32_t arg0, int32_t arg1, int32_t arg2, void* arg3);
-extern void _ZN11QModelIndexC1EiiiPK18QAbstractItemModel(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, void* arg3);
-  // proto:  bool QModelIndex::isValid();
-extern void demth_ZNK11QModelIndex7isValidEv(void* qthis);
   // proto:  QModelIndex QModelIndex::parent();
-extern void demth_ZNK11QModelIndex6parentEv(void* qthis);
+extern void _ZNK11QModelIndex6parentEv(void* qthis); // 2
+  // proto:  void * QModelIndex::internalPointer();
+extern void _ZNK11QModelIndex15internalPointerEv(void* qthis); // 2
+  // proto:  quintptr QModelIndex::internalId();
+extern void _ZNK11QModelIndex10internalIdEv(void* qthis); // 2
+  // proto:  int QModelIndex::column();
+extern void _ZNK11QModelIndex6columnEv(void* qthis); // 2
+  // proto:  bool QModelIndex::isValid();
+extern void _ZNK11QModelIndex7isValidEv(void* qthis); // 2
   // proto:  QModelIndex QModelIndex::sibling(int row, int column);
-extern void demth_ZNK11QModelIndex7siblingEii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZNK11QModelIndex7siblingEii(void* qthis, int32_t arg0, int32_t arg1); // 2
+  // proto:  Qt::ItemFlags QModelIndex::flags();
+extern void _ZNK11QModelIndex5flagsEv(void* qthis); // 2
+  // proto:  QModelIndex QModelIndex::child(int row, int column);
+extern void _ZNK11QModelIndex5childEii(void* qthis, int32_t arg0, int32_t arg1); // 2
   // proto:  const QAbstractItemModel * QModelIndex::model();
-extern void demth_ZNK11QModelIndex5modelEv(void* qthis);
-  // proto:  QVariant QModelIndex::data(int role);
-extern void demth_ZNK11QModelIndex4dataEi(void* qthis, int32_t arg0);
+extern void _ZNK11QModelIndex5modelEv(void* qthis); // 2
   // proto:  int QModelIndex::row();
-extern void demth_ZNK11QModelIndex3rowEv(void* qthis);
-  // proto:  QModelIndex QPersistentModelIndex::sibling(int row, int column);
-extern void _ZNK21QPersistentModelIndex7siblingEii(void* qthis, int32_t arg0, int32_t arg1);
-  // proto:  QVariant QPersistentModelIndex::data(int role);
-extern void _ZNK21QPersistentModelIndex4dataEi(void* qthis, int32_t arg0);
-  // proto:  QModelIndex QPersistentModelIndex::parent();
-extern void _ZNK21QPersistentModelIndex6parentEv(void* qthis);
-  // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
-extern void* dector_ZN21QPersistentModelIndexC1ERKS_(void* arg0);
-extern void _ZN21QPersistentModelIndexC1ERKS_(void* qthis, void* arg0);
+extern void _ZNK11QModelIndex3rowEv(void* qthis); // 2
+  // proto:  QVariant QModelIndex::data(int role);
+extern void _ZNK11QModelIndex4dataEi(void* qthis, int32_t arg0); // 2
+  // proto:  void QModelIndex::QModelIndex();
+extern void _ZN11QModelIndexC2Ev(void* qthis); // 1
   // proto:  void * QPersistentModelIndex::internalPointer();
-extern void _ZNK21QPersistentModelIndex15internalPointerEv(void* qthis);
-  // proto:  int QPersistentModelIndex::row();
-extern void _ZNK21QPersistentModelIndex3rowEv(void* qthis);
-  // proto:  quintptr QPersistentModelIndex::internalId();
-extern void _ZNK21QPersistentModelIndex10internalIdEv(void* qthis);
-  // proto:  const QAbstractItemModel * QPersistentModelIndex::model();
-extern void _ZNK21QPersistentModelIndex5modelEv(void* qthis);
-  // proto:  void QPersistentModelIndex::~QPersistentModelIndex();
-extern void _ZN21QPersistentModelIndexD0Ev(void* qthis);
-  // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QModelIndex & index);
-extern void* dector_ZN21QPersistentModelIndexC1ERK11QModelIndex(void* arg0);
-extern void _ZN21QPersistentModelIndexC1ERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  void QPersistentModelIndex::QPersistentModelIndex();
-extern void* dector_ZN21QPersistentModelIndexC1Ev();
-extern void _ZN21QPersistentModelIndexC1Ev(void* qthis);
+extern void _ZNK21QPersistentModelIndex15internalPointerEv(void* qthis); // 4
+  // proto:  QModelIndex QPersistentModelIndex::parent();
+extern void _ZNK21QPersistentModelIndex6parentEv(void* qthis); // 4
   // proto:  int QPersistentModelIndex::column();
-extern void _ZNK21QPersistentModelIndex6columnEv(void* qthis);
-  // proto:  void QPersistentModelIndex::swap(QPersistentModelIndex & other);
-extern void demth_ZN21QPersistentModelIndex4swapERS_(void* qthis, void* arg0);
-  // proto:  QModelIndex QPersistentModelIndex::child(int row, int column);
-extern void _ZNK21QPersistentModelIndex5childEii(void* qthis, int32_t arg0, int32_t arg1);
+extern void _ZNK21QPersistentModelIndex6columnEv(void* qthis); // 4
   // proto:  bool QPersistentModelIndex::isValid();
-extern void _ZNK21QPersistentModelIndex7isValidEv(void* qthis);
-  // proto:  void QAbstractTableModel::QAbstractTableModel(const QAbstractTableModel & );
-extern void* dector_ZN19QAbstractTableModelC1ERKS_(void* arg0);
-extern void _ZN19QAbstractTableModelC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QAbstractTableModel::QAbstractTableModel(QObject * parent);
-extern void* dector_ZN19QAbstractTableModelC1EP7QObject(void* arg0);
-extern void _ZN19QAbstractTableModelC1EP7QObject(void* qthis, void* arg0);
+extern void _ZNK21QPersistentModelIndex7isValidEv(void* qthis); // 4
+  // proto:  void QPersistentModelIndex::~QPersistentModelIndex();
+extern void _ZN21QPersistentModelIndexD2Ev(void* qthis); // 4
+  // proto:  void QPersistentModelIndex::QPersistentModelIndex();
+extern void _ZN21QPersistentModelIndexC2Ev(void* qthis); // 3
+  // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
+extern void _ZN21QPersistentModelIndexC2ERKS_(void* qthis, void* arg0); // 3
+  // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QModelIndex & index);
+extern void _ZN21QPersistentModelIndexC2ERK11QModelIndex(void* qthis, void* arg0); // 3
+  // proto:  quintptr QPersistentModelIndex::internalId();
+extern void _ZNK21QPersistentModelIndex10internalIdEv(void* qthis); // 4
+  // proto:  QModelIndex QPersistentModelIndex::sibling(int row, int column);
+extern void _ZNK21QPersistentModelIndex7siblingEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  Qt::ItemFlags QPersistentModelIndex::flags();
+extern void _ZNK21QPersistentModelIndex5flagsEv(void* qthis); // 4
+  // proto:  void QPersistentModelIndex::swap(QPersistentModelIndex & other);
+extern void _ZN21QPersistentModelIndex4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  QModelIndex QPersistentModelIndex::child(int row, int column);
+extern void _ZNK21QPersistentModelIndex5childEii(void* qthis, int32_t arg0, int32_t arg1); // 4
+  // proto:  const QAbstractItemModel * QPersistentModelIndex::model();
+extern void _ZNK21QPersistentModelIndex5modelEv(void* qthis); // 4
+  // proto:  int QPersistentModelIndex::row();
+extern void _ZNK21QPersistentModelIndex3rowEv(void* qthis); // 4
+  // proto:  QVariant QPersistentModelIndex::data(int role);
+extern void _ZNK21QPersistentModelIndex4dataEi(void* qthis, int32_t arg0); // 4
   // proto:  QModelIndex QAbstractTableModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK19QAbstractTableModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZNK19QAbstractTableModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  QModelIndex QAbstractTableModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZNK19QAbstractTableModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  void QAbstractTableModel::QAbstractTableModel(QObject * parent);
+extern void _ZN19QAbstractTableModelC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  Qt::ItemFlags QAbstractTableModel::flags(const QModelIndex & index);
+extern void _ZNK19QAbstractTableModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTableModel::~QAbstractTableModel();
-extern void _ZN19QAbstractTableModelD0Ev(void* qthis);
+extern void _ZN19QAbstractTableModelD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QAbstractTableModel::metaObject();
-extern void _ZNK19QAbstractTableModel10metaObjectEv(void* qthis);
-  // proto:  bool QAbstractItemModel::removeColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  void QAbstractItemModel::~QAbstractItemModel();
-extern void _ZN18QAbstractItemModelD0Ev(void* qthis);
-  // proto:  bool QAbstractItemModel::canFetchMore(const QModelIndex & parent);
-extern void _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  bool QAbstractItemModel::submit();
-extern void _ZN18QAbstractItemModel6submitEv(void* qthis);
-  // proto:  bool QAbstractItemModel::hasIndex(int row, int column, const QModelIndex & parent);
-extern void _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  QHash<int, QByteArray> QAbstractItemModel::roleNames();
-extern void _ZNK18QAbstractItemModel9roleNamesEv(void* qthis);
-  // proto:  bool QAbstractItemModel::moveColumn(const QModelIndex & sourceParent, int sourceColumn, const QModelIndex & destinationParent, int destinationChild);
-extern void demth_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3);
-  // proto:  void QAbstractItemModel::fetchMore(const QModelIndex & parent);
-extern void _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  bool QAbstractItemModel::insertRows(int row, int count, const QModelIndex & parent);
-extern void _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  QSize QAbstractItemModel::span(const QModelIndex & index);
-extern void _ZNK18QAbstractItemModel4spanERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  void QAbstractItemModel::QAbstractItemModel(QObject * parent);
-extern void* dector_ZN18QAbstractItemModelC1EP7QObject(void* arg0);
-extern void _ZN18QAbstractItemModelC1EP7QObject(void* qthis, void* arg0);
-  // proto:  bool QAbstractItemModel::insertRow(int row, const QModelIndex & parent);
-extern void demth_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
-  // proto:  void QAbstractItemModel::QAbstractItemModel(const QAbstractItemModel & );
-extern void* dector_ZN18QAbstractItemModelC1ERKS_(void* arg0);
-extern void _ZN18QAbstractItemModelC1ERKS_(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QAbstractItemModel::metaObject();
-extern void _ZNK18QAbstractItemModel10metaObjectEv(void* qthis);
-  // proto:  bool QAbstractItemModel::removeRow(int row, const QModelIndex & parent);
-extern void demth_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
-  // proto:  bool QAbstractItemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-extern void _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2);
-  // proto:  bool QAbstractItemModel::removeRows(int row, int count, const QModelIndex & parent);
-extern void _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  bool QAbstractItemModel::hasChildren(const QModelIndex & parent);
-extern void _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  bool QAbstractItemModel::moveRow(const QModelIndex & sourceParent, int sourceRow, const QModelIndex & destinationParent, int destinationChild);
-extern void demth_ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3);
-  // proto:  void QAbstractItemModel::revert();
-extern void _ZN18QAbstractItemModel6revertEv(void* qthis);
-  // proto:  bool QAbstractItemModel::removeColumn(int column, const QModelIndex & parent);
-extern void demth_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
-  // proto:  bool QAbstractItemModel::insertColumns(int column, int count, const QModelIndex & parent);
-extern void _ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  bool QAbstractItemModel::insertColumn(int column, const QModelIndex & parent);
-extern void demth_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1);
-  // proto:  bool QAbstractItemModel::moveColumns(const QModelIndex & sourceParent, int sourceColumn, int count, const QModelIndex & destinationParent, int destinationChild);
-extern void _ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i(void* qthis, void* arg0, int32_t arg1, int32_t arg2, void* arg3, int32_t arg4);
-  // proto:  QMap<int, QVariant> QAbstractItemModel::itemData(const QModelIndex & index);
-extern void _ZNK18QAbstractItemModel8itemDataERK11QModelIndex(void* qthis, void* arg0);
-  // proto:  QStringList QAbstractItemModel::mimeTypes();
-extern void _ZNK18QAbstractItemModel9mimeTypesEv(void* qthis);
+extern void _ZNK19QAbstractTableModel10metaObjectEv(void* qthis); // 4
+  // proto:  Qt::DropActions QAbstractItemModel::supportedDragActions();
+extern void _ZNK18QAbstractItemModel20supportedDragActionsEv(void* qthis); // 4
   // proto:  QModelIndex QAbstractItemModel::buddy(const QModelIndex & index);
-extern void _ZNK18QAbstractItemModel5buddyERK11QModelIndex(void* qthis, void* arg0);
+extern void _ZNK18QAbstractItemModel5buddyERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QAbstractItemModel::moveRow(const QModelIndex & sourceParent, int sourceRow, const QModelIndex & destinationParent, int destinationChild);
+extern void _ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 2
+  // proto:  bool QAbstractItemModel::removeColumn(int column, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 2
+  // proto:  const QMetaObject * QAbstractItemModel::metaObject();
+extern void _ZNK18QAbstractItemModel10metaObjectEv(void* qthis); // 4
+  // proto:  bool QAbstractItemModel::insertColumns(int column, int count, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel13insertColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  void QAbstractItemModel::revert();
+extern void _ZN18QAbstractItemModel6revertEv(void* qthis); // 4
+  // proto:  bool QAbstractItemModel::insertRow(int row, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 2
+  // proto:  void QAbstractItemModel::fetchMore(const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  Qt::DropActions QAbstractItemModel::supportedDropActions();
+extern void _ZNK18QAbstractItemModel20supportedDropActionsEv(void* qthis); // 4
+  // proto:  bool QAbstractItemModel::moveColumn(const QModelIndex & sourceParent, int sourceColumn, const QModelIndex & destinationParent, int destinationChild);
+extern void _ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(void* qthis, void* arg0, int32_t arg1, void* arg2, int32_t arg3); // 2
+  // proto:  QMap<int, QVariant> QAbstractItemModel::itemData(const QModelIndex & index);
+extern void _ZNK18QAbstractItemModel8itemDataERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QAbstractItemModel::removeRow(int row, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 2
+  // proto:  QStringList QAbstractItemModel::mimeTypes();
+extern void _ZNK18QAbstractItemModel9mimeTypesEv(void* qthis); // 4
+  // proto:  void QAbstractItemModel::~QAbstractItemModel();
+extern void _ZN18QAbstractItemModelD2Ev(void* qthis); // 4
+  // proto:  QHash<int, QByteArray> QAbstractItemModel::roleNames();
+extern void _ZNK18QAbstractItemModel9roleNamesEv(void* qthis); // 4
+  // proto:  bool QAbstractItemModel::removeColumns(int column, int count, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  void QAbstractItemModel::QAbstractItemModel(QObject * parent);
+extern void _ZN18QAbstractItemModelC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  QSize QAbstractItemModel::span(const QModelIndex & index);
+extern void _ZNK18QAbstractItemModel4spanERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QAbstractItemModel::submit();
+extern void _ZN18QAbstractItemModel6submitEv(void* qthis); // 4
+  // proto:  bool QAbstractItemModel::removeRows(int row, int count, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  bool QAbstractItemModel::canFetchMore(const QModelIndex & parent);
+extern void _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QAbstractItemModel::moveColumns(const QModelIndex & sourceParent, int sourceColumn, int count, const QModelIndex & destinationParent, int destinationChild);
+extern void _ZN18QAbstractItemModel11moveColumnsERK11QModelIndexiiS2_i(void* qthis, void* arg0, int32_t arg1, int32_t arg2, void* arg3, int32_t arg4); // 4
   // proto:  QModelIndex QAbstractItemModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZNK18QAbstractItemModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  bool QAbstractItemModel::moveRows(const QModelIndex & sourceParent, int sourceRow, int count, const QModelIndex & destinationParent, int destinationChild);
-extern void _ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i(void* qthis, void* arg0, int32_t arg1, int32_t arg2, void* arg3, int32_t arg4);
-  // proto:  QModelIndex QAbstractListModel::sibling(int row, int column, const QModelIndex & idx);
-extern void _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
-  // proto:  void QAbstractListModel::QAbstractListModel(QObject * parent);
-extern void* dector_ZN18QAbstractListModelC1EP7QObject(void* arg0);
-extern void _ZN18QAbstractListModelC1EP7QObject(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QAbstractListModel::metaObject();
-extern void _ZNK18QAbstractListModel10metaObjectEv(void* qthis);
-  // proto:  void QAbstractListModel::QAbstractListModel(const QAbstractListModel & );
-extern void* dector_ZN18QAbstractListModelC1ERKS_(void* arg0);
-extern void _ZN18QAbstractListModelC1ERKS_(void* qthis, void* arg0);
+extern void _ZN18QAbstractItemModel8moveRowsERK11QModelIndexiiS2_i(void* qthis, void* arg0, int32_t arg1, int32_t arg2, void* arg3, int32_t arg4); // 4
+  // proto:  bool QAbstractItemModel::insertColumn(int column, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 2
+  // proto:  bool QAbstractItemModel::hasChildren(const QModelIndex & parent);
+extern void _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(void* qthis, void* arg0); // 4
+  // proto:  bool QAbstractItemModel::hasIndex(int row, int column, const QModelIndex & parent);
+extern void _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  bool QAbstractItemModel::setData(const QModelIndex & index, const QVariant & value, int role);
+extern void _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 4
+  // proto:  bool QAbstractItemModel::insertRows(int row, int count, const QModelIndex & parent);
+extern void _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  Qt::ItemFlags QAbstractItemModel::flags(const QModelIndex & index);
+extern void _ZNK18QAbstractItemModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QModelIndex QAbstractListModel::index(int row, int column, const QModelIndex & parent);
-extern void _ZNK18QAbstractListModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2);
+extern void _ZNK18QAbstractListModel5indexEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  const QMetaObject * QAbstractListModel::metaObject();
+extern void _ZNK18QAbstractListModel10metaObjectEv(void* qthis); // 4
+  // proto:  void QAbstractListModel::QAbstractListModel(QObject * parent);
+extern void _ZN18QAbstractListModelC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  QModelIndex QAbstractListModel::sibling(int row, int column, const QModelIndex & idx);
+extern void _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
+  // proto:  Qt::ItemFlags QAbstractListModel::flags(const QModelIndex & index);
+extern void _ZNK18QAbstractListModel5flagsERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QAbstractListModel::~QAbstractListModel();
-extern void _ZN18QAbstractListModelD0Ev(void* qthis);
+extern void _ZN18QAbstractListModelD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -242,118 +230,7 @@ type QAbstractListModel struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QModelIndex::QModelIndex(int arow, int acolumn, void * ptr, const QAbstractItemModel * amodel);
-func NewQModelIndex(args ...interface{}) QModelIndex {
-  return QModelIndex{}
-}
-
-  // proto:  int QModelIndex::column();
-func (this *QModelIndex) column(args ...interface{}) () {
-  // column()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QModelIndex6columnEv
-    // invoke: int column()
-    C.demth_ZNK11QModelIndex6columnEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QModelIndex", "column", args)
-  }
-
-}
-
-  // proto:  quintptr QModelIndex::internalId();
-func (this *QModelIndex) internalId(args ...interface{}) () {
-  // internalId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QModelIndex10internalIdEv
-    // invoke: quintptr internalId()
-    C.demth_ZNK11QModelIndex10internalIdEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QModelIndex", "internalId", args)
-  }
-
-}
-
-  // proto:  QModelIndex QModelIndex::child(int row, int column);
-func (this *QModelIndex) child(args ...interface{}) () {
-  // child(int, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QModelIndex5childEii
-    // invoke: QModelIndex child(int, int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    C.demth_ZNK11QModelIndex5childEii(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QModelIndex", "child", args)
-  }
-
-}
-
-  // proto:  void * QModelIndex::internalPointer();
-func (this *QModelIndex) internalPointer(args ...interface{}) () {
-  // internalPointer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QModelIndex15internalPointerEv
-    // invoke: void * internalPointer()
-    C.demth_ZNK11QModelIndex15internalPointerEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QModelIndex", "internalPointer", args)
-  }
-
-}
-
-  // proto:  bool QModelIndex::isValid();
-func (this *QModelIndex) isValid(args ...interface{}) () {
-  // isValid()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK11QModelIndex7isValidEv
-    // invoke: bool isValid()
-    C.demth_ZNK11QModelIndex7isValidEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QModelIndex", "isValid", args)
-  }
-
-}
-
-  // proto:  QModelIndex QModelIndex::parent();
+// parent()
 func (this *QModelIndex) parent(args ...interface{}) () {
   // parent()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -366,14 +243,94 @@ func (this *QModelIndex) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QModelIndex6parentEv
     // invoke: QModelIndex parent()
-    C.demth_ZNK11QModelIndex6parentEv(this.qclsinst)
+    C._ZNK11QModelIndex6parentEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "parent", args)
   }
 
 }
 
-  // proto:  QModelIndex QModelIndex::sibling(int row, int column);
+// internalPointer()
+func (this *QModelIndex) internalPointer(args ...interface{}) () {
+  // internalPointer()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex15internalPointerEv
+    // invoke: void * internalPointer()
+    C._ZNK11QModelIndex15internalPointerEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "internalPointer", args)
+  }
+
+}
+
+// internalId()
+func (this *QModelIndex) internalId(args ...interface{}) () {
+  // internalId()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex10internalIdEv
+    // invoke: quintptr internalId()
+    C._ZNK11QModelIndex10internalIdEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "internalId", args)
+  }
+
+}
+
+// column()
+func (this *QModelIndex) column(args ...interface{}) () {
+  // column()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex6columnEv
+    // invoke: int column()
+    C._ZNK11QModelIndex6columnEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "column", args)
+  }
+
+}
+
+// isValid()
+func (this *QModelIndex) isValid(args ...interface{}) () {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex7isValidEv
+    // invoke: bool isValid()
+    C._ZNK11QModelIndex7isValidEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "isValid", args)
+  }
+
+}
+
+// sibling(int, int)
 func (this *QModelIndex) sibling(args ...interface{}) () {
   // sibling(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -392,14 +349,60 @@ func (this *QModelIndex) sibling(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.demth_ZNK11QModelIndex7siblingEii(this.qclsinst, arg0, arg1)
+    C._ZNK11QModelIndex7siblingEii(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QModelIndex", "sibling", args)
   }
 
 }
 
-  // proto:  const QAbstractItemModel * QModelIndex::model();
+// flags()
+func (this *QModelIndex) flags(args ...interface{}) () {
+  // flags()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex5flagsEv
+    // invoke: Qt::ItemFlags flags()
+    C._ZNK11QModelIndex5flagsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "flags", args)
+  }
+
+}
+
+// child(int, int)
+func (this *QModelIndex) child(args ...interface{}) () {
+  // child(int, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex5childEii
+    // invoke: QModelIndex child(int, int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    C._ZNK11QModelIndex5childEii(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "child", args)
+  }
+
+}
+
+// model()
 func (this *QModelIndex) model(args ...interface{}) () {
   // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -412,14 +415,34 @@ func (this *QModelIndex) model(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QModelIndex5modelEv
     // invoke: const QAbstractItemModel * model()
-    C.demth_ZNK11QModelIndex5modelEv(this.qclsinst)
+    C._ZNK11QModelIndex5modelEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QModelIndex", "model", args)
   }
 
 }
 
-  // proto:  QVariant QModelIndex::data(int role);
+// row()
+func (this *QModelIndex) row(args ...interface{}) () {
+  // row()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QModelIndex3rowEv
+    // invoke: int row()
+    C._ZNK11QModelIndex3rowEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QModelIndex", "row", args)
+  }
+
+}
+
+// data(int)
 func (this *QModelIndex) data(args ...interface{}) () {
   // data(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -435,16 +458,16 @@ func (this *QModelIndex) data(args ...interface{}) () {
     // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.demth_ZNK11QModelIndex4dataEi(this.qclsinst, arg0)
+    C._ZNK11QModelIndex4dataEi(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QModelIndex", "data", args)
   }
 
 }
 
-  // proto:  int QModelIndex::row();
-func (this *QModelIndex) row(args ...interface{}) () {
-  // row()
+// QModelIndex()
+func NewQModelIndex(args ...interface{}) QModelIndex {
+  // QModelIndex()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -453,16 +476,184 @@ func (this *QModelIndex) row(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK11QModelIndex3rowEv
-    // invoke: int row()
-    C.demth_ZNK11QModelIndex3rowEv(this.qclsinst)
+    // invoke: _ZN11QModelIndexC1Ev
+    // invoke: void QModelIndex()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN11QModelIndexC2Ev(qthis)
   default:
-    qtrt.ErrorResolve("QModelIndex", "row", args)
+    qtrt.ErrorResolve("QModelIndex", "QModelIndex", args)
+  }
+
+  return QModelIndex{}
+}
+
+// internalPointer()
+func (this *QPersistentModelIndex) internalPointer(args ...interface{}) () {
+  // internalPointer()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex15internalPointerEv
+    // invoke: void * internalPointer()
+    C._ZNK21QPersistentModelIndex15internalPointerEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "internalPointer", args)
   }
 
 }
 
-  // proto:  QModelIndex QPersistentModelIndex::sibling(int row, int column);
+// parent()
+func (this *QPersistentModelIndex) parent(args ...interface{}) () {
+  // parent()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex6parentEv
+    // invoke: QModelIndex parent()
+    C._ZNK21QPersistentModelIndex6parentEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "parent", args)
+  }
+
+}
+
+// column()
+func (this *QPersistentModelIndex) column(args ...interface{}) () {
+  // column()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex6columnEv
+    // invoke: int column()
+    C._ZNK21QPersistentModelIndex6columnEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "column", args)
+  }
+
+}
+
+// isValid()
+func (this *QPersistentModelIndex) isValid(args ...interface{}) () {
+  // isValid()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex7isValidEv
+    // invoke: bool isValid()
+    C._ZNK21QPersistentModelIndex7isValidEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "isValid", args)
+  }
+
+}
+
+// ~QPersistentModelIndex()
+func (this *QPersistentModelIndex) FreeQPersistentModelIndex(args ...interface{}) () {
+  // ~QPersistentModelIndex()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN21QPersistentModelIndexD0Ev
+    // invoke: void ~QPersistentModelIndex()
+    C._ZN21QPersistentModelIndexD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "~QPersistentModelIndex", args)
+  }
+
+}
+
+// QPersistentModelIndex()
+func NewQPersistentModelIndex(args ...interface{}) QPersistentModelIndex {
+  // QPersistentModelIndex()
+  // QPersistentModelIndex(const class QPersistentModelIndex &)
+  // QPersistentModelIndex(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QPersistentModelIndex{}) // "const QPersistentModelIndex &"
+  vtys[2] = make(map[int32]reflect.Type)
+  vtys[2][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN21QPersistentModelIndexC1Ev
+    // invoke: void QPersistentModelIndex()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QPersistentModelIndexC2Ev(qthis)
+  case 1:
+    // invoke: _ZN21QPersistentModelIndexC1ERKS_
+    // invoke: void QPersistentModelIndex(const class QPersistentModelIndex &)
+    var arg0 = args[0].(QPersistentModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QPersistentModelIndexC2ERKS_(qthis, arg0)
+  case 2:
+    // invoke: _ZN21QPersistentModelIndexC1ERK11QModelIndex
+    // invoke: void QPersistentModelIndex(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN21QPersistentModelIndexC2ERK11QModelIndex(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "QPersistentModelIndex", args)
+  }
+
+  return QPersistentModelIndex{}
+}
+
+// internalId()
+func (this *QPersistentModelIndex) internalId(args ...interface{}) () {
+  // internalId()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex10internalIdEv
+    // invoke: quintptr internalId()
+    C._ZNK21QPersistentModelIndex10internalIdEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "internalId", args)
+  }
+
+}
+
+// sibling(int, int)
 func (this *QPersistentModelIndex) sibling(args ...interface{}) () {
   // sibling(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -488,32 +679,9 @@ func (this *QPersistentModelIndex) sibling(args ...interface{}) () {
 
 }
 
-  // proto:  QVariant QPersistentModelIndex::data(int role);
-func (this *QPersistentModelIndex) data(args ...interface{}) () {
-  // data(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex4dataEi
-    // invoke: QVariant data(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK21QPersistentModelIndex4dataEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "data", args)
-  }
-
-}
-
-  // proto:  QModelIndex QPersistentModelIndex::parent();
-func (this *QPersistentModelIndex) parent(args ...interface{}) () {
-  // parent()
+// flags()
+func (this *QPersistentModelIndex) flags(args ...interface{}) () {
+  // flags()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -522,135 +690,16 @@ func (this *QPersistentModelIndex) parent(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK21QPersistentModelIndex6parentEv
-    // invoke: QModelIndex parent()
-    C._ZNK21QPersistentModelIndex6parentEv(this.qclsinst)
+    // invoke: _ZNK21QPersistentModelIndex5flagsEv
+    // invoke: Qt::ItemFlags flags()
+    C._ZNK21QPersistentModelIndex5flagsEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "parent", args)
+    qtrt.ErrorResolve("QPersistentModelIndex", "flags", args)
   }
 
 }
 
-  // proto:  void QPersistentModelIndex::QPersistentModelIndex(const QPersistentModelIndex & other);
-func NewQPersistentModelIndex(args ...interface{}) QPersistentModelIndex {
-  return QPersistentModelIndex{}
-}
-
-  // proto:  void * QPersistentModelIndex::internalPointer();
-func (this *QPersistentModelIndex) internalPointer(args ...interface{}) () {
-  // internalPointer()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex15internalPointerEv
-    // invoke: void * internalPointer()
-    C._ZNK21QPersistentModelIndex15internalPointerEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "internalPointer", args)
-  }
-
-}
-
-  // proto:  int QPersistentModelIndex::row();
-func (this *QPersistentModelIndex) row(args ...interface{}) () {
-  // row()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex3rowEv
-    // invoke: int row()
-    C._ZNK21QPersistentModelIndex3rowEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "row", args)
-  }
-
-}
-
-  // proto:  quintptr QPersistentModelIndex::internalId();
-func (this *QPersistentModelIndex) internalId(args ...interface{}) () {
-  // internalId()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex10internalIdEv
-    // invoke: quintptr internalId()
-    C._ZNK21QPersistentModelIndex10internalIdEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "internalId", args)
-  }
-
-}
-
-  // proto:  const QAbstractItemModel * QPersistentModelIndex::model();
-func (this *QPersistentModelIndex) model(args ...interface{}) () {
-  // model()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex5modelEv
-    // invoke: const QAbstractItemModel * model()
-    C._ZNK21QPersistentModelIndex5modelEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "model", args)
-  }
-
-}
-
-  // proto:  void QPersistentModelIndex::~QPersistentModelIndex();
-func (this *QPersistentModelIndex) FreeQPersistentModelIndex(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "~QPersistentModelIndex", args)
-  }
-
-}
-
-  // proto:  int QPersistentModelIndex::column();
-func (this *QPersistentModelIndex) column(args ...interface{}) () {
-  // column()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK21QPersistentModelIndex6columnEv
-    // invoke: int column()
-    C._ZNK21QPersistentModelIndex6columnEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "column", args)
-  }
-
-}
-
-  // proto:  void QPersistentModelIndex::swap(QPersistentModelIndex & other);
+// swap(class QPersistentModelIndex &)
 func (this *QPersistentModelIndex) swap(args ...interface{}) () {
   // swap(class QPersistentModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -666,14 +715,14 @@ func (this *QPersistentModelIndex) swap(args ...interface{}) () {
     // invoke: void swap(class QPersistentModelIndex &)
     var arg0 = args[0].(QPersistentModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.demth_ZN21QPersistentModelIndex4swapERS_(this.qclsinst, arg0)
+    C._ZN21QPersistentModelIndex4swapERS_(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QPersistentModelIndex", "swap", args)
   }
 
 }
 
-  // proto:  QModelIndex QPersistentModelIndex::child(int row, int column);
+// child(int, int)
 func (this *QPersistentModelIndex) child(args ...interface{}) () {
   // child(int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -699,9 +748,9 @@ func (this *QPersistentModelIndex) child(args ...interface{}) () {
 
 }
 
-  // proto:  bool QPersistentModelIndex::isValid();
-func (this *QPersistentModelIndex) isValid(args ...interface{}) () {
-  // isValid()
+// model()
+func (this *QPersistentModelIndex) model(args ...interface{}) () {
+  // model()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -710,21 +759,59 @@ func (this *QPersistentModelIndex) isValid(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK21QPersistentModelIndex7isValidEv
-    // invoke: bool isValid()
-    C._ZNK21QPersistentModelIndex7isValidEv(this.qclsinst)
+    // invoke: _ZNK21QPersistentModelIndex5modelEv
+    // invoke: const QAbstractItemModel * model()
+    C._ZNK21QPersistentModelIndex5modelEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QPersistentModelIndex", "isValid", args)
+    qtrt.ErrorResolve("QPersistentModelIndex", "model", args)
   }
 
 }
 
-  // proto:  void QAbstractTableModel::QAbstractTableModel(const QAbstractTableModel & );
-func NewQAbstractTableModel(args ...interface{}) QAbstractTableModel {
-  return QAbstractTableModel{}
+// row()
+func (this *QPersistentModelIndex) row(args ...interface{}) () {
+  // row()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex3rowEv
+    // invoke: int row()
+    C._ZNK21QPersistentModelIndex3rowEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "row", args)
+  }
+
 }
 
-  // proto:  QModelIndex QAbstractTableModel::index(int row, int column, const QModelIndex & parent);
+// data(int)
+func (this *QPersistentModelIndex) data(args ...interface{}) () {
+  // data(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK21QPersistentModelIndex4dataEi
+    // invoke: QVariant data(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZNK21QPersistentModelIndex4dataEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QPersistentModelIndex", "data", args)
+  }
+
+}
+
+// index(int, int, const class QModelIndex &)
 func (this *QAbstractTableModel) index(args ...interface{}) () {
   // index(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -753,7 +840,7 @@ func (this *QAbstractTableModel) index(args ...interface{}) () {
 
 }
 
-  // proto:  QModelIndex QAbstractTableModel::sibling(int row, int column, const QModelIndex & idx);
+// sibling(int, int, const class QModelIndex &)
 func (this *QAbstractTableModel) sibling(args ...interface{}) () {
   // sibling(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -782,21 +869,76 @@ func (this *QAbstractTableModel) sibling(args ...interface{}) () {
 
 }
 
-  // proto:  void QAbstractTableModel::~QAbstractTableModel();
-func (this *QAbstractTableModel) FreeQAbstractTableModel(args ...interface{}) () {
+// QAbstractTableModel(class QObject *)
+func NewQAbstractTableModel(args ...interface{}) QAbstractTableModel {
+  // QAbstractTableModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN19QAbstractTableModelC1EP7QObject
+    // invoke: void QAbstractTableModel(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN19QAbstractTableModelC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractTableModel", "QAbstractTableModel", args)
+  }
+
+  return QAbstractTableModel{}
+}
+
+// flags(const class QModelIndex &)
+func (this *QAbstractTableModel) flags(args ...interface{}) () {
+  // flags(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK19QAbstractTableModel5flagsERK11QModelIndex
+    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK19QAbstractTableModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractTableModel", "flags", args)
+  }
+
+}
+
+// ~QAbstractTableModel()
+func (this *QAbstractTableModel) FreeQAbstractTableModel(args ...interface{}) () {
+  // ~QAbstractTableModel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN19QAbstractTableModelD0Ev
+    // invoke: void ~QAbstractTableModel()
+    C._ZN19QAbstractTableModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractTableModel", "~QAbstractTableModel", args)
   }
 
 }
 
-  // proto:  const QMetaObject * QAbstractTableModel::metaObject();
+// metaObject()
 func (this *QAbstractTableModel) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -816,52 +958,29 @@ func (this *QAbstractTableModel) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  bool QAbstractItemModel::removeColumns(int column, int count, const QModelIndex & parent);
-func (this *QAbstractItemModel) removeColumns(args ...interface{}) () {
-  // removeColumns(int, int, const class QModelIndex &)
+// supportedDragActions()
+func (this *QAbstractItemModel) supportedDragActions(args ...interface{}) () {
+  // supportedDragActions()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex
-    // invoke: bool removeColumns(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    // invoke: _ZNK18QAbstractItemModel20supportedDragActionsEv
+    // invoke: Qt::DropActions supportedDragActions()
+    C._ZNK18QAbstractItemModel20supportedDragActionsEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QAbstractItemModel", "removeColumns", args)
+    qtrt.ErrorResolve("QAbstractItemModel", "supportedDragActions", args)
   }
 
 }
 
-  // proto:  void QAbstractItemModel::~QAbstractItemModel();
-func (this *QAbstractItemModel) FreeQAbstractItemModel(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "~QAbstractItemModel", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::canFetchMore(const QModelIndex & parent);
-func (this *QAbstractItemModel) canFetchMore(args ...interface{}) () {
-  // canFetchMore(const class QModelIndex &)
+// buddy(const class QModelIndex &)
+func (this *QAbstractItemModel) buddy(args ...interface{}) () {
+  // buddy(const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -871,352 +990,18 @@ func (this *QAbstractItemModel) canFetchMore(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex
-    // invoke: bool canFetchMore(const class QModelIndex &)
+    // invoke: _ZNK18QAbstractItemModel5buddyERK11QModelIndex
+    // invoke: QModelIndex buddy(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    C._ZNK18QAbstractItemModel5buddyERK11QModelIndex(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QAbstractItemModel", "canFetchMore", args)
+    qtrt.ErrorResolve("QAbstractItemModel", "buddy", args)
   }
 
 }
 
-  // proto:  bool QAbstractItemModel::submit();
-func (this *QAbstractItemModel) submit(args ...interface{}) () {
-  // submit()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel6submitEv
-    // invoke: bool submit()
-    C._ZN18QAbstractItemModel6submitEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "submit", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::hasIndex(int row, int column, const QModelIndex & parent);
-func (this *QAbstractItemModel) hasIndex(args ...interface{}) () {
-  // hasIndex(int, int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex
-    // invoke: bool hasIndex(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "hasIndex", args)
-  }
-
-}
-
-  // proto:  QHash<int, QByteArray> QAbstractItemModel::roleNames();
-func (this *QAbstractItemModel) roleNames(args ...interface{}) () {
-  // roleNames()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel9roleNamesEv
-    // invoke: QHash<int, QByteArray> roleNames()
-    C._ZNK18QAbstractItemModel9roleNamesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "roleNames", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::moveColumn(const QModelIndex & sourceParent, int sourceColumn, const QModelIndex & destinationParent, int destinationChild);
-func (this *QAbstractItemModel) moveColumn(args ...interface{}) () {
-  // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[0][3] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i
-    // invoke: bool moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    var arg3 = C.int32_t(args[3].(int32))
-    if false {fmt.Println(arg3)}
-    C.demth_ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "moveColumn", args)
-  }
-
-}
-
-  // proto:  void QAbstractItemModel::fetchMore(const QModelIndex & parent);
-func (this *QAbstractItemModel) fetchMore(args ...interface{}) () {
-  // fetchMore(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex
-    // invoke: void fetchMore(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN18QAbstractItemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "fetchMore", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::insertRows(int row, int count, const QModelIndex & parent);
-func (this *QAbstractItemModel) insertRows(args ...interface{}) () {
-  // insertRows(int, int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex
-    // invoke: bool insertRows(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "insertRows", args)
-  }
-
-}
-
-  // proto:  QSize QAbstractItemModel::span(const QModelIndex & index);
-func (this *QAbstractItemModel) span(args ...interface{}) () {
-  // span(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel4spanERK11QModelIndex
-    // invoke: QSize span(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK18QAbstractItemModel4spanERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "span", args)
-  }
-
-}
-
-  // proto:  void QAbstractItemModel::QAbstractItemModel(QObject * parent);
-func NewQAbstractItemModel(args ...interface{}) QAbstractItemModel {
-  return QAbstractItemModel{}
-}
-
-  // proto:  bool QAbstractItemModel::insertRow(int row, const QModelIndex & parent);
-func (this *QAbstractItemModel) insertRow(args ...interface{}) () {
-  // insertRow(int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel9insertRowEiRK11QModelIndex
-    // invoke: bool insertRow(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
-    if false {fmt.Println(arg1)}
-    C.demth_ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "insertRow", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QAbstractItemModel::metaObject();
-func (this *QAbstractItemModel) metaObject(args ...interface{}) () {
-  // metaObject()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK18QAbstractItemModel10metaObjectEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "metaObject", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::removeRow(int row, const QModelIndex & parent);
-func (this *QAbstractItemModel) removeRow(args ...interface{}) () {
-  // removeRow(int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel9removeRowEiRK11QModelIndex
-    // invoke: bool removeRow(int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QModelIndex).qclsinst
-    if false {fmt.Println(arg1)}
-    C.demth_ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "removeRow", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::setData(const QModelIndex & index, const QVariant & value, int role);
-func (this *QAbstractItemModel) setData(args ...interface{}) () {
-  // setData(const class QModelIndex &, const class QVariant &, int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-  vtys[0][1] = reflect.TypeOf(QVariant{}) // "const QVariant &"
-  vtys[0][2] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti
-    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    var arg1 = args[1].(QVariant).qclsinst
-    if false {fmt.Println(arg1)}
-    var arg2 = C.int32_t(args[2].(int32))
-    if false {fmt.Println(arg2)}
-    C._ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "setData", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::removeRows(int row, int count, const QModelIndex & parent);
-func (this *QAbstractItemModel) removeRows(args ...interface{}) () {
-  // removeRows(int, int, const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-  vtys[0][1] = qtrt.Int32Ty(false) // "int"
-  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex
-    // invoke: bool removeRows(int, int, const class QModelIndex &)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    var arg1 = C.int32_t(args[1].(int32))
-    if false {fmt.Println(arg1)}
-    var arg2 = args[2].(QModelIndex).qclsinst
-    if false {fmt.Println(arg2)}
-    C._ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "removeRows", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::hasChildren(const QModelIndex & parent);
-func (this *QAbstractItemModel) hasChildren(args ...interface{}) () {
-  // hasChildren(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex
-    // invoke: bool hasChildren(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "hasChildren", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::moveRow(const QModelIndex & sourceParent, int sourceRow, const QModelIndex & destinationParent, int destinationChild);
+// moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
 func (this *QAbstractItemModel) moveRow(args ...interface{}) () {
   // moveRow(const class QModelIndex &, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1241,34 +1026,14 @@ func (this *QAbstractItemModel) moveRow(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.demth_ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    C._ZN18QAbstractItemModel7moveRowERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "moveRow", args)
   }
 
 }
 
-  // proto:  void QAbstractItemModel::revert();
-func (this *QAbstractItemModel) revert(args ...interface{}) () {
-  // revert()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN18QAbstractItemModel6revertEv
-    // invoke: void revert()
-    C._ZN18QAbstractItemModel6revertEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "revert", args)
-  }
-
-}
-
-  // proto:  bool QAbstractItemModel::removeColumn(int column, const QModelIndex & parent);
+// removeColumn(int, const class QModelIndex &)
 func (this *QAbstractItemModel) removeColumn(args ...interface{}) () {
   // removeColumn(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1287,14 +1052,34 @@ func (this *QAbstractItemModel) removeColumn(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.demth_ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    C._ZN18QAbstractItemModel12removeColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
     qtrt.ErrorResolve("QAbstractItemModel", "removeColumn", args)
   }
 
 }
 
-  // proto:  bool QAbstractItemModel::insertColumns(int column, int count, const QModelIndex & parent);
+// metaObject()
+func (this *QAbstractItemModel) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractItemModel10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "metaObject", args)
+  }
+
+}
+
+// insertColumns(int, int, const class QModelIndex &)
 func (this *QAbstractItemModel) insertColumns(args ...interface{}) () {
   // insertColumns(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1323,9 +1108,29 @@ func (this *QAbstractItemModel) insertColumns(args ...interface{}) () {
 
 }
 
-  // proto:  bool QAbstractItemModel::insertColumn(int column, const QModelIndex & parent);
-func (this *QAbstractItemModel) insertColumn(args ...interface{}) () {
-  // insertColumn(int, const class QModelIndex &)
+// revert()
+func (this *QAbstractItemModel) revert(args ...interface{}) () {
+  // revert()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel6revertEv
+    // invoke: void revert()
+    C._ZN18QAbstractItemModel6revertEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "revert", args)
+  }
+
+}
+
+// insertRow(int, const class QModelIndex &)
+func (this *QAbstractItemModel) insertRow(args ...interface{}) () {
+  // insertRow(int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1336,20 +1141,354 @@ func (this *QAbstractItemModel) insertColumn(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex
-    // invoke: bool insertColumn(int, const class QModelIndex &)
+    // invoke: _ZN18QAbstractItemModel9insertRowEiRK11QModelIndex
+    // invoke: bool insertRow(int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.demth_ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    C._ZN18QAbstractItemModel9insertRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
   default:
-    qtrt.ErrorResolve("QAbstractItemModel", "insertColumn", args)
+    qtrt.ErrorResolve("QAbstractItemModel", "insertRow", args)
   }
 
 }
 
-  // proto:  bool QAbstractItemModel::moveColumns(const QModelIndex & sourceParent, int sourceColumn, int count, const QModelIndex & destinationParent, int destinationChild);
+// fetchMore(const class QModelIndex &)
+func (this *QAbstractItemModel) fetchMore(args ...interface{}) () {
+  // fetchMore(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel9fetchMoreERK11QModelIndex
+    // invoke: void fetchMore(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN18QAbstractItemModel9fetchMoreERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "fetchMore", args)
+  }
+
+}
+
+// supportedDropActions()
+func (this *QAbstractItemModel) supportedDropActions(args ...interface{}) () {
+  // supportedDropActions()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel20supportedDropActionsEv
+    // invoke: Qt::DropActions supportedDropActions()
+    C._ZNK18QAbstractItemModel20supportedDropActionsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "supportedDropActions", args)
+  }
+
+}
+
+// moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
+func (this *QAbstractItemModel) moveColumn(args ...interface{}) () {
+  // moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[0][3] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i
+    // invoke: bool moveColumn(const class QModelIndex &, int, const class QModelIndex &, int)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
+    var arg3 = C.int32_t(args[3].(int32))
+    if false {fmt.Println(arg3)}
+    C._ZN18QAbstractItemModel10moveColumnERK11QModelIndexiS2_i(this.qclsinst, arg0, arg1, arg2, arg3)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "moveColumn", args)
+  }
+
+}
+
+// itemData(const class QModelIndex &)
+func (this *QAbstractItemModel) itemData(args ...interface{}) () {
+  // itemData(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel8itemDataERK11QModelIndex
+    // invoke: QMap<int, QVariant> itemData(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel8itemDataERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "itemData", args)
+  }
+
+}
+
+// removeRow(int, const class QModelIndex &)
+func (this *QAbstractItemModel) removeRow(args ...interface{}) () {
+  // removeRow(int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel9removeRowEiRK11QModelIndex
+    // invoke: bool removeRow(int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
+    C._ZN18QAbstractItemModel9removeRowEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "removeRow", args)
+  }
+
+}
+
+// mimeTypes()
+func (this *QAbstractItemModel) mimeTypes(args ...interface{}) () {
+  // mimeTypes()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel9mimeTypesEv
+    // invoke: QStringList mimeTypes()
+    C._ZNK18QAbstractItemModel9mimeTypesEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "mimeTypes", args)
+  }
+
+}
+
+// ~QAbstractItemModel()
+func (this *QAbstractItemModel) FreeQAbstractItemModel(args ...interface{}) () {
+  // ~QAbstractItemModel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModelD0Ev
+    // invoke: void ~QAbstractItemModel()
+    C._ZN18QAbstractItemModelD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "~QAbstractItemModel", args)
+  }
+
+}
+
+// roleNames()
+func (this *QAbstractItemModel) roleNames(args ...interface{}) () {
+  // roleNames()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel9roleNamesEv
+    // invoke: QHash<int, QByteArray> roleNames()
+    C._ZNK18QAbstractItemModel9roleNamesEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "roleNames", args)
+  }
+
+}
+
+// removeColumns(int, int, const class QModelIndex &)
+func (this *QAbstractItemModel) removeColumns(args ...interface{}) () {
+  // removeColumns(int, int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex
+    // invoke: bool removeColumns(int, int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "removeColumns", args)
+  }
+
+}
+
+// QAbstractItemModel(class QObject *)
+func NewQAbstractItemModel(args ...interface{}) QAbstractItemModel {
+  // QAbstractItemModel(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModelC1EP7QObject
+    // invoke: void QAbstractItemModel(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QAbstractItemModelC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "QAbstractItemModel", args)
+  }
+
+  return QAbstractItemModel{}
+}
+
+// span(const class QModelIndex &)
+func (this *QAbstractItemModel) span(args ...interface{}) () {
+  // span(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel4spanERK11QModelIndex
+    // invoke: QSize span(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel4spanERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "span", args)
+  }
+
+}
+
+// submit()
+func (this *QAbstractItemModel) submit(args ...interface{}) () {
+  // submit()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel6submitEv
+    // invoke: bool submit()
+    C._ZN18QAbstractItemModel6submitEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "submit", args)
+  }
+
+}
+
+// removeRows(int, int, const class QModelIndex &)
+func (this *QAbstractItemModel) removeRows(args ...interface{}) () {
+  // removeRows(int, int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex
+    // invoke: bool removeRows(int, int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "removeRows", args)
+  }
+
+}
+
+// canFetchMore(const class QModelIndex &)
+func (this *QAbstractItemModel) canFetchMore(args ...interface{}) () {
+  // canFetchMore(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex
+    // invoke: bool canFetchMore(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "canFetchMore", args)
+  }
+
+}
+
+// moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
 func (this *QAbstractItemModel) moveColumns(args ...interface{}) () {
   // moveColumns(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1384,73 +1523,7 @@ func (this *QAbstractItemModel) moveColumns(args ...interface{}) () {
 
 }
 
-  // proto:  QMap<int, QVariant> QAbstractItemModel::itemData(const QModelIndex & index);
-func (this *QAbstractItemModel) itemData(args ...interface{}) () {
-  // itemData(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel8itemDataERK11QModelIndex
-    // invoke: QMap<int, QVariant> itemData(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK18QAbstractItemModel8itemDataERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "itemData", args)
-  }
-
-}
-
-  // proto:  QStringList QAbstractItemModel::mimeTypes();
-func (this *QAbstractItemModel) mimeTypes(args ...interface{}) () {
-  // mimeTypes()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel9mimeTypesEv
-    // invoke: QStringList mimeTypes()
-    C._ZNK18QAbstractItemModel9mimeTypesEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "mimeTypes", args)
-  }
-
-}
-
-  // proto:  QModelIndex QAbstractItemModel::buddy(const QModelIndex & index);
-func (this *QAbstractItemModel) buddy(args ...interface{}) () {
-  // buddy(const class QModelIndex &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK18QAbstractItemModel5buddyERK11QModelIndex
-    // invoke: QModelIndex buddy(const class QModelIndex &)
-    var arg0 = args[0].(QModelIndex).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK18QAbstractItemModel5buddyERK11QModelIndex(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAbstractItemModel", "buddy", args)
-  }
-
-}
-
-  // proto:  QModelIndex QAbstractItemModel::sibling(int row, int column, const QModelIndex & idx);
+// sibling(int, int, const class QModelIndex &)
 func (this *QAbstractItemModel) sibling(args ...interface{}) () {
   // sibling(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1479,7 +1552,7 @@ func (this *QAbstractItemModel) sibling(args ...interface{}) () {
 
 }
 
-  // proto:  bool QAbstractItemModel::moveRows(const QModelIndex & sourceParent, int sourceRow, int count, const QModelIndex & destinationParent, int destinationChild);
+// moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
 func (this *QAbstractItemModel) moveRows(args ...interface{}) () {
   // moveRows(const class QModelIndex &, int, int, const class QModelIndex &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1514,9 +1587,58 @@ func (this *QAbstractItemModel) moveRows(args ...interface{}) () {
 
 }
 
-  // proto:  QModelIndex QAbstractListModel::sibling(int row, int column, const QModelIndex & idx);
-func (this *QAbstractListModel) sibling(args ...interface{}) () {
-  // sibling(int, int, const class QModelIndex &)
+// insertColumn(int, const class QModelIndex &)
+func (this *QAbstractItemModel) insertColumn(args ...interface{}) () {
+  // insertColumn(int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex
+    // invoke: bool insertColumn(int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QModelIndex).qclsinst
+    if false {fmt.Println(arg1)}
+    C._ZN18QAbstractItemModel12insertColumnEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "insertColumn", args)
+  }
+
+}
+
+// hasChildren(const class QModelIndex &)
+func (this *QAbstractItemModel) hasChildren(args ...interface{}) () {
+  // hasChildren(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex
+    // invoke: bool hasChildren(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "hasChildren", args)
+  }
+
+}
+
+// hasIndex(int, int, const class QModelIndex &)
+func (this *QAbstractItemModel) hasIndex(args ...interface{}) () {
+  // hasIndex(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -1528,47 +1650,103 @@ func (this *QAbstractListModel) sibling(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex
-    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
+    // invoke: _ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex
+    // invoke: bool hasIndex(int, int, const class QModelIndex &)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C._ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    C._ZNK18QAbstractItemModel8hasIndexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
   default:
-    qtrt.ErrorResolve("QAbstractListModel", "sibling", args)
+    qtrt.ErrorResolve("QAbstractItemModel", "hasIndex", args)
   }
 
 }
 
-  // proto:  void QAbstractListModel::QAbstractListModel(QObject * parent);
-func NewQAbstractListModel(args ...interface{}) QAbstractListModel {
-  return QAbstractListModel{}
-}
-
-  // proto:  const QMetaObject * QAbstractListModel::metaObject();
-func (this *QAbstractListModel) metaObject(args ...interface{}) () {
-  // metaObject()
+// setData(const class QModelIndex &, const class QVariant &, int)
+func (this *QAbstractItemModel) setData(args ...interface{}) () {
+  // setData(const class QModelIndex &, const class QVariant &, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+  vtys[0][1] = reflect.TypeOf(QVariant{}) // "const QVariant &"
+  vtys[0][2] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK18QAbstractListModel10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK18QAbstractListModel10metaObjectEv(this.qclsinst)
+    // invoke: _ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti
+    // invoke: bool setData(const class QModelIndex &, const class QVariant &, int)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    var arg1 = args[1].(QVariant).qclsinst
+    if false {fmt.Println(arg1)}
+    var arg2 = C.int32_t(args[2].(int32))
+    if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
   default:
-    qtrt.ErrorResolve("QAbstractListModel", "metaObject", args)
+    qtrt.ErrorResolve("QAbstractItemModel", "setData", args)
   }
 
 }
 
-  // proto:  QModelIndex QAbstractListModel::index(int row, int column, const QModelIndex & parent);
+// insertRows(int, int, const class QModelIndex &)
+func (this *QAbstractItemModel) insertRows(args ...interface{}) () {
+  // insertRows(int, int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex
+    // invoke: bool insertRows(int, int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
+    C._ZN18QAbstractItemModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "insertRows", args)
+  }
+
+}
+
+// flags(const class QModelIndex &)
+func (this *QAbstractItemModel) flags(args ...interface{}) () {
+  // flags(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractItemModel5flagsERK11QModelIndex
+    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractItemModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractItemModel", "flags", args)
+  }
+
+}
+
+// index(int, int, const class QModelIndex &)
 func (this *QAbstractListModel) index(args ...interface{}) () {
   // index(int, int, const class QModelIndex &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1597,14 +1775,118 @@ func (this *QAbstractListModel) index(args ...interface{}) () {
 
 }
 
-  // proto:  void QAbstractListModel::~QAbstractListModel();
-func (this *QAbstractListModel) FreeQAbstractListModel(args ...interface{}) () {
+// metaObject()
+func (this *QAbstractListModel) metaObject(args ...interface{}) () {
+  // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractListModel10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK18QAbstractListModel10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAbstractListModel", "metaObject", args)
+  }
+
+}
+
+// QAbstractListModel(class QObject *)
+func NewQAbstractListModel(args ...interface{}) QAbstractListModel {
+  // QAbstractListModel(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractListModelC1EP7QObject
+    // invoke: void QAbstractListModel(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN18QAbstractListModelC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractListModel", "QAbstractListModel", args)
+  }
+
+  return QAbstractListModel{}
+}
+
+// sibling(int, int, const class QModelIndex &)
+func (this *QAbstractListModel) sibling(args ...interface{}) () {
+  // sibling(int, int, const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+  vtys[0][1] = qtrt.Int32Ty(false) // "int"
+  vtys[0][2] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractListModel7siblingEiiRK11QModelIndex
+    // invoke: QModelIndex sibling(int, int, const class QModelIndex &)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var arg1 = C.int32_t(args[1].(int32))
+    if false {fmt.Println(arg1)}
+    var arg2 = args[2].(QModelIndex).qclsinst
+    if false {fmt.Println(arg2)}
+    C._ZNK18QAbstractListModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+  default:
+    qtrt.ErrorResolve("QAbstractListModel", "sibling", args)
+  }
+
+}
+
+// flags(const class QModelIndex &)
+func (this *QAbstractListModel) flags(args ...interface{}) () {
+  // flags(const class QModelIndex &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QModelIndex{}) // "const QModelIndex &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK18QAbstractListModel5flagsERK11QModelIndex
+    // invoke: Qt::ItemFlags flags(const class QModelIndex &)
+    var arg0 = args[0].(QModelIndex).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK18QAbstractListModel5flagsERK11QModelIndex(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAbstractListModel", "flags", args)
+  }
+
+}
+
+// ~QAbstractListModel()
+func (this *QAbstractListModel) FreeQAbstractListModel(args ...interface{}) () {
+  // ~QAbstractListModel()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN18QAbstractListModelD0Ev
+    // invoke: void ~QAbstractListModel()
+    C._ZN18QAbstractListModelD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QAbstractListModel", "~QAbstractListModel", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qanimationgroup.h
 // dst-file: /src/core/qanimationgroup.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,32 +28,28 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-extern void _ZNK15QAnimationGroup11animationAtEi(void* qthis, int32_t arg0);
-  // proto:  void QAnimationGroup::~QAnimationGroup();
-extern void _ZN15QAnimationGroupD0Ev(void* qthis);
-  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-extern void* dector_ZN15QAnimationGroupC1ERKS_(void* arg0);
-extern void _ZN15QAnimationGroupC1ERKS_(void* qthis, void* arg0);
-  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-extern void _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0);
-  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
-extern void* dector_ZN15QAnimationGroupC1EP7QObject(void* arg0);
-extern void _ZN15QAnimationGroupC1EP7QObject(void* qthis, void* arg0);
   // proto:  int QAnimationGroup::animationCount();
-extern void _ZNK15QAnimationGroup14animationCountEv(void* qthis);
+extern void _ZNK15QAnimationGroup14animationCountEv(void* qthis); // 4
   // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
-extern void _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0);
-  // proto:  void QAnimationGroup::clear();
-extern void _ZN15QAnimationGroup5clearEv(void* qthis);
-  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-extern void _ZN15QAnimationGroup13takeAnimationEi(void* qthis, int32_t arg0);
-  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
-extern void _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(void* qthis, int32_t arg0, void* arg1);
-  // proto:  const QMetaObject * QAnimationGroup::metaObject();
-extern void _ZNK15QAnimationGroup10metaObjectEv(void* qthis);
+extern void _ZN15QAnimationGroup12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-extern void _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(void* qthis, void* arg0);
+extern void _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+  // proto:  void QAnimationGroup::~QAnimationGroup();
+extern void _ZN15QAnimationGroupD2Ev(void* qthis); // 4
+  // proto:  void QAnimationGroup::clear();
+extern void _ZN15QAnimationGroup5clearEv(void* qthis); // 4
+  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
+extern void _ZNK15QAnimationGroup11animationAtEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
+extern void _ZN15QAnimationGroup15insertAnimationEiP18QAbstractAnimation(void* qthis, int32_t arg0, void* arg1); // 4
+  // proto:  const QMetaObject * QAnimationGroup::metaObject();
+extern void _ZNK15QAnimationGroup10metaObjectEv(void* qthis); // 4
+  // proto:  void QAnimationGroup::QAnimationGroup(QObject * parent);
+extern void _ZN15QAnimationGroupC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
+extern void _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
+  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
+extern void _ZN15QAnimationGroup13takeAnimationEi(void* qthis, int32_t arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -76,72 +68,7 @@ type QAnimationGroup struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QAbstractAnimation * QAnimationGroup::animationAt(int index);
-func (this *QAnimationGroup) animationAt(args ...interface{}) () {
-  // animationAt(int)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK15QAnimationGroup11animationAtEi
-    // invoke: QAbstractAnimation * animationAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZNK15QAnimationGroup11animationAtEi(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
-  }
-
-}
-
-  // proto:  void QAnimationGroup::~QAnimationGroup();
-func (this *QAnimationGroup) FreeQAnimationGroup(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
-  }
-
-}
-
-  // proto:  void QAnimationGroup::QAnimationGroup(const QAnimationGroup & );
-func NewQAnimationGroup(args ...interface{}) QAnimationGroup {
-  return QAnimationGroup{}
-}
-
-  // proto:  void QAnimationGroup::removeAnimation(QAbstractAnimation * animation);
-func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
-  // removeAnimation(class QAbstractAnimation *)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation
-    // invoke: void removeAnimation(class QAbstractAnimation *)
-    var arg0 = args[0].(QAbstractAnimation).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
-  }
-
-}
-
-  // proto:  int QAnimationGroup::animationCount();
+// animationCount()
 func (this *QAnimationGroup) animationCount(args ...interface{}) () {
   // animationCount()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -161,7 +88,7 @@ func (this *QAnimationGroup) animationCount(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationGroup::addAnimation(QAbstractAnimation * animation);
+// addAnimation(class QAbstractAnimation *)
 func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
   // addAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -184,7 +111,50 @@ func (this *QAnimationGroup) addAnimation(args ...interface{}) () {
 
 }
 
-  // proto:  void QAnimationGroup::clear();
+// indexOfAnimation(class QAbstractAnimation *)
+func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
+  // indexOfAnimation(class QAbstractAnimation *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QAbstractAnimation{}) // "QAbstractAnimation *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation
+    // invoke: int indexOfAnimation(class QAbstractAnimation *)
+    var arg0 = args[0].(QAbstractAnimation).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
+  }
+
+}
+
+// ~QAnimationGroup()
+func (this *QAnimationGroup) FreeQAnimationGroup(args ...interface{}) () {
+  // ~QAnimationGroup()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QAnimationGroupD0Ev
+    // invoke: void ~QAnimationGroup()
+    C._ZN15QAnimationGroupD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAnimationGroup", "~QAnimationGroup", args)
+  }
+
+}
+
+// clear()
 func (this *QAnimationGroup) clear(args ...interface{}) () {
   // clear()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -204,9 +174,9 @@ func (this *QAnimationGroup) clear(args ...interface{}) () {
 
 }
 
-  // proto:  QAbstractAnimation * QAnimationGroup::takeAnimation(int index);
-func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
-  // takeAnimation(int)
+// animationAt(int)
+func (this *QAnimationGroup) animationAt(args ...interface{}) () {
+  // animationAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -216,18 +186,18 @@ func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN15QAnimationGroup13takeAnimationEi
-    // invoke: QAbstractAnimation * takeAnimation(int)
+    // invoke: _ZNK15QAnimationGroup11animationAtEi
+    // invoke: QAbstractAnimation * animationAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN15QAnimationGroup13takeAnimationEi(this.qclsinst, arg0)
+    C._ZNK15QAnimationGroup11animationAtEi(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
+    qtrt.ErrorResolve("QAnimationGroup", "animationAt", args)
   }
 
 }
 
-  // proto:  void QAnimationGroup::insertAnimation(int index, QAbstractAnimation * animation);
+// insertAnimation(int, class QAbstractAnimation *)
 func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
   // insertAnimation(int, class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -253,7 +223,7 @@ func (this *QAnimationGroup) insertAnimation(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QAnimationGroup::metaObject();
+// metaObject()
 func (this *QAnimationGroup) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -273,9 +243,35 @@ func (this *QAnimationGroup) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  int QAnimationGroup::indexOfAnimation(QAbstractAnimation * animation);
-func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
-  // indexOfAnimation(class QAbstractAnimation *)
+// QAnimationGroup(class QObject *)
+func NewQAnimationGroup(args ...interface{}) QAnimationGroup {
+  // QAnimationGroup(class QObject *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QAnimationGroupC1EP7QObject
+    // invoke: void QAnimationGroup(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN15QAnimationGroupC2EP7QObject(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAnimationGroup", "QAnimationGroup", args)
+  }
+
+  return QAnimationGroup{}
+}
+
+// removeAnimation(class QAbstractAnimation *)
+func (this *QAnimationGroup) removeAnimation(args ...interface{}) () {
+  // removeAnimation(class QAbstractAnimation *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -285,13 +281,36 @@ func (this *QAnimationGroup) indexOfAnimation(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation
-    // invoke: int indexOfAnimation(class QAbstractAnimation *)
+    // invoke: _ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation
+    // invoke: void removeAnimation(class QAbstractAnimation *)
     var arg0 = args[0].(QAbstractAnimation).qclsinst
     if false {fmt.Println(arg0)}
-    C._ZNK15QAnimationGroup16indexOfAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
+    C._ZN15QAnimationGroup15removeAnimationEP18QAbstractAnimation(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QAnimationGroup", "indexOfAnimation", args)
+    qtrt.ErrorResolve("QAnimationGroup", "removeAnimation", args)
+  }
+
+}
+
+// takeAnimation(int)
+func (this *QAnimationGroup) takeAnimation(args ...interface{}) () {
+  // takeAnimation(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN15QAnimationGroup13takeAnimationEi
+    // invoke: QAbstractAnimation * takeAnimation(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN15QAnimationGroup13takeAnimationEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QAnimationGroup", "takeAnimation", args)
   }
 
 }

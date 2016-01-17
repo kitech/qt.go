@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qelapsedtimer.h
 // dst-file: /src/core/qelapsedtimer.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,31 +28,32 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QElapsedTimer::start();
-extern void _ZN13QElapsedTimer5startEv(void* qthis);
-  // proto:  qint64 QElapsedTimer::nsecsElapsed();
-extern void _ZNK13QElapsedTimer12nsecsElapsedEv(void* qthis);
   // proto:  void QElapsedTimer::invalidate();
-extern void _ZN13QElapsedTimer10invalidateEv(void* qthis);
-  // proto: static bool QElapsedTimer::isMonotonic();
-extern void _ZN13QElapsedTimer11isMonotonicEv();
-  // proto:  void QElapsedTimer::QElapsedTimer();
-extern void* dector_ZN13QElapsedTimerC1Ev();
-extern void _ZN13QElapsedTimerC1Ev(void* qthis);
-  // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-extern void _ZNK13QElapsedTimer7msecsToERKS_(void* qthis, void* arg0);
-  // proto:  qint64 QElapsedTimer::msecsSinceReference();
-extern void _ZNK13QElapsedTimer19msecsSinceReferenceEv(void* qthis);
-  // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-extern void _ZNK13QElapsedTimer10hasExpiredEx(void* qthis, int64_t arg0);
-  // proto:  qint64 QElapsedTimer::restart();
-extern void _ZN13QElapsedTimer7restartEv(void* qthis);
+extern void _ZN13QElapsedTimer10invalidateEv(void* qthis); // 4
   // proto:  bool QElapsedTimer::isValid();
-extern void _ZNK13QElapsedTimer7isValidEv(void* qthis);
+extern void _ZNK13QElapsedTimer7isValidEv(void* qthis); // 4
   // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
-extern void _ZNK13QElapsedTimer6secsToERKS_(void* qthis, void* arg0);
+extern void _ZNK13QElapsedTimer6secsToERKS_(void* qthis, void* arg0); // 4
+  // proto: static bool QElapsedTimer::isMonotonic();
+extern void _ZN13QElapsedTimer11isMonotonicEv(); // 4
+  // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
+extern void _ZNK13QElapsedTimer10hasExpiredEx(void* qthis, int64_t arg0); // 4
+  // proto:  void QElapsedTimer::QElapsedTimer();
+extern void _ZN13QElapsedTimerC2Ev(void* qthis); // 1
   // proto:  qint64 QElapsedTimer::elapsed();
-extern void _ZNK13QElapsedTimer7elapsedEv(void* qthis);
+extern void _ZNK13QElapsedTimer7elapsedEv(void* qthis); // 4
+  // proto:  void QElapsedTimer::start();
+extern void _ZN13QElapsedTimer5startEv(void* qthis); // 4
+  // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
+extern void _ZNK13QElapsedTimer7msecsToERKS_(void* qthis, void* arg0); // 4
+  // proto:  qint64 QElapsedTimer::msecsSinceReference();
+extern void _ZNK13QElapsedTimer19msecsSinceReferenceEv(void* qthis); // 4
+  // proto: static QElapsedTimer::ClockType QElapsedTimer::clockType();
+extern void _ZN13QElapsedTimer9clockTypeEv(); // 4
+  // proto:  qint64 QElapsedTimer::nsecsElapsed();
+extern void _ZNK13QElapsedTimer12nsecsElapsedEv(void* qthis); // 4
+  // proto:  qint64 QElapsedTimer::restart();
+extern void _ZN13QElapsedTimer7restartEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -75,47 +72,7 @@ type QElapsedTimer struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QElapsedTimer::start();
-func (this *QElapsedTimer) start(args ...interface{}) () {
-  // start()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QElapsedTimer5startEv
-    // invoke: void start()
-    C._ZN13QElapsedTimer5startEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "start", args)
-  }
-
-}
-
-  // proto:  qint64 QElapsedTimer::nsecsElapsed();
-func (this *QElapsedTimer) nsecsElapsed(args ...interface{}) () {
-  // nsecsElapsed()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QElapsedTimer12nsecsElapsedEv
-    // invoke: qint64 nsecsElapsed()
-    C._ZNK13QElapsedTimer12nsecsElapsedEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "nsecsElapsed", args)
-  }
-
-}
-
-  // proto:  void QElapsedTimer::invalidate();
+// invalidate()
 func (this *QElapsedTimer) invalidate(args ...interface{}) () {
   // invalidate()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -135,112 +92,7 @@ func (this *QElapsedTimer) invalidate(args ...interface{}) () {
 
 }
 
-  // proto: static bool QElapsedTimer::isMonotonic();
-func (this *QElapsedTimer) isMonotonic_s(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "isMonotonic", args)
-  }
-
-}
-
-  // proto:  void QElapsedTimer::QElapsedTimer();
-func NewQElapsedTimer(args ...interface{}) QElapsedTimer {
-  return QElapsedTimer{}
-}
-
-  // proto:  qint64 QElapsedTimer::msecsTo(const QElapsedTimer & other);
-func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
-  // msecsTo(const class QElapsedTimer &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QElapsedTimer{}) // "const QElapsedTimer &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QElapsedTimer7msecsToERKS_
-    // invoke: qint64 msecsTo(const class QElapsedTimer &)
-    var arg0 = args[0].(QElapsedTimer).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZNK13QElapsedTimer7msecsToERKS_(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
-  }
-
-}
-
-  // proto:  qint64 QElapsedTimer::msecsSinceReference();
-func (this *QElapsedTimer) msecsSinceReference(args ...interface{}) () {
-  // msecsSinceReference()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QElapsedTimer19msecsSinceReferenceEv
-    // invoke: qint64 msecsSinceReference()
-    C._ZNK13QElapsedTimer19msecsSinceReferenceEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "msecsSinceReference", args)
-  }
-
-}
-
-  // proto:  bool QElapsedTimer::hasExpired(qint64 timeout);
-func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
-  // hasExpired(qint64)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK13QElapsedTimer10hasExpiredEx
-    // invoke: bool hasExpired(qint64)
-    var arg0 = C.int64_t(args[0].(int64))
-    if false {fmt.Println(arg0)}
-    C._ZNK13QElapsedTimer10hasExpiredEx(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
-  }
-
-}
-
-  // proto:  qint64 QElapsedTimer::restart();
-func (this *QElapsedTimer) restart(args ...interface{}) () {
-  // restart()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN13QElapsedTimer7restartEv
-    // invoke: qint64 restart()
-    C._ZN13QElapsedTimer7restartEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QElapsedTimer", "restart", args)
-  }
-
-}
-
-  // proto:  bool QElapsedTimer::isValid();
+// isValid()
 func (this *QElapsedTimer) isValid(args ...interface{}) () {
   // isValid()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -260,7 +112,7 @@ func (this *QElapsedTimer) isValid(args ...interface{}) () {
 
 }
 
-  // proto:  qint64 QElapsedTimer::secsTo(const QElapsedTimer & other);
+// secsTo(const class QElapsedTimer &)
 func (this *QElapsedTimer) secsTo(args ...interface{}) () {
   // secsTo(const class QElapsedTimer &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -283,7 +135,73 @@ func (this *QElapsedTimer) secsTo(args ...interface{}) () {
 
 }
 
-  // proto:  qint64 QElapsedTimer::elapsed();
+// isMonotonic()
+func (this *QElapsedTimer) isMonotonic_s(args ...interface{}) () {
+  // isMonotonic()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QElapsedTimer11isMonotonicEv
+    // invoke: bool isMonotonic()
+    C._ZN13QElapsedTimer11isMonotonicEv()
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "isMonotonic", args)
+  }
+
+}
+
+// hasExpired(qint64)
+func (this *QElapsedTimer) hasExpired(args ...interface{}) () {
+  // hasExpired(qint64)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int64Ty(false) // "qint64"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QElapsedTimer10hasExpiredEx
+    // invoke: bool hasExpired(qint64)
+    var arg0 = C.int64_t(args[0].(int64))
+    if false {fmt.Println(arg0)}
+    C._ZNK13QElapsedTimer10hasExpiredEx(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "hasExpired", args)
+  }
+
+}
+
+// QElapsedTimer()
+func NewQElapsedTimer(args ...interface{}) QElapsedTimer {
+  // QElapsedTimer()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QElapsedTimerC1Ev
+    // invoke: void QElapsedTimer()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QElapsedTimerC2Ev(qthis)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "QElapsedTimer", args)
+  }
+
+  return QElapsedTimer{}
+}
+
+// elapsed()
 func (this *QElapsedTimer) elapsed(args ...interface{}) () {
   // elapsed()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -299,6 +217,129 @@ func (this *QElapsedTimer) elapsed(args ...interface{}) () {
     C._ZNK13QElapsedTimer7elapsedEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QElapsedTimer", "elapsed", args)
+  }
+
+}
+
+// start()
+func (this *QElapsedTimer) start(args ...interface{}) () {
+  // start()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QElapsedTimer5startEv
+    // invoke: void start()
+    C._ZN13QElapsedTimer5startEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "start", args)
+  }
+
+}
+
+// msecsTo(const class QElapsedTimer &)
+func (this *QElapsedTimer) msecsTo(args ...interface{}) () {
+  // msecsTo(const class QElapsedTimer &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QElapsedTimer{}) // "const QElapsedTimer &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QElapsedTimer7msecsToERKS_
+    // invoke: qint64 msecsTo(const class QElapsedTimer &)
+    var arg0 = args[0].(QElapsedTimer).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK13QElapsedTimer7msecsToERKS_(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "msecsTo", args)
+  }
+
+}
+
+// msecsSinceReference()
+func (this *QElapsedTimer) msecsSinceReference(args ...interface{}) () {
+  // msecsSinceReference()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QElapsedTimer19msecsSinceReferenceEv
+    // invoke: qint64 msecsSinceReference()
+    C._ZNK13QElapsedTimer19msecsSinceReferenceEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "msecsSinceReference", args)
+  }
+
+}
+
+// clockType()
+func (this *QElapsedTimer) clockType_s(args ...interface{}) () {
+  // clockType()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QElapsedTimer9clockTypeEv
+    // invoke: QElapsedTimer::ClockType clockType()
+    C._ZN13QElapsedTimer9clockTypeEv()
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "clockType", args)
+  }
+
+}
+
+// nsecsElapsed()
+func (this *QElapsedTimer) nsecsElapsed(args ...interface{}) () {
+  // nsecsElapsed()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QElapsedTimer12nsecsElapsedEv
+    // invoke: qint64 nsecsElapsed()
+    C._ZNK13QElapsedTimer12nsecsElapsedEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "nsecsElapsed", args)
+  }
+
+}
+
+// restart()
+func (this *QElapsedTimer) restart(args ...interface{}) () {
+  // restart()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN13QElapsedTimer7restartEv
+    // invoke: qint64 restart()
+    C._ZN13QElapsedTimer7restartEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QElapsedTimer", "restart", args)
   }
 
 }

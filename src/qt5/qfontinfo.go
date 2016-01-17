@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qfontinfo.h
 // dst-file: /src/gui/qfontinfo.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,44 +28,46 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QFontInfo::rawMode();
-extern void _ZNK9QFontInfo7rawModeEv(void* qthis);
-  // proto:  bool QFontInfo::exactMatch();
-extern void _ZNK9QFontInfo10exactMatchEv(void* qthis);
-  // proto:  int QFontInfo::pointSize();
-extern void _ZNK9QFontInfo9pointSizeEv(void* qthis);
-  // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
-extern void* dector_ZN9QFontInfoC1ERKS_(void* arg0);
-extern void _ZN9QFontInfoC1ERKS_(void* qthis, void* arg0);
-  // proto:  QString QFontInfo::family();
-extern void _ZNK9QFontInfo6familyEv(void* qthis);
-  // proto:  bool QFontInfo::bold();
-extern void demth_ZNK9QFontInfo4boldEv(void* qthis);
-  // proto:  qreal QFontInfo::pointSizeF();
-extern void _ZNK9QFontInfo10pointSizeFEv(void* qthis);
-  // proto:  bool QFontInfo::fixedPitch();
-extern void _ZNK9QFontInfo10fixedPitchEv(void* qthis);
-  // proto:  bool QFontInfo::overline();
-extern void _ZNK9QFontInfo8overlineEv(void* qthis);
-  // proto:  void QFontInfo::swap(QFontInfo & other);
-extern void demth_ZN9QFontInfo4swapERS_(void* qthis, void* arg0);
-  // proto:  void QFontInfo::QFontInfo(const QFont & );
-extern void* dector_ZN9QFontInfoC1ERK5QFont(void* arg0);
-extern void _ZN9QFontInfoC1ERK5QFont(void* qthis, void* arg0);
-  // proto:  int QFontInfo::pixelSize();
-extern void _ZNK9QFontInfo9pixelSizeEv(void* qthis);
+  // proto:  QFont::StyleHint QFontInfo::styleHint();
+extern void _ZNK9QFontInfo9styleHintEv(void* qthis); // 4
+  // proto:  QFont::Style QFontInfo::style();
+extern void _ZNK9QFontInfo5styleEv(void* qthis); // 4
   // proto:  bool QFontInfo::strikeOut();
-extern void _ZNK9QFontInfo9strikeOutEv(void* qthis);
-  // proto:  void QFontInfo::~QFontInfo();
-extern void _ZN9QFontInfoD0Ev(void* qthis);
-  // proto:  bool QFontInfo::italic();
-extern void _ZNK9QFontInfo6italicEv(void* qthis);
-  // proto:  bool QFontInfo::underline();
-extern void _ZNK9QFontInfo9underlineEv(void* qthis);
-  // proto:  QString QFontInfo::styleName();
-extern void _ZNK9QFontInfo9styleNameEv(void* qthis);
+extern void _ZNK9QFontInfo9strikeOutEv(void* qthis); // 4
+  // proto:  int QFontInfo::pointSize();
+extern void _ZNK9QFontInfo9pointSizeEv(void* qthis); // 4
+  // proto:  bool QFontInfo::bold();
+extern void _ZNK9QFontInfo4boldEv(void* qthis); // 2
+  // proto:  QString QFontInfo::family();
+extern void _ZNK9QFontInfo6familyEv(void* qthis); // 4
   // proto:  int QFontInfo::weight();
-extern void _ZNK9QFontInfo6weightEv(void* qthis);
+extern void _ZNK9QFontInfo6weightEv(void* qthis); // 4
+  // proto:  qreal QFontInfo::pointSizeF();
+extern void _ZNK9QFontInfo10pointSizeFEv(void* qthis); // 4
+  // proto:  bool QFontInfo::exactMatch();
+extern void _ZNK9QFontInfo10exactMatchEv(void* qthis); // 4
+  // proto:  bool QFontInfo::underline();
+extern void _ZNK9QFontInfo9underlineEv(void* qthis); // 4
+  // proto:  bool QFontInfo::overline();
+extern void _ZNK9QFontInfo8overlineEv(void* qthis); // 4
+  // proto:  bool QFontInfo::fixedPitch();
+extern void _ZNK9QFontInfo10fixedPitchEv(void* qthis); // 4
+  // proto:  void QFontInfo::swap(QFontInfo & other);
+extern void _ZN9QFontInfo4swapERS_(void* qthis, void* arg0); // 2
+  // proto:  bool QFontInfo::italic();
+extern void _ZNK9QFontInfo6italicEv(void* qthis); // 4
+  // proto:  bool QFontInfo::rawMode();
+extern void _ZNK9QFontInfo7rawModeEv(void* qthis); // 4
+  // proto:  int QFontInfo::pixelSize();
+extern void _ZNK9QFontInfo9pixelSizeEv(void* qthis); // 4
+  // proto:  QString QFontInfo::styleName();
+extern void _ZNK9QFontInfo9styleNameEv(void* qthis); // 4
+  // proto:  void QFontInfo::~QFontInfo();
+extern void _ZN9QFontInfoD2Ev(void* qthis); // 4
+  // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
+extern void _ZN9QFontInfoC2ERKS_(void* qthis, void* arg0); // 3
+  // proto:  void QFontInfo::QFontInfo(const QFont & );
+extern void _ZN9QFontInfoC2ERK5QFont(void* qthis, void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -88,9 +86,9 @@ type QFontInfo struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QFontInfo::rawMode();
-func (this *QFontInfo) rawMode(args ...interface{}) () {
-  // rawMode()
+// styleHint()
+func (this *QFontInfo) styleHint(args ...interface{}) () {
+  // styleHint()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -99,18 +97,18 @@ func (this *QFontInfo) rawMode(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QFontInfo7rawModeEv
-    // invoke: bool rawMode()
-    C._ZNK9QFontInfo7rawModeEv(this.qclsinst)
+    // invoke: _ZNK9QFontInfo9styleHintEv
+    // invoke: QFont::StyleHint styleHint()
+    C._ZNK9QFontInfo9styleHintEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontInfo", "rawMode", args)
+    qtrt.ErrorResolve("QFontInfo", "styleHint", args)
   }
 
 }
 
-  // proto:  bool QFontInfo::exactMatch();
-func (this *QFontInfo) exactMatch(args ...interface{}) () {
-  // exactMatch()
+// style()
+func (this *QFontInfo) style(args ...interface{}) () {
+  // style()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -119,184 +117,16 @@ func (this *QFontInfo) exactMatch(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QFontInfo10exactMatchEv
-    // invoke: bool exactMatch()
-    C._ZNK9QFontInfo10exactMatchEv(this.qclsinst)
+    // invoke: _ZNK9QFontInfo5styleEv
+    // invoke: QFont::Style style()
+    C._ZNK9QFontInfo5styleEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontInfo", "exactMatch", args)
+    qtrt.ErrorResolve("QFontInfo", "style", args)
   }
 
 }
 
-  // proto:  int QFontInfo::pointSize();
-func (this *QFontInfo) pointSize(args ...interface{}) () {
-  // pointSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo9pointSizeEv
-    // invoke: int pointSize()
-    C._ZNK9QFontInfo9pointSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "pointSize", args)
-  }
-
-}
-
-  // proto:  void QFontInfo::QFontInfo(const QFontInfo & );
-func NewQFontInfo(args ...interface{}) QFontInfo {
-  return QFontInfo{}
-}
-
-  // proto:  QString QFontInfo::family();
-func (this *QFontInfo) family(args ...interface{}) () {
-  // family()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo6familyEv
-    // invoke: QString family()
-    C._ZNK9QFontInfo6familyEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "family", args)
-  }
-
-}
-
-  // proto:  bool QFontInfo::bold();
-func (this *QFontInfo) bold(args ...interface{}) () {
-  // bold()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo4boldEv
-    // invoke: bool bold()
-    C.demth_ZNK9QFontInfo4boldEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "bold", args)
-  }
-
-}
-
-  // proto:  qreal QFontInfo::pointSizeF();
-func (this *QFontInfo) pointSizeF(args ...interface{}) () {
-  // pointSizeF()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo10pointSizeFEv
-    // invoke: qreal pointSizeF()
-    C._ZNK9QFontInfo10pointSizeFEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "pointSizeF", args)
-  }
-
-}
-
-  // proto:  bool QFontInfo::fixedPitch();
-func (this *QFontInfo) fixedPitch(args ...interface{}) () {
-  // fixedPitch()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo10fixedPitchEv
-    // invoke: bool fixedPitch()
-    C._ZNK9QFontInfo10fixedPitchEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "fixedPitch", args)
-  }
-
-}
-
-  // proto:  bool QFontInfo::overline();
-func (this *QFontInfo) overline(args ...interface{}) () {
-  // overline()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo8overlineEv
-    // invoke: bool overline()
-    C._ZNK9QFontInfo8overlineEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "overline", args)
-  }
-
-}
-
-  // proto:  void QFontInfo::swap(QFontInfo & other);
-func (this *QFontInfo) swap(args ...interface{}) () {
-  // swap(class QFontInfo &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QFontInfo{}) // "QFontInfo &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN9QFontInfo4swapERS_
-    // invoke: void swap(class QFontInfo &)
-    var arg0 = args[0].(QFontInfo).qclsinst
-    if false {fmt.Println(arg0)}
-    C.demth_ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "swap", args)
-  }
-
-}
-
-  // proto:  int QFontInfo::pixelSize();
-func (this *QFontInfo) pixelSize(args ...interface{}) () {
-  // pixelSize()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QFontInfo9pixelSizeEv
-    // invoke: int pixelSize()
-    C._ZNK9QFontInfo9pixelSizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QFontInfo", "pixelSize", args)
-  }
-
-}
-
-  // proto:  bool QFontInfo::strikeOut();
+// strikeOut()
 func (this *QFontInfo) strikeOut(args ...interface{}) () {
   // strikeOut()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -316,23 +146,9 @@ func (this *QFontInfo) strikeOut(args ...interface{}) () {
 
 }
 
-  // proto:  void QFontInfo::~QFontInfo();
-func (this *QFontInfo) FreeQFontInfo(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QFontInfo", "~QFontInfo", args)
-  }
-
-}
-
-  // proto:  bool QFontInfo::italic();
-func (this *QFontInfo) italic(args ...interface{}) () {
-  // italic()
+// pointSize()
+func (this *QFontInfo) pointSize(args ...interface{}) () {
+  // pointSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -341,16 +157,116 @@ func (this *QFontInfo) italic(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QFontInfo6italicEv
-    // invoke: bool italic()
-    C._ZNK9QFontInfo6italicEv(this.qclsinst)
+    // invoke: _ZNK9QFontInfo9pointSizeEv
+    // invoke: int pointSize()
+    C._ZNK9QFontInfo9pointSizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontInfo", "italic", args)
+    qtrt.ErrorResolve("QFontInfo", "pointSize", args)
   }
 
 }
 
-  // proto:  bool QFontInfo::underline();
+// bold()
+func (this *QFontInfo) bold(args ...interface{}) () {
+  // bold()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo4boldEv
+    // invoke: bool bold()
+    C._ZNK9QFontInfo4boldEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "bold", args)
+  }
+
+}
+
+// family()
+func (this *QFontInfo) family(args ...interface{}) () {
+  // family()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo6familyEv
+    // invoke: QString family()
+    C._ZNK9QFontInfo6familyEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "family", args)
+  }
+
+}
+
+// weight()
+func (this *QFontInfo) weight(args ...interface{}) () {
+  // weight()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo6weightEv
+    // invoke: int weight()
+    C._ZNK9QFontInfo6weightEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "weight", args)
+  }
+
+}
+
+// pointSizeF()
+func (this *QFontInfo) pointSizeF(args ...interface{}) () {
+  // pointSizeF()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo10pointSizeFEv
+    // invoke: qreal pointSizeF()
+    C._ZNK9QFontInfo10pointSizeFEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "pointSizeF", args)
+  }
+
+}
+
+// exactMatch()
+func (this *QFontInfo) exactMatch(args ...interface{}) () {
+  // exactMatch()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo10exactMatchEv
+    // invoke: bool exactMatch()
+    C._ZNK9QFontInfo10exactMatchEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "exactMatch", args)
+  }
+
+}
+
+// underline()
 func (this *QFontInfo) underline(args ...interface{}) () {
   // underline()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -370,7 +286,130 @@ func (this *QFontInfo) underline(args ...interface{}) () {
 
 }
 
-  // proto:  QString QFontInfo::styleName();
+// overline()
+func (this *QFontInfo) overline(args ...interface{}) () {
+  // overline()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo8overlineEv
+    // invoke: bool overline()
+    C._ZNK9QFontInfo8overlineEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "overline", args)
+  }
+
+}
+
+// fixedPitch()
+func (this *QFontInfo) fixedPitch(args ...interface{}) () {
+  // fixedPitch()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo10fixedPitchEv
+    // invoke: bool fixedPitch()
+    C._ZNK9QFontInfo10fixedPitchEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "fixedPitch", args)
+  }
+
+}
+
+// swap(class QFontInfo &)
+func (this *QFontInfo) swap(args ...interface{}) () {
+  // swap(class QFontInfo &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QFontInfo{}) // "QFontInfo &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QFontInfo4swapERS_
+    // invoke: void swap(class QFontInfo &)
+    var arg0 = args[0].(QFontInfo).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN9QFontInfo4swapERS_(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "swap", args)
+  }
+
+}
+
+// italic()
+func (this *QFontInfo) italic(args ...interface{}) () {
+  // italic()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo6italicEv
+    // invoke: bool italic()
+    C._ZNK9QFontInfo6italicEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "italic", args)
+  }
+
+}
+
+// rawMode()
+func (this *QFontInfo) rawMode(args ...interface{}) () {
+  // rawMode()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo7rawModeEv
+    // invoke: bool rawMode()
+    C._ZNK9QFontInfo7rawModeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "rawMode", args)
+  }
+
+}
+
+// pixelSize()
+func (this *QFontInfo) pixelSize(args ...interface{}) () {
+  // pixelSize()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QFontInfo9pixelSizeEv
+    // invoke: int pixelSize()
+    C._ZNK9QFontInfo9pixelSizeEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "pixelSize", args)
+  }
+
+}
+
+// styleName()
 func (this *QFontInfo) styleName(args ...interface{}) () {
   // styleName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -390,9 +429,9 @@ func (this *QFontInfo) styleName(args ...interface{}) () {
 
 }
 
-  // proto:  int QFontInfo::weight();
-func (this *QFontInfo) weight(args ...interface{}) () {
-  // weight()
+// ~QFontInfo()
+func (this *QFontInfo) FreeQFontInfo(args ...interface{}) () {
+  // ~QFontInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -401,13 +440,50 @@ func (this *QFontInfo) weight(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QFontInfo6weightEv
-    // invoke: int weight()
-    C._ZNK9QFontInfo6weightEv(this.qclsinst)
+    // invoke: _ZN9QFontInfoD0Ev
+    // invoke: void ~QFontInfo()
+    C._ZN9QFontInfoD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFontInfo", "weight", args)
+    qtrt.ErrorResolve("QFontInfo", "~QFontInfo", args)
   }
 
+}
+
+// QFontInfo(const class QFontInfo &)
+func NewQFontInfo(args ...interface{}) QFontInfo {
+  // QFontInfo(const class QFontInfo &)
+  // QFontInfo(const class QFont &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QFontInfo{}) // "const QFontInfo &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QFont{}) // "const QFont &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN9QFontInfoC1ERKS_
+    // invoke: void QFontInfo(const class QFontInfo &)
+    var arg0 = args[0].(QFontInfo).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QFontInfoC2ERKS_(qthis, arg0)
+  case 1:
+    // invoke: _ZN9QFontInfoC1ERK5QFont
+    // invoke: void QFontInfo(const class QFont &)
+    var arg0 = args[0].(QFont).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QFontInfoC2ERK5QFont(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QFontInfo", "QFontInfo", args)
+  }
+
+  return QFontInfo{}
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qpaintdevicewindow.h
 // dst-file: /src/gui/qpaintdevicewindow.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,17 +28,14 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
-extern void _ZN18QPaintDeviceWindow6updateERK7QRegion(void* qthis, void* arg0);
-  // proto:  void QPaintDeviceWindow::update();
-extern void _ZN18QPaintDeviceWindow6updateEv(void* qthis);
-  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-extern void* dector_ZN18QPaintDeviceWindowC1ERKS_(void* arg0);
-extern void _ZN18QPaintDeviceWindowC1ERKS_(void* qthis, void* arg0);
-  // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
-extern void _ZNK18QPaintDeviceWindow10metaObjectEv(void* qthis);
   // proto:  void QPaintDeviceWindow::update(const QRect & rect);
-extern void _ZN18QPaintDeviceWindow6updateERK5QRect(void* qthis, void* arg0);
+extern void _ZN18QPaintDeviceWindow6updateERK5QRect(void* qthis, void* arg0); // 4
+  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
+extern void _ZN18QPaintDeviceWindow6updateERK7QRegion(void* qthis, void* arg0); // 4
+  // proto:  void QPaintDeviceWindow::update();
+extern void _ZN18QPaintDeviceWindow6updateEv(void* qthis); // 4
+  // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
+extern void _ZNK18QPaintDeviceWindow10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -61,50 +54,45 @@ type QPaintDeviceWindow struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QPaintDeviceWindow::update(const QRegion & region);
+// update(const class QRect &)
 func (this *QPaintDeviceWindow) update(args ...interface{}) () {
+  // update(const class QRect &)
   // update(const class QRegion &)
   // update()
-  // update(const class QRect &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
+  vtys[0][0] = reflect.TypeOf(QRect{}) // "const QRect &"
   vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QRegion{}) // "const QRegion &"
   vtys[2] = make(map[int32]reflect.Type)
-  vtys[2][0] = reflect.TypeOf(QRect{}) // "const QRect &"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
-    // invoke: void update(const class QRegion &)
-    var arg0 = args[0].(QRegion).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN18QPaintDeviceWindow6updateERK7QRegion(this.qclsinst, arg0)
-  case 1:
-    // invoke: _ZN18QPaintDeviceWindow6updateEv
-    // invoke: void update()
-    C._ZN18QPaintDeviceWindow6updateEv(this.qclsinst)
-  case 2:
     // invoke: _ZN18QPaintDeviceWindow6updateERK5QRect
     // invoke: void update(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
     C._ZN18QPaintDeviceWindow6updateERK5QRect(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZN18QPaintDeviceWindow6updateERK7QRegion
+    // invoke: void update(const class QRegion &)
+    var arg0 = args[0].(QRegion).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN18QPaintDeviceWindow6updateERK7QRegion(this.qclsinst, arg0)
+  case 2:
+    // invoke: _ZN18QPaintDeviceWindow6updateEv
+    // invoke: void update()
+    C._ZN18QPaintDeviceWindow6updateEv(this.qclsinst)
   default:
     qtrt.ErrorResolve("QPaintDeviceWindow", "update", args)
   }
 
 }
 
-  // proto:  void QPaintDeviceWindow::QPaintDeviceWindow(const QPaintDeviceWindow & );
-func NewQPaintDeviceWindow(args ...interface{}) QPaintDeviceWindow {
-  return QPaintDeviceWindow{}
-}
-
-  // proto:  const QMetaObject * QPaintDeviceWindow::metaObject();
+// metaObject()
 func (this *QPaintDeviceWindow) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)

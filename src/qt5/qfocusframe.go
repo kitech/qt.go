@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtWidgets/qfocusframe.h
 // dst-file: /src/widgets/qfocusframe.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,19 +29,15 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFocusFrame::~QFocusFrame();
-extern void _ZN11QFocusFrameD0Ev(void* qthis);
-  // proto:  const QMetaObject * QFocusFrame::metaObject();
-extern void _ZNK11QFocusFrame10metaObjectEv(void* qthis);
-  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
-extern void* dector_ZN11QFocusFrameC1ERKS_(void* arg0);
-extern void _ZN11QFocusFrameC1ERKS_(void* qthis, void* arg0);
+extern void _ZN11QFocusFrameD2Ev(void* qthis); // 4
   // proto:  QWidget * QFocusFrame::widget();
-extern void _ZNK11QFocusFrame6widgetEv(void* qthis);
-  // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
-extern void* dector_ZN11QFocusFrameC1EP7QWidget(void* arg0);
-extern void _ZN11QFocusFrameC1EP7QWidget(void* qthis, void* arg0);
+extern void _ZNK11QFocusFrame6widgetEv(void* qthis); // 4
   // proto:  void QFocusFrame::setWidget(QWidget * widget);
-extern void _ZN11QFocusFrame9setWidgetEP7QWidget(void* qthis, void* arg0);
+extern void _ZN11QFocusFrame9setWidgetEP7QWidget(void* qthis, void* arg0); // 4
+  // proto:  void QFocusFrame::QFocusFrame(QWidget * parent);
+extern void _ZN11QFocusFrameC2EP7QWidget(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QFocusFrame::metaObject();
+extern void _ZNK11QFocusFrame10metaObjectEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -64,23 +56,9 @@ type QFocusFrame struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QFocusFrame::~QFocusFrame();
+// ~QFocusFrame()
 func (this *QFocusFrame) FreeQFocusFrame(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QFocusFrame::metaObject();
-func (this *QFocusFrame) metaObject(args ...interface{}) () {
-  // metaObject()
+  // ~QFocusFrame()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -89,21 +67,16 @@ func (this *QFocusFrame) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK11QFocusFrame10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK11QFocusFrame10metaObjectEv(this.qclsinst)
+    // invoke: _ZN11QFocusFrameD0Ev
+    // invoke: void ~QFocusFrame()
+    C._ZN11QFocusFrameD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
+    qtrt.ErrorResolve("QFocusFrame", "~QFocusFrame", args)
   }
 
 }
 
-  // proto:  void QFocusFrame::QFocusFrame(const QFocusFrame & );
-func NewQFocusFrame(args ...interface{}) QFocusFrame {
-  return QFocusFrame{}
-}
-
-  // proto:  QWidget * QFocusFrame::widget();
+// widget()
 func (this *QFocusFrame) widget(args ...interface{}) () {
   // widget()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -123,7 +96,7 @@ func (this *QFocusFrame) widget(args ...interface{}) () {
 
 }
 
-  // proto:  void QFocusFrame::setWidget(QWidget * widget);
+// setWidget(class QWidget *)
 func (this *QFocusFrame) setWidget(args ...interface{}) () {
   // setWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -142,6 +115,52 @@ func (this *QFocusFrame) setWidget(args ...interface{}) () {
     C._ZN11QFocusFrame9setWidgetEP7QWidget(this.qclsinst, arg0)
   default:
     qtrt.ErrorResolve("QFocusFrame", "setWidget", args)
+  }
+
+}
+
+// QFocusFrame(class QWidget *)
+func NewQFocusFrame(args ...interface{}) QFocusFrame {
+  // QFocusFrame(class QWidget *)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QFocusFrameC1EP7QWidget
+    // invoke: void QFocusFrame(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN11QFocusFrameC2EP7QWidget(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QFocusFrame", "QFocusFrame", args)
+  }
+
+  return QFocusFrame{}
+}
+
+// metaObject()
+func (this *QFocusFrame) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK11QFocusFrame10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK11QFocusFrame10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFocusFrame", "metaObject", args)
   }
 
 }

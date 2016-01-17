@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,23 +28,22 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QStringList QFileSelector::allSelectors();
-extern void _ZNK13QFileSelector12allSelectorsEv(void* qthis);
-  // proto:  const QMetaObject * QFileSelector::metaObject();
-extern void _ZNK13QFileSelector10metaObjectEv(void* qthis);
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-extern void _ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0);
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
-extern void* dector_ZN13QFileSelectorC1EP7QObject(void* arg0);
-extern void _ZN13QFileSelectorC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
-extern void _ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, void* arg0);
-  // proto:  QString QFileSelector::select(const QString & filePath);
-extern void _ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0);
-  // proto:  void QFileSelector::~QFileSelector();
-extern void _ZN13QFileSelectorD0Ev(void* qthis);
+extern void _ZN13QFileSelectorC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  const QMetaObject * QFileSelector::metaObject();
+extern void _ZNK13QFileSelector10metaObjectEv(void* qthis); // 4
+  // proto:  QStringList QFileSelector::allSelectors();
+extern void _ZNK13QFileSelector12allSelectorsEv(void* qthis); // 4
   // proto:  QStringList QFileSelector::extraSelectors();
-extern void _ZNK13QFileSelector14extraSelectorsEv(void* qthis);
+extern void _ZNK13QFileSelector14extraSelectorsEv(void* qthis); // 4
+  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
+extern void _ZN13QFileSelector17setExtraSelectorsERK11QStringList(void* qthis, void* arg0); // 4
+  // proto:  void QFileSelector::~QFileSelector();
+extern void _ZN13QFileSelectorD2Ev(void* qthis); // 4
+  // proto:  QString QFileSelector::select(const QString & filePath);
+extern void _ZNK13QFileSelector6selectERK7QString(void* qthis, void* arg0); // 4
+  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
+extern void _ZNK13QFileSelector6selectERK4QUrl(void* qthis, void* arg0); // 4
 */
 import "C"
 // } // <= ext block end
@@ -67,27 +62,33 @@ type QFileSelector struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QStringList QFileSelector::allSelectors();
-func (this *QFileSelector) allSelectors(args ...interface{}) () {
-  // allSelectors()
+// QFileSelector(class QObject *)
+func NewQFileSelector(args ...interface{}) QFileSelector {
+  // QFileSelector(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QFileSelector12allSelectorsEv
-    // invoke: QStringList allSelectors()
-    C._ZNK13QFileSelector12allSelectorsEv(this.qclsinst)
+    // invoke: _ZN13QFileSelectorC1EP7QObject
+    // invoke: void QFileSelector(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN13QFileSelectorC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
+    qtrt.ErrorResolve("QFileSelector", "QFileSelector", args)
   }
 
+  return QFileSelector{}
 }
 
-  // proto:  const QMetaObject * QFileSelector::metaObject();
+// metaObject()
 func (this *QFileSelector) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -107,26 +108,47 @@ func (this *QFileSelector) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  QUrl QFileSelector::select(const QUrl & filePath);
-func (this *QFileSelector) select_(args ...interface{}) () {
+// allSelectors()
+func (this *QFileSelector) allSelectors(args ...interface{}) () {
+  // allSelectors()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZNK13QFileSelector12allSelectorsEv
+    // invoke: QStringList allSelectors()
+    C._ZNK13QFileSelector12allSelectorsEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFileSelector", "select", args)
+    qtrt.ErrorResolve("QFileSelector", "allSelectors", args)
   }
 
 }
 
-  // proto:  void QFileSelector::QFileSelector(QObject * parent);
-func NewQFileSelector(args ...interface{}) QFileSelector {
-  return QFileSelector{}
+// extraSelectors()
+func (this *QFileSelector) extraSelectors(args ...interface{}) () {
+  // extraSelectors()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QFileSelector14extraSelectorsEv
+    // invoke: QStringList extraSelectors()
+    C._ZNK13QFileSelector14extraSelectorsEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
+  }
+
 }
 
-  // proto:  void QFileSelector::setExtraSelectors(const QStringList & list);
+// setExtraSelectors(const class QStringList &)
 func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
   // setExtraSelectors(const class QStringList &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -149,23 +171,9 @@ func (this *QFileSelector) setExtraSelectors(args ...interface{}) () {
 
 }
 
-  // proto:  void QFileSelector::~QFileSelector();
+// ~QFileSelector()
 func (this *QFileSelector) FreeQFileSelector(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
-  }
-
-}
-
-  // proto:  QStringList QFileSelector::extraSelectors();
-func (this *QFileSelector) extraSelectors(args ...interface{}) () {
-  // extraSelectors()
+  // ~QFileSelector()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -174,11 +182,43 @@ func (this *QFileSelector) extraSelectors(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK13QFileSelector14extraSelectorsEv
-    // invoke: QStringList extraSelectors()
-    C._ZNK13QFileSelector14extraSelectorsEv(this.qclsinst)
+    // invoke: _ZN13QFileSelectorD0Ev
+    // invoke: void ~QFileSelector()
+    C._ZN13QFileSelectorD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QFileSelector", "extraSelectors", args)
+    qtrt.ErrorResolve("QFileSelector", "~QFileSelector", args)
+  }
+
+}
+
+// select(const class QString &)
+func (this *QFileSelector) select_(args ...interface{}) () {
+  // select(const class QString &)
+  // select(const class QUrl &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QString{}) // "const QString &"
+  vtys[1] = make(map[int32]reflect.Type)
+  vtys[1][0] = reflect.TypeOf(QUrl{}) // "const QUrl &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK13QFileSelector6selectERK7QString
+    // invoke: QString select(const class QString &)
+    var arg0 = args[0].(QString).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
+  case 1:
+    // invoke: _ZNK13QFileSelector6selectERK4QUrl
+    // invoke: QUrl select(const class QUrl &)
+    var arg0 = args[0].(QUrl).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QFileSelector", "select", args)
   }
 
 }

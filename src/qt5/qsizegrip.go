@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,20 +28,16 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
-extern void* dector_ZN9QSizeGripC1ERKS_(void* arg0);
-extern void _ZN9QSizeGripC1ERKS_(void* qthis, void* arg0);
   // proto:  void QSizeGrip::QSizeGrip(QWidget * parent);
-extern void* dector_ZN9QSizeGripC1EP7QWidget(void* arg0);
-extern void _ZN9QSizeGripC1EP7QWidget(void* qthis, void* arg0);
-  // proto:  void QSizeGrip::~QSizeGrip();
-extern void _ZN9QSizeGripD0Ev(void* qthis);
-  // proto:  void QSizeGrip::setVisible(bool );
-extern void _ZN9QSizeGrip10setVisibleEb(void* qthis, bool arg0);
-  // proto:  const QMetaObject * QSizeGrip::metaObject();
-extern void _ZNK9QSizeGrip10metaObjectEv(void* qthis);
+extern void _ZN9QSizeGripC2EP7QWidget(void* qthis, void* arg0); // 3
   // proto:  QSize QSizeGrip::sizeHint();
-extern void _ZNK9QSizeGrip8sizeHintEv(void* qthis);
+extern void _ZNK9QSizeGrip8sizeHintEv(void* qthis); // 4
+  // proto:  const QMetaObject * QSizeGrip::metaObject();
+extern void _ZNK9QSizeGrip10metaObjectEv(void* qthis); // 4
+  // proto:  void QSizeGrip::setVisible(bool );
+extern void _ZN9QSizeGrip10setVisibleEb(void* qthis, bool arg0); // 4
+  // proto:  void QSizeGrip::~QSizeGrip();
+extern void _ZN9QSizeGripD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -64,26 +56,73 @@ type QSizeGrip struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QSizeGrip::QSizeGrip(const QSizeGrip & );
+// QSizeGrip(class QWidget *)
 func NewQSizeGrip(args ...interface{}) QSizeGrip {
-  return QSizeGrip{}
-}
-
-  // proto:  void QSizeGrip::~QSizeGrip();
-func (this *QSizeGrip) FreeQSizeGrip(args ...interface{}) () {
+  // QSizeGrip(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QWidget{}) // "QWidget *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN9QSizeGripC1EP7QWidget
+    // invoke: void QSizeGrip(class QWidget *)
+    var arg0 = args[0].(QWidget).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN9QSizeGripC2EP7QWidget(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QSizeGrip", "~QSizeGrip", args)
+    qtrt.ErrorResolve("QSizeGrip", "QSizeGrip", args)
+  }
+
+  return QSizeGrip{}
+}
+
+// sizeHint()
+func (this *QSizeGrip) sizeHint(args ...interface{}) () {
+  // sizeHint()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QSizeGrip8sizeHintEv
+    // invoke: QSize sizeHint()
+    C._ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
   }
 
 }
 
-  // proto:  void QSizeGrip::setVisible(bool );
+// metaObject()
+func (this *QSizeGrip) metaObject(args ...interface{}) () {
+  // metaObject()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK9QSizeGrip10metaObjectEv
+    // invoke: const QMetaObject * metaObject()
+    C._ZNK9QSizeGrip10metaObjectEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QSizeGrip", "metaObject", args)
+  }
+
+}
+
+// setVisible(_Bool)
 func (this *QSizeGrip) setVisible(args ...interface{}) () {
   // setVisible(_Bool)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -106,9 +145,9 @@ func (this *QSizeGrip) setVisible(args ...interface{}) () {
 
 }
 
-  // proto:  const QMetaObject * QSizeGrip::metaObject();
-func (this *QSizeGrip) metaObject(args ...interface{}) () {
-  // metaObject()
+// ~QSizeGrip()
+func (this *QSizeGrip) FreeQSizeGrip(args ...interface{}) () {
+  // ~QSizeGrip()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -117,31 +156,11 @@ func (this *QSizeGrip) metaObject(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK9QSizeGrip10metaObjectEv
-    // invoke: const QMetaObject * metaObject()
-    C._ZNK9QSizeGrip10metaObjectEv(this.qclsinst)
+    // invoke: _ZN9QSizeGripD0Ev
+    // invoke: void ~QSizeGrip()
+    C._ZN9QSizeGripD2Ev(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QSizeGrip", "metaObject", args)
-  }
-
-}
-
-  // proto:  QSize QSizeGrip::sizeHint();
-func (this *QSizeGrip) sizeHint(args ...interface{}) () {
-  // sizeHint()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK9QSizeGrip8sizeHintEv
-    // invoke: QSize sizeHint()
-    C._ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
+    qtrt.ErrorResolve("QSizeGrip", "~QSizeGrip", args)
   }
 
 }

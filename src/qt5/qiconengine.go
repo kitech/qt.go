@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,18 +28,18 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  bool QIconEngine::read(QDataStream & in);
-extern void _ZN11QIconEngine4readER11QDataStream(void* qthis, void* arg0);
   // proto:  QString QIconEngine::iconName();
-extern void _ZNK11QIconEngine8iconNameEv(void* qthis);
+extern void _ZNK11QIconEngine8iconNameEv(void* qthis); // 4
   // proto:  bool QIconEngine::write(QDataStream & out);
-extern void _ZNK11QIconEngine5writeER11QDataStream(void* qthis, void* arg0);
+extern void _ZNK11QIconEngine5writeER11QDataStream(void* qthis, void* arg0); // 4
+  // proto:  bool QIconEngine::read(QDataStream & in);
+extern void _ZN11QIconEngine4readER11QDataStream(void* qthis, void* arg0); // 4
   // proto:  void QIconEngine::virtual_hook(int id, void * data);
-extern void _ZN11QIconEngine12virtual_hookEiPv(void* qthis, int32_t arg0, void* arg1);
+extern void _ZN11QIconEngine12virtual_hookEiPv(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  QString QIconEngine::key();
-extern void _ZNK11QIconEngine3keyEv(void* qthis);
+extern void _ZNK11QIconEngine3keyEv(void* qthis); // 4
   // proto:  void QIconEngine::~QIconEngine();
-extern void _ZN11QIconEngineD0Ev(void* qthis);
+extern void _ZN11QIconEngineD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -62,30 +58,7 @@ type QIconEngine struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  bool QIconEngine::read(QDataStream & in);
-func (this *QIconEngine) read(args ...interface{}) () {
-  // read(class QDataStream &)
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = reflect.TypeOf(QDataStream{}) // "QDataStream &"
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN11QIconEngine4readER11QDataStream
-    // invoke: bool read(class QDataStream &)
-    var arg0 = args[0].(QDataStream).qclsinst
-    if false {fmt.Println(arg0)}
-    C._ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
-  default:
-    qtrt.ErrorResolve("QIconEngine", "read", args)
-  }
-
-}
-
-  // proto:  QString QIconEngine::iconName();
+// iconName()
 func (this *QIconEngine) iconName(args ...interface{}) () {
   // iconName()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -105,7 +78,7 @@ func (this *QIconEngine) iconName(args ...interface{}) () {
 
 }
 
-  // proto:  bool QIconEngine::write(QDataStream & out);
+// write(class QDataStream &)
 func (this *QIconEngine) write(args ...interface{}) () {
   // write(class QDataStream &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -128,7 +101,30 @@ func (this *QIconEngine) write(args ...interface{}) () {
 
 }
 
-  // proto:  void QIconEngine::virtual_hook(int id, void * data);
+// read(class QDataStream &)
+func (this *QIconEngine) read(args ...interface{}) () {
+  // read(class QDataStream &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QDataStream{}) // "QDataStream &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN11QIconEngine4readER11QDataStream
+    // invoke: bool read(class QDataStream &)
+    var arg0 = args[0].(QDataStream).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QIconEngine", "read", args)
+  }
+
+}
+
+// virtual_hook(int, void *)
 func (this *QIconEngine) virtual_hook(args ...interface{}) () {
   // virtual_hook(int, void *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,7 +150,7 @@ func (this *QIconEngine) virtual_hook(args ...interface{}) () {
 
 }
 
-  // proto:  QString QIconEngine::key();
+// key()
 func (this *QIconEngine) key(args ...interface{}) () {
   // key()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -174,14 +170,20 @@ func (this *QIconEngine) key(args ...interface{}) () {
 
 }
 
-  // proto:  void QIconEngine::~QIconEngine();
+// ~QIconEngine()
 func (this *QIconEngine) FreeQIconEngine(args ...interface{}) () {
+  // ~QIconEngine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN11QIconEngineD0Ev
+    // invoke: void ~QIconEngine()
+    C._ZN11QIconEngineD2Ev(this.qclsinst)
   default:
     qtrt.ErrorResolve("QIconEngine", "~QIconEngine", args)
   }

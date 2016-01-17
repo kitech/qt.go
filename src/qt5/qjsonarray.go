@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,41 +28,48 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  QJsonValue QJsonArray::first();
-extern void _ZNK10QJsonArray5firstEv(void* qthis);
-  // proto:  bool QJsonArray::empty();
-extern void demth_ZNK10QJsonArray5emptyEv(void* qthis);
-  // proto:  QJsonValue QJsonArray::takeAt(int i);
-extern void _ZN10QJsonArray6takeAtEi(void* qthis, int32_t arg0);
-  // proto:  void QJsonArray::removeLast();
-extern void demth_ZN10QJsonArray10removeLastEv(void* qthis);
-  // proto:  void QJsonArray::pop_front();
-extern void demth_ZN10QJsonArray9pop_frontEv(void* qthis);
-  // proto:  QVariantList QJsonArray::toVariantList();
-extern void _ZNK10QJsonArray13toVariantListEv(void* qthis);
-  // proto:  void QJsonArray::~QJsonArray();
-extern void _ZN10QJsonArrayD0Ev(void* qthis);
-  // proto:  int QJsonArray::size();
-extern void _ZNK10QJsonArray4sizeEv(void* qthis);
-  // proto:  int QJsonArray::count();
-extern void demth_ZNK10QJsonArray5countEv(void* qthis);
   // proto:  void QJsonArray::QJsonArray();
-extern void* dector_ZN10QJsonArrayC1Ev();
-extern void _ZN10QJsonArrayC1Ev(void* qthis);
-  // proto:  QJsonValue QJsonArray::at(int i);
-extern void _ZNK10QJsonArray2atEi(void* qthis, int32_t arg0);
-  // proto:  void QJsonArray::pop_back();
-extern void demth_ZN10QJsonArray8pop_backEv(void* qthis);
-  // proto:  bool QJsonArray::isEmpty();
-extern void _ZNK10QJsonArray7isEmptyEv(void* qthis);
-  // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
-extern void _ZN10QJsonArray14fromStringListERK11QStringList(void* arg0);
-  // proto:  QJsonValue QJsonArray::last();
-extern void _ZNK10QJsonArray4lastEv(void* qthis);
-  // proto:  void QJsonArray::removeFirst();
-extern void demth_ZN10QJsonArray11removeFirstEv(void* qthis);
+extern void _ZN10QJsonArrayC2Ev(void* qthis); // 3
+  // proto:  QJsonArray::const_iterator QJsonArray::constBegin();
+extern void _ZNK10QJsonArray10constBeginEv(void* qthis); // 2
   // proto:  void QJsonArray::removeAt(int i);
-extern void _ZN10QJsonArray8removeAtEi(void* qthis, int32_t arg0);
+extern void _ZN10QJsonArray8removeAtEi(void* qthis, int32_t arg0); // 4
+  // proto:  QJsonValue QJsonArray::at(int i);
+extern void _ZNK10QJsonArray2atEi(void* qthis, int32_t arg0); // 4
+  // proto:  int QJsonArray::size();
+extern void _ZNK10QJsonArray4sizeEv(void* qthis); // 4
+  // proto:  QJsonArray::iterator QJsonArray::end();
+extern void _ZN10QJsonArray3endEv(void* qthis); // 2
+  // proto:  void QJsonArray::pop_front();
+extern void _ZN10QJsonArray9pop_frontEv(void* qthis); // 2
+  // proto:  bool QJsonArray::isEmpty();
+extern void _ZNK10QJsonArray7isEmptyEv(void* qthis); // 4
+  // proto:  void QJsonArray::pop_back();
+extern void _ZN10QJsonArray8pop_backEv(void* qthis); // 2
+  // proto:  bool QJsonArray::empty();
+extern void _ZNK10QJsonArray5emptyEv(void* qthis); // 2
+  // proto:  QJsonArray::iterator QJsonArray::begin();
+extern void _ZN10QJsonArray5beginEv(void* qthis); // 2
+  // proto:  QJsonValue QJsonArray::takeAt(int i);
+extern void _ZN10QJsonArray6takeAtEi(void* qthis, int32_t arg0); // 4
+  // proto:  void QJsonArray::removeFirst();
+extern void _ZN10QJsonArray11removeFirstEv(void* qthis); // 2
+  // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
+extern void _ZN10QJsonArray14fromStringListERK11QStringList(void* arg0); // 4
+  // proto:  int QJsonArray::count();
+extern void _ZNK10QJsonArray5countEv(void* qthis); // 2
+  // proto:  QJsonValue QJsonArray::last();
+extern void _ZNK10QJsonArray4lastEv(void* qthis); // 4
+  // proto:  QVariantList QJsonArray::toVariantList();
+extern void _ZNK10QJsonArray13toVariantListEv(void* qthis); // 4
+  // proto:  void QJsonArray::removeLast();
+extern void _ZN10QJsonArray10removeLastEv(void* qthis); // 2
+  // proto:  QJsonArray::const_iterator QJsonArray::constEnd();
+extern void _ZNK10QJsonArray8constEndEv(void* qthis); // 2
+  // proto:  void QJsonArray::~QJsonArray();
+extern void _ZN10QJsonArrayD2Ev(void* qthis); // 4
+  // proto:  QJsonValue QJsonArray::first();
+extern void _ZNK10QJsonArray5firstEv(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -85,9 +88,9 @@ type QJsonArray struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  QJsonValue QJsonArray::first();
-func (this *QJsonArray) first(args ...interface{}) () {
-  // first()
+// QJsonArray()
+func NewQJsonArray(args ...interface{}) QJsonArray {
+  // QJsonArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -96,18 +99,21 @@ func (this *QJsonArray) first(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QJsonArray5firstEv
-    // invoke: QJsonValue first()
-    C._ZNK10QJsonArray5firstEv(this.qclsinst)
+    // invoke: _ZN10QJsonArrayC1Ev
+    // invoke: void QJsonArray()
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QJsonArrayC2Ev(qthis)
   default:
-    qtrt.ErrorResolve("QJsonArray", "first", args)
+    qtrt.ErrorResolve("QJsonArray", "QJsonArray", args)
   }
 
+  return QJsonArray{}
 }
 
-  // proto:  bool QJsonArray::empty();
-func (this *QJsonArray) empty(args ...interface{}) () {
-  // empty()
+// constBegin()
+func (this *QJsonArray) constBegin(args ...interface{}) () {
+  // constBegin()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -116,18 +122,18 @@ func (this *QJsonArray) empty(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZNK10QJsonArray5emptyEv
-    // invoke: bool empty()
-    C.demth_ZNK10QJsonArray5emptyEv(this.qclsinst)
+    // invoke: _ZNK10QJsonArray10constBeginEv
+    // invoke: QJsonArray::const_iterator constBegin()
+    C._ZNK10QJsonArray10constBeginEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonArray", "empty", args)
+    qtrt.ErrorResolve("QJsonArray", "constBegin", args)
   }
 
 }
 
-  // proto:  QJsonValue QJsonArray::takeAt(int i);
-func (this *QJsonArray) takeAt(args ...interface{}) () {
-  // takeAt(int)
+// removeAt(int)
+func (this *QJsonArray) removeAt(args ...interface{}) () {
+  // removeAt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -137,137 +143,18 @@ func (this *QJsonArray) takeAt(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QJsonArray6takeAtEi
-    // invoke: QJsonValue takeAt(int)
+    // invoke: _ZN10QJsonArray8removeAtEi
+    // invoke: void removeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C._ZN10QJsonArray6takeAtEi(this.qclsinst, arg0)
+    C._ZN10QJsonArray8removeAtEi(this.qclsinst, arg0)
   default:
-    qtrt.ErrorResolve("QJsonArray", "takeAt", args)
+    qtrt.ErrorResolve("QJsonArray", "removeAt", args)
   }
 
 }
 
-  // proto:  void QJsonArray::removeLast();
-func (this *QJsonArray) removeLast(args ...interface{}) () {
-  // removeLast()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QJsonArray10removeLastEv
-    // invoke: void removeLast()
-    C.demth_ZN10QJsonArray10removeLastEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonArray", "removeLast", args)
-  }
-
-}
-
-  // proto:  void QJsonArray::pop_front();
-func (this *QJsonArray) pop_front(args ...interface{}) () {
-  // pop_front()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZN10QJsonArray9pop_frontEv
-    // invoke: void pop_front()
-    C.demth_ZN10QJsonArray9pop_frontEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonArray", "pop_front", args)
-  }
-
-}
-
-  // proto:  QVariantList QJsonArray::toVariantList();
-func (this *QJsonArray) toVariantList(args ...interface{}) () {
-  // toVariantList()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonArray13toVariantListEv
-    // invoke: QVariantList toVariantList()
-    C._ZNK10QJsonArray13toVariantListEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonArray", "toVariantList", args)
-  }
-
-}
-
-  // proto:  void QJsonArray::~QJsonArray();
-func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QJsonArray", "~QJsonArray", args)
-  }
-
-}
-
-  // proto:  int QJsonArray::size();
-func (this *QJsonArray) size(args ...interface{}) () {
-  // size()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonArray4sizeEv
-    // invoke: int size()
-    C._ZNK10QJsonArray4sizeEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonArray", "size", args)
-  }
-
-}
-
-  // proto:  int QJsonArray::count();
-func (this *QJsonArray) count(args ...interface{}) () {
-  // count()
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-  vtys[0] = make(map[int32]reflect.Type)
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  case 0:
-    // invoke: _ZNK10QJsonArray5countEv
-    // invoke: int count()
-    C.demth_ZNK10QJsonArray5countEv(this.qclsinst)
-  default:
-    qtrt.ErrorResolve("QJsonArray", "count", args)
-  }
-
-}
-
-  // proto:  void QJsonArray::QJsonArray();
-func NewQJsonArray(args ...interface{}) QJsonArray {
-  return QJsonArray{}
-}
-
-  // proto:  QJsonValue QJsonArray::at(int i);
+// at(int)
 func (this *QJsonArray) at(args ...interface{}) () {
   // at(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -290,9 +177,9 @@ func (this *QJsonArray) at(args ...interface{}) () {
 
 }
 
-  // proto:  void QJsonArray::pop_back();
-func (this *QJsonArray) pop_back(args ...interface{}) () {
-  // pop_back()
+// size()
+func (this *QJsonArray) size(args ...interface{}) () {
+  // size()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -301,16 +188,56 @@ func (this *QJsonArray) pop_back(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QJsonArray8pop_backEv
-    // invoke: void pop_back()
-    C.demth_ZN10QJsonArray8pop_backEv(this.qclsinst)
+    // invoke: _ZNK10QJsonArray4sizeEv
+    // invoke: int size()
+    C._ZNK10QJsonArray4sizeEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonArray", "pop_back", args)
+    qtrt.ErrorResolve("QJsonArray", "size", args)
   }
 
 }
 
-  // proto:  bool QJsonArray::isEmpty();
+// end()
+func (this *QJsonArray) end(args ...interface{}) () {
+  // end()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray3endEv
+    // invoke: QJsonArray::iterator end()
+    C._ZN10QJsonArray3endEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "end", args)
+  }
+
+}
+
+// pop_front()
+func (this *QJsonArray) pop_front(args ...interface{}) () {
+  // pop_front()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray9pop_frontEv
+    // invoke: void pop_front()
+    C._ZN10QJsonArray9pop_frontEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "pop_front", args)
+  }
+
+}
+
+// isEmpty()
 func (this *QJsonArray) isEmpty(args ...interface{}) () {
   // isEmpty()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -330,21 +257,153 @@ func (this *QJsonArray) isEmpty(args ...interface{}) () {
 
 }
 
-  // proto: static QJsonArray QJsonArray::fromStringList(const QStringList & list);
-func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
+// pop_back()
+func (this *QJsonArray) pop_back(args ...interface{}) () {
+  // pop_back()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray8pop_backEv
+    // invoke: void pop_back()
+    C._ZN10QJsonArray8pop_backEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "pop_back", args)
+  }
+
+}
+
+// empty()
+func (this *QJsonArray) empty(args ...interface{}) () {
+  // empty()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonArray5emptyEv
+    // invoke: bool empty()
+    C._ZNK10QJsonArray5emptyEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "empty", args)
+  }
+
+}
+
+// begin()
+func (this *QJsonArray) begin(args ...interface{}) () {
+  // begin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray5beginEv
+    // invoke: QJsonArray::iterator begin()
+    C._ZN10QJsonArray5beginEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "begin", args)
+  }
+
+}
+
+// takeAt(int)
+func (this *QJsonArray) takeAt(args ...interface{}) () {
+  // takeAt(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray6takeAtEi
+    // invoke: QJsonValue takeAt(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    C._ZN10QJsonArray6takeAtEi(this.qclsinst, arg0)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "takeAt", args)
+  }
+
+}
+
+// removeFirst()
+func (this *QJsonArray) removeFirst(args ...interface{}) () {
+  // removeFirst()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray11removeFirstEv
+    // invoke: void removeFirst()
+    C._ZN10QJsonArray11removeFirstEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "removeFirst", args)
+  }
+
+}
+
+// fromStringList(const class QStringList &)
+func (this *QJsonArray) fromStringList_s(args ...interface{}) () {
+  // fromStringList(const class QStringList &)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QStringList{}) // "const QStringList &"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArray14fromStringListERK11QStringList
+    // invoke: QJsonArray fromStringList(const class QStringList &)
+    var arg0 = args[0].(QStringList).qclsinst
+    if false {fmt.Println(arg0)}
+    C._ZN10QJsonArray14fromStringListERK11QStringList(arg0)
   default:
     qtrt.ErrorResolve("QJsonArray", "fromStringList", args)
   }
 
 }
 
-  // proto:  QJsonValue QJsonArray::last();
+// count()
+func (this *QJsonArray) count(args ...interface{}) () {
+  // count()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonArray5countEv
+    // invoke: int count()
+    C._ZNK10QJsonArray5countEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "count", args)
+  }
+
+}
+
+// last()
 func (this *QJsonArray) last(args ...interface{}) () {
   // last()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -364,9 +423,9 @@ func (this *QJsonArray) last(args ...interface{}) () {
 
 }
 
-  // proto:  void QJsonArray::removeFirst();
-func (this *QJsonArray) removeFirst(args ...interface{}) () {
-  // removeFirst()
+// toVariantList()
+func (this *QJsonArray) toVariantList(args ...interface{}) () {
+  // toVariantList()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
@@ -375,34 +434,91 @@ func (this *QJsonArray) removeFirst(args ...interface{}) () {
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QJsonArray11removeFirstEv
-    // invoke: void removeFirst()
-    C.demth_ZN10QJsonArray11removeFirstEv(this.qclsinst)
+    // invoke: _ZNK10QJsonArray13toVariantListEv
+    // invoke: QVariantList toVariantList()
+    C._ZNK10QJsonArray13toVariantListEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonArray", "removeFirst", args)
+    qtrt.ErrorResolve("QJsonArray", "toVariantList", args)
   }
 
 }
 
-  // proto:  void QJsonArray::removeAt(int i);
-func (this *QJsonArray) removeAt(args ...interface{}) () {
-  // removeAt(int)
+// removeLast()
+func (this *QJsonArray) removeLast(args ...interface{}) () {
+  // removeLast()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
   vtys[0] = make(map[int32]reflect.Type)
-  vtys[0][0] = qtrt.Int32Ty(false) // "int"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
   case 0:
-    // invoke: _ZN10QJsonArray8removeAtEi
-    // invoke: void removeAt(int)
-    var arg0 = C.int32_t(args[0].(int32))
-    if false {fmt.Println(arg0)}
-    C._ZN10QJsonArray8removeAtEi(this.qclsinst, arg0)
+    // invoke: _ZN10QJsonArray10removeLastEv
+    // invoke: void removeLast()
+    C._ZN10QJsonArray10removeLastEv(this.qclsinst)
   default:
-    qtrt.ErrorResolve("QJsonArray", "removeAt", args)
+    qtrt.ErrorResolve("QJsonArray", "removeLast", args)
+  }
+
+}
+
+// constEnd()
+func (this *QJsonArray) constEnd(args ...interface{}) () {
+  // constEnd()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonArray8constEndEv
+    // invoke: QJsonArray::const_iterator constEnd()
+    C._ZNK10QJsonArray8constEndEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "constEnd", args)
+  }
+
+}
+
+// ~QJsonArray()
+func (this *QJsonArray) FreeQJsonArray(args ...interface{}) () {
+  // ~QJsonArray()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QJsonArrayD0Ev
+    // invoke: void ~QJsonArray()
+    C._ZN10QJsonArrayD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "~QJsonArray", args)
+  }
+
+}
+
+// first()
+func (this *QJsonArray) first(args ...interface{}) () {
+  // first()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZNK10QJsonArray5firstEv
+    // invoke: QJsonValue first()
+    C._ZNK10QJsonArray5firstEv(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QJsonArray", "first", args)
   }
 
 }

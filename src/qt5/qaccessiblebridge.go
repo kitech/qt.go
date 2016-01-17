@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:14 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -32,15 +28,12 @@ import "qtrt"
 #include <stdint.h>
 #include <wchar.h>
 #include <uchar.h>
-  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-extern void* dector_ZN23QAccessibleBridgePluginC1EP7QObject(void* arg0);
-extern void _ZN23QAccessibleBridgePluginC1EP7QObject(void* qthis, void* arg0);
-  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
-extern void _ZN23QAccessibleBridgePluginD0Ev(void* qthis);
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
-extern void _ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis);
-  // proto:  void QAccessibleBridge::~QAccessibleBridge();
-extern void _ZN17QAccessibleBridgeD0Ev(void* qthis);
+extern void _ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis); // 4
+  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
+extern void _ZN23QAccessibleBridgePluginC2EP7QObject(void* qthis, void* arg0); // 3
+  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
+extern void _ZN23QAccessibleBridgePluginD2Ev(void* qthis); // 4
 */
 import "C"
 // } // <= ext block end
@@ -65,26 +58,7 @@ type QAccessibleBridge struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
-  return QAccessibleBridgePlugin{}
-}
-
-  // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
-func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interface{}) () {
-  var vtys = make(map[int32]map[int32]reflect.Type)
-  if false {fmt.Println(vtys)}
-
-  var matched_index = qtrt.SymbolResolve(args, vtys)
-  if false {fmt.Println(matched_index)}
-  switch matched_index {
-  default:
-    qtrt.ErrorResolve("QAccessibleBridgePlugin", "~QAccessibleBridgePlugin", args)
-  }
-
-}
-
-  // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
+// metaObject()
 func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
   // metaObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -104,16 +78,48 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
 
 }
 
-  // proto:  void QAccessibleBridge::~QAccessibleBridge();
-func (this *QAccessibleBridge) FreeQAccessibleBridge(args ...interface{}) () {
+// QAccessibleBridgePlugin(class QObject *)
+func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
+  // QAccessibleBridgePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = reflect.TypeOf(QObject{}) // "QObject *"
 
   var matched_index = qtrt.SymbolResolve(args, vtys)
   if false {fmt.Println(matched_index)}
   switch matched_index {
+  case 0:
+    // invoke: _ZN23QAccessibleBridgePluginC1EP7QObject
+    // invoke: void QAccessibleBridgePlugin(class QObject *)
+    var arg0 = args[0].(QObject).qclsinst
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN23QAccessibleBridgePluginC2EP7QObject(qthis, arg0)
   default:
-    qtrt.ErrorResolve("QAccessibleBridge", "~QAccessibleBridge", args)
+    qtrt.ErrorResolve("QAccessibleBridgePlugin", "QAccessibleBridgePlugin", args)
+  }
+
+  return QAccessibleBridgePlugin{}
+}
+
+// ~QAccessibleBridgePlugin()
+func (this *QAccessibleBridgePlugin) FreeQAccessibleBridgePlugin(args ...interface{}) () {
+  // ~QAccessibleBridgePlugin()
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN23QAccessibleBridgePluginD0Ev
+    // invoke: void ~QAccessibleBridgePlugin()
+    C._ZN23QAccessibleBridgePluginD2Ev(this.qclsinst)
+  default:
+    qtrt.ErrorResolve("QAccessibleBridgePlugin", "~QAccessibleBridgePlugin", args)
   }
 
 }

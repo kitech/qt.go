@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan  3 20:07:07 2016
+// created: Sun Jan 17 14:31:13 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -21,10 +21,6 @@ import "qtrt"
 // <= use block end
 
 // ext block begin =>
-// #[link(name = "Qt5Core")]
-// #[link(name = "Qt5Gui")]
-// #[link(name = "Qt5Widgets")]
-// #[link(name = "QtInline")]
 
 /*
 #include <stdlib.h>
@@ -33,8 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAtomicInt::QAtomicInt(int value);
-extern void* dector_ZN10QAtomicIntC1Ei(int32_t arg0);
-extern void _ZN10QAtomicIntC1Ei(void* qthis, int32_t arg0);
+extern void _ZN10QAtomicIntC2Ei(void* qthis, int32_t arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -53,8 +48,29 @@ type QAtomicInt struct {
   qclsinst unsafe.Pointer /* *C.void */;
 }
 
-  // proto:  void QAtomicInt::QAtomicInt(int value);
+// QAtomicInt(int)
 func NewQAtomicInt(args ...interface{}) QAtomicInt {
+  // QAtomicInt(int)
+  var vtys = make(map[int32]map[int32]reflect.Type)
+  if false {fmt.Println(vtys)}
+  vtys[0] = make(map[int32]reflect.Type)
+  vtys[0][0] = qtrt.Int32Ty(false) // "int"
+
+  var matched_index = qtrt.SymbolResolve(args, vtys)
+  if false {fmt.Println(matched_index)}
+  switch matched_index {
+  case 0:
+    // invoke: _ZN10QAtomicIntC1Ei
+    // invoke: void QAtomicInt(int)
+    var arg0 = C.int32_t(args[0].(int32))
+    if false {fmt.Println(arg0)}
+    var qthis = unsafe.Pointer(C.malloc(5))
+    if false {reflect.TypeOf(qthis)}
+    C._ZN10QAtomicIntC2Ei(qthis, arg0)
+  default:
+    qtrt.ErrorResolve("QAtomicInt", "QAtomicInt", args)
+  }
+
   return QAtomicInt{}
 }
 
