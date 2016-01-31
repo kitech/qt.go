@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qaccessible.h
 // dst-file: /src/gui/qaccessible.go
 //
@@ -139,31 +139,31 @@ extern void C_ZNK26QAccessibleTextUpdateEvent14changePositionEv(void* qthis); //
   // proto:  QString QAccessibleTextUpdateEvent::textRemoved();
 extern void C_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(void* qthis); // 2
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QAccessibleInterface * iface, int position, const QString & oldText, const QString & text);
-extern void C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(void* qthis, void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
+extern void* C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
   // proto:  void QAccessibleTextUpdateEvent::QAccessibleTextUpdateEvent(QObject * obj, int position, const QString & oldText, const QString & text);
-extern void C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(void* qthis, void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
+extern void* C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(void* arg0, int32_t arg1, void* arg2, void* arg3); // 1
   // proto:  QAccessible::State QAccessibleStateChangeEvent::changedStates();
 extern void C_ZNK27QAccessibleStateChangeEvent13changedStatesEv(void* qthis); // 2
   // proto:  QString QAccessibleTextInsertEvent::textInserted();
 extern void C_ZNK26QAccessibleTextInsertEvent12textInsertedEv(void* qthis); // 2
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QAccessibleInterface * iface, int position, const QString & text);
-extern void C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2); // 1
+extern void* C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  void QAccessibleTextInsertEvent::QAccessibleTextInsertEvent(QObject * obj, int position, const QString & text);
-extern void C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2); // 1
+extern void* C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  int QAccessibleTextInsertEvent::changePosition();
 extern void C_ZNK26QAccessibleTextInsertEvent14changePositionEv(void* qthis); // 2
   // proto:  QString QAccessibleTextRemoveEvent::textRemoved();
 extern void C_ZNK26QAccessibleTextRemoveEvent11textRemovedEv(void* qthis); // 2
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QObject * obj, int position, const QString & text);
-extern void C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2); // 1
+extern void* C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  void QAccessibleTextRemoveEvent::QAccessibleTextRemoveEvent(QAccessibleInterface * iface, int position, const QString & text);
-extern void C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(void* qthis, void* arg0, int32_t arg1, void* arg2); // 1
+extern void* C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(void* arg0, int32_t arg1, void* arg2); // 1
   // proto:  int QAccessibleTextRemoveEvent::changePosition();
 extern void C_ZNK26QAccessibleTextRemoveEvent14changePositionEv(void* qthis); // 2
   // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QAccessibleInterface * iface, int start, int end);
-extern void C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 1
+extern void* C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(void* arg0, int32_t arg1, int32_t arg2); // 1
   // proto:  void QAccessibleTextSelectionEvent::QAccessibleTextSelectionEvent(QObject * obj, int start, int end);
-extern void C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 1
+extern void* C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(void* arg0, int32_t arg1, int32_t arg2); // 1
   // proto:  int QAccessibleTextSelectionEvent::selectionStart();
 extern void C_ZNK29QAccessibleTextSelectionEvent14selectionStartEv(void* qthis); // 2
   // proto:  int QAccessibleTextSelectionEvent::selectionEnd();
@@ -173,15 +173,15 @@ extern void C_ZN29QAccessibleTextSelectionEvent12setSelectionEii(void* qthis, in
   // proto:  int QAccessibleTextCursorEvent::cursorPosition();
 extern void C_ZNK26QAccessibleTextCursorEvent14cursorPositionEv(void* qthis); // 2
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QAccessibleInterface * iface, int cursorPos);
-extern void C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(void* qthis, void* arg0, int32_t arg1); // 1
+extern void* C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(void* arg0, int32_t arg1); // 1
   // proto:  void QAccessibleTextCursorEvent::QAccessibleTextCursorEvent(QObject * obj, int cursorPos);
-extern void C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(void* qthis, void* arg0, int32_t arg1); // 1
+extern void* C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(void* arg0, int32_t arg1); // 1
   // proto:  void QAccessibleTextCursorEvent::setCursorPosition(int position);
 extern void C_ZN26QAccessibleTextCursorEvent17setCursorPositionEi(void* qthis, int32_t arg0); // 2
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QObject * obj, const QVariant & val);
-extern void C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(void* arg0, void* arg1); // 1
   // proto:  void QAccessibleValueChangeEvent::QAccessibleValueChangeEvent(QAccessibleInterface * iface, const QVariant & val);
-extern void C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(void* arg0, void* arg1); // 1
   // proto:  void QAccessibleValueChangeEvent::setValue(const QVariant & val);
 extern void C_ZN27QAccessibleValueChangeEvent8setValueERK8QVariant(void* qthis, void* arg0); // 2
   // proto:  QVariant QAccessibleValueChangeEvent::value();
@@ -322,7 +322,8 @@ func (this *QAccessible) accessibleInterface_s(args ...interface{}) () {
     // invoke: QAccessibleInterface * accessibleInterface(Id)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QAccessible19accessibleInterfaceEj(arg0)
+    var ret = C.C_ZN11QAccessible19accessibleInterfaceEj(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessible", "accessibleInterface", args)
   }
@@ -391,7 +392,8 @@ func (this *QAccessible) queryAccessibleInterface_s(args ...interface{}) () {
     // invoke: QAccessibleInterface * queryAccessibleInterface(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0)
+    var ret = C.C_ZN11QAccessible24queryAccessibleInterfaceEP7QObject(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessible", "queryAccessibleInterface", args)
   }
@@ -414,7 +416,8 @@ func (this *QAccessible) uniqueId_s(args ...interface{}) () {
     // invoke: Id uniqueId(class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0)
+    var ret = C.C_ZN11QAccessible8uniqueIdEP20QAccessibleInterface(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessible", "uniqueId", args)
   }
@@ -500,7 +503,8 @@ func (this *QAccessible) isActive_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QAccessible8isActiveEv
     // invoke: bool isActive()
-    C.C_ZN11QAccessible8isActiveEv()
+    var ret = C.C_ZN11QAccessible8isActiveEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessible", "isActive", args)
   }
@@ -523,7 +527,8 @@ func (this *QAccessible) registerAccessibleInterface_s(args ...interface{}) () {
     // invoke: Id registerAccessibleInterface(class QAccessibleInterface *)
     var arg0 = args[0].(QAccessibleInterface).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0)
+    var ret = C.C_ZN11QAccessible27registerAccessibleInterfaceEP20QAccessibleInterface(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessible", "registerAccessibleInterface", args)
   }
@@ -609,7 +614,8 @@ func (this *QAccessibleTableModelChangeEvent) lastColumn(args ...interface{}) ()
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent10lastColumnEv
     // invoke: int lastColumn()
-    C.C_ZNK32QAccessibleTableModelChangeEvent10lastColumnEv(this.qclsinst)
+    var ret = C.C_ZNK32QAccessibleTableModelChangeEvent10lastColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastColumn", args)
   }
@@ -629,7 +635,8 @@ func (this *QAccessibleTableModelChangeEvent) firstColumn(args ...interface{}) (
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent11firstColumnEv
     // invoke: int firstColumn()
-    C.C_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv(this.qclsinst)
+    var ret = C.C_ZNK32QAccessibleTableModelChangeEvent11firstColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstColumn", args)
   }
@@ -672,7 +679,8 @@ func (this *QAccessibleTableModelChangeEvent) firstRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent8firstRowEv
     // invoke: int firstRow()
-    C.C_ZNK32QAccessibleTableModelChangeEvent8firstRowEv(this.qclsinst)
+    var ret = C.C_ZNK32QAccessibleTableModelChangeEvent8firstRowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "firstRow", args)
   }
@@ -715,7 +723,8 @@ func (this *QAccessibleTableModelChangeEvent) lastRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK32QAccessibleTableModelChangeEvent7lastRowEv
     // invoke: int lastRow()
-    C.C_ZNK32QAccessibleTableModelChangeEvent7lastRowEv(this.qclsinst)
+    var ret = C.C_ZNK32QAccessibleTableModelChangeEvent7lastRowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTableModelChangeEvent", "lastRow", args)
   }
@@ -735,7 +744,8 @@ func (this *QAccessibleEvent) accessibleInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAccessibleEvent19accessibleInterfaceEv
     // invoke: QAccessibleInterface * accessibleInterface()
-    C.C_ZNK16QAccessibleEvent19accessibleInterfaceEv(this.qclsinst)
+    var ret = C.C_ZNK16QAccessibleEvent19accessibleInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "accessibleInterface", args)
   }
@@ -755,7 +765,8 @@ func (this *QAccessibleEvent) object(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAccessibleEvent6objectEv
     // invoke: QObject * object()
-    C.C_ZNK16QAccessibleEvent6objectEv(this.qclsinst)
+    var ret = C.C_ZNK16QAccessibleEvent6objectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "object", args)
   }
@@ -795,7 +806,8 @@ func (this *QAccessibleEvent) child(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QAccessibleEvent5childEv
     // invoke: int child()
-    C.C_ZNK16QAccessibleEvent5childEv(this.qclsinst)
+    var ret = C.C_ZNK16QAccessibleEvent5childEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleEvent", "child", args)
   }
@@ -878,7 +890,8 @@ func (this *QAccessibleActionInterface) increaseAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14increaseActionEv
     // invoke: const QString & increaseAction()
-    C.C_ZN26QAccessibleActionInterface14increaseActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14increaseActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "increaseAction", args)
   }
@@ -898,7 +911,8 @@ func (this *QAccessibleActionInterface) pressAction_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QAccessibleActionInterface11pressActionEv
     // invoke: const QString & pressAction()
-    C.C_ZN26QAccessibleActionInterface11pressActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface11pressActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "pressAction", args)
   }
@@ -918,7 +932,8 @@ func (this *QAccessibleActionInterface) previousPageAction_s(args ...interface{}
   case 0:
     // invoke: _ZN26QAccessibleActionInterface18previousPageActionEv
     // invoke: QString previousPageAction()
-    C.C_ZN26QAccessibleActionInterface18previousPageActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface18previousPageActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "previousPageAction", args)
   }
@@ -941,7 +956,8 @@ func (this *QAccessibleActionInterface) localizedActionName(args ...interface{})
     // invoke: QString localizedActionName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK26QAccessibleActionInterface19localizedActionNameERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK26QAccessibleActionInterface19localizedActionNameERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionName", args)
   }
@@ -961,7 +977,8 @@ func (this *QAccessibleActionInterface) scrollRightAction_s(args ...interface{})
   case 0:
     // invoke: _ZN26QAccessibleActionInterface17scrollRightActionEv
     // invoke: QString scrollRightAction()
-    C.C_ZN26QAccessibleActionInterface17scrollRightActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface17scrollRightActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollRightAction", args)
   }
@@ -981,7 +998,8 @@ func (this *QAccessibleActionInterface) decreaseAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14decreaseActionEv
     // invoke: const QString & decreaseAction()
-    C.C_ZN26QAccessibleActionInterface14decreaseActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14decreaseActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "decreaseAction", args)
   }
@@ -1001,7 +1019,8 @@ func (this *QAccessibleActionInterface) showMenuAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14showMenuActionEv
     // invoke: const QString & showMenuAction()
-    C.C_ZN26QAccessibleActionInterface14showMenuActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14showMenuActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "showMenuAction", args)
   }
@@ -1021,7 +1040,8 @@ func (this *QAccessibleActionInterface) toggleAction_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN26QAccessibleActionInterface12toggleActionEv
     // invoke: const QString & toggleAction()
-    C.C_ZN26QAccessibleActionInterface12toggleActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface12toggleActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "toggleAction", args)
   }
@@ -1041,7 +1061,8 @@ func (this *QAccessibleActionInterface) setFocusAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14setFocusActionEv
     // invoke: const QString & setFocusAction()
-    C.C_ZN26QAccessibleActionInterface14setFocusActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14setFocusActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "setFocusAction", args)
   }
@@ -1061,7 +1082,8 @@ func (this *QAccessibleActionInterface) scrollLeftAction_s(args ...interface{}) 
   case 0:
     // invoke: _ZN26QAccessibleActionInterface16scrollLeftActionEv
     // invoke: QString scrollLeftAction()
-    C.C_ZN26QAccessibleActionInterface16scrollLeftActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface16scrollLeftActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollLeftAction", args)
   }
@@ -1084,7 +1106,8 @@ func (this *QAccessibleActionInterface) localizedActionDescription(args ...inter
     // invoke: QString localizedActionDescription(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK26QAccessibleActionInterface26localizedActionDescriptionERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "localizedActionDescription", args)
   }
@@ -1104,7 +1127,8 @@ func (this *QAccessibleActionInterface) scrollUpAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14scrollUpActionEv
     // invoke: QString scrollUpAction()
-    C.C_ZN26QAccessibleActionInterface14scrollUpActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14scrollUpActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollUpAction", args)
   }
@@ -1124,7 +1148,8 @@ func (this *QAccessibleActionInterface) scrollDownAction_s(args ...interface{}) 
   case 0:
     // invoke: _ZN26QAccessibleActionInterface16scrollDownActionEv
     // invoke: QString scrollDownAction()
-    C.C_ZN26QAccessibleActionInterface16scrollDownActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface16scrollDownActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "scrollDownAction", args)
   }
@@ -1144,7 +1169,8 @@ func (this *QAccessibleActionInterface) nextPageAction_s(args ...interface{}) ()
   case 0:
     // invoke: _ZN26QAccessibleActionInterface14nextPageActionEv
     // invoke: QString nextPageAction()
-    C.C_ZN26QAccessibleActionInterface14nextPageActionEv()
+    var ret = C.C_ZN26QAccessibleActionInterface14nextPageActionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleActionInterface", "nextPageAction", args)
   }
@@ -1164,7 +1190,8 @@ func (this *QAccessibleInterface) tableInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface14tableInterfaceEv
     // invoke: QAccessibleTableInterface * tableInterface()
-    C.C_ZN20QAccessibleInterface14tableInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface14tableInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableInterface", args)
   }
@@ -1184,7 +1211,8 @@ func (this *QAccessibleInterface) actionInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface15actionInterfaceEv
     // invoke: QAccessibleActionInterface * actionInterface()
-    C.C_ZN20QAccessibleInterface15actionInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface15actionInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "actionInterface", args)
   }
@@ -1204,7 +1232,8 @@ func (this *QAccessibleInterface) textInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface13textInterfaceEv
     // invoke: QAccessibleTextInterface * textInterface()
-    C.C_ZN20QAccessibleInterface13textInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface13textInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "textInterface", args)
   }
@@ -1224,7 +1253,8 @@ func (this *QAccessibleInterface) foregroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15foregroundColorEv
     // invoke: QColor foregroundColor()
-    C.C_ZNK20QAccessibleInterface15foregroundColorEv(this.qclsinst)
+    var ret = C.C_ZNK20QAccessibleInterface15foregroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "foregroundColor", args)
   }
@@ -1244,7 +1274,8 @@ func (this *QAccessibleInterface) editableTextInterface(args ...interface{}) () 
   case 0:
     // invoke: _ZN20QAccessibleInterface21editableTextInterfaceEv
     // invoke: QAccessibleEditableTextInterface * editableTextInterface()
-    C.C_ZN20QAccessibleInterface21editableTextInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface21editableTextInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "editableTextInterface", args)
   }
@@ -1264,7 +1295,8 @@ func (this *QAccessibleInterface) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAccessibleInterface6windowEv
     // invoke: QWindow * window()
-    C.C_ZNK20QAccessibleInterface6windowEv(this.qclsinst)
+    var ret = C.C_ZNK20QAccessibleInterface6windowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "window", args)
   }
@@ -1310,7 +1342,8 @@ func (this *QAccessibleInterface) backgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAccessibleInterface15backgroundColorEv
     // invoke: QColor backgroundColor()
-    C.C_ZNK20QAccessibleInterface15backgroundColorEv(this.qclsinst)
+    var ret = C.C_ZNK20QAccessibleInterface15backgroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "backgroundColor", args)
   }
@@ -1330,7 +1363,8 @@ func (this *QAccessibleInterface) valueInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface14valueInterfaceEv
     // invoke: QAccessibleValueInterface * valueInterface()
-    C.C_ZN20QAccessibleInterface14valueInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface14valueInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "valueInterface", args)
   }
@@ -1350,7 +1384,8 @@ func (this *QAccessibleInterface) focusChild(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QAccessibleInterface10focusChildEv
     // invoke: QAccessibleInterface * focusChild()
-    C.C_ZNK20QAccessibleInterface10focusChildEv(this.qclsinst)
+    var ret = C.C_ZNK20QAccessibleInterface10focusChildEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "focusChild", args)
   }
@@ -1370,7 +1405,8 @@ func (this *QAccessibleInterface) imageInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface14imageInterfaceEv
     // invoke: QAccessibleImageInterface * imageInterface()
-    C.C_ZN20QAccessibleInterface14imageInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface14imageInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "imageInterface", args)
   }
@@ -1390,7 +1426,8 @@ func (this *QAccessibleInterface) tableCellInterface(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QAccessibleInterface18tableCellInterfaceEv
     // invoke: QAccessibleTableCellInterface * tableCellInterface()
-    C.C_ZN20QAccessibleInterface18tableCellInterfaceEv(this.qclsinst)
+    var ret = C.C_ZN20QAccessibleInterface18tableCellInterfaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleInterface", "tableCellInterface", args)
   }
@@ -1410,7 +1447,8 @@ func (this *QAccessibleTextUpdateEvent) textInserted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent12textInsertedEv
     // invoke: QString textInserted()
-    C.C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextUpdateEvent12textInsertedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textInserted", args)
   }
@@ -1430,7 +1468,8 @@ func (this *QAccessibleTextUpdateEvent) changePosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent14changePositionEv
     // invoke: int changePosition()
-    C.C_ZNK26QAccessibleTextUpdateEvent14changePositionEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextUpdateEvent14changePositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "changePosition", args)
   }
@@ -1450,7 +1489,8 @@ func (this *QAccessibleTextUpdateEvent) textRemoved(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextUpdateEvent11textRemovedEv
     // invoke: QString textRemoved()
-    C.C_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextUpdateEvent11textRemovedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "textRemoved", args)
   }
@@ -1458,7 +1498,7 @@ func (this *QAccessibleTextUpdateEvent) textRemoved(args ...interface{}) () {
 }
 
 // QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
-func NewQAccessibleTextUpdateEvent(args ...interface{}) QAccessibleTextUpdateEvent {
+func NewQAccessibleTextUpdateEvent(args ...interface{}) *QAccessibleTextUpdateEvent {
   // QAccessibleTextUpdateEvent(class QAccessibleInterface *, int, const class QString &, const class QString &)
   // QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1490,7 +1530,8 @@ func NewQAccessibleTextUpdateEvent(args ...interface{}) QAccessibleTextUpdateEve
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP20QAccessibleInterfaceiRK7QStringS4_(arg0, arg1, arg2, arg3)
+    return &QAccessibleTextUpdateEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextUpdateEventC1EP7QObjectiRK7QStringS4_
     // invoke: void QAccessibleTextUpdateEvent(class QObject *, int, const class QString &, const class QString &)
@@ -1504,12 +1545,13 @@ func NewQAccessibleTextUpdateEvent(args ...interface{}) QAccessibleTextUpdateEve
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN26QAccessibleTextUpdateEventC2EP7QObjectiRK7QStringS4_(arg0, arg1, arg2, arg3)
+    return &QAccessibleTextUpdateEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextUpdateEvent", "QAccessibleTextUpdateEvent", args)
   }
 
-  return QAccessibleTextUpdateEvent{}
+  return nil // QAccessibleTextUpdateEvent{qclsinst:qthis}
 }
 
 // changedStates()
@@ -1545,7 +1587,8 @@ func (this *QAccessibleTextInsertEvent) textInserted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent12textInsertedEv
     // invoke: QString textInserted()
-    C.C_ZNK26QAccessibleTextInsertEvent12textInsertedEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextInsertEvent12textInsertedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "textInserted", args)
   }
@@ -1553,7 +1596,7 @@ func (this *QAccessibleTextInsertEvent) textInserted(args ...interface{}) () {
 }
 
 // QAccessibleTextInsertEvent(class QAccessibleInterface *, int, const class QString &)
-func NewQAccessibleTextInsertEvent(args ...interface{}) QAccessibleTextInsertEvent {
+func NewQAccessibleTextInsertEvent(args ...interface{}) *QAccessibleTextInsertEvent {
   // QAccessibleTextInsertEvent(class QAccessibleInterface *, int, const class QString &)
   // QAccessibleTextInsertEvent(class QObject *, int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1581,7 +1624,8 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) QAccessibleTextInsertEve
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN26QAccessibleTextInsertEventC2EP20QAccessibleInterfaceiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextInsertEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextInsertEventC1EP7QObjectiRK7QString
     // invoke: void QAccessibleTextInsertEvent(class QObject *, int, const class QString &)
@@ -1593,12 +1637,13 @@ func NewQAccessibleTextInsertEvent(args ...interface{}) QAccessibleTextInsertEve
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN26QAccessibleTextInsertEventC2EP7QObjectiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextInsertEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "QAccessibleTextInsertEvent", args)
   }
 
-  return QAccessibleTextInsertEvent{}
+  return nil // QAccessibleTextInsertEvent{qclsinst:qthis}
 }
 
 // changePosition()
@@ -1614,7 +1659,8 @@ func (this *QAccessibleTextInsertEvent) changePosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextInsertEvent14changePositionEv
     // invoke: int changePosition()
-    C.C_ZNK26QAccessibleTextInsertEvent14changePositionEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextInsertEvent14changePositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextInsertEvent", "changePosition", args)
   }
@@ -1634,7 +1680,8 @@ func (this *QAccessibleTextRemoveEvent) textRemoved(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent11textRemovedEv
     // invoke: QString textRemoved()
-    C.C_ZNK26QAccessibleTextRemoveEvent11textRemovedEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextRemoveEvent11textRemovedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "textRemoved", args)
   }
@@ -1642,7 +1689,7 @@ func (this *QAccessibleTextRemoveEvent) textRemoved(args ...interface{}) () {
 }
 
 // QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
-func NewQAccessibleTextRemoveEvent(args ...interface{}) QAccessibleTextRemoveEvent {
+func NewQAccessibleTextRemoveEvent(args ...interface{}) *QAccessibleTextRemoveEvent {
   // QAccessibleTextRemoveEvent(class QObject *, int, const class QString &)
   // QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1670,7 +1717,8 @@ func NewQAccessibleTextRemoveEvent(args ...interface{}) QAccessibleTextRemoveEve
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP7QObjectiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextRemoveEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextRemoveEventC1EP20QAccessibleInterfaceiRK7QString
     // invoke: void QAccessibleTextRemoveEvent(class QAccessibleInterface *, int, const class QString &)
@@ -1682,12 +1730,13 @@ func NewQAccessibleTextRemoveEvent(args ...interface{}) QAccessibleTextRemoveEve
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN26QAccessibleTextRemoveEventC2EP20QAccessibleInterfaceiRK7QString(arg0, arg1, arg2)
+    return &QAccessibleTextRemoveEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "QAccessibleTextRemoveEvent", args)
   }
 
-  return QAccessibleTextRemoveEvent{}
+  return nil // QAccessibleTextRemoveEvent{qclsinst:qthis}
 }
 
 // changePosition()
@@ -1703,7 +1752,8 @@ func (this *QAccessibleTextRemoveEvent) changePosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextRemoveEvent14changePositionEv
     // invoke: int changePosition()
-    C.C_ZNK26QAccessibleTextRemoveEvent14changePositionEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextRemoveEvent14changePositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextRemoveEvent", "changePosition", args)
   }
@@ -1711,7 +1761,7 @@ func (this *QAccessibleTextRemoveEvent) changePosition(args ...interface{}) () {
 }
 
 // QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
-func NewQAccessibleTextSelectionEvent(args ...interface{}) QAccessibleTextSelectionEvent {
+func NewQAccessibleTextSelectionEvent(args ...interface{}) *QAccessibleTextSelectionEvent {
   // QAccessibleTextSelectionEvent(class QAccessibleInterface *, int, int)
   // QAccessibleTextSelectionEvent(class QObject *, int, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1739,7 +1789,8 @@ func NewQAccessibleTextSelectionEvent(args ...interface{}) QAccessibleTextSelect
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP20QAccessibleInterfaceii(arg0, arg1, arg2)
+    return &QAccessibleTextSelectionEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN29QAccessibleTextSelectionEventC1EP7QObjectii
     // invoke: void QAccessibleTextSelectionEvent(class QObject *, int, int)
@@ -1751,12 +1802,13 @@ func NewQAccessibleTextSelectionEvent(args ...interface{}) QAccessibleTextSelect
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN29QAccessibleTextSelectionEventC2EP7QObjectii(arg0, arg1, arg2)
+    return &QAccessibleTextSelectionEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "QAccessibleTextSelectionEvent", args)
   }
 
-  return QAccessibleTextSelectionEvent{}
+  return nil // QAccessibleTextSelectionEvent{qclsinst:qthis}
 }
 
 // selectionStart()
@@ -1772,7 +1824,8 @@ func (this *QAccessibleTextSelectionEvent) selectionStart(args ...interface{}) (
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent14selectionStartEv
     // invoke: int selectionStart()
-    C.C_ZNK29QAccessibleTextSelectionEvent14selectionStartEv(this.qclsinst)
+    var ret = C.C_ZNK29QAccessibleTextSelectionEvent14selectionStartEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionStart", args)
   }
@@ -1792,7 +1845,8 @@ func (this *QAccessibleTextSelectionEvent) selectionEnd(args ...interface{}) () 
   case 0:
     // invoke: _ZNK29QAccessibleTextSelectionEvent12selectionEndEv
     // invoke: int selectionEnd()
-    C.C_ZNK29QAccessibleTextSelectionEvent12selectionEndEv(this.qclsinst)
+    var ret = C.C_ZNK29QAccessibleTextSelectionEvent12selectionEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextSelectionEvent", "selectionEnd", args)
   }
@@ -1838,7 +1892,8 @@ func (this *QAccessibleTextCursorEvent) cursorPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QAccessibleTextCursorEvent14cursorPositionEv
     // invoke: int cursorPosition()
-    C.C_ZNK26QAccessibleTextCursorEvent14cursorPositionEv(this.qclsinst)
+    var ret = C.C_ZNK26QAccessibleTextCursorEvent14cursorPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "cursorPosition", args)
   }
@@ -1846,7 +1901,7 @@ func (this *QAccessibleTextCursorEvent) cursorPosition(args ...interface{}) () {
 }
 
 // QAccessibleTextCursorEvent(class QAccessibleInterface *, int)
-func NewQAccessibleTextCursorEvent(args ...interface{}) QAccessibleTextCursorEvent {
+func NewQAccessibleTextCursorEvent(args ...interface{}) *QAccessibleTextCursorEvent {
   // QAccessibleTextCursorEvent(class QAccessibleInterface *, int)
   // QAccessibleTextCursorEvent(class QObject *, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1870,7 +1925,8 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) QAccessibleTextCursorEve
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(qthis, arg0, arg1)
+    qthis = C.C_ZN26QAccessibleTextCursorEventC2EP20QAccessibleInterfacei(arg0, arg1)
+    return &QAccessibleTextCursorEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN26QAccessibleTextCursorEventC1EP7QObjecti
     // invoke: void QAccessibleTextCursorEvent(class QObject *, int)
@@ -1880,12 +1936,13 @@ func NewQAccessibleTextCursorEvent(args ...interface{}) QAccessibleTextCursorEve
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(qthis, arg0, arg1)
+    qthis = C.C_ZN26QAccessibleTextCursorEventC2EP7QObjecti(arg0, arg1)
+    return &QAccessibleTextCursorEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleTextCursorEvent", "QAccessibleTextCursorEvent", args)
   }
 
-  return QAccessibleTextCursorEvent{}
+  return nil // QAccessibleTextCursorEvent{qclsinst:qthis}
 }
 
 // setCursorPosition(int)
@@ -1912,7 +1969,7 @@ func (this *QAccessibleTextCursorEvent) setCursorPosition(args ...interface{}) (
 }
 
 // QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
-func NewQAccessibleValueChangeEvent(args ...interface{}) QAccessibleValueChangeEvent {
+func NewQAccessibleValueChangeEvent(args ...interface{}) *QAccessibleValueChangeEvent {
   // QAccessibleValueChangeEvent(class QObject *, const class QVariant &)
   // QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1936,7 +1993,8 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) QAccessibleValueChangeE
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(qthis, arg0, arg1)
+    qthis = C.C_ZN27QAccessibleValueChangeEventC2EP7QObjectRK8QVariant(arg0, arg1)
+    return &QAccessibleValueChangeEvent{qclsinst:qthis}
   case 1:
     // invoke: _ZN27QAccessibleValueChangeEventC1EP20QAccessibleInterfaceRK8QVariant
     // invoke: void QAccessibleValueChangeEvent(class QAccessibleInterface *, const class QVariant &)
@@ -1946,12 +2004,13 @@ func NewQAccessibleValueChangeEvent(args ...interface{}) QAccessibleValueChangeE
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(qthis, arg0, arg1)
+    qthis = C.C_ZN27QAccessibleValueChangeEventC2EP20QAccessibleInterfaceRK8QVariant(arg0, arg1)
+    return &QAccessibleValueChangeEvent{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "QAccessibleValueChangeEvent", args)
   }
 
-  return QAccessibleValueChangeEvent{}
+  return nil // QAccessibleValueChangeEvent{qclsinst:qthis}
 }
 
 // setValue(const class QVariant &)
@@ -1990,7 +2049,8 @@ func (this *QAccessibleValueChangeEvent) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAccessibleValueChangeEvent5valueEv
     // invoke: QVariant value()
-    C.C_ZNK27QAccessibleValueChangeEvent5valueEv(this.qclsinst)
+    var ret = C.C_ZNK27QAccessibleValueChangeEvent5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAccessibleValueChangeEvent", "value", args)
   }

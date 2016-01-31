@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qlabel.h
 // dst-file: /src/widgets/qlabel.go
 //
@@ -154,7 +154,8 @@ func (this *QLabel) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel4textEv
     // invoke: QString text()
-    C.C_ZNK6QLabel4textEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "text", args)
   }
@@ -197,7 +198,8 @@ func (this *QLabel) wordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8wordWrapEv
     // invoke: bool wordWrap()
-    C.C_ZNK6QLabel8wordWrapEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel8wordWrapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "wordWrap", args)
   }
@@ -217,7 +219,8 @@ func (this *QLabel) hasSelectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15hasSelectedTextEv
     // invoke: bool hasSelectedText()
-    C.C_ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel15hasSelectedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "hasSelectedText", args)
   }
@@ -280,7 +283,8 @@ func (this *QLabel) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6pixmapEv
     // invoke: const QPixmap * pixmap()
-    C.C_ZNK6QLabel6pixmapEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel6pixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "pixmap", args)
   }
@@ -300,7 +304,8 @@ func (this *QLabel) buddy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5buddyEv
     // invoke: QWidget * buddy()
-    C.C_ZNK6QLabel5buddyEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel5buddyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "buddy", args)
   }
@@ -320,7 +325,8 @@ func (this *QLabel) movie(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel5movieEv
     // invoke: QMovie * movie()
-    C.C_ZNK6QLabel5movieEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel5movieEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "movie", args)
   }
@@ -363,7 +369,8 @@ func (this *QLabel) hasScaledContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17hasScaledContentsEv
     // invoke: bool hasScaledContents()
-    C.C_ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel17hasScaledContentsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "hasScaledContents", args)
   }
@@ -446,7 +453,8 @@ func (this *QLabel) picture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel7pictureEv
     // invoke: const QPicture * picture()
-    C.C_ZNK6QLabel7pictureEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel7pictureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "picture", args)
   }
@@ -535,7 +543,8 @@ func (this *QLabel) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK6QLabel8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "sizeHint", args)
   }
@@ -578,7 +587,8 @@ func (this *QLabel) indent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6indentEv
     // invoke: int indent()
-    C.C_ZNK6QLabel6indentEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel6indentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "indent", args)
   }
@@ -644,7 +654,8 @@ func (this *QLabel) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "minimumSizeHint", args)
   }
@@ -664,7 +675,8 @@ func (this *QLabel) openExternalLinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel17openExternalLinksEv
     // invoke: bool openExternalLinks()
-    C.C_ZNK6QLabel17openExternalLinksEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel17openExternalLinksEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "openExternalLinks", args)
   }
@@ -707,7 +719,8 @@ func (this *QLabel) selectedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel12selectedTextEv
     // invoke: QString selectedText()
-    C.C_ZNK6QLabel12selectedTextEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel12selectedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "selectedText", args)
   }
@@ -730,7 +743,8 @@ func (this *QLabel) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QLabel14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "heightForWidth", args)
   }
@@ -782,7 +796,8 @@ func (this *QLabel) selectionStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel14selectionStartEv
     // invoke: int selectionStart()
-    C.C_ZNK6QLabel14selectionStartEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel14selectionStartEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "selectionStart", args)
   }
@@ -822,7 +837,8 @@ func (this *QLabel) margin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLabel6marginEv
     // invoke: int margin()
-    C.C_ZNK6QLabel6marginEv(this.qclsinst)
+    var ret = C.C_ZNK6QLabel6marginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLabel", "margin", args)
   }

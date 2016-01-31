@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qiconengineplugin.h
 // dst-file: /src/gui/qiconengineplugin.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  const QMetaObject * QIconEnginePlugin::metaObject();
 extern void C_ZNK17QIconEnginePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QIconEnginePlugin::QIconEnginePlugin(QObject * parent);
-extern void C_ZN17QIconEnginePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN17QIconEnginePluginC2EP7QObject(void* arg0); // 3
   // proto:  void QIconEnginePlugin::~QIconEnginePlugin();
 extern void C_ZN17QIconEnginePluginD2Ev(void* qthis); // 4
 */
@@ -73,7 +73,7 @@ func (this *QIconEnginePlugin) metaObject(args ...interface{}) () {
 }
 
 // QIconEnginePlugin(class QObject *)
-func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
+func NewQIconEnginePlugin(args ...interface{}) *QIconEnginePlugin {
   // QIconEnginePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -90,12 +90,13 @@ func NewQIconEnginePlugin(args ...interface{}) QIconEnginePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QIconEnginePluginC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN17QIconEnginePluginC2EP7QObject(arg0)
+    return &QIconEnginePlugin{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIconEnginePlugin", "QIconEnginePlugin", args)
   }
 
-  return QIconEnginePlugin{}
+  return nil // QIconEnginePlugin{qclsinst:qthis}
 }
 
 // ~QIconEnginePlugin()

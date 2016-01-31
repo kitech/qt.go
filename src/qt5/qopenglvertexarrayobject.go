@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopenglvertexarrayobject.h
 // dst-file: /src/gui/qopenglvertexarrayobject.go
 //
@@ -43,7 +43,7 @@ extern void C_ZN24QOpenGLVertexArrayObject7releaseEv(void* qthis); // 4
   // proto:  void QOpenGLVertexArrayObject::destroy();
 extern void C_ZN24QOpenGLVertexArrayObject7destroyEv(void* qthis); // 4
   // proto:  void QOpenGLVertexArrayObject::QOpenGLVertexArrayObject(QObject * parent);
-extern void C_ZN24QOpenGLVertexArrayObjectC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN24QOpenGLVertexArrayObjectC2EP7QObject(void* arg0); // 3
   // proto:  bool QOpenGLVertexArrayObject::create();
 extern void C_ZN24QOpenGLVertexArrayObject6createEv(void* qthis); // 4
 */
@@ -77,7 +77,8 @@ func (this *QOpenGLVertexArrayObject) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject9isCreatedEv
     // invoke: bool isCreated()
-    C.C_ZNK24QOpenGLVertexArrayObject9isCreatedEv(this.qclsinst)
+    var ret = C.C_ZNK24QOpenGLVertexArrayObject9isCreatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "isCreated", args)
   }
@@ -117,7 +118,8 @@ func (this *QOpenGLVertexArrayObject) objectId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK24QOpenGLVertexArrayObject8objectIdEv
     // invoke: GLuint objectId()
-    C.C_ZNK24QOpenGLVertexArrayObject8objectIdEv(this.qclsinst)
+    var ret = C.C_ZNK24QOpenGLVertexArrayObject8objectIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "objectId", args)
   }
@@ -205,7 +207,7 @@ func (this *QOpenGLVertexArrayObject) destroy(args ...interface{}) () {
 }
 
 // QOpenGLVertexArrayObject(class QObject *)
-func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
+func NewQOpenGLVertexArrayObject(args ...interface{}) *QOpenGLVertexArrayObject {
   // QOpenGLVertexArrayObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -222,12 +224,13 @@ func NewQOpenGLVertexArrayObject(args ...interface{}) QOpenGLVertexArrayObject {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN24QOpenGLVertexArrayObjectC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN24QOpenGLVertexArrayObjectC2EP7QObject(arg0)
+    return &QOpenGLVertexArrayObject{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "QOpenGLVertexArrayObject", args)
   }
 
-  return QOpenGLVertexArrayObject{}
+  return nil // QOpenGLVertexArrayObject{qclsinst:qthis}
 }
 
 // create()
@@ -243,7 +246,8 @@ func (this *QOpenGLVertexArrayObject) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN24QOpenGLVertexArrayObject6createEv
     // invoke: bool create()
-    C.C_ZN24QOpenGLVertexArrayObject6createEv(this.qclsinst)
+    var ret = C.C_ZN24QOpenGLVertexArrayObject6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLVertexArrayObject", "create", args)
   }

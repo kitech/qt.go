@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qhash.h
 // dst-file: /src/core/qhash.go
 //
@@ -100,7 +100,8 @@ func (this *QHashData) willGrow(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QHashData8willGrowEv
     // invoke: bool willGrow()
-    C.C_ZN9QHashData8willGrowEv(this.qclsinst)
+    var ret = C.C_ZN9QHashData8willGrowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QHashData", "willGrow", args)
   }
@@ -123,7 +124,8 @@ func (this *QHashData) allocateNode(args ...interface{}) () {
     // invoke: void * allocateNode(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QHashData12allocateNodeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QHashData", "allocateNode", args)
   }

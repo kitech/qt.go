@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qjsonvalue.h
 // dst-file: /src/core/qjsonvalue.go
 //
@@ -29,17 +29,17 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QJsonValue::QJsonValue(double n);
-extern void C_ZN10QJsonValueC2Ed(void* qthis, double arg0); // 3
+extern void* C_ZN10QJsonValueC2Ed(double arg0); // 3
   // proto:  void QJsonValue::QJsonValue(bool b);
-extern void C_ZN10QJsonValueC2Eb(void* qthis, bool arg0); // 3
+extern void* C_ZN10QJsonValueC2Eb(bool arg0); // 3
   // proto:  void QJsonValue::QJsonValue(int n);
-extern void C_ZN10QJsonValueC2Ei(void* qthis, int32_t arg0); // 3
+extern void* C_ZN10QJsonValueC2Ei(int32_t arg0); // 3
   // proto:  void QJsonValue::QJsonValue(const QString & s);
-extern void C_ZN10QJsonValueC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN10QJsonValueC2ERK7QString(void* arg0); // 3
   // proto:  void QJsonValue::QJsonValue(const char * s);
-extern void C_ZN10QJsonValueC2EPKc(void* qthis, unsigned char* arg0); // 1
+extern void* C_ZN10QJsonValueC2EPKc(unsigned char* arg0); // 1
   // proto:  void QJsonValue::QJsonValue(qint64 n);
-extern void C_ZN10QJsonValueC2Ex(void* qthis, int64_t arg0); // 3
+extern void* C_ZN10QJsonValueC2Ex(int64_t arg0); // 3
   // proto: static QJsonValue QJsonValue::fromVariant(const QVariant & variant);
 extern void C_ZN10QJsonValue11fromVariantERK8QVariant(void* arg0); // 4
   // proto:  void QJsonValue::~QJsonValue();
@@ -149,7 +149,7 @@ type QJsonValueRef struct {
 }
 
 // QJsonValue(double)
-func NewQJsonValue(args ...interface{}) QJsonValue {
+func NewQJsonValue(args ...interface{}) *QJsonValue {
   // QJsonValue(double)
   // QJsonValue(_Bool)
   // QJsonValue(int)
@@ -181,7 +181,8 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2Ed(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2Ed(arg0)
+    return &QJsonValue{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QJsonValueC1Eb
     // invoke: void QJsonValue(_Bool)
@@ -189,7 +190,8 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2Eb(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2Eb(arg0)
+    return &QJsonValue{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QJsonValueC1Ei
     // invoke: void QJsonValue(int)
@@ -197,7 +199,8 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2Ei(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2Ei(arg0)
+    return &QJsonValue{qclsinst:qthis}
   case 3:
     // invoke: _ZN10QJsonValueC1ERK7QString
     // invoke: void QJsonValue(const class QString &)
@@ -205,7 +208,8 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2ERK7QString(arg0)
+    return &QJsonValue{qclsinst:qthis}
   case 4:
     // invoke: _ZN10QJsonValueC1EPKc
     // invoke: void QJsonValue(const char *)
@@ -213,7 +217,8 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2EPKc(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2EPKc(arg0)
+    return &QJsonValue{qclsinst:qthis}
   case 5:
     // invoke: _ZN10QJsonValueC1Ex
     // invoke: void QJsonValue(qint64)
@@ -221,12 +226,13 @@ func NewQJsonValue(args ...interface{}) QJsonValue {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonValueC2Ex(qthis, arg0)
+    qthis = C.C_ZN10QJsonValueC2Ex(arg0)
+    return &QJsonValue{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonValue", "QJsonValue", args)
   }
 
-  return QJsonValue{}
+  return nil // QJsonValue{qclsinst:qthis}
 }
 
 // fromVariant(const class QVariant &)
@@ -308,7 +314,8 @@ func (this *QJsonValue) toBool(args ...interface{}) () {
     // invoke: bool toBool(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QJsonValue6toBoolEb(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QJsonValue6toBoolEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "toBool", args)
   }
@@ -328,7 +335,8 @@ func (this *QJsonValue) toVariant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue9toVariantEv
     // invoke: QVariant toVariant()
-    C.C_ZNK10QJsonValue9toVariantEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue9toVariantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "toVariant", args)
   }
@@ -351,7 +359,8 @@ func (this *QJsonValue) toString(args ...interface{}) () {
     // invoke: QString toString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QJsonValue8toStringERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "toString", args)
   }
@@ -391,7 +400,8 @@ func (this *QJsonValue) isUndefined(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue11isUndefinedEv
     // invoke: bool isUndefined()
-    C.C_ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue11isUndefinedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isUndefined", args)
   }
@@ -411,7 +421,8 @@ func (this *QJsonValue) isArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue7isArrayEv
     // invoke: bool isArray()
-    C.C_ZNK10QJsonValue7isArrayEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue7isArrayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isArray", args)
   }
@@ -431,7 +442,8 @@ func (this *QJsonValue) isBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue6isBoolEv
     // invoke: bool isBool()
-    C.C_ZNK10QJsonValue6isBoolEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue6isBoolEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isBool", args)
   }
@@ -451,7 +463,8 @@ func (this *QJsonValue) isObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue8isObjectEv
     // invoke: bool isObject()
-    C.C_ZNK10QJsonValue8isObjectEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue8isObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isObject", args)
   }
@@ -471,7 +484,8 @@ func (this *QJsonValue) isDouble(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue8isDoubleEv
     // invoke: bool isDouble()
-    C.C_ZNK10QJsonValue8isDoubleEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue8isDoubleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isDouble", args)
   }
@@ -511,7 +525,8 @@ func (this *QJsonValue) isString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue8isStringEv
     // invoke: bool isString()
-    C.C_ZNK10QJsonValue8isStringEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue8isStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isString", args)
   }
@@ -534,7 +549,8 @@ func (this *QJsonValue) toInt(args ...interface{}) () {
     // invoke: int toInt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QJsonValue5toIntEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "toInt", args)
   }
@@ -554,7 +570,8 @@ func (this *QJsonValue) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonValue6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK10QJsonValue6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonValue6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "isNull", args)
   }
@@ -577,7 +594,8 @@ func (this *QJsonValue) toDouble(args ...interface{}) () {
     // invoke: double toDouble(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QJsonValue8toDoubleEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValue", "toDouble", args)
   }
@@ -597,7 +615,8 @@ func (this *QJsonValueRef) isArray(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef7isArrayEv
     // invoke: bool isArray()
-    C.C_ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef7isArrayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isArray", args)
   }
@@ -637,7 +656,8 @@ func (this *QJsonValueRef) isString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isStringEv
     // invoke: bool isString()
-    C.C_ZNK13QJsonValueRef8isStringEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef8isStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isString", args)
   }
@@ -682,11 +702,13 @@ func (this *QJsonValueRef) toInt(args ...interface{}) () {
     // invoke: int toInt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QJsonValueRef5toIntEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QJsonValueRef5toIntEv
     // invoke: int toInt()
-    C.C_ZNK13QJsonValueRef5toIntEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef5toIntEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toInt", args)
   }
@@ -706,7 +728,8 @@ func (this *QJsonValueRef) isBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isBoolEv
     // invoke: bool isBool()
-    C.C_ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef6isBoolEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isBool", args)
   }
@@ -726,7 +749,8 @@ func (this *QJsonValueRef) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK13QJsonValueRef6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isNull", args)
   }
@@ -751,11 +775,13 @@ func (this *QJsonValueRef) toDouble(args ...interface{}) () {
     // invoke: double toDouble(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QJsonValueRef8toDoubleEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QJsonValueRef8toDoubleEv
     // invoke: double toDouble()
-    C.C_ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef8toDoubleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toDouble", args)
   }
@@ -778,13 +804,15 @@ func (this *QJsonValueRef) toBool(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef6toBoolEv
     // invoke: bool toBool()
-    C.C_ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef6toBoolEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QJsonValueRef6toBoolEb
     // invoke: bool toBool(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QJsonValueRef6toBoolEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toBool", args)
   }
@@ -804,7 +832,8 @@ func (this *QJsonValueRef) toVariant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef9toVariantEv
     // invoke: QVariant toVariant()
-    C.C_ZNK13QJsonValueRef9toVariantEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef9toVariantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toVariant", args)
   }
@@ -827,13 +856,15 @@ func (this *QJsonValueRef) toString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef8toStringEv
     // invoke: QString toString()
-    C.C_ZNK13QJsonValueRef8toStringEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef8toStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QJsonValueRef8toStringERK7QString
     // invoke: QString toString(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QJsonValueRef8toStringERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "toString", args)
   }
@@ -853,7 +884,8 @@ func (this *QJsonValueRef) isUndefined(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef11isUndefinedEv
     // invoke: bool isUndefined()
-    C.C_ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef11isUndefinedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isUndefined", args)
   }
@@ -893,7 +925,8 @@ func (this *QJsonValueRef) isObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isObjectEv
     // invoke: bool isObject()
-    C.C_ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef8isObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isObject", args)
   }
@@ -913,7 +946,8 @@ func (this *QJsonValueRef) isDouble(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QJsonValueRef8isDoubleEv
     // invoke: bool isDouble()
-    C.C_ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
+    var ret = C.C_ZNK13QJsonValueRef8isDoubleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonValueRef", "isDouble", args)
   }

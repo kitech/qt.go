@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qprocess.h
 // dst-file: /src/core/qprocess.go
 //
@@ -99,7 +99,7 @@ extern void C_ZNK8QProcess18processChannelModeEv(void* qthis); // 4
   // proto:  int QProcess::exitCode();
 extern void C_ZNK8QProcess8exitCodeEv(void* qthis); // 4
   // proto:  void QProcess::QProcess(QObject * parent);
-extern void C_ZN8QProcessC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN8QProcessC2EP7QObject(void* arg0); // 3
   // proto: static int QProcess::execute(const QString & command);
 extern void C_ZN8QProcess7executeERK7QString(void* arg0); // 4
   // proto: static int QProcess::execute(const QString & program, const QStringList & arguments);
@@ -123,9 +123,9 @@ extern void C_ZNK8QProcess10exitStatusEv(void* qthis); // 4
   // proto:  QProcess::ProcessChannelMode QProcess::readChannelMode();
 extern void C_ZNK8QProcess15readChannelModeEv(void* qthis); // 4
   // proto:  void QProcessEnvironment::QProcessEnvironment(const QProcessEnvironment & other);
-extern void C_ZN19QProcessEnvironmentC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN19QProcessEnvironmentC2ERKS_(void* arg0); // 3
   // proto:  void QProcessEnvironment::QProcessEnvironment();
-extern void C_ZN19QProcessEnvironmentC2Ev(void* qthis); // 3
+extern void* C_ZN19QProcessEnvironmentC2Ev(); // 3
   // proto: static QProcessEnvironment QProcessEnvironment::systemEnvironment();
 extern void C_ZN19QProcessEnvironment17systemEnvironmentEv(); // 4
   // proto:  void QProcessEnvironment::insert(const QProcessEnvironment & e);
@@ -216,7 +216,8 @@ func (this *QProcess) processId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess9processIdEv
     // invoke: qint64 processId()
-    C.C_ZNK8QProcess9processIdEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess9processIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "processId", args)
   }
@@ -236,7 +237,8 @@ func (this *QProcess) bytesAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess14bytesAvailableEv
     // invoke: qint64 bytesAvailable()
-    C.C_ZNK8QProcess14bytesAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess14bytesAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "bytesAvailable", args)
   }
@@ -256,7 +258,8 @@ func (this *QProcess) readAllStandardError(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QProcess20readAllStandardErrorEv
     // invoke: QByteArray readAllStandardError()
-    C.C_ZN8QProcess20readAllStandardErrorEv(this.qclsinst)
+    var ret = C.C_ZN8QProcess20readAllStandardErrorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardError", args)
   }
@@ -276,7 +279,8 @@ func (this *QProcess) bytesToWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess12bytesToWriteEv
     // invoke: qint64 bytesToWrite()
-    C.C_ZNK8QProcess12bytesToWriteEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess12bytesToWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "bytesToWrite", args)
   }
@@ -296,7 +300,8 @@ func (this *QProcess) pid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess3pidEv
     // invoke: Q_PID pid()
-    C.C_ZNK8QProcess3pidEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess3pidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "pid", args)
   }
@@ -422,7 +427,8 @@ func (this *QProcess) isSequential(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess12isSequentialEv
     // invoke: bool isSequential()
-    C.C_ZNK8QProcess12isSequentialEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess12isSequentialEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "isSequential", args)
   }
@@ -462,7 +468,8 @@ func (this *QProcess) canReadLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess11canReadLineEv
     // invoke: bool canReadLine()
-    C.C_ZNK8QProcess11canReadLineEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess11canReadLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "canReadLine", args)
   }
@@ -485,7 +492,8 @@ func (this *QProcess) waitForBytesWritten(args ...interface{}) () {
     // invoke: bool waitForBytesWritten(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess19waitForBytesWrittenEi(this.qclsinst, arg0)
+    var ret = C.C_ZN8QProcess19waitForBytesWrittenEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "waitForBytesWritten", args)
   }
@@ -505,7 +513,8 @@ func (this *QProcess) workingDirectory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess16workingDirectoryEv
     // invoke: QString workingDirectory()
-    C.C_ZNK8QProcess16workingDirectoryEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess16workingDirectoryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "workingDirectory", args)
   }
@@ -525,7 +534,8 @@ func (this *QProcess) readAllStandardOutput(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QProcess21readAllStandardOutputEv
     // invoke: QByteArray readAllStandardOutput()
-    C.C_ZN8QProcess21readAllStandardOutputEv(this.qclsinst)
+    var ret = C.C_ZN8QProcess21readAllStandardOutputEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "readAllStandardOutput", args)
   }
@@ -548,7 +558,8 @@ func (this *QProcess) waitForFinished(args ...interface{}) () {
     // invoke: bool waitForFinished(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess15waitForFinishedEi(this.qclsinst, arg0)
+    var ret = C.C_ZN8QProcess15waitForFinishedEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "waitForFinished", args)
   }
@@ -671,7 +682,8 @@ func (this *QProcess) program(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess7programEv
     // invoke: QString program()
-    C.C_ZNK8QProcess7programEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess7programEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "program", args)
   }
@@ -780,7 +792,8 @@ func (this *QProcess) waitForStarted(args ...interface{}) () {
     // invoke: bool waitForStarted(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess14waitForStartedEi(this.qclsinst, arg0)
+    var ret = C.C_ZN8QProcess14waitForStartedEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "waitForStarted", args)
   }
@@ -819,13 +832,15 @@ func (this *QProcess) startDetached_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int64_t)(args[3].(*int64))
     if false {fmt.Println(arg3)}
-    C.C_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN8QProcess13startDetachedERK7QStringRK11QStringListS2_Px(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN8QProcess13startDetachedERK7QString
     // invoke: bool startDetached(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess13startDetachedERK7QString(arg0)
+    var ret = C.C_ZN8QProcess13startDetachedERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN8QProcess13startDetachedERK7QStringRK11QStringList
     // invoke: bool startDetached(const class QString &, const class QStringList &)
@@ -833,7 +848,8 @@ func (this *QProcess) startDetached_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN8QProcess13startDetachedERK7QStringRK11QStringList(arg0, arg1)
+    var ret = C.C_ZN8QProcess13startDetachedERK7QStringRK11QStringList(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "startDetached", args)
   }
@@ -893,7 +909,8 @@ func (this *QProcess) exitCode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess8exitCodeEv
     // invoke: int exitCode()
-    C.C_ZNK8QProcess8exitCodeEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess8exitCodeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "exitCode", args)
   }
@@ -901,7 +918,7 @@ func (this *QProcess) exitCode(args ...interface{}) () {
 }
 
 // QProcess(class QObject *)
-func NewQProcess(args ...interface{}) QProcess {
+func NewQProcess(args ...interface{}) *QProcess {
   // QProcess(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -918,12 +935,13 @@ func NewQProcess(args ...interface{}) QProcess {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QProcessC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN8QProcessC2EP7QObject(arg0)
+    return &QProcess{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProcess", "QProcess", args)
   }
 
-  return QProcess{}
+  return nil // QProcess{qclsinst:qthis}
 }
 
 // execute(const class QString &)
@@ -946,7 +964,8 @@ func (this *QProcess) execute_s(args ...interface{}) () {
     // invoke: int execute(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess7executeERK7QString(arg0)
+    var ret = C.C_ZN8QProcess7executeERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN8QProcess7executeERK7QStringRK11QStringList
     // invoke: int execute(const class QString &, const class QStringList &)
@@ -954,7 +973,8 @@ func (this *QProcess) execute_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN8QProcess7executeERK7QStringRK11QStringList(arg0, arg1)
+    var ret = C.C_ZN8QProcess7executeERK7QStringRK11QStringList(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "execute", args)
   }
@@ -974,7 +994,8 @@ func (this *QProcess) processEnvironment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess18processEnvironmentEv
     // invoke: QProcessEnvironment processEnvironment()
-    C.C_ZNK8QProcess18processEnvironmentEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess18processEnvironmentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "processEnvironment", args)
   }
@@ -994,7 +1015,8 @@ func (this *QProcess) nullDevice_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QProcess10nullDeviceEv
     // invoke: QString nullDevice()
-    C.C_ZN8QProcess10nullDeviceEv()
+    var ret = C.C_ZN8QProcess10nullDeviceEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "nullDevice", args)
   }
@@ -1014,7 +1036,8 @@ func (this *QProcess) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QProcess5atEndEv
     // invoke: bool atEnd()
-    C.C_ZNK8QProcess5atEndEv(this.qclsinst)
+    var ret = C.C_ZNK8QProcess5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "atEnd", args)
   }
@@ -1037,7 +1060,8 @@ func (this *QProcess) waitForReadyRead(args ...interface{}) () {
     // invoke: bool waitForReadyRead(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QProcess16waitForReadyReadEi(this.qclsinst, arg0)
+    var ret = C.C_ZN8QProcess16waitForReadyReadEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcess", "waitForReadyRead", args)
   }
@@ -1148,7 +1172,7 @@ func (this *QProcess) readChannelMode(args ...interface{}) () {
 }
 
 // QProcessEnvironment(const class QProcessEnvironment &)
-func NewQProcessEnvironment(args ...interface{}) QProcessEnvironment {
+func NewQProcessEnvironment(args ...interface{}) *QProcessEnvironment {
   // QProcessEnvironment(const class QProcessEnvironment &)
   // QProcessEnvironment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1167,18 +1191,20 @@ func NewQProcessEnvironment(args ...interface{}) QProcessEnvironment {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QProcessEnvironmentC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN19QProcessEnvironmentC2ERKS_(arg0)
+    return &QProcessEnvironment{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QProcessEnvironmentC1Ev
     // invoke: void QProcessEnvironment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QProcessEnvironmentC2Ev(qthis)
+    qthis = C.C_ZN19QProcessEnvironmentC2Ev()
+    return &QProcessEnvironment{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "QProcessEnvironment", args)
   }
 
-  return QProcessEnvironment{}
+  return nil // QProcessEnvironment{qclsinst:qthis}
 }
 
 // systemEnvironment()
@@ -1194,7 +1220,8 @@ func (this *QProcessEnvironment) systemEnvironment_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QProcessEnvironment17systemEnvironmentEv
     // invoke: QProcessEnvironment systemEnvironment()
-    C.C_ZN19QProcessEnvironment17systemEnvironmentEv()
+    var ret = C.C_ZN19QProcessEnvironment17systemEnvironmentEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "systemEnvironment", args)
   }
@@ -1292,7 +1319,8 @@ func (this *QProcessEnvironment) contains(args ...interface{}) () {
     // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QProcessEnvironment8containsERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QProcessEnvironment8containsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "contains", args)
   }
@@ -1318,7 +1346,8 @@ func (this *QProcessEnvironment) value(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QProcessEnvironment5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QProcessEnvironment5valueERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "value", args)
   }
@@ -1358,7 +1387,8 @@ func (this *QProcessEnvironment) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QProcessEnvironment7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK19QProcessEnvironment7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK19QProcessEnvironment7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProcessEnvironment", "isEmpty", args)
   }

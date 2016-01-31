@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsysinfo.h
 // dst-file: /src/core/qsysinfo.go
 //
@@ -79,7 +79,8 @@ func (this *QSysInfo) kernelVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo13kernelVersionEv
     // invoke: QString kernelVersion()
-    C.C_ZN8QSysInfo13kernelVersionEv()
+    var ret = C.C_ZN8QSysInfo13kernelVersionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelVersion", args)
   }
@@ -99,7 +100,8 @@ func (this *QSysInfo) buildCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo20buildCpuArchitectureEv
     // invoke: QString buildCpuArchitecture()
-    C.C_ZN8QSysInfo20buildCpuArchitectureEv()
+    var ret = C.C_ZN8QSysInfo20buildCpuArchitectureEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "buildCpuArchitecture", args)
   }
@@ -119,7 +121,8 @@ func (this *QSysInfo) prettyProductName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo17prettyProductNameEv
     // invoke: QString prettyProductName()
-    C.C_ZN8QSysInfo17prettyProductNameEv()
+    var ret = C.C_ZN8QSysInfo17prettyProductNameEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "prettyProductName", args)
   }
@@ -139,7 +142,8 @@ func (this *QSysInfo) productVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo14productVersionEv
     // invoke: QString productVersion()
-    C.C_ZN8QSysInfo14productVersionEv()
+    var ret = C.C_ZN8QSysInfo14productVersionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "productVersion", args)
   }
@@ -159,7 +163,8 @@ func (this *QSysInfo) buildAbi_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo8buildAbiEv
     // invoke: QString buildAbi()
-    C.C_ZN8QSysInfo8buildAbiEv()
+    var ret = C.C_ZN8QSysInfo8buildAbiEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "buildAbi", args)
   }
@@ -179,7 +184,8 @@ func (this *QSysInfo) kernelType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo10kernelTypeEv
     // invoke: QString kernelType()
-    C.C_ZN8QSysInfo10kernelTypeEv()
+    var ret = C.C_ZN8QSysInfo10kernelTypeEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "kernelType", args)
   }
@@ -199,7 +205,8 @@ func (this *QSysInfo) productType_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo11productTypeEv
     // invoke: QString productType()
-    C.C_ZN8QSysInfo11productTypeEv()
+    var ret = C.C_ZN8QSysInfo11productTypeEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "productType", args)
   }
@@ -239,7 +246,8 @@ func (this *QSysInfo) currentCpuArchitecture_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QSysInfo22currentCpuArchitectureEv
     // invoke: QString currentCpuArchitecture()
-    C.C_ZN8QSysInfo22currentCpuArchitectureEv()
+    var ret = C.C_ZN8QSysInfo22currentCpuArchitectureEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSysInfo", "currentCpuArchitecture", args)
   }

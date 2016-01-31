@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsignaltransition.h
 // dst-file: /src/core/qsignaltransition.go
 //
@@ -33,9 +33,9 @@ extern void C_ZNK17QSignalTransition6signalEv(void* qthis); // 4
   // proto:  void QSignalTransition::~QSignalTransition();
 extern void C_ZN17QSignalTransitionD2Ev(void* qthis); // 4
   // proto:  void QSignalTransition::QSignalTransition(QState * sourceState);
-extern void C_ZN17QSignalTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN17QSignalTransitionC2EP6QState(void* arg0); // 3
   // proto:  void QSignalTransition::QSignalTransition(const QObject * sender, const char * signal, QState * sourceState);
-extern void C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(void* qthis, void* arg0, unsigned char* arg1, void* arg2); // 3
+extern void* C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(void* arg0, unsigned char* arg1, void* arg2); // 3
   // proto:  const QMetaObject * QSignalTransition::metaObject();
 extern void C_ZNK17QSignalTransition10metaObjectEv(void* qthis); // 4
   // proto:  void QSignalTransition::setSenderObject(const QObject * sender);
@@ -77,7 +77,8 @@ func (this *QSignalTransition) signal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QSignalTransition6signalEv
     // invoke: QByteArray signal()
-    C.C_ZNK17QSignalTransition6signalEv(this.qclsinst)
+    var ret = C.C_ZNK17QSignalTransition6signalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSignalTransition", "signal", args)
   }
@@ -105,7 +106,7 @@ func (this *QSignalTransition) FreeQSignalTransition(args ...interface{}) () {
 }
 
 // QSignalTransition(class QState *)
-func NewQSignalTransition(args ...interface{}) QSignalTransition {
+func NewQSignalTransition(args ...interface{}) *QSignalTransition {
   // QSignalTransition(class QState *)
   // QSignalTransition(const class QObject *, const char *, class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -127,7 +128,8 @@ func NewQSignalTransition(args ...interface{}) QSignalTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QSignalTransitionC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN17QSignalTransitionC2EP6QState(arg0)
+    return &QSignalTransition{qclsinst:qthis}
   case 1:
     // invoke: _ZN17QSignalTransitionC1EPK7QObjectPKcP6QState
     // invoke: void QSignalTransition(const class QObject *, const char *, class QState *)
@@ -139,12 +141,13 @@ func NewQSignalTransition(args ...interface{}) QSignalTransition {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN17QSignalTransitionC2EPK7QObjectPKcP6QState(arg0, arg1, arg2)
+    return &QSignalTransition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSignalTransition", "QSignalTransition", args)
   }
 
-  return QSignalTransition{}
+  return nil // QSignalTransition{qclsinst:qthis}
 }
 
 // metaObject()
@@ -203,7 +206,8 @@ func (this *QSignalTransition) senderObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QSignalTransition12senderObjectEv
     // invoke: QObject * senderObject()
-    C.C_ZNK17QSignalTransition12senderObjectEv(this.qclsinst)
+    var ret = C.C_ZNK17QSignalTransition12senderObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSignalTransition", "senderObject", args)
   }

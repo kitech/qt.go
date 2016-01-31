@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qdesktopservices.h
 // dst-file: /src/gui/qdesktopservices.go
 //
@@ -120,7 +120,8 @@ func (this *QDesktopServices) openUrl_s(args ...interface{}) () {
     // invoke: bool openUrl(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)
+    var ret = C.C_ZN16QDesktopServices7openUrlERK4QUrl(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDesktopServices", "openUrl", args)
   }

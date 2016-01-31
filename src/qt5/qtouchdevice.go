@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtouchdevice.h
 // dst-file: /src/gui/qtouchdevice.go
 //
@@ -43,7 +43,7 @@ extern void C_ZN12QTouchDevice7devicesEv(); // 4
   // proto:  Capabilities QTouchDevice::capabilities();
 extern void C_ZNK12QTouchDevice12capabilitiesEv(void* qthis); // 4
   // proto:  void QTouchDevice::QTouchDevice();
-extern void C_ZN12QTouchDeviceC2Ev(void* qthis); // 3
+extern void* C_ZN12QTouchDeviceC2Ev(); // 3
   // proto:  QTouchDevice::DeviceType QTouchDevice::type();
 extern void C_ZNK12QTouchDevice4typeEv(void* qthis); // 4
 */
@@ -77,7 +77,8 @@ func (this *QTouchDevice) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTouchDevice4nameEv
     // invoke: QString name()
-    C.C_ZNK12QTouchDevice4nameEv(this.qclsinst)
+    var ret = C.C_ZNK12QTouchDevice4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTouchDevice", "name", args)
   }
@@ -163,7 +164,8 @@ func (this *QTouchDevice) maximumTouchPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QTouchDevice18maximumTouchPointsEv
     // invoke: int maximumTouchPoints()
-    C.C_ZNK12QTouchDevice18maximumTouchPointsEv(this.qclsinst)
+    var ret = C.C_ZNK12QTouchDevice18maximumTouchPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTouchDevice", "maximumTouchPoints", args)
   }
@@ -211,7 +213,7 @@ func (this *QTouchDevice) capabilities(args ...interface{}) () {
 }
 
 // QTouchDevice()
-func NewQTouchDevice(args ...interface{}) QTouchDevice {
+func NewQTouchDevice(args ...interface{}) *QTouchDevice {
   // QTouchDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,12 +227,13 @@ func NewQTouchDevice(args ...interface{}) QTouchDevice {
     // invoke: void QTouchDevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QTouchDeviceC2Ev(qthis)
+    qthis = C.C_ZN12QTouchDeviceC2Ev()
+    return &QTouchDevice{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTouchDevice", "QTouchDevice", args)
   }
 
-  return QTouchDevice{}
+  return nil // QTouchDevice{qclsinst:qthis}
 }
 
 // type()

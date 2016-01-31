@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpicture.h
 // dst-file: /src/gui/qpicture.go
 //
@@ -31,11 +31,11 @@ import "qtrt"
   // proto:  void QPictureIO::setParameters(const char * );
 extern void C_ZN10QPictureIO13setParametersEPKc(void* qthis, unsigned char* arg0); // 4
   // proto:  void QPictureIO::QPictureIO(const QString & fileName, const char * format);
-extern void C_ZN10QPictureIOC2ERK7QStringPKc(void* qthis, void* arg0, unsigned char* arg1); // 3
+extern void* C_ZN10QPictureIOC2ERK7QStringPKc(void* arg0, unsigned char* arg1); // 3
   // proto:  void QPictureIO::QPictureIO(QIODevice * ioDevice, const char * format);
-extern void C_ZN10QPictureIOC2EP9QIODevicePKc(void* qthis, void* arg0, unsigned char* arg1); // 3
+extern void* C_ZN10QPictureIOC2EP9QIODevicePKc(void* arg0, unsigned char* arg1); // 3
   // proto:  void QPictureIO::QPictureIO();
-extern void C_ZN10QPictureIOC2Ev(void* qthis); // 3
+extern void* C_ZN10QPictureIOC2Ev(); // 3
   // proto:  void QPictureIO::~QPictureIO();
 extern void C_ZN10QPictureIOD2Ev(void* qthis); // 4
   // proto:  int QPictureIO::quality();
@@ -93,9 +93,9 @@ extern void C_ZNK8QPicture12boundingRectEv(void* qthis); // 4
   // proto:  void QPicture::~QPicture();
 extern void C_ZN8QPictureD2Ev(void* qthis); // 4
   // proto:  void QPicture::QPicture(int formatVersion);
-extern void C_ZN8QPictureC2Ei(void* qthis, int32_t arg0); // 3
+extern void* C_ZN8QPictureC2Ei(int32_t arg0); // 3
   // proto:  void QPicture::QPicture(const QPicture & );
-extern void C_ZN8QPictureC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN8QPictureC2ERKS_(void* arg0); // 3
   // proto:  QPaintEngine * QPicture::paintEngine();
 extern void C_ZNK8QPicture11paintEngineEv(void* qthis); // 4
   // proto:  uint QPicture::size();
@@ -180,7 +180,7 @@ func (this *QPictureIO) setParameters(args ...interface{}) () {
 }
 
 // QPictureIO(const class QString &, const char *)
-func NewQPictureIO(args ...interface{}) QPictureIO {
+func NewQPictureIO(args ...interface{}) *QPictureIO {
   // QPictureIO(const class QString &, const char *)
   // QPictureIO(class QIODevice *, const char *)
   // QPictureIO()
@@ -206,7 +206,8 @@ func NewQPictureIO(args ...interface{}) QPictureIO {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QPictureIOC2ERK7QStringPKc(qthis, arg0, arg1)
+    qthis = C.C_ZN10QPictureIOC2ERK7QStringPKc(arg0, arg1)
+    return &QPictureIO{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QPictureIOC1EP9QIODevicePKc
     // invoke: void QPictureIO(class QIODevice *, const char *)
@@ -216,18 +217,20 @@ func NewQPictureIO(args ...interface{}) QPictureIO {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QPictureIOC2EP9QIODevicePKc(qthis, arg0, arg1)
+    qthis = C.C_ZN10QPictureIOC2EP9QIODevicePKc(arg0, arg1)
+    return &QPictureIO{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QPictureIOC1Ev
     // invoke: void QPictureIO()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QPictureIOC2Ev(qthis)
+    qthis = C.C_ZN10QPictureIOC2Ev()
+    return &QPictureIO{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPictureIO", "QPictureIO", args)
   }
 
-  return QPictureIO{}
+  return nil // QPictureIO{qclsinst:qthis}
 }
 
 // ~QPictureIO()
@@ -263,7 +266,8 @@ func (this *QPictureIO) quality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO7qualityEv
     // invoke: int quality()
-    C.C_ZNK10QPictureIO7qualityEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO7qualityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "quality", args)
   }
@@ -306,7 +310,8 @@ func (this *QPictureIO) parameters(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO10parametersEv
     // invoke: const char * parameters()
-    C.C_ZNK10QPictureIO10parametersEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO10parametersEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "parameters", args)
   }
@@ -349,7 +354,8 @@ func (this *QPictureIO) ioDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO8ioDeviceEv
     // invoke: QIODevice * ioDevice()
-    C.C_ZNK10QPictureIO8ioDeviceEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO8ioDeviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "ioDevice", args)
   }
@@ -415,7 +421,8 @@ func (this *QPictureIO) write(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPictureIO5writeEv
     // invoke: bool write()
-    C.C_ZN10QPictureIO5writeEv(this.qclsinst)
+    var ret = C.C_ZN10QPictureIO5writeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "write", args)
   }
@@ -461,13 +468,15 @@ func (this *QPictureIO) pictureFormat_s(args ...interface{}) () {
     // invoke: QByteArray pictureFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPictureIO13pictureFormatERK7QString(arg0)
+    var ret = C.C_ZN10QPictureIO13pictureFormatERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QPictureIO13pictureFormatEP9QIODevice
     // invoke: QByteArray pictureFormat(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QPictureIO13pictureFormatEP9QIODevice(arg0)
+    var ret = C.C_ZN10QPictureIO13pictureFormatEP9QIODevice(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "pictureFormat", args)
   }
@@ -487,7 +496,8 @@ func (this *QPictureIO) status(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO6statusEv
     // invoke: int status()
-    C.C_ZNK10QPictureIO6statusEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO6statusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "status", args)
   }
@@ -507,7 +517,8 @@ func (this *QPictureIO) picture(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO7pictureEv
     // invoke: const QPicture & picture()
-    C.C_ZNK10QPictureIO7pictureEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO7pictureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "picture", args)
   }
@@ -527,7 +538,8 @@ func (this *QPictureIO) description(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO11descriptionEv
     // invoke: QString description()
-    C.C_ZNK10QPictureIO11descriptionEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO11descriptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "description", args)
   }
@@ -547,7 +559,8 @@ func (this *QPictureIO) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO6formatEv
     // invoke: const char * format()
-    C.C_ZNK10QPictureIO6formatEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "format", args)
   }
@@ -567,7 +580,8 @@ func (this *QPictureIO) read(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QPictureIO4readEv
     // invoke: bool read()
-    C.C_ZN10QPictureIO4readEv(this.qclsinst)
+    var ret = C.C_ZN10QPictureIO4readEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "read", args)
   }
@@ -587,7 +601,8 @@ func (this *QPictureIO) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK10QPictureIO8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "fileName", args)
   }
@@ -719,7 +734,8 @@ func (this *QPictureIO) gamma(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QPictureIO5gammaEv
     // invoke: float gamma()
-    C.C_ZNK10QPictureIO5gammaEv(this.qclsinst)
+    var ret = C.C_ZNK10QPictureIO5gammaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureIO", "gamma", args)
   }
@@ -749,7 +765,8 @@ func (this *QPicture) load(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPicture4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN8QPicture4loadERK7QStringPKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN8QPicture4loadEP9QIODevicePKc
     // invoke: bool load(class QIODevice *, const char *)
@@ -757,7 +774,8 @@ func (this *QPicture) load(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPicture4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN8QPicture4loadEP9QIODevicePKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "load", args)
   }
@@ -777,7 +795,8 @@ func (this *QPicture) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture12boundingRectEv
     // invoke: QRect boundingRect()
-    C.C_ZNK8QPicture12boundingRectEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture12boundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "boundingRect", args)
   }
@@ -805,7 +824,7 @@ func (this *QPicture) FreeQPicture(args ...interface{}) () {
 }
 
 // QPicture(int)
-func NewQPicture(args ...interface{}) QPicture {
+func NewQPicture(args ...interface{}) *QPicture {
   // QPicture(int)
   // QPicture(const class QPicture &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -825,7 +844,8 @@ func NewQPicture(args ...interface{}) QPicture {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPictureC2Ei(qthis, arg0)
+    qthis = C.C_ZN8QPictureC2Ei(arg0)
+    return &QPicture{qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPictureC1ERKS_
     // invoke: void QPicture(const class QPicture &)
@@ -833,12 +853,13 @@ func NewQPicture(args ...interface{}) QPicture {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPictureC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN8QPictureC2ERKS_(arg0)
+    return &QPicture{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPicture", "QPicture", args)
   }
 
-  return QPicture{}
+  return nil // QPicture{qclsinst:qthis}
 }
 
 // paintEngine()
@@ -854,7 +875,8 @@ func (this *QPicture) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C.C_ZNK8QPicture11paintEngineEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture11paintEngineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "paintEngine", args)
   }
@@ -874,7 +896,8 @@ func (this *QPicture) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture4sizeEv
     // invoke: uint size()
-    C.C_ZNK8QPicture4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "size", args)
   }
@@ -983,7 +1006,8 @@ func (this *QPicture) pictureFormat_s(args ...interface{}) () {
     // invoke: const char * pictureFormat(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPicture13pictureFormatERK7QString(arg0)
+    var ret = C.C_ZN8QPicture13pictureFormatERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "pictureFormat", args)
   }
@@ -1013,7 +1037,8 @@ func (this *QPicture) save(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPicture4saveEP9QIODevicePKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN8QPicture4saveEP9QIODevicePKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN8QPicture4saveERK7QStringPKc
     // invoke: bool save(const class QString &, const char *)
@@ -1021,7 +1046,8 @@ func (this *QPicture) save(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPicture4saveERK7QStringPKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN8QPicture4saveERK7QStringPKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "save", args)
   }
@@ -1067,7 +1093,8 @@ func (this *QPicture) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK8QPicture10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "isDetached", args)
   }
@@ -1090,7 +1117,8 @@ func (this *QPicture) play(args ...interface{}) () {
     // invoke: bool play(class QPainter *)
     var arg0 = args[0].(QPainter).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPicture4playEP8QPainter(this.qclsinst, arg0)
+    var ret = C.C_ZN8QPicture4playEP8QPainter(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "play", args)
   }
@@ -1170,7 +1198,8 @@ func (this *QPicture) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture4dataEv
     // invoke: const char * data()
-    C.C_ZNK8QPicture4dataEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "data", args)
   }
@@ -1190,7 +1219,8 @@ func (this *QPicture) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK8QPicture6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "isNull", args)
   }
@@ -1210,7 +1240,8 @@ func (this *QPicture) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPicture7devTypeEv
     // invoke: int devType()
-    C.C_ZNK8QPicture7devTypeEv(this.qclsinst)
+    var ret = C.C_ZNK8QPicture7devTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPicture", "devType", args)
   }

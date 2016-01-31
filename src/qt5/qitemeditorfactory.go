@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qitemeditorfactory.h
 // dst-file: /src/widgets/qitemeditorfactory.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN18QItemEditorFactoryD2Ev(void* qthis); // 4
   // proto:  QWidget * QItemEditorFactory::createEditor(int userType, QWidget * parent);
 extern void C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QItemEditorFactory::QItemEditorFactory();
-extern void C_ZN18QItemEditorFactoryC2Ev(void* qthis); // 1
+extern void* C_ZN18QItemEditorFactoryC2Ev(); // 1
   // proto: static const QItemEditorFactory * QItemEditorFactory::defaultFactory();
 extern void C_ZN18QItemEditorFactory14defaultFactoryEv(); // 4
   // proto:  void QItemEditorFactory::registerEditor(int userType, QItemEditorCreatorBase * creator);
@@ -150,7 +150,8 @@ func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK18QItemEditorFactory12createEditorEiP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "createEditor", args)
   }
@@ -158,7 +159,7 @@ func (this *QItemEditorFactory) createEditor(args ...interface{}) () {
 }
 
 // QItemEditorFactory()
-func NewQItemEditorFactory(args ...interface{}) QItemEditorFactory {
+func NewQItemEditorFactory(args ...interface{}) *QItemEditorFactory {
   // QItemEditorFactory()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -172,12 +173,13 @@ func NewQItemEditorFactory(args ...interface{}) QItemEditorFactory {
     // invoke: void QItemEditorFactory()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QItemEditorFactoryC2Ev(qthis)
+    qthis = C.C_ZN18QItemEditorFactoryC2Ev()
+    return &QItemEditorFactory{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "QItemEditorFactory", args)
   }
 
-  return QItemEditorFactory{}
+  return nil // QItemEditorFactory{qclsinst:qthis}
 }
 
 // defaultFactory()
@@ -193,7 +195,8 @@ func (this *QItemEditorFactory) defaultFactory_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QItemEditorFactory14defaultFactoryEv
     // invoke: const QItemEditorFactory * defaultFactory()
-    C.C_ZN18QItemEditorFactory14defaultFactoryEv()
+    var ret = C.C_ZN18QItemEditorFactory14defaultFactoryEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "defaultFactory", args)
   }
@@ -242,7 +245,8 @@ func (this *QItemEditorFactory) valuePropertyName(args ...interface{}) () {
     // invoke: QByteArray valuePropertyName(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK18QItemEditorFactory17valuePropertyNameEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK18QItemEditorFactory17valuePropertyNameEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemEditorFactory", "valuePropertyName", args)
   }

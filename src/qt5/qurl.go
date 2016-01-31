@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qurl.h
 // dst-file: /src/core/qurl.go
 //
@@ -51,9 +51,9 @@ extern void C_ZN4QUrl7fromAceERK10QByteArray(void* arg0); // 4
   // proto:  void QUrl::detach();
 extern void C_ZN4QUrl6detachEv(void* qthis); // 4
   // proto:  void QUrl::QUrl();
-extern void C_ZN4QUrlC2Ev(void* qthis); // 3
+extern void* C_ZN4QUrlC2Ev(); // 3
   // proto:  void QUrl::QUrl(const QUrl & copy);
-extern void C_ZN4QUrlC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN4QUrlC2ERKS_(void* arg0); // 3
   // proto:  bool QUrl::isEmpty();
 extern void C_ZNK4QUrl7isEmptyEv(void* qthis); // 4
   // proto:  void QUrl::swap(QUrl & other);
@@ -119,7 +119,8 @@ func (this *QUrl) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK4QUrl10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isDetached", args)
   }
@@ -159,7 +160,8 @@ func (this *QUrl) isRelative(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl10isRelativeEv
     // invoke: bool isRelative()
-    C.C_ZNK4QUrl10isRelativeEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl10isRelativeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isRelative", args)
   }
@@ -179,7 +181,8 @@ func (this *QUrl) hasFragment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl11hasFragmentEv
     // invoke: bool hasFragment()
-    C.C_ZNK4QUrl11hasFragmentEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl11hasFragmentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "hasFragment", args)
   }
@@ -225,7 +228,8 @@ func (this *QUrl) fromUserInput_s(args ...interface{}) () {
     // invoke: QUrl fromUserInput(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl13fromUserInputERK7QString(arg0)
+    var ret = C.C_ZN4QUrl13fromUserInputERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "fromUserInput", args)
   }
@@ -248,7 +252,8 @@ func (this *QUrl) fromLocalFile_s(args ...interface{}) () {
     // invoke: QUrl fromLocalFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl13fromLocalFileERK7QString(arg0)
+    var ret = C.C_ZN4QUrl13fromLocalFileERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "fromLocalFile", args)
   }
@@ -271,7 +276,8 @@ func (this *QUrl) port(args ...interface{}) () {
     // invoke: int port(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QUrl4portEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QUrl4portEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "port", args)
   }
@@ -294,7 +300,8 @@ func (this *QUrl) toAce_s(args ...interface{}) () {
     // invoke: QByteArray toAce(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl5toAceERK7QString(arg0)
+    var ret = C.C_ZN4QUrl5toAceERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "toAce", args)
   }
@@ -317,7 +324,8 @@ func (this *QUrl) fromAce_s(args ...interface{}) () {
     // invoke: QString fromAce(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl7fromAceERK10QByteArray(arg0)
+    var ret = C.C_ZN4QUrl7fromAceERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "fromAce", args)
   }
@@ -345,7 +353,7 @@ func (this *QUrl) detach(args ...interface{}) () {
 }
 
 // QUrl()
-func NewQUrl(args ...interface{}) QUrl {
+func NewQUrl(args ...interface{}) *QUrl {
   // QUrl()
   // QUrl(const class QUrl &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -362,7 +370,8 @@ func NewQUrl(args ...interface{}) QUrl {
     // invoke: void QUrl()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QUrlC2Ev(qthis)
+    qthis = C.C_ZN4QUrlC2Ev()
+    return &QUrl{qclsinst:qthis}
   case 1:
     // invoke: _ZN4QUrlC1ERKS_
     // invoke: void QUrl(const class QUrl &)
@@ -370,12 +379,13 @@ func NewQUrl(args ...interface{}) QUrl {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QUrlC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN4QUrlC2ERKS_(arg0)
+    return &QUrl{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUrl", "QUrl", args)
   }
 
-  return QUrl{}
+  return nil // QUrl{qclsinst:qthis}
 }
 
 // isEmpty()
@@ -391,7 +401,8 @@ func (this *QUrl) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK4QUrl7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isEmpty", args)
   }
@@ -437,7 +448,8 @@ func (this *QUrl) fromPercentEncoding_s(args ...interface{}) () {
     // invoke: QString fromPercentEncoding(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0)
+    var ret = C.C_ZN4QUrl19fromPercentEncodingERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "fromPercentEncoding", args)
   }
@@ -460,7 +472,8 @@ func (this *QUrl) isParentOf(args ...interface{}) () {
     // invoke: bool isParentOf(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QUrl10isParentOfERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QUrl10isParentOfERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isParentOf", args)
   }
@@ -503,7 +516,8 @@ func (this *QUrl) resolved(args ...interface{}) () {
     // invoke: QUrl resolved(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QUrl8resolvedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QUrl8resolvedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "resolved", args)
   }
@@ -523,7 +537,8 @@ func (this *QUrl) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK4QUrl11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "errorString", args)
   }
@@ -543,7 +558,8 @@ func (this *QUrl) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK4QUrl7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isValid", args)
   }
@@ -563,7 +579,8 @@ func (this *QUrl) hasQuery(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl8hasQueryEv
     // invoke: bool hasQuery()
-    C.C_ZNK4QUrl8hasQueryEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl8hasQueryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "hasQuery", args)
   }
@@ -606,7 +623,8 @@ func (this *QUrl) scheme(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl6schemeEv
     // invoke: QString scheme()
-    C.C_ZNK4QUrl6schemeEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl6schemeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "scheme", args)
   }
@@ -649,7 +667,8 @@ func (this *QUrl) isLocalFile(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl11isLocalFileEv
     // invoke: bool isLocalFile()
-    C.C_ZNK4QUrl11isLocalFileEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl11isLocalFileEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "isLocalFile", args)
   }
@@ -678,7 +697,8 @@ func (this *QUrl) toPercentEncoding_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QByteArray).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0, arg1, arg2)
+    var ret = C.C_ZN4QUrl17toPercentEncodingERK7QStringRK10QByteArrayS5_(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "toPercentEncoding", args)
   }
@@ -741,7 +761,8 @@ func (this *QUrl) toLocalFile(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QUrl11toLocalFileEv
     // invoke: QString toLocalFile()
-    C.C_ZNK4QUrl11toLocalFileEv(this.qclsinst)
+    var ret = C.C_ZNK4QUrl11toLocalFileEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrl", "toLocalFile", args)
   }

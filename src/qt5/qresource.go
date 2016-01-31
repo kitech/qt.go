@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qresource.h
 // dst-file: /src/core/qresource.go
 //
@@ -41,7 +41,7 @@ extern void C_ZNK9QResource16absoluteFilePathEv(void* qthis); // 4
   // proto:  void QResource::~QResource();
 extern void C_ZN9QResourceD2Ev(void* qthis); // 4
   // proto:  void QResource::QResource(const QString & file, const QLocale & locale);
-extern void C_ZN9QResourceC2ERK7QStringRK7QLocale(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QResourceC2ERK7QStringRK7QLocale(void* arg0, void* arg1); // 3
   // proto:  void QResource::setFileName(const QString & file);
 extern void C_ZN9QResource11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  QString QResource::fileName();
@@ -113,7 +113,8 @@ func (this *QResource) isCompressed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource12isCompressedEv
     // invoke: bool isCompressed()
-    C.C_ZNK9QResource12isCompressedEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource12isCompressedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "isCompressed", args)
   }
@@ -156,7 +157,8 @@ func (this *QResource) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource6localeEv
     // invoke: QLocale locale()
-    C.C_ZNK9QResource6localeEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource6localeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "locale", args)
   }
@@ -176,7 +178,8 @@ func (this *QResource) absoluteFilePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource16absoluteFilePathEv
     // invoke: QString absoluteFilePath()
-    C.C_ZNK9QResource16absoluteFilePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource16absoluteFilePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "absoluteFilePath", args)
   }
@@ -204,7 +207,7 @@ func (this *QResource) FreeQResource(args ...interface{}) () {
 }
 
 // QResource(const class QString &, const class QLocale &)
-func NewQResource(args ...interface{}) QResource {
+func NewQResource(args ...interface{}) *QResource {
   // QResource(const class QString &, const class QLocale &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -224,12 +227,13 @@ func NewQResource(args ...interface{}) QResource {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QResourceC2ERK7QStringRK7QLocale(qthis, arg0, arg1)
+    qthis = C.C_ZN9QResourceC2ERK7QStringRK7QLocale(arg0, arg1)
+    return &QResource{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QResource", "QResource", args)
   }
 
-  return QResource{}
+  return nil // QResource{qclsinst:qthis}
 }
 
 // setFileName(const class QString &)
@@ -268,7 +272,8 @@ func (this *QResource) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK9QResource8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "fileName", args)
   }
@@ -298,7 +303,8 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN9QResource18unregisterResourceERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QResource18unregisterResourceEPKhRK7QString
     // invoke: bool unregisterResource(const uchar *, const class QString &)
@@ -306,7 +312,8 @@ func (this *QResource) unregisterResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)
+    var ret = C.C_ZN9QResource18unregisterResourceEPKhRK7QString(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "unregisterResource", args)
   }
@@ -336,7 +343,8 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)
+    var ret = C.C_ZN9QResource16registerResourceEPKhRK7QString(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QResource16registerResourceERK7QStringS2_
     // invoke: bool registerResource(const class QString &, const class QString &)
@@ -344,7 +352,8 @@ func (this *QResource) registerResource_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN9QResource16registerResourceERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "registerResource", args)
   }
@@ -364,7 +373,8 @@ func (this *QResource) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QResource7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "isValid", args)
   }
@@ -407,7 +417,8 @@ func (this *QResource) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource4dataEv
     // invoke: const uchar * data()
-    C.C_ZNK9QResource4dataEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "data", args)
   }
@@ -427,7 +438,8 @@ func (this *QResource) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QResource4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK9QResource4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QResource4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QResource", "size", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qcontiguouscache.h
 // dst-file: /src/core/qcontiguouscache.go
 //
@@ -69,7 +69,8 @@ func (this *QContiguousCacheData) allocateData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
+    var ret = C.C_ZN20QContiguousCacheData12allocateDataEii(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QContiguousCacheData", "allocateData", args)
   }

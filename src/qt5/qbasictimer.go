@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qbasictimer.h
 // dst-file: /src/core/qbasictimer.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN11QBasicTimer4stopEv(void* qthis); // 4
   // proto:  void QBasicTimer::start(int msec, QObject * obj);
 extern void C_ZN11QBasicTimer5startEiP7QObject(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QBasicTimer::QBasicTimer();
-extern void C_ZN11QBasicTimerC2Ev(void* qthis); // 1
+extern void* C_ZN11QBasicTimerC2Ev(); // 1
   // proto:  void QBasicTimer::~QBasicTimer();
 extern void C_ZN11QBasicTimerD2Ev(void* qthis); // 2
   // proto:  int QBasicTimer::timerId();
@@ -105,7 +105,7 @@ func (this *QBasicTimer) start(args ...interface{}) () {
 }
 
 // QBasicTimer()
-func NewQBasicTimer(args ...interface{}) QBasicTimer {
+func NewQBasicTimer(args ...interface{}) *QBasicTimer {
   // QBasicTimer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,12 +119,13 @@ func NewQBasicTimer(args ...interface{}) QBasicTimer {
     // invoke: void QBasicTimer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QBasicTimerC2Ev(qthis)
+    qthis = C.C_ZN11QBasicTimerC2Ev()
+    return &QBasicTimer{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBasicTimer", "QBasicTimer", args)
   }
 
-  return QBasicTimer{}
+  return nil // QBasicTimer{qclsinst:qthis}
 }
 
 // ~QBasicTimer()
@@ -160,7 +161,8 @@ func (this *QBasicTimer) timerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QBasicTimer7timerIdEv
     // invoke: int timerId()
-    C.C_ZNK11QBasicTimer7timerIdEv(this.qclsinst)
+    var ret = C.C_ZNK11QBasicTimer7timerIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBasicTimer", "timerId", args)
   }
@@ -180,7 +182,8 @@ func (this *QBasicTimer) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QBasicTimer8isActiveEv
     // invoke: bool isActive()
-    C.C_ZNK11QBasicTimer8isActiveEv(this.qclsinst)
+    var ret = C.C_ZNK11QBasicTimer8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBasicTimer", "isActive", args)
   }

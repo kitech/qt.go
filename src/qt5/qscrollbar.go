@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qscrollbar.h
 // dst-file: /src/widgets/qscrollbar.go
 //
@@ -33,7 +33,7 @@ extern void C_ZNK10QScrollBar10metaObjectEv(void* qthis); // 4
   // proto:  QSize QScrollBar::sizeHint();
 extern void C_ZNK10QScrollBar8sizeHintEv(void* qthis); // 4
   // proto:  void QScrollBar::QScrollBar(QWidget * parent);
-extern void C_ZN10QScrollBarC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN10QScrollBarC2EP7QWidget(void* arg0); // 3
   // proto:  void QScrollBar::~QScrollBar();
 extern void C_ZN10QScrollBarD2Ev(void* qthis); // 4
   // proto:  bool QScrollBar::event(QEvent * event);
@@ -89,7 +89,8 @@ func (this *QScrollBar) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QScrollBar8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK10QScrollBar8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK10QScrollBar8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScrollBar", "sizeHint", args)
   }
@@ -97,7 +98,7 @@ func (this *QScrollBar) sizeHint(args ...interface{}) () {
 }
 
 // QScrollBar(class QWidget *)
-func NewQScrollBar(args ...interface{}) QScrollBar {
+func NewQScrollBar(args ...interface{}) *QScrollBar {
   // QScrollBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,12 +115,13 @@ func NewQScrollBar(args ...interface{}) QScrollBar {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QScrollBarC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN10QScrollBarC2EP7QWidget(arg0)
+    return &QScrollBar{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollBar", "QScrollBar", args)
   }
 
-  return QScrollBar{}
+  return nil // QScrollBar{qclsinst:qthis}
 }
 
 // ~QScrollBar()
@@ -158,7 +160,8 @@ func (this *QScrollBar) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
+    var ret = C.C_ZN10QScrollBar5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScrollBar", "event", args)
   }

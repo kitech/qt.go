@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstyleditemdelegate.h
 // dst-file: /src/widgets/qstyleditemdelegate.go
 //
@@ -35,7 +35,7 @@ extern void C_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionVi
   // proto:  void QStyledItemDelegate::updateEditorGeometry(QWidget * editor, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void C_ZNK19QStyledItemDelegate20updateEditorGeometryEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QStyledItemDelegate::QStyledItemDelegate(QObject * parent);
-extern void C_ZN19QStyledItemDelegateC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN19QStyledItemDelegateC2EP7QObject(void* arg0); // 3
   // proto:  void QStyledItemDelegate::paint(QPainter * painter, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void C_ZNK19QStyledItemDelegate5paintEP8QPainterRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QStyledItemDelegate::setModelData(QWidget * editor, QAbstractItemModel * model, const QModelIndex & index);
@@ -83,7 +83,8 @@ func (this *QStyledItemDelegate) itemEditorFactory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QStyledItemDelegate17itemEditorFactoryEv
     // invoke: QItemEditorFactory * itemEditorFactory()
-    C.C_ZNK19QStyledItemDelegate17itemEditorFactoryEv(this.qclsinst)
+    var ret = C.C_ZNK19QStyledItemDelegate17itemEditorFactoryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "itemEditorFactory", args)
   }
@@ -112,7 +113,8 @@ func (this *QStyledItemDelegate) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK19QStyledItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "createEditor", args)
   }
@@ -149,7 +151,7 @@ func (this *QStyledItemDelegate) updateEditorGeometry(args ...interface{}) () {
 }
 
 // QStyledItemDelegate(class QObject *)
-func NewQStyledItemDelegate(args ...interface{}) QStyledItemDelegate {
+func NewQStyledItemDelegate(args ...interface{}) *QStyledItemDelegate {
   // QStyledItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,12 +168,13 @@ func NewQStyledItemDelegate(args ...interface{}) QStyledItemDelegate {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QStyledItemDelegateC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN19QStyledItemDelegateC2EP7QObject(arg0)
+    return &QStyledItemDelegate{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "QStyledItemDelegate", args)
   }
 
-  return QStyledItemDelegate{}
+  return nil // QStyledItemDelegate{qclsinst:qthis}
 }
 
 // paint(class QPainter *, const class QStyleOptionViewItem &, const class QModelIndex &)
@@ -251,7 +254,8 @@ func (this *QStyledItemDelegate) displayText(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QLocale).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QStyledItemDelegate11displayTextERK8QVariantRK7QLocale(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "displayText", args)
   }
@@ -323,7 +327,8 @@ func (this *QStyledItemDelegate) sizeHint(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QStyledItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyledItemDelegate", "sizeHint", args)
   }

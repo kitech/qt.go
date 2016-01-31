@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsettings.h
 // dst-file: /src/core/qsettings.go
 //
@@ -87,9 +87,9 @@ extern void C_ZNK9QSettings9childKeysEv(void* qthis); // 4
   // proto:  QString QSettings::organizationName();
 extern void C_ZNK9QSettings16organizationNameEv(void* qthis); // 4
   // proto:  void QSettings::QSettings(QObject * parent);
-extern void C_ZN9QSettingsC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN9QSettingsC2EP7QObject(void* arg0); // 3
   // proto:  void QSettings::QSettings(const QString & organization, const QString & application, QObject * parent);
-extern void C_ZN9QSettingsC2ERK7QStringS2_P7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN9QSettingsC2ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2); // 3
   // proto:  QTextCodec * QSettings::iniCodec();
 extern void C_ZNK9QSettings8iniCodecEv(void* qthis); // 4
   // proto:  void QSettings::clear();
@@ -132,7 +132,8 @@ func (this *QSettings) contains(args ...interface{}) () {
     // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QSettings8containsERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QSettings8containsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "contains", args)
   }
@@ -290,7 +291,8 @@ func (this *QSettings) fallbacksEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings16fallbacksEnabledEv
     // invoke: bool fallbacksEnabled()
-    C.C_ZNK9QSettings16fallbacksEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings16fallbacksEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "fallbacksEnabled", args)
   }
@@ -330,7 +332,8 @@ func (this *QSettings) applicationName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings15applicationNameEv
     // invoke: QString applicationName()
-    C.C_ZNK9QSettings15applicationNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings15applicationNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "applicationName", args)
   }
@@ -350,7 +353,8 @@ func (this *QSettings) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings5groupEv
     // invoke: QString group()
-    C.C_ZNK9QSettings5groupEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings5groupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "group", args)
   }
@@ -370,7 +374,8 @@ func (this *QSettings) isWritable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings10isWritableEv
     // invoke: bool isWritable()
-    C.C_ZNK9QSettings10isWritableEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings10isWritableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "isWritable", args)
   }
@@ -674,7 +679,8 @@ func (this *QSettings) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK9QSettings8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "fileName", args)
   }
@@ -714,7 +720,8 @@ func (this *QSettings) organizationName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings16organizationNameEv
     // invoke: QString organizationName()
-    C.C_ZNK9QSettings16organizationNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings16organizationNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "organizationName", args)
   }
@@ -722,7 +729,7 @@ func (this *QSettings) organizationName(args ...interface{}) () {
 }
 
 // QSettings(class QObject *)
-func NewQSettings(args ...interface{}) QSettings {
+func NewQSettings(args ...interface{}) *QSettings {
   // QSettings(class QObject *)
   // QSettings(const class QString &, const class QString &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -744,7 +751,8 @@ func NewQSettings(args ...interface{}) QSettings {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSettingsC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN9QSettingsC2EP7QObject(arg0)
+    return &QSettings{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QSettingsC1ERK7QStringS2_P7QObject
     // invoke: void QSettings(const class QString &, const class QString &, class QObject *)
@@ -756,12 +764,13 @@ func NewQSettings(args ...interface{}) QSettings {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSettingsC2ERK7QStringS2_P7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN9QSettingsC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)
+    return &QSettings{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSettings", "QSettings", args)
   }
 
-  return QSettings{}
+  return nil // QSettings{qclsinst:qthis}
 }
 
 // iniCodec()
@@ -777,7 +786,8 @@ func (this *QSettings) iniCodec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSettings8iniCodecEv
     // invoke: QTextCodec * iniCodec()
-    C.C_ZNK9QSettings8iniCodecEv(this.qclsinst)
+    var ret = C.C_ZNK9QSettings8iniCodecEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "iniCodec", args)
   }
@@ -823,7 +833,8 @@ func (this *QSettings) value(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QSettings5valueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QSettings5valueERK7QStringRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "value", args)
   }
@@ -846,7 +857,8 @@ func (this *QSettings) beginReadArray(args ...interface{}) () {
     // invoke: int beginReadArray(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QSettings14beginReadArrayERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN9QSettings14beginReadArrayERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSettings", "beginReadArray", args)
   }

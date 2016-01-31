@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qabstracttextdocumentlayout.h
 // dst-file: /src/gui/qabstracttextdocumentlayout.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN27QAbstractTextDocumentLayout14setPaintDeviceEP12QPaintDevice(vo
   // proto:  QString QAbstractTextDocumentLayout::anchorAt(const QPointF & pos);
 extern void C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTextDocumentLayout::QAbstractTextDocumentLayout(QTextDocument * doc);
-extern void C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void* C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(void* arg0); // 3
   // proto:  QPaintDevice * QAbstractTextDocumentLayout::paintDevice();
 extern void C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(void* qthis); // 4
   // proto:  QTextDocument * QAbstractTextDocumentLayout::document();
@@ -141,7 +141,8 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
     // invoke: QString anchorAt(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK27QAbstractTextDocumentLayout8anchorAtERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "anchorAt", args)
   }
@@ -149,7 +150,7 @@ func (this *QAbstractTextDocumentLayout) anchorAt(args ...interface{}) () {
 }
 
 // QAbstractTextDocumentLayout(class QTextDocument *)
-func NewQAbstractTextDocumentLayout(args ...interface{}) QAbstractTextDocumentLayout {
+func NewQAbstractTextDocumentLayout(args ...interface{}) *QAbstractTextDocumentLayout {
   // QAbstractTextDocumentLayout(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -166,12 +167,13 @@ func NewQAbstractTextDocumentLayout(args ...interface{}) QAbstractTextDocumentLa
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(qthis, arg0)
+    qthis = C.C_ZN27QAbstractTextDocumentLayoutC2EP13QTextDocument(arg0)
+    return &QAbstractTextDocumentLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "QAbstractTextDocumentLayout", args)
   }
 
-  return QAbstractTextDocumentLayout{}
+  return nil // QAbstractTextDocumentLayout{qclsinst:qthis}
 }
 
 // paintDevice()
@@ -187,7 +189,8 @@ func (this *QAbstractTextDocumentLayout) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C.C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
+    var ret = C.C_ZNK27QAbstractTextDocumentLayout11paintDeviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "paintDevice", args)
   }
@@ -207,7 +210,8 @@ func (this *QAbstractTextDocumentLayout) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK27QAbstractTextDocumentLayout8documentEv
     // invoke: QTextDocument * document()
-    C.C_ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
+    var ret = C.C_ZNK27QAbstractTextDocumentLayout8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "document", args)
   }
@@ -296,7 +300,8 @@ func (this *QAbstractTextDocumentLayout) handlerForObject(args ...interface{}) (
     // invoke: QTextObjectInterface * handlerForObject(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK27QAbstractTextDocumentLayout16handlerForObjectEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTextDocumentLayout", "handlerForObject", args)
   }

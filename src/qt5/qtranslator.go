@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qtranslator.h
 // dst-file: /src/core/qtranslator.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN11QTranslatorD2Ev(void* qthis); // 4
   // proto:  bool QTranslator::isEmpty();
 extern void C_ZNK11QTranslator7isEmptyEv(void* qthis); // 4
   // proto:  void QTranslator::QTranslator(QObject * parent);
-extern void C_ZN11QTranslatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN11QTranslatorC2EP7QObject(void* arg0); // 3
   // proto:  QString QTranslator::translate(const char * context, const char * sourceText, const char * disambiguation, int n);
 extern void C_ZNK11QTranslator9translateEPKcS1_S1_i(void* qthis, unsigned char* arg0, unsigned char* arg1, unsigned char* arg2, int32_t arg3); // 4
 */
@@ -99,7 +99,8 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QString).qclsinst
     if false {fmt.Println(arg3)}
-    C.C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN11QTranslator4loadERK7QStringS2_S2_S2_(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_
     // invoke: bool load(const class QLocale &, const class QString &, const class QString &, const class QString &, const class QString &)
@@ -113,7 +114,8 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C.C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZN11QTranslator4loadERK7QLocaleRK7QStringS5_S5_S5_(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN11QTranslator4loadEPKhiRK7QString
     // invoke: bool load(const uchar *, int, const class QString &)
@@ -123,7 +125,8 @@ func (this *QTranslator) load(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN11QTranslator4loadEPKhiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTranslator", "load", args)
   }
@@ -183,7 +186,8 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTranslator7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK11QTranslator7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK11QTranslator7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTranslator", "isEmpty", args)
   }
@@ -191,7 +195,7 @@ func (this *QTranslator) isEmpty(args ...interface{}) () {
 }
 
 // QTranslator(class QObject *)
-func NewQTranslator(args ...interface{}) QTranslator {
+func NewQTranslator(args ...interface{}) *QTranslator {
   // QTranslator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -208,12 +212,13 @@ func NewQTranslator(args ...interface{}) QTranslator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTranslatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN11QTranslatorC2EP7QObject(arg0)
+    return &QTranslator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTranslator", "QTranslator", args)
   }
 
-  return QTranslator{}
+  return nil // QTranslator{qclsinst:qthis}
 }
 
 // translate(const char *, const char *, const char *, int)
@@ -241,7 +246,8 @@ func (this *QTranslator) translate(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZNK11QTranslator9translateEPKcS1_S1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTranslator", "translate", args)
   }

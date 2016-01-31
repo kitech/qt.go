@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qerrormessage.h
 // dst-file: /src/widgets/qerrormessage.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  const QMetaObject * QErrorMessage::metaObject();
 extern void C_ZNK13QErrorMessage10metaObjectEv(void* qthis); // 4
   // proto:  void QErrorMessage::QErrorMessage(QWidget * parent);
-extern void C_ZN13QErrorMessageC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN13QErrorMessageC2EP7QWidget(void* arg0); // 3
   // proto:  void QErrorMessage::~QErrorMessage();
 extern void C_ZN13QErrorMessageD2Ev(void* qthis); // 4
   // proto: static QErrorMessage * QErrorMessage::qtHandler();
@@ -79,7 +79,7 @@ func (this *QErrorMessage) metaObject(args ...interface{}) () {
 }
 
 // QErrorMessage(class QWidget *)
-func NewQErrorMessage(args ...interface{}) QErrorMessage {
+func NewQErrorMessage(args ...interface{}) *QErrorMessage {
   // QErrorMessage(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,12 +96,13 @@ func NewQErrorMessage(args ...interface{}) QErrorMessage {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QErrorMessageC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN13QErrorMessageC2EP7QWidget(arg0)
+    return &QErrorMessage{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QErrorMessage", "QErrorMessage", args)
   }
 
-  return QErrorMessage{}
+  return nil // QErrorMessage{qclsinst:qthis}
 }
 
 // ~QErrorMessage()
@@ -137,7 +138,8 @@ func (this *QErrorMessage) qtHandler_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QErrorMessage9qtHandlerEv
     // invoke: QErrorMessage * qtHandler()
-    C.C_ZN13QErrorMessage9qtHandlerEv()
+    var ret = C.C_ZN13QErrorMessage9qtHandlerEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QErrorMessage", "qtHandler", args)
   }

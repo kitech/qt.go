@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qinputmethod.h
 // dst-file: /src/gui/qinputmethod.go
 //
@@ -117,7 +117,8 @@ func (this *QInputMethod) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod6localeEv
     // invoke: QLocale locale()
-    C.C_ZNK12QInputMethod6localeEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod6localeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "locale", args)
   }
@@ -180,7 +181,8 @@ func (this *QInputMethod) cursorRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod15cursorRectangleEv
     // invoke: QRectF cursorRectangle()
-    C.C_ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod15cursorRectangleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "cursorRectangle", args)
   }
@@ -200,7 +202,8 @@ func (this *QInputMethod) inputItemRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemRectangleEv
     // invoke: QRectF inputItemRectangle()
-    C.C_ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod18inputItemRectangleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemRectangle", args)
   }
@@ -220,7 +223,8 @@ func (this *QInputMethod) isAnimating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod11isAnimatingEv
     // invoke: bool isAnimating()
-    C.C_ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod11isAnimatingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "isAnimating", args)
   }
@@ -283,7 +287,8 @@ func (this *QInputMethod) keyboardRectangle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod17keyboardRectangleEv
     // invoke: QRectF keyboardRectangle()
-    C.C_ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod17keyboardRectangleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "keyboardRectangle", args)
   }
@@ -343,7 +348,8 @@ func (this *QInputMethod) inputItemTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod18inputItemTransformEv
     // invoke: QTransform inputItemTransform()
-    C.C_ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod18inputItemTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "inputItemTransform", args)
   }
@@ -363,7 +369,8 @@ func (this *QInputMethod) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputMethod9isVisibleEv
     // invoke: bool isVisible()
-    C.C_ZNK12QInputMethod9isVisibleEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputMethod9isVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputMethod", "isVisible", args)
   }

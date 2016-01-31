@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qimagewriter.h
 // dst-file: /src/gui/qimagewriter.go
 //
@@ -39,11 +39,11 @@ extern void C_ZNK12QImageWriter7subTypeEv(void* qthis); // 4
   // proto:  void QImageWriter::setOptimizedWrite(bool optimize);
 extern void C_ZN12QImageWriter17setOptimizedWriteEb(void* qthis, bool arg0); // 4
   // proto:  void QImageWriter::QImageWriter(const QString & fileName, const QByteArray & format);
-extern void C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  void QImageWriter::QImageWriter(QIODevice * device, const QByteArray & format);
-extern void C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  void QImageWriter::QImageWriter();
-extern void C_ZN12QImageWriterC2Ev(void* qthis); // 3
+extern void* C_ZN12QImageWriterC2Ev(); // 3
   // proto:  int QImageWriter::quality();
 extern void C_ZNK12QImageWriter7qualityEv(void* qthis); // 4
   // proto:  void QImageWriter::setDescription(const QString & description);
@@ -148,7 +148,8 @@ func (this *QImageWriter) canWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter8canWriteEv
     // invoke: bool canWrite()
-    C.C_ZNK12QImageWriter8canWriteEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter8canWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "canWrite", args)
   }
@@ -188,7 +189,8 @@ func (this *QImageWriter) subType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter7subTypeEv
     // invoke: QByteArray subType()
-    C.C_ZNK12QImageWriter7subTypeEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter7subTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "subType", args)
   }
@@ -219,7 +221,7 @@ func (this *QImageWriter) setOptimizedWrite(args ...interface{}) () {
 }
 
 // QImageWriter(const class QString &, const class QByteArray &)
-func NewQImageWriter(args ...interface{}) QImageWriter {
+func NewQImageWriter(args ...interface{}) *QImageWriter {
   // QImageWriter(const class QString &, const class QByteArray &)
   // QImageWriter(class QIODevice *, const class QByteArray &)
   // QImageWriter()
@@ -245,7 +247,8 @@ func NewQImageWriter(args ...interface{}) QImageWriter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(qthis, arg0, arg1)
+    qthis = C.C_ZN12QImageWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
+    return &QImageWriter{qclsinst:qthis}
   case 1:
     // invoke: _ZN12QImageWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QImageWriter(class QIODevice *, const class QByteArray &)
@@ -255,18 +258,20 @@ func NewQImageWriter(args ...interface{}) QImageWriter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)
+    qthis = C.C_ZN12QImageWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
+    return &QImageWriter{qclsinst:qthis}
   case 2:
     // invoke: _ZN12QImageWriterC1Ev
     // invoke: void QImageWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QImageWriterC2Ev(qthis)
+    qthis = C.C_ZN12QImageWriterC2Ev()
+    return &QImageWriter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QImageWriter", "QImageWriter", args)
   }
 
-  return QImageWriter{}
+  return nil // QImageWriter{qclsinst:qthis}
 }
 
 // quality()
@@ -282,7 +287,8 @@ func (this *QImageWriter) quality(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter7qualityEv
     // invoke: int quality()
-    C.C_ZNK12QImageWriter7qualityEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter7qualityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "quality", args)
   }
@@ -325,7 +331,8 @@ func (this *QImageWriter) compression(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter11compressionEv
     // invoke: int compression()
-    C.C_ZNK12QImageWriter11compressionEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter11compressionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "compression", args)
   }
@@ -371,7 +378,8 @@ func (this *QImageWriter) write(args ...interface{}) () {
     // invoke: bool write(const class QImage &)
     var arg0 = args[0].(QImage).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QImageWriter5writeERK6QImage(this.qclsinst, arg0)
+    var ret = C.C_ZN12QImageWriter5writeERK6QImage(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "write", args)
   }
@@ -500,7 +508,8 @@ func (this *QImageWriter) description(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter11descriptionEv
     // invoke: QString description()
-    C.C_ZNK12QImageWriter11descriptionEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter11descriptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "description", args)
   }
@@ -520,7 +529,8 @@ func (this *QImageWriter) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK12QImageWriter11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "errorString", args)
   }
@@ -540,7 +550,8 @@ func (this *QImageWriter) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter6formatEv
     // invoke: QByteArray format()
-    C.C_ZNK12QImageWriter6formatEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "format", args)
   }
@@ -580,7 +591,8 @@ func (this *QImageWriter) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK12QImageWriter8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "fileName", args)
   }
@@ -623,7 +635,8 @@ func (this *QImageWriter) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter6deviceEv
     // invoke: QIODevice * device()
-    C.C_ZNK12QImageWriter6deviceEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "device", args)
   }
@@ -663,7 +676,8 @@ func (this *QImageWriter) optimizedWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter14optimizedWriteEv
     // invoke: bool optimizedWrite()
-    C.C_ZNK12QImageWriter14optimizedWriteEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter14optimizedWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "optimizedWrite", args)
   }
@@ -683,7 +697,8 @@ func (this *QImageWriter) progressiveScanWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter20progressiveScanWriteEv
     // invoke: bool progressiveScanWrite()
-    C.C_ZNK12QImageWriter20progressiveScanWriteEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter20progressiveScanWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "progressiveScanWrite", args)
   }
@@ -795,7 +810,8 @@ func (this *QImageWriter) gamma(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QImageWriter5gammaEv
     // invoke: float gamma()
-    C.C_ZNK12QImageWriter5gammaEv(this.qclsinst)
+    var ret = C.C_ZNK12QImageWriter5gammaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QImageWriter", "gamma", args)
   }

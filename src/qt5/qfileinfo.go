@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfileinfo.h
 // dst-file: /src/core/qfileinfo.go
 //
@@ -33,15 +33,15 @@ extern void C_ZNK9QFileInfo11absoluteDirEv(void* qthis); // 4
   // proto:  QString QFileInfo::suffix();
 extern void C_ZNK9QFileInfo6suffixEv(void* qthis); // 4
   // proto:  void QFileInfo::QFileInfo(const QFileInfo & fileinfo);
-extern void C_ZN9QFileInfoC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN9QFileInfoC2ERKS_(void* arg0); // 3
   // proto:  void QFileInfo::QFileInfo();
-extern void C_ZN9QFileInfoC2Ev(void* qthis); // 3
+extern void* C_ZN9QFileInfoC2Ev(); // 3
   // proto:  void QFileInfo::QFileInfo(const QString & file);
-extern void C_ZN9QFileInfoC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN9QFileInfoC2ERK7QString(void* arg0); // 3
   // proto:  void QFileInfo::QFileInfo(const QFile & file);
-extern void C_ZN9QFileInfoC2ERK5QFile(void* qthis, void* arg0); // 3
+extern void* C_ZN9QFileInfoC2ERK5QFile(void* arg0); // 3
   // proto:  void QFileInfo::QFileInfo(const QDir & dir, const QString & file);
-extern void C_ZN9QFileInfoC2ERK4QDirRK7QString(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QFileInfoC2ERK4QDirRK7QString(void* arg0, void* arg1); // 3
   // proto:  QString QFileInfo::symLinkTarget();
 extern void C_ZNK9QFileInfo13symLinkTargetEv(void* qthis); // 2
   // proto:  bool QFileInfo::isRelative();
@@ -165,7 +165,8 @@ func (this *QFileInfo) absoluteDir(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo11absoluteDirEv
     // invoke: QDir absoluteDir()
-    C.C_ZNK9QFileInfo11absoluteDirEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo11absoluteDirEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "absoluteDir", args)
   }
@@ -185,7 +186,8 @@ func (this *QFileInfo) suffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo6suffixEv
     // invoke: QString suffix()
-    C.C_ZNK9QFileInfo6suffixEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo6suffixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "suffix", args)
   }
@@ -193,7 +195,7 @@ func (this *QFileInfo) suffix(args ...interface{}) () {
 }
 
 // QFileInfo(const class QFileInfo &)
-func NewQFileInfo(args ...interface{}) QFileInfo {
+func NewQFileInfo(args ...interface{}) *QFileInfo {
   // QFileInfo(const class QFileInfo &)
   // QFileInfo()
   // QFileInfo(const class QString &)
@@ -222,13 +224,15 @@ func NewQFileInfo(args ...interface{}) QFileInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QFileInfoC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN9QFileInfoC2ERKS_(arg0)
+    return &QFileInfo{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QFileInfoC1Ev
     // invoke: void QFileInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QFileInfoC2Ev(qthis)
+    qthis = C.C_ZN9QFileInfoC2Ev()
+    return &QFileInfo{qclsinst:qthis}
   case 2:
     // invoke: _ZN9QFileInfoC1ERK7QString
     // invoke: void QFileInfo(const class QString &)
@@ -236,7 +240,8 @@ func NewQFileInfo(args ...interface{}) QFileInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QFileInfoC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN9QFileInfoC2ERK7QString(arg0)
+    return &QFileInfo{qclsinst:qthis}
   case 3:
     // invoke: _ZN9QFileInfoC1ERK5QFile
     // invoke: void QFileInfo(const class QFile &)
@@ -244,7 +249,8 @@ func NewQFileInfo(args ...interface{}) QFileInfo {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QFileInfoC2ERK5QFile(qthis, arg0)
+    qthis = C.C_ZN9QFileInfoC2ERK5QFile(arg0)
+    return &QFileInfo{qclsinst:qthis}
   case 4:
     // invoke: _ZN9QFileInfoC1ERK4QDirRK7QString
     // invoke: void QFileInfo(const class QDir &, const class QString &)
@@ -254,12 +260,13 @@ func NewQFileInfo(args ...interface{}) QFileInfo {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QFileInfoC2ERK4QDirRK7QString(qthis, arg0, arg1)
+    qthis = C.C_ZN9QFileInfoC2ERK4QDirRK7QString(arg0, arg1)
+    return &QFileInfo{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileInfo", "QFileInfo", args)
   }
 
-  return QFileInfo{}
+  return nil // QFileInfo{qclsinst:qthis}
 }
 
 // symLinkTarget()
@@ -275,7 +282,8 @@ func (this *QFileInfo) symLinkTarget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo13symLinkTargetEv
     // invoke: QString symLinkTarget()
-    C.C_ZNK9QFileInfo13symLinkTargetEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo13symLinkTargetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "symLinkTarget", args)
   }
@@ -295,7 +303,8 @@ func (this *QFileInfo) isRelative(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo10isRelativeEv
     // invoke: bool isRelative()
-    C.C_ZNK9QFileInfo10isRelativeEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo10isRelativeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isRelative", args)
   }
@@ -315,7 +324,8 @@ func (this *QFileInfo) completeBaseName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo16completeBaseNameEv
     // invoke: QString completeBaseName()
-    C.C_ZNK9QFileInfo16completeBaseNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo16completeBaseNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "completeBaseName", args)
   }
@@ -335,7 +345,8 @@ func (this *QFileInfo) canonicalFilePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo17canonicalFilePathEv
     // invoke: QString canonicalFilePath()
-    C.C_ZNK9QFileInfo17canonicalFilePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo17canonicalFilePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "canonicalFilePath", args)
   }
@@ -355,7 +366,8 @@ func (this *QFileInfo) isAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo10isAbsoluteEv
     // invoke: bool isAbsolute()
-    C.C_ZNK9QFileInfo10isAbsoluteEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo10isAbsoluteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isAbsolute", args)
   }
@@ -375,7 +387,8 @@ func (this *QFileInfo) owner(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo5ownerEv
     // invoke: QString owner()
-    C.C_ZNK9QFileInfo5ownerEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo5ownerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "owner", args)
   }
@@ -395,7 +408,8 @@ func (this *QFileInfo) isExecutable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo12isExecutableEv
     // invoke: bool isExecutable()
-    C.C_ZNK9QFileInfo12isExecutableEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo12isExecutableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isExecutable", args)
   }
@@ -415,7 +429,8 @@ func (this *QFileInfo) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK9QFileInfo4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "size", args)
   }
@@ -435,7 +450,8 @@ func (this *QFileInfo) bundleName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo10bundleNameEv
     // invoke: QString bundleName()
-    C.C_ZNK9QFileInfo10bundleNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo10bundleNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "bundleName", args)
   }
@@ -455,7 +471,8 @@ func (this *QFileInfo) group(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo5groupEv
     // invoke: QString group()
-    C.C_ZNK9QFileInfo5groupEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo5groupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "group", args)
   }
@@ -480,11 +497,13 @@ func (this *QFileInfo) exists_s(args ...interface{}) () {
     // invoke: bool exists(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QFileInfo6existsERK7QString(arg0)
+    var ret = C.C_ZN9QFileInfo6existsERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QFileInfo6existsEv
     // invoke: bool exists()
-    C.C_ZNK9QFileInfo6existsEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo6existsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "exists", args)
   }
@@ -504,7 +523,8 @@ func (this *QFileInfo) isWritable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo10isWritableEv
     // invoke: bool isWritable()
-    C.C_ZNK9QFileInfo10isWritableEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo10isWritableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isWritable", args)
   }
@@ -524,7 +544,8 @@ func (this *QFileInfo) filePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8filePathEv
     // invoke: QString filePath()
-    C.C_ZNK9QFileInfo8filePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8filePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "filePath", args)
   }
@@ -544,7 +565,8 @@ func (this *QFileInfo) absolutePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo12absolutePathEv
     // invoke: QString absolutePath()
-    C.C_ZNK9QFileInfo12absolutePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo12absolutePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "absolutePath", args)
   }
@@ -587,7 +609,8 @@ func (this *QFileInfo) canonicalPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo13canonicalPathEv
     // invoke: QString canonicalPath()
-    C.C_ZNK9QFileInfo13canonicalPathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo13canonicalPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "canonicalPath", args)
   }
@@ -607,7 +630,8 @@ func (this *QFileInfo) isBundle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8isBundleEv
     // invoke: bool isBundle()
-    C.C_ZNK9QFileInfo8isBundleEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8isBundleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isBundle", args)
   }
@@ -627,7 +651,8 @@ func (this *QFileInfo) isHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8isHiddenEv
     // invoke: bool isHidden()
-    C.C_ZNK9QFileInfo8isHiddenEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8isHiddenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isHidden", args)
   }
@@ -647,7 +672,8 @@ func (this *QFileInfo) isDir(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo5isDirEv
     // invoke: bool isDir()
-    C.C_ZNK9QFileInfo5isDirEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo5isDirEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isDir", args)
   }
@@ -667,7 +693,8 @@ func (this *QFileInfo) lastRead(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8lastReadEv
     // invoke: QDateTime lastRead()
-    C.C_ZNK9QFileInfo8lastReadEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8lastReadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "lastRead", args)
   }
@@ -687,7 +714,8 @@ func (this *QFileInfo) isRoot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo6isRootEv
     // invoke: bool isRoot()
-    C.C_ZNK9QFileInfo6isRootEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo6isRootEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isRoot", args)
   }
@@ -707,7 +735,8 @@ func (this *QFileInfo) absoluteFilePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo16absoluteFilePathEv
     // invoke: QString absoluteFilePath()
-    C.C_ZNK9QFileInfo16absoluteFilePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo16absoluteFilePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "absoluteFilePath", args)
   }
@@ -727,7 +756,8 @@ func (this *QFileInfo) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK9QFileInfo8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "fileName", args)
   }
@@ -770,7 +800,8 @@ func (this *QFileInfo) completeSuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo14completeSuffixEv
     // invoke: QString completeSuffix()
-    C.C_ZNK9QFileInfo14completeSuffixEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo14completeSuffixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "completeSuffix", args)
   }
@@ -790,7 +821,8 @@ func (this *QFileInfo) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo4pathEv
     // invoke: QString path()
-    C.C_ZNK9QFileInfo4pathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo4pathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "path", args)
   }
@@ -830,7 +862,8 @@ func (this *QFileInfo) groupId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo7groupIdEv
     // invoke: uint groupId()
-    C.C_ZNK9QFileInfo7groupIdEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo7groupIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "groupId", args)
   }
@@ -870,7 +903,8 @@ func (this *QFileInfo) isNativePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo12isNativePathEv
     // invoke: bool isNativePath()
-    C.C_ZNK9QFileInfo12isNativePathEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo12isNativePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isNativePath", args)
   }
@@ -890,7 +924,8 @@ func (this *QFileInfo) created(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo7createdEv
     // invoke: QDateTime created()
-    C.C_ZNK9QFileInfo7createdEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo7createdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "created", args)
   }
@@ -910,7 +945,8 @@ func (this *QFileInfo) isSymLink(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo9isSymLinkEv
     // invoke: bool isSymLink()
-    C.C_ZNK9QFileInfo9isSymLinkEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo9isSymLinkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isSymLink", args)
   }
@@ -930,7 +966,8 @@ func (this *QFileInfo) lastModified(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo12lastModifiedEv
     // invoke: QDateTime lastModified()
-    C.C_ZNK9QFileInfo12lastModifiedEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo12lastModifiedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "lastModified", args)
   }
@@ -950,7 +987,8 @@ func (this *QFileInfo) baseName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8baseNameEv
     // invoke: QString baseName()
-    C.C_ZNK9QFileInfo8baseNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8baseNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "baseName", args)
   }
@@ -990,7 +1028,8 @@ func (this *QFileInfo) readLink(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo8readLinkEv
     // invoke: QString readLink()
-    C.C_ZNK9QFileInfo8readLinkEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo8readLinkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "readLink", args)
   }
@@ -1054,7 +1093,8 @@ func (this *QFileInfo) isReadable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo10isReadableEv
     // invoke: bool isReadable()
-    C.C_ZNK9QFileInfo10isReadableEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo10isReadableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isReadable", args)
   }
@@ -1074,7 +1114,8 @@ func (this *QFileInfo) caching(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo7cachingEv
     // invoke: bool caching()
-    C.C_ZNK9QFileInfo7cachingEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo7cachingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "caching", args)
   }
@@ -1094,7 +1135,8 @@ func (this *QFileInfo) ownerId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo7ownerIdEv
     // invoke: uint ownerId()
-    C.C_ZNK9QFileInfo7ownerIdEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo7ownerIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "ownerId", args)
   }
@@ -1114,7 +1156,8 @@ func (this *QFileInfo) isFile(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo6isFileEv
     // invoke: bool isFile()
-    C.C_ZNK9QFileInfo6isFileEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo6isFileEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "isFile", args)
   }
@@ -1134,7 +1177,8 @@ func (this *QFileInfo) makeAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QFileInfo12makeAbsoluteEv
     // invoke: bool makeAbsolute()
-    C.C_ZN9QFileInfo12makeAbsoluteEv(this.qclsinst)
+    var ret = C.C_ZN9QFileInfo12makeAbsoluteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "makeAbsolute", args)
   }
@@ -1154,7 +1198,8 @@ func (this *QFileInfo) dir(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QFileInfo3dirEv
     // invoke: QDir dir()
-    C.C_ZNK9QFileInfo3dirEv(this.qclsinst)
+    var ret = C.C_ZNK9QFileInfo3dirEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileInfo", "dir", args)
   }

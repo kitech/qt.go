@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qstandardpaths.h
 // dst-file: /src/core/qstandardpaths.go
 //
@@ -119,7 +119,8 @@ func (this *QStandardPaths) findExecutable_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QStringList).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
+    var ret = C.C_ZN14QStandardPaths14findExecutableERK7QStringRK11QStringList(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStandardPaths", "findExecutable", args)
   }
@@ -139,7 +140,8 @@ func (this *QStandardPaths) isTestModeEnabled_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QStandardPaths17isTestModeEnabledEv
     // invoke: bool isTestModeEnabled()
-    C.C_ZN14QStandardPaths17isTestModeEnabledEv()
+    var ret = C.C_ZN14QStandardPaths17isTestModeEnabledEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStandardPaths", "isTestModeEnabled", args)
   }

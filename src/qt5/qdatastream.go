@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qdatastream.h
 // dst-file: /src/core/qdatastream.go
 //
@@ -61,11 +61,11 @@ extern void C_ZN11QDataStream11resetStatusEv(void* qthis); // 4
   // proto:  bool QDataStream::atEnd();
 extern void C_ZNK11QDataStream5atEndEv(void* qthis); // 4
   // proto:  void QDataStream::QDataStream(const QByteArray & );
-extern void C_ZN11QDataStreamC2ERK10QByteArray(void* qthis, void* arg0); // 3
+extern void* C_ZN11QDataStreamC2ERK10QByteArray(void* arg0); // 3
   // proto:  void QDataStream::QDataStream();
-extern void C_ZN11QDataStreamC2Ev(void* qthis); // 3
+extern void* C_ZN11QDataStreamC2Ev(); // 3
   // proto:  void QDataStream::QDataStream(QIODevice * );
-extern void C_ZN11QDataStreamC2EP9QIODevice(void* qthis, void* arg0); // 3
+extern void* C_ZN11QDataStreamC2EP9QIODevice(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -120,7 +120,8 @@ func (this *QDataStream) skipRawData(args ...interface{}) () {
     // invoke: int skipRawData(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
+    var ret = C.C_ZN11QDataStream11skipRawDataEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "skipRawData", args)
   }
@@ -169,7 +170,8 @@ func (this *QDataStream) writeBytes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN11QDataStream10writeBytesEPKcj(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "writeBytes", args)
   }
@@ -209,7 +211,8 @@ func (this *QDataStream) version(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream7versionEv
     // invoke: int version()
-    C.C_ZNK11QDataStream7versionEv(this.qclsinst)
+    var ret = C.C_ZNK11QDataStream7versionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "version", args)
   }
@@ -235,7 +238,8 @@ func (this *QDataStream) readBytes(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.int32_t)(args[1].(*int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN11QDataStream9readBytesERPcRj(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "readBytes", args)
   }
@@ -324,7 +328,8 @@ func (this *QDataStream) readRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN11QDataStream11readRawDataEPci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "readRawData", args)
   }
@@ -370,7 +375,8 @@ func (this *QDataStream) writeRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN11QDataStream12writeRawDataEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "writeRawData", args)
   }
@@ -390,7 +396,8 @@ func (this *QDataStream) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream6deviceEv
     // invoke: QIODevice * device()
-    C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
+    var ret = C.C_ZNK11QDataStream6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "device", args)
   }
@@ -430,7 +437,8 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDataStream5atEndEv
     // invoke: bool atEnd()
-    C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
+    var ret = C.C_ZNK11QDataStream5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDataStream", "atEnd", args)
   }
@@ -438,7 +446,7 @@ func (this *QDataStream) atEnd(args ...interface{}) () {
 }
 
 // QDataStream(const class QByteArray &)
-func NewQDataStream(args ...interface{}) QDataStream {
+func NewQDataStream(args ...interface{}) *QDataStream {
   // QDataStream(const class QByteArray &)
   // QDataStream()
   // QDataStream(class QIODevice *)
@@ -460,13 +468,15 @@ func NewQDataStream(args ...interface{}) QDataStream {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QDataStreamC2ERK10QByteArray(qthis, arg0)
+    qthis = C.C_ZN11QDataStreamC2ERK10QByteArray(arg0)
+    return &QDataStream{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QDataStreamC1Ev
     // invoke: void QDataStream()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QDataStreamC2Ev(qthis)
+    qthis = C.C_ZN11QDataStreamC2Ev()
+    return &QDataStream{qclsinst:qthis}
   case 2:
     // invoke: _ZN11QDataStreamC1EP9QIODevice
     // invoke: void QDataStream(class QIODevice *)
@@ -474,12 +484,13 @@ func NewQDataStream(args ...interface{}) QDataStream {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QDataStreamC2EP9QIODevice(qthis, arg0)
+    qthis = C.C_ZN11QDataStreamC2EP9QIODevice(arg0)
+    return &QDataStream{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDataStream", "QDataStream", args)
   }
 
-  return QDataStream{}
+  return nil // QDataStream{qclsinst:qthis}
 }
 
 // <= body block end

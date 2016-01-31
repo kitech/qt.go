@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qscroller.h
 // dst-file: /src/widgets/qscroller.go
 //
@@ -111,13 +111,15 @@ func (this *QScroller) scroller_s(args ...interface{}) () {
     // invoke: QScroller * scroller(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QScroller8scrollerEP7QObject(arg0)
+    var ret = C.C_ZN9QScroller8scrollerEP7QObject(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QScroller8scrollerEPK7QObject
     // invoke: const QScroller * scroller(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QScroller8scrollerEPK7QObject(arg0)
+    var ret = C.C_ZN9QScroller8scrollerEPK7QObject(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "scroller", args)
   }
@@ -195,7 +197,8 @@ func (this *QScroller) hasScroller_s(args ...interface{}) () {
     // invoke: bool hasScroller(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QScroller11hasScrollerEP7QObject(arg0)
+    var ret = C.C_ZN9QScroller11hasScrollerEP7QObject(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "hasScroller", args)
   }
@@ -350,7 +353,8 @@ func (this *QScroller) scrollerProperties(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller18scrollerPropertiesEv
     // invoke: QScrollerProperties scrollerProperties()
-    C.C_ZNK9QScroller18scrollerPropertiesEv(this.qclsinst)
+    var ret = C.C_ZNK9QScroller18scrollerPropertiesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "scrollerProperties", args)
   }
@@ -370,7 +374,8 @@ func (this *QScroller) finalPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller13finalPositionEv
     // invoke: QPointF finalPosition()
-    C.C_ZNK9QScroller13finalPositionEv(this.qclsinst)
+    var ret = C.C_ZNK9QScroller13finalPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "finalPosition", args)
   }
@@ -437,7 +442,8 @@ func (this *QScroller) pixelPerMeter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller13pixelPerMeterEv
     // invoke: QPointF pixelPerMeter()
-    C.C_ZNK9QScroller13pixelPerMeterEv(this.qclsinst)
+    var ret = C.C_ZNK9QScroller13pixelPerMeterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "pixelPerMeter", args)
   }
@@ -477,7 +483,8 @@ func (this *QScroller) target(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller6targetEv
     // invoke: QObject * target()
-    C.C_ZNK9QScroller6targetEv(this.qclsinst)
+    var ret = C.C_ZNK9QScroller6targetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "target", args)
   }
@@ -543,7 +550,8 @@ func (this *QScroller) velocity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QScroller8velocityEv
     // invoke: QPointF velocity()
-    C.C_ZNK9QScroller8velocityEv(this.qclsinst)
+    var ret = C.C_ZNK9QScroller8velocityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QScroller", "velocity", args)
   }

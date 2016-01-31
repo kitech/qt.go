@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpaintengine.h
 // dst-file: /src/gui/qpaintengine.go
 //
@@ -171,7 +171,8 @@ func (this *QTextItem) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem7descentEv
     // invoke: qreal descent()
-    C.C_ZNK9QTextItem7descentEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextItem7descentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextItem", "descent", args)
   }
@@ -191,7 +192,8 @@ func (this *QTextItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4textEv
     // invoke: QString text()
-    C.C_ZNK9QTextItem4textEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextItem4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextItem", "text", args)
   }
@@ -211,7 +213,8 @@ func (this *QTextItem) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem5widthEv
     // invoke: qreal width()
-    C.C_ZNK9QTextItem5widthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextItem5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextItem", "width", args)
   }
@@ -251,7 +254,8 @@ func (this *QTextItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem4fontEv
     // invoke: QFont font()
-    C.C_ZNK9QTextItem4fontEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextItem4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextItem", "font", args)
   }
@@ -271,7 +275,8 @@ func (this *QTextItem) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextItem6ascentEv
     // invoke: qreal ascent()
-    C.C_ZNK9QTextItem6ascentEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextItem6ascentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextItem", "ascent", args)
   }
@@ -291,7 +296,8 @@ func (this *QPaintEngineState) opacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7opacityEv
     // invoke: qreal opacity()
-    C.C_ZNK17QPaintEngineState7opacityEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState7opacityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "opacity", args)
   }
@@ -311,7 +317,8 @@ func (this *QPaintEngineState) penNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState17penNeedsResolvingEv
     // invoke: bool penNeedsResolving()
-    C.C_ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState17penNeedsResolvingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "penNeedsResolving", args)
   }
@@ -331,7 +338,8 @@ func (this *QPaintEngineState) isClipEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState13isClipEnabledEv
     // invoke: bool isClipEnabled()
-    C.C_ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState13isClipEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "isClipEnabled", args)
   }
@@ -351,7 +359,8 @@ func (this *QPaintEngineState) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState6matrixEv
     // invoke: QMatrix matrix()
-    C.C_ZNK17QPaintEngineState6matrixEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState6matrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "matrix", args)
   }
@@ -371,7 +380,8 @@ func (this *QPaintEngineState) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState3penEv
     // invoke: QPen pen()
-    C.C_ZNK17QPaintEngineState3penEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState3penEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "pen", args)
   }
@@ -391,7 +401,8 @@ func (this *QPaintEngineState) backgroundBrush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState15backgroundBrushEv
     // invoke: QBrush backgroundBrush()
-    C.C_ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState15backgroundBrushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "backgroundBrush", args)
   }
@@ -431,7 +442,8 @@ func (this *QPaintEngineState) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState9transformEv
     // invoke: QTransform transform()
-    C.C_ZNK17QPaintEngineState9transformEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState9transformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "transform", args)
   }
@@ -531,7 +543,8 @@ func (this *QPaintEngineState) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState5brushEv
     // invoke: QBrush brush()
-    C.C_ZNK17QPaintEngineState5brushEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState5brushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brush", args)
   }
@@ -551,7 +564,8 @@ func (this *QPaintEngineState) clipPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState8clipPathEv
     // invoke: QPainterPath clipPath()
-    C.C_ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState8clipPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipPath", args)
   }
@@ -571,7 +585,8 @@ func (this *QPaintEngineState) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState4fontEv
     // invoke: QFont font()
-    C.C_ZNK17QPaintEngineState4fontEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "font", args)
   }
@@ -591,7 +606,8 @@ func (this *QPaintEngineState) clipRegion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState10clipRegionEv
     // invoke: QRegion clipRegion()
-    C.C_ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState10clipRegionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "clipRegion", args)
   }
@@ -611,7 +627,8 @@ func (this *QPaintEngineState) brushOrigin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState11brushOriginEv
     // invoke: QPointF brushOrigin()
-    C.C_ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState11brushOriginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushOrigin", args)
   }
@@ -631,7 +648,8 @@ func (this *QPaintEngineState) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState7painterEv
     // invoke: QPainter * painter()
-    C.C_ZNK17QPaintEngineState7painterEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState7painterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "painter", args)
   }
@@ -651,7 +669,8 @@ func (this *QPaintEngineState) brushNeedsResolving(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPaintEngineState19brushNeedsResolvingEv
     // invoke: bool brushNeedsResolving()
-    C.C_ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
+    var ret = C.C_ZNK17QPaintEngineState19brushNeedsResolvingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngineState", "brushNeedsResolving", args)
   }
@@ -671,7 +690,8 @@ func (this *QPaintEngine) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C.C_ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine11paintDeviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "paintDevice", args)
   }
@@ -767,7 +787,8 @@ func (this *QPaintEngine) systemRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemRectEv
     // invoke: QRect systemRect()
-    C.C_ZNK12QPaintEngine10systemRectEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine10systemRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemRect", args)
   }
@@ -833,7 +854,8 @@ func (this *QPaintEngine) painter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine7painterEv
     // invoke: QPainter * painter()
-    C.C_ZNK12QPaintEngine7painterEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine7painterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "painter", args)
   }
@@ -968,7 +990,8 @@ func (this *QPaintEngine) systemClip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10systemClipEv
     // invoke: QRegion systemClip()
-    C.C_ZNK12QPaintEngine10systemClipEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine10systemClipEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "systemClip", args)
   }
@@ -1043,7 +1066,8 @@ func (this *QPaintEngine) coordinateOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine16coordinateOffsetEv
     // invoke: QPoint coordinateOffset()
-    C.C_ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine16coordinateOffsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "coordinateOffset", args)
   }
@@ -1063,7 +1087,8 @@ func (this *QPaintEngine) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine8isActiveEv
     // invoke: bool isActive()
-    C.C_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "isActive", args)
   }
@@ -1141,7 +1166,8 @@ func (this *QPaintEngine) isExtended(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPaintEngine10isExtendedEv
     // invoke: bool isExtended()
-    C.C_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
+    var ret = C.C_ZNK12QPaintEngine10isExtendedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPaintEngine", "isExtended", args)
   }

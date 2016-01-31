@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qmimetype.h
 // dst-file: /src/core/qmimetype.go
 //
@@ -49,9 +49,9 @@ extern void C_ZNK9QMimeType8iconNameEv(void* qthis); // 4
   // proto:  void QMimeType::swap(QMimeType & other);
 extern void C_ZN9QMimeType4swapERS_(void* qthis, void* arg0); // 2
   // proto:  void QMimeType::QMimeType(const QMimeType & other);
-extern void C_ZN9QMimeTypeC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN9QMimeTypeC2ERKS_(void* arg0); // 3
   // proto:  void QMimeType::QMimeType();
-extern void C_ZN9QMimeTypeC2Ev(void* qthis); // 3
+extern void* C_ZN9QMimeTypeC2Ev(); // 3
   // proto:  void QMimeType::~QMimeType();
 extern void C_ZN9QMimeTypeD2Ev(void* qthis); // 4
   // proto:  QStringList QMimeType::allAncestors();
@@ -95,7 +95,8 @@ func (this *QMimeType) comment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType7commentEv
     // invoke: QString comment()
-    C.C_ZNK9QMimeType7commentEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType7commentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "comment", args)
   }
@@ -118,7 +119,8 @@ func (this *QMimeType) inherits(args ...interface{}) () {
     // invoke: bool inherits(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMimeType8inheritsERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMimeType8inheritsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "inherits", args)
   }
@@ -158,7 +160,8 @@ func (this *QMimeType) filterString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType12filterStringEv
     // invoke: QString filterString()
-    C.C_ZNK9QMimeType12filterStringEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType12filterStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "filterString", args)
   }
@@ -178,7 +181,8 @@ func (this *QMimeType) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QMimeType7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "isValid", args)
   }
@@ -198,7 +202,8 @@ func (this *QMimeType) preferredSuffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType15preferredSuffixEv
     // invoke: QString preferredSuffix()
-    C.C_ZNK9QMimeType15preferredSuffixEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType15preferredSuffixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "preferredSuffix", args)
   }
@@ -238,7 +243,8 @@ func (this *QMimeType) genericIconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType15genericIconNameEv
     // invoke: QString genericIconName()
-    C.C_ZNK9QMimeType15genericIconNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType15genericIconNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "genericIconName", args)
   }
@@ -258,7 +264,8 @@ func (this *QMimeType) iconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType8iconNameEv
     // invoke: QString iconName()
-    C.C_ZNK9QMimeType8iconNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType8iconNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "iconName", args)
   }
@@ -289,7 +296,7 @@ func (this *QMimeType) swap(args ...interface{}) () {
 }
 
 // QMimeType(const class QMimeType &)
-func NewQMimeType(args ...interface{}) QMimeType {
+func NewQMimeType(args ...interface{}) *QMimeType {
   // QMimeType(const class QMimeType &)
   // QMimeType()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -308,18 +315,20 @@ func NewQMimeType(args ...interface{}) QMimeType {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QMimeTypeC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN9QMimeTypeC2ERKS_(arg0)
+    return &QMimeType{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QMimeTypeC1Ev
     // invoke: void QMimeType()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QMimeTypeC2Ev(qthis)
+    qthis = C.C_ZN9QMimeTypeC2Ev()
+    return &QMimeType{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMimeType", "QMimeType", args)
   }
 
-  return QMimeType{}
+  return nil // QMimeType{qclsinst:qthis}
 }
 
 // ~QMimeType()
@@ -395,7 +404,8 @@ func (this *QMimeType) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType4nameEv
     // invoke: QString name()
-    C.C_ZNK9QMimeType4nameEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "name", args)
   }
@@ -415,7 +425,8 @@ func (this *QMimeType) isDefault(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMimeType9isDefaultEv
     // invoke: bool isDefault()
-    C.C_ZNK9QMimeType9isDefaultEv(this.qclsinst)
+    var ret = C.C_ZNK9QMimeType9isDefaultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMimeType", "isDefault", args)
   }

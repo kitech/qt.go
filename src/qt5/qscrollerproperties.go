@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qscrollerproperties.h
 // dst-file: /src/widgets/qscrollerproperties.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto: static void QScrollerProperties::unsetDefaultScrollerProperties();
 extern void C_ZN19QScrollerProperties30unsetDefaultScrollerPropertiesEv(); // 4
   // proto:  void QScrollerProperties::QScrollerProperties();
-extern void C_ZN19QScrollerPropertiesC2Ev(void* qthis); // 3
+extern void* C_ZN19QScrollerPropertiesC2Ev(); // 3
   // proto:  void QScrollerProperties::QScrollerProperties(const QScrollerProperties & sp);
-extern void C_ZN19QScrollerPropertiesC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN19QScrollerPropertiesC2ERKS_(void* arg0); // 3
   // proto: static void QScrollerProperties::setDefaultScrollerProperties(const QScrollerProperties & sp);
 extern void C_ZN19QScrollerProperties28setDefaultScrollerPropertiesERKS_(void* arg0); // 4
   // proto:  void QScrollerProperties::~QScrollerProperties();
@@ -77,7 +77,7 @@ func (this *QScrollerProperties) unsetDefaultScrollerProperties_s(args ...interf
 }
 
 // QScrollerProperties()
-func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
+func NewQScrollerProperties(args ...interface{}) *QScrollerProperties {
   // QScrollerProperties()
   // QScrollerProperties(const class QScrollerProperties &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -94,7 +94,8 @@ func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
     // invoke: void QScrollerProperties()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QScrollerPropertiesC2Ev(qthis)
+    qthis = C.C_ZN19QScrollerPropertiesC2Ev()
+    return &QScrollerProperties{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QScrollerPropertiesC1ERKS_
     // invoke: void QScrollerProperties(const class QScrollerProperties &)
@@ -102,12 +103,13 @@ func NewQScrollerProperties(args ...interface{}) QScrollerProperties {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QScrollerPropertiesC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN19QScrollerPropertiesC2ERKS_(arg0)
+    return &QScrollerProperties{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QScrollerProperties", "QScrollerProperties", args)
   }
 
-  return QScrollerProperties{}
+  return nil // QScrollerProperties{qclsinst:qthis}
 }
 
 // setDefaultScrollerProperties(const class QScrollerProperties &)

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgraphicswidget.h
 // dst-file: /src/widgets/qgraphicswidget.go
 //
@@ -159,7 +159,8 @@ func (this *QGraphicsWidget) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget12boundingRectEv
     // invoke: QRectF boundingRect()
-    C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget12boundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "boundingRect", args)
   }
@@ -245,7 +246,8 @@ func (this *QGraphicsWidget) shape(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5shapeEv
     // invoke: QPainterPath shape()
-    C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget5shapeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "shape", args)
   }
@@ -265,7 +267,8 @@ func (this *QGraphicsWidget) windowFrameGeometry(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget19windowFrameGeometryEv
     // invoke: QRectF windowFrameGeometry()
-    C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget19windowFrameGeometryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameGeometry", args)
   }
@@ -305,7 +308,8 @@ func (this *QGraphicsWidget) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4fontEv
     // invoke: QFont font()
-    C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "font", args)
   }
@@ -325,7 +329,8 @@ func (this *QGraphicsWidget) style(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget5styleEv
     // invoke: QStyle * style()
-    C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget5styleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "style", args)
   }
@@ -610,7 +615,8 @@ func (this *QGraphicsWidget) close(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QGraphicsWidget5closeEv
     // invoke: bool close()
-    C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
+    var ret = C.C_ZN15QGraphicsWidget5closeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "close", args)
   }
@@ -630,7 +636,8 @@ func (this *QGraphicsWidget) palette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget7paletteEv
     // invoke: QPalette palette()
-    C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget7paletteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "palette", args)
   }
@@ -650,7 +657,8 @@ func (this *QGraphicsWidget) windowTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget11windowTitleEv
     // invoke: QString windowTitle()
-    C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget11windowTitleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowTitle", args)
   }
@@ -742,7 +750,8 @@ func (this *QGraphicsWidget) windowFrameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget15windowFrameRectEv
     // invoke: QRectF windowFrameRect()
-    C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget15windowFrameRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "windowFrameRect", args)
   }
@@ -883,7 +892,8 @@ func (this *QGraphicsWidget) isActiveWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget14isActiveWindowEv
     // invoke: bool isActiveWindow()
-    C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget14isActiveWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "isActiveWindow", args)
   }
@@ -903,7 +913,8 @@ func (this *QGraphicsWidget) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4sizeEv
     // invoke: QSizeF size()
-    C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "size", args)
   }
@@ -923,7 +934,8 @@ func (this *QGraphicsWidget) autoFillBackground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget18autoFillBackgroundEv
     // invoke: bool autoFillBackground()
-    C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget18autoFillBackgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "autoFillBackground", args)
   }
@@ -1018,7 +1030,8 @@ func (this *QGraphicsWidget) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4rectEv
     // invoke: QRectF rect()
-    C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget4rectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "rect", args)
   }
@@ -1038,7 +1051,8 @@ func (this *QGraphicsWidget) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsWidget4typeEv
     // invoke: int type()
-    C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsWidget4typeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsWidget", "type", args)
   }

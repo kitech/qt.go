@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qprogressdialog.h
 // dst-file: /src/widgets/qprogressdialog.go
 //
@@ -135,7 +135,8 @@ func (this *QProgressDialog) minimumDuration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog15minimumDurationEv
     // invoke: int minimumDuration()
-    C.C_ZNK15QProgressDialog15minimumDurationEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog15minimumDurationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimumDuration", args)
   }
@@ -155,7 +156,8 @@ func (this *QProgressDialog) labelText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9labelTextEv
     // invoke: QString labelText()
-    C.C_ZNK15QProgressDialog9labelTextEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog9labelTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "labelText", args)
   }
@@ -175,7 +177,8 @@ func (this *QProgressDialog) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog7minimumEv
     // invoke: int minimum()
-    C.C_ZNK15QProgressDialog7minimumEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog7minimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "minimum", args)
   }
@@ -264,7 +267,8 @@ func (this *QProgressDialog) autoReset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoResetEv
     // invoke: bool autoReset()
-    C.C_ZNK15QProgressDialog9autoResetEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog9autoResetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoReset", args)
   }
@@ -284,7 +288,8 @@ func (this *QProgressDialog) wasCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog11wasCanceledEv
     // invoke: bool wasCanceled()
-    C.C_ZNK15QProgressDialog11wasCanceledEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog11wasCanceledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "wasCanceled", args)
   }
@@ -442,7 +447,8 @@ func (this *QProgressDialog) autoClose(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog9autoCloseEv
     // invoke: bool autoClose()
-    C.C_ZNK15QProgressDialog9autoCloseEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog9autoCloseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "autoClose", args)
   }
@@ -528,7 +534,8 @@ func (this *QProgressDialog) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK15QProgressDialog8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "sizeHint", args)
   }
@@ -571,7 +578,8 @@ func (this *QProgressDialog) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog7maximumEv
     // invoke: int maximum()
-    C.C_ZNK15QProgressDialog7maximumEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog7maximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "maximum", args)
   }
@@ -591,7 +599,8 @@ func (this *QProgressDialog) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QProgressDialog5valueEv
     // invoke: int value()
-    C.C_ZNK15QProgressDialog5valueEv(this.qclsinst)
+    var ret = C.C_ZNK15QProgressDialog5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProgressDialog", "value", args)
   }

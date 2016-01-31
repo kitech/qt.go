@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qlibraryinfo.h
 // dst-file: /src/core/qlibraryinfo.go
 //
@@ -71,7 +71,8 @@ func (this *QLibraryInfo) buildDate_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo9buildDateEv
     // invoke: QDate buildDate()
-    C.C_ZN12QLibraryInfo9buildDateEv()
+    var ret = C.C_ZN12QLibraryInfo9buildDateEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibraryInfo", "buildDate", args)
   }
@@ -91,7 +92,8 @@ func (this *QLibraryInfo) isDebugBuild_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo12isDebugBuildEv
     // invoke: bool isDebugBuild()
-    C.C_ZN12QLibraryInfo12isDebugBuildEv()
+    var ret = C.C_ZN12QLibraryInfo12isDebugBuildEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibraryInfo", "isDebugBuild", args)
   }
@@ -111,7 +113,8 @@ func (this *QLibraryInfo) licensee_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo8licenseeEv
     // invoke: QString licensee()
-    C.C_ZN12QLibraryInfo8licenseeEv()
+    var ret = C.C_ZN12QLibraryInfo8licenseeEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensee", args)
   }
@@ -131,7 +134,8 @@ func (this *QLibraryInfo) licensedProducts_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo16licensedProductsEv
     // invoke: QString licensedProducts()
-    C.C_ZN12QLibraryInfo16licensedProductsEv()
+    var ret = C.C_ZN12QLibraryInfo16licensedProductsEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibraryInfo", "licensedProducts", args)
   }
@@ -151,7 +155,8 @@ func (this *QLibraryInfo) build_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QLibraryInfo5buildEv
     // invoke: const char * build()
-    C.C_ZN12QLibraryInfo5buildEv()
+    var ret = C.C_ZN12QLibraryInfo5buildEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibraryInfo", "build", args)
   }

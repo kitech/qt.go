@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstyleplugin.h
 // dst-file: /src/widgets/qstyleplugin.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN12QStylePluginD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QStylePlugin::metaObject();
 extern void C_ZNK12QStylePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QStylePlugin::QStylePlugin(QObject * parent);
-extern void C_ZN12QStylePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN12QStylePluginC2EP7QObject(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -93,7 +93,7 @@ func (this *QStylePlugin) metaObject(args ...interface{}) () {
 }
 
 // QStylePlugin(class QObject *)
-func NewQStylePlugin(args ...interface{}) QStylePlugin {
+func NewQStylePlugin(args ...interface{}) *QStylePlugin {
   // QStylePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -110,12 +110,13 @@ func NewQStylePlugin(args ...interface{}) QStylePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QStylePluginC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN12QStylePluginC2EP7QObject(arg0)
+    return &QStylePlugin{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStylePlugin", "QStylePlugin", args)
   }
 
-  return QStylePlugin{}
+  return nil // QStylePlugin{qclsinst:qthis}
 }
 
 // <= body block end

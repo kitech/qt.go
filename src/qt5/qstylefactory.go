@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstylefactory.h
 // dst-file: /src/widgets/qstylefactory.go
 //
@@ -86,7 +86,8 @@ func (this *QStyleFactory) create_s(args ...interface{}) () {
     // invoke: QStyle * create(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QStyleFactory6createERK7QString(arg0)
+    var ret = C.C_ZN13QStyleFactory6createERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleFactory", "create", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgesturerecognizer.h
 // dst-file: /src/widgets/qgesturerecognizer.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN18QGestureRecognizer6createEP7QObject(void* qthis, void* arg0); 
   // proto: static Qt::GestureType QGestureRecognizer::registerRecognizer(QGestureRecognizer * recognizer);
 extern void C_ZN18QGestureRecognizer18registerRecognizerEPS_(void* arg0); // 4
   // proto:  void QGestureRecognizer::QGestureRecognizer();
-extern void C_ZN18QGestureRecognizerC2Ev(void* qthis); // 3
+extern void* C_ZN18QGestureRecognizerC2Ev(); // 3
 */
 import "C"
 // } // <= ext block end
@@ -115,7 +115,8 @@ func (this *QGestureRecognizer) create(args ...interface{}) () {
     // invoke: QGesture * create(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QGestureRecognizer6createEP7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZN18QGestureRecognizer6createEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "create", args)
   }
@@ -146,7 +147,7 @@ func (this *QGestureRecognizer) registerRecognizer_s(args ...interface{}) () {
 }
 
 // QGestureRecognizer()
-func NewQGestureRecognizer(args ...interface{}) QGestureRecognizer {
+func NewQGestureRecognizer(args ...interface{}) *QGestureRecognizer {
   // QGestureRecognizer()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -160,12 +161,13 @@ func NewQGestureRecognizer(args ...interface{}) QGestureRecognizer {
     // invoke: void QGestureRecognizer()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QGestureRecognizerC2Ev(qthis)
+    qthis = C.C_ZN18QGestureRecognizerC2Ev()
+    return &QGestureRecognizer{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGestureRecognizer", "QGestureRecognizer", args)
   }
 
-  return QGestureRecognizer{}
+  return nil // QGestureRecognizer{qclsinst:qthis}
 }
 
 // <= body block end

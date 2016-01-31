@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgridlayout.h
 // dst-file: /src/widgets/qgridlayout.go
 //
@@ -53,9 +53,9 @@ extern void C_ZNK11QGridLayout10rowStretchEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGridLayout::setColumnStretch(int column, int stretch);
 extern void C_ZN11QGridLayout16setColumnStretchEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  void QGridLayout::QGridLayout(QWidget * parent);
-extern void C_ZN11QGridLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QGridLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  void QGridLayout::QGridLayout();
-extern void C_ZN11QGridLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN11QGridLayoutC2Ev(); // 3
   // proto:  int QGridLayout::rowMinimumHeight(int row);
 extern void C_ZNK11QGridLayout16rowMinimumHeightEi(void* qthis, int32_t arg0); // 4
   // proto:  QLayoutItem * QGridLayout::takeAt(int index);
@@ -133,7 +133,8 @@ func (this *QGridLayout) columnCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout11columnCountEv
     // invoke: int columnCount()
-    C.C_ZNK11QGridLayout11columnCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout11columnCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "columnCount", args)
   }
@@ -193,7 +194,8 @@ func (this *QGridLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    C.C_ZNK11QGridLayout11minimumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "minimumSize", args)
   }
@@ -216,7 +218,8 @@ func (this *QGridLayout) columnStretch(args ...interface{}) () {
     // invoke: int columnStretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout13columnStretchEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout13columnStretchEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "columnStretch", args)
   }
@@ -236,7 +239,8 @@ func (this *QGridLayout) verticalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout15verticalSpacingEv
     // invoke: int verticalSpacing()
-    C.C_ZNK11QGridLayout15verticalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout15verticalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "verticalSpacing", args)
   }
@@ -262,7 +266,8 @@ func (this *QGridLayout) itemAtPosition(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK11QGridLayout14itemAtPositionEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK11QGridLayout14itemAtPositionEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "itemAtPosition", args)
   }
@@ -369,7 +374,8 @@ func (this *QGridLayout) rowStretch(args ...interface{}) () {
     // invoke: int rowStretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout10rowStretchEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout10rowStretchEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "rowStretch", args)
   }
@@ -403,7 +409,7 @@ func (this *QGridLayout) setColumnStretch(args ...interface{}) () {
 }
 
 // QGridLayout(class QWidget *)
-func NewQGridLayout(args ...interface{}) QGridLayout {
+func NewQGridLayout(args ...interface{}) *QGridLayout {
   // QGridLayout(class QWidget *)
   // QGridLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -422,18 +428,20 @@ func NewQGridLayout(args ...interface{}) QGridLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QGridLayoutC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QGridLayoutC2EP7QWidget(arg0)
+    return &QGridLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QGridLayoutC1Ev
     // invoke: void QGridLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QGridLayoutC2Ev(qthis)
+    qthis = C.C_ZN11QGridLayoutC2Ev()
+    return &QGridLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGridLayout", "QGridLayout", args)
   }
 
-  return QGridLayout{}
+  return nil // QGridLayout{qclsinst:qthis}
 }
 
 // rowMinimumHeight(int)
@@ -452,7 +460,8 @@ func (this *QGridLayout) rowMinimumHeight(args ...interface{}) () {
     // invoke: int rowMinimumHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout16rowMinimumHeightEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout16rowMinimumHeightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "rowMinimumHeight", args)
   }
@@ -475,7 +484,8 @@ func (this *QGridLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QGridLayout6takeAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZN11QGridLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "takeAt", args)
   }
@@ -524,7 +534,8 @@ func (this *QGridLayout) minimumHeightForWidth(args ...interface{}) () {
     // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "minimumHeightForWidth", args)
   }
@@ -567,7 +578,8 @@ func (this *QGridLayout) horizontalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout17horizontalSpacingEv
     // invoke: int horizontalSpacing()
-    C.C_ZNK11QGridLayout17horizontalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout17horizontalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "horizontalSpacing", args)
   }
@@ -610,7 +622,8 @@ func (this *QGridLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout7spacingEv
     // invoke: int spacing()
-    C.C_ZNK11QGridLayout7spacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout7spacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "spacing", args)
   }
@@ -630,7 +643,8 @@ func (this *QGridLayout) rowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout8rowCountEv
     // invoke: int rowCount()
-    C.C_ZNK11QGridLayout8rowCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout8rowCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "rowCount", args)
   }
@@ -656,7 +670,8 @@ func (this *QGridLayout) cellRect(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK11QGridLayout8cellRectEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK11QGridLayout8cellRectEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "cellRect", args)
   }
@@ -719,7 +734,8 @@ func (this *QGridLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout5countEv
     // invoke: int count()
-    C.C_ZNK11QGridLayout5countEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "count", args)
   }
@@ -739,7 +755,8 @@ func (this *QGridLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK11QGridLayout8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "sizeHint", args)
   }
@@ -759,7 +776,8 @@ func (this *QGridLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C.C_ZNK11QGridLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "hasHeightForWidth", args)
   }
@@ -782,7 +800,8 @@ func (this *QGridLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout6itemAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "itemAt", args)
   }
@@ -805,7 +824,8 @@ func (this *QGridLayout) columnMinimumWidth(args ...interface{}) () {
     // invoke: int columnMinimumWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout18columnMinimumWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout18columnMinimumWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "columnMinimumWidth", args)
   }
@@ -897,7 +917,8 @@ func (this *QGridLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QGridLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QGridLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "heightForWidth", args)
   }
@@ -937,7 +958,8 @@ func (this *QGridLayout) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QGridLayout11maximumSizeEv
     // invoke: QSize maximumSize()
-    C.C_ZNK11QGridLayout11maximumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QGridLayout11maximumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGridLayout", "maximumSize", args)
   }

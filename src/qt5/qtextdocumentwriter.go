@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextdocumentwriter.h
 // dst-file: /src/gui/qtextdocumentwriter.go
 //
@@ -35,11 +35,11 @@ extern void C_ZN19QTextDocumentWriter9setFormatERK10QByteArray(void* qthis, void
   // proto:  void QTextDocumentWriter::setFileName(const QString & fileName);
 extern void C_ZN19QTextDocumentWriter11setFileNameERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QTextDocumentWriter::QTextDocumentWriter();
-extern void C_ZN19QTextDocumentWriterC2Ev(void* qthis); // 3
+extern void* C_ZN19QTextDocumentWriterC2Ev(); // 3
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(QIODevice * device, const QByteArray & format);
-extern void C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  void QTextDocumentWriter::QTextDocumentWriter(const QString & fileName, const QByteArray & format);
-extern void C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(void* arg0, void* arg1); // 3
   // proto:  QString QTextDocumentWriter::fileName();
 extern void C_ZNK19QTextDocumentWriter8fileNameEv(void* qthis); // 4
   // proto:  bool QTextDocumentWriter::write(const QTextDocumentFragment & fragment);
@@ -89,7 +89,8 @@ func (this *QTextDocumentWriter) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6formatEv
     // invoke: QByteArray format()
-    C.C_ZNK19QTextDocumentWriter6formatEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextDocumentWriter6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "format", args)
   }
@@ -143,7 +144,7 @@ func (this *QTextDocumentWriter) setFileName(args ...interface{}) () {
 }
 
 // QTextDocumentWriter()
-func NewQTextDocumentWriter(args ...interface{}) QTextDocumentWriter {
+func NewQTextDocumentWriter(args ...interface{}) *QTextDocumentWriter {
   // QTextDocumentWriter()
   // QTextDocumentWriter(class QIODevice *, const class QByteArray &)
   // QTextDocumentWriter(const class QString &, const class QByteArray &)
@@ -165,7 +166,8 @@ func NewQTextDocumentWriter(args ...interface{}) QTextDocumentWriter {
     // invoke: void QTextDocumentWriter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QTextDocumentWriterC2Ev(qthis)
+    qthis = C.C_ZN19QTextDocumentWriterC2Ev()
+    return &QTextDocumentWriter{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QTextDocumentWriterC1EP9QIODeviceRK10QByteArray
     // invoke: void QTextDocumentWriter(class QIODevice *, const class QByteArray &)
@@ -175,7 +177,8 @@ func NewQTextDocumentWriter(args ...interface{}) QTextDocumentWriter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(qthis, arg0, arg1)
+    qthis = C.C_ZN19QTextDocumentWriterC2EP9QIODeviceRK10QByteArray(arg0, arg1)
+    return &QTextDocumentWriter{qclsinst:qthis}
   case 2:
     // invoke: _ZN19QTextDocumentWriterC1ERK7QStringRK10QByteArray
     // invoke: void QTextDocumentWriter(const class QString &, const class QByteArray &)
@@ -185,12 +188,13 @@ func NewQTextDocumentWriter(args ...interface{}) QTextDocumentWriter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(qthis, arg0, arg1)
+    qthis = C.C_ZN19QTextDocumentWriterC2ERK7QStringRK10QByteArray(arg0, arg1)
+    return &QTextDocumentWriter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "QTextDocumentWriter", args)
   }
 
-  return QTextDocumentWriter{}
+  return nil // QTextDocumentWriter{qclsinst:qthis}
 }
 
 // fileName()
@@ -206,7 +210,8 @@ func (this *QTextDocumentWriter) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK19QTextDocumentWriter8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextDocumentWriter8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "fileName", args)
   }
@@ -232,13 +237,15 @@ func (this *QTextDocumentWriter) write(args ...interface{}) () {
     // invoke: bool write(const class QTextDocumentFragment &)
     var arg0 = args[0].(QTextDocumentFragment).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.qclsinst, arg0)
+    var ret = C.C_ZN19QTextDocumentWriter5writeERK21QTextDocumentFragment(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN19QTextDocumentWriter5writeEPK13QTextDocument
     // invoke: bool write(const class QTextDocument *)
     var arg0 = args[0].(QTextDocument).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.qclsinst, arg0)
+    var ret = C.C_ZN19QTextDocumentWriter5writeEPK13QTextDocument(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "write", args)
   }
@@ -258,7 +265,8 @@ func (this *QTextDocumentWriter) codec(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter5codecEv
     // invoke: QTextCodec * codec()
-    C.C_ZNK19QTextDocumentWriter5codecEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextDocumentWriter5codecEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "codec", args)
   }
@@ -321,7 +329,8 @@ func (this *QTextDocumentWriter) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextDocumentWriter6deviceEv
     // invoke: QIODevice * device()
-    C.C_ZNK19QTextDocumentWriter6deviceEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextDocumentWriter6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocumentWriter", "device", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qtemporarydir.h
 // dst-file: /src/core/qtemporarydir.go
 //
@@ -33,9 +33,9 @@ extern void C_ZN13QTemporaryDirD2Ev(void* qthis); // 4
   // proto:  void QTemporaryDir::setAutoRemove(bool b);
 extern void C_ZN13QTemporaryDir13setAutoRemoveEb(void* qthis, bool arg0); // 4
   // proto:  void QTemporaryDir::QTemporaryDir();
-extern void C_ZN13QTemporaryDirC2Ev(void* qthis); // 3
+extern void* C_ZN13QTemporaryDirC2Ev(); // 3
   // proto:  void QTemporaryDir::QTemporaryDir(const QString & templateName);
-extern void C_ZN13QTemporaryDirC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN13QTemporaryDirC2ERK7QString(void* arg0); // 3
   // proto:  bool QTemporaryDir::isValid();
 extern void C_ZNK13QTemporaryDir7isValidEv(void* qthis); // 4
   // proto:  bool QTemporaryDir::remove();
@@ -106,7 +106,7 @@ func (this *QTemporaryDir) setAutoRemove(args ...interface{}) () {
 }
 
 // QTemporaryDir()
-func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
+func NewQTemporaryDir(args ...interface{}) *QTemporaryDir {
   // QTemporaryDir()
   // QTemporaryDir(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -123,7 +123,8 @@ func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
     // invoke: void QTemporaryDir()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTemporaryDirC2Ev(qthis)
+    qthis = C.C_ZN13QTemporaryDirC2Ev()
+    return &QTemporaryDir{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QTemporaryDirC1ERK7QString
     // invoke: void QTemporaryDir(const class QString &)
@@ -131,12 +132,13 @@ func NewQTemporaryDir(args ...interface{}) QTemporaryDir {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTemporaryDirC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN13QTemporaryDirC2ERK7QString(arg0)
+    return &QTemporaryDir{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "QTemporaryDir", args)
   }
 
-  return QTemporaryDir{}
+  return nil // QTemporaryDir{qclsinst:qthis}
 }
 
 // isValid()
@@ -152,7 +154,8 @@ func (this *QTemporaryDir) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTemporaryDir7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK13QTemporaryDir7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK13QTemporaryDir7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "isValid", args)
   }
@@ -172,7 +175,8 @@ func (this *QTemporaryDir) remove(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QTemporaryDir6removeEv
     // invoke: bool remove()
-    C.C_ZN13QTemporaryDir6removeEv(this.qclsinst)
+    var ret = C.C_ZN13QTemporaryDir6removeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "remove", args)
   }
@@ -192,7 +196,8 @@ func (this *QTemporaryDir) autoRemove(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTemporaryDir10autoRemoveEv
     // invoke: bool autoRemove()
-    C.C_ZNK13QTemporaryDir10autoRemoveEv(this.qclsinst)
+    var ret = C.C_ZNK13QTemporaryDir10autoRemoveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "autoRemove", args)
   }
@@ -212,7 +217,8 @@ func (this *QTemporaryDir) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTemporaryDir4pathEv
     // invoke: QString path()
-    C.C_ZNK13QTemporaryDir4pathEv(this.qclsinst)
+    var ret = C.C_ZNK13QTemporaryDir4pathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTemporaryDir", "path", args)
   }

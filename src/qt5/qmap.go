@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qmap.h
 // dst-file: /src/core/qmap.go
 //
@@ -128,7 +128,8 @@ func (this *QMapDataBase) createNode(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.bool(args[3].(bool))
     if false {fmt.Println(arg3)}
-    C.C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN12QMapDataBase10createNodeEiiP12QMapNodeBaseb(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "createNode", args)
   }
@@ -217,7 +218,8 @@ func (this *QMapDataBase) createData_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapDataBase10createDataEv
     // invoke: QMapDataBase * createData()
-    C.C_ZN12QMapDataBase10createDataEv()
+    var ret = C.C_ZN12QMapDataBase10createDataEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMapDataBase", "createData", args)
   }
@@ -306,7 +308,8 @@ func (this *QMapNodeBase) previousNode(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapNodeBase12previousNodeEv
     // invoke: QMapNodeBase * previousNode()
-    C.C_ZN12QMapNodeBase12previousNodeEv(this.qclsinst)
+    var ret = C.C_ZN12QMapNodeBase12previousNodeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMapNodeBase", "previousNode", args)
   }
@@ -326,7 +329,8 @@ func (this *QMapNodeBase) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QMapNodeBase6parentEv
     // invoke: QMapNodeBase * parent()
-    C.C_ZNK12QMapNodeBase6parentEv(this.qclsinst)
+    var ret = C.C_ZNK12QMapNodeBase6parentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMapNodeBase", "parent", args)
   }
@@ -389,7 +393,8 @@ func (this *QMapNodeBase) nextNode(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QMapNodeBase8nextNodeEv
     // invoke: QMapNodeBase * nextNode()
-    C.C_ZN12QMapNodeBase8nextNodeEv(this.qclsinst)
+    var ret = C.C_ZN12QMapNodeBase8nextNodeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMapNodeBase", "nextNode", args)
   }

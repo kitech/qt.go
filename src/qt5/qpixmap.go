@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpixmap.h
 // dst-file: /src/gui/qpixmap.go
 //
@@ -95,13 +95,13 @@ extern void C_ZNK7QPixmap4maskEv(void* qthis); // 4
   // proto:  QImage QPixmap::toImage();
 extern void C_ZNK7QPixmap7toImageEv(void* qthis); // 4
   // proto:  void QPixmap::QPixmap();
-extern void C_ZN7QPixmapC2Ev(void* qthis); // 3
+extern void* C_ZN7QPixmapC2Ev(); // 3
   // proto:  void QPixmap::QPixmap(int w, int h);
-extern void C_ZN7QPixmapC2Eii(void* qthis, int32_t arg0, int32_t arg1); // 3
+extern void* C_ZN7QPixmapC2Eii(int32_t arg0, int32_t arg1); // 3
   // proto:  void QPixmap::QPixmap(const QPixmap & );
-extern void C_ZN7QPixmapC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN7QPixmapC2ERKS_(void* arg0); // 3
   // proto:  void QPixmap::QPixmap(const QSize & );
-extern void C_ZN7QPixmapC2ERK5QSize(void* qthis, void* arg0); // 3
+extern void* C_ZN7QPixmapC2ERK5QSize(void* arg0); // 3
   // proto:  bool QPixmap::isNull();
 extern void C_ZNK7QPixmap6isNullEv(void* qthis); // 4
   // proto:  int QPixmap::devType();
@@ -141,7 +141,8 @@ func (this *QPixmap) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap6heightEv
     // invoke: int height()
-    C.C_ZNK7QPixmap6heightEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "height", args)
   }
@@ -180,7 +181,8 @@ func (this *QPixmap) grabWidget_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.int32_t(args[4].(int32))
     if false {fmt.Println(arg4)}
-    C.C_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZN7QPixmap10grabWidgetEP7QObjectiiii(arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN7QPixmap10grabWidgetEP7QObjectRK5QRect
     // invoke: QPixmap grabWidget(class QObject *, const class QRect &)
@@ -188,7 +190,8 @@ func (this *QPixmap) grabWidget_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QRect).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)
+    var ret = C.C_ZN7QPixmap10grabWidgetEP7QObjectRK5QRect(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "grabWidget", args)
   }
@@ -208,7 +211,8 @@ func (this *QPixmap) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C.C_ZNK7QPixmap11paintEngineEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap11paintEngineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "paintEngine", args)
   }
@@ -318,7 +322,8 @@ func (this *QPixmap) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4rectEv
     // invoke: QRect rect()
-    C.C_ZNK7QPixmap4rectEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap4rectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "rect", args)
   }
@@ -352,7 +357,8 @@ func (this *QPixmap) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
+    var ret = C.C_ZN7QPixmap10trueMatrixERK7QMatrixii(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN7QPixmap10trueMatrixERK10QTransformii
     // invoke: QTransform trueMatrix(const class QTransform &, int, int)
@@ -362,7 +368,8 @@ func (this *QPixmap) trueMatrix_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)
+    var ret = C.C_ZN7QPixmap10trueMatrixERK10QTransformii(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "trueMatrix", args)
   }
@@ -402,7 +409,8 @@ func (this *QPixmap) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4sizeEv
     // invoke: QSize size()
-    C.C_ZNK7QPixmap4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "size", args)
   }
@@ -422,7 +430,8 @@ func (this *QPixmap) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap5depthEv
     // invoke: int depth()
-    C.C_ZNK7QPixmap5depthEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap5depthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "depth", args)
   }
@@ -442,7 +451,8 @@ func (this *QPixmap) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap5widthEv
     // invoke: int width()
-    C.C_ZNK7QPixmap5widthEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "width", args)
   }
@@ -485,7 +495,8 @@ func (this *QPixmap) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK7QPixmap10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "isDetached", args)
   }
@@ -505,7 +516,8 @@ func (this *QPixmap) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap8cacheKeyEv
     // invoke: qint64 cacheKey()
-    C.C_ZNK7QPixmap8cacheKeyEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap8cacheKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "cacheKey", args)
   }
@@ -548,7 +560,8 @@ func (this *QPixmap) hasAlphaChannel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap15hasAlphaChannelEv
     // invoke: bool hasAlphaChannel()
-    C.C_ZNK7QPixmap15hasAlphaChannelEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap15hasAlphaChannelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlphaChannel", args)
   }
@@ -568,7 +581,8 @@ func (this *QPixmap) hasAlpha(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap8hasAlphaEv
     // invoke: bool hasAlpha()
-    C.C_ZNK7QPixmap8hasAlphaEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap8hasAlphaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "hasAlpha", args)
   }
@@ -614,7 +628,8 @@ func (this *QPixmap) createHeuristicMask(args ...interface{}) () {
     // invoke: QBitmap createHeuristicMask(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QPixmap19createHeuristicMaskEb(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QPixmap19createHeuristicMaskEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "createHeuristicMask", args)
   }
@@ -634,7 +649,8 @@ func (this *QPixmap) defaultDepth_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QPixmap12defaultDepthEv
     // invoke: int defaultDepth()
-    C.C_ZN7QPixmap12defaultDepthEv()
+    var ret = C.C_ZN7QPixmap12defaultDepthEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "defaultDepth", args)
   }
@@ -663,7 +679,8 @@ func (this *QPixmap) copy(args ...interface{}) () {
     // invoke: QPixmap copy(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QPixmap4copyERK5QRect(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QPixmap4copyERK5QRect(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK7QPixmap4copyEiiii
     // invoke: QPixmap copy(int, int, int, int)
@@ -675,7 +692,8 @@ func (this *QPixmap) copy(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZNK7QPixmap4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZNK7QPixmap4copyEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "copy", args)
   }
@@ -709,7 +727,8 @@ func (this *QPixmap) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK7QPixmap4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK7QPixmap4saveERK7QStringPKci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK7QPixmap4saveEP9QIODevicePKci
     // invoke: bool save(class QIODevice *, const char *, int)
@@ -719,7 +738,8 @@ func (this *QPixmap) save(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK7QPixmap4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK7QPixmap4saveEP9QIODevicePKci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "save", args)
   }
@@ -739,7 +759,8 @@ func (this *QPixmap) devicePixelRatio(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap16devicePixelRatioEv
     // invoke: qreal devicePixelRatio()
-    C.C_ZNK7QPixmap16devicePixelRatioEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap16devicePixelRatioEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "devicePixelRatio", args)
   }
@@ -759,7 +780,8 @@ func (this *QPixmap) isQBitmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap9isQBitmapEv
     // invoke: bool isQBitmap()
-    C.C_ZNK7QPixmap9isQBitmapEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap9isQBitmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "isQBitmap", args)
   }
@@ -779,7 +801,8 @@ func (this *QPixmap) mask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap4maskEv
     // invoke: QBitmap mask()
-    C.C_ZNK7QPixmap4maskEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap4maskEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "mask", args)
   }
@@ -799,7 +822,8 @@ func (this *QPixmap) toImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap7toImageEv
     // invoke: QImage toImage()
-    C.C_ZNK7QPixmap7toImageEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap7toImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "toImage", args)
   }
@@ -807,7 +831,7 @@ func (this *QPixmap) toImage(args ...interface{}) () {
 }
 
 // QPixmap()
-func NewQPixmap(args ...interface{}) QPixmap {
+func NewQPixmap(args ...interface{}) *QPixmap {
   // QPixmap()
   // QPixmap(int, int)
   // QPixmap(const class QPixmap &)
@@ -831,7 +855,8 @@ func NewQPixmap(args ...interface{}) QPixmap {
     // invoke: void QPixmap()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QPixmapC2Ev(qthis)
+    qthis = C.C_ZN7QPixmapC2Ev()
+    return &QPixmap{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QPixmapC1Eii
     // invoke: void QPixmap(int, int)
@@ -841,7 +866,8 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QPixmapC2Eii(qthis, arg0, arg1)
+    qthis = C.C_ZN7QPixmapC2Eii(arg0, arg1)
+    return &QPixmap{qclsinst:qthis}
   case 2:
     // invoke: _ZN7QPixmapC1ERKS_
     // invoke: void QPixmap(const class QPixmap &)
@@ -849,7 +875,8 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QPixmapC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN7QPixmapC2ERKS_(arg0)
+    return &QPixmap{qclsinst:qthis}
   case 3:
     // invoke: _ZN7QPixmapC1ERK5QSize
     // invoke: void QPixmap(const class QSize &)
@@ -857,12 +884,13 @@ func NewQPixmap(args ...interface{}) QPixmap {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QPixmapC2ERK5QSize(qthis, arg0)
+    qthis = C.C_ZN7QPixmapC2ERK5QSize(arg0)
+    return &QPixmap{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPixmap", "QPixmap", args)
   }
 
-  return QPixmap{}
+  return nil // QPixmap{qclsinst:qthis}
 }
 
 // isNull()
@@ -878,7 +906,8 @@ func (this *QPixmap) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK7QPixmap6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "isNull", args)
   }
@@ -898,7 +927,8 @@ func (this *QPixmap) devType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QPixmap7devTypeEv
     // invoke: int devType()
-    C.C_ZNK7QPixmap7devTypeEv(this.qclsinst)
+    var ret = C.C_ZNK7QPixmap7devTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmap", "devType", args)
   }

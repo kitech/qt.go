@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextlist.h
 // dst-file: /src/gui/qtextlist.go
 //
@@ -53,7 +53,7 @@ extern void C_ZNK9QTextList10metaObjectEv(void* qthis); // 4
   // proto:  void QTextList::~QTextList();
 extern void C_ZN9QTextListD2Ev(void* qthis); // 4
   // proto:  void QTextList::QTextList(QTextDocument * doc);
-extern void C_ZN9QTextListC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void* C_ZN9QTextListC2EP13QTextDocument(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -88,7 +88,8 @@ func (this *QTextList) itemText(args ...interface{}) () {
     // invoke: QString itemText(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextList8itemTextERK10QTextBlock(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextList8itemTextERK10QTextBlock(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "itemText", args)
   }
@@ -108,7 +109,8 @@ func (this *QTextList) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList5countEv
     // invoke: int count()
-    C.C_ZNK9QTextList5countEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextList5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "count", args)
   }
@@ -151,7 +153,8 @@ func (this *QTextList) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList6formatEv
     // invoke: QTextListFormat format()
-    C.C_ZNK9QTextList6formatEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextList6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "format", args)
   }
@@ -197,7 +200,8 @@ func (this *QTextList) itemNumber(args ...interface{}) () {
     // invoke: int itemNumber(const class QTextBlock &)
     var arg0 = args[0].(QTextBlock).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextList10itemNumberERK10QTextBlock(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextList10itemNumberERK10QTextBlock(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "itemNumber", args)
   }
@@ -220,7 +224,8 @@ func (this *QTextList) item(args ...interface{}) () {
     // invoke: QTextBlock item(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextList4itemEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextList4itemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "item", args)
   }
@@ -263,7 +268,8 @@ func (this *QTextList) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextList7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK9QTextList7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextList7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextList", "isEmpty", args)
   }
@@ -334,7 +340,7 @@ func (this *QTextList) FreeQTextList(args ...interface{}) () {
 }
 
 // QTextList(class QTextDocument *)
-func NewQTextList(args ...interface{}) QTextList {
+func NewQTextList(args ...interface{}) *QTextList {
   // QTextList(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -351,12 +357,13 @@ func NewQTextList(args ...interface{}) QTextList {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTextListC2EP13QTextDocument(qthis, arg0)
+    qthis = C.C_ZN9QTextListC2EP13QTextDocument(arg0)
+    return &QTextList{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextList", "QTextList", args)
   }
 
-  return QTextList{}
+  return nil // QTextList{qclsinst:qthis}
 }
 
 // <= body block end

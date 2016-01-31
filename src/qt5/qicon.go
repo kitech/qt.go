@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qicon.h
 // dst-file: /src/gui/qicon.go
 //
@@ -49,15 +49,15 @@ extern void C_ZN5QIcon16themeSearchPathsEv(); // 4
   // proto:  void QIcon::~QIcon();
 extern void C_ZN5QIconD2Ev(void* qthis); // 4
   // proto:  void QIcon::QIcon(const QString & fileName);
-extern void C_ZN5QIconC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN5QIconC2ERK7QString(void* arg0); // 3
   // proto:  void QIcon::QIcon(const QPixmap & pixmap);
-extern void C_ZN5QIconC2ERK7QPixmap(void* qthis, void* arg0); // 3
+extern void* C_ZN5QIconC2ERK7QPixmap(void* arg0); // 3
   // proto:  void QIcon::QIcon(const QIcon & other);
-extern void C_ZN5QIconC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN5QIconC2ERKS_(void* arg0); // 3
   // proto:  void QIcon::QIcon();
-extern void C_ZN5QIconC2Ev(void* qthis); // 3
+extern void* C_ZN5QIconC2Ev(); // 3
   // proto:  void QIcon::QIcon(QIconEngine * engine);
-extern void C_ZN5QIconC2EP11QIconEngine(void* qthis, void* arg0); // 3
+extern void* C_ZN5QIconC2EP11QIconEngine(void* arg0); // 3
   // proto: static bool QIcon::hasThemeIcon(const QString & name);
 extern void C_ZN5QIcon12hasThemeIconERK7QString(void* arg0); // 4
   // proto:  bool QIcon::isNull();
@@ -95,7 +95,8 @@ func (this *QIcon) themeName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN5QIcon9themeNameEv
     // invoke: QString themeName()
-    C.C_ZN5QIcon9themeNameEv()
+    var ret = C.C_ZN5QIcon9themeNameEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "themeName", args)
   }
@@ -161,7 +162,8 @@ func (this *QIcon) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK5QIcon10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK5QIcon10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "isDetached", args)
   }
@@ -181,7 +183,8 @@ func (this *QIcon) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon8cacheKeyEv
     // invoke: qint64 cacheKey()
-    C.C_ZNK5QIcon8cacheKeyEv(this.qclsinst)
+    var ret = C.C_ZNK5QIcon8cacheKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "cacheKey", args)
   }
@@ -244,7 +247,8 @@ func (this *QIcon) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon4nameEv
     // invoke: QString name()
-    C.C_ZNK5QIcon4nameEv(this.qclsinst)
+    var ret = C.C_ZNK5QIcon4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "name", args)
   }
@@ -292,7 +296,7 @@ func (this *QIcon) FreeQIcon(args ...interface{}) () {
 }
 
 // QIcon(const class QString &)
-func NewQIcon(args ...interface{}) QIcon {
+func NewQIcon(args ...interface{}) *QIcon {
   // QIcon(const class QString &)
   // QIcon(const class QPixmap &)
   // QIcon(const class QIcon &)
@@ -320,7 +324,8 @@ func NewQIcon(args ...interface{}) QIcon {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QIconC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN5QIconC2ERK7QString(arg0)
+    return &QIcon{qclsinst:qthis}
   case 1:
     // invoke: _ZN5QIconC1ERK7QPixmap
     // invoke: void QIcon(const class QPixmap &)
@@ -328,7 +333,8 @@ func NewQIcon(args ...interface{}) QIcon {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QIconC2ERK7QPixmap(qthis, arg0)
+    qthis = C.C_ZN5QIconC2ERK7QPixmap(arg0)
+    return &QIcon{qclsinst:qthis}
   case 2:
     // invoke: _ZN5QIconC1ERKS_
     // invoke: void QIcon(const class QIcon &)
@@ -336,13 +342,15 @@ func NewQIcon(args ...interface{}) QIcon {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QIconC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN5QIconC2ERKS_(arg0)
+    return &QIcon{qclsinst:qthis}
   case 3:
     // invoke: _ZN5QIconC1Ev
     // invoke: void QIcon()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QIconC2Ev(qthis)
+    qthis = C.C_ZN5QIconC2Ev()
+    return &QIcon{qclsinst:qthis}
   case 4:
     // invoke: _ZN5QIconC1EP11QIconEngine
     // invoke: void QIcon(class QIconEngine *)
@@ -350,12 +358,13 @@ func NewQIcon(args ...interface{}) QIcon {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QIconC2EP11QIconEngine(qthis, arg0)
+    qthis = C.C_ZN5QIconC2EP11QIconEngine(arg0)
+    return &QIcon{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIcon", "QIcon", args)
   }
 
-  return QIcon{}
+  return nil // QIcon{qclsinst:qthis}
 }
 
 // hasThemeIcon(const class QString &)
@@ -374,7 +383,8 @@ func (this *QIcon) hasThemeIcon_s(args ...interface{}) () {
     // invoke: bool hasThemeIcon(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
+    var ret = C.C_ZN5QIcon12hasThemeIconERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "hasThemeIcon", args)
   }
@@ -394,7 +404,8 @@ func (this *QIcon) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QIcon6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK5QIcon6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK5QIcon6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "isNull", args)
   }
@@ -420,7 +431,8 @@ func (this *QIcon) fromTheme_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QIcon).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
+    var ret = C.C_ZN5QIcon9fromThemeERK7QStringRKS_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIcon", "fromTheme", args)
   }

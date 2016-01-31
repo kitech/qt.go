@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qwaitcondition.h
 // dst-file: /src/core/qwaitcondition.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QWaitCondition::QWaitCondition();
-extern void C_ZN14QWaitConditionC2Ev(void* qthis); // 3
+extern void* C_ZN14QWaitConditionC2Ev(); // 3
   // proto:  void QWaitCondition::wakeAll();
 extern void C_ZN14QWaitCondition7wakeAllEv(void* qthis); // 4
   // proto:  void QWaitCondition::wakeOne();
@@ -59,7 +59,7 @@ type QWaitCondition struct {
 }
 
 // QWaitCondition()
-func NewQWaitCondition(args ...interface{}) QWaitCondition {
+func NewQWaitCondition(args ...interface{}) *QWaitCondition {
   // QWaitCondition()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -73,12 +73,13 @@ func NewQWaitCondition(args ...interface{}) QWaitCondition {
     // invoke: void QWaitCondition()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QWaitConditionC2Ev(qthis)
+    qthis = C.C_ZN14QWaitConditionC2Ev()
+    return &QWaitCondition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWaitCondition", "QWaitCondition", args)
   }
 
-  return QWaitCondition{}
+  return nil // QWaitCondition{qclsinst:qthis}
 }
 
 // wakeAll()
@@ -164,7 +165,8 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN14QWaitCondition4waitEP14QReadWriteLockm(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN14QWaitCondition4waitEP14QReadWriteLockm(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN14QWaitCondition4waitEP6QMutexm
     // invoke: bool wait(class QMutex *, unsigned long)
@@ -172,7 +174,8 @@ func (this *QWaitCondition) wait(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN14QWaitCondition4waitEP6QMutexm(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWaitCondition", "wait", args)
   }

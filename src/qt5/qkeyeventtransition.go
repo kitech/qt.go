@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qkeyeventtransition.h
 // dst-file: /src/widgets/qkeyeventtransition.go
 //
@@ -39,7 +39,7 @@ extern void C_ZN19QKeyEventTransition6setKeyEi(void* qthis, int32_t arg0); // 4
   // proto:  void QKeyEventTransition::~QKeyEventTransition();
 extern void C_ZN19QKeyEventTransitionD2Ev(void* qthis); // 4
   // proto:  void QKeyEventTransition::QKeyEventTransition(QState * sourceState);
-extern void C_ZN19QKeyEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN19QKeyEventTransitionC2EP6QState(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -91,7 +91,8 @@ func (this *QKeyEventTransition) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QKeyEventTransition3keyEv
     // invoke: int key()
-    C.C_ZNK19QKeyEventTransition3keyEv(this.qclsinst)
+    var ret = C.C_ZNK19QKeyEventTransition3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "key", args)
   }
@@ -162,7 +163,7 @@ func (this *QKeyEventTransition) FreeQKeyEventTransition(args ...interface{}) ()
 }
 
 // QKeyEventTransition(class QState *)
-func NewQKeyEventTransition(args ...interface{}) QKeyEventTransition {
+func NewQKeyEventTransition(args ...interface{}) *QKeyEventTransition {
   // QKeyEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -179,12 +180,13 @@ func NewQKeyEventTransition(args ...interface{}) QKeyEventTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QKeyEventTransitionC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN19QKeyEventTransitionC2EP6QState(arg0)
+    return &QKeyEventTransition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QKeyEventTransition", "QKeyEventTransition", args)
   }
 
-  return QKeyEventTransition{}
+  return nil // QKeyEventTransition{qclsinst:qthis}
 }
 
 // <= body block end

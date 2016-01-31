@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgroupbox.h
 // dst-file: /src/widgets/qgroupbox.go
 //
@@ -39,9 +39,9 @@ extern void C_ZNK9QGroupBox9alignmentEv(void* qthis); // 4
   // proto:  void QGroupBox::setFlat(bool flat);
 extern void C_ZN9QGroupBox7setFlatEb(void* qthis, bool arg0); // 4
   // proto:  void QGroupBox::QGroupBox(QWidget * parent);
-extern void C_ZN9QGroupBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QGroupBoxC2EP7QWidget(void* arg0); // 3
   // proto:  void QGroupBox::QGroupBox(const QString & title, QWidget * parent);
-extern void C_ZN9QGroupBoxC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QGroupBoxC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
   // proto:  QString QGroupBox::title();
 extern void C_ZNK9QGroupBox5titleEv(void* qthis); // 4
   // proto:  bool QGroupBox::isChecked();
@@ -134,7 +134,8 @@ func (this *QGroupBox) isCheckable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox11isCheckableEv
     // invoke: bool isCheckable()
-    C.C_ZNK9QGroupBox11isCheckableEv(this.qclsinst)
+    var ret = C.C_ZNK9QGroupBox11isCheckableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGroupBox", "isCheckable", args)
   }
@@ -185,7 +186,7 @@ func (this *QGroupBox) setFlat(args ...interface{}) () {
 }
 
 // QGroupBox(class QWidget *)
-func NewQGroupBox(args ...interface{}) QGroupBox {
+func NewQGroupBox(args ...interface{}) *QGroupBox {
   // QGroupBox(class QWidget *)
   // QGroupBox(const class QString &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -206,7 +207,8 @@ func NewQGroupBox(args ...interface{}) QGroupBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QGroupBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QGroupBoxC2EP7QWidget(arg0)
+    return &QGroupBox{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QGroupBoxC1ERK7QStringP7QWidget
     // invoke: void QGroupBox(const class QString &, class QWidget *)
@@ -216,12 +218,13 @@ func NewQGroupBox(args ...interface{}) QGroupBox {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN9QGroupBoxC2ERK7QStringP7QWidget(arg0, arg1)
+    return &QGroupBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGroupBox", "QGroupBox", args)
   }
 
-  return QGroupBox{}
+  return nil // QGroupBox{qclsinst:qthis}
 }
 
 // title()
@@ -237,7 +240,8 @@ func (this *QGroupBox) title(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox5titleEv
     // invoke: QString title()
-    C.C_ZNK9QGroupBox5titleEv(this.qclsinst)
+    var ret = C.C_ZNK9QGroupBox5titleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGroupBox", "title", args)
   }
@@ -257,7 +261,8 @@ func (this *QGroupBox) isChecked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox9isCheckedEv
     // invoke: bool isChecked()
-    C.C_ZNK9QGroupBox9isCheckedEv(this.qclsinst)
+    var ret = C.C_ZNK9QGroupBox9isCheckedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGroupBox", "isChecked", args)
   }
@@ -346,7 +351,8 @@ func (this *QGroupBox) isFlat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox6isFlatEv
     // invoke: bool isFlat()
-    C.C_ZNK9QGroupBox6isFlatEv(this.qclsinst)
+    var ret = C.C_ZNK9QGroupBox6isFlatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGroupBox", "isFlat", args)
   }
@@ -386,7 +392,8 @@ func (this *QGroupBox) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QGroupBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK9QGroupBox15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QGroupBox15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGroupBox", "minimumSizeHint", args)
   }

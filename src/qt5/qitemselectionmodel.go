@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qitemselectionmodel.h
 // dst-file: /src/core/qitemselectionmodel.go
 //
@@ -33,9 +33,9 @@ extern void C_ZNK14QItemSelection8containsERK11QModelIndex(void* qthis, void* ar
   // proto:  QModelIndexList QItemSelection::indexes();
 extern void C_ZNK14QItemSelection7indexesEv(void* qthis); // 4
   // proto:  void QItemSelection::QItemSelection(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-extern void C_ZN14QItemSelectionC2ERK11QModelIndexS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN14QItemSelectionC2ERK11QModelIndexS2_(void* arg0, void* arg1); // 3
   // proto:  void QItemSelection::QItemSelection();
-extern void C_ZN14QItemSelectionC2Ev(void* qthis); // 1
+extern void* C_ZN14QItemSelectionC2Ev(); // 1
   // proto: static void QItemSelection::split(const QItemSelectionRange & range, const QItemSelectionRange & other, QItemSelection * result);
 extern void C_ZN14QItemSelection5splitERK19QItemSelectionRangeS2_PS_(void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QItemSelection::select(const QModelIndex & topLeft, const QModelIndex & bottomRight);
@@ -57,13 +57,13 @@ extern void C_ZNK19QItemSelectionRange8containsERK11QModelIndex(void* qthis, voi
   // proto:  bool QItemSelectionRange::contains(int row, int column, const QModelIndex & parentIndex);
 extern void C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 2
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & index);
-extern void C_ZN19QItemSelectionRangeC2ERK11QModelIndex(void* qthis, void* arg0); // 1
+extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndex(void* arg0); // 1
   // proto:  void QItemSelectionRange::QItemSelectionRange();
-extern void C_ZN19QItemSelectionRangeC2Ev(void* qthis); // 1
+extern void* C_ZN19QItemSelectionRangeC2Ev(); // 1
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QModelIndex & topLeft, const QModelIndex & bottomRight);
-extern void C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(void* arg0, void* arg1); // 1
   // proto:  void QItemSelectionRange::QItemSelectionRange(const QItemSelectionRange & other);
-extern void C_ZN19QItemSelectionRangeC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN19QItemSelectionRangeC2ERKS_(void* arg0); // 1
   // proto:  QModelIndexList QItemSelectionRange::indexes();
 extern void C_ZNK19QItemSelectionRange7indexesEv(void* qthis); // 4
   // proto:  int QItemSelectionRange::width();
@@ -97,9 +97,9 @@ extern void C_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(void* qthis, 
   // proto:  bool QItemSelectionModel::rowIntersectsSelection(int row, const QModelIndex & parent);
 extern void C_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model, QObject * parent);
-extern void C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QItemSelectionModel::QItemSelectionModel(QAbstractItemModel * model);
-extern void C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(void* qthis, void* arg0); // 3
+extern void* C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(void* arg0); // 3
   // proto:  void QItemSelectionModel::clearCurrentIndex();
 extern void C_ZN19QItemSelectionModel17clearCurrentIndexEv(void* qthis); // 4
   // proto:  void QItemSelectionModel::setModel(QAbstractItemModel * model);
@@ -175,7 +175,8 @@ func (this *QItemSelection) contains(args ...interface{}) () {
     // invoke: bool contains(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QItemSelection8containsERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QItemSelection8containsERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelection", "contains", args)
   }
@@ -203,7 +204,7 @@ func (this *QItemSelection) indexes(args ...interface{}) () {
 }
 
 // QItemSelection(const class QModelIndex &, const class QModelIndex &)
-func NewQItemSelection(args ...interface{}) QItemSelection {
+func NewQItemSelection(args ...interface{}) *QItemSelection {
   // QItemSelection(const class QModelIndex &, const class QModelIndex &)
   // QItemSelection()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -225,18 +226,20 @@ func NewQItemSelection(args ...interface{}) QItemSelection {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QItemSelectionC2ERK11QModelIndexS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN14QItemSelectionC2ERK11QModelIndexS2_(arg0, arg1)
+    return &QItemSelection{qclsinst:qthis}
   case 1:
     // invoke: _ZN14QItemSelectionC1Ev
     // invoke: void QItemSelection()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QItemSelectionC2Ev(qthis)
+    qthis = C.C_ZN14QItemSelectionC2Ev()
+    return &QItemSelection{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelection", "QItemSelection", args)
   }
 
-  return QItemSelection{}
+  return nil // QItemSelection{qclsinst:qthis}
 }
 
 // split(const class QItemSelectionRange &, const class QItemSelectionRange &, class QItemSelection *)
@@ -307,7 +310,8 @@ func (this *QItemSelectionRange) topLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7topLeftEv
     // invoke: const QPersistentModelIndex & topLeft()
-    C.C_ZNK19QItemSelectionRange7topLeftEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange7topLeftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "topLeft", args)
   }
@@ -327,7 +331,8 @@ func (this *QItemSelectionRange) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5rightEv
     // invoke: int right()
-    C.C_ZNK19QItemSelectionRange5rightEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange5rightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "right", args)
   }
@@ -347,7 +352,8 @@ func (this *QItemSelectionRange) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6parentEv
     // invoke: QModelIndex parent()
-    C.C_ZNK19QItemSelectionRange6parentEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange6parentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "parent", args)
   }
@@ -367,7 +373,8 @@ func (this *QItemSelectionRange) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6bottomEv
     // invoke: int bottom()
-    C.C_ZNK19QItemSelectionRange6bottomEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottom", args)
   }
@@ -387,7 +394,8 @@ func (this *QItemSelectionRange) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK19QItemSelectionRange7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isValid", args)
   }
@@ -407,7 +415,8 @@ func (this *QItemSelectionRange) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange3topEv
     // invoke: int top()
-    C.C_ZNK19QItemSelectionRange3topEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "top", args)
   }
@@ -435,7 +444,8 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
     // invoke: bool contains(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionRange8containsERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QItemSelectionRange8containsERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK19QItemSelectionRange8containsEiiRK11QModelIndex
     // invoke: bool contains(int, int, const class QModelIndex &)
@@ -445,7 +455,8 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK19QItemSelectionRange8containsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "contains", args)
   }
@@ -453,7 +464,7 @@ func (this *QItemSelectionRange) contains(args ...interface{}) () {
 }
 
 // QItemSelectionRange(const class QModelIndex &)
-func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
+func NewQItemSelectionRange(args ...interface{}) *QItemSelectionRange {
   // QItemSelectionRange(const class QModelIndex &)
   // QItemSelectionRange()
   // QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
@@ -479,13 +490,15 @@ func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(qthis, arg0)
+    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndex(arg0)
+    return &QItemSelectionRange{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QItemSelectionRangeC1Ev
     // invoke: void QItemSelectionRange()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionRangeC2Ev(qthis)
+    qthis = C.C_ZN19QItemSelectionRangeC2Ev()
+    return &QItemSelectionRange{qclsinst:qthis}
   case 2:
     // invoke: _ZN19QItemSelectionRangeC1ERK11QModelIndexS2_
     // invoke: void QItemSelectionRange(const class QModelIndex &, const class QModelIndex &)
@@ -495,7 +508,8 @@ func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN19QItemSelectionRangeC2ERK11QModelIndexS2_(arg0, arg1)
+    return &QItemSelectionRange{qclsinst:qthis}
   case 3:
     // invoke: _ZN19QItemSelectionRangeC1ERKS_
     // invoke: void QItemSelectionRange(const class QItemSelectionRange &)
@@ -503,12 +517,13 @@ func NewQItemSelectionRange(args ...interface{}) QItemSelectionRange {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionRangeC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN19QItemSelectionRangeC2ERKS_(arg0)
+    return &QItemSelectionRange{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "QItemSelectionRange", args)
   }
 
-  return QItemSelectionRange{}
+  return nil // QItemSelectionRange{qclsinst:qthis}
 }
 
 // indexes()
@@ -544,7 +559,8 @@ func (this *QItemSelectionRange) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange5widthEv
     // invoke: int width()
-    C.C_ZNK19QItemSelectionRange5widthEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "width", args)
   }
@@ -564,7 +580,8 @@ func (this *QItemSelectionRange) bottomRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange11bottomRightEv
     // invoke: const QPersistentModelIndex & bottomRight()
-    C.C_ZNK19QItemSelectionRange11bottomRightEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange11bottomRightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "bottomRight", args)
   }
@@ -584,7 +601,8 @@ func (this *QItemSelectionRange) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK19QItemSelectionRange7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "isEmpty", args)
   }
@@ -607,7 +625,8 @@ func (this *QItemSelectionRange) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QItemSelectionRange &)
     var arg0 = args[0].(QItemSelectionRange).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QItemSelectionRange10intersectsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersects", args)
   }
@@ -647,7 +666,8 @@ func (this *QItemSelectionRange) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange6heightEv
     // invoke: int height()
-    C.C_ZNK19QItemSelectionRange6heightEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "height", args)
   }
@@ -670,7 +690,8 @@ func (this *QItemSelectionRange) intersected(args ...interface{}) () {
     // invoke: QItemSelectionRange intersected(const class QItemSelectionRange &)
     var arg0 = args[0].(QItemSelectionRange).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionRange11intersectedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QItemSelectionRange11intersectedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "intersected", args)
   }
@@ -690,7 +711,8 @@ func (this *QItemSelectionRange) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionRange4leftEv
     // invoke: int left()
-    C.C_ZNK19QItemSelectionRange4leftEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionRange4leftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionRange", "left", args)
   }
@@ -710,7 +732,8 @@ func (this *QItemSelectionModel) selection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel9selectionEv
     // invoke: const QItemSelection selection()
-    C.C_ZNK19QItemSelectionModel9selectionEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionModel9selectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "selection", args)
   }
@@ -736,7 +759,8 @@ func (this *QItemSelectionModel) isColumnSelected(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QItemSelectionModel16isColumnSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isColumnSelected", args)
   }
@@ -822,7 +846,8 @@ func (this *QItemSelectionModel) isSelected(args ...interface{}) () {
     // invoke: bool isSelected(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QItemSelectionModel10isSelectedERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isSelected", args)
   }
@@ -848,7 +873,8 @@ func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QItemSelectionModel22rowIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "rowIntersectsSelection", args)
   }
@@ -856,7 +882,7 @@ func (this *QItemSelectionModel) rowIntersectsSelection(args ...interface{}) () 
 }
 
 // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
-func NewQItemSelectionModel(args ...interface{}) QItemSelectionModel {
+func NewQItemSelectionModel(args ...interface{}) *QItemSelectionModel {
   // QItemSelectionModel(class QAbstractItemModel *, class QObject *)
   // QItemSelectionModel(class QAbstractItemModel *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -879,7 +905,8 @@ func NewQItemSelectionModel(args ...interface{}) QItemSelectionModel {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModelP7QObject(arg0, arg1)
+    return &QItemSelectionModel{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QItemSelectionModelC1EP18QAbstractItemModel
     // invoke: void QItemSelectionModel(class QAbstractItemModel *)
@@ -887,12 +914,13 @@ func NewQItemSelectionModel(args ...interface{}) QItemSelectionModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(qthis, arg0)
+    qthis = C.C_ZN19QItemSelectionModelC2EP18QAbstractItemModel(arg0)
+    return &QItemSelectionModel{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "QItemSelectionModel", args)
   }
 
-  return QItemSelectionModel{}
+  return nil // QItemSelectionModel{qclsinst:qthis}
 }
 
 // clearCurrentIndex()
@@ -957,7 +985,8 @@ func (this *QItemSelectionModel) isRowSelected(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QItemSelectionModel13isRowSelectedEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "isRowSelected", args)
   }
@@ -1063,7 +1092,8 @@ func (this *QItemSelectionModel) columnIntersectsSelection(args ...interface{}) 
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK19QItemSelectionModel25columnIntersectsSelectionEiRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "columnIntersectsSelection", args)
   }
@@ -1083,7 +1113,8 @@ func (this *QItemSelectionModel) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    C.C_ZNK19QItemSelectionModel12currentIndexEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionModel12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "currentIndex", args)
   }
@@ -1146,7 +1177,8 @@ func (this *QItemSelectionModel) hasSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QItemSelectionModel12hasSelectionEv
     // invoke: bool hasSelection()
-    C.C_ZNK19QItemSelectionModel12hasSelectionEv(this.qclsinst)
+    var ret = C.C_ZNK19QItemSelectionModel12hasSelectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemSelectionModel", "hasSelection", args)
   }

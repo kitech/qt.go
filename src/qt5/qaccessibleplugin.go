@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qaccessibleplugin.h
 // dst-file: /src/gui/qaccessibleplugin.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAccessiblePlugin::QAccessiblePlugin(QObject * parent);
-extern void C_ZN17QAccessiblePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN17QAccessiblePluginC2EP7QObject(void* arg0); // 3
   // proto:  const QMetaObject * QAccessiblePlugin::metaObject();
 extern void C_ZNK17QAccessiblePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QAccessiblePlugin::~QAccessiblePlugin();
@@ -53,7 +53,7 @@ type QAccessiblePlugin struct {
 }
 
 // QAccessiblePlugin(class QObject *)
-func NewQAccessiblePlugin(args ...interface{}) QAccessiblePlugin {
+func NewQAccessiblePlugin(args ...interface{}) *QAccessiblePlugin {
   // QAccessiblePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -70,12 +70,13 @@ func NewQAccessiblePlugin(args ...interface{}) QAccessiblePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QAccessiblePluginC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN17QAccessiblePluginC2EP7QObject(arg0)
+    return &QAccessiblePlugin{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessiblePlugin", "QAccessiblePlugin", args)
   }
 
-  return QAccessiblePlugin{}
+  return nil // QAccessiblePlugin{qclsinst:qthis}
 }
 
 // metaObject()

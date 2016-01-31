@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qmainwindow.h
 // dst-file: /src/widgets/qmainwindow.go
 //
@@ -238,7 +238,8 @@ func (this *QMainWindow) saveState(args ...interface{}) () {
     // invoke: QByteArray saveState(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow9saveStateEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QMainWindow9saveStateEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "saveState", args)
   }
@@ -319,7 +320,8 @@ func (this *QMainWindow) addToolBar(args ...interface{}) () {
     // invoke: QToolBar * addToolBar(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow10addToolBarERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN11QMainWindow10addToolBarERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "addToolBar", args)
   }
@@ -339,7 +341,8 @@ func (this *QMainWindow) isAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10isAnimatedEv
     // invoke: bool isAnimated()
-    C.C_ZNK11QMainWindow10isAnimatedEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow10isAnimatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "isAnimated", args)
   }
@@ -451,7 +454,8 @@ func (this *QMainWindow) unifiedTitleAndToolBarOnMac(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv
     // invoke: bool unifiedTitleAndToolBarOnMac()
-    C.C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow27unifiedTitleAndToolBarOnMacEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "unifiedTitleAndToolBarOnMac", args)
   }
@@ -491,7 +495,8 @@ func (this *QMainWindow) iconSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow8iconSizeEv
     // invoke: QSize iconSize()
-    C.C_ZNK11QMainWindow8iconSizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow8iconSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "iconSize", args)
   }
@@ -540,7 +545,8 @@ func (this *QMainWindow) toolBarBreak(args ...interface{}) () {
     // invoke: bool toolBarBreak(class QToolBar *)
     var arg0 = args[0].(QToolBar).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QMainWindow12toolBarBreakEP8QToolBar(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "toolBarBreak", args)
   }
@@ -560,7 +566,8 @@ func (this *QMainWindow) documentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow12documentModeEv
     // invoke: bool documentMode()
-    C.C_ZNK11QMainWindow12documentModeEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow12documentModeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "documentMode", args)
   }
@@ -609,7 +616,8 @@ func (this *QMainWindow) restoreState(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QMainWindow12restoreStateERK10QByteArrayi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN11QMainWindow12restoreStateERK10QByteArrayi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreState", args)
   }
@@ -632,7 +640,8 @@ func (this *QMainWindow) restoreDockWidget(args ...interface{}) () {
     // invoke: bool restoreDockWidget(class QDockWidget *)
     var arg0 = args[0].(QDockWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    var ret = C.C_ZN11QMainWindow17restoreDockWidgetEP11QDockWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "restoreDockWidget", args)
   }
@@ -652,7 +661,8 @@ func (this *QMainWindow) statusBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow9statusBarEv
     // invoke: QStatusBar * statusBar()
-    C.C_ZNK11QMainWindow9statusBarEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow9statusBarEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "statusBar", args)
   }
@@ -781,7 +791,8 @@ func (this *QMainWindow) takeCentralWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow17takeCentralWidgetEv
     // invoke: QWidget * takeCentralWidget()
-    C.C_ZN11QMainWindow17takeCentralWidgetEv(this.qclsinst)
+    var ret = C.C_ZN11QMainWindow17takeCentralWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "takeCentralWidget", args)
   }
@@ -801,7 +812,8 @@ func (this *QMainWindow) createPopupMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QMainWindow15createPopupMenuEv
     // invoke: QMenu * createPopupMenu()
-    C.C_ZN11QMainWindow15createPopupMenuEv(this.qclsinst)
+    var ret = C.C_ZN11QMainWindow15createPopupMenuEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "createPopupMenu", args)
   }
@@ -844,7 +856,8 @@ func (this *QMainWindow) centralWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow13centralWidgetEv
     // invoke: QWidget * centralWidget()
-    C.C_ZNK11QMainWindow13centralWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow13centralWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "centralWidget", args)
   }
@@ -913,7 +926,8 @@ func (this *QMainWindow) isSeparator(args ...interface{}) () {
     // invoke: bool isSeparator(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMainWindow11isSeparatorERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QMainWindow11isSeparatorERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "isSeparator", args)
   }
@@ -933,7 +947,8 @@ func (this *QMainWindow) menuWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow10menuWidgetEv
     // invoke: QWidget * menuWidget()
-    C.C_ZNK11QMainWindow10menuWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow10menuWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "menuWidget", args)
   }
@@ -993,7 +1008,8 @@ func (this *QMainWindow) isDockNestingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow20isDockNestingEnabledEv
     // invoke: bool isDockNestingEnabled()
-    C.C_ZNK11QMainWindow20isDockNestingEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow20isDockNestingEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "isDockNestingEnabled", args)
   }
@@ -1013,7 +1029,8 @@ func (this *QMainWindow) menuBar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMainWindow7menuBarEv
     // invoke: QMenuBar * menuBar()
-    C.C_ZNK11QMainWindow7menuBarEv(this.qclsinst)
+    var ret = C.C_ZNK11QMainWindow7menuBarEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMainWindow", "menuBar", args)
   }

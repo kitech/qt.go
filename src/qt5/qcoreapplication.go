@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qcoreapplication.h
 // dst-file: /src/core/qcoreapplication.go
 //
@@ -81,7 +81,7 @@ extern void C_ZN16QCoreApplication23removeNativeEventFilterEP26QAbstractNativeEv
   // proto: static bool QCoreApplication::installTranslator(QTranslator * messageFile);
 extern void C_ZN16QCoreApplication17installTranslatorEP11QTranslator(void* arg0); // 4
   // proto:  void QCoreApplication::QCoreApplication(int & argc, char ** argv, int );
-extern void C_ZN16QCoreApplicationC2ERiPPci(void* qthis, int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
+extern void* C_ZN16QCoreApplicationC2ERiPPci(int32_t* arg0, unsigned char* arg1, int32_t arg2); // 3
   // proto: static void QCoreApplication::setOrganizationDomain(const QString & orgDomain);
 extern void C_ZN16QCoreApplication21setOrganizationDomainERK7QString(void* arg0); // 4
   // proto: static void QCoreApplication::removePostedEvents(QObject * receiver, int eventType);
@@ -239,7 +239,8 @@ func (this *QCoreApplication) applicationDirPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18applicationDirPathEv
     // invoke: QString applicationDirPath()
-    C.C_ZN16QCoreApplication18applicationDirPathEv()
+    var ret = C.C_ZN16QCoreApplication18applicationDirPathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationDirPath", args)
   }
@@ -259,7 +260,8 @@ func (this *QCoreApplication) applicationPid_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication14applicationPidEv
     // invoke: qint64 applicationPid()
-    C.C_ZN16QCoreApplication14applicationPidEv()
+    var ret = C.C_ZN16QCoreApplication14applicationPidEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationPid", args)
   }
@@ -285,7 +287,8 @@ func (this *QCoreApplication) notify(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN16QCoreApplication6notifyEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "notify", args)
   }
@@ -348,7 +351,8 @@ func (this *QCoreApplication) isQuitLockEnabled_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication17isQuitLockEnabledEv
     // invoke: bool isQuitLockEnabled()
-    C.C_ZN16QCoreApplication17isQuitLockEnabledEv()
+    var ret = C.C_ZN16QCoreApplication17isQuitLockEnabledEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "isQuitLockEnabled", args)
   }
@@ -368,7 +372,8 @@ func (this *QCoreApplication) closingDown_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication11closingDownEv
     // invoke: bool closingDown()
-    C.C_ZN16QCoreApplication11closingDownEv()
+    var ret = C.C_ZN16QCoreApplication11closingDownEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "closingDown", args)
   }
@@ -388,7 +393,8 @@ func (this *QCoreApplication) applicationName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication15applicationNameEv
     // invoke: QString applicationName()
-    C.C_ZN16QCoreApplication15applicationNameEv()
+    var ret = C.C_ZN16QCoreApplication15applicationNameEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationName", args)
   }
@@ -428,7 +434,8 @@ func (this *QCoreApplication) applicationVersion_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18applicationVersionEv
     // invoke: QString applicationVersion()
-    C.C_ZN16QCoreApplication18applicationVersionEv()
+    var ret = C.C_ZN16QCoreApplication18applicationVersionEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationVersion", args)
   }
@@ -448,7 +455,8 @@ func (this *QCoreApplication) exec_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication4execEv
     // invoke: int exec()
-    C.C_ZN16QCoreApplication4execEv()
+    var ret = C.C_ZN16QCoreApplication4execEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "exec", args)
   }
@@ -468,7 +476,8 @@ func (this *QCoreApplication) instance_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication8instanceEv
     // invoke: QCoreApplication * instance()
-    C.C_ZN16QCoreApplication8instanceEv()
+    var ret = C.C_ZN16QCoreApplication8instanceEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "instance", args)
   }
@@ -488,7 +497,8 @@ func (this *QCoreApplication) organizationDomain_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication18organizationDomainEv
     // invoke: QString organizationDomain()
-    C.C_ZN16QCoreApplication18organizationDomainEv()
+    var ret = C.C_ZN16QCoreApplication18organizationDomainEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationDomain", args)
   }
@@ -551,7 +561,8 @@ func (this *QCoreApplication) applicationFilePath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication19applicationFilePathEv
     // invoke: QString applicationFilePath()
-    C.C_ZN16QCoreApplication19applicationFilePathEv()
+    var ret = C.C_ZN16QCoreApplication19applicationFilePathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "applicationFilePath", args)
   }
@@ -606,7 +617,8 @@ func (this *QCoreApplication) translate_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN16QCoreApplication9translateEPKcS1_S1_i(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "translate", args)
   }
@@ -698,7 +710,8 @@ func (this *QCoreApplication) installTranslator_s(args ...interface{}) () {
     // invoke: bool installTranslator(class QTranslator *)
     var arg0 = args[0].(QTranslator).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QCoreApplication17installTranslatorEP11QTranslator(arg0)
+    var ret = C.C_ZN16QCoreApplication17installTranslatorEP11QTranslator(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "installTranslator", args)
   }
@@ -706,7 +719,7 @@ func (this *QCoreApplication) installTranslator_s(args ...interface{}) () {
 }
 
 // QCoreApplication(int &, char **, int)
-func NewQCoreApplication(args ...interface{}) QCoreApplication {
+func NewQCoreApplication(args ...interface{}) *QCoreApplication {
   // QCoreApplication(int &, char **, int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -729,12 +742,13 @@ func NewQCoreApplication(args ...interface{}) QCoreApplication {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QCoreApplicationC2ERiPPci(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN16QCoreApplicationC2ERiPPci(arg0, arg1, arg2)
+    return &QCoreApplication{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCoreApplication", "QCoreApplication", args)
   }
 
-  return QCoreApplication{}
+  return nil // QCoreApplication{qclsinst:qthis}
 }
 
 // setOrganizationDomain(const class QString &)
@@ -868,7 +882,8 @@ func (this *QCoreApplication) removeTranslator_s(args ...interface{}) () {
     // invoke: bool removeTranslator(class QTranslator *)
     var arg0 = args[0].(QTranslator).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(arg0)
+    var ret = C.C_ZN16QCoreApplication16removeTranslatorEP11QTranslator(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "removeTranslator", args)
   }
@@ -908,7 +923,8 @@ func (this *QCoreApplication) organizationName_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication16organizationNameEv
     // invoke: QString organizationName()
-    C.C_ZN16QCoreApplication16organizationNameEv()
+    var ret = C.C_ZN16QCoreApplication16organizationNameEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "organizationName", args)
   }
@@ -974,7 +990,8 @@ func (this *QCoreApplication) isSetuidAllowed_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication15isSetuidAllowedEv
     // invoke: bool isSetuidAllowed()
-    C.C_ZN16QCoreApplication15isSetuidAllowedEv()
+    var ret = C.C_ZN16QCoreApplication15isSetuidAllowedEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "isSetuidAllowed", args)
   }
@@ -1000,7 +1017,8 @@ func (this *QCoreApplication) sendEvent_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(arg0, arg1)
+    var ret = C.C_ZN16QCoreApplication9sendEventEP7QObjectP6QEvent(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "sendEvent", args)
   }
@@ -1020,7 +1038,8 @@ func (this *QCoreApplication) startingUp_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication10startingUpEv
     // invoke: bool startingUp()
-    C.C_ZN16QCoreApplication10startingUpEv()
+    var ret = C.C_ZN16QCoreApplication10startingUpEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "startingUp", args)
   }
@@ -1040,7 +1059,8 @@ func (this *QCoreApplication) hasPendingEvents_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QCoreApplication16hasPendingEventsEv
     // invoke: bool hasPendingEvents()
-    C.C_ZN16QCoreApplication16hasPendingEventsEv()
+    var ret = C.C_ZN16QCoreApplication16hasPendingEventsEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCoreApplication", "hasPendingEvents", args)
   }

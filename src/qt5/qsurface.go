@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qsurface.h
 // dst-file: /src/gui/qsurface.go
 //
@@ -105,7 +105,8 @@ func (this *QSurface) supportsOpenGL(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSurface14supportsOpenGLEv
     // invoke: bool supportsOpenGL()
-    C.C_ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
+    var ret = C.C_ZNK8QSurface14supportsOpenGLEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSurface", "supportsOpenGL", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qjsonarray.h
 // dst-file: /src/core/qjsonarray.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QJsonArray::QJsonArray();
-extern void C_ZN10QJsonArrayC2Ev(void* qthis); // 3
+extern void* C_ZN10QJsonArrayC2Ev(); // 3
   // proto:  QJsonArray::const_iterator QJsonArray::constBegin();
 extern void C_ZNK10QJsonArray10constBeginEv(void* qthis); // 2
   // proto:  void QJsonArray::removeAt(int i);
@@ -89,7 +89,7 @@ type QJsonArray struct {
 }
 
 // QJsonArray()
-func NewQJsonArray(args ...interface{}) QJsonArray {
+func NewQJsonArray(args ...interface{}) *QJsonArray {
   // QJsonArray()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -103,12 +103,13 @@ func NewQJsonArray(args ...interface{}) QJsonArray {
     // invoke: void QJsonArray()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QJsonArrayC2Ev(qthis)
+    qthis = C.C_ZN10QJsonArrayC2Ev()
+    return &QJsonArray{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonArray", "QJsonArray", args)
   }
 
-  return QJsonArray{}
+  return nil // QJsonArray{qclsinst:qthis}
 }
 
 // constBegin()
@@ -190,7 +191,8 @@ func (this *QJsonArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray4sizeEv
     // invoke: int size()
-    C.C_ZNK10QJsonArray4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonArray4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonArray", "size", args)
   }
@@ -250,7 +252,8 @@ func (this *QJsonArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK10QJsonArray7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonArray7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonArray", "isEmpty", args)
   }
@@ -290,7 +293,8 @@ func (this *QJsonArray) empty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5emptyEv
     // invoke: bool empty()
-    C.C_ZNK10QJsonArray5emptyEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonArray5emptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonArray", "empty", args)
   }
@@ -396,7 +400,8 @@ func (this *QJsonArray) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QJsonArray5countEv
     // invoke: int count()
-    C.C_ZNK10QJsonArray5countEv(this.qclsinst)
+    var ret = C.C_ZNK10QJsonArray5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonArray", "count", args)
   }

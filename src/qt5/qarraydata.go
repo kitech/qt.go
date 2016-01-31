@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qarraydata.h
 // dst-file: /src/core/qarraydata.go
 //
@@ -109,7 +109,8 @@ func (this *QArrayData) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QArrayData4dataEv
     // invoke: void * data()
-    C.C_ZN10QArrayData4dataEv(this.qclsinst)
+    var ret = C.C_ZN10QArrayData4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QArrayData", "data", args)
   }
@@ -129,7 +130,8 @@ func (this *QArrayData) sharedNull_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QArrayData10sharedNullEv
     // invoke: QArrayData * sharedNull()
-    C.C_ZN10QArrayData10sharedNullEv()
+    var ret = C.C_ZN10QArrayData10sharedNullEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QArrayData", "sharedNull", args)
   }
@@ -149,7 +151,8 @@ func (this *QArrayData) isMutable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QArrayData9isMutableEv
     // invoke: bool isMutable()
-    C.C_ZNK10QArrayData9isMutableEv(this.qclsinst)
+    var ret = C.C_ZNK10QArrayData9isMutableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QArrayData", "isMutable", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qdiriterator.h
 // dst-file: /src/core/qdiriterator.go
 //
@@ -93,7 +93,8 @@ func (this *QDirIterator) filePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8filePathEv
     // invoke: QString filePath()
-    C.C_ZNK12QDirIterator8filePathEv(this.qclsinst)
+    var ret = C.C_ZNK12QDirIterator8filePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "filePath", args)
   }
@@ -113,7 +114,8 @@ func (this *QDirIterator) next(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QDirIterator4nextEv
     // invoke: QString next()
-    C.C_ZN12QDirIterator4nextEv(this.qclsinst)
+    var ret = C.C_ZN12QDirIterator4nextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "next", args)
   }
@@ -133,7 +135,8 @@ func (this *QDirIterator) hasNext(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator7hasNextEv
     // invoke: bool hasNext()
-    C.C_ZNK12QDirIterator7hasNextEv(this.qclsinst)
+    var ret = C.C_ZNK12QDirIterator7hasNextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "hasNext", args)
   }
@@ -153,7 +156,8 @@ func (this *QDirIterator) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator4pathEv
     // invoke: QString path()
-    C.C_ZNK12QDirIterator4pathEv(this.qclsinst)
+    var ret = C.C_ZNK12QDirIterator4pathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "path", args)
   }
@@ -173,7 +177,8 @@ func (this *QDirIterator) fileInfo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8fileInfoEv
     // invoke: QFileInfo fileInfo()
-    C.C_ZNK12QDirIterator8fileInfoEv(this.qclsinst)
+    var ret = C.C_ZNK12QDirIterator8fileInfoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "fileInfo", args)
   }
@@ -193,7 +198,8 @@ func (this *QDirIterator) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QDirIterator8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK12QDirIterator8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK12QDirIterator8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirIterator", "fileName", args)
   }

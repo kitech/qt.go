@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qclipboard.h
 // dst-file: /src/gui/qclipboard.go
 //
@@ -75,7 +75,8 @@ func (this *QClipboard) ownsClipboard(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsClipboardEv
     // invoke: bool ownsClipboard()
-    C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
+    var ret = C.C_ZNK10QClipboard13ownsClipboardEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QClipboard", "ownsClipboard", args)
   }
@@ -95,7 +96,8 @@ func (this *QClipboard) supportsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard18supportsFindBufferEv
     // invoke: bool supportsFindBuffer()
-    C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
+    var ret = C.C_ZNK10QClipboard18supportsFindBufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QClipboard", "supportsFindBuffer", args)
   }
@@ -115,7 +117,8 @@ func (this *QClipboard) ownsFindBuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard14ownsFindBufferEv
     // invoke: bool ownsFindBuffer()
-    C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+    var ret = C.C_ZNK10QClipboard14ownsFindBufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QClipboard", "ownsFindBuffer", args)
   }
@@ -135,7 +138,8 @@ func (this *QClipboard) supportsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard17supportsSelectionEv
     // invoke: bool supportsSelection()
-    C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
+    var ret = C.C_ZNK10QClipboard17supportsSelectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QClipboard", "supportsSelection", args)
   }
@@ -175,7 +179,8 @@ func (this *QClipboard) ownsSelection(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QClipboard13ownsSelectionEv
     // invoke: bool ownsSelection()
-    C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
+    var ret = C.C_ZNK10QClipboard13ownsSelectionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QClipboard", "ownsSelection", args)
   }

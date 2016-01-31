@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qactiongroup.h
 // dst-file: /src/widgets/qactiongroup.go
 //
@@ -41,7 +41,7 @@ extern void C_ZNK12QActionGroup13checkedActionEv(void* qthis); // 4
   // proto:  void QActionGroup::setDisabled(bool b);
 extern void C_ZN12QActionGroup11setDisabledEb(void* qthis, bool arg0); // 2
   // proto:  void QActionGroup::QActionGroup(QObject * parent);
-extern void C_ZN12QActionGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN12QActionGroupC2EP7QObject(void* arg0); // 3
   // proto:  void QActionGroup::setEnabled(bool );
 extern void C_ZN12QActionGroup10setEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QActionGroup::setExclusive(bool );
@@ -103,7 +103,8 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
     // invoke: QAction * addAction(class QAction *)
     var arg0 = args[0].(QAction).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup9addActionEP7QAction(this.qclsinst, arg0)
+    var ret = C.C_ZN12QActionGroup9addActionEP7QAction(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN12QActionGroup9addActionERK5QIconRK7QString
     // invoke: QAction * addAction(const class QIcon &, const class QString &)
@@ -111,13 +112,15 @@ func (this *QActionGroup) addAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN12QActionGroup9addActionERK5QIconRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN12QActionGroup9addActionERK7QString
     // invoke: QAction * addAction(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QActionGroup9addActionERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN12QActionGroup9addActionERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QActionGroup", "addAction", args)
   }
@@ -157,7 +160,8 @@ func (this *QActionGroup) checkedAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup13checkedActionEv
     // invoke: QAction * checkedAction()
-    C.C_ZNK12QActionGroup13checkedActionEv(this.qclsinst)
+    var ret = C.C_ZNK12QActionGroup13checkedActionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QActionGroup", "checkedAction", args)
   }
@@ -188,7 +192,7 @@ func (this *QActionGroup) setDisabled(args ...interface{}) () {
 }
 
 // QActionGroup(class QObject *)
-func NewQActionGroup(args ...interface{}) QActionGroup {
+func NewQActionGroup(args ...interface{}) *QActionGroup {
   // QActionGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,12 +209,13 @@ func NewQActionGroup(args ...interface{}) QActionGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QActionGroupC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN12QActionGroupC2EP7QObject(arg0)
+    return &QActionGroup{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QActionGroup", "QActionGroup", args)
   }
 
-  return QActionGroup{}
+  return nil // QActionGroup{qclsinst:qthis}
 }
 
 // setEnabled(_Bool)
@@ -295,7 +300,8 @@ func (this *QActionGroup) isExclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup11isExclusiveEv
     // invoke: bool isExclusive()
-    C.C_ZNK12QActionGroup11isExclusiveEv(this.qclsinst)
+    var ret = C.C_ZNK12QActionGroup11isExclusiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QActionGroup", "isExclusive", args)
   }
@@ -355,7 +361,8 @@ func (this *QActionGroup) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup9isVisibleEv
     // invoke: bool isVisible()
-    C.C_ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+    var ret = C.C_ZNK12QActionGroup9isVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QActionGroup", "isVisible", args)
   }
@@ -398,7 +405,8 @@ func (this *QActionGroup) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QActionGroup9isEnabledEv
     // invoke: bool isEnabled()
-    C.C_ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK12QActionGroup9isEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QActionGroup", "isEnabled", args)
   }

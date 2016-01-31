@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsavefile.h
 // dst-file: /src/core/qsavefile.go
 //
@@ -41,11 +41,11 @@ extern void C_ZN9QSaveFile11setFileNameERK7QString(void* qthis, void* arg0); // 
   // proto:  QString QSaveFile::fileName();
 extern void C_ZNK9QSaveFile8fileNameEv(void* qthis); // 4
   // proto:  void QSaveFile::QSaveFile(const QString & name);
-extern void C_ZN9QSaveFileC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN9QSaveFileC2ERK7QString(void* arg0); // 3
   // proto:  void QSaveFile::QSaveFile(const QString & name, QObject * parent);
-extern void C_ZN9QSaveFileC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QSaveFileC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QSaveFile::QSaveFile(QObject * parent);
-extern void C_ZN9QSaveFileC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN9QSaveFileC2EP7QObject(void* arg0); // 3
   // proto:  bool QSaveFile::directWriteFallback();
 extern void C_ZNK9QSaveFile19directWriteFallbackEv(void* qthis); // 4
   // proto:  bool QSaveFile::commit();
@@ -187,7 +187,8 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK9QSaveFile8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSaveFile", "fileName", args)
   }
@@ -195,7 +196,7 @@ func (this *QSaveFile) fileName(args ...interface{}) () {
 }
 
 // QSaveFile(const class QString &)
-func NewQSaveFile(args ...interface{}) QSaveFile {
+func NewQSaveFile(args ...interface{}) *QSaveFile {
   // QSaveFile(const class QString &)
   // QSaveFile(const class QString &, class QObject *)
   // QSaveFile(class QObject *)
@@ -219,7 +220,8 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSaveFileC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN9QSaveFileC2ERK7QString(arg0)
+    return &QSaveFile{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QSaveFileC1ERK7QStringP7QObject
     // invoke: void QSaveFile(const class QString &, class QObject *)
@@ -229,7 +231,8 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSaveFileC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN9QSaveFileC2ERK7QStringP7QObject(arg0, arg1)
+    return &QSaveFile{qclsinst:qthis}
   case 2:
     // invoke: _ZN9QSaveFileC1EP7QObject
     // invoke: void QSaveFile(class QObject *)
@@ -237,12 +240,13 @@ func NewQSaveFile(args ...interface{}) QSaveFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSaveFileC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN9QSaveFileC2EP7QObject(arg0)
+    return &QSaveFile{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSaveFile", "QSaveFile", args)
   }
 
-  return QSaveFile{}
+  return nil // QSaveFile{qclsinst:qthis}
 }
 
 // directWriteFallback()
@@ -258,7 +262,8 @@ func (this *QSaveFile) directWriteFallback(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSaveFile19directWriteFallbackEv
     // invoke: bool directWriteFallback()
-    C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
+    var ret = C.C_ZNK9QSaveFile19directWriteFallbackEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSaveFile", "directWriteFallback", args)
   }
@@ -278,7 +283,8 @@ func (this *QSaveFile) commit(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QSaveFile6commitEv
     // invoke: bool commit()
-    C.C_ZN9QSaveFile6commitEv(this.qclsinst)
+    var ret = C.C_ZN9QSaveFile6commitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSaveFile", "commit", args)
   }

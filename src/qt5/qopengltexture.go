@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopengltexture.h
 // dst-file: /src/gui/qopengltexture.go
 //
@@ -195,7 +195,8 @@ func (this *QOpenGLTexture) maximumAnisotropy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture17maximumAnisotropyEv
     // invoke: float maximumAnisotropy()
-    C.C_ZNK14QOpenGLTexture17maximumAnisotropyEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture17maximumAnisotropyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumAnisotropy", args)
   }
@@ -215,7 +216,8 @@ func (this *QOpenGLTexture) maximumMipLevels(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture16maximumMipLevelsEv
     // invoke: int maximumMipLevels()
-    C.C_ZNK14QOpenGLTexture16maximumMipLevelsEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture16maximumMipLevelsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumMipLevels", args)
   }
@@ -255,7 +257,8 @@ func (this *QOpenGLTexture) isTextureView(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture13isTextureViewEv
     // invoke: bool isTextureView()
-    C.C_ZNK14QOpenGLTexture13isTextureViewEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture13isTextureViewEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isTextureView", args)
   }
@@ -275,7 +278,8 @@ func (this *QOpenGLTexture) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture6heightEv
     // invoke: int height()
-    C.C_ZNK14QOpenGLTexture6heightEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "height", args)
   }
@@ -358,7 +362,8 @@ func (this *QOpenGLTexture) isFixedSamplePositions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture22isFixedSamplePositionsEv
     // invoke: bool isFixedSamplePositions()
-    C.C_ZNK14QOpenGLTexture22isFixedSamplePositionsEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture22isFixedSamplePositionsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isFixedSamplePositions", args)
   }
@@ -393,7 +398,8 @@ func (this *QOpenGLTexture) borderColor(args ...interface{}) () {
   case 1:
     // invoke: _ZNK14QOpenGLTexture11borderColorEv
     // invoke: QColor borderColor()
-    C.C_ZNK14QOpenGLTexture11borderColorEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture11borderColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK14QOpenGLTexture11borderColorEPj
     // invoke: void borderColor(unsigned int *)
@@ -445,7 +451,8 @@ func (this *QOpenGLTexture) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9isCreatedEv
     // invoke: bool isCreated()
-    C.C_ZNK14QOpenGLTexture9isCreatedEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture9isCreatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isCreated", args)
   }
@@ -531,7 +538,8 @@ func (this *QOpenGLTexture) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QOpenGLTexture6createEv
     // invoke: bool create()
-    C.C_ZN14QOpenGLTexture6createEv(this.qclsinst)
+    var ret = C.C_ZN14QOpenGLTexture6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "create", args)
   }
@@ -551,7 +559,8 @@ func (this *QOpenGLTexture) minimumLevelOfDetail(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture20minimumLevelOfDetailEv
     // invoke: float minimumLevelOfDetail()
-    C.C_ZNK14QOpenGLTexture20minimumLevelOfDetailEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture20minimumLevelOfDetailEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "minimumLevelOfDetail", args)
   }
@@ -594,7 +603,8 @@ func (this *QOpenGLTexture) maximumLevelOfDetail(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture20maximumLevelOfDetailEv
     // invoke: float maximumLevelOfDetail()
-    C.C_ZNK14QOpenGLTexture20maximumLevelOfDetailEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture20maximumLevelOfDetailEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "maximumLevelOfDetail", args)
   }
@@ -614,7 +624,8 @@ func (this *QOpenGLTexture) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5widthEv
     // invoke: int width()
-    C.C_ZNK14QOpenGLTexture5widthEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "width", args)
   }
@@ -660,7 +671,8 @@ func (this *QOpenGLTexture) samples(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture7samplesEv
     // invoke: int samples()
-    C.C_ZNK14QOpenGLTexture7samplesEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture7samplesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "samples", args)
   }
@@ -680,7 +692,8 @@ func (this *QOpenGLTexture) isStorageAllocated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture18isStorageAllocatedEv
     // invoke: bool isStorageAllocated()
-    C.C_ZNK14QOpenGLTexture18isStorageAllocatedEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture18isStorageAllocatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isStorageAllocated", args)
   }
@@ -726,7 +739,8 @@ func (this *QOpenGLTexture) textureId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9textureIdEv
     // invoke: GLuint textureId()
-    C.C_ZNK14QOpenGLTexture9textureIdEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture9textureIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "textureId", args)
   }
@@ -809,7 +823,8 @@ func (this *QOpenGLTexture) layers(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture6layersEv
     // invoke: int layers()
-    C.C_ZNK14QOpenGLTexture6layersEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture6layersEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "layers", args)
   }
@@ -926,7 +941,8 @@ func (this *QOpenGLTexture) mipBaseLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture12mipBaseLevelEv
     // invoke: int mipBaseLevel()
-    C.C_ZNK14QOpenGLTexture12mipBaseLevelEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture12mipBaseLevelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipBaseLevel", args)
   }
@@ -1114,7 +1130,8 @@ func (this *QOpenGLTexture) isAutoMipMapGenerationEnabled(args ...interface{}) (
   case 0:
     // invoke: _ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv
     // invoke: bool isAutoMipMapGenerationEnabled()
-    C.C_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture29isAutoMipMapGenerationEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isAutoMipMapGenerationEnabled", args)
   }
@@ -1134,7 +1151,8 @@ func (this *QOpenGLTexture) mipLevels(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture9mipLevelsEv
     // invoke: int mipLevels()
-    C.C_ZNK14QOpenGLTexture9mipLevelsEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture9mipLevelsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipLevels", args)
   }
@@ -1154,7 +1172,8 @@ func (this *QOpenGLTexture) levelofDetailBias(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture17levelofDetailBiasEv
     // invoke: float levelofDetailBias()
-    C.C_ZNK14QOpenGLTexture17levelofDetailBiasEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture17levelofDetailBiasEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "levelofDetailBias", args)
   }
@@ -1328,11 +1347,13 @@ func (this *QOpenGLTexture) isBound(args ...interface{}) () {
     // invoke: bool isBound(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN14QOpenGLTexture7isBoundEj(this.qclsinst, arg0)
+    var ret = C.C_ZN14QOpenGLTexture7isBoundEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK14QOpenGLTexture7isBoundEv
     // invoke: bool isBound()
-    C.C_ZNK14QOpenGLTexture7isBoundEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture7isBoundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "isBound", args)
   }
@@ -1392,7 +1413,8 @@ func (this *QOpenGLTexture) mipMaxLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture11mipMaxLevelEv
     // invoke: int mipMaxLevel()
-    C.C_ZNK14QOpenGLTexture11mipMaxLevelEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture11mipMaxLevelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "mipMaxLevel", args)
   }
@@ -1412,7 +1434,8 @@ func (this *QOpenGLTexture) depth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5depthEv
     // invoke: int depth()
-    C.C_ZNK14QOpenGLTexture5depthEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture5depthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "depth", args)
   }
@@ -1455,7 +1478,8 @@ func (this *QOpenGLTexture) faces(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QOpenGLTexture5facesEv
     // invoke: int faces()
-    C.C_ZNK14QOpenGLTexture5facesEv(this.qclsinst)
+    var ret = C.C_ZNK14QOpenGLTexture5facesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTexture", "faces", args)
   }

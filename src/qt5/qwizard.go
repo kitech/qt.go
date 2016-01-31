@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qwizard.h
 // dst-file: /src/widgets/qwizard.go
 //
@@ -53,7 +53,7 @@ extern void C_ZN11QWizardPage14initializePageEv(void* qthis); // 4
   // proto:  const QMetaObject * QWizardPage::metaObject();
 extern void C_ZNK11QWizardPage10metaObjectEv(void* qthis); // 4
   // proto:  void QWizardPage::QWizardPage(QWidget * parent);
-extern void C_ZN11QWizardPageC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QWizardPageC2EP7QWidget(void* arg0); // 3
   // proto:  void QWizardPage::setCommitPage(bool commitPage);
 extern void C_ZN11QWizardPage13setCommitPageEb(void* qthis, bool arg0); // 4
   // proto:  int QWizardPage::nextId();
@@ -184,7 +184,8 @@ func (this *QWizardPage) isCommitPage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage12isCommitPageEv
     // invoke: bool isCommitPage()
-    C.C_ZNK11QWizardPage12isCommitPageEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage12isCommitPageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "isCommitPage", args)
   }
@@ -244,7 +245,8 @@ func (this *QWizardPage) subTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage8subTitleEv
     // invoke: QString subTitle()
-    C.C_ZNK11QWizardPage8subTitleEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage8subTitleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "subTitle", args)
   }
@@ -264,7 +266,8 @@ func (this *QWizardPage) title(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage5titleEv
     // invoke: QString title()
-    C.C_ZNK11QWizardPage5titleEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage5titleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "title", args)
   }
@@ -284,7 +287,8 @@ func (this *QWizardPage) isComplete(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage10isCompleteEv
     // invoke: bool isComplete()
-    C.C_ZNK11QWizardPage10isCompleteEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage10isCompleteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "isComplete", args)
   }
@@ -304,7 +308,8 @@ func (this *QWizardPage) isFinalPage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage11isFinalPageEv
     // invoke: bool isFinalPage()
-    C.C_ZNK11QWizardPage11isFinalPageEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage11isFinalPageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "isFinalPage", args)
   }
@@ -324,7 +329,8 @@ func (this *QWizardPage) validatePage(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QWizardPage12validatePageEv
     // invoke: bool validatePage()
-    C.C_ZN11QWizardPage12validatePageEv(this.qclsinst)
+    var ret = C.C_ZN11QWizardPage12validatePageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "validatePage", args)
   }
@@ -395,7 +401,7 @@ func (this *QWizardPage) metaObject(args ...interface{}) () {
 }
 
 // QWizardPage(class QWidget *)
-func NewQWizardPage(args ...interface{}) QWizardPage {
+func NewQWizardPage(args ...interface{}) *QWizardPage {
   // QWizardPage(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -412,12 +418,13 @@ func NewQWizardPage(args ...interface{}) QWizardPage {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QWizardPageC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QWizardPageC2EP7QWidget(arg0)
+    return &QWizardPage{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWizardPage", "QWizardPage", args)
   }
 
-  return QWizardPage{}
+  return nil // QWizardPage{qclsinst:qthis}
 }
 
 // setCommitPage(_Bool)
@@ -456,7 +463,8 @@ func (this *QWizardPage) nextId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QWizardPage6nextIdEv
     // invoke: int nextId()
-    C.C_ZNK11QWizardPage6nextIdEv(this.qclsinst)
+    var ret = C.C_ZNK11QWizardPage6nextIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizardPage", "nextId", args)
   }
@@ -499,7 +507,8 @@ func (this *QWizard) validateCurrentPage(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QWizard19validateCurrentPageEv
     // invoke: bool validateCurrentPage()
-    C.C_ZN7QWizard19validateCurrentPageEv(this.qclsinst)
+    var ret = C.C_ZN7QWizard19validateCurrentPageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "validateCurrentPage", args)
   }
@@ -663,7 +672,8 @@ func (this *QWizard) field(args ...interface{}) () {
     // invoke: QVariant field(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QWizard5fieldERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QWizard5fieldERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "field", args)
   }
@@ -789,7 +799,8 @@ func (this *QWizard) currentPage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard11currentPageEv
     // invoke: QWizardPage * currentPage()
-    C.C_ZNK7QWizard11currentPageEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard11currentPageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "currentPage", args)
   }
@@ -812,7 +823,8 @@ func (this *QWizard) hasVisitedPage(args ...interface{}) () {
     // invoke: bool hasVisitedPage(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QWizard14hasVisitedPageEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QWizard14hasVisitedPageEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "hasVisitedPage", args)
   }
@@ -892,7 +904,8 @@ func (this *QWizard) startId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard7startIdEv
     // invoke: int startId()
-    C.C_ZNK7QWizard7startIdEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard7startIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "startId", args)
   }
@@ -932,7 +945,8 @@ func (this *QWizard) sideWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard10sideWidgetEv
     // invoke: QWidget * sideWidget()
-    C.C_ZNK7QWizard10sideWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard10sideWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "sideWidget", args)
   }
@@ -952,7 +966,8 @@ func (this *QWizard) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK7QWizard8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "sizeHint", args)
   }
@@ -972,7 +987,8 @@ func (this *QWizard) currentId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard9currentIdEv
     // invoke: int currentId()
-    C.C_ZNK7QWizard9currentIdEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard9currentIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "currentId", args)
   }
@@ -1058,7 +1074,8 @@ func (this *QWizard) nextId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QWizard6nextIdEv
     // invoke: int nextId()
-    C.C_ZNK7QWizard6nextIdEv(this.qclsinst)
+    var ret = C.C_ZNK7QWizard6nextIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "nextId", args)
   }
@@ -1081,7 +1098,8 @@ func (this *QWizard) page(args ...interface{}) () {
     // invoke: QWizardPage * page(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QWizard4pageEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QWizard4pageEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "page", args)
   }
@@ -1104,7 +1122,8 @@ func (this *QWizard) addPage(args ...interface{}) () {
     // invoke: int addPage(class QWizardPage *)
     var arg0 = args[0].(QWizardPage).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QWizard7addPageEP11QWizardPage(this.qclsinst, arg0)
+    var ret = C.C_ZN7QWizard7addPageEP11QWizardPage(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWizard", "addPage", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qproxystyle.h
 // dst-file: /src/widgets/qproxystyle.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QProxyStyle::QProxyStyle(QStyle * style);
-extern void C_ZN11QProxyStyleC2EP6QStyle(void* qthis, void* arg0); // 3
+extern void* C_ZN11QProxyStyleC2EP6QStyle(void* arg0); // 3
   // proto:  void QProxyStyle::QProxyStyle(const QString & key);
-extern void C_ZN11QProxyStyleC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN11QProxyStyleC2ERK7QString(void* arg0); // 3
   // proto:  void QProxyStyle::polish(QWidget * widget);
 extern void C_ZN11QProxyStyle6polishEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QProxyStyle::polish(QPalette & pal);
@@ -77,7 +77,7 @@ type QProxyStyle struct {
 }
 
 // QProxyStyle(class QStyle *)
-func NewQProxyStyle(args ...interface{}) QProxyStyle {
+func NewQProxyStyle(args ...interface{}) *QProxyStyle {
   // QProxyStyle(class QStyle *)
   // QProxyStyle(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -97,7 +97,8 @@ func NewQProxyStyle(args ...interface{}) QProxyStyle {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QProxyStyleC2EP6QStyle(qthis, arg0)
+    qthis = C.C_ZN11QProxyStyleC2EP6QStyle(arg0)
+    return &QProxyStyle{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QProxyStyleC1ERK7QString
     // invoke: void QProxyStyle(const class QString &)
@@ -105,12 +106,13 @@ func NewQProxyStyle(args ...interface{}) QProxyStyle {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QProxyStyleC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN11QProxyStyleC2ERK7QString(arg0)
+    return &QProxyStyle{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QProxyStyle", "QProxyStyle", args)
   }
 
-  return QProxyStyle{}
+  return nil // QProxyStyle{qclsinst:qthis}
 }
 
 // polish(class QWidget *)
@@ -167,7 +169,8 @@ func (this *QProxyStyle) baseStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle9baseStyleEv
     // invoke: QStyle * baseStyle()
-    C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
+    var ret = C.C_ZNK11QProxyStyle9baseStyleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "baseStyle", args)
   }
@@ -187,7 +190,8 @@ func (this *QProxyStyle) standardPalette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QProxyStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
+    var ret = C.C_ZNK11QProxyStyle15standardPaletteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "standardPalette", args)
   }
@@ -317,7 +321,8 @@ func (this *QProxyStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZNK11QProxyStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemTextRect", args)
   }
@@ -346,7 +351,8 @@ func (this *QProxyStyle) itemPixmapRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK11QProxyStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QProxyStyle", "itemPixmapRect", args)
   }

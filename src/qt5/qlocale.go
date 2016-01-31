@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qlocale.h
 // dst-file: /src/core/qlocale.go
 //
@@ -93,11 +93,11 @@ extern void C_ZNK7QLocale18nativeLanguageNameEv(void* qthis); // 4
   // proto:  QChar QLocale::groupSeparator();
 extern void C_ZNK7QLocale14groupSeparatorEv(void* qthis); // 4
   // proto:  void QLocale::QLocale(const QLocale & other);
-extern void C_ZN7QLocaleC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN7QLocaleC2ERKS_(void* arg0); // 3
   // proto:  void QLocale::QLocale(const QString & name);
-extern void C_ZN7QLocaleC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN7QLocaleC2ERK7QString(void* arg0); // 3
   // proto:  void QLocale::QLocale();
-extern void C_ZN7QLocaleC2Ev(void* qthis); // 3
+extern void* C_ZN7QLocaleC2Ev(); // 3
   // proto:  QChar QLocale::positiveSign();
 extern void C_ZNK7QLocale12positiveSignEv(void* qthis); // 4
   // proto:  QString QLocale::toCurrencyString(double , const QString & symbol);
@@ -189,7 +189,8 @@ func (this *QLocale) toUShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale8toUShortERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale8toUShortERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toUShort", args)
   }
@@ -215,7 +216,8 @@ func (this *QLocale) toTime(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale6toTimeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale6toTimeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toTime", args)
   }
@@ -261,7 +263,8 @@ func (this *QLocale) toUInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale6toUIntERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale6toUIntERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toUInt", args)
   }
@@ -287,7 +290,8 @@ func (this *QLocale) toFloat(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale7toFloatERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale7toFloatERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toFloat", args)
   }
@@ -307,7 +311,8 @@ func (this *QLocale) system_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QLocale6systemEv
     // invoke: QLocale system()
-    C.C_ZN7QLocale6systemEv()
+    var ret = C.C_ZN7QLocale6systemEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "system", args)
   }
@@ -333,7 +338,8 @@ func (this *QLocale) toShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale7toShortERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale7toShortERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toShort", args)
   }
@@ -353,7 +359,8 @@ func (this *QLocale) amText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale6amTextEv
     // invoke: QString amText()
-    C.C_ZNK7QLocale6amTextEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale6amTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "amText", args)
   }
@@ -402,7 +409,8 @@ func (this *QLocale) toDate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale6toDateERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale6toDateERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toDate", args)
   }
@@ -425,7 +433,8 @@ func (this *QLocale) toLower(args ...interface{}) () {
     // invoke: QString toLower(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale7toLowerERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale7toLowerERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toLower", args)
   }
@@ -445,7 +454,8 @@ func (this *QLocale) pmText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale6pmTextEv
     // invoke: QString pmText()
-    C.C_ZNK7QLocale6pmTextEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale6pmTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "pmText", args)
   }
@@ -485,7 +495,8 @@ func (this *QLocale) percent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale7percentEv
     // invoke: QChar percent()
-    C.C_ZNK7QLocale7percentEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale7percentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "percent", args)
   }
@@ -531,7 +542,8 @@ func (this *QLocale) toLongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale10toLongLongERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale10toLongLongERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toLongLong", args)
   }
@@ -551,7 +563,8 @@ func (this *QLocale) negativeSign(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale12negativeSignEv
     // invoke: QChar negativeSign()
-    C.C_ZNK7QLocale12negativeSignEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale12negativeSignEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "negativeSign", args)
   }
@@ -611,13 +624,15 @@ func (this *QLocale) toString(args ...interface{}) () {
     // invoke: QString toString(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK7QLocale8toStringEj
     // invoke: QString toString(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEj(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK7QLocale8toStringERK5QTimeRK7QString
     // invoke: QString toString(const class QTime &, const class QString &)
@@ -625,7 +640,8 @@ func (this *QLocale) toString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale8toStringERK5QTimeRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale8toStringERK5QTimeRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK7QLocale8toStringEdci
     // invoke: QString toString(double, char, int)
@@ -635,7 +651,8 @@ func (this *QLocale) toString(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK7QLocale8toStringEdci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK7QLocale8toStringEdci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZNK7QLocale8toStringEfci
     // invoke: QString toString(float, char, int)
@@ -645,13 +662,15 @@ func (this *QLocale) toString(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK7QLocale8toStringEfci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK7QLocale8toStringEfci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 5:
     // invoke: _ZNK7QLocale8toStringEt
     // invoke: QString toString(ushort)
     var arg0 = C.int16_t(args[0].(int16))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEt(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEt(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 6:
     // invoke: _ZNK7QLocale8toStringERK9QDateTimeRK7QString
     // invoke: QString toString(const class QDateTime &, const class QString &)
@@ -659,19 +678,22 @@ func (this *QLocale) toString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale8toStringERK9QDateTimeRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale8toStringERK9QDateTimeRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 7:
     // invoke: _ZNK7QLocale8toStringEx
     // invoke: QString toString(qlonglong)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEx(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 8:
     // invoke: _ZNK7QLocale8toStringEy
     // invoke: QString toString(qulonglong)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEy(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEy(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 9:
     // invoke: _ZNK7QLocale8toStringERK5QDateRK7QString
     // invoke: QString toString(const class QDate &, const class QString &)
@@ -679,13 +701,15 @@ func (this *QLocale) toString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale8toStringERK5QDateRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale8toStringERK5QDateRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 10:
     // invoke: _ZNK7QLocale8toStringEs
     // invoke: QString toString(short)
     var arg0 = C.int16_t(args[0].(int16))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale8toStringEs(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale8toStringEs(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toString", args)
   }
@@ -728,7 +752,8 @@ func (this *QLocale) createSeparatedList(args ...interface{}) () {
     // invoke: QString createSeparatedList(const class QStringList &)
     var arg0 = args[0].(QStringList).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale19createSeparatedListERK11QStringList(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale19createSeparatedListERK11QStringList(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "createSeparatedList", args)
   }
@@ -748,7 +773,8 @@ func (this *QLocale) nativeLanguageName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale18nativeLanguageNameEv
     // invoke: QString nativeLanguageName()
-    C.C_ZNK7QLocale18nativeLanguageNameEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale18nativeLanguageNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "nativeLanguageName", args)
   }
@@ -768,7 +794,8 @@ func (this *QLocale) groupSeparator(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale14groupSeparatorEv
     // invoke: QChar groupSeparator()
-    C.C_ZNK7QLocale14groupSeparatorEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale14groupSeparatorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "groupSeparator", args)
   }
@@ -776,7 +803,7 @@ func (this *QLocale) groupSeparator(args ...interface{}) () {
 }
 
 // QLocale(const class QLocale &)
-func NewQLocale(args ...interface{}) QLocale {
+func NewQLocale(args ...interface{}) *QLocale {
   // QLocale(const class QLocale &)
   // QLocale(const class QString &)
   // QLocale()
@@ -798,7 +825,8 @@ func NewQLocale(args ...interface{}) QLocale {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QLocaleC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN7QLocaleC2ERKS_(arg0)
+    return &QLocale{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QLocaleC1ERK7QString
     // invoke: void QLocale(const class QString &)
@@ -806,18 +834,20 @@ func NewQLocale(args ...interface{}) QLocale {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QLocaleC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN7QLocaleC2ERK7QString(arg0)
+    return &QLocale{qclsinst:qthis}
   case 2:
     // invoke: _ZN7QLocaleC1Ev
     // invoke: void QLocale()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QLocaleC2Ev(qthis)
+    qthis = C.C_ZN7QLocaleC2Ev()
+    return &QLocale{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLocale", "QLocale", args)
   }
 
-  return QLocale{}
+  return nil // QLocale{qclsinst:qthis}
 }
 
 // positiveSign()
@@ -833,7 +863,8 @@ func (this *QLocale) positiveSign(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale12positiveSignEv
     // invoke: QChar positiveSign()
-    C.C_ZNK7QLocale12positiveSignEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale12positiveSignEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "positiveSign", args)
   }
@@ -887,7 +918,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEdRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEdRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK7QLocale16toCurrencyStringEjRK7QString
     // invoke: QString toCurrencyString(uint, const class QString &)
@@ -895,7 +927,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEjRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEjRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK7QLocale16toCurrencyStringEsRK7QString
     // invoke: QString toCurrencyString(short, const class QString &)
@@ -903,7 +936,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEsRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEsRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK7QLocale16toCurrencyStringEyRK7QString
     // invoke: QString toCurrencyString(qulonglong, const class QString &)
@@ -911,7 +945,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEyRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEyRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZNK7QLocale16toCurrencyStringEfRK7QString
     // invoke: QString toCurrencyString(float, const class QString &)
@@ -919,7 +954,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEfRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEfRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 5:
     // invoke: _ZNK7QLocale16toCurrencyStringEtRK7QString
     // invoke: QString toCurrencyString(ushort, const class QString &)
@@ -927,7 +963,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEtRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEtRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 6:
     // invoke: _ZNK7QLocale16toCurrencyStringExRK7QString
     // invoke: QString toCurrencyString(qlonglong, const class QString &)
@@ -935,7 +972,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringExRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringExRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 7:
     // invoke: _ZNK7QLocale16toCurrencyStringEiRK7QString
     // invoke: QString toCurrencyString(int, const class QString &)
@@ -943,7 +981,8 @@ func (this *QLocale) toCurrencyString(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale16toCurrencyStringEiRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale16toCurrencyStringEiRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toCurrencyString", args)
   }
@@ -963,7 +1002,8 @@ func (this *QLocale) nativeCountryName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale17nativeCountryNameEv
     // invoke: QString nativeCountryName()
-    C.C_ZNK7QLocale17nativeCountryNameEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale17nativeCountryNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "nativeCountryName", args)
   }
@@ -1003,7 +1043,8 @@ func (this *QLocale) bcp47Name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale9bcp47NameEv
     // invoke: QString bcp47Name()
-    C.C_ZNK7QLocale9bcp47NameEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale9bcp47NameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "bcp47Name", args)
   }
@@ -1049,7 +1090,8 @@ func (this *QLocale) toULongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale11toULongLongERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale11toULongLongERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toULongLong", args)
   }
@@ -1069,7 +1111,8 @@ func (this *QLocale) c_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QLocale1cEv
     // invoke: QLocale c()
-    C.C_ZN7QLocale1cEv()
+    var ret = C.C_ZN7QLocale1cEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "c", args)
   }
@@ -1089,7 +1132,8 @@ func (this *QLocale) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale4nameEv
     // invoke: QString name()
-    C.C_ZNK7QLocale4nameEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "name", args)
   }
@@ -1109,7 +1153,8 @@ func (this *QLocale) exponential(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale11exponentialEv
     // invoke: QChar exponential()
-    C.C_ZNK7QLocale11exponentialEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale11exponentialEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "exponential", args)
   }
@@ -1155,7 +1200,8 @@ func (this *QLocale) toInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale5toIntERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale5toIntERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toInt", args)
   }
@@ -1221,7 +1267,8 @@ func (this *QLocale) toDouble(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale8toDoubleERK7QStringPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale8toDoubleERK7QStringPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toDouble", args)
   }
@@ -1247,7 +1294,8 @@ func (this *QLocale) toDateTime(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QLocale10toDateTimeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QLocale10toDateTimeERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toDateTime", args)
   }
@@ -1267,7 +1315,8 @@ func (this *QLocale) decimalPoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale12decimalPointEv
     // invoke: QChar decimalPoint()
-    C.C_ZNK7QLocale12decimalPointEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale12decimalPointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "decimalPoint", args)
   }
@@ -1290,7 +1339,8 @@ func (this *QLocale) toUpper(args ...interface{}) () {
     // invoke: QString toUpper(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QLocale7toUpperERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QLocale7toUpperERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "toUpper", args)
   }
@@ -1310,7 +1360,8 @@ func (this *QLocale) zeroDigit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QLocale9zeroDigitEv
     // invoke: QChar zeroDigit()
-    C.C_ZNK7QLocale9zeroDigitEv(this.qclsinst)
+    var ret = C.C_ZNK7QLocale9zeroDigitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLocale", "zeroDigit", args)
   }

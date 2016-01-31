@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qspinbox.h
 // dst-file: /src/widgets/qspinbox.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  QString QSpinBox::suffix();
 extern void C_ZNK8QSpinBox6suffixEv(void* qthis); // 4
   // proto:  void QSpinBox::QSpinBox(QWidget * parent);
-extern void C_ZN8QSpinBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN8QSpinBoxC2EP7QWidget(void* arg0); // 3
   // proto:  int QSpinBox::singleStep();
 extern void C_ZNK8QSpinBox10singleStepEv(void* qthis); // 4
   // proto:  QString QSpinBox::prefix();
@@ -79,7 +79,7 @@ extern void C_ZNK14QDoubleSpinBox13textFromValueEd(void* qthis, double arg0); //
   // proto:  void QDoubleSpinBox::fixup(QString & str);
 extern void C_ZNK14QDoubleSpinBox5fixupER7QString(void* qthis, void* arg0); // 4
   // proto:  void QDoubleSpinBox::QDoubleSpinBox(QWidget * parent);
-extern void C_ZN14QDoubleSpinBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN14QDoubleSpinBoxC2EP7QWidget(void* arg0); // 3
   // proto:  void QDoubleSpinBox::setSingleStep(double val);
 extern void C_ZN14QDoubleSpinBox13setSingleStepEd(void* qthis, double arg0); // 4
   // proto:  void QDoubleSpinBox::setRange(double min, double max);
@@ -151,7 +151,8 @@ func (this *QSpinBox) suffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox6suffixEv
     // invoke: QString suffix()
-    C.C_ZNK8QSpinBox6suffixEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox6suffixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "suffix", args)
   }
@@ -159,7 +160,7 @@ func (this *QSpinBox) suffix(args ...interface{}) () {
 }
 
 // QSpinBox(class QWidget *)
-func NewQSpinBox(args ...interface{}) QSpinBox {
+func NewQSpinBox(args ...interface{}) *QSpinBox {
   // QSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -176,12 +177,13 @@ func NewQSpinBox(args ...interface{}) QSpinBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QSpinBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN8QSpinBoxC2EP7QWidget(arg0)
+    return &QSpinBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSpinBox", "QSpinBox", args)
   }
 
-  return QSpinBox{}
+  return nil // QSpinBox{qclsinst:qthis}
 }
 
 // singleStep()
@@ -197,7 +199,8 @@ func (this *QSpinBox) singleStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox10singleStepEv
     // invoke: int singleStep()
-    C.C_ZNK8QSpinBox10singleStepEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox10singleStepEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "singleStep", args)
   }
@@ -217,7 +220,8 @@ func (this *QSpinBox) prefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox6prefixEv
     // invoke: QString prefix()
-    C.C_ZNK8QSpinBox6prefixEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox6prefixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "prefix", args)
   }
@@ -237,7 +241,8 @@ func (this *QSpinBox) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox7minimumEv
     // invoke: int minimum()
-    C.C_ZNK8QSpinBox7minimumEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox7minimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "minimum", args)
   }
@@ -257,7 +262,8 @@ func (this *QSpinBox) cleanText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox9cleanTextEv
     // invoke: QString cleanText()
-    C.C_ZNK8QSpinBox9cleanTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox9cleanTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "cleanText", args)
   }
@@ -369,7 +375,8 @@ func (this *QSpinBox) displayIntegerBase(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox18displayIntegerBaseEv
     // invoke: int displayIntegerBase()
-    C.C_ZNK8QSpinBox18displayIntegerBaseEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox18displayIntegerBaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "displayIntegerBase", args)
   }
@@ -478,7 +485,8 @@ func (this *QSpinBox) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox7maximumEv
     // invoke: int maximum()
-    C.C_ZNK8QSpinBox7maximumEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox7maximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "maximum", args)
   }
@@ -498,7 +506,8 @@ func (this *QSpinBox) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QSpinBox5valueEv
     // invoke: int value()
-    C.C_ZNK8QSpinBox5valueEv(this.qclsinst)
+    var ret = C.C_ZNK8QSpinBox5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSpinBox", "value", args)
   }
@@ -564,7 +573,8 @@ func (this *QDoubleSpinBox) suffix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox6suffixEv
     // invoke: QString suffix()
-    C.C_ZNK14QDoubleSpinBox6suffixEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox6suffixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "suffix", args)
   }
@@ -584,7 +594,8 @@ func (this *QDoubleSpinBox) singleStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox10singleStepEv
     // invoke: double singleStep()
-    C.C_ZNK14QDoubleSpinBox10singleStepEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox10singleStepEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "singleStep", args)
   }
@@ -604,7 +615,8 @@ func (this *QDoubleSpinBox) prefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox6prefixEv
     // invoke: QString prefix()
-    C.C_ZNK14QDoubleSpinBox6prefixEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox6prefixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "prefix", args)
   }
@@ -624,7 +636,8 @@ func (this *QDoubleSpinBox) minimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox7minimumEv
     // invoke: double minimum()
-    C.C_ZNK14QDoubleSpinBox7minimumEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox7minimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "minimum", args)
   }
@@ -647,7 +660,8 @@ func (this *QDoubleSpinBox) textFromValue(args ...interface{}) () {
     // invoke: QString textFromValue(double)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QDoubleSpinBox13textFromValueEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QDoubleSpinBox13textFromValueEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "textFromValue", args)
   }
@@ -678,7 +692,7 @@ func (this *QDoubleSpinBox) fixup(args ...interface{}) () {
 }
 
 // QDoubleSpinBox(class QWidget *)
-func NewQDoubleSpinBox(args ...interface{}) QDoubleSpinBox {
+func NewQDoubleSpinBox(args ...interface{}) *QDoubleSpinBox {
   // QDoubleSpinBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -695,12 +709,13 @@ func NewQDoubleSpinBox(args ...interface{}) QDoubleSpinBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QDoubleSpinBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN14QDoubleSpinBoxC2EP7QWidget(arg0)
+    return &QDoubleSpinBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "QDoubleSpinBox", args)
   }
 
-  return QDoubleSpinBox{}
+  return nil // QDoubleSpinBox{qclsinst:qthis}
 }
 
 // setSingleStep(double)
@@ -814,7 +829,8 @@ func (this *QDoubleSpinBox) valueFromText(args ...interface{}) () {
     // invoke: double valueFromText(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QDoubleSpinBox13valueFromTextERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QDoubleSpinBox13valueFromTextERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "valueFromText", args)
   }
@@ -860,7 +876,8 @@ func (this *QDoubleSpinBox) cleanText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox9cleanTextEv
     // invoke: QString cleanText()
-    C.C_ZNK14QDoubleSpinBox9cleanTextEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox9cleanTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "cleanText", args)
   }
@@ -966,7 +983,8 @@ func (this *QDoubleSpinBox) maximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox7maximumEv
     // invoke: double maximum()
-    C.C_ZNK14QDoubleSpinBox7maximumEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox7maximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "maximum", args)
   }
@@ -986,7 +1004,8 @@ func (this *QDoubleSpinBox) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox5valueEv
     // invoke: double value()
-    C.C_ZNK14QDoubleSpinBox5valueEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "value", args)
   }
@@ -1006,7 +1025,8 @@ func (this *QDoubleSpinBox) decimals(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QDoubleSpinBox8decimalsEv
     // invoke: int decimals()
-    C.C_ZNK14QDoubleSpinBox8decimalsEv(this.qclsinst)
+    var ret = C.C_ZNK14QDoubleSpinBox8decimalsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleSpinBox", "decimals", args)
   }

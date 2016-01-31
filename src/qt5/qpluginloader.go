@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qpluginloader.h
 // dst-file: /src/core/qpluginloader.go
 //
@@ -35,9 +35,9 @@ extern void C_ZNK13QPluginLoader11errorStringEv(void* qthis); // 4
   // proto:  bool QPluginLoader::unload();
 extern void C_ZN13QPluginLoader6unloadEv(void* qthis); // 4
   // proto:  void QPluginLoader::QPluginLoader(QObject * parent);
-extern void C_ZN13QPluginLoaderC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QPluginLoaderC2EP7QObject(void* arg0); // 3
   // proto:  void QPluginLoader::QPluginLoader(const QString & fileName, QObject * parent);
-extern void C_ZN13QPluginLoaderC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN13QPluginLoaderC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QPluginLoader::~QPluginLoader();
 extern void C_ZN13QPluginLoaderD2Ev(void* qthis); // 4
   // proto:  void QPluginLoader::setFileName(const QString & fileName);
@@ -89,7 +89,8 @@ func (this *QPluginLoader) load(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader4loadEv
     // invoke: bool load()
-    C.C_ZN13QPluginLoader4loadEv(this.qclsinst)
+    var ret = C.C_ZN13QPluginLoader4loadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "load", args)
   }
@@ -109,7 +110,8 @@ func (this *QPluginLoader) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK13QPluginLoader11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK13QPluginLoader11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "errorString", args)
   }
@@ -129,7 +131,8 @@ func (this *QPluginLoader) unload(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader6unloadEv
     // invoke: bool unload()
-    C.C_ZN13QPluginLoader6unloadEv(this.qclsinst)
+    var ret = C.C_ZN13QPluginLoader6unloadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "unload", args)
   }
@@ -137,7 +140,7 @@ func (this *QPluginLoader) unload(args ...interface{}) () {
 }
 
 // QPluginLoader(class QObject *)
-func NewQPluginLoader(args ...interface{}) QPluginLoader {
+func NewQPluginLoader(args ...interface{}) *QPluginLoader {
   // QPluginLoader(class QObject *)
   // QPluginLoader(const class QString &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,7 +161,8 @@ func NewQPluginLoader(args ...interface{}) QPluginLoader {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QPluginLoaderC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QPluginLoaderC2EP7QObject(arg0)
+    return &QPluginLoader{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QPluginLoaderC1ERK7QStringP7QObject
     // invoke: void QPluginLoader(const class QString &, class QObject *)
@@ -168,12 +172,13 @@ func NewQPluginLoader(args ...interface{}) QPluginLoader {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QPluginLoaderC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN13QPluginLoaderC2ERK7QStringP7QObject(arg0, arg1)
+    return &QPluginLoader{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPluginLoader", "QPluginLoader", args)
   }
 
-  return QPluginLoader{}
+  return nil // QPluginLoader{qclsinst:qthis}
 }
 
 // ~QPluginLoader()
@@ -232,7 +237,8 @@ func (this *QPluginLoader) isLoaded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader8isLoadedEv
     // invoke: bool isLoaded()
-    C.C_ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
+    var ret = C.C_ZNK13QPluginLoader8isLoadedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "isLoaded", args)
   }
@@ -252,7 +258,8 @@ func (this *QPluginLoader) instance(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QPluginLoader8instanceEv
     // invoke: QObject * instance()
-    C.C_ZN13QPluginLoader8instanceEv(this.qclsinst)
+    var ret = C.C_ZN13QPluginLoader8instanceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "instance", args)
   }
@@ -272,7 +279,8 @@ func (this *QPluginLoader) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QPluginLoader8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK13QPluginLoader8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK13QPluginLoader8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPluginLoader", "fileName", args)
   }

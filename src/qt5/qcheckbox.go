@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qcheckbox.h
 // dst-file: /src/widgets/qcheckbox.go
 //
@@ -35,9 +35,9 @@ extern void C_ZN9QCheckBoxD2Ev(void* qthis); // 4
   // proto:  void QCheckBox::setTristate(bool y);
 extern void C_ZN9QCheckBox11setTristateEb(void* qthis, bool arg0); // 4
   // proto:  void QCheckBox::QCheckBox(const QString & text, QWidget * parent);
-extern void C_ZN9QCheckBoxC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QCheckBoxC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QCheckBox::QCheckBox(QWidget * parent);
-extern void C_ZN9QCheckBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QCheckBoxC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QCheckBox::sizeHint();
 extern void C_ZNK9QCheckBox8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QCheckBox::metaObject();
@@ -78,7 +78,8 @@ func (this *QCheckBox) isTristate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox10isTristateEv
     // invoke: bool isTristate()
-    C.C_ZNK9QCheckBox10isTristateEv(this.qclsinst)
+    var ret = C.C_ZNK9QCheckBox10isTristateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCheckBox", "isTristate", args)
   }
@@ -129,7 +130,7 @@ func (this *QCheckBox) setTristate(args ...interface{}) () {
 }
 
 // QCheckBox(const class QString &, class QWidget *)
-func NewQCheckBox(args ...interface{}) QCheckBox {
+func NewQCheckBox(args ...interface{}) *QCheckBox {
   // QCheckBox(const class QString &, class QWidget *)
   // QCheckBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -152,7 +153,8 @@ func NewQCheckBox(args ...interface{}) QCheckBox {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QCheckBoxC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN9QCheckBoxC2ERK7QStringP7QWidget(arg0, arg1)
+    return &QCheckBox{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QCheckBoxC1EP7QWidget
     // invoke: void QCheckBox(class QWidget *)
@@ -160,12 +162,13 @@ func NewQCheckBox(args ...interface{}) QCheckBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QCheckBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QCheckBoxC2EP7QWidget(arg0)
+    return &QCheckBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCheckBox", "QCheckBox", args)
   }
 
-  return QCheckBox{}
+  return nil // QCheckBox{qclsinst:qthis}
 }
 
 // sizeHint()
@@ -181,7 +184,8 @@ func (this *QCheckBox) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK9QCheckBox8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QCheckBox8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCheckBox", "sizeHint", args)
   }
@@ -221,7 +225,8 @@ func (this *QCheckBox) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QCheckBox15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK9QCheckBox15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QCheckBox15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCheckBox", "minimumSizeHint", args)
   }

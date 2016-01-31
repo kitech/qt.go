@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qlogging.h
 // dst-file: /src/core/qlogging.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto:  void QMessageLogContext::copy(const QMessageLogContext & logContext);
 extern void C_ZN18QMessageLogContext4copyERKS_(void* qthis, void* arg0); // 4
   // proto:  void QMessageLogContext::QMessageLogContext(const char * fileName, int lineNumber, const char * functionName, const char * categoryName);
-extern void C_ZN18QMessageLogContextC2EPKciS1_S1_(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2, unsigned char* arg3); // 1
+extern void* C_ZN18QMessageLogContextC2EPKciS1_S1_(unsigned char* arg0, int32_t arg1, unsigned char* arg2, unsigned char* arg3); // 1
   // proto:  void QMessageLogContext::QMessageLogContext();
-extern void C_ZN18QMessageLogContextC2Ev(void* qthis); // 1
+extern void* C_ZN18QMessageLogContextC2Ev(); // 1
   // proto:  void QMessageLogger::info(const QLoggingCategory & cat, const char * msg);
 extern void C_ZNK14QMessageLogger4infoERK16QLoggingCategoryPKcz(void* qthis, void* arg0, unsigned char* arg1); // 4
   // proto:  void QMessageLogger::info(const char * msg);
@@ -69,11 +69,11 @@ extern void C_ZNK14QMessageLogger5debugERK16QLoggingCategory(void* qthis, void* 
   // proto:  void QMessageLogger::fatal(const char * msg);
 extern void C_ZNK14QMessageLogger5fatalEPKcz(void* qthis, unsigned char* arg0); // 4
   // proto:  void QMessageLogger::QMessageLogger();
-extern void C_ZN14QMessageLoggerC2Ev(void* qthis); // 1
+extern void* C_ZN14QMessageLoggerC2Ev(); // 1
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function);
-extern void C_ZN14QMessageLoggerC2EPKciS1_(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 1
+extern void* C_ZN14QMessageLoggerC2EPKciS1_(unsigned char* arg0, int32_t arg1, unsigned char* arg2); // 1
   // proto:  void QMessageLogger::QMessageLogger(const char * file, int line, const char * function, const char * category);
-extern void C_ZN14QMessageLoggerC2EPKciS1_S1_(void* qthis, unsigned char* arg0, int32_t arg1, unsigned char* arg2, unsigned char* arg3); // 1
+extern void* C_ZN14QMessageLoggerC2EPKciS1_S1_(unsigned char* arg0, int32_t arg1, unsigned char* arg2, unsigned char* arg3); // 1
   // proto:  void QMessageLogger::noDebug(const char * );
 extern void C_ZNK14QMessageLogger7noDebugEPKcz(void* qthis, unsigned char* arg0); // 2
   // proto:  QNoDebug QMessageLogger::noDebug();
@@ -126,7 +126,7 @@ func (this *QMessageLogContext) copy(args ...interface{}) () {
 }
 
 // QMessageLogContext(const char *, int, const char *, const char *)
-func NewQMessageLogContext(args ...interface{}) QMessageLogContext {
+func NewQMessageLogContext(args ...interface{}) *QMessageLogContext {
   // QMessageLogContext(const char *, int, const char *, const char *)
   // QMessageLogContext()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -154,18 +154,20 @@ func NewQMessageLogContext(args ...interface{}) QMessageLogContext {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QMessageLogContextC2EPKciS1_S1_(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN18QMessageLogContextC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
+    return &QMessageLogContext{qclsinst:qthis}
   case 1:
     // invoke: _ZN18QMessageLogContextC1Ev
     // invoke: void QMessageLogContext()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QMessageLogContextC2Ev(qthis)
+    qthis = C.C_ZN18QMessageLogContextC2Ev()
+    return &QMessageLogContext{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogContext", "QMessageLogContext", args)
   }
 
-  return QMessageLogContext{}
+  return nil // QMessageLogContext{qclsinst:qthis}
 }
 
 // info(const class QLoggingCategory &, const char *, ...)
@@ -205,13 +207,15 @@ func (this *QMessageLogger) info(args ...interface{}) () {
   case 2:
     // invoke: _ZNK14QMessageLogger4infoEv
     // invoke: QDebug info()
-    C.C_ZNK14QMessageLogger4infoEv(this.qclsinst)
+    var ret = C.C_ZNK14QMessageLogger4infoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK14QMessageLogger4infoERK16QLoggingCategory
     // invoke: QDebug info(const class QLoggingCategory &)
     var arg0 = args[0].(QLoggingCategory).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QMessageLogger4infoERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QMessageLogger4infoERK16QLoggingCategory(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "info", args)
   }
@@ -243,7 +247,8 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
     // invoke: QDebug warning(const class QLoggingCategory &)
     var arg0 = args[0].(QLoggingCategory).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QMessageLogger7warningERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QMessageLogger7warningERK16QLoggingCategory(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK14QMessageLogger7warningEPKcz
     // invoke: void warning(const char *, ...)
@@ -261,7 +266,8 @@ func (this *QMessageLogger) warning(args ...interface{}) () {
   case 3:
     // invoke: _ZNK14QMessageLogger7warningEv
     // invoke: QDebug warning()
-    C.C_ZNK14QMessageLogger7warningEv(this.qclsinst)
+    var ret = C.C_ZNK14QMessageLogger7warningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "warning", args)
   }
@@ -291,7 +297,8 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QMessageLogger8criticalEv
     // invoke: QDebug critical()
-    C.C_ZNK14QMessageLogger8criticalEv(this.qclsinst)
+    var ret = C.C_ZNK14QMessageLogger8criticalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK14QMessageLogger8criticalEPKcz
     // invoke: void critical(const char *, ...)
@@ -303,7 +310,8 @@ func (this *QMessageLogger) critical(args ...interface{}) () {
     // invoke: QDebug critical(const class QLoggingCategory &)
     var arg0 = args[0].(QLoggingCategory).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QMessageLogger8criticalERK16QLoggingCategory(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK14QMessageLogger8criticalERK16QLoggingCategoryPKcz
     // invoke: void critical(const class QLoggingCategory &, const char *, ...)
@@ -349,7 +357,8 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
   case 1:
     // invoke: _ZNK14QMessageLogger5debugEv
     // invoke: QDebug debug()
-    C.C_ZNK14QMessageLogger5debugEv(this.qclsinst)
+    var ret = C.C_ZNK14QMessageLogger5debugEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK14QMessageLogger5debugEPKcz
     // invoke: void debug(const char *, ...)
@@ -361,7 +370,8 @@ func (this *QMessageLogger) debug(args ...interface{}) () {
     // invoke: QDebug debug(const class QLoggingCategory &)
     var arg0 = args[0].(QLoggingCategory).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QMessageLogger5debugERK16QLoggingCategory(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QMessageLogger5debugERK16QLoggingCategory(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "debug", args)
   }
@@ -392,7 +402,7 @@ func (this *QMessageLogger) fatal(args ...interface{}) () {
 }
 
 // QMessageLogger()
-func NewQMessageLogger(args ...interface{}) QMessageLogger {
+func NewQMessageLogger(args ...interface{}) *QMessageLogger {
   // QMessageLogger()
   // QMessageLogger(const char *, int, const char *)
   // QMessageLogger(const char *, int, const char *, const char *)
@@ -417,7 +427,8 @@ func NewQMessageLogger(args ...interface{}) QMessageLogger {
     // invoke: void QMessageLogger()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QMessageLoggerC2Ev(qthis)
+    qthis = C.C_ZN14QMessageLoggerC2Ev()
+    return &QMessageLogger{qclsinst:qthis}
   case 1:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_
     // invoke: void QMessageLogger(const char *, int, const char *)
@@ -429,7 +440,8 @@ func NewQMessageLogger(args ...interface{}) QMessageLogger {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QMessageLoggerC2EPKciS1_(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN14QMessageLoggerC2EPKciS1_(arg0, arg1, arg2)
+    return &QMessageLogger{qclsinst:qthis}
   case 2:
     // invoke: _ZN14QMessageLoggerC1EPKciS1_S1_
     // invoke: void QMessageLogger(const char *, int, const char *, const char *)
@@ -443,12 +455,13 @@ func NewQMessageLogger(args ...interface{}) QMessageLogger {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QMessageLoggerC2EPKciS1_S1_(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN14QMessageLoggerC2EPKciS1_S1_(arg0, arg1, arg2, arg3)
+    return &QMessageLogger{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageLogger", "QMessageLogger", args)
   }
 
-  return QMessageLogger{}
+  return nil // QMessageLogger{qclsinst:qthis}
 }
 
 // noDebug(const char *, ...)
@@ -473,7 +486,8 @@ func (this *QMessageLogger) noDebug(args ...interface{}) () {
   case 1:
     // invoke: _ZNK14QMessageLogger7noDebugEv
     // invoke: QNoDebug noDebug()
-    C.C_ZNK14QMessageLogger7noDebugEv(this.qclsinst)
+    var ret = C.C_ZNK14QMessageLogger7noDebugEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageLogger", "noDebug", args)
   }

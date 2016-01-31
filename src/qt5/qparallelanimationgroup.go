@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qparallelanimationgroup.h
 // dst-file: /src/core/qparallelanimationgroup.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QParallelAnimationGroup::QParallelAnimationGroup(QObject * parent);
-extern void C_ZN23QParallelAnimationGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN23QParallelAnimationGroupC2EP7QObject(void* arg0); // 3
   // proto:  void QParallelAnimationGroup::~QParallelAnimationGroup();
 extern void C_ZN23QParallelAnimationGroupD2Ev(void* qthis); // 4
   // proto:  int QParallelAnimationGroup::duration();
@@ -55,7 +55,7 @@ type QParallelAnimationGroup struct {
 }
 
 // QParallelAnimationGroup(class QObject *)
-func NewQParallelAnimationGroup(args ...interface{}) QParallelAnimationGroup {
+func NewQParallelAnimationGroup(args ...interface{}) *QParallelAnimationGroup {
   // QParallelAnimationGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -72,12 +72,13 @@ func NewQParallelAnimationGroup(args ...interface{}) QParallelAnimationGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN23QParallelAnimationGroupC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN23QParallelAnimationGroupC2EP7QObject(arg0)
+    return &QParallelAnimationGroup{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "QParallelAnimationGroup", args)
   }
 
-  return QParallelAnimationGroup{}
+  return nil // QParallelAnimationGroup{qclsinst:qthis}
 }
 
 // ~QParallelAnimationGroup()
@@ -113,7 +114,8 @@ func (this *QParallelAnimationGroup) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK23QParallelAnimationGroup8durationEv
     // invoke: int duration()
-    C.C_ZNK23QParallelAnimationGroup8durationEv(this.qclsinst)
+    var ret = C.C_ZNK23QParallelAnimationGroup8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QParallelAnimationGroup", "duration", args)
   }

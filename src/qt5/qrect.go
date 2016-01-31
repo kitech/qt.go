@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qrect.h
 // dst-file: /src/core/qrect.go
 //
@@ -119,13 +119,13 @@ extern void C_ZN5QRect4setYEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::setHeight(int h);
 extern void C_ZN5QRect9setHeightEi(void* qthis, int32_t arg0); // 2
   // proto:  void QRect::QRect(const QPoint & topleft, const QSize & size);
-extern void C_ZN5QRectC2ERK6QPointRK5QSize(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN5QRectC2ERK6QPointRK5QSize(void* arg0, void* arg1); // 1
   // proto:  void QRect::QRect();
-extern void C_ZN5QRectC2Ev(void* qthis); // 1
+extern void* C_ZN5QRectC2Ev(); // 1
   // proto:  void QRect::QRect(int left, int top, int width, int height);
-extern void C_ZN5QRectC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
+extern void* C_ZN5QRectC2Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
   // proto:  void QRect::QRect(const QPoint & topleft, const QPoint & bottomright);
-extern void C_ZN5QRectC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN5QRectC2ERK6QPointS2_(void* arg0, void* arg1); // 1
   // proto:  void QRect::translate(const QPoint & p);
 extern void C_ZN5QRect9translateERK6QPoint(void* qthis, void* arg0); // 2
   // proto:  void QRect::translate(int dx, int dy);
@@ -217,15 +217,15 @@ extern void C_ZNK6QRectF5widthEv(void* qthis); // 2
   // proto:  bool QRectF::isEmpty();
 extern void C_ZNK6QRectF7isEmptyEv(void* qthis); // 2
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QPointF & bottomRight);
-extern void C_ZN6QRectFC2ERK7QPointFS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN6QRectFC2ERK7QPointFS2_(void* arg0, void* arg1); // 1
   // proto:  void QRectF::QRectF(qreal left, qreal top, qreal width, qreal height);
-extern void C_ZN6QRectFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
+extern void* C_ZN6QRectFC2Edddd(double arg0, double arg1, double arg2, double arg3); // 1
   // proto:  void QRectF::QRectF();
-extern void C_ZN6QRectFC2Ev(void* qthis); // 1
+extern void* C_ZN6QRectFC2Ev(); // 1
   // proto:  void QRectF::QRectF(const QPointF & topleft, const QSizeF & size);
-extern void C_ZN6QRectFC2ERK7QPointFRK6QSizeF(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN6QRectFC2ERK7QPointFRK6QSizeF(void* arg0, void* arg1); // 1
   // proto:  void QRectF::QRectF(const QRect & rect);
-extern void C_ZN6QRectFC2ERK5QRect(void* qthis, void* arg0); // 1
+extern void* C_ZN6QRectFC2ERK5QRect(void* arg0); // 1
   // proto:  QSizeF QRectF::size();
 extern void C_ZNK6QRectF4sizeEv(void* qthis); // 2
   // proto:  void QRectF::setX(qreal pos);
@@ -332,7 +332,8 @@ func (this *QRect) marginsRemoved(args ...interface{}) () {
     // invoke: QRect marginsRemoved(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect14marginsRemovedERK8QMargins(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect14marginsRemovedERK8QMargins(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "marginsRemoved", args)
   }
@@ -387,7 +388,8 @@ func (this *QRect) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect5rightEv
     // invoke: int right()
-    C.C_ZNK5QRect5rightEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect5rightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "right", args)
   }
@@ -410,7 +412,8 @@ func (this *QRect) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect10intersectsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect10intersectsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "intersects", args)
   }
@@ -430,7 +433,8 @@ func (this *QRect) topLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7topLeftEv
     // invoke: QPoint topLeft()
-    C.C_ZNK5QRect7topLeftEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect7topLeftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "topLeft", args)
   }
@@ -508,7 +512,8 @@ func (this *QRect) adjusted(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZNK5QRect8adjustedEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZNK5QRect8adjustedEiiii(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "adjusted", args)
   }
@@ -528,7 +533,8 @@ func (this *QRect) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6heightEv
     // invoke: int height()
-    C.C_ZNK5QRect6heightEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "height", args)
   }
@@ -643,7 +649,8 @@ func (this *QRect) marginsAdded(args ...interface{}) () {
     // invoke: QRect marginsAdded(const class QMargins &)
     var arg0 = args[0].(QMargins).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect12marginsAddedERK8QMargins(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect12marginsAddedERK8QMargins(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "marginsAdded", args)
   }
@@ -663,7 +670,8 @@ func (this *QRect) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect4sizeEv
     // invoke: QSize size()
-    C.C_ZNK5QRect4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "size", args)
   }
@@ -709,7 +717,8 @@ func (this *QRect) united(args ...interface{}) () {
     // invoke: QRect united(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect6unitedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect6unitedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "united", args)
   }
@@ -729,7 +738,8 @@ func (this *QRect) bottomRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect11bottomRightEv
     // invoke: QPoint bottomRight()
-    C.C_ZNK5QRect11bottomRightEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect11bottomRightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "bottomRight", args)
   }
@@ -752,7 +762,8 @@ func (this *QRect) intersected(args ...interface{}) () {
     // invoke: QRect intersected(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect11intersectedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect11intersectedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "intersected", args)
   }
@@ -804,7 +815,8 @@ func (this *QRect) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect3topEv
     // invoke: int top()
-    C.C_ZNK5QRect3topEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "top", args)
   }
@@ -845,7 +857,8 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C.C_ZNK5QRect8containsEiib(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK5QRect8containsEiib(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK5QRect8containsERK6QPointb
     // invoke: bool contains(const class QPoint &, _Bool)
@@ -853,7 +866,8 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK5QRect8containsERK6QPointb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK5QRect8containsERK6QPointb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK5QRect8containsERKS_b
     // invoke: bool contains(const class QRect &, _Bool)
@@ -861,7 +875,8 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.bool(args[1].(bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK5QRect8containsERKS_b(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK5QRect8containsERKS_b(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK5QRect8containsEii
     // invoke: bool contains(int, int)
@@ -869,7 +884,8 @@ func (this *QRect) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK5QRect8containsEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK5QRect8containsEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "contains", args)
   }
@@ -912,7 +928,8 @@ func (this *QRect) topRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect8topRightEv
     // invoke: QPoint topRight()
-    C.C_ZNK5QRect8topRightEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect8topRightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "topRight", args)
   }
@@ -955,7 +972,8 @@ func (this *QRect) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect5widthEv
     // invoke: int width()
-    C.C_ZNK5QRect5widthEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "width", args)
   }
@@ -975,7 +993,8 @@ func (this *QRect) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK5QRect7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "isEmpty", args)
   }
@@ -1073,7 +1092,8 @@ func (this *QRect) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK5QRect7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "isValid", args)
   }
@@ -1169,7 +1189,8 @@ func (this *QRect) translated(args ...interface{}) () {
     // invoke: QRect translated(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QRect10translatedERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QRect10translatedERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK5QRect10translatedEii
     // invoke: QRect translated(int, int)
@@ -1177,7 +1198,8 @@ func (this *QRect) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK5QRect10translatedEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK5QRect10translatedEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "translated", args)
   }
@@ -1197,7 +1219,8 @@ func (this *QRect) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect10normalizedEv
     // invoke: QRect normalized()
-    C.C_ZNK5QRect10normalizedEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect10normalizedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "normalized", args)
   }
@@ -1306,7 +1329,7 @@ func (this *QRect) setHeight(args ...interface{}) () {
 }
 
 // QRect(const class QPoint &, const class QSize &)
-func NewQRect(args ...interface{}) QRect {
+func NewQRect(args ...interface{}) *QRect {
   // QRect(const class QPoint &, const class QSize &)
   // QRect()
   // QRect(int, int, int, int)
@@ -1338,13 +1361,15 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QRectC2ERK6QPointRK5QSize(qthis, arg0, arg1)
+    qthis = C.C_ZN5QRectC2ERK6QPointRK5QSize(arg0, arg1)
+    return &QRect{qclsinst:qthis}
   case 1:
     // invoke: _ZN5QRectC1Ev
     // invoke: void QRect()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QRectC2Ev(qthis)
+    qthis = C.C_ZN5QRectC2Ev()
+    return &QRect{qclsinst:qthis}
   case 2:
     // invoke: _ZN5QRectC1Eiiii
     // invoke: void QRect(int, int, int, int)
@@ -1358,7 +1383,8 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QRectC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN5QRectC2Eiiii(arg0, arg1, arg2, arg3)
+    return &QRect{qclsinst:qthis}
   case 3:
     // invoke: _ZN5QRectC1ERK6QPointS2_
     // invoke: void QRect(const class QPoint &, const class QPoint &)
@@ -1368,12 +1394,13 @@ func NewQRect(args ...interface{}) QRect {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QRectC2ERK6QPointS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN5QRectC2ERK6QPointS2_(arg0, arg1)
+    return &QRect{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRect", "QRect", args)
   }
 
-  return QRect{}
+  return nil // QRect{qclsinst:qthis}
 }
 
 // translate(const class QPoint &)
@@ -1424,7 +1451,8 @@ func (this *QRect) bottomLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect10bottomLeftEv
     // invoke: QPoint bottomLeft()
-    C.C_ZNK5QRect10bottomLeftEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect10bottomLeftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "bottomLeft", args)
   }
@@ -1444,7 +1472,8 @@ func (this *QRect) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6centerEv
     // invoke: QPoint center()
-    C.C_ZNK5QRect6centerEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect6centerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "center", args)
   }
@@ -1510,7 +1539,8 @@ func (this *QRect) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6bottomEv
     // invoke: int bottom()
-    C.C_ZNK5QRect6bottomEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "bottom", args)
   }
@@ -1585,7 +1615,8 @@ func (this *QRect) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK5QRect6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "isNull", args)
   }
@@ -1723,7 +1754,8 @@ func (this *QRect) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QRect4leftEv
     // invoke: int left()
-    C.C_ZNK5QRect4leftEv(this.qclsinst)
+    var ret = C.C_ZNK5QRect4leftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRect", "left", args)
   }
@@ -1746,7 +1778,8 @@ func (this *QRectF) marginsRemoved(args ...interface{}) () {
     // invoke: QRectF marginsRemoved(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF14marginsRemovedERK9QMarginsF(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF14marginsRemovedERK9QMarginsF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "marginsRemoved", args)
   }
@@ -1827,7 +1860,8 @@ func (this *QRectF) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF10intersectsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF10intersectsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "intersects", args)
   }
@@ -1847,7 +1881,8 @@ func (this *QRectF) topLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7topLeftEv
     // invoke: QPointF topLeft()
-    C.C_ZNK6QRectF7topLeftEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF7topLeftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "topLeft", args)
   }
@@ -1925,7 +1960,8 @@ func (this *QRectF) adjusted(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.double(args[3].(float64))
     if false {fmt.Println(arg3)}
-    C.C_ZNK6QRectF8adjustedEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZNK6QRectF8adjustedEdddd(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "adjusted", args)
   }
@@ -1945,7 +1981,8 @@ func (this *QRectF) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6heightEv
     // invoke: qreal height()
-    C.C_ZNK6QRectF6heightEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "height", args)
   }
@@ -1965,7 +2002,8 @@ func (this *QRectF) right(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF5rightEv
     // invoke: qreal right()
-    C.C_ZNK6QRectF5rightEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF5rightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "right", args)
   }
@@ -2080,7 +2118,8 @@ func (this *QRectF) marginsAdded(args ...interface{}) () {
     // invoke: QRectF marginsAdded(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF12marginsAddedERK9QMarginsF(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF12marginsAddedERK9QMarginsF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "marginsAdded", args)
   }
@@ -2123,7 +2162,8 @@ func (this *QRectF) bottomRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF11bottomRightEv
     // invoke: QPointF bottomRight()
-    C.C_ZNK6QRectF11bottomRightEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF11bottomRightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "bottomRight", args)
   }
@@ -2143,7 +2183,8 @@ func (this *QRectF) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6bottomEv
     // invoke: qreal bottom()
-    C.C_ZNK6QRectF6bottomEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "bottom", args)
   }
@@ -2195,7 +2236,8 @@ func (this *QRectF) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF3topEv
     // invoke: qreal top()
-    C.C_ZNK6QRectF3topEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "top", args)
   }
@@ -2227,19 +2269,22 @@ func (this *QRectF) contains(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZNK6QRectF8containsEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK6QRectF8containsEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK6QRectF8containsERKS_
     // invoke: bool contains(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF8containsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF8containsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK6QRectF8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF8containsERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF8containsERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "contains", args)
   }
@@ -2259,7 +2304,8 @@ func (this *QRectF) toRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6toRectEv
     // invoke: QRect toRect()
-    C.C_ZNK6QRectF6toRectEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF6toRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "toRect", args)
   }
@@ -2279,7 +2325,8 @@ func (this *QRectF) topRight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF8topRightEv
     // invoke: QPointF topRight()
-    C.C_ZNK6QRectF8topRightEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF8topRightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "topRight", args)
   }
@@ -2322,7 +2369,8 @@ func (this *QRectF) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF5widthEv
     // invoke: qreal width()
-    C.C_ZNK6QRectF5widthEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "width", args)
   }
@@ -2342,7 +2390,8 @@ func (this *QRectF) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK6QRectF7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "isEmpty", args)
   }
@@ -2350,7 +2399,7 @@ func (this *QRectF) isEmpty(args ...interface{}) () {
 }
 
 // QRectF(const class QPointF &, const class QPointF &)
-func NewQRectF(args ...interface{}) QRectF {
+func NewQRectF(args ...interface{}) *QRectF {
   // QRectF(const class QPointF &, const class QPointF &)
   // QRectF(qreal, qreal, qreal, qreal)
   // QRectF()
@@ -2385,7 +2434,8 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QRectFC2ERK7QPointFS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN6QRectFC2ERK7QPointFS2_(arg0, arg1)
+    return &QRectF{qclsinst:qthis}
   case 1:
     // invoke: _ZN6QRectFC1Edddd
     // invoke: void QRectF(qreal, qreal, qreal, qreal)
@@ -2399,13 +2449,15 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QRectFC2Edddd(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN6QRectFC2Edddd(arg0, arg1, arg2, arg3)
+    return &QRectF{qclsinst:qthis}
   case 2:
     // invoke: _ZN6QRectFC1Ev
     // invoke: void QRectF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QRectFC2Ev(qthis)
+    qthis = C.C_ZN6QRectFC2Ev()
+    return &QRectF{qclsinst:qthis}
   case 3:
     // invoke: _ZN6QRectFC1ERK7QPointFRK6QSizeF
     // invoke: void QRectF(const class QPointF &, const class QSizeF &)
@@ -2415,7 +2467,8 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QRectFC2ERK7QPointFRK6QSizeF(qthis, arg0, arg1)
+    qthis = C.C_ZN6QRectFC2ERK7QPointFRK6QSizeF(arg0, arg1)
+    return &QRectF{qclsinst:qthis}
   case 4:
     // invoke: _ZN6QRectFC1ERK5QRect
     // invoke: void QRectF(const class QRect &)
@@ -2423,12 +2476,13 @@ func NewQRectF(args ...interface{}) QRectF {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QRectFC2ERK5QRect(qthis, arg0)
+    qthis = C.C_ZN6QRectFC2ERK5QRect(arg0)
+    return &QRectF{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRectF", "QRectF", args)
   }
 
-  return QRectF{}
+  return nil // QRectF{qclsinst:qthis}
 }
 
 // size()
@@ -2444,7 +2498,8 @@ func (this *QRectF) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF4sizeEv
     // invoke: QSizeF size()
-    C.C_ZNK6QRectF4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "size", args)
   }
@@ -2565,7 +2620,8 @@ func (this *QRectF) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK6QRectF7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "isValid", args)
   }
@@ -2649,13 +2705,15 @@ func (this *QRectF) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZNK6QRectF10translatedEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK6QRectF10translatedEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK6QRectF10translatedERK7QPointF
     // invoke: QRectF translated(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF10translatedERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF10translatedERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "translated", args)
   }
@@ -2675,7 +2733,8 @@ func (this *QRectF) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF10normalizedEv
     // invoke: QRectF normalized()
-    C.C_ZNK6QRectF10normalizedEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF10normalizedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "normalized", args)
   }
@@ -2854,7 +2913,8 @@ func (this *QRectF) bottomLeft(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF10bottomLeftEv
     // invoke: QPointF bottomLeft()
-    C.C_ZNK6QRectF10bottomLeftEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF10bottomLeftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "bottomLeft", args)
   }
@@ -2874,7 +2934,8 @@ func (this *QRectF) center(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6centerEv
     // invoke: QPointF center()
-    C.C_ZNK6QRectF6centerEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF6centerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "center", args)
   }
@@ -2940,7 +3001,8 @@ func (this *QRectF) toAlignedRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF13toAlignedRectEv
     // invoke: QRect toAlignedRect()
-    C.C_ZNK6QRectF13toAlignedRectEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF13toAlignedRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "toAlignedRect", args)
   }
@@ -2963,7 +3025,8 @@ func (this *QRectF) intersected(args ...interface{}) () {
     // invoke: QRectF intersected(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF11intersectedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF11intersectedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "intersected", args)
   }
@@ -2986,7 +3049,8 @@ func (this *QRectF) united(args ...interface{}) () {
     // invoke: QRectF united(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QRectF6unitedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QRectF6unitedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "united", args)
   }
@@ -3029,7 +3093,8 @@ func (this *QRectF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK6QRectF6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "isNull", args)
   }
@@ -3121,7 +3186,8 @@ func (this *QRectF) left(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QRectF4leftEv
     // invoke: qreal left()
-    C.C_ZNK6QRectF4leftEv(this.qclsinst)
+    var ret = C.C_ZNK6QRectF4leftEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRectF", "left", args)
   }

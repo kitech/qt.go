@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpixmapcache.h
 // dst-file: /src/gui/qpixmapcache.go
 //
@@ -86,7 +86,8 @@ func (this *QPixmapCache) insert_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
+    var ret = C.C_ZN12QPixmapCache6insertERK7QStringRK7QPixmap(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN12QPixmapCache6insertERK7QPixmap
     // invoke: QPixmapCache::Key insert(const class QPixmap &)
@@ -112,7 +113,8 @@ func (this *QPixmapCache) cacheLimit_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN12QPixmapCache10cacheLimitEv
     // invoke: int cacheLimit()
-    C.C_ZN12QPixmapCache10cacheLimitEv()
+    var ret = C.C_ZN12QPixmapCache10cacheLimitEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmapCache", "cacheLimit", args)
   }
@@ -209,7 +211,8 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     // invoke: QPixmap * find(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QPixmapCache4findERK7QString(arg0)
+    var ret = C.C_ZN12QPixmapCache4findERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN12QPixmapCache4findERK7QStringR7QPixmap
     // invoke: bool find(const class QString &, class QPixmap &)
@@ -217,7 +220,8 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
+    var ret = C.C_ZN12QPixmapCache4findERK7QStringR7QPixmap(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN12QPixmapCache4findERK7QStringP7QPixmap
     // invoke: bool find(const class QString &, class QPixmap *)
@@ -225,7 +229,8 @@ func (this *QPixmapCache) find_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPixmap).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
+    var ret = C.C_ZN12QPixmapCache4findERK7QStringP7QPixmap(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPixmapCache", "find", args)
   }

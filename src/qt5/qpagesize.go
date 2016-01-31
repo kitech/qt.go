@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpagesize.h
 // dst-file: /src/gui/qpagesize.go
 //
@@ -53,9 +53,9 @@ extern void C_ZNK9QPageSize3keyEv(void* qthis); // 4
   // proto:  QRect QPageSize::rectPoints();
 extern void C_ZNK9QPageSize10rectPointsEv(void* qthis); // 4
   // proto:  void QPageSize::QPageSize(const QPageSize & other);
-extern void C_ZN9QPageSizeC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN9QPageSizeC2ERKS_(void* arg0); // 3
   // proto:  void QPageSize::QPageSize();
-extern void C_ZN9QPageSizeC2Ev(void* qthis); // 3
+extern void* C_ZN9QPageSizeC2Ev(); // 3
   // proto: static QPageSize::PageSizeId QPageSize::id(int windowsId);
 extern void C_ZN9QPageSize2idEi(int32_t arg0); // 4
   // proto:  QPageSize::PageSizeId QPageSize::id();
@@ -93,7 +93,8 @@ func (this *QPageSize) windowsId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize9windowsIdEv
     // invoke: int windowsId()
-    C.C_ZNK9QPageSize9windowsIdEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize9windowsIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "windowsId", args)
   }
@@ -116,7 +117,8 @@ func (this *QPageSize) sizePixels(args ...interface{}) () {
     // invoke: QSize sizePixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QPageSize10sizePixelsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QPageSize10sizePixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "sizePixels", args)
   }
@@ -139,7 +141,8 @@ func (this *QPageSize) rectPixels(args ...interface{}) () {
     // invoke: QRect rectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QPageSize10rectPixelsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QPageSize10rectPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "rectPixels", args)
   }
@@ -159,7 +162,8 @@ func (this *QPageSize) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize4nameEv
     // invoke: QString name()
-    C.C_ZNK9QPageSize4nameEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "name", args)
   }
@@ -199,7 +203,8 @@ func (this *QPageSize) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QPageSize7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "isValid", args)
   }
@@ -222,7 +227,8 @@ func (this *QPageSize) isEquivalentTo(args ...interface{}) () {
     // invoke: bool isEquivalentTo(const class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QPageSize14isEquivalentToERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QPageSize14isEquivalentToERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "isEquivalentTo", args)
   }
@@ -262,7 +268,8 @@ func (this *QPageSize) sizePoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize10sizePointsEv
     // invoke: QSize sizePoints()
-    C.C_ZNK9QPageSize10sizePointsEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize10sizePointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "sizePoints", args)
   }
@@ -305,7 +312,8 @@ func (this *QPageSize) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize3keyEv
     // invoke: QString key()
-    C.C_ZNK9QPageSize3keyEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "key", args)
   }
@@ -325,7 +333,8 @@ func (this *QPageSize) rectPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize10rectPointsEv
     // invoke: QRect rectPoints()
-    C.C_ZNK9QPageSize10rectPointsEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize10rectPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "rectPoints", args)
   }
@@ -333,7 +342,7 @@ func (this *QPageSize) rectPoints(args ...interface{}) () {
 }
 
 // QPageSize(const class QPageSize &)
-func NewQPageSize(args ...interface{}) QPageSize {
+func NewQPageSize(args ...interface{}) *QPageSize {
   // QPageSize(const class QPageSize &)
   // QPageSize()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -352,18 +361,20 @@ func NewQPageSize(args ...interface{}) QPageSize {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QPageSizeC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN9QPageSizeC2ERKS_(arg0)
+    return &QPageSize{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QPageSizeC1Ev
     // invoke: void QPageSize()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QPageSizeC2Ev(qthis)
+    qthis = C.C_ZN9QPageSizeC2Ev()
+    return &QPageSize{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPageSize", "QPageSize", args)
   }
 
-  return QPageSize{}
+  return nil // QPageSize{qclsinst:qthis}
 }
 
 // id(int)
@@ -408,7 +419,8 @@ func (this *QPageSize) definitionSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QPageSize14definitionSizeEv
     // invoke: QSizeF definitionSize()
-    C.C_ZNK9QPageSize14definitionSizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QPageSize14definitionSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageSize", "definitionSize", args)
   }

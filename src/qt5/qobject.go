@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qobject.h
 // dst-file: /src/core/qobject.go
 //
@@ -35,9 +35,9 @@ extern void C_ZN14QSignalBlocker7unblockEv(void* qthis); // 2
   // proto:  void QSignalBlocker::reblock();
 extern void C_ZN14QSignalBlocker7reblockEv(void* qthis); // 2
   // proto:  void QSignalBlocker::QSignalBlocker(QObject & o);
-extern void C_ZN14QSignalBlockerC2ER7QObject(void* qthis, void* arg0); // 1
+extern void* C_ZN14QSignalBlockerC2ER7QObject(void* arg0); // 1
   // proto:  void QSignalBlocker::QSignalBlocker(QObject * o);
-extern void C_ZN14QSignalBlockerC2EP7QObject(void* qthis, void* arg0); // 1
+extern void* C_ZN14QSignalBlockerC2EP7QObject(void* arg0); // 1
   // proto:  QMetaObject * QObjectData::dynamicMetaObject();
 extern void C_ZNK11QObjectData17dynamicMetaObjectEv(void* qthis); // 4
   // proto:  void QObjectUserData::~QObjectUserData();
@@ -73,7 +73,7 @@ extern void C_ZN7QObject11eventFilterEPS_P6QEvent(void* qthis, void* arg0, void*
   // proto:  void QObject::setParent(QObject * );
 extern void C_ZN7QObject9setParentEPS_(void* qthis, void* arg0); // 4
   // proto:  void QObject::QObject(QObject * parent);
-extern void C_ZN7QObjectC2EPS_(void* qthis, void* arg0); // 3
+extern void* C_ZN7QObjectC2EPS_(void* arg0); // 3
   // proto:  bool QObject::isWidgetType();
 extern void C_ZNK7QObject12isWidgetTypeEv(void* qthis); // 2
   // proto:  QObjectUserData * QObject::userData(uint id);
@@ -207,7 +207,7 @@ func (this *QSignalBlocker) reblock(args ...interface{}) () {
 }
 
 // QSignalBlocker(class QObject &)
-func NewQSignalBlocker(args ...interface{}) QSignalBlocker {
+func NewQSignalBlocker(args ...interface{}) *QSignalBlocker {
   // QSignalBlocker(class QObject &)
   // QSignalBlocker(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -227,7 +227,8 @@ func NewQSignalBlocker(args ...interface{}) QSignalBlocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QSignalBlockerC2ER7QObject(qthis, arg0)
+    qthis = C.C_ZN14QSignalBlockerC2ER7QObject(arg0)
+    return &QSignalBlocker{qclsinst:qthis}
   case 1:
     // invoke: _ZN14QSignalBlockerC1EP7QObject
     // invoke: void QSignalBlocker(class QObject *)
@@ -235,12 +236,13 @@ func NewQSignalBlocker(args ...interface{}) QSignalBlocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QSignalBlockerC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN14QSignalBlockerC2EP7QObject(arg0)
+    return &QSignalBlocker{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSignalBlocker", "QSignalBlocker", args)
   }
 
-  return QSignalBlocker{}
+  return nil // QSignalBlocker{qclsinst:qthis}
 }
 
 // dynamicMetaObject()
@@ -299,7 +301,8 @@ func (this *QObject) inherits(args ...interface{}) () {
     // invoke: bool inherits(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QObject8inheritsEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QObject8inheritsEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "inherits", args)
   }
@@ -422,7 +425,8 @@ func (this *QObject) parent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject6parentEv
     // invoke: QObject * parent()
-    C.C_ZNK7QObject6parentEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject6parentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "parent", args)
   }
@@ -445,7 +449,8 @@ func (this *QObject) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QObject5eventEP6QEvent(this.qclsinst, arg0)
+    var ret = C.C_ZN7QObject5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "event", args)
   }
@@ -515,7 +520,8 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[3].([]byte)).Pointer()))
     if false {fmt.Println(arg3)}
-    C.C_ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN7QObject10disconnectEPKS_PKcS1_S3_(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK7QObject10disconnectEPKcPKS_S1_
     // invoke: bool disconnect(const char *, const class QObject *, const char *)
@@ -525,7 +531,8 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C.C_ZNK7QObject10disconnectEPKcPKS_S1_(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK7QObject10disconnectEPKcPKS_S1_(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK7QObject10disconnectEPKS_PKc
     // invoke: bool disconnect(const class QObject *, const char *)
@@ -533,7 +540,8 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZNK7QObject10disconnectEPKS_PKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK7QObject10disconnectEPKS_PKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_
     // invoke: bool disconnect(const class QObject *, const class QMetaMethod &, const class QObject *, const class QMetaMethod &)
@@ -545,7 +553,8 @@ func (this *QObject) disconnect_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QMetaMethod).qclsinst
     if false {fmt.Println(arg3)}
-    C.C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN7QObject10disconnectEPKS_RK11QMetaMethodS1_S4_(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "disconnect", args)
   }
@@ -571,7 +580,8 @@ func (this *QObject) eventFilter(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QObject11eventFilterEPS_P6QEvent(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN7QObject11eventFilterEPS_P6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "eventFilter", args)
   }
@@ -602,7 +612,7 @@ func (this *QObject) setParent(args ...interface{}) () {
 }
 
 // QObject(class QObject *)
-func NewQObject(args ...interface{}) QObject {
+func NewQObject(args ...interface{}) *QObject {
   // QObject(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -619,12 +629,13 @@ func NewQObject(args ...interface{}) QObject {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QObjectC2EPS_(qthis, arg0)
+    qthis = C.C_ZN7QObjectC2EPS_(arg0)
+    return &QObject{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QObject", "QObject", args)
   }
 
-  return QObject{}
+  return nil // QObject{qclsinst:qthis}
 }
 
 // isWidgetType()
@@ -640,7 +651,8 @@ func (this *QObject) isWidgetType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject12isWidgetTypeEv
     // invoke: bool isWidgetType()
-    C.C_ZNK7QObject12isWidgetTypeEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject12isWidgetTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "isWidgetType", args)
   }
@@ -663,7 +675,8 @@ func (this *QObject) userData(args ...interface{}) () {
     // invoke: QObjectUserData * userData(uint)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QObject8userDataEj(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QObject8userDataEj(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "userData", args)
   }
@@ -686,7 +699,8 @@ func (this *QObject) blockSignals(args ...interface{}) () {
     // invoke: bool blockSignals(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QObject12blockSignalsEb(this.qclsinst, arg0)
+    var ret = C.C_ZN7QObject12blockSignalsEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "blockSignals", args)
   }
@@ -706,7 +720,8 @@ func (this *QObject) objectName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject10objectNameEv
     // invoke: QString objectName()
-    C.C_ZNK7QObject10objectNameEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject10objectNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "objectName", args)
   }
@@ -726,7 +741,8 @@ func (this *QObject) isWindowType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject12isWindowTypeEv
     // invoke: bool isWindowType()
-    C.C_ZNK7QObject12isWindowTypeEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject12isWindowTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "isWindowType", args)
   }
@@ -746,7 +762,8 @@ func (this *QObject) signalsBlocked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject14signalsBlockedEv
     // invoke: bool signalsBlocked()
-    C.C_ZNK7QObject14signalsBlockedEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject14signalsBlockedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "signalsBlocked", args)
   }
@@ -766,7 +783,8 @@ func (this *QObject) registerUserData_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QObject16registerUserDataEv
     // invoke: uint registerUserData()
-    C.C_ZN7QObject16registerUserDataEv()
+    var ret = C.C_ZN7QObject16registerUserDataEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "registerUserData", args)
   }
@@ -792,7 +810,8 @@ func (this *QObject) setProperty(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN7QObject11setPropertyEPKcRK8QVariant(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN7QObject11setPropertyEPKcRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "setProperty", args)
   }
@@ -881,7 +900,8 @@ func (this *QObject) thread(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QObject6threadEv
     // invoke: QThread * thread()
-    C.C_ZNK7QObject6threadEv(this.qclsinst)
+    var ret = C.C_ZNK7QObject6threadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "thread", args)
   }
@@ -990,7 +1010,8 @@ func (this *QObject) property(args ...interface{}) () {
     // invoke: QVariant property(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QObject8propertyEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QObject8propertyEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QObject", "property", args)
   }

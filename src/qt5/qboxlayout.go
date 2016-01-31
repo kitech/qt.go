@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qboxlayout.h
 // dst-file: /src/widgets/qboxlayout.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QHBoxLayout::QHBoxLayout(QWidget * parent);
-extern void C_ZN11QHBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QHBoxLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  void QHBoxLayout::QHBoxLayout();
-extern void C_ZN11QHBoxLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN11QHBoxLayoutC2Ev(); // 3
   // proto:  const QMetaObject * QHBoxLayout::metaObject();
 extern void C_ZNK11QHBoxLayout10metaObjectEv(void* qthis); // 4
   // proto:  void QHBoxLayout::~QHBoxLayout();
@@ -101,9 +101,9 @@ extern void C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(void* qthis, void* arg
   // proto:  QSize QBoxLayout::maximumSize();
 extern void C_ZNK10QBoxLayout11maximumSizeEv(void* qthis); // 4
   // proto:  void QVBoxLayout::QVBoxLayout();
-extern void C_ZN11QVBoxLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN11QVBoxLayoutC2Ev(); // 3
   // proto:  void QVBoxLayout::QVBoxLayout(QWidget * parent);
-extern void C_ZN11QVBoxLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QVBoxLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  void QVBoxLayout::~QVBoxLayout();
 extern void C_ZN11QVBoxLayoutD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QVBoxLayout::metaObject();
@@ -139,7 +139,7 @@ type QVBoxLayout struct {
 }
 
 // QHBoxLayout(class QWidget *)
-func NewQHBoxLayout(args ...interface{}) QHBoxLayout {
+func NewQHBoxLayout(args ...interface{}) *QHBoxLayout {
   // QHBoxLayout(class QWidget *)
   // QHBoxLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -158,18 +158,20 @@ func NewQHBoxLayout(args ...interface{}) QHBoxLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QHBoxLayoutC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QHBoxLayoutC2EP7QWidget(arg0)
+    return &QHBoxLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QHBoxLayoutC1Ev
     // invoke: void QHBoxLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QHBoxLayoutC2Ev(qthis)
+    qthis = C.C_ZN11QHBoxLayoutC2Ev()
+    return &QHBoxLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QHBoxLayout", "QHBoxLayout", args)
   }
 
-  return QHBoxLayout{}
+  return nil // QHBoxLayout{qclsinst:qthis}
 }
 
 // metaObject()
@@ -398,7 +400,8 @@ func (this *QBoxLayout) stretch(args ...interface{}) () {
     // invoke: int stretch(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QBoxLayout7stretchEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "stretch", args)
   }
@@ -421,7 +424,8 @@ func (this *QBoxLayout) minimumHeightForWidth(args ...interface{}) () {
     // invoke: int minimumHeightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QBoxLayout21minimumHeightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumHeightForWidth", args)
   }
@@ -553,7 +557,8 @@ func (this *QBoxLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZN10QBoxLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "takeAt", args)
   }
@@ -645,7 +650,8 @@ func (this *QBoxLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout7spacingEv
     // invoke: int spacing()
-    C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout7spacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "spacing", args)
   }
@@ -685,7 +691,8 @@ func (this *QBoxLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout5countEv
     // invoke: int count()
-    C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "count", args)
   }
@@ -728,7 +735,8 @@ func (this *QBoxLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "sizeHint", args)
   }
@@ -748,7 +756,8 @@ func (this *QBoxLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "hasHeightForWidth", args)
   }
@@ -771,7 +780,8 @@ func (this *QBoxLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QBoxLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "itemAt", args)
   }
@@ -791,7 +801,8 @@ func (this *QBoxLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "minimumSize", args)
   }
@@ -814,7 +825,8 @@ func (this *QBoxLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QBoxLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "heightForWidth", args)
   }
@@ -896,7 +908,8 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QBoxLayout16setStretchFactorEP7QLayouti(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QBoxLayout16setStretchFactorEP7QWidgeti
     // invoke: bool setStretchFactor(class QWidget *, int)
@@ -904,7 +917,8 @@ func (this *QBoxLayout) setStretchFactor(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QBoxLayout16setStretchFactorEP7QWidgeti(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "setStretchFactor", args)
   }
@@ -924,7 +938,8 @@ func (this *QBoxLayout) maximumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QBoxLayout11maximumSizeEv
     // invoke: QSize maximumSize()
-    C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK10QBoxLayout11maximumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBoxLayout", "maximumSize", args)
   }
@@ -932,7 +947,7 @@ func (this *QBoxLayout) maximumSize(args ...interface{}) () {
 }
 
 // QVBoxLayout()
-func NewQVBoxLayout(args ...interface{}) QVBoxLayout {
+func NewQVBoxLayout(args ...interface{}) *QVBoxLayout {
   // QVBoxLayout()
   // QVBoxLayout(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -949,7 +964,8 @@ func NewQVBoxLayout(args ...interface{}) QVBoxLayout {
     // invoke: void QVBoxLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QVBoxLayoutC2Ev(qthis)
+    qthis = C.C_ZN11QVBoxLayoutC2Ev()
+    return &QVBoxLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QVBoxLayoutC1EP7QWidget
     // invoke: void QVBoxLayout(class QWidget *)
@@ -957,12 +973,13 @@ func NewQVBoxLayout(args ...interface{}) QVBoxLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QVBoxLayoutC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QVBoxLayoutC2EP7QWidget(arg0)
+    return &QVBoxLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QVBoxLayout", "QVBoxLayout", args)
   }
 
-  return QVBoxLayout{}
+  return nil // QVBoxLayout{qclsinst:qthis}
 }
 
 // ~QVBoxLayout()

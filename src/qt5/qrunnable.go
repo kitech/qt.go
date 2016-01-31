@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qrunnable.h
 // dst-file: /src/core/qrunnable.go
 //
@@ -86,7 +86,8 @@ func (this *QRunnable) autoDelete(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QRunnable10autoDeleteEv
     // invoke: bool autoDelete()
-    C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    var ret = C.C_ZNK9QRunnable10autoDeleteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRunnable", "autoDelete", args)
   }

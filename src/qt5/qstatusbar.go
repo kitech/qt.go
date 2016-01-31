@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstatusbar.h
 // dst-file: /src/widgets/qstatusbar.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN10QStatusBarD2Ev(void* qthis); // 4
   // proto:  void QStatusBar::removeWidget(QWidget * widget);
 extern void C_ZN10QStatusBar12removeWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStatusBar::QStatusBar(QWidget * parent);
-extern void C_ZN10QStatusBarC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN10QStatusBarC2EP7QWidget(void* arg0); // 3
   // proto:  void QStatusBar::clearMessage();
 extern void C_ZN10QStatusBar12clearMessageEv(void* qthis); // 4
   // proto:  int QStatusBar::insertWidget(int index, QWidget * widget, int stretch);
@@ -117,7 +117,7 @@ func (this *QStatusBar) removeWidget(args ...interface{}) () {
 }
 
 // QStatusBar(class QWidget *)
-func NewQStatusBar(args ...interface{}) QStatusBar {
+func NewQStatusBar(args ...interface{}) *QStatusBar {
   // QStatusBar(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -134,12 +134,13 @@ func NewQStatusBar(args ...interface{}) QStatusBar {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QStatusBarC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN10QStatusBarC2EP7QWidget(arg0)
+    return &QStatusBar{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStatusBar", "QStatusBar", args)
   }
 
-  return QStatusBar{}
+  return nil // QStatusBar{qclsinst:qthis}
 }
 
 // clearMessage()
@@ -184,7 +185,8 @@ func (this *QStatusBar) insertWidget(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QStatusBar12insertWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStatusBar", "insertWidget", args)
   }
@@ -230,7 +232,8 @@ func (this *QStatusBar) currentMessage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QStatusBar14currentMessageEv
     // invoke: QString currentMessage()
-    C.C_ZNK10QStatusBar14currentMessageEv(this.qclsinst)
+    var ret = C.C_ZNK10QStatusBar14currentMessageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStatusBar", "currentMessage", args)
   }
@@ -308,7 +311,8 @@ func (this *QStatusBar) insertPermanentWidget(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QStatusBar21insertPermanentWidgetEiP7QWidgeti(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStatusBar", "insertPermanentWidget", args)
   }
@@ -348,7 +352,8 @@ func (this *QStatusBar) isSizeGripEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QStatusBar17isSizeGripEnabledEv
     // invoke: bool isSizeGripEnabled()
-    C.C_ZNK10QStatusBar17isSizeGripEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK10QStatusBar17isSizeGripEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStatusBar", "isSizeGripEnabled", args)
   }

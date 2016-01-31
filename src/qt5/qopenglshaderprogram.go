@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopenglshaderprogram.h
 // dst-file: /src/gui/qopenglshaderprogram.go
 //
@@ -201,7 +201,7 @@ extern void C_ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray(void* qt
   // proto:  void QOpenGLShaderProgram::~QOpenGLShaderProgram();
 extern void C_ZN20QOpenGLShaderProgramD2Ev(void* qthis); // 4
   // proto:  void QOpenGLShaderProgram::QOpenGLShaderProgram(QObject * parent);
-extern void C_ZN20QOpenGLShaderProgramC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN20QOpenGLShaderProgramC2EP7QObject(void* arg0); // 3
   // proto:  const QMetaObject * QOpenGLShaderProgram::metaObject();
 extern void C_ZNK20QOpenGLShaderProgram10metaObjectEv(void* qthis); // 4
   // proto:  bool QOpenGLShaderProgram::bind();
@@ -317,7 +317,8 @@ func (this *QOpenGLShader) isCompiled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLShader10isCompiledEv
     // invoke: bool isCompiled()
-    C.C_ZNK13QOpenGLShader10isCompiledEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLShader10isCompiledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "isCompiled", args)
   }
@@ -337,7 +338,8 @@ func (this *QOpenGLShader) log(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLShader3logEv
     // invoke: QString log()
-    C.C_ZNK13QOpenGLShader3logEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLShader3logEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "log", args)
   }
@@ -360,7 +362,8 @@ func (this *QOpenGLShader) compileSourceFile(args ...interface{}) () {
     // invoke: bool compileSourceFile(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QOpenGLShader17compileSourceFileERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN13QOpenGLShader17compileSourceFileERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "compileSourceFile", args)
   }
@@ -380,7 +383,8 @@ func (this *QOpenGLShader) shaderId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLShader8shaderIdEv
     // invoke: GLuint shaderId()
-    C.C_ZNK13QOpenGLShader8shaderIdEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLShader8shaderIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "shaderId", args)
   }
@@ -409,19 +413,22 @@ func (this *QOpenGLShader) compileSourceCode(args ...interface{}) () {
     // invoke: bool compileSourceCode(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QOpenGLShader17compileSourceCodeERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN13QOpenGLShader17compileSourceCodeERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN13QOpenGLShader17compileSourceCodeEPKc
     // invoke: bool compileSourceCode(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QOpenGLShader17compileSourceCodeEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZN13QOpenGLShader17compileSourceCodeEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN13QOpenGLShader17compileSourceCodeERK10QByteArray
     // invoke: bool compileSourceCode(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QOpenGLShader17compileSourceCodeERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZN13QOpenGLShader17compileSourceCodeERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "compileSourceCode", args)
   }
@@ -441,7 +448,8 @@ func (this *QOpenGLShader) sourceCode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLShader10sourceCodeEv
     // invoke: QByteArray sourceCode()
-    C.C_ZNK13QOpenGLShader10sourceCodeEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLShader10sourceCodeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShader", "sourceCode", args)
   }
@@ -547,7 +555,8 @@ func (this *QOpenGLShaderProgram) addShader(args ...interface{}) () {
     // invoke: bool addShader(class QOpenGLShader *)
     var arg0 = args[0].(QOpenGLShader).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader(this.qclsinst, arg0)
+    var ret = C.C_ZN20QOpenGLShaderProgram9addShaderEP13QOpenGLShader(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "addShader", args)
   }
@@ -596,19 +605,22 @@ func (this *QOpenGLShaderProgram) attributeLocation(args ...interface{}) () {
     // invoke: int attributeLocation(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram17attributeLocationEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram17attributeLocationEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray
     // invoke: int attributeLocation(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram17attributeLocationERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK20QOpenGLShaderProgram17attributeLocationERK7QString
     // invoke: int attributeLocation(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram17attributeLocationERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram17attributeLocationERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "attributeLocation", args)
   }
@@ -853,7 +865,8 @@ func (this *QOpenGLShaderProgram) patchVertexCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram16patchVertexCountEv
     // invoke: int patchVertexCount()
-    C.C_ZNK20QOpenGLShaderProgram16patchVertexCountEv(this.qclsinst)
+    var ret = C.C_ZNK20QOpenGLShaderProgram16patchVertexCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "patchVertexCount", args)
   }
@@ -873,7 +886,8 @@ func (this *QOpenGLShaderProgram) log(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram3logEv
     // invoke: QString log()
-    C.C_ZNK20QOpenGLShaderProgram3logEv(this.qclsinst)
+    var ret = C.C_ZNK20QOpenGLShaderProgram3logEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "log", args)
   }
@@ -1399,7 +1413,8 @@ func (this *QOpenGLShaderProgram) isLinked(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram8isLinkedEv
     // invoke: bool isLinked()
-    C.C_ZNK20QOpenGLShaderProgram8isLinkedEv(this.qclsinst)
+    var ret = C.C_ZNK20QOpenGLShaderProgram8isLinkedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "isLinked", args)
   }
@@ -1454,7 +1469,8 @@ func (this *QOpenGLShaderProgram) hasOpenGLShaderPrograms_s(args ...interface{})
     // invoke: bool hasOpenGLShaderPrograms(class QOpenGLContext *)
     var arg0 = args[0].(QOpenGLContext).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext(arg0)
+    var ret = C.C_ZN20QOpenGLShaderProgram23hasOpenGLShaderProgramsEP14QOpenGLContext(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "hasOpenGLShaderPrograms", args)
   }
@@ -1524,7 +1540,8 @@ func (this *QOpenGLShaderProgram) programId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram9programIdEv
     // invoke: GLuint programId()
-    C.C_ZNK20QOpenGLShaderProgram9programIdEv(this.qclsinst)
+    var ret = C.C_ZNK20QOpenGLShaderProgram9programIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "programId", args)
   }
@@ -1544,7 +1561,8 @@ func (this *QOpenGLShaderProgram) link(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram4linkEv
     // invoke: bool link()
-    C.C_ZN20QOpenGLShaderProgram4linkEv(this.qclsinst)
+    var ret = C.C_ZN20QOpenGLShaderProgram4linkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "link", args)
   }
@@ -1661,19 +1679,22 @@ func (this *QOpenGLShaderProgram) uniformLocation(args ...interface{}) () {
     // invoke: int uniformLocation(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram15uniformLocationERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram15uniformLocationERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK20QOpenGLShaderProgram15uniformLocationEPKc
     // invoke: int uniformLocation(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram15uniformLocationEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram15uniformLocationEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray
     // invoke: int uniformLocation(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QOpenGLShaderProgram15uniformLocationERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "uniformLocation", args)
   }
@@ -1701,7 +1722,7 @@ func (this *QOpenGLShaderProgram) FreeQOpenGLShaderProgram(args ...interface{}) 
 }
 
 // QOpenGLShaderProgram(class QObject *)
-func NewQOpenGLShaderProgram(args ...interface{}) QOpenGLShaderProgram {
+func NewQOpenGLShaderProgram(args ...interface{}) *QOpenGLShaderProgram {
   // QOpenGLShaderProgram(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1718,12 +1739,13 @@ func NewQOpenGLShaderProgram(args ...interface{}) QOpenGLShaderProgram {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN20QOpenGLShaderProgramC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN20QOpenGLShaderProgramC2EP7QObject(arg0)
+    return &QOpenGLShaderProgram{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "QOpenGLShaderProgram", args)
   }
 
-  return QOpenGLShaderProgram{}
+  return nil // QOpenGLShaderProgram{qclsinst:qthis}
 }
 
 // metaObject()
@@ -1759,7 +1781,8 @@ func (this *QOpenGLShaderProgram) bind(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram4bindEv
     // invoke: bool bind()
-    C.C_ZN20QOpenGLShaderProgram4bindEv(this.qclsinst)
+    var ret = C.C_ZN20QOpenGLShaderProgram4bindEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "bind", args)
   }
@@ -2009,7 +2032,8 @@ func (this *QOpenGLShaderProgram) maxGeometryOutputVertices(args ...interface{})
   case 0:
     // invoke: _ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv
     // invoke: int maxGeometryOutputVertices()
-    C.C_ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv(this.qclsinst)
+    var ret = C.C_ZNK20QOpenGLShaderProgram25maxGeometryOutputVerticesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "maxGeometryOutputVertices", args)
   }
@@ -2367,7 +2391,8 @@ func (this *QOpenGLShaderProgram) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QOpenGLShaderProgram6createEv
     // invoke: bool create()
-    C.C_ZN20QOpenGLShaderProgram6createEv(this.qclsinst)
+    var ret = C.C_ZN20QOpenGLShaderProgram6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLShaderProgram", "create", args)
   }

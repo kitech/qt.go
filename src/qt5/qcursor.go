@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qcursor.h
 // dst-file: /src/gui/qcursor.go
 //
@@ -53,13 +53,13 @@ extern void C_ZN7QCursorD2Ev(void* qthis); // 4
   // proto:  Qt::CursorShape QCursor::shape();
 extern void C_ZNK7QCursor5shapeEv(void* qthis); // 4
   // proto:  void QCursor::QCursor(const QBitmap & bitmap, const QBitmap & mask, int hotX, int hotY);
-extern void C_ZN7QCursorC2ERK7QBitmapS2_ii(void* qthis, void* arg0, void* arg1, int32_t arg2, int32_t arg3); // 3
+extern void* C_ZN7QCursorC2ERK7QBitmapS2_ii(void* arg0, void* arg1, int32_t arg2, int32_t arg3); // 3
   // proto:  void QCursor::QCursor(const QPixmap & pixmap, int hotX, int hotY);
-extern void C_ZN7QCursorC2ERK7QPixmapii(void* qthis, void* arg0, int32_t arg1, int32_t arg2); // 3
+extern void* C_ZN7QCursorC2ERK7QPixmapii(void* arg0, int32_t arg1, int32_t arg2); // 3
   // proto:  void QCursor::QCursor(const QCursor & cursor);
-extern void C_ZN7QCursorC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN7QCursorC2ERKS_(void* arg0); // 3
   // proto:  void QCursor::QCursor();
-extern void C_ZN7QCursorC2Ev(void* qthis); // 3
+extern void* C_ZN7QCursorC2Ev(); // 3
 */
 import "C"
 // } // <= ext block end
@@ -91,7 +91,8 @@ func (this *QCursor) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QCursor6pixmapEv
     // invoke: QPixmap pixmap()
-    C.C_ZNK7QCursor6pixmapEv(this.qclsinst)
+    var ret = C.C_ZNK7QCursor6pixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCursor", "pixmap", args)
   }
@@ -173,7 +174,8 @@ func (this *QCursor) mask(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QCursor4maskEv
     // invoke: const QBitmap * mask()
-    C.C_ZNK7QCursor4maskEv(this.qclsinst)
+    var ret = C.C_ZNK7QCursor4maskEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCursor", "mask", args)
   }
@@ -196,13 +198,15 @@ func (this *QCursor) pos_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QCursor3posEv
     // invoke: QPoint pos()
-    C.C_ZN7QCursor3posEv()
+    var ret = C.C_ZN7QCursor3posEv()
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN7QCursor3posEPK7QScreen
     // invoke: QPoint pos(const class QScreen *)
     var arg0 = args[0].(QScreen).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QCursor3posEPK7QScreen(arg0)
+    var ret = C.C_ZN7QCursor3posEPK7QScreen(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCursor", "pos", args)
   }
@@ -222,7 +226,8 @@ func (this *QCursor) hotSpot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QCursor7hotSpotEv
     // invoke: QPoint hotSpot()
-    C.C_ZNK7QCursor7hotSpotEv(this.qclsinst)
+    var ret = C.C_ZNK7QCursor7hotSpotEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCursor", "hotSpot", args)
   }
@@ -242,7 +247,8 @@ func (this *QCursor) bitmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QCursor6bitmapEv
     // invoke: const QBitmap * bitmap()
-    C.C_ZNK7QCursor6bitmapEv(this.qclsinst)
+    var ret = C.C_ZNK7QCursor6bitmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCursor", "bitmap", args)
   }
@@ -290,7 +296,7 @@ func (this *QCursor) shape(args ...interface{}) () {
 }
 
 // QCursor(const class QBitmap &, const class QBitmap &, int, int)
-func NewQCursor(args ...interface{}) QCursor {
+func NewQCursor(args ...interface{}) *QCursor {
   // QCursor(const class QBitmap &, const class QBitmap &, int, int)
   // QCursor(const class QPixmap &, int, int)
   // QCursor(const class QCursor &)
@@ -326,7 +332,8 @@ func NewQCursor(args ...interface{}) QCursor {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QCursorC2ERK7QBitmapS2_ii(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN7QCursorC2ERK7QBitmapS2_ii(arg0, arg1, arg2, arg3)
+    return &QCursor{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QCursorC1ERK7QPixmapii
     // invoke: void QCursor(const class QPixmap &, int, int)
@@ -338,7 +345,8 @@ func NewQCursor(args ...interface{}) QCursor {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QCursorC2ERK7QPixmapii(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN7QCursorC2ERK7QPixmapii(arg0, arg1, arg2)
+    return &QCursor{qclsinst:qthis}
   case 2:
     // invoke: _ZN7QCursorC1ERKS_
     // invoke: void QCursor(const class QCursor &)
@@ -346,18 +354,20 @@ func NewQCursor(args ...interface{}) QCursor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QCursorC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN7QCursorC2ERKS_(arg0)
+    return &QCursor{qclsinst:qthis}
   case 3:
     // invoke: _ZN7QCursorC1Ev
     // invoke: void QCursor()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QCursorC2Ev(qthis)
+    qthis = C.C_ZN7QCursorC2Ev()
+    return &QCursor{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCursor", "QCursor", args)
   }
 
-  return QCursor{}
+  return nil // QCursor{qclsinst:qthis}
 }
 
 // <= body block end

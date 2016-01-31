@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qhistorystate.h
 // dst-file: /src/core/qhistorystate.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN13QHistoryStateD2Ev(void* qthis); // 4
   // proto:  QAbstractState * QHistoryState::defaultState();
 extern void C_ZNK13QHistoryState12defaultStateEv(void* qthis); // 4
   // proto:  void QHistoryState::QHistoryState(QState * parent);
-extern void C_ZN13QHistoryStateC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN13QHistoryStateC2EP6QState(void* arg0); // 3
   // proto:  const QMetaObject * QHistoryState::metaObject();
 extern void C_ZNK13QHistoryState10metaObjectEv(void* qthis); // 4
   // proto:  void QHistoryState::setDefaultState(QAbstractState * state);
@@ -121,7 +121,7 @@ func (this *QHistoryState) defaultState(args ...interface{}) () {
 }
 
 // QHistoryState(class QState *)
-func NewQHistoryState(args ...interface{}) QHistoryState {
+func NewQHistoryState(args ...interface{}) *QHistoryState {
   // QHistoryState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -138,12 +138,13 @@ func NewQHistoryState(args ...interface{}) QHistoryState {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QHistoryStateC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN13QHistoryStateC2EP6QState(arg0)
+    return &QHistoryState{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QHistoryState", "QHistoryState", args)
   }
 
-  return QHistoryState{}
+  return nil // QHistoryState{qclsinst:qthis}
 }
 
 // metaObject()

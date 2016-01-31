@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qcommandlinkbutton.h
 // dst-file: /src/widgets/qcommandlinkbutton.go
 //
@@ -35,11 +35,11 @@ extern void C_ZN18QCommandLinkButtonD2Ev(void* qthis); // 4
   // proto:  QString QCommandLinkButton::description();
 extern void C_ZNK18QCommandLinkButton11descriptionEv(void* qthis); // 4
   // proto:  void QCommandLinkButton::QCommandLinkButton(QWidget * parent);
-extern void C_ZN18QCommandLinkButtonC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN18QCommandLinkButtonC2EP7QWidget(void* arg0); // 3
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, const QString & description, QWidget * parent);
-extern void C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QCommandLinkButton::QCommandLinkButton(const QString & text, QWidget * parent);
-extern void C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
   // proto:  const QMetaObject * QCommandLinkButton::metaObject();
 extern void C_ZNK18QCommandLinkButton10metaObjectEv(void* qthis); // 4
 */
@@ -116,7 +116,8 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCommandLinkButton11descriptionEv
     // invoke: QString description()
-    C.C_ZNK18QCommandLinkButton11descriptionEv(this.qclsinst)
+    var ret = C.C_ZNK18QCommandLinkButton11descriptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "description", args)
   }
@@ -124,7 +125,7 @@ func (this *QCommandLinkButton) description(args ...interface{}) () {
 }
 
 // QCommandLinkButton(class QWidget *)
-func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
+func NewQCommandLinkButton(args ...interface{}) *QCommandLinkButton {
   // QCommandLinkButton(class QWidget *)
   // QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
   // QCommandLinkButton(const class QString &, class QWidget *)
@@ -150,7 +151,8 @@ func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QCommandLinkButtonC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN18QCommandLinkButtonC2EP7QWidget(arg0)
+    return &QCommandLinkButton{qclsinst:qthis}
   case 1:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringS2_P7QWidget
     // invoke: void QCommandLinkButton(const class QString &, const class QString &, class QWidget *)
@@ -162,7 +164,8 @@ func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringS2_P7QWidget(arg0, arg1, arg2)
+    return &QCommandLinkButton{qclsinst:qthis}
   case 2:
     // invoke: _ZN18QCommandLinkButtonC1ERK7QStringP7QWidget
     // invoke: void QCommandLinkButton(const class QString &, class QWidget *)
@@ -172,12 +175,13 @@ func NewQCommandLinkButton(args ...interface{}) QCommandLinkButton {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN18QCommandLinkButtonC2ERK7QStringP7QWidget(arg0, arg1)
+    return &QCommandLinkButton{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommandLinkButton", "QCommandLinkButton", args)
   }
 
-  return QCommandLinkButton{}
+  return nil // QCommandLinkButton{qclsinst:qthis}
 }
 
 // metaObject()

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qmouseeventtransition.h
 // dst-file: /src/widgets/qmouseeventtransition.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN21QMouseEventTransitionD2Ev(void* qthis); // 4
   // proto:  Qt::MouseButton QMouseEventTransition::button();
 extern void C_ZNK21QMouseEventTransition6buttonEv(void* qthis); // 4
   // proto:  void QMouseEventTransition::QMouseEventTransition(QState * sourceState);
-extern void C_ZN21QMouseEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN21QMouseEventTransitionC2EP6QState(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -136,7 +136,8 @@ func (this *QMouseEventTransition) hitTestPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QMouseEventTransition11hitTestPathEv
     // invoke: QPainterPath hitTestPath()
-    C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
+    var ret = C.C_ZNK21QMouseEventTransition11hitTestPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "hitTestPath", args)
   }
@@ -184,7 +185,7 @@ func (this *QMouseEventTransition) button(args ...interface{}) () {
 }
 
 // QMouseEventTransition(class QState *)
-func NewQMouseEventTransition(args ...interface{}) QMouseEventTransition {
+func NewQMouseEventTransition(args ...interface{}) *QMouseEventTransition {
   // QMouseEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -201,12 +202,13 @@ func NewQMouseEventTransition(args ...interface{}) QMouseEventTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN21QMouseEventTransitionC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN21QMouseEventTransitionC2EP6QState(arg0)
+    return &QMouseEventTransition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMouseEventTransition", "QMouseEventTransition", args)
   }
 
-  return QMouseEventTransition{}
+  return nil // QMouseEventTransition{qclsinst:qthis}
 }
 
 // <= body block end

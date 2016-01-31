@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qmetaobject.h
 // dst-file: /src/core/qmetaobject.go
 //
@@ -37,7 +37,7 @@ extern void C_ZNK9QMetaEnum7isValidEv(void* qthis); // 2
   // proto:  int QMetaEnum::keyToValue(const char * key, bool * ok);
 extern void C_ZNK9QMetaEnum10keyToValueEPKcPb(void* qthis, unsigned char* arg0, bool* arg1); // 4
   // proto:  void QMetaEnum::QMetaEnum();
-extern void C_ZN9QMetaEnumC2Ev(void* qthis); // 1
+extern void* C_ZN9QMetaEnumC2Ev(); // 1
   // proto:  int QMetaEnum::value(int index);
 extern void C_ZNK9QMetaEnum5valueEi(void* qthis, int32_t arg0); // 4
   // proto:  const char * QMetaEnum::valueToKey(int value);
@@ -55,7 +55,7 @@ extern void C_ZNK9QMetaEnum11keysToValueEPKcPb(void* qthis, unsigned char* arg0,
   // proto:  const QMetaObject * QMetaEnum::enclosingMetaObject();
 extern void C_ZNK9QMetaEnum19enclosingMetaObjectEv(void* qthis); // 2
   // proto:  void QMetaClassInfo::QMetaClassInfo();
-extern void C_ZN14QMetaClassInfoC2Ev(void* qthis); // 1
+extern void* C_ZN14QMetaClassInfoC2Ev(); // 1
   // proto:  const char * QMetaClassInfo::name();
 extern void C_ZNK14QMetaClassInfo4nameEv(void* qthis); // 4
   // proto:  const char * QMetaClassInfo::value();
@@ -95,7 +95,7 @@ extern void C_ZNK11QMetaMethod8revisionEv(void* qthis); // 4
   // proto:  QByteArray QMetaMethod::methodSignature();
 extern void C_ZNK11QMetaMethod15methodSignatureEv(void* qthis); // 4
   // proto:  void QMetaMethod::QMetaMethod();
-extern void C_ZN11QMetaMethodC2Ev(void* qthis); // 1
+extern void* C_ZN11QMetaMethodC2Ev(); // 1
   // proto:  const QMetaObject * QMetaMethod::enclosingMetaObject();
 extern void C_ZNK11QMetaMethod19enclosingMetaObjectEv(void* qthis); // 2
   // proto:  bool QMetaProperty::isStored(const QObject * obj);
@@ -109,7 +109,7 @@ extern void C_ZNK13QMetaProperty10isConstantEv(void* qthis); // 4
   // proto:  const char * QMetaProperty::typeName();
 extern void C_ZNK13QMetaProperty8typeNameEv(void* qthis); // 4
   // proto:  void QMetaProperty::QMetaProperty();
-extern void C_ZN13QMetaPropertyC2Ev(void* qthis); // 3
+extern void* C_ZN13QMetaPropertyC2Ev(); // 3
   // proto:  int QMetaProperty::notifySignalIndex();
 extern void C_ZNK13QMetaProperty17notifySignalIndexEv(void* qthis); // 4
   // proto:  QVariant QMetaProperty::readOnGadget(const void * gadget);
@@ -211,7 +211,8 @@ func (this *QMetaEnum) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum4nameEv
     // invoke: const char * name()
-    C.C_ZNK9QMetaEnum4nameEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaEnum4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "name", args)
   }
@@ -231,7 +232,8 @@ func (this *QMetaEnum) isFlag(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum6isFlagEv
     // invoke: bool isFlag()
-    C.C_ZNK9QMetaEnum6isFlagEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaEnum6isFlagEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "isFlag", args)
   }
@@ -251,7 +253,8 @@ func (this *QMetaEnum) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QMetaEnum7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaEnum7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "isValid", args)
   }
@@ -277,7 +280,8 @@ func (this *QMetaEnum) keyToValue(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QMetaEnum10keyToValueEPKcPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QMetaEnum10keyToValueEPKcPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "keyToValue", args)
   }
@@ -285,7 +289,7 @@ func (this *QMetaEnum) keyToValue(args ...interface{}) () {
 }
 
 // QMetaEnum()
-func NewQMetaEnum(args ...interface{}) QMetaEnum {
+func NewQMetaEnum(args ...interface{}) *QMetaEnum {
   // QMetaEnum()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -299,12 +303,13 @@ func NewQMetaEnum(args ...interface{}) QMetaEnum {
     // invoke: void QMetaEnum()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QMetaEnumC2Ev(qthis)
+    qthis = C.C_ZN9QMetaEnumC2Ev()
+    return &QMetaEnum{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaEnum", "QMetaEnum", args)
   }
 
-  return QMetaEnum{}
+  return nil // QMetaEnum{qclsinst:qthis}
 }
 
 // value(int)
@@ -323,7 +328,8 @@ func (this *QMetaEnum) value(args ...interface{}) () {
     // invoke: int value(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMetaEnum5valueEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMetaEnum5valueEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "value", args)
   }
@@ -346,7 +352,8 @@ func (this *QMetaEnum) valueToKey(args ...interface{}) () {
     // invoke: const char * valueToKey(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMetaEnum10valueToKeyEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMetaEnum10valueToKeyEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "valueToKey", args)
   }
@@ -369,7 +376,8 @@ func (this *QMetaEnum) key(args ...interface{}) () {
     // invoke: const char * key(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMetaEnum3keyEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMetaEnum3keyEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "key", args)
   }
@@ -392,7 +400,8 @@ func (this *QMetaEnum) valueToKeys(args ...interface{}) () {
     // invoke: QByteArray valueToKeys(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMetaEnum11valueToKeysEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMetaEnum11valueToKeysEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "valueToKeys", args)
   }
@@ -412,7 +421,8 @@ func (this *QMetaEnum) scope(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum5scopeEv
     // invoke: const char * scope()
-    C.C_ZNK9QMetaEnum5scopeEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaEnum5scopeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "scope", args)
   }
@@ -432,7 +442,8 @@ func (this *QMetaEnum) keyCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaEnum8keyCountEv
     // invoke: int keyCount()
-    C.C_ZNK9QMetaEnum8keyCountEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaEnum8keyCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "keyCount", args)
   }
@@ -458,7 +469,8 @@ func (this *QMetaEnum) keysToValue(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.bool)(args[1].(*bool))
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QMetaEnum11keysToValueEPKcPb(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QMetaEnum11keysToValueEPKcPb(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaEnum", "keysToValue", args)
   }
@@ -486,7 +498,7 @@ func (this *QMetaEnum) enclosingMetaObject(args ...interface{}) () {
 }
 
 // QMetaClassInfo()
-func NewQMetaClassInfo(args ...interface{}) QMetaClassInfo {
+func NewQMetaClassInfo(args ...interface{}) *QMetaClassInfo {
   // QMetaClassInfo()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -500,12 +512,13 @@ func NewQMetaClassInfo(args ...interface{}) QMetaClassInfo {
     // invoke: void QMetaClassInfo()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QMetaClassInfoC2Ev(qthis)
+    qthis = C.C_ZN14QMetaClassInfoC2Ev()
+    return &QMetaClassInfo{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaClassInfo", "QMetaClassInfo", args)
   }
 
-  return QMetaClassInfo{}
+  return nil // QMetaClassInfo{qclsinst:qthis}
 }
 
 // name()
@@ -521,7 +534,8 @@ func (this *QMetaClassInfo) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QMetaClassInfo4nameEv
     // invoke: const char * name()
-    C.C_ZNK14QMetaClassInfo4nameEv(this.qclsinst)
+    var ret = C.C_ZNK14QMetaClassInfo4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaClassInfo", "name", args)
   }
@@ -541,7 +555,8 @@ func (this *QMetaClassInfo) value(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QMetaClassInfo5valueEv
     // invoke: const char * value()
-    C.C_ZNK14QMetaClassInfo5valueEv(this.qclsinst)
+    var ret = C.C_ZNK14QMetaClassInfo5valueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaClassInfo", "value", args)
   }
@@ -584,7 +599,8 @@ func (this *QMetaMethod) parameterType(args ...interface{}) () {
     // invoke: int parameterType(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMetaMethod13parameterTypeEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QMetaMethod13parameterTypeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "parameterType", args)
   }
@@ -624,7 +640,8 @@ func (this *QMetaMethod) methodIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod11methodIndexEv
     // invoke: int methodIndex()
-    C.C_ZNK11QMetaMethod11methodIndexEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod11methodIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "methodIndex", args)
   }
@@ -644,7 +661,8 @@ func (this *QMetaMethod) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK11QMetaMethod7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "isValid", args)
   }
@@ -664,7 +682,8 @@ func (this *QMetaMethod) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod4nameEv
     // invoke: QByteArray name()
-    C.C_ZNK11QMetaMethod4nameEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "name", args)
   }
@@ -707,7 +726,8 @@ func (this *QMetaMethod) parameterCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod14parameterCountEv
     // invoke: int parameterCount()
-    C.C_ZNK11QMetaMethod14parameterCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod14parameterCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "parameterCount", args)
   }
@@ -747,7 +767,8 @@ func (this *QMetaMethod) typeName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod8typeNameEv
     // invoke: const char * typeName()
-    C.C_ZNK11QMetaMethod8typeNameEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod8typeNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "typeName", args)
   }
@@ -767,7 +788,8 @@ func (this *QMetaMethod) tag(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod3tagEv
     // invoke: const char * tag()
-    C.C_ZNK11QMetaMethod3tagEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod3tagEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "tag", args)
   }
@@ -807,7 +829,8 @@ func (this *QMetaMethod) returnType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod10returnTypeEv
     // invoke: int returnType()
-    C.C_ZNK11QMetaMethod10returnTypeEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod10returnTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "returnType", args)
   }
@@ -827,7 +850,8 @@ func (this *QMetaMethod) attributes(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod10attributesEv
     // invoke: int attributes()
-    C.C_ZNK11QMetaMethod10attributesEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod10attributesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "attributes", args)
   }
@@ -867,7 +891,8 @@ func (this *QMetaMethod) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod8revisionEv
     // invoke: int revision()
-    C.C_ZNK11QMetaMethod8revisionEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod8revisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "revision", args)
   }
@@ -887,7 +912,8 @@ func (this *QMetaMethod) methodSignature(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMetaMethod15methodSignatureEv
     // invoke: QByteArray methodSignature()
-    C.C_ZNK11QMetaMethod15methodSignatureEv(this.qclsinst)
+    var ret = C.C_ZNK11QMetaMethod15methodSignatureEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaMethod", "methodSignature", args)
   }
@@ -895,7 +921,7 @@ func (this *QMetaMethod) methodSignature(args ...interface{}) () {
 }
 
 // QMetaMethod()
-func NewQMetaMethod(args ...interface{}) QMetaMethod {
+func NewQMetaMethod(args ...interface{}) *QMetaMethod {
   // QMetaMethod()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -909,12 +935,13 @@ func NewQMetaMethod(args ...interface{}) QMetaMethod {
     // invoke: void QMetaMethod()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QMetaMethodC2Ev(qthis)
+    qthis = C.C_ZN11QMetaMethodC2Ev()
+    return &QMetaMethod{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaMethod", "QMetaMethod", args)
   }
 
-  return QMetaMethod{}
+  return nil // QMetaMethod{qclsinst:qthis}
 }
 
 // enclosingMetaObject()
@@ -953,7 +980,8 @@ func (this *QMetaProperty) isStored(args ...interface{}) () {
     // invoke: bool isStored(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty8isStoredEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty8isStoredEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isStored", args)
   }
@@ -976,7 +1004,8 @@ func (this *QMetaProperty) isEditable(args ...interface{}) () {
     // invoke: bool isEditable(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty10isEditableEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty10isEditableEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isEditable", args)
   }
@@ -996,7 +1025,8 @@ func (this *QMetaProperty) notifySignal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty12notifySignalEv
     // invoke: QMetaMethod notifySignal()
-    C.C_ZNK13QMetaProperty12notifySignalEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty12notifySignalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "notifySignal", args)
   }
@@ -1016,7 +1046,8 @@ func (this *QMetaProperty) isConstant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10isConstantEv
     // invoke: bool isConstant()
-    C.C_ZNK13QMetaProperty10isConstantEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10isConstantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isConstant", args)
   }
@@ -1036,7 +1067,8 @@ func (this *QMetaProperty) typeName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty8typeNameEv
     // invoke: const char * typeName()
-    C.C_ZNK13QMetaProperty8typeNameEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty8typeNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "typeName", args)
   }
@@ -1044,7 +1076,7 @@ func (this *QMetaProperty) typeName(args ...interface{}) () {
 }
 
 // QMetaProperty()
-func NewQMetaProperty(args ...interface{}) QMetaProperty {
+func NewQMetaProperty(args ...interface{}) *QMetaProperty {
   // QMetaProperty()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1058,12 +1090,13 @@ func NewQMetaProperty(args ...interface{}) QMetaProperty {
     // invoke: void QMetaProperty()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QMetaPropertyC2Ev(qthis)
+    qthis = C.C_ZN13QMetaPropertyC2Ev()
+    return &QMetaProperty{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaProperty", "QMetaProperty", args)
   }
 
-  return QMetaProperty{}
+  return nil // QMetaProperty{qclsinst:qthis}
 }
 
 // notifySignalIndex()
@@ -1079,7 +1112,8 @@ func (this *QMetaProperty) notifySignalIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty17notifySignalIndexEv
     // invoke: int notifySignalIndex()
-    C.C_ZNK13QMetaProperty17notifySignalIndexEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty17notifySignalIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "notifySignalIndex", args)
   }
@@ -1102,7 +1136,8 @@ func (this *QMetaProperty) readOnGadget(args ...interface{}) () {
     // invoke: QVariant readOnGadget(const void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty12readOnGadgetEPKv(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty12readOnGadgetEPKv(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "readOnGadget", args)
   }
@@ -1122,7 +1157,8 @@ func (this *QMetaProperty) hasStdCppSet(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty12hasStdCppSetEv
     // invoke: bool hasStdCppSet()
-    C.C_ZNK13QMetaProperty12hasStdCppSetEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty12hasStdCppSetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "hasStdCppSet", args)
   }
@@ -1142,7 +1178,8 @@ func (this *QMetaProperty) isFinal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty7isFinalEv
     // invoke: bool isFinal()
-    C.C_ZNK13QMetaProperty7isFinalEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty7isFinalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isFinal", args)
   }
@@ -1162,7 +1199,8 @@ func (this *QMetaProperty) propertyIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty13propertyIndexEv
     // invoke: int propertyIndex()
-    C.C_ZNK13QMetaProperty13propertyIndexEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty13propertyIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "propertyIndex", args)
   }
@@ -1182,7 +1220,8 @@ func (this *QMetaProperty) isWritable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10isWritableEv
     // invoke: bool isWritable()
-    C.C_ZNK13QMetaProperty10isWritableEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10isWritableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isWritable", args)
   }
@@ -1208,7 +1247,8 @@ func (this *QMetaProperty) write(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QMetaProperty5writeEP7QObjectRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "write", args)
   }
@@ -1271,7 +1311,8 @@ func (this *QMetaProperty) reset(args ...interface{}) () {
     // invoke: bool reset(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty5resetEP7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty5resetEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "reset", args)
   }
@@ -1291,7 +1332,8 @@ func (this *QMetaProperty) enumerator(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10enumeratorEv
     // invoke: QMetaEnum enumerator()
-    C.C_ZNK13QMetaProperty10enumeratorEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10enumeratorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "enumerator", args)
   }
@@ -1311,7 +1353,8 @@ func (this *QMetaProperty) isEnumType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10isEnumTypeEv
     // invoke: bool isEnumType()
-    C.C_ZNK13QMetaProperty10isEnumTypeEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10isEnumTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isEnumType", args)
   }
@@ -1334,7 +1377,8 @@ func (this *QMetaProperty) read(args ...interface{}) () {
     // invoke: QVariant read(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty4readEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty4readEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "read", args)
   }
@@ -1354,7 +1398,8 @@ func (this *QMetaProperty) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK13QMetaProperty7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isValid", args)
   }
@@ -1377,7 +1422,8 @@ func (this *QMetaProperty) isDesignable(args ...interface{}) () {
     // invoke: bool isDesignable(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty12isDesignableEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty12isDesignableEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isDesignable", args)
   }
@@ -1403,7 +1449,8 @@ func (this *QMetaProperty) writeOnGadget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVariant).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QMetaProperty13writeOnGadgetEPvRK8QVariant(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "writeOnGadget", args)
   }
@@ -1423,7 +1470,8 @@ func (this *QMetaProperty) userType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty8userTypeEv
     // invoke: int userType()
-    C.C_ZNK13QMetaProperty8userTypeEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty8userTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "userType", args)
   }
@@ -1443,7 +1491,8 @@ func (this *QMetaProperty) hasNotifySignal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty15hasNotifySignalEv
     // invoke: bool hasNotifySignal()
-    C.C_ZNK13QMetaProperty15hasNotifySignalEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty15hasNotifySignalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "hasNotifySignal", args)
   }
@@ -1466,7 +1515,8 @@ func (this *QMetaProperty) isScriptable(args ...interface{}) () {
     // invoke: bool isScriptable(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty12isScriptableEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty12isScriptableEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isScriptable", args)
   }
@@ -1486,7 +1536,8 @@ func (this *QMetaProperty) isFlagType(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10isFlagTypeEv
     // invoke: bool isFlagType()
-    C.C_ZNK13QMetaProperty10isFlagTypeEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10isFlagTypeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isFlagType", args)
   }
@@ -1506,7 +1557,8 @@ func (this *QMetaProperty) name(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty4nameEv
     // invoke: const char * name()
-    C.C_ZNK13QMetaProperty4nameEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty4nameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "name", args)
   }
@@ -1529,7 +1581,8 @@ func (this *QMetaProperty) resetOnGadget(args ...interface{}) () {
     // invoke: bool resetOnGadget(void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty13resetOnGadgetEPv(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty13resetOnGadgetEPv(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "resetOnGadget", args)
   }
@@ -1549,7 +1602,8 @@ func (this *QMetaProperty) isResettable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty12isResettableEv
     // invoke: bool isResettable()
-    C.C_ZNK13QMetaProperty12isResettableEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty12isResettableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isResettable", args)
   }
@@ -1569,7 +1623,8 @@ func (this *QMetaProperty) isReadable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty10isReadableEv
     // invoke: bool isReadable()
-    C.C_ZNK13QMetaProperty10isReadableEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty10isReadableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isReadable", args)
   }
@@ -1589,7 +1644,8 @@ func (this *QMetaProperty) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMetaProperty8revisionEv
     // invoke: int revision()
-    C.C_ZNK13QMetaProperty8revisionEv(this.qclsinst)
+    var ret = C.C_ZNK13QMetaProperty8revisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "revision", args)
   }
@@ -1612,7 +1668,8 @@ func (this *QMetaProperty) isUser(args ...interface{}) () {
     // invoke: bool isUser(const class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QMetaProperty6isUserEPK7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QMetaProperty6isUserEPK7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaProperty", "isUser", args)
   }

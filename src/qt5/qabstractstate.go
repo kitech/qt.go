@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qabstractstate.h
 // dst-file: /src/core/qabstractstate.go
 //
@@ -72,7 +72,8 @@ func (this *QAbstractState) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState7machineEv
     // invoke: QStateMachine * machine()
-    C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
+    var ret = C.C_ZNK14QAbstractState7machineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractState", "machine", args)
   }
@@ -92,7 +93,8 @@ func (this *QAbstractState) active(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState6activeEv
     // invoke: bool active()
-    C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
+    var ret = C.C_ZNK14QAbstractState6activeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractState", "active", args)
   }
@@ -132,7 +134,8 @@ func (this *QAbstractState) parentState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QAbstractState11parentStateEv
     // invoke: QState * parentState()
-    C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
+    var ret = C.C_ZNK14QAbstractState11parentStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractState", "parentState", args)
   }

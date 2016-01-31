@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qiodevice.h
 // dst-file: /src/core/qiodevice.go
 //
@@ -73,9 +73,9 @@ extern void C_ZN9QIODevice7readAllEv(void* qthis); // 4
   // proto:  void QIODevice::setTextModeEnabled(bool enabled);
 extern void C_ZN9QIODevice18setTextModeEnabledEb(void* qthis, bool arg0); // 4
   // proto:  void QIODevice::QIODevice(QObject * parent);
-extern void C_ZN9QIODeviceC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN9QIODeviceC2EP7QObject(void* arg0); // 3
   // proto:  void QIODevice::QIODevice();
-extern void C_ZN9QIODeviceC2Ev(void* qthis); // 3
+extern void* C_ZN9QIODeviceC2Ev(); // 3
   // proto:  bool QIODevice::reset();
 extern void C_ZN9QIODevice5resetEv(void* qthis); // 4
   // proto:  OpenMode QIODevice::openMode();
@@ -135,7 +135,8 @@ func (this *QIODevice) bytesAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice14bytesAvailableEv
     // invoke: qint64 bytesAvailable()
-    C.C_ZNK9QIODevice14bytesAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice14bytesAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "bytesAvailable", args)
   }
@@ -155,7 +156,8 @@ func (this *QIODevice) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice3posEv
     // invoke: qint64 pos()
-    C.C_ZNK9QIODevice3posEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice3posEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "pos", args)
   }
@@ -175,7 +177,8 @@ func (this *QIODevice) bytesToWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice12bytesToWriteEv
     // invoke: qint64 bytesToWrite()
-    C.C_ZNK9QIODevice12bytesToWriteEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice12bytesToWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "bytesToWrite", args)
   }
@@ -218,7 +221,8 @@ func (this *QIODevice) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice4seekEx(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice4seekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "seek", args)
   }
@@ -238,7 +242,8 @@ func (this *QIODevice) isSequential(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice12isSequentialEv
     // invoke: bool isSequential()
-    C.C_ZNK9QIODevice12isSequentialEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice12isSequentialEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "isSequential", args)
   }
@@ -281,7 +286,8 @@ func (this *QIODevice) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK9QIODevice4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "size", args)
   }
@@ -313,19 +319,22 @@ func (this *QIODevice) write(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QIODevice5writeEPKcx(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QIODevice5writeEPKcx(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QIODevice5writeEPKc
     // invoke: qint64 write(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice5writeEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice5writeEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN9QIODevice5writeERK10QByteArray
     // invoke: qint64 write(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice5writeERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice5writeERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "write", args)
   }
@@ -345,7 +354,8 @@ func (this *QIODevice) canReadLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice11canReadLineEv
     // invoke: bool canReadLine()
-    C.C_ZNK9QIODevice11canReadLineEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice11canReadLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "canReadLine", args)
   }
@@ -368,7 +378,8 @@ func (this *QIODevice) waitForBytesWritten(args ...interface{}) () {
     // invoke: bool waitForBytesWritten(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice19waitForBytesWrittenEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice19waitForBytesWrittenEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "waitForBytesWritten", args)
   }
@@ -397,13 +408,15 @@ func (this *QIODevice) read(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QIODevice4readEPcx(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QIODevice4readEPcx(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QIODevice4readEx
     // invoke: QByteArray read(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice4readEx(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice4readEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "read", args)
   }
@@ -432,13 +445,15 @@ func (this *QIODevice) peek(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QIODevice4peekEPcx(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QIODevice4peekEPcx(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QIODevice4peekEx
     // invoke: QByteArray peek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice4peekEx(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice4peekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "peek", args)
   }
@@ -461,7 +476,8 @@ func (this *QIODevice) putChar(args ...interface{}) () {
     // invoke: bool putChar(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice7putCharEc(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice7putCharEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "putChar", args)
   }
@@ -481,7 +497,8 @@ func (this *QIODevice) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK9QIODevice11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "errorString", args)
   }
@@ -521,7 +538,8 @@ func (this *QIODevice) readAll(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice7readAllEv
     // invoke: QByteArray readAll()
-    C.C_ZN9QIODevice7readAllEv(this.qclsinst)
+    var ret = C.C_ZN9QIODevice7readAllEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "readAll", args)
   }
@@ -552,7 +570,7 @@ func (this *QIODevice) setTextModeEnabled(args ...interface{}) () {
 }
 
 // QIODevice(class QObject *)
-func NewQIODevice(args ...interface{}) QIODevice {
+func NewQIODevice(args ...interface{}) *QIODevice {
   // QIODevice(class QObject *)
   // QIODevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -571,18 +589,20 @@ func NewQIODevice(args ...interface{}) QIODevice {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QIODeviceC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN9QIODeviceC2EP7QObject(arg0)
+    return &QIODevice{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QIODeviceC1Ev
     // invoke: void QIODevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QIODeviceC2Ev(qthis)
+    qthis = C.C_ZN9QIODeviceC2Ev()
+    return &QIODevice{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIODevice", "QIODevice", args)
   }
 
-  return QIODevice{}
+  return nil // QIODevice{qclsinst:qthis}
 }
 
 // reset()
@@ -598,7 +618,8 @@ func (this *QIODevice) reset(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QIODevice5resetEv
     // invoke: bool reset()
-    C.C_ZN9QIODevice5resetEv(this.qclsinst)
+    var ret = C.C_ZN9QIODevice5resetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "reset", args)
   }
@@ -638,7 +659,8 @@ func (this *QIODevice) isTextModeEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice17isTextModeEnabledEv
     // invoke: bool isTextModeEnabled()
-    C.C_ZNK9QIODevice17isTextModeEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice17isTextModeEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "isTextModeEnabled", args)
   }
@@ -678,7 +700,8 @@ func (this *QIODevice) isOpen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice6isOpenEv
     // invoke: bool isOpen()
-    C.C_ZNK9QIODevice6isOpenEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice6isOpenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "isOpen", args)
   }
@@ -698,7 +721,8 @@ func (this *QIODevice) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice5atEndEv
     // invoke: bool atEnd()
-    C.C_ZNK9QIODevice5atEndEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "atEnd", args)
   }
@@ -721,7 +745,8 @@ func (this *QIODevice) waitForReadyRead(args ...interface{}) () {
     // invoke: bool waitForReadyRead(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice16waitForReadyReadEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice16waitForReadyReadEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "waitForReadyRead", args)
   }
@@ -741,7 +766,8 @@ func (this *QIODevice) isReadable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice10isReadableEv
     // invoke: bool isReadable()
-    C.C_ZNK9QIODevice10isReadableEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice10isReadableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "isReadable", args)
   }
@@ -768,7 +794,8 @@ func (this *QIODevice) readLine(args ...interface{}) () {
     // invoke: QByteArray readLine(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice8readLineEx(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice8readLineEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QIODevice8readLineEPcx
     // invoke: qint64 readLine(char *, qint64)
@@ -776,7 +803,8 @@ func (this *QIODevice) readLine(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QIODevice8readLineEPcx(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QIODevice8readLineEPcx(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "readLine", args)
   }
@@ -796,7 +824,8 @@ func (this *QIODevice) isWritable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QIODevice10isWritableEv
     // invoke: bool isWritable()
-    C.C_ZNK9QIODevice10isWritableEv(this.qclsinst)
+    var ret = C.C_ZNK9QIODevice10isWritableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "isWritable", args)
   }
@@ -819,7 +848,8 @@ func (this *QIODevice) getChar(args ...interface{}) () {
     // invoke: bool getChar(char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QIODevice7getCharEPc(this.qclsinst, arg0)
+    var ret = C.C_ZN9QIODevice7getCharEPc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIODevice", "getChar", args)
   }

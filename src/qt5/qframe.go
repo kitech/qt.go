@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qframe.h
 // dst-file: /src/widgets/qframe.go
 //
@@ -87,7 +87,8 @@ func (this *QFrame) frameStyle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameStyleEv
     // invoke: int frameStyle()
-    C.C_ZNK6QFrame10frameStyleEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame10frameStyleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "frameStyle", args)
   }
@@ -127,7 +128,8 @@ func (this *QFrame) frameWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame10frameWidthEv
     // invoke: int frameWidth()
-    C.C_ZNK6QFrame10frameWidthEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame10frameWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "frameWidth", args)
   }
@@ -213,7 +215,8 @@ func (this *QFrame) frameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9frameRectEv
     // invoke: QRect frameRect()
-    C.C_ZNK6QFrame9frameRectEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame9frameRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "frameRect", args)
   }
@@ -276,7 +279,8 @@ func (this *QFrame) midLineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame12midLineWidthEv
     // invoke: int midLineWidth()
-    C.C_ZNK6QFrame12midLineWidthEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame12midLineWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "midLineWidth", args)
   }
@@ -296,7 +300,8 @@ func (this *QFrame) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK6QFrame8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "sizeHint", args)
   }
@@ -359,7 +364,8 @@ func (this *QFrame) lineWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QFrame9lineWidthEv
     // invoke: int lineWidth()
-    C.C_ZNK6QFrame9lineWidthEv(this.qclsinst)
+    var ret = C.C_ZNK6QFrame9lineWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFrame", "lineWidth", args)
   }

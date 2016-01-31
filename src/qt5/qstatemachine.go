@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qstatemachine.h
 // dst-file: /src/core/qstatemachine.go
 //
@@ -65,7 +65,7 @@ extern void C_ZNK13QStateMachine9isRunningEv(void* qthis); // 4
   // proto:  void QStateMachine::~QStateMachine();
 extern void C_ZN13QStateMachineD2Ev(void* qthis); // 4
   // proto:  void QStateMachine::QStateMachine(QObject * parent);
-extern void C_ZN13QStateMachineC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QStateMachineC2EP7QObject(void* arg0); // 3
   // proto:  int QStateMachine::postDelayedEvent(QEvent * event, int delay);
 extern void C_ZN13QStateMachine16postDelayedEventEP6QEventi(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  QStateMachine::Error QStateMachine::error();
@@ -189,7 +189,8 @@ func (this *QStateMachine) isAnimated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine10isAnimatedEv
     // invoke: bool isAnimated()
-    C.C_ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
+    var ret = C.C_ZNK13QStateMachine10isAnimatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "isAnimated", args)
   }
@@ -238,7 +239,8 @@ func (this *QStateMachine) eventFilter(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QEvent).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN13QStateMachine11eventFilterEP7QObjectP6QEvent(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "eventFilter", args)
   }
@@ -281,7 +283,8 @@ func (this *QStateMachine) cancelDelayedEvent(args ...interface{}) () {
     // invoke: bool cancelDelayedEvent(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
+    var ret = C.C_ZN13QStateMachine18cancelDelayedEventEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "cancelDelayedEvent", args)
   }
@@ -347,7 +350,8 @@ func (this *QStateMachine) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK13QStateMachine11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK13QStateMachine11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "errorString", args)
   }
@@ -450,7 +454,8 @@ func (this *QStateMachine) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QStateMachine9isRunningEv
     // invoke: bool isRunning()
-    C.C_ZNK13QStateMachine9isRunningEv(this.qclsinst)
+    var ret = C.C_ZNK13QStateMachine9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "isRunning", args)
   }
@@ -478,7 +483,7 @@ func (this *QStateMachine) FreeQStateMachine(args ...interface{}) () {
 }
 
 // QStateMachine(class QObject *)
-func NewQStateMachine(args ...interface{}) QStateMachine {
+func NewQStateMachine(args ...interface{}) *QStateMachine {
   // QStateMachine(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -495,12 +500,13 @@ func NewQStateMachine(args ...interface{}) QStateMachine {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QStateMachineC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QStateMachineC2EP7QObject(arg0)
+    return &QStateMachine{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStateMachine", "QStateMachine", args)
   }
 
-  return QStateMachine{}
+  return nil // QStateMachine{qclsinst:qthis}
 }
 
 // postDelayedEvent(class QEvent *, int)
@@ -522,7 +528,8 @@ func (this *QStateMachine) postDelayedEvent(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN13QStateMachine16postDelayedEventEP6QEventi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStateMachine", "postDelayedEvent", args)
   }

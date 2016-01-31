@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qtreewidgetitemiterator.h
 // dst-file: /src/widgets/qtreewidgetitemiterator.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QTreeWidgetItemIterator::~QTreeWidgetItemIterator();
 extern void C_ZN23QTreeWidgetItemIteratorD2Ev(void* qthis); // 4
   // proto:  void QTreeWidgetItemIterator::QTreeWidgetItemIterator(const QTreeWidgetItemIterator & it);
-extern void C_ZN23QTreeWidgetItemIteratorC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN23QTreeWidgetItemIteratorC2ERKS_(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QTreeWidgetItemIterator) FreeQTreeWidgetItemIterator(args ...interfa
 }
 
 // QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
-func NewQTreeWidgetItemIterator(args ...interface{}) QTreeWidgetItemIterator {
+func NewQTreeWidgetItemIterator(args ...interface{}) *QTreeWidgetItemIterator {
   // QTreeWidgetItemIterator(const class QTreeWidgetItemIterator &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -88,12 +88,13 @@ func NewQTreeWidgetItemIterator(args ...interface{}) QTreeWidgetItemIterator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN23QTreeWidgetItemIteratorC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN23QTreeWidgetItemIteratorC2ERKS_(arg0)
+    return &QTreeWidgetItemIterator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTreeWidgetItemIterator", "QTreeWidgetItemIterator", args)
   }
 
-  return QTreeWidgetItemIterator{}
+  return nil // QTreeWidgetItemIterator{qclsinst:qthis}
 }
 
 // <= body block end

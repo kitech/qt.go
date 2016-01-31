@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qlibrary.h
 // dst-file: /src/core/qlibrary.go
 //
@@ -57,13 +57,13 @@ extern void C_ZN8QLibraryD2Ev(void* qthis); // 4
   // proto: static bool QLibrary::isLibrary(const QString & fileName);
 extern void C_ZN8QLibrary9isLibraryERK7QString(void* arg0); // 4
   // proto:  void QLibrary::QLibrary(QObject * parent);
-extern void C_ZN8QLibraryC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN8QLibraryC2EP7QObject(void* arg0); // 3
   // proto:  void QLibrary::QLibrary(const QString & fileName, int verNum, QObject * parent);
-extern void C_ZN8QLibraryC2ERK7QStringiP7QObject(void* qthis, void* arg0, int32_t arg1, void* arg2); // 3
+extern void* C_ZN8QLibraryC2ERK7QStringiP7QObject(void* arg0, int32_t arg1, void* arg2); // 3
   // proto:  void QLibrary::QLibrary(const QString & fileName, const QString & version, QObject * parent);
-extern void C_ZN8QLibraryC2ERK7QStringS2_P7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN8QLibraryC2ERK7QStringS2_P7QObject(void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QLibrary::QLibrary(const QString & fileName, QObject * parent);
-extern void C_ZN8QLibraryC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN8QLibraryC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  QString QLibrary::fileName();
 extern void C_ZNK8QLibrary8fileNameEv(void* qthis); // 4
   // proto:  LoadHints QLibrary::loadHints();
@@ -99,7 +99,8 @@ func (this *QLibrary) load(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QLibrary4loadEv
     // invoke: bool load()
-    C.C_ZN8QLibrary4loadEv(this.qclsinst)
+    var ret = C.C_ZN8QLibrary4loadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "load", args)
   }
@@ -204,7 +205,8 @@ func (this *QLibrary) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QLibrary11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK8QLibrary11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK8QLibrary11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "errorString", args)
   }
@@ -224,7 +226,8 @@ func (this *QLibrary) unload(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QLibrary6unloadEv
     // invoke: bool unload()
-    C.C_ZN8QLibrary6unloadEv(this.qclsinst)
+    var ret = C.C_ZN8QLibrary6unloadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "unload", args)
   }
@@ -305,7 +308,8 @@ func (this *QLibrary) isLoaded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QLibrary8isLoadedEv
     // invoke: bool isLoaded()
-    C.C_ZNK8QLibrary8isLoadedEv(this.qclsinst)
+    var ret = C.C_ZNK8QLibrary8isLoadedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "isLoaded", args)
   }
@@ -348,7 +352,8 @@ func (this *QLibrary) isLibrary_s(args ...interface{}) () {
     // invoke: bool isLibrary(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QLibrary9isLibraryERK7QString(arg0)
+    var ret = C.C_ZN8QLibrary9isLibraryERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "isLibrary", args)
   }
@@ -356,7 +361,7 @@ func (this *QLibrary) isLibrary_s(args ...interface{}) () {
 }
 
 // QLibrary(class QObject *)
-func NewQLibrary(args ...interface{}) QLibrary {
+func NewQLibrary(args ...interface{}) *QLibrary {
   // QLibrary(class QObject *)
   // QLibrary(const class QString &, int, class QObject *)
   // QLibrary(const class QString &, const class QString &, class QObject *)
@@ -387,7 +392,8 @@ func NewQLibrary(args ...interface{}) QLibrary {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QLibraryC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN8QLibraryC2EP7QObject(arg0)
+    return &QLibrary{qclsinst:qthis}
   case 1:
     // invoke: _ZN8QLibraryC1ERK7QStringiP7QObject
     // invoke: void QLibrary(const class QString &, int, class QObject *)
@@ -399,7 +405,8 @@ func NewQLibrary(args ...interface{}) QLibrary {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QLibraryC2ERK7QStringiP7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN8QLibraryC2ERK7QStringiP7QObject(arg0, arg1, arg2)
+    return &QLibrary{qclsinst:qthis}
   case 2:
     // invoke: _ZN8QLibraryC1ERK7QStringS2_P7QObject
     // invoke: void QLibrary(const class QString &, const class QString &, class QObject *)
@@ -411,7 +418,8 @@ func NewQLibrary(args ...interface{}) QLibrary {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QLibraryC2ERK7QStringS2_P7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN8QLibraryC2ERK7QStringS2_P7QObject(arg0, arg1, arg2)
+    return &QLibrary{qclsinst:qthis}
   case 3:
     // invoke: _ZN8QLibraryC1ERK7QStringP7QObject
     // invoke: void QLibrary(const class QString &, class QObject *)
@@ -421,12 +429,13 @@ func NewQLibrary(args ...interface{}) QLibrary {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QLibraryC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN8QLibraryC2ERK7QStringP7QObject(arg0, arg1)
+    return &QLibrary{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLibrary", "QLibrary", args)
   }
 
-  return QLibrary{}
+  return nil // QLibrary{qclsinst:qthis}
 }
 
 // fileName()
@@ -442,7 +451,8 @@ func (this *QLibrary) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QLibrary8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK8QLibrary8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK8QLibrary8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLibrary", "fileName", args)
   }

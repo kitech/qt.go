@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qcryptographichash.h
 // dst-file: /src/core/qcryptographichash.go
 //
@@ -109,7 +109,8 @@ func (this *QCryptographicHash) addData(args ...interface{}) () {
     // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
+    var ret = C.C_ZN18QCryptographicHash7addDataEP9QIODevice(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN18QCryptographicHash7addDataERK10QByteArray
     // invoke: void addData(const class QByteArray &)
@@ -135,7 +136,8 @@ func (this *QCryptographicHash) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QCryptographicHash6resultEv
     // invoke: QByteArray result()
-    C.C_ZNK18QCryptographicHash6resultEv(this.qclsinst)
+    var ret = C.C_ZNK18QCryptographicHash6resultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCryptographicHash", "result", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qpropertyanimation.h
 // dst-file: /src/core/qpropertyanimation.go
 //
@@ -33,9 +33,9 @@ extern void C_ZN18QPropertyAnimationD2Ev(void* qthis); // 4
   // proto:  QByteArray QPropertyAnimation::propertyName();
 extern void C_ZNK18QPropertyAnimation12propertyNameEv(void* qthis); // 4
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * parent);
-extern void C_ZN18QPropertyAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN18QPropertyAnimationC2EP7QObject(void* arg0); // 3
   // proto:  void QPropertyAnimation::QPropertyAnimation(QObject * target, const QByteArray & propertyName, QObject * parent);
-extern void C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QPropertyAnimation::setTargetObject(QObject * target);
 extern void C_ZN18QPropertyAnimation15setTargetObjectEP7QObject(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QPropertyAnimation::metaObject();
@@ -95,7 +95,8 @@ func (this *QPropertyAnimation) propertyName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12propertyNameEv
     // invoke: QByteArray propertyName()
-    C.C_ZNK18QPropertyAnimation12propertyNameEv(this.qclsinst)
+    var ret = C.C_ZNK18QPropertyAnimation12propertyNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "propertyName", args)
   }
@@ -103,7 +104,7 @@ func (this *QPropertyAnimation) propertyName(args ...interface{}) () {
 }
 
 // QPropertyAnimation(class QObject *)
-func NewQPropertyAnimation(args ...interface{}) QPropertyAnimation {
+func NewQPropertyAnimation(args ...interface{}) *QPropertyAnimation {
   // QPropertyAnimation(class QObject *)
   // QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -125,7 +126,8 @@ func NewQPropertyAnimation(args ...interface{}) QPropertyAnimation {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QPropertyAnimationC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN18QPropertyAnimationC2EP7QObject(arg0)
+    return &QPropertyAnimation{qclsinst:qthis}
   case 1:
     // invoke: _ZN18QPropertyAnimationC1EP7QObjectRK10QByteArrayS1_
     // invoke: void QPropertyAnimation(class QObject *, const class QByteArray &, class QObject *)
@@ -137,12 +139,13 @@ func NewQPropertyAnimation(args ...interface{}) QPropertyAnimation {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN18QPropertyAnimationC2EP7QObjectRK10QByteArrayS1_(arg0, arg1, arg2)
+    return &QPropertyAnimation{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "QPropertyAnimation", args)
   }
 
-  return QPropertyAnimation{}
+  return nil // QPropertyAnimation{qclsinst:qthis}
 }
 
 // setTargetObject(class QObject *)
@@ -224,7 +227,8 @@ func (this *QPropertyAnimation) targetObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QPropertyAnimation12targetObjectEv
     // invoke: QObject * targetObject()
-    C.C_ZNK18QPropertyAnimation12targetObjectEv(this.qclsinst)
+    var ret = C.C_ZNK18QPropertyAnimation12targetObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPropertyAnimation", "targetObject", args)
   }

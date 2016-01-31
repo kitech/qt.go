@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qquaternion.h
 // dst-file: /src/gui/qquaternion.go
 //
@@ -35,13 +35,13 @@ extern void C_ZN11QQuaternion13fromDirectionERK9QVector3DS2_(void* arg0, void* a
   // proto:  QVector4D QQuaternion::toVector4D();
 extern void C_ZNK11QQuaternion10toVector4DEv(void* qthis); // 2
   // proto:  void QQuaternion::QQuaternion(float scalar, float xpos, float ypos, float zpos);
-extern void C_ZN11QQuaternionC2Effff(void* qthis, float arg0, float arg1, float arg2, float arg3); // 1
+extern void* C_ZN11QQuaternionC2Effff(float arg0, float arg1, float arg2, float arg3); // 1
   // proto:  void QQuaternion::QQuaternion(const QVector4D & vector);
-extern void C_ZN11QQuaternionC2ERK9QVector4D(void* qthis, void* arg0); // 1
+extern void* C_ZN11QQuaternionC2ERK9QVector4D(void* arg0); // 1
   // proto:  void QQuaternion::QQuaternion(float scalar, const QVector3D & vector);
-extern void C_ZN11QQuaternionC2EfRK9QVector3D(void* qthis, float arg0, void* arg1); // 1
+extern void* C_ZN11QQuaternionC2EfRK9QVector3D(float arg0, void* arg1); // 1
   // proto:  void QQuaternion::QQuaternion();
-extern void C_ZN11QQuaternionC2Ev(void* qthis); // 1
+extern void* C_ZN11QQuaternionC2Ev(); // 1
   // proto:  QVector3D QQuaternion::rotatedVector(const QVector3D & vector);
 extern void C_ZNK11QQuaternion13rotatedVectorERK9QVector3D(void* qthis, void* arg0); // 4
   // proto:  QQuaternion QQuaternion::inverted();
@@ -149,7 +149,8 @@ func (this *QQuaternion) rotationTo_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QQuaternion10rotationToERK9QVector3DS2_(arg0, arg1)
+    var ret = C.C_ZN11QQuaternion10rotationToERK9QVector3DS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "rotationTo", args)
   }
@@ -175,7 +176,8 @@ func (this *QQuaternion) fromDirection_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QVector3D).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QQuaternion13fromDirectionERK9QVector3DS2_(arg0, arg1)
+    var ret = C.C_ZN11QQuaternion13fromDirectionERK9QVector3DS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "fromDirection", args)
   }
@@ -195,7 +197,8 @@ func (this *QQuaternion) toVector4D(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion10toVector4DEv
     // invoke: QVector4D toVector4D()
-    C.C_ZNK11QQuaternion10toVector4DEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion10toVector4DEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "toVector4D", args)
   }
@@ -203,7 +206,7 @@ func (this *QQuaternion) toVector4D(args ...interface{}) () {
 }
 
 // QQuaternion(float, float, float, float)
-func NewQQuaternion(args ...interface{}) QQuaternion {
+func NewQQuaternion(args ...interface{}) *QQuaternion {
   // QQuaternion(float, float, float, float)
   // QQuaternion(const class QVector4D &)
   // QQuaternion(float, const class QVector3D &)
@@ -238,7 +241,8 @@ func NewQQuaternion(args ...interface{}) QQuaternion {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QQuaternionC2Effff(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN11QQuaternionC2Effff(arg0, arg1, arg2, arg3)
+    return &QQuaternion{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QQuaternionC1ERK9QVector4D
     // invoke: void QQuaternion(const class QVector4D &)
@@ -246,7 +250,8 @@ func NewQQuaternion(args ...interface{}) QQuaternion {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QQuaternionC2ERK9QVector4D(qthis, arg0)
+    qthis = C.C_ZN11QQuaternionC2ERK9QVector4D(arg0)
+    return &QQuaternion{qclsinst:qthis}
   case 2:
     // invoke: _ZN11QQuaternionC1EfRK9QVector3D
     // invoke: void QQuaternion(float, const class QVector3D &)
@@ -256,18 +261,20 @@ func NewQQuaternion(args ...interface{}) QQuaternion {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QQuaternionC2EfRK9QVector3D(qthis, arg0, arg1)
+    qthis = C.C_ZN11QQuaternionC2EfRK9QVector3D(arg0, arg1)
+    return &QQuaternion{qclsinst:qthis}
   case 3:
     // invoke: _ZN11QQuaternionC1Ev
     // invoke: void QQuaternion()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QQuaternionC2Ev(qthis)
+    qthis = C.C_ZN11QQuaternionC2Ev()
+    return &QQuaternion{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QQuaternion", "QQuaternion", args)
   }
 
-  return QQuaternion{}
+  return nil // QQuaternion{qclsinst:qthis}
 }
 
 // rotatedVector(const class QVector3D &)
@@ -286,7 +293,8 @@ func (this *QQuaternion) rotatedVector(args ...interface{}) () {
     // invoke: QVector3D rotatedVector(const class QVector3D &)
     var arg0 = args[0].(QVector3D).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QQuaternion13rotatedVectorERK9QVector3D(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QQuaternion13rotatedVectorERK9QVector3D(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "rotatedVector", args)
   }
@@ -306,7 +314,8 @@ func (this *QQuaternion) inverted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion8invertedEv
     // invoke: QQuaternion inverted()
-    C.C_ZNK11QQuaternion8invertedEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion8invertedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "inverted", args)
   }
@@ -326,7 +335,8 @@ func (this *QQuaternion) scalar(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion6scalarEv
     // invoke: float scalar()
-    C.C_ZNK11QQuaternion6scalarEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion6scalarEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "scalar", args)
   }
@@ -346,7 +356,8 @@ func (this *QQuaternion) conjugate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion9conjugateEv
     // invoke: QQuaternion conjugate()
-    C.C_ZNK11QQuaternion9conjugateEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion9conjugateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "conjugate", args)
   }
@@ -372,7 +383,8 @@ func (this *QQuaternion) dotProduct_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QQuaternion).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QQuaternion10dotProductERKS_S1_(arg0, arg1)
+    var ret = C.C_ZN11QQuaternion10dotProductERKS_S1_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "dotProduct", args)
   }
@@ -450,7 +462,8 @@ func (this *QQuaternion) slerp_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.float(args[2].(float32))
     if false {fmt.Println(arg2)}
-    C.C_ZN11QQuaternion5slerpERKS_S1_f(arg0, arg1, arg2)
+    var ret = C.C_ZN11QQuaternion5slerpERKS_S1_f(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "slerp", args)
   }
@@ -520,7 +533,8 @@ func (this *QQuaternion) fromAxisAndAngle_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.float(args[1].(float32))
     if false {fmt.Println(arg1)}
-    C.C_ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df(arg0, arg1)
+    var ret = C.C_ZN11QQuaternion16fromAxisAndAngleERK9QVector3Df(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QQuaternion16fromAxisAndAngleEffff
     // invoke: QQuaternion fromAxisAndAngle(float, float, float, float)
@@ -532,7 +546,8 @@ func (this *QQuaternion) fromAxisAndAngle_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.float(args[3].(float32))
     if false {fmt.Println(arg3)}
-    C.C_ZN11QQuaternion16fromAxisAndAngleEffff(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN11QQuaternion16fromAxisAndAngleEffff(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "fromAxisAndAngle", args)
   }
@@ -552,7 +567,8 @@ func (this *QQuaternion) conjugated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion10conjugatedEv
     // invoke: QQuaternion conjugated()
-    C.C_ZNK11QQuaternion10conjugatedEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion10conjugatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "conjugated", args)
   }
@@ -624,7 +640,8 @@ func (this *QQuaternion) fromEulerAngles_s(args ...interface{}) () {
     // invoke: QQuaternion fromEulerAngles(const class QVector3D &)
     var arg0 = args[0].(QVector3D).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0)
+    var ret = C.C_ZN11QQuaternion15fromEulerAnglesERK9QVector3D(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QQuaternion15fromEulerAnglesEfff
     // invoke: QQuaternion fromEulerAngles(float, float, float)
@@ -634,7 +651,8 @@ func (this *QQuaternion) fromEulerAngles_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.float(args[2].(float32))
     if false {fmt.Println(arg2)}
-    C.C_ZN11QQuaternion15fromEulerAnglesEfff(arg0, arg1, arg2)
+    var ret = C.C_ZN11QQuaternion15fromEulerAnglesEfff(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "fromEulerAngles", args)
   }
@@ -654,7 +672,8 @@ func (this *QQuaternion) lengthSquared(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion13lengthSquaredEv
     // invoke: float lengthSquared()
-    C.C_ZNK11QQuaternion13lengthSquaredEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion13lengthSquaredEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "lengthSquared", args)
   }
@@ -683,7 +702,8 @@ func (this *QQuaternion) nlerp_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.float(args[2].(float32))
     if false {fmt.Println(arg2)}
-    C.C_ZN11QQuaternion5nlerpERKS_S1_f(arg0, arg1, arg2)
+    var ret = C.C_ZN11QQuaternion5nlerpERKS_S1_f(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "nlerp", args)
   }
@@ -703,7 +723,8 @@ func (this *QQuaternion) normalized(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion10normalizedEv
     // invoke: QQuaternion normalized()
-    C.C_ZNK11QQuaternion10normalizedEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion10normalizedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "normalized", args)
   }
@@ -850,7 +871,8 @@ func (this *QQuaternion) fromAxes_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QVector3D).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_(arg0, arg1, arg2)
+    var ret = C.C_ZN11QQuaternion8fromAxesERK9QVector3DS2_S2_(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "fromAxes", args)
   }
@@ -870,7 +892,8 @@ func (this *QQuaternion) toEulerAngles(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion13toEulerAnglesEv
     // invoke: QVector3D toEulerAngles()
-    C.C_ZNK11QQuaternion13toEulerAnglesEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion13toEulerAnglesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "toEulerAngles", args)
   }
@@ -913,7 +936,8 @@ func (this *QQuaternion) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK11QQuaternion6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "isNull", args)
   }
@@ -933,7 +957,8 @@ func (this *QQuaternion) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion6lengthEv
     // invoke: float length()
-    C.C_ZNK11QQuaternion6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "length", args)
   }
@@ -953,7 +978,8 @@ func (this *QQuaternion) vector(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion6vectorEv
     // invoke: QVector3D vector()
-    C.C_ZNK11QQuaternion6vectorEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion6vectorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "vector", args)
   }
@@ -973,7 +999,8 @@ func (this *QQuaternion) isIdentity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion10isIdentityEv
     // invoke: bool isIdentity()
-    C.C_ZNK11QQuaternion10isIdentityEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion10isIdentityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "isIdentity", args)
   }
@@ -1013,7 +1040,8 @@ func (this *QQuaternion) z(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QQuaternion1zEv
     // invoke: float z()
-    C.C_ZNK11QQuaternion1zEv(this.qclsinst)
+    var ret = C.C_ZNK11QQuaternion1zEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QQuaternion", "z", args)
   }

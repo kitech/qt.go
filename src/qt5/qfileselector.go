@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfileselector.h
 // dst-file: /src/core/qfileselector.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QFileSelector::QFileSelector(QObject * parent);
-extern void C_ZN13QFileSelectorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QFileSelectorC2EP7QObject(void* arg0); // 3
   // proto:  const QMetaObject * QFileSelector::metaObject();
 extern void C_ZNK13QFileSelector10metaObjectEv(void* qthis); // 4
   // proto:  QStringList QFileSelector::allSelectors();
@@ -63,7 +63,7 @@ type QFileSelector struct {
 }
 
 // QFileSelector(class QObject *)
-func NewQFileSelector(args ...interface{}) QFileSelector {
+func NewQFileSelector(args ...interface{}) *QFileSelector {
   // QFileSelector(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -80,12 +80,13 @@ func NewQFileSelector(args ...interface{}) QFileSelector {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QFileSelectorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QFileSelectorC2EP7QObject(arg0)
+    return &QFileSelector{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSelector", "QFileSelector", args)
   }
 
-  return QFileSelector{}
+  return nil // QFileSelector{qclsinst:qthis}
 }
 
 // metaObject()
@@ -210,13 +211,15 @@ func (this *QFileSelector) select_(args ...interface{}) () {
     // invoke: QString select(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QFileSelector6selectERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QFileSelector6selectERK4QUrl
     // invoke: QUrl select(const class QUrl &)
     var arg0 = args[0].(QUrl).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QFileSelector6selectERK4QUrl(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileSelector", "select", args)
   }

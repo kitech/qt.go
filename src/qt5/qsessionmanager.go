@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qsessionmanager.h
 // dst-file: /src/gui/qsessionmanager.go
 //
@@ -232,7 +232,8 @@ func (this *QSessionManager) sessionKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager10sessionKeyEv
     // invoke: QString sessionKey()
-    C.C_ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
+    var ret = C.C_ZNK15QSessionManager10sessionKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionKey", args)
   }
@@ -252,7 +253,8 @@ func (this *QSessionManager) isPhase2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager8isPhase2Ev
     // invoke: bool isPhase2()
-    C.C_ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
+    var ret = C.C_ZNK15QSessionManager8isPhase2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSessionManager", "isPhase2", args)
   }
@@ -295,7 +297,8 @@ func (this *QSessionManager) allowsInteraction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager17allowsInteractionEv
     // invoke: bool allowsInteraction()
-    C.C_ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
+    var ret = C.C_ZN15QSessionManager17allowsInteractionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsInteraction", args)
   }
@@ -355,7 +358,8 @@ func (this *QSessionManager) allowsErrorInteraction(args ...interface{}) () {
   case 0:
     // invoke: _ZN15QSessionManager22allowsErrorInteractionEv
     // invoke: bool allowsErrorInteraction()
-    C.C_ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
+    var ret = C.C_ZN15QSessionManager22allowsErrorInteractionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSessionManager", "allowsErrorInteraction", args)
   }
@@ -375,7 +379,8 @@ func (this *QSessionManager) sessionId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSessionManager9sessionIdEv
     // invoke: QString sessionId()
-    C.C_ZNK15QSessionManager9sessionIdEv(this.qclsinst)
+    var ret = C.C_ZNK15QSessionManager9sessionIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSessionManager", "sessionId", args)
   }

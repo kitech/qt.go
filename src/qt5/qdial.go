@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdial.h
 // dst-file: /src/widgets/qdial.go
 //
@@ -35,7 +35,7 @@ extern void C_ZNK5QDial14notchesVisibleEv(void* qthis); // 4
   // proto:  void QDial::~QDial();
 extern void C_ZN5QDialD2Ev(void* qthis); // 4
   // proto:  void QDial::QDial(QWidget * parent);
-extern void C_ZN5QDialC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN5QDialC2EP7QWidget(void* arg0); // 3
   // proto:  void QDial::setWrapping(bool on);
 extern void C_ZN5QDial11setWrappingEb(void* qthis, bool arg0); // 4
   // proto:  void QDial::setNotchesVisible(bool visible);
@@ -106,7 +106,8 @@ func (this *QDial) notchesVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial14notchesVisibleEv
     // invoke: bool notchesVisible()
-    C.C_ZNK5QDial14notchesVisibleEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial14notchesVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "notchesVisible", args)
   }
@@ -134,7 +135,7 @@ func (this *QDial) FreeQDial(args ...interface{}) () {
 }
 
 // QDial(class QWidget *)
-func NewQDial(args ...interface{}) QDial {
+func NewQDial(args ...interface{}) *QDial {
   // QDial(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -151,12 +152,13 @@ func NewQDial(args ...interface{}) QDial {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QDialC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN5QDialC2EP7QWidget(arg0)
+    return &QDial{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDial", "QDial", args)
   }
 
-  return QDial{}
+  return nil // QDial{qclsinst:qthis}
 }
 
 // setWrapping(_Bool)
@@ -218,7 +220,8 @@ func (this *QDial) notchSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial9notchSizeEv
     // invoke: int notchSize()
-    C.C_ZNK5QDial9notchSizeEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial9notchSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "notchSize", args)
   }
@@ -238,7 +241,8 @@ func (this *QDial) wrapping(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial8wrappingEv
     // invoke: bool wrapping()
-    C.C_ZNK5QDial8wrappingEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial8wrappingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "wrapping", args)
   }
@@ -258,7 +262,8 @@ func (this *QDial) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK5QDial8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "sizeHint", args)
   }
@@ -278,7 +283,8 @@ func (this *QDial) notchTarget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial11notchTargetEv
     // invoke: qreal notchTarget()
-    C.C_ZNK5QDial11notchTargetEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial11notchTargetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "notchTarget", args)
   }
@@ -318,7 +324,8 @@ func (this *QDial) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDial15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK5QDial15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK5QDial15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDial", "minimumSizeHint", args)
   }

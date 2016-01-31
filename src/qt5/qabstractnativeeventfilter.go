@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qabstractnativeeventfilter.h
 // dst-file: /src/core/qabstractnativeeventfilter.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QAbstractNativeEventFilter::~QAbstractNativeEventFilter();
 extern void C_ZN26QAbstractNativeEventFilterD2Ev(void* qthis); // 4
   // proto:  void QAbstractNativeEventFilter::QAbstractNativeEventFilter();
-extern void C_ZN26QAbstractNativeEventFilterC2Ev(void* qthis); // 3
+extern void* C_ZN26QAbstractNativeEventFilterC2Ev(); // 3
 */
 import "C"
 // } // <= ext block end
@@ -71,7 +71,7 @@ func (this *QAbstractNativeEventFilter) FreeQAbstractNativeEventFilter(args ...i
 }
 
 // QAbstractNativeEventFilter()
-func NewQAbstractNativeEventFilter(args ...interface{}) QAbstractNativeEventFilter {
+func NewQAbstractNativeEventFilter(args ...interface{}) *QAbstractNativeEventFilter {
   // QAbstractNativeEventFilter()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -85,12 +85,13 @@ func NewQAbstractNativeEventFilter(args ...interface{}) QAbstractNativeEventFilt
     // invoke: void QAbstractNativeEventFilter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN26QAbstractNativeEventFilterC2Ev(qthis)
+    qthis = C.C_ZN26QAbstractNativeEventFilterC2Ev()
+    return &QAbstractNativeEventFilter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractNativeEventFilter", "QAbstractNativeEventFilter", args)
   }
 
-  return QAbstractNativeEventFilter{}
+  return nil // QAbstractNativeEventFilter{qclsinst:qthis}
 }
 
 // <= body block end

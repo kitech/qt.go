@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdirmodel.h
 // dst-file: /src/widgets/qdirmodel.go
 //
@@ -85,7 +85,7 @@ extern void C_ZNK9QDirModel12iconProviderEv(void* qthis); // 4
   // proto:  QStringList QDirModel::nameFilters();
 extern void C_ZNK9QDirModel11nameFiltersEv(void* qthis); // 4
   // proto:  void QDirModel::QDirModel(QObject * parent);
-extern void C_ZN9QDirModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN9QDirModelC2EP7QObject(void* arg0); // 3
   // proto:  bool QDirModel::remove(const QModelIndex & index);
 extern void C_ZN9QDirModel6removeERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  QDir::Filters QDirModel::filter();
@@ -132,7 +132,8 @@ func (this *QDirModel) columnCount(args ...interface{}) () {
     // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "columnCount", args)
   }
@@ -224,7 +225,8 @@ func (this *QDirModel) isDir(args ...interface{}) () {
     // invoke: bool isDir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel5isDirERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "isDir", args)
   }
@@ -244,7 +246,8 @@ func (this *QDirModel) lazyChildCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel14lazyChildCountEv
     // invoke: bool lazyChildCount()
-    C.C_ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
+    var ret = C.C_ZNK9QDirModel14lazyChildCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "lazyChildCount", args)
   }
@@ -287,7 +290,8 @@ func (this *QDirModel) resolveSymlinks(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel15resolveSymlinksEv
     // invoke: bool resolveSymlinks()
-    C.C_ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
+    var ret = C.C_ZNK9QDirModel15resolveSymlinksEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "resolveSymlinks", args)
   }
@@ -320,7 +324,8 @@ func (this *QDirModel) index(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK9QDirModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QDirModel5indexERK7QStringi
     // invoke: QModelIndex index(const class QString &, int)
@@ -328,7 +333,8 @@ func (this *QDirModel) index(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QDirModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QDirModel5indexERK7QStringi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "index", args)
   }
@@ -351,7 +357,8 @@ func (this *QDirModel) hasChildren(args ...interface{}) () {
     // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "hasChildren", args)
   }
@@ -371,7 +378,8 @@ func (this *QDirModel) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C.C_ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
+    var ret = C.C_ZNK9QDirModel10isReadOnlyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "isReadOnly", args)
   }
@@ -394,7 +402,8 @@ func (this *QDirModel) filePath(args ...interface{}) () {
     // invoke: QString filePath(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel8filePathERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "filePath", args)
   }
@@ -420,7 +429,8 @@ func (this *QDirModel) mkdir(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QDirModel5mkdirERK11QModelIndexRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "mkdir", args)
   }
@@ -443,7 +453,8 @@ func (this *QDirModel) rmdir(args ...interface{}) () {
     // invoke: bool rmdir(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZN9QDirModel5rmdirERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "rmdir", args)
   }
@@ -489,7 +500,8 @@ func (this *QDirModel) fileInfo(args ...interface{}) () {
     // invoke: QFileInfo fileInfo(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel8fileInfoERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "fileInfo", args)
   }
@@ -518,7 +530,8 @@ func (this *QDirModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN9QDirModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "setData", args)
   }
@@ -541,7 +554,8 @@ func (this *QDirModel) parent(args ...interface{}) () {
     // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "parent", args)
   }
@@ -564,7 +578,8 @@ func (this *QDirModel) fileName(args ...interface{}) () {
     // invoke: QString fileName(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel8fileNameERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "fileName", args)
   }
@@ -587,7 +602,8 @@ func (this *QDirModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "rowCount", args)
   }
@@ -653,7 +669,8 @@ func (this *QDirModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QDirModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "data", args)
   }
@@ -713,7 +730,8 @@ func (this *QDirModel) iconProvider(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QDirModel12iconProviderEv
     // invoke: QFileIconProvider * iconProvider()
-    C.C_ZNK9QDirModel12iconProviderEv(this.qclsinst)
+    var ret = C.C_ZNK9QDirModel12iconProviderEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "iconProvider", args)
   }
@@ -741,7 +759,7 @@ func (this *QDirModel) nameFilters(args ...interface{}) () {
 }
 
 // QDirModel(class QObject *)
-func NewQDirModel(args ...interface{}) QDirModel {
+func NewQDirModel(args ...interface{}) *QDirModel {
   // QDirModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -758,12 +776,13 @@ func NewQDirModel(args ...interface{}) QDirModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QDirModelC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN9QDirModelC2EP7QObject(arg0)
+    return &QDirModel{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDirModel", "QDirModel", args)
   }
 
-  return QDirModel{}
+  return nil // QDirModel{qclsinst:qthis}
 }
 
 // remove(const class QModelIndex &)
@@ -782,7 +801,8 @@ func (this *QDirModel) remove(args ...interface{}) () {
     // invoke: bool remove(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZN9QDirModel6removeERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "remove", args)
   }
@@ -871,7 +891,8 @@ func (this *QDirModel) fileIcon(args ...interface{}) () {
     // invoke: QIcon fileIcon(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QDirModel8fileIconERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDirModel", "fileIcon", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qabstractitemdelegate.h
 // dst-file: /src/widgets/qabstractitemdelegate.go
 //
@@ -37,7 +37,7 @@ extern void C_ZNK21QAbstractItemDelegate12setModelDataEP7QWidgetP18QAbstractItem
   // proto:  void QAbstractItemDelegate::destroyEditor(QWidget * editor, const QModelIndex & index);
 extern void C_ZNK21QAbstractItemDelegate13destroyEditorEP7QWidgetRK11QModelIndex(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QAbstractItemDelegate::QAbstractItemDelegate(QObject * parent);
-extern void C_ZN21QAbstractItemDelegateC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN21QAbstractItemDelegateC2EP7QObject(void* arg0); // 3
   // proto:  bool QAbstractItemDelegate::editorEvent(QEvent * event, QAbstractItemModel * model, const QStyleOptionViewItem & option, const QModelIndex & index);
 extern void C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3); // 4
   // proto:  void QAbstractItemDelegate::setEditorData(QWidget * editor, const QModelIndex & index);
@@ -93,7 +93,8 @@ func (this *QAbstractItemDelegate) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK21QAbstractItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "createEditor", args)
   }
@@ -185,7 +186,7 @@ func (this *QAbstractItemDelegate) destroyEditor(args ...interface{}) () {
 }
 
 // QAbstractItemDelegate(class QObject *)
-func NewQAbstractItemDelegate(args ...interface{}) QAbstractItemDelegate {
+func NewQAbstractItemDelegate(args ...interface{}) *QAbstractItemDelegate {
   // QAbstractItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -202,12 +203,13 @@ func NewQAbstractItemDelegate(args ...interface{}) QAbstractItemDelegate {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN21QAbstractItemDelegateC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN21QAbstractItemDelegateC2EP7QObject(arg0)
+    return &QAbstractItemDelegate{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "QAbstractItemDelegate", args)
   }
 
-  return QAbstractItemDelegate{}
+  return nil // QAbstractItemDelegate{qclsinst:qthis}
 }
 
 // editorEvent(class QEvent *, class QAbstractItemModel *, const class QStyleOptionViewItem &, const class QModelIndex &)
@@ -235,7 +237,8 @@ func (this *QAbstractItemDelegate) editorEvent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QModelIndex).qclsinst
     if false {fmt.Println(arg3)}
-    C.C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN21QAbstractItemDelegate11editorEventEP6QEventP18QAbstractItemModelRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "editorEvent", args)
   }
@@ -313,7 +316,8 @@ func (this *QAbstractItemDelegate) helpEvent(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = args[3].(QModelIndex).qclsinst
     if false {fmt.Println(arg3)}
-    C.C_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN21QAbstractItemDelegate9helpEventEP10QHelpEventP17QAbstractItemViewRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractItemDelegate", "helpEvent", args)
   }

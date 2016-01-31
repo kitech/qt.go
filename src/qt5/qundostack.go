@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qundostack.h
 // dst-file: /src/widgets/qundostack.go
 //
@@ -43,7 +43,7 @@ extern void C_ZNK10QUndoStack7isCleanEv(void* qthis); // 4
   // proto:  int QUndoStack::cleanIndex();
 extern void C_ZNK10QUndoStack10cleanIndexEv(void* qthis); // 4
   // proto:  void QUndoStack::QUndoStack(QObject * parent);
-extern void C_ZN10QUndoStackC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN10QUndoStackC2EP7QObject(void* arg0); // 3
   // proto:  void QUndoStack::~QUndoStack();
 extern void C_ZN10QUndoStackD2Ev(void* qthis); // 4
   // proto:  QString QUndoStack::text(int idx);
@@ -95,9 +95,9 @@ extern void C_ZN12QUndoCommand4undoEv(void* qthis); // 4
   // proto:  int QUndoCommand::childCount();
 extern void C_ZNK12QUndoCommand10childCountEv(void* qthis); // 4
   // proto:  void QUndoCommand::QUndoCommand(const QString & text, QUndoCommand * parent);
-extern void C_ZN12QUndoCommandC2ERK7QStringPS_(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN12QUndoCommandC2ERK7QStringPS_(void* arg0, void* arg1); // 3
   // proto:  void QUndoCommand::QUndoCommand(QUndoCommand * parent);
-extern void C_ZN12QUndoCommandC2EPS_(void* qthis, void* arg0); // 3
+extern void* C_ZN12QUndoCommandC2EPS_(void* arg0); // 3
   // proto:  void QUndoCommand::~QUndoCommand();
 extern void C_ZN12QUndoCommandD2Ev(void* qthis); // 4
   // proto:  const QUndoCommand * QUndoCommand::child(int index);
@@ -155,7 +155,8 @@ func (this *QUndoStack) createUndoAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QUndoStack16createUndoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "createUndoAction", args)
   }
@@ -241,7 +242,8 @@ func (this *QUndoStack) canUndo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack7canUndoEv
     // invoke: bool canUndo()
-    C.C_ZNK10QUndoStack7canUndoEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack7canUndoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "canUndo", args)
   }
@@ -261,7 +263,8 @@ func (this *QUndoStack) isClean(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack7isCleanEv
     // invoke: bool isClean()
-    C.C_ZNK10QUndoStack7isCleanEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack7isCleanEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "isClean", args)
   }
@@ -281,7 +284,8 @@ func (this *QUndoStack) cleanIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack10cleanIndexEv
     // invoke: int cleanIndex()
-    C.C_ZNK10QUndoStack10cleanIndexEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack10cleanIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "cleanIndex", args)
   }
@@ -289,7 +293,7 @@ func (this *QUndoStack) cleanIndex(args ...interface{}) () {
 }
 
 // QUndoStack(class QObject *)
-func NewQUndoStack(args ...interface{}) QUndoStack {
+func NewQUndoStack(args ...interface{}) *QUndoStack {
   // QUndoStack(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -306,12 +310,13 @@ func NewQUndoStack(args ...interface{}) QUndoStack {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QUndoStackC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN10QUndoStackC2EP7QObject(arg0)
+    return &QUndoStack{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoStack", "QUndoStack", args)
   }
 
-  return QUndoStack{}
+  return nil // QUndoStack{qclsinst:qthis}
 }
 
 // ~QUndoStack()
@@ -350,7 +355,8 @@ func (this *QUndoStack) text(args ...interface{}) () {
     // invoke: QString text(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QUndoStack4textEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QUndoStack4textEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "text", args)
   }
@@ -370,7 +376,8 @@ func (this *QUndoStack) redoText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack8redoTextEv
     // invoke: QString redoText()
-    C.C_ZNK10QUndoStack8redoTextEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack8redoTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "redoText", args)
   }
@@ -390,7 +397,8 @@ func (this *QUndoStack) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack5countEv
     // invoke: int count()
-    C.C_ZNK10QUndoStack5countEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "count", args)
   }
@@ -410,7 +418,8 @@ func (this *QUndoStack) index(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack5indexEv
     // invoke: int index()
-    C.C_ZNK10QUndoStack5indexEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack5indexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "index", args)
   }
@@ -473,7 +482,8 @@ func (this *QUndoStack) undoLimit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack9undoLimitEv
     // invoke: int undoLimit()
-    C.C_ZNK10QUndoStack9undoLimitEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack9undoLimitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "undoLimit", args)
   }
@@ -493,7 +503,8 @@ func (this *QUndoStack) canRedo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack7canRedoEv
     // invoke: bool canRedo()
-    C.C_ZNK10QUndoStack7canRedoEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack7canRedoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "canRedo", args)
   }
@@ -533,7 +544,8 @@ func (this *QUndoStack) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack8isActiveEv
     // invoke: bool isActive()
-    C.C_ZNK10QUndoStack8isActiveEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "isActive", args)
   }
@@ -559,7 +571,8 @@ func (this *QUndoStack) createRedoAction(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QUndoStack16createRedoActionEP7QObjectRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "createRedoAction", args)
   }
@@ -599,7 +612,8 @@ func (this *QUndoStack) undoText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QUndoStack8undoTextEv
     // invoke: QString undoText()
-    C.C_ZNK10QUndoStack8undoTextEv(this.qclsinst)
+    var ret = C.C_ZNK10QUndoStack8undoTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "undoText", args)
   }
@@ -665,7 +679,8 @@ func (this *QUndoStack) command(args ...interface{}) () {
     // invoke: const QUndoCommand * command(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QUndoStack7commandEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QUndoStack7commandEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoStack", "command", args)
   }
@@ -728,7 +743,8 @@ func (this *QUndoCommand) actionText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QUndoCommand10actionTextEv
     // invoke: QString actionText()
-    C.C_ZNK12QUndoCommand10actionTextEv(this.qclsinst)
+    var ret = C.C_ZNK12QUndoCommand10actionTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "actionText", args)
   }
@@ -751,7 +767,8 @@ func (this *QUndoCommand) mergeWith(args ...interface{}) () {
     // invoke: bool mergeWith(const class QUndoCommand *)
     var arg0 = args[0].(QUndoCommand).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN12QUndoCommand9mergeWithEPKS_(this.qclsinst, arg0)
+    var ret = C.C_ZN12QUndoCommand9mergeWithEPKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "mergeWith", args)
   }
@@ -771,7 +788,8 @@ func (this *QUndoCommand) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QUndoCommand4textEv
     // invoke: QString text()
-    C.C_ZNK12QUndoCommand4textEv(this.qclsinst)
+    var ret = C.C_ZNK12QUndoCommand4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "text", args)
   }
@@ -834,7 +852,8 @@ func (this *QUndoCommand) childCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QUndoCommand10childCountEv
     // invoke: int childCount()
-    C.C_ZNK12QUndoCommand10childCountEv(this.qclsinst)
+    var ret = C.C_ZNK12QUndoCommand10childCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "childCount", args)
   }
@@ -842,7 +861,7 @@ func (this *QUndoCommand) childCount(args ...interface{}) () {
 }
 
 // QUndoCommand(const class QString &, class QUndoCommand *)
-func NewQUndoCommand(args ...interface{}) QUndoCommand {
+func NewQUndoCommand(args ...interface{}) *QUndoCommand {
   // QUndoCommand(const class QString &, class QUndoCommand *)
   // QUndoCommand(class QUndoCommand *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -865,7 +884,8 @@ func NewQUndoCommand(args ...interface{}) QUndoCommand {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QUndoCommandC2ERK7QStringPS_(qthis, arg0, arg1)
+    qthis = C.C_ZN12QUndoCommandC2ERK7QStringPS_(arg0, arg1)
+    return &QUndoCommand{qclsinst:qthis}
   case 1:
     // invoke: _ZN12QUndoCommandC1EPS_
     // invoke: void QUndoCommand(class QUndoCommand *)
@@ -873,12 +893,13 @@ func NewQUndoCommand(args ...interface{}) QUndoCommand {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QUndoCommandC2EPS_(qthis, arg0)
+    qthis = C.C_ZN12QUndoCommandC2EPS_(arg0)
+    return &QUndoCommand{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUndoCommand", "QUndoCommand", args)
   }
 
-  return QUndoCommand{}
+  return nil // QUndoCommand{qclsinst:qthis}
 }
 
 // ~QUndoCommand()
@@ -917,7 +938,8 @@ func (this *QUndoCommand) child(args ...interface{}) () {
     // invoke: const QUndoCommand * child(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QUndoCommand5childEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QUndoCommand5childEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "child", args)
   }
@@ -957,7 +979,8 @@ func (this *QUndoCommand) id(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QUndoCommand2idEv
     // invoke: int id()
-    C.C_ZNK12QUndoCommand2idEv(this.qclsinst)
+    var ret = C.C_ZNK12QUndoCommand2idEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUndoCommand", "id", args)
   }

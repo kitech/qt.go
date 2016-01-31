@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qbytearray.h
 // dst-file: /src/core/qbytearray.go
 //
@@ -93,13 +93,13 @@ extern void C_ZNK10QByteArray7indexOfERK7QStringi(void* qthis, void* arg0, int32
   // proto:  const_iterator QByteArray::cbegin();
 extern void C_ZNK10QByteArray6cbeginEv(void* qthis); // 2
   // proto:  void QByteArray::QByteArray();
-extern void C_ZN10QByteArrayC2Ev(void* qthis); // 1
+extern void* C_ZN10QByteArrayC2Ev(); // 1
   // proto:  void QByteArray::QByteArray(const QByteArray & );
-extern void C_ZN10QByteArrayC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN10QByteArrayC2ERKS_(void* arg0); // 1
   // proto:  void QByteArray::QByteArray(const char * , int size);
-extern void C_ZN10QByteArrayC2EPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 3
+extern void* C_ZN10QByteArrayC2EPKci(unsigned char* arg0, int32_t arg1); // 3
   // proto:  void QByteArray::QByteArray(int size, char c);
-extern void C_ZN10QByteArrayC2Eic(void* qthis, int32_t arg0, unsigned char arg1); // 3
+extern void* C_ZN10QByteArrayC2Eic(int32_t arg0, unsigned char arg1); // 3
   // proto: static QByteArray QByteArray::fromBase64(const QByteArray & base64);
 extern void C_ZN10QByteArray10fromBase64ERKS_(void* arg0); // 4
   // proto: static QByteArray QByteArray::fromHex(const QByteArray & hexEncoded);
@@ -381,7 +381,8 @@ func (this *QByteArray) rightJustified(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C.C_ZNK10QByteArray14rightJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK10QByteArray14rightJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "rightJustified", args)
   }
@@ -424,7 +425,8 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6insertEiRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6insertEiRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray6insertEiPKc
     // invoke: QByteArray & insert(int, const char *)
@@ -432,7 +434,8 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6insertEiPKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6insertEiPKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray6insertEiRKS_
     // invoke: QByteArray & insert(int, const class QByteArray &)
@@ -440,7 +443,8 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6insertEiRKS_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6insertEiRKS_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray6insertEic
     // invoke: QByteArray & insert(int, char)
@@ -448,7 +452,8 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6insertEic(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6insertEic(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZN10QByteArray6insertEiPKci
     // invoke: QByteArray & insert(int, const char *, int)
@@ -458,7 +463,8 @@ func (this *QByteArray) insert(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray6insertEiPKci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray6insertEiPKci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "insert", args)
   }
@@ -484,7 +490,8 @@ func (this *QByteArray) remove(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6removeEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6removeEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "remove", args)
   }
@@ -504,7 +511,8 @@ func (this *QByteArray) trimmed(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7trimmedEv
     // invoke: QByteArray trimmed()
-    C.C_ZNKR10QByteArray7trimmedEv(this.qclsinst)
+    var ret = C.C_ZNKR10QByteArray7trimmedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "trimmed", args)
   }
@@ -524,7 +532,8 @@ func (this *QByteArray) constEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8constEndEv
     // invoke: const_iterator constEnd()
-    C.C_ZNK10QByteArray8constEndEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray8constEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "constEnd", args)
   }
@@ -547,7 +556,8 @@ func (this *QByteArray) isSharedWith(args ...interface{}) () {
     // invoke: bool isSharedWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray12isSharedWithERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray12isSharedWithERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "isSharedWith", args)
   }
@@ -570,7 +580,8 @@ func (this *QByteArray) right(args ...interface{}) () {
     // invoke: QByteArray right(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray5rightEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray5rightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "right", args)
   }
@@ -596,7 +607,8 @@ func (this *QByteArray) toUInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray6toUIntEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray6toUIntEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toUInt", args)
   }
@@ -632,7 +644,8 @@ func (this *QByteArray) append(args ...interface{}) () {
     // invoke: QByteArray & append(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray6appendEc(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray6appendEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray6appendEPKci
     // invoke: QByteArray & append(const char *, int)
@@ -640,25 +653,29 @@ func (this *QByteArray) append(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6appendEPKci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6appendEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray6appendERKS_
     // invoke: QByteArray & append(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray6appendERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray6appendERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray6appendERK7QString
     // invoke: QByteArray & append(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray6appendERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray6appendERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZN10QByteArray6appendEPKc
     // invoke: QByteArray & append(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray6appendEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray6appendEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "append", args)
   }
@@ -687,19 +704,22 @@ func (this *QByteArray) startsWith(args ...interface{}) () {
     // invoke: bool startsWith(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray10startsWithEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray10startsWithEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray10startsWithERKS_
     // invoke: bool startsWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray10startsWithERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray10startsWithERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray10startsWithEc
     // invoke: bool startsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray10startsWithEc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray10startsWithEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "startsWith", args)
   }
@@ -719,7 +739,8 @@ func (this *QByteArray) capacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8capacityEv
     // invoke: int capacity()
-    C.C_ZNK10QByteArray8capacityEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray8capacityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "capacity", args)
   }
@@ -739,7 +760,8 @@ func (this *QByteArray) toLower(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7toLowerEv
     // invoke: QByteArray toLower()
-    C.C_ZNKR10QByteArray7toLowerEv(this.qclsinst)
+    var ret = C.C_ZNKR10QByteArray7toLowerEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toLower", args)
   }
@@ -759,7 +781,8 @@ func (this *QByteArray) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK10QByteArray6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "isNull", args)
   }
@@ -799,7 +822,8 @@ func (this *QByteArray) toHex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray5toHexEv
     // invoke: QByteArray toHex()
-    C.C_ZNK10QByteArray5toHexEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray5toHexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toHex", args)
   }
@@ -837,7 +861,8 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7indexOfEPKci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7indexOfEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray7indexOfEci
     // invoke: int indexOf(char, int)
@@ -845,7 +870,8 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7indexOfEci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7indexOfEci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray7indexOfERKS_i
     // invoke: int indexOf(const class QByteArray &, int)
@@ -853,7 +879,8 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7indexOfERKS_i(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7indexOfERKS_i(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK10QByteArray7indexOfERK7QStringi
     // invoke: int indexOf(const class QString &, int)
@@ -861,7 +888,8 @@ func (this *QByteArray) indexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7indexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7indexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "indexOf", args)
   }
@@ -881,7 +909,8 @@ func (this *QByteArray) cbegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6cbeginEv
     // invoke: const_iterator cbegin()
-    C.C_ZNK10QByteArray6cbeginEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray6cbeginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "cbegin", args)
   }
@@ -889,7 +918,7 @@ func (this *QByteArray) cbegin(args ...interface{}) () {
 }
 
 // QByteArray()
-func NewQByteArray(args ...interface{}) QByteArray {
+func NewQByteArray(args ...interface{}) *QByteArray {
   // QByteArray()
   // QByteArray(const class QByteArray &)
   // QByteArray(const char *, int)
@@ -914,7 +943,8 @@ func NewQByteArray(args ...interface{}) QByteArray {
     // invoke: void QByteArray()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QByteArrayC2Ev(qthis)
+    qthis = C.C_ZN10QByteArrayC2Ev()
+    return &QByteArray{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QByteArrayC1ERKS_
     // invoke: void QByteArray(const class QByteArray &)
@@ -922,7 +952,8 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QByteArrayC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN10QByteArrayC2ERKS_(arg0)
+    return &QByteArray{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QByteArrayC1EPKci
     // invoke: void QByteArray(const char *, int)
@@ -932,7 +963,8 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QByteArrayC2EPKci(qthis, arg0, arg1)
+    qthis = C.C_ZN10QByteArrayC2EPKci(arg0, arg1)
+    return &QByteArray{qclsinst:qthis}
   case 3:
     // invoke: _ZN10QByteArrayC1Eic
     // invoke: void QByteArray(int, char)
@@ -942,12 +974,13 @@ func NewQByteArray(args ...interface{}) QByteArray {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QByteArrayC2Eic(qthis, arg0, arg1)
+    qthis = C.C_ZN10QByteArrayC2Eic(arg0, arg1)
+    return &QByteArray{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QByteArray", "QByteArray", args)
   }
 
-  return QByteArray{}
+  return nil // QByteArray{qclsinst:qthis}
 }
 
 // fromBase64(const class QByteArray &)
@@ -966,7 +999,8 @@ func (this *QByteArray) fromBase64_s(args ...interface{}) () {
     // invoke: QByteArray fromBase64(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray10fromBase64ERKS_(arg0)
+    var ret = C.C_ZN10QByteArray10fromBase64ERKS_(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "fromBase64", args)
   }
@@ -989,7 +1023,8 @@ func (this *QByteArray) fromHex_s(args ...interface{}) () {
     // invoke: QByteArray fromHex(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray7fromHexERKS_(arg0)
+    var ret = C.C_ZN10QByteArray7fromHexERKS_(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "fromHex", args)
   }
@@ -1032,7 +1067,8 @@ func (this *QByteArray) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray6lengthEv
     // invoke: int length()
-    C.C_ZNK10QByteArray6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "length", args)
   }
@@ -1055,7 +1091,8 @@ func (this *QByteArray) toDouble(args ...interface{}) () {
     // invoke: double toDouble(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8toDoubleEPb(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8toDoubleEPb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toDouble", args)
   }
@@ -1081,7 +1118,8 @@ func (this *QByteArray) toLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray6toLongEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray6toLongEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toLong", args)
   }
@@ -1110,7 +1148,8 @@ func (this *QByteArray) toPercentEncoding(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.uchar(args[2].(byte))
     if false {fmt.Println(arg2)}
-    C.C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK10QByteArray17toPercentEncodingERKS_S1_c(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toPercentEncoding", args)
   }
@@ -1136,7 +1175,8 @@ func (this *QByteArray) toUShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray8toUShortEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray8toUShortEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toUShort", args)
   }
@@ -1156,7 +1196,8 @@ func (this *QByteArray) constBegin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray10constBeginEv
     // invoke: const_iterator constBegin()
-    C.C_ZNK10QByteArray10constBeginEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray10constBeginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "constBegin", args)
   }
@@ -1182,7 +1223,8 @@ func (this *QByteArray) toShort(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7toShortEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7toShortEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toShort", args)
   }
@@ -1225,7 +1267,8 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6numberExi(arg0, arg1)
+    var ret = C.C_ZN10QByteArray6numberExi(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray6numberEyi
     // invoke: QByteArray number(qulonglong, int)
@@ -1233,7 +1276,8 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6numberEyi(arg0, arg1)
+    var ret = C.C_ZN10QByteArray6numberEyi(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray6numberEii
     // invoke: QByteArray number(int, int)
@@ -1241,7 +1285,8 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6numberEii(arg0, arg1)
+    var ret = C.C_ZN10QByteArray6numberEii(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray6numberEji
     // invoke: QByteArray number(uint, int)
@@ -1249,7 +1294,8 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6numberEji(arg0, arg1)
+    var ret = C.C_ZN10QByteArray6numberEji(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZN10QByteArray6numberEdci
     // invoke: QByteArray number(double, char, int)
@@ -1259,7 +1305,8 @@ func (this *QByteArray) number_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray6numberEdci(arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray6numberEdci(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "number", args)
   }
@@ -1343,7 +1390,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceERK7QStringPKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceERK7QStringPKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray7replaceEcRKS_
     // invoke: QByteArray & replace(char, const class QByteArray &)
@@ -1351,7 +1399,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEcRKS_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEcRKS_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray7replaceEiiRKS_
     // invoke: QByteArray & replace(int, int, const class QByteArray &)
@@ -1361,7 +1410,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QByteArray).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray7replaceEiiRKS_(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray7replaceEiiRKS_(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray7replaceEcPKc
     // invoke: QByteArray & replace(char, const char *)
@@ -1369,7 +1419,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEcPKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEcPKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZN10QByteArray7replaceEcc
     // invoke: QByteArray & replace(char, char)
@@ -1377,7 +1428,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEcc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEcc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 5:
     // invoke: _ZN10QByteArray7replaceERKS_S1_
     // invoke: QByteArray & replace(const class QByteArray &, const class QByteArray &)
@@ -1385,7 +1437,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceERKS_S1_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceERKS_S1_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 6:
     // invoke: _ZN10QByteArray7replaceERKS_PKc
     // invoke: QByteArray & replace(const class QByteArray &, const char *)
@@ -1393,7 +1446,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceERKS_PKc(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceERKS_PKc(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 7:
     // invoke: _ZN10QByteArray7replaceEiiPKc
     // invoke: QByteArray & replace(int, int, const char *)
@@ -1403,7 +1457,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[2].([]byte)).Pointer()))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray7replaceEiiPKc(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray7replaceEiiPKc(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 8:
     // invoke: _ZN10QByteArray7replaceEiiPKci
     // invoke: QByteArray & replace(int, int, const char *, int)
@@ -1415,7 +1470,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN10QByteArray7replaceEiiPKci(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN10QByteArray7replaceEiiPKci(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   case 9:
     // invoke: _ZN10QByteArray7replaceEPKcRKS_
     // invoke: QByteArray & replace(const char *, const class QByteArray &)
@@ -1423,7 +1479,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEPKcRKS_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEPKcRKS_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 10:
     // invoke: _ZN10QByteArray7replaceEPKcS1_
     // invoke: QByteArray & replace(const char *, const char *)
@@ -1431,7 +1488,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[1].([]byte)).Pointer()))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEPKcS1_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEPKcS1_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 11:
     // invoke: _ZN10QByteArray7replaceEcRK7QString
     // invoke: QByteArray & replace(char, const class QString &)
@@ -1439,7 +1497,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceEcRK7QString(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceEcRK7QString(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 12:
     // invoke: _ZN10QByteArray7replaceERK7QStringRKS_
     // invoke: QByteArray & replace(const class QString &, const class QByteArray &)
@@ -1447,7 +1506,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QByteArray).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7replaceERK7QStringRKS_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7replaceERK7QStringRKS_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 13:
     // invoke: _ZN10QByteArray7replaceEPKciS1_i
     // invoke: QByteArray & replace(const char *, int, const char *, int)
@@ -1459,7 +1519,8 @@ func (this *QByteArray) replace(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN10QByteArray7replaceEPKciS1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN10QByteArray7replaceEPKciS1_i(this.qclsinst, arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "replace", args)
   }
@@ -1520,7 +1581,8 @@ func (this *QByteArray) simplified(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray10simplifiedEv
     // invoke: QByteArray simplified()
-    C.C_ZNKR10QByteArray10simplifiedEv(this.qclsinst)
+    var ret = C.C_ZNKR10QByteArray10simplifiedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "simplified", args)
   }
@@ -1540,7 +1602,8 @@ func (this *QByteArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray4sizeEv
     // invoke: int size()
-    C.C_ZNK10QByteArray4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "size", args)
   }
@@ -1569,19 +1632,22 @@ func (this *QByteArray) contains(args ...interface{}) () {
     // invoke: bool contains(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8containsEc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8containsEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray8containsERKS_
     // invoke: bool contains(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8containsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8containsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray8containsEPKc
     // invoke: bool contains(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8containsEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8containsEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "contains", args)
   }
@@ -1607,7 +1673,8 @@ func (this *QByteArray) fromPercentEncoding_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.uchar(args[1].(byte))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)
+    var ret = C.C_ZN10QByteArray19fromPercentEncodingERKS_c(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "fromPercentEncoding", args)
   }
@@ -1627,7 +1694,8 @@ func (this *QByteArray) cend(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray4cendEv
     // invoke: const_iterator cend()
-    C.C_ZNK10QByteArray4cendEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray4cendEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "cend", args)
   }
@@ -1656,7 +1724,8 @@ func (this *QByteArray) leftJustified(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.bool(args[2].(bool))
     if false {fmt.Println(arg2)}
-    C.C_ZNK10QByteArray13leftJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK10QByteArray13leftJustifiedEicb(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "leftJustified", args)
   }
@@ -1679,7 +1748,8 @@ func (this *QByteArray) repeated(args ...interface{}) () {
     // invoke: QByteArray repeated(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8repeatedEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8repeatedEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "repeated", args)
   }
@@ -1705,7 +1775,8 @@ func (this *QByteArray) fromRawData_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)
+    var ret = C.C_ZN10QByteArray11fromRawDataEPKci(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "fromRawData", args)
   }
@@ -1774,7 +1845,8 @@ func (this *QByteArray) toULongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray11toULongLongEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray11toULongLongEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toULongLong", args)
   }
@@ -1803,25 +1875,29 @@ func (this *QByteArray) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray5countEv
     // invoke: int count()
-    C.C_ZNK10QByteArray5countEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray5countEPKc
     // invoke: int count(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray5countEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray5countEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray5countEc
     // invoke: int count(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray5countEc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray5countEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK10QByteArray5countERKS_
     // invoke: int count(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray5countERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray5countERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "count", args)
   }
@@ -1864,7 +1940,8 @@ func (this *QByteArray) toFloat(args ...interface{}) () {
     // invoke: float toFloat(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray7toFloatEPb(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray7toFloatEPb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toFloat", args)
   }
@@ -1887,7 +1964,8 @@ func (this *QByteArray) at(args ...interface{}) () {
     // invoke: char at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray2atEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray2atEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "at", args)
   }
@@ -1913,7 +1991,8 @@ func (this *QByteArray) fill(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray4fillEci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray4fillEci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "fill", args)
   }
@@ -1939,7 +2018,8 @@ func (this *QByteArray) toULong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray7toULongEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray7toULongEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toULong", args)
   }
@@ -1959,7 +2039,8 @@ func (this *QByteArray) end(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray3endEv
     // invoke: iterator end()
-    C.C_ZN10QByteArray3endEv(this.qclsinst)
+    var ret = C.C_ZN10QByteArray3endEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "end", args)
   }
@@ -1985,7 +2066,8 @@ func (this *QByteArray) mid(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray3midEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray3midEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "mid", args)
   }
@@ -2018,13 +2100,15 @@ func (this *QByteArray) prepend(args ...interface{}) () {
     // invoke: QByteArray & prepend(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray7prependEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray7prependEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray7prependEc
     // invoke: QByteArray & prepend(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray7prependEc(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray7prependEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray7prependEPKci
     // invoke: QByteArray & prepend(const char *, int)
@@ -2032,13 +2116,15 @@ func (this *QByteArray) prepend(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray7prependEPKci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray7prependEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray7prependERKS_
     // invoke: QByteArray & prepend(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QByteArray7prependERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZN10QByteArray7prependERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "prepend", args)
   }
@@ -2058,7 +2144,8 @@ func (this *QByteArray) constData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray9constDataEv
     // invoke: const char * constData()
-    C.C_ZNK10QByteArray9constDataEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray9constDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "constData", args)
   }
@@ -2084,7 +2171,8 @@ func (this *QByteArray) toLongLong(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray10toLongLongEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray10toLongLongEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toLongLong", args)
   }
@@ -2104,7 +2192,8 @@ func (this *QByteArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK10QByteArray7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "isEmpty", args)
   }
@@ -2153,7 +2242,8 @@ func (this *QByteArray) setRawData(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray10setRawDataEPKcj(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray10setRawDataEPKcj(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "setRawData", args)
   }
@@ -2173,7 +2263,8 @@ func (this *QByteArray) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK10QByteArray10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "isDetached", args)
   }
@@ -2193,7 +2284,8 @@ func (this *QByteArray) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray5beginEv
     // invoke: iterator begin()
-    C.C_ZN10QByteArray5beginEv(this.qclsinst)
+    var ret = C.C_ZN10QByteArray5beginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "begin", args)
   }
@@ -2231,7 +2323,8 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray11lastIndexOfEPKci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray11lastIndexOfEPKci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray11lastIndexOfERK7QStringi
     // invoke: int lastIndexOf(const class QString &, int)
@@ -2239,7 +2332,8 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray11lastIndexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray11lastIndexOfERK7QStringi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray11lastIndexOfERKS_i
     // invoke: int lastIndexOf(const class QByteArray &, int)
@@ -2247,7 +2341,8 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray11lastIndexOfERKS_i(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray11lastIndexOfERKS_i(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK10QByteArray11lastIndexOfEci
     // invoke: int lastIndexOf(char, int)
@@ -2255,7 +2350,8 @@ func (this *QByteArray) lastIndexOf(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray11lastIndexOfEci(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray11lastIndexOfEci(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "lastIndexOf", args)
   }
@@ -2275,7 +2371,8 @@ func (this *QByteArray) toUpper(args ...interface{}) () {
   case 0:
     // invoke: _ZNKR10QByteArray7toUpperEv
     // invoke: QByteArray toUpper()
-    C.C_ZNKR10QByteArray7toUpperEv(this.qclsinst)
+    var ret = C.C_ZNKR10QByteArray7toUpperEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toUpper", args)
   }
@@ -2318,7 +2415,8 @@ func (this *QByteArray) toBase64(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QByteArray8toBase64Ev
     // invoke: QByteArray toBase64()
-    C.C_ZNK10QByteArray8toBase64Ev(this.qclsinst)
+    var ret = C.C_ZNK10QByteArray8toBase64Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toBase64", args)
   }
@@ -2338,7 +2436,8 @@ func (this *QByteArray) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QByteArray4dataEv
     // invoke: char * data()
-    C.C_ZN10QByteArray4dataEv(this.qclsinst)
+    var ret = C.C_ZN10QByteArray4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "data", args)
   }
@@ -2384,7 +2483,8 @@ func (this *QByteArray) toInt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QByteArray5toIntEPbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QByteArray5toIntEPbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "toInt", args)
   }
@@ -2413,19 +2513,22 @@ func (this *QByteArray) endsWith(args ...interface{}) () {
     // invoke: bool endsWith(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8endsWithERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8endsWithERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QByteArray8endsWithEPKc
     // invoke: bool endsWith(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8endsWithEPKc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8endsWithEPKc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QByteArray8endsWithEc
     // invoke: bool endsWith(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray8endsWithEc(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray8endsWithEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "endsWith", args)
   }
@@ -2481,7 +2584,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumEji(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumEji(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN10QByteArray6setNumEii
     // invoke: QByteArray & setNum(int, int)
@@ -2489,7 +2593,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN10QByteArray6setNumEsi
     // invoke: QByteArray & setNum(short, int)
@@ -2497,7 +2602,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumEsi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumEsi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN10QByteArray6setNumEdci
     // invoke: QByteArray & setNum(double, char, int)
@@ -2507,7 +2613,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray6setNumEdci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray6setNumEdci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZN10QByteArray6setNumEfci
     // invoke: QByteArray & setNum(float, char, int)
@@ -2517,7 +2624,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN10QByteArray6setNumEfci(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN10QByteArray6setNumEfci(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 5:
     // invoke: _ZN10QByteArray6setNumEyi
     // invoke: QByteArray & setNum(qulonglong, int)
@@ -2525,7 +2633,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumEyi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumEyi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 6:
     // invoke: _ZN10QByteArray6setNumExi
     // invoke: QByteArray & setNum(qlonglong, int)
@@ -2533,7 +2642,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumExi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumExi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 7:
     // invoke: _ZN10QByteArray6setNumEti
     // invoke: QByteArray & setNum(ushort, int)
@@ -2541,7 +2651,8 @@ func (this *QByteArray) setNum(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QByteArray6setNumEti(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QByteArray6setNumEti(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "setNum", args)
   }
@@ -2628,7 +2739,8 @@ func (this *QByteArray) left(args ...interface{}) () {
     // invoke: QByteArray left(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QByteArray4leftEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QByteArray4leftEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QByteArray", "left", args)
   }

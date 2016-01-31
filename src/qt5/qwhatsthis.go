@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qwhatsthis.h
 // dst-file: /src/widgets/qwhatsthis.go
 //
@@ -134,7 +134,8 @@ func (this *QWhatsThis) createAction_s(args ...interface{}) () {
     // invoke: QAction * createAction(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
+    var ret = C.C_ZN10QWhatsThis12createActionEP7QObject(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWhatsThis", "createAction", args)
   }
@@ -183,7 +184,8 @@ func (this *QWhatsThis) inWhatsThisMode_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QWhatsThis15inWhatsThisModeEv
     // invoke: bool inWhatsThisMode()
-    C.C_ZN10QWhatsThis15inWhatsThisModeEv()
+    var ret = C.C_ZN10QWhatsThis15inWhatsThisModeEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWhatsThis", "inWhatsThisMode", args)
   }

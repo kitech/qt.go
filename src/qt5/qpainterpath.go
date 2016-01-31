@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpainterpath.h
 // dst-file: /src/gui/qpainterpath.go
 //
@@ -55,11 +55,11 @@ extern void C_ZNK12QPainterPath17toSubpathPolygonsERK10QTransform(void* qthis, v
   // proto:  QList<QPolygonF> QPainterPath::toSubpathPolygons(const QMatrix & matrix);
 extern void C_ZNK12QPainterPath17toSubpathPolygonsERK7QMatrix(void* qthis, void* arg0); // 4
   // proto:  void QPainterPath::QPainterPath(const QPointF & startPoint);
-extern void C_ZN12QPainterPathC2ERK7QPointF(void* qthis, void* arg0); // 3
+extern void* C_ZN12QPainterPathC2ERK7QPointF(void* arg0); // 3
   // proto:  void QPainterPath::QPainterPath();
-extern void C_ZN12QPainterPathC2Ev(void* qthis); // 3
+extern void* C_ZN12QPainterPathC2Ev(); // 3
   // proto:  void QPainterPath::QPainterPath(const QPainterPath & other);
-extern void C_ZN12QPainterPathC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN12QPainterPathC2ERKS_(void* arg0); // 3
   // proto:  qreal QPainterPath::angleAtPercent(qreal t);
 extern void C_ZNK12QPainterPath14angleAtPercentEd(void* qthis, double arg0); // 4
   // proto:  void QPainterPath::addEllipse(const QRectF & rect);
@@ -169,9 +169,9 @@ extern void C_ZNK19QPainterPathStroker11dashPatternEv(void* qthis); // 4
   // proto:  qreal QPainterPathStroker::miterLimit();
 extern void C_ZNK19QPainterPathStroker10miterLimitEv(void* qthis); // 4
   // proto:  void QPainterPathStroker::QPainterPathStroker(const QPen & pen);
-extern void C_ZN19QPainterPathStrokerC2ERK4QPen(void* qthis, void* arg0); // 3
+extern void* C_ZN19QPainterPathStrokerC2ERK4QPen(void* arg0); // 3
   // proto:  void QPainterPathStroker::QPainterPathStroker();
-extern void C_ZN19QPainterPathStrokerC2Ev(void* qthis); // 3
+extern void* C_ZN19QPainterPathStrokerC2Ev(); // 3
   // proto:  void QPainterPathStroker::setMiterLimit(qreal length);
 extern void C_ZN19QPainterPathStroker13setMiterLimitEd(void* qthis, double arg0); // 4
   // proto:  qreal QPainterPathStroker::dashOffset();
@@ -270,7 +270,8 @@ func (this *QPainterPath) controlPointRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath16controlPointRectEv
     // invoke: QRectF controlPointRect()
-    C.C_ZNK12QPainterPath16controlPointRectEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath16controlPointRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "controlPointRect", args)
   }
@@ -366,13 +367,15 @@ func (this *QPainterPath) intersects(args ...interface{}) () {
     // invoke: bool intersects(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath10intersectsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath10intersectsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK12QPainterPath10intersectsERK6QRectF
     // invoke: bool intersects(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath10intersectsERK6QRectF(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath10intersectsERK6QRectF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "intersects", args)
   }
@@ -392,7 +395,8 @@ func (this *QPainterPath) elementCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath12elementCountEv
     // invoke: int elementCount()
-    C.C_ZNK12QPainterPath12elementCountEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath12elementCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "elementCount", args)
   }
@@ -452,7 +456,7 @@ func (this *QPainterPath) toSubpathPolygons(args ...interface{}) () {
 }
 
 // QPainterPath(const class QPointF &)
-func NewQPainterPath(args ...interface{}) QPainterPath {
+func NewQPainterPath(args ...interface{}) *QPainterPath {
   // QPainterPath(const class QPointF &)
   // QPainterPath()
   // QPainterPath(const class QPainterPath &)
@@ -474,13 +478,15 @@ func NewQPainterPath(args ...interface{}) QPainterPath {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QPainterPathC2ERK7QPointF(qthis, arg0)
+    qthis = C.C_ZN12QPainterPathC2ERK7QPointF(arg0)
+    return &QPainterPath{qclsinst:qthis}
   case 1:
     // invoke: _ZN12QPainterPathC1Ev
     // invoke: void QPainterPath()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QPainterPathC2Ev(qthis)
+    qthis = C.C_ZN12QPainterPathC2Ev()
+    return &QPainterPath{qclsinst:qthis}
   case 2:
     // invoke: _ZN12QPainterPathC1ERKS_
     // invoke: void QPainterPath(const class QPainterPath &)
@@ -488,12 +494,13 @@ func NewQPainterPath(args ...interface{}) QPainterPath {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QPainterPathC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN12QPainterPathC2ERKS_(arg0)
+    return &QPainterPath{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPainterPath", "QPainterPath", args)
   }
 
-  return QPainterPath{}
+  return nil // QPainterPath{qclsinst:qthis}
 }
 
 // angleAtPercent(qreal)
@@ -512,7 +519,8 @@ func (this *QPainterPath) angleAtPercent(args ...interface{}) () {
     // invoke: qreal angleAtPercent(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath14angleAtPercentEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath14angleAtPercentEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "angleAtPercent", args)
   }
@@ -655,7 +663,8 @@ func (this *QPainterPath) intersected(args ...interface{}) () {
     // invoke: QPainterPath intersected(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath11intersectedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath11intersectedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "intersected", args)
   }
@@ -719,19 +728,22 @@ func (this *QPainterPath) contains(args ...interface{}) () {
     // invoke: bool contains(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath8containsERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath8containsERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK12QPainterPath8containsERK6QRectF
     // invoke: bool contains(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath8containsERK6QRectF(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath8containsERK6QRectF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK12QPainterPath8containsERK7QPointF
     // invoke: bool contains(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath8containsERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath8containsERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "contains", args)
   }
@@ -855,7 +867,8 @@ func (this *QPainterPath) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK12QPainterPath7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "isEmpty", args)
   }
@@ -1000,7 +1013,8 @@ func (this *QPainterPath) slopeAtPercent(args ...interface{}) () {
     // invoke: qreal slopeAtPercent(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath14slopeAtPercentEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath14slopeAtPercentEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "slopeAtPercent", args)
   }
@@ -1199,7 +1213,8 @@ func (this *QPainterPath) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath12boundingRectEv
     // invoke: QRectF boundingRect()
-    C.C_ZNK12QPainterPath12boundingRectEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath12boundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "boundingRect", args)
   }
@@ -1272,7 +1287,8 @@ func (this *QPainterPath) toReversed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath10toReversedEv
     // invoke: QPainterPath toReversed()
-    C.C_ZNK12QPainterPath10toReversedEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath10toReversedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "toReversed", args)
   }
@@ -1295,7 +1311,8 @@ func (this *QPainterPath) subtractedInverted(args ...interface{}) () {
     // invoke: QPainterPath subtractedInverted(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath18subtractedInvertedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath18subtractedInvertedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "subtractedInverted", args)
   }
@@ -1321,13 +1338,15 @@ func (this *QPainterPath) toFillPolygon(args ...interface{}) () {
     // invoke: QPolygonF toFillPolygon(const class QMatrix &)
     var arg0 = args[0].(QMatrix).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath13toFillPolygonERK7QMatrix(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath13toFillPolygonERK7QMatrix(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK12QPainterPath13toFillPolygonERK10QTransform
     // invoke: QPolygonF toFillPolygon(const class QTransform &)
     var arg0 = args[0].(QTransform).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath13toFillPolygonERK10QTransform(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath13toFillPolygonERK10QTransform(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "toFillPolygon", args)
   }
@@ -1350,7 +1369,8 @@ func (this *QPainterPath) subtracted(args ...interface{}) () {
     // invoke: QPainterPath subtracted(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath10subtractedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath10subtractedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "subtracted", args)
   }
@@ -1373,7 +1393,8 @@ func (this *QPainterPath) pointAtPercent(args ...interface{}) () {
     // invoke: QPointF pointAtPercent(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath14pointAtPercentEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath14pointAtPercentEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "pointAtPercent", args)
   }
@@ -1396,7 +1417,8 @@ func (this *QPainterPath) united(args ...interface{}) () {
     // invoke: QPainterPath united(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath6unitedERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath6unitedERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "united", args)
   }
@@ -1416,7 +1438,8 @@ func (this *QPainterPath) currentPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath15currentPositionEv
     // invoke: QPointF currentPosition()
-    C.C_ZNK12QPainterPath15currentPositionEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath15currentPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "currentPosition", args)
   }
@@ -1436,7 +1459,8 @@ func (this *QPainterPath) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath6lengthEv
     // invoke: qreal length()
-    C.C_ZNK12QPainterPath6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "length", args)
   }
@@ -1465,13 +1489,15 @@ func (this *QPainterPath) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZNK12QPainterPath10translatedEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK12QPainterPath10translatedEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK12QPainterPath10translatedERK7QPointF
     // invoke: QPainterPath translated(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath10translatedERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath10translatedERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "translated", args)
   }
@@ -1491,7 +1517,8 @@ func (this *QPainterPath) simplified(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QPainterPath10simplifiedEv
     // invoke: QPainterPath simplified()
-    C.C_ZNK12QPainterPath10simplifiedEv(this.qclsinst)
+    var ret = C.C_ZNK12QPainterPath10simplifiedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "simplified", args)
   }
@@ -1561,7 +1588,8 @@ func (this *QPainterPath) percentAtLength(args ...interface{}) () {
     // invoke: qreal percentAtLength(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QPainterPath15percentAtLengthEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QPainterPath15percentAtLengthEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPath", "percentAtLength", args)
   }
@@ -1584,7 +1612,8 @@ func (this *QPainterPathStroker) createStroke(args ...interface{}) () {
     // invoke: QPainterPath createStroke(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QPainterPathStroker12createStrokeERK12QPainterPath(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "createStroke", args)
   }
@@ -1624,7 +1653,8 @@ func (this *QPainterPathStroker) miterLimit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QPainterPathStroker10miterLimitEv
     // invoke: qreal miterLimit()
-    C.C_ZNK19QPainterPathStroker10miterLimitEv(this.qclsinst)
+    var ret = C.C_ZNK19QPainterPathStroker10miterLimitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "miterLimit", args)
   }
@@ -1632,7 +1662,7 @@ func (this *QPainterPathStroker) miterLimit(args ...interface{}) () {
 }
 
 // QPainterPathStroker(const class QPen &)
-func NewQPainterPathStroker(args ...interface{}) QPainterPathStroker {
+func NewQPainterPathStroker(args ...interface{}) *QPainterPathStroker {
   // QPainterPathStroker(const class QPen &)
   // QPainterPathStroker()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1651,18 +1681,20 @@ func NewQPainterPathStroker(args ...interface{}) QPainterPathStroker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QPainterPathStrokerC2ERK4QPen(qthis, arg0)
+    qthis = C.C_ZN19QPainterPathStrokerC2ERK4QPen(arg0)
+    return &QPainterPathStroker{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QPainterPathStrokerC1Ev
     // invoke: void QPainterPathStroker()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QPainterPathStrokerC2Ev(qthis)
+    qthis = C.C_ZN19QPainterPathStrokerC2Ev()
+    return &QPainterPathStroker{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "QPainterPathStroker", args)
   }
 
-  return QPainterPathStroker{}
+  return nil // QPainterPathStroker{qclsinst:qthis}
 }
 
 // setMiterLimit(qreal)
@@ -1701,7 +1733,8 @@ func (this *QPainterPathStroker) dashOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QPainterPathStroker10dashOffsetEv
     // invoke: qreal dashOffset()
-    C.C_ZNK19QPainterPathStroker10dashOffsetEv(this.qclsinst)
+    var ret = C.C_ZNK19QPainterPathStroker10dashOffsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "dashOffset", args)
   }
@@ -1721,7 +1754,8 @@ func (this *QPainterPathStroker) curveThreshold(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QPainterPathStroker14curveThresholdEv
     // invoke: qreal curveThreshold()
-    C.C_ZNK19QPainterPathStroker14curveThresholdEv(this.qclsinst)
+    var ret = C.C_ZNK19QPainterPathStroker14curveThresholdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "curveThreshold", args)
   }
@@ -1784,7 +1818,8 @@ func (this *QPainterPathStroker) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QPainterPathStroker5widthEv
     // invoke: qreal width()
-    C.C_ZNK19QPainterPathStroker5widthEv(this.qclsinst)
+    var ret = C.C_ZNK19QPainterPathStroker5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainterPathStroker", "width", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextlayout.h
 // dst-file: /src/gui/qtextlayout.go
 //
@@ -35,7 +35,7 @@ extern void C_ZNK9QTextLine6heightEv(void* qthis); // 4
   // proto:  int QTextLine::textStart();
 extern void C_ZNK9QTextLine9textStartEv(void* qthis); // 4
   // proto:  void QTextLine::QTextLine();
-extern void C_ZN9QTextLineC2Ev(void* qthis); // 1
+extern void* C_ZN9QTextLineC2Ev(); // 1
   // proto:  void QTextLine::setLeadingIncluded(bool included);
 extern void C_ZN9QTextLine18setLeadingIncludedEb(void* qthis, bool arg0); // 4
   // proto:  qreal QTextLine::ascent();
@@ -117,13 +117,13 @@ extern void C_ZNK11QTextLayout6engineEv(void* qthis); // 2
   // proto:  qreal QTextLayout::minimumWidth();
 extern void C_ZNK11QTextLayout12minimumWidthEv(void* qthis); // 4
   // proto:  void QTextLayout::QTextLayout(const QString & text, const QFont & font, QPaintDevice * paintdevice);
-extern void C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QTextLayout::QTextLayout(const QTextBlock & b);
-extern void C_ZN11QTextLayoutC2ERK10QTextBlock(void* qthis, void* arg0); // 3
+extern void* C_ZN11QTextLayoutC2ERK10QTextBlock(void* arg0); // 3
   // proto:  void QTextLayout::QTextLayout();
-extern void C_ZN11QTextLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN11QTextLayoutC2Ev(); // 3
   // proto:  void QTextLayout::QTextLayout(const QString & text);
-extern void C_ZN11QTextLayoutC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN11QTextLayoutC2ERK7QString(void* arg0); // 3
   // proto:  int QTextLayout::leftCursorPosition(int oldPos);
 extern void C_ZNK11QTextLayout18leftCursorPositionEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTextLayout::endLayout();
@@ -179,7 +179,7 @@ extern void C_ZN17QTextInlineObject9setAscentEd(void* qthis, double arg0); // 4
   // proto:  int QTextInlineObject::formatIndex();
 extern void C_ZNK17QTextInlineObject11formatIndexEv(void* qthis); // 4
   // proto:  void QTextInlineObject::QTextInlineObject();
-extern void C_ZN17QTextInlineObjectC2Ev(void* qthis); // 1
+extern void* C_ZN17QTextInlineObjectC2Ev(); // 1
   // proto:  qreal QTextInlineObject::ascent();
 extern void C_ZNK17QTextInlineObject6ascentEv(void* qthis); // 4
   // proto:  QRectF QTextInlineObject::rect();
@@ -227,7 +227,8 @@ func (this *QTextLine) horizontalAdvance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine17horizontalAdvanceEv
     // invoke: qreal horizontalAdvance()
-    C.C_ZNK9QTextLine17horizontalAdvanceEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine17horizontalAdvanceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "horizontalAdvance", args)
   }
@@ -247,7 +248,8 @@ func (this *QTextLine) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine6heightEv
     // invoke: qreal height()
-    C.C_ZNK9QTextLine6heightEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "height", args)
   }
@@ -267,7 +269,8 @@ func (this *QTextLine) textStart(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine9textStartEv
     // invoke: int textStart()
-    C.C_ZNK9QTextLine9textStartEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine9textStartEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "textStart", args)
   }
@@ -275,7 +278,7 @@ func (this *QTextLine) textStart(args ...interface{}) () {
 }
 
 // QTextLine()
-func NewQTextLine(args ...interface{}) QTextLine {
+func NewQTextLine(args ...interface{}) *QTextLine {
   // QTextLine()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -289,12 +292,13 @@ func NewQTextLine(args ...interface{}) QTextLine {
     // invoke: void QTextLine()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTextLineC2Ev(qthis)
+    qthis = C.C_ZN9QTextLineC2Ev()
+    return &QTextLine{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextLine", "QTextLine", args)
   }
 
-  return QTextLine{}
+  return nil // QTextLine{qclsinst:qthis}
 }
 
 // setLeadingIncluded(_Bool)
@@ -333,7 +337,8 @@ func (this *QTextLine) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine6ascentEv
     // invoke: qreal ascent()
-    C.C_ZNK9QTextLine6ascentEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine6ascentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "ascent", args)
   }
@@ -373,7 +378,8 @@ func (this *QTextLine) naturalTextWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine16naturalTextWidthEv
     // invoke: qreal naturalTextWidth()
-    C.C_ZNK9QTextLine16naturalTextWidthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine16naturalTextWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "naturalTextWidth", args)
   }
@@ -428,7 +434,8 @@ func (this *QTextLine) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine7descentEv
     // invoke: qreal descent()
-    C.C_ZNK9QTextLine7descentEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine7descentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "descent", args)
   }
@@ -448,7 +455,8 @@ func (this *QTextLine) leading(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine7leadingEv
     // invoke: qreal leading()
-    C.C_ZNK9QTextLine7leadingEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine7leadingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "leading", args)
   }
@@ -468,7 +476,8 @@ func (this *QTextLine) naturalTextRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine15naturalTextRectEv
     // invoke: QRectF naturalTextRect()
-    C.C_ZNK9QTextLine15naturalTextRectEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine15naturalTextRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "naturalTextRect", args)
   }
@@ -488,7 +497,8 @@ func (this *QTextLine) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine5widthEv
     // invoke: qreal width()
-    C.C_ZNK9QTextLine5widthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "width", args)
   }
@@ -531,7 +541,8 @@ func (this *QTextLine) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QTextLine7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "isValid", args)
   }
@@ -551,7 +562,8 @@ func (this *QTextLine) lineNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine10lineNumberEv
     // invoke: int lineNumber()
-    C.C_ZNK9QTextLine10lineNumberEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine10lineNumberEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "lineNumber", args)
   }
@@ -620,7 +632,8 @@ func (this *QTextLine) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine4rectEv
     // invoke: QRectF rect()
-    C.C_ZNK9QTextLine4rectEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine4rectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "rect", args)
   }
@@ -640,7 +653,8 @@ func (this *QTextLine) leadingIncluded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine15leadingIncludedEv
     // invoke: bool leadingIncluded()
-    C.C_ZNK9QTextLine15leadingIncludedEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine15leadingIncludedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "leadingIncluded", args)
   }
@@ -660,7 +674,8 @@ func (this *QTextLine) textLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine10textLengthEv
     // invoke: int textLength()
-    C.C_ZNK9QTextLine10textLengthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine10textLengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "textLength", args)
   }
@@ -700,7 +715,8 @@ func (this *QTextLine) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextLine8positionEv
     // invoke: QPointF position()
-    C.C_ZNK9QTextLine8positionEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextLine8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLine", "position", args)
   }
@@ -743,7 +759,8 @@ func (this *QTextLayout) boundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout12boundingRectEv
     // invoke: QRectF boundingRect()
-    C.C_ZNK11QTextLayout12boundingRectEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout12boundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "boundingRect", args)
   }
@@ -763,7 +780,8 @@ func (this *QTextLayout) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout4textEv
     // invoke: QString text()
-    C.C_ZNK11QTextLayout4textEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "text", args)
   }
@@ -803,7 +821,8 @@ func (this *QTextLayout) lineCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout9lineCountEv
     // invoke: int lineCount()
-    C.C_ZNK11QTextLayout9lineCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout9lineCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "lineCount", args)
   }
@@ -843,7 +862,8 @@ func (this *QTextLayout) createLine(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QTextLayout10createLineEv
     // invoke: QTextLine createLine()
-    C.C_ZN11QTextLayout10createLineEv(this.qclsinst)
+    var ret = C.C_ZN11QTextLayout10createLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "createLine", args)
   }
@@ -863,7 +883,8 @@ func (this *QTextLayout) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout4fontEv
     // invoke: QFont font()
-    C.C_ZNK11QTextLayout4fontEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "font", args)
   }
@@ -883,7 +904,8 @@ func (this *QTextLayout) textOption(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout10textOptionEv
     // invoke: const QTextOption & textOption()
-    C.C_ZNK11QTextLayout10textOptionEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout10textOptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "textOption", args)
   }
@@ -906,7 +928,8 @@ func (this *QTextLayout) lineAt(args ...interface{}) () {
     // invoke: QTextLine lineAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextLayout6lineAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QTextLayout6lineAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "lineAt", args)
   }
@@ -998,7 +1021,8 @@ func (this *QTextLayout) rightCursorPosition(args ...interface{}) () {
     // invoke: int rightCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextLayout19rightCursorPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QTextLayout19rightCursorPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "rightCursorPosition", args)
   }
@@ -1064,7 +1088,8 @@ func (this *QTextLayout) isValidCursorPosition(args ...interface{}) () {
     // invoke: bool isValidCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextLayout21isValidCursorPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QTextLayout21isValidCursorPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "isValidCursorPosition", args)
   }
@@ -1130,7 +1155,8 @@ func (this *QTextLayout) minimumWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout12minimumWidthEv
     // invoke: qreal minimumWidth()
-    C.C_ZNK11QTextLayout12minimumWidthEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout12minimumWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "minimumWidth", args)
   }
@@ -1138,7 +1164,7 @@ func (this *QTextLayout) minimumWidth(args ...interface{}) () {
 }
 
 // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
-func NewQTextLayout(args ...interface{}) QTextLayout {
+func NewQTextLayout(args ...interface{}) *QTextLayout {
   // QTextLayout(const class QString &, const class QFont &, class QPaintDevice *)
   // QTextLayout(const class QTextBlock &)
   // QTextLayout()
@@ -1169,7 +1195,8 @@ func NewQTextLayout(args ...interface{}) QTextLayout {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN11QTextLayoutC2ERK7QStringRK5QFontP12QPaintDevice(arg0, arg1, arg2)
+    return &QTextLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextLayoutC1ERK10QTextBlock
     // invoke: void QTextLayout(const class QTextBlock &)
@@ -1177,13 +1204,15 @@ func NewQTextLayout(args ...interface{}) QTextLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextLayoutC2ERK10QTextBlock(qthis, arg0)
+    qthis = C.C_ZN11QTextLayoutC2ERK10QTextBlock(arg0)
+    return &QTextLayout{qclsinst:qthis}
   case 2:
     // invoke: _ZN11QTextLayoutC1Ev
     // invoke: void QTextLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextLayoutC2Ev(qthis)
+    qthis = C.C_ZN11QTextLayoutC2Ev()
+    return &QTextLayout{qclsinst:qthis}
   case 3:
     // invoke: _ZN11QTextLayoutC1ERK7QString
     // invoke: void QTextLayout(const class QString &)
@@ -1191,12 +1220,13 @@ func NewQTextLayout(args ...interface{}) QTextLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextLayoutC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN11QTextLayoutC2ERK7QString(arg0)
+    return &QTextLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextLayout", "QTextLayout", args)
   }
 
-  return QTextLayout{}
+  return nil // QTextLayout{qclsinst:qthis}
 }
 
 // leftCursorPosition(int)
@@ -1215,7 +1245,8 @@ func (this *QTextLayout) leftCursorPosition(args ...interface{}) () {
     // invoke: int leftCursorPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextLayout18leftCursorPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QTextLayout18leftCursorPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "leftCursorPosition", args)
   }
@@ -1255,7 +1286,8 @@ func (this *QTextLayout) maximumWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout12maximumWidthEv
     // invoke: qreal maximumWidth()
-    C.C_ZNK11QTextLayout12maximumWidthEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout12maximumWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "maximumWidth", args)
   }
@@ -1301,7 +1333,8 @@ func (this *QTextLayout) lineForTextPosition(args ...interface{}) () {
     // invoke: QTextLine lineForTextPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QTextLayout19lineForTextPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QTextLayout19lineForTextPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "lineForTextPosition", args)
   }
@@ -1321,7 +1354,8 @@ func (this *QTextLayout) preeditAreaPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout19preeditAreaPositionEv
     // invoke: int preeditAreaPosition()
-    C.C_ZNK11QTextLayout19preeditAreaPositionEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout19preeditAreaPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "preeditAreaPosition", args)
   }
@@ -1434,7 +1468,8 @@ func (this *QTextLayout) cacheEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout12cacheEnabledEv
     // invoke: bool cacheEnabled()
-    C.C_ZNK11QTextLayout12cacheEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout12cacheEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "cacheEnabled", args)
   }
@@ -1497,7 +1532,8 @@ func (this *QTextLayout) preeditAreaText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout15preeditAreaTextEv
     // invoke: QString preeditAreaText()
-    C.C_ZNK11QTextLayout15preeditAreaTextEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout15preeditAreaTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "preeditAreaText", args)
   }
@@ -1537,7 +1573,8 @@ func (this *QTextLayout) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextLayout8positionEv
     // invoke: QPointF position()
-    C.C_ZNK11QTextLayout8positionEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextLayout8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextLayout", "position", args)
   }
@@ -1557,7 +1594,8 @@ func (this *QTextInlineObject) textPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject12textPositionEv
     // invoke: int textPosition()
-    C.C_ZNK17QTextInlineObject12textPositionEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject12textPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "textPosition", args)
   }
@@ -1577,7 +1615,8 @@ func (this *QTextInlineObject) descent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject7descentEv
     // invoke: qreal descent()
-    C.C_ZNK17QTextInlineObject7descentEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject7descentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "descent", args)
   }
@@ -1620,7 +1659,8 @@ func (this *QTextInlineObject) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject6formatEv
     // invoke: QTextFormat format()
-    C.C_ZNK17QTextInlineObject6formatEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "format", args)
   }
@@ -1663,7 +1703,8 @@ func (this *QTextInlineObject) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK17QTextInlineObject7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "isValid", args)
   }
@@ -1703,7 +1744,8 @@ func (this *QTextInlineObject) height(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject6heightEv
     // invoke: qreal height()
-    C.C_ZNK17QTextInlineObject6heightEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject6heightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "height", args)
   }
@@ -1723,7 +1765,8 @@ func (this *QTextInlineObject) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject5widthEv
     // invoke: qreal width()
-    C.C_ZNK17QTextInlineObject5widthEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "width", args)
   }
@@ -1766,7 +1809,8 @@ func (this *QTextInlineObject) formatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject11formatIndexEv
     // invoke: int formatIndex()
-    C.C_ZNK17QTextInlineObject11formatIndexEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject11formatIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "formatIndex", args)
   }
@@ -1774,7 +1818,7 @@ func (this *QTextInlineObject) formatIndex(args ...interface{}) () {
 }
 
 // QTextInlineObject()
-func NewQTextInlineObject(args ...interface{}) QTextInlineObject {
+func NewQTextInlineObject(args ...interface{}) *QTextInlineObject {
   // QTextInlineObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1788,12 +1832,13 @@ func NewQTextInlineObject(args ...interface{}) QTextInlineObject {
     // invoke: void QTextInlineObject()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QTextInlineObjectC2Ev(qthis)
+    qthis = C.C_ZN17QTextInlineObjectC2Ev()
+    return &QTextInlineObject{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "QTextInlineObject", args)
   }
 
-  return QTextInlineObject{}
+  return nil // QTextInlineObject{qclsinst:qthis}
 }
 
 // ascent()
@@ -1809,7 +1854,8 @@ func (this *QTextInlineObject) ascent(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject6ascentEv
     // invoke: qreal ascent()
-    C.C_ZNK17QTextInlineObject6ascentEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject6ascentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "ascent", args)
   }
@@ -1829,7 +1875,8 @@ func (this *QTextInlineObject) rect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QTextInlineObject4rectEv
     // invoke: QRectF rect()
-    C.C_ZNK17QTextInlineObject4rectEv(this.qclsinst)
+    var ret = C.C_ZNK17QTextInlineObject4rectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextInlineObject", "rect", args)
   }

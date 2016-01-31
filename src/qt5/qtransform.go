@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtransform.h
 // dst-file: /src/gui/qtransform.go
 //
@@ -103,13 +103,13 @@ extern void C_ZNK10QTransform10transposedEv(void* qthis); // 4
   // proto:  qreal QTransform::det();
 extern void C_ZNK10QTransform3detEv(void* qthis); // 2
   // proto:  void QTransform::QTransform();
-extern void C_ZN10QTransformC2Ev(void* qthis); // 3
+extern void* C_ZN10QTransformC2Ev(); // 3
   // proto:  void QTransform::QTransform(const QMatrix & mtx);
-extern void C_ZN10QTransformC2ERK7QMatrix(void* qthis, void* arg0); // 3
+extern void* C_ZN10QTransformC2ERK7QMatrix(void* arg0); // 3
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h13, qreal h21, qreal h22, qreal h23, qreal h31, qreal h32, qreal h33);
-extern void C_ZN10QTransformC2Eddddddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8); // 3
+extern void* C_ZN10QTransformC2Eddddddddd(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5, double arg6, double arg7, double arg8); // 3
   // proto:  void QTransform::QTransform(qreal h11, qreal h12, qreal h21, qreal h22, qreal dx, qreal dy);
-extern void C_ZN10QTransformC2Edddddd(void* qthis, double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 3
+extern void* C_ZN10QTransformC2Edddddd(double arg0, double arg1, double arg2, double arg3, double arg4, double arg5); // 3
   // proto:  qreal QTransform::m22();
 extern void C_ZNK10QTransform3m22Ev(void* qthis); // 2
   // proto: static QTransform QTransform::fromScale(qreal dx, qreal dy);
@@ -161,7 +161,8 @@ func (this *QTransform) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform2dxEv
     // invoke: qreal dx()
-    C.C_ZNK10QTransform2dxEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform2dxEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "dx", args)
   }
@@ -234,13 +235,15 @@ func (this *QTransform) mapRect(args ...interface{}) () {
     // invoke: QRect mapRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform7mapRectERK5QRect(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform7mapRectERK5QRect(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QTransform7mapRectERK6QRectF
     // invoke: QRectF mapRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform7mapRectERK6QRectF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform7mapRectERK6QRectF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "mapRect", args)
   }
@@ -260,7 +263,8 @@ func (this *QTransform) m21(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m21Ev
     // invoke: qreal m21()
-    C.C_ZNK10QTransform3m21Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m21Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m21", args)
   }
@@ -280,7 +284,8 @@ func (this *QTransform) m11(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m11Ev
     // invoke: qreal m11()
-    C.C_ZNK10QTransform3m11Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m11Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m11", args)
   }
@@ -300,7 +305,8 @@ func (this *QTransform) m13(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m13Ev
     // invoke: qreal m13()
-    C.C_ZNK10QTransform3m13Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m13Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m13", args)
   }
@@ -320,7 +326,8 @@ func (this *QTransform) isInvertible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform12isInvertibleEv
     // invoke: bool isInvertible()
-    C.C_ZNK10QTransform12isInvertibleEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform12isInvertibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isInvertible", args)
   }
@@ -340,7 +347,8 @@ func (this *QTransform) m23(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m23Ev
     // invoke: qreal m23()
-    C.C_ZNK10QTransform3m23Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m23Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m23", args)
   }
@@ -366,7 +374,8 @@ func (this *QTransform) scale(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform5scaleEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QTransform5scaleEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "scale", args)
   }
@@ -389,7 +398,8 @@ func (this *QTransform) mapToPolygon(args ...interface{}) () {
     // invoke: QPolygon mapToPolygon(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform12mapToPolygonERK5QRect(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform12mapToPolygonERK5QRect(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "mapToPolygon", args)
   }
@@ -409,7 +419,8 @@ func (this *QTransform) adjoint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform7adjointEv
     // invoke: QTransform adjoint()
-    C.C_ZNK10QTransform7adjointEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform7adjointEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "adjoint", args)
   }
@@ -429,7 +440,8 @@ func (this *QTransform) m33(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m33Ev
     // invoke: qreal m33()
-    C.C_ZNK10QTransform3m33Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m33Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m33", args)
   }
@@ -449,7 +461,8 @@ func (this *QTransform) m32(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m32Ev
     // invoke: qreal m32()
-    C.C_ZNK10QTransform3m32Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m32Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m32", args)
   }
@@ -469,7 +482,8 @@ func (this *QTransform) m31(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m31Ev
     // invoke: qreal m31()
-    C.C_ZNK10QTransform3m31Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m31Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m31", args)
   }
@@ -495,7 +509,8 @@ func (this *QTransform) translate(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform9translateEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QTransform9translateEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "translate", args)
   }
@@ -541,7 +556,8 @@ func (this *QTransform) shear(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform5shearEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN10QTransform5shearEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "shear", args)
   }
@@ -597,31 +613,36 @@ func (this *QTransform) map_(args ...interface{}) () {
     // invoke: QPoint map(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QTransform3mapERK12QPainterPath
     // invoke: QPainterPath map(const class QPainterPath &)
     var arg0 = args[0].(QPainterPath).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK12QPainterPath(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK12QPainterPath(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QTransform3mapERK5QLine
     // invoke: QLine map(const class QLine &)
     var arg0 = args[0].(QLine).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK5QLine(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK5QLine(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK10QTransform3mapERK9QPolygonF
     // invoke: QPolygonF map(const class QPolygonF &)
     var arg0 = args[0].(QPolygonF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK9QPolygonF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK9QPolygonF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 4:
     // invoke: _ZNK10QTransform3mapERK7QPointF
     // invoke: QPointF map(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 5:
     // invoke: _ZNK10QTransform3mapEddPdS0_
     // invoke: void map(qreal, qreal, qreal *, qreal *)
@@ -639,7 +660,8 @@ func (this *QTransform) map_(args ...interface{}) () {
     // invoke: QPolygon map(const class QPolygon &)
     var arg0 = args[0].(QPolygon).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK8QPolygon(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK8QPolygon(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 7:
     // invoke: _ZNK10QTransform3mapEiiPiS0_
     // invoke: void map(int, int, int *, int *)
@@ -657,13 +679,15 @@ func (this *QTransform) map_(args ...interface{}) () {
     // invoke: QRegion map(const class QRegion &)
     var arg0 = args[0].(QRegion).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK7QRegion(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK7QRegion(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 9:
     // invoke: _ZNK10QTransform3mapERK6QLineF
     // invoke: QLineF map(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform3mapERK6QLineF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform3mapERK6QLineF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "map", args)
   }
@@ -683,7 +707,8 @@ func (this *QTransform) determinant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform11determinantEv
     // invoke: qreal determinant()
-    C.C_ZNK10QTransform11determinantEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform11determinantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "determinant", args)
   }
@@ -703,7 +728,8 @@ func (this *QTransform) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform2dyEv
     // invoke: qreal dy()
-    C.C_ZNK10QTransform2dyEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform2dyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "dy", args)
   }
@@ -723,7 +749,8 @@ func (this *QTransform) toAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform8toAffineEv
     // invoke: const QMatrix & toAffine()
-    C.C_ZNK10QTransform8toAffineEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform8toAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "toAffine", args)
   }
@@ -743,7 +770,8 @@ func (this *QTransform) isRotating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform10isRotatingEv
     // invoke: bool isRotating()
-    C.C_ZNK10QTransform10isRotatingEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform10isRotatingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isRotating", args)
   }
@@ -766,7 +794,8 @@ func (this *QTransform) inverted(args ...interface{}) () {
     // invoke: QTransform inverted(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTransform8invertedEPb(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTransform8invertedEPb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "inverted", args)
   }
@@ -792,7 +821,8 @@ func (this *QTransform) squareToQuad_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTransform).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform12squareToQuadERK9QPolygonFRS_(arg0, arg1)
+    var ret = C.C_ZN10QTransform12squareToQuadERK9QPolygonFRS_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "squareToQuad", args)
   }
@@ -832,7 +862,8 @@ func (this *QTransform) transposed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform10transposedEv
     // invoke: QTransform transposed()
-    C.C_ZNK10QTransform10transposedEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform10transposedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "transposed", args)
   }
@@ -852,7 +883,8 @@ func (this *QTransform) det(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3detEv
     // invoke: qreal det()
-    C.C_ZNK10QTransform3detEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3detEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "det", args)
   }
@@ -860,7 +892,7 @@ func (this *QTransform) det(args ...interface{}) () {
 }
 
 // QTransform()
-func NewQTransform(args ...interface{}) QTransform {
+func NewQTransform(args ...interface{}) *QTransform {
   // QTransform()
   // QTransform(const class QMatrix &)
   // QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
@@ -896,7 +928,8 @@ func NewQTransform(args ...interface{}) QTransform {
     // invoke: void QTransform()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTransformC2Ev(qthis)
+    qthis = C.C_ZN10QTransformC2Ev()
+    return &QTransform{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QTransformC1ERK7QMatrix
     // invoke: void QTransform(const class QMatrix &)
@@ -904,7 +937,8 @@ func NewQTransform(args ...interface{}) QTransform {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTransformC2ERK7QMatrix(qthis, arg0)
+    qthis = C.C_ZN10QTransformC2ERK7QMatrix(arg0)
+    return &QTransform{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QTransformC1Eddddddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal, qreal)
@@ -928,7 +962,8 @@ func NewQTransform(args ...interface{}) QTransform {
     if false {fmt.Println(arg8)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTransformC2Eddddddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+    qthis = C.C_ZN10QTransformC2Eddddddddd(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+    return &QTransform{qclsinst:qthis}
   case 3:
     // invoke: _ZN10QTransformC1Edddddd
     // invoke: void QTransform(qreal, qreal, qreal, qreal, qreal, qreal)
@@ -946,12 +981,13 @@ func NewQTransform(args ...interface{}) QTransform {
     if false {fmt.Println(arg5)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTransformC2Edddddd(qthis, arg0, arg1, arg2, arg3, arg4, arg5)
+    qthis = C.C_ZN10QTransformC2Edddddd(arg0, arg1, arg2, arg3, arg4, arg5)
+    return &QTransform{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTransform", "QTransform", args)
   }
 
-  return QTransform{}
+  return nil // QTransform{qclsinst:qthis}
 }
 
 // m22()
@@ -967,7 +1003,8 @@ func (this *QTransform) m22(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m22Ev
     // invoke: qreal m22()
-    C.C_ZNK10QTransform3m22Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m22Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m22", args)
   }
@@ -993,7 +1030,8 @@ func (this *QTransform) fromScale_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform9fromScaleEdd(arg0, arg1)
+    var ret = C.C_ZN10QTransform9fromScaleEdd(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "fromScale", args)
   }
@@ -1022,7 +1060,8 @@ func (this *QTransform) quadToQuad_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTransform).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(arg0, arg1, arg2)
+    var ret = C.C_ZN10QTransform10quadToQuadERK9QPolygonFS2_RS_(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "quadToQuad", args)
   }
@@ -1042,7 +1081,8 @@ func (this *QTransform) m12(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform3m12Ev
     // invoke: qreal m12()
-    C.C_ZNK10QTransform3m12Ev(this.qclsinst)
+    var ret = C.C_ZNK10QTransform3m12Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "m12", args)
   }
@@ -1062,7 +1102,8 @@ func (this *QTransform) isIdentity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform10isIdentityEv
     // invoke: bool isIdentity()
-    C.C_ZNK10QTransform10isIdentityEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform10isIdentityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isIdentity", args)
   }
@@ -1082,7 +1123,8 @@ func (this *QTransform) isScaling(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform9isScalingEv
     // invoke: bool isScaling()
-    C.C_ZNK10QTransform9isScalingEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform9isScalingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isScaling", args)
   }
@@ -1108,7 +1150,8 @@ func (this *QTransform) quadToSquare_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QTransform).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform12quadToSquareERK9QPolygonFRS_(arg0, arg1)
+    var ret = C.C_ZN10QTransform12quadToSquareERK9QPolygonFRS_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "quadToSquare", args)
   }
@@ -1128,7 +1171,8 @@ func (this *QTransform) isAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform8isAffineEv
     // invoke: bool isAffine()
-    C.C_ZNK10QTransform8isAffineEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform8isAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isAffine", args)
   }
@@ -1148,7 +1192,8 @@ func (this *QTransform) isTranslating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTransform13isTranslatingEv
     // invoke: bool isTranslating()
-    C.C_ZNK10QTransform13isTranslatingEv(this.qclsinst)
+    var ret = C.C_ZNK10QTransform13isTranslatingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "isTranslating", args)
   }
@@ -1174,7 +1219,8 @@ func (this *QTransform) fromTranslate_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN10QTransform13fromTranslateEdd(arg0, arg1)
+    var ret = C.C_ZN10QTransform13fromTranslateEdd(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTransform", "fromTranslate", args)
   }

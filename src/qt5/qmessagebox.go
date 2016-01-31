@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qmessagebox.h
 // dst-file: /src/widgets/qmessagebox.go
 //
@@ -105,7 +105,7 @@ extern void C_ZNK11QMessageBox13defaultButtonEv(void* qthis); // 4
   // proto:  void QMessageBox::setDefaultButton(QPushButton * button);
 extern void C_ZN11QMessageBox16setDefaultButtonEP11QPushButton(void* qthis, void* arg0); // 4
   // proto:  void QMessageBox::QMessageBox(QWidget * parent);
-extern void C_ZN11QMessageBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QMessageBoxC2EP7QWidget(void* arg0); // 3
   // proto:  Qt::TextFormat QMessageBox::textFormat();
 extern void C_ZNK11QMessageBox10textFormatEv(void* qthis); // 4
 */
@@ -206,7 +206,8 @@ func (this *QMessageBox) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox4textEv
     // invoke: QString text()
-    C.C_ZNK11QMessageBox4textEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "text", args)
   }
@@ -252,7 +253,8 @@ func (this *QMessageBox) iconPixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox10iconPixmapEv
     // invoke: QPixmap iconPixmap()
-    C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox10iconPixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "iconPixmap", args)
   }
@@ -304,7 +306,8 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    var ret = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii
     // invoke: int warning(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -320,7 +323,8 @@ func (this *QMessageBox) warning_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    var ret = C.C_ZN11QMessageBox7warningEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "warning", args)
   }
@@ -340,7 +344,8 @@ func (this *QMessageBox) detailedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox12detailedTextEv
     // invoke: QString detailedText()
-    C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox12detailedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "detailedText", args)
   }
@@ -458,7 +463,8 @@ func (this *QMessageBox) informativeText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox15informativeTextEv
     // invoke: QString informativeText()
-    C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox15informativeTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "informativeText", args)
   }
@@ -510,7 +516,8 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    var ret = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii
     // invoke: int question(class QWidget *, const class QString &, const class QString &, int, int, int)
@@ -526,7 +533,8 @@ func (this *QMessageBox) question_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    var ret = C.C_ZN11QMessageBox8questionEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "question", args)
   }
@@ -617,7 +625,8 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    var ret = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int critical(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -637,7 +646,8 @@ func (this *QMessageBox) critical_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    var ret = C.C_ZN11QMessageBox8criticalEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "critical", args)
   }
@@ -771,7 +781,8 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = C.int32_t(args[5].(int32))
     if false {fmt.Println(arg5)}
-    C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    var ret = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_iii(arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii
     // invoke: int information(class QWidget *, const class QString &, const class QString &, const class QString &, const class QString &, const class QString &, int, int)
@@ -791,7 +802,8 @@ func (this *QMessageBox) information_s(args ...interface{}) () {
     if false {fmt.Println(arg6)}
     var arg7 = C.int32_t(args[7].(int32))
     if false {fmt.Println(arg7)}
-    C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    var ret = C.C_ZN11QMessageBox11informationEP7QWidgetRK7QStringS4_S4_S4_S4_ii(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "information", args)
   }
@@ -834,7 +846,8 @@ func (this *QMessageBox) checkBox(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox8checkBoxEv
     // invoke: QCheckBox * checkBox()
-    C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox8checkBoxEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "checkBox", args)
   }
@@ -992,7 +1005,8 @@ func (this *QMessageBox) buttonText(args ...interface{}) () {
     // invoke: QString buttonText(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QMessageBox10buttonTextEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "buttonText", args)
   }
@@ -1032,7 +1046,8 @@ func (this *QMessageBox) defaultButton(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QMessageBox13defaultButtonEv
     // invoke: QPushButton * defaultButton()
-    C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
+    var ret = C.C_ZNK11QMessageBox13defaultButtonEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageBox", "defaultButton", args)
   }
@@ -1063,7 +1078,7 @@ func (this *QMessageBox) setDefaultButton(args ...interface{}) () {
 }
 
 // QMessageBox(class QWidget *)
-func NewQMessageBox(args ...interface{}) QMessageBox {
+func NewQMessageBox(args ...interface{}) *QMessageBox {
   // QMessageBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1080,12 +1095,13 @@ func NewQMessageBox(args ...interface{}) QMessageBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QMessageBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QMessageBoxC2EP7QWidget(arg0)
+    return &QMessageBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMessageBox", "QMessageBox", args)
   }
 
-  return QMessageBox{}
+  return nil // QMessageBox{qclsinst:qthis}
 }
 
 // textFormat()

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopenglwindow.h
 // dst-file: /src/gui/qopenglwindow.go
 //
@@ -140,7 +140,8 @@ func (this *QOpenGLWindow) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLWindow7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "isValid", args)
   }
@@ -160,7 +161,8 @@ func (this *QOpenGLWindow) defaultFramebufferObject(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QOpenGLWindow24defaultFramebufferObjectEv
     // invoke: GLuint defaultFramebufferObject()
-    C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
+    var ret = C.C_ZNK13QOpenGLWindow24defaultFramebufferObjectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "defaultFramebufferObject", args)
   }
@@ -240,7 +242,8 @@ func (this *QOpenGLWindow) grabFramebuffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QOpenGLWindow15grabFramebufferEv
     // invoke: QImage grabFramebuffer()
-    C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
+    var ret = C.C_ZN13QOpenGLWindow15grabFramebufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLWindow", "grabFramebuffer", args)
   }

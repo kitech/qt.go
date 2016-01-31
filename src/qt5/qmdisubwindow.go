@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qmdisubwindow.h
 // dst-file: /src/widgets/qmdisubwindow.go
 //
@@ -163,7 +163,8 @@ func (this *QMdiSubWindow) maximizedButtonsWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow22maximizedButtonsWidgetEv
     // invoke: QWidget * maximizedButtonsWidget()
-    C.C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow22maximizedButtonsWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedButtonsWidget", args)
   }
@@ -183,7 +184,8 @@ func (this *QMdiSubWindow) mdiArea(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow7mdiAreaEv
     // invoke: QMdiArea * mdiArea()
-    C.C_ZNK13QMdiSubWindow7mdiAreaEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow7mdiAreaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "mdiArea", args)
   }
@@ -226,7 +228,8 @@ func (this *QMdiSubWindow) keyboardPageStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow16keyboardPageStepEv
     // invoke: int keyboardPageStep()
-    C.C_ZNK13QMdiSubWindow16keyboardPageStepEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow16keyboardPageStepEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardPageStep", args)
   }
@@ -289,7 +292,8 @@ func (this *QMdiSubWindow) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow6widgetEv
     // invoke: QWidget * widget()
-    C.C_ZNK13QMdiSubWindow6widgetEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "widget", args)
   }
@@ -309,7 +313,8 @@ func (this *QMdiSubWindow) keyboardSingleStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow18keyboardSingleStepEv
     // invoke: int keyboardSingleStep()
-    C.C_ZNK13QMdiSubWindow18keyboardSingleStepEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow18keyboardSingleStepEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "keyboardSingleStep", args)
   }
@@ -329,7 +334,8 @@ func (this *QMdiSubWindow) systemMenu(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow10systemMenuEv
     // invoke: QMenu * systemMenu()
-    C.C_ZNK13QMdiSubWindow10systemMenuEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow10systemMenuEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "systemMenu", args)
   }
@@ -369,7 +375,8 @@ func (this *QMdiSubWindow) isShaded(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8isShadedEv
     // invoke: bool isShaded()
-    C.C_ZNK13QMdiSubWindow8isShadedEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow8isShadedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "isShaded", args)
   }
@@ -389,7 +396,8 @@ func (this *QMdiSubWindow) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK13QMdiSubWindow8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "sizeHint", args)
   }
@@ -409,7 +417,8 @@ func (this *QMdiSubWindow) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QMdiSubWindow15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK13QMdiSubWindow15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "minimumSizeHint", args)
   }
@@ -449,7 +458,8 @@ func (this *QMdiSubWindow) maximizedSystemMenuIconWidget(args ...interface{}) ()
   case 0:
     // invoke: _ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv
     // invoke: QWidget * maximizedSystemMenuIconWidget()
-    C.C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK13QMdiSubWindow29maximizedSystemMenuIconWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiSubWindow", "maximizedSystemMenuIconWidget", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpen.h
 // dst-file: /src/gui/qpen.go
 //
@@ -55,11 +55,11 @@ extern void C_ZNK4QPen10miterLimitEv(void* qthis); // 4
   // proto:  bool QPen::isSolid();
 extern void C_ZNK4QPen7isSolidEv(void* qthis); // 4
   // proto:  void QPen::QPen(const QPen & pen);
-extern void C_ZN4QPenC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN4QPenC2ERKS_(void* arg0); // 3
   // proto:  void QPen::QPen(const QColor & color);
-extern void C_ZN4QPenC2ERK6QColor(void* qthis, void* arg0); // 3
+extern void* C_ZN4QPenC2ERK6QColor(void* arg0); // 3
   // proto:  void QPen::QPen();
-extern void C_ZN4QPenC2Ev(void* qthis); // 3
+extern void* C_ZN4QPenC2Ev(); // 3
   // proto:  qreal QPen::widthF();
 extern void C_ZNK4QPen6widthFEv(void* qthis); // 4
   // proto:  QVector<qreal> QPen::dashPattern();
@@ -109,7 +109,8 @@ func (this *QPen) color(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen5colorEv
     // invoke: QColor color()
-    C.C_ZNK4QPen5colorEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen5colorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "color", args)
   }
@@ -129,7 +130,8 @@ func (this *QPen) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen5brushEv
     // invoke: QBrush brush()
-    C.C_ZNK4QPen5brushEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen5brushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "brush", args)
   }
@@ -192,7 +194,8 @@ func (this *QPen) isCosmetic(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen10isCosmeticEv
     // invoke: bool isCosmetic()
-    C.C_ZNK4QPen10isCosmeticEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen10isCosmeticEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "isCosmetic", args)
   }
@@ -252,7 +255,8 @@ func (this *QPen) width(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen5widthEv
     // invoke: int width()
-    C.C_ZNK4QPen5widthEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen5widthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "width", args)
   }
@@ -295,7 +299,8 @@ func (this *QPen) dashOffset(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen10dashOffsetEv
     // invoke: qreal dashOffset()
-    C.C_ZNK4QPen10dashOffsetEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen10dashOffsetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "dashOffset", args)
   }
@@ -315,7 +320,8 @@ func (this *QPen) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QPen10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZN4QPen10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZN4QPen10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "isDetached", args)
   }
@@ -335,7 +341,8 @@ func (this *QPen) miterLimit(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen10miterLimitEv
     // invoke: qreal miterLimit()
-    C.C_ZNK4QPen10miterLimitEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen10miterLimitEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "miterLimit", args)
   }
@@ -355,7 +362,8 @@ func (this *QPen) isSolid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen7isSolidEv
     // invoke: bool isSolid()
-    C.C_ZNK4QPen7isSolidEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen7isSolidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "isSolid", args)
   }
@@ -363,7 +371,7 @@ func (this *QPen) isSolid(args ...interface{}) () {
 }
 
 // QPen(const class QPen &)
-func NewQPen(args ...interface{}) QPen {
+func NewQPen(args ...interface{}) *QPen {
   // QPen(const class QPen &)
   // QPen(const class QColor &)
   // QPen()
@@ -385,7 +393,8 @@ func NewQPen(args ...interface{}) QPen {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QPenC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN4QPenC2ERKS_(arg0)
+    return &QPen{qclsinst:qthis}
   case 1:
     // invoke: _ZN4QPenC1ERK6QColor
     // invoke: void QPen(const class QColor &)
@@ -393,18 +402,20 @@ func NewQPen(args ...interface{}) QPen {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QPenC2ERK6QColor(qthis, arg0)
+    qthis = C.C_ZN4QPenC2ERK6QColor(arg0)
+    return &QPen{qclsinst:qthis}
   case 2:
     // invoke: _ZN4QPenC1Ev
     // invoke: void QPen()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QPenC2Ev(qthis)
+    qthis = C.C_ZN4QPenC2Ev()
+    return &QPen{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPen", "QPen", args)
   }
 
-  return QPen{}
+  return nil // QPen{qclsinst:qthis}
 }
 
 // widthF()
@@ -420,7 +431,8 @@ func (this *QPen) widthF(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QPen6widthFEv
     // invoke: qreal widthF()
-    C.C_ZNK4QPen6widthFEv(this.qclsinst)
+    var ret = C.C_ZNK4QPen6widthFEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPen", "widthF", args)
   }

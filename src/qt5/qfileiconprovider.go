@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qfileiconprovider.h
 // dst-file: /src/widgets/qfileiconprovider.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QFileIconProvider::~QFileIconProvider();
 extern void C_ZN17QFileIconProviderD2Ev(void* qthis); // 4
   // proto:  void QFileIconProvider::QFileIconProvider();
-extern void C_ZN17QFileIconProviderC2Ev(void* qthis); // 3
+extern void* C_ZN17QFileIconProviderC2Ev(); // 3
   // proto:  QString QFileIconProvider::type(const QFileInfo & info);
 extern void C_ZNK17QFileIconProvider4typeERK9QFileInfo(void* qthis, void* arg0); // 4
   // proto:  Options QFileIconProvider::options();
@@ -77,7 +77,7 @@ func (this *QFileIconProvider) FreeQFileIconProvider(args ...interface{}) () {
 }
 
 // QFileIconProvider()
-func NewQFileIconProvider(args ...interface{}) QFileIconProvider {
+func NewQFileIconProvider(args ...interface{}) *QFileIconProvider {
   // QFileIconProvider()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -91,12 +91,13 @@ func NewQFileIconProvider(args ...interface{}) QFileIconProvider {
     // invoke: void QFileIconProvider()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QFileIconProviderC2Ev(qthis)
+    qthis = C.C_ZN17QFileIconProviderC2Ev()
+    return &QFileIconProvider{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileIconProvider", "QFileIconProvider", args)
   }
 
-  return QFileIconProvider{}
+  return nil // QFileIconProvider{qclsinst:qthis}
 }
 
 // type(const class QFileInfo &)
@@ -115,7 +116,8 @@ func (this *QFileIconProvider) type_(args ...interface{}) () {
     // invoke: QString type(const class QFileInfo &)
     var arg0 = args[0].(QFileInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK17QFileIconProvider4typeERK9QFileInfo(this.qclsinst, arg0)
+    var ret = C.C_ZNK17QFileIconProvider4typeERK9QFileInfo(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileIconProvider", "type", args)
   }
@@ -158,7 +160,8 @@ func (this *QFileIconProvider) icon(args ...interface{}) () {
     // invoke: QIcon icon(const class QFileInfo &)
     var arg0 = args[0].(QFileInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK17QFileIconProvider4iconERK9QFileInfo(this.qclsinst, arg0)
+    var ret = C.C_ZNK17QFileIconProvider4iconERK9QFileInfo(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileIconProvider", "icon", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdialog.h
 // dst-file: /src/widgets/qdialog.go
 //
@@ -186,7 +186,8 @@ func (this *QDialog) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog6resultEv
     // invoke: int result()
-    C.C_ZNK7QDialog6resultEv(this.qclsinst)
+    var ret = C.C_ZNK7QDialog6resultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "result", args)
   }
@@ -249,7 +250,8 @@ func (this *QDialog) exec(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QDialog4execEv
     // invoke: int exec()
-    C.C_ZN7QDialog4execEv(this.qclsinst)
+    var ret = C.C_ZN7QDialog4execEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "exec", args)
   }
@@ -375,7 +377,8 @@ func (this *QDialog) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK7QDialog8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK7QDialog8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "sizeHint", args)
   }
@@ -395,7 +398,8 @@ func (this *QDialog) extension(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog9extensionEv
     // invoke: QWidget * extension()
-    C.C_ZNK7QDialog9extensionEv(this.qclsinst)
+    var ret = C.C_ZNK7QDialog9extensionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "extension", args)
   }
@@ -415,7 +419,8 @@ func (this *QDialog) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK7QDialog15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK7QDialog15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "minimumSizeHint", args)
   }
@@ -435,7 +440,8 @@ func (this *QDialog) isSizeGripEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QDialog17isSizeGripEnabledEv
     // invoke: bool isSizeGripEnabled()
-    C.C_ZNK7QDialog17isSizeGripEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK7QDialog17isSizeGripEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialog", "isSizeGripEnabled", args)
   }

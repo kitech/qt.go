@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpictureformatplugin.h
 // dst-file: /src/gui/qpictureformatplugin.go
 //
@@ -35,7 +35,7 @@ extern void C_ZNK20QPictureFormatPlugin10metaObjectEv(void* qthis); // 4
   // proto:  bool QPictureFormatPlugin::loadPicture(const QString & format, const QString & filename, QPicture * pic);
 extern void C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(void* qthis, void* arg0, void* arg1, void* arg2); // 4
   // proto:  void QPictureFormatPlugin::QPictureFormatPlugin(QObject * parent);
-extern void C_ZN20QPictureFormatPluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN20QPictureFormatPluginC2EP7QObject(void* arg0); // 3
   // proto:  void QPictureFormatPlugin::~QPictureFormatPlugin();
 extern void C_ZN20QPictureFormatPluginD2Ev(void* qthis); // 4
 */
@@ -78,7 +78,8 @@ func (this *QPictureFormatPlugin) savePicture(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN20QPictureFormatPlugin11savePictureERK7QStringS2_RK8QPicture(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "savePicture", args)
   }
@@ -127,7 +128,8 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPicture).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN20QPictureFormatPlugin11loadPictureERK7QStringS2_P8QPicture(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "loadPicture", args)
   }
@@ -135,7 +137,7 @@ func (this *QPictureFormatPlugin) loadPicture(args ...interface{}) () {
 }
 
 // QPictureFormatPlugin(class QObject *)
-func NewQPictureFormatPlugin(args ...interface{}) QPictureFormatPlugin {
+func NewQPictureFormatPlugin(args ...interface{}) *QPictureFormatPlugin {
   // QPictureFormatPlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -152,12 +154,13 @@ func NewQPictureFormatPlugin(args ...interface{}) QPictureFormatPlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN20QPictureFormatPluginC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN20QPictureFormatPluginC2EP7QObject(arg0)
+    return &QPictureFormatPlugin{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPictureFormatPlugin", "QPictureFormatPlugin", args)
   }
 
-  return QPictureFormatPlugin{}
+  return nil // QPictureFormatPlugin{qclsinst:qthis}
 }
 
 // ~QPictureFormatPlugin()

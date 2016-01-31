@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpagedpaintdevice.h
 // dst-file: /src/gui/qpagedpaintdevice.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(void* qthis, void*
   // proto:  bool QPagedPaintDevice::setPageLayout(const QPageLayout & pageLayout);
 extern void C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(void* qthis, void* arg0); // 4
   // proto:  void QPagedPaintDevice::QPagedPaintDevice();
-extern void C_ZN17QPagedPaintDeviceC2Ev(void* qthis); // 3
+extern void* C_ZN17QPagedPaintDeviceC2Ev(); // 3
   // proto:  void QPagedPaintDevice::~QPagedPaintDevice();
 extern void C_ZN17QPagedPaintDeviceD2Ev(void* qthis); // 4
   // proto:  QSizeF QPagedPaintDevice::pageSizeMM();
@@ -82,7 +82,8 @@ func (this *QPagedPaintDevice) setPageMargins(args ...interface{}) () {
     // invoke: bool setPageMargins(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(this.qclsinst, arg0)
+    var ret = C.C_ZN17QPagedPaintDevice14setPageMarginsERK9QMarginsF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageMargins", args)
   }
@@ -102,7 +103,8 @@ func (this *QPagedPaintDevice) pageLayout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice10pageLayoutEv
     // invoke: QPageLayout pageLayout()
-    C.C_ZNK17QPagedPaintDevice10pageLayoutEv(this.qclsinst)
+    var ret = C.C_ZNK17QPagedPaintDevice10pageLayoutEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "pageLayout", args)
   }
@@ -125,7 +127,8 @@ func (this *QPagedPaintDevice) setPageSize(args ...interface{}) () {
     // invoke: bool setPageSize(const class QPageSize &)
     var arg0 = args[0].(QPageSize).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(this.qclsinst, arg0)
+    var ret = C.C_ZN17QPagedPaintDevice11setPageSizeERK9QPageSize(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageSize", args)
   }
@@ -148,7 +151,8 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
     // invoke: bool setPageLayout(const class QPageLayout &)
     var arg0 = args[0].(QPageLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(this.qclsinst, arg0)
+    var ret = C.C_ZN17QPagedPaintDevice13setPageLayoutERK11QPageLayout(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "setPageLayout", args)
   }
@@ -156,7 +160,7 @@ func (this *QPagedPaintDevice) setPageLayout(args ...interface{}) () {
 }
 
 // QPagedPaintDevice()
-func NewQPagedPaintDevice(args ...interface{}) QPagedPaintDevice {
+func NewQPagedPaintDevice(args ...interface{}) *QPagedPaintDevice {
   // QPagedPaintDevice()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -170,12 +174,13 @@ func NewQPagedPaintDevice(args ...interface{}) QPagedPaintDevice {
     // invoke: void QPagedPaintDevice()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QPagedPaintDeviceC2Ev(qthis)
+    qthis = C.C_ZN17QPagedPaintDeviceC2Ev()
+    return &QPagedPaintDevice{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "QPagedPaintDevice", args)
   }
 
-  return QPagedPaintDevice{}
+  return nil // QPagedPaintDevice{qclsinst:qthis}
 }
 
 // ~QPagedPaintDevice()
@@ -211,7 +216,8 @@ func (this *QPagedPaintDevice) pageSizeMM(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QPagedPaintDevice10pageSizeMMEv
     // invoke: QSizeF pageSizeMM()
-    C.C_ZNK17QPagedPaintDevice10pageSizeMMEv(this.qclsinst)
+    var ret = C.C_ZNK17QPagedPaintDevice10pageSizeMMEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPagedPaintDevice", "pageSizeMM", args)
   }

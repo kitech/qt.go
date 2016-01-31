@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qmessageauthenticationcode.h
 // dst-file: /src/core/qmessageauthenticationcode.go
 //
@@ -137,7 +137,8 @@ func (this *QMessageAuthenticationCode) addData(args ...interface{}) () {
     // invoke: bool addData(class QIODevice *)
     var arg0 = args[0].(QIODevice).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
+    var ret = C.C_ZN26QMessageAuthenticationCode7addDataEP9QIODevice(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "addData", args)
   }
@@ -180,7 +181,8 @@ func (this *QMessageAuthenticationCode) result(args ...interface{}) () {
   case 0:
     // invoke: _ZNK26QMessageAuthenticationCode6resultEv
     // invoke: QByteArray result()
-    C.C_ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+    var ret = C.C_ZNK26QMessageAuthenticationCode6resultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMessageAuthenticationCode", "result", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qmdiarea.h
 // dst-file: /src/widgets/qmdiarea.go
 //
@@ -59,7 +59,7 @@ extern void C_ZNK8QMdiArea11tabsMovableEv(void* qthis); // 4
   // proto:  void QMdiArea::setTabsClosable(bool closable);
 extern void C_ZN8QMdiArea15setTabsClosableEb(void* qthis, bool arg0); // 4
   // proto:  void QMdiArea::QMdiArea(QWidget * parent);
-extern void C_ZN8QMdiAreaC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN8QMdiAreaC2EP7QWidget(void* arg0); // 3
   // proto:  QBrush QMdiArea::background();
 extern void C_ZNK8QMdiArea10backgroundEv(void* qthis); // 4
   // proto:  QSize QMdiArea::sizeHint();
@@ -237,7 +237,8 @@ func (this *QMdiArea) tabsClosable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea12tabsClosableEv
     // invoke: bool tabsClosable()
-    C.C_ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea12tabsClosableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsClosable", args)
   }
@@ -363,7 +364,8 @@ func (this *QMdiArea) documentMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea12documentModeEv
     // invoke: bool documentMode()
-    C.C_ZNK8QMdiArea12documentModeEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea12documentModeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "documentMode", args)
   }
@@ -383,7 +385,8 @@ func (this *QMdiArea) tabsMovable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea11tabsMovableEv
     // invoke: bool tabsMovable()
-    C.C_ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea11tabsMovableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "tabsMovable", args)
   }
@@ -414,7 +417,7 @@ func (this *QMdiArea) setTabsClosable(args ...interface{}) () {
 }
 
 // QMdiArea(class QWidget *)
-func NewQMdiArea(args ...interface{}) QMdiArea {
+func NewQMdiArea(args ...interface{}) *QMdiArea {
   // QMdiArea(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -431,12 +434,13 @@ func NewQMdiArea(args ...interface{}) QMdiArea {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QMdiAreaC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN8QMdiAreaC2EP7QWidget(arg0)
+    return &QMdiArea{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMdiArea", "QMdiArea", args)
   }
 
-  return QMdiArea{}
+  return nil // QMdiArea{qclsinst:qthis}
 }
 
 // background()
@@ -452,7 +456,8 @@ func (this *QMdiArea) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea10backgroundEv
     // invoke: QBrush background()
-    C.C_ZNK8QMdiArea10backgroundEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea10backgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "background", args)
   }
@@ -472,7 +477,8 @@ func (this *QMdiArea) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK8QMdiArea8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "sizeHint", args)
   }
@@ -538,7 +544,8 @@ func (this *QMdiArea) currentSubWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea16currentSubWindowEv
     // invoke: QMdiSubWindow * currentSubWindow()
-    C.C_ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea16currentSubWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "currentSubWindow", args)
   }
@@ -558,7 +565,8 @@ func (this *QMdiArea) activeSubWindow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea15activeSubWindowEv
     // invoke: QMdiSubWindow * activeSubWindow()
-    C.C_ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea15activeSubWindowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "activeSubWindow", args)
   }
@@ -618,7 +626,8 @@ func (this *QMdiArea) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QMdiArea15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK8QMdiArea15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMdiArea", "minimumSizeHint", args)
   }

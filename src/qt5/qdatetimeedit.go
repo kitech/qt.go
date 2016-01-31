@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdatetimeedit.h
 // dst-file: /src/widgets/qdatetimeedit.go
 //
@@ -31,17 +31,17 @@ import "qtrt"
   // proto:  const QMetaObject * QTimeEdit::metaObject();
 extern void C_ZNK9QTimeEdit10metaObjectEv(void* qthis); // 4
   // proto:  void QTimeEdit::QTimeEdit(QWidget * parent);
-extern void C_ZN9QTimeEditC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QTimeEditC2EP7QWidget(void* arg0); // 3
   // proto:  void QTimeEdit::QTimeEdit(const QTime & time, QWidget * parent);
-extern void C_ZN9QTimeEditC2ERK5QTimeP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QTimeEditC2ERK5QTimeP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QTimeEdit::~QTimeEdit();
 extern void C_ZN9QTimeEditD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QDateEdit::metaObject();
 extern void C_ZNK9QDateEdit10metaObjectEv(void* qthis); // 4
   // proto:  void QDateEdit::QDateEdit(const QDate & date, QWidget * parent);
-extern void C_ZN9QDateEditC2ERK5QDateP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QDateEditC2ERK5QDateP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QDateEdit::QDateEdit(QWidget * parent);
-extern void C_ZN9QDateEditC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QDateEditC2EP7QWidget(void* arg0); // 3
   // proto:  void QDateEdit::~QDateEdit();
 extern void C_ZN9QDateEditD2Ev(void* qthis); // 4
   // proto:  void QDateTimeEdit::setMaximumDate(const QDate & max);
@@ -115,13 +115,13 @@ extern void C_ZNK13QDateTimeEdit8sizeHintEv(void* qthis); // 4
   // proto:  QDate QDateTimeEdit::maximumDate();
 extern void C_ZNK13QDateTimeEdit11maximumDateEv(void* qthis); // 4
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QTime & t, QWidget * parent);
-extern void C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDate & d, QWidget * parent);
-extern void C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QDateTimeEdit::QDateTimeEdit(const QDateTime & dt, QWidget * parent);
-extern void C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(void* arg0, void* arg1); // 3
   // proto:  void QDateTimeEdit::QDateTimeEdit(QWidget * parent);
-extern void C_ZN13QDateTimeEditC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN13QDateTimeEditC2EP7QWidget(void* arg0); // 3
   // proto:  const QMetaObject * QDateTimeEdit::metaObject();
 extern void C_ZNK13QDateTimeEdit10metaObjectEv(void* qthis); // 4
   // proto:  Qt::TimeSpec QDateTimeEdit::timeSpec();
@@ -200,7 +200,7 @@ func (this *QTimeEdit) metaObject(args ...interface{}) () {
 }
 
 // QTimeEdit(class QWidget *)
-func NewQTimeEdit(args ...interface{}) QTimeEdit {
+func NewQTimeEdit(args ...interface{}) *QTimeEdit {
   // QTimeEdit(class QWidget *)
   // QTimeEdit(const class QTime &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -221,7 +221,8 @@ func NewQTimeEdit(args ...interface{}) QTimeEdit {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTimeEditC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QTimeEditC2EP7QWidget(arg0)
+    return &QTimeEdit{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QTimeEditC1ERK5QTimeP7QWidget
     // invoke: void QTimeEdit(const class QTime &, class QWidget *)
@@ -231,12 +232,13 @@ func NewQTimeEdit(args ...interface{}) QTimeEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTimeEditC2ERK5QTimeP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN9QTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)
+    return &QTimeEdit{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTimeEdit", "QTimeEdit", args)
   }
 
-  return QTimeEdit{}
+  return nil // QTimeEdit{qclsinst:qthis}
 }
 
 // ~QTimeEdit()
@@ -280,7 +282,7 @@ func (this *QDateEdit) metaObject(args ...interface{}) () {
 }
 
 // QDateEdit(const class QDate &, class QWidget *)
-func NewQDateEdit(args ...interface{}) QDateEdit {
+func NewQDateEdit(args ...interface{}) *QDateEdit {
   // QDateEdit(const class QDate &, class QWidget *)
   // QDateEdit(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -303,7 +305,8 @@ func NewQDateEdit(args ...interface{}) QDateEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QDateEditC2ERK5QDateP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN9QDateEditC2ERK5QDateP7QWidget(arg0, arg1)
+    return &QDateEdit{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QDateEditC1EP7QWidget
     // invoke: void QDateEdit(class QWidget *)
@@ -311,12 +314,13 @@ func NewQDateEdit(args ...interface{}) QDateEdit {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QDateEditC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QDateEditC2EP7QWidget(arg0)
+    return &QDateEdit{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateEdit", "QDateEdit", args)
   }
 
-  return QDateEdit{}
+  return nil // QDateEdit{qclsinst:qthis}
 }
 
 // ~QDateEdit()
@@ -516,7 +520,8 @@ func (this *QDateTimeEdit) displayFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13displayFormatEv
     // invoke: QString displayFormat()
-    C.C_ZNK13QDateTimeEdit13displayFormatEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit13displayFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "displayFormat", args)
   }
@@ -556,7 +561,8 @@ func (this *QDateTimeEdit) maximumTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumTimeEv
     // invoke: QTime maximumTime()
-    C.C_ZNK13QDateTimeEdit11maximumTimeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit11maximumTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumTime", args)
   }
@@ -576,7 +582,8 @@ func (this *QDateTimeEdit) currentSectionIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit19currentSectionIndexEv
     // invoke: int currentSectionIndex()
-    C.C_ZNK13QDateTimeEdit19currentSectionIndexEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit19currentSectionIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "currentSectionIndex", args)
   }
@@ -599,7 +606,8 @@ func (this *QDateTimeEdit) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QDateTimeEdit5eventEP6QEvent(this.qclsinst, arg0)
+    var ret = C.C_ZN13QDateTimeEdit5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "event", args)
   }
@@ -619,7 +627,8 @@ func (this *QDateTimeEdit) minimumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumDateEv
     // invoke: QDate minimumDate()
-    C.C_ZNK13QDateTimeEdit11minimumDateEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit11minimumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDate", args)
   }
@@ -860,7 +869,8 @@ func (this *QDateTimeEdit) calendarPopup(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit13calendarPopupEv
     // invoke: bool calendarPopup()
-    C.C_ZNK13QDateTimeEdit13calendarPopupEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit13calendarPopupEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarPopup", args)
   }
@@ -903,7 +913,8 @@ func (this *QDateTimeEdit) calendarWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit14calendarWidgetEv
     // invoke: QCalendarWidget * calendarWidget()
-    C.C_ZNK13QDateTimeEdit14calendarWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit14calendarWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "calendarWidget", args)
   }
@@ -989,7 +1000,8 @@ func (this *QDateTimeEdit) sectionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit12sectionCountEv
     // invoke: int sectionCount()
-    C.C_ZNK13QDateTimeEdit12sectionCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit12sectionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sectionCount", args)
   }
@@ -1052,7 +1064,8 @@ func (this *QDateTimeEdit) date(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4dateEv
     // invoke: QDate date()
-    C.C_ZNK13QDateTimeEdit4dateEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit4dateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "date", args)
   }
@@ -1072,7 +1085,8 @@ func (this *QDateTimeEdit) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK13QDateTimeEdit8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "sizeHint", args)
   }
@@ -1092,7 +1106,8 @@ func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11maximumDateEv
     // invoke: QDate maximumDate()
-    C.C_ZNK13QDateTimeEdit11maximumDateEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit11maximumDateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDate", args)
   }
@@ -1100,7 +1115,7 @@ func (this *QDateTimeEdit) maximumDate(args ...interface{}) () {
 }
 
 // QDateTimeEdit(const class QTime &, class QWidget *)
-func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
+func NewQDateTimeEdit(args ...interface{}) *QDateTimeEdit {
   // QDateTimeEdit(const class QTime &, class QWidget *)
   // QDateTimeEdit(const class QDate &, class QWidget *)
   // QDateTimeEdit(const class QDateTime &, class QWidget *)
@@ -1131,7 +1146,8 @@ func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN13QDateTimeEditC2ERK5QTimeP7QWidget(arg0, arg1)
+    return &QDateTimeEdit{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QDateTimeEditC1ERK5QDateP7QWidget
     // invoke: void QDateTimeEdit(const class QDate &, class QWidget *)
@@ -1141,7 +1157,8 @@ func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN13QDateTimeEditC2ERK5QDateP7QWidget(arg0, arg1)
+    return &QDateTimeEdit{qclsinst:qthis}
   case 2:
     // invoke: _ZN13QDateTimeEditC1ERK9QDateTimeP7QWidget
     // invoke: void QDateTimeEdit(const class QDateTime &, class QWidget *)
@@ -1151,7 +1168,8 @@ func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN13QDateTimeEditC2ERK9QDateTimeP7QWidget(arg0, arg1)
+    return &QDateTimeEdit{qclsinst:qthis}
   case 3:
     // invoke: _ZN13QDateTimeEditC1EP7QWidget
     // invoke: void QDateTimeEdit(class QWidget *)
@@ -1159,12 +1177,13 @@ func NewQDateTimeEdit(args ...interface{}) QDateTimeEdit {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QDateTimeEditC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN13QDateTimeEditC2EP7QWidget(arg0)
+    return &QDateTimeEdit{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "QDateTimeEdit", args)
   }
 
-  return QDateTimeEdit{}
+  return nil // QDateTimeEdit{qclsinst:qthis}
 }
 
 // metaObject()
@@ -1220,7 +1239,8 @@ func (this *QDateTimeEdit) dateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit8dateTimeEv
     // invoke: QDateTime dateTime()
-    C.C_ZNK13QDateTimeEdit8dateTimeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit8dateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "dateTime", args)
   }
@@ -1303,7 +1323,8 @@ func (this *QDateTimeEdit) minimumTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit11minimumTimeEv
     // invoke: QTime minimumTime()
-    C.C_ZNK13QDateTimeEdit11minimumTimeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit11minimumTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumTime", args)
   }
@@ -1323,7 +1344,8 @@ func (this *QDateTimeEdit) maximumDateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15maximumDateTimeEv
     // invoke: QDateTime maximumDateTime()
-    C.C_ZNK13QDateTimeEdit15maximumDateTimeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit15maximumDateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "maximumDateTime", args)
   }
@@ -1343,7 +1365,8 @@ func (this *QDateTimeEdit) time(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit4timeEv
     // invoke: QTime time()
-    C.C_ZNK13QDateTimeEdit4timeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit4timeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "time", args)
   }
@@ -1363,7 +1386,8 @@ func (this *QDateTimeEdit) minimumDateTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QDateTimeEdit15minimumDateTimeEv
     // invoke: QDateTime minimumDateTime()
-    C.C_ZNK13QDateTimeEdit15minimumDateTimeEv(this.qclsinst)
+    var ret = C.C_ZNK13QDateTimeEdit15minimumDateTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDateTimeEdit", "minimumDateTime", args)
   }

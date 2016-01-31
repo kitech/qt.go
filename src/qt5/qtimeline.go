@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qtimeline.h
 // dst-file: /src/core/qtimeline.go
 //
@@ -39,7 +39,7 @@ extern void C_ZN9QTimeLine14setEasingCurveERK12QEasingCurve(void* qthis, void* a
   // proto:  qreal QTimeLine::currentValue();
 extern void C_ZNK9QTimeLine12currentValueEv(void* qthis); // 4
   // proto:  void QTimeLine::QTimeLine(int duration, QObject * parent);
-extern void C_ZN9QTimeLineC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
+extern void* C_ZN9QTimeLineC2EiP7QObject(int32_t arg0, void* arg1); // 3
   // proto:  void QTimeLine::setFrameRange(int startFrame, int endFrame);
 extern void C_ZN9QTimeLine13setFrameRangeEii(void* qthis, int32_t arg0, int32_t arg1); // 4
   // proto:  int QTimeLine::duration();
@@ -169,7 +169,8 @@ func (this *QTimeLine) valueForTime(args ...interface{}) () {
     // invoke: qreal valueForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTimeLine12valueForTimeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "valueForTime", args)
   }
@@ -212,7 +213,8 @@ func (this *QTimeLine) currentValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentValueEv
     // invoke: qreal currentValue()
-    C.C_ZNK9QTimeLine12currentValueEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine12currentValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "currentValue", args)
   }
@@ -220,7 +222,7 @@ func (this *QTimeLine) currentValue(args ...interface{}) () {
 }
 
 // QTimeLine(int, class QObject *)
-func NewQTimeLine(args ...interface{}) QTimeLine {
+func NewQTimeLine(args ...interface{}) *QTimeLine {
   // QTimeLine(int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -240,12 +242,13 @@ func NewQTimeLine(args ...interface{}) QTimeLine {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTimeLineC2EiP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN9QTimeLineC2EiP7QObject(arg0, arg1)
+    return &QTimeLine{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTimeLine", "QTimeLine", args)
   }
 
-  return QTimeLine{}
+  return nil // QTimeLine{qclsinst:qthis}
 }
 
 // setFrameRange(int, int)
@@ -287,7 +290,8 @@ func (this *QTimeLine) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8durationEv
     // invoke: int duration()
-    C.C_ZNK9QTimeLine8durationEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "duration", args)
   }
@@ -307,7 +311,8 @@ func (this *QTimeLine) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine9loopCountEv
     // invoke: int loopCount()
-    C.C_ZNK9QTimeLine9loopCountEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine9loopCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "loopCount", args)
   }
@@ -390,7 +395,8 @@ func (this *QTimeLine) frameForTime(args ...interface{}) () {
     // invoke: int frameForTime(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTimeLine12frameForTimeEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "frameForTime", args)
   }
@@ -453,7 +459,8 @@ func (this *QTimeLine) endFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine8endFrameEv
     // invoke: int endFrame()
-    C.C_ZNK9QTimeLine8endFrameEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine8endFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "endFrame", args)
   }
@@ -493,7 +500,8 @@ func (this *QTimeLine) startFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine10startFrameEv
     // invoke: int startFrame()
-    C.C_ZNK9QTimeLine10startFrameEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine10startFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "startFrame", args)
   }
@@ -513,7 +521,8 @@ func (this *QTimeLine) updateInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine14updateIntervalEv
     // invoke: int updateInterval()
-    C.C_ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine14updateIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "updateInterval", args)
   }
@@ -533,7 +542,8 @@ func (this *QTimeLine) currentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine12currentFrameEv
     // invoke: int currentFrame()
-    C.C_ZNK9QTimeLine12currentFrameEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine12currentFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "currentFrame", args)
   }
@@ -616,7 +626,8 @@ func (this *QTimeLine) currentTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11currentTimeEv
     // invoke: int currentTime()
-    C.C_ZNK9QTimeLine11currentTimeEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine11currentTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "currentTime", args)
   }
@@ -636,7 +647,8 @@ func (this *QTimeLine) easingCurve(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTimeLine11easingCurveEv
     // invoke: QEasingCurve easingCurve()
-    C.C_ZNK9QTimeLine11easingCurveEv(this.qclsinst)
+    var ret = C.C_ZNK9QTimeLine11easingCurveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTimeLine", "easingCurve", args)
   }

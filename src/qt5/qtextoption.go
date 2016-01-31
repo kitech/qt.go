@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextoption.h
 // dst-file: /src/gui/qtextoption.go
 //
@@ -45,9 +45,9 @@ extern void C_ZNK11QTextOption8tabArrayEv(void* qthis); // 4
   // proto:  Flags QTextOption::flags();
 extern void C_ZNK11QTextOption5flagsEv(void* qthis); // 2
   // proto:  void QTextOption::QTextOption(const QTextOption & o);
-extern void C_ZN11QTextOptionC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN11QTextOptionC2ERKS_(void* arg0); // 3
   // proto:  void QTextOption::QTextOption();
-extern void C_ZN11QTextOptionC2Ev(void* qthis); // 3
+extern void* C_ZN11QTextOptionC2Ev(); // 3
   // proto:  QTextOption::WrapMode QTextOption::wrapMode();
 extern void C_ZNK11QTextOption8wrapModeEv(void* qthis); // 2
   // proto:  Qt::Alignment QTextOption::alignment();
@@ -128,7 +128,8 @@ func (this *QTextOption) useDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    C.C_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextOption16useDesignMetricsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextOption", "useDesignMetrics", args)
   }
@@ -191,7 +192,8 @@ func (this *QTextOption) tabStop(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextOption7tabStopEv
     // invoke: qreal tabStop()
-    C.C_ZNK11QTextOption7tabStopEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextOption7tabStopEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextOption", "tabStop", args)
   }
@@ -239,7 +241,7 @@ func (this *QTextOption) flags(args ...interface{}) () {
 }
 
 // QTextOption(const class QTextOption &)
-func NewQTextOption(args ...interface{}) QTextOption {
+func NewQTextOption(args ...interface{}) *QTextOption {
   // QTextOption(const class QTextOption &)
   // QTextOption()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -258,18 +260,20 @@ func NewQTextOption(args ...interface{}) QTextOption {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextOptionC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN11QTextOptionC2ERKS_(arg0)
+    return &QTextOption{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QTextOptionC1Ev
     // invoke: void QTextOption()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QTextOptionC2Ev(qthis)
+    qthis = C.C_ZN11QTextOptionC2Ev()
+    return &QTextOption{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextOption", "QTextOption", args)
   }
 
-  return QTextOption{}
+  return nil // QTextOption{qclsinst:qthis}
 }
 
 // wrapMode()

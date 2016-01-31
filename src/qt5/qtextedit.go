@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qtextedit.h
 // dst-file: /src/widgets/qtextedit.go
 //
@@ -159,9 +159,9 @@ extern void C_ZNK9QTextEdit8canPasteEv(void* qthis); // 4
   // proto:  QString QTextEdit::fontFamily();
 extern void C_ZNK9QTextEdit10fontFamilyEv(void* qthis); // 4
   // proto:  void QTextEdit::QTextEdit(QWidget * parent);
-extern void C_ZN9QTextEditC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QTextEditC2EP7QWidget(void* arg0); // 3
   // proto:  void QTextEdit::QTextEdit(const QString & text, QWidget * parent);
-extern void C_ZN9QTextEditC2ERK7QStringP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN9QTextEditC2ERK7QStringP7QWidget(void* arg0, void* arg1); // 3
   // proto:  int QTextEdit::tabStopWidth();
 extern void C_ZNK9QTextEdit12tabStopWidthEv(void* qthis); // 4
   // proto:  QTextOption::WrapMode QTextEdit::wordWrapMode();
@@ -271,7 +271,8 @@ func (this *QTextEdit) textBackgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit19textBackgroundColorEv
     // invoke: QColor textBackgroundColor()
-    C.C_ZNK9QTextEdit19textBackgroundColorEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit19textBackgroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "textBackgroundColor", args)
   }
@@ -334,7 +335,8 @@ func (this *QTextEdit) tabChangesFocus(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit15tabChangesFocusEv
     // invoke: bool tabChangesFocus()
-    C.C_ZNK9QTextEdit15tabChangesFocusEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit15tabChangesFocusEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "tabChangesFocus", args)
   }
@@ -374,7 +376,8 @@ func (this *QTextEdit) isUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit17isUndoRedoEnabledEv
     // invoke: bool isUndoRedoEnabled()
-    C.C_ZNK9QTextEdit17isUndoRedoEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit17isUndoRedoEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "isUndoRedoEnabled", args)
   }
@@ -419,11 +422,13 @@ func (this *QTextEdit) createStandardContextMenu(args ...interface{}) () {
     // invoke: QMenu * createStandardContextMenu(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QTextEdit25createStandardContextMenuERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZN9QTextEdit25createStandardContextMenuERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QTextEdit25createStandardContextMenuEv
     // invoke: QMenu * createStandardContextMenu()
-    C.C_ZN9QTextEdit25createStandardContextMenuEv(this.qclsinst)
+    var ret = C.C_ZN9QTextEdit25createStandardContextMenuEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "createStandardContextMenu", args)
   }
@@ -489,7 +494,8 @@ func (this *QTextEdit) documentTitle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit13documentTitleEv
     // invoke: QString documentTitle()
-    C.C_ZNK9QTextEdit13documentTitleEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit13documentTitleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "documentTitle", args)
   }
@@ -509,7 +515,8 @@ func (this *QTextEdit) toHtml(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit6toHtmlEv
     // invoke: QString toHtml()
-    C.C_ZNK9QTextEdit6toHtmlEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit6toHtmlEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "toHtml", args)
   }
@@ -552,7 +559,8 @@ func (this *QTextEdit) fontPointSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit13fontPointSizeEv
     // invoke: qreal fontPointSize()
-    C.C_ZNK9QTextEdit13fontPointSizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit13fontPointSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "fontPointSize", args)
   }
@@ -572,7 +580,8 @@ func (this *QTextEdit) textColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit9textColorEv
     // invoke: QColor textColor()
-    C.C_ZNK9QTextEdit9textColorEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit9textColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "textColor", args)
   }
@@ -658,7 +667,8 @@ func (this *QTextEdit) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit11toPlainTextEv
     // invoke: QString toPlainText()
-    C.C_ZNK9QTextEdit11toPlainTextEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit11toPlainTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "toPlainText", args)
   }
@@ -729,11 +739,13 @@ func (this *QTextEdit) cursorRect(args ...interface{}) () {
     // invoke: QRect cursorRect(const class QTextCursor &)
     var arg0 = args[0].(QTextCursor).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextEdit10cursorRectERK11QTextCursor(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextEdit10cursorRectERK11QTextCursor(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QTextEdit10cursorRectEv
     // invoke: QRect cursorRect()
-    C.C_ZNK9QTextEdit10cursorRectEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10cursorRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorRect", args)
   }
@@ -776,7 +788,8 @@ func (this *QTextEdit) textCursor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10textCursorEv
     // invoke: QTextCursor textCursor()
-    C.C_ZNK9QTextEdit10textCursorEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10textCursorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "textCursor", args)
   }
@@ -822,7 +835,8 @@ func (this *QTextEdit) anchorAt(args ...interface{}) () {
     // invoke: QString anchorAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextEdit8anchorAtERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextEdit8anchorAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "anchorAt", args)
   }
@@ -888,7 +902,8 @@ func (this *QTextEdit) fontItalic(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10fontItalicEv
     // invoke: bool fontItalic()
-    C.C_ZNK9QTextEdit10fontItalicEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10fontItalicEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "fontItalic", args)
   }
@@ -983,7 +998,8 @@ func (this *QTextEdit) loadResource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN9QTextEdit12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QTextEdit12loadResourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "loadResource", args)
   }
@@ -1023,7 +1039,8 @@ func (this *QTextEdit) lineWrapColumnOrWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit21lineWrapColumnOrWidthEv
     // invoke: int lineWrapColumnOrWidth()
-    C.C_ZNK9QTextEdit21lineWrapColumnOrWidthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit21lineWrapColumnOrWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "lineWrapColumnOrWidth", args)
   }
@@ -1212,7 +1229,8 @@ func (this *QTextEdit) isReadOnly(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10isReadOnlyEv
     // invoke: bool isReadOnly()
-    C.C_ZNK9QTextEdit10isReadOnlyEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10isReadOnlyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "isReadOnly", args)
   }
@@ -1255,7 +1273,8 @@ func (this *QTextEdit) overwriteMode(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit13overwriteModeEv
     // invoke: bool overwriteMode()
-    C.C_ZNK9QTextEdit13overwriteModeEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit13overwriteModeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "overwriteMode", args)
   }
@@ -1275,7 +1294,8 @@ func (this *QTextEdit) acceptRichText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit14acceptRichTextEv
     // invoke: bool acceptRichText()
-    C.C_ZNK9QTextEdit14acceptRichTextEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit14acceptRichTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "acceptRichText", args)
   }
@@ -1361,7 +1381,8 @@ func (this *QTextEdit) currentFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit11currentFontEv
     // invoke: QFont currentFont()
-    C.C_ZNK9QTextEdit11currentFontEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit11currentFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "currentFont", args)
   }
@@ -1424,7 +1445,8 @@ func (this *QTextEdit) fontUnderline(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit13fontUnderlineEv
     // invoke: bool fontUnderline()
-    C.C_ZNK9QTextEdit13fontUnderlineEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit13fontUnderlineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "fontUnderline", args)
   }
@@ -1444,7 +1466,8 @@ func (this *QTextEdit) cursorWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit11cursorWidthEv
     // invoke: int cursorWidth()
-    C.C_ZNK9QTextEdit11cursorWidthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit11cursorWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorWidth", args)
   }
@@ -1553,7 +1576,8 @@ func (this *QTextEdit) canPaste(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit8canPasteEv
     // invoke: bool canPaste()
-    C.C_ZNK9QTextEdit8canPasteEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit8canPasteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "canPaste", args)
   }
@@ -1573,7 +1597,8 @@ func (this *QTextEdit) fontFamily(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10fontFamilyEv
     // invoke: QString fontFamily()
-    C.C_ZNK9QTextEdit10fontFamilyEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10fontFamilyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "fontFamily", args)
   }
@@ -1581,7 +1606,7 @@ func (this *QTextEdit) fontFamily(args ...interface{}) () {
 }
 
 // QTextEdit(class QWidget *)
-func NewQTextEdit(args ...interface{}) QTextEdit {
+func NewQTextEdit(args ...interface{}) *QTextEdit {
   // QTextEdit(class QWidget *)
   // QTextEdit(const class QString &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1602,7 +1627,8 @@ func NewQTextEdit(args ...interface{}) QTextEdit {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTextEditC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QTextEditC2EP7QWidget(arg0)
+    return &QTextEdit{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QTextEditC1ERK7QStringP7QWidget
     // invoke: void QTextEdit(const class QString &, class QWidget *)
@@ -1612,12 +1638,13 @@ func NewQTextEdit(args ...interface{}) QTextEdit {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QTextEditC2ERK7QStringP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN9QTextEditC2ERK7QStringP7QWidget(arg0, arg1)
+    return &QTextEdit{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextEdit", "QTextEdit", args)
   }
 
-  return QTextEdit{}
+  return nil // QTextEdit{qclsinst:qthis}
 }
 
 // tabStopWidth()
@@ -1633,7 +1660,8 @@ func (this *QTextEdit) tabStopWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit12tabStopWidthEv
     // invoke: int tabStopWidth()
-    C.C_ZNK9QTextEdit12tabStopWidthEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit12tabStopWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "tabStopWidth", args)
   }
@@ -1676,7 +1704,8 @@ func (this *QTextEdit) cursorForPosition(args ...interface{}) () {
     // invoke: QTextCursor cursorForPosition(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QTextEdit17cursorForPositionERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QTextEdit17cursorForPositionERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "cursorForPosition", args)
   }
@@ -1742,7 +1771,8 @@ func (this *QTextEdit) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit8documentEv
     // invoke: QTextDocument * document()
-    C.C_ZNK9QTextEdit8documentEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "document", args)
   }
@@ -1762,7 +1792,8 @@ func (this *QTextEdit) currentCharFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit17currentCharFormatEv
     // invoke: QTextCharFormat currentCharFormat()
-    C.C_ZNK9QTextEdit17currentCharFormatEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit17currentCharFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "currentCharFormat", args)
   }
@@ -1782,7 +1813,8 @@ func (this *QTextEdit) fontWeight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit10fontWeightEv
     // invoke: int fontWeight()
-    C.C_ZNK9QTextEdit10fontWeightEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit10fontWeightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "fontWeight", args)
   }
@@ -1802,7 +1834,8 @@ func (this *QTextEdit) placeholderText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QTextEdit15placeholderTextEv
     // invoke: QString placeholderText()
-    C.C_ZNK9QTextEdit15placeholderTextEv(this.qclsinst)
+    var ret = C.C_ZNK9QTextEdit15placeholderTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextEdit", "placeholderText", args)
   }

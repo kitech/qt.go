@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstyle.h
 // dst-file: /src/widgets/qstyle.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN6QStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  QPalette QStyle::standardPalette();
 extern void C_ZNK6QStyle15standardPaletteEv(void* qthis); // 4
   // proto:  void QStyle::QStyle();
-extern void C_ZN6QStyleC2Ev(void* qthis); // 3
+extern void* C_ZN6QStyleC2Ev(); // 3
   // proto: static int QStyle::sliderValueFromPosition(int min, int max, int pos, int space, bool upsideDown);
 extern void C_ZN6QStyle23sliderValueFromPositionEiiiib(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3, bool arg4); // 4
   // proto:  const QStyle * QStyle::proxy();
@@ -182,7 +182,8 @@ func (this *QStyle) standardPalette(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QStyle15standardPaletteEv
     // invoke: QPalette standardPalette()
-    C.C_ZNK6QStyle15standardPaletteEv(this.qclsinst)
+    var ret = C.C_ZNK6QStyle15standardPaletteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "standardPalette", args)
   }
@@ -190,7 +191,7 @@ func (this *QStyle) standardPalette(args ...interface{}) () {
 }
 
 // QStyle()
-func NewQStyle(args ...interface{}) QStyle {
+func NewQStyle(args ...interface{}) *QStyle {
   // QStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -204,12 +205,13 @@ func NewQStyle(args ...interface{}) QStyle {
     // invoke: void QStyle()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QStyleC2Ev(qthis)
+    qthis = C.C_ZN6QStyleC2Ev()
+    return &QStyle{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStyle", "QStyle", args)
   }
 
-  return QStyle{}
+  return nil // QStyle{qclsinst:qthis}
 }
 
 // sliderValueFromPosition(int, int, int, int, _Bool)
@@ -240,7 +242,8 @@ func (this *QStyle) sliderValueFromPosition_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.bool(args[4].(bool))
     if false {fmt.Println(arg4)}
-    C.C_ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZN6QStyle23sliderValueFromPositionEiiiib(arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "sliderValueFromPosition", args)
   }
@@ -260,7 +263,8 @@ func (this *QStyle) proxy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QStyle5proxyEv
     // invoke: const QStyle * proxy()
-    C.C_ZNK6QStyle5proxyEv(this.qclsinst)
+    var ret = C.C_ZNK6QStyle5proxyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "proxy", args)
   }
@@ -315,7 +319,8 @@ func (this *QStyle) itemTextRect(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = args[4].(QString).qclsinst
     if false {fmt.Println(arg4)}
-    C.C_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZNK6QStyle12itemTextRectERK12QFontMetricsRK5QRectibRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "itemTextRect", args)
   }
@@ -382,7 +387,8 @@ func (this *QStyle) sliderPositionFromValue_s(args ...interface{}) () {
     if false {fmt.Println(arg3)}
     var arg4 = C.bool(args[4].(bool))
     if false {fmt.Println(arg4)}
-    C.C_ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)
+    var ret = C.C_ZN6QStyle23sliderPositionFromValueEiiiib(arg0, arg1, arg2, arg3, arg4)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "sliderPositionFromValue", args)
   }
@@ -411,7 +417,8 @@ func (this *QStyle) itemPixmapRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QPixmap).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK6QStyle14itemPixmapRectERK5QRectiRK7QPixmap(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyle", "itemPixmapRect", args)
   }

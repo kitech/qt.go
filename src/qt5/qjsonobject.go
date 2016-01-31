@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qjsonobject.h
 // dst-file: /src/core/qjsonobject.go
 //
@@ -61,7 +61,7 @@ extern void C_ZNK11QJsonObject12toVariantMapEv(void* qthis); // 4
   // proto:  int QJsonObject::count();
 extern void C_ZNK11QJsonObject5countEv(void* qthis); // 2
   // proto:  void QJsonObject::QJsonObject();
-extern void C_ZN11QJsonObjectC2Ev(void* qthis); // 3
+extern void* C_ZN11QJsonObjectC2Ev(); // 3
   // proto:  void QJsonObject::remove(const QString & key);
 extern void C_ZN11QJsonObject6removeERK7QString(void* qthis, void* arg0); // 4
   // proto:  int QJsonObject::length();
@@ -188,7 +188,8 @@ func (this *QJsonObject) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject4sizeEv
     // invoke: int size()
-    C.C_ZNK11QJsonObject4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QJsonObject4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "size", args)
   }
@@ -231,7 +232,8 @@ func (this *QJsonObject) contains(args ...interface{}) () {
     // invoke: bool contains(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QJsonObject8containsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "contains", args)
   }
@@ -251,7 +253,8 @@ func (this *QJsonObject) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK11QJsonObject7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK11QJsonObject7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "isEmpty", args)
   }
@@ -294,7 +297,8 @@ func (this *QJsonObject) empty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject5emptyEv
     // invoke: bool empty()
-    C.C_ZNK11QJsonObject5emptyEv(this.qclsinst)
+    var ret = C.C_ZNK11QJsonObject5emptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "empty", args)
   }
@@ -414,7 +418,8 @@ func (this *QJsonObject) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject5countEv
     // invoke: int count()
-    C.C_ZNK11QJsonObject5countEv(this.qclsinst)
+    var ret = C.C_ZNK11QJsonObject5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "count", args)
   }
@@ -422,7 +427,7 @@ func (this *QJsonObject) count(args ...interface{}) () {
 }
 
 // QJsonObject()
-func NewQJsonObject(args ...interface{}) QJsonObject {
+func NewQJsonObject(args ...interface{}) *QJsonObject {
   // QJsonObject()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -436,12 +441,13 @@ func NewQJsonObject(args ...interface{}) QJsonObject {
     // invoke: void QJsonObject()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QJsonObjectC2Ev(qthis)
+    qthis = C.C_ZN11QJsonObjectC2Ev()
+    return &QJsonObject{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QJsonObject", "QJsonObject", args)
   }
 
-  return QJsonObject{}
+  return nil // QJsonObject{qclsinst:qthis}
 }
 
 // remove(const class QString &)
@@ -480,7 +486,8 @@ func (this *QJsonObject) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QJsonObject6lengthEv
     // invoke: int length()
-    C.C_ZNK11QJsonObject6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK11QJsonObject6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QJsonObject", "length", args)
   }

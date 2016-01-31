@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qmatrix4x4.h
 // dst-file: /src/gui/qmatrix4x4.go
 //
@@ -115,17 +115,17 @@ extern void C_ZN10QMatrix4x45orthoERK5QRect(void* qthis, void* arg0); // 4
   // proto:  void QMatrix4x4::ortho(const QRectF & rect);
 extern void C_ZN10QMatrix4x45orthoERK6QRectF(void* qthis, void* arg0); // 4
   // proto:  void QMatrix4x4::QMatrix4x4(const QTransform & transform);
-extern void C_ZN10QMatrix4x4C2ERK10QTransform(void* qthis, void* arg0); // 3
+extern void* C_ZN10QMatrix4x4C2ERK10QTransform(void* arg0); // 3
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values, int cols, int rows);
-extern void C_ZN10QMatrix4x4C2EPKfii(void* qthis, float* arg0, int32_t arg1, int32_t arg2); // 3
+extern void* C_ZN10QMatrix4x4C2EPKfii(float* arg0, int32_t arg1, int32_t arg2); // 3
   // proto:  void QMatrix4x4::QMatrix4x4(const float * values);
-extern void C_ZN10QMatrix4x4C2EPKf(void* qthis, float* arg0); // 3
+extern void* C_ZN10QMatrix4x4C2EPKf(float* arg0); // 3
   // proto:  void QMatrix4x4::QMatrix4x4(const QMatrix & matrix);
-extern void C_ZN10QMatrix4x4C2ERK7QMatrix(void* qthis, void* arg0); // 3
+extern void* C_ZN10QMatrix4x4C2ERK7QMatrix(void* arg0); // 3
   // proto:  void QMatrix4x4::QMatrix4x4();
-extern void C_ZN10QMatrix4x4C2Ev(void* qthis); // 1
+extern void* C_ZN10QMatrix4x4C2Ev(); // 1
   // proto:  void QMatrix4x4::QMatrix4x4(float m11, float m12, float m13, float m14, float m21, float m22, float m23, float m24, float m31, float m32, float m33, float m34, float m41, float m42, float m43, float m44);
-extern void C_ZN10QMatrix4x4C2Effffffffffffffff(void* qthis, float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15); // 1
+extern void* C_ZN10QMatrix4x4C2Effffffffffffffff(float arg0, float arg1, float arg2, float arg3, float arg4, float arg5, float arg6, float arg7, float arg8, float arg9, float arg10, float arg11, float arg12, float arg13, float arg14, float arg15); // 1
   // proto:  void QMatrix4x4::setRow(int index, const QVector4D & value);
 extern void C_ZN10QMatrix4x46setRowEiRK9QVector4D(void* qthis, int32_t arg0, void* arg1); // 2
   // proto:  bool QMatrix4x4::isAffine();
@@ -164,7 +164,8 @@ func (this *QMatrix4x4) row(args ...interface{}) () {
     // invoke: QVector4D row(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x43rowEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x43rowEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "row", args)
   }
@@ -187,7 +188,8 @@ func (this *QMatrix4x4) mapVector(args ...interface{}) () {
     // invoke: QVector3D mapVector(const class QVector3D &)
     var arg0 = args[0].(QVector3D).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x49mapVectorERK9QVector3D(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x49mapVectorERK9QVector3D(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "mapVector", args)
   }
@@ -213,13 +215,15 @@ func (this *QMatrix4x4) mapRect(args ...interface{}) () {
     // invoke: QRectF mapRect(const class QRectF &)
     var arg0 = args[0].(QRectF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x47mapRectERK6QRectF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x47mapRectERK6QRectF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QMatrix4x47mapRectERK5QRect
     // invoke: QRect mapRect(const class QRect &)
     var arg0 = args[0].(QRect).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x47mapRectERK5QRect(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x47mapRectERK5QRect(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "mapRect", args)
   }
@@ -242,7 +246,8 @@ func (this *QMatrix4x4) inverted(args ...interface{}) () {
     // invoke: QMatrix4x4 inverted(_Bool *)
     var arg0 = (*C.bool)(args[0].(*bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x48invertedEPb(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x48invertedEPb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "inverted", args)
   }
@@ -425,7 +430,8 @@ func (this *QMatrix4x4) constData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x49constDataEv
     // invoke: const float * constData()
-    C.C_ZNK10QMatrix4x49constDataEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x49constDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "constData", args)
   }
@@ -468,7 +474,8 @@ func (this *QMatrix4x4) isIdentity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x410isIdentityEv
     // invoke: bool isIdentity()
-    C.C_ZNK10QMatrix4x410isIdentityEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x410isIdentityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "isIdentity", args)
   }
@@ -570,25 +577,29 @@ func (this *QMatrix4x4) map_(args ...interface{}) () {
     // invoke: QPoint map(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x43mapERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x43mapERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QMatrix4x43mapERK7QPointF
     // invoke: QPointF map(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x43mapERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x43mapERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK10QMatrix4x43mapERK9QVector4D
     // invoke: QVector4D map(const class QVector4D &)
     var arg0 = args[0].(QVector4D).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x43mapERK9QVector4D(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x43mapERK9QVector4D(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK10QMatrix4x43mapERK9QVector3D
     // invoke: QVector3D map(const class QVector3D &)
     var arg0 = args[0].(QVector3D).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x43mapERK9QVector3D(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x43mapERK9QVector3D(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "map", args)
   }
@@ -608,7 +619,8 @@ func (this *QMatrix4x4) determinant(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x411determinantEv
     // invoke: double determinant()
-    C.C_ZNK10QMatrix4x411determinantEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x411determinantEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "determinant", args)
   }
@@ -717,11 +729,13 @@ func (this *QMatrix4x4) toTransform(args ...interface{}) () {
     // invoke: QTransform toTransform(float)
     var arg0 = C.float(args[0].(float32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x411toTransformEf(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x411toTransformEf(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK10QMatrix4x411toTransformEv
     // invoke: QTransform toTransform()
-    C.C_ZNK10QMatrix4x411toTransformEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x411toTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "toTransform", args)
   }
@@ -741,7 +755,8 @@ func (this *QMatrix4x4) toAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x48toAffineEv
     // invoke: QMatrix toAffine()
-    C.C_ZNK10QMatrix4x48toAffineEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x48toAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "toAffine", args)
   }
@@ -761,7 +776,8 @@ func (this *QMatrix4x4) data(args ...interface{}) () {
   case 0:
     // invoke: _ZN10QMatrix4x44dataEv
     // invoke: float * data()
-    C.C_ZN10QMatrix4x44dataEv(this.qclsinst)
+    var ret = C.C_ZN10QMatrix4x44dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "data", args)
   }
@@ -848,7 +864,8 @@ func (this *QMatrix4x4) transposed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x410transposedEv
     // invoke: QMatrix4x4 transposed()
-    C.C_ZNK10QMatrix4x410transposedEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x410transposedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "transposed", args)
   }
@@ -924,7 +941,8 @@ func (this *QMatrix4x4) column(args ...interface{}) () {
     // invoke: QVector4D column(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QMatrix4x46columnEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QMatrix4x46columnEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "column", args)
   }
@@ -988,7 +1006,7 @@ func (this *QMatrix4x4) ortho(args ...interface{}) () {
 }
 
 // QMatrix4x4(const class QTransform &)
-func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
+func NewQMatrix4x4(args ...interface{}) *QMatrix4x4 {
   // QMatrix4x4(const class QTransform &)
   // QMatrix4x4(const float *, int, int)
   // QMatrix4x4(const float *)
@@ -1036,7 +1054,8 @@ func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2ERK10QTransform(qthis, arg0)
+    qthis = C.C_ZN10QMatrix4x4C2ERK10QTransform(arg0)
+    return &QMatrix4x4{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QMatrix4x4C1EPKfii
     // invoke: void QMatrix4x4(const float *, int, int)
@@ -1048,7 +1067,8 @@ func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2EPKfii(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN10QMatrix4x4C2EPKfii(arg0, arg1, arg2)
+    return &QMatrix4x4{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QMatrix4x4C1EPKf
     // invoke: void QMatrix4x4(const float *)
@@ -1056,7 +1076,8 @@ func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2EPKf(qthis, arg0)
+    qthis = C.C_ZN10QMatrix4x4C2EPKf(arg0)
+    return &QMatrix4x4{qclsinst:qthis}
   case 3:
     // invoke: _ZN10QMatrix4x4C1ERK7QMatrix
     // invoke: void QMatrix4x4(const class QMatrix &)
@@ -1064,13 +1085,15 @@ func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2ERK7QMatrix(qthis, arg0)
+    qthis = C.C_ZN10QMatrix4x4C2ERK7QMatrix(arg0)
+    return &QMatrix4x4{qclsinst:qthis}
   case 4:
     // invoke: _ZN10QMatrix4x4C1Ev
     // invoke: void QMatrix4x4()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2Ev(qthis)
+    qthis = C.C_ZN10QMatrix4x4C2Ev()
+    return &QMatrix4x4{qclsinst:qthis}
   case 5:
     // invoke: _ZN10QMatrix4x4C1Effffffffffffffff
     // invoke: void QMatrix4x4(float, float, float, float, float, float, float, float, float, float, float, float, float, float, float, float)
@@ -1108,12 +1131,13 @@ func NewQMatrix4x4(args ...interface{}) QMatrix4x4 {
     if false {fmt.Println(arg15)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QMatrix4x4C2Effffffffffffffff(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)
+    qthis = C.C_ZN10QMatrix4x4C2Effffffffffffffff(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8, arg9, arg10, arg11, arg12, arg13, arg14, arg15)
+    return &QMatrix4x4{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "QMatrix4x4", args)
   }
 
-  return QMatrix4x4{}
+  return nil // QMatrix4x4{qclsinst:qthis}
 }
 
 // setRow(int, const class QVector4D &)
@@ -1155,7 +1179,8 @@ func (this *QMatrix4x4) isAffine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QMatrix4x48isAffineEv
     // invoke: bool isAffine()
-    C.C_ZNK10QMatrix4x48isAffineEv(this.qclsinst)
+    var ret = C.C_ZNK10QMatrix4x48isAffineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMatrix4x4", "isAffine", args)
   }

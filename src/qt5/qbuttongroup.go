@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qbuttongroup.h
 // dst-file: /src/widgets/qbuttongroup.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  bool QButtonGroup::exclusive();
 extern void C_ZNK12QButtonGroup9exclusiveEv(void* qthis); // 4
   // proto:  void QButtonGroup::QButtonGroup(QObject * parent);
-extern void C_ZN12QButtonGroupC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN12QButtonGroupC2EP7QObject(void* arg0); // 3
   // proto:  void QButtonGroup::addButton(QAbstractButton * , int id);
 extern void C_ZN12QButtonGroup9addButtonEP15QAbstractButtoni(void* qthis, void* arg0, int32_t arg1); // 4
   // proto:  void QButtonGroup::~QButtonGroup();
@@ -89,7 +89,8 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9exclusiveEv
     // invoke: bool exclusive()
-    C.C_ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
+    var ret = C.C_ZNK12QButtonGroup9exclusiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "exclusive", args)
   }
@@ -97,7 +98,7 @@ func (this *QButtonGroup) exclusive(args ...interface{}) () {
 }
 
 // QButtonGroup(class QObject *)
-func NewQButtonGroup(args ...interface{}) QButtonGroup {
+func NewQButtonGroup(args ...interface{}) *QButtonGroup {
   // QButtonGroup(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -114,12 +115,13 @@ func NewQButtonGroup(args ...interface{}) QButtonGroup {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QButtonGroupC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN12QButtonGroupC2EP7QObject(arg0)
+    return &QButtonGroup{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QButtonGroup", "QButtonGroup", args)
   }
 
-  return QButtonGroup{}
+  return nil // QButtonGroup{qclsinst:qthis}
 }
 
 // addButton(class QAbstractButton *, int)
@@ -207,7 +209,8 @@ func (this *QButtonGroup) id(args ...interface{}) () {
     // invoke: int id(class QAbstractButton *)
     var arg0 = args[0].(QAbstractButton).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
+    var ret = C.C_ZNK12QButtonGroup2idEP15QAbstractButton(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "id", args)
   }
@@ -267,7 +270,8 @@ func (this *QButtonGroup) checkedId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QButtonGroup9checkedIdEv
     // invoke: int checkedId()
-    C.C_ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
+    var ret = C.C_ZNK12QButtonGroup9checkedIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QButtonGroup", "checkedId", args)
   }

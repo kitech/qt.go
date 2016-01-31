@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsortfilterproxymodel.h
 // dst-file: /src/core/qsortfilterproxymodel.go
 //
@@ -121,7 +121,7 @@ extern void C_ZN21QSortFilterProxyModel13setFilterRoleEi(void* qthis, int32_t ar
   // proto:  bool QSortFilterProxyModel::removeColumns(int column, int count, const QModelIndex & parent);
 extern void C_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 4
   // proto:  void QSortFilterProxyModel::QSortFilterProxyModel(QObject * parent);
-extern void C_ZN21QSortFilterProxyModelC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN21QSortFilterProxyModelC2EP7QObject(void* arg0); // 3
   // proto:  Qt::DropActions QSortFilterProxyModel::supportedDropActions();
 extern void C_ZNK21QSortFilterProxyModel20supportedDropActionsEv(void* qthis); // 4
 */
@@ -155,7 +155,8 @@ func (this *QSortFilterProxyModel) sortColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel10sortColumnEv
     // invoke: int sortColumn()
-    C.C_ZNK21QSortFilterProxyModel10sortColumnEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel10sortColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sortColumn", args)
   }
@@ -221,7 +222,8 @@ func (this *QSortFilterProxyModel) canFetchMore(args ...interface{}) () {
     // invoke: bool canFetchMore(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel12canFetchMoreERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "canFetchMore", args)
   }
@@ -244,7 +246,8 @@ func (this *QSortFilterProxyModel) mapSelectionToSource(args ...interface{}) () 
     // invoke: QItemSelection mapSelectionToSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel20mapSelectionToSourceERK14QItemSelection(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapSelectionToSource", args)
   }
@@ -296,7 +299,8 @@ func (this *QSortFilterProxyModel) sibling(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK21QSortFilterProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK21QSortFilterProxyModel7siblingEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sibling", args)
   }
@@ -339,7 +343,8 @@ func (this *QSortFilterProxyModel) parent(args ...interface{}) () {
     // invoke: QModelIndex parent(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel6parentERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "parent", args)
   }
@@ -368,7 +373,8 @@ func (this *QSortFilterProxyModel) index(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK21QSortFilterProxyModel5indexEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "index", args)
   }
@@ -414,7 +420,8 @@ func (this *QSortFilterProxyModel) span(args ...interface{}) () {
     // invoke: QSize span(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel4spanERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel4spanERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "span", args)
   }
@@ -437,7 +444,8 @@ func (this *QSortFilterProxyModel) buddy(args ...interface{}) () {
     // invoke: QModelIndex buddy(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel5buddyERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel5buddyERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "buddy", args)
   }
@@ -460,7 +468,8 @@ func (this *QSortFilterProxyModel) hasChildren(args ...interface{}) () {
     // invoke: bool hasChildren(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel11hasChildrenERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "hasChildren", args)
   }
@@ -483,7 +492,8 @@ func (this *QSortFilterProxyModel) mapFromSource(args ...interface{}) () {
     // invoke: QModelIndex mapFromSource(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel13mapFromSourceERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapFromSource", args)
   }
@@ -503,7 +513,8 @@ func (this *QSortFilterProxyModel) filterRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel10filterRoleEv
     // invoke: int filterRole()
-    C.C_ZNK21QSortFilterProxyModel10filterRoleEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel10filterRoleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterRole", args)
   }
@@ -523,7 +534,8 @@ func (this *QSortFilterProxyModel) sortRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel8sortRoleEv
     // invoke: int sortRole()
-    C.C_ZNK21QSortFilterProxyModel8sortRoleEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel8sortRoleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "sortRole", args)
   }
@@ -572,7 +584,8 @@ func (this *QSortFilterProxyModel) setData(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN21QSortFilterProxyModel7setDataERK11QModelIndexRK8QVarianti(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "setData", args)
   }
@@ -641,7 +654,8 @@ func (this *QSortFilterProxyModel) columnCount(args ...interface{}) () {
     // invoke: int columnCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel11columnCountERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "columnCount", args)
   }
@@ -701,7 +715,8 @@ func (this *QSortFilterProxyModel) filterRegExp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel12filterRegExpEv
     // invoke: QRegExp filterRegExp()
-    C.C_ZNK21QSortFilterProxyModel12filterRegExpEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel12filterRegExpEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterRegExp", args)
   }
@@ -724,7 +739,8 @@ func (this *QSortFilterProxyModel) rowCount(args ...interface{}) () {
     // invoke: int rowCount(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel8rowCountERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "rowCount", args)
   }
@@ -753,7 +769,8 @@ func (this *QSortFilterProxyModel) insertRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN21QSortFilterProxyModel10insertRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "insertRows", args)
   }
@@ -796,7 +813,8 @@ func (this *QSortFilterProxyModel) dynamicSortFilter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel17dynamicSortFilterEv
     // invoke: bool dynamicSortFilter()
-    C.C_ZNK21QSortFilterProxyModel17dynamicSortFilterEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel17dynamicSortFilterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "dynamicSortFilter", args)
   }
@@ -845,7 +863,8 @@ func (this *QSortFilterProxyModel) data(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK21QSortFilterProxyModel4dataERK11QModelIndexi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "data", args)
   }
@@ -865,7 +884,8 @@ func (this *QSortFilterProxyModel) filterKeyColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel15filterKeyColumnEv
     // invoke: int filterKeyColumn()
-    C.C_ZNK21QSortFilterProxyModel15filterKeyColumnEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel15filterKeyColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "filterKeyColumn", args)
   }
@@ -940,7 +960,8 @@ func (this *QSortFilterProxyModel) mapSelectionFromSource(args ...interface{}) (
     // invoke: QItemSelection mapSelectionFromSource(const class QItemSelection &)
     var arg0 = args[0].(QItemSelection).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel22mapSelectionFromSourceERK14QItemSelection(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapSelectionFromSource", args)
   }
@@ -1003,7 +1024,8 @@ func (this *QSortFilterProxyModel) mapToSource(args ...interface{}) () {
     // invoke: QModelIndex mapToSource(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK21QSortFilterProxyModel11mapToSourceERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "mapToSource", args)
   }
@@ -1055,7 +1077,8 @@ func (this *QSortFilterProxyModel) removeRows(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN21QSortFilterProxyModel10removeRowsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "removeRows", args)
   }
@@ -1084,7 +1107,8 @@ func (this *QSortFilterProxyModel) insertColumns(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN21QSortFilterProxyModel13insertColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "insertColumns", args)
   }
@@ -1104,7 +1128,8 @@ func (this *QSortFilterProxyModel) isSortLocaleAware(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QSortFilterProxyModel17isSortLocaleAwareEv
     // invoke: bool isSortLocaleAware()
-    C.C_ZNK21QSortFilterProxyModel17isSortLocaleAwareEv(this.qclsinst)
+    var ret = C.C_ZNK21QSortFilterProxyModel17isSortLocaleAwareEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "isSortLocaleAware", args)
   }
@@ -1179,7 +1204,8 @@ func (this *QSortFilterProxyModel) removeColumns(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN21QSortFilterProxyModel13removeColumnsEiiRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "removeColumns", args)
   }
@@ -1187,7 +1213,7 @@ func (this *QSortFilterProxyModel) removeColumns(args ...interface{}) () {
 }
 
 // QSortFilterProxyModel(class QObject *)
-func NewQSortFilterProxyModel(args ...interface{}) QSortFilterProxyModel {
+func NewQSortFilterProxyModel(args ...interface{}) *QSortFilterProxyModel {
   // QSortFilterProxyModel(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1204,12 +1230,13 @@ func NewQSortFilterProxyModel(args ...interface{}) QSortFilterProxyModel {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN21QSortFilterProxyModelC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN21QSortFilterProxyModelC2EP7QObject(arg0)
+    return &QSortFilterProxyModel{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSortFilterProxyModel", "QSortFilterProxyModel", args)
   }
 
-  return QSortFilterProxyModel{}
+  return nil // QSortFilterProxyModel{qclsinst:qthis}
 }
 
 // supportedDropActions()

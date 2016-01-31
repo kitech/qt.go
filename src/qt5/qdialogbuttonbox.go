@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdialogbuttonbox.h
 // dst-file: /src/widgets/qdialogbuttonbox.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN16QDialogButtonBox16setCenterButtonsEb(void* qthis, bool arg0); 
   // proto:  void QDialogButtonBox::removeButton(QAbstractButton * button);
 extern void C_ZN16QDialogButtonBox12removeButtonEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  void QDialogButtonBox::QDialogButtonBox(QWidget * parent);
-extern void C_ZN16QDialogButtonBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN16QDialogButtonBoxC2EP7QWidget(void* arg0); // 3
   // proto:  QDialogButtonBox::ButtonRole QDialogButtonBox::buttonRole(QAbstractButton * button);
 extern void C_ZNK16QDialogButtonBox10buttonRoleEP15QAbstractButton(void* qthis, void* arg0); // 4
   // proto:  QList<QAbstractButton *> QDialogButtonBox::buttons();
@@ -107,7 +107,8 @@ func (this *QDialogButtonBox) centerButtons(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDialogButtonBox13centerButtonsEv
     // invoke: bool centerButtons()
-    C.C_ZNK16QDialogButtonBox13centerButtonsEv(this.qclsinst)
+    var ret = C.C_ZNK16QDialogButtonBox13centerButtonsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "centerButtons", args)
   }
@@ -161,7 +162,7 @@ func (this *QDialogButtonBox) removeButton(args ...interface{}) () {
 }
 
 // QDialogButtonBox(class QWidget *)
-func NewQDialogButtonBox(args ...interface{}) QDialogButtonBox {
+func NewQDialogButtonBox(args ...interface{}) *QDialogButtonBox {
   // QDialogButtonBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -178,12 +179,13 @@ func NewQDialogButtonBox(args ...interface{}) QDialogButtonBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QDialogButtonBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN16QDialogButtonBoxC2EP7QWidget(arg0)
+    return &QDialogButtonBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDialogButtonBox", "QDialogButtonBox", args)
   }
 
-  return QDialogButtonBox{}
+  return nil // QDialogButtonBox{qclsinst:qthis}
 }
 
 // buttonRole(class QAbstractButton *)

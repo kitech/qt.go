@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qdockwidget.h
 // dst-file: /src/widgets/qdockwidget.go
 //
@@ -109,7 +109,8 @@ func (this *QDockWidget) isFloating(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget10isFloatingEv
     // invoke: bool isFloating()
-    C.C_ZNK11QDockWidget10isFloatingEv(this.qclsinst)
+    var ret = C.C_ZNK11QDockWidget10isFloatingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDockWidget", "isFloating", args)
   }
@@ -129,7 +130,8 @@ func (this *QDockWidget) toggleViewAction(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget16toggleViewActionEv
     // invoke: QAction * toggleViewAction()
-    C.C_ZNK11QDockWidget16toggleViewActionEv(this.qclsinst)
+    var ret = C.C_ZNK11QDockWidget16toggleViewActionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDockWidget", "toggleViewAction", args)
   }
@@ -149,7 +151,8 @@ func (this *QDockWidget) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget6widgetEv
     // invoke: QWidget * widget()
-    C.C_ZNK11QDockWidget6widgetEv(this.qclsinst)
+    var ret = C.C_ZNK11QDockWidget6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDockWidget", "widget", args)
   }
@@ -252,7 +255,8 @@ func (this *QDockWidget) titleBarWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QDockWidget14titleBarWidgetEv
     // invoke: QWidget * titleBarWidget()
-    C.C_ZNK11QDockWidget14titleBarWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK11QDockWidget14titleBarWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDockWidget", "titleBarWidget", args)
   }

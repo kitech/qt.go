@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfilesystemwatcher.h
 // dst-file: /src/core/qfilesystemwatcher.go
 //
@@ -33,9 +33,9 @@ extern void C_ZNK18QFileSystemWatcher5filesEv(void* qthis); // 4
   // proto:  const QMetaObject * QFileSystemWatcher::metaObject();
 extern void C_ZNK18QFileSystemWatcher10metaObjectEv(void* qthis); // 4
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(QObject * parent);
-extern void C_ZN18QFileSystemWatcherC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN18QFileSystemWatcherC2EP7QObject(void* arg0); // 3
   // proto:  void QFileSystemWatcher::QFileSystemWatcher(const QStringList & paths, QObject * parent);
-extern void C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(void* arg0, void* arg1); // 3
   // proto:  QStringList QFileSystemWatcher::removePaths(const QStringList & files);
 extern void C_ZN18QFileSystemWatcher11removePathsERK11QStringList(void* qthis, void* arg0); // 4
   // proto:  QStringList QFileSystemWatcher::directories();
@@ -109,7 +109,7 @@ func (this *QFileSystemWatcher) metaObject(args ...interface{}) () {
 }
 
 // QFileSystemWatcher(class QObject *)
-func NewQFileSystemWatcher(args ...interface{}) QFileSystemWatcher {
+func NewQFileSystemWatcher(args ...interface{}) *QFileSystemWatcher {
   // QFileSystemWatcher(class QObject *)
   // QFileSystemWatcher(const class QStringList &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -130,7 +130,8 @@ func NewQFileSystemWatcher(args ...interface{}) QFileSystemWatcher {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QFileSystemWatcherC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN18QFileSystemWatcherC2EP7QObject(arg0)
+    return &QFileSystemWatcher{qclsinst:qthis}
   case 1:
     // invoke: _ZN18QFileSystemWatcherC1ERK11QStringListP7QObject
     // invoke: void QFileSystemWatcher(const class QStringList &, class QObject *)
@@ -140,12 +141,13 @@ func NewQFileSystemWatcher(args ...interface{}) QFileSystemWatcher {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN18QFileSystemWatcherC2ERK11QStringListP7QObject(arg0, arg1)
+    return &QFileSystemWatcher{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "QFileSystemWatcher", args)
   }
 
-  return QFileSystemWatcher{}
+  return nil // QFileSystemWatcher{qclsinst:qthis}
 }
 
 // removePaths(const class QStringList &)
@@ -207,7 +209,8 @@ func (this *QFileSystemWatcher) addPath(args ...interface{}) () {
     // invoke: bool addPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN18QFileSystemWatcher7addPathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "addPath", args)
   }
@@ -273,7 +276,8 @@ func (this *QFileSystemWatcher) removePath(args ...interface{}) () {
     // invoke: bool removePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN18QFileSystemWatcher10removePathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileSystemWatcher", "removePath", args)
   }

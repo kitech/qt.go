@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qshareddata.h
 // dst-file: /src/core/qshareddata.go
 //
@@ -29,9 +29,9 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSharedData::QSharedData();
-extern void C_ZN11QSharedDataC2Ev(void* qthis); // 1
+extern void* C_ZN11QSharedDataC2Ev(); // 1
   // proto:  void QSharedData::QSharedData(const QSharedData & );
-extern void C_ZN11QSharedDataC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN11QSharedDataC2ERKS_(void* arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -51,7 +51,7 @@ type QSharedData struct {
 }
 
 // QSharedData()
-func NewQSharedData(args ...interface{}) QSharedData {
+func NewQSharedData(args ...interface{}) *QSharedData {
   // QSharedData()
   // QSharedData(const class QSharedData &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -68,7 +68,8 @@ func NewQSharedData(args ...interface{}) QSharedData {
     // invoke: void QSharedData()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QSharedDataC2Ev(qthis)
+    qthis = C.C_ZN11QSharedDataC2Ev()
+    return &QSharedData{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QSharedDataC1ERKS_
     // invoke: void QSharedData(const class QSharedData &)
@@ -76,12 +77,13 @@ func NewQSharedData(args ...interface{}) QSharedData {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QSharedDataC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN11QSharedDataC2ERKS_(arg0)
+    return &QSharedData{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSharedData", "QSharedData", args)
   }
 
-  return QSharedData{}
+  return nil // QSharedData{qclsinst:qthis}
 }
 
 // <= body block end

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopenglversionfunctions.h
 // dst-file: /src/gui/qopenglversionfunctions.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QOpenGLVersionFunctionsBackend::QOpenGLVersionFunctionsBackend(QOpenGLContext * ctx);
-extern void C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(void* qthis, void* arg0); // 1
+extern void* C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(void* arg0); // 1
   // proto:  QAbstractOpenGLFunctionsPrivate * QAbstractOpenGLFunctions::d_func();
 extern void C_ZN24QAbstractOpenGLFunctions6d_funcEv(void* qthis); // 4
   // proto:  void QAbstractOpenGLFunctions::~QAbstractOpenGLFunctions();
@@ -37,7 +37,7 @@ extern void C_ZN24QAbstractOpenGLFunctionsD2Ev(void* qthis); // 4
   // proto:  bool QAbstractOpenGLFunctions::initializeOpenGLFunctions();
 extern void C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(void* qthis); // 4
   // proto:  void QOpenGLVersionStatus::QOpenGLVersionStatus();
-extern void C_ZN20QOpenGLVersionStatusC2Ev(void* qthis); // 1
+extern void* C_ZN20QOpenGLVersionStatusC2Ev(); // 1
 */
 import "C"
 // } // <= ext block end
@@ -69,7 +69,7 @@ type QOpenGLVersionStatus struct {
 }
 
 // QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
-func NewQOpenGLVersionFunctionsBackend(args ...interface{}) QOpenGLVersionFunctionsBackend {
+func NewQOpenGLVersionFunctionsBackend(args ...interface{}) *QOpenGLVersionFunctionsBackend {
   // QOpenGLVersionFunctionsBackend(class QOpenGLContext *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -86,12 +86,13 @@ func NewQOpenGLVersionFunctionsBackend(args ...interface{}) QOpenGLVersionFuncti
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(qthis, arg0)
+    qthis = C.C_ZN30QOpenGLVersionFunctionsBackendC2EP14QOpenGLContext(arg0)
+    return &QOpenGLVersionFunctionsBackend{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVersionFunctionsBackend", "QOpenGLVersionFunctionsBackend", args)
   }
 
-  return QOpenGLVersionFunctionsBackend{}
+  return nil // QOpenGLVersionFunctionsBackend{qclsinst:qthis}
 }
 
 // d_func()
@@ -147,7 +148,8 @@ func (this *QAbstractOpenGLFunctions) initializeOpenGLFunctions(args ...interfac
   case 0:
     // invoke: _ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv
     // invoke: bool initializeOpenGLFunctions()
-    C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
+    var ret = C.C_ZN24QAbstractOpenGLFunctions25initializeOpenGLFunctionsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractOpenGLFunctions", "initializeOpenGLFunctions", args)
   }
@@ -155,7 +157,7 @@ func (this *QAbstractOpenGLFunctions) initializeOpenGLFunctions(args ...interfac
 }
 
 // QOpenGLVersionStatus()
-func NewQOpenGLVersionStatus(args ...interface{}) QOpenGLVersionStatus {
+func NewQOpenGLVersionStatus(args ...interface{}) *QOpenGLVersionStatus {
   // QOpenGLVersionStatus()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -169,12 +171,13 @@ func NewQOpenGLVersionStatus(args ...interface{}) QOpenGLVersionStatus {
     // invoke: void QOpenGLVersionStatus()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN20QOpenGLVersionStatusC2Ev(qthis)
+    qthis = C.C_ZN20QOpenGLVersionStatusC2Ev()
+    return &QOpenGLVersionStatus{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLVersionStatus", "QOpenGLVersionStatus", args)
   }
 
-  return QOpenGLVersionStatus{}
+  return nil // QOpenGLVersionStatus{qclsinst:qthis}
 }
 
 // <= body block end

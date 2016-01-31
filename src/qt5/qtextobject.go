@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextobject.h
 // dst-file: /src/gui/qtextobject.go
 //
@@ -53,9 +53,9 @@ extern void C_ZNK13QTextFragment8containsEi(void* qthis, int32_t arg0); // 4
   // proto:  QTextCharFormat QTextFragment::charFormat();
 extern void C_ZNK13QTextFragment10charFormatEv(void* qthis); // 4
   // proto:  void QTextFragment::QTextFragment(const QTextFragment & o);
-extern void C_ZN13QTextFragmentC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN13QTextFragmentC2ERKS_(void* arg0); // 1
   // proto:  void QTextFragment::QTextFragment();
-extern void C_ZN13QTextFragmentC2Ev(void* qthis); // 1
+extern void* C_ZN13QTextFragmentC2Ev(); // 1
   // proto:  int QTextFragment::length();
 extern void C_ZNK13QTextFragment6lengthEv(void* qthis); // 4
   // proto:  int QTextFragment::position();
@@ -125,9 +125,9 @@ extern void C_ZNK10QTextBlock15charFormatIndexEv(void* qthis); // 4
   // proto:  int QTextBlock::length();
 extern void C_ZNK10QTextBlock6lengthEv(void* qthis); // 4
   // proto:  void QTextBlock::QTextBlock(const QTextBlock & o);
-extern void C_ZN10QTextBlockC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN10QTextBlockC2ERKS_(void* arg0); // 1
   // proto:  void QTextBlock::QTextBlock();
-extern void C_ZN10QTextBlockC2Ev(void* qthis); // 1
+extern void* C_ZN10QTextBlockC2Ev(); // 1
   // proto:  bool QTextBlock::isVisible();
 extern void C_ZNK10QTextBlock9isVisibleEv(void* qthis); // 4
   // proto:  int QTextBlock::position();
@@ -157,7 +157,7 @@ extern void C_ZNK10QTextFrame3endEv(void* qthis); // 4
   // proto:  void QTextFrame::~QTextFrame();
 extern void C_ZN10QTextFrameD2Ev(void* qthis); // 4
   // proto:  void QTextFrame::QTextFrame(QTextDocument * doc);
-extern void C_ZN10QTextFrameC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void* C_ZN10QTextFrameC2EP13QTextDocument(void* arg0); // 3
   // proto:  const QMetaObject * QTextFrame::metaObject();
 extern void C_ZNK10QTextFrame10metaObjectEv(void* qthis); // 4
   // proto:  void QTextFrame::setLayoutData(QTextFrameLayoutData * data);
@@ -233,7 +233,8 @@ func (this *QTextObject) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject6formatEv
     // invoke: QTextFormat format()
-    C.C_ZNK11QTextObject6formatEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextObject6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextObject", "format", args)
   }
@@ -293,7 +294,8 @@ func (this *QTextObject) formatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject11formatIndexEv
     // invoke: int formatIndex()
-    C.C_ZNK11QTextObject11formatIndexEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextObject11formatIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextObject", "formatIndex", args)
   }
@@ -313,7 +315,8 @@ func (this *QTextObject) objectIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject11objectIndexEv
     // invoke: int objectIndex()
-    C.C_ZNK11QTextObject11objectIndexEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextObject11objectIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextObject", "objectIndex", args)
   }
@@ -333,7 +336,8 @@ func (this *QTextObject) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QTextObject8documentEv
     // invoke: QTextDocument * document()
-    C.C_ZNK11QTextObject8documentEv(this.qclsinst)
+    var ret = C.C_ZNK11QTextObject8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextObject", "document", args)
   }
@@ -373,7 +377,8 @@ func (this *QTextFragment) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK13QTextFragment7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "isValid", args)
   }
@@ -393,7 +398,8 @@ func (this *QTextFragment) charFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment15charFormatIndexEv
     // invoke: int charFormatIndex()
-    C.C_ZNK13QTextFragment15charFormatIndexEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment15charFormatIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormatIndex", args)
   }
@@ -413,7 +419,8 @@ func (this *QTextFragment) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment4textEv
     // invoke: QString text()
-    C.C_ZNK13QTextFragment4textEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "text", args)
   }
@@ -436,7 +443,8 @@ func (this *QTextFragment) contains(args ...interface{}) () {
     // invoke: bool contains(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextFragment8containsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextFragment8containsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "contains", args)
   }
@@ -456,7 +464,8 @@ func (this *QTextFragment) charFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    C.C_ZNK13QTextFragment10charFormatEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment10charFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "charFormat", args)
   }
@@ -464,7 +473,7 @@ func (this *QTextFragment) charFormat(args ...interface{}) () {
 }
 
 // QTextFragment(const class QTextFragment &)
-func NewQTextFragment(args ...interface{}) QTextFragment {
+func NewQTextFragment(args ...interface{}) *QTextFragment {
   // QTextFragment(const class QTextFragment &)
   // QTextFragment()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -483,18 +492,20 @@ func NewQTextFragment(args ...interface{}) QTextFragment {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTextFragmentC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN13QTextFragmentC2ERKS_(arg0)
+    return &QTextFragment{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QTextFragmentC1Ev
     // invoke: void QTextFragment()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTextFragmentC2Ev(qthis)
+    qthis = C.C_ZN13QTextFragmentC2Ev()
+    return &QTextFragment{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFragment", "QTextFragment", args)
   }
 
-  return QTextFragment{}
+  return nil // QTextFragment{qclsinst:qthis}
 }
 
 // length()
@@ -510,7 +521,8 @@ func (this *QTextFragment) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment6lengthEv
     // invoke: int length()
-    C.C_ZNK13QTextFragment6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "length", args)
   }
@@ -530,7 +542,8 @@ func (this *QTextFragment) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextFragment8positionEv
     // invoke: int position()
-    C.C_ZNK13QTextFragment8positionEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextFragment8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFragment", "position", args)
   }
@@ -596,7 +609,8 @@ func (this *QTextBlock) blockFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock16blockFormatIndexEv
     // invoke: int blockFormatIndex()
-    C.C_ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock16blockFormatIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormatIndex", args)
   }
@@ -616,7 +630,8 @@ func (this *QTextBlock) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock4textEv
     // invoke: QString text()
-    C.C_ZNK10QTextBlock4textEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "text", args)
   }
@@ -636,7 +651,8 @@ func (this *QTextBlock) lineCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9lineCountEv
     // invoke: int lineCount()
-    C.C_ZNK10QTextBlock9lineCountEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock9lineCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "lineCount", args)
   }
@@ -676,7 +692,8 @@ func (this *QTextBlock) charFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock10charFormatEv
     // invoke: QTextCharFormat charFormat()
-    C.C_ZNK10QTextBlock10charFormatEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock10charFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormat", args)
   }
@@ -719,7 +736,8 @@ func (this *QTextBlock) textList(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8textListEv
     // invoke: QTextList * textList()
-    C.C_ZNK10QTextBlock8textListEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8textListEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "textList", args)
   }
@@ -739,7 +757,8 @@ func (this *QTextBlock) userState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9userStateEv
     // invoke: int userState()
-    C.C_ZNK10QTextBlock9userStateEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock9userStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "userState", args)
   }
@@ -802,7 +821,8 @@ func (this *QTextBlock) blockFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11blockFormatEv
     // invoke: QTextBlockFormat blockFormat()
-    C.C_ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock11blockFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "blockFormat", args)
   }
@@ -845,7 +865,8 @@ func (this *QTextBlock) contains(args ...interface{}) () {
     // invoke: bool contains(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTextBlock8containsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "contains", args)
   }
@@ -865,7 +886,8 @@ func (this *QTextBlock) next(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock4nextEv
     // invoke: QTextBlock next()
-    C.C_ZNK10QTextBlock4nextEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock4nextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "next", args)
   }
@@ -905,7 +927,8 @@ func (this *QTextBlock) fragmentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock13fragmentIndexEv
     // invoke: int fragmentIndex()
-    C.C_ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock13fragmentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "fragmentIndex", args)
   }
@@ -925,7 +948,8 @@ func (this *QTextBlock) firstLineNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock15firstLineNumberEv
     // invoke: int firstLineNumber()
-    C.C_ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock15firstLineNumberEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "firstLineNumber", args)
   }
@@ -945,7 +969,8 @@ func (this *QTextBlock) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8documentEv
     // invoke: const QTextDocument * document()
-    C.C_ZNK10QTextBlock8documentEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "document", args)
   }
@@ -965,7 +990,8 @@ func (this *QTextBlock) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8revisionEv
     // invoke: int revision()
-    C.C_ZNK10QTextBlock8revisionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8revisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "revision", args)
   }
@@ -985,7 +1011,8 @@ func (this *QTextBlock) userData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8userDataEv
     // invoke: QTextBlockUserData * userData()
-    C.C_ZNK10QTextBlock8userDataEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8userDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "userData", args)
   }
@@ -1025,7 +1052,8 @@ func (this *QTextBlock) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK10QTextBlock7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "isValid", args)
   }
@@ -1068,7 +1096,8 @@ func (this *QTextBlock) blockNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock11blockNumberEv
     // invoke: int blockNumber()
-    C.C_ZNK10QTextBlock11blockNumberEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock11blockNumberEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "blockNumber", args)
   }
@@ -1088,7 +1117,8 @@ func (this *QTextBlock) previous(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8previousEv
     // invoke: QTextBlock previous()
-    C.C_ZNK10QTextBlock8previousEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8previousEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "previous", args)
   }
@@ -1108,7 +1138,8 @@ func (this *QTextBlock) layout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock6layoutEv
     // invoke: QTextLayout * layout()
-    C.C_ZNK10QTextBlock6layoutEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock6layoutEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "layout", args)
   }
@@ -1171,7 +1202,8 @@ func (this *QTextBlock) charFormatIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock15charFormatIndexEv
     // invoke: int charFormatIndex()
-    C.C_ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock15charFormatIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "charFormatIndex", args)
   }
@@ -1191,7 +1223,8 @@ func (this *QTextBlock) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock6lengthEv
     // invoke: int length()
-    C.C_ZNK10QTextBlock6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "length", args)
   }
@@ -1199,7 +1232,7 @@ func (this *QTextBlock) length(args ...interface{}) () {
 }
 
 // QTextBlock(const class QTextBlock &)
-func NewQTextBlock(args ...interface{}) QTextBlock {
+func NewQTextBlock(args ...interface{}) *QTextBlock {
   // QTextBlock(const class QTextBlock &)
   // QTextBlock()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1218,18 +1251,20 @@ func NewQTextBlock(args ...interface{}) QTextBlock {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTextBlockC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN10QTextBlockC2ERKS_(arg0)
+    return &QTextBlock{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QTextBlockC1Ev
     // invoke: void QTextBlock()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTextBlockC2Ev(qthis)
+    qthis = C.C_ZN10QTextBlockC2Ev()
+    return &QTextBlock{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBlock", "QTextBlock", args)
   }
 
-  return QTextBlock{}
+  return nil // QTextBlock{qclsinst:qthis}
 }
 
 // isVisible()
@@ -1245,7 +1280,8 @@ func (this *QTextBlock) isVisible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock9isVisibleEv
     // invoke: bool isVisible()
-    C.C_ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock9isVisibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "isVisible", args)
   }
@@ -1265,7 +1301,8 @@ func (this *QTextBlock) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextBlock8positionEv
     // invoke: int position()
-    C.C_ZNK10QTextBlock8positionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextBlock8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBlock", "position", args)
   }
@@ -1371,7 +1408,8 @@ func (this *QTextFrame) parentFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11parentFrameEv
     // invoke: QTextFrame * parentFrame()
-    C.C_ZNK10QTextFrame11parentFrameEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame11parentFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "parentFrame", args)
   }
@@ -1391,7 +1429,8 @@ func (this *QTextFrame) firstCursorPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame19firstCursorPositionEv
     // invoke: QTextCursor firstCursorPosition()
-    C.C_ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame19firstCursorPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "firstCursorPosition", args)
   }
@@ -1411,7 +1450,8 @@ func (this *QTextFrame) lastCursorPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame18lastCursorPositionEv
     // invoke: QTextCursor lastCursorPosition()
-    C.C_ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame18lastCursorPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "lastCursorPosition", args)
   }
@@ -1431,7 +1471,8 @@ func (this *QTextFrame) firstPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame13firstPositionEv
     // invoke: int firstPosition()
-    C.C_ZNK10QTextFrame13firstPositionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame13firstPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "firstPosition", args)
   }
@@ -1471,7 +1512,8 @@ func (this *QTextFrame) layoutData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame10layoutDataEv
     // invoke: QTextFrameLayoutData * layoutData()
-    C.C_ZNK10QTextFrame10layoutDataEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame10layoutDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "layoutData", args)
   }
@@ -1519,7 +1561,7 @@ func (this *QTextFrame) FreeQTextFrame(args ...interface{}) () {
 }
 
 // QTextFrame(class QTextDocument *)
-func NewQTextFrame(args ...interface{}) QTextFrame {
+func NewQTextFrame(args ...interface{}) *QTextFrame {
   // QTextFrame(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1536,12 +1578,13 @@ func NewQTextFrame(args ...interface{}) QTextFrame {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTextFrameC2EP13QTextDocument(qthis, arg0)
+    qthis = C.C_ZN10QTextFrameC2EP13QTextDocument(arg0)
+    return &QTextFrame{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextFrame", "QTextFrame", args)
   }
 
-  return QTextFrame{}
+  return nil // QTextFrame{qclsinst:qthis}
 }
 
 // metaObject()
@@ -1600,7 +1643,8 @@ func (this *QTextFrame) frameFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame11frameFormatEv
     // invoke: QTextFrameFormat frameFormat()
-    C.C_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame11frameFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "frameFormat", args)
   }
@@ -1620,7 +1664,8 @@ func (this *QTextFrame) lastPosition(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTextFrame12lastPositionEv
     // invoke: int lastPosition()
-    C.C_ZNK10QTextFrame12lastPositionEv(this.qclsinst)
+    var ret = C.C_ZNK10QTextFrame12lastPositionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextFrame", "lastPosition", args)
   }

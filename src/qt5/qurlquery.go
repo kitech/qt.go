@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qurlquery.h
 // dst-file: /src/core/qurlquery.go
 //
@@ -47,13 +47,13 @@ extern void C_ZNK9QUrlQuery10isDetachedEv(void* qthis); // 4
   // proto: static QChar QUrlQuery::defaultQueryPairDelimiter();
 extern void C_ZN9QUrlQuery25defaultQueryPairDelimiterEv(); // 2
   // proto:  void QUrlQuery::QUrlQuery();
-extern void C_ZN9QUrlQueryC2Ev(void* qthis); // 3
+extern void* C_ZN9QUrlQueryC2Ev(); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QString & queryString);
-extern void C_ZN9QUrlQueryC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN9QUrlQueryC2ERK7QString(void* arg0); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QUrl & url);
-extern void C_ZN9QUrlQueryC2ERK4QUrl(void* qthis, void* arg0); // 3
+extern void* C_ZN9QUrlQueryC2ERK4QUrl(void* arg0); // 3
   // proto:  void QUrlQuery::QUrlQuery(const QUrlQuery & other);
-extern void C_ZN9QUrlQueryC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN9QUrlQueryC2ERKS_(void* arg0); // 3
   // proto:  void QUrlQuery::setQueryDelimiters(QChar valueDelimiter, QChar pairDelimiter);
 extern void C_ZN9QUrlQuery18setQueryDelimitersE5QCharS0_(void* qthis, void* arg0, void* arg1); // 4
   // proto:  void QUrlQuery::clear();
@@ -123,7 +123,8 @@ func (this *QUrlQuery) queryValueDelimiter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery19queryValueDelimiterEv
     // invoke: QChar queryValueDelimiter()
-    C.C_ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
+    var ret = C.C_ZNK9QUrlQuery19queryValueDelimiterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryValueDelimiter", args)
   }
@@ -146,7 +147,8 @@ func (this *QUrlQuery) hasQueryItem(args ...interface{}) () {
     // invoke: bool hasQueryItem(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QUrlQuery12hasQueryItemERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "hasQueryItem", args)
   }
@@ -209,7 +211,8 @@ func (this *QUrlQuery) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK9QUrlQuery7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "isEmpty", args)
   }
@@ -252,7 +255,8 @@ func (this *QUrlQuery) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK9QUrlQuery10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "isDetached", args)
   }
@@ -272,7 +276,8 @@ func (this *QUrlQuery) defaultQueryPairDelimiter_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery25defaultQueryPairDelimiterEv
     // invoke: QChar defaultQueryPairDelimiter()
-    C.C_ZN9QUrlQuery25defaultQueryPairDelimiterEv()
+    var ret = C.C_ZN9QUrlQuery25defaultQueryPairDelimiterEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryPairDelimiter", args)
   }
@@ -280,7 +285,7 @@ func (this *QUrlQuery) defaultQueryPairDelimiter_s(args ...interface{}) () {
 }
 
 // QUrlQuery()
-func NewQUrlQuery(args ...interface{}) QUrlQuery {
+func NewQUrlQuery(args ...interface{}) *QUrlQuery {
   // QUrlQuery()
   // QUrlQuery(const class QString &)
   // QUrlQuery(const class QUrl &)
@@ -303,7 +308,8 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     // invoke: void QUrlQuery()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QUrlQueryC2Ev(qthis)
+    qthis = C.C_ZN9QUrlQueryC2Ev()
+    return &QUrlQuery{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QUrlQueryC1ERK7QString
     // invoke: void QUrlQuery(const class QString &)
@@ -311,7 +317,8 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QUrlQueryC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN9QUrlQueryC2ERK7QString(arg0)
+    return &QUrlQuery{qclsinst:qthis}
   case 2:
     // invoke: _ZN9QUrlQueryC1ERK4QUrl
     // invoke: void QUrlQuery(const class QUrl &)
@@ -319,7 +326,8 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QUrlQueryC2ERK4QUrl(qthis, arg0)
+    qthis = C.C_ZN9QUrlQueryC2ERK4QUrl(arg0)
+    return &QUrlQuery{qclsinst:qthis}
   case 3:
     // invoke: _ZN9QUrlQueryC1ERKS_
     // invoke: void QUrlQuery(const class QUrlQuery &)
@@ -327,12 +335,13 @@ func NewQUrlQuery(args ...interface{}) QUrlQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QUrlQueryC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN9QUrlQueryC2ERKS_(arg0)
+    return &QUrlQuery{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QUrlQuery", "QUrlQuery", args)
   }
 
-  return QUrlQuery{}
+  return nil // QUrlQuery{qclsinst:qthis}
 }
 
 // setQueryDelimiters(class QChar, class QChar)
@@ -394,7 +403,8 @@ func (this *QUrlQuery) queryPairDelimiter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QUrlQuery18queryPairDelimiterEv
     // invoke: QChar queryPairDelimiter()
-    C.C_ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
+    var ret = C.C_ZNK9QUrlQuery18queryPairDelimiterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "queryPairDelimiter", args)
   }
@@ -437,7 +447,8 @@ func (this *QUrlQuery) defaultQueryValueDelimiter_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QUrlQuery26defaultQueryValueDelimiterEv
     // invoke: QChar defaultQueryValueDelimiter()
-    C.C_ZN9QUrlQuery26defaultQueryValueDelimiterEv()
+    var ret = C.C_ZN9QUrlQuery26defaultQueryValueDelimiterEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QUrlQuery", "defaultQueryValueDelimiter", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qslider.h
 // dst-file: /src/widgets/qslider.go
 //
@@ -41,7 +41,7 @@ extern void C_ZNK7QSlider10metaObjectEv(void* qthis); // 4
   // proto:  QSize QSlider::minimumSizeHint();
 extern void C_ZNK7QSlider15minimumSizeHintEv(void* qthis); // 4
   // proto:  void QSlider::QSlider(QWidget * parent);
-extern void C_ZN7QSliderC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN7QSliderC2EP7QWidget(void* arg0); // 3
   // proto:  QSlider::TickPosition QSlider::tickPosition();
 extern void C_ZNK7QSlider12tickPositionEv(void* qthis); // 4
   // proto:  void QSlider::setTickInterval(int ti);
@@ -80,7 +80,8 @@ func (this *QSlider) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QSlider5eventEP6QEvent(this.qclsinst, arg0)
+    var ret = C.C_ZN7QSlider5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSlider", "event", args)
   }
@@ -120,7 +121,8 @@ func (this *QSlider) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK7QSlider8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK7QSlider8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSlider", "sizeHint", args)
   }
@@ -140,7 +142,8 @@ func (this *QSlider) tickInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider12tickIntervalEv
     // invoke: int tickInterval()
-    C.C_ZNK7QSlider12tickIntervalEv(this.qclsinst)
+    var ret = C.C_ZNK7QSlider12tickIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSlider", "tickInterval", args)
   }
@@ -180,7 +183,8 @@ func (this *QSlider) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QSlider15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK7QSlider15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK7QSlider15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSlider", "minimumSizeHint", args)
   }
@@ -188,7 +192,7 @@ func (this *QSlider) minimumSizeHint(args ...interface{}) () {
 }
 
 // QSlider(class QWidget *)
-func NewQSlider(args ...interface{}) QSlider {
+func NewQSlider(args ...interface{}) *QSlider {
   // QSlider(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -205,12 +209,13 @@ func NewQSlider(args ...interface{}) QSlider {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QSliderC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN7QSliderC2EP7QWidget(arg0)
+    return &QSlider{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSlider", "QSlider", args)
   }
 
-  return QSlider{}
+  return nil // QSlider{qclsinst:qthis}
 }
 
 // tickPosition()

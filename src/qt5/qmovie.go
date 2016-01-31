@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qmovie.h
 // dst-file: /src/gui/qmovie.go
 //
@@ -83,11 +83,11 @@ extern void C_ZNK6QMovie9cacheModeEv(void* qthis); // 4
   // proto:  QSize QMovie::scaledSize();
 extern void C_ZN6QMovie10scaledSizeEv(void* qthis); // 4
   // proto:  void QMovie::QMovie(QObject * parent);
-extern void C_ZN6QMovieC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN6QMovieC2EP7QObject(void* arg0); // 3
   // proto:  void QMovie::QMovie(QIODevice * device, const QByteArray & format, QObject * parent);
-extern void C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(void* arg0, void* arg1, void* arg2); // 3
   // proto:  void QMovie::QMovie(const QString & fileName, const QByteArray & format, QObject * parent);
-extern void C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1, void* arg2); // 3
+extern void* C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(void* arg0, void* arg1, void* arg2); // 3
   // proto: static QList<QByteArray> QMovie::supportedFormats();
 extern void C_ZN6QMovie16supportedFormatsEv(); // 4
   // proto:  bool QMovie::jumpToNextFrame();
@@ -155,7 +155,8 @@ func (this *QMovie) nextFrameDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie14nextFrameDelayEv
     // invoke: int nextFrameDelay()
-    C.C_ZNK6QMovie14nextFrameDelayEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie14nextFrameDelayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "nextFrameDelay", args)
   }
@@ -175,7 +176,8 @@ func (this *QMovie) speed(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie5speedEv
     // invoke: int speed()
-    C.C_ZNK6QMovie5speedEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie5speedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "speed", args)
   }
@@ -195,7 +197,8 @@ func (this *QMovie) frameCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie10frameCountEv
     // invoke: int frameCount()
-    C.C_ZNK6QMovie10frameCountEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie10frameCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "frameCount", args)
   }
@@ -215,7 +218,8 @@ func (this *QMovie) currentFrameNumber(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie18currentFrameNumberEv
     // invoke: int currentFrameNumber()
-    C.C_ZNK6QMovie18currentFrameNumberEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie18currentFrameNumberEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "currentFrameNumber", args)
   }
@@ -235,7 +239,8 @@ func (this *QMovie) loopCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie9loopCountEv
     // invoke: int loopCount()
-    C.C_ZNK6QMovie9loopCountEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie9loopCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "loopCount", args)
   }
@@ -278,7 +283,8 @@ func (this *QMovie) format(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie6formatEv
     // invoke: QByteArray format()
-    C.C_ZNK6QMovie6formatEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie6formatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "format", args)
   }
@@ -338,7 +344,8 @@ func (this *QMovie) backgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie15backgroundColorEv
     // invoke: QColor backgroundColor()
-    C.C_ZNK6QMovie15backgroundColorEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie15backgroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "backgroundColor", args)
   }
@@ -384,7 +391,8 @@ func (this *QMovie) jumpToFrame(args ...interface{}) () {
     // invoke: bool jumpToFrame(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QMovie11jumpToFrameEi(this.qclsinst, arg0)
+    var ret = C.C_ZN6QMovie11jumpToFrameEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "jumpToFrame", args)
   }
@@ -404,7 +412,8 @@ func (this *QMovie) frameRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie9frameRectEv
     // invoke: QRect frameRect()
-    C.C_ZNK6QMovie9frameRectEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie9frameRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "frameRect", args)
   }
@@ -424,7 +433,8 @@ func (this *QMovie) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK6QMovie7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "isValid", args)
   }
@@ -487,7 +497,8 @@ func (this *QMovie) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK6QMovie8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "fileName", args)
   }
@@ -507,7 +518,8 @@ func (this *QMovie) currentImage(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie12currentImageEv
     // invoke: QImage currentImage()
-    C.C_ZNK6QMovie12currentImageEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie12currentImageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "currentImage", args)
   }
@@ -527,7 +539,8 @@ func (this *QMovie) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie6deviceEv
     // invoke: QIODevice * device()
-    C.C_ZNK6QMovie6deviceEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "device", args)
   }
@@ -567,7 +580,8 @@ func (this *QMovie) currentPixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QMovie13currentPixmapEv
     // invoke: QPixmap currentPixmap()
-    C.C_ZNK6QMovie13currentPixmapEv(this.qclsinst)
+    var ret = C.C_ZNK6QMovie13currentPixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "currentPixmap", args)
   }
@@ -673,7 +687,8 @@ func (this *QMovie) scaledSize(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMovie10scaledSizeEv
     // invoke: QSize scaledSize()
-    C.C_ZN6QMovie10scaledSizeEv(this.qclsinst)
+    var ret = C.C_ZN6QMovie10scaledSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "scaledSize", args)
   }
@@ -681,7 +696,7 @@ func (this *QMovie) scaledSize(args ...interface{}) () {
 }
 
 // QMovie(class QObject *)
-func NewQMovie(args ...interface{}) QMovie {
+func NewQMovie(args ...interface{}) *QMovie {
   // QMovie(class QObject *)
   // QMovie(class QIODevice *, const class QByteArray &, class QObject *)
   // QMovie(const class QString &, const class QByteArray &, class QObject *)
@@ -708,7 +723,8 @@ func NewQMovie(args ...interface{}) QMovie {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QMovieC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN6QMovieC2EP7QObject(arg0)
+    return &QMovie{qclsinst:qthis}
   case 1:
     // invoke: _ZN6QMovieC1EP9QIODeviceRK10QByteArrayP7QObject
     // invoke: void QMovie(class QIODevice *, const class QByteArray &, class QObject *)
@@ -720,7 +736,8 @@ func NewQMovie(args ...interface{}) QMovie {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN6QMovieC2EP9QIODeviceRK10QByteArrayP7QObject(arg0, arg1, arg2)
+    return &QMovie{qclsinst:qthis}
   case 2:
     // invoke: _ZN6QMovieC1ERK7QStringRK10QByteArrayP7QObject
     // invoke: void QMovie(const class QString &, const class QByteArray &, class QObject *)
@@ -732,12 +749,13 @@ func NewQMovie(args ...interface{}) QMovie {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN6QMovieC2ERK7QStringRK10QByteArrayP7QObject(arg0, arg1, arg2)
+    return &QMovie{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMovie", "QMovie", args)
   }
 
-  return QMovie{}
+  return nil // QMovie{qclsinst:qthis}
 }
 
 // supportedFormats()
@@ -773,7 +791,8 @@ func (this *QMovie) jumpToNextFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QMovie15jumpToNextFrameEv
     // invoke: bool jumpToNextFrame()
-    C.C_ZN6QMovie15jumpToNextFrameEv(this.qclsinst)
+    var ret = C.C_ZN6QMovie15jumpToNextFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMovie", "jumpToNextFrame", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpagelayout.h
 // dst-file: /src/gui/qpagelayout.go
 //
@@ -43,9 +43,9 @@ extern void C_ZNK11QPageLayout14minimumMarginsEv(void* qthis); // 4
   // proto:  void QPageLayout::setMinimumMargins(const QMarginsF & minMargins);
 extern void C_ZN11QPageLayout17setMinimumMarginsERK9QMarginsF(void* qthis, void* arg0); // 4
   // proto:  void QPageLayout::QPageLayout(const QPageLayout & other);
-extern void C_ZN11QPageLayoutC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN11QPageLayoutC2ERKS_(void* arg0); // 3
   // proto:  void QPageLayout::QPageLayout();
-extern void C_ZN11QPageLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN11QPageLayoutC2Ev(); // 3
   // proto:  QRect QPageLayout::fullRectPoints();
 extern void C_ZNK11QPageLayout14fullRectPointsEv(void* qthis); // 4
   // proto:  QRectF QPageLayout::fullRect();
@@ -135,7 +135,8 @@ func (this *QPageLayout) pageSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout8pageSizeEv
     // invoke: QPageSize pageSize()
-    C.C_ZNK11QPageLayout8pageSizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout8pageSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "pageSize", args)
   }
@@ -181,7 +182,8 @@ func (this *QPageLayout) paintRectPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout15paintRectPointsEv
     // invoke: QRect paintRectPoints()
-    C.C_ZNK11QPageLayout15paintRectPointsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout15paintRectPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPoints", args)
   }
@@ -201,7 +203,8 @@ func (this *QPageLayout) margins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout7marginsEv
     // invoke: QMarginsF margins()
-    C.C_ZNK11QPageLayout7marginsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout7marginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "margins", args)
   }
@@ -221,7 +224,8 @@ func (this *QPageLayout) minimumMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14minimumMarginsEv
     // invoke: QMarginsF minimumMargins()
-    C.C_ZNK11QPageLayout14minimumMarginsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout14minimumMarginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "minimumMargins", args)
   }
@@ -252,7 +256,7 @@ func (this *QPageLayout) setMinimumMargins(args ...interface{}) () {
 }
 
 // QPageLayout(const class QPageLayout &)
-func NewQPageLayout(args ...interface{}) QPageLayout {
+func NewQPageLayout(args ...interface{}) *QPageLayout {
   // QPageLayout(const class QPageLayout &)
   // QPageLayout()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -271,18 +275,20 @@ func NewQPageLayout(args ...interface{}) QPageLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QPageLayoutC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN11QPageLayoutC2ERKS_(arg0)
+    return &QPageLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QPageLayoutC1Ev
     // invoke: void QPageLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QPageLayoutC2Ev(qthis)
+    qthis = C.C_ZN11QPageLayoutC2Ev()
+    return &QPageLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPageLayout", "QPageLayout", args)
   }
 
-  return QPageLayout{}
+  return nil // QPageLayout{qclsinst:qthis}
 }
 
 // fullRectPoints()
@@ -298,7 +304,8 @@ func (this *QPageLayout) fullRectPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14fullRectPointsEv
     // invoke: QRect fullRectPoints()
-    C.C_ZNK11QPageLayout14fullRectPointsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout14fullRectPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPoints", args)
   }
@@ -318,7 +325,8 @@ func (this *QPageLayout) fullRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout8fullRectEv
     // invoke: QRectF fullRect()
-    C.C_ZNK11QPageLayout8fullRectEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout8fullRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRect", args)
   }
@@ -338,7 +346,8 @@ func (this *QPageLayout) marginsPoints(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout13marginsPointsEv
     // invoke: QMargins marginsPoints()
-    C.C_ZNK11QPageLayout13marginsPointsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout13marginsPointsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPoints", args)
   }
@@ -401,7 +410,8 @@ func (this *QPageLayout) maximumMargins(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout14maximumMarginsEv
     // invoke: QMarginsF maximumMargins()
-    C.C_ZNK11QPageLayout14maximumMarginsEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout14maximumMarginsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "maximumMargins", args)
   }
@@ -424,7 +434,8 @@ func (this *QPageLayout) fullRectPixels(args ...interface{}) () {
     // invoke: QRect fullRectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QPageLayout14fullRectPixelsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QPageLayout14fullRectPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "fullRectPixels", args)
   }
@@ -447,7 +458,8 @@ func (this *QPageLayout) setTopMargin(args ...interface{}) () {
     // invoke: bool setTopMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout12setTopMarginEd(this.qclsinst, arg0)
+    var ret = C.C_ZN11QPageLayout12setTopMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "setTopMargin", args)
   }
@@ -467,7 +479,8 @@ func (this *QPageLayout) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK11QPageLayout7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "isValid", args)
   }
@@ -510,7 +523,8 @@ func (this *QPageLayout) paintRectPixels(args ...interface{}) () {
     // invoke: QRect paintRectPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QPageLayout15paintRectPixelsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QPageLayout15paintRectPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRectPixels", args)
   }
@@ -530,7 +544,8 @@ func (this *QPageLayout) paintRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QPageLayout9paintRectEv
     // invoke: QRectF paintRect()
-    C.C_ZNK11QPageLayout9paintRectEv(this.qclsinst)
+    var ret = C.C_ZNK11QPageLayout9paintRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "paintRect", args)
   }
@@ -553,7 +568,8 @@ func (this *QPageLayout) setLeftMargin(args ...interface{}) () {
     // invoke: bool setLeftMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout13setLeftMarginEd(this.qclsinst, arg0)
+    var ret = C.C_ZN11QPageLayout13setLeftMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "setLeftMargin", args)
   }
@@ -576,7 +592,8 @@ func (this *QPageLayout) setRightMargin(args ...interface{}) () {
     // invoke: bool setRightMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout14setRightMarginEd(this.qclsinst, arg0)
+    var ret = C.C_ZN11QPageLayout14setRightMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "setRightMargin", args)
   }
@@ -599,7 +616,8 @@ func (this *QPageLayout) isEquivalentTo(args ...interface{}) () {
     // invoke: bool isEquivalentTo(const class QPageLayout &)
     var arg0 = args[0].(QPageLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QPageLayout14isEquivalentToERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "isEquivalentTo", args)
   }
@@ -622,7 +640,8 @@ func (this *QPageLayout) marginsPixels(args ...interface{}) () {
     // invoke: QMargins marginsPixels(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QPageLayout13marginsPixelsEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QPageLayout13marginsPixelsEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "marginsPixels", args)
   }
@@ -665,7 +684,8 @@ func (this *QPageLayout) setMargins(args ...interface{}) () {
     // invoke: bool setMargins(const class QMarginsF &)
     var arg0 = args[0].(QMarginsF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.qclsinst, arg0)
+    var ret = C.C_ZN11QPageLayout10setMarginsERK9QMarginsF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "setMargins", args)
   }
@@ -688,7 +708,8 @@ func (this *QPageLayout) setBottomMargin(args ...interface{}) () {
     // invoke: bool setBottomMargin(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QPageLayout15setBottomMarginEd(this.qclsinst, arg0)
+    var ret = C.C_ZN11QPageLayout15setBottomMarginEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPageLayout", "setBottomMargin", args)
   }

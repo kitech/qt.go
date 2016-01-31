@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsocketnotifier.h
 // dst-file: /src/core/qsocketnotifier.go
 //
@@ -95,7 +95,8 @@ func (this *QSocketNotifier) socket(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSocketNotifier6socketEv
     // invoke: qintptr socket()
-    C.C_ZNK15QSocketNotifier6socketEv(this.qclsinst)
+    var ret = C.C_ZNK15QSocketNotifier6socketEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSocketNotifier", "socket", args)
   }
@@ -135,7 +136,8 @@ func (this *QSocketNotifier) isEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSocketNotifier9isEnabledEv
     // invoke: bool isEnabled()
-    C.C_ZNK15QSocketNotifier9isEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK15QSocketNotifier9isEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSocketNotifier", "isEnabled", args)
   }

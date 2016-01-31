@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgraphicsanchorlayout.h
 // dst-file: /src/widgets/qgraphicsanchorlayout.go
 //
@@ -49,7 +49,7 @@ extern void C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(void* qthis); // 4
   // proto:  void QGraphicsAnchorLayout::removeAt(int index);
 extern void C_ZN21QGraphicsAnchorLayout8removeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  void QGraphicsAnchorLayout::QGraphicsAnchorLayout(QGraphicsLayoutItem * parent);
-extern void C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
+extern void* C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(void* arg0); // 3
   // proto:  void QGraphicsAnchorLayout::setHorizontalSpacing(qreal spacing);
 extern void C_ZN21QGraphicsAnchorLayout20setHorizontalSpacingEd(void* qthis, double arg0); // 4
   // proto:  void QGraphicsAnchor::setSpacing(qreal spacing);
@@ -167,7 +167,8 @@ func (this *QGraphicsAnchorLayout) horizontalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsAnchorLayout17horizontalSpacingEv
     // invoke: qreal horizontalSpacing()
-    C.C_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK21QGraphicsAnchorLayout17horizontalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "horizontalSpacing", args)
   }
@@ -230,7 +231,8 @@ func (this *QGraphicsAnchorLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsAnchorLayout5countEv
     // invoke: int count()
-    C.C_ZNK21QGraphicsAnchorLayout5countEv(this.qclsinst)
+    var ret = C.C_ZNK21QGraphicsAnchorLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "count", args)
   }
@@ -273,7 +275,8 @@ func (this *QGraphicsAnchorLayout) verticalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK21QGraphicsAnchorLayout15verticalSpacingEv
     // invoke: qreal verticalSpacing()
-    C.C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK21QGraphicsAnchorLayout15verticalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "verticalSpacing", args)
   }
@@ -304,7 +307,7 @@ func (this *QGraphicsAnchorLayout) removeAt(args ...interface{}) () {
 }
 
 // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsAnchorLayout(args ...interface{}) QGraphicsAnchorLayout {
+func NewQGraphicsAnchorLayout(args ...interface{}) *QGraphicsAnchorLayout {
   // QGraphicsAnchorLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -321,12 +324,13 @@ func NewQGraphicsAnchorLayout(args ...interface{}) QGraphicsAnchorLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
+    qthis = C.C_ZN21QGraphicsAnchorLayoutC2EP19QGraphicsLayoutItem(arg0)
+    return &QGraphicsAnchorLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsAnchorLayout", "QGraphicsAnchorLayout", args)
   }
 
-  return QGraphicsAnchorLayout{}
+  return nil // QGraphicsAnchorLayout{qclsinst:qthis}
 }
 
 // setHorizontalSpacing(qreal)
@@ -428,7 +432,8 @@ func (this *QGraphicsAnchor) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsAnchor7spacingEv
     // invoke: qreal spacing()
-    C.C_ZNK15QGraphicsAnchor7spacingEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsAnchor7spacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsAnchor", "spacing", args)
   }

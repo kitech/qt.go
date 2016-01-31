@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpainter.h
 // dst-file: /src/gui/qpainter.go
 //
@@ -343,9 +343,9 @@ extern void C_ZN8QPainter8fillRectERK5QRectRK6QBrush(void* qthis, void* arg0, vo
   // proto: static void QPainter::restoreRedirected(const QPaintDevice * device);
 extern void C_ZN8QPainter17restoreRedirectedEPK12QPaintDevice(void* arg0); // 4
   // proto:  void QPainter::QPainter();
-extern void C_ZN8QPainterC2Ev(void* qthis); // 3
+extern void* C_ZN8QPainterC2Ev(); // 3
   // proto:  void QPainter::QPainter(QPaintDevice * );
-extern void C_ZN8QPainterC2EP12QPaintDevice(void* qthis, void* arg0); // 3
+extern void* C_ZN8QPainterC2EP12QPaintDevice(void* arg0); // 3
   // proto:  qreal QPainter::opacity();
 extern void C_ZNK8QPainter7opacityEv(void* qthis); // 4
   // proto:  bool QPainter::begin(QPaintDevice * );
@@ -450,7 +450,8 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPainter12boundingRectERK5QRectiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN8QPainter12boundingRectERK5QRectiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN8QPainter12boundingRectERK6QRectFiRK7QString
     // invoke: QRectF boundingRect(const class QRectF &, int, const class QString &)
@@ -460,7 +461,8 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QString).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPainter12boundingRectERK6QRectFiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN8QPainter12boundingRectERK6QRectFiRK7QString(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN8QPainter12boundingRectEiiiiiRK7QString
     // invoke: QRect boundingRect(int, int, int, int, int, const class QString &)
@@ -476,7 +478,8 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     if false {fmt.Println(arg4)}
     var arg5 = args[5].(QString).qclsinst
     if false {fmt.Println(arg5)}
-    C.C_ZN8QPainter12boundingRectEiiiiiRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    var ret = C.C_ZN8QPainter12boundingRectEiiiiiRK7QString(this.qclsinst, arg0, arg1, arg2, arg3, arg4, arg5)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption
     // invoke: QRectF boundingRect(const class QRectF &, const class QString &, const class QTextOption &)
@@ -486,7 +489,8 @@ func (this *QPainter) boundingRect(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QTextOption).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN8QPainter12boundingRectERK6QRectFRK7QStringRK11QTextOption(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "boundingRect", args)
   }
@@ -650,7 +654,8 @@ func (this *QPainter) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter4fontEv
     // invoke: const QFont & font()
-    C.C_ZNK8QPainter4fontEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "font", args)
   }
@@ -670,7 +675,8 @@ func (this *QPainter) brushOrigin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter11brushOriginEv
     // invoke: QPoint brushOrigin()
-    C.C_ZNK8QPainter11brushOriginEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter11brushOriginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "brushOrigin", args)
   }
@@ -1105,7 +1111,8 @@ func (this *QPainter) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter6windowEv
     // invoke: QRect window()
-    C.C_ZNK8QPainter6windowEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter6windowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "window", args)
   }
@@ -1282,7 +1289,8 @@ func (this *QPainter) clipBoundingRect(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter16clipBoundingRectEv
     // invoke: QRectF clipBoundingRect()
-    C.C_ZNK8QPainter16clipBoundingRectEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter16clipBoundingRectEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "clipBoundingRect", args)
   }
@@ -1302,7 +1310,8 @@ func (this *QPainter) fontMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter11fontMetricsEv
     // invoke: QFontMetrics fontMetrics()
-    C.C_ZNK8QPainter11fontMetricsEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter11fontMetricsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "fontMetrics", args)
   }
@@ -1342,7 +1351,8 @@ func (this *QPainter) hasClipping(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter11hasClippingEv
     // invoke: bool hasClipping()
-    C.C_ZNK8QPainter11hasClippingEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter11hasClippingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "hasClipping", args)
   }
@@ -1362,7 +1372,8 @@ func (this *QPainter) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter10backgroundEv
     // invoke: const QBrush & background()
-    C.C_ZNK8QPainter10backgroundEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter10backgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "background", args)
   }
@@ -1382,7 +1393,8 @@ func (this *QPainter) deviceMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter12deviceMatrixEv
     // invoke: const QMatrix & deviceMatrix()
-    C.C_ZNK8QPainter12deviceMatrixEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter12deviceMatrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "deviceMatrix", args)
   }
@@ -1674,7 +1686,8 @@ func (this *QPainter) paintEngine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter11paintEngineEv
     // invoke: QPaintEngine * paintEngine()
-    C.C_ZNK8QPainter11paintEngineEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter11paintEngineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "paintEngine", args)
   }
@@ -1694,7 +1707,8 @@ func (this *QPainter) clipRegion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter10clipRegionEv
     // invoke: QRegion clipRegion()
-    C.C_ZNK8QPainter10clipRegionEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter10clipRegionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "clipRegion", args)
   }
@@ -1843,7 +1857,8 @@ func (this *QPainter) matrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter6matrixEv
     // invoke: const QMatrix & matrix()
-    C.C_ZNK8QPainter6matrixEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter6matrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "matrix", args)
   }
@@ -1863,7 +1878,8 @@ func (this *QPainter) pen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter3penEv
     // invoke: const QPen & pen()
-    C.C_ZNK8QPainter3penEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter3penEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "pen", args)
   }
@@ -1936,7 +1952,8 @@ func (this *QPainter) worldMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter11worldMatrixEv
     // invoke: const QMatrix & worldMatrix()
-    C.C_ZNK8QPainter11worldMatrixEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter11worldMatrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrix", args)
   }
@@ -1956,7 +1973,8 @@ func (this *QPainter) deviceTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter15deviceTransformEv
     // invoke: const QTransform & deviceTransform()
-    C.C_ZNK8QPainter15deviceTransformEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter15deviceTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "deviceTransform", args)
   }
@@ -2144,7 +2162,8 @@ func (this *QPainter) isActive(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter8isActiveEv
     // invoke: bool isActive()
-    C.C_ZNK8QPainter8isActiveEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter8isActiveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "isActive", args)
   }
@@ -2236,7 +2255,8 @@ func (this *QPainter) brush(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter5brushEv
     // invoke: const QBrush & brush()
-    C.C_ZNK8QPainter5brushEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter5brushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "brush", args)
   }
@@ -2282,7 +2302,8 @@ func (this *QPainter) worldMatrixEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter18worldMatrixEnabledEv
     // invoke: bool worldMatrixEnabled()
-    C.C_ZNK8QPainter18worldMatrixEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter18worldMatrixEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "worldMatrixEnabled", args)
   }
@@ -2322,7 +2343,8 @@ func (this *QPainter) transform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter9transformEv
     // invoke: const QTransform & transform()
-    C.C_ZNK8QPainter9transformEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter9transformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "transform", args)
   }
@@ -2342,7 +2364,8 @@ func (this *QPainter) viewTransformEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter20viewTransformEnabledEv
     // invoke: bool viewTransformEnabled()
-    C.C_ZNK8QPainter20viewTransformEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter20viewTransformEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "viewTransformEnabled", args)
   }
@@ -2579,7 +2602,8 @@ func (this *QPainter) viewport(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter8viewportEv
     // invoke: QRect viewport()
-    C.C_ZNK8QPainter8viewportEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter8viewportEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "viewport", args)
   }
@@ -2850,7 +2874,8 @@ func (this *QPainter) combinedMatrix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter14combinedMatrixEv
     // invoke: QMatrix combinedMatrix()
-    C.C_ZNK8QPainter14combinedMatrixEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter14combinedMatrixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "combinedMatrix", args)
   }
@@ -3144,7 +3169,8 @@ func (this *QPainter) fontInfo(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter8fontInfoEv
     // invoke: QFontInfo fontInfo()
-    C.C_ZNK8QPainter8fontInfoEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter8fontInfoEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "fontInfo", args)
   }
@@ -3207,7 +3233,8 @@ func (this *QPainter) end(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QPainter3endEv
     // invoke: bool end()
-    C.C_ZN8QPainter3endEv(this.qclsinst)
+    var ret = C.C_ZN8QPainter3endEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "end", args)
   }
@@ -3250,7 +3277,8 @@ func (this *QPainter) worldTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter14worldTransformEv
     // invoke: const QTransform & worldTransform()
-    C.C_ZNK8QPainter14worldTransformEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter14worldTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "worldTransform", args)
   }
@@ -3385,7 +3413,7 @@ func (this *QPainter) restoreRedirected_s(args ...interface{}) () {
 }
 
 // QPainter()
-func NewQPainter(args ...interface{}) QPainter {
+func NewQPainter(args ...interface{}) *QPainter {
   // QPainter()
   // QPainter(class QPaintDevice *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -3402,7 +3430,8 @@ func NewQPainter(args ...interface{}) QPainter {
     // invoke: void QPainter()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPainterC2Ev(qthis)
+    qthis = C.C_ZN8QPainterC2Ev()
+    return &QPainter{qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPainterC1EP12QPaintDevice
     // invoke: void QPainter(class QPaintDevice *)
@@ -3410,12 +3439,13 @@ func NewQPainter(args ...interface{}) QPainter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPainterC2EP12QPaintDevice(qthis, arg0)
+    qthis = C.C_ZN8QPainterC2EP12QPaintDevice(arg0)
+    return &QPainter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPainter", "QPainter", args)
   }
 
-  return QPainter{}
+  return nil // QPainter{qclsinst:qthis}
 }
 
 // opacity()
@@ -3431,7 +3461,8 @@ func (this *QPainter) opacity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter7opacityEv
     // invoke: qreal opacity()
-    C.C_ZNK8QPainter7opacityEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter7opacityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "opacity", args)
   }
@@ -3454,7 +3485,8 @@ func (this *QPainter) begin(args ...interface{}) () {
     // invoke: bool begin(class QPaintDevice *)
     var arg0 = args[0].(QPaintDevice).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN8QPainter5beginEP12QPaintDevice(this.qclsinst, arg0)
+    var ret = C.C_ZN8QPainter5beginEP12QPaintDevice(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "begin", args)
   }
@@ -3474,7 +3506,8 @@ func (this *QPainter) combinedTransform(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter17combinedTransformEv
     // invoke: QTransform combinedTransform()
-    C.C_ZNK8QPainter17combinedTransformEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter17combinedTransformEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "combinedTransform", args)
   }
@@ -3494,7 +3527,8 @@ func (this *QPainter) device(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter6deviceEv
     // invoke: QPaintDevice * device()
-    C.C_ZNK8QPainter6deviceEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter6deviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "device", args)
   }
@@ -3566,7 +3600,8 @@ func (this *QPainter) matrixEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter13matrixEnabledEv
     // invoke: bool matrixEnabled()
-    C.C_ZNK8QPainter13matrixEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter13matrixEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "matrixEnabled", args)
   }
@@ -3630,7 +3665,8 @@ func (this *QPainter) clipPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPainter8clipPathEv
     // invoke: QPainterPath clipPath()
-    C.C_ZNK8QPainter8clipPathEv(this.qclsinst)
+    var ret = C.C_ZNK8QPainter8clipPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "clipPath", args)
   }
@@ -3679,7 +3715,8 @@ func (this *QPainter) redirected_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QPoint).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(arg0, arg1)
+    var ret = C.C_ZN8QPainter10redirectedEPK12QPaintDeviceP6QPoint(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPainter", "redirected", args)
   }

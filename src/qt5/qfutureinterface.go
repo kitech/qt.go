@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfutureinterface.h
 // dst-file: /src/core/qfutureinterface.go
 //
@@ -53,7 +53,7 @@ extern void C_ZNK20QFutureInterfaceBase15progressMinimumEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::waitForFinished();
 extern void C_ZN20QFutureInterfaceBase15waitForFinishedEv(void* qthis); // 4
   // proto:  void QFutureInterfaceBase::QFutureInterfaceBase(const QFutureInterfaceBase & other);
-extern void C_ZN20QFutureInterfaceBaseC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN20QFutureInterfaceBaseC2ERKS_(void* arg0); // 3
   // proto:  bool QFutureInterfaceBase::isStarted();
 extern void C_ZNK20QFutureInterfaceBase9isStartedEv(void* qthis); // 4
   // proto:  QtPrivate::ExceptionStore & QFutureInterfaceBase::exceptionStore();
@@ -169,7 +169,8 @@ func (this *QFutureInterfaceBase) progressText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase12progressTextEv
     // invoke: QString progressText()
-    C.C_ZNK20QFutureInterfaceBase12progressTextEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase12progressTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressText", args)
   }
@@ -255,7 +256,8 @@ func (this *QFutureInterfaceBase) progressMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase15progressMaximumEv
     // invoke: int progressMaximum()
-    C.C_ZNK20QFutureInterfaceBase15progressMaximumEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase15progressMaximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressMaximum", args)
   }
@@ -335,7 +337,8 @@ func (this *QFutureInterfaceBase) isProgressUpdateNeeded(args ...interface{}) ()
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv
     // invoke: bool isProgressUpdateNeeded()
-    C.C_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase22isProgressUpdateNeededEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isProgressUpdateNeeded", args)
   }
@@ -355,7 +358,8 @@ func (this *QFutureInterfaceBase) progressMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase15progressMinimumEv
     // invoke: int progressMinimum()
-    C.C_ZNK20QFutureInterfaceBase15progressMinimumEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase15progressMinimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressMinimum", args)
   }
@@ -383,7 +387,7 @@ func (this *QFutureInterfaceBase) waitForFinished(args ...interface{}) () {
 }
 
 // QFutureInterfaceBase(const class QFutureInterfaceBase &)
-func NewQFutureInterfaceBase(args ...interface{}) QFutureInterfaceBase {
+func NewQFutureInterfaceBase(args ...interface{}) *QFutureInterfaceBase {
   // QFutureInterfaceBase(const class QFutureInterfaceBase &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -400,12 +404,13 @@ func NewQFutureInterfaceBase(args ...interface{}) QFutureInterfaceBase {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN20QFutureInterfaceBaseC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN20QFutureInterfaceBaseC2ERKS_(arg0)
+    return &QFutureInterfaceBase{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "QFutureInterfaceBase", args)
   }
 
-  return QFutureInterfaceBase{}
+  return nil // QFutureInterfaceBase{qclsinst:qthis}
 }
 
 // isStarted()
@@ -421,7 +426,8 @@ func (this *QFutureInterfaceBase) isStarted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase9isStartedEv
     // invoke: bool isStarted()
-    C.C_ZNK20QFutureInterfaceBase9isStartedEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase9isStartedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isStarted", args)
   }
@@ -461,7 +467,8 @@ func (this *QFutureInterfaceBase) mutex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase5mutexEv
     // invoke: QMutex * mutex()
-    C.C_ZNK20QFutureInterfaceBase5mutexEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase5mutexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "mutex", args)
   }
@@ -527,7 +534,8 @@ func (this *QFutureInterfaceBase) isThrottled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase11isThrottledEv
     // invoke: bool isThrottled()
-    C.C_ZNK20QFutureInterfaceBase11isThrottledEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase11isThrottledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isThrottled", args)
   }
@@ -547,7 +555,8 @@ func (this *QFutureInterfaceBase) waitForNextResult(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase17waitForNextResultEv
     // invoke: bool waitForNextResult()
-    C.C_ZN20QFutureInterfaceBase17waitForNextResultEv(this.qclsinst)
+    var ret = C.C_ZN20QFutureInterfaceBase17waitForNextResultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "waitForNextResult", args)
   }
@@ -567,7 +576,8 @@ func (this *QFutureInterfaceBase) isFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase10isFinishedEv
     // invoke: bool isFinished()
-    C.C_ZNK20QFutureInterfaceBase10isFinishedEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase10isFinishedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isFinished", args)
   }
@@ -630,7 +640,8 @@ func (this *QFutureInterfaceBase) expectedResultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZN20QFutureInterfaceBase19expectedResultCountEv
     // invoke: int expectedResultCount()
-    C.C_ZN20QFutureInterfaceBase19expectedResultCountEv(this.qclsinst)
+    var ret = C.C_ZN20QFutureInterfaceBase19expectedResultCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "expectedResultCount", args)
   }
@@ -676,7 +687,8 @@ func (this *QFutureInterfaceBase) resultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase11resultCountEv
     // invoke: int resultCount()
-    C.C_ZNK20QFutureInterfaceBase11resultCountEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase11resultCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "resultCount", args)
   }
@@ -739,7 +751,8 @@ func (this *QFutureInterfaceBase) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase9isRunningEv
     // invoke: bool isRunning()
-    C.C_ZNK20QFutureInterfaceBase9isRunningEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isRunning", args)
   }
@@ -805,7 +818,8 @@ func (this *QFutureInterfaceBase) isCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase10isCanceledEv
     // invoke: bool isCanceled()
-    C.C_ZNK20QFutureInterfaceBase10isCanceledEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase10isCanceledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isCanceled", args)
   }
@@ -828,7 +842,8 @@ func (this *QFutureInterfaceBase) isResultReadyAt(args ...interface{}) () {
     // invoke: bool isResultReadyAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QFutureInterfaceBase15isResultReadyAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QFutureInterfaceBase15isResultReadyAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isResultReadyAt", args)
   }
@@ -848,7 +863,8 @@ func (this *QFutureInterfaceBase) isPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase8isPausedEv
     // invoke: bool isPaused()
-    C.C_ZNK20QFutureInterfaceBase8isPausedEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase8isPausedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "isPaused", args)
   }
@@ -914,7 +930,8 @@ func (this *QFutureInterfaceBase) progressValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QFutureInterfaceBase13progressValueEv
     // invoke: int progressValue()
-    C.C_ZNK20QFutureInterfaceBase13progressValueEv(this.qclsinst)
+    var ret = C.C_ZNK20QFutureInterfaceBase13progressValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFutureInterfaceBase", "progressValue", args)
   }

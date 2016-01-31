@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qmetatype.h
 // dst-file: /src/core/qmetatype.go
 //
@@ -37,7 +37,7 @@ extern void C_ZN9QMetaType7compareEPKvS1_iPi(void* arg0, void* arg1, int32_t arg
   // proto: static const char * QMetaType::typeName(int type);
 extern void C_ZN9QMetaType8typeNameEi(int32_t arg0); // 4
   // proto:  void QMetaType::QMetaType(const int type);
-extern void C_ZN9QMetaTypeC2Ei(void* qthis, int32_t arg0); // 3
+extern void* C_ZN9QMetaTypeC2Ei(int32_t arg0); // 3
   // proto: static bool QMetaType::isRegistered(int type);
 extern void C_ZN9QMetaType12isRegisteredEi(int32_t arg0); // 4
   // proto:  bool QMetaType::isRegistered();
@@ -136,7 +136,8 @@ func (this *QMetaType) load_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(unsafe.Pointer)
     if false {fmt.Println(arg2)}
-    C.C_ZN9QMetaType4loadER11QDataStreamiPv(arg0, arg1, arg2)
+    var ret = C.C_ZN9QMetaType4loadER11QDataStreamiPv(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "load", args)
   }
@@ -162,7 +163,8 @@ func (this *QMetaType) registerNormalizedTypedef_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0, arg1)
+    var ret = C.C_ZN9QMetaType25registerNormalizedTypedefERK10QByteArrayi(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "registerNormalizedTypedef", args)
   }
@@ -194,7 +196,8 @@ func (this *QMetaType) compare_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN9QMetaType7compareEPKvS1_iPi(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN9QMetaType7compareEPKvS1_iPi(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "compare", args)
   }
@@ -217,7 +220,8 @@ func (this *QMetaType) typeName_s(args ...interface{}) () {
     // invoke: const char * typeName(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType8typeNameEi(arg0)
+    var ret = C.C_ZN9QMetaType8typeNameEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "typeName", args)
   }
@@ -225,7 +229,7 @@ func (this *QMetaType) typeName_s(args ...interface{}) () {
 }
 
 // QMetaType(const int)
-func NewQMetaType(args ...interface{}) QMetaType {
+func NewQMetaType(args ...interface{}) *QMetaType {
   // QMetaType(const int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,12 +246,13 @@ func NewQMetaType(args ...interface{}) QMetaType {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QMetaTypeC2Ei(qthis, arg0)
+    qthis = C.C_ZN9QMetaTypeC2Ei(arg0)
+    return &QMetaType{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QMetaType", "QMetaType", args)
   }
 
-  return QMetaType{}
+  return nil // QMetaType{qclsinst:qthis}
 }
 
 // isRegistered(int)
@@ -268,11 +273,13 @@ func (this *QMetaType) isRegistered_s(args ...interface{}) () {
     // invoke: bool isRegistered(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType12isRegisteredEi(arg0)
+    var ret = C.C_ZN9QMetaType12isRegisteredEi(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QMetaType12isRegisteredEv
     // invoke: bool isRegistered()
-    C.C_ZNK9QMetaType12isRegisteredEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaType12isRegisteredEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "isRegistered", args)
   }
@@ -295,7 +302,8 @@ func (this *QMetaType) unregisterType_s(args ...interface{}) () {
     // invoke: bool unregisterType(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType14unregisterTypeEi(arg0)
+    var ret = C.C_ZN9QMetaType14unregisterTypeEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "unregisterType", args)
   }
@@ -347,13 +355,15 @@ func (this *QMetaType) create_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
-    C.C_ZN9QMetaType6createEiPKv(arg0, arg1)
+    var ret = C.C_ZN9QMetaType6createEiPKv(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QMetaType6createEPKv
     // invoke: void * create(const void *)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QMetaType6createEPKv(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QMetaType6createEPKv(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "create", args)
   }
@@ -386,7 +396,8 @@ func (this *QMetaType) construct_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(unsafe.Pointer)
     if false {fmt.Println(arg2)}
-    C.C_ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)
+    var ret = C.C_ZN9QMetaType9constructEiPvPKv(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QMetaType9constructEPvPKv
     // invoke: void * construct(void *, const void *)
@@ -394,7 +405,8 @@ func (this *QMetaType) construct_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(unsafe.Pointer)
     if false {fmt.Println(arg1)}
-    C.C_ZNK9QMetaType9constructEPvPKv(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK9QMetaType9constructEPvPKv(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "construct", args)
   }
@@ -417,7 +429,8 @@ func (this *QMetaType) hasRegisteredDebugStreamOperator_s(args ...interface{}) (
     // invoke: bool hasRegisteredDebugStreamOperator(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0)
+    var ret = C.C_ZN9QMetaType32hasRegisteredDebugStreamOperatorEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredDebugStreamOperator", args)
   }
@@ -481,7 +494,8 @@ func (this *QMetaType) save_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(unsafe.Pointer)
     if false {fmt.Println(arg2)}
-    C.C_ZN9QMetaType4saveER11QDataStreamiPKv(arg0, arg1, arg2)
+    var ret = C.C_ZN9QMetaType4saveER11QDataStreamiPKv(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "save", args)
   }
@@ -507,13 +521,15 @@ func (this *QMetaType) type_s(args ...interface{}) () {
     // invoke: int type(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType4typeEPKc(arg0)
+    var ret = C.C_ZN9QMetaType4typeEPKc(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QMetaType4typeERK10QByteArray
     // invoke: int type(const ::QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType4typeERK10QByteArray(arg0)
+    var ret = C.C_ZN9QMetaType4typeERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "type", args)
   }
@@ -556,7 +572,8 @@ func (this *QMetaType) hasRegisteredComparators_s(args ...interface{}) () {
     // invoke: bool hasRegisteredComparators(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType24hasRegisteredComparatorsEi(arg0)
+    var ret = C.C_ZN9QMetaType24hasRegisteredComparatorsEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredComparators", args)
   }
@@ -576,7 +593,8 @@ func (this *QMetaType) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaType7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK9QMetaType7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaType7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "isValid", args)
   }
@@ -608,7 +626,8 @@ func (this *QMetaType) equals_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = (*C.int32_t)(args[3].(*int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN9QMetaType6equalsEPKvS1_iPi(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN9QMetaType6equalsEPKvS1_iPi(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "equals", args)
   }
@@ -640,7 +659,8 @@ func (this *QMetaType) convert_s(args ...interface{}) () {
     if false {fmt.Println(arg2)}
     var arg3 = C.int32_t(args[3].(int32))
     if false {fmt.Println(arg3)}
-    C.C_ZN9QMetaType7convertEPKviPvi(arg0, arg1, arg2, arg3)
+    var ret = C.C_ZN9QMetaType7convertEPKviPvi(arg0, arg1, arg2, arg3)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "convert", args)
   }
@@ -689,7 +709,8 @@ func (this *QMetaType) debugStream_s(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0, arg1, arg2)
+    var ret = C.C_ZN9QMetaType11debugStreamER6QDebugPKvi(arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "debugStream", args)
   }
@@ -773,7 +794,8 @@ func (this *QMetaType) hasRegisteredConverterFunction_s(args ...interface{}) () 
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0, arg1)
+    var ret = C.C_ZN9QMetaType30hasRegisteredConverterFunctionEii(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "hasRegisteredConverterFunction", args)
   }
@@ -819,7 +841,8 @@ func (this *QMetaType) registerTypedef_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QMetaType15registerTypedefEPKci(arg0, arg1)
+    var ret = C.C_ZN9QMetaType15registerTypedefEPKci(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "registerTypedef", args)
   }
@@ -842,13 +865,15 @@ func (this *QMetaType) sizeOf(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QMetaType6sizeOfEv
     // invoke: int sizeOf()
-    C.C_ZNK9QMetaType6sizeOfEv(this.qclsinst)
+    var ret = C.C_ZNK9QMetaType6sizeOfEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QMetaType6sizeOfEi
     // invoke: int sizeOf(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QMetaType6sizeOfEi(arg0)
+    var ret = C.C_ZN9QMetaType6sizeOfEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QMetaType", "sizeOf", args)
   }

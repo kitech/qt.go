@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qthread.h
 // dst-file: /src/core/qthread.go
 //
@@ -67,7 +67,7 @@ extern void C_ZNK7QThread23isInterruptionRequestedEv(void* qthis); // 4
   // proto:  void QThread::requestInterruption();
 extern void C_ZN7QThread19requestInterruptionEv(void* qthis); // 4
   // proto:  void QThread::QThread(QObject * parent);
-extern void C_ZN7QThreadC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN7QThreadC2EP7QObject(void* arg0); // 3
   // proto:  bool QThread::wait(unsigned long time);
 extern void C_ZN7QThread4waitEm(void* qthis, int32_t arg0); // 4
   // proto:  const QMetaObject * QThread::metaObject();
@@ -131,7 +131,8 @@ func (this *QThread) currentThread_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread13currentThreadEv
     // invoke: QThread * currentThread()
-    C.C_ZN7QThread13currentThreadEv()
+    var ret = C.C_ZN7QThread13currentThreadEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "currentThread", args)
   }
@@ -217,7 +218,8 @@ func (this *QThread) stackSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread9stackSizeEv
     // invoke: uint stackSize()
-    C.C_ZNK7QThread9stackSizeEv(this.qclsinst)
+    var ret = C.C_ZNK7QThread9stackSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "stackSize", args)
   }
@@ -240,7 +242,8 @@ func (this *QThread) event(args ...interface{}) () {
     // invoke: bool event(class QEvent *)
     var arg0 = args[0].(QEvent).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QThread5eventEP6QEvent(this.qclsinst, arg0)
+    var ret = C.C_ZN7QThread5eventEP6QEvent(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "event", args)
   }
@@ -303,7 +306,8 @@ func (this *QThread) loopLevel(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread9loopLevelEv
     // invoke: int loopLevel()
-    C.C_ZNK7QThread9loopLevelEv(this.qclsinst)
+    var ret = C.C_ZNK7QThread9loopLevelEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "loopLevel", args)
   }
@@ -343,7 +347,8 @@ func (this *QThread) isFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread10isFinishedEv
     // invoke: bool isFinished()
-    C.C_ZNK7QThread10isFinishedEv(this.qclsinst)
+    var ret = C.C_ZNK7QThread10isFinishedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "isFinished", args)
   }
@@ -452,7 +457,8 @@ func (this *QThread) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread9isRunningEv
     // invoke: bool isRunning()
-    C.C_ZNK7QThread9isRunningEv(this.qclsinst)
+    var ret = C.C_ZNK7QThread9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "isRunning", args)
   }
@@ -472,7 +478,8 @@ func (this *QThread) isInterruptionRequested(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QThread23isInterruptionRequestedEv
     // invoke: bool isInterruptionRequested()
-    C.C_ZNK7QThread23isInterruptionRequestedEv(this.qclsinst)
+    var ret = C.C_ZNK7QThread23isInterruptionRequestedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "isInterruptionRequested", args)
   }
@@ -500,7 +507,7 @@ func (this *QThread) requestInterruption(args ...interface{}) () {
 }
 
 // QThread(class QObject *)
-func NewQThread(args ...interface{}) QThread {
+func NewQThread(args ...interface{}) *QThread {
   // QThread(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -517,12 +524,13 @@ func NewQThread(args ...interface{}) QThread {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QThreadC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN7QThreadC2EP7QObject(arg0)
+    return &QThread{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThread", "QThread", args)
   }
 
-  return QThread{}
+  return nil // QThread{qclsinst:qthis}
 }
 
 // wait(unsigned long)
@@ -541,7 +549,8 @@ func (this *QThread) wait(args ...interface{}) () {
     // invoke: bool wait(unsigned long)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QThread4waitEm(this.qclsinst, arg0)
+    var ret = C.C_ZN7QThread4waitEm(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "wait", args)
   }
@@ -581,7 +590,8 @@ func (this *QThread) idealThreadCount_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QThread16idealThreadCountEv
     // invoke: int idealThreadCount()
-    C.C_ZN7QThread16idealThreadCountEv()
+    var ret = C.C_ZN7QThread16idealThreadCountEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThread", "idealThreadCount", args)
   }

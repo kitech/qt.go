@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qfontdatabase.h
 // dst-file: /src/gui/qfontdatabase.go
 //
@@ -45,7 +45,7 @@ extern void C_ZNK13QFontDatabase14writingSystemsERK7QString(void* qthis, void* a
   // proto:  bool QFontDatabase::isPrivateFamily(const QString & family);
 extern void C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QFontDatabase::QFontDatabase();
-extern void C_ZN13QFontDatabaseC2Ev(void* qthis); // 3
+extern void* C_ZN13QFontDatabaseC2Ev(); // 3
   // proto:  QString QFontDatabase::styleString(const QFontInfo & fontInfo);
 extern void C_ZN13QFontDatabase11styleStringERK9QFontInfo(void* qthis, void* arg0); // 4
   // proto:  QString QFontDatabase::styleString(const QFont & font);
@@ -112,7 +112,8 @@ func (this *QFontDatabase) addApplicationFontFromData_s(args ...interface{}) () 
     // invoke: int addApplicationFontFromData(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(arg0)
+    var ret = C.C_ZN13QFontDatabase26addApplicationFontFromDataERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "addApplicationFontFromData", args)
   }
@@ -138,7 +139,8 @@ func (this *QFontDatabase) weight(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase6weightERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase6weightERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "weight", args)
   }
@@ -164,7 +166,8 @@ func (this *QFontDatabase) isFixedPitch(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase12isFixedPitchERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "isFixedPitch", args)
   }
@@ -193,7 +196,8 @@ func (this *QFontDatabase) font(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZNK13QFontDatabase4fontERK7QStringS2_i(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK13QFontDatabase4fontERK7QStringS2_i(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "font", args)
   }
@@ -271,7 +275,8 @@ func (this *QFontDatabase) isPrivateFamily(args ...interface{}) () {
     // invoke: bool isPrivateFamily(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QFontDatabase15isPrivateFamilyERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "isPrivateFamily", args)
   }
@@ -279,7 +284,7 @@ func (this *QFontDatabase) isPrivateFamily(args ...interface{}) () {
 }
 
 // QFontDatabase()
-func NewQFontDatabase(args ...interface{}) QFontDatabase {
+func NewQFontDatabase(args ...interface{}) *QFontDatabase {
   // QFontDatabase()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -293,12 +298,13 @@ func NewQFontDatabase(args ...interface{}) QFontDatabase {
     // invoke: void QFontDatabase()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QFontDatabaseC2Ev(qthis)
+    qthis = C.C_ZN13QFontDatabaseC2Ev()
+    return &QFontDatabase{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontDatabase", "QFontDatabase", args)
   }
 
-  return QFontDatabase{}
+  return nil // QFontDatabase{qclsinst:qthis}
 }
 
 // styleString(const class QFontInfo &)
@@ -320,13 +326,15 @@ func (this *QFontDatabase) styleString(args ...interface{}) () {
     // invoke: QString styleString(const class QFontInfo &)
     var arg0 = args[0].(QFontInfo).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase11styleStringERK9QFontInfo(this.qclsinst, arg0)
+    var ret = C.C_ZN13QFontDatabase11styleStringERK9QFontInfo(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN13QFontDatabase11styleStringERK5QFont
     // invoke: QString styleString(const class QFont &)
     var arg0 = args[0].(QFont).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase11styleStringERK5QFont(this.qclsinst, arg0)
+    var ret = C.C_ZN13QFontDatabase11styleStringERK5QFont(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "styleString", args)
   }
@@ -352,7 +360,8 @@ func (this *QFontDatabase) italic(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase6italicERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase6italicERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "italic", args)
   }
@@ -401,7 +410,8 @@ func (this *QFontDatabase) isSmoothlyScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase18isSmoothlyScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "isSmoothlyScalable", args)
   }
@@ -427,7 +437,8 @@ func (this *QFontDatabase) bold(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase4boldERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase4boldERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "bold", args)
   }
@@ -453,7 +464,8 @@ func (this *QFontDatabase) isScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase10isScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase10isScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "isScalable", args)
   }
@@ -476,7 +488,8 @@ func (this *QFontDatabase) addApplicationFont_s(args ...interface{}) () {
     // invoke: int addApplicationFont(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase18addApplicationFontERK7QString(arg0)
+    var ret = C.C_ZN13QFontDatabase18addApplicationFontERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "addApplicationFont", args)
   }
@@ -502,7 +515,8 @@ func (this *QFontDatabase) isBitmapScalable(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QFontDatabase16isBitmapScalableERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "isBitmapScalable", args)
   }
@@ -545,7 +559,8 @@ func (this *QFontDatabase) supportsThreadedFontRendering_s(args ...interface{}) 
   case 0:
     // invoke: _ZN13QFontDatabase29supportsThreadedFontRenderingEv
     // invoke: bool supportsThreadedFontRendering()
-    C.C_ZN13QFontDatabase29supportsThreadedFontRenderingEv()
+    var ret = C.C_ZN13QFontDatabase29supportsThreadedFontRenderingEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "supportsThreadedFontRendering", args)
   }
@@ -594,7 +609,8 @@ func (this *QFontDatabase) removeApplicationFont_s(args ...interface{}) () {
     // invoke: bool removeApplicationFont(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN13QFontDatabase21removeApplicationFontEi(arg0)
+    var ret = C.C_ZN13QFontDatabase21removeApplicationFontEi(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "removeApplicationFont", args)
   }
@@ -617,7 +633,8 @@ func (this *QFontDatabase) hasFamily(args ...interface{}) () {
     // invoke: bool hasFamily(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QFontDatabase9hasFamilyERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QFontDatabase9hasFamilyERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "hasFamily", args)
   }
@@ -657,7 +674,8 @@ func (this *QFontDatabase) removeAllApplicationFonts_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QFontDatabase25removeAllApplicationFontsEv
     // invoke: bool removeAllApplicationFonts()
-    C.C_ZN13QFontDatabase25removeAllApplicationFontsEv()
+    var ret = C.C_ZN13QFontDatabase25removeAllApplicationFontsEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDatabase", "removeAllApplicationFonts", args)
   }

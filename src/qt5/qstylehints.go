@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qstylehints.h
 // dst-file: /src/gui/qstylehints.go
 //
@@ -108,7 +108,8 @@ func (this *QStyleHints) setFocusOnTouchRelease(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints22setFocusOnTouchReleaseEv
     // invoke: bool setFocusOnTouchRelease()
-    C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints22setFocusOnTouchReleaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "setFocusOnTouchRelease", args)
   }
@@ -128,7 +129,8 @@ func (this *QStyleHints) startDragDistance(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragDistanceEv
     // invoke: int startDragDistance()
-    C.C_ZNK11QStyleHints17startDragDistanceEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints17startDragDistanceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragDistance", args)
   }
@@ -148,7 +150,8 @@ func (this *QStyleHints) keyboardAutoRepeatRate(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints22keyboardAutoRepeatRateEv
     // invoke: int keyboardAutoRepeatRate()
-    C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints22keyboardAutoRepeatRateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardAutoRepeatRate", args)
   }
@@ -168,7 +171,8 @@ func (this *QStyleHints) passwordMaskDelay(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17passwordMaskDelayEv
     // invoke: int passwordMaskDelay()
-    C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints17passwordMaskDelayEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskDelay", args)
   }
@@ -211,7 +215,8 @@ func (this *QStyleHints) cursorFlashTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints15cursorFlashTimeEv
     // invoke: int cursorFlashTime()
-    C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints15cursorFlashTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "cursorFlashTime", args)
   }
@@ -231,7 +236,8 @@ func (this *QStyleHints) mousePressAndHoldInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints25mousePressAndHoldIntervalEv
     // invoke: int mousePressAndHoldInterval()
-    C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints25mousePressAndHoldIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "mousePressAndHoldInterval", args)
   }
@@ -251,7 +257,8 @@ func (this *QStyleHints) startDragVelocity(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints17startDragVelocityEv
     // invoke: int startDragVelocity()
-    C.C_ZNK11QStyleHints17startDragVelocityEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints17startDragVelocityEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragVelocity", args)
   }
@@ -271,7 +278,8 @@ func (this *QStyleHints) useRtlExtensions(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16useRtlExtensionsEv
     // invoke: bool useRtlExtensions()
-    C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints16useRtlExtensionsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "useRtlExtensions", args)
   }
@@ -380,7 +388,8 @@ func (this *QStyleHints) fontSmoothingGamma(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints18fontSmoothingGammaEv
     // invoke: qreal fontSmoothingGamma()
-    C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints18fontSmoothingGammaEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "fontSmoothingGamma", args)
   }
@@ -443,7 +452,8 @@ func (this *QStyleHints) keyboardInputInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21keyboardInputIntervalEv
     // invoke: int keyboardInputInterval()
-    C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints21keyboardInputIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "keyboardInputInterval", args)
   }
@@ -463,7 +473,8 @@ func (this *QStyleHints) showIsFullScreen(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints16showIsFullScreenEv
     // invoke: bool showIsFullScreen()
-    C.C_ZNK11QStyleHints16showIsFullScreenEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints16showIsFullScreenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "showIsFullScreen", args)
   }
@@ -483,7 +494,8 @@ func (this *QStyleHints) startDragTime(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints13startDragTimeEv
     // invoke: int startDragTime()
-    C.C_ZNK11QStyleHints13startDragTimeEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints13startDragTimeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "startDragTime", args)
   }
@@ -503,7 +515,8 @@ func (this *QStyleHints) singleClickActivation(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21singleClickActivationEv
     // invoke: bool singleClickActivation()
-    C.C_ZNK11QStyleHints21singleClickActivationEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints21singleClickActivationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "singleClickActivation", args)
   }
@@ -523,7 +536,8 @@ func (this *QStyleHints) passwordMaskCharacter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints21passwordMaskCharacterEv
     // invoke: QChar passwordMaskCharacter()
-    C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints21passwordMaskCharacterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "passwordMaskCharacter", args)
   }
@@ -543,7 +557,8 @@ func (this *QStyleHints) mouseDoubleClickInterval(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QStyleHints24mouseDoubleClickIntervalEv
     // invoke: int mouseDoubleClickInterval()
-    C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.qclsinst)
+    var ret = C.C_ZNK11QStyleHints24mouseDoubleClickIntervalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStyleHints", "mouseDoubleClickInterval", args)
   }

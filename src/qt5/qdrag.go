@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qdrag.h
 // dst-file: /src/gui/qdrag.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  void QDrag::setMimeData(QMimeData * data);
 extern void C_ZN5QDrag11setMimeDataEP9QMimeData(void* qthis, void* arg0); // 4
   // proto:  void QDrag::QDrag(QObject * dragSource);
-extern void C_ZN5QDragC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN5QDragC2EP7QObject(void* arg0); // 3
   // proto:  QPixmap QDrag::pixmap();
 extern void C_ZNK5QDrag6pixmapEv(void* qthis); // 4
   // proto:  void QDrag::~QDrag();
@@ -98,7 +98,7 @@ func (this *QDrag) setMimeData(args ...interface{}) () {
 }
 
 // QDrag(class QObject *)
-func NewQDrag(args ...interface{}) QDrag {
+func NewQDrag(args ...interface{}) *QDrag {
   // QDrag(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -115,12 +115,13 @@ func NewQDrag(args ...interface{}) QDrag {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QDragC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN5QDragC2EP7QObject(arg0)
+    return &QDrag{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDrag", "QDrag", args)
   }
 
-  return QDrag{}
+  return nil // QDrag{qclsinst:qthis}
 }
 
 // pixmap()
@@ -136,7 +137,8 @@ func (this *QDrag) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6pixmapEv
     // invoke: QPixmap pixmap()
-    C.C_ZNK5QDrag6pixmapEv(this.qclsinst)
+    var ret = C.C_ZNK5QDrag6pixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDrag", "pixmap", args)
   }
@@ -196,7 +198,8 @@ func (this *QDrag) source(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6sourceEv
     // invoke: QObject * source()
-    C.C_ZNK5QDrag6sourceEv(this.qclsinst)
+    var ret = C.C_ZNK5QDrag6sourceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDrag", "source", args)
   }
@@ -282,7 +285,8 @@ func (this *QDrag) hotSpot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag7hotSpotEv
     // invoke: QPoint hotSpot()
-    C.C_ZNK5QDrag7hotSpotEv(this.qclsinst)
+    var ret = C.C_ZNK5QDrag7hotSpotEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDrag", "hotSpot", args)
   }
@@ -302,7 +306,8 @@ func (this *QDrag) mimeData(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag8mimeDataEv
     // invoke: QMimeData * mimeData()
-    C.C_ZNK5QDrag8mimeDataEv(this.qclsinst)
+    var ret = C.C_ZNK5QDrag8mimeDataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDrag", "mimeData", args)
   }
@@ -342,7 +347,8 @@ func (this *QDrag) target(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QDrag6targetEv
     // invoke: QObject * target()
-    C.C_ZNK5QDrag6targetEv(this.qclsinst)
+    var ret = C.C_ZNK5QDrag6targetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDrag", "target", args)
   }

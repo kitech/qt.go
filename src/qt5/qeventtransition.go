@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qeventtransition.h
 // dst-file: /src/core/qeventtransition.go
 //
@@ -33,7 +33,7 @@ extern void C_ZNK16QEventTransition10metaObjectEv(void* qthis); // 4
   // proto:  void QEventTransition::setEventSource(QObject * object);
 extern void C_ZN16QEventTransition14setEventSourceEP7QObject(void* qthis, void* arg0); // 4
   // proto:  void QEventTransition::QEventTransition(QState * sourceState);
-extern void C_ZN16QEventTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN16QEventTransitionC2EP6QState(void* arg0); // 3
   // proto:  QObject * QEventTransition::eventSource();
 extern void C_ZNK16QEventTransition11eventSourceEv(void* qthis); // 4
   // proto:  QEvent::Type QEventTransition::eventType();
@@ -102,7 +102,7 @@ func (this *QEventTransition) setEventSource(args ...interface{}) () {
 }
 
 // QEventTransition(class QState *)
-func NewQEventTransition(args ...interface{}) QEventTransition {
+func NewQEventTransition(args ...interface{}) *QEventTransition {
   // QEventTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -119,12 +119,13 @@ func NewQEventTransition(args ...interface{}) QEventTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QEventTransitionC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN16QEventTransitionC2EP6QState(arg0)
+    return &QEventTransition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QEventTransition", "QEventTransition", args)
   }
 
-  return QEventTransition{}
+  return nil // QEventTransition{qclsinst:qthis}
 }
 
 // eventSource()
@@ -140,7 +141,8 @@ func (this *QEventTransition) eventSource(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QEventTransition11eventSourceEv
     // invoke: QObject * eventSource()
-    C.C_ZNK16QEventTransition11eventSourceEv(this.qclsinst)
+    var ret = C.C_ZNK16QEventTransition11eventSourceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QEventTransition", "eventSource", args)
   }

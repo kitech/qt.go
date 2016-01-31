@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfuture.h
 // dst-file: /src/core/qfuture.go
 //
@@ -57,9 +57,9 @@ extern void C_ZN7QFutureIvE6cancelEv(void* qthis); // 2
   // proto:  bool QFuture<void>::isRunning();
 extern void C_ZNK7QFutureIvE9isRunningEv(void* qthis); // 2
   // proto:  void QFuture<void>::QFuture(QFutureInterfaceBase * p);
-extern void C_ZN7QFutureIvEC2EP20QFutureInterfaceBase(void* qthis, void* arg0); // 1
+extern void* C_ZN7QFutureIvEC2EP20QFutureInterfaceBase(void* arg0); // 1
   // proto:  void QFuture<void>::QFuture();
-extern void C_ZN7QFutureIvEC2Ev(void* qthis); // 1
+extern void* C_ZN7QFutureIvEC2Ev(); // 1
   // proto:  int QFuture<void>::progressValue();
 extern void C_ZNK7QFutureIvE13progressValueEv(void* qthis); // 2
   // proto:  void QFuture<void>::togglePaused();
@@ -97,7 +97,8 @@ func (this *QFutureLvoidG) progressText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE12progressTextEv
     // invoke: QString progressText()
-    C.C_ZNK7QFutureIvE12progressTextEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE12progressTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressText", args)
   }
@@ -117,7 +118,8 @@ func (this *QFutureLvoidG) resultCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE11resultCountEv
     // invoke: int resultCount()
-    C.C_ZNK7QFutureIvE11resultCountEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE11resultCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "resultCount", args)
   }
@@ -177,7 +179,8 @@ func (this *QFutureLvoidG) isFinished(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE10isFinishedEv
     // invoke: bool isFinished()
-    C.C_ZNK7QFutureIvE10isFinishedEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE10isFinishedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "isFinished", args)
   }
@@ -217,7 +220,8 @@ func (this *QFutureLvoidG) isCanceled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE10isCanceledEv
     // invoke: bool isCanceled()
-    C.C_ZNK7QFutureIvE10isCanceledEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE10isCanceledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "isCanceled", args)
   }
@@ -237,7 +241,8 @@ func (this *QFutureLvoidG) progressMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE15progressMaximumEv
     // invoke: int progressMaximum()
-    C.C_ZNK7QFutureIvE15progressMaximumEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE15progressMaximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressMaximum", args)
   }
@@ -257,7 +262,8 @@ func (this *QFutureLvoidG) progressMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE15progressMinimumEv
     // invoke: int progressMinimum()
-    C.C_ZNK7QFutureIvE15progressMinimumEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE15progressMinimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressMinimum", args)
   }
@@ -297,7 +303,8 @@ func (this *QFutureLvoidG) isStarted(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE9isStartedEv
     // invoke: bool isStarted()
-    C.C_ZNK7QFutureIvE9isStartedEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE9isStartedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "isStarted", args)
   }
@@ -317,7 +324,8 @@ func (this *QFutureLvoidG) isPaused(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE8isPausedEv
     // invoke: bool isPaused()
-    C.C_ZNK7QFutureIvE8isPausedEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE8isPausedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "isPaused", args)
   }
@@ -357,7 +365,8 @@ func (this *QFutureLvoidG) isRunning(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE9isRunningEv
     // invoke: bool isRunning()
-    C.C_ZNK7QFutureIvE9isRunningEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE9isRunningEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "isRunning", args)
   }
@@ -365,7 +374,7 @@ func (this *QFutureLvoidG) isRunning(args ...interface{}) () {
 }
 
 // QFuture(class QFutureInterfaceBase *)
-func NewQFutureLvoidG(args ...interface{}) QFutureLvoidG {
+func NewQFutureLvoidG(args ...interface{}) *QFutureLvoidG {
   // QFuture(class QFutureInterfaceBase *)
   // QFuture()
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -384,18 +393,20 @@ func NewQFutureLvoidG(args ...interface{}) QFutureLvoidG {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QFutureIvEC2EP20QFutureInterfaceBase(qthis, arg0)
+    qthis = C.C_ZN7QFutureIvEC2EP20QFutureInterfaceBase(arg0)
+    return &QFutureLvoidG{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QFutureIvEC1Ev
     // invoke: void QFuture()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QFutureIvEC2Ev(qthis)
+    qthis = C.C_ZN7QFutureIvEC2Ev()
+    return &QFutureLvoidG{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFuture<void>", "QFuture", args)
   }
 
-  return QFutureLvoidG{}
+  return nil // QFutureLvoidG{qclsinst:qthis}
 }
 
 // progressValue()
@@ -411,7 +422,8 @@ func (this *QFutureLvoidG) progressValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QFutureIvE13progressValueEv
     // invoke: int progressValue()
-    C.C_ZNK7QFutureIvE13progressValueEv(this.qclsinst)
+    var ret = C.C_ZNK7QFutureIvE13progressValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFuture<void>", "progressValue", args)
   }

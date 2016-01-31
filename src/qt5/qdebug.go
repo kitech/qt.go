@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qdebug.h
 // dst-file: /src/core/qdebug.go
 //
@@ -41,7 +41,7 @@ extern void C_ZN8QNoDebug7noquoteEv(void* qthis); // 2
   // proto:  QNoDebug & QNoDebug::maybeQuote(const char );
 extern void C_ZN8QNoDebug10maybeQuoteEc(void* qthis, unsigned char arg0); // 2
   // proto:  void QDebugStateSaver::QDebugStateSaver(QDebug & dbg);
-extern void C_ZN16QDebugStateSaverC2ER6QDebug(void* qthis, void* arg0); // 3
+extern void* C_ZN16QDebugStateSaverC2ER6QDebug(void* arg0); // 3
   // proto:  void QDebugStateSaver::~QDebugStateSaver();
 extern void C_ZN16QDebugStateSaverD2Ev(void* qthis); // 4
   // proto:  void QDebug::~QDebug();
@@ -63,13 +63,13 @@ extern void C_ZN6QDebug4swapERS_(void* qthis, void* arg0); // 2
   // proto:  QDebug & QDebug::quote();
 extern void C_ZN6QDebug5quoteEv(void* qthis); // 2
   // proto:  void QDebug::QDebug(const QDebug & o);
-extern void C_ZN6QDebugC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN6QDebugC2ERKS_(void* arg0); // 1
   // proto:  void QDebug::QDebug(QtMsgType t);
-extern void C_ZN6QDebugC2E9QtMsgType(void* qthis, int32_t arg0); // 1
+extern void* C_ZN6QDebugC2E9QtMsgType(int32_t arg0); // 1
   // proto:  void QDebug::QDebug(QString * string);
-extern void C_ZN6QDebugC2EP7QString(void* qthis, void* arg0); // 1
+extern void* C_ZN6QDebugC2EP7QString(void* arg0); // 1
   // proto:  void QDebug::QDebug(QIODevice * device);
-extern void C_ZN6QDebugC2EP9QIODevice(void* qthis, void* arg0); // 1
+extern void* C_ZN6QDebugC2EP9QIODevice(void* arg0); // 1
   // proto:  QDebug & QDebug::maybeSpace();
 extern void C_ZN6QDebug10maybeSpaceEv(void* qthis); // 2
   // proto:  QDebug & QDebug::maybeQuote(char c);
@@ -117,7 +117,8 @@ func (this *QNoDebug) maybeSpace(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug10maybeSpaceEv
     // invoke: QNoDebug & maybeSpace()
-    C.C_ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
+    var ret = C.C_ZN8QNoDebug10maybeSpaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeSpace", args)
   }
@@ -137,7 +138,8 @@ func (this *QNoDebug) space(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug5spaceEv
     // invoke: QNoDebug & space()
-    C.C_ZN8QNoDebug5spaceEv(this.qclsinst)
+    var ret = C.C_ZN8QNoDebug5spaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "space", args)
   }
@@ -157,7 +159,8 @@ func (this *QNoDebug) quote(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug5quoteEv
     // invoke: QNoDebug & quote()
-    C.C_ZN8QNoDebug5quoteEv(this.qclsinst)
+    var ret = C.C_ZN8QNoDebug5quoteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "quote", args)
   }
@@ -177,7 +180,8 @@ func (this *QNoDebug) nospace(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug7nospaceEv
     // invoke: QNoDebug & nospace()
-    C.C_ZN8QNoDebug7nospaceEv(this.qclsinst)
+    var ret = C.C_ZN8QNoDebug7nospaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "nospace", args)
   }
@@ -197,7 +201,8 @@ func (this *QNoDebug) noquote(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QNoDebug7noquoteEv
     // invoke: QNoDebug & noquote()
-    C.C_ZN8QNoDebug7noquoteEv(this.qclsinst)
+    var ret = C.C_ZN8QNoDebug7noquoteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "noquote", args)
   }
@@ -220,7 +225,8 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
     // invoke: QNoDebug & maybeQuote(const char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
+    var ret = C.C_ZN8QNoDebug10maybeQuoteEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QNoDebug", "maybeQuote", args)
   }
@@ -228,7 +234,7 @@ func (this *QNoDebug) maybeQuote(args ...interface{}) () {
 }
 
 // QDebugStateSaver(class QDebug &)
-func NewQDebugStateSaver(args ...interface{}) QDebugStateSaver {
+func NewQDebugStateSaver(args ...interface{}) *QDebugStateSaver {
   // QDebugStateSaver(class QDebug &)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -245,12 +251,13 @@ func NewQDebugStateSaver(args ...interface{}) QDebugStateSaver {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QDebugStateSaverC2ER6QDebug(qthis, arg0)
+    qthis = C.C_ZN16QDebugStateSaverC2ER6QDebug(arg0)
+    return &QDebugStateSaver{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDebugStateSaver", "QDebugStateSaver", args)
   }
 
-  return QDebugStateSaver{}
+  return nil // QDebugStateSaver{qclsinst:qthis}
 }
 
 // ~QDebugStateSaver()
@@ -306,7 +313,8 @@ func (this *QDebug) space(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug5spaceEv
     // invoke: QDebug & space()
-    C.C_ZN6QDebug5spaceEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug5spaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "space", args)
   }
@@ -349,7 +357,8 @@ func (this *QDebug) autoInsertSpaces(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QDebug16autoInsertSpacesEv
     // invoke: bool autoInsertSpaces()
-    C.C_ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
+    var ret = C.C_ZNK6QDebug16autoInsertSpacesEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "autoInsertSpaces", args)
   }
@@ -369,7 +378,8 @@ func (this *QDebug) nospace(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug7nospaceEv
     // invoke: QDebug & nospace()
-    C.C_ZN6QDebug7nospaceEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug7nospaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "nospace", args)
   }
@@ -389,7 +399,8 @@ func (this *QDebug) resetFormat(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug11resetFormatEv
     // invoke: QDebug & resetFormat()
-    C.C_ZN6QDebug11resetFormatEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug11resetFormatEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "resetFormat", args)
   }
@@ -409,7 +420,8 @@ func (this *QDebug) noquote(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug7noquoteEv
     // invoke: QDebug & noquote()
-    C.C_ZN6QDebug7noquoteEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug7noquoteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "noquote", args)
   }
@@ -452,7 +464,8 @@ func (this *QDebug) quote(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug5quoteEv
     // invoke: QDebug & quote()
-    C.C_ZN6QDebug5quoteEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug5quoteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "quote", args)
   }
@@ -460,7 +473,7 @@ func (this *QDebug) quote(args ...interface{}) () {
 }
 
 // QDebug(const class QDebug &)
-func NewQDebug(args ...interface{}) QDebug {
+func NewQDebug(args ...interface{}) *QDebug {
   // QDebug(const class QDebug &)
   // QDebug(enum QtMsgType)
   // QDebug(class QString *)
@@ -486,7 +499,8 @@ func NewQDebug(args ...interface{}) QDebug {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QDebugC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN6QDebugC2ERKS_(arg0)
+    return &QDebug{qclsinst:qthis}
   case 1:
     // invoke: _ZN6QDebugC1E9QtMsgType
     // invoke: void QDebug(enum QtMsgType)
@@ -494,7 +508,8 @@ func NewQDebug(args ...interface{}) QDebug {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QDebugC2E9QtMsgType(qthis, arg0)
+    qthis = C.C_ZN6QDebugC2E9QtMsgType(arg0)
+    return &QDebug{qclsinst:qthis}
   case 2:
     // invoke: _ZN6QDebugC1EP7QString
     // invoke: void QDebug(class QString *)
@@ -502,7 +517,8 @@ func NewQDebug(args ...interface{}) QDebug {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QDebugC2EP7QString(qthis, arg0)
+    qthis = C.C_ZN6QDebugC2EP7QString(arg0)
+    return &QDebug{qclsinst:qthis}
   case 3:
     // invoke: _ZN6QDebugC1EP9QIODevice
     // invoke: void QDebug(class QIODevice *)
@@ -510,12 +526,13 @@ func NewQDebug(args ...interface{}) QDebug {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QDebugC2EP9QIODevice(qthis, arg0)
+    qthis = C.C_ZN6QDebugC2EP9QIODevice(arg0)
+    return &QDebug{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDebug", "QDebug", args)
   }
 
-  return QDebug{}
+  return nil // QDebug{qclsinst:qthis}
 }
 
 // maybeSpace()
@@ -531,7 +548,8 @@ func (this *QDebug) maybeSpace(args ...interface{}) () {
   case 0:
     // invoke: _ZN6QDebug10maybeSpaceEv
     // invoke: QDebug & maybeSpace()
-    C.C_ZN6QDebug10maybeSpaceEv(this.qclsinst)
+    var ret = C.C_ZN6QDebug10maybeSpaceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "maybeSpace", args)
   }
@@ -554,7 +572,8 @@ func (this *QDebug) maybeQuote(args ...interface{}) () {
     // invoke: QDebug & maybeQuote(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
+    var ret = C.C_ZN6QDebug10maybeQuoteEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDebug", "maybeQuote", args)
   }

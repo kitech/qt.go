@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qthreadpool.h
 // dst-file: /src/core/qthreadpool.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN11QThreadPool13reserveThreadEv(void* qthis); // 4
   // proto:  void QThreadPool::cancel(QRunnable * runnable);
 extern void C_ZN11QThreadPool6cancelEP9QRunnable(void* qthis, void* arg0); // 4
   // proto:  void QThreadPool::QThreadPool(QObject * parent);
-extern void C_ZN11QThreadPoolC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN11QThreadPoolC2EP7QObject(void* arg0); // 3
   // proto:  bool QThreadPool::waitForDone(int msecs);
 extern void C_ZN11QThreadPool11waitForDoneEi(void* qthis, int32_t arg0); // 4
   // proto:  void QThreadPool::start(QRunnable * runnable, int priority);
@@ -145,7 +145,7 @@ func (this *QThreadPool) cancel(args ...interface{}) () {
 }
 
 // QThreadPool(class QObject *)
-func NewQThreadPool(args ...interface{}) QThreadPool {
+func NewQThreadPool(args ...interface{}) *QThreadPool {
   // QThreadPool(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -162,12 +162,13 @@ func NewQThreadPool(args ...interface{}) QThreadPool {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QThreadPoolC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN11QThreadPoolC2EP7QObject(arg0)
+    return &QThreadPool{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QThreadPool", "QThreadPool", args)
   }
 
-  return QThreadPool{}
+  return nil // QThreadPool{qclsinst:qthis}
 }
 
 // waitForDone(int)
@@ -186,7 +187,8 @@ func (this *QThreadPool) waitForDone(args ...interface{}) () {
     // invoke: bool waitForDone(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool11waitForDoneEi(this.qclsinst, arg0)
+    var ret = C.C_ZN11QThreadPool11waitForDoneEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "waitForDone", args)
   }
@@ -232,7 +234,8 @@ func (this *QThreadPool) activeThreadCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool17activeThreadCountEv
     // invoke: int activeThreadCount()
-    C.C_ZNK11QThreadPool17activeThreadCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QThreadPool17activeThreadCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "activeThreadCount", args)
   }
@@ -295,7 +298,8 @@ func (this *QThreadPool) globalInstance_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QThreadPool14globalInstanceEv
     // invoke: QThreadPool * globalInstance()
-    C.C_ZN11QThreadPool14globalInstanceEv()
+    var ret = C.C_ZN11QThreadPool14globalInstanceEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "globalInstance", args)
   }
@@ -378,7 +382,8 @@ func (this *QThreadPool) tryStart(args ...interface{}) () {
     // invoke: bool tryStart(class QRunnable *)
     var arg0 = args[0].(QRunnable).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.qclsinst, arg0)
+    var ret = C.C_ZN11QThreadPool8tryStartEP9QRunnable(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "tryStart", args)
   }
@@ -398,7 +403,8 @@ func (this *QThreadPool) maxThreadCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool14maxThreadCountEv
     // invoke: int maxThreadCount()
-    C.C_ZNK11QThreadPool14maxThreadCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QThreadPool14maxThreadCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "maxThreadCount", args)
   }
@@ -418,7 +424,8 @@ func (this *QThreadPool) expiryTimeout(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QThreadPool13expiryTimeoutEv
     // invoke: int expiryTimeout()
-    C.C_ZNK11QThreadPool13expiryTimeoutEv(this.qclsinst)
+    var ret = C.C_ZNK11QThreadPool13expiryTimeoutEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QThreadPool", "expiryTimeout", args)
   }

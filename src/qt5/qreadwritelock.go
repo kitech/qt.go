@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qreadwritelock.h
 // dst-file: /src/core/qreadwritelock.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QWriteLocker::QWriteLocker(QReadWriteLock * readWriteLock);
-extern void C_ZN12QWriteLockerC2EP14QReadWriteLock(void* qthis, void* arg0); // 1
+extern void* C_ZN12QWriteLockerC2EP14QReadWriteLock(void* arg0); // 1
   // proto:  QReadWriteLock * QWriteLocker::readWriteLock();
 extern void C_ZNK12QWriteLocker13readWriteLockEv(void* qthis); // 2
   // proto:  void QWriteLocker::~QWriteLocker();
@@ -63,7 +63,7 @@ extern void C_ZN11QReadLocker6unlockEv(void* qthis); // 2
   // proto:  void QReadLocker::relock();
 extern void C_ZN11QReadLocker6relockEv(void* qthis); // 2
   // proto:  void QReadLocker::QReadLocker(QReadWriteLock * readWriteLock);
-extern void C_ZN11QReadLockerC2EP14QReadWriteLock(void* qthis, void* arg0); // 1
+extern void* C_ZN11QReadLockerC2EP14QReadWriteLock(void* arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -95,7 +95,7 @@ type QReadLocker struct {
 }
 
 // QWriteLocker(class QReadWriteLock *)
-func NewQWriteLocker(args ...interface{}) QWriteLocker {
+func NewQWriteLocker(args ...interface{}) *QWriteLocker {
   // QWriteLocker(class QReadWriteLock *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -112,12 +112,13 @@ func NewQWriteLocker(args ...interface{}) QWriteLocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QWriteLockerC2EP14QReadWriteLock(qthis, arg0)
+    qthis = C.C_ZN12QWriteLockerC2EP14QReadWriteLock(arg0)
+    return &QWriteLocker{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QWriteLocker", "QWriteLocker", args)
   }
 
-  return QWriteLocker{}
+  return nil // QWriteLocker{qclsinst:qthis}
 }
 
 // readWriteLock()
@@ -133,7 +134,8 @@ func (this *QWriteLocker) readWriteLock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QWriteLocker13readWriteLockEv
     // invoke: QReadWriteLock * readWriteLock()
-    C.C_ZNK12QWriteLocker13readWriteLockEv(this.qclsinst)
+    var ret = C.C_ZNK12QWriteLocker13readWriteLockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QWriteLocker", "readWriteLock", args)
   }
@@ -216,13 +218,15 @@ func (this *QReadWriteLock) tryLockForWrite(args ...interface{}) () {
   case 0:
     // invoke: _ZN14QReadWriteLock15tryLockForWriteEv
     // invoke: bool tryLockForWrite()
-    C.C_ZN14QReadWriteLock15tryLockForWriteEv(this.qclsinst)
+    var ret = C.C_ZN14QReadWriteLock15tryLockForWriteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN14QReadWriteLock15tryLockForWriteEi
     // invoke: bool tryLockForWrite(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN14QReadWriteLock15tryLockForWriteEi(this.qclsinst, arg0)
+    var ret = C.C_ZN14QReadWriteLock15tryLockForWriteEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QReadWriteLock", "tryLockForWrite", args)
   }
@@ -267,11 +271,13 @@ func (this *QReadWriteLock) tryLockForRead(args ...interface{}) () {
     // invoke: bool tryLockForRead(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN14QReadWriteLock14tryLockForReadEi(this.qclsinst, arg0)
+    var ret = C.C_ZN14QReadWriteLock14tryLockForReadEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN14QReadWriteLock14tryLockForReadEv
     // invoke: bool tryLockForRead()
-    C.C_ZN14QReadWriteLock14tryLockForReadEv(this.qclsinst)
+    var ret = C.C_ZN14QReadWriteLock14tryLockForReadEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QReadWriteLock", "tryLockForRead", args)
   }
@@ -351,7 +357,8 @@ func (this *QReadLocker) readWriteLock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QReadLocker13readWriteLockEv
     // invoke: QReadWriteLock * readWriteLock()
-    C.C_ZNK11QReadLocker13readWriteLockEv(this.qclsinst)
+    var ret = C.C_ZNK11QReadLocker13readWriteLockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QReadLocker", "readWriteLock", args)
   }
@@ -419,7 +426,7 @@ func (this *QReadLocker) relock(args ...interface{}) () {
 }
 
 // QReadLocker(class QReadWriteLock *)
-func NewQReadLocker(args ...interface{}) QReadLocker {
+func NewQReadLocker(args ...interface{}) *QReadLocker {
   // QReadLocker(class QReadWriteLock *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -436,12 +443,13 @@ func NewQReadLocker(args ...interface{}) QReadLocker {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QReadLockerC2EP14QReadWriteLock(qthis, arg0)
+    qthis = C.C_ZN11QReadLockerC2EP14QReadWriteLock(arg0)
+    return &QReadLocker{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QReadLocker", "QReadLocker", args)
   }
 
-  return QReadLocker{}
+  return nil // QReadLocker{qclsinst:qthis}
 }
 
 // <= body block end

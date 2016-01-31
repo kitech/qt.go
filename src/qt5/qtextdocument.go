@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qtextdocument.h
 // dst-file: /src/gui/qtextdocument.go
 //
@@ -81,9 +81,9 @@ extern void C_ZNK13QTextDocument7frameAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QTextDocument::pageCount();
 extern void C_ZNK13QTextDocument9pageCountEv(void* qthis); // 4
   // proto:  void QTextDocument::QTextDocument(QObject * parent);
-extern void C_ZN13QTextDocumentC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QTextDocumentC2EP7QObject(void* arg0); // 3
   // proto:  void QTextDocument::QTextDocument(const QString & text, QObject * parent);
-extern void C_ZN13QTextDocumentC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN13QTextDocumentC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QTextDocument::~QTextDocument();
 extern void C_ZN13QTextDocumentD2Ev(void* qthis); // 4
   // proto:  int QTextDocument::availableUndoSteps();
@@ -223,7 +223,8 @@ func (this *QTextDocument) pageSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument8pageSizeEv
     // invoke: QSizeF pageSize()
-    C.C_ZNK13QTextDocument8pageSizeEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument8pageSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "pageSize", args)
   }
@@ -243,7 +244,8 @@ func (this *QTextDocument) availableRedoSteps(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument18availableRedoStepsEv
     // invoke: int availableRedoSteps()
-    C.C_ZNK13QTextDocument18availableRedoStepsEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument18availableRedoStepsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "availableRedoSteps", args)
   }
@@ -263,7 +265,8 @@ func (this *QTextDocument) defaultStyleSheet(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17defaultStyleSheetEv
     // invoke: QString defaultStyleSheet()
-    C.C_ZNK13QTextDocument17defaultStyleSheetEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument17defaultStyleSheetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultStyleSheet", args)
   }
@@ -289,7 +292,8 @@ func (this *QTextDocument) resource(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QUrl).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QTextDocument8resourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QTextDocument8resourceEiRK4QUrl(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "resource", args)
   }
@@ -309,7 +313,8 @@ func (this *QTextDocument) indentWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11indentWidthEv
     // invoke: qreal indentWidth()
-    C.C_ZNK13QTextDocument11indentWidthEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument11indentWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "indentWidth", args)
   }
@@ -349,7 +354,8 @@ func (this *QTextDocument) lastBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9lastBlockEv
     // invoke: QTextBlock lastBlock()
-    C.C_ZNK13QTextDocument9lastBlockEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument9lastBlockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "lastBlock", args)
   }
@@ -392,7 +398,8 @@ func (this *QTextDocument) isUndoAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument15isUndoAvailableEv
     // invoke: bool isUndoAvailable()
-    C.C_ZNK13QTextDocument15isUndoAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument15isUndoAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "isUndoAvailable", args)
   }
@@ -435,7 +442,8 @@ func (this *QTextDocument) useDesignMetrics(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument16useDesignMetricsEv
     // invoke: bool useDesignMetrics()
-    C.C_ZNK13QTextDocument16useDesignMetricsEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument16useDesignMetricsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "useDesignMetrics", args)
   }
@@ -455,7 +463,8 @@ func (this *QTextDocument) textWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9textWidthEv
     // invoke: qreal textWidth()
-    C.C_ZNK13QTextDocument9textWidthEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument9textWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "textWidth", args)
   }
@@ -475,7 +484,8 @@ func (this *QTextDocument) characterCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument14characterCountEv
     // invoke: int characterCount()
-    C.C_ZNK13QTextDocument14characterCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument14characterCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "characterCount", args)
   }
@@ -495,7 +505,8 @@ func (this *QTextDocument) isUndoRedoEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17isUndoRedoEnabledEv
     // invoke: bool isUndoRedoEnabled()
-    C.C_ZNK13QTextDocument17isUndoRedoEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument17isUndoRedoEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "isUndoRedoEnabled", args)
   }
@@ -541,7 +552,8 @@ func (this *QTextDocument) objectForFormat(args ...interface{}) () {
     // invoke: QTextObject * objectForFormat(const class QTextFormat &)
     var arg0 = args[0].(QTextFormat).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument15objectForFormatERK11QTextFormat(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "objectForFormat", args)
   }
@@ -561,7 +573,8 @@ func (this *QTextDocument) toPlainText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11toPlainTextEv
     // invoke: QString toPlainText()
-    C.C_ZNK13QTextDocument11toPlainTextEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument11toPlainTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "toPlainText", args)
   }
@@ -659,7 +672,8 @@ func (this *QTextDocument) blockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10blockCountEv
     // invoke: int blockCount()
-    C.C_ZNK13QTextDocument10blockCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument10blockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "blockCount", args)
   }
@@ -679,7 +693,8 @@ func (this *QTextDocument) defaultFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument11defaultFontEv
     // invoke: QFont defaultFont()
-    C.C_ZNK13QTextDocument11defaultFontEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument11defaultFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultFont", args)
   }
@@ -699,7 +714,8 @@ func (this *QTextDocument) isRedoAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument15isRedoAvailableEv
     // invoke: bool isRedoAvailable()
-    C.C_ZNK13QTextDocument15isRedoAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument15isRedoAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "isRedoAvailable", args)
   }
@@ -722,7 +738,8 @@ func (this *QTextDocument) frameAt(args ...interface{}) () {
     // invoke: QTextFrame * frameAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument7frameAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument7frameAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "frameAt", args)
   }
@@ -742,7 +759,8 @@ func (this *QTextDocument) pageCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9pageCountEv
     // invoke: int pageCount()
-    C.C_ZNK13QTextDocument9pageCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument9pageCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "pageCount", args)
   }
@@ -750,7 +768,7 @@ func (this *QTextDocument) pageCount(args ...interface{}) () {
 }
 
 // QTextDocument(class QObject *)
-func NewQTextDocument(args ...interface{}) QTextDocument {
+func NewQTextDocument(args ...interface{}) *QTextDocument {
   // QTextDocument(class QObject *)
   // QTextDocument(const class QString &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -771,7 +789,8 @@ func NewQTextDocument(args ...interface{}) QTextDocument {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTextDocumentC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QTextDocumentC2EP7QObject(arg0)
+    return &QTextDocument{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QTextDocumentC1ERK7QStringP7QObject
     // invoke: void QTextDocument(const class QString &, class QObject *)
@@ -781,12 +800,13 @@ func NewQTextDocument(args ...interface{}) QTextDocument {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QTextDocumentC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN13QTextDocumentC2ERK7QStringP7QObject(arg0, arg1)
+    return &QTextDocument{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextDocument", "QTextDocument", args)
   }
 
-  return QTextDocument{}
+  return nil // QTextDocument{qclsinst:qthis}
 }
 
 // ~QTextDocument()
@@ -822,7 +842,8 @@ func (this *QTextDocument) availableUndoSteps(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument18availableUndoStepsEv
     // invoke: int availableUndoSteps()
-    C.C_ZNK13QTextDocument18availableUndoStepsEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument18availableUndoStepsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "availableUndoSteps", args)
   }
@@ -842,7 +863,8 @@ func (this *QTextDocument) maximumBlockCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17maximumBlockCountEv
     // invoke: int maximumBlockCount()
-    C.C_ZNK13QTextDocument17maximumBlockCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument17maximumBlockCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "maximumBlockCount", args)
   }
@@ -862,7 +884,8 @@ func (this *QTextDocument) lineCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9lineCountEv
     // invoke: int lineCount()
-    C.C_ZNK13QTextDocument9lineCountEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument9lineCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "lineCount", args)
   }
@@ -885,7 +908,8 @@ func (this *QTextDocument) findBlock(args ...interface{}) () {
     // invoke: QTextBlock findBlock(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument9findBlockEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument9findBlockEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlock", args)
   }
@@ -934,7 +958,8 @@ func (this *QTextDocument) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument4sizeEv
     // invoke: QSizeF size()
-    C.C_ZNK13QTextDocument4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "size", args)
   }
@@ -954,7 +979,8 @@ func (this *QTextDocument) isModified(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10isModifiedEv
     // invoke: bool isModified()
-    C.C_ZNK13QTextDocument10isModifiedEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument10isModifiedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "isModified", args)
   }
@@ -977,7 +1003,8 @@ func (this *QTextDocument) findBlockByLineNumber(args ...interface{}) () {
     // invoke: QTextBlock findBlockByLineNumber(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument21findBlockByLineNumberEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument21findBlockByLineNumberEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByLineNumber", args)
   }
@@ -997,7 +1024,8 @@ func (this *QTextDocument) baseUrl(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument7baseUrlEv
     // invoke: QUrl baseUrl()
-    C.C_ZNK13QTextDocument7baseUrlEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument7baseUrlEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "baseUrl", args)
   }
@@ -1017,7 +1045,8 @@ func (this *QTextDocument) documentMargin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument14documentMarginEv
     // invoke: qreal documentMargin()
-    C.C_ZNK13QTextDocument14documentMarginEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument14documentMarginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "documentMargin", args)
   }
@@ -1040,7 +1069,8 @@ func (this *QTextDocument) characterAt(args ...interface{}) () {
     // invoke: QChar characterAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument11characterAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument11characterAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "characterAt", args)
   }
@@ -1083,7 +1113,8 @@ func (this *QTextDocument) rootFrame(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument9rootFrameEv
     // invoke: QTextFrame * rootFrame()
-    C.C_ZNK13QTextDocument9rootFrameEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument9rootFrameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "rootFrame", args)
   }
@@ -1241,7 +1272,8 @@ func (this *QTextDocument) defaultTextOption(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument17defaultTextOptionEv
     // invoke: QTextOption defaultTextOption()
-    C.C_ZNK13QTextDocument17defaultTextOptionEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument17defaultTextOptionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "defaultTextOption", args)
   }
@@ -1264,7 +1296,8 @@ func (this *QTextDocument) toHtml(args ...interface{}) () {
     // invoke: QString toHtml(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument6toHtmlERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument6toHtmlERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "toHtml", args)
   }
@@ -1284,7 +1317,8 @@ func (this *QTextDocument) firstBlock(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10firstBlockEv
     // invoke: QTextBlock firstBlock()
-    C.C_ZNK13QTextDocument10firstBlockEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument10firstBlockEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "firstBlock", args)
   }
@@ -1307,7 +1341,8 @@ func (this *QTextDocument) findBlockByNumber(args ...interface{}) () {
     // invoke: QTextBlock findBlockByNumber(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument17findBlockByNumberEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument17findBlockByNumberEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "findBlockByNumber", args)
   }
@@ -1327,7 +1362,8 @@ func (this *QTextDocument) idealWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument10idealWidthEv
     // invoke: qreal idealWidth()
-    C.C_ZNK13QTextDocument10idealWidthEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument10idealWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "idealWidth", args)
   }
@@ -1347,7 +1383,8 @@ func (this *QTextDocument) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument3endEv
     // invoke: QTextBlock end()
-    C.C_ZNK13QTextDocument3endEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument3endEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "end", args)
   }
@@ -1456,7 +1493,8 @@ func (this *QTextDocument) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK13QTextDocument7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "isEmpty", args)
   }
@@ -1502,7 +1540,8 @@ func (this *QTextDocument) revision(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument8revisionEv
     // invoke: int revision()
-    C.C_ZNK13QTextDocument8revisionEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument8revisionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "revision", args)
   }
@@ -1545,7 +1584,8 @@ func (this *QTextDocument) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QTextDocument5beginEv
     // invoke: QTextBlock begin()
-    C.C_ZNK13QTextDocument5beginEv(this.qclsinst)
+    var ret = C.C_ZNK13QTextDocument5beginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "begin", args)
   }
@@ -1591,7 +1631,8 @@ func (this *QTextDocument) clone(args ...interface{}) () {
     // invoke: QTextDocument * clone(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument5cloneEP7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument5cloneEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "clone", args)
   }
@@ -1614,7 +1655,8 @@ func (this *QTextDocument) object(args ...interface{}) () {
     // invoke: QTextObject * object(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QTextDocument6objectEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QTextDocument6objectEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextDocument", "object", args)
   }

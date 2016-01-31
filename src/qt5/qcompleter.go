@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qcompleter.h
 // dst-file: /src/widgets/qcompleter.go
 //
@@ -69,11 +69,11 @@ extern void C_ZNK10QCompleter16completionColumnEv(void* qthis); // 4
   // proto:  void QCompleter::setModel(QAbstractItemModel * c);
 extern void C_ZN10QCompleter8setModelEP18QAbstractItemModel(void* qthis, void* arg0); // 4
   // proto:  void QCompleter::QCompleter(QObject * parent);
-extern void C_ZN10QCompleterC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN10QCompleterC2EP7QObject(void* arg0); // 3
   // proto:  void QCompleter::QCompleter(QAbstractItemModel * model, QObject * parent);
-extern void C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QCompleter::QCompleter(const QStringList & completions, QObject * parent);
-extern void C_ZN10QCompleterC2ERK11QStringListP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN10QCompleterC2ERK11QStringListP7QObject(void* arg0, void* arg1); // 3
   // proto:  QCompleter::ModelSorting QCompleter::modelSorting();
 extern void C_ZNK10QCompleter12modelSortingEv(void* qthis); // 4
   // proto:  int QCompleter::currentRow();
@@ -132,7 +132,8 @@ func (this *QCompleter) setCurrentRow(args ...interface{}) () {
     // invoke: bool setCurrentRow(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
+    var ret = C.C_ZN10QCompleter13setCurrentRowEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "setCurrentRow", args)
   }
@@ -172,7 +173,8 @@ func (this *QCompleter) completionRole(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter14completionRoleEv
     // invoke: int completionRole()
-    C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter14completionRoleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "completionRole", args)
   }
@@ -192,7 +194,8 @@ func (this *QCompleter) maxVisibleItems(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15maxVisibleItemsEv
     // invoke: int maxVisibleItems()
-    C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter15maxVisibleItemsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "maxVisibleItems", args)
   }
@@ -212,7 +215,8 @@ func (this *QCompleter) wrapAround(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10wrapAroundEv
     // invoke: bool wrapAround()
-    C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter10wrapAroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "wrapAround", args)
   }
@@ -232,7 +236,8 @@ func (this *QCompleter) completionPrefix(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionPrefixEv
     // invoke: QString completionPrefix()
-    C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter16completionPrefixEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "completionPrefix", args)
   }
@@ -450,7 +455,8 @@ func (this *QCompleter) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter6widgetEv
     // invoke: QWidget * widget()
-    C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "widget", args)
   }
@@ -513,7 +519,8 @@ func (this *QCompleter) completionColumn(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter16completionColumnEv
     // invoke: int completionColumn()
-    C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter16completionColumnEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "completionColumn", args)
   }
@@ -544,7 +551,7 @@ func (this *QCompleter) setModel(args ...interface{}) () {
 }
 
 // QCompleter(class QObject *)
-func NewQCompleter(args ...interface{}) QCompleter {
+func NewQCompleter(args ...interface{}) *QCompleter {
   // QCompleter(class QObject *)
   // QCompleter(class QAbstractItemModel *, class QObject *)
   // QCompleter(const class QStringList &, class QObject *)
@@ -569,7 +576,8 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QCompleterC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN10QCompleterC2EP7QObject(arg0)
+    return &QCompleter{qclsinst:qthis}
   case 1:
     // invoke: _ZN10QCompleterC1EP18QAbstractItemModelP7QObject
     // invoke: void QCompleter(class QAbstractItemModel *, class QObject *)
@@ -579,7 +587,8 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN10QCompleterC2EP18QAbstractItemModelP7QObject(arg0, arg1)
+    return &QCompleter{qclsinst:qthis}
   case 2:
     // invoke: _ZN10QCompleterC1ERK11QStringListP7QObject
     // invoke: void QCompleter(const class QStringList &, class QObject *)
@@ -589,12 +598,13 @@ func NewQCompleter(args ...interface{}) QCompleter {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QCompleterC2ERK11QStringListP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN10QCompleterC2ERK11QStringListP7QObject(arg0, arg1)
+    return &QCompleter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCompleter", "QCompleter", args)
   }
 
-  return QCompleter{}
+  return nil // QCompleter{qclsinst:qthis}
 }
 
 // modelSorting()
@@ -630,7 +640,8 @@ func (this *QCompleter) currentRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter10currentRowEv
     // invoke: int currentRow()
-    C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter10currentRowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "currentRow", args)
   }
@@ -670,7 +681,8 @@ func (this *QCompleter) currentCompletion(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter17currentCompletionEv
     // invoke: QString currentCompletion()
-    C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter17currentCompletionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "currentCompletion", args)
   }
@@ -713,7 +725,8 @@ func (this *QCompleter) completionCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter15completionCountEv
     // invoke: int completionCount()
-    C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter15completionCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "completionCount", args)
   }
@@ -756,7 +769,8 @@ func (this *QCompleter) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QCompleter12currentIndexEv
     // invoke: QModelIndex currentIndex()
-    C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
+    var ret = C.C_ZNK10QCompleter12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "currentIndex", args)
   }
@@ -779,7 +793,8 @@ func (this *QCompleter) pathFromIndex(args ...interface{}) () {
     // invoke: QString pathFromIndex(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QCompleter13pathFromIndexERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QCompleter", "pathFromIndex", args)
   }

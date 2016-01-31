@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qbuffer.h
 // dst-file: /src/core/qbuffer.go
 //
@@ -39,9 +39,9 @@ extern void C_ZNK7QBuffer11canReadLineEv(void* qthis); // 4
   // proto:  void QBuffer::setBuffer(QByteArray * a);
 extern void C_ZN7QBuffer9setBufferEP10QByteArray(void* qthis, void* arg0); // 4
   // proto:  void QBuffer::QBuffer(QByteArray * buf, QObject * parent);
-extern void C_ZN7QBufferC2EP10QByteArrayP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN7QBufferC2EP10QByteArrayP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QBuffer::QBuffer(QObject * parent);
-extern void C_ZN7QBufferC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN7QBufferC2EP7QObject(void* arg0); // 3
   // proto:  void QBuffer::setData(const char * data, int len);
 extern void C_ZN7QBuffer7setDataEPKci(void* qthis, unsigned char* arg0, int32_t arg1); // 2
   // proto:  void QBuffer::setData(const QByteArray & data);
@@ -89,7 +89,8 @@ func (this *QBuffer) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer3posEv
     // invoke: qint64 pos()
-    C.C_ZNK7QBuffer3posEv(this.qclsinst)
+    var ret = C.C_ZNK7QBuffer3posEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "pos", args)
   }
@@ -129,7 +130,8 @@ func (this *QBuffer) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK7QBuffer4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK7QBuffer4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "size", args)
   }
@@ -149,7 +151,8 @@ func (this *QBuffer) canReadLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer11canReadLineEv
     // invoke: bool canReadLine()
-    C.C_ZNK7QBuffer11canReadLineEv(this.qclsinst)
+    var ret = C.C_ZNK7QBuffer11canReadLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "canReadLine", args)
   }
@@ -180,7 +183,7 @@ func (this *QBuffer) setBuffer(args ...interface{}) () {
 }
 
 // QBuffer(class QByteArray *, class QObject *)
-func NewQBuffer(args ...interface{}) QBuffer {
+func NewQBuffer(args ...interface{}) *QBuffer {
   // QBuffer(class QByteArray *, class QObject *)
   // QBuffer(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -203,7 +206,8 @@ func NewQBuffer(args ...interface{}) QBuffer {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QBufferC2EP10QByteArrayP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN7QBufferC2EP10QByteArrayP7QObject(arg0, arg1)
+    return &QBuffer{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QBufferC1EP7QObject
     // invoke: void QBuffer(class QObject *)
@@ -211,12 +215,13 @@ func NewQBuffer(args ...interface{}) QBuffer {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QBufferC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN7QBufferC2EP7QObject(arg0)
+    return &QBuffer{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBuffer", "QBuffer", args)
   }
 
-  return QBuffer{}
+  return nil // QBuffer{qclsinst:qthis}
 }
 
 // setData(const char *, int)
@@ -287,7 +292,8 @@ func (this *QBuffer) buffer(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QBuffer6bufferEv
     // invoke: QByteArray & buffer()
-    C.C_ZN7QBuffer6bufferEv(this.qclsinst)
+    var ret = C.C_ZN7QBuffer6bufferEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "buffer", args)
   }
@@ -307,7 +313,8 @@ func (this *QBuffer) data(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer4dataEv
     // invoke: const QByteArray & data()
-    C.C_ZNK7QBuffer4dataEv(this.qclsinst)
+    var ret = C.C_ZNK7QBuffer4dataEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "data", args)
   }
@@ -350,7 +357,8 @@ func (this *QBuffer) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QBuffer4seekEx(this.qclsinst, arg0)
+    var ret = C.C_ZN7QBuffer4seekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "seek", args)
   }
@@ -370,7 +378,8 @@ func (this *QBuffer) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QBuffer5atEndEv
     // invoke: bool atEnd()
-    C.C_ZNK7QBuffer5atEndEv(this.qclsinst)
+    var ret = C.C_ZNK7QBuffer5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBuffer", "atEnd", args)
   }

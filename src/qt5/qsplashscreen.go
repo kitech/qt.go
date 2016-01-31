@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qsplashscreen.h
 // dst-file: /src/widgets/qsplashscreen.go
 //
@@ -78,7 +78,8 @@ func (this *QSplashScreen) pixmap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSplashScreen6pixmapEv
     // invoke: const QPixmap pixmap()
-    C.C_ZNK13QSplashScreen6pixmapEv(this.qclsinst)
+    var ret = C.C_ZNK13QSplashScreen6pixmapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplashScreen", "pixmap", args)
   }
@@ -204,7 +205,8 @@ func (this *QSplashScreen) message(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QSplashScreen7messageEv
     // invoke: QString message()
-    C.C_ZNK13QSplashScreen7messageEv(this.qclsinst)
+    var ret = C.C_ZNK13QSplashScreen7messageEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplashScreen", "message", args)
   }

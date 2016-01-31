@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qtextboundaryfinder.h
 // dst-file: /src/core/qtextboundaryfinder.go
 //
@@ -45,9 +45,9 @@ extern void C_ZN19QTextBoundaryFinderD2Ev(void* qthis); // 4
   // proto:  int QTextBoundaryFinder::toPreviousBoundary();
 extern void C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(void* qthis); // 4
   // proto:  void QTextBoundaryFinder::QTextBoundaryFinder();
-extern void C_ZN19QTextBoundaryFinderC2Ev(void* qthis); // 3
+extern void* C_ZN19QTextBoundaryFinderC2Ev(); // 3
   // proto:  void QTextBoundaryFinder::QTextBoundaryFinder(const QTextBoundaryFinder & other);
-extern void C_ZN19QTextBoundaryFinderC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN19QTextBoundaryFinderC2ERKS_(void* arg0); // 3
   // proto:  bool QTextBoundaryFinder::isAtBoundary();
 extern void C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(void* qthis); // 4
   // proto:  void QTextBoundaryFinder::setPosition(int position);
@@ -87,7 +87,8 @@ func (this *QTextBoundaryFinder) toNextBoundary(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder14toNextBoundaryEv
     // invoke: int toNextBoundary()
-    C.C_ZN19QTextBoundaryFinder14toNextBoundaryEv(this.qclsinst)
+    var ret = C.C_ZN19QTextBoundaryFinder14toNextBoundaryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toNextBoundary", args)
   }
@@ -107,7 +108,8 @@ func (this *QTextBoundaryFinder) position(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder8positionEv
     // invoke: int position()
-    C.C_ZNK19QTextBoundaryFinder8positionEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextBoundaryFinder8positionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "position", args)
   }
@@ -127,7 +129,8 @@ func (this *QTextBoundaryFinder) string(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder6stringEv
     // invoke: QString string()
-    C.C_ZNK19QTextBoundaryFinder6stringEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextBoundaryFinder6stringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "string", args)
   }
@@ -147,7 +150,8 @@ func (this *QTextBoundaryFinder) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK19QTextBoundaryFinder7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextBoundaryFinder7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isValid", args)
   }
@@ -227,7 +231,8 @@ func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
   case 0:
     // invoke: _ZN19QTextBoundaryFinder18toPreviousBoundaryEv
     // invoke: int toPreviousBoundary()
-    C.C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(this.qclsinst)
+    var ret = C.C_ZN19QTextBoundaryFinder18toPreviousBoundaryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "toPreviousBoundary", args)
   }
@@ -235,7 +240,7 @@ func (this *QTextBoundaryFinder) toPreviousBoundary(args ...interface{}) () {
 }
 
 // QTextBoundaryFinder()
-func NewQTextBoundaryFinder(args ...interface{}) QTextBoundaryFinder {
+func NewQTextBoundaryFinder(args ...interface{}) *QTextBoundaryFinder {
   // QTextBoundaryFinder()
   // QTextBoundaryFinder(const class QTextBoundaryFinder &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -252,7 +257,8 @@ func NewQTextBoundaryFinder(args ...interface{}) QTextBoundaryFinder {
     // invoke: void QTextBoundaryFinder()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QTextBoundaryFinderC2Ev(qthis)
+    qthis = C.C_ZN19QTextBoundaryFinderC2Ev()
+    return &QTextBoundaryFinder{qclsinst:qthis}
   case 1:
     // invoke: _ZN19QTextBoundaryFinderC1ERKS_
     // invoke: void QTextBoundaryFinder(const class QTextBoundaryFinder &)
@@ -260,12 +266,13 @@ func NewQTextBoundaryFinder(args ...interface{}) QTextBoundaryFinder {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QTextBoundaryFinderC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN19QTextBoundaryFinderC2ERKS_(arg0)
+    return &QTextBoundaryFinder{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "QTextBoundaryFinder", args)
   }
 
-  return QTextBoundaryFinder{}
+  return nil // QTextBoundaryFinder{qclsinst:qthis}
 }
 
 // isAtBoundary()
@@ -281,7 +288,8 @@ func (this *QTextBoundaryFinder) isAtBoundary(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QTextBoundaryFinder12isAtBoundaryEv
     // invoke: bool isAtBoundary()
-    C.C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(this.qclsinst)
+    var ret = C.C_ZNK19QTextBoundaryFinder12isAtBoundaryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTextBoundaryFinder", "isAtBoundary", args)
   }

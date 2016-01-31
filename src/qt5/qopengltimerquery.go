@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qopengltimerquery.h
 // dst-file: /src/gui/qopengltimerquery.go
 //
@@ -51,7 +51,7 @@ extern void C_ZNK17QOpenGLTimerQuery10metaObjectEv(void* qthis); // 4
   // proto:  void QOpenGLTimerQuery::destroy();
 extern void C_ZN17QOpenGLTimerQuery7destroyEv(void* qthis); // 4
   // proto:  void QOpenGLTimerQuery::QOpenGLTimerQuery(QObject * parent);
-extern void C_ZN17QOpenGLTimerQueryC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN17QOpenGLTimerQueryC2EP7QObject(void* arg0); // 3
   // proto:  bool QOpenGLTimerQuery::isResultAvailable();
 extern void C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(void* qthis); // 4
   // proto:  void QOpenGLTimeMonitor::reset();
@@ -79,7 +79,7 @@ extern void C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(void* qthis); // 4
   // proto:  QVector<GLuint64> QOpenGLTimeMonitor::waitForIntervals();
 extern void C_ZNK18QOpenGLTimeMonitor16waitForIntervalsEv(void* qthis); // 4
   // proto:  void QOpenGLTimeMonitor::QOpenGLTimeMonitor(QObject * parent);
-extern void C_ZN18QOpenGLTimeMonitorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN18QOpenGLTimeMonitorC2EP7QObject(void* arg0); // 3
   // proto:  void QOpenGLTimeMonitor::destroy();
 extern void C_ZN18QOpenGLTimeMonitor7destroyEv(void* qthis); // 4
 */
@@ -159,7 +159,8 @@ func (this *QOpenGLTimerQuery) objectId(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery8objectIdEv
     // invoke: GLuint objectId()
-    C.C_ZNK17QOpenGLTimerQuery8objectIdEv(this.qclsinst)
+    var ret = C.C_ZNK17QOpenGLTimerQuery8objectIdEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "objectId", args)
   }
@@ -179,7 +180,8 @@ func (this *QOpenGLTimerQuery) waitForTimestamp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery16waitForTimestampEv
     // invoke: GLuint64 waitForTimestamp()
-    C.C_ZNK17QOpenGLTimerQuery16waitForTimestampEv(this.qclsinst)
+    var ret = C.C_ZNK17QOpenGLTimerQuery16waitForTimestampEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForTimestamp", args)
   }
@@ -199,7 +201,8 @@ func (this *QOpenGLTimerQuery) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN17QOpenGLTimerQuery6createEv
     // invoke: bool create()
-    C.C_ZN17QOpenGLTimerQuery6createEv(this.qclsinst)
+    var ret = C.C_ZN17QOpenGLTimerQuery6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "create", args)
   }
@@ -239,7 +242,8 @@ func (this *QOpenGLTimerQuery) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery9isCreatedEv
     // invoke: bool isCreated()
-    C.C_ZNK17QOpenGLTimerQuery9isCreatedEv(this.qclsinst)
+    var ret = C.C_ZNK17QOpenGLTimerQuery9isCreatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isCreated", args)
   }
@@ -259,7 +263,8 @@ func (this *QOpenGLTimerQuery) waitForResult(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery13waitForResultEv
     // invoke: GLuint64 waitForResult()
-    C.C_ZNK17QOpenGLTimerQuery13waitForResultEv(this.qclsinst)
+    var ret = C.C_ZNK17QOpenGLTimerQuery13waitForResultEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "waitForResult", args)
   }
@@ -327,7 +332,7 @@ func (this *QOpenGLTimerQuery) destroy(args ...interface{}) () {
 }
 
 // QOpenGLTimerQuery(class QObject *)
-func NewQOpenGLTimerQuery(args ...interface{}) QOpenGLTimerQuery {
+func NewQOpenGLTimerQuery(args ...interface{}) *QOpenGLTimerQuery {
   // QOpenGLTimerQuery(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -344,12 +349,13 @@ func NewQOpenGLTimerQuery(args ...interface{}) QOpenGLTimerQuery {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN17QOpenGLTimerQueryC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN17QOpenGLTimerQueryC2EP7QObject(arg0)
+    return &QOpenGLTimerQuery{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "QOpenGLTimerQuery", args)
   }
 
-  return QOpenGLTimerQuery{}
+  return nil // QOpenGLTimerQuery{qclsinst:qthis}
 }
 
 // isResultAvailable()
@@ -365,7 +371,8 @@ func (this *QOpenGLTimerQuery) isResultAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK17QOpenGLTimerQuery17isResultAvailableEv
     // invoke: bool isResultAvailable()
-    C.C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK17QOpenGLTimerQuery17isResultAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimerQuery", "isResultAvailable", args)
   }
@@ -405,7 +412,8 @@ func (this *QOpenGLTimeMonitor) recordSample(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor12recordSampleEv
     // invoke: int recordSample()
-    C.C_ZN18QOpenGLTimeMonitor12recordSampleEv(this.qclsinst)
+    var ret = C.C_ZN18QOpenGLTimeMonitor12recordSampleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "recordSample", args)
   }
@@ -465,7 +473,8 @@ func (this *QOpenGLTimeMonitor) sampleCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor11sampleCountEv
     // invoke: int sampleCount()
-    C.C_ZNK18QOpenGLTimeMonitor11sampleCountEv(this.qclsinst)
+    var ret = C.C_ZNK18QOpenGLTimeMonitor11sampleCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "sampleCount", args)
   }
@@ -485,7 +494,8 @@ func (this *QOpenGLTimeMonitor) create(args ...interface{}) () {
   case 0:
     // invoke: _ZN18QOpenGLTimeMonitor6createEv
     // invoke: bool create()
-    C.C_ZN18QOpenGLTimeMonitor6createEv(this.qclsinst)
+    var ret = C.C_ZN18QOpenGLTimeMonitor6createEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "create", args)
   }
@@ -548,7 +558,8 @@ func (this *QOpenGLTimeMonitor) isCreated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor9isCreatedEv
     // invoke: bool isCreated()
-    C.C_ZNK18QOpenGLTimeMonitor9isCreatedEv(this.qclsinst)
+    var ret = C.C_ZNK18QOpenGLTimeMonitor9isCreatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isCreated", args)
   }
@@ -588,7 +599,8 @@ func (this *QOpenGLTimeMonitor) isResultAvailable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QOpenGLTimeMonitor17isResultAvailableEv
     // invoke: bool isResultAvailable()
-    C.C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(this.qclsinst)
+    var ret = C.C_ZNK18QOpenGLTimeMonitor17isResultAvailableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "isResultAvailable", args)
   }
@@ -616,7 +628,7 @@ func (this *QOpenGLTimeMonitor) waitForIntervals(args ...interface{}) () {
 }
 
 // QOpenGLTimeMonitor(class QObject *)
-func NewQOpenGLTimeMonitor(args ...interface{}) QOpenGLTimeMonitor {
+func NewQOpenGLTimeMonitor(args ...interface{}) *QOpenGLTimeMonitor {
   // QOpenGLTimeMonitor(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -633,12 +645,13 @@ func NewQOpenGLTimeMonitor(args ...interface{}) QOpenGLTimeMonitor {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QOpenGLTimeMonitorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN18QOpenGLTimeMonitorC2EP7QObject(arg0)
+    return &QOpenGLTimeMonitor{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QOpenGLTimeMonitor", "QOpenGLTimeMonitor", args)
   }
 
-  return QOpenGLTimeMonitor{}
+  return nil // QOpenGLTimeMonitor{qclsinst:qthis}
 }
 
 // destroy()

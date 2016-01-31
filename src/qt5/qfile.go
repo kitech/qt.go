@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfile.h
 // dst-file: /src/core/qfile.go
 //
@@ -49,13 +49,13 @@ extern void C_ZN5QFile10decodeNameERK10QByteArray(void* arg0); // 2
   // proto: static QString QFile::decodeName(const char * localFileName);
 extern void C_ZN5QFile10decodeNameEPKc(unsigned char* arg0); // 2
   // proto:  void QFile::QFile(const QString & name, QObject * parent);
-extern void C_ZN5QFileC2ERK7QStringP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN5QFileC2ERK7QStringP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QFile::QFile();
-extern void C_ZN5QFileC2Ev(void* qthis); // 3
+extern void* C_ZN5QFileC2Ev(); // 3
   // proto:  void QFile::QFile(QObject * parent);
-extern void C_ZN5QFileC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN5QFileC2EP7QObject(void* arg0); // 3
   // proto:  void QFile::QFile(const QString & name);
-extern void C_ZN5QFileC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN5QFileC2ERK7QString(void* arg0); // 3
   // proto:  QString QFile::fileName();
 extern void C_ZNK5QFile8fileNameEv(void* qthis); // 4
   // proto:  bool QFile::link(const QString & newName);
@@ -128,13 +128,15 @@ func (this *QFile) rename_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN5QFile6renameERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN5QFile6renameERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile6renameERK7QString
     // invoke: bool rename(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile6renameERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN5QFile6renameERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "rename", args)
   }
@@ -159,11 +161,13 @@ func (this *QFile) exists_s(args ...interface{}) () {
     // invoke: bool exists(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile6existsERK7QString(arg0)
+    var ret = C.C_ZN5QFile6existsERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK5QFile6existsEv
     // invoke: bool exists()
-    C.C_ZNK5QFile6existsEv(this.qclsinst)
+    var ret = C.C_ZNK5QFile6existsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "exists", args)
   }
@@ -186,13 +190,15 @@ func (this *QFile) symLinkTarget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QFile13symLinkTargetEv
     // invoke: QString symLinkTarget()
-    C.C_ZNK5QFile13symLinkTargetEv(this.qclsinst)
+    var ret = C.C_ZNK5QFile13symLinkTargetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile13symLinkTargetERK7QString
     // invoke: QString symLinkTarget(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile13symLinkTargetERK7QString(arg0)
+    var ret = C.C_ZN5QFile13symLinkTargetERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "symLinkTarget", args)
   }
@@ -212,7 +218,8 @@ func (this *QFile) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QFile4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK5QFile4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK5QFile4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "size", args)
   }
@@ -235,7 +242,8 @@ func (this *QFile) encodeName_s(args ...interface{}) () {
     // invoke: QByteArray encodeName(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile10encodeNameERK7QString(arg0)
+    var ret = C.C_ZN5QFile10encodeNameERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "encodeName", args)
   }
@@ -261,13 +269,15 @@ func (this *QFile) decodeName_s(args ...interface{}) () {
     // invoke: QString decodeName(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile10decodeNameERK10QByteArray(arg0)
+    var ret = C.C_ZN5QFile10decodeNameERK10QByteArray(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile10decodeNameEPKc
     // invoke: QString decodeName(const char *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile10decodeNameEPKc(arg0)
+    var ret = C.C_ZN5QFile10decodeNameEPKc(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "decodeName", args)
   }
@@ -275,7 +285,7 @@ func (this *QFile) decodeName_s(args ...interface{}) () {
 }
 
 // QFile(const class QString &, class QObject *)
-func NewQFile(args ...interface{}) QFile {
+func NewQFile(args ...interface{}) *QFile {
   // QFile(const class QString &, class QObject *)
   // QFile()
   // QFile(class QObject *)
@@ -303,13 +313,15 @@ func NewQFile(args ...interface{}) QFile {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QFileC2ERK7QStringP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN5QFileC2ERK7QStringP7QObject(arg0, arg1)
+    return &QFile{qclsinst:qthis}
   case 1:
     // invoke: _ZN5QFileC1Ev
     // invoke: void QFile()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QFileC2Ev(qthis)
+    qthis = C.C_ZN5QFileC2Ev()
+    return &QFile{qclsinst:qthis}
   case 2:
     // invoke: _ZN5QFileC1EP7QObject
     // invoke: void QFile(class QObject *)
@@ -317,7 +329,8 @@ func NewQFile(args ...interface{}) QFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QFileC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN5QFileC2EP7QObject(arg0)
+    return &QFile{qclsinst:qthis}
   case 3:
     // invoke: _ZN5QFileC1ERK7QString
     // invoke: void QFile(const class QString &)
@@ -325,12 +338,13 @@ func NewQFile(args ...interface{}) QFile {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QFileC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN5QFileC2ERK7QString(arg0)
+    return &QFile{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFile", "QFile", args)
   }
 
-  return QFile{}
+  return nil // QFile{qclsinst:qthis}
 }
 
 // fileName()
@@ -346,7 +360,8 @@ func (this *QFile) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QFile8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK5QFile8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK5QFile8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "fileName", args)
   }
@@ -373,7 +388,8 @@ func (this *QFile) link(args ...interface{}) () {
     // invoke: bool link(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile4linkERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN5QFile4linkERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile4linkERK7QStringS2_
     // invoke: bool link(const class QString &, const class QString &)
@@ -381,7 +397,8 @@ func (this *QFile) link(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN5QFile4linkERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN5QFile4linkERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "link", args)
   }
@@ -410,13 +427,15 @@ func (this *QFile) copy_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN5QFile4copyERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN5QFile4copyERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile4copyERK7QString
     // invoke: bool copy(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile4copyERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN5QFile4copyERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "copy", args)
   }
@@ -443,7 +462,8 @@ func (this *QFile) resize(args ...interface{}) () {
     // invoke: bool resize(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile6resizeEx(this.qclsinst, arg0)
+    var ret = C.C_ZN5QFile6resizeEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile6resizeERK7QStringx
     // invoke: bool resize(const class QString &, qint64)
@@ -451,7 +471,8 @@ func (this *QFile) resize(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int64_t(args[1].(int64))
     if false {fmt.Println(arg1)}
-    C.C_ZN5QFile6resizeERK7QStringx(arg0, arg1)
+    var ret = C.C_ZN5QFile6resizeERK7QStringx(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "resize", args)
   }
@@ -568,11 +589,13 @@ func (this *QFile) remove_s(args ...interface{}) () {
     // invoke: bool remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile6removeERK7QString(arg0)
+    var ret = C.C_ZN5QFile6removeERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN5QFile6removeEv
     // invoke: bool remove()
-    C.C_ZN5QFile6removeEv(this.qclsinst)
+    var ret = C.C_ZN5QFile6removeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "remove", args)
   }
@@ -597,11 +620,13 @@ func (this *QFile) readLink_s(args ...interface{}) () {
     // invoke: QString readLink(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN5QFile8readLinkERK7QString(arg0)
+    var ret = C.C_ZN5QFile8readLinkERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK5QFile8readLinkEv
     // invoke: QString readLink()
-    C.C_ZNK5QFile8readLinkEv(this.qclsinst)
+    var ret = C.C_ZNK5QFile8readLinkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFile", "readLink", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qregexp.h
 // dst-file: /src/core/qregexp.go
 //
@@ -35,9 +35,9 @@ extern void C_ZNK7QRegExp13matchedLengthEv(void* qthis); // 4
   // proto:  void QRegExp::setMinimal(bool minimal);
 extern void C_ZN7QRegExp10setMinimalEb(void* qthis, bool arg0); // 4
   // proto:  void QRegExp::QRegExp();
-extern void C_ZN7QRegExpC2Ev(void* qthis); // 3
+extern void* C_ZN7QRegExpC2Ev(); // 3
   // proto:  void QRegExp::QRegExp(const QRegExp & rx);
-extern void C_ZN7QRegExpC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN7QRegExpC2ERKS_(void* arg0); // 3
   // proto: static QString QRegExp::escape(const QString & str);
 extern void C_ZN7QRegExp6escapeERK7QString(void* arg0); // 4
   // proto:  void QRegExp::setPattern(const QString & pattern);
@@ -102,7 +102,8 @@ func (this *QRegExp) pos(args ...interface{}) () {
     // invoke: int pos(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp3posEi(this.qclsinst, arg0)
+    var ret = C.C_ZN7QRegExp3posEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "pos", args)
   }
@@ -122,7 +123,8 @@ func (this *QRegExp) matchedLength(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp13matchedLengthEv
     // invoke: int matchedLength()
-    C.C_ZNK7QRegExp13matchedLengthEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp13matchedLengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "matchedLength", args)
   }
@@ -153,7 +155,7 @@ func (this *QRegExp) setMinimal(args ...interface{}) () {
 }
 
 // QRegExp()
-func NewQRegExp(args ...interface{}) QRegExp {
+func NewQRegExp(args ...interface{}) *QRegExp {
   // QRegExp()
   // QRegExp(const class QRegExp &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -170,7 +172,8 @@ func NewQRegExp(args ...interface{}) QRegExp {
     // invoke: void QRegExp()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QRegExpC2Ev(qthis)
+    qthis = C.C_ZN7QRegExpC2Ev()
+    return &QRegExp{qclsinst:qthis}
   case 1:
     // invoke: _ZN7QRegExpC1ERKS_
     // invoke: void QRegExp(const class QRegExp &)
@@ -178,12 +181,13 @@ func NewQRegExp(args ...interface{}) QRegExp {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN7QRegExpC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN7QRegExpC2ERKS_(arg0)
+    return &QRegExp{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegExp", "QRegExp", args)
   }
 
-  return QRegExp{}
+  return nil // QRegExp{qclsinst:qthis}
 }
 
 // escape(const class QString &)
@@ -202,7 +206,8 @@ func (this *QRegExp) escape_s(args ...interface{}) () {
     // invoke: QString escape(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp6escapeERK7QString(arg0)
+    var ret = C.C_ZN7QRegExp6escapeERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "escape", args)
   }
@@ -245,7 +250,8 @@ func (this *QRegExp) pattern(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp7patternEv
     // invoke: QString pattern()
-    C.C_ZNK7QRegExp7patternEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp7patternEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "pattern", args)
   }
@@ -285,7 +291,8 @@ func (this *QRegExp) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK7QRegExp7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "isEmpty", args)
   }
@@ -348,7 +355,8 @@ func (this *QRegExp) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZN7QRegExp11errorStringEv
     // invoke: QString errorString()
-    C.C_ZN7QRegExp11errorStringEv(this.qclsinst)
+    var ret = C.C_ZN7QRegExp11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "errorString", args)
   }
@@ -388,7 +396,8 @@ func (this *QRegExp) isValid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp7isValidEv
     // invoke: bool isValid()
-    C.C_ZNK7QRegExp7isValidEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp7isValidEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "isValid", args)
   }
@@ -411,7 +420,8 @@ func (this *QRegExp) exactMatch(args ...interface{}) () {
     // invoke: bool exactMatch(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK7QRegExp10exactMatchERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK7QRegExp10exactMatchERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "exactMatch", args)
   }
@@ -434,7 +444,8 @@ func (this *QRegExp) cap(args ...interface{}) () {
     // invoke: QString cap(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN7QRegExp3capEi(this.qclsinst, arg0)
+    var ret = C.C_ZN7QRegExp3capEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "cap", args)
   }
@@ -454,7 +465,8 @@ func (this *QRegExp) isMinimal(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp9isMinimalEv
     // invoke: bool isMinimal()
-    C.C_ZNK7QRegExp9isMinimalEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp9isMinimalEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "isMinimal", args)
   }
@@ -494,7 +506,8 @@ func (this *QRegExp) captureCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK7QRegExp12captureCountEv
     // invoke: int captureCount()
-    C.C_ZNK7QRegExp12captureCountEv(this.qclsinst)
+    var ret = C.C_ZNK7QRegExp12captureCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExp", "captureCount", args)
   }

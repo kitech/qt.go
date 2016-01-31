@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qsizegrip.h
 // dst-file: /src/widgets/qsizegrip.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QSizeGrip::QSizeGrip(QWidget * parent);
-extern void C_ZN9QSizeGripC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QSizeGripC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QSizeGrip::sizeHint();
 extern void C_ZNK9QSizeGrip8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QSizeGrip::metaObject();
@@ -57,7 +57,7 @@ type QSizeGrip struct {
 }
 
 // QSizeGrip(class QWidget *)
-func NewQSizeGrip(args ...interface{}) QSizeGrip {
+func NewQSizeGrip(args ...interface{}) *QSizeGrip {
   // QSizeGrip(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -74,12 +74,13 @@ func NewQSizeGrip(args ...interface{}) QSizeGrip {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSizeGripC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QSizeGripC2EP7QWidget(arg0)
+    return &QSizeGrip{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSizeGrip", "QSizeGrip", args)
   }
 
-  return QSizeGrip{}
+  return nil // QSizeGrip{qclsinst:qthis}
 }
 
 // sizeHint()
@@ -95,7 +96,8 @@ func (this *QSizeGrip) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSizeGrip8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QSizeGrip8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSizeGrip", "sizeHint", args)
   }

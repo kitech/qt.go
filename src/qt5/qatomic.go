@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qatomic.h
 // dst-file: /src/core/qatomic.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QAtomicInt::QAtomicInt(int value);
-extern void C_ZN10QAtomicIntC2Ei(void* qthis, int32_t arg0); // 1
+extern void* C_ZN10QAtomicIntC2Ei(int32_t arg0); // 1
 */
 import "C"
 // } // <= ext block end
@@ -49,7 +49,7 @@ type QAtomicInt struct {
 }
 
 // QAtomicInt(int)
-func NewQAtomicInt(args ...interface{}) QAtomicInt {
+func NewQAtomicInt(args ...interface{}) *QAtomicInt {
   // QAtomicInt(int)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -66,12 +66,13 @@ func NewQAtomicInt(args ...interface{}) QAtomicInt {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QAtomicIntC2Ei(qthis, arg0)
+    qthis = C.C_ZN10QAtomicIntC2Ei(arg0)
+    return &QAtomicInt{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAtomicInt", "QAtomicInt", args)
   }
 
-  return QAtomicInt{}
+  return nil // QAtomicInt{qclsinst:qthis}
 }
 
 // <= body block end

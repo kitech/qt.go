@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgraphicsproxywidget.h
 // dst-file: /src/widgets/qgraphicsproxywidget.go
 //
@@ -149,7 +149,8 @@ func (this *QGraphicsProxyWidget) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget4typeEv
     // invoke: int type()
-    C.C_ZNK20QGraphicsProxyWidget4typeEv(this.qclsinst)
+    var ret = C.C_ZNK20QGraphicsProxyWidget4typeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "type", args)
   }
@@ -169,7 +170,8 @@ func (this *QGraphicsProxyWidget) widget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK20QGraphicsProxyWidget6widgetEv
     // invoke: QWidget * widget()
-    C.C_ZNK20QGraphicsProxyWidget6widgetEv(this.qclsinst)
+    var ret = C.C_ZNK20QGraphicsProxyWidget6widgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "widget", args)
   }
@@ -235,7 +237,8 @@ func (this *QGraphicsProxyWidget) subWidgetRect(args ...interface{}) () {
     // invoke: QRectF subWidgetRect(const class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZNK20QGraphicsProxyWidget13subWidgetRectEPK7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsProxyWidget", "subWidgetRect", args)
   }

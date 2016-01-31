@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qsplitter.h
 // dst-file: /src/widgets/qsplitter.go
 //
@@ -59,7 +59,7 @@ extern void C_ZNK9QSplitter7indexOfEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QSplitter::insertWidget(int index, QWidget * widget);
 extern void C_ZN9QSplitter12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QSplitter::QSplitter(QWidget * parent);
-extern void C_ZN9QSplitterC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN9QSplitterC2EP7QWidget(void* arg0); // 3
   // proto:  void QSplitter::addWidget(QWidget * widget);
 extern void C_ZN9QSplitter9addWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  QSize QSplitter::sizeHint();
@@ -130,7 +130,8 @@ func (this *QSplitter) saveState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter9saveStateEv
     // invoke: QByteArray saveState()
-    C.C_ZNK9QSplitter9saveStateEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter9saveStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "saveState", args)
   }
@@ -173,7 +174,8 @@ func (this *QSplitter) restoreState(args ...interface{}) () {
     // invoke: bool restoreState(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QSplitter12restoreStateERK10QByteArray(this.qclsinst, arg0)
+    var ret = C.C_ZN9QSplitter12restoreStateERK10QByteArray(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "restoreState", args)
   }
@@ -216,7 +218,8 @@ func (this *QSplitter) widget(args ...interface{}) () {
     // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QSplitter6widgetEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QSplitter6widgetEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "widget", args)
   }
@@ -311,7 +314,8 @@ func (this *QSplitter) handleWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter11handleWidthEv
     // invoke: int handleWidth()
-    C.C_ZNK9QSplitter11handleWidthEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter11handleWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "handleWidth", args)
   }
@@ -357,7 +361,8 @@ func (this *QSplitter) childrenCollapsible(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter19childrenCollapsibleEv
     // invoke: bool childrenCollapsible()
-    C.C_ZNK9QSplitter19childrenCollapsibleEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter19childrenCollapsibleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "childrenCollapsible", args)
   }
@@ -380,7 +385,8 @@ func (this *QSplitter) isCollapsible(args ...interface{}) () {
     // invoke: bool isCollapsible(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QSplitter13isCollapsibleEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QSplitter13isCollapsibleEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "isCollapsible", args)
   }
@@ -403,7 +409,8 @@ func (this *QSplitter) handle(args ...interface{}) () {
     // invoke: QSplitterHandle * handle(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QSplitter6handleEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QSplitter6handleEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "handle", args)
   }
@@ -426,7 +433,8 @@ func (this *QSplitter) indexOf(args ...interface{}) () {
     // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QSplitter7indexOfEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QSplitter7indexOfEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "indexOf", args)
   }
@@ -460,7 +468,7 @@ func (this *QSplitter) insertWidget(args ...interface{}) () {
 }
 
 // QSplitter(class QWidget *)
-func NewQSplitter(args ...interface{}) QSplitter {
+func NewQSplitter(args ...interface{}) *QSplitter {
   // QSplitter(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -477,12 +485,13 @@ func NewQSplitter(args ...interface{}) QSplitter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QSplitterC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN9QSplitterC2EP7QWidget(arg0)
+    return &QSplitter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSplitter", "QSplitter", args)
   }
 
-  return QSplitter{}
+  return nil // QSplitter{qclsinst:qthis}
 }
 
 // addWidget(class QWidget *)
@@ -521,7 +530,8 @@ func (this *QSplitter) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK9QSplitter8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "sizeHint", args)
   }
@@ -564,7 +574,8 @@ func (this *QSplitter) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter5countEv
     // invoke: int count()
-    C.C_ZNK9QSplitter5countEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "count", args)
   }
@@ -630,7 +641,8 @@ func (this *QSplitter) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK9QSplitter15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "minimumSizeHint", args)
   }
@@ -690,7 +702,8 @@ func (this *QSplitter) opaqueResize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QSplitter12opaqueResizeEv
     // invoke: bool opaqueResize()
-    C.C_ZNK9QSplitter12opaqueResizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QSplitter12opaqueResizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitter", "opaqueResize", args)
   }
@@ -770,7 +783,8 @@ func (this *QSplitterHandle) splitter(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSplitterHandle8splitterEv
     // invoke: QSplitter * splitter()
-    C.C_ZNK15QSplitterHandle8splitterEv(this.qclsinst)
+    var ret = C.C_ZNK15QSplitterHandle8splitterEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitterHandle", "splitter", args)
   }
@@ -790,7 +804,8 @@ func (this *QSplitterHandle) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSplitterHandle8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK15QSplitterHandle8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK15QSplitterHandle8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitterHandle", "sizeHint", args)
   }
@@ -810,7 +825,8 @@ func (this *QSplitterHandle) opaqueResize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QSplitterHandle12opaqueResizeEv
     // invoke: bool opaqueResize()
-    C.C_ZNK15QSplitterHandle12opaqueResizeEv(this.qclsinst)
+    var ret = C.C_ZNK15QSplitterHandle12opaqueResizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSplitterHandle", "opaqueResize", args)
   }

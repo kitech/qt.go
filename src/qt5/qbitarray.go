@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qbitarray.h
 // dst-file: /src/core/qbitarray.go
 //
@@ -43,11 +43,11 @@ extern void C_ZN9QBitArray4fillEbi(void* qthis, bool arg0, int32_t arg1); // 2
   // proto:  void QBitArray::clearBit(int i);
 extern void C_ZN9QBitArray8clearBitEi(void* qthis, int32_t arg0); // 2
   // proto:  void QBitArray::QBitArray();
-extern void C_ZN9QBitArrayC2Ev(void* qthis); // 1
+extern void* C_ZN9QBitArrayC2Ev(); // 1
   // proto:  void QBitArray::QBitArray(int size, bool val);
-extern void C_ZN9QBitArrayC2Eib(void* qthis, int32_t arg0, bool arg1); // 3
+extern void* C_ZN9QBitArrayC2Eib(int32_t arg0, bool arg1); // 3
   // proto:  void QBitArray::QBitArray(const QBitArray & other);
-extern void C_ZN9QBitArrayC2ERKS_(void* qthis, void* arg0); // 1
+extern void* C_ZN9QBitArrayC2ERKS_(void* arg0); // 1
   // proto:  void QBitArray::swap(QBitArray & other);
 extern void C_ZN9QBitArray4swapERS_(void* qthis, void* arg0); // 2
   // proto:  bool QBitArray::isEmpty();
@@ -109,7 +109,8 @@ func (this *QBitArray) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray4sizeEv
     // invoke: int size()
-    C.C_ZNK9QBitArray4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QBitArray4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "size", args)
   }
@@ -132,7 +133,8 @@ func (this *QBitArray) testBit(args ...interface{}) () {
     // invoke: bool testBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QBitArray7testBitEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QBitArray7testBitEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "testBit", args)
   }
@@ -155,7 +157,8 @@ func (this *QBitArray) at(args ...interface{}) () {
     // invoke: bool at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QBitArray2atEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QBitArray2atEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "at", args)
   }
@@ -178,7 +181,8 @@ func (this *QBitArray) toggleBit(args ...interface{}) () {
     // invoke: bool toggleBit(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QBitArray9toggleBitEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QBitArray9toggleBitEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "toggleBit", args)
   }
@@ -219,7 +223,8 @@ func (this *QBitArray) fill(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZN9QBitArray4fillEbi(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN9QBitArray4fillEbi(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "fill", args)
   }
@@ -250,7 +255,7 @@ func (this *QBitArray) clearBit(args ...interface{}) () {
 }
 
 // QBitArray()
-func NewQBitArray(args ...interface{}) QBitArray {
+func NewQBitArray(args ...interface{}) *QBitArray {
   // QBitArray()
   // QBitArray(int, _Bool)
   // QBitArray(const class QBitArray &)
@@ -271,7 +276,8 @@ func NewQBitArray(args ...interface{}) QBitArray {
     // invoke: void QBitArray()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QBitArrayC2Ev(qthis)
+    qthis = C.C_ZN9QBitArrayC2Ev()
+    return &QBitArray{qclsinst:qthis}
   case 1:
     // invoke: _ZN9QBitArrayC1Eib
     // invoke: void QBitArray(int, _Bool)
@@ -281,7 +287,8 @@ func NewQBitArray(args ...interface{}) QBitArray {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QBitArrayC2Eib(qthis, arg0, arg1)
+    qthis = C.C_ZN9QBitArrayC2Eib(arg0, arg1)
+    return &QBitArray{qclsinst:qthis}
   case 2:
     // invoke: _ZN9QBitArrayC1ERKS_
     // invoke: void QBitArray(const class QBitArray &)
@@ -289,12 +296,13 @@ func NewQBitArray(args ...interface{}) QBitArray {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN9QBitArrayC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN9QBitArrayC2ERKS_(arg0)
+    return &QBitArray{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBitArray", "QBitArray", args)
   }
 
-  return QBitArray{}
+  return nil // QBitArray{qclsinst:qthis}
 }
 
 // swap(class QBitArray &)
@@ -333,7 +341,8 @@ func (this *QBitArray) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK9QBitArray7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK9QBitArray7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "isEmpty", args)
   }
@@ -388,7 +397,8 @@ func (this *QBitArray) isDetached(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray10isDetachedEv
     // invoke: bool isDetached()
-    C.C_ZNK9QBitArray10isDetachedEv(this.qclsinst)
+    var ret = C.C_ZNK9QBitArray10isDetachedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "isDetached", args)
   }
@@ -479,11 +489,13 @@ func (this *QBitArray) count(args ...interface{}) () {
     // invoke: int count(_Bool)
     var arg0 = C.bool(args[0].(bool))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QBitArray5countEb(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QBitArray5countEb(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK9QBitArray5countEv
     // invoke: int count()
-    C.C_ZNK9QBitArray5countEv(this.qclsinst)
+    var ret = C.C_ZNK9QBitArray5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "count", args)
   }
@@ -523,7 +535,8 @@ func (this *QBitArray) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QBitArray6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK9QBitArray6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK9QBitArray6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBitArray", "isNull", args)
   }

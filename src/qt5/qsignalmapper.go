@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsignalmapper.h
 // dst-file: /src/core/qsignalmapper.go
 //
@@ -55,7 +55,7 @@ extern void C_ZNK13QSignalMapper7mappingEP7QObject(void* qthis, void* arg0); // 
   // proto:  QObject * QSignalMapper::mapping(QWidget * widget);
 extern void C_ZNK13QSignalMapper7mappingEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QSignalMapper::QSignalMapper(QObject * parent);
-extern void C_ZN13QSignalMapperC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QSignalMapperC2EP7QObject(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -254,25 +254,29 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
     // invoke: QObject * mapping(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QSignalMapper7mappingERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QSignalMapper7mappingERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK13QSignalMapper7mappingEi
     // invoke: QObject * mapping(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QSignalMapper7mappingEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QSignalMapper7mappingEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK13QSignalMapper7mappingEP7QObject
     // invoke: QObject * mapping(class QObject *)
     var arg0 = args[0].(QObject).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QSignalMapper7mappingEP7QObject(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QSignalMapper7mappingEP7QObject(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 3:
     // invoke: _ZNK13QSignalMapper7mappingEP7QWidget
     // invoke: QObject * mapping(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK13QSignalMapper7mappingEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZNK13QSignalMapper7mappingEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSignalMapper", "mapping", args)
   }
@@ -280,7 +284,7 @@ func (this *QSignalMapper) mapping(args ...interface{}) () {
 }
 
 // QSignalMapper(class QObject *)
-func NewQSignalMapper(args ...interface{}) QSignalMapper {
+func NewQSignalMapper(args ...interface{}) *QSignalMapper {
   // QSignalMapper(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -297,12 +301,13 @@ func NewQSignalMapper(args ...interface{}) QSignalMapper {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QSignalMapperC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QSignalMapperC2EP7QObject(arg0)
+    return &QSignalMapper{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSignalMapper", "QSignalMapper", args)
   }
 
-  return QSignalMapper{}
+  return nil // QSignalMapper{qclsinst:qthis}
 }
 
 // <= body block end

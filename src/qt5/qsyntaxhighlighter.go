@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qsyntaxhighlighter.h
 // dst-file: /src/gui/qsyntaxhighlighter.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto:  void QSyntaxHighlighter::setDocument(QTextDocument * doc);
 extern void C_ZN18QSyntaxHighlighter11setDocumentEP13QTextDocument(void* qthis, void* arg0); // 4
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QObject * parent);
-extern void C_ZN18QSyntaxHighlighterC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN18QSyntaxHighlighterC2EP7QObject(void* arg0); // 3
   // proto:  void QSyntaxHighlighter::QSyntaxHighlighter(QTextDocument * parent);
-extern void C_ZN18QSyntaxHighlighterC2EP13QTextDocument(void* qthis, void* arg0); // 3
+extern void* C_ZN18QSyntaxHighlighterC2EP13QTextDocument(void* arg0); // 3
   // proto:  QTextDocument * QSyntaxHighlighter::document();
 extern void C_ZNK18QSyntaxHighlighter8documentEv(void* qthis); // 4
   // proto:  void QSyntaxHighlighter::~QSyntaxHighlighter();
@@ -86,7 +86,7 @@ func (this *QSyntaxHighlighter) setDocument(args ...interface{}) () {
 }
 
 // QSyntaxHighlighter(class QObject *)
-func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
+func NewQSyntaxHighlighter(args ...interface{}) *QSyntaxHighlighter {
   // QSyntaxHighlighter(class QObject *)
   // QSyntaxHighlighter(class QTextDocument *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -106,7 +106,8 @@ func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QSyntaxHighlighterC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN18QSyntaxHighlighterC2EP7QObject(arg0)
+    return &QSyntaxHighlighter{qclsinst:qthis}
   case 1:
     // invoke: _ZN18QSyntaxHighlighterC1EP13QTextDocument
     // invoke: void QSyntaxHighlighter(class QTextDocument *)
@@ -114,12 +115,13 @@ func NewQSyntaxHighlighter(args ...interface{}) QSyntaxHighlighter {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN18QSyntaxHighlighterC2EP13QTextDocument(qthis, arg0)
+    qthis = C.C_ZN18QSyntaxHighlighterC2EP13QTextDocument(arg0)
+    return &QSyntaxHighlighter{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "QSyntaxHighlighter", args)
   }
 
-  return QSyntaxHighlighter{}
+  return nil // QSyntaxHighlighter{qclsinst:qthis}
 }
 
 // document()
@@ -135,7 +137,8 @@ func (this *QSyntaxHighlighter) document(args ...interface{}) () {
   case 0:
     // invoke: _ZNK18QSyntaxHighlighter8documentEv
     // invoke: QTextDocument * document()
-    C.C_ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+    var ret = C.C_ZNK18QSyntaxHighlighter8documentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSyntaxHighlighter", "document", args)
   }

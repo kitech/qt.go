@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qpalette.h
 // dst-file: /src/gui/qpalette.go
 //
@@ -37,17 +37,17 @@ extern void C_ZNK8QPalette3midEv(void* qthis); // 2
   // proto:  const QBrush & QPalette::windowText();
 extern void C_ZNK8QPalette10windowTextEv(void* qthis); // 2
   // proto:  void QPalette::QPalette(const QColor & windowText, const QColor & window, const QColor & light, const QColor & dark, const QColor & mid, const QColor & text, const QColor & base);
-extern void C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6); // 3
+extern void* C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6); // 3
   // proto:  void QPalette::QPalette(const QColor & button);
-extern void C_ZN8QPaletteC2ERK6QColor(void* qthis, void* arg0); // 3
+extern void* C_ZN8QPaletteC2ERK6QColor(void* arg0); // 3
   // proto:  void QPalette::QPalette(const QPalette & palette);
-extern void C_ZN8QPaletteC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN8QPaletteC2ERKS_(void* arg0); // 3
   // proto:  void QPalette::QPalette(const QColor & button, const QColor & window);
-extern void C_ZN8QPaletteC2ERK6QColorS2_(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN8QPaletteC2ERK6QColorS2_(void* arg0, void* arg1); // 3
   // proto:  void QPalette::QPalette(const QBrush & windowText, const QBrush & button, const QBrush & light, const QBrush & dark, const QBrush & mid, const QBrush & text, const QBrush & bright_text, const QBrush & base, const QBrush & window);
-extern void C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(void* qthis, void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6, void* arg7, void* arg8); // 3
+extern void* C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(void* arg0, void* arg1, void* arg2, void* arg3, void* arg4, void* arg5, void* arg6, void* arg7, void* arg8); // 3
   // proto:  void QPalette::QPalette();
-extern void C_ZN8QPaletteC2Ev(void* qthis); // 3
+extern void* C_ZN8QPaletteC2Ev(); // 3
   // proto:  const QBrush & QPalette::toolTipText();
 extern void C_ZNK8QPalette11toolTipTextEv(void* qthis); // 2
   // proto:  const QBrush & QPalette::midlight();
@@ -132,7 +132,8 @@ func (this *QPalette) isCopyOf(args ...interface{}) () {
     // invoke: bool isCopyOf(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK8QPalette8isCopyOfERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK8QPalette8isCopyOfERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "isCopyOf", args)
   }
@@ -152,7 +153,8 @@ func (this *QPalette) highlightedText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette15highlightedTextEv
     // invoke: const QBrush & highlightedText()
-    C.C_ZNK8QPalette15highlightedTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette15highlightedTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "highlightedText", args)
   }
@@ -172,7 +174,8 @@ func (this *QPalette) mid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette3midEv
     // invoke: const QBrush & mid()
-    C.C_ZNK8QPalette3midEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette3midEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "mid", args)
   }
@@ -192,7 +195,8 @@ func (this *QPalette) windowText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette10windowTextEv
     // invoke: const QBrush & windowText()
-    C.C_ZNK8QPalette10windowTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette10windowTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "windowText", args)
   }
@@ -200,7 +204,7 @@ func (this *QPalette) windowText(args ...interface{}) () {
 }
 
 // QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
-func NewQPalette(args ...interface{}) QPalette {
+func NewQPalette(args ...interface{}) *QPalette {
   // QPalette(const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &, const class QColor &)
   // QPalette(const class QColor &)
   // QPalette(const class QPalette &)
@@ -258,7 +262,8 @@ func NewQPalette(args ...interface{}) QPalette {
     if false {fmt.Println(arg6)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+    qthis = C.C_ZN8QPaletteC2ERK6QColorS2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6)
+    return &QPalette{qclsinst:qthis}
   case 1:
     // invoke: _ZN8QPaletteC1ERK6QColor
     // invoke: void QPalette(const class QColor &)
@@ -266,7 +271,8 @@ func NewQPalette(args ...interface{}) QPalette {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2ERK6QColor(qthis, arg0)
+    qthis = C.C_ZN8QPaletteC2ERK6QColor(arg0)
+    return &QPalette{qclsinst:qthis}
   case 2:
     // invoke: _ZN8QPaletteC1ERKS_
     // invoke: void QPalette(const class QPalette &)
@@ -274,7 +280,8 @@ func NewQPalette(args ...interface{}) QPalette {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN8QPaletteC2ERKS_(arg0)
+    return &QPalette{qclsinst:qthis}
   case 3:
     // invoke: _ZN8QPaletteC1ERK6QColorS2_
     // invoke: void QPalette(const class QColor &, const class QColor &)
@@ -284,7 +291,8 @@ func NewQPalette(args ...interface{}) QPalette {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2ERK6QColorS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN8QPaletteC2ERK6QColorS2_(arg0, arg1)
+    return &QPalette{qclsinst:qthis}
   case 4:
     // invoke: _ZN8QPaletteC1ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_
     // invoke: void QPalette(const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &, const class QBrush &)
@@ -308,18 +316,20 @@ func NewQPalette(args ...interface{}) QPalette {
     if false {fmt.Println(arg8)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(qthis, arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+    qthis = C.C_ZN8QPaletteC2ERK6QBrushS2_S2_S2_S2_S2_S2_S2_S2_(arg0, arg1, arg2, arg3, arg4, arg5, arg6, arg7, arg8)
+    return &QPalette{qclsinst:qthis}
   case 5:
     // invoke: _ZN8QPaletteC1Ev
     // invoke: void QPalette()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN8QPaletteC2Ev(qthis)
+    qthis = C.C_ZN8QPaletteC2Ev()
+    return &QPalette{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPalette", "QPalette", args)
   }
 
-  return QPalette{}
+  return nil // QPalette{qclsinst:qthis}
 }
 
 // toolTipText()
@@ -335,7 +345,8 @@ func (this *QPalette) toolTipText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette11toolTipTextEv
     // invoke: const QBrush & toolTipText()
-    C.C_ZNK8QPalette11toolTipTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette11toolTipTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "toolTipText", args)
   }
@@ -355,7 +366,8 @@ func (this *QPalette) midlight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette8midlightEv
     // invoke: const QBrush & midlight()
-    C.C_ZNK8QPalette8midlightEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette8midlightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "midlight", args)
   }
@@ -375,7 +387,8 @@ func (this *QPalette) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette6windowEv
     // invoke: const QBrush & window()
-    C.C_ZNK8QPalette6windowEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette6windowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "window", args)
   }
@@ -395,7 +408,8 @@ func (this *QPalette) brightText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette10brightTextEv
     // invoke: const QBrush & brightText()
-    C.C_ZNK8QPalette10brightTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette10brightTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "brightText", args)
   }
@@ -438,7 +452,8 @@ func (this *QPalette) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette4textEv
     // invoke: const QBrush & text()
-    C.C_ZNK8QPalette4textEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "text", args)
   }
@@ -478,7 +493,8 @@ func (this *QPalette) foreground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette10foregroundEv
     // invoke: const QBrush & foreground()
-    C.C_ZNK8QPalette10foregroundEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette10foregroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "foreground", args)
   }
@@ -498,7 +514,8 @@ func (this *QPalette) cacheKey(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette8cacheKeyEv
     // invoke: qint64 cacheKey()
-    C.C_ZNK8QPalette8cacheKeyEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette8cacheKeyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "cacheKey", args)
   }
@@ -518,7 +535,8 @@ func (this *QPalette) dark(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette4darkEv
     // invoke: const QBrush & dark()
-    C.C_ZNK8QPalette4darkEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette4darkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "dark", args)
   }
@@ -538,7 +556,8 @@ func (this *QPalette) base(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette4baseEv
     // invoke: const QBrush & base()
-    C.C_ZNK8QPalette4baseEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette4baseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "base", args)
   }
@@ -558,7 +577,8 @@ func (this *QPalette) link(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette4linkEv
     // invoke: const QBrush & link()
-    C.C_ZNK8QPalette4linkEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette4linkEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "link", args)
   }
@@ -578,7 +598,8 @@ func (this *QPalette) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette10backgroundEv
     // invoke: const QBrush & background()
-    C.C_ZNK8QPalette10backgroundEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette10backgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "background", args)
   }
@@ -598,7 +619,8 @@ func (this *QPalette) shadow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette6shadowEv
     // invoke: const QBrush & shadow()
-    C.C_ZNK8QPalette6shadowEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette6shadowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "shadow", args)
   }
@@ -618,7 +640,8 @@ func (this *QPalette) toolTipBase(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette11toolTipBaseEv
     // invoke: const QBrush & toolTipBase()
-    C.C_ZNK8QPalette11toolTipBaseEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette11toolTipBaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "toolTipBase", args)
   }
@@ -638,7 +661,8 @@ func (this *QPalette) linkVisited(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette11linkVisitedEv
     // invoke: const QBrush & linkVisited()
-    C.C_ZNK8QPalette11linkVisitedEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette11linkVisitedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "linkVisited", args)
   }
@@ -672,11 +696,13 @@ func (this *QPalette) resolve(args ...interface{}) () {
     // invoke: QPalette resolve(const class QPalette &)
     var arg0 = args[0].(QPalette).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK8QPalette7resolveERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK8QPalette7resolveERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK8QPalette7resolveEv
     // invoke: uint resolve()
-    C.C_ZNK8QPalette7resolveEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette7resolveEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "resolve", args)
   }
@@ -696,7 +722,8 @@ func (this *QPalette) light(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette5lightEv
     // invoke: const QBrush & light()
-    C.C_ZNK8QPalette5lightEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette5lightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "light", args)
   }
@@ -716,7 +743,8 @@ func (this *QPalette) button(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette6buttonEv
     // invoke: const QBrush & button()
-    C.C_ZNK8QPalette6buttonEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette6buttonEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "button", args)
   }
@@ -736,7 +764,8 @@ func (this *QPalette) buttonText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette10buttonTextEv
     // invoke: const QBrush & buttonText()
-    C.C_ZNK8QPalette10buttonTextEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette10buttonTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "buttonText", args)
   }
@@ -776,7 +805,8 @@ func (this *QPalette) alternateBase(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette13alternateBaseEv
     // invoke: const QBrush & alternateBase()
-    C.C_ZNK8QPalette13alternateBaseEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette13alternateBaseEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "alternateBase", args)
   }
@@ -796,7 +826,8 @@ func (this *QPalette) highlight(args ...interface{}) () {
   case 0:
     // invoke: _ZNK8QPalette9highlightEv
     // invoke: const QBrush & highlight()
-    C.C_ZNK8QPalette9highlightEv(this.qclsinst)
+    var ret = C.C_ZNK8QPalette9highlightEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPalette", "highlight", args)
   }

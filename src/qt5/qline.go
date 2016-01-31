@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qline.h
 // dst-file: /src/core/qline.go
 //
@@ -49,11 +49,11 @@ extern void C_ZNK5QLine6isNullEv(void* qthis); // 2
   // proto:  QPoint QLine::p1();
 extern void C_ZNK5QLine2p1Ev(void* qthis); // 2
   // proto:  void QLine::QLine(int x1, int y1, int x2, int y2);
-extern void C_ZN5QLineC2Eiiii(void* qthis, int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
+extern void* C_ZN5QLineC2Eiiii(int32_t arg0, int32_t arg1, int32_t arg2, int32_t arg3); // 1
   // proto:  void QLine::QLine(const QPoint & pt1, const QPoint & pt2);
-extern void C_ZN5QLineC2ERK6QPointS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN5QLineC2ERK6QPointS2_(void* arg0, void* arg1); // 1
   // proto:  void QLine::QLine();
-extern void C_ZN5QLineC2Ev(void* qthis); // 1
+extern void* C_ZN5QLineC2Ev(); // 1
   // proto:  int QLine::dy();
 extern void C_ZNK5QLine2dyEv(void* qthis); // 2
   // proto:  QLine QLine::translated(const QPoint & p);
@@ -127,13 +127,13 @@ extern void C_ZNK6QLineF10translatedERK7QPointF(void* qthis, void* arg0); // 2
   // proto:  QLineF QLineF::translated(qreal dx, qreal dy);
 extern void C_ZNK6QLineF10translatedEdd(void* qthis, double arg0, double arg1); // 2
   // proto:  void QLineF::QLineF(qreal x1, qreal y1, qreal x2, qreal y2);
-extern void C_ZN6QLineFC2Edddd(void* qthis, double arg0, double arg1, double arg2, double arg3); // 1
+extern void* C_ZN6QLineFC2Edddd(double arg0, double arg1, double arg2, double arg3); // 1
   // proto:  void QLineF::QLineF(const QLine & line);
-extern void C_ZN6QLineFC2ERK5QLine(void* qthis, void* arg0); // 1
+extern void* C_ZN6QLineFC2ERK5QLine(void* arg0); // 1
   // proto:  void QLineF::QLineF(const QPointF & pt1, const QPointF & pt2);
-extern void C_ZN6QLineFC2ERK7QPointFS2_(void* qthis, void* arg0, void* arg1); // 1
+extern void* C_ZN6QLineFC2ERK7QPointFS2_(void* arg0, void* arg1); // 1
   // proto:  void QLineF::QLineF();
-extern void C_ZN6QLineFC2Ev(void* qthis); // 1
+extern void* C_ZN6QLineFC2Ev(); // 1
 */
 import "C"
 // } // <= ext block end
@@ -171,7 +171,8 @@ func (this *QLine) p2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2p2Ev
     // invoke: QPoint p2()
-    C.C_ZNK5QLine2p2Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2p2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "p2", args)
   }
@@ -191,7 +192,8 @@ func (this *QLine) y2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2y2Ev
     // invoke: int y2()
-    C.C_ZNK5QLine2y2Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2y2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "y2", args)
   }
@@ -211,7 +213,8 @@ func (this *QLine) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2dxEv
     // invoke: int dx()
-    C.C_ZNK5QLine2dxEv(this.qclsinst)
+    var ret = C.C_ZNK5QLine2dxEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "dx", args)
   }
@@ -231,7 +234,8 @@ func (this *QLine) y1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2y1Ev
     // invoke: int y1()
-    C.C_ZNK5QLine2y1Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2y1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "y1", args)
   }
@@ -274,7 +278,8 @@ func (this *QLine) x1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2x1Ev
     // invoke: int x1()
-    C.C_ZNK5QLine2x1Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2x1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "x1", args)
   }
@@ -326,7 +331,8 @@ func (this *QLine) x2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2x2Ev
     // invoke: int x2()
-    C.C_ZNK5QLine2x2Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2x2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "x2", args)
   }
@@ -346,7 +352,8 @@ func (this *QLine) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK5QLine6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK5QLine6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "isNull", args)
   }
@@ -366,7 +373,8 @@ func (this *QLine) p1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2p1Ev
     // invoke: QPoint p1()
-    C.C_ZNK5QLine2p1Ev(this.qclsinst)
+    var ret = C.C_ZNK5QLine2p1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "p1", args)
   }
@@ -374,7 +382,7 @@ func (this *QLine) p1(args ...interface{}) () {
 }
 
 // QLine(int, int, int, int)
-func NewQLine(args ...interface{}) QLine {
+func NewQLine(args ...interface{}) *QLine {
   // QLine(int, int, int, int)
   // QLine(const class QPoint &, const class QPoint &)
   // QLine()
@@ -406,7 +414,8 @@ func NewQLine(args ...interface{}) QLine {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QLineC2Eiiii(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN5QLineC2Eiiii(arg0, arg1, arg2, arg3)
+    return &QLine{qclsinst:qthis}
   case 1:
     // invoke: _ZN5QLineC1ERK6QPointS2_
     // invoke: void QLine(const class QPoint &, const class QPoint &)
@@ -416,18 +425,20 @@ func NewQLine(args ...interface{}) QLine {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QLineC2ERK6QPointS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN5QLineC2ERK6QPointS2_(arg0, arg1)
+    return &QLine{qclsinst:qthis}
   case 2:
     // invoke: _ZN5QLineC1Ev
     // invoke: void QLine()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN5QLineC2Ev(qthis)
+    qthis = C.C_ZN5QLineC2Ev()
+    return &QLine{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLine", "QLine", args)
   }
 
-  return QLine{}
+  return nil // QLine{qclsinst:qthis}
 }
 
 // dy()
@@ -443,7 +454,8 @@ func (this *QLine) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK5QLine2dyEv
     // invoke: int dy()
-    C.C_ZNK5QLine2dyEv(this.qclsinst)
+    var ret = C.C_ZNK5QLine2dyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "dy", args)
   }
@@ -470,7 +482,8 @@ func (this *QLine) translated(args ...interface{}) () {
     // invoke: QLine translated(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK5QLine10translatedERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK5QLine10translatedERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK5QLine10translatedEii
     // invoke: QLine translated(int, int)
@@ -478,7 +491,8 @@ func (this *QLine) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK5QLine10translatedEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK5QLine10translatedEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLine", "translated", args)
   }
@@ -611,7 +625,8 @@ func (this *QLineF) fromPolar_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZN6QLineF9fromPolarEdd(arg0, arg1)
+    var ret = C.C_ZN6QLineF9fromPolarEdd(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "fromPolar", args)
   }
@@ -631,7 +646,8 @@ func (this *QLineF) y1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2y1Ev
     // invoke: qreal y1()
-    C.C_ZNK6QLineF2y1Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2y1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "y1", args)
   }
@@ -674,7 +690,8 @@ func (this *QLineF) y2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2y2Ev
     // invoke: qreal y2()
-    C.C_ZNK6QLineF2y2Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2y2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "y2", args)
   }
@@ -694,7 +711,8 @@ func (this *QLineF) normalVector(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF12normalVectorEv
     // invoke: QLineF normalVector()
-    C.C_ZNK6QLineF12normalVectorEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF12normalVectorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "normalVector", args)
   }
@@ -719,11 +737,13 @@ func (this *QLineF) angle(args ...interface{}) () {
     // invoke: qreal angle(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QLineF5angleERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QLineF5angleERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK6QLineF5angleEv
     // invoke: qreal angle()
-    C.C_ZNK6QLineF5angleEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF5angleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "angle", args)
   }
@@ -859,7 +879,8 @@ func (this *QLineF) unitVector(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF10unitVectorEv
     // invoke: QLineF unitVector()
-    C.C_ZNK6QLineF10unitVectorEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF10unitVectorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "unitVector", args)
   }
@@ -882,7 +903,8 @@ func (this *QLineF) angleTo(args ...interface{}) () {
     // invoke: qreal angleTo(const class QLineF &)
     var arg0 = args[0].(QLineF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QLineF7angleToERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QLineF7angleToERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "angleTo", args)
   }
@@ -902,7 +924,8 @@ func (this *QLineF) dx(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2dxEv
     // invoke: qreal dx()
-    C.C_ZNK6QLineF2dxEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2dxEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "dx", args)
   }
@@ -922,7 +945,8 @@ func (this *QLineF) dy(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2dyEv
     // invoke: qreal dy()
-    C.C_ZNK6QLineF2dyEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2dyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "dy", args)
   }
@@ -942,7 +966,8 @@ func (this *QLineF) x2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2x2Ev
     // invoke: qreal x2()
-    C.C_ZNK6QLineF2x2Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2x2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "x2", args)
   }
@@ -962,7 +987,8 @@ func (this *QLineF) x1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2x1Ev
     // invoke: qreal x1()
-    C.C_ZNK6QLineF2x1Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2x1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "x1", args)
   }
@@ -1031,7 +1057,8 @@ func (this *QLineF) p2(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2p2Ev
     // invoke: QPointF p2()
-    C.C_ZNK6QLineF2p2Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2p2Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "p2", args)
   }
@@ -1051,7 +1078,8 @@ func (this *QLineF) p1(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF2p1Ev
     // invoke: QPointF p1()
-    C.C_ZNK6QLineF2p1Ev(this.qclsinst)
+    var ret = C.C_ZNK6QLineF2p1Ev(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "p1", args)
   }
@@ -1074,7 +1102,8 @@ func (this *QLineF) pointAt(args ...interface{}) () {
     // invoke: QPointF pointAt(qreal)
     var arg0 = C.double(args[0].(float64))
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QLineF7pointAtEd(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QLineF7pointAtEd(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "pointAt", args)
   }
@@ -1094,7 +1123,8 @@ func (this *QLineF) toLine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF6toLineEv
     // invoke: QLine toLine()
-    C.C_ZNK6QLineF6toLineEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF6toLineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "toLine", args)
   }
@@ -1114,7 +1144,8 @@ func (this *QLineF) isNull(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF6isNullEv
     // invoke: bool isNull()
-    C.C_ZNK6QLineF6isNullEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF6isNullEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "isNull", args)
   }
@@ -1134,7 +1165,8 @@ func (this *QLineF) length(args ...interface{}) () {
   case 0:
     // invoke: _ZNK6QLineF6lengthEv
     // invoke: qreal length()
-    C.C_ZNK6QLineF6lengthEv(this.qclsinst)
+    var ret = C.C_ZNK6QLineF6lengthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "length", args)
   }
@@ -1161,7 +1193,8 @@ func (this *QLineF) translated(args ...interface{}) () {
     // invoke: QLineF translated(const class QPointF &)
     var arg0 = args[0].(QPointF).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK6QLineF10translatedERK7QPointF(this.qclsinst, arg0)
+    var ret = C.C_ZNK6QLineF10translatedERK7QPointF(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK6QLineF10translatedEdd
     // invoke: QLineF translated(qreal, qreal)
@@ -1169,7 +1202,8 @@ func (this *QLineF) translated(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.double(args[1].(float64))
     if false {fmt.Println(arg1)}
-    C.C_ZNK6QLineF10translatedEdd(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK6QLineF10translatedEdd(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QLineF", "translated", args)
   }
@@ -1177,7 +1211,7 @@ func (this *QLineF) translated(args ...interface{}) () {
 }
 
 // QLineF(qreal, qreal, qreal, qreal)
-func NewQLineF(args ...interface{}) QLineF {
+func NewQLineF(args ...interface{}) *QLineF {
   // QLineF(qreal, qreal, qreal, qreal)
   // QLineF(const class QLine &)
   // QLineF(const class QPointF &, const class QPointF &)
@@ -1212,7 +1246,8 @@ func NewQLineF(args ...interface{}) QLineF {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QLineFC2Edddd(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN6QLineFC2Edddd(arg0, arg1, arg2, arg3)
+    return &QLineF{qclsinst:qthis}
   case 1:
     // invoke: _ZN6QLineFC1ERK5QLine
     // invoke: void QLineF(const class QLine &)
@@ -1220,7 +1255,8 @@ func NewQLineF(args ...interface{}) QLineF {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QLineFC2ERK5QLine(qthis, arg0)
+    qthis = C.C_ZN6QLineFC2ERK5QLine(arg0)
+    return &QLineF{qclsinst:qthis}
   case 2:
     // invoke: _ZN6QLineFC1ERK7QPointFS2_
     // invoke: void QLineF(const class QPointF &, const class QPointF &)
@@ -1230,18 +1266,20 @@ func NewQLineF(args ...interface{}) QLineF {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QLineFC2ERK7QPointFS2_(qthis, arg0, arg1)
+    qthis = C.C_ZN6QLineFC2ERK7QPointFS2_(arg0, arg1)
+    return &QLineF{qclsinst:qthis}
   case 3:
     // invoke: _ZN6QLineFC1Ev
     // invoke: void QLineF()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QLineFC2Ev(qthis)
+    qthis = C.C_ZN6QLineFC2Ev()
+    return &QLineF{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QLineF", "QLineF", args)
   }
 
-  return QLineF{}
+  return nil // QLineF{qclsinst:qthis}
 }
 
 // <= body block end

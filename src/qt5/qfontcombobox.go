@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qfontcombobox.h
 // dst-file: /src/widgets/qfontcombobox.go
 //
@@ -33,7 +33,7 @@ extern void C_ZNK13QFontComboBox11fontFiltersEv(void* qthis); // 4
   // proto:  void QFontComboBox::setCurrentFont(const QFont & f);
 extern void C_ZN13QFontComboBox14setCurrentFontERK5QFont(void* qthis, void* arg0); // 4
   // proto:  void QFontComboBox::QFontComboBox(QWidget * parent);
-extern void C_ZN13QFontComboBoxC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN13QFontComboBoxC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QFontComboBox::sizeHint();
 extern void C_ZNK13QFontComboBox8sizeHintEv(void* qthis); // 4
   // proto:  const QMetaObject * QFontComboBox::metaObject();
@@ -107,7 +107,7 @@ func (this *QFontComboBox) setCurrentFont(args ...interface{}) () {
 }
 
 // QFontComboBox(class QWidget *)
-func NewQFontComboBox(args ...interface{}) QFontComboBox {
+func NewQFontComboBox(args ...interface{}) *QFontComboBox {
   // QFontComboBox(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -124,12 +124,13 @@ func NewQFontComboBox(args ...interface{}) QFontComboBox {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QFontComboBoxC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN13QFontComboBoxC2EP7QWidget(arg0)
+    return &QFontComboBox{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontComboBox", "QFontComboBox", args)
   }
 
-  return QFontComboBox{}
+  return nil // QFontComboBox{qclsinst:qthis}
 }
 
 // sizeHint()
@@ -145,7 +146,8 @@ func (this *QFontComboBox) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK13QFontComboBox8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK13QFontComboBox8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontComboBox", "sizeHint", args)
   }
@@ -185,7 +187,8 @@ func (this *QFontComboBox) currentFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QFontComboBox11currentFontEv
     // invoke: QFont currentFont()
-    C.C_ZNK13QFontComboBox11currentFontEv(this.qclsinst)
+    var ret = C.C_ZNK13QFontComboBox11currentFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontComboBox", "currentFont", args)
   }

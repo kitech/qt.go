@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qcommonstyle.h
 // dst-file: /src/widgets/qcommonstyle.go
 //
@@ -35,7 +35,7 @@ extern void C_ZN12QCommonStyle6polishER8QPalette(void* qthis, void* arg0); // 4
   // proto:  void QCommonStyle::polish(QApplication * app);
 extern void C_ZN12QCommonStyle6polishEP12QApplication(void* qthis, void* arg0); // 4
   // proto:  void QCommonStyle::QCommonStyle();
-extern void C_ZN12QCommonStyleC2Ev(void* qthis); // 3
+extern void* C_ZN12QCommonStyleC2Ev(); // 3
   // proto:  void QCommonStyle::~QCommonStyle();
 extern void C_ZN12QCommonStyleD2Ev(void* qthis); // 4
   // proto:  const QMetaObject * QCommonStyle::metaObject();
@@ -104,7 +104,7 @@ func (this *QCommonStyle) polish(args ...interface{}) () {
 }
 
 // QCommonStyle()
-func NewQCommonStyle(args ...interface{}) QCommonStyle {
+func NewQCommonStyle(args ...interface{}) *QCommonStyle {
   // QCommonStyle()
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -118,12 +118,13 @@ func NewQCommonStyle(args ...interface{}) QCommonStyle {
     // invoke: void QCommonStyle()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN12QCommonStyleC2Ev(qthis)
+    qthis = C.C_ZN12QCommonStyleC2Ev()
+    return &QCommonStyle{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QCommonStyle", "QCommonStyle", args)
   }
 
-  return QCommonStyle{}
+  return nil // QCommonStyle{qclsinst:qthis}
 }
 
 // ~QCommonStyle()

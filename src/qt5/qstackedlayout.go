@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstackedlayout.h
 // dst-file: /src/widgets/qstackedlayout.go
 //
@@ -49,11 +49,11 @@ extern void C_ZN14QStackedLayout6takeAtEi(void* qthis, int32_t arg0); // 4
   // proto:  int QStackedLayout::insertWidget(int index, QWidget * w);
 extern void C_ZN14QStackedLayout12insertWidgetEiP7QWidget(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QStackedLayout::QStackedLayout();
-extern void C_ZN14QStackedLayoutC2Ev(void* qthis); // 3
+extern void* C_ZN14QStackedLayoutC2Ev(); // 3
   // proto:  void QStackedLayout::QStackedLayout(QLayout * parentLayout);
-extern void C_ZN14QStackedLayoutC2EP7QLayout(void* qthis, void* arg0); // 3
+extern void* C_ZN14QStackedLayoutC2EP7QLayout(void* arg0); // 3
   // proto:  void QStackedLayout::QStackedLayout(QWidget * parent);
-extern void C_ZN14QStackedLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN14QStackedLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  QSize QStackedLayout::sizeHint();
 extern void C_ZNK14QStackedLayout8sizeHintEv(void* qthis); // 4
   // proto:  QStackedLayout::StackingMode QStackedLayout::stackingMode();
@@ -108,7 +108,8 @@ func (this *QStackedLayout) addWidget(args ...interface{}) () {
     // invoke: int addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZN14QStackedLayout9addWidgetEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "addWidget", args)
   }
@@ -151,7 +152,8 @@ func (this *QStackedLayout) currentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout13currentWidgetEv
     // invoke: QWidget * currentWidget()
-    C.C_ZNK14QStackedLayout13currentWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout13currentWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentWidget", args)
   }
@@ -240,7 +242,8 @@ func (this *QStackedLayout) widget(args ...interface{}) () {
     // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QStackedLayout6widgetEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QStackedLayout6widgetEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "widget", args)
   }
@@ -286,7 +289,8 @@ func (this *QStackedLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedLayout6takeAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZN14QStackedLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "takeAt", args)
   }
@@ -312,7 +316,8 @@ func (this *QStackedLayout) insertWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN14QStackedLayout12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "insertWidget", args)
   }
@@ -320,7 +325,7 @@ func (this *QStackedLayout) insertWidget(args ...interface{}) () {
 }
 
 // QStackedLayout()
-func NewQStackedLayout(args ...interface{}) QStackedLayout {
+func NewQStackedLayout(args ...interface{}) *QStackedLayout {
   // QStackedLayout()
   // QStackedLayout(class QLayout *)
   // QStackedLayout(class QWidget *)
@@ -340,7 +345,8 @@ func NewQStackedLayout(args ...interface{}) QStackedLayout {
     // invoke: void QStackedLayout()
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QStackedLayoutC2Ev(qthis)
+    qthis = C.C_ZN14QStackedLayoutC2Ev()
+    return &QStackedLayout{qclsinst:qthis}
   case 1:
     // invoke: _ZN14QStackedLayoutC1EP7QLayout
     // invoke: void QStackedLayout(class QLayout *)
@@ -348,7 +354,8 @@ func NewQStackedLayout(args ...interface{}) QStackedLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QStackedLayoutC2EP7QLayout(qthis, arg0)
+    qthis = C.C_ZN14QStackedLayoutC2EP7QLayout(arg0)
+    return &QStackedLayout{qclsinst:qthis}
   case 2:
     // invoke: _ZN14QStackedLayoutC1EP7QWidget
     // invoke: void QStackedLayout(class QWidget *)
@@ -356,12 +363,13 @@ func NewQStackedLayout(args ...interface{}) QStackedLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QStackedLayoutC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN14QStackedLayoutC2EP7QWidget(arg0)
+    return &QStackedLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStackedLayout", "QStackedLayout", args)
   }
 
-  return QStackedLayout{}
+  return nil // QStackedLayout{qclsinst:qthis}
 }
 
 // sizeHint()
@@ -377,7 +385,8 @@ func (this *QStackedLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK14QStackedLayout8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "sizeHint", args)
   }
@@ -417,7 +426,8 @@ func (this *QStackedLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout5countEv
     // invoke: int count()
-    C.C_ZNK14QStackedLayout5countEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "count", args)
   }
@@ -457,7 +467,8 @@ func (this *QStackedLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "hasHeightForWidth", args)
   }
@@ -480,7 +491,8 @@ func (this *QStackedLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QStackedLayout6itemAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QStackedLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "itemAt", args)
   }
@@ -500,7 +512,8 @@ func (this *QStackedLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    C.C_ZNK14QStackedLayout11minimumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "minimumSize", args)
   }
@@ -523,7 +536,8 @@ func (this *QStackedLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QStackedLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QStackedLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "heightForWidth", args)
   }
@@ -543,7 +557,8 @@ func (this *QStackedLayout) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedLayout12currentIndexEv
     // invoke: int currentIndex()
-    C.C_ZNK14QStackedLayout12currentIndexEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedLayout12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedLayout", "currentIndex", args)
   }

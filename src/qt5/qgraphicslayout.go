@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qgraphicslayout.h
 // dst-file: /src/widgets/qgraphicslayout.go
 //
@@ -49,7 +49,7 @@ extern void C_ZN15QGraphicsLayout28instantInvalidatePropagationEv(); // 4
   // proto:  void QGraphicsLayout::widgetEvent(QEvent * e);
 extern void C_ZN15QGraphicsLayout11widgetEventEP6QEvent(void* qthis, void* arg0); // 4
   // proto:  void QGraphicsLayout::QGraphicsLayout(QGraphicsLayoutItem * parent);
-extern void C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(void* qthis, void* arg0); // 3
+extern void* C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -121,7 +121,8 @@ func (this *QGraphicsLayout) isActivated(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QGraphicsLayout11isActivatedEv
     // invoke: bool isActivated()
-    C.C_ZNK15QGraphicsLayout11isActivatedEv(this.qclsinst)
+    var ret = C.C_ZNK15QGraphicsLayout11isActivatedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "isActivated", args)
   }
@@ -268,7 +269,8 @@ func (this *QGraphicsLayout) instantInvalidatePropagation_s(args ...interface{})
   case 0:
     // invoke: _ZN15QGraphicsLayout28instantInvalidatePropagationEv
     // invoke: bool instantInvalidatePropagation()
-    C.C_ZN15QGraphicsLayout28instantInvalidatePropagationEv()
+    var ret = C.C_ZN15QGraphicsLayout28instantInvalidatePropagationEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "instantInvalidatePropagation", args)
   }
@@ -299,7 +301,7 @@ func (this *QGraphicsLayout) widgetEvent(args ...interface{}) () {
 }
 
 // QGraphicsLayout(class QGraphicsLayoutItem *)
-func NewQGraphicsLayout(args ...interface{}) QGraphicsLayout {
+func NewQGraphicsLayout(args ...interface{}) *QGraphicsLayout {
   // QGraphicsLayout(class QGraphicsLayoutItem *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -316,12 +318,13 @@ func NewQGraphicsLayout(args ...interface{}) QGraphicsLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(qthis, arg0)
+    qthis = C.C_ZN15QGraphicsLayoutC2EP19QGraphicsLayoutItem(arg0)
+    return &QGraphicsLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QGraphicsLayout", "QGraphicsLayout", args)
   }
 
-  return QGraphicsLayout{}
+  return nil // QGraphicsLayout{qclsinst:qthis}
 }
 
 // <= body block end

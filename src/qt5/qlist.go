@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qlist.h
 // dst-file: /src/core/qlist.go
 //
@@ -98,7 +98,8 @@ func (this *QListData) insert(args ...interface{}) () {
     // invoke: void ** insert(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData6insertEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QListData6insertEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "insert", args)
   }
@@ -118,7 +119,8 @@ func (this *QListData) begin(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData5beginEv
     // invoke: void ** begin()
-    C.C_ZNK9QListData5beginEv(this.qclsinst)
+    var ret = C.C_ZNK9QListData5beginEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "begin", args)
   }
@@ -138,7 +140,8 @@ func (this *QListData) end(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData3endEv
     // invoke: void ** end()
-    C.C_ZNK9QListData3endEv(this.qclsinst)
+    var ret = C.C_ZNK9QListData3endEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "end", args)
   }
@@ -262,7 +265,8 @@ func (this *QListData) prepend(args ...interface{}) () {
   case 0:
     // invoke: _ZN9QListData7prependEv
     // invoke: void ** prepend()
-    C.C_ZN9QListData7prependEv(this.qclsinst)
+    var ret = C.C_ZN9QListData7prependEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "prepend", args)
   }
@@ -285,7 +289,8 @@ func (this *QListData) erase(args ...interface{}) () {
     // invoke: void ** erase(void **)
     var arg0 = args[0].(unsafe.Pointer)
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData5eraseEPPv(this.qclsinst, arg0)
+    var ret = C.C_ZN9QListData5eraseEPPv(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "erase", args)
   }
@@ -305,7 +310,8 @@ func (this *QListData) isEmpty(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData7isEmptyEv
     // invoke: bool isEmpty()
-    C.C_ZNK9QListData7isEmptyEv(this.qclsinst)
+    var ret = C.C_ZNK9QListData7isEmptyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "isEmpty", args)
   }
@@ -328,7 +334,8 @@ func (this *QListData) at(args ...interface{}) () {
     // invoke: void ** at(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK9QListData2atEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK9QListData2atEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "at", args)
   }
@@ -405,17 +412,20 @@ func (this *QListData) append(args ...interface{}) () {
     // invoke: void ** append(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData6appendEi(this.qclsinst, arg0)
+    var ret = C.C_ZN9QListData6appendEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN9QListData6appendERKS_
     // invoke: void ** append(const struct QListData &)
     var arg0 = args[0].(QListData).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN9QListData6appendERKS_(this.qclsinst, arg0)
+    var ret = C.C_ZN9QListData6appendERKS_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZN9QListData6appendEv
     // invoke: void ** append()
-    C.C_ZN9QListData6appendEv(this.qclsinst)
+    var ret = C.C_ZN9QListData6appendEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "append", args)
   }
@@ -435,7 +445,8 @@ func (this *QListData) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK9QListData4sizeEv
     // invoke: int size()
-    C.C_ZNK9QListData4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK9QListData4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListData", "size", args)
   }

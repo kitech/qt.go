@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qfontdialog.h
 // dst-file: /src/widgets/qfontdialog.go
 //
@@ -33,9 +33,9 @@ extern void C_ZN11QFontDialog4openEP7QObjectPKc(void* qthis, void* arg0, unsigne
   // proto:  QFont QFontDialog::selectedFont();
 extern void C_ZNK11QFontDialog12selectedFontEv(void* qthis); // 4
   // proto:  void QFontDialog::QFontDialog(QWidget * parent);
-extern void C_ZN11QFontDialogC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QFontDialogC2EP7QWidget(void* arg0); // 3
   // proto:  void QFontDialog::QFontDialog(const QFont & initial, QWidget * parent);
-extern void C_ZN11QFontDialogC2ERK5QFontP7QWidget(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN11QFontDialogC2ERK5QFontP7QWidget(void* arg0, void* arg1); // 3
   // proto: static QFont QFontDialog::getFont(bool * ok, QWidget * parent);
 extern void C_ZN11QFontDialog7getFontEPbP7QWidget(bool* arg0, void* arg1); // 4
   // proto:  QFont QFontDialog::currentFont();
@@ -109,7 +109,8 @@ func (this *QFontDialog) selectedFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFontDialog12selectedFontEv
     // invoke: QFont selectedFont()
-    C.C_ZNK11QFontDialog12selectedFontEv(this.qclsinst)
+    var ret = C.C_ZNK11QFontDialog12selectedFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDialog", "selectedFont", args)
   }
@@ -117,7 +118,7 @@ func (this *QFontDialog) selectedFont(args ...interface{}) () {
 }
 
 // QFontDialog(class QWidget *)
-func NewQFontDialog(args ...interface{}) QFontDialog {
+func NewQFontDialog(args ...interface{}) *QFontDialog {
   // QFontDialog(class QWidget *)
   // QFontDialog(const class QFont &, class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -138,7 +139,8 @@ func NewQFontDialog(args ...interface{}) QFontDialog {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QFontDialogC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QFontDialogC2EP7QWidget(arg0)
+    return &QFontDialog{qclsinst:qthis}
   case 1:
     // invoke: _ZN11QFontDialogC1ERK5QFontP7QWidget
     // invoke: void QFontDialog(const class QFont &, class QWidget *)
@@ -148,12 +150,13 @@ func NewQFontDialog(args ...interface{}) QFontDialog {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QFontDialogC2ERK5QFontP7QWidget(qthis, arg0, arg1)
+    qthis = C.C_ZN11QFontDialogC2ERK5QFontP7QWidget(arg0, arg1)
+    return &QFontDialog{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFontDialog", "QFontDialog", args)
   }
 
-  return QFontDialog{}
+  return nil // QFontDialog{qclsinst:qthis}
 }
 
 // getFont(_Bool *, class QWidget *)
@@ -175,7 +178,8 @@ func (this *QFontDialog) getFont_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)
+    var ret = C.C_ZN11QFontDialog7getFontEPbP7QWidget(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDialog", "getFont", args)
   }
@@ -195,7 +199,8 @@ func (this *QFontDialog) currentFont(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFontDialog11currentFontEv
     // invoke: QFont currentFont()
-    C.C_ZNK11QFontDialog11currentFontEv(this.qclsinst)
+    var ret = C.C_ZNK11QFontDialog11currentFontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFontDialog", "currentFont", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qtableview.h
 // dst-file: /src/widgets/qtableview.go
 //
@@ -69,7 +69,7 @@ extern void C_ZNK10QTableView14isColumnHiddenEi(void* qthis, int32_t arg0); // 4
   // proto:  void QTableView::~QTableView();
 extern void C_ZN10QTableViewD2Ev(void* qthis); // 4
   // proto:  void QTableView::QTableView(QWidget * parent);
-extern void C_ZN10QTableViewC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN10QTableViewC2EP7QWidget(void* arg0); // 3
   // proto:  QRect QTableView::visualRect(const QModelIndex & index);
 extern void C_ZNK10QTableView10visualRectERK11QModelIndex(void* qthis, void* arg0); // 4
   // proto:  void QTableView::setWordWrap(bool on);
@@ -157,7 +157,8 @@ func (this *QTableView) showGrid(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView8showGridEv
     // invoke: bool showGrid()
-    C.C_ZNK10QTableView8showGridEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView8showGridEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "showGrid", args)
   }
@@ -203,7 +204,8 @@ func (this *QTableView) isSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView16isSortingEnabledEv
     // invoke: bool isSortingEnabled()
-    C.C_ZNK10QTableView16isSortingEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView16isSortingEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "isSortingEnabled", args)
   }
@@ -229,7 +231,8 @@ func (this *QTableView) rowSpan(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QTableView7rowSpanEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QTableView7rowSpanEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "rowSpan", args)
   }
@@ -413,7 +416,8 @@ func (this *QTableView) columnAt(args ...interface{}) () {
     // invoke: int columnAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView8columnAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView8columnAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "columnAt", args)
   }
@@ -436,7 +440,8 @@ func (this *QTableView) rowViewportPosition(args ...interface{}) () {
     // invoke: int rowViewportPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView19rowViewportPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView19rowViewportPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "rowViewportPosition", args)
   }
@@ -456,7 +461,8 @@ func (this *QTableView) isCornerButtonEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView21isCornerButtonEnabledEv
     // invoke: bool isCornerButtonEnabled()
-    C.C_ZNK10QTableView21isCornerButtonEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView21isCornerButtonEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "isCornerButtonEnabled", args)
   }
@@ -557,7 +563,8 @@ func (this *QTableView) verticalHeader(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView14verticalHeaderEv
     // invoke: QHeaderView * verticalHeader()
-    C.C_ZNK10QTableView14verticalHeaderEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView14verticalHeaderEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "verticalHeader", args)
   }
@@ -580,7 +587,8 @@ func (this *QTableView) isColumnHidden(args ...interface{}) () {
     // invoke: bool isColumnHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView14isColumnHiddenEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView14isColumnHiddenEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "isColumnHidden", args)
   }
@@ -608,7 +616,7 @@ func (this *QTableView) FreeQTableView(args ...interface{}) () {
 }
 
 // QTableView(class QWidget *)
-func NewQTableView(args ...interface{}) QTableView {
+func NewQTableView(args ...interface{}) *QTableView {
   // QTableView(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -625,12 +633,13 @@ func NewQTableView(args ...interface{}) QTableView {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QTableViewC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN10QTableViewC2EP7QWidget(arg0)
+    return &QTableView{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QTableView", "QTableView", args)
   }
 
-  return QTableView{}
+  return nil // QTableView{qclsinst:qthis}
 }
 
 // visualRect(const class QModelIndex &)
@@ -649,7 +658,8 @@ func (this *QTableView) visualRect(args ...interface{}) () {
     // invoke: QRect visualRect(const class QModelIndex &)
     var arg0 = args[0].(QModelIndex).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView10visualRectERK11QModelIndex(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView10visualRectERK11QModelIndex(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "visualRect", args)
   }
@@ -695,7 +705,8 @@ func (this *QTableView) indexAt(args ...interface{}) () {
     // invoke: QModelIndex indexAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView7indexAtERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView7indexAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "indexAt", args)
   }
@@ -718,7 +729,8 @@ func (this *QTableView) isRowHidden(args ...interface{}) () {
     // invoke: bool isRowHidden(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView11isRowHiddenEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView11isRowHiddenEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "isRowHidden", args)
   }
@@ -761,7 +773,8 @@ func (this *QTableView) columnViewportPosition(args ...interface{}) () {
     // invoke: int columnViewportPosition(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView22columnViewportPositionEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView22columnViewportPositionEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "columnViewportPosition", args)
   }
@@ -784,7 +797,8 @@ func (this *QTableView) rowAt(args ...interface{}) () {
     // invoke: int rowAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView5rowAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView5rowAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "rowAt", args)
   }
@@ -827,7 +841,8 @@ func (this *QTableView) horizontalHeader(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView16horizontalHeaderEv
     // invoke: QHeaderView * horizontalHeader()
-    C.C_ZNK10QTableView16horizontalHeaderEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView16horizontalHeaderEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "horizontalHeader", args)
   }
@@ -850,7 +865,8 @@ func (this *QTableView) columnWidth(args ...interface{}) () {
     // invoke: int columnWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView11columnWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView11columnWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "columnWidth", args)
   }
@@ -922,7 +938,8 @@ func (this *QTableView) columnSpan(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK10QTableView10columnSpanEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK10QTableView10columnSpanEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "columnSpan", args)
   }
@@ -991,7 +1008,8 @@ func (this *QTableView) rowHeight(args ...interface{}) () {
     // invoke: int rowHeight(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK10QTableView9rowHeightEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK10QTableView9rowHeightEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "rowHeight", args)
   }
@@ -1255,7 +1273,8 @@ func (this *QTableView) wordWrap(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QTableView8wordWrapEv
     // invoke: bool wordWrap()
-    C.C_ZNK10QTableView8wordWrapEv(this.qclsinst)
+    var ret = C.C_ZNK10QTableView8wordWrapEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QTableView", "wordWrap", args)
   }

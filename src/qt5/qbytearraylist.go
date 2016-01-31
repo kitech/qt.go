@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qbytearraylist.h
 // dst-file: /src/core/qbytearraylist.go
 //
@@ -71,19 +71,22 @@ func (this *QListSpecialMethodsLQByteArrayG) join(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinEv
     // invoke: QByteArray join()
-    C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv(this.qclsinst)
+    var ret = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_
     // invoke: QByteArray join(const class QByteArray &)
     var arg0 = args[0].(QByteArray).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinERKS0_(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 2:
     // invoke: _ZNK19QListSpecialMethodsI10QByteArrayE4joinEc
     // invoke: QByteArray join(char)
     var arg0 = C.uchar(args[0].(byte))
     if false {fmt.Println(arg0)}
-    C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc(this.qclsinst, arg0)
+    var ret = C.C_ZNK19QListSpecialMethodsI10QByteArrayE4joinEc(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListSpecialMethods<QByteArray>", "join", args)
   }

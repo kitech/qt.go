@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qdir.h
 // dst-file: /src/core/qdir.go
 //
@@ -47,9 +47,9 @@ extern void C_ZNK4QDir10isRelativeEv(void* qthis); // 4
   // proto:  bool QDir::cd(const QString & dirName);
 extern void C_ZN4QDir2cdERK7QString(void* qthis, void* arg0); // 4
   // proto:  void QDir::QDir(const QDir & );
-extern void C_ZN4QDirC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN4QDirC2ERKS_(void* arg0); // 3
   // proto:  void QDir::QDir(const QString & path);
-extern void C_ZN4QDirC2ERK7QString(void* qthis, void* arg0); // 3
+extern void* C_ZN4QDirC2ERK7QString(void* arg0); // 3
   // proto: static bool QDir::isAbsolutePath(const QString & path);
 extern void C_ZN4QDir14isAbsolutePathERK7QString(void* arg0); // 2
   // proto:  bool QDir::remove(const QString & fileName);
@@ -179,7 +179,8 @@ func (this *QDir) rename(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN4QDir6renameERK7QStringS2_(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN4QDir6renameERK7QStringS2_(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "rename", args)
   }
@@ -245,13 +246,15 @@ func (this *QDir) exists(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir6existsEv
     // invoke: bool exists()
-    C.C_ZNK4QDir6existsEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir6existsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK4QDir6existsERK7QString
     // invoke: bool exists(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir6existsERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir6existsERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "exists", args)
   }
@@ -274,7 +277,8 @@ func (this *QDir) relativeFilePath(args ...interface{}) () {
     // invoke: QString relativeFilePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir16relativeFilePathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir16relativeFilePathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "relativeFilePath", args)
   }
@@ -294,7 +298,8 @@ func (this *QDir) currentPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir11currentPathEv
     // invoke: QString currentPath()
-    C.C_ZN4QDir11currentPathEv()
+    var ret = C.C_ZN4QDir11currentPathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "currentPath", args)
   }
@@ -314,7 +319,8 @@ func (this *QDir) isRelative(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isRelativeEv
     // invoke: bool isRelative()
-    C.C_ZNK4QDir10isRelativeEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir10isRelativeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isRelative", args)
   }
@@ -337,7 +343,8 @@ func (this *QDir) cd(args ...interface{}) () {
     // invoke: bool cd(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir2cdERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN4QDir2cdERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "cd", args)
   }
@@ -345,7 +352,7 @@ func (this *QDir) cd(args ...interface{}) () {
 }
 
 // QDir(const class QDir &)
-func NewQDir(args ...interface{}) QDir {
+func NewQDir(args ...interface{}) *QDir {
   // QDir(const class QDir &)
   // QDir(const class QString &)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -365,7 +372,8 @@ func NewQDir(args ...interface{}) QDir {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QDirC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN4QDirC2ERKS_(arg0)
+    return &QDir{qclsinst:qthis}
   case 1:
     // invoke: _ZN4QDirC1ERK7QString
     // invoke: void QDir(const class QString &)
@@ -373,12 +381,13 @@ func NewQDir(args ...interface{}) QDir {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN4QDirC2ERK7QString(qthis, arg0)
+    qthis = C.C_ZN4QDirC2ERK7QString(arg0)
+    return &QDir{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDir", "QDir", args)
   }
 
-  return QDir{}
+  return nil // QDir{qclsinst:qthis}
 }
 
 // isAbsolutePath(const class QString &)
@@ -397,7 +406,8 @@ func (this *QDir) isAbsolutePath_s(args ...interface{}) () {
     // invoke: bool isAbsolutePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir14isAbsolutePathERK7QString(arg0)
+    var ret = C.C_ZN4QDir14isAbsolutePathERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isAbsolutePath", args)
   }
@@ -420,7 +430,8 @@ func (this *QDir) remove(args ...interface{}) () {
     // invoke: bool remove(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir6removeERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZN4QDir6removeERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "remove", args)
   }
@@ -440,7 +451,8 @@ func (this *QDir) tempPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8tempPathEv
     // invoke: QString tempPath()
-    C.C_ZN4QDir8tempPathEv()
+    var ret = C.C_ZN4QDir8tempPathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "tempPath", args)
   }
@@ -460,7 +472,8 @@ func (this *QDir) homePath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8homePathEv
     // invoke: QString homePath()
-    C.C_ZN4QDir8homePathEv()
+    var ret = C.C_ZN4QDir8homePathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "homePath", args)
   }
@@ -480,7 +493,8 @@ func (this *QDir) home_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4homeEv
     // invoke: QDir home()
-    C.C_ZN4QDir4homeEv()
+    var ret = C.C_ZN4QDir4homeEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "home", args)
   }
@@ -503,7 +517,8 @@ func (this *QDir) cleanPath_s(args ...interface{}) () {
     // invoke: QString cleanPath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir9cleanPathERK7QString(arg0)
+    var ret = C.C_ZN4QDir9cleanPathERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "cleanPath", args)
   }
@@ -526,7 +541,8 @@ func (this *QDir) setCurrent_s(args ...interface{}) () {
     // invoke: bool setCurrent(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir10setCurrentERK7QString(arg0)
+    var ret = C.C_ZN4QDir10setCurrentERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "setCurrent", args)
   }
@@ -549,7 +565,8 @@ func (this *QDir) toNativeSeparators_s(args ...interface{}) () {
     // invoke: QString toNativeSeparators(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir18toNativeSeparatorsERK7QString(arg0)
+    var ret = C.C_ZN4QDir18toNativeSeparatorsERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "toNativeSeparators", args)
   }
@@ -612,7 +629,8 @@ func (this *QDir) isRoot(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir6isRootEv
     // invoke: bool isRoot()
-    C.C_ZNK4QDir6isRootEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir6isRootEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isRoot", args)
   }
@@ -635,7 +653,8 @@ func (this *QDir) filePath(args ...interface{}) () {
     // invoke: QString filePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir8filePathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir8filePathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "filePath", args)
   }
@@ -658,7 +677,8 @@ func (this *QDir) mkdir(args ...interface{}) () {
     // invoke: bool mkdir(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir5mkdirERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir5mkdirERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "mkdir", args)
   }
@@ -678,7 +698,8 @@ func (this *QDir) absolutePath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir12absolutePathEv
     // invoke: QString absolutePath()
-    C.C_ZNK4QDir12absolutePathEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir12absolutePathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "absolutePath", args)
   }
@@ -721,7 +742,8 @@ func (this *QDir) current_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir7currentEv
     // invoke: QDir current()
-    C.C_ZN4QDir7currentEv()
+    var ret = C.C_ZN4QDir7currentEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "current", args)
   }
@@ -744,7 +766,8 @@ func (this *QDir) fromNativeSeparators_s(args ...interface{}) () {
     // invoke: QString fromNativeSeparators(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir20fromNativeSeparatorsERK7QString(arg0)
+    var ret = C.C_ZN4QDir20fromNativeSeparatorsERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "fromNativeSeparators", args)
   }
@@ -767,7 +790,8 @@ func (this *QDir) isRelativePath_s(args ...interface{}) () {
     // invoke: bool isRelativePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN4QDir14isRelativePathERK7QString(arg0)
+    var ret = C.C_ZN4QDir14isRelativePathERK7QString(arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isRelativePath", args)
   }
@@ -790,7 +814,8 @@ func (this *QDir) rmdir(args ...interface{}) () {
     // invoke: bool rmdir(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir5rmdirERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir5rmdirERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "rmdir", args)
   }
@@ -810,7 +835,8 @@ func (this *QDir) canonicalPath(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir13canonicalPathEv
     // invoke: QString canonicalPath()
-    C.C_ZNK4QDir13canonicalPathEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir13canonicalPathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "canonicalPath", args)
   }
@@ -830,7 +856,8 @@ func (this *QDir) removeRecursively(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir17removeRecursivelyEv
     // invoke: bool removeRecursively()
-    C.C_ZN4QDir17removeRecursivelyEv(this.qclsinst)
+    var ret = C.C_ZN4QDir17removeRecursivelyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "removeRecursively", args)
   }
@@ -873,7 +900,8 @@ func (this *QDir) dirName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir7dirNameEv
     // invoke: QString dirName()
-    C.C_ZNK4QDir7dirNameEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir7dirNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "dirName", args)
   }
@@ -903,7 +931,8 @@ func (this *QDir) match_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN4QDir5matchERK11QStringListRK7QString(arg0, arg1)
+    var ret = C.C_ZN4QDir5matchERK11QStringListRK7QString(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZN4QDir5matchERK7QStringS2_
     // invoke: bool match(const class QString &, const class QString &)
@@ -911,7 +940,8 @@ func (this *QDir) match_s(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QString).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN4QDir5matchERK7QStringS2_(arg0, arg1)
+    var ret = C.C_ZN4QDir5matchERK7QStringS2_(arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "match", args)
   }
@@ -983,7 +1013,8 @@ func (this *QDir) absoluteFilePath(args ...interface{}) () {
     // invoke: QString absoluteFilePath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir16absoluteFilePathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir16absoluteFilePathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "absoluteFilePath", args)
   }
@@ -1026,7 +1057,8 @@ func (this *QDir) rmpath(args ...interface{}) () {
     // invoke: bool rmpath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir6rmpathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir6rmpathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "rmpath", args)
   }
@@ -1046,7 +1078,8 @@ func (this *QDir) path(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir4pathEv
     // invoke: QString path()
-    C.C_ZNK4QDir4pathEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir4pathEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "path", args)
   }
@@ -1092,7 +1125,8 @@ func (this *QDir) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir5countEv
     // invoke: uint count()
-    C.C_ZNK4QDir5countEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "count", args)
   }
@@ -1112,7 +1146,8 @@ func (this *QDir) cdUp(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4cdUpEv
     // invoke: bool cdUp()
-    C.C_ZN4QDir4cdUpEv(this.qclsinst)
+    var ret = C.C_ZN4QDir4cdUpEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "cdUp", args)
   }
@@ -1172,7 +1207,8 @@ func (this *QDir) temp_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4tempEv
     // invoke: QDir temp()
-    C.C_ZN4QDir4tempEv()
+    var ret = C.C_ZN4QDir4tempEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "temp", args)
   }
@@ -1195,7 +1231,8 @@ func (this *QDir) mkpath(args ...interface{}) () {
     // invoke: bool mkpath(const class QString &)
     var arg0 = args[0].(QString).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK4QDir6mkpathERK7QString(this.qclsinst, arg0)
+    var ret = C.C_ZNK4QDir6mkpathERK7QString(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "mkpath", args)
   }
@@ -1215,7 +1252,8 @@ func (this *QDir) rootPath_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir8rootPathEv
     // invoke: QString rootPath()
-    C.C_ZN4QDir8rootPathEv()
+    var ret = C.C_ZN4QDir8rootPathEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "rootPath", args)
   }
@@ -1255,7 +1293,8 @@ func (this *QDir) makeAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir12makeAbsoluteEv
     // invoke: bool makeAbsolute()
-    C.C_ZN4QDir12makeAbsoluteEv(this.qclsinst)
+    var ret = C.C_ZN4QDir12makeAbsoluteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "makeAbsolute", args)
   }
@@ -1298,7 +1337,8 @@ func (this *QDir) separator_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir9separatorEv
     // invoke: QChar separator()
-    C.C_ZN4QDir9separatorEv()
+    var ret = C.C_ZN4QDir9separatorEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "separator", args)
   }
@@ -1318,7 +1358,8 @@ func (this *QDir) isReadable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isReadableEv
     // invoke: bool isReadable()
-    C.C_ZNK4QDir10isReadableEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir10isReadableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isReadable", args)
   }
@@ -1338,7 +1379,8 @@ func (this *QDir) root_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN4QDir4rootEv
     // invoke: QDir root()
-    C.C_ZN4QDir4rootEv()
+    var ret = C.C_ZN4QDir4rootEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "root", args)
   }
@@ -1358,7 +1400,8 @@ func (this *QDir) isAbsolute(args ...interface{}) () {
   case 0:
     // invoke: _ZNK4QDir10isAbsoluteEv
     // invoke: bool isAbsolute()
-    C.C_ZNK4QDir10isAbsoluteEv(this.qclsinst)
+    var ret = C.C_ZNK4QDir10isAbsoluteEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDir", "isAbsolute", args)
   }

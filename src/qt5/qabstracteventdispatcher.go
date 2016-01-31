@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qabstracteventdispatcher.h
 // dst-file: /src/core/qabstracteventdispatcher.go
 //
@@ -43,7 +43,7 @@ extern void C_ZN24QAbstractEventDispatcher23removeNativeEventFilterEP26QAbstract
   // proto:  bool QAbstractEventDispatcher::filterNativeEvent(const QByteArray & eventType, void * message, long * result);
 extern void C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(void* qthis, void* arg0, void* arg1, int32_t* arg2); // 4
   // proto:  void QAbstractEventDispatcher::QAbstractEventDispatcher(QObject * parent);
-extern void C_ZN24QAbstractEventDispatcherC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN24QAbstractEventDispatcherC2EP7QObject(void* arg0); // 3
   // proto:  const QMetaObject * QAbstractEventDispatcher::metaObject();
 extern void C_ZNK24QAbstractEventDispatcher10metaObjectEv(void* qthis); // 4
 */
@@ -217,7 +217,8 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
     if false {fmt.Println(arg1)}
     var arg2 = (*C.int32_t)(args[2].(*int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN24QAbstractEventDispatcher17filterNativeEventERK10QByteArrayPvPl(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "filterNativeEvent", args)
   }
@@ -225,7 +226,7 @@ func (this *QAbstractEventDispatcher) filterNativeEvent(args ...interface{}) () 
 }
 
 // QAbstractEventDispatcher(class QObject *)
-func NewQAbstractEventDispatcher(args ...interface{}) QAbstractEventDispatcher {
+func NewQAbstractEventDispatcher(args ...interface{}) *QAbstractEventDispatcher {
   // QAbstractEventDispatcher(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -242,12 +243,13 @@ func NewQAbstractEventDispatcher(args ...interface{}) QAbstractEventDispatcher {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN24QAbstractEventDispatcherC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN24QAbstractEventDispatcherC2EP7QObject(arg0)
+    return &QAbstractEventDispatcher{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractEventDispatcher", "QAbstractEventDispatcher", args)
   }
 
-  return QAbstractEventDispatcher{}
+  return nil // QAbstractEventDispatcher{qclsinst:qthis}
 }
 
 // metaObject()

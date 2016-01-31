@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qitemdelegate.h
 // dst-file: /src/widgets/qitemdelegate.go
 //
@@ -53,7 +53,7 @@ extern void C_ZNK13QItemDelegate10metaObjectEv(void* qthis); // 4
   // proto:  void QItemDelegate::setItemEditorFactory(QItemEditorFactory * factory);
 extern void C_ZN13QItemDelegate20setItemEditorFactoryEP18QItemEditorFactory(void* qthis, void* arg0); // 4
   // proto:  void QItemDelegate::QItemDelegate(QObject * parent);
-extern void C_ZN13QItemDelegateC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QItemDelegateC2EP7QObject(void* arg0); // 3
 */
 import "C"
 // } // <= ext block end
@@ -85,7 +85,8 @@ func (this *QItemDelegate) itemEditorFactory(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QItemDelegate17itemEditorFactoryEv
     // invoke: QItemEditorFactory * itemEditorFactory()
-    C.C_ZNK13QItemDelegate17itemEditorFactoryEv(this.qclsinst)
+    var ret = C.C_ZNK13QItemDelegate17itemEditorFactoryEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemDelegate", "itemEditorFactory", args)
   }
@@ -114,7 +115,8 @@ func (this *QItemDelegate) createEditor(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QModelIndex).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZNK13QItemDelegate12createEditorEP7QWidgetRK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemDelegate", "createEditor", args)
   }
@@ -241,7 +243,8 @@ func (this *QItemDelegate) hasClipping(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QItemDelegate11hasClippingEv
     // invoke: bool hasClipping()
-    C.C_ZNK13QItemDelegate11hasClippingEv(this.qclsinst)
+    var ret = C.C_ZNK13QItemDelegate11hasClippingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemDelegate", "hasClipping", args)
   }
@@ -293,7 +296,8 @@ func (this *QItemDelegate) sizeHint(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QModelIndex).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK13QItemDelegate8sizeHintERK20QStyleOptionViewItemRK11QModelIndex(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QItemDelegate", "sizeHint", args)
   }
@@ -367,7 +371,7 @@ func (this *QItemDelegate) setItemEditorFactory(args ...interface{}) () {
 }
 
 // QItemDelegate(class QObject *)
-func NewQItemDelegate(args ...interface{}) QItemDelegate {
+func NewQItemDelegate(args ...interface{}) *QItemDelegate {
   // QItemDelegate(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -384,12 +388,13 @@ func NewQItemDelegate(args ...interface{}) QItemDelegate {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QItemDelegateC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QItemDelegateC2EP7QObject(arg0)
+    return &QItemDelegate{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QItemDelegate", "QItemDelegate", args)
   }
 
-  return QItemDelegate{}
+  return nil // QItemDelegate{qclsinst:qthis}
 }
 
 // <= body block end

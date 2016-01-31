@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qformlayout.h
 // dst-file: /src/widgets/qformlayout.go
 //
@@ -37,7 +37,7 @@ extern void C_ZNK11QFormLayout15verticalSpacingEv(void* qthis); // 4
   // proto:  Qt::Orientations QFormLayout::expandingDirections();
 extern void C_ZNK11QFormLayout19expandingDirectionsEv(void* qthis); // 4
   // proto:  void QFormLayout::QFormLayout(QWidget * parent);
-extern void C_ZN11QFormLayoutC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QFormLayoutC2EP7QWidget(void* arg0); // 3
   // proto:  Qt::Alignment QFormLayout::formAlignment();
 extern void C_ZNK11QFormLayout13formAlignmentEv(void* qthis); // 4
   // proto:  QWidget * QFormLayout::labelForField(QLayout * field);
@@ -180,7 +180,8 @@ func (this *QFormLayout) verticalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout15verticalSpacingEv
     // invoke: int verticalSpacing()
-    C.C_ZNK11QFormLayout15verticalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout15verticalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "verticalSpacing", args)
   }
@@ -208,7 +209,7 @@ func (this *QFormLayout) expandingDirections(args ...interface{}) () {
 }
 
 // QFormLayout(class QWidget *)
-func NewQFormLayout(args ...interface{}) QFormLayout {
+func NewQFormLayout(args ...interface{}) *QFormLayout {
   // QFormLayout(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -225,12 +226,13 @@ func NewQFormLayout(args ...interface{}) QFormLayout {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QFormLayoutC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QFormLayoutC2EP7QWidget(arg0)
+    return &QFormLayout{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QFormLayout", "QFormLayout", args)
   }
 
-  return QFormLayout{}
+  return nil // QFormLayout{qclsinst:qthis}
 }
 
 // formAlignment()
@@ -272,13 +274,15 @@ func (this *QFormLayout) labelForField(args ...interface{}) () {
     // invoke: QWidget * labelForField(class QLayout *)
     var arg0 = args[0].(QLayout).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QFormLayout13labelForFieldEP7QLayout(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QFormLayout13labelForFieldEP7QLayout(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK11QFormLayout13labelForFieldEP7QWidget
     // invoke: QWidget * labelForField(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QFormLayout13labelForFieldEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QFormLayout13labelForFieldEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "labelForField", args)
   }
@@ -364,7 +368,8 @@ func (this *QFormLayout) takeAt(args ...interface{}) () {
     // invoke: QLayoutItem * takeAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QFormLayout6takeAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZN11QFormLayout6takeAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "takeAt", args)
   }
@@ -407,7 +412,8 @@ func (this *QFormLayout) horizontalSpacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout17horizontalSpacingEv
     // invoke: int horizontalSpacing()
-    C.C_ZNK11QFormLayout17horizontalSpacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout17horizontalSpacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "horizontalSpacing", args)
   }
@@ -450,7 +456,8 @@ func (this *QFormLayout) spacing(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout7spacingEv
     // invoke: int spacing()
-    C.C_ZNK11QFormLayout7spacingEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout7spacingEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "spacing", args)
   }
@@ -470,7 +477,8 @@ func (this *QFormLayout) rowCount(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout8rowCountEv
     // invoke: int rowCount()
-    C.C_ZNK11QFormLayout8rowCountEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout8rowCountEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "rowCount", args)
   }
@@ -510,7 +518,8 @@ func (this *QFormLayout) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK11QFormLayout8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "sizeHint", args)
   }
@@ -533,7 +542,8 @@ func (this *QFormLayout) heightForWidth(args ...interface{}) () {
     // invoke: int heightForWidth(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QFormLayout14heightForWidthEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QFormLayout14heightForWidthEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "heightForWidth", args)
   }
@@ -553,7 +563,8 @@ func (this *QFormLayout) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout5countEv
     // invoke: int count()
-    C.C_ZNK11QFormLayout5countEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "count", args)
   }
@@ -593,7 +604,8 @@ func (this *QFormLayout) hasHeightForWidth(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout17hasHeightForWidthEv
     // invoke: bool hasHeightForWidth()
-    C.C_ZNK11QFormLayout17hasHeightForWidthEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout17hasHeightForWidthEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "hasHeightForWidth", args)
   }
@@ -616,7 +628,8 @@ func (this *QFormLayout) itemAt(args ...interface{}) () {
     // invoke: QLayoutItem * itemAt(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QFormLayout6itemAtEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QFormLayout6itemAtEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "itemAt", args)
   }
@@ -636,7 +649,8 @@ func (this *QFormLayout) minimumSize(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFormLayout11minimumSizeEv
     // invoke: QSize minimumSize()
-    C.C_ZNK11QFormLayout11minimumSizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QFormLayout11minimumSizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFormLayout", "minimumSize", args)
   }

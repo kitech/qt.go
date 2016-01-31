@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qaccessiblebridge.h
 // dst-file: /src/gui/qaccessiblebridge.go
 //
@@ -31,7 +31,7 @@ import "qtrt"
   // proto:  const QMetaObject * QAccessibleBridgePlugin::metaObject();
 extern void C_ZNK23QAccessibleBridgePlugin10metaObjectEv(void* qthis); // 4
   // proto:  void QAccessibleBridgePlugin::QAccessibleBridgePlugin(QObject * parent);
-extern void C_ZN23QAccessibleBridgePluginC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN23QAccessibleBridgePluginC2EP7QObject(void* arg0); // 3
   // proto:  void QAccessibleBridgePlugin::~QAccessibleBridgePlugin();
 extern void C_ZN23QAccessibleBridgePluginD2Ev(void* qthis); // 4
 */
@@ -79,7 +79,7 @@ func (this *QAccessibleBridgePlugin) metaObject(args ...interface{}) () {
 }
 
 // QAccessibleBridgePlugin(class QObject *)
-func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
+func NewQAccessibleBridgePlugin(args ...interface{}) *QAccessibleBridgePlugin {
   // QAccessibleBridgePlugin(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -96,12 +96,13 @@ func NewQAccessibleBridgePlugin(args ...interface{}) QAccessibleBridgePlugin {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN23QAccessibleBridgePluginC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN23QAccessibleBridgePluginC2EP7QObject(arg0)
+    return &QAccessibleBridgePlugin{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAccessibleBridgePlugin", "QAccessibleBridgePlugin", args)
   }
 
-  return QAccessibleBridgePlugin{}
+  return nil // QAccessibleBridgePlugin{qclsinst:qthis}
 }
 
 // ~QAccessibleBridgePlugin()

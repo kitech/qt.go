@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qstackedwidget.h
 // dst-file: /src/widgets/qstackedwidget.go
 //
@@ -33,7 +33,7 @@ extern void C_ZN14QStackedWidget15setCurrentIndexEi(void* qthis, int32_t arg0); 
   // proto:  QWidget * QStackedWidget::currentWidget();
 extern void C_ZNK14QStackedWidget13currentWidgetEv(void* qthis); // 4
   // proto:  void QStackedWidget::QStackedWidget(QWidget * parent);
-extern void C_ZN14QStackedWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN14QStackedWidgetC2EP7QWidget(void* arg0); // 3
   // proto:  void QStackedWidget::setCurrentWidget(QWidget * w);
 extern void C_ZN14QStackedWidget16setCurrentWidgetEP7QWidget(void* qthis, void* arg0); // 4
   // proto:  void QStackedWidget::removeWidget(QWidget * w);
@@ -110,7 +110,8 @@ func (this *QStackedWidget) currentWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedWidget13currentWidgetEv
     // invoke: QWidget * currentWidget()
-    C.C_ZNK14QStackedWidget13currentWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedWidget13currentWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentWidget", args)
   }
@@ -118,7 +119,7 @@ func (this *QStackedWidget) currentWidget(args ...interface{}) () {
 }
 
 // QStackedWidget(class QWidget *)
-func NewQStackedWidget(args ...interface{}) QStackedWidget {
+func NewQStackedWidget(args ...interface{}) *QStackedWidget {
   // QStackedWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -135,12 +136,13 @@ func NewQStackedWidget(args ...interface{}) QStackedWidget {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN14QStackedWidgetC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN14QStackedWidgetC2EP7QWidget(arg0)
+    return &QStackedWidget{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QStackedWidget", "QStackedWidget", args)
   }
 
-  return QStackedWidget{}
+  return nil // QStackedWidget{qclsinst:qthis}
 }
 
 // setCurrentWidget(class QWidget *)
@@ -205,7 +207,8 @@ func (this *QStackedWidget) widget(args ...interface{}) () {
     // invoke: QWidget * widget(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QStackedWidget6widgetEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QStackedWidget6widgetEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "widget", args)
   }
@@ -228,7 +231,8 @@ func (this *QStackedWidget) indexOf(args ...interface{}) () {
     // invoke: int indexOf(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK14QStackedWidget7indexOfEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZNK14QStackedWidget7indexOfEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "indexOf", args)
   }
@@ -254,7 +258,8 @@ func (this *QStackedWidget) insertWidget(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = args[1].(QWidget).qclsinst
     if false {fmt.Println(arg1)}
-    C.C_ZN14QStackedWidget12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZN14QStackedWidget12insertWidgetEiP7QWidget(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "insertWidget", args)
   }
@@ -277,7 +282,8 @@ func (this *QStackedWidget) addWidget(args ...interface{}) () {
     // invoke: int addWidget(class QWidget *)
     var arg0 = args[0].(QWidget).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN14QStackedWidget9addWidgetEP7QWidget(this.qclsinst, arg0)
+    var ret = C.C_ZN14QStackedWidget9addWidgetEP7QWidget(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "addWidget", args)
   }
@@ -317,7 +323,8 @@ func (this *QStackedWidget) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedWidget5countEv
     // invoke: int count()
-    C.C_ZNK14QStackedWidget5countEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedWidget5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "count", args)
   }
@@ -357,7 +364,8 @@ func (this *QStackedWidget) currentIndex(args ...interface{}) () {
   case 0:
     // invoke: _ZNK14QStackedWidget12currentIndexEv
     // invoke: int currentIndex()
-    C.C_ZNK14QStackedWidget12currentIndexEv(this.qclsinst)
+    var ret = C.C_ZNK14QStackedWidget12currentIndexEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QStackedWidget", "currentIndex", args)
   }

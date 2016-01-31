@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qbackingstore.h
 // dst-file: /src/gui/qbackingstore.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QBackingStore::QBackingStore(QWindow * window);
-extern void C_ZN13QBackingStoreC2EP7QWindow(void* qthis, void* arg0); // 3
+extern void* C_ZN13QBackingStoreC2EP7QWindow(void* arg0); // 3
   // proto:  QPlatformBackingStore * QBackingStore::handle();
 extern void C_ZNK13QBackingStore6handleEv(void* qthis); // 4
   // proto:  QPaintDevice * QBackingStore::paintDevice();
@@ -75,7 +75,7 @@ type QBackingStore struct {
 }
 
 // QBackingStore(class QWindow *)
-func NewQBackingStore(args ...interface{}) QBackingStore {
+func NewQBackingStore(args ...interface{}) *QBackingStore {
   // QBackingStore(class QWindow *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -92,12 +92,13 @@ func NewQBackingStore(args ...interface{}) QBackingStore {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QBackingStoreC2EP7QWindow(qthis, arg0)
+    qthis = C.C_ZN13QBackingStoreC2EP7QWindow(arg0)
+    return &QBackingStore{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QBackingStore", "QBackingStore", args)
   }
 
-  return QBackingStore{}
+  return nil // QBackingStore{qclsinst:qthis}
 }
 
 // handle()
@@ -133,7 +134,8 @@ func (this *QBackingStore) paintDevice(args ...interface{}) () {
   case 0:
     // invoke: _ZN13QBackingStore11paintDeviceEv
     // invoke: QPaintDevice * paintDevice()
-    C.C_ZN13QBackingStore11paintDeviceEv(this.qclsinst)
+    var ret = C.C_ZN13QBackingStore11paintDeviceEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "paintDevice", args)
   }
@@ -153,7 +155,8 @@ func (this *QBackingStore) staticContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore14staticContentsEv
     // invoke: QRegion staticContents()
-    C.C_ZNK13QBackingStore14staticContentsEv(this.qclsinst)
+    var ret = C.C_ZNK13QBackingStore14staticContentsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "staticContents", args)
   }
@@ -216,7 +219,8 @@ func (this *QBackingStore) hasStaticContents(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore17hasStaticContentsEv
     // invoke: bool hasStaticContents()
-    C.C_ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+    var ret = C.C_ZNK13QBackingStore17hasStaticContentsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "hasStaticContents", args)
   }
@@ -236,7 +240,8 @@ func (this *QBackingStore) window(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore6windowEv
     // invoke: QWindow * window()
-    C.C_ZNK13QBackingStore6windowEv(this.qclsinst)
+    var ret = C.C_ZNK13QBackingStore6windowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "window", args)
   }
@@ -308,7 +313,8 @@ func (this *QBackingStore) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QBackingStore4sizeEv
     // invoke: QSize size()
-    C.C_ZNK13QBackingStore4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK13QBackingStore4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "size", args)
   }
@@ -337,7 +343,8 @@ func (this *QBackingStore) scroll(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = C.int32_t(args[2].(int32))
     if false {fmt.Println(arg2)}
-    C.C_ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN13QBackingStore6scrollERK7QRegionii(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QBackingStore", "scroll", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qinputdialog.h
 // dst-file: /src/widgets/qinputdialog.go
 //
@@ -188,7 +188,8 @@ func (this *QInputDialog) doubleMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog13doubleMinimumEv
     // invoke: double doubleMinimum()
-    C.C_ZNK12QInputDialog13doubleMinimumEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog13doubleMinimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleMinimum", args)
   }
@@ -231,7 +232,8 @@ func (this *QInputDialog) intMinimum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog10intMinimumEv
     // invoke: int intMinimum()
-    C.C_ZNK12QInputDialog10intMinimumEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog10intMinimumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "intMinimum", args)
   }
@@ -251,7 +253,8 @@ func (this *QInputDialog) intMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog10intMaximumEv
     // invoke: int intMaximum()
-    C.C_ZNK12QInputDialog10intMaximumEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog10intMaximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "intMaximum", args)
   }
@@ -271,7 +274,8 @@ func (this *QInputDialog) doubleMaximum(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog13doubleMaximumEv
     // invoke: double doubleMaximum()
-    C.C_ZNK12QInputDialog13doubleMaximumEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog13doubleMaximumEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleMaximum", args)
   }
@@ -458,7 +462,8 @@ func (this *QInputDialog) labelText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog9labelTextEv
     // invoke: QString labelText()
-    C.C_ZNK12QInputDialog9labelTextEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog9labelTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "labelText", args)
   }
@@ -524,7 +529,8 @@ func (this *QInputDialog) doubleValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog11doubleValueEv
     // invoke: double doubleValue()
-    C.C_ZNK12QInputDialog11doubleValueEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog11doubleValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleValue", args)
   }
@@ -702,7 +708,8 @@ func (this *QInputDialog) intValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog8intValueEv
     // invoke: int intValue()
-    C.C_ZNK12QInputDialog8intValueEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog8intValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "intValue", args)
   }
@@ -722,7 +729,8 @@ func (this *QInputDialog) cancelButtonText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog16cancelButtonTextEv
     // invoke: QString cancelButtonText()
-    C.C_ZNK12QInputDialog16cancelButtonTextEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog16cancelButtonTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "cancelButtonText", args)
   }
@@ -765,7 +773,8 @@ func (this *QInputDialog) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK12QInputDialog8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "sizeHint", args)
   }
@@ -785,7 +794,8 @@ func (this *QInputDialog) textValue(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog9textValueEv
     // invoke: QString textValue()
-    C.C_ZNK12QInputDialog9textValueEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog9textValueEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "textValue", args)
   }
@@ -845,7 +855,8 @@ func (this *QInputDialog) minimumSizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog15minimumSizeHintEv
     // invoke: QSize minimumSizeHint()
-    C.C_ZNK12QInputDialog15minimumSizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog15minimumSizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "minimumSizeHint", args)
   }
@@ -908,7 +919,8 @@ func (this *QInputDialog) isComboBoxEditable(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog18isComboBoxEditableEv
     // invoke: bool isComboBoxEditable()
-    C.C_ZNK12QInputDialog18isComboBoxEditableEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog18isComboBoxEditableEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "isComboBoxEditable", args)
   }
@@ -928,7 +940,8 @@ func (this *QInputDialog) okButtonText(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog12okButtonTextEv
     // invoke: QString okButtonText()
-    C.C_ZNK12QInputDialog12okButtonTextEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog12okButtonTextEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "okButtonText", args)
   }
@@ -948,7 +961,8 @@ func (this *QInputDialog) doubleDecimals(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog14doubleDecimalsEv
     // invoke: int doubleDecimals()
-    C.C_ZNK12QInputDialog14doubleDecimalsEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog14doubleDecimalsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "doubleDecimals", args)
   }
@@ -991,7 +1005,8 @@ func (this *QInputDialog) intStep(args ...interface{}) () {
   case 0:
     // invoke: _ZNK12QInputDialog7intStepEv
     // invoke: int intStep()
-    C.C_ZNK12QInputDialog7intStepEv(this.qclsinst)
+    var ret = C.C_ZNK12QInputDialog7intStepEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QInputDialog", "intStep", args)
   }

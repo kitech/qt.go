@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qvalidator.h
 // dst-file: /src/gui/qvalidator.go
 //
@@ -39,9 +39,9 @@ extern void C_ZN27QRegularExpressionValidator20setRegularExpressionERK18QRegular
   // proto:  QValidator::State QRegularExpressionValidator::validate(QString & input, int & pos);
 extern void C_ZNK27QRegularExpressionValidator8validateER7QStringRi(void* qthis, void* arg0, int32_t* arg1); // 4
   // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(QObject * parent);
-extern void C_ZN27QRegularExpressionValidatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN27QRegularExpressionValidatorC2EP7QObject(void* arg0); // 3
   // proto:  void QRegularExpressionValidator::QRegularExpressionValidator(const QRegularExpression & re, QObject * parent);
-extern void C_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QDoubleValidator::setBottom(double );
 extern void C_ZN16QDoubleValidator9setBottomEd(void* qthis, double arg0); // 4
   // proto:  void QDoubleValidator::setTop(double );
@@ -61,9 +61,9 @@ extern void C_ZN16QDoubleValidator8setRangeEddi(void* qthis, double arg0, double
   // proto:  const QMetaObject * QDoubleValidator::metaObject();
 extern void C_ZNK16QDoubleValidator10metaObjectEv(void* qthis); // 4
   // proto:  void QDoubleValidator::QDoubleValidator(QObject * parent);
-extern void C_ZN16QDoubleValidatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN16QDoubleValidatorC2EP7QObject(void* arg0); // 3
   // proto:  void QDoubleValidator::QDoubleValidator(double bottom, double top, int decimals, QObject * parent);
-extern void C_ZN16QDoubleValidatorC2EddiP7QObject(void* qthis, double arg0, double arg1, int32_t arg2, void* arg3); // 3
+extern void* C_ZN16QDoubleValidatorC2EddiP7QObject(double arg0, double arg1, int32_t arg2, void* arg3); // 3
   // proto:  int QDoubleValidator::decimals();
 extern void C_ZNK16QDoubleValidator8decimalsEv(void* qthis); // 2
   // proto:  double QDoubleValidator::top();
@@ -71,9 +71,9 @@ extern void C_ZNK16QDoubleValidator3topEv(void* qthis); // 2
   // proto:  void QIntValidator::setTop(int );
 extern void C_ZN13QIntValidator6setTopEi(void* qthis, int32_t arg0); // 4
   // proto:  void QIntValidator::QIntValidator(QObject * parent);
-extern void C_ZN13QIntValidatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN13QIntValidatorC2EP7QObject(void* arg0); // 3
   // proto:  void QIntValidator::QIntValidator(int bottom, int top, QObject * parent);
-extern void C_ZN13QIntValidatorC2EiiP7QObject(void* qthis, int32_t arg0, int32_t arg1, void* arg2); // 3
+extern void* C_ZN13QIntValidatorC2EiiP7QObject(int32_t arg0, int32_t arg1, void* arg2); // 3
   // proto:  const QMetaObject * QIntValidator::metaObject();
 extern void C_ZNK13QIntValidator10metaObjectEv(void* qthis); // 4
   // proto:  void QIntValidator::~QIntValidator();
@@ -99,15 +99,15 @@ extern void C_ZNK10QValidator6localeEv(void* qthis); // 4
   // proto:  void QValidator::~QValidator();
 extern void C_ZN10QValidatorD2Ev(void* qthis); // 4
   // proto:  void QValidator::QValidator(QObject * parent);
-extern void C_ZN10QValidatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN10QValidatorC2EP7QObject(void* arg0); // 3
   // proto:  void QValidator::fixup(QString & );
 extern void C_ZNK10QValidator5fixupER7QString(void* qthis, void* arg0); // 4
   // proto:  const QMetaObject * QRegExpValidator::metaObject();
 extern void C_ZNK16QRegExpValidator10metaObjectEv(void* qthis); // 4
   // proto:  void QRegExpValidator::QRegExpValidator(const QRegExp & rx, QObject * parent);
-extern void C_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject(void* qthis, void* arg0, void* arg1); // 3
+extern void* C_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject(void* arg0, void* arg1); // 3
   // proto:  void QRegExpValidator::QRegExpValidator(QObject * parent);
-extern void C_ZN16QRegExpValidatorC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN16QRegExpValidatorC2EP7QObject(void* arg0); // 3
   // proto:  void QRegExpValidator::setRegExp(const QRegExp & rx);
 extern void C_ZN16QRegExpValidator9setRegExpERK7QRegExp(void* qthis, void* arg0); // 4
   // proto:  const QRegExp & QRegExpValidator::regExp();
@@ -200,7 +200,8 @@ func (this *QRegularExpressionValidator) regularExpression(args ...interface{}) 
   case 0:
     // invoke: _ZNK27QRegularExpressionValidator17regularExpressionEv
     // invoke: QRegularExpression regularExpression()
-    C.C_ZNK27QRegularExpressionValidator17regularExpressionEv(this.qclsinst)
+    var ret = C.C_ZNK27QRegularExpressionValidator17regularExpressionEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "regularExpression", args)
   }
@@ -277,7 +278,7 @@ func (this *QRegularExpressionValidator) validate(args ...interface{}) () {
 }
 
 // QRegularExpressionValidator(class QObject *)
-func NewQRegularExpressionValidator(args ...interface{}) QRegularExpressionValidator {
+func NewQRegularExpressionValidator(args ...interface{}) *QRegularExpressionValidator {
   // QRegularExpressionValidator(class QObject *)
   // QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -298,7 +299,8 @@ func NewQRegularExpressionValidator(args ...interface{}) QRegularExpressionValid
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN27QRegularExpressionValidatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN27QRegularExpressionValidatorC2EP7QObject(arg0)
+    return &QRegularExpressionValidator{qclsinst:qthis}
   case 1:
     // invoke: _ZN27QRegularExpressionValidatorC1ERK18QRegularExpressionP7QObject
     // invoke: void QRegularExpressionValidator(const class QRegularExpression &, class QObject *)
@@ -308,12 +310,13 @@ func NewQRegularExpressionValidator(args ...interface{}) QRegularExpressionValid
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN27QRegularExpressionValidatorC2ERK18QRegularExpressionP7QObject(arg0, arg1)
+    return &QRegularExpressionValidator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegularExpressionValidator", "QRegularExpressionValidator", args)
   }
 
-  return QRegularExpressionValidator{}
+  return nil // QRegularExpressionValidator{qclsinst:qthis}
 }
 
 // setBottom(double)
@@ -375,7 +378,8 @@ func (this *QDoubleValidator) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDoubleValidator6bottomEv
     // invoke: double bottom()
-    C.C_ZNK16QDoubleValidator6bottomEv(this.qclsinst)
+    var ret = C.C_ZNK16QDoubleValidator6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "bottom", args)
   }
@@ -521,7 +525,7 @@ func (this *QDoubleValidator) metaObject(args ...interface{}) () {
 }
 
 // QDoubleValidator(class QObject *)
-func NewQDoubleValidator(args ...interface{}) QDoubleValidator {
+func NewQDoubleValidator(args ...interface{}) *QDoubleValidator {
   // QDoubleValidator(class QObject *)
   // QDoubleValidator(double, double, int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -544,7 +548,8 @@ func NewQDoubleValidator(args ...interface{}) QDoubleValidator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QDoubleValidatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN16QDoubleValidatorC2EP7QObject(arg0)
+    return &QDoubleValidator{qclsinst:qthis}
   case 1:
     // invoke: _ZN16QDoubleValidatorC1EddiP7QObject
     // invoke: void QDoubleValidator(double, double, int, class QObject *)
@@ -558,12 +563,13 @@ func NewQDoubleValidator(args ...interface{}) QDoubleValidator {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QDoubleValidatorC2EddiP7QObject(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN16QDoubleValidatorC2EddiP7QObject(arg0, arg1, arg2, arg3)
+    return &QDoubleValidator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "QDoubleValidator", args)
   }
 
-  return QDoubleValidator{}
+  return nil // QDoubleValidator{qclsinst:qthis}
 }
 
 // decimals()
@@ -579,7 +585,8 @@ func (this *QDoubleValidator) decimals(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDoubleValidator8decimalsEv
     // invoke: int decimals()
-    C.C_ZNK16QDoubleValidator8decimalsEv(this.qclsinst)
+    var ret = C.C_ZNK16QDoubleValidator8decimalsEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "decimals", args)
   }
@@ -599,7 +606,8 @@ func (this *QDoubleValidator) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QDoubleValidator3topEv
     // invoke: double top()
-    C.C_ZNK16QDoubleValidator3topEv(this.qclsinst)
+    var ret = C.C_ZNK16QDoubleValidator3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QDoubleValidator", "top", args)
   }
@@ -630,7 +638,7 @@ func (this *QIntValidator) setTop(args ...interface{}) () {
 }
 
 // QIntValidator(class QObject *)
-func NewQIntValidator(args ...interface{}) QIntValidator {
+func NewQIntValidator(args ...interface{}) *QIntValidator {
   // QIntValidator(class QObject *)
   // QIntValidator(int, int, class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -652,7 +660,8 @@ func NewQIntValidator(args ...interface{}) QIntValidator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QIntValidatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN13QIntValidatorC2EP7QObject(arg0)
+    return &QIntValidator{qclsinst:qthis}
   case 1:
     // invoke: _ZN13QIntValidatorC1EiiP7QObject
     // invoke: void QIntValidator(int, int, class QObject *)
@@ -664,12 +673,13 @@ func NewQIntValidator(args ...interface{}) QIntValidator {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN13QIntValidatorC2EiiP7QObject(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN13QIntValidatorC2EiiP7QObject(arg0, arg1, arg2)
+    return &QIntValidator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QIntValidator", "QIntValidator", args)
   }
 
-  return QIntValidator{}
+  return nil // QIntValidator{qclsinst:qthis}
 }
 
 // metaObject()
@@ -725,7 +735,8 @@ func (this *QIntValidator) bottom(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QIntValidator6bottomEv
     // invoke: int bottom()
-    C.C_ZNK13QIntValidator6bottomEv(this.qclsinst)
+    var ret = C.C_ZNK13QIntValidator6bottomEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIntValidator", "bottom", args)
   }
@@ -768,7 +779,8 @@ func (this *QIntValidator) top(args ...interface{}) () {
   case 0:
     // invoke: _ZNK13QIntValidator3topEv
     // invoke: int top()
-    C.C_ZNK13QIntValidator3topEv(this.qclsinst)
+    var ret = C.C_ZNK13QIntValidator3topEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIntValidator", "top", args)
   }
@@ -906,7 +918,8 @@ func (this *QValidator) locale(args ...interface{}) () {
   case 0:
     // invoke: _ZNK10QValidator6localeEv
     // invoke: QLocale locale()
-    C.C_ZNK10QValidator6localeEv(this.qclsinst)
+    var ret = C.C_ZNK10QValidator6localeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QValidator", "locale", args)
   }
@@ -934,7 +947,7 @@ func (this *QValidator) FreeQValidator(args ...interface{}) () {
 }
 
 // QValidator(class QObject *)
-func NewQValidator(args ...interface{}) QValidator {
+func NewQValidator(args ...interface{}) *QValidator {
   // QValidator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -951,12 +964,13 @@ func NewQValidator(args ...interface{}) QValidator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN10QValidatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN10QValidatorC2EP7QObject(arg0)
+    return &QValidator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QValidator", "QValidator", args)
   }
 
-  return QValidator{}
+  return nil // QValidator{qclsinst:qthis}
 }
 
 // fixup(class QString &)
@@ -1003,7 +1017,7 @@ func (this *QRegExpValidator) metaObject(args ...interface{}) () {
 }
 
 // QRegExpValidator(const class QRegExp &, class QObject *)
-func NewQRegExpValidator(args ...interface{}) QRegExpValidator {
+func NewQRegExpValidator(args ...interface{}) *QRegExpValidator {
   // QRegExpValidator(const class QRegExp &, class QObject *)
   // QRegExpValidator(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -1026,7 +1040,8 @@ func NewQRegExpValidator(args ...interface{}) QRegExpValidator {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN16QRegExpValidatorC2ERK7QRegExpP7QObject(arg0, arg1)
+    return &QRegExpValidator{qclsinst:qthis}
   case 1:
     // invoke: _ZN16QRegExpValidatorC1EP7QObject
     // invoke: void QRegExpValidator(class QObject *)
@@ -1034,12 +1049,13 @@ func NewQRegExpValidator(args ...interface{}) QRegExpValidator {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN16QRegExpValidatorC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN16QRegExpValidatorC2EP7QObject(arg0)
+    return &QRegExpValidator{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QRegExpValidator", "QRegExpValidator", args)
   }
 
-  return QRegExpValidator{}
+  return nil // QRegExpValidator{qclsinst:qthis}
 }
 
 // setRegExp(const class QRegExp &)
@@ -1078,7 +1094,8 @@ func (this *QRegExpValidator) regExp(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QRegExpValidator6regExpEv
     // invoke: const QRegExp & regExp()
-    C.C_ZNK16QRegExpValidator6regExpEv(this.qclsinst)
+    var ret = C.C_ZNK16QRegExpValidator6regExpEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QRegExpValidator", "regExp", args)
   }

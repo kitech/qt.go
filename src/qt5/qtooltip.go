@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qtooltip.h
 // dst-file: /src/widgets/qtooltip.go
 //
@@ -79,7 +79,8 @@ func (this *QToolTip) palette_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip7paletteEv
     // invoke: QPalette palette()
-    C.C_ZN8QToolTip7paletteEv()
+    var ret = C.C_ZN8QToolTip7paletteEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QToolTip", "palette", args)
   }
@@ -119,7 +120,8 @@ func (this *QToolTip) text_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4textEv
     // invoke: QString text()
-    C.C_ZN8QToolTip4textEv()
+    var ret = C.C_ZN8QToolTip4textEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QToolTip", "text", args)
   }
@@ -230,7 +232,8 @@ func (this *QToolTip) isVisible_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip9isVisibleEv
     // invoke: bool isVisible()
-    C.C_ZN8QToolTip9isVisibleEv()
+    var ret = C.C_ZN8QToolTip9isVisibleEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QToolTip", "isVisible", args)
   }
@@ -273,7 +276,8 @@ func (this *QToolTip) font_s(args ...interface{}) () {
   case 0:
     // invoke: _ZN8QToolTip4fontEv
     // invoke: QFont font()
-    C.C_ZN8QToolTip4fontEv()
+    var ret = C.C_ZN8QToolTip4fontEv()
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QToolTip", "font", args)
   }

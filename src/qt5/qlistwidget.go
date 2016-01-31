@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtWidgets/qlistwidget.h
 // dst-file: /src/widgets/qlistwidget.go
 //
@@ -37,13 +37,13 @@ extern void C_ZN15QListWidgetItem11setSelectedEb(void* qthis, bool arg0); // 2
   // proto:  QString QListWidgetItem::text();
 extern void C_ZNK15QListWidgetItem4textEv(void* qthis); // 2
   // proto:  void QListWidgetItem::QListWidgetItem(const QListWidgetItem & other);
-extern void C_ZN15QListWidgetItemC2ERKS_(void* qthis, void* arg0); // 3
+extern void* C_ZN15QListWidgetItemC2ERKS_(void* arg0); // 3
   // proto:  void QListWidgetItem::QListWidgetItem(const QIcon & icon, const QString & text, QListWidget * view, int type);
-extern void C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, void* arg2, int32_t arg3); // 3
+extern void* C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(void* arg0, void* arg1, void* arg2, int32_t arg3); // 3
   // proto:  void QListWidgetItem::QListWidgetItem(const QString & text, QListWidget * view, int type);
-extern void C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(void* qthis, void* arg0, void* arg1, int32_t arg2); // 3
+extern void* C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(void* arg0, void* arg1, int32_t arg2); // 3
   // proto:  void QListWidgetItem::QListWidgetItem(QListWidget * view, int type);
-extern void C_ZN15QListWidgetItemC2EP11QListWidgeti(void* qthis, void* arg0, int32_t arg1); // 3
+extern void* C_ZN15QListWidgetItemC2EP11QListWidgeti(void* arg0, int32_t arg1); // 3
   // proto:  void QListWidgetItem::setHidden(bool hide);
 extern void C_ZN15QListWidgetItem9setHiddenEb(void* qthis, bool arg0); // 2
   // proto:  QFont QListWidgetItem::font();
@@ -143,7 +143,7 @@ extern void C_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(void* qthis, 
   // proto:  void QListWidget::insertItems(int row, const QStringList & labels);
 extern void C_ZN11QListWidget11insertItemsEiRK11QStringList(void* qthis, int32_t arg0, void* arg1); // 4
   // proto:  void QListWidget::QListWidget(QWidget * parent);
-extern void C_ZN11QListWidgetC2EP7QWidget(void* qthis, void* arg0); // 3
+extern void* C_ZN11QListWidgetC2EP7QWidget(void* arg0); // 3
   // proto:  QListWidgetItem * QListWidget::takeItem(int row);
 extern void C_ZN11QListWidget8takeItemEi(void* qthis, int32_t arg0); // 4
   // proto:  void QListWidget::insertItem(int row, QListWidgetItem * item);
@@ -298,7 +298,8 @@ func (this *QListWidgetItem) text(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem4textEv
     // invoke: QString text()
-    C.C_ZNK15QListWidgetItem4textEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem4textEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "text", args)
   }
@@ -306,7 +307,7 @@ func (this *QListWidgetItem) text(args ...interface{}) () {
 }
 
 // QListWidgetItem(const class QListWidgetItem &)
-func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
+func NewQListWidgetItem(args ...interface{}) *QListWidgetItem {
   // QListWidgetItem(const class QListWidgetItem &)
   // QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
   // QListWidgetItem(const class QString &, class QListWidget *, int)
@@ -338,7 +339,8 @@ func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QListWidgetItemC2ERKS_(qthis, arg0)
+    qthis = C.C_ZN15QListWidgetItemC2ERKS_(arg0)
+    return &QListWidgetItem{qclsinst:qthis}
   case 1:
     // invoke: _ZN15QListWidgetItemC1ERK5QIconRK7QStringP11QListWidgeti
     // invoke: void QListWidgetItem(const class QIcon &, const class QString &, class QListWidget *, int)
@@ -352,7 +354,8 @@ func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
     if false {fmt.Println(arg3)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(qthis, arg0, arg1, arg2, arg3)
+    qthis = C.C_ZN15QListWidgetItemC2ERK5QIconRK7QStringP11QListWidgeti(arg0, arg1, arg2, arg3)
+    return &QListWidgetItem{qclsinst:qthis}
   case 2:
     // invoke: _ZN15QListWidgetItemC1ERK7QStringP11QListWidgeti
     // invoke: void QListWidgetItem(const class QString &, class QListWidget *, int)
@@ -364,7 +367,8 @@ func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
     if false {fmt.Println(arg2)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(qthis, arg0, arg1, arg2)
+    qthis = C.C_ZN15QListWidgetItemC2ERK7QStringP11QListWidgeti(arg0, arg1, arg2)
+    return &QListWidgetItem{qclsinst:qthis}
   case 3:
     // invoke: _ZN15QListWidgetItemC1EP11QListWidgeti
     // invoke: void QListWidgetItem(class QListWidget *, int)
@@ -374,12 +378,13 @@ func NewQListWidgetItem(args ...interface{}) QListWidgetItem {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QListWidgetItemC2EP11QListWidgeti(qthis, arg0, arg1)
+    qthis = C.C_ZN15QListWidgetItemC2EP11QListWidgeti(arg0, arg1)
+    return &QListWidgetItem{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "QListWidgetItem", args)
   }
 
-  return QListWidgetItem{}
+  return nil // QListWidgetItem{qclsinst:qthis}
 }
 
 // setHidden(_Bool)
@@ -418,7 +423,8 @@ func (this *QListWidgetItem) font(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem4fontEv
     // invoke: QFont font()
-    C.C_ZNK15QListWidgetItem4fontEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem4fontEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "font", args)
   }
@@ -507,7 +513,8 @@ func (this *QListWidgetItem) whatsThis(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem9whatsThisEv
     // invoke: QString whatsThis()
-    C.C_ZNK15QListWidgetItem9whatsThisEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem9whatsThisEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "whatsThis", args)
   }
@@ -527,7 +534,8 @@ func (this *QListWidgetItem) isSelected(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem10isSelectedEv
     // invoke: bool isSelected()
-    C.C_ZNK15QListWidgetItem10isSelectedEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem10isSelectedEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "isSelected", args)
   }
@@ -547,7 +555,8 @@ func (this *QListWidgetItem) backgroundColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem15backgroundColorEv
     // invoke: QColor backgroundColor()
-    C.C_ZNK15QListWidgetItem15backgroundColorEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem15backgroundColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "backgroundColor", args)
   }
@@ -587,7 +596,8 @@ func (this *QListWidgetItem) textColor(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem9textColorEv
     // invoke: QColor textColor()
-    C.C_ZNK15QListWidgetItem9textColorEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem9textColorEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "textColor", args)
   }
@@ -607,7 +617,8 @@ func (this *QListWidgetItem) type_(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem4typeEv
     // invoke: int type()
-    C.C_ZNK15QListWidgetItem4typeEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem4typeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "type", args)
   }
@@ -653,7 +664,8 @@ func (this *QListWidgetItem) statusTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem9statusTipEv
     // invoke: QString statusTip()
-    C.C_ZNK15QListWidgetItem9statusTipEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem9statusTipEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "statusTip", args)
   }
@@ -673,7 +685,8 @@ func (this *QListWidgetItem) foreground(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem10foregroundEv
     // invoke: QBrush foreground()
-    C.C_ZNK15QListWidgetItem10foregroundEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem10foregroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "foreground", args)
   }
@@ -693,7 +706,8 @@ func (this *QListWidgetItem) listWidget(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem10listWidgetEv
     // invoke: QListWidget * listWidget()
-    C.C_ZNK15QListWidgetItem10listWidgetEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem10listWidgetEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "listWidget", args)
   }
@@ -736,7 +750,8 @@ func (this *QListWidgetItem) clone(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem5cloneEv
     // invoke: QListWidgetItem * clone()
-    C.C_ZNK15QListWidgetItem5cloneEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem5cloneEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "clone", args)
   }
@@ -779,7 +794,8 @@ func (this *QListWidgetItem) toolTip(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem7toolTipEv
     // invoke: QString toolTip()
-    C.C_ZNK15QListWidgetItem7toolTipEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem7toolTipEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "toolTip", args)
   }
@@ -822,7 +838,8 @@ func (this *QListWidgetItem) background(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem10backgroundEv
     // invoke: QBrush background()
-    C.C_ZNK15QListWidgetItem10backgroundEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem10backgroundEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "background", args)
   }
@@ -845,7 +862,8 @@ func (this *QListWidgetItem) data(args ...interface{}) () {
     // invoke: QVariant data(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK15QListWidgetItem4dataEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK15QListWidgetItem4dataEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "data", args)
   }
@@ -888,7 +906,8 @@ func (this *QListWidgetItem) icon(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem4iconEv
     // invoke: QIcon icon()
-    C.C_ZNK15QListWidgetItem4iconEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem4iconEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "icon", args)
   }
@@ -931,7 +950,8 @@ func (this *QListWidgetItem) sizeHint(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem8sizeHintEv
     // invoke: QSize sizeHint()
-    C.C_ZNK15QListWidgetItem8sizeHintEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem8sizeHintEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "sizeHint", args)
   }
@@ -951,7 +971,8 @@ func (this *QListWidgetItem) isHidden(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem8isHiddenEv
     // invoke: bool isHidden()
-    C.C_ZNK15QListWidgetItem8isHiddenEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem8isHiddenEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "isHidden", args)
   }
@@ -1103,7 +1124,8 @@ func (this *QListWidgetItem) textAlignment(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QListWidgetItem13textAlignmentEv
     // invoke: int textAlignment()
-    C.C_ZNK15QListWidgetItem13textAlignmentEv(this.qclsinst)
+    var ret = C.C_ZNK15QListWidgetItem13textAlignmentEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidgetItem", "textAlignment", args)
   }
@@ -1169,7 +1191,8 @@ func (this *QListWidget) isItemHidden(args ...interface{}) () {
     // invoke: bool isItemHidden(const class QListWidgetItem *)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget12isItemHiddenEPK15QListWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "isItemHidden", args)
   }
@@ -1241,7 +1264,8 @@ func (this *QListWidget) itemWidget(args ...interface{}) () {
     // invoke: QWidget * itemWidget(class QListWidgetItem *)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget10itemWidgetEP15QListWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "itemWidget", args)
   }
@@ -1287,7 +1311,8 @@ func (this *QListWidget) row(args ...interface{}) () {
     // invoke: int row(const class QListWidgetItem *)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget3rowEPK15QListWidgetItem(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget3rowEPK15QListWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "row", args)
   }
@@ -1307,7 +1332,8 @@ func (this *QListWidget) isSortingEnabled(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QListWidget16isSortingEnabledEv
     // invoke: bool isSortingEnabled()
-    C.C_ZNK11QListWidget16isSortingEnabledEv(this.qclsinst)
+    var ret = C.C_ZNK11QListWidget16isSortingEnabledEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "isSortingEnabled", args)
   }
@@ -1376,7 +1402,8 @@ func (this *QListWidget) currentItem(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QListWidget11currentItemEv
     // invoke: QListWidgetItem * currentItem()
-    C.C_ZNK11QListWidget11currentItemEv(this.qclsinst)
+    var ret = C.C_ZNK11QListWidget11currentItemEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "currentItem", args)
   }
@@ -1422,7 +1449,8 @@ func (this *QListWidget) isItemSelected(args ...interface{}) () {
     // invoke: bool isItemSelected(const class QListWidgetItem *)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget14isItemSelectedEPK15QListWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "isItemSelected", args)
   }
@@ -1456,7 +1484,7 @@ func (this *QListWidget) insertItems(args ...interface{}) () {
 }
 
 // QListWidget(class QWidget *)
-func NewQListWidget(args ...interface{}) QListWidget {
+func NewQListWidget(args ...interface{}) *QListWidget {
   // QListWidget(class QWidget *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -1473,12 +1501,13 @@ func NewQListWidget(args ...interface{}) QListWidget {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN11QListWidgetC2EP7QWidget(qthis, arg0)
+    qthis = C.C_ZN11QListWidgetC2EP7QWidget(arg0)
+    return &QListWidget{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QListWidget", "QListWidget", args)
   }
 
-  return QListWidget{}
+  return nil // QListWidget{qclsinst:qthis}
 }
 
 // takeItem(int)
@@ -1497,7 +1526,8 @@ func (this *QListWidget) takeItem(args ...interface{}) () {
     // invoke: QListWidgetItem * takeItem(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QListWidget8takeItemEi(this.qclsinst, arg0)
+    var ret = C.C_ZN11QListWidget8takeItemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "takeItem", args)
   }
@@ -1630,7 +1660,8 @@ func (this *QListWidget) currentRow(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QListWidget10currentRowEv
     // invoke: int currentRow()
-    C.C_ZNK11QListWidget10currentRowEv(this.qclsinst)
+    var ret = C.C_ZNK11QListWidget10currentRowEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "currentRow", args)
   }
@@ -1653,7 +1684,8 @@ func (this *QListWidget) visualItemRect(args ...interface{}) () {
     // invoke: QRect visualItemRect(const class QListWidgetItem *)
     var arg0 = args[0].(QListWidgetItem).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget14visualItemRectEPK15QListWidgetItem(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "visualItemRect", args)
   }
@@ -1696,7 +1728,8 @@ func (this *QListWidget) count(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QListWidget5countEv
     // invoke: int count()
-    C.C_ZNK11QListWidget5countEv(this.qclsinst)
+    var ret = C.C_ZNK11QListWidget5countEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "count", args)
   }
@@ -1768,13 +1801,15 @@ func (this *QListWidget) itemAt(args ...interface{}) () {
     if false {fmt.Println(arg0)}
     var arg1 = C.int32_t(args[1].(int32))
     if false {fmt.Println(arg1)}
-    C.C_ZNK11QListWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    var ret = C.C_ZNK11QListWidget6itemAtEii(this.qclsinst, arg0, arg1)
+    if false {reflect.TypeOf(ret)}
   case 1:
     // invoke: _ZNK11QListWidget6itemAtERK6QPoint
     // invoke: QListWidgetItem * itemAt(const class QPoint &)
     var arg0 = args[0].(QPoint).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget6itemAtERK6QPoint(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "itemAt", args)
   }
@@ -1840,7 +1875,8 @@ func (this *QListWidget) item(args ...interface{}) () {
     // invoke: QListWidgetItem * item(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QListWidget4itemEi(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QListWidget4itemEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QListWidget", "item", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qsystemsemaphore.h
 // dst-file: /src/core/qsystemsemaphore.go
 //
@@ -71,7 +71,8 @@ func (this *QSystemSemaphore) errorString(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QSystemSemaphore11errorStringEv
     // invoke: QString errorString()
-    C.C_ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
+    var ret = C.C_ZNK16QSystemSemaphore11errorStringEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "errorString", args)
   }
@@ -91,7 +92,8 @@ func (this *QSystemSemaphore) acquire(args ...interface{}) () {
   case 0:
     // invoke: _ZN16QSystemSemaphore7acquireEv
     // invoke: bool acquire()
-    C.C_ZN16QSystemSemaphore7acquireEv(this.qclsinst)
+    var ret = C.C_ZN16QSystemSemaphore7acquireEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "acquire", args)
   }
@@ -131,7 +133,8 @@ func (this *QSystemSemaphore) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK16QSystemSemaphore3keyEv
     // invoke: QString key()
-    C.C_ZNK16QSystemSemaphore3keyEv(this.qclsinst)
+    var ret = C.C_ZNK16QSystemSemaphore3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "key", args)
   }
@@ -174,7 +177,8 @@ func (this *QSystemSemaphore) release(args ...interface{}) () {
     // invoke: bool release(int)
     var arg0 = C.int32_t(args[0].(int32))
     if false {fmt.Println(arg0)}
-    C.C_ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
+    var ret = C.C_ZN16QSystemSemaphore7releaseEi(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QSystemSemaphore", "release", args)
   }

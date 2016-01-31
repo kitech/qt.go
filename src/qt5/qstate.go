@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qstate.h
 // dst-file: /src/core/qstate.go
 //
@@ -29,7 +29,7 @@ import "qtrt"
 #include <wchar.h>
 #include <uchar.h>
   // proto:  void QState::QState(QState * parent);
-extern void C_ZN6QStateC2EPS_(void* qthis, void* arg0); // 3
+extern void* C_ZN6QStateC2EPS_(void* arg0); // 3
   // proto:  QList<QAbstractTransition *> QState::transitions();
 extern void C_ZNK6QState11transitionsEv(void* qthis); // 4
   // proto:  QAbstractState * QState::errorState();
@@ -80,7 +80,7 @@ type QState struct {
 }
 
 // QState(class QState *)
-func NewQState(args ...interface{}) QState {
+func NewQState(args ...interface{}) *QState {
   // QState(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -97,12 +97,13 @@ func NewQState(args ...interface{}) QState {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN6QStateC2EPS_(qthis, arg0)
+    qthis = C.C_ZN6QStateC2EPS_(arg0)
+    return &QState{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QState", "QState", args)
   }
 
-  return QState{}
+  return nil // QState{qclsinst:qthis}
 }
 
 // transitions()
@@ -208,7 +209,8 @@ func (this *QState) addTransition(args ...interface{}) () {
     if false {fmt.Println(arg1)}
     var arg2 = args[2].(QAbstractState).qclsinst
     if false {fmt.Println(arg2)}
-    C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.qclsinst, arg0, arg1, arg2)
+    var ret = C.C_ZN6QState13addTransitionEPK7QObjectPKcP14QAbstractState(this.qclsinst, arg0, arg1, arg2)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QState", "addTransition", args)
   }

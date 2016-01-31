@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qpauseanimation.h
 // dst-file: /src/core/qpauseanimation.go
 //
@@ -31,9 +31,9 @@ import "qtrt"
   // proto:  void QPauseAnimation::~QPauseAnimation();
 extern void C_ZN15QPauseAnimationD2Ev(void* qthis); // 4
   // proto:  void QPauseAnimation::QPauseAnimation(int msecs, QObject * parent);
-extern void C_ZN15QPauseAnimationC2EiP7QObject(void* qthis, int32_t arg0, void* arg1); // 3
+extern void* C_ZN15QPauseAnimationC2EiP7QObject(int32_t arg0, void* arg1); // 3
   // proto:  void QPauseAnimation::QPauseAnimation(QObject * parent);
-extern void C_ZN15QPauseAnimationC2EP7QObject(void* qthis, void* arg0); // 3
+extern void* C_ZN15QPauseAnimationC2EP7QObject(void* arg0); // 3
   // proto:  int QPauseAnimation::duration();
 extern void C_ZNK15QPauseAnimation8durationEv(void* qthis); // 4
   // proto:  const QMetaObject * QPauseAnimation::metaObject();
@@ -79,7 +79,7 @@ func (this *QPauseAnimation) FreeQPauseAnimation(args ...interface{}) () {
 }
 
 // QPauseAnimation(int, class QObject *)
-func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
+func NewQPauseAnimation(args ...interface{}) *QPauseAnimation {
   // QPauseAnimation(int, class QObject *)
   // QPauseAnimation(class QObject *)
   var vtys = make(map[int32]map[int32]reflect.Type)
@@ -102,7 +102,8 @@ func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
     if false {fmt.Println(arg1)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QPauseAnimationC2EiP7QObject(qthis, arg0, arg1)
+    qthis = C.C_ZN15QPauseAnimationC2EiP7QObject(arg0, arg1)
+    return &QPauseAnimation{qclsinst:qthis}
   case 1:
     // invoke: _ZN15QPauseAnimationC1EP7QObject
     // invoke: void QPauseAnimation(class QObject *)
@@ -110,12 +111,13 @@ func NewQPauseAnimation(args ...interface{}) QPauseAnimation {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN15QPauseAnimationC2EP7QObject(qthis, arg0)
+    qthis = C.C_ZN15QPauseAnimationC2EP7QObject(arg0)
+    return &QPauseAnimation{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QPauseAnimation", "QPauseAnimation", args)
   }
 
-  return QPauseAnimation{}
+  return nil // QPauseAnimation{qclsinst:qthis}
 }
 
 // duration()
@@ -131,7 +133,8 @@ func (this *QPauseAnimation) duration(args ...interface{}) () {
   case 0:
     // invoke: _ZNK15QPauseAnimation8durationEv
     // invoke: int duration()
-    C.C_ZNK15QPauseAnimation8durationEv(this.qclsinst)
+    var ret = C.C_ZNK15QPauseAnimation8durationEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QPauseAnimation", "duration", args)
   }

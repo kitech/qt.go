@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtGui/qiconengine.h
 // dst-file: /src/gui/qiconengine.go
 //
@@ -71,7 +71,8 @@ func (this *QIconEngine) iconName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QIconEngine8iconNameEv
     // invoke: QString iconName()
-    C.C_ZNK11QIconEngine8iconNameEv(this.qclsinst)
+    var ret = C.C_ZNK11QIconEngine8iconNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIconEngine", "iconName", args)
   }
@@ -94,7 +95,8 @@ func (this *QIconEngine) write(args ...interface{}) () {
     // invoke: bool write(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
+    var ret = C.C_ZNK11QIconEngine5writeER11QDataStream(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIconEngine", "write", args)
   }
@@ -117,7 +119,8 @@ func (this *QIconEngine) read(args ...interface{}) () {
     // invoke: bool read(class QDataStream &)
     var arg0 = args[0].(QDataStream).qclsinst
     if false {fmt.Println(arg0)}
-    C.C_ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
+    var ret = C.C_ZN11QIconEngine4readER11QDataStream(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIconEngine", "read", args)
   }
@@ -163,7 +166,8 @@ func (this *QIconEngine) key(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QIconEngine3keyEv
     // invoke: QString key()
-    C.C_ZNK11QIconEngine3keyEv(this.qclsinst)
+    var ret = C.C_ZNK11QIconEngine3keyEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QIconEngine", "key", args)
   }

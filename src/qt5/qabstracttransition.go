@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qabstracttransition.h
 // dst-file: /src/core/qabstracttransition.go
 //
@@ -49,7 +49,7 @@ extern void C_ZN19QAbstractTransitionD2Ev(void* qthis); // 4
   // proto:  void QAbstractTransition::addAnimation(QAbstractAnimation * animation);
 extern void C_ZN19QAbstractTransition12addAnimationEP18QAbstractAnimation(void* qthis, void* arg0); // 4
   // proto:  void QAbstractTransition::QAbstractTransition(QState * sourceState);
-extern void C_ZN19QAbstractTransitionC2EP6QState(void* qthis, void* arg0); // 3
+extern void* C_ZN19QAbstractTransitionC2EP6QState(void* arg0); // 3
   // proto:  QState * QAbstractTransition::sourceState();
 extern void C_ZNK19QAbstractTransition11sourceStateEv(void* qthis); // 4
 */
@@ -149,7 +149,8 @@ func (this *QAbstractTransition) machine(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition7machineEv
     // invoke: QStateMachine * machine()
-    C.C_ZNK19QAbstractTransition7machineEv(this.qclsinst)
+    var ret = C.C_ZNK19QAbstractTransition7machineEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "machine", args)
   }
@@ -283,7 +284,7 @@ func (this *QAbstractTransition) addAnimation(args ...interface{}) () {
 }
 
 // QAbstractTransition(class QState *)
-func NewQAbstractTransition(args ...interface{}) QAbstractTransition {
+func NewQAbstractTransition(args ...interface{}) *QAbstractTransition {
   // QAbstractTransition(class QState *)
   var vtys = make(map[int32]map[int32]reflect.Type)
   if false {fmt.Println(vtys)}
@@ -300,12 +301,13 @@ func NewQAbstractTransition(args ...interface{}) QAbstractTransition {
     if false {fmt.Println(arg0)}
     var qthis = unsafe.Pointer(C.malloc(5))
     if false {reflect.TypeOf(qthis)}
-    C.C_ZN19QAbstractTransitionC2EP6QState(qthis, arg0)
+    qthis = C.C_ZN19QAbstractTransitionC2EP6QState(arg0)
+    return &QAbstractTransition{qclsinst:qthis}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "QAbstractTransition", args)
   }
 
-  return QAbstractTransition{}
+  return nil // QAbstractTransition{qclsinst:qthis}
 }
 
 // sourceState()
@@ -321,7 +323,8 @@ func (this *QAbstractTransition) sourceState(args ...interface{}) () {
   case 0:
     // invoke: _ZNK19QAbstractTransition11sourceStateEv
     // invoke: QState * sourceState()
-    C.C_ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
+    var ret = C.C_ZNK19QAbstractTransition11sourceStateEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QAbstractTransition", "sourceState", args)
   }

@@ -1,6 +1,6 @@
 package qt5
 // auto generated, do not modify.
-// created: Sun Jan 31 12:22:27 2016
+// created: Sun Jan 31 14:26:18 2016
 // src-file: /QtCore/qfiledevice.h
 // dst-file: /src/core/qfiledevice.go
 //
@@ -91,7 +91,8 @@ func (this *QFileDevice) pos(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice3posEv
     // invoke: qint64 pos()
-    C.C_ZNK11QFileDevice3posEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice3posEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "pos", args)
   }
@@ -111,7 +112,8 @@ func (this *QFileDevice) flush(args ...interface{}) () {
   case 0:
     // invoke: _ZN11QFileDevice5flushEv
     // invoke: bool flush()
-    C.C_ZN11QFileDevice5flushEv(this.qclsinst)
+    var ret = C.C_ZN11QFileDevice5flushEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "flush", args)
   }
@@ -154,7 +156,8 @@ func (this *QFileDevice) seek(args ...interface{}) () {
     // invoke: bool seek(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QFileDevice4seekEx(this.qclsinst, arg0)
+    var ret = C.C_ZN11QFileDevice4seekEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "seek", args)
   }
@@ -174,7 +177,8 @@ func (this *QFileDevice) isSequential(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice12isSequentialEv
     // invoke: bool isSequential()
-    C.C_ZNK11QFileDevice12isSequentialEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice12isSequentialEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "isSequential", args)
   }
@@ -194,7 +198,8 @@ func (this *QFileDevice) size(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice4sizeEv
     // invoke: qint64 size()
-    C.C_ZNK11QFileDevice4sizeEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice4sizeEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "size", args)
   }
@@ -234,7 +239,8 @@ func (this *QFileDevice) handle(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice6handleEv
     // invoke: int handle()
-    C.C_ZNK11QFileDevice6handleEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice6handleEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "handle", args)
   }
@@ -254,7 +260,8 @@ func (this *QFileDevice) fileName(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice8fileNameEv
     // invoke: QString fileName()
-    C.C_ZNK11QFileDevice8fileNameEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice8fileNameEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "fileName", args)
   }
@@ -297,7 +304,8 @@ func (this *QFileDevice) resize(args ...interface{}) () {
     // invoke: bool resize(qint64)
     var arg0 = C.int64_t(args[0].(int64))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
+    var ret = C.C_ZN11QFileDevice6resizeEx(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "resize", args)
   }
@@ -340,7 +348,8 @@ func (this *QFileDevice) unmap(args ...interface{}) () {
     // invoke: bool unmap(uchar *)
     var arg0 = (*C.uchar)((unsafe.Pointer)(reflect.ValueOf(args[0].([]byte)).Pointer()))
     if false {fmt.Println(arg0)}
-    C.C_ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
+    var ret = C.C_ZN11QFileDevice5unmapEPh(this.qclsinst, arg0)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "unmap", args)
   }
@@ -360,7 +369,8 @@ func (this *QFileDevice) atEnd(args ...interface{}) () {
   case 0:
     // invoke: _ZNK11QFileDevice5atEndEv
     // invoke: bool atEnd()
-    C.C_ZNK11QFileDevice5atEndEv(this.qclsinst)
+    var ret = C.C_ZNK11QFileDevice5atEndEv(this.qclsinst)
+    if false {reflect.TypeOf(ret)}
   default:
     qtrt.ErrorResolve("QFileDevice", "atEnd", args)
   }
